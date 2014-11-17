@@ -34,6 +34,10 @@ Rails.application.configure do
 
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
+  config.action_controller.asset_host = ENV['GOVUK_ASSET_HOST']
+  config.slimmer.use_cache = true
+  config.slimmer.asset_host = Plek.current.find('static')
+
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
