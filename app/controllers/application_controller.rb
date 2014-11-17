@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
 
     expires_in(max_age, public: cache_control_directive == 'public')
   end
+
+  def set_slimmer_headers
+    response.headers[Slimmer::Headers::TEMPLATE_HEADER] = "core_layout"
+  end
 end
