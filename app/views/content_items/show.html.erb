@@ -1,0 +1,9 @@
+<div id="wrapper">
+  <%= content_tag(:h1, @content_item["title"]) %>
+  <div class="summary">
+    <p><%= @content_item["description"] %></p>
+  </div>
+  <div>
+    <%= raw @content_item["details"]["body"] %>
+  </div>
+</div>
