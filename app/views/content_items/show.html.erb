@@ -1,9 +1,39 @@
-<div id="wrapper">
-  <%= content_tag(:h1, @content_item["title"]) %>
-  <div class="summary">
-    <p><%= @content_item["description"] %></p>
-  </div>
-  <div>
-    <%= raw @content_item["details"]["body"] %>
+<%= content_for :page_class, @content_item.format.dasherize %>
+<%= content_for :title, "#{@content_item.title} - #{@content_item.context}" %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: @content_item.context,
+        title: @content_item.title %>
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from,
+        updated: @content_item.updated,
+        history: @content_item.short_history,
+        published: @content_item.published
+    %>
   </div>
 </div>
+
+<p class="description"><%= @content_item.description %></p>
+
+<div class="grid-row">
+  <div class="column-third">
+    <% if @content_item.image %>
+      <figure class="image">
+        <img src="<%= @content_item.image["url"] %>" alt="<%= @content_item.image["alt_text"] %>">
+        <figcaption><%= @content_item.image["caption"] %></figcaption>
+      </figure>
+    <% end %>
+  </div>
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body %>
+  </div>
+</div>
+
+<%= render 'govuk_component/document_footer',
+        from: @content_item.from,
+        updated: @content_item.updated,
+        history: @content_item.history,
+        published: @content_item.published %>
