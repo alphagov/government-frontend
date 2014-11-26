@@ -1,4 +1,4 @@
-<%= content_for :page_class, @content_item.format.dasherize %>
+<%= content_for :page_class, @content_item.format.dasherize.pluralize %>
 <%= content_for :title, "#{@content_item.title} - #{@content_item.context}" %>
 
 <div class="grid-row">
@@ -20,7 +20,7 @@
 <div class="grid-row">
   <div class="column-third">
     <% if @content_item.image %>
-      <figure class="image">
+      <figure class="sidebar-image">
         <img src="<%= @content_item.image["url"] %>" alt="<%= @content_item.image["alt_text"] %>">
         <figcaption><%= @content_item.image["caption"] %></figcaption>
       </figure>
