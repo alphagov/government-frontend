@@ -10,7 +10,7 @@ class ContentItemPresenter
     @description = content_item["description"]
     @body = content_item["details"]["body"]
     @format = content_item["format"]
-    @context = "Case study" #content_itme["details"]["type"]
+    @context = I18n.t("content_item.format.#{content_item["details"]["format_display_type"]}", count: 10)
   end
 
   def from
