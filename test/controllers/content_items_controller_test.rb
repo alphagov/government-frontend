@@ -13,6 +13,14 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "Get Britain Building: Carlisle Park", assigns[:content_item]["title"]
   end
 
+  test "gets item from content store even when url contains multi-byte UTF8 character" do
+    path = "government/case-studies/caf\u00e9-culture"
+    content_store_has_item('/' + path, read_content_store_fixture('case_study'))
+
+    get :show, path: path
+    assert_response :success
+  end
+
   test "returns 404 for item not in content store" do
     path = 'government/case-studies/boost-chocolate-production'
 
