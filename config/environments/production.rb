@@ -34,7 +34,7 @@ Rails.application.configure do
 
   # `config.assets.precompile` has moved to config/initializers/assets.rb
 
-  config.action_controller.asset_host = ENV['GOVUK_ASSET_HOST']
+  config.action_controller.asset_host = Plek.current.asset_root
   config.slimmer.use_cache = true
   config.slimmer.asset_host = Plek.current.find('static')
 
