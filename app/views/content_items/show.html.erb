@@ -1,10 +1,10 @@
 <%= content_for :page_class, @content_item.format.dasherize.pluralize %>
-<%= content_for :title, "#{@content_item.title} - #{@content_item.context}" %>
+<%= content_for :title, "#{@content_item.title} - #{t("content_item.format.#{@content_item.format_display_type}", count: 10)}" %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        context: @content_item.context,
+        context: t("content_item.format.#{@content_item.format_display_type}", count: 10),
         title: @content_item.title %>
     <%= render 'govuk_component/metadata',
         from: @content_item.from,

@@ -1,7 +1,7 @@
 class ContentItemPresenter
   include ActionView::Helpers::UrlHelper
 
-  attr_reader :content_item, :title, :description, :body, :format, :context
+  attr_reader :content_item, :title, :description, :body, :format, :format_display_type
 
   def initialize(content_item)
     @content_item = content_item
@@ -10,7 +10,7 @@ class ContentItemPresenter
     @description = content_item["description"]
     @body = content_item["details"]["body"]
     @format = content_item["format"]
-    @context = I18n.t("content_item.format.#{content_item["details"]["format_display_type"]}", count: 10)
+    @format_display_type = content_item["details"]["format_display_type"]
   end
 
   def from
