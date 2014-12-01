@@ -10,7 +10,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     get :show, path: path
     assert_response :success
-    assert_equal "Get Britain Building: Carlisle Park", assigns[:content_item]["title"]
+    assert_equal "Get Britain Building: Carlisle Park", assigns[:content_item].title
   end
 
   test "returns 404 for item not in content store" do

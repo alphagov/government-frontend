@@ -1,0 +1,23 @@
+.case-studies {
+  .description {
+    @include core-24;
+    margin: $gutter-half 0;
+
+    @include media(tablet){
+      margin: ($gutter*1.5) 0;
+    }
+  }
+
+  .sidebar-image {
+    img {
+      max-width: 100%;
+    }
+    figcaption {
+      @include core-16;
+    }
+  }
+
+  .govuk-document-footer {
+    margin-bottom: $gutter*2;
+  }
+}

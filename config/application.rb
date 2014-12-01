@@ -32,5 +32,8 @@ module GovernmentFrontend
 
     # Caching
     config.cache_control_directive = 'public'
+
+    # Path within public/ where assets are compiled to
+    config.assets.prefix = '/government-frontend'
   end
 end
