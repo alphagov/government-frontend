@@ -4,6 +4,13 @@ require 'test_helper'
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
 
+  test "routing handles translated content paths" do
+    translated_path = 'government/case-studies/allez.fr'
+
+    assert_routing({ path: translated_path, method: :get },
+      { controller: 'content_items', action: 'show', path: translated_path })
+  end
+
   test "gets item from content store" do
     path = 'government/case-studies/get-britain-building-carlisle-park'
     content_store_has_item('/' + path, read_content_store_fixture('case_study'))
