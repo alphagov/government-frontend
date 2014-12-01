@@ -15,7 +15,7 @@ class ContentItemsController < ApplicationController
   private
 
   def content_item_path
-    '/' + params[:path]
+    '/' + URI.encode(params[:path])
   end
 
   def content_store
