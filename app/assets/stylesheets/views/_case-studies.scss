@@ -1,4 +1,9 @@
 .case-studies {
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
+
   .description {
     @include core-24;
     margin: $gutter-half 0;

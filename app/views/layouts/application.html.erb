@@ -10,8 +10,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrapper">
-    <main role="main" id="content" class="<%= yield(:page_class) %>">
+  <div id="wrapper" class="<%= wrapper_class %>">
+    <main role="main" id="content" class="<%= yield(:page_class) %>" lang="<%= yield(:lang) %>">
         <%= yield %>
     </main>
   </div>
