@@ -1,4 +1,3 @@
-require 'gds_api/test_helpers/content_store'
 require 'test_helper'
 
 class ContentItemsControllerTest < ActionController::TestCase
@@ -12,19 +11,21 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store" do
-    path = 'government/case-studies/get-britain-building-carlisle-park'
-    content_store_has_item('/' + path, read_content_store_fixture('case_study'))
+    content_item = govuk_content_schema_example('case_study')
 
-    get :show, path: path
+    get :show, path: path_for(content_item)
     assert_response :success
-    assert_equal "Get Britain Building: Carlisle Park", assigns[:content_item].title
+    assert_equal content_item['title'], assigns[:content_item].title
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do
-    path = "government/case-studies/caf\u00e9-culture"
-    content_store_has_item('/' + path, read_content_store_fixture('case_study'))
+    content_item = govuk_content_schema_example('case_study')
+    utf8_path    = "government/case-studies/caf\u00e9-culture"
+    content_item['base_path'] = "/#{utf8_path}"
 
-    get :show, path: path
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, path: utf8_path
     assert_response :success
   end
 
@@ -35,5 +36,11 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     get :show, path: path
     assert_response :not_found
+  end
+
+private
+
+  def path_for(content_item)
+    content_item['base_path'].sub(/^\//, '')
   end
 end

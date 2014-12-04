@@ -1,12 +1,4 @@
 require 'test_helper'
-require 'gds_api/test_helpers/content_store'
-
-# TODO: Tidy up. This is to skip slimmer
-class ActionController::Base
-  before_filter proc {
-    response.headers[Slimmer::Headers::SKIP_HEADER] = "true" unless ENV["USE_SLIMMER"]
-  }
-end
 
 class GovukContentSchemasTest < ActionDispatch::IntegrationTest
   include GovukContentSchemaExamples
