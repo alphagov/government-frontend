@@ -1,7 +1,7 @@
 class ContentItemPresenter
   include ActionView::Helpers::UrlHelper
 
-  attr_reader :content_item, :title, :description, :body, :format, :format_display_type
+  attr_reader :content_item, :title, :description, :body, :format, :format_display_type, :locale
 
   def initialize(content_item)
     @content_item = content_item
@@ -11,6 +11,7 @@ class ContentItemPresenter
     @body = content_item["details"]["body"]
     @format = content_item["format"]
     @format_display_type = content_item["details"]["format_display_type"]
+    @locale = content_item["locale"] || "en"
   end
 
   def from
@@ -44,7 +45,7 @@ class ContentItemPresenter
 
   def short_history
     if any_updates?
-      "Updated #{updated_at}"
+      "Updated #{updated}"
     else
       "Published #{published}"
     end
@@ -54,7 +55,12 @@ class ContentItemPresenter
     @content_item["details"]["image"]
   end
 
+  def text_direction
+    I18n.t("i18n.direction", locale: @locale.to_sym, default: "ltr")
+  end
+
 private
+
   def display_time(timestamp)
     Date.parse(timestamp).strftime("%-d %B %Y") if timestamp
   end
