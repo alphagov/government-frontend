@@ -15,6 +15,10 @@ module GovukContentSchemaExamples
   extend ActiveSupport::Concern
 
   included do
+    unless Dir.exists?(govuk_content_schemas_path)
+      raise "Could not find govuk-content-schemas in #{govuk_content_schemas_path}. Make sure it is present to run test suite."
+    end
+
     include GdsApi::TestHelpers::ContentStore
 
     setup do
