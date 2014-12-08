@@ -83,7 +83,7 @@ private
   end
 
   def any_updates?
-    Date.parse(content_item["public_updated_at"]) != Date.parse(content_item["details"]["first_public_at"])
+    DateTime.parse(content_item["public_updated_at"]) != DateTime.parse(content_item["details"]["first_public_at"])
   end
 
   def links(type)
