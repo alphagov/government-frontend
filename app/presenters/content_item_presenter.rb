@@ -59,6 +59,23 @@ class ContentItemPresenter
     I18n.t("i18n.direction", locale: locale.to_sym, default: "ltr")
   end
 
+  def archived?
+    content_item["details"].include? "archive_notice"
+  end
+
+  def page_title
+    archived? ? "[Archived] #{title}" : title
+  end
+
+
+  def archive_notice
+    notice = content_item["details"]["archive_notice"]
+    {
+      time: content_tag(:time, display_time(notice["archived_at"]), datetime: notice["archived_at"]),
+      explanation: notice["explanation"]
+    }
+  end
+
 private
 
   def display_time(timestamp)
