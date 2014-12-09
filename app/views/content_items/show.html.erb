@@ -12,7 +12,7 @@
 
   <% if @content_item.archived? %>
     <div class="archive-notice">
-      <h2>This <%= t("content_item.format.#{@content_item.format_display_type}", count: 1) %> was archived on <%= @content_item.archive_notice[:time] %></h2>
+      <h2>This <%= t("content_item.format.#{@content_item.format_display_type}", count: 1).downcase %> was archived on <%= @content_item.archive_notice[:time] %></h2>
       <%= @content_item.archive_notice[:explanation] %>
     </div>
   <% end %>
