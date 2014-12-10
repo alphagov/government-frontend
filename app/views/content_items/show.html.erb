@@ -1,7 +1,5 @@
 <%= content_for :page_class, @content_item.format.dasherize.pluralize %>
 <%= content_for :title, "#{@content_item.page_title} - #{t("content_item.format.#{@content_item.format_display_type}", count: 10)}" %>
-<%= content_for :lang, @content_item.locale %>
-<%= content_for :direction, @content_item.text_direction %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
@@ -23,7 +21,7 @@
         updated: @content_item.updated,
         history: @content_item.short_history,
         published: @content_item.published,
-        direction: @content_item.text_direction
+        direction: page_text_direction
     %>
   </div>
 </div>
@@ -42,7 +40,7 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/govspeak',
         content: @content_item.body,
-        direction: @content_item.text_direction %>
+        direction: page_text_direction %>
   </div>
 </div>
 
@@ -51,4 +49,4 @@
         updated: @content_item.updated,
         history: @content_item.history,
         published: @content_item.published,
-        direction: @content_item.text_direction %>
+        direction: page_text_direction %>

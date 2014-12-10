@@ -18,6 +18,16 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['title'], assigns[:content_item].title
   end
 
+  test "renders translated content items in their locale" do
+    content_item = govuk_content_schema_example('translated')
+    translated_format_name = I18n.t("content_item.format.case_study", count: 10, locale: 'es')
+
+    get :show, path: path_for(content_item)
+
+    assert_response :success
+    assert_select "title", %r(#{translated_format_name})
+  end
+
   test "gets item from content store even when url contains multi-byte UTF8 character" do
     content_item = govuk_content_schema_example('case_study')
     utf8_path    = "government/case-studies/caf\u00e9-culture"

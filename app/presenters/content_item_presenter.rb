@@ -55,10 +55,6 @@ class ContentItemPresenter
     content_item["details"]["image"]
   end
 
-  def text_direction
-    I18n.t("i18n.direction", locale: locale.to_sym, default: "ltr")
-  end
-
   def archived?
     content_item["details"].include? "archive_notice"
   end
