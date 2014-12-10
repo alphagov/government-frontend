@@ -5,6 +5,7 @@ class ContentItemsController < ApplicationController
     if load_content_item
       set_expiry
       set_locale
+      render content_item_template
     else
       render text: 'Not found', status: :not_found
     end
@@ -14,8 +15,19 @@ private
 
   def load_content_item
     if content_item = content_store.content_item(content_item_path)
-      @content_item = ContentItemPresenter.new(content_item)
+      @content_item = present(content_item)
     end
+  end
+
+  def present(content_item)
+    case content_item['format']
+      when 'case_study' then ContentItemPresenter.new(content_item)
+      when 'unpublishing' then UnpublishingPresenter.new(content_item)
+    end
+  end
+
+  def content_item_template
+    @content_item.format
   end
 
   def set_expiry
