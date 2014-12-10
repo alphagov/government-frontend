@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ContentItemPresenterTest < ActiveSupport::TestCase
-  include GdsApi::TestHelpers::ContentStore
   include ActionView::Helpers::UrlHelper
 
   test 'presents the basic details of a content item' do
