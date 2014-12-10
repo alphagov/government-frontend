@@ -1,21 +1,25 @@
 require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
-  before_action :load_content_item
-  before_action :set_locale
-
   def show
+    if load_content_item
+      set_expiry
+      set_locale
+    else
+      render text: 'Not found', status: :not_found
+    end
   end
 
 private
 
   def load_content_item
     if content_item = content_store.content_item(content_item_path)
-      set_expiry(content_item.expires_in)
       @content_item = ContentItemPresenter.new(content_item)
-    else
-      render text: 'Not found', status: :not_found
     end
+  end
+
+  def set_expiry
+    super(@content_item.content_item.expires_in)
   end
 
   def set_locale
