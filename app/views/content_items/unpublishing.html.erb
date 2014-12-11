@@ -1,0 +1,15 @@
+<%= content_for :page_class, "unpublishing" %>
+<%= content_for :title, "No longer available - GOV.UK" %>
+
+<h2>The page you are looking for is no longer available</h2>
+<p class="summary">
+  The information on this page has been removed because it was published in error.
+</p>
+
+<%= @content_item.explanation %>
+
+<% if @content_item.alternative_url.present? %>
+  <p>
+    Visit: <%= link_to(@content_item.alternative_url, @content_item.alternative_url) %>
+  </p>
+<% end %>
