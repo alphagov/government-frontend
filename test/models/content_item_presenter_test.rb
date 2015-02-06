@@ -49,6 +49,23 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal expected_from_links, presented_case_study(with_organisations).from
   end
 
+  test '#part_of returns an array of related policies, worldwide priorities and world locations' do
+    with_extras = case_study
+    with_extras['links']['related_policies'] = [
+      { "title" => "Cheese", "base_path" => "/policy/cheese" }
+    ]
+    with_extras['links']['worldwide_priorities'] = [
+      { "title" => "Cheese around the world", "base_path" => "/world_prior/cheese" }
+    ]
+
+    expected_part_of_links = [
+      link_to('Cheese', '/policy/cheese'),
+      link_to('Cheese around the world', '/world_prior/cheese'),
+      link_to('Pakistan', '/government/world/pakistan'),
+    ]
+    assert_equal expected_part_of_links, presented_case_study(with_extras).part_of
+  end
+
   test '#history returns an empty array if the content item has no updates' do
     assert_equal [], presented_case_study.history
   end
