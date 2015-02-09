@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UnpubishingPresenterTest < ActiveSupport::TestCase
+class UnpublishingPresenterTest < ActiveSupport::TestCase
 
   test 'presents the basic details required to display an unpublishing' do
     assert_equal unpublishing['format'], presented_unpublishing.format
