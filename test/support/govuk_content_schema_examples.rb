@@ -41,6 +41,12 @@ module GovukContentSchemaExamples
 
   module ClassMethods
     def govuk_content_schema_examples
+      all_govuk_content_schema_examples.each_with_object({}) do |(filename, data), hash|
+        hash[filename] = data if supported_format?(data)
+      end
+    end
+
+    def all_govuk_content_schema_examples
       govuk_content_schema_example_files.each_with_object({}) do |file_path, hash|
         filename = File.basename(file_path)
         hash[filename] = JSON.parse(File.read(file_path))
@@ -51,9 +57,18 @@ module GovukContentSchemaExamples
       Dir.glob Rails.root.join(govuk_content_schemas_path).join("formats/*/frontend/examples/*.json")
     end
 
-
     def govuk_content_schemas_path
       ENV['GOVUK_CONTENT_SCHEMAS_PATH'] || '../govuk-content-schemas'
+    end
+
+  private
+    def supported_format?(data)
+      supported_formats = %w{
+        case_study
+        redirect
+        unpublishing
+      }
+      supported_formats.include?(data['format'])
     end
   end
 end
