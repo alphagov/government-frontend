@@ -21,7 +21,8 @@
         updated: @content_item.updated,
         history: @content_item.short_history,
         published: @content_item.published,
-        direction: page_text_direction
+        direction: page_text_direction,
+        part_of: @content_item.part_of
     %>
   </div>
 </div>
@@ -49,4 +50,6 @@
         updated: @content_item.updated,
         history: @content_item.history,
         published: @content_item.published,
-        direction: page_text_direction %>
+        direction: page_text_direction,
+        part_of: @content_item.part_of
+%>
