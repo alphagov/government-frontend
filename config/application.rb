@@ -23,9 +23,11 @@ module GovernmentFrontend
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    # Explicitly set default locale
+    config.i18n.default_locale = :en
+
+    # Explicitly set available locales
+    config.i18n.available_locales = [:es, :ar, :en]
 
     # Disable rack::cache
     config.action_dispatch.rack_cache = nil
