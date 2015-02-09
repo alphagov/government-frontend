@@ -15,7 +15,7 @@ class ContentItemPresenter
   end
 
   def from
-    links("lead_organisations") + links("supporting_organisations")
+    links("lead_organisations") + links("supporting_organisations") + links("worldwide_organisations")
   end
 
   def part_of
