@@ -32,7 +32,7 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal 'Updated 21 March 2013', presented_case_study_with_updates.short_history
   end
 
-  test '#from returns links to lead organisations and supporting organisations' do
+  test '#from returns links to lead organisations, supporting organisations and worldwide organisations' do
     with_organisations = case_study
     with_organisations['links']['lead_organisations'] = [
       { "title" => 'Lead org', "base_path" => '/orgs/lead'}
@@ -43,7 +43,8 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
 
     expected_from_links = [
       link_to('Lead org', '/orgs/lead'),
-      link_to('Supporting org', '/orgs/supporting')
+      link_to('Supporting org', '/orgs/supporting'),
+      link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan'),
     ]
 
     assert_equal expected_from_links, presented_case_study(with_organisations).from
