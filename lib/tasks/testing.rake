@@ -3,7 +3,11 @@ namespace :test do
   Rails::TestTask.new(contracts: "test:prepare") do |t|
     t.pattern = "test/contracts/**/*_test.rb"
   end
+
+  Rails::TestTask.new(presenters: "test:prepare") do |t|
+    t.pattern = "test/presenters/**/*_test.rb"
+  end
 end
 
-Rake::Task["test:run"].prerequisites << 'test:contracts'
-Rake::Task[:test].comment = "Includes test:contracts"
+Rake::Task["test:run"].enhance ["test:contracts", "test:presenters"]
+Rake::Task[:test].comment = "Includes test:contracts and test:presenters"
