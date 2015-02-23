@@ -23,6 +23,7 @@ private
     case content_item['format']
       when 'case_study' then ContentItemPresenter.new(content_item)
       when 'unpublishing' then UnpublishingPresenter.new(content_item)
+      when 'coming_soon' then ComingSoonPresenter.new(content_item)
       else raise "No support for format \"#{content_item['format']}\""
     end
   end
