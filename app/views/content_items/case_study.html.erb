@@ -8,6 +8,11 @@
         title: @content_item.title %>
   </div>
 
+  <div class="column-third">
+  <%= render 'shared/available_languages',
+    translations: @content_item.available_translations
+  %>
+  </div>
   <% if @content_item.archived? %>
     <div class="archive-notice">
       <h2>This <%= t("content_item.format.#{@content_item.format_display_type}", count: 1).downcase %> was archived on <%= @content_item.archive_notice[:time] %></h2>
