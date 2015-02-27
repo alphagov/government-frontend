@@ -1,0 +1,15 @@
+<%= content_for :page_class, "coming-soon" %>
+<%= content_for :title, "Coming soon - GOV.UK" %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title', title: 'Coming soon' %>
+
+    <p class="summary">
+      This document will be published on<br />
+      <%= content_tag(:time, class: 'publish_time', datetime: @content_item.iso8601_publish_time) do %>
+        <%= @content_item.formatted_publish_date + " at " + @content_item.formatted_publish_time %>
+      <% end %>
+    </p>
+  </div>
+</div>

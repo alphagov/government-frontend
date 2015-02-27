@@ -65,6 +65,7 @@ module GovukContentSchemaExamples
     def supported_format?(data)
       supported_formats = %w{
         case_study
+        coming_soon
         redirect
         unpublishing
       }

@@ -18,6 +18,17 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['title'], assigns[:content_item].title
   end
 
+  test "sets the expiry as sent by content-store" do
+    content_item = govuk_content_schema_example('coming_soon')
+
+    expires_in = 20
+    content_store_has_item(content_item['base_path'], content_item, expires_in)
+
+    get :show, path: path_for(content_item)
+    assert_response :success
+    assert_equal "max-age=20, public", @response.headers['Cache-Control']
+  end
+
   test "renders translated content items in their locale" do
     content_item = govuk_content_schema_example('translated')
     translated_format_name = I18n.t("content_item.format.case_study", count: 10, locale: 'es')
