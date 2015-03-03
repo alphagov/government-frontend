@@ -4,9 +4,13 @@
 @import 'colours';
 @import 'measurements';
 @import 'typography';
+@import 'shims';
 
 // pages specific view imports
 @import "views/case-studies";
 @import "views/coming-soon";
 @import "views/unpublishing";
 
+// HELPERS
+// Styles for comment page elements
+@import "helpers/available-languages";

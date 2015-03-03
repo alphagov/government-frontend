@@ -1,6 +1,8 @@
 ar:
   i18n:
     direction: rtl
+  language_names:
+    ar: العربية
   content_item:
     format:
       announcement:
@@ -21,7 +23,7 @@ ar:
         zero:
         one: دراسة حالة
         two:
-        few:
+        few: دراسات حالة
         many:
         other: دراسات حالة
       closed_consultation:

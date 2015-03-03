@@ -79,6 +79,12 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal expected_history, presented_case_study_with_updates.history
   end
 
+  test "available_translations sorts languages by locale with English first" do
+    translated = govuk_content_schema_example('translated')
+    locales = ContentItemPresenter.new(translated).available_translations
+    assert_equal ['en', 'ar', 'es'], locales.map {|t| t["locale"]}
+  end
+
 private
 
   def presented_case_study(overrides={})

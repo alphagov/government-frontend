@@ -22,6 +22,10 @@ class ContentItemPresenter
     links("related_policies") + links("worldwide_priorities") + links("world_locations")
   end
 
+  def available_translations
+    sorted_locales(@content_item["links"]["available_translations"])
+  end
+
   def history
     return [] unless any_updates?
     content_item["details"]["change_history"].map do |item|
@@ -73,6 +77,10 @@ class ContentItemPresenter
   end
 
 private
+
+  def sorted_locales(translations)
+    translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? '' : t["locale"] }
+  end
 
   def display_time(timestamp)
     Date.parse(timestamp).strftime("%-d %B %Y") if timestamp
