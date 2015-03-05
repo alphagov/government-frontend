@@ -1,7 +1,9 @@
 require 'test_helper'
+require 'slimmer/test_helpers/shared_templates'
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
+  include Slimmer::TestHelpers::SharedTemplates
 
   test "routing handles translated content paths" do
     translated_path = 'government/case-studies/allez.fr'
@@ -48,6 +50,15 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     get :show, path: utf8_path
     assert_response :success
+  end
+
+  test "includes government navigation and sets the correct active item" do
+    content_item = govuk_content_schema_example('case_study')
+
+    get :show, path: path_for(content_item)
+
+    assert_response :success
+    assert_select shared_component_selector('government_navigation'), match: "case-studies"
   end
 
   test "returns 404 for item not in content store" do
