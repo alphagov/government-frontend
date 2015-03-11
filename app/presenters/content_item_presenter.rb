@@ -83,7 +83,7 @@ private
   end
 
   def display_time(timestamp)
-    Date.parse(timestamp).strftime("%-d %B %Y") if timestamp
+    I18n.l(Date.parse(timestamp), format: "%-d %B %Y") if timestamp
   end
 
   def any_updates?
