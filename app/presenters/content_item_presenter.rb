@@ -49,9 +49,9 @@ class ContentItemPresenter
 
   def short_history
     if any_updates?
-      "Updated #{updated}"
+      "#{I18n.t('content_item.metadata.updated')} #{updated}"
     else
-      "Published #{published}"
+      "#{I18n.t('content_item.metadata.published')} #{published}"
     end
   end
 
