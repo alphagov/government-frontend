@@ -13,7 +13,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store" do
-    content_item = govuk_content_schema_example('case_study')
+    content_item = content_store_has_schema_example('case_study', 'case_study')
 
     get :show, path: path_for(content_item)
     assert_response :success
@@ -21,7 +21,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets the expiry as sent by content-store" do
-    content_item = govuk_content_schema_example('coming_soon')
+    content_item = content_store_has_schema_example('coming_soon', 'coming_soon')
 
     expires_in = 20
     content_store_has_item(content_item['base_path'], content_item, expires_in)
@@ -32,7 +32,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "renders translated content items in their locale" do
-    content_item = govuk_content_schema_example('translated')
+    content_item = content_store_has_schema_example('case_study', 'translated')
     translated_format_name = I18n.t("content_item.format.case_study", count: 10, locale: 'es')
 
     get :show, path: path_for(content_item)
@@ -42,7 +42,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do
-    content_item = govuk_content_schema_example('case_study')
+    content_item = content_store_has_schema_example('case_study', 'case_study')
     utf8_path    = "government/case-studies/caf\u00e9-culture"
     content_item['base_path'] = "/#{utf8_path}"
 
@@ -53,7 +53,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "includes government navigation and sets the correct active item" do
-    content_item = govuk_content_schema_example('case_study')
+    content_item = content_store_has_schema_example('case_study', 'case_study')
 
     get :show, path: path_for(content_item)
 

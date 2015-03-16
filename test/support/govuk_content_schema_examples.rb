@@ -11,65 +11,44 @@ require 'gds_api/test_helpers/content_store'
 #
 # Including this module will automatically stub out all the available examples
 # with the content store.
+
+GovukContentSchemaTestHelpers.configure do |config|
+  config.schema_type = 'frontend'
+  config.project_root = Rails.root
+end
+
 module GovukContentSchemaExamples
   extend ActiveSupport::Concern
 
   included do
-    unless Dir.exists?(govuk_content_schemas_path)
-      raise "Could not find govuk-content-schemas in #{govuk_content_schemas_path}. Make sure it is present to run test suite."
-    end
-
     include GdsApi::TestHelpers::ContentStore
+  end
 
-    setup do
-      stub_example_content_items_in_content_store
-    end
+  def content_store_has_schema_example(schema_name, example_name)
+    document = govuk_content_schema_example(schema_name, example_name)
+    content_store_has_item(document['base_path'], document)
+    document
+  end
 
-    # Returns a hash representing an example content item from govuk-content-schemas
-    def govuk_content_schema_example(name)
-      self.class.govuk_content_schema_examples[name + '.json']
-    end
-
-  private
-
-    def stub_example_content_items_in_content_store
-      self.class.govuk_content_schema_examples.each_value do |content_item|
-        content_store_has_item(content_item['base_path'], content_item)
-      end
-    end
+  def govuk_content_schema_example(schema_name, example_name)
+    string = GovukContentSchemaTestHelpers::Examples.new.get(schema_name, example_name)
+    JSON.parse(string)
   end
 
   module ClassMethods
-    def govuk_content_schema_examples
-      all_govuk_content_schema_examples.each_with_object({}) do |(filename, data), hash|
-        hash[filename] = data if supported_format?(data)
+    def all_examples_for_supported_formats
+      GovukContentSchemaTestHelpers::Examples.new.get_all_for_formats(supported_formats).map do |string|
+        JSON.parse(string)
       end
     end
 
-    def all_govuk_content_schema_examples
-      govuk_content_schema_example_files.each_with_object({}) do |file_path, hash|
-        filename = File.basename(file_path)
-        hash[filename] = JSON.parse(File.read(file_path))
-      end
-    end
-
-    def govuk_content_schema_example_files
-      Dir.glob Rails.root.join(govuk_content_schemas_path).join("formats/*/frontend/examples/*.json")
-    end
-
-    def govuk_content_schemas_path
-      ENV['GOVUK_CONTENT_SCHEMAS_PATH'] || '../govuk-content-schemas'
-    end
-
-  private
-    def supported_format?(data)
-      supported_formats = %w{
+    def supported_formats
+      %w{
         case_study
         coming_soon
         redirect
         unpublishing
       }
-      supported_formats.include?(data['format'])
     end
   end
 end

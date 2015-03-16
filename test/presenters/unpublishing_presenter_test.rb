@@ -12,7 +12,7 @@ class UnpublishingPresenterTest < ActiveSupport::TestCase
 private
 
   def unpublishing
-    govuk_content_schema_example('unpublishing')
+    govuk_content_schema_example('unpublishing', 'unpublishing')
   end
 
   def presented_unpublishing

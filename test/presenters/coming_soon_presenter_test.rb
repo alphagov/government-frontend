@@ -22,7 +22,7 @@ private
   end
 
   def coming_soon
-    govuk_content_schema_example('coming_soon')
+    govuk_content_schema_example('coming_soon', 'coming_soon')
   end
 
 end
