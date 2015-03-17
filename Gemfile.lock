@@ -28,7 +28,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    addressable (2.3.6)
+    addressable (2.3.7)
     airbrake (4.0.0)
       builder
       multi_json
@@ -53,12 +53,16 @@ GEM
       plek
       rack-cache
       rest-client (~> 1.6.3)
+    govuk-content-schema-test-helpers (1.1.0)
+      json-schema (~> 2.5.1)
     govuk_frontend_toolkit (2.0.1)
       rails (>= 3.1.0)
       sass (>= 3.2.0)
     hike (1.2.3)
     i18n (0.6.11)
     json (1.8.1)
+    json-schema (2.5.1)
+      addressable (~> 2.3.7)
     kgio (2.9.2)
     link_header (0.0.8)
     logstash-event (1.1.5)
@@ -163,6 +167,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   gds-api-adapters (= 16.1.0)
+  govuk-content-schema-test-helpers (= 1.1.0)
   govuk_frontend_toolkit (= 2.0.1)
   logstasher (= 0.6.1)
   plek (= 1.9)
