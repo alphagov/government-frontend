@@ -49,9 +49,9 @@ class ContentItemPresenter
 
   def short_history
     if any_updates?
-      "Updated #{updated}"
+      "#{I18n.t('content_item.metadata.updated')} #{updated}"
     else
-      "Published #{published}"
+      "#{I18n.t('content_item.metadata.published')} #{published}"
     end
   end
 
@@ -83,7 +83,7 @@ private
   end
 
   def display_time(timestamp)
-    Date.parse(timestamp).strftime("%-d %B %Y") if timestamp
+    I18n.l(Date.parse(timestamp), format: "%-d %B %Y") if timestamp
   end
 
   def any_updates?

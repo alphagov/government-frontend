@@ -27,7 +27,7 @@ module GovernmentFrontend
     config.i18n.default_locale = :en
 
     # Explicitly set available locales
-    config.i18n.available_locales = [:es, :ar, :en, :ur]
+    config.i18n.available_locales = [:es, :ar, :en, :ur, :uk, :zh]
 
     # Disable rack::cache
     config.action_dispatch.rack_cache = nil

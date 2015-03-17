@@ -33,7 +33,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "renders translated content items in their locale" do
     content_item = content_store_has_schema_example('case_study', 'translated')
-    translated_format_name = I18n.t("content_item.format.case_study", count: 10, locale: 'es')
+    translated_format_name = I18n.t("content_item.format.case_study", count: 1, locale: 'es')
 
     get :show, path: path_for(content_item)
 

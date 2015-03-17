@@ -9,6 +9,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'slimmer', '7.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
+gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.1'
 
 if ENV['API_DEV']
