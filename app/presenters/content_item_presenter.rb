@@ -19,7 +19,7 @@ class ContentItemPresenter
   end
 
   def part_of
-    links("related_policies") + links("worldwide_priorities") + links("world_locations")
+    links("document_collections") + links("related_policies") + links("worldwide_priorities") + links("world_locations")
   end
 
   def available_translations
