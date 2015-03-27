@@ -37,10 +37,10 @@
 
 <div class="grid-row">
   <div class="column-third">
-    <% if @content_item.image %>
+    <% if (image = @content_item.image) %>
       <figure class="sidebar-image">
-        <img src="<%= @content_item.image["url"] %>" alt="<%= @content_item.image["alt_text"] %>">
-        <figcaption><%= @content_item.image["caption"] %></figcaption>
+        <img src="<%= image["url"] %>" alt="<%= image["alt_text"] %>">
+        <% if image["caption"].present? %><figcaption><%= image["caption"] %></figcaption><% end %>
       </figure>
     <% end %>
   </div>
