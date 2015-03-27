@@ -5,7 +5,8 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         context: t("content_item.format.#{@content_item.format_display_type}", count: 1),
-        title: @content_item.title %>
+        title: @content_item.title,
+        average_title_length: 'long' %>
   </div>
 
   <div class="column-third">
