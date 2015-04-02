@@ -6,7 +6,7 @@
           <% if translation["locale"] == I18n.locale.to_s %>
             <span><%= native_language_name_for(translation["locale"]) %></span>
           <% else %>
-            <%= link_to native_language_name_for(translation["locale"]), translation["web_url"] %>
+            <%= link_to native_language_name_for(translation["locale"]), translation["base_path"] %>
           <% end %>
         </li>
       <% end %>
