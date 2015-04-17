@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class ContentItemPresenterTest < ActiveSupport::TestCase
-  include ActionView::Helpers::UrlHelper
-
   test 'presents the basic details of a content item' do
     assert_equal case_study['description'], presented_case_study.description
     assert_equal case_study['format'], presented_case_study.format
@@ -42,9 +40,9 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     ]
 
     expected_from_links = [
-      link_to('Lead org', '/orgs/lead'),
-      link_to('Supporting org', '/orgs/supporting'),
-      link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan'),
+      view_context.link_to('Lead org', '/orgs/lead'),
+      view_context.link_to('Supporting org', '/orgs/supporting'),
+      view_context.link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan'),
     ]
 
     assert_equal expected_from_links, presented_case_study(with_organisations).from
@@ -63,10 +61,10 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     ]
 
     expected_part_of_links = [
-      link_to('Work Programme real life stories', '/government/collections/work-programme-real-life-stories'),
-      link_to('Cheese', '/policy/cheese'),
-      link_to('Cheese around the world', '/world_prior/cheese'),
-      link_to('Pakistan', '/government/world/pakistan'),
+      view_context.link_to('Work Programme real life stories', '/government/collections/work-programme-real-life-stories'),
+      view_context.link_to('Cheese', '/policy/cheese'),
+      view_context.link_to('Cheese around the world', '/world_prior/cheese'),
+      view_context.link_to('Pakistan', '/government/world/pakistan'),
     ]
     assert_equal expected_part_of_links, presented_case_study(with_extras).part_of
   end
@@ -85,14 +83,14 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
 
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example('case_study', 'translated')
-    locales = ContentItemPresenter.new(translated).available_translations
+    locales = ContentItemPresenter.new(translated, view_context).available_translations
     assert_equal ['en', 'ar', 'es'], locales.map {|t| t["locale"]}
   end
 
 private
 
   def presented_case_study(overrides={})
-    ContentItemPresenter.new(case_study.merge(overrides))
+    ContentItemPresenter.new(case_study.merge(overrides), view_context)
   end
 
   def presented_case_study_with_updates
@@ -106,5 +104,9 @@ private
 
   def case_study
     govuk_content_schema_example('case_study', 'case_study')
+  end
+
+  def view_context
+    @view_context ||= ActionController::Base.new.view_context
   end
 end
