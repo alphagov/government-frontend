@@ -55,7 +55,7 @@ class ContentItemPresenter
   end
 
   def image
-    content_item["details"]["image"]
+    content_item["details"]["image"].presence || placeholder_image_data
   end
 
   def archived?
@@ -94,5 +94,13 @@ private
     content_item["links"][type].map do |link|
       @view_context.link_to(link["title"], link["base_path"])
     end
+  end
+
+  def placeholder_image_data
+    {
+      'url' => @view_context.url_to_image('placeholder.jpg'),
+      'alt_text' => 'placeholder',
+      'caption' => nil
+    }
   end
 end

@@ -87,6 +87,20 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal ['en', 'ar', 'es'], locales.map {|t| t["locale"]}
   end
 
+  test "#image returns placeholder image data for content item without images" do
+    case_study_without_images = case_study
+    case_study_without_images['details'].delete('image')
+
+    presented_case_study_without_images = presented_case_study(case_study_without_images)
+    placeholder_image_data = {
+      'url' => view_context.url_to_image('placeholder.jpg'),
+      'alt_text' => 'placeholder',
+      'caption' => nil
+    }
+
+    assert_equal placeholder_image_data, presented_case_study_without_images.image
+  end
+
 private
 
   def presented_case_study(overrides={})
