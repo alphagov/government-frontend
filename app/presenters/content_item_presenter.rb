@@ -1,10 +1,9 @@
 class ContentItemPresenter
-  include ActionView::Helpers::UrlHelper
-
   attr_reader :content_item, :title, :description, :body, :format, :format_display_type, :locale
 
-  def initialize(content_item)
+  def initialize(content_item, view_context)
     @content_item = content_item
+    @view_context = view_context
 
     @title = content_item["title"]
     @description = content_item["description"]
@@ -56,7 +55,7 @@ class ContentItemPresenter
   end
 
   def image
-    content_item["details"]["image"]
+    content_item["details"]["image"].presence || placeholder_image_data
   end
 
   def archived?
@@ -71,7 +70,7 @@ class ContentItemPresenter
   def archive_notice
     notice = content_item["details"]["archive_notice"]
     {
-      time: content_tag(:time, display_time(notice["archived_at"]), datetime: notice["archived_at"]),
+      time: @view_context.content_tag(:time, display_time(notice["archived_at"]), datetime: notice["archived_at"]),
       explanation: notice["explanation"]
     }
   end
@@ -93,7 +92,15 @@ private
   def links(type)
     return [] unless content_item["links"][type]
     content_item["links"][type].map do |link|
-      link_to(link["title"], link["base_path"])
+      @view_context.link_to(link["title"], link["base_path"])
     end
+  end
+
+  def placeholder_image_data
+    {
+      'url' => @view_context.url_to_image('placeholder.jpg'),
+      'alt_text' => 'placeholder',
+      'caption' => nil
+    }
   end
 end
