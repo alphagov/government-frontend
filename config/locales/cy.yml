@@ -1,66 +1,64 @@
-ar:
-  i18n:
-    direction: rtl
+cy:
   language_names:
-    ar: "العربية"
+    cy: Cymraeg
   content_item:
     format:
       announcement:
         zero:
-        one: "إعلان"
+        one: Cyhoeddiad
         two:
         few:
         many:
-        other: "إعلانات"
+        other: Cyhoeddiadau
       authored_article:
         zero:
-        one: "مقال مرخص"
+        one:
         two:
         few:
         many:
-        other: "مقالات مرخصة"
+        other:
       case_study:
         zero:
-        one: "دراسة حالة"
+        one: Astudiaeth achos
         two:
         few:
         many:
-        other: "دراسات حالة"
+        other: Astudiaethau achos
       closed_consultation:
         zero:
-        one: "مشاورة منتهية"
+        one: Ymgynghoriad ar gau
         two:
         few:
         many:
-        other: "مشاورات منتهية"
+        other: Ymgynghoriadau ar gau
       consultation:
         zero:
-        one: "مشاورة"
+        one: Ymgynghoriad
         two:
         few:
         many:
-        other: "مشاورات"
+        other: Ymgynghoriadau
       consultation_outcome:
         zero:
-        one: "نتيجة المشاورة"
+        one: Canlyniad ymgynghoriad
         two:
         few:
         many:
-        other: "نتائج المشاورات"
+        other: Canlyniadau ymgynghoriadau
       corporate_report:
         zero:
-        one: "تقرير الوزارة"
+        one: Adroddiad corfforaethol
         two:
         few:
         many:
-        other: "تقارير الوزارة"
+        other: Adroddiadau corfforaethol
       correspondence:
         zero:
-        one: "مراسلة"
+        one: Gohebiaeth
         two:
         few:
         many:
-        other: "مراسلات"
+        other: Gohebiaeth
       decision:
         zero:
         one:
@@ -70,81 +68,81 @@ ar:
         other:
       detailed_guidance:
         zero:
-        one: "توجيه مفصل"
+        one: Cyfarwyddyd manwl
         two:
         few:
         many:
-        other: "توجيهات مفصل"
+        other: Cyfarwyddyd manwl
       document_collection:
         zero:
-        one: "سلسة"
+        one: Cyfres
         two:
         few:
         many:
         other:
       draft_text:
         zero:
-        one: "مسودة النص"
+        one: Testun drafft
         two:
         few:
         many:
-        other: "مسودة النصوص"
+        other: Testun drafft
       fatality_notice:
         zero:
-        one: "إشعار وفاة"
+        one: Hysbysiad marwolaeth
         two:
         few:
         many:
-        other: "إشعارات وفاة"
+        other: Hysbysiadau marwolaeth
       foi_release:
         zero:
-        one: "نشرة وفق حرية الحصول على المعلومات"
+        one: Datganiad Rhyddid Gwybodaeth
         two:
         few:
         many:
-        other: "نشرات وفق حرية الحصول على المعلومات"
+        other: Datganiadau Rhyddid Gwybodaeth
       form:
         zero:
-        one: "نموذج"
+        one: Ffurflen
         two:
         few:
         many:
-        other: "نماذج"
+        other: Ffurflenni
       government_response:
         zero:
-        one: "رد من الحكومة"
+        one:
         two:
         few:
         many:
-        other: "ردود من الحكومة"
+        other:
       guidance:
         zero:
-        one: "توجيه"
+        one: Cyfarwyddyd
         two:
         few:
         many:
-        other: "توجيهات"
+        other: Cyfarwyddyd
       impact_assessment:
         zero:
-        one: "تقييم التأثير"
+        one: Asesiad o'r effaith
         two:
         few:
         many:
-        other: "تقييمات التأثير"
+        other: Asesiadau o'r effaith
       imported:
         zero:
-        one: "استلم - بانتظار الطباعة"
+        one: wedi mewngludo - yn disgwyl math
         two:
         few:
         many:
-        other: "استلم - بانتظار الطباعة"
+        other: wedi mewngludo - yn disgwyl math
       independent_report:
         zero:
-        one: "تقرير مستقل"
+        one: Adroddiad annibynnol
         two:
         few:
         many:
-        other: "تقارير مستقلة"
+        other: Adroddiadau annibynnol
       international_treaty:
         zero:
         one:
@@ -154,32 +152,32 @@ ar:
         other:
       map:
         zero:
-        one: "خريطة"
+        one: Map
         two:
         few:
         many:
-        other: "خرائط"
+        other: Mapiau
       national_statistics:
         zero:
-        one: "إحصائية - إحصائية محلية"
+        one: Ystadegau - ystadegau gwladol
         two:
         few:
         many:
-        other: "إحصائيات - إحصائيات محلية"
+        other: Ystadegau - ystadegau gwladol
       news_article:
         zero:
-        one: "مقال إخباري"
+        one: Erthygl newyddion
         two:
         few:
         many:
-        other: "مقالات إخبارية"
+        other: Erthyglau newyddion
       news_story:
         zero:
-        one: "قصة إخبارية"
+        one: Stori newyddion
         two:
         few:
         many:
-        other: "قصص إخبارية"
+        other: Straeon newyddion
       notice:
         zero:
         one:
@@ -189,53 +187,53 @@ ar:
         other:
       open_consultation:
         zero:
-        one: "مشاورة جارية"
+        one: Ymgynghoriad ar agor
         two:
         few:
         many:
-        other: "مشاورات جارية"
+        other: Ymgynghoriadau ar agor
       oral_statement:
         zero:
-        one: "تصريح شفهي للبرلمان"
+        one: Datganiad llafar i'r senedd
         two:
         few:
         many:
-        other: "تصريحات شفهية للبرلمان"
+        other: Datganiadau llafar i'r senedd
       policy:
         zero:
-        one: "سياسة"
+        one: Polisi
         two:
         few:
         many:
-        other: "سياسات"
+        other: Polisïau
       policy_paper:
         zero:
-        one: "ورقة عن السياسة"
+        one: Papur polisi
         two:
         few:
         many:
-        other: "ورقة عن السياسات"
+        other: Papurau polisi
       press_release:
         zero:
-        one: "بيان صحفي"
+        one: Datganiad i'r wasg
         two:
         few:
         many:
-        other: "بيانات صحفية"
+        other: Datganiadau i'r wasg
       promotional:
         zero:
-        one: "مادة ترويجية"
+        one: Deunydd hyrwyddo
         two:
         few:
         many:
-        other: "مواد ترويجية"
+        other: Deunydd hyrwyddo
       publication:
         zero:
-        one: "مطبوعة"
+        one: Cyhoeddiad
         two:
         few:
         many:
-        other: "مطبوعات"
+        other: Cyhoeddiadau
       regulation:
         zero:
         one:
@@ -245,46 +243,46 @@ ar:
         other:
       research:
         zero:
-        one: "بحث وتحليل"
+        one: Ymchwil a dadansoddiad
         two:
         few:
         many:
-        other: "بحوث وتحليلات"
+        other: Ymchwil a dadansoddiad
       speaking_notes:
         zero:
-        one: "مذكرات كلامية"
+        one: Nodiadau siarad
         two:
         few:
         many:
-        other: "مذكرات كلامية"
+        other: Nodiadau siarad
       speech:
         zero:
-        one: "كلمة"
+        one: Araith
         two:
         few:
         many:
-        other: "كلمات"
+        other: Areithiau
       statement_to_parliament:
         zero:
-        one: "تصريح للبرلمان"
+        one: Datganiad i'r senedd
         two:
         few:
         many:
-        other: "تصريحات للبرلمان"
+        other: Datganiadau i'r senedd
       statistical_data_set:
         zero:
-        one: "مجموعة بيانات إحصائية"
+        one: Set data ystadegol
         two:
         few:
         many:
-        other: "مجموعات بيانات إحصائية"
+        other: Setiau data ystadegol
       statistics:
         zero:
-        one: "إحصائية"
+        one: Ystadegau
         two:
         few:
         many:
-        other: "إحصائيات"
+        other: Ystadegau
       statutory_guidance:
         zero:
         one:
@@ -294,32 +292,32 @@ ar:
         other:
       transcript:
         zero:
-        one: "نص منسوخ"
+        one: Trawsgrifiad
         two:
         few:
         many:
-        other: "نصوص منسوخة"
+        other: Trawsgrifiadau
       transparency:
         zero:
-        one: "بيانات تتعلق بالشفافية"
+        one: Data tryloywder
         two:
         few:
         many:
-        other: "بيانات تتعلق بالشفافية"
+        other: Data tryloywder
       worldwide_priority:
         zero:
-        one: "أولوية في الخارج"
+        one: Blaenoriaeth fyd-eang
         two:
         few:
         many:
-        other: "أولويات في الخارج"
+        other: Blaenoriaethau byd-eang
       written_statement:
         zero:
-        one: "تصريح خطي"
+        one: Datganiad ysgrifenedig i'r Senedd
         two:
         few:
         many:
-        other: "تصريحات خطية"
+        other: Datganiadau ysgrifenedig i'r Senedd
     metadata:
-      published: "نشر"
-      updated: "تحديث"
+      published: cyhoeddwyd
+      updated: diweddarwyd

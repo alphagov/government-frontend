@@ -1,0 +1,143 @@
+si:
+  language_names:
+    si: "සිංහල"
+  content_item:
+    format:
+      announcement:
+        one: "නිවේදනය"
+        other: "නිවේදන"
+      authored_article:
+        one: "රචිත ලිපිය  "
+        other: "රචිත ලිපි"
+      case_study:
+        one: "සිද්ධි අධ්යනයනය"
+        other: "සිද්ධීන්  අධ්යයයනය"
+      closed_consultation:
+        one: "සංවෘත මත විමසුම"
+        other: "සංවෘත"
+      consultation:
+        one: " මත විමසුම"
+        other: "මත විමසුම්"
+      consultation_outcome:
+        one: "මත විමසුමේ ප්‍රතිපල"
+        other: "මත විමසුමේ ප්‍රතිපලයන්"
+      corporate_report:
+        one: "සංවිධාන වාර්තාව"
+        other: "සංවිධාන වාර්තා"
+      correspondence:
+        one: "ලිපි ගනුදෙනුව  "
+        other: "ලිපි ගනුදෙනු"
+      decision:
+        one:
+        other:
+      detailed_guidance:
+        one: "විස්තරාත්මක උපදෙස්"
+        other: "විස්තරාත්මක උපදෙස්"
+      document_collection:
+        one: "කාණ්ඩය"
+        other:
+      draft_text:
+        one: "අශෝදිත වැකිය"
+        other: "අශෝදිත වැකි"
+      fatality_notice:
+        one: "තීරණාත්මක  දැන්වීම"
+        other: "තීරණාත්මක  දැන්වීම්"
+      foi_release:
+        one: "එෆ්. ඉ. ඕ. දැන්වීම"
+        other: "එෆ්. ඉ. ඕ. දැන්වීම්"
+      form:
+        one: "පෝරමය"
+        other: "පෝරම"
+      government_response:
+        one: "ආණ්ඩුවේ ප්‍රතිචාරය"
+        other: "ආණ්ඩුවේ ප්‍රතිචාර"
+      guidance:
+        one: "උපදෙස්"
+        other: "උපදෙස්"
+      impact_assessment:
+        one: "ප්‍රතිපල ඇගයීම"
+        other: "ප්‍රතිපල ඇගයීම්"
+      imported:
+        one: "ගෙන්වන ලද - ටයිප් කිරීමට මදක් ඉන්න"
+        other: "ගෙන්වන ලද - ටයිප් කිරීමට මදක් ඉන්න"
+      independent_report:
+        one: "ස්වාධීන වාර්තාව"
+        other: "ස්වාධීන වාර්තා"
+      international_treaty:
+        one:
+        other:
+      map:
+        one: "සිතියම"
+        other: "සිතියම්"
+      national_statistics:
+        one: "සංඛ්යාන - ජාතික සංඛ්යාන"
+        other: "සංඛ්යාන - ජාතික සංඛ්යාන"
+      news_article:
+        one: "පුවත් ලිපිය"
+        other: "පුවත් ලිපි"
+      news_story:
+        one: "පුවත් වාර්තාව"
+        other: "පුවත් වාර්තා"
+      notice:
+        one:
+        other:
+      open_consultation:
+        one: "විවෘත මත විමසුම"
+        other: "විවෘත මත විමසුම්"
+      oral_statement:
+        one: " පාර්ලිමේන්තුවේ වාචික ප්රුකාශය"
+        other: "පාර්ලිමේන්තුවේ වාචික ප්රේකාශ"
+      policy:
+        one: "ප්රතතිපත්තිය"
+        other: "ප්‍රතිපත්තීන්"
+      policy_paper:
+        one: "ප්‍රතිපත්ති  ලිපිය"
+        other: "ප්‍රතිපත්ති  ලිපි"
+      press_release:
+        one: "මාධ්යි නිවේදනය"
+        other: "මාධ්යි නිවේදන"
+      promotional:
+        one: "ප්ර්චාරණ ද්රිච්ය"
+        other: "ප්ර්චාරණ ද්රිච්ය"
+      publication:
+        one: "ප්ර්කාශනය"
+        other: "ප්ර්කාශන"
+      regulation:
+        one:
+        other:
+      research:
+        one: "පර්යේෂණ සහ විශ්ලේෂණ"
+        other: "පර්යේෂණ සහ විශ්ලේෂණ"
+      speaking_notes:
+        one: "දේශනයට අදාළ සටහන්"
+        other: "දේශනයට අදාළ සටහන්"
+      speech:
+        one: "කථාව"
+        other: "කථා"
+      statement_to_parliament:
+        one: "පාර්ලිමේන්තුවට කල ප්‍රකාශය"
+        other: "පාර්ලිමේන්තුවට කල ප්‍රකාශ"
+      statistical_data_set:
+        one: "සංඛ්යාන දත්ත සමූහය  "
+        other: "සංඛ්යාන දත්ත සමූහ"
+      statistics:
+        one: "සංඛ්යාන"
+        other: "සංඛ්යාන"
+      statutory_guidance:
+        one:
+        other:
+      transcript:
+        one: "අනුපත"
+        other: " අනුපත්"
+      transparency:
+        one: "විනිවිධභාවයේ දත්ත"
+        other: "විනිවිධභාවයේ දත්ත"
+      worldwide_priority:
+        one: "ලෝක ප්‍රමුඛතාව"
+        other: "ලෝක ප්‍රමුඛතා"
+      written_statement:
+        one: "පාර්ලිමේන්තුවට කල ලිඛිත ප්‍රකාශය"
+        other: "පාර්ලිමේන්තුවට කල ලිඛිත ප්‍රකාශ"
+    metadata:
+      published: "පල කරන ලදී"
+      updated: "යාවත්කාලීන කල"

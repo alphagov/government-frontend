@@ -16,7 +16,7 @@ uk:
       case_study:
         one: "Тематичне дослідження"
         few:
-        many: 
+        many:
         other: "Тематичні дослідження"
       closed_consultation:
         one: "Закрите обговорення"
@@ -228,3 +228,6 @@ uk:
         few:
         many:
         other: "Письмові заяви у парламенті"
+    metadata:
+      published: "опубліковано"
+      updated: "оновлено"
