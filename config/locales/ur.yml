@@ -3,12 +3,143 @@ ur:
     direction: rtl
   content_item:
     format:
+      announcement:
+        one: "اعلان"
+        other: "اعلانات"
+      authored_article:
+        one: "تحریر کردہ مضمون"
+        other: "تحریر کردہ مضامین"
       case_study:
-        one: کیس اسٹڈی
-        other: کیس اسٹڈیز
+        one: "کیس اسٹڈی"
+        other: "کیس اسٹڈیز"
+      closed_consultation:
+        one: "مشاورت ختم"
+        other: " مشاورت ختم"
+      consultation:
+        one: "مشاورت"
+        other: "مشاورت"
+      consultation_outcome:
+        one: "مشاورت کا نتیجہ"
+        other: "مشاورت کے نتائج"
+      corporate_report:
+        one: "کارپوریٹ رپورٹ"
+        other: "کارپوریٹ رپورٹس"
+      correspondence:
+        one: "مراسلت"
+        other: "مراسلات"
+      decision:
+        one:
+        other:
+      detailed_guidance:
+        one: "مفصل رہنمائی"
+        other: "مفصل رہنمائی"
+      document_collection:
+        one: "سلسلہ"
+        other:
+      draft_text:
+        one: "ڈرافٹ متن"
+        other: "ڈرافٹ متن"
+      fatality_notice:
+        one: "وفات کی اطلاع"
+        other: "وفات کی اطلاعات"
+      foi_release:
+        one: "آزادئی معلومات کی اشاعت"
+        other: "آزادئی معلومات کی اشاعت"
+      form:
+        one: "فارم"
+        other: "فارمز"
+      government_response:
+        one: "حکومتی جوابی اقدام"
+        other: "حکومتی جوابی اقدامات"
+      guidance:
+        one: "رہنمائی"
+        other: "رہنمائی"
+      impact_assessment:
+        one: "اثرات کا تجزیہ"
+        other: "اثرات کے تجزیے"
+      imported:
+        one: "امپورٹڈ- نوع کا انتظار"
+        other: "امپورٹڈ- نوع کا انتظار"
+      independent_report:
+        one: "غیر جانبدار رپورٹ"
+        other: "غیر جانبداررپورٹس"
+      international_treaty:
+        one:
+        other:
+      map:
+        one: "نقشہ"
+        other: "نقشے"
+      national_statistics:
+        one: "شماریات- قومی اعدادوشمار"
+        other: "شماریات- قومی اعدادوشمار"
+      news_article:
+        one: "نیوزآرٹیکل"
+        other: "نیوزآرٹیکلز"
+      news_story:
+        one: "نیوز اسٹوری"
+        other: "نیوزاسٹوریز"
+      notice:
+        one:
+        other:
+      open_consultation:
+        one: "جاری مشاورت"
+        other: "جاری مشاورت"
+      oral_statement:
+        one: "پارلیمنٹ میں زبانی بیان"
+        other: "پارلیمنٹ میں زبانی بیانات"
+      policy:
+        one: "پالیسی"
+        other: "پالیسیاں"
+      policy_paper:
+        one: "پالیسی پیپر"
+        other: "پالیسی پیپرز"
+      press_release:
+        one: "پریس ریلیز"
+        other: "پریس ریلیزز"
+      promotional:
+        one: "تشہیری مواد"
+        other: "تشہیری مواد"
+      publication:
+        one: "مطبوعہ"
+        other: "مطبوعات"
+      regulation:
+        one:
+        other:
+      research:
+        one: "تحقیق وتجزیہ"
+        other: "تحقیق وتجزیہ"
+      speaking_notes:
+        one: "تقریری نوٹ"
+        other: "تقریری نوٹ"
+      speech:
+        one: "تقریر"
+        other: "تقاریر"
+      statement_to_parliament:
+        one: "پارلیمنٹ میں بیان"
+        other: "پارلیمنٹ میں بیانات"
+      statistical_data_set:
+        one: "شماریاتی ڈیٹا سیٹ"
+        other: " شماریاتی ڈیٹا سیٹس"
+      statistics:
+        one: "اعدادوشمار"
+        other: "اعدادو شمار"
+      statutory_guidance:
+        one:
+        other:
+      transcript:
+        one: "ٹرانسکرپٹ"
+        other: "ٹرانسکرپٹس"
+      transparency:
+        one: "ٹرانسپیرنسی ڈیٹا"
+        other: "ٹرانسپیرنسی ڈیٹا"
+      worldwide_priority:
+        one: "عالمی ترجیح"
+        other: "عالمی ترجیحات"
+      written_statement:
+        one: "پارلیمنٹ میں تحریری بیان"
+        other: "پارلیمنٹ میں تحریری بیانات"
     metadata:
-      published: شائع شدہ
-      updated: تجدید شدہ
+      published: "شائع شدہ"
+      updated: "تجدید شدہ"
   language_names:
-    ur: اردو
-
+    ur: "اردو"
