@@ -83,6 +83,13 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal expected_history, presented_case_study_with_updates.history
   end
 
+  test '#history returns an empty array if the content item is not published' do
+    never_published = case_study
+    never_published['details'].delete('first_public_at')
+    presented = ContentItemPresenter.new(never_published)
+    assert_equal [], presented.history
+  end
+
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example('case_study', 'translated')
     locales = ContentItemPresenter.new(translated).available_translations
