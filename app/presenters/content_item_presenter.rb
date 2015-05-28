@@ -59,16 +59,16 @@ class ContentItemPresenter
     content_item["details"]["image"]
   end
 
-  def archived?
+  def withdrawn?
     content_item["details"].include? "archive_notice"
   end
 
   def page_title
-    archived? ? "[Archived] #{title}" : title
+    withdrawn? ? "[Withdrawn] #{title}" : title
   end
 
 
-  def archive_notice
+  def withdrawal_notice
     notice = content_item["details"]["archive_notice"]
     {
       time: content_tag(:time, display_time(notice["archived_at"]), datetime: notice["archived_at"]),
