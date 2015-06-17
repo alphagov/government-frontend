@@ -60,7 +60,7 @@ class ContentItemPresenter
   end
 
   def withdrawn?
-    content_item["details"].include?("archive_notice") || content_item["details"].include?("withdrawn_notice")
+    content_item["details"].include?("withdrawn_notice")
   end
 
   def page_title
@@ -72,11 +72,6 @@ class ContentItemPresenter
     if notice = content_item["details"]["withdrawn_notice"]
       {
         time: content_tag(:time, display_time(notice["withdrawn_at"]), datetime: notice["withdrawn_at"]),
-        explanation: notice["explanation"]
-      }
-    elsif notice = content_item["details"]["archive_notice"]
-      {
-        time: content_tag(:time, display_time(notice["archived_at"]), datetime: notice["archived_at"]),
         explanation: notice["explanation"]
       }
     end
