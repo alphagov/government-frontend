@@ -37,9 +37,6 @@ module GovernmentFrontend
     # Disable rack::cache
     config.action_dispatch.rack_cache = nil
 
-    # Caching
-    config.cache_control_directive = 'public'
-
     # Path within public/ where assets are compiled to
     config.assets.prefix = '/government-frontend'
   end

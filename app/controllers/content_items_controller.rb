@@ -33,7 +33,9 @@ private
   end
 
   def set_expiry
-    super(@content_item.content_item.expires_in)
+    max_age = @content_item.content_item.cache_control.max_age
+    cache_private  = @content_item.content_item.cache_control.private?
+    expires_in(max_age, public: !cache_private)
   end
 
   def set_locale
