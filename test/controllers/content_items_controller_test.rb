@@ -22,13 +22,20 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "sets the expiry as sent by content-store" do
     content_item = content_store_has_schema_example('coming_soon', 'coming_soon')
-
-    expires_in = 20
-    content_store_has_item(content_item['base_path'], content_item, expires_in)
+    content_store_has_item(content_item['base_path'], content_item, max_age: 20)
 
     get :show, path: path_for(content_item)
     assert_response :success
     assert_equal "max-age=20, public", @response.headers['Cache-Control']
+  end
+
+  test "honours cache-control private items" do
+    content_item = content_store_has_schema_example('coming_soon', 'coming_soon')
+    content_store_has_item(content_item['base_path'], content_item, private: true)
+
+    get :show, path: path_for(content_item)
+    assert_response :success
+    assert_equal "max-age=900, private", @response.headers['Cache-Control']
   end
 
   test "renders translated content items in their locale" do
