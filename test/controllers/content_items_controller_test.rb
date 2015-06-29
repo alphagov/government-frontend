@@ -77,6 +77,15 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test "returns 403 for access-limited item" do
+    path = 'government/case-studies/super-sekrit-document'
+    url = CONTENT_STORE_ENDPOINT + "/content/" + path
+    stub_request(:get, url).to_return(status: 403, headers: {})
+
+    get :show, path: path
+    assert_response :forbidden
+  end
+
   test 'content item without images is rendered with a placeholder image' do
     content_item_without_images = govuk_content_schema_example('case_study', 'case_study')
     content_item_without_images['details'].delete('image')
