@@ -1,6 +1,8 @@
 require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
+  rescue_from GdsApi::HTTPForbidden, with: :error_403
+
   def show
     if load_content_item
       set_expiry
@@ -48,5 +50,11 @@ private
 
   def content_store
     @content_store ||= GdsApi::ContentStore.new(Plek.current.find("content-store"))
+  end
+
+  private
+
+  def error_403(exception)
+    render text: exception.message, status: 403
   end
 end
