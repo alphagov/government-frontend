@@ -48,7 +48,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.5.2)
-    gds-api-adapters (20.0.0)
+    gds-api-adapters (20.1.1)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -169,7 +169,7 @@ DEPENDENCIES
   airbrake (= 4.0)
   better_errors
   binding_of_caller
-  gds-api-adapters (= 20.0.0)
+  gds-api-adapters (= 20.1.1)
   govuk-content-schema-test-helpers (= 1.1.0)
   govuk_frontend_toolkit (= 2.0.1)
   logstasher (= 0.6.1)
