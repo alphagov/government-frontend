@@ -27,4 +27,3 @@ group :test do
   gem 'webmock', '~> 1.18.0', :require => false
   gem 'govuk-content-schema-test-helpers', '1.1.0'
 end
-
