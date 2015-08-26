@@ -7,6 +7,7 @@
   <!--[if IE 7]><%= stylesheet_link_tag "application-ie7" %><script>var ieVersion = 7;</script><![endif]-->
   <!--[if IE 8]><%= stylesheet_link_tag "application-ie8" %><script>var ieVersion = 8;</script><![endif]-->
   <%= csrf_meta_tags %>
+  <%= render partial: 'govuk_component/analytics_identifiers', locals: { content_item: @content_item.content_item } %>
 </head>
 <body>
   <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
