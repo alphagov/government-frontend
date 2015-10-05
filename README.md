@@ -8,6 +8,10 @@ parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
 ![A  Case Study](https://raw.githubusercontent.com/alphagov/government-frontend/master/docs/assets/case-study-screenshot.png)
 
+## Live examples
+
+- [gov.uk/government/case-studies/2013-elections-in-swaziland](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland)
+
 ## Technical documentation
 
 This is a Ruby on Rails application that fetches documents from
