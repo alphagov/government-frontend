@@ -22,8 +22,8 @@ private
   end
 
   def present(content_item)
-    if ENV["FLAG_ENABLE_SERVICE_MANUAL"].present? && content_item['format'] == 'short_text'
-      return ShortTextPresenter.new(content_item)
+    if ENV["FLAG_ENABLE_SERVICE_MANUAL"].present? && content_item['format'] == 'service_manual_guide'
+      return ServiceManualGuidePresenter.new(content_item)
     end
 
     case content_item['format']
