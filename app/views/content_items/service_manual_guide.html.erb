@@ -1,0 +1,11 @@
+<h1>
+  <%= @content_item.title %>
+</h1>
+
+<ul class="header-links">
+  <% @content_item.header_links.each do |header_link| %>
+    <li><a href="<%=header_link[:href]%>"><%=header_link[:title]%></a></li>
+  <% end %>
+</ul>
+
+<%= @content_item.body.html_safe %>
