@@ -10,4 +10,10 @@
   <% end %>
 </ul>
 
-<%= @content_item.body.html_safe %>
+<div class="grid-row">
+  <div class="column-third">
+  </div>
+  <div class="column-two-thirds">
+     <%= @content_item.body.html_safe %>
+  </div>
+</div>
