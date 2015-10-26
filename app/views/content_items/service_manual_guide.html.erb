@@ -46,7 +46,9 @@
         <dt>Related discussion:</dt>
         <dd><a href="/government/topics/arts-and-culture" rel="external">Arts and culture</a></dd>
         <dt>Last updated:</dt>
-        <dd><a href="#">Updated 2 weeks ago</a></dd>
+        <dd>
+          <%= link_to @content_item.last_updated_ago_in_words, "#", title: @content_item.last_update_timestamp %>
+        </dd>
       </dl>
     </div>
 
