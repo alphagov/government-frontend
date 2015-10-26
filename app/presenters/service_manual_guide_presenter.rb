@@ -7,8 +7,8 @@ class ServiceManualGuidePresenter
 
     @title = content_item["title"]
     @body = content_item["details"]["body"]
-    @header_links = content_item["details"]["header_links"]
-                      .map{|h| ActiveSupport::HashWithIndifferentAccess.new(h)}
+    @header_links = Array(content_item["details"]["header_links"])
+                      .map{ |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
     @format = content_item["format"]
   end
 
