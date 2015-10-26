@@ -6,6 +6,14 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
     assert_equal "service_manual_guide", presented_guide.format
     assert presented_guide.body.size > 10
     assert presented_guide.header_links.size >= 1
+
+    content_owner = presented_guide.content_owner
+    assert content_owner.title.present?
+    assert content_owner.href.present?
+
+    related_discussion = presented_guide.related_discussion
+    assert related_discussion.title.present?
+    assert related_discussion.href.present?
   end
 
   test '#last_updated_ago_in_words outputs a human readable definition of time ago' do
