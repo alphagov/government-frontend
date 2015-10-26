@@ -1,20 +1,28 @@
 require 'test_helper'
 
 class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
-  test 'presents the basic details required to display a short text item' do
-    assert_equal "the title", presented_short_text.title
-    assert_equal "the format", presented_short_text.format
-    assert_equal "the body", presented_short_text.body
-    assert_equal [{"title" => "title", "href" => "href"}], presented_short_text.header_links
+  test 'presents the basic details required to display a Service Manual Guide' do
+    assert_equal "Agile", presented_guide.title
+    assert_equal "service_manual_guide", presented_guide.format
+    assert presented_guide.body.size > 10
+    assert presented_guide.header_links.size >= 1
   end
 
-  private
+  test '#last_updated_ago_in_words outputs a human readable definition of time ago' do
+    guide = presented_guide('public_updated_at' => 1.year.ago.iso8601)
+    assert_equal 'about 1 year ago', guide.last_updated_ago_in_words
+  end
 
-  def presented_short_text
-    ServiceManualGuidePresenter.new({
-      "title"  => "the title",
-      "details" => { "body" => "the body", "header_links" => [{"title" => "title", "href" => "href"}]},
-      "format" => "the format",
-    })
+  test '#last_update_timestamp outputs a nicely formatted timestamp' do
+    guide = presented_guide('public_updated_at' => '2014-10-26T10:27:34Z')
+    assert_equal '26 October 2014 10:27', guide.last_update_timestamp
+  end
+
+private
+
+  def presented_guide(overriden_attributes = {})
+    ServiceManualGuidePresenter.new(
+      JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('service_manual_guide', 'basic_with_related_discussions')).merge(overriden_attributes)
+    )
   end
 end
