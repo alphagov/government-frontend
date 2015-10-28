@@ -97,6 +97,14 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_select '.sidebar-image img[src="/government-frontend/placeholder.jpg"]', count: 1
   end
 
+  test 'when feature flag is NOT set, it does not get service manual content' do
+    content_item = content_store_has_schema_example('service_manual_guide', 'basic_with_related_discussions')
+
+    assert_raises do
+      get :show, path: path_for(content_item)
+    end
+  end
+
   test 'when feature flag is set, it gets service manual content' do
     ENV["FLAG_ENABLE_SERVICE_MANUAL"] = "yes"
     content_item = content_store_has_schema_example('service_manual_guide', 'basic_with_related_discussions')
