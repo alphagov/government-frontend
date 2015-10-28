@@ -11,6 +11,10 @@
 @import "views/coming-soon";
 @import "views/unpublishing";
 
+.service-manual-guide {
+  @import "views/service-manual-guide";
+}
+
 // HELPERS
 // Styles for comment page elements
 @import "helpers/available-languages";
