@@ -12,6 +12,7 @@
 @import "views/unpublishing";
 
 .service-manual-guide {
+  @import "components/breadcrumb";
   @import "views/service-manual-guide";
 }
 
