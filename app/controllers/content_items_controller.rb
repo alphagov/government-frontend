@@ -28,6 +28,7 @@ private
       when 'unpublishing' then UnpublishingPresenter.new(content_item)
       when 'coming_soon' then ComingSoonPresenter.new(content_item)
       when 'service_manual_guide' then ServiceManualGuidePresenter.new(content_item)
+      when 'service_manual_section' then ServiceManualSectionPresenter.new(content_item)
       else raise "No support for format \"#{content_item['format']}\""
     end
   end

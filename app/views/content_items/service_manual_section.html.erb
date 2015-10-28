@@ -1,0 +1,35 @@
+<%= content_for :page_class, @content_item.format.dasherize.pluralize %>
+<%= content_for :title, @content_item.title %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: "Service Manual Section",
+        title: @content_item.title,
+        average_title_length: 'long' %>
+  </div>
+
+  <div class="column-third">
+  </div>
+
+  <div class="column-two-thirds">
+  </div>
+</div>
+
+<p class="description"><%= @content_item.description %></p>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <% @content_item.link_groups.each do |link_group| %>
+      <h2><%= link_group.title %></h2>
+      <div><%= link_group.description %></div>
+      <ul>
+        <% link_group.linked_items.each do |linked_item| %>
+          <li>
+            <%= link_to linked_item.label, linked_item.href %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>
