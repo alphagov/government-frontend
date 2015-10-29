@@ -1,0 +1,16 @@
+.page-title {
+  margin-top: 1.875em; // 30/16
+  margin-bottom: 1.875em; // 30/16
+  @include media(tablet) {
+    margin-bottom: 2.5em; // 40/16
+  }
+}
+
+.page-title-context {
+  @include core-24;
+  color: $secondary-text-colour;
+}
+
+.page-title-heading {
+  @include bold-48;
+}

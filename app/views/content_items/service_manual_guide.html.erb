@@ -1,11 +1,77 @@
-<h1>
-  <%= @content_item.title %>
-</h1>
+<%= content_for :page_class, "service-manual-guide" %>
 
-<ul class="header-links">
-  <% @content_item.header_links.each do |header_link| %>
-    <li><a href="<%=header_link[:href]%>"><%=header_link[:title]%></a></li>
-  <% end %>
-</ul>
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <ol>
+    <li><a href="/">Service Manual</a></li>
+    <li><a href="/">Topic</a></li>
+    <li>Guide name</li>
+  </ol>
+</div>
 
-<%= @content_item.body.html_safe %>
+<!-- Page title and contact -->
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <!-- Page title -->
+    <div class="page-title">
+      <p class="page-title-context">
+        Topic
+      </p>
+      <h1 class="page-title-heading">
+        <%= @content_item.title %>
+      </h1>
+    </div>
+
+  </div>
+  <div class="column-third">
+
+    <div class="community-contact">
+      <p>
+        Contact the <a href="#">Agile community</a> with any comments or questions.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Metadata-->
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+    <div class="metadata">
+      <dl>
+        <dt>Published by:</dt>
+        <dd><a href="#">Design community</a></dd>
+        <dt>Related discussion:</dt>
+        <dd><a href="/government/topics/arts-and-culture" rel="external">Arts and culture</a></dd>
+        <dt>Last updated:</dt>
+        <dd><a href="#">Updated 2 weeks ago</a></dd>
+      </dl>
+    </div>
+
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-third">
+
+    <!--  Page contents -->
+    <div class="page-contents">
+      <h3 class="page-contents-title">Page contents:</h3>
+      <ul class="page-contents-links">
+        <% @content_item.header_links.each do |header_link| %>
+          <li><a href="<%=header_link[:href]%>"><%=header_link[:title]%></a></li>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+  <div class="column-two-thirds">
+
+    <div class="prose">
+      <%= @content_item.body.html_safe %>
+    </div>
+
+  </div>
+</div>
