@@ -1,11 +1,8 @@
-class UnpublishingPresenter
-  attr_reader :alternative_url, :content_item, :explanation, :format, :locale
+class UnpublishingPresenter < ContentItemPresenter
+  attr_reader :alternative_url, :explanation
 
   def initialize(content_item)
-    @content_item = content_item
-
-    @format = content_item['format']
-    @locale = content_item['locale']
+    super
     @explanation = content_item['details']['explanation']
     @alternative_url = content_item['details']['alternative_url']
   end
