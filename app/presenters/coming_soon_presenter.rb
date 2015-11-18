@@ -1,12 +1,8 @@
-class ComingSoonPresenter
-  attr_reader :content_item, :title, :format, :locale, :publish_time
+class ComingSoonPresenter < ContentItemPresenter
+  attr_reader :publish_time
 
   def initialize(content_item)
-    @content_item = content_item
-
-    @title = content_item["title"]
-    @format = content_item["format"]
-    @locale = content_item["locale"] || "en"
+    super
     @publish_time = content_item["details"]["publish_time"]
   end
 
