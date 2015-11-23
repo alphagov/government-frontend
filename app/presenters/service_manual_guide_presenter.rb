@@ -1,18 +1,15 @@
-class ServiceManualGuidePresenter
+class ServiceManualGuidePresenter < ContentItemPresenter
   ContentOwner = Struct.new(:title, :href)
   RelatedDiscussion = Struct.new(:title, :href)
 
   include ActionView::Helpers::DateHelper
-  attr_reader :content_item, :title, :body, :format, :locale, :publish_time, :header_links
+  attr_reader :body, :publish_time, :header_links
 
   def initialize(content_item)
-    @content_item = content_item
-
-    @title = content_item["title"]
+    super
     @body = content_item["details"]["body"]
     @header_links = Array(content_item["details"]["header_links"])
                       .map{ |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
-    @format = content_item["format"]
   end
 
   def content_owner
