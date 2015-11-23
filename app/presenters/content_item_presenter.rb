@@ -1,5 +1,5 @@
 class ContentItemPresenter
-  attr_reader :content_item, :title, :description, :format, :locale
+  attr_reader :content_item, :title, :description, :format, :locale, :phase
 
   def initialize(content_item)
     @content_item = content_item
@@ -7,6 +7,7 @@ class ContentItemPresenter
     @description = content_item["description"]
     @format = content_item["format"]
     @locale = content_item["locale"] || "en"
+    @phase = content_item["phase"]
   end
 
   def available_translations
