@@ -2,7 +2,6 @@ require 'test_helper'
 
 class PhaseLabelTest < ActionDispatch::IntegrationTest
   test "Beta phase label is displayed for a Service Manual Guide in phase 'beta'" do
-    ENV["FLAG_ENABLE_SERVICE_MANUAL"] = 'yes'
     guide_sample = JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('service_manual_guide', 'basic_with_related_discussions'))
     guide_sample.merge!("phase" => "beta")
     content_store_has_item("/service-manual/agile", guide_sample.to_json)
@@ -10,7 +9,6 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
     visit "/service-manual/agile"
 
     assert_has_phase_label "beta"
-    ENV.delete("FLAG_ENABLE_SERVICE_MANUAL")
   end
 
   test "Alpha phase label is displayed for a Case Study in phase 'alpha'" do

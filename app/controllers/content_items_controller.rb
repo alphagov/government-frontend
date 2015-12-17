@@ -22,14 +22,11 @@ private
   end
 
   def present(content_item)
-    if ENV["FLAG_ENABLE_SERVICE_MANUAL"].present? && content_item['format'] == 'service_manual_guide'
-      return ServiceManualGuidePresenter.new(content_item)
-    end
-
     case content_item['format']
       when 'case_study' then CaseStudyPresenter.new(content_item)
       when 'unpublishing' then UnpublishingPresenter.new(content_item)
       when 'coming_soon' then ComingSoonPresenter.new(content_item)
+      when 'service_manual_guide' then ServiceManualGuidePresenter.new(content_item)
       else raise "No support for format \"#{content_item['format']}\""
     end
   end
