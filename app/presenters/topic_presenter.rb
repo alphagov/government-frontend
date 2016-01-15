@@ -1,4 +1,4 @@
-class ServiceManualSectionPresenter
+class TopicPresenter
   attr_reader :content_item, :title, :format, :description, :locale
 
   def initialize(content_item)
@@ -12,7 +12,7 @@ class ServiceManualSectionPresenter
 
   def link_groups
     links_data = content_item['links']['linked_items']
-    Array(content_item['details']['link_groups']).map do |group_data|
+    Array(content_item['details']['groups']).map do |group_data|
       LinkGroup.new(group_data, links_data)
     end
   end
@@ -20,18 +20,18 @@ class ServiceManualSectionPresenter
 private
 
   class LinkGroup
-    attr_reader :title, :description, :data
+    attr_reader :name, :description, :data
 
     def initialize(data, links)
       @data = data
       @links = links
 
-      @title = data['title']
+      @name = data['name']
       @description = data['description']
     end
 
     def linked_items
-      Array(data['linked_items']).map do |content_id|
+      Array(data['content_ids']).map do |content_id|
         LinkedItem.new(content_id, @links)
       end
     end
