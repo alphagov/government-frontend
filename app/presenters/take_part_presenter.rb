@@ -1,0 +1,3 @@
+class TakePartPresenter < ContentItemPresenter
+
+end
