@@ -12,24 +12,29 @@ class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
   test 'loads link groups' do
     topic = presented_topic
 
-    assert_equal 2, topic.link_groups.size
-    assert_equal ["Agile and government services", "Agile methods"], topic.link_groups.map(&:title)
-    assert_equal [true, true], topic.link_groups.map{ |lg| lg.description.present? }
+    assert_equal 2, topic.groups.size
+    assert_equal ["Group 1", "Group 2"], topic.groups.map(&:name)
+    assert_equal [true, true], topic.groups.map{ |lg| lg.description.present? }
   end
 
   test 'loads linked items within link groups and populates them with data from "links" based on content_id' do
-    groups = presented_topic.link_groups
-    assert_equal [2, 2], groups.map(&:linked_items).map(&:size)
+    groups = presented_topic.groups
+    assert_equal [2, 1], groups.map(&:linked_items).map(&:size)
 
-    agile_and_services_items = groups.find{ |li| li.title == "Agile and government services" }.linked_items
-    assert_equal ["Agile and government services: an introduction", "Agile methodology explained"], agile_and_services_items.map(&:label)
-    assert_equal ["/service-manual/agile-delivery/agile-and-government-services", "/service-manual/agile-delivery/agile-methodology-explained"], agile_and_services_items.map(&:href)
+    group_items = groups.find { |li| li.name == "Group 1" }.linked_items
+    assert_equal ["Accessibility", "Addresses"], group_items.map(&:label)
+    assert_equal ["/service-manual/user-centred-design/accessibility", "/service-manual/user-centred-design/resources/patterns/addresses"], group_items.map(&:href)
   end
 
   test 'does not fail if there are no linked_groups' do
-    topic = presented_topic(details: { link_groups: nil })
+    topic = presented_topic(details: { groups: nil })
 
-    assert_equal [], topic.link_groups
+    assert_equal [], topic.groups
+  end
+
+  test 'omits groups that have no published linked items' do
+    topic = presented_topic(links: { linked_items: [] }) # unpublished content_ids are filtered out from content-store responses
+    assert_equal 0, topic.groups.size
   end
 
 private
