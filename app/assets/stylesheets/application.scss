@@ -6,6 +6,9 @@
 @import 'typography';
 @import 'shims';
 
+// helpers for common page elements
+@import "helpers/available-languages";
+
 // pages specific view imports
 @import "views/case-studies";
 @import "views/coming-soon";
@@ -19,7 +22,3 @@
   @import "components/page-contents";
   @import "views/service-manual-guide";
 }
-
-// HELPERS
-// Styles for comment page elements
-@import "helpers/available-languages";
