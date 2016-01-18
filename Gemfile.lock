@@ -54,7 +54,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.5.2)
-    gds-api-adapters (20.1.1)
+    gds-api-adapters (27.0.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -93,7 +93,7 @@ GEM
     null_logger (0.0.1)
     plek (1.11.0)
     rack (1.5.5)
-    rack-cache (1.2)
+    rack-cache (1.5.1)
       rack (>= 0.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -178,7 +178,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara
-  gds-api-adapters (= 20.1.1)
+  gds-api-adapters (= 27.0.0)
   govuk-content-schema-test-helpers (= 1.1.0)
   govuk_frontend_toolkit (= 2.0.1)
   logstasher (= 0.6.1)
