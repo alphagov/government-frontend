@@ -1,25 +1,3 @@
 .take-part {
-
-  .description {
-    @include core-24;
-    margin: 0 0 $gutter-half;
-
-    @include media(tablet){
-      margin: 0 0 ($gutter*1.5);
-    }
-  }
-
-  .sidebar-image {
-    img {
-      max-width: 100%;
-    }
-    figcaption {
-      @include core-16;
-    }
-  }
-
-  .govuk-document-footer {
-    margin-bottom: $gutter*2;
-  }
-  
+  @include sidebar-with-body;
 }

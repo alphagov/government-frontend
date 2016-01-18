@@ -1,0 +1,24 @@
+@mixin sidebar-with-body {
+  .sidebar-with-body {
+    margin-bottom: $gutter * 1.5;
+  }
+
+  .description {
+    @include core-24;
+    margin-bottom: $gutter-half;
+
+    @include media(tablet) {
+      margin-bottom: $gutter * 1.5;
+    }
+  }
+
+  .sidebar-image {
+    img {
+      max-width: 100%;
+    }
+
+    figcaption {
+      @include core-16;
+    }
+  }
+}
