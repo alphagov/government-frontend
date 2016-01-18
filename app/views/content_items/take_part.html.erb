@@ -1,0 +1,28 @@
+<%= content_for :page_class, @content_item.format.dasherize %>
+<%= content_for :title, "#{@content_item.title}" %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: t("content_item.format.#{@content_item.format}", count: 1),
+        title: @content_item.title %>
+  </div>
+</div>
+
+<p class="description"><%= @content_item.description %></p>
+
+<div class="grid-row">
+  <% if (image = @content_item.image) %>
+  <div class="column-third">
+    <figure class="sidebar-image">
+      <img src="<%= image["url"] %>" alt="<%= image["alt_text"] %>">
+      <% if image["caption"].present? %><figcaption><%= image["caption"] %></figcaption><% end %>
+    </figure>
+  </div>
+  <% end %>
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+  </div>
+</div>
