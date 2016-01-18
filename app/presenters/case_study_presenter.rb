@@ -58,7 +58,6 @@ class CaseStudyPresenter < ContentItemPresenter
     withdrawn? ? "[Withdrawn] #{title}" : title
   end
 
-
   def withdrawal_notice
     if notice = content_item["details"]["withdrawn_notice"]
       {
@@ -69,7 +68,6 @@ class CaseStudyPresenter < ContentItemPresenter
   end
 
 private
-
   def display_time(timestamp)
     I18n.l(Date.parse(timestamp), format: "%-d %B %Y") if timestamp
   end
