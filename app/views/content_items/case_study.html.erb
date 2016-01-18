@@ -33,25 +33,8 @@
   </div>
 </div>
 
-<p class="description"><%= @content_item.description %></p>
-
-<div class="grid-row">
-  <div class="column-third">
-    <% if (image = @content_item.image) %>
-      <figure class="sidebar-image">
-        <img src="<%= image["url"] %>" alt="<%= image["alt_text"] %>">
-        <% if image["caption"].present? %><figcaption><%= image["caption"] %></figcaption><% end %>
-      </figure>
-    <% else %>
-      <div class="sidebar-image"><%= image_tag 'placeholder.jpg', alt: '' %></div>
-    <% end %>
-  </div>
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction %>
-  </div>
-</div>
+<%= render 'shared/description', description: @content_item.description %>
+<%= render 'shared/sidebar_with_body', content_item: @content_item %>
 
 <%= render 'govuk_component/document_footer',
         from: @content_item.from,
