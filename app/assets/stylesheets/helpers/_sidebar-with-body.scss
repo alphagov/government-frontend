@@ -4,6 +4,8 @@
   }
 
   .sidebar-image {
+    @include responsive-bottom-margin;
+
     img {
       max-width: 100%;
     }

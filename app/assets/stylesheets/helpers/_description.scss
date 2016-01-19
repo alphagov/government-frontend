@@ -1,10 +1,6 @@
 @mixin description {
   .description {
     @include core-24;
-    margin-bottom: $gutter-half;
-
-    @include media(tablet) {
-      margin-bottom: $gutter * 1.5;
-    }
+    @include responsive-bottom-margin;
   }
 }
