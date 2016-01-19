@@ -47,6 +47,7 @@ module GovukContentSchemaExamples
         case_study
         coming_soon
         redirect
+        take_part
         unpublishing
       }
     end
