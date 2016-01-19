@@ -26,12 +26,8 @@
     }
   }
 
-  .description {
-    margin-top: $gutter-half;
-
-    @include media(tablet) {
-      margin-top: $gutter * 1.5;
-    }
+  .govuk-metadata {
+    @include responsive-bottom-margin;
   }
 
   .govuk-document-footer {
