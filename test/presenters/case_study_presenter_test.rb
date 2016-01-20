@@ -91,8 +91,7 @@ class CaseStudyPresenterTest < ActiveSupport::TestCase
   end
 
 private
-
-  def presented_case_study(overrides={})
+  def presented_case_study(overrides = {})
     CaseStudyPresenter.new(case_study.merge(overrides))
   end
 

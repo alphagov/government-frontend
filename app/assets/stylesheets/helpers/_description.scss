@@ -1,0 +1,6 @@
+@mixin description {
+  .description {
+    @include core-24;
+    @include responsive-bottom-margin;
+  }
+}

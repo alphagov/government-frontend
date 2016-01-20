@@ -1,0 +1,17 @@
+@mixin sidebar-with-body {
+  .sidebar-with-body {
+    margin-bottom: $gutter * 1.5;
+  }
+
+  .sidebar-image {
+    @include responsive-bottom-margin;
+
+    img {
+      max-width: 100%;
+    }
+
+    figcaption {
+      @include core-16;
+    }
+  }
+}

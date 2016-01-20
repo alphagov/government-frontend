@@ -1,4 +1,7 @@
 .case-studies {
+  @include description;
+  @include sidebar-with-body;
+
   .direction-rtl & {
     direction: rtl;
     text-align: start;
@@ -10,7 +13,7 @@
     padding: 15px 10px;
     border: 5px solid $govuk-blue;
 
-    @include media(tablet){
+    @include media(tablet) {
       padding: 25px 10px;
       margin-bottom: $gutter;
     }
@@ -23,25 +26,11 @@
     }
   }
 
-  .description {
-    @include core-24;
-    margin: $gutter-half 0;
-
-    @include media(tablet){
-      margin: ($gutter*1.5) 0;
-    }
-  }
-
-  .sidebar-image {
-    img {
-      max-width: 100%;
-    }
-    figcaption {
-      @include core-16;
-    }
+  .govuk-metadata {
+    @include responsive-bottom-margin;
   }
 
   .govuk-document-footer {
-    margin-bottom: $gutter*2;
+    margin-bottom: $gutter * 1.5;
   }
 }
