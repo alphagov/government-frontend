@@ -45,6 +45,7 @@ module GovukContentSchemaExamples
     def supported_formats
       %w{
         case_study
+        statistics_announcement
         coming_soon
         redirect
         take_part

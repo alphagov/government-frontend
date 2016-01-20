@@ -1,0 +1,2 @@
+class StatisticsAnnouncementPresenter < ContentItemPresenter
+end
