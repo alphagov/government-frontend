@@ -37,6 +37,26 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     assert_equal 'About Midday on Tuesday', item.release_date
   end
 
+<<<<<<< HEAD
+=======
+  test 'knows if an item is a national statistic' do
+    item = presented_statistics_announcement({
+      "details" => {
+        "format_sub_type" => "official"
+      }
+    })
+    assert_not item.national_statistics?
+
+    item = presented_statistics_announcement({
+      "details" => {
+        "format_sub_type" => "national"
+      }
+    })
+    assert item.national_statistics?
+  end
+
+private
+>>>>>>> a2a2c5b... Add national statistics logo logic
   def presented_statistics_announcement(overrides = {})
     StatisticsAnnouncementPresenter.new(statistics_announcement.merge(overrides))
   end

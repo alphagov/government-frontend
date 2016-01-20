@@ -16,4 +16,8 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   def release_date
     content_item["details"]["display_date"]
   end
+
+  def national_statistics?
+    content_item["details"]["format_sub_type"] == 'national'
+  end
 end

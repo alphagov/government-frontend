@@ -8,6 +8,14 @@
         title: @content_item.title,
         average_title_length: "long" %>
   </div>
+
+  <% if @content_item.national_statistics? %>
+  <div class="column-third">
+    <div class="national-statistics-logo">
+      <%= image_tag 'national-statistics.png', alt: 'National Statistics' %>
+    </div>
+  </div>
+  <% end %>
 </div>
 
 <div class="grid-row">
