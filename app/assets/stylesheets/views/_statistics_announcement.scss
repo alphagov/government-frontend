@@ -1,3 +1,4 @@
 .statistics-announcement {
+  @include metadata;
   @include description;
 }
