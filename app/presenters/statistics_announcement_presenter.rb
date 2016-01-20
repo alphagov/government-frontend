@@ -12,4 +12,8 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
       link_to(policy_area["title"], policy_area["base_path"])
     }
   end
+
+  def release_date
+    content_item["details"]["display_date"]
+  end
 end

@@ -28,6 +28,15 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     assert_equal links, item.part_of
   end
 
+  test 'presents release_date' do
+    item = presented_statistics_announcement({
+      "details" => {
+        "display_date" => "About Midday on Tuesday"
+      }
+    })
+    assert_equal 'About Midday on Tuesday', item.release_date
+  end
+
   def presented_statistics_announcement(overrides = {})
     StatisticsAnnouncementPresenter.new(statistics_announcement.merge(overrides))
   end
