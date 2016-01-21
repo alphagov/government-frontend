@@ -1,46 +1,51 @@
 .govuk-govspeak--service-manual {
 
-  margin-top: 1em;
-  margin-bottom: 2em;
+  padding-top: 1em;
+
+  margin-bottom: (30/19)+em;
   @include media(tablet) {
-    margin-top: 2em;
-    margin-bottom: 4em;
+    margin-bottom: (45/19)+em;
+  }
+
+  > h2:first-of-type {
+    padding-top: (15/24)+em;
   }
 
   h2 {
     @include bold-24();
-    margin-top: 1.875em; // 45/24
-    margin-bottom: 0.833333333em; // 20/24
+    padding-top: (20/24)+em;
+    margin-bottom: (15/24)+em;
+    @include media(tablet) {
+      margin-bottom: (20/24)+em;
+    }
   }
 
   h3 {
     @include bold-19();
-    margin-top: 1.052631579em; // 20/19
+    margin-bottom: (15/19)+em;
+    @include media(tablet) {
+      margin-bottom:(20/19)+em;
+    }
+  }
+
+  p {
+    margin-bottom: (15/19)+em;
+    @include media(tablet) {
+      margin-bottom: (20/19)+em;
+    }
   }
 
   ol,
   ul {
-    @include core-19;
-    padding-left: 1.052631579em; // 20/19
-    margin-bottom: 1.052631579em; // 20/19
+    margin-top: 0;
+    margin-bottom: (15/19)+em;
+    @include media(tablet) {
+      margin-bottom: (20/19)+em;
+    }
   }
 
-  ul {
-    list-style-type: disc;
+  li {
+    margin-bottom: (10/19)+em;
   }
 
-  ol {
-    list-style-type: decimal;
-  }
-
-  ul li,
-  ol li {
-    margin-bottom: 0.263157895em // 5/19
-  }
-
-  p {
-    @include core-19;
-    margin-top: 0.263157895em; // 5/19
-    margin-bottom: 1.052631579em; // 20/19
-  }
 }
