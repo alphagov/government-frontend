@@ -26,6 +26,27 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
     assert_equal '26 October 2014 10:27', guide.last_update_timestamp
   end
 
+  test 'breadcrumbs have a root and a topic link' do
+    presented_guide = presented_guide({ "links" => { "topics" => [{ "title" => "Topic", "base_path" => "/service-manual/topic" }]}})
+    assert_equal [
+                   { title: "Service manual", url: "/service-manual"},
+                   { title: "Topic", url: "/service-manual/topic"},
+                   { title: "Agile" },
+                 ],
+                 presented_guide.breadcrumbs
+  end
+
+  test "breadcrumbs gracefully omit topic if it's not present" do
+    presented_guide = presented_guide({ "links" => {}})
+    assert_equal [
+                   { title: "Service manual", url: "/service-manual"},
+                   { title: "Agile" },
+                 ],
+                 presented_guide.breadcrumbs
+  end
+
+private
+
   def presented_guide(overriden_attributes = {})
     ServiceManualGuidePresenter.new(
       JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('service_manual_guide', 'basic_with_related_discussions')).merge(overriden_attributes)
