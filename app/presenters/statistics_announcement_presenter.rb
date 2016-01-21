@@ -17,7 +17,18 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     content_item["details"]["display_date"]
   end
 
+  def release_date_and_status
+    return "#{release_date} (#{state})" unless state == "cancelled"
+    release_date
+  end
+
   def national_statistics?
     content_item["details"]["format_sub_type"] == 'national'
+  end
+
+private
+
+  def state
+    content_item["details"]["state"]
   end
 end

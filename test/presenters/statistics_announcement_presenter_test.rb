@@ -37,8 +37,36 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     assert_equal 'About Midday on Tuesday', item.release_date
   end
 
-<<<<<<< HEAD
-=======
+  test 'presents release_date_and_status when confirmed' do
+    item = presented_statistics_announcement({
+      "details" => {
+        "display_date" => "About Midday on Tuesday",
+        "state" => "confirmed"
+      }
+    })
+    assert_equal 'About Midday on Tuesday (confirmed)', item.release_date_and_status
+  end
+
+  test 'presents release_date_and_status when provisional' do
+    item = presented_statistics_announcement({
+      "details" => {
+        "display_date" => "About Midday on Tuesday",
+        "state" => "provisional"
+      }
+    })
+    assert_equal 'About Midday on Tuesday (provisional)', item.release_date_and_status
+  end
+
+  test 'presents release_date_and_status when cancelled' do
+    item = presented_statistics_announcement({
+      "details" => {
+        "display_date" => "About Midday on Tuesday",
+        "state" => "cancelled"
+      }
+    })
+    assert_equal 'About Midday on Tuesday', item.release_date_and_status
+  end
+
   test 'knows if an item is a national statistic' do
     item = presented_statistics_announcement({
       "details" => {
@@ -55,8 +83,6 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     assert item.national_statistics?
   end
 
-private
->>>>>>> a2a2c5b... Add national statistics logo logic
   def presented_statistics_announcement(overrides = {})
     StatisticsAnnouncementPresenter.new(statistics_announcement.merge(overrides))
   end
