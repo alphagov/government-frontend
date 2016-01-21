@@ -21,9 +21,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/metadata',
-        other: {
-          "Release date" => @content_item.release_date_and_status
-        },
+        other: @content_item.other_metadata,
         from: @content_item.from,
         part_of: @content_item.part_of
     %>

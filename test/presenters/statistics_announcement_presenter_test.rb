@@ -58,13 +58,30 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
   end
 
   test 'presents release_date_and_status when cancelled' do
+    item = presented_cancelled_statistics_announcement
+    assert_equal 'About Midday on Tuesday', item.release_date_and_status
+  end
+
+  test "present other metadata when confirmed" do
     item = presented_statistics_announcement({
       "details" => {
         "display_date" => "About Midday on Tuesday",
-        "state" => "cancelled"
+        "state" => "confirmed"
       }
     })
-    assert_equal 'About Midday on Tuesday', item.release_date_and_status
+    other = {
+      "Release date" => "About Midday on Tuesday (confirmed)"
+    }
+    assert_equal other, item.other_metadata
+  end
+
+  test "present other metadata when cancelled" do
+    item = presented_cancelled_statistics_announcement
+    other = {
+      "Proposed release" => "About Midday on Tuesday",
+      "Cancellation date" => "17 January 2016 2:19pm"
+    }
+    assert_equal other, item.other_metadata
   end
 
   test 'knows if an item is a national statistic' do
@@ -85,6 +102,16 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
 
   def presented_statistics_announcement(overrides = {})
     StatisticsAnnouncementPresenter.new(statistics_announcement.merge(overrides))
+  end
+
+  def presented_cancelled_statistics_announcement(overrides = {})
+    presented_statistics_announcement({
+      "details" => {
+        "display_date" => "About Midday on Tuesday",
+        "state" => "cancelled",
+        "cancelled_at" => "2016-01-17T14:19:42.460Z"
+      }
+    })
   end
 
   def statistics_announcement

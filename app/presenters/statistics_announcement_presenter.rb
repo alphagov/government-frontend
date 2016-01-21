@@ -22,8 +22,24 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     release_date
   end
 
+  def other_metadata
+    if cancelled?
+      {
+        "Proposed release" => release_date,
+        "Cancellation date" => cancellation_date,
+      }
+    else
+      { "Release date" => release_date_and_status }
+    end
+  end
+
   def national_statistics?
     content_item["details"]["format_sub_type"] == 'national'
+  end
+
+  def cancellation_date
+    cancelled_at = content_item["details"]["cancelled_at"]
+    DateTime.parse(cancelled_at).strftime("%e %B %Y %-l:%M%P")
   end
 
 private
