@@ -84,6 +84,12 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     assert_equal other, item.other_metadata
   end
 
+  test "shows the cancellation reason when cancelled" do
+    item = presented_cancelled_statistics_announcement
+
+    assert_equal "Release cancelled for operational reasons.", item.cancellation_reason
+  end
+
   test 'knows if an item is a national statistic' do
     item = presented_statistics_announcement({
       "details" => {
@@ -109,7 +115,8 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
       "details" => {
         "display_date" => "About Midday on Tuesday",
         "state" => "cancelled",
-        "cancelled_at" => "2016-01-17T14:19:42.460Z"
+        "cancelled_at" => "2016-01-17T14:19:42.460Z",
+        "cancellation_reason" => "Release cancelled for operational reasons."
       }
     })
   end

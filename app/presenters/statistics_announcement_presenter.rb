@@ -18,7 +18,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   end
 
   def release_date_and_status
-    return "#{release_date} (#{state})" unless state == "cancelled"
+    return "#{release_date} (#{state})" unless cancelled?
     release_date
   end
 
@@ -40,6 +40,14 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   def cancellation_date
     cancelled_at = content_item["details"]["cancelled_at"]
     DateTime.parse(cancelled_at).strftime("%e %B %Y %-l:%M%P")
+  end
+
+  def cancelled?
+    state == "cancelled"
+  end
+
+  def cancellation_reason
+    content_item["details"]["cancellation_reason"]
   end
 
 private

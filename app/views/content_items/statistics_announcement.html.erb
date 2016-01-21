@@ -27,5 +27,10 @@
     %>
   </div>
 </div>
-
+<% if @content_item.cancelled? %>
+  <div class="cancellation-notice">
+    <h2>Statistics release cancelled</h2>
+    <p><%= @content_item.cancellation_reason %></p>
+  </div>
+<% end %>
 <%= render 'shared/description', description: @content_item.description %>

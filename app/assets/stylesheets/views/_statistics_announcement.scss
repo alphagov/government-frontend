@@ -5,4 +5,8 @@
   .national-statistics-logo {
     margin-top: $gutter;
   }
+
+  .cancellation-notice {
+    @include notice;
+  }
 }

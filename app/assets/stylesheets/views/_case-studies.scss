@@ -9,22 +9,7 @@
   }
 
   .withdrawal-notice {
-    clear: both;
-    margin: 15px 0;
-    padding: 15px 10px;
-    border: 5px solid $govuk-blue;
-
-    @include media(tablet) {
-      padding: 25px 10px;
-      margin-bottom: $gutter;
-    }
-
-    h2 {
-      @include bold-36;
-    }
-    p {
-      @include core-19;
-    }
+    @include notice;
   }
 
   .govuk-document-footer {
