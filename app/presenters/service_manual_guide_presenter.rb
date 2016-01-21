@@ -32,6 +32,9 @@ class ServiceManualGuidePresenter < ContentItemPresenter
     updated_at.strftime("%e %B %Y %H:%M")
   end
 
+  def main_topic
+    @main_topic ||= Array(content_item.links.topics).first
+  end
 private
 
   def updated_at
