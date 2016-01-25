@@ -31,46 +31,46 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
   test 'presents release_date' do
     item = presented_statistics_announcement({
       "details" => {
-        "display_date" => "About Midday on Tuesday"
+        "display_date" => "April to May 2016"
       }
     })
-    assert_equal 'About Midday on Tuesday', item.release_date
+    assert_equal 'April to May 2016', item.release_date
   end
 
   test 'presents release_date_and_status when confirmed' do
     item = presented_statistics_announcement({
       "details" => {
-        "display_date" => "About Midday on Tuesday",
+        "display_date" => "April to May 2016",
         "state" => "confirmed"
       }
     })
-    assert_equal 'About Midday on Tuesday (confirmed)', item.release_date_and_status
+    assert_equal 'April to May 2016 (confirmed)', item.release_date_and_status
   end
 
   test 'presents release_date_and_status when provisional' do
     item = presented_statistics_announcement({
       "details" => {
-        "display_date" => "About Midday on Tuesday",
+        "display_date" => "April to May 2016",
         "state" => "provisional"
       }
     })
-    assert_equal 'About Midday on Tuesday (provisional)', item.release_date_and_status
+    assert_equal 'April to May 2016 (provisional)', item.release_date_and_status
   end
 
   test 'presents release_date_and_status when cancelled' do
     item = presented_cancelled_statistics_announcement
-    assert_equal 'About Midday on Tuesday', item.release_date_and_status
+    assert_equal 'April to May 2016', item.release_date_and_status
   end
 
   test "present other metadata when confirmed" do
     item = presented_statistics_announcement({
       "details" => {
-        "display_date" => "About Midday on Tuesday",
+        "display_date" => "April to May 2016",
         "state" => "confirmed"
       }
     })
     other = {
-      "Release date" => "About Midday on Tuesday (confirmed)"
+      "Release date" => "April to May 2016 (confirmed)"
     }
     assert_equal other, item.other_metadata
   end
@@ -78,7 +78,7 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
   test "present other metadata when cancelled" do
     item = presented_cancelled_statistics_announcement
     other = {
-      "Proposed release" => "About Midday on Tuesday",
+      "Proposed release" => "April to May 2016",
       "Cancellation date" => "17 January 2016 2:19pm"
     }
     assert_equal other, item.other_metadata
@@ -113,7 +113,7 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
   def presented_cancelled_statistics_announcement(overrides = {})
     presented_statistics_announcement({
       "details" => {
-        "display_date" => "About Midday on Tuesday",
+        "display_date" => "April to May 2016",
         "state" => "cancelled",
         "cancelled_at" => "2016-01-17T14:19:42.460Z",
         "cancellation_reason" => "Release cancelled for operational reasons."
