@@ -11,6 +11,13 @@ class TopicPresenter
     @locale = content_item["locale"]
   end
 
+  def breadcrumbs
+    [
+      { title: "Service manual", url: "/service-manual" },
+      { title: content_item["title"] }
+    ]
+  end
+
   def groups
     linked_items = content_item['links']['linked_items']
     topic_groups = Array(content_item['details']['groups']).map do |group_data|

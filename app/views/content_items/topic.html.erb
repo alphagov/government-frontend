@@ -1,6 +1,8 @@
 <%= content_for :page_class, "service-manual" %>
 <%= content_for :title, @content_item.title %>
 
+<%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
