@@ -78,8 +78,8 @@
   </div>
   <div class="column-two-thirds">
 
-    <div class="prose">
-      <%= @content_item.body.html_safe %>
+    <div class="govspeak-wrapper">
+      <%= render 'govuk_component/govspeak', content: @content_item.body.html_safe %>
     </div>
 
   </div>
