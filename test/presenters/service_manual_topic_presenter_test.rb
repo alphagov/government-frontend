@@ -51,6 +51,11 @@ class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
     assert_equal '/service-manual/agile-community', agile_community.href
   end
 
+  test '#breadcrumbs links to the root path and references itself' do
+    topic = presented_topic(title: "Hello")
+    assert_equal [{title: "Service manual", url: "/service-manual"}, { title: "Hello" }], topic.breadcrumbs
+  end
+
 private
 
   def presented_topic(overriden_attributes = {})
