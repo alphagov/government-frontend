@@ -13,8 +13,12 @@ class ServiceManualGuidePresenter < ContentItemPresenter
   end
 
   def content_owner
-    content_owner_data = content_item["details"]["content_owner"]
-    ContentOwner.new(content_owner_data["title"], content_owner_data["href"])
+    content_owner_data = Array(content_item["links"] && content_item["links"]["content_owners"]).first
+    if content_owner_data.present?
+      ContentOwner.new(content_owner_data["title"], content_owner_data["base_path"])
+    else
+      content_owner_fallback
+    end
   end
 
   def related_discussion
@@ -33,7 +37,7 @@ class ServiceManualGuidePresenter < ContentItemPresenter
   end
 
   def main_topic
-    @main_topic ||= Array(content_item["links"].try(:[], "topics")).first
+    @main_topic ||= Array(content_item["links"] && content_item["links"]["topics"]).first
   end
 
   def breadcrumbs
@@ -47,5 +51,11 @@ private
 
   def updated_at
     DateTime.parse(content_item["public_updated_at"])
+  end
+
+  # Remove this method after switching (see commit message)
+  def content_owner_fallback
+    content_owner_data = content_item["details"]["content_owner"]
+    ContentOwner.new(content_owner_data["title"], content_owner_data["href"])
   end
 end

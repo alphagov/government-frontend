@@ -45,6 +45,24 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
                  presented_guide.breadcrumbs
   end
 
+  test '#content_owner fetches the first content owner info from the links' do
+    guide = presented_guide(
+      'details' => {'content_owner' => nil},
+      'links' => {'content_owners' => [{'title' => 'Design Community', 'base_path' => '/example/dc'}]}
+    )
+    assert_equal 'Design Community', guide.content_owner.title
+    assert_equal '/example/dc', guide.content_owner.href
+  end
+
+  test '#content_owner falls back to using deprecated content owner info in details' do
+    guide = presented_guide(
+      'details' => {'content_owner' => {'title' => 'Agile Community', 'href' => 'http://example.com/ac'}},
+      'links' => {'content_owners' => []}
+    )
+    assert_equal 'Agile Community', guide.content_owner.title
+    assert_equal 'http://example.com/ac', guide.content_owner.href
+  end
+
 private
 
   def presented_guide(overriden_attributes = {})
