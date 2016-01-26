@@ -9,8 +9,6 @@ class UnpublishingPresenterTest < ActiveSupport::TestCase
     assert_equal unpublishing['details']['alternative_url'], presented_unpublishing.alternative_url
   end
 
-private
-
   def unpublishing
     govuk_content_schema_example('unpublishing', 'unpublishing')
   end

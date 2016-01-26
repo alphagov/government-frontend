@@ -26,8 +26,6 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
     assert_equal '26 October 2014 10:27', guide.last_update_timestamp
   end
 
-private
-
   def presented_guide(overriden_attributes = {})
     ServiceManualGuidePresenter.new(
       JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('service_manual_guide', 'basic_with_related_discussions')).merge(overriden_attributes)
