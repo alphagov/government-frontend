@@ -1,4 +1,5 @@
 class ServiceManualTopicPresenter
+  ContentOwner = Struct.new(:title, :href)
   attr_reader :content_item, :title, :format, :description, :locale
 
   def initialize(content_item)
@@ -15,5 +16,11 @@ class ServiceManualTopicPresenter
     Array(content_item['details']['groups']).map do |group_data|
       ServiceManualTopicPresenter::TopicGroup.new(group_data, linked_items)
     end.select(&:present?)
+  end
+
+  def content_owners
+    @content_owners ||= Array(content_item['links']['content_owners']).map do |data|
+      ContentOwner.new(data['title'], data['base_path'])
+    end
   end
 end
