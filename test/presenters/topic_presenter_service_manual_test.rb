@@ -37,6 +37,20 @@ class TopicPresenterServiceManualTest < ActiveSupport::TestCase
     assert_equal 0, topic.groups.size
   end
 
+  test '#content_owners loads the data into objects' do
+    topic = presented_topic(links: { content_owners: [
+                                                       {title: 'Design Community', base_path: '/service-manual/design-community'},
+                                                       {title: 'Agile Community', base_path: '/service-manual/agile-community'}
+                                                     ]})
+    assert_equal 2, topic.content_owners.size
+    design_community = topic.content_owners.first
+    assert_equal 'Design Community', design_community.title
+    assert_equal '/service-manual/design-community', design_community.href
+    agile_community = topic.content_owners.last
+    assert_equal 'Agile Community', agile_community.title
+    assert_equal '/service-manual/agile-community', agile_community.href
+  end
+
 private
 
   def presented_topic(overriden_attributes = {})
