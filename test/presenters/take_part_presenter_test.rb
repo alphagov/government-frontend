@@ -10,7 +10,6 @@ class TakePartPresenterTest < ActiveSupport::TestCase
     assert_equal take_part['details']['body'], presented_take_part.body
   end
 
-private
   def presented_take_part(overrides = {})
     TakePartPresenter.new(take_part.merge(overrides))
   end

@@ -90,7 +90,6 @@ class CaseStudyPresenterTest < ActiveSupport::TestCase
     assert_equal [], presented.history
   end
 
-private
   def presented_case_study(overrides = {})
     CaseStudyPresenter.new(case_study.merge(overrides))
   end

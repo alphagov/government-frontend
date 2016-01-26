@@ -16,7 +16,6 @@ class ComingSoonPresenterTest < ActiveSupport::TestCase
     assert_equal '17 December 2014', presented_coming_soon.formatted_publish_date
   end
 
-private
   def presented_coming_soon(overrides={})
     ComingSoonPresenter.new(coming_soon.merge(overrides))
   end
