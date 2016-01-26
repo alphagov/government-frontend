@@ -32,8 +32,6 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
     assert page.has_no_css?("[data-template='govuk_component-beta_label']")
   end
 
-private
-
   def assert_has_phase_label(phase)
     within "[data-template='govuk_component-#{phase}_label']" do
       assert page.has_content?("#{phase}_label"), "Expected the page to have an '#{phase.titleize}' label"

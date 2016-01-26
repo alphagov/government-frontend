@@ -106,8 +106,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['title'], assigns[:content_item].title
   end
 
-private
-
   def path_for(content_item)
     content_item['base_path'].sub(/^\//, '')
   end
