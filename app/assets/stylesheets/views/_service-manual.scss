@@ -4,6 +4,11 @@
     margin-top: 1.875em; // 30/16
   }
 
+  // Lede text
+  .lede {
+    @include core-24;
+  }
+
   // Metadata
   .metadata {
     @include core-14;
