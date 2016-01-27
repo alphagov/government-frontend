@@ -65,25 +65,24 @@
     }
   }
 
-  .page-contents-title {
+  .page-contents__title {
     @include bold-16;
     margin-bottom: 0.3125em;
   }
 
-  .page-contents-links {
+  .page-contents__list {
     list-style-type: none;
   }
 
-  .page-contents-links a {
+  .page-contents__list a {
     text-decoration: none;
   }
 
-  .page-contents-links a:before {
+  .page-contents__list a:before {
     content: "–";
     margin-right: 6px;
   }
 
-  // Govspeak
   .govspeak-wrapper {
     padding-top: 0.9375em;
 

@@ -56,8 +56,8 @@ This is the <a href='https://www.gov.uk/help/beta'>beta</a> version of the manua
 
     <!--  Page contents -->
     <div class="page-contents">
-      <h3 class="page-contents-title">Page contents:</h3>
-      <ul class="page-contents-links">
+      <h3 class="page-contents__title">Page contents:</h3>
+      <ul class="page-contents__list">
         <% @content_item.header_links.each do |header_link| %>
           <li><a href="<%=header_link[:href]%>"><%=header_link[:title]%></a></li>
         <% end %>
