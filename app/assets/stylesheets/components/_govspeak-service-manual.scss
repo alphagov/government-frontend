@@ -1,0 +1,51 @@
+.govuk-govspeak--service-manual {
+
+  padding-top: 1em;
+
+  margin-bottom: (30/19)+em;
+  @include media(tablet) {
+    margin-bottom: (45/19)+em;
+  }
+
+  > h2:first-of-type {
+    padding-top: (15/24)+em;
+  }
+
+  h2 {
+    @include bold-24();
+    padding-top: (20/24)+em;
+    margin-bottom: (15/24)+em;
+    @include media(tablet) {
+      margin-bottom: (20/24)+em;
+    }
+  }
+
+  h3 {
+    @include bold-19();
+    margin-bottom: (15/19)+em;
+    @include media(tablet) {
+      margin-bottom:(20/19)+em;
+    }
+  }
+
+  p {
+    margin-bottom: (15/19)+em;
+    @include media(tablet) {
+      margin-bottom: (20/19)+em;
+    }
+  }
+
+  ol,
+  ul {
+    margin-top: 0;
+    margin-bottom: (15/19)+em;
+    @include media(tablet) {
+      margin-bottom: (20/19)+em;
+    }
+  }
+
+  li {
+    margin-bottom: (10/19)+em;
+  }
+
+}
