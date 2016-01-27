@@ -1,0 +1,90 @@
+.service-manual {
+
+  .community-contact {
+    margin-top: 1.875em; // 30/16
+  }
+
+  // Metadata
+  .metadata {
+    @include core-14;
+    @extend %contain-floats;
+    margin-bottom: 2em;
+
+    &.direction-rtl {
+      direction: rtl;
+      text-align: start;
+    }
+
+    dt {
+      float: left;
+      clear: left;
+      width: auto;
+      min-width: 120px;
+
+      @include media(tablet){
+        padding-right: $gutter-one-third;
+      }
+    }
+    &.direction-rtl dt {
+      float: right;
+      clear: right;
+      @include media(tablet){
+        padding-left: $gutter-one-third;
+        padding-right: 0;
+      }
+    }
+
+    dd {
+      float: left;
+      width: 55%;
+
+      @include media(tablet){
+        width: 70%;
+      }
+    }
+    &.direction-rtl dd {
+      float: right;
+    }
+
+    // Adjust icon position for external links
+    a[rel="external"]:after {
+      content: "\A0\A0\A0\A0\A0\A0";
+      background-position: right 0%;
+    }
+  }
+
+
+  // Page contents
+  .page-contents {
+    margin-top: 1em;
+    @include media(tablet) {
+      margin-top: 2em;
+    }
+  }
+
+  .page-contents-title {
+    @include bold-16;
+    margin-bottom: 0.3125em;
+  }
+
+  .page-contents-links {
+    list-style-type: none;
+  }
+
+  .page-contents-links a {
+    text-decoration: none;
+  }
+
+  .page-contents-links a:before {
+    content: "–";
+    margin-right: 6px;
+  }
+
+}
+
+.govspeak-wrapper {
+  padding-top: 0.9375em;
+  @include media(tablet) {
+    padding-top: 1.875em;
+  }
+}
