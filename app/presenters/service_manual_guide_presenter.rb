@@ -32,6 +32,17 @@ class ServiceManualGuidePresenter < ContentItemPresenter
     updated_at.strftime("%e %B %Y %H:%M")
   end
 
+  def main_topic
+    @main_topic ||= Array(content_item["links"].try(:[], "topics")).first
+  end
+
+  def breadcrumbs
+    crumbs = [{ title: "Service manual", url: "/service-manual"}]
+    crumbs << { title: main_topic["title"], url: main_topic["base_path"]} if main_topic
+    crumbs << { title: content_item["title"] }
+    crumbs
+  end
+
 private
 
   def updated_at
