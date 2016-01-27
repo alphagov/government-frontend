@@ -2,6 +2,32 @@
   margin-top: 1.875em; // 30/16
 }
 
+// Page contents
+.page-contents {
+  margin-top: 1em;
+  @include media(tablet) {
+    margin-top: 2em;
+  }
+}
+
+.page-contents-title {
+  @include bold-16;
+  margin-bottom: 0.3125em;
+}
+
+.page-contents-links {
+  list-style-type: none;
+}
+
+.page-contents-links a {
+  text-decoration: none;
+}
+
+.page-contents-links a:before {
+  content: "–";
+  margin-right: 6px;
+}
+
 .govspeak-wrapper {
   padding-top: 0.9375em;
   @include media(tablet) {
