@@ -6,10 +6,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    within shared_component_selector("metadata") do
-      assert page.has_text?('20 January 2016 9:30am (confirmed)'), "displays a confirmed release date"
-      assert page.has_text?('Release date'), "is laballed with a release date"
-    end
+    assert_has_component_metadata_pair("Release date", "20 January 2016 9:30am (confirmed)")
   end
 
   test "national statistics" do
@@ -18,11 +15,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert page.has_css?('.national-statistics-logo img')
-
-    within shared_component_selector("metadata") do
-      assert page.has_text?('January 2016 (provisional)'), "displays a provisional release date"
-      assert page.has_text?('Release date'), "is laballed with a release date"
-    end
+    assert_has_component_metadata_pair("Release date", "January 2016 (provisional)")
   end
 
   test "cancelled statistics" do
@@ -35,11 +28,17 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
       assert page.has_text?(@content_item["details"]["cancellation_reason"]), "displays cancelleation reason"
     end
 
+    assert_has_component_metadata_pair("Proposed release", "20 January 2016 9:30am")
+    assert_has_component_metadata_pair("Cancellation date", "17 January 2016 2:19pm")
+  end
+
+  def assert_has_component_metadata_pair(label, value)
     within shared_component_selector("metadata") do
-      assert page.has_text?('20 January 2016 9:30am'), "displays the proposed release date"
-      assert page.has_text?('Proposed release'), "is laballed 'proposed release'"
-      assert page.has_text?('17 January 2016 2:19pm'), "displays the cancellation date"
-      assert page.has_text?('Cancellation date'), "is laballed as cancelled'"
+      # Flatten top level / "other" args, for consistent hash access
+      component_args = JSON.parse(page.text).tap do |args|
+        args.merge!(args.delete("other"))
+      end
+      assert_equal value, component_args.fetch(label)
     end
   end
 
