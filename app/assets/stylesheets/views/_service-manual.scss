@@ -4,6 +4,11 @@
     margin-top: 1.875em; // 30/16
   }
 
+  // Lede text
+  .lede {
+    @include core-24;
+  }
+
   // Metadata
   .metadata {
     @include core-14;
@@ -87,4 +92,27 @@
   @include media(tablet) {
     padding-top: 1.875em;
   }
+}
+
+.related {
+  border-top: 1px solid $border-colour;
+  padding-top: 1em;
+}
+
+.related__title {
+  @include bold-19;
+  margin-bottom: 0.5em;
+}
+
+.related__description {
+  margin-bottom: 0.5em;
+}
+
+.related__list {
+  @include core-16;
+  list-style: none;
+}
+
+.related__list-item {
+  margin-bottom: 0.5em;
 }
