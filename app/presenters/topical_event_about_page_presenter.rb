@@ -1,0 +1,3 @@
+class TopicalEventAboutPagePresenter < ContentItemPresenter
+
+end
