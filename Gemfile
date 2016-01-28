@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby File.read(".ruby-version").strip
+
 gem 'airbrake', '4.0'
 gem 'govuk_frontend_toolkit', '2.0.1'
 gem 'logstasher', '0.6.1'
