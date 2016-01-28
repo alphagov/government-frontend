@@ -4,21 +4,27 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
   test "official statistics" do
     setup_and_visit_content_item('official_statistics')
 
-    assert page.has_text?('Diagnostic imaging dataset for September 2015')
+    assert_has_component_title('Diagnostic imaging dataset for September 2015')
   end
 
   test "national statistics" do
     setup_and_visit_content_item('national_statistics')
 
-    assert page.has_text?('UK armed forces quarterly personnel report: 1 October 2015')
+    assert_has_component_title('UK armed forces quarterly personnel report: 1 October 2015')
     assert page.has_css?('.national-statistics-logo img')
   end
 
   test "cancelled statistics" do
     setup_and_visit_content_item('cancelled_official_statistics')
 
-    assert page.has_text?('Diagnostic imaging dataset for September 2015')
+    assert_has_component_title('Diagnostic imaging dataset for September 2015')
     assert page.has_text?('Statistics release cancelled'), "is cancelled"
+  end
+
+  def assert_has_component_title(title)
+    within shared_component_selector("title") do
+      assert_equal title, JSON.parse(page.text).fetch("title")
+    end
   end
 
   def setup_and_visit_content_item(name)

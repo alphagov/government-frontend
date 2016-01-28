@@ -4,6 +4,7 @@ require 'rails/test_help'
 require 'webmock/minitest'
 require 'support/govuk_content_schema_examples'
 require 'capybara/rails'
+require 'slimmer/test_helpers/shared_templates'
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
@@ -20,4 +21,5 @@ end
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
+  include Slimmer::TestHelpers::SharedTemplates
 end
