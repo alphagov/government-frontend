@@ -1,0 +1,36 @@
+<%= content_for :page_class, @content_item.format.dasherize %>
+<%= content_for :title, "#{@content_item.title} - #{t("content_item.format.#{@content_item.format}", count: 1)}" %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: t("content_item.format.#{@content_item.format}", count: 1),
+        title: @content_item.title,
+        average_title_length: "long" %>
+  </div>
+
+  <% if @content_item.national_statistics? %>
+  <div class="column-third">
+    <div class="national-statistics-logo">
+      <%= image_tag 'national-statistics.png', alt: 'National Statistics' %>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        other: @content_item.other_metadata,
+        from: @content_item.from,
+        part_of: @content_item.part_of
+    %>
+  </div>
+</div>
+<% if @content_item.cancelled? %>
+  <div class="cancellation-notice">
+    <h2>Statistics release cancelled</h2>
+    <p><%= @content_item.cancellation_reason %></p>
+  </div>
+<% end %>
+<%= render 'shared/description', description: @content_item.description %>

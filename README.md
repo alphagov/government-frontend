@@ -11,6 +11,7 @@ parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 ## Live examples
 
 - [gov.uk/government/case-studies/2013-elections-in-swaziland](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland)
+- [gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015)
 
 ## Technical documentation
 
