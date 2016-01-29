@@ -1,0 +1,76 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'history' mode, which is best suited to
+# making sure your site's appearance remains consistent over
+# time.
+#
+# `wraith history history.yaml` # generate base screenshots
+# `wraith latest history.yaml`  # take new shots and compare
+# ---
+# Installing:
+#
+# On a GOV.UK VM, run:
+#   `apt-get install imagemagick phantomjs`
+#
+# Otherwise, on a Mac, run:
+#   `brew install imagemagick phantomjs`
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser:
+  phantomjs: 'phantomjs'
+
+# (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
+before_capture: 'test/wraith/cookies_and_headers.js'
+
+# (required) The directory that your latest screenshots will be stored in
+directory: 'tmp/wraith/shots'
+
+# (required for history mode, otherwise optional) The directory that your base screenshots will be stored in.
+history_dir: 'tmp/wraith/shots_history'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (required) The domain to take screenshots of.
+domains:
+  dev: 'http://localhost:3090'
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+  - 320x5000
+  - 600x4000
+  - 1080x3000
+
+# (optional) Resize to each screen width (efficient), or reload at each screen width (costly). Default: 'reload'
+resize_or_reload: 'reload'
+
+# (optional) Color to highlight the image diff. Default: 'blue'
+highlight_color: 'red'
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: 'diffs_first'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (required) The paths to capture.
+paths:
+  case_study: '/government/case-studies/doing-business-in-spain.es'
+  case_study_withdrawn: '/government/case-studies/terence-age-33-stoke-on-trent'
+  take_part: '/government/get-involved/take-part/become-a-councillor'
+  statistics_announcement: '/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015--2'
+  statistics_national: '/government/statistics/announcements/uk-armed-forces-quarterly-personnel-report-october-2015'
+  statistics_announcement_release_date_changes: '/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015--1'
+  statistics_announcement_cancelled: '/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015'

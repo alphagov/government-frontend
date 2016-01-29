@@ -43,6 +43,25 @@ Or to specify the location explicitly:
 
 `GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
 
+#### Visual regression tests
+
+Use [Wraith](http://bbc-news.github.io/wraith/) ("A responsive screenshot
+comparison tool") to generate a visual diff to compare rendering changes in this
+application. Wraith has some dependencies you'll [need to install](http://bbc-news.github.io/wraith/os-install.html).
+
+First, on `master` branch, run:
+```
+wraith history test/wraith/config.yaml
+```
+
+Then, on a branch with your changes, run:
+```
+wraith latest test/wraith/config.yaml
+```
+
+This will generate image diffs comparing the two runs, including a browseable
+gallery of the output, in `tmp/wraith`.
+
 ## Licence
 
 [MIT License](LICENCE)

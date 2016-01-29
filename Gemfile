@@ -20,7 +20,10 @@ else
   gem 'gds-api-adapters', '27.0.0'
 end
 
-gem 'govuk-lint', group: [:development, :test]
+group :development, :test do
+  gem 'govuk-lint'
+  gem 'wraith', '~> 3.1'
+end
 
 group :development do
   gem 'better_errors'
