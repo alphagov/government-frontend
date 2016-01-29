@@ -18,9 +18,7 @@ class CaseStudyTest < ActionDispatch::IntegrationTest
 
     within ".withdrawal-notice" do
       assert page.has_text?('This case study was withdrawn'), "is withdrawn"
-      within shared_component_selector("govspeak") do
-        assert_equal @content_item["details"]["withdrawn_notice"]["explanation"], JSON.parse(page.text).fetch("content")
-      end
+      assert_has_component_govspeak(@content_item["details"]["withdrawn_notice"]["explanation"])
     end
   end
 end

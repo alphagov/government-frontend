@@ -39,6 +39,12 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def assert_has_component_govspeak(content)
+    within shared_component_selector("govspeak") do
+      assert_equal content, JSON.parse(page.text).fetch("content")
+    end
+  end
+
   def setup_and_visit_content_item(name)
     @content_item = JSON.parse(get_content_example(name)).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)
