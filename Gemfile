@@ -20,6 +20,8 @@ else
   gem 'gds-api-adapters', '27.0.0'
 end
 
+gem 'govuk-lint', group: [:development, :test]
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
