@@ -9,4 +9,11 @@
   .cancellation-notice {
     @include notice;
   }
+
+  .release-date-change-notice {
+    h2 {
+      font-weight: bold;
+      margin-bottom: $gutter-half;
+    }
+  }
 }

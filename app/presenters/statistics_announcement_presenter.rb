@@ -22,6 +22,14 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     release_date
   end
 
+  def previous_release_date
+    content_item["details"]["previous_display_date"]
+  end
+
+  def release_date_changed?
+    content_item["details"].include?("previous_display_date")
+  end
+
   def other_metadata
     if cancelled?
       {
@@ -48,6 +56,10 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
 
   def cancellation_reason
     content_item["details"]["cancellation_reason"]
+  end
+
+  def release_date_change_reason
+    content_item["details"]["latest_change_note"]
   end
 
 private

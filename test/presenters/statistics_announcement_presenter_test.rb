@@ -21,6 +21,10 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     assert_equal '20 January 2016 9:30am', statistics_announcement.release_date
   end
 
+  test 'presents previous_release_date' do
+    assert_equal '19 January 2016 9:30am', statistics_announcement_date_changed.previous_release_date
+  end
+
   test 'presents release_date_and_status when confirmed' do
     assert_equal '20 January 2016 9:30am (confirmed)', statistics_announcement.release_date_and_status
   end
@@ -58,6 +62,11 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     assert statistics_announcement_national.national_statistics?
   end
 
+  test 'knows if the release date has changed' do
+    assert statistics_announcement_date_changed.release_date_changed?
+    assert_not statistics_announcement_national.release_date_changed?
+  end
+
   def statistics_announcement_cancelled
     statistics_announcement('cancelled_official_statistics')
   end
@@ -68,6 +77,10 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
 
   def statistics_announcement_national
     statistics_announcement('national_statistics')
+  end
+
+  def statistics_announcement_date_changed
+    statistics_announcement('release_date_changed')
   end
 
   def statistics_announcement(type = 'official_statistics')
