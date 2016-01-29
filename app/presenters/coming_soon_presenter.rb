@@ -19,6 +19,7 @@ class ComingSoonPresenter < ContentItemPresenter
   end
 
 private
+
   def display_date(date)
     date.strftime("%e %B %Y")
   end

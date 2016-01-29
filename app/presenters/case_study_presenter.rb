@@ -33,9 +33,7 @@ class CaseStudyPresenter < ContentItemPresenter
   end
 
   def updated
-    if any_updates?
-      display_time(content_item["public_updated_at"])
-    end
+    display_time(content_item["public_updated_at"]) if any_updates?
   end
 
   def short_history
@@ -59,7 +57,8 @@ class CaseStudyPresenter < ContentItemPresenter
   end
 
   def withdrawal_notice
-    if notice = content_item["details"]["withdrawn_notice"]
+    notice = content_item["details"]["withdrawn_notice"]
+    if notice
       {
         time: content_tag(:time, display_time(notice["withdrawn_at"]), datetime: notice["withdrawn_at"]),
         explanation: notice["explanation"]
@@ -68,6 +67,7 @@ class CaseStudyPresenter < ContentItemPresenter
   end
 
 private
+
   def display_time(timestamp)
     I18n.l(Date.parse(timestamp), format: "%-d %B %Y") if timestamp
   end

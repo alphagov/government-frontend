@@ -9,7 +9,7 @@ class ServiceManualGuidePresenter < ContentItemPresenter
     super
     @body = content_item["details"]["body"]
     @header_links = Array(content_item["details"]["header_links"])
-                      .map{ |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
+      .map { |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
   end
 
   def content_owner

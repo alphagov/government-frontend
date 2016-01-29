@@ -20,4 +20,3 @@ private
     translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? '' : t["locale"] }
   end
 end
-
