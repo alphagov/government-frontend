@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
-
   include ActionView::Helpers::UrlHelper
 
   test 'presents from as links to organisations' do
@@ -71,9 +70,8 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
     statistics_announcement('national_statistics')
   end
 
-  def statistics_announcement(type='official_statistics')
+  def statistics_announcement(type = 'official_statistics')
     content_item = govuk_content_schema_example('statistics_announcement', type)
     StatisticsAnnouncementPresenter.new(content_item)
   end
-
 end

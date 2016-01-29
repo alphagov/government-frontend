@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class TakePartPresenterTest < ActiveSupport::TestCase
-
   test 'presents the basic details of a content item' do
     assert_equal take_part['description'], presented_take_part.description
     assert_equal take_part['format'], presented_take_part.format
