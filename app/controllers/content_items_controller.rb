@@ -16,20 +16,19 @@ class ContentItemsController < ApplicationController
 private
 
   def load_content_item
-    if content_item = content_store.content_item(content_item_path)
-      @content_item = present(content_item)
-    end
+    content_item = content_store.content_item(content_item_path)
+    @content_item = present(content_item) if content_item
   end
 
   def present(content_item)
     case content_item['format']
-      when 'case_study' then CaseStudyPresenter.new(content_item)
-      when 'take_part' then TakePartPresenter.new(content_item)
-      when 'statistics_announcement' then StatisticsAnnouncementPresenter.new(content_item)
-      when 'unpublishing' then UnpublishingPresenter.new(content_item)
-      when 'coming_soon' then ComingSoonPresenter.new(content_item)
-      when 'service_manual_guide' then ServiceManualGuidePresenter.new(content_item)
-      else raise "No support for format \"#{content_item['format']}\""
+    when 'case_study' then CaseStudyPresenter.new(content_item)
+    when 'take_part' then TakePartPresenter.new(content_item)
+    when 'statistics_announcement' then StatisticsAnnouncementPresenter.new(content_item)
+    when 'unpublishing' then UnpublishingPresenter.new(content_item)
+    when 'coming_soon' then ComingSoonPresenter.new(content_item)
+    when 'service_manual_guide' then ServiceManualGuidePresenter.new(content_item)
+    else raise "No support for format \"#{content_item['format']}\""
     end
   end
 
@@ -39,7 +38,7 @@ private
 
   def set_expiry
     max_age = @content_item.content_item.cache_control.max_age
-    cache_private  = @content_item.content_item.cache_control.private?
+    cache_private = @content_item.content_item.cache_control.private?
     expires_in(max_age, public: !cache_private)
   end
 
@@ -55,7 +54,7 @@ private
     @content_store ||= GdsApi::ContentStore.new(Plek.current.find("content-store"))
   end
 
-  private
+private
 
   def error_403(exception)
     render text: exception.message, status: 403

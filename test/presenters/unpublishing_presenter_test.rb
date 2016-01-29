@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UnpublishingPresenterTest < ActiveSupport::TestCase
-
   test 'presents the basic details required to display an unpublishing' do
     assert_equal unpublishing['format'], presented_unpublishing.format
     assert_equal unpublishing['locale'], presented_unpublishing.locale

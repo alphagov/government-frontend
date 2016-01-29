@@ -16,12 +16,11 @@ class ComingSoonPresenterTest < ActiveSupport::TestCase
     assert_equal '17 December 2014', presented_coming_soon.formatted_publish_date
   end
 
-  def presented_coming_soon(overrides={})
+  def presented_coming_soon(overrides = {})
     ComingSoonPresenter.new(coming_soon.merge(overrides))
   end
 
   def coming_soon
     govuk_content_schema_example('coming_soon', 'coming_soon')
   end
-
 end
