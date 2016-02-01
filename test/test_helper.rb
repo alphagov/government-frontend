@@ -45,6 +45,20 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def assert_has_component_breadcrumbs(breadcrumbs)
+    within shared_component_selector("breadcrumbs") do
+      assert_equal breadcrumbs, JSON.parse(page.text).deep_symbolize_keys.fetch(:breadcrumbs)
+    end
+  end
+
+  def assert_has_contents(contents)
+    within ".dash-list" do
+      contents.each do |heading|
+        assert page.has_css?("a[href=\"##{heading[:id]}\"]", text: heading[:text])
+      end
+    end
+  end
+
   def setup_and_visit_content_item(name)
     @content_item = JSON.parse(get_content_example(name)).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)
