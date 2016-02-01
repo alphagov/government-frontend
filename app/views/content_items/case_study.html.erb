@@ -14,13 +14,14 @@
     translations: @content_item.available_translations
   %>
   </div>
+</div>
   <% if @content_item.withdrawn? %>
     <div class="withdrawal-notice">
       <h2>This <%= t("content_item.format.#{@content_item.format_display_type}", count: 1).downcase %> was withdrawn on <%= @content_item.withdrawal_notice[:time] %></h2>
       <%= render 'govuk_component/govspeak', content: @content_item.withdrawal_notice[:explanation] %>
     </div>
   <% end %>
-
+<div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/metadata',
         from: @content_item.from,
