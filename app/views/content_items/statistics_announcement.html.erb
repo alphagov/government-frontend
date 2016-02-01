@@ -18,7 +18,7 @@
   <% end %>
 </div>
 
-<div class="grid-row">
+<div class="grid-row primary-metadata">
   <div class="column-two-thirds">
     <%= render 'govuk_component/metadata',
         other: @content_item.other_metadata,
@@ -34,3 +34,17 @@
   </div>
 <% end %>
 <%= render 'shared/description', description: @content_item.description %>
+
+<% if @content_item.release_date_changed? %>
+<div class="grid-row">
+  <div class="column-two-thirds release-date-change-notice">
+    <h2>The release date has been changed</h2>
+    <%= render 'govuk_component/metadata',
+        other: {
+          "Previous date" => @content_item.previous_release_date,
+          "Reason for change" => @content_item.release_date_change_reason,
+        }
+    %>
+  </div>
+</div>
+<% end %>
