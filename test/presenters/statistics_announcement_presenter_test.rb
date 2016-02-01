@@ -58,13 +58,13 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
   end
 
   test 'knows if an item is a national statistic' do
-    assert_not statistics_announcement.national_statistics?
+    refute statistics_announcement.national_statistics?
     assert statistics_announcement_national.national_statistics?
   end
 
   test 'knows if the release date has changed' do
     assert statistics_announcement_date_changed.release_date_changed?
-    assert_not statistics_announcement_national.release_date_changed?
+    refute statistics_announcement_national.release_date_changed?
   end
 
   def statistics_announcement_cancelled
