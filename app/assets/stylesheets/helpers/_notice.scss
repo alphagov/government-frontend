@@ -1,17 +1,18 @@
 @mixin notice {
   clear: both;
-  margin: 15px 0;
-  padding: 15px 10px;
+  @include responsive-bottom-margin;
+  padding: $gutter-two-thirds;
   border: 5px solid $govuk-blue;
 
-  @include media(tablet) {
-    padding: 25px 10px;
-    margin-bottom: $gutter;
+  @include media(mobile) {
+    padding: $gutter-half;
   }
 
   h2 {
     @include bold-36;
+    margin-bottom: $gutter-one-third;
   }
+
   p {
     @include core-19;
   }
