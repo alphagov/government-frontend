@@ -14,9 +14,11 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
 
   def breadcrumbs
     parent = topical_event
+    title = archived_topical_event? ? "#{parent['title']} (Archived)" : parent["title"]
+
     [
       {title: "Home", url: "/"},
-      {title: parent["title"], url: parent["base_path"]}
+      {title: title, url: parent["base_path"]}
     ]
   end
 
@@ -24,5 +26,13 @@ private
 
   def topical_event
     content_item["links"]["parent"][0]
+  end
+
+  def topical_event_end_date
+    topical_event["details"]["end_date"]
+  end
+
+  def archived_topical_event?
+    topical_event_end_date && DateTime.parse(topical_event_end_date) <= Date.today
   end
 end

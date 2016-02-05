@@ -22,16 +22,41 @@ class TopicalEventAboutPagePresenterTest < ActiveSupport::TestCase
     assert_equal [], presented_topical_event_about_page('slim').contents
   end
 
-  test 'presents a breadcrumb using the parent topic event' do
-    assert_equal [
+  test 'presents a breadcrumb and indicates the archive state of the parent topical event' do
+    breadcrumbs = [
       {title: "Home", url: "/"},
       {title: "Ebola virus: UK government response", url: "/government/topical-events/ebola-virus-government-response"}
-    ], presented_topical_event_about_page.breadcrumbs
+    ]
+
+    travel_to(topical_event_end_date - 1) do
+      assert_equal breadcrumbs, presented_topical_event_about_page.breadcrumbs
+    end
+
+    travel_to(topical_event_end_date) do
+      breadcrumbs[1].merge!(title: "Ebola virus: UK government response (Archived)")
+      assert_equal breadcrumbs, presented_topical_event_about_page.breadcrumbs
+    end
   end
 
-  def presented_topical_event_about_page(type = 'topical_event_about_page', overrides = {})
+  test 'presents a breadcrumb if parent topic event has no end date' do
+    breadcrumbs = [
+      {title: "Home", url: "/"},
+      {title: "Battle of the Somme Centenary", url: "/government/topical-events/battle-of-the-somme-centenary-commemorations"}
+    ]
+
+    refute topical_event_about_page('slim')['links']['parent'][0]['details']['end_date']
+    assert_equal breadcrumbs, presented_topical_event_about_page('slim').breadcrumbs
+  end
+
+private
+
+  def topical_event_end_date
+    Date.parse(topical_event_about_page['links']['parent'][0]['details']['end_date'])
+  end
+
+  def presented_topical_event_about_page(type = 'topical_event_about_page')
     content_item = topical_event_about_page(type)
-    TopicalEventAboutPagePresenter.new(content_item.merge(overrides))
+    TopicalEventAboutPagePresenter.new(content_item)
   end
 
   def topical_event_about_page(type = 'topical_event_about_page')
