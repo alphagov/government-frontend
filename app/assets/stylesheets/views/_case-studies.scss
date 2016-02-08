@@ -1,5 +1,4 @@
 .case-studies {
-  @include metadata;
   @include description;
   @include sidebar-with-body;
 
@@ -10,9 +9,5 @@
 
   .withdrawal-notice {
     @include notice;
-  }
-
-  .govuk-document-footer {
-    margin-bottom: $gutter * 1.5;
   }
 }
