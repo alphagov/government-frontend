@@ -5,7 +5,7 @@ class ExtractsHeadingsTest < ActiveSupport::TestCase
 
   test "extracts a single h2" do
     html = '<h2 id="custom">A heading</h2>'
-    assert_equal [{text: "A heading", id: 'custom'}], extract_headings_with_ids(html)
+    assert_equal [{ text: "A heading", id: 'custom' }], extract_headings_with_ids(html)
   end
 
   test "ignores headings without an id" do
@@ -22,9 +22,9 @@ class ExtractsHeadingsTest < ActiveSupport::TestCase
             <h3>Pi</h3>
             <h2 id="four">Four</h2>'
     assert_equal [
-      {text: "One", id: "one"},
-      {text: "Two", id: "two"},
-      {text: "Three", id: "three"},
-      {text: "Four", id: "four"}], extract_headings_with_ids(html)
+      { text: "One", id: "one" },
+      { text: "Two", id: "two" },
+      { text: "Three", id: "three" },
+      { text: "Four", id: "four" }], extract_headings_with_ids(html)
   end
 end

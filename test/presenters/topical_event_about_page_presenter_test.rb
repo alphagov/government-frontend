@@ -24,8 +24,8 @@ class TopicalEventAboutPagePresenterTest < ActiveSupport::TestCase
 
   test 'presents a breadcrumb and indicates the archive state of the parent topical event' do
     breadcrumbs = [
-      {title: "Home", url: "/"},
-      {title: "Ebola virus: UK government response", url: "/government/topical-events/ebola-virus-government-response"}
+      { title: "Home", url: "/" },
+      { title: "Ebola virus: UK government response", url: "/government/topical-events/ebola-virus-government-response" }
     ]
 
     travel_to(topical_event_end_date - 1) do
@@ -40,8 +40,8 @@ class TopicalEventAboutPagePresenterTest < ActiveSupport::TestCase
 
   test 'presents a breadcrumb if parent topic event has no end date' do
     breadcrumbs = [
-      {title: "Home", url: "/"},
-      {title: "Battle of the Somme Centenary", url: "/government/topical-events/battle-of-the-somme-centenary-commemorations"}
+      { title: "Home", url: "/" },
+      { title: "Battle of the Somme Centenary", url: "/government/topical-events/battle-of-the-somme-centenary-commemorations" }
     ]
 
     refute topical_event_about_page('slim')['links']['parent'][0]['details']['end_date']

@@ -17,8 +17,8 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
     title = archived_topical_event? ? "#{parent['title']} (Archived)" : parent["title"]
 
     [
-      {title: "Home", url: "/"},
-      {title: title, url: parent["base_path"]}
+      { title: "Home", url: "/" },
+      { title: title, url: parent["base_path"] }
     ]
   end
 
