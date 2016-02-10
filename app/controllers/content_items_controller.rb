@@ -21,16 +21,11 @@ private
   end
 
   def present(content_item)
-    case content_item['format']
-    when 'case_study' then CaseStudyPresenter.new(content_item)
-    when 'statistics_announcement' then StatisticsAnnouncementPresenter.new(content_item)
-    when 'take_part' then TakePartPresenter.new(content_item)
-    when 'topical_event_about_page' then TopicalEventAboutPagePresenter.new(content_item)
-    when 'unpublishing' then UnpublishingPresenter.new(content_item)
-    when 'coming_soon' then ComingSoonPresenter.new(content_item)
-    when 'service_manual_guide' then ServiceManualGuidePresenter.new(content_item)
-    else raise "No support for format \"#{content_item['format']}\""
-    end
+    presenter_name = content_item['format'].classify + 'Presenter'
+    presenter_class = Object.const_get(presenter_name)
+    presenter_class.new(content_item)
+  rescue NameError
+    raise "No support for format \"#{content_item['format']}\""
   end
 
   def content_item_template
