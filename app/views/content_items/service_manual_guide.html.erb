@@ -14,7 +14,7 @@
 
     <div class="community-contact">
       <p>
-        Contact the <a href="#">Agile community</a> with any comments or questions.
+        Contact the <%= link_to @content_item.content_owner.title, @content_item.content_owner.href %> with any comments or questions.
       </p>
     </div>
 
