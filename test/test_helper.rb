@@ -51,7 +51,7 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_contents(contents)
+  def assert_has_contents_list(contents)
     within ".dash-list" do
       contents.each do |heading|
         assert page.has_css?("a[href=\"##{heading[:id]}\"]", text: heading[:text])

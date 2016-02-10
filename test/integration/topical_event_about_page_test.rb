@@ -6,7 +6,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert_has_component_govspeak(@content_item["details"]["body"])
-    assert_has_contents([
+    assert_has_contents_list([
       { text: "Response in the UK", id: "response-in-the-uk" },
       { text: "Response in Africa", id: "response-in-africa" },
       { text: "Advice for travellers", id: "advice-for-travellers" }
