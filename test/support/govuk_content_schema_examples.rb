@@ -49,6 +49,7 @@ module GovukContentSchemaExamples
         coming_soon
         redirect
         take_part
+        topical_event_about_page
         unpublishing
       }
     end

@@ -35,7 +35,7 @@ class CaseStudyPresenterTest < ActiveSupport::TestCase
   test '#from returns links to lead organisations, supporting organisations and worldwide organisations' do
     with_organisations = case_study
     with_organisations['links']['lead_organisations'] = [
-      { "title" => 'Lead org', "base_path" => '/orgs/lead'}
+      { "title" => 'Lead org', "base_path" => '/orgs/lead' }
     ]
     with_organisations['links']['supporting_organisations'] = [
       { "title" => 'Supporting org', "base_path" => '/orgs/supporting' }
@@ -77,7 +77,7 @@ class CaseStudyPresenterTest < ActiveSupport::TestCase
 
   test '#history returns a formatted history if the content item has updates' do
     expected_history = [
-      { display_time: '21 March 2013', note: 'Something changed', timestamp: '2013-03-21T00:00:00+00:00'},
+      { display_time: '21 March 2013', note: 'Something changed', timestamp: '2013-03-21T00:00:00+00:00' },
     ]
 
     assert_equal expected_history, presented_case_study_with_updates.history

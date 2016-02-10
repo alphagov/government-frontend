@@ -9,6 +9,7 @@
 // helpers for common page elements
 @import "helpers/responsive-bottom-margin";
 @import "helpers/available-languages";
+@import "helpers/dash-list";
 @import "helpers/description";
 @import "helpers/sidebar-with-body";
 @import "helpers/metadata";
@@ -19,5 +20,6 @@
 @import "views/statistics_announcement";
 @import "views/coming-soon";
 @import "views/take-part";
+@import "views/topical-event-about-page";
 @import "views/unpublishing";
 @import "views/service-manual";

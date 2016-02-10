@@ -9,7 +9,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     translated_path = 'government/case-studies/allez.fr'
 
     assert_routing({ path: translated_path, method: :get },
-      { controller: 'content_items', action: 'show', path: translated_path })
+      controller: 'content_items', action: 'show', path: translated_path)
   end
 
   test "gets item from content store" do

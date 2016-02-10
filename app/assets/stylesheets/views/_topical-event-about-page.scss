@@ -1,0 +1,8 @@
+.topical-event-about-page {
+  @include description;
+  @include sidebar-with-body;
+
+  .offset-one-third {
+    margin-left: percentage(1/3);
+  }
+}

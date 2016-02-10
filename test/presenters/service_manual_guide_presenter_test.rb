@@ -27,19 +27,19 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
   end
 
   test 'breadcrumbs have a root and a topic link' do
-    presented_guide = presented_guide({ "links" => { "topics" => [{ "title" => "Topic", "base_path" => "/service-manual/topic" }]}})
+    presented_guide = presented_guide("links" => { "topics" => [{ "title" => "Topic", "base_path" => "/service-manual/topic" }] })
     assert_equal [
-                   { title: "Service manual", url: "/service-manual"},
-                   { title: "Topic", url: "/service-manual/topic"},
+                   { title: "Service manual", url: "/service-manual" },
+                   { title: "Topic", url: "/service-manual/topic" },
                    { title: "Agile" },
                  ],
                  presented_guide.breadcrumbs
   end
 
   test "breadcrumbs gracefully omit topic if it's not present" do
-    presented_guide = presented_guide({ "links" => {}})
+    presented_guide = presented_guide("links" => {})
     assert_equal [
-                   { title: "Service manual", url: "/service-manual"},
+                   { title: "Service manual", url: "/service-manual" },
                    { title: "Agile" },
                  ],
                  presented_guide.breadcrumbs

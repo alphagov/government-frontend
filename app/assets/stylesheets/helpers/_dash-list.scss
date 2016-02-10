@@ -1,0 +1,33 @@
+.dash-list {
+  margin-bottom: $gutter-two-thirds;
+
+  li {
+    list-style-type: disc;
+    margin-left: $gutter-half;
+    padding-right: $gutter-half;
+    padding-top: $gutter / 6;
+
+    @media (min-width: 1px) { // target modern browsers
+      list-style-type: none;
+      &:before {
+        content: "-";
+        position: relative;
+        float: left;
+        width: $gutter-half;
+        margin-left: $gutter-half*-1;
+      }
+    }
+  }
+
+  // Remove underlines from lists of links
+  // to improve legibility
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}

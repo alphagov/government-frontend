@@ -1,0 +1,12 @@
+<% if contents.any? %>
+  <nav role="navigation">
+    <h1><%= t("content_item.contents") %></h1>
+    <ol class="dash-list">
+      <% contents.each do |heading| %>
+        <li>
+          <%= heading %>
+        </li>
+      <% end %>
+    </ol>
+  </nav>
+<% end %>
