@@ -52,7 +52,7 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
 
   def assert_has_phase_label_message(phase, message)
     within shared_component_selector("#{phase}_label") do
-      assert_equal message, CGI.unescapeHTML(JSON.parse(page.text).fetch("message"))
+      assert_equal message, JSON.parse(page.text).fetch("message").strip
     end
   end
 end
