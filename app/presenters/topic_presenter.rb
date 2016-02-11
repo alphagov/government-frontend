@@ -12,10 +12,13 @@ class TopicPresenter
   end
 
   def breadcrumbs
-    [
-      { title: "Service manual", url: "/service-manual" },
-      { title: content_item["title"] }
-    ]
+    combined_breadcrumbs = parent_breadcrumbs << topic_breadcrumb
+
+    if combined_breadcrumbs.length > 1
+      combined_breadcrumbs
+    else
+      []
+    end
   end
 
   def groups
@@ -29,6 +32,21 @@ class TopicPresenter
   def content_owners
     @content_owners ||= Array(content_item['links']['content_owners']).map do |data|
       ContentOwner.new(data['title'], data['base_path'])
+    end
+  end
+
+private
+
+  def topic_breadcrumb
+    { title: title }
+  end
+
+  def parent_breadcrumbs
+    Array(content_item['links']['parent']).map do |parent|
+      {
+        title: parent['title'],
+        url: parent['base_path']
+      }
     end
   end
 end

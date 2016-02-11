@@ -53,7 +53,19 @@ class TopicPresenterServiceManualTest < ActiveSupport::TestCase
 
   test '#breadcrumbs links to the root path and references itself' do
     topic = presented_topic(title: "Hello")
-    assert_equal [{ title: "Service manual", url: "/service-manual" }, { title: "Hello" }], topic.breadcrumbs
+
+    expected_breadcrumbs = [
+      { title: "Service manual", url: "/service-manual" },
+      { title: "Hello" }
+    ]
+    assert_equal expected_breadcrumbs, topic.breadcrumbs
+  end
+
+  test '#breadcrumbs is empty if there is only one element. A breadcrumb with just the page '\
+    'title is not useful.' do
+    topic = presented_topic(links: {})
+
+    assert_empty topic.breadcrumbs
   end
 
 private
@@ -61,7 +73,7 @@ private
   def presented_topic(overriden_attributes = {})
     parsed = JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('topic', 'service_manual_topic'))
     TopicPresenter.new(
-      parsed.deep_merge!(overriden_attributes.with_indifferent_access)
+      parsed.merge(overriden_attributes.with_indifferent_access)
     )
   end
 end
