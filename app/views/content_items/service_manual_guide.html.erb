@@ -1,6 +1,9 @@
 <%= content_for :page_class, "service-manual" %>
 <%= content_for :title, "#{@content_item.title} - Digital Service Manual" %>
-<%= content_for :phase_message, "This is the <a href='https://www.gov.uk/help/beta'>beta</a> version of the manual for building government services. <a href='https://www.gov.uk/contact/govuk'>Tell us what you think.</a>"  %>
+
+<% content_for :phase_message do %>
+This is the <a href='https://www.gov.uk/help/beta'>beta</a> version of the manual for building government services. <a href='https://www.gov.uk/contact/govuk'>Tell us what you think.</a>
+<% end %>
 
 <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
 
