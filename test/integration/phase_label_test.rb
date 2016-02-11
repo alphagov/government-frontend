@@ -11,6 +11,18 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
     assert_has_phase_label "beta"
   end
 
+  test "renders custom message for service manual guide pages" do
+    guide_sample = JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('service_manual_guide', 'basic_with_related_discussions'))
+    phase = 'beta'
+    guide_sample["phase"] = phase
+    content_store_has_item("/service-manual/agile", guide_sample.to_json)
+
+    visit "/service-manual/agile"
+    assert_has_phase_label phase
+    expected_phase_message = "This is the <a href='https://www.gov.uk/help/beta'>beta</a> version of the manual for building government services. <a href='https://www.gov.uk/contact/govuk'>Tell us what you think.</a>"
+    assert_has_phase_label_message phase, expected_phase_message
+  end
+
   test "Alpha phase label is displayed for a Case Study in phase 'alpha'" do
     case_study = JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('case_study', 'case_study'))
     case_study.merge!("phase" => "alpha")
@@ -35,6 +47,12 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
   def assert_has_phase_label(phase)
     within "[data-template='govuk_component-#{phase}_label']" do
       assert page.has_content?("#{phase}_label"), "Expected the page to have an '#{phase.titleize}' label"
+    end
+  end
+
+  def assert_has_phase_label_message(phase, message)
+    within shared_component_selector("#{phase}_label") do
+      assert_equal message, CGI.unescapeHTML(JSON.parse(page.text).fetch("message"))
     end
   end
 end
