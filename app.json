@@ -1,0 +1,37 @@
+{
+  "name": "Government Frontend",
+  "repository": "https://github.com/alphagov/government-frontend",
+  "env": {
+    "GOVUK_APP_DOMAIN": {
+      "value": "www.gov.uk"
+    },
+    "GOVUK_ASSET_ROOT": {
+      "value": "https://government-frontend.herokuapp.com"
+    },
+    "GOVUK_WEBSITE_ROOT": {
+      "value": "https://www.gov.uk"
+    },
+    "PLEK_SERVICE_CONTENT_STORE_URI": {
+      "value": "https://www.gov.uk/api"
+    },
+    "PLEK_SERVICE_STATIC_URI": {
+      "value": "assets.digital.cabinet-office.gov.uk"
+    },
+    "RAILS_SERVE_STATIC_ASSETS": {
+      "value": "yes"
+    },
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    }
+  },
+  "image": "heroku/ruby",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    }
+  ],
+  "addons": []
+}
