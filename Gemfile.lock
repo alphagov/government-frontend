@@ -118,7 +118,7 @@ GEM
       byebug (~> 8.0)
       pry (~> 0.10)
     rack (1.5.5)
-    rack-cache (1.5.1)
+    rack-cache (1.6.1)
       rack (>= 0.4)
     rack-test (0.6.3)
       rack (>= 1.0)
