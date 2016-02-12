@@ -10,28 +10,28 @@
     width: 100%;
   }
 
-  .subsection__title {
+  .subsection-title {
     @include bold-19;
     color: $govuk-blue;
     padding-top: 1em;
   }
 
-  .subsection__description {
+  .subsection-description {
     @include core-16;
     color: $secondary-text-colour;
   }
 
-  .subsection__list {
+  .subsection-list {
     margin-bottom: 0.5em;
     padding-left: 1.25em;
     border-bottom: 1px solid $border-colour;
   }
 
-  .subsection__list-item {
+  .subsection-list-item {
     margin-bottom: 0.25em;
   }
 
-  .subsection__list-item a {
+  .subsection-list-item a {
     text-decoration: none;
   }
 

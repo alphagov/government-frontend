@@ -21,11 +21,11 @@
 
     <% @content_item.groups.each do |link_group| %>
       <div class="subsection">
-        <h2 class="subsection__title"><%= link_group.name %></h2>
-        <p class="subsection__description"><%= link_group.description %></p>
-        <ul class="subsection__list">
+        <h2 class="subsection-title"><%= link_group.name %></h2>
+        <p class="subsection-description"><%= link_group.description %></p>
+        <ul class="subsection-list">
           <% link_group.linked_items.each do |linked_item| %>
-            <li class="subsection__list-item">
+            <li class="subsection-list-item">
               <%= link_to linked_item.label, linked_item.href %>
             </li>
           <% end %>
