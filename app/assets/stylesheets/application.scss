@@ -3,22 +3,23 @@
 // govuk_frontend_toolkit imports
 @import 'colours';
 @import 'measurements';
-@import 'typography';
 @import 'shims';
+@import 'typography';
 
 // helpers for common page elements
-@import "helpers/responsive-bottom-margin";
 @import "helpers/available-languages";
 @import "helpers/dash-list";
 @import "helpers/description";
-@import "helpers/sidebar-with-body";
 @import "helpers/notice";
+@import "helpers/responsive-bottom-margin";
+@import "helpers/sidebar-with-body";
 
 // pages specific view imports
 @import "views/case-studies";
-@import "views/statistics_announcement";
 @import "views/coming-soon";
+@import "views/service-manual";
+@import "views/statistics_announcement";
 @import "views/take-part";
+@import "views/topic";
 @import "views/topical-event-about-page";
 @import "views/unpublishing";
-@import "views/service-manual";
