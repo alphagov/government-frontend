@@ -70,12 +70,12 @@
     }
   }
 
-  .page-contents__title {
+  .page-contents-title {
     @include bold-16;
     margin-bottom: 0.3125em;
   }
 
-  .page-contents__list li {
+  .page-contents-list li {
     list-style-type: none;
     margin-left: $gutter-half;
     padding-right: $gutter-half;
@@ -92,7 +92,7 @@
 
   // Remove underlines from lists of links
   // to improve legibility
-  .page-contents__list a {
+  .page-contents-list a {
     text-decoration: none;
 
     &:hover,
