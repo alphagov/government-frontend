@@ -1,4 +1,4 @@
-class TopicPresenter::TopicGroup
+class ServiceManualTopicPresenter::TopicGroup
   attr_reader :name, :description, :data
 
   def initialize(data, linked_items)
@@ -11,7 +11,7 @@ class TopicPresenter::TopicGroup
 
   def linked_items
     linked_items = Array(data['content_ids']).map do |content_id|
-      TopicPresenter::LinkedItem.new(content_id, @linked_items)
+      ServiceManualTopicPresenter::LinkedItem.new(content_id, @linked_items)
     end
     linked_items.select(&:present?)
   end
