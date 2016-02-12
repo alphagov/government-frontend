@@ -116,21 +116,21 @@
     padding-top: 1em;
   }
 
-  .related__title {
+  .related-title {
     @include bold-19;
     margin-bottom: 0.5em;
   }
 
-  .related__description {
+  .related-description {
     margin-bottom: 0.5em;
   }
 
-  .related__list {
+  .related-list {
     @include core-16;
     list-style: none;
   }
 
-  .related__list-item {
+  .related-list-item {
     margin-bottom: 0.5em;
   }
 

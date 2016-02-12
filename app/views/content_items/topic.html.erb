@@ -38,14 +38,14 @@
   <div class="column-third">
     <% if @content_item.content_owners.any? %>
       <aside class="related">
-        <h2 class="related__title" id="related-communities">Join the conversation</h2>
-        <p class="related__description">
+        <h2 class="related-title" id="related-communities">Join the conversation</h2>
+        <p class="related-description">
           Discuss the work you're doing with other service teams across government.
         </p>
         <nav role="navigation" aria-labelledby="related-communities">
-          <ul class="related__list">
+          <ul class="related-list">
             <% @content_item.content_owners.each do |content_owner| %>
-              <li class="related__list-item">
+              <li class="related-list-item">
                 <%= link_to @content_owner.title, @content_owner.href %>
               </li>
             <% end %>
