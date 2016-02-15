@@ -48,6 +48,8 @@ if [[ ${GIT_BRANCH} != "origin/master" ]]; then
     --format html --out rubocop-${GIT_COMMIT}.html \
     --format clang \
     Gemfile app test config
+
+  bundle exec govuk-lint-sass app
 fi
 
 GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas bundle exec rake
