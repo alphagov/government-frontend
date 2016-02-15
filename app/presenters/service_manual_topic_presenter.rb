@@ -29,6 +29,10 @@ class ServiceManualTopicPresenter
     end
   end
 
+  def phase
+    "beta"
+  end
+
 private
 
   def topic_breadcrumb

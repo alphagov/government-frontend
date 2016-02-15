@@ -1,6 +1,10 @@
 <%= content_for :page_class, "service-manual-topic" %>
 <%= content_for :title, @content_item.title %>
 
+<% content_for :phase_message do %>
+  <%= render 'shared/service_manual_custom_phase_message', phase: @content_item.phase %>
+<% end %>
+
 <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
 
 <div class="grid-row">

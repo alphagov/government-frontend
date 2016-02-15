@@ -19,7 +19,7 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
 
     visit "/service-manual/agile"
     assert_has_phase_label phase
-    expected_phase_message = "This is the <a href='https://www.gov.uk/help/beta'>beta</a> version of the manual for building government services. <a href='https://www.gov.uk/contact/govuk'>Tell us what you think.</a>"
+    expected_phase_message = %{This is the <a href="/help/beta">beta</a> version of the manual for building government services. <a href="/contact/govuk">Tell us what you think</a>.}
     assert_has_phase_label_message phase, expected_phase_message
   end
 
