@@ -12,27 +12,29 @@
 
   .subsection-title {
     @include bold-19;
-    color: $govuk-blue;
     padding-top: 1em;
   }
 
   .subsection-description {
     @include core-16;
     color: $secondary-text-colour;
+    margin-bottom: .9375em;   // 15px
+    @include media(tablet) {
+      margin-bottom: .625em;  // 20px
+    }
   }
 
   .subsection-list {
     margin-bottom: 0.5em;
     padding-left: 1.25em;
-    border-bottom: 1px solid $border-colour;
   }
 
   .subsection-list-item {
-    margin-bottom: 0.25em;
+    margin-bottom: .3125em;
   }
 
   .subsection-list-item a {
-    text-decoration: none;
+    text-decoration: underline;
   }
 
 }
