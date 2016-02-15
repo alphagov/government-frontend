@@ -1,7 +1,0 @@
-// Consistent margin, should be moved to the component, see:
-// https://trello.com/c/zwYvoQxY/386-standardise-whitespace-margins-on-components
-@mixin metadata {
-  .govuk-metadata {
-    @include responsive-bottom-margin;
-  }
-}
