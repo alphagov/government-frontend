@@ -21,14 +21,16 @@
       width: auto;
       min-width: 120px;
 
-      @include media(tablet){
+      @include media(tablet) {
         padding-right: $gutter-one-third;
       }
     }
+
     &.direction-rtl dt {
       float: right;
       clear: right;
-      @include media(tablet){
+
+      @include media(tablet) {
         padding-left: $gutter-one-third;
         padding-right: 0;
       }
@@ -38,10 +40,11 @@
       float: left;
       width: 55%;
 
-      @include media(tablet){
+      @include media(tablet) {
         width: 70%;
       }
     }
+
     &.direction-rtl dd {
       float: right;
     }
@@ -53,10 +56,10 @@
     }
   }
 
-
   // Page contents
   .page-contents {
     margin-top: 1em;
+
     @include media(tablet) {
       margin-top: 2em;
     }
@@ -84,6 +87,7 @@
 
 .govspeak-wrapper {
   padding-top: 0.9375em;
+
   @include media(tablet) {
     padding-top: 1.875em;
   }

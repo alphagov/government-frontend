@@ -7,7 +7,6 @@
     padding: $gutter-half 0 $gutter-one-third;
     border-bottom: 1px solid $border-colour;
 
-
     li {
       float: left;
       display: block;
@@ -20,11 +19,13 @@
         border-right: 0;
       }
 
-      a, span {
+      a,
+      span {
         display: block;
         margin-top: -1px;
         @include core-16;
       }
+
       .direction-rtl & {
         direction: rtl;
         float: right;
@@ -33,6 +34,7 @@
         border-right: 0;
         margin: 3px 0 2px $gutter-one-third;
         padding: 0 0 0 $gutter-one-third;
+
         &.last {
           border-left: 0;
         }
