@@ -3,16 +3,18 @@
   // Lede text
   .lede {
     @include core-24;
+    margin-top: 30px;
+    margin-bottom: 60px;
   }
 
   // Topic subsections
   .subsection {
     width: 100%;
+    margin-bottom: 30px;
   }
 
   .subsection-title {
     @include bold-19;
-    padding-top: 1em;
   }
 
   .subsection-description {
