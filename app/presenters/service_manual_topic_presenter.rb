@@ -12,13 +12,7 @@ class ServiceManualTopicPresenter
   end
 
   def breadcrumbs
-    combined_breadcrumbs = parent_breadcrumbs << topic_breadcrumb
-
-    if combined_breadcrumbs.length > 1
-      combined_breadcrumbs
-    else
-      []
-    end
+    parent_breadcrumbs << topic_breadcrumb
   end
 
   def groups
@@ -42,11 +36,11 @@ private
   end
 
   def parent_breadcrumbs
-    Array(content_item['links']['parent']).map do |parent|
+    [
       {
-        title: parent['title'],
-        url: parent['base_path']
+        title: 'Service manual',
+        url: '/service-manual'
       }
-    end
+    ]
   end
 end

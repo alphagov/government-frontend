@@ -61,13 +61,6 @@ class TopicPresenterServiceManualTest < ActiveSupport::TestCase
     assert_equal expected_breadcrumbs, topic.breadcrumbs
   end
 
-  test '#breadcrumbs is empty if there is only one element. A breadcrumb with just the page '\
-    'title is not useful.' do
-    topic = presented_topic(links: {})
-
-    assert_empty topic.breadcrumbs
-  end
-
 private
 
   def presented_topic(overriden_attributes = {})
