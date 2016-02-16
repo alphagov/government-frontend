@@ -7,12 +7,12 @@
 @import 'typography';
 
 // helpers for common page elements
+@import "helpers/responsive-bottom-margin";
 @import "helpers/available-languages";
 @import "helpers/dash-list";
 @import "helpers/description";
-@import "helpers/notice";
-@import "helpers/responsive-bottom-margin";
 @import "helpers/sidebar-with-body";
+@import "helpers/notice";
 
 // pages specific view imports
 @import "views/case-studies";
