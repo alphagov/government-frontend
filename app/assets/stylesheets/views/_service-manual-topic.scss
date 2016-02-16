@@ -1,0 +1,42 @@
+.service-manual-topic {
+
+  // Lede text
+  .lede {
+    @include core-24;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  // Topic subsections
+  .subsection {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .subsection-title {
+    @include bold-19;
+  }
+
+  .subsection-description {
+    @include core-16;
+    color: $secondary-text-colour;
+    margin-bottom: .9375em;   // 15px
+    @include media(tablet) {
+      margin-bottom: .625em;  // 20px
+    }
+  }
+
+  .subsection-list {
+    margin-bottom: 0.5em;
+    padding-left: 1.25em;
+  }
+
+  .subsection-list-item {
+    margin-bottom: .3125em;
+  }
+
+  .subsection-list-item a {
+    text-decoration: underline;
+  }
+
+}

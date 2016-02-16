@@ -2,7 +2,7 @@
 <%= content_for :title, "#{@content_item.title} - Digital Service Manual" %>
 
 <% content_for :phase_message do %>
-This is the <a href='https://www.gov.uk/help/beta'>beta</a> version of the manual for building government services. <a href='https://www.gov.uk/contact/govuk'>Tell us what you think.</a>
+  <%= render 'shared/service_manual_custom_phase_message', phase: @content_item.phase %>
 <% end %>
 
 <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
@@ -57,7 +57,7 @@ This is the <a href='https://www.gov.uk/help/beta'>beta</a> version of the manua
     <!--  Page contents -->
     <div class="page-contents">
       <h3 class="page-contents-title">Page contents:</h3>
-      <ul class="page-contents-links">
+      <ul class="page-contents-list">
         <% @content_item.header_links.each do |header_link| %>
           <li><a href="<%=header_link[:href]%>"><%=header_link[:title]%></a></li>
         <% end %>
