@@ -10,7 +10,11 @@
   .lede {
     @include core-24;
     margin-top: $gutter;
-    margin-bottom: $gutter * 1.5;
+    margin-bottom: $gutter;
+
+    @include media(tablet) {
+      margin-bottom: $gutter * 1.5;
+    }
   }
 
   // Topic subsections
