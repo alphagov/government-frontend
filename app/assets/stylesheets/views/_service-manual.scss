@@ -79,11 +79,13 @@
 
   .page-contents-title {
     @include bold-16;
-    margin-bottom: 0.3125em;
+    margin-bottom: 5px;
   }
 
   .page-contents-list li {
+    @include core-16;
     list-style-type: none;
+    margin-bottom: 5px;
     margin-left: $gutter-half;
     padding-right: $gutter-half;
 
