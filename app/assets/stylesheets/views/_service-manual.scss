@@ -1,5 +1,11 @@
 .service-manual {
 
+  margin-bottom: $gutter;
+
+  @include media(tablet) {
+    margin-bottom: $gutter * 2;
+  }
+
   .community-contact {
     margin-top: 1.875em; // 30/16
   }

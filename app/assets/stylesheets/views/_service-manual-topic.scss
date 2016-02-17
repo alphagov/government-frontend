@@ -1,5 +1,11 @@
 .service-manual-topic {
 
+  margin-bottom: $gutter;
+
+  @include media(tablet) {
+    margin-bottom: $gutter * 2;
+  }
+
   // Lede text
   .lede {
     @include core-24;
