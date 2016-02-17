@@ -43,7 +43,7 @@
         <% end %>
         <dt>Last updated:</dt>
         <dd>
-          <%= link_to @content_item.last_updated_ago_in_words, "#", title: @content_item.last_update_timestamp %>
+          <%= @content_item.last_updated_ago_in_words %>
         </dd>
       </dl>
     </div>
