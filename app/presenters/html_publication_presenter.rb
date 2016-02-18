@@ -1,0 +1,2 @@
+class HtmlPublicationPresenter < ContentItemPresenter
+end

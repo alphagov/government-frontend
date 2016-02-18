@@ -45,9 +45,10 @@ module GovukContentSchemaExamples
     def supported_formats
       %w{
         case_study
-        statistics_announcement
         coming_soon
+        html_publication
         redirect
+        statistics_announcement
         take_part
         topical_event_about_page
         unpublishing
