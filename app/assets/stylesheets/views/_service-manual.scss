@@ -1,7 +1,14 @@
 .service-manual {
 
+  margin-bottom: $gutter;
+
+  @include media(tablet) {
+    margin-bottom: $gutter * 2;
+  }
+
   .community-contact {
-    margin-top: 1.875em; // 30/16
+    margin-top: $gutter;
+    margin-bottom: $gutter;
   }
 
   // Lede text
@@ -72,11 +79,13 @@
 
   .page-contents-title {
     @include bold-16;
-    margin-bottom: 0.3125em;
+    margin-bottom: 5px;
   }
 
   .page-contents-list li {
+    @include core-16;
     list-style-type: none;
+    margin-bottom: 5px;
     margin-left: $gutter-half;
     padding-right: $gutter-half;
 
