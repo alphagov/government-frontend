@@ -16,6 +16,10 @@ class ContentItemPresenter
 
 private
 
+  def display_time(timestamp)
+    I18n.l(Date.parse(timestamp), format: "%-d %B %Y") if timestamp
+  end
+
   def sorted_locales(translations)
     translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? '' : t["locale"] }
   end

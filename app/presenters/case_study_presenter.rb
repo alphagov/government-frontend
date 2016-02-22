@@ -68,10 +68,6 @@ class CaseStudyPresenter < ContentItemPresenter
 
 private
 
-  def display_time(timestamp)
-    I18n.l(Date.parse(timestamp), format: "%-d %B %Y") if timestamp
-  end
-
   def any_updates?
     if (first_public_at = content_item["details"]["first_public_at"]).present?
       DateTime.parse(content_item["public_updated_at"]) != DateTime.parse(first_public_at)
