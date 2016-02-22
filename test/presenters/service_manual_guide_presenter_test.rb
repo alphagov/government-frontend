@@ -45,6 +45,16 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
                  presented_guide.breadcrumbs
   end
 
+  test "#main_topic_title is the title of the main topic" do
+    guide = presented_guide("links" => { "topics" => [{ "title" => "Agile Delivery", "base_path" => "/service-manual/topic" }] })
+    assert_equal 'Agile Delivery', guide.main_topic_title
+  end
+
+  test "#main_topic_title can be empty" do
+    guide = presented_guide
+    assert_nil guide.main_topic_title
+  end
+
   test '#content_owner fetches the first content owner info from the links' do
     guide = presented_guide(
       'details' => { 'content_owner' => nil },
