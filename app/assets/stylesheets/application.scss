@@ -6,6 +6,9 @@
 @import 'shims';
 @import 'typography';
 
+// government-frontend mixins
+@import "mixins/white-links";
+
 // helpers for common page elements
 @import "helpers/responsive-bottom-margin";
 @import "helpers/available-languages";
