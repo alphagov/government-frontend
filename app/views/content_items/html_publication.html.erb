@@ -6,15 +6,12 @@
 
 <header class="publication-header" id="contents">
   <div class="headings">
-    <p class="format-sub-type">
-      <%= I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1) %>
-    </p>
-    <h1>
-      <%= @content_item.title %>
-    </h1>
-    <p>
-      <%= @content_item.last_changed %>
-    </p>
+    <%= render partial: 'govuk_component/title',
+        locals: {
+          context: I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1),
+          title: @content_item.title,
+        } %>
+    <%= @content_item.last_changed %>
   </div>
   <nav class="in-page-navigation">
     <h2>
