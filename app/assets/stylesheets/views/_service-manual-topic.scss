@@ -9,7 +9,6 @@
   // Lede text
   .lede {
     @include core-24;
-    margin-top: $gutter;
     margin-bottom: $gutter;
 
     @include media(tablet) {
