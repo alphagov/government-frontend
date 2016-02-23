@@ -1,3 +1,89 @@
 .html-publication {
 
+  .publication-header {
+    @include white-links;
+    @include core-19;
+    color: $white;
+
+    background: $light-blue;
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter * 1.5;
+
+    padding-top: $gutter * 2.5;
+    padding-bottom: $gutter / 3;
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    h1 {
+      @include bold-48;
+      @include media(tablet) {
+        margin-bottom: $gutter * 2;
+      }
+    }
+
+    .format-sub-type {
+      @include core-27;
+      margin-bottom: $gutter-one-third;
+    }
+
+    p {
+      margin-bottom: $gutter;
+    }
+  }
+
+  .in-page-navigation {
+    margin-bottom: $gutter;
+
+    h2 {
+      font-weight: bold;
+    }
+
+    ol {
+      padding-left: $gutter;
+
+      .direction-rtl & {
+        padding-right: $gutter;
+        padding-left: 0;
+      }
+
+      li {
+        list-style: decimal;
+        font-weight: bold;
+      }
+
+      &.unnumbered {
+        padding-left: 0;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+
+    .numbered {
+      margin-left: $gutter-two-thirds;
+
+      @include media(desktop) {
+        margin-left: $gutter;
+      }
+    }
+
+    .heading-number {
+      @include bold-19($tabular-numbers: true);
+      margin-left: -18px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: underline;
+    }
+  }
+
 }
