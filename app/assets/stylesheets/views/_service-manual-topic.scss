@@ -23,10 +23,11 @@
   }
 
   .subsection-title {
-    @include bold-19;
+    @include bold-24;
   }
 
   .subsection-description {
+    @include core-19;
     color: $secondary-text-colour;
     margin-bottom: $gutter-one-quarter;
 
@@ -36,6 +37,7 @@
   }
 
   .subsection-list {
+    @include core-19;
     margin-bottom: $gutter-one-quarter;
     padding-left: $gutter-two-thirds;
   }
