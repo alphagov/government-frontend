@@ -10,7 +10,12 @@
   <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
 </head>
 <body>
-  <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
+
+  <% if content_for(:simple_header).present? %>
+    <%= content_for(:simple_header) %>
+  <% else %>
+      <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
+  <% end %>
 
   <div id="wrapper" class="<%= wrapper_class %>">
     <main role="main" id="content" class="<%= yield(:page_class) %>" lang="<%= I18n.locale %>">
