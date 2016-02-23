@@ -20,6 +20,10 @@
   .subsection {
     width: 100%;
     margin-bottom: $gutter;
+
+    @include media(tablet) {
+      margin-bottom: $gutter * 1.5;
+    }
   }
 
   .subsection-title {
@@ -39,7 +43,6 @@
 
   .subsection-list {
     @include core-19;
-    margin-bottom: $gutter-one-quarter;
     padding-left: $gutter-two-thirds;
   }
 
