@@ -20,13 +20,19 @@
   .subsection {
     width: 100%;
     margin-bottom: $gutter;
+
+    @include media(tablet) {
+      margin-bottom: $gutter * 1.5;
+    }
   }
 
   .subsection-title {
-    @include bold-19;
+    @include bold-24;
+    margin-bottom: 5px;
   }
 
   .subsection-description {
+    @include core-19;
     color: $secondary-text-colour;
     margin-bottom: $gutter-one-quarter;
 
@@ -36,7 +42,7 @@
   }
 
   .subsection-list {
-    margin-bottom: $gutter-one-quarter;
+    @include core-19;
     padding-left: $gutter-two-thirds;
   }
 
