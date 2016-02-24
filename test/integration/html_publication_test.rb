@@ -3,7 +3,7 @@ require 'test_helper'
 class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publications" do
     setup_and_visit_content_item('published')
-    assert_has_component_govspeak_html_publication(@content_item["details"]["body"])
+    assert page.has_text?("See more information about this Notice")
 
     within ".publication-header" do
       assert page.has_text?(@content_item["details"]["format_sub_type"])
@@ -14,6 +14,8 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?("Contents")
       assert page.has_css?('ol.unnumbered')
     end
+
+    assert_has_component_govspeak_html_publication(@content_item["details"]["body"])
   end
 
   def assert_has_component_govspeak_html_publication(content)

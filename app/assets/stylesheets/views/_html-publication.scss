@@ -5,13 +5,18 @@
     margin-bottom: $gutter-one-third;
   }
 
+  .see-more-about {
+    @include core-19;
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter-half;
+  }
+
   .publication-header {
     @include white-links;
     @include core-19;
     color: $white;
 
     background: $light-blue;
-    margin-top: $gutter * 1.5;
     margin-bottom: $gutter * 1.5;
     padding: $gutter $gutter $gutter / 3;
   }

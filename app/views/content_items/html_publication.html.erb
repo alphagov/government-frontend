@@ -4,6 +4,10 @@
   content_for :simple_header, true
 %>
 
+<p class="see-more-about">
+  <%= link_to t('html_publication.see_more', document_type: t("content_item.format.#{@content_item.format_sub_type}", count: 1)), @content_item.parent_base_path %>
+</p>
+
 <header class="publication-header" id="contents">
   <div class="headings">
     <%= render partial: 'govuk_component/title',

@@ -16,6 +16,10 @@ class HtmlPublicationPresenterTest < ActiveSupport::TestCase
     assert_equal "Updated 2 February 2016", updated.last_changed
   end
 
+  test 'presents the path to its parent' do
+    assert_equal html_publication["links"]["parent"][0]["base_path"], presented_html_publication.parent_base_path
+  end
+
   def presented_html_publication(type = 'published')
     content_item = html_publication(type)
     HtmlPublicationPresenter.new(content_item)

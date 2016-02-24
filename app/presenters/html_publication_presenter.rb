@@ -21,4 +21,8 @@ class HtmlPublicationPresenter < ContentItemPresenter
       "#{I18n.t('content_item.metadata.updated')} #{timestamp}"
     end
   end
+
+  def parent_base_path
+    content_item["links"]["parent"][0]["base_path"]
+  end
 end
