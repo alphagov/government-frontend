@@ -25,6 +25,10 @@
     margin-top: $gutter;
     margin-bottom: $gutter;
 
+    @include media(tablet) {
+      width: 70%;
+    }
+
     h2 {
       font-weight: bold;
     }
