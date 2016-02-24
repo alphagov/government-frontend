@@ -42,16 +42,6 @@ git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-sc
 
 bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment --without development
 
-if [[ ${GIT_BRANCH} != "origin/master" ]]; then
-  bundle exec govuk-lint-ruby \
-    --diff \
-    --format html --out rubocop-${GIT_COMMIT}.html \
-    --format clang \
-    Gemfile app test config
-
-  bundle exec govuk-lint-sass app
-fi
-
 GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas bundle exec rake
 bundle exec rake assets:precompile
 
