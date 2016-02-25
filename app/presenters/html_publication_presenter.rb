@@ -8,7 +8,7 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def format_sub_type
-    content_item["links"]["parent"][0]["format_sub_type"]
+    parent["format_sub_type"]
   end
 
   def last_changed
@@ -23,6 +23,12 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def parent_base_path
-    content_item["links"]["parent"][0]["base_path"]
+    parent["base_path"]
+  end
+
+private
+
+  def parent
+    content_item["links"]["parent"][0]
   end
 end
