@@ -40,6 +40,10 @@ class ServiceManualGuidePresenter < ContentItemPresenter
     @main_topic ||= Array(content_item["links"] && content_item["links"]["topics"]).first
   end
 
+  def main_topic_title
+    main_topic["title"] if main_topic.present?
+  end
+
   def breadcrumbs
     crumbs = [{ title: "Service manual", url: "/service-manual" }]
     crumbs << { title: main_topic["title"], url: main_topic["base_path"] } if main_topic

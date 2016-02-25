@@ -11,7 +11,7 @@
 <div class="grid-row">
 
   <div class="column-two-thirds">
-    <%= render "govuk_component/title", title: @content_item.title, context: @content_item.main_topic.try(:title) %>
+    <%= render "govuk_component/title", title: @content_item.title, context: @content_item.main_topic_title %>
   </div>
 
   <div class="column-third">
