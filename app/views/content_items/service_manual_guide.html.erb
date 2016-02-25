@@ -30,11 +30,13 @@
 
     <div class="metadata">
       <dl>
-        <dt>Published by:</dt>
-        <% @content_item.content_owners.each do |content_owner| %>
-          <dd>
-            <%= link_to content_owner.title, content_owner.href %>
-          </dd>
+        <% if @content_item.content_owners.any? %>
+          <dt>Published by:</dt>
+          <% @content_item.content_owners.each do |content_owner| %>
+            <dd>
+              <%= link_to content_owner.title, content_owner.href %>
+            </dd>
+          <% end %>
         <% end %>
         <% if @content_item.related_discussion %>
           <dt>Related discussion:</dt>

@@ -8,4 +8,12 @@ class ServiceManualGuideTest < ActionDispatch::IntegrationTest
       assert page.has_link?('Agile delivery community')
     end
   end
+
+  test "service manual guide does not show published by" do
+    setup_and_visit_content_item('service_manual_guide_community')
+
+    within('.metadata') do
+      refute page.has_content?('Published by')
+    end
+  end
 end
