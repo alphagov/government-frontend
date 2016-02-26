@@ -7,7 +7,7 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
     assert presented_guide.body.size > 10
     assert presented_guide.header_links.size >= 1
 
-    content_owner = presented_guide.content_owner
+    content_owner = presented_guide.content_owners.first
     assert content_owner.title.present?
     assert content_owner.href.present?
 
@@ -55,22 +55,36 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
     assert_nil guide.main_topic_title
   end
 
-  test '#content_owner fetches the first content owner info from the links' do
+  test '#content_owners when stored in the links' do
     guide = presented_guide(
       'details' => { 'content_owner' => nil },
-      'links' => { 'content_owners' => [{ 'title' => 'Design Community', 'base_path' => '/example/dc' }] }
+      'links' => { 'content_owners' => [{
+        "content_id" => "e5f09422-bf55-417c-b520-8a42cb409814",
+        "title" => "Agile delivery community",
+        "base_path" => "/service-manual/communities/agile-delivery-community",
+      }] }
     )
-    assert_equal 'Design Community', guide.content_owner.title
-    assert_equal '/example/dc', guide.content_owner.href
+
+    expected = [
+      ServiceManualGuidePresenter::ContentOwner.new(
+        "Agile delivery community",
+        "/service-manual/communities/agile-delivery-community")
+    ]
+    assert_equal expected, guide.content_owners
   end
 
   test '#content_owner falls back to using deprecated content owner info in details' do
     guide = presented_guide(
-      'details' => { 'content_owner' => { 'title' => 'Agile Community', 'href' => 'http://example.com/ac' } },
-      'links' => { 'content_owners' => [] }
+      'details' => { 'content_owner' => { 'title' => 'Agile Community', 'href' => '/service-manual/communities/agile-delivery-community' } },
+      'links' => {}
     )
-    assert_equal 'Agile Community', guide.content_owner.title
-    assert_equal 'http://example.com/ac', guide.content_owner.href
+
+    expected = [
+      ServiceManualGuidePresenter::ContentOwner.new(
+        "Agile Community",
+        "/service-manual/communities/agile-delivery-community")
+    ]
+    assert_equal expected, guide.content_owners
   end
 
 private

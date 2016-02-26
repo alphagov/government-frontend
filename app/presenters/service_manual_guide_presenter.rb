@@ -12,12 +12,19 @@ class ServiceManualGuidePresenter < ContentItemPresenter
       .map { |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
   end
 
-  def content_owner
-    content_owner_data = Array(content_item["links"] && content_item["links"]["content_owners"]).first
-    if content_owner_data.present?
-      ContentOwner.new(content_owner_data["title"], content_owner_data["base_path"])
+  def content_owners
+    if links_content_owners_attributes.any?
+      links_content_owners_attributes.map do |content_owner_attributes|
+        ContentOwner.new(content_owner_attributes["title"], content_owner_attributes["base_path"])
+      end
     else
-      content_owner_fallback
+      # During a migration period we need to be able to retrieve content owners
+      # from the details as well. Once all guides have been republished and no
+      # guides contain content_owners in the details then this branch and
+      # associated private method can be removed.
+      details_content_owners_attributes.map do |content_owner_attributes|
+        ContentOwner.new(content_owner_attributes["title"], content_owner_attributes["href"])
+      end
     end
   end
 
@@ -57,9 +64,11 @@ private
     DateTime.parse(content_item["public_updated_at"])
   end
 
-  # Remove this method after switching (see commit message)
-  def content_owner_fallback
-    content_owner_data = content_item["details"]["content_owner"]
-    ContentOwner.new(content_owner_data["title"], content_owner_data["href"])
+  def links_content_owners_attributes
+    content_item.to_hash.fetch('links', {}).fetch('content_owners', [])
+  end
+
+  def details_content_owners_attributes
+    [content_item.to_hash.fetch('details', {}).fetch('content_owner', nil)].compact
   end
 end

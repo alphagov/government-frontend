@@ -21,7 +21,6 @@
         <%= link_to "Give feedback about this page", "/contact/govuk", class: "feedback" %>
       </p>
     </div>
-
   </div>
 </div>
 
@@ -31,10 +30,14 @@
 
     <div class="metadata">
       <dl>
-        <dt>Published by:</dt>
-        <dd>
-          <%= link_to @content_item.content_owner.title, @content_item.content_owner.href %>
-        </dd>
+        <% if @content_item.content_owners.any? %>
+          <dt>Published by:</dt>
+          <% @content_item.content_owners.each do |content_owner| %>
+            <dd>
+              <%= link_to content_owner.title, content_owner.href %>
+            </dd>
+          <% end %>
+        <% end %>
         <% if @content_item.related_discussion %>
           <dt>Related discussion:</dt>
           <dd>
