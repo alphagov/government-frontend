@@ -1,6 +1,12 @@
 <%= content_for :page_class, "service-manual" %>
 <%= content_for :title, "#{@content_item.title} - Digital Service Manual" %>
 
+<% content_for :simple_header do %>
+    <nav id='proposition-menu'>
+      <a href='/service-manual' id='proposition-name'>Digital service manual</a>
+    </nav>
+<% end %>
+
 <% content_for :phase_message do %>
   <%= render 'shared/service_manual_custom_phase_message', phase: @content_item.phase %>
 <% end %>
