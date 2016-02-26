@@ -52,9 +52,13 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_contents_list(contents)
+    assert page.has_css?(".dash-list"), "Failed to find an element with a class of dash-list"
     within ".dash-list" do
       contents.each do |heading|
-        assert page.has_css?("a[href=\"##{heading[:id]}\"]", text: heading[:text])
+        selector = "a[href=\"##{heading[:id]}\"]"
+        text = heading.fetch(:text)
+        assert page.has_css?(selector), "Failed to find an element matching: #{selector}"
+        assert page.has_css?(selector, text: text), "Failed to find an element matching #{selector} with text: #{text}"
       end
     end
   end
