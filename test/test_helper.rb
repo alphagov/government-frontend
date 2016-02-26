@@ -39,9 +39,16 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_component_govspeak(content)
-    within shared_component_selector("govspeak") do
+  def assert_has_component_govspeak(content, index: 1)
+    within_component_govspeak(index: index) do
       assert_equal content, JSON.parse(page.text).fetch("content")
+    end
+  end
+
+  def within_component_govspeak(index: 1)
+    within(shared_component_selector("govspeak") + ":nth-of-type(#{index})") do
+      component_args = JSON.parse(page.text)
+      yield component_args
     end
   end
 
