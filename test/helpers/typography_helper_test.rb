@@ -21,4 +21,10 @@ class TypographyHelperTest < ActionView::TestCase
     assert_equal "&lt;b&gt;this&lt;b&gt; &amp; that&nbsp;thing", nbsp_between_last_two_words("<b>this<b> & that thing")
     assert_equal "&lt;b&gt;this&lt;b&gt; &amp;&nbsp;that", nbsp_between_last_two_words("<b>this<b> &amp; that")
   end
+
+  test "nbsp_between_last_two_words handles nil descriptions" do
+    assert_nothing_raised do
+      assert_equal nil, nbsp_between_last_two_words(nil)
+    end
+  end
 end
