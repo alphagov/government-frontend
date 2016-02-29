@@ -7,10 +7,10 @@
 @import 'typography';
 
 // government-frontend mixins
+@import "mixins/margins";
 @import "mixins/white-links";
 
 // helpers for common page elements
-@import "helpers/responsive-bottom-margin";
 @import "helpers/available-languages";
 @import "helpers/dash-list";
 @import "helpers/description";

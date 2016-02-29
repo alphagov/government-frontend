@@ -1,8 +1,18 @@
 .html-publication {
 
-  .govuk-title .context {
-    color: $white;
-    margin-bottom: $gutter-one-third;
+  // Based on the govuk-title component
+  .html-publication-title {
+    @include responsive-vertical-margins;
+
+    .context {
+      @include core-27;
+      color: $white;
+      margin-bottom: $gutter-one-third;
+    }
+
+    h1 {
+      @include bold-48;
+    }
   }
 
   .see-more-about {

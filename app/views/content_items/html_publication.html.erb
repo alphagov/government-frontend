@@ -10,11 +10,10 @@
 
 <header class="publication-header" id="contents">
   <div class="headings">
-    <%= render partial: 'govuk_component/title',
-        locals: {
-          context: I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1),
-          title: @content_item.title,
-        } %>
+    <div class="html-publication-title">
+      <p class="context"><%= I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1) %></p>
+      <h1><%= @content_item.title %></h1>
+    </div>
     <%= @content_item.last_changed %>
   </div>
   <nav class="in-page-navigation">
