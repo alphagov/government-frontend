@@ -1,0 +1,94 @@
+.html-publication {
+
+  // Based on the govuk-title component
+  .html-publication-title {
+    @include responsive-vertical-margins;
+
+    .context {
+      @include core-27;
+      color: $white;
+      margin-bottom: $gutter-one-third;
+    }
+
+    h1 {
+      @include bold-48;
+    }
+  }
+
+  .see-more-about {
+    @include core-19;
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter-half;
+  }
+
+  .publication-header {
+    @include white-links;
+    @include core-19;
+    color: $white;
+
+    background: $light-blue;
+    margin-bottom: $gutter * 1.5;
+    padding: $gutter $gutter $gutter / 3;
+  }
+
+  .in-page-navigation {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    @include media(tablet) {
+      width: 70%;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+
+    ol {
+      padding-left: $gutter;
+
+      .direction-rtl & {
+        padding-right: $gutter;
+        padding-left: 0;
+      }
+
+      li {
+        list-style: decimal;
+        font-weight: bold;
+      }
+
+      &.unnumbered {
+        padding-left: 0;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+
+    .numbered {
+      margin-left: $gutter-two-thirds;
+
+      @include media(desktop) {
+        margin-left: $gutter;
+      }
+    }
+
+    .heading-number {
+      @include bold-19($tabular-numbers: true);
+      margin-left: -18px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: underline;
+    }
+  }
+
+}

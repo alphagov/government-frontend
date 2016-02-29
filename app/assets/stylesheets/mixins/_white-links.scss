@@ -1,0 +1,12 @@
+@mixin white-links {
+  a,
+  a:visited,
+  a:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: $link-active-colour;
+  }
+}
