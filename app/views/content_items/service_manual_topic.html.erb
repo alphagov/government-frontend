@@ -7,6 +7,8 @@
 
 <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
 
+<% content_for :meta_description, @content_item.description %>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', title: @content_item.title %>

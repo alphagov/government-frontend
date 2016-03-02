@@ -8,6 +8,9 @@
   <!--[if IE 8]><%= stylesheet_link_tag "application-ie8" %><script>var ieVersion = 8;</script><![endif]-->
   <%= csrf_meta_tags %>
   <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
+  <% if content_for(:meta_description).present? %>
+    <meta name="description" content="<%= content_for(:meta_description) %>" />
+  <% end %>
 </head>
 <body>
   <% unless content_for(:simple_header) %>
