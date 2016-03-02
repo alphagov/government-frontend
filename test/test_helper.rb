@@ -5,6 +5,7 @@ require 'webmock/minitest'
 require 'support/govuk_content_schema_examples'
 require 'capybara/rails'
 require 'slimmer/test_helpers/shared_templates'
+require "minitest/pride"
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
