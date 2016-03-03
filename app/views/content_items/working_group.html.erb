@@ -1,0 +1,45 @@
+<%= content_for :page_class, @content_item.format.dasherize %>
+<%= content_for :title, @content_item.title %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        title: @content_item.title %>
+  </div>
+</div>
+
+<% unless @content_item.description.blank? %>
+  <%= render 'shared/description', description: @content_item.description %>
+<% end %>
+
+<div class="grid-row sidebar-with-body">
+  <% if @content_item.contents.any? %>
+    <div class="column-third">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+    </div>
+  <% end %>
+  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+
+    <% @additional_body = capture do %>
+      <% if @content_item.policies.any? %>
+        <h2 id="policies">Policies</h2>
+        <ul>
+          <% @content_item.policies.each do |policy| %>
+            <li><%= link_to policy["title"], policy["base_path"] %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
+      <% if @content_item.email.present? %>
+        <h2 id="contact-details">Contact details</h2>
+        <p><%= mail_to @content_item.email, @content_item.email %></p>
+      <% end %>
+    <% end %>
+    <%= render 'govuk_component/govspeak',
+        content: @additional_body,
+        direction: page_text_direction %>
+  </div>
+</div>
