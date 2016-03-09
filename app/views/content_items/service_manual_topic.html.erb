@@ -1,6 +1,8 @@
 <%= content_for :page_class, "service-manual-topic" %>
 <%= content_for :title, @content_item.title %>
 
+<%= javascript_include_tag 'modules/accordion-with-descriptions' %>
+
 <% content_for :phase_message do %>
   <%= render 'shared/service_manual_custom_phase_message', phase: @content_item.phase %>
 <% end %>
