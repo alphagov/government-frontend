@@ -24,19 +24,33 @@
       <%= @content_item.description %>
     </p>
 
-    <% @content_item.groups.each do |link_group| %>
-      <div class="subsection">
-        <h2 class="subsection-title"><%= link_group.name %></h2>
-        <p class="subsection-description"><%= link_group.description %></p>
-        <ul class="subsection-list">
-          <% link_group.linked_items.each do |linked_item| %>
-            <li class="subsection-list-item">
-              <%= link_to linked_item.label, linked_item.href %>
-            </li>
-          <% end %>
-        </ul>
+    <div class="subsections js-hidden" data-module="accordion-with-descriptions">
+
+      <div class="subsection-wrapper">
+
+        <% @content_item.groups.each_with_index do |link_group, idx| %>
+          <div class="subsection">
+
+            <div class="subsection-header">
+              <h2 class="subsection-title"><%= link_group.name %></h2>
+              <p class="subsection-description"><%= link_group.description %></p>
+            </div>
+
+            <div class="subsection-content" id="subsection_content_<%= idx %>">
+              <ul class="subsection-list">
+                <% link_group.linked_items.each do |linked_item| %>
+                  <li>
+                    <%= link_to linked_item.label, linked_item.href %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+
+          </div>
+        <% end %>
+
       </div>
-    <% end %>
+    </div>
 
   </div>
 
