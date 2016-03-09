@@ -44,14 +44,147 @@
   .subsection-list {
     @include core-19;
     padding-left: $gutter-two-thirds;
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
   }
 
-  .subsection-list-item {
-    margin-bottom: 5px;
-  }
+  // When JavaScript is enabled, create accordion
+  .js-accordion-with-descriptions {
 
-  .subsection-list-item a {
-    text-decoration: underline;
-  }
+    // Wrapper for 'open all / close all' button
+    .subsection-controls {
+      @extend %contain-floats;
 
+      button {
+        float: right;
+
+        @include core-16;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: $link-colour;
+        padding: 0.5em 0;
+      }
+    }
+
+    // Wrapper for subsections
+    .subsection-wrapper {
+      @extend %contain-floats;
+      border-bottom: 1px solid $border-colour;
+    }
+
+    .subsection {
+      margin-bottom: 0;
+
+      @include media(tablet) {
+        margin-bottom: 0;
+      }
+    }
+
+    .subsection-header {
+      position: relative;
+      padding-top: $gutter-half;
+      padding-bottom: $gutter-half;
+      border-top: 1px solid $border-colour;
+
+      // Change the background of the header on hover
+      &:hover {
+        cursor: pointer;
+        background: $highlight-colour;
+      }
+
+      &.is-open {
+        padding-bottom: 5px;
+      }
+    }
+
+    .subsection-title {
+      button {
+        color: $govuk-blue;
+
+        @include bold-24;
+        background: none;
+        border: 0;
+        padding-left: 0;
+        text-align: left;
+      }
+
+      margin-bottom: 0;
+      margin-right: $gutter-half;
+
+      @include media(tablet) {
+        margin-right: $gutter;
+      }
+
+    }
+
+    .subsection-description {
+      margin-bottom: 0;
+      margin-right: $gutter-half;
+
+      @include media(tablet) {
+        margin-bottom: 0;
+        margin-right: $gutter;
+      }
+    }
+
+    .is-open .subsection-description {
+      @include media(tablet) {
+        margin-bottom: $gutter-one-quarter;
+      }
+    }
+
+    .subsection-icon {
+      position: absolute;
+      top: 15px;
+      right: 0;
+
+      @include media (tablet) {
+        right: 15px;
+      }
+
+      height: 15px;
+      width: 16px;
+
+      // PNG fallback for SVG
+      background-image: image-url('icons-plus-minus.png');
+      // SVG sprite
+      background: image-url("icons-plus-minus.svg"), linear-gradient(transparent, transparent);
+      background-repeat: no-repeat;
+      background-position: 0 -16px;
+    }
+
+    .is-open .subsection-icon {
+      background-position: 0 0;
+    }
+
+    .subsection-content {
+      padding-top: $gutter-half;
+      padding-bottom: $gutter-half;
+    }
+
+    .is-open + .subsection-content {
+      padding-top: 5px;
+    }
+
+    .subsection-list {
+      padding-left: 0;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+  }
 }
