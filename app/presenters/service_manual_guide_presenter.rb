@@ -35,11 +35,11 @@ class ServiceManualGuidePresenter < ContentItemPresenter
     end
   end
 
-  def last_updated_ago_in_words
+  def last_published_time_in_words
     "#{time_ago_in_words(updated_at)} ago"
   end
 
-  def last_update_timestamp
+  def last_published_time_timestamp
     updated_at.strftime("%e %B %Y %H:%M")
   end
 
@@ -61,7 +61,7 @@ class ServiceManualGuidePresenter < ContentItemPresenter
 private
 
   def updated_at
-    DateTime.parse(content_item["public_updated_at"])
+    DateTime.parse(content_item["updated_at"])
   end
 
   def links_content_owners_attributes
