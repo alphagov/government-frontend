@@ -26,6 +26,10 @@ class HtmlPublicationPresenter < ContentItemPresenter
     parent["base_path"]
   end
 
+  def organisations
+    content_item["links"]["organisations"].sort_by { |o| o["title"] }
+  end
+
 private
 
   def parent

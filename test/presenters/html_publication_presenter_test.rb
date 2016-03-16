@@ -20,6 +20,16 @@ class HtmlPublicationPresenterTest < ActiveSupport::TestCase
     assert_equal html_publication["links"]["parent"][0]["base_path"], presented_html_publication.parent_base_path
   end
 
+  test 'presents the list of organisations' do
+    multiple_organisations_html_publication = govuk_content_schema_example('html_publication', 'multiple_organisations')
+    organisation_titles = multiple_organisations_html_publication["links"]["organisations"].map { |o| o["title"] }
+
+    presented_unordered_html_publication = HtmlPublicationPresenter.new(multiple_organisations_html_publication)
+    presented_organisations = presented_unordered_html_publication.organisations.map { |o| o["title"] }
+
+    assert_equal organisation_titles, presented_organisations
+  end
+
   def presented_html_publication(type = 'published')
     content_item = html_publication(type)
     HtmlPublicationPresenter.new(content_item)
