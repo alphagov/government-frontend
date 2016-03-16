@@ -15,6 +15,10 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_css?('ol.unnumbered')
     end
 
+    within ".organisation-logos" do
+      assert page.has_text?(@content_item["links"]["organisations"][0]["title"])
+    end
+
     assert_has_component_govspeak_html_publication(@content_item["details"]["body"])
   end
 
