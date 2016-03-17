@@ -4,9 +4,28 @@
   content_for :simple_header, true
 %>
 
-<p class="see-more-about">
-  <%= link_to t('html_publication.see_more', document_type: t("content_item.format.#{@content_item.format_sub_type}", count: 1)), @content_item.parent_base_path %>
-</p>
+<div class="publication-external">
+  <ol class="organisation-logos">
+    <% @content_item.organisations.each do |organisation| %>
+      <li class="organisation-logo">
+        <%= render partial: 'govuk_component/organisation_logo', locals: {
+          organisation: {
+            name: organisation["logo"]["formatted_title"],
+            url: organisation["base_path"],
+            brand: organisation["brand"],
+            crest: organisation["logo"]["crest"]
+          }
+        } %>
+      </li>
+    <% end %>
+  </ol>
+
+  <div class="see-more-about-container">
+    <p class="see-more-about">
+      <%= link_to t('html_publication.see_more', document_type: t("content_item.format.#{@content_item.format_sub_type}", count: 1)), @content_item.parent_base_path %>
+    </p>
+  </div>
+</div>
 
 <header class="publication-header" id="contents">
   <div class="headings">

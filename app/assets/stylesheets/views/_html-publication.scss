@@ -1,4 +1,38 @@
+@import "grid_layout";
+
 .html-publication {
+  @include responsive-top-margin;
+
+  .publication-external {
+    @extend %grid-row;
+    margin-bottom: $gutter-two-thirds;
+    position: relative;
+
+    .organisation-logos {
+      @include grid-column(1 / 4);
+      list-style-type: none;
+
+      .organisation-logo {
+        padding-bottom: $gutter-one-third;
+      }
+    }
+
+    .see-more-about-container {
+      @include grid-column(3 / 4);
+
+      .see-more-about {
+        @include core-19;
+        padding-top: $gutter-one-third;
+        position: static;
+
+        @include media(tablet) {
+          bottom: 0;
+          position: absolute;
+          right: $gutter-half;
+        }
+      }
+    }
+  }
 
   // Based on the govuk-title component
   .html-publication-title {
@@ -13,12 +47,6 @@
     h1 {
       @include bold-48;
     }
-  }
-
-  .see-more-about {
-    @include core-19;
-    margin-top: $gutter * 1.5;
-    margin-bottom: $gutter-half;
   }
 
   .publication-header {
