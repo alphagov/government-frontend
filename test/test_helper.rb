@@ -78,7 +78,11 @@ class ActionDispatch::IntegrationTest
   end
 
   def get_content_example(name)
-    GovukContentSchemaTestHelpers::Examples.new.get(schema_format, name)
+    get_content_example_by_format_and_name(schema_format, name)
+  end
+
+  def get_content_example_by_format_and_name(format, name)
+    GovukContentSchemaTestHelpers::Examples.new.get(format, name)
   end
 
   # Override this method if your test file doesn't match the convention
