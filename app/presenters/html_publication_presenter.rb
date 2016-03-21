@@ -30,6 +30,15 @@ class HtmlPublicationPresenter < ContentItemPresenter
     content_item["links"]["organisations"].sort_by { |o| o["title"] }
   end
 
+  # HACK: Replaces the organisation_brand for executive office organisations.
+  # Remove this in the future after migrating organisations to the content store API,
+  # and updating them with the correct brand in the actual store.
+  def organisation_brand(organisation)
+    brand = organisation["brand"]
+    brand = "executive-office" if organisation["logo"]["crest"] == "eo"
+    brand
+  end
+
 private
 
   def parent

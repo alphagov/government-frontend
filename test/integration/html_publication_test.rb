@@ -22,9 +22,20 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     assert_has_component_govspeak_html_publication(@content_item["details"]["body"])
   end
 
+  test "prime minister office organisation html publication" do
+    setup_and_visit_content_item("prime_ministers_office")
+    assert_has_component_organisation_logo_with_brand("executive-office", 4)
+  end
+
   def assert_has_component_govspeak_html_publication(content)
     within shared_component_selector("govspeak_html_publication") do
       assert_equal content, JSON.parse(page.text).fetch("content")
+    end
+  end
+
+  def assert_has_component_organisation_logo_with_brand(brand, index = 1)
+    within("li.organisation-logo:nth-of-type(#{index}) #{shared_component_selector('organisation_logo')}") do
+      assert_equal brand, JSON.parse(page.text).fetch("organisation").fetch("brand")
     end
   end
 end

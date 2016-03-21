@@ -12,7 +12,7 @@
           organisation: {
             name: organisation["logo"]["formatted_title"],
             url: organisation["base_path"],
-            brand: organisation["brand"],
+            brand: @content_item.organisation_brand(organisation),
             crest: organisation["logo"]["crest"]
           }
         } %>
