@@ -59,15 +59,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "includes government navigation and sets the correct active item" do
-    content_item = content_store_has_schema_example('case_study', 'case_study')
-
-    get :show, path: path_for(content_item)
-
-    assert_response :success
-    assert_select shared_component_selector('government_navigation'), match: "case-studies"
-  end
-
   test "returns 404 for item not in content store" do
     path = 'government/case-studies/boost-chocolate-production'
 
