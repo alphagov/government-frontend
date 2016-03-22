@@ -109,6 +109,7 @@ GEM
     parallel (1.6.1)
     parser (2.3.0.6)
       ast (~> 2.2)
+    phantomjs (1.9.8.0)
     plek (1.11.0)
     powerpack (0.1.1)
     pry (0.10.3)
@@ -233,6 +234,7 @@ DEPENDENCIES
   govuk-lint
   govuk_frontend_toolkit (= 2.0.1)
   logstasher (= 0.6.1)
+  phantomjs (~> 1.9.7)
   plek (= 1.11)
   pry-byebug
   rails (= 4.1.14.1)

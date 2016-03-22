@@ -22,6 +22,7 @@ end
 
 group :development, :test do
   gem 'govuk-lint'
+  gem 'phantomjs', '~> 1.9.7'
   gem 'wraith', '~> 3.1'
 end
 
