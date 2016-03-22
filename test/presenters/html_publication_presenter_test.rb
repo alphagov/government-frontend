@@ -30,6 +30,24 @@ class HtmlPublicationPresenterTest < ActiveSupport::TestCase
     assert_equal organisation_titles, presented_organisations
   end
 
+  test "presents the branding for organisations" do
+    mo_presented_html_publication = presented_html_publication("multiple_organisations")
+    mo_presented_html_publication.organisations.each do |organisation|
+      assert_equal mo_presented_html_publication.organisation_brand(organisation), organisation["brand"]
+    end
+  end
+
+  test "alters the branding for executive office organisations" do
+    organisation = {
+      "brand" => "cabinet-office",
+      "logo" => {
+        "formatted_title" => "Prime Minister's Office, 10 Downing Street",
+        "crest" => "eo"
+      }
+    }
+    assert_equal presented_html_publication("prime_ministers_office").organisation_brand(organisation), "executive-office"
+  end
+
   def presented_html_publication(type = 'published')
     content_item = html_publication(type)
     HtmlPublicationPresenter.new(content_item)
