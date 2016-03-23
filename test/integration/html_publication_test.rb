@@ -27,6 +27,11 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     assert_has_component_organisation_logo_with_brand("executive-office", 4)
   end
 
+  test "html publication with rtl text direction" do
+    setup_and_visit_content_item("arabic_translation")
+    assert page.has_css?(".publication-header.direction-rtl"), "has .direction-rtl class on .publication-header element"
+  end
+
   def assert_has_component_govspeak_html_publication(content)
     within shared_component_selector("govspeak_html_publication") do
       assert_equal content, JSON.parse(page.text).fetch("content")

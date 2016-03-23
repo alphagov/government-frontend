@@ -56,6 +56,11 @@
 
     background: $light-blue;
     padding: $gutter $gutter $gutter / 3;
+
+    &.direction-rtl {
+      direction: rtl;
+      text-align: start;
+    }
   }
 
   .in-page-navigation {

@@ -3,6 +3,10 @@
   content_for :title, @content_item.title
   content_for :simple_header, true
 %>
+<%
+  publication_header_direction_class = ""
+  publication_header_direction_class = " direction-#{page_text_direction}" if page_text_direction
+%>
 
 <div class="publication-external">
   <ol class="organisation-logos">
@@ -27,7 +31,7 @@
   </div>
 </div>
 
-<header class="publication-header" id="contents">
+<header class="publication-header<%= publication_header_direction_class %>" id="contents">
   <div class="headings">
     <div class="html-publication-title">
       <p class="context"><%= I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1) %></p>
