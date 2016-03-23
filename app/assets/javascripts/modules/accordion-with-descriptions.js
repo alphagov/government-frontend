@@ -6,10 +6,10 @@
     this.start = function($element) {
 
       // Indicate that js has worked
-      $('.subsections').addClass('js-accordion-with-descriptions');
+      $element.addClass('js-accordion-with-descriptions');
 
        // Prevent FOUC, remove class hiding content
-      $('.subsections').removeClass('js-hidden');
+      $element.removeClass('js-hidden');
 
       // Insert the markup for the subsection-controls
       $element.prepend( '<div class="subsection-controls js-subsection-controls"><button aria-expanded="false">Open all</button></div>' );

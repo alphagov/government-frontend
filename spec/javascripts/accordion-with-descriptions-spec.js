@@ -1,20 +1,46 @@
-describe('Accordion with descriptions', function () {
+describe('An accordion with descriptions module', function () {
   "use strict";
 
   // Test that the .js-accordion-with-descriptions class has been added
   it("has a class of js-accordion-with-descriptions", function () {
+
+    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
+    var accordion = new GOVUK.Modules.AccordionWithDescriptions();
+    accordion.start($element);
+
+    expect($element).toHaveClass("js-accordion-with-descriptions");
   });
 
   // Test that the .js-hidden class has been removed
   it("does not have a class of js-hidden", function () {
+
+    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
+    var accordion = new GOVUK.Modules.AccordionWithDescriptions();
+    accordion.start($element);
+
+    expect($element).not.toHaveClass("js-hidden");
   });
 
   // Test that the markup has been inserted for subsection controls
-  it("has created a wrapper with a class of subsection-controls", function () {
+  it("has a child element with a class of subsection-controls", function () {
+
+    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
+    var accordion = new GOVUK.Modules.AccordionWithDescriptions();
+    accordion.start($element);
+
+    expect($element).toContain('.js-subsection-controls');
+
   });
 
   // Test that inside subsection controls is a button (the open/close all button)
   it("has a child element which is a button", function () {
+
+    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
+    var accordion = new GOVUK.Modules.AccordionWithDescriptions();
+    accordion.start($element);
+
+    expect($element).toContain('.js-subsection-controls button');
+
   });
 
   // Test that the open/close all button has the aria-expanded attribute and it is set to false
