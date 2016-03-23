@@ -31,6 +31,21 @@
           right: $gutter-half;
         }
       }
+
+      &.direction-rtl {
+        direction: rtl;
+        text-align: start;
+
+        // Chrome (and probably other browsers) does a weird thing where it changes
+        // the font kerning ever so slightly when RTL rendering latin characters,
+        // which will cause the glyphs to become slightly wider, which will cause
+        // them to collapse over multiple rows even though they do have enough space to fit.
+        // It's reproducible only for specific character strings, such as "See More".
+        // This is a sheepish fix, by giving the element much more space than it needs.
+        .see-more-about {
+          width: 100%;
+        }
+      }
     }
   }
 

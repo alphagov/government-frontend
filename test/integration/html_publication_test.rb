@@ -30,6 +30,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publication with rtl text direction" do
     setup_and_visit_content_item("arabic_translation")
     assert page.has_css?(".publication-header.direction-rtl"), "has .direction-rtl class on .publication-header element"
+    assert page.has_css?(".see-more-about-container.direction-rtl"), "has .direction-rtl class on .see-more-about-container element"
   end
 
   def assert_has_component_govspeak_html_publication(content)
