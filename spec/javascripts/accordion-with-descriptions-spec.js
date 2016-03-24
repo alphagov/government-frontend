@@ -1,106 +1,137 @@
 describe('An accordion with descriptions module', function () {
   "use strict";
 
-  // Test that the .js-accordion-with-descriptions class has been added
-  it("has a class of js-accordion-with-descriptions", function () {
+  var $element;
 
-    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
+  beforeEach(function() {
+    $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions">\
+        <div class="subsection-wrapper">\
+          <div class="subsection">\
+            <div class="subsection-header">\
+              <h2 class="subsection-title">Subsection title in here</h2>\
+              <p class="subsection-description">Subsection description in here</p>\
+            </div>\
+            <div class="subsection-content" id="subsection_content_0">\
+              <ul class="subsection-list">\
+                <li>\
+                  <a href="">Subsection list item in here</a>\
+                </li>\
+              </ul>\
+            </div>\
+          </div>\
+          <div class="subsection">\
+            <div class="subsection-header">\
+              <h2 class="subsection-title">Subsection title in here</h2>\
+              <p class="subsection-description">Subsection description in here</p>\
+            </div>\
+            <div class="subsection-content" id="subsection_content_1">\
+              <ul class="subsection-list">\
+                <li>\
+                  <a href="">Subsection list item in here</a>\
+                </li>\
+              </ul>\
+            </div>\
+          </div>\
+        </div>\
+      </div>');
+
     var accordion = new GOVUK.Modules.AccordionWithDescriptions();
     accordion.start($element);
+  });
 
+  afterEach(function() {
+    $(document).off();
+  });
+
+  it("has a class of js-accordion-with-descriptions", function () {
     expect($element).toHaveClass("js-accordion-with-descriptions");
   });
 
-  // Test that the .js-hidden class has been removed
   it("does not have a class of js-hidden", function () {
-
-    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
-    var accordion = new GOVUK.Modules.AccordionWithDescriptions();
-    accordion.start($element);
-
     expect($element).not.toHaveClass("js-hidden");
   });
 
-  // Test that the markup has been inserted for subsection controls
   it("has a child element with a class of subsection-controls", function () {
-
-    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
-    var accordion = new GOVUK.Modules.AccordionWithDescriptions();
-    accordion.start($element);
-
     expect($element).toContain('.js-subsection-controls');
-
   });
 
-  // Test that inside subsection controls is a button (the open/close all button)
   it("has a child element which is a button", function () {
-
-    var $element = $('<div class="subsections js-hidden" data-module="accordion-with-descriptions"></div>');
-    var accordion = new GOVUK.Modules.AccordionWithDescriptions();
-    accordion.start($element);
-
     expect($element).toContain('.js-subsection-controls button');
-
   });
 
-  // Test that the open/close all button has the aria-expanded attribute and it is set to false
-  it("has an aria-expanded attribute and it is false", function () {
+  it("has an open/close all button with an aria-expanded attribute and it is false", function () {
+    var $button = $element.find('.js-subsection-controls button');
+
+    expect($button).toHaveAttr("aria-expanded", "false");
   });
 
-  // Test that the open/close all button text is "Open all"
-  it("has text inside which is equal to Open all", function () {
+  it("has an open/close all button with text inside which is equal to Open all and a value for the aria-controls attribute which includes all of the subsection_content_IDs", function () {
+    var $openCloseAllButton = $element.find('.js-subsection-controls button');
+
+    expect($openCloseAllButton).toHaveText("Open all");
+    expect($openCloseAllButton).toHaveAttr('aria-controls','subsection_content_0 subsection_content_1 ');
   });
 
-  // Test that each section has a title with a class of .subsection-title
-  it("has a title with a class of .subsection-title", function () {
+  it("has a h2 with a class of .subsection-title with a child element which is a button", function () {
+    var $subsectionButton = $element.find('.subsection-title button:first');
+
+    expect($subsectionButton).toHaveClass('subsection-button');
+    expect($subsectionButton).toHaveAttr('aria-expanded','false');
+    expect($subsectionButton).toHaveAttr('aria-controls','subsection_content_0');
   });
 
-  // Test that inside .subsection-title is a button
-  it("has a child element which is a button", function () {
+  it("has two subsection-content items which are initially hidden", function () {
+    var $subsectionContent = $element.find('.subsection-content');
+
+    expect($subsectionContent).toHaveLength(2);
+    expect($subsectionContent).toHaveClass('js-hidden');
   });
 
-  // Test that the button inside each title has an aria-expanded attribute and it is set to false
-  it("has an aria-expanded attribute and it is false", function () {
+  it("has a header with a child element which has a class of .subsection-icon", function () {
+    var $subsectionHeader = $element.find('.subsection-header');
+
+    expect($subsectionHeader).toContain('.subsection-icon');
   });
 
-  // Test that each button has an aria-controls attribute which matches the ID of a subsection_content_ID
-  it("has aria-controls attribute which matches the ID of a subsection_content_ID", function () {
+  it("has no is-open classes and two sections when all sections are closed", function () {
+    var openSubsections = $element.find('.is-open').length;
+    expect(openSubsections).toEqual(0);
+    var totalSubsections = $element.find('.subsection-content').length;
+    expect(totalSubsections).toEqual(2);
   });
 
-  // Test that the total number of .subsection-content items is known
-  it("has a number of subsection-content items and the total is stored", function () {
+  // When the open/close all button is clicked...
+
+  it("has no is-open classes, then when the open-close button is clicked, it has two is-open classes, this is equal to the number of sections", function () {
+
+    var $openCloseAllButton = $element.find('.js-subsection-controls button');
+    var openSubsections = $element.find('.is-open').length;
+
+    expect(openSubsections).toEqual(0);
+
+    $openCloseAllButton.click();
+
+    var openSubsections = $element.find('.is-open').length;
+    expect(openSubsections).toEqual(2);
+
+    var totalSubsections = $element.find('.subsection-content').length;
+    expect(totalSubsections).toEqual(openSubsections);
   });
 
-  // Test that the open/close all button has a value for the aria-controls attribute which matches *all* subsection_content_IDs
-  it("has a value for the aria-controls attribute which includes all of the subsection_content_IDs", function () {
-  });
-
-  // Test that all of the .subsection-content items are initially hidden
-  it("has a class of js-hidden for all .subsection-content items", function () {
-  });
-
-  // Test that the subsection icon has been inserted into each subsection header
-  it("has a child element which has a class of .subsection-icon", function () {
-  });
-
-  // When all sections are open (testing: setOpenCloseAllText)
-
-  // Test that the total number of sections is equal to the total number of .is-open classes
-  it("has a total number of is-open classes and that this is the same as the number of sections", function () {
-  });
 
   // Test that the button text is updated to Close all
   it("has text inside which is equal to Close all", function () {
+    var $openCloseAllButton = $element.find('.js-subsection-controls button');
+
+    expect($openCloseAllButton).toContainText("Open all");
+    $openCloseAllButton.click();
+    expect($openCloseAllButton).toContainText("Close all");
   });
 
   // When a section is open
 
   // When a section is open (testing: toggleSection, openSection)
   it("does not have a class of js-hidden", function () {
-  });
-
-  // When a section is open (testing: toggleIcon)
-  it("has a class of is-open", function () {
   });
 
   // When a section is open (testing: toggleState, setExpandedState)
@@ -113,9 +144,6 @@ describe('An accordion with descriptions module', function () {
   it("has a class of js-hidden", function () {
   });
 
-  // When a section is closed (testing: toggleIcon)
-  it("does not have a class of is-open", function () {
-  });
 
   // When a section is closed (testing: toggleState, setExpandedState)
   it("has a an aria-expanded attribute and the value is false", function () {
