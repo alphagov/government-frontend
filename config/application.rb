@@ -34,6 +34,10 @@ module GovernmentFrontend
       :ru, :si, :sk, :so, :sq, :sr, :sw, :ta, :th, :tk, :tr,
       :uk, :ur, :uz, :vi, :zh, 'zh-hk', 'zh-tw']
 
+    # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+    # the I18n.default_locale when a translation can not be found).
+    config.i18n.fallbacks = true
+
     # Disable rack::cache
     config.action_dispatch.rack_cache = nil
 
