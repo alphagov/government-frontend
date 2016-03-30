@@ -10,3 +10,10 @@ Rails.application.config.assets.precompile += %w(
   application-ie7.css
   application-ie8.css
 )
+
+# Precompile js
+Rails.application.config.assets.precompile += %w(
+  govuk/modules.js
+  modules/accordion-with-descriptions.js
+  start-modules.js
+)
