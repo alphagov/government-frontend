@@ -1,3 +1,5 @@
+@import "mixins/service-manual-related";
+
 .service-manual-topic {
 
   margin-bottom: $gutter;
@@ -53,5 +55,7 @@
   .subsection-list-item a {
     text-decoration: underline;
   }
+
+  @include service-manual-related;
 
 }
