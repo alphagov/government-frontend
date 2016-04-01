@@ -1,3 +1,7 @@
 .working-group {
   @include description;
+
+  .offset-one-third {
+    margin-left: percentage(1 / 3);
+  }
 }
