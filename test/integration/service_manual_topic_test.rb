@@ -28,4 +28,15 @@ class ServiceManualTopicTest < ActionDispatch::IntegrationTest
 
     refute page.has_css?('meta[name="description"]', visible: false)
   end
+
+  test "it lists communities in the sidebar" do
+    setup_and_visit_content_item('service_manual_topic')
+
+    within('.related-communities') do
+      assert page.has_link?("Agile delivery community",
+        href: "/service-manual/communities/agile-delivery-community")
+      assert page.has_link?("User research community",
+        href: "/service-manual/communities/user-research-community")
+    end
+  end
 end

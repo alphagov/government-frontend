@@ -45,11 +45,11 @@
         <p class="related-description">
           Discuss the work you're doing with other service teams across government.
         </p>
-        <nav role="navigation" aria-labelledby="related-communities">
+        <nav role="navigation" aria-labelledby="related-communities" class="related-communities">
           <ul class="related-list">
             <% @content_item.content_owners.each do |content_owner| %>
               <li class="related-list-item">
-                <%= link_to @content_owner.title, @content_owner.href %>
+                <%= link_to content_owner.title, content_owner.href %>
               </li>
             <% end %>
           </ul>
