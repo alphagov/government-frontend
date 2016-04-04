@@ -76,3 +76,36 @@
 
   </div>
 </div>
+
+<% if @content_item.change_history.any? %>
+  <div class="grid-row change-history">
+    <div class="column-one-third">
+      &nbsp;
+    </div>
+    <div class="column-two-thirds">
+      <div>
+        Published by:
+      </div>
+
+      <% @content_item.content_owners.each do |content_owner| %>
+        <div class="change-history-published-by">
+          <%= link_to content_owner.title, content_owner.href %>
+        </div>
+      <% end %>
+
+      <div>
+        Last update:
+      </div>
+
+      <% @content_item.change_history.each do |change_history| %>
+        <div class="change-history-public-timestamp">
+          <%= change_history.public_timestamp.strftime("%d %B %Y") %>
+        </div>
+        <div class="change-history-note">
+          <%= change_history.note.html_safe %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+<% end %>
