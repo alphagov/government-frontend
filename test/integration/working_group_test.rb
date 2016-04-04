@@ -7,7 +7,6 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
     assert page.has_text?("Contact details")
     assert page.has_text?(@content_item["details"]["email"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
 
     assert_has_contents_list([
       { text: "Membership",         id: "membership" },
@@ -15,8 +14,11 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
       { text: "Meeting Minutes",    id: "meeting-minutes" },
       { text: "Contact details",    id: "contact-details" },
     ])
-    within_component_govspeak(index: 2) do |component_args|
-      html = Nokogiri::HTML.parse(component_args.fetch("content"))
+    within_component_govspeak do |component_args|
+      content = component_args.fetch("content")
+      assert content.include? @content_item["details"]["body"]
+
+      html = Nokogiri::HTML.parse(content)
       assert_not_nil html.at_css("h2#contact-details")
     end
   end
@@ -32,7 +34,7 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
     assert_has_contents_list([
       { text: "Policies", id: "policies" },
     ])
-    within_component_govspeak(index: 2) do |component_args|
+    within_component_govspeak do |component_args|
       html = Nokogiri::HTML.parse(component_args.fetch("content"))
       assert_not_nil html.at_css("h2#policies")
     end

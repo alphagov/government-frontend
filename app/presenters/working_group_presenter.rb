@@ -29,7 +29,7 @@ private
   def extra_headings
     extra_headings = []
     extra_headings << { id: "policies", text: "Policies" } if policies.any?
-    extra_headings << { id: "contact-details", text: "Contact details" } if email
+    extra_headings << { id: "contact-details", text: "Contact details" } if email.present?
     extra_headings
   end
 end

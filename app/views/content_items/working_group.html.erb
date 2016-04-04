@@ -19,9 +19,6 @@
     </div>
   <% end %>
   <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
-    <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction %>
 
     <% @additional_body = capture do %>
       <% if @content_item.policies.any? %>
@@ -39,7 +36,7 @@
       <% end %>
     <% end %>
     <%= render 'govuk_component/govspeak',
-        content: @additional_body,
+        content: "#{@content_item.body} #{@additional_body}",
         direction: page_text_direction %>
   </div>
 </div>
