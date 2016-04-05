@@ -62,6 +62,19 @@ wraith latest test/wraith/config.yaml
 This will generate image diffs comparing the two runs, including a browseable
 gallery of the output, in `tmp/wraith`.
 
+### Adding a new format
+
+There’s a rails generator you can use to stub the basic files needed for a new format. It stubs the following:
+* Stylesheet
+* Template
+* Presenter
+* Presenter test
+* Integration test
+
+```
+bundle exec rails generate format [format_name_with_underscores]
+```
+
 ## Licence
 
 [MIT License](LICENCE)
