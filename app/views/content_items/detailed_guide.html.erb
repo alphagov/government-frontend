@@ -10,3 +10,16 @@
 </div>
 
 <%= render 'shared/description', description: @content_item.description %>
+
+<div class="grid-row sidebar-with-body">
+  <% if @content_item.contents.any? %>
+    <div class="column-third">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+    </div>
+  <% end %>
+  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+  </div>
+</div>
