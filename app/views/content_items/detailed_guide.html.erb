@@ -1,11 +1,26 @@
 <%= content_for :page_class, @content_item.format.dasherize %>
 <%= content_for :title, @content_item.title %>
 
+<%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.format}", count: 1),
+        context: "#{@content_item.context} — guidance",
         title: @content_item.title %>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from,
+        updated: @content_item.updated,
+        history: @content_item.short_history,
+        published: @content_item.published,
+        direction: page_text_direction,
+        part_of: @content_item.part_of
+    %>
   </div>
 </div>
 
@@ -23,3 +38,12 @@
         direction: page_text_direction %>
   </div>
 </div>
+
+<%= render 'govuk_component/document_footer',
+    from: @content_item.from,
+    updated: @content_item.updated,
+    history: @content_item.history,
+    published: @content_item.published,
+    direction: page_text_direction,
+    part_of: @content_item.part_of
+%>
