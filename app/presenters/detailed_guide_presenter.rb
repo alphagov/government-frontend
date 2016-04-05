@@ -1,0 +1,2 @@
+class DetailedGuidePresenter < ContentItemPresenter
+end
