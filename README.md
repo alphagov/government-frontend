@@ -72,7 +72,7 @@ There’s a rails generator you can use to stub the basic files needed for a new
 * Integration test
 
 ```
-bundle exec rails generate format [format_name_with_underscores]
+bundle exec rails generate format [format_name]
 ```
 
 ## Licence

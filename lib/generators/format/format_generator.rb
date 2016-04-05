@@ -4,7 +4,7 @@ class FormatGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates', __FILE__)
 
   def copy_format_files
-    format_name = file_name
+    format_name = file_name.underscore
     @dashed_name = format_name.dasherize
     @camel_name = format_name.camelize
 
