@@ -1,4 +1,7 @@
-require 'test_helper'
+require 'presenter_test_helper'
 
-class DetailedGuidePresenterTest < ActiveSupport::TestCase
+class DetailedGuidePresenterTest < PresenterTest
+  def format_name
+    "detailed_guide"
+  end
 end
