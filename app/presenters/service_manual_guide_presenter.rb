@@ -1,6 +1,7 @@
 class ServiceManualGuidePresenter < ContentItemPresenter
   ContentOwner = Struct.new(:title, :href)
   RelatedDiscussion = Struct.new(:title, :href)
+  ChangeHistory = Struct.new(:public_timestamp, :note, :reason_for_change)
 
   include ActionView::Helpers::DateHelper
   attr_reader :body, :publish_time, :header_links
@@ -56,6 +57,17 @@ class ServiceManualGuidePresenter < ContentItemPresenter
     crumbs << { title: main_topic["title"], url: main_topic["base_path"] } if main_topic
     crumbs << { title: content_item["title"] }
     crumbs
+  end
+
+  def change_history
+    change_history = Array(@content_item["details"]["change_history"])
+    change_history.map do |c|
+      ChangeHistory.new(
+        DateTime.parse(c["public_timestamp"]),
+        c["note"],
+        c["reason_for_change"],
+      )
+    end
   end
 
 private

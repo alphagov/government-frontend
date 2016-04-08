@@ -76,3 +76,43 @@
 
   </div>
 </div>
+
+<% if @content_item.change_history.any? %>
+  <div class="grid-row change-history" data-module="toggle">
+    <div class="column-one-third">
+      &nbsp;
+    </div>
+    <div class="column-two-thirds">
+      <div>
+        Published by:
+      </div>
+
+      <% @content_item.content_owners.each do |content_owner| %>
+        <div class="change-history-published-by">
+          <%= link_to content_owner.title, content_owner.href %>
+        </div>
+      <% end %>
+
+      <div>
+        Last update:
+      </div>
+
+      <% first_change, *rest_of_changes = @content_item.change_history %>
+
+      <%= render "shared/change_history_item", change_history_item: first_change %>
+
+      <% if rest_of_changes.any? %>
+        <a href="#change-history-hidden" data-expanded="false" data-controls="change-history-hidden">
+          + full page history
+        </a>
+
+        <div id="change-history-hidden" class="js-hidden">
+          <% rest_of_changes.each do |change_history| %>
+            <%= render "shared/change_history_item", change_history_item: change_history %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+<% end %>

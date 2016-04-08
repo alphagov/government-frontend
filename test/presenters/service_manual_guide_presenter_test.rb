@@ -87,6 +87,23 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
     assert_equal expected, guide.content_owners
   end
 
+  test "#change_history outputs change history" do
+    expected_time = Time.now
+    guide = presented_guide(
+      "details" => {
+        "change_history" => [
+          "public_timestamp" => expected_time.iso8601,
+          "note" => "A Change Note",
+        ],
+      }
+    )
+
+    refute_empty guide.change_history
+    first_change = guide.change_history.first
+    assert_equal "A Change Note", first_change.note
+    assert_equal expected_time.to_i, first_change.public_timestamp.to_i
+  end
+
 private
 
   def presented_guide(overriden_attributes = {})

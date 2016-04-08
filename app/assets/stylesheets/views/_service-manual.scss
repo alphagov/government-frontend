@@ -123,4 +123,22 @@
 
   @include service-manual-related;
 
+  // Change history
+  .change-history {
+    @include core-19;
+  }
+
+  .change-history-published-by {
+    @include bold-24;
+  }
+
+  .change-history-public-timestamp {
+    @include bold-24;
+  }
+
+  .change-history-note {
+    @include core-19;
+    color: $secondary-text-colour;
+  }
+
 }
