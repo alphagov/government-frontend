@@ -28,7 +28,7 @@ class DetailedGuidePresenter < ContentItemPresenter
   end
 
   def part_of
-    links("document_collections") + links("related_policies") + links("worldwide_priorities") + links("world_locations")
+    links("document_collections") + links("related_policies") + links("worldwide_priorities") + links("world_locations") + links("topics")
   end
 
   def history

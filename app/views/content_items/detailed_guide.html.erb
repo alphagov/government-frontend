@@ -15,11 +15,11 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/metadata',
         from: @content_item.from,
-        updated: @content_item.updated,
-        history: @content_item.short_history,
-        published: @content_item.published,
-        direction: page_text_direction,
-        part_of: @content_item.part_of
+        other: {
+          "First published" => @content_item.published,
+          "Last updated" => @content_item.updated,
+          "Part of" => @content_item.part_of #doing this to preserve the ordering but if part_of, at the same level as from and other
+        }
     %>
   </div>
 </div>
