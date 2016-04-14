@@ -1,9 +1,7 @@
 require 'presenter_test_helper'
 
 class DetailedGuidePresenterTest < PresenterTest
-
   test 'presents the basic details of a content item' do
-
     assert_equal example['description'], presented_example.description
     assert_equal example['format'], presented_example.format
     assert_equal example['title'], presented_example.title
@@ -16,7 +14,7 @@ class DetailedGuidePresenterTest < PresenterTest
   end
 
   test '#published returns a formatted date of the day the content item became public' do
-    assert_equal '18 February 2016', presented_example.published
+    assert_equal '12 June 2014', presented_example.published
   end
 
   def format_name
