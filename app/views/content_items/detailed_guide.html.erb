@@ -17,7 +17,7 @@
         from: @content_item.from,
         other: {
           "First published" => @content_item.published,
-          "Last updated" => @content_item.updated,
+          "Last updated" => [@content_item.updated,"<a href=\"#history\">see all updates</a>"].join(", "),
           "Part of" => @content_item.part_of #doing this to preserve the ordering but if part_of, at the same level as from and other
         }
     %>
@@ -44,6 +44,5 @@
     updated: @content_item.updated,
     history: @content_item.history,
     published: @content_item.published,
-    direction: page_text_direction,
-    part_of: @content_item.part_of
+    direction: page_text_direction
 %>
