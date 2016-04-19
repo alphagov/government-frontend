@@ -8,10 +8,15 @@ class DetailedGuidePresenter < ContentItemPresenter
   end
 
   def breadcrumbs
-    [
-      { title: "Home", url: "/" },
-      { title: context, url: parent["base_path"] }
-    ]
+    e = parent
+    res = []
+
+    while e
+      res << { title: e["title"], url: e["base_path"] }
+      e = e["parent"] && e["parent"].first
+    end
+
+    res.reverse
   end
 
   def contents

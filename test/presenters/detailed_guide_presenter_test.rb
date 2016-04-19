@@ -17,6 +17,15 @@ class DetailedGuidePresenterTest < PresenterTest
     assert_equal '12 June 2014', presented_example.published
   end
 
+  test 'breadcrumbs show the full parent hierarchy' do
+    assert_equal "Home", presented_example.breadcrumbs[0][:title]
+    assert_equal "/", presented_example.breadcrumbs[0][:url]
+    assert_equal "Business tax", presented_example.breadcrumbs[1][:title]
+    assert_equal "/topic/business-tax", presented_example.breadcrumbs[1][:url]
+    assert_equal "PAYE", presented_example.breadcrumbs[2][:title]
+    assert_equal "/topic/business-tax/paye", presented_example.breadcrumbs[2][:url]
+  end
+
   def format_name
     "detailed_guide"
   end
