@@ -6,7 +6,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        context: "Guidance",
+        context: t("content_item.format.#{@content_item.format}", count: 1),
         title: @content_item.title %>
   </div>
 </div>
