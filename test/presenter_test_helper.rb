@@ -7,12 +7,12 @@ class PresenterTest < ActiveSupport::TestCase
 
 private
 
-  def presented_example_content_item(type)
+  def presented_example_content_item(type = format_name)
     content_item = example_content_item(type)
     "#{format_name.classify}Presenter".safe_constantize.new(content_item)
   end
 
-  def example_content_item(type)
+  def example_content_item(type = format_name)
     govuk_content_schema_example(format_name, type)
   end
 end
