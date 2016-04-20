@@ -16,6 +16,7 @@ class DetailedGuidePresenter < ContentItemPresenter
       e = e["parent"] && e["parent"].first
     end
 
+    res << { title: "Home", url: "/" }
     res.reverse
   end
 
