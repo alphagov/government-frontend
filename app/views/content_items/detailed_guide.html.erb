@@ -1,0 +1,48 @@
+<%= content_for :page_class, @content_item.format.dasherize %>
+<%= content_for :title, @content_item.title %>
+
+<%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: t("content_item.format.#{@content_item.format}", count: 1),
+        title: @content_item.title %>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from,
+        other: {
+          "First published" => @content_item.published,
+          "Last updated" => [@content_item.updated,"<a href=\"#history\">see all updates</a>"].join(", "),
+          "Part of" => @content_item.part_of #doing this to preserve the ordering but if part_of, at the same level as from and other
+        }
+    %>
+  </div>
+</div>
+
+<%= render 'shared/description', description: @content_item.description %>
+
+<div class="grid-row sidebar-with-body">
+  <% if @content_item.contents.any? %>
+    <div class="column-third">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+    </div>
+  <% end %>
+  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+  </div>
+</div>
+
+<%= render 'govuk_component/document_footer',
+    from: @content_item.from,
+    updated: @content_item.updated,
+    history: @content_item.history,
+    published: @content_item.published,
+    direction: page_text_direction
+%>

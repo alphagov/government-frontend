@@ -27,7 +27,7 @@ class ActionDispatch::IntegrationTest
     within shared_component_selector("metadata") do
       # Flatten top level / "other" args, for consistent hash access
       component_args = JSON.parse(page.text).tap do |args|
-        args.merge!(args.delete("other"))
+        args.merge!(args.delete("other")) if args.key?("other")
       end
       assert_equal value, component_args.fetch(label)
     end
