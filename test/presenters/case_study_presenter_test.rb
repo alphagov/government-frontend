@@ -90,6 +90,16 @@ class CaseStudyPresenterTest < PresenterTest
     assert_equal [], presented.history
   end
 
+  test 'presents withdrawn notices' do
+    example = schema_item("archived")
+    presented = presented_item("archived")
+
+    assert example["details"].include?("withdrawn_notice")
+    assert presented.withdrawn?
+    assert_equal example["details"]["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
+    assert_equal '<time datetime="2014-08-22T10:29:02+01:00">22 August 2014</time>', presented.withdrawal_notice[:time]
+  end
+
   def presented_case_study_with_updates
     march_21_2013 = DateTime.new(2013, 3, 21).to_s
     with_history = schema_item
