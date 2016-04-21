@@ -1,5 +1,5 @@
 <%= content_for :page_class, @content_item.format.dasherize %>
-<%= content_for :title, @content_item.title %>
+<%= content_for :title, @content_item.page_title %>
 
 <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
 
@@ -11,6 +11,8 @@
         average_title_length: "long" %>
   </div>
 </div>
+
+<%= render 'shared/withdrawal_notice', content_item: @content_item %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
@@ -24,7 +26,6 @@
     %>
   </div>
 </div>
-
 <%= render 'shared/description', description: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">

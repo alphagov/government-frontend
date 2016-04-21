@@ -1,13 +1,10 @@
 .case-studies {
   @include description;
   @include sidebar-with-body;
+  @include withdrawal-notice;
 
   .direction-rtl & {
     direction: rtl;
     text-align: start;
-  }
-
-  .withdrawal-notice {
-    @include notice;
   }
 }
