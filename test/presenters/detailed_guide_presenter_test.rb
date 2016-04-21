@@ -29,6 +29,10 @@ class DetailedGuidePresenterTest < PresenterTest
     assert_equal "/topic/business-tax/paye", presented_item.breadcrumbs[2][:url]
   end
 
+  test 'no breadcrumbs show if there is no parent' do
+    assert_equal [], presented_item("withdrawn_detailed_guide").breadcrumbs
+  end
+
   test 'presents withdrawn notices' do
     example = schema_item("withdrawn_detailed_guide")
     presented = presented_item("withdrawn_detailed_guide")

@@ -10,6 +10,8 @@ class DetailedGuidePresenter < ContentItemPresenter
   end
 
   def breadcrumbs
+    return [] unless parent
+
     e = parent
     res = []
 
