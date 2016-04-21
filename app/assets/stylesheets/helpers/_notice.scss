@@ -15,5 +15,9 @@
 
   p {
     @include core-19;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
