@@ -4,7 +4,7 @@ module Linkable
   end
 
   def part_of
-    links("document_collections") + links("related_policies") + links("worldwide_priorities") + links("world_locations") + links("topics")
+    links("document_collections") + links("related_policies") + links("world_locations") + links("topics")
   end
 
 private
