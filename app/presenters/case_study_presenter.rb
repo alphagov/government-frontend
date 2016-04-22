@@ -1,6 +1,7 @@
 class CaseStudyPresenter < ContentItemPresenter
   include ActionView::Helpers::UrlHelper
-  include CommonSections
+  include Linkable
+  include Updatable
 
   attr_reader :body, :format_display_type
 
@@ -20,10 +21,6 @@ class CaseStudyPresenter < ContentItemPresenter
 
   def page_title
     withdrawn? ? "[Withdrawn] #{title}" : title
-  end
-
-  def part_of
-    links("document_collections") + links("related_policies") + links("worldwide_priorities") + links("world_locations")
   end
 
   def withdrawal_notice

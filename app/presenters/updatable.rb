@@ -1,8 +1,4 @@
-module CommonSections
-  def from
-    links("lead_organisations") + links("supporting_organisations") + links("worldwide_organisations")
-  end
-
+module Updatable
   def published
     display_time(content_item["details"]["first_public_at"])
   end
@@ -37,13 +33,6 @@ private
       DateTime.parse(content_item["public_updated_at"]) != DateTime.parse(first_public_at)
     else
       false
-    end
-  end
-
-  def links(type)
-    return [] unless content_item["links"][type]
-    content_item["links"][type].map do |link|
-      link_to(link["title"], link["base_path"])
     end
   end
 end
