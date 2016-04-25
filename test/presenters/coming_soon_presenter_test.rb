@@ -1,26 +1,22 @@
-require 'test_helper'
+require 'presenter_test_helper'
 
-class ComingSoonPresenterTest < ActiveSupport::TestCase
+class ComingSoonPresenterTest < PresenterTest
+  def format_name
+    "coming_soon"
+  end
+
   test 'presents the basic details required to display a coming soon item' do
-    assert_equal coming_soon['title'], presented_coming_soon.title
-    assert_equal coming_soon['format'], presented_coming_soon.format
-    assert_equal coming_soon['locale'], presented_coming_soon.locale
-    assert_equal coming_soon['details']['publish_time'], presented_coming_soon.publish_time
+    assert_equal schema_item['title'], presented_item.title
+    assert_equal schema_item['format'], presented_item.format
+    assert_equal schema_item['locale'], presented_item.locale
+    assert_equal schema_item['details']['publish_time'], presented_item.publish_time
   end
 
   test '#formatted_publish_time' do
-    assert_equal '09:30', presented_coming_soon.formatted_publish_time
+    assert_equal '09:30', presented_item.formatted_publish_time
   end
 
   test '#formatted_publish_date' do
-    assert_equal '17 December 2014', presented_coming_soon.formatted_publish_date
-  end
-
-  def presented_coming_soon(overrides = {})
-    ComingSoonPresenter.new(coming_soon.merge(overrides))
-  end
-
-  def coming_soon
-    govuk_content_schema_example('coming_soon', 'coming_soon')
+    assert_equal '17 December 2014', presented_item.formatted_publish_date
   end
 end

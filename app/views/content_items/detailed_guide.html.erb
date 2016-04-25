@@ -1,29 +1,33 @@
 <%= content_for :page_class, @content_item.format.dasherize %>
-<%= content_for :title, @content_item.title %>
+<%= content_for :title, @content_item.page_title %>
 
-<%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+<% if @content_item.breadcrumbs.any? %>
+  <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+<% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         context: t("content_item.format.#{@content_item.format}", count: 1),
-        title: @content_item.title %>
+        title: @content_item.title,
+        average_title_length: "long" %>
   </div>
 </div>
+
+<%= render 'shared/withdrawal_notice', content_item: @content_item %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/metadata',
         from: @content_item.from,
+        part_of: @content_item.part_of,
         other: {
           "First published" => @content_item.published,
-          "Last updated" => [@content_item.updated,"<a href=\"#history\">see all updates</a>"].join(", "),
-          "Part of" => @content_item.part_of #doing this to preserve the ordering but if part_of, at the same level as from and other
+          "Last updated" => [@content_item.updated,"<a href=\"#history\">see all updates</a>"].join(", ")
         }
     %>
   </div>
 </div>
-
 <%= render 'shared/description', description: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">

@@ -1,11 +1,15 @@
-require 'test_helper'
+require 'presenter_test_helper'
 
-class TopicalEventAboutPagePresenterTest < ActiveSupport::TestCase
+class TopicalEventAboutPagePresenterTest < PresenterTest
+  def format_name
+    "topical_event_about_page"
+  end
+
   test 'presents the basic details of a content item' do
-    assert_equal topical_event_about_page['description'], presented_topical_event_about_page.description
-    assert_equal topical_event_about_page['format'], presented_topical_event_about_page.format
-    assert_equal topical_event_about_page['title'], presented_topical_event_about_page.title
-    assert_equal topical_event_about_page['details']['body'], presented_topical_event_about_page.body
+    assert_equal schema_item['description'], presented_item.description
+    assert_equal schema_item['format'], presented_item.format
+    assert_equal schema_item['title'], presented_item.title
+    assert_equal schema_item['details']['body'], presented_item.body
   end
 
   test 'presents a list of contents extracted from headings in the body' do
@@ -15,11 +19,11 @@ class TopicalEventAboutPagePresenterTest < ActiveSupport::TestCase
                   '<a href="#advice-for-medics">Advice for medics</a>',
                   '<a href="#advice-for-aid-workers">Advice for aid workers</a>',
                   '<a href="#how-you-can-help">How you can help</a>'
-                 ], presented_topical_event_about_page.contents
+                 ], presented_item.contents
   end
 
   test 'presents no contents when no headings in the body' do
-    assert_equal [], presented_topical_event_about_page('slim').contents
+    assert_equal [], presented_item('slim').contents
   end
 
   test 'presents a breadcrumb and indicates the archive state of the parent topical event' do
@@ -29,12 +33,12 @@ class TopicalEventAboutPagePresenterTest < ActiveSupport::TestCase
     ]
 
     travel_to(topical_event_end_date - 1) do
-      assert_equal breadcrumbs, presented_topical_event_about_page.breadcrumbs
+      assert_equal breadcrumbs, presented_item.breadcrumbs
     end
 
     travel_to(topical_event_end_date) do
       breadcrumbs[1].merge!(title: "Ebola virus: UK government response (Archived)")
-      assert_equal breadcrumbs, presented_topical_event_about_page.breadcrumbs
+      assert_equal breadcrumbs, presented_item.breadcrumbs
     end
   end
 
@@ -44,22 +48,13 @@ class TopicalEventAboutPagePresenterTest < ActiveSupport::TestCase
       { title: "Battle of the Somme Centenary", url: "/government/topical-events/battle-of-the-somme-centenary-commemorations" }
     ]
 
-    refute topical_event_about_page('slim')['links']['parent'][0]['details']['end_date']
-    assert_equal breadcrumbs, presented_topical_event_about_page('slim').breadcrumbs
+    refute schema_item('slim')['links']['parent'][0]['details']['end_date']
+    assert_equal breadcrumbs, presented_item('slim').breadcrumbs
   end
 
 private
 
   def topical_event_end_date
-    Date.parse(topical_event_about_page['links']['parent'][0]['details']['end_date'])
-  end
-
-  def presented_topical_event_about_page(type = 'topical_event_about_page')
-    content_item = topical_event_about_page(type)
-    TopicalEventAboutPagePresenter.new(content_item)
-  end
-
-  def topical_event_about_page(type = 'topical_event_about_page')
-    govuk_content_schema_example('topical_event_about_page', type)
+    Date.parse(schema_item['links']['parent'][0]['details']['end_date'])
   end
 end

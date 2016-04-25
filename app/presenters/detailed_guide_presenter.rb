@@ -2,6 +2,7 @@ class DetailedGuidePresenter < ContentItemPresenter
   include ExtractsHeadings
   include Linkable
   include Updatable
+  include Withdrawable
   include ActionView::Helpers::UrlHelper
 
   def body
@@ -9,6 +10,8 @@ class DetailedGuidePresenter < ContentItemPresenter
   end
 
   def breadcrumbs
+    return [] unless parent
+
     e = parent
     res = []
 

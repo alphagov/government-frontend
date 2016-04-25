@@ -1,7 +1,11 @@
-require 'test_helper'
+require 'presenter_test_helper'
 
-class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
+class StatisticsAnnouncementPresenterTest < PresenterTest
   include ActionView::Helpers::UrlHelper
+
+  def format_name
+    "statistics_announcement"
+  end
 
   test 'presents from as links to organisations' do
     links = [
@@ -68,23 +72,22 @@ class StatisticsAnnouncementPresenterTest < ActiveSupport::TestCase
   end
 
   def statistics_announcement_cancelled
-    statistics_announcement('cancelled_official_statistics')
+    presented_item('cancelled_official_statistics')
   end
 
   def statistics_announcement_provisional
-    statistics_announcement('national_statistics')
+    presented_item('national_statistics')
   end
 
   def statistics_announcement_national
-    statistics_announcement('national_statistics')
+    presented_item('national_statistics')
   end
 
   def statistics_announcement_date_changed
-    statistics_announcement('release_date_changed')
+    presented_item('release_date_changed')
   end
 
-  def statistics_announcement(type = 'official_statistics')
-    content_item = govuk_content_schema_example('statistics_announcement', type)
-    StatisticsAnnouncementPresenter.new(content_item)
+  def statistics_announcement
+    presented_item('official_statistics')
   end
 end

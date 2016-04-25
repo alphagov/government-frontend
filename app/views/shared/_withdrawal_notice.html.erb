@@ -1,0 +1,6 @@
+<% if content_item.withdrawn? %>
+  <div class="withdrawal-notice">
+    <h2>This <%= t("content_item.format.#{content_item.format}", count: 1).downcase %> was withdrawn on <%= content_item.withdrawal_notice[:time] %></h2>
+    <%= render 'govuk_component/govspeak', content: content_item.withdrawal_notice[:explanation] %>
+  </div>
+<% end %>
