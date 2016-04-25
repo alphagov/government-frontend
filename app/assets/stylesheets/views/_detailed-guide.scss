@@ -1,6 +1,7 @@
 .detailed-guide {
   @include description;
   @include sidebar-with-body;
+  @include history-notice;
   @include withdrawal-notice;
 
   .offset-one-third {

@@ -1,0 +1,17 @@
+@mixin history-notice {
+  .history-notice {
+    @include responsive-bottom-margin;
+    clear: both;
+    padding: $gutter-half;
+    background: $govuk-blue;
+    color: $white;
+
+    @include media(tablet) {
+      padding: $gutter-two-thirds $gutter;
+    }
+
+    h2 {
+      @include bold-36;
+    }
+  }
+}

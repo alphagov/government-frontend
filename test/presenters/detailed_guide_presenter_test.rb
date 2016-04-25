@@ -42,4 +42,18 @@ class DetailedGuidePresenterTest < PresenterTest
     assert_equal example["details"]["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
     assert_equal '<time datetime="2015-01-28T13:05:30Z">28 January 2015</time>', presented.withdrawal_notice[:time]
   end
+
+  test 'presents the title of the publishing government' do
+    assert_equal schema_item["details"]["government"]["title"], presented_item.publishing_government
+  end
+
+  test 'content can be historically political' do
+    example = schema_item("political_detailed_guide")
+    presented = presented_item("political_detailed_guide")
+
+    refute example["details"]["government"]["current"]
+    assert example["details"]["political"]
+
+    assert presented.historically_political?
+  end
 end

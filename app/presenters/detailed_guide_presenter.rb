@@ -1,4 +1,5 @@
 class DetailedGuidePresenter < ContentItemPresenter
+  include Political
   include ExtractsHeadings
   include Linkable
   include Updatable
