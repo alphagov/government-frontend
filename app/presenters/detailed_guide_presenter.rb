@@ -1,7 +1,8 @@
 class DetailedGuidePresenter < ContentItemPresenter
   include ExtractsHeadings
+  include Linkable
+  include Updatable
   include ActionView::Helpers::UrlHelper
-  include CommonSections
 
   def body
     content_item["details"]["body"]
@@ -28,10 +29,6 @@ class DetailedGuidePresenter < ContentItemPresenter
 
   def context
     parent["title"]
-  end
-
-  def part_of
-    links("document_collections") + links("related_policies") + links("worldwide_priorities") + links("world_locations") + links("topics")
   end
 
 private

@@ -50,7 +50,7 @@ class CaseStudyPresenterTest < ActiveSupport::TestCase
     assert_equal expected_from_links, presented_case_study(with_organisations).from
   end
 
-  test '#part_of returns an array of document_collections, related policies, worldwide priorities and world locations' do
+  test '#part_of returns an array of document_collections, related policies and world locations' do
     with_extras = case_study
     with_extras['links']['document_collections'] = [
       { "title" => "Work Programme real life stories", "base_path" => "/government/collections/work-programme-real-life-stories" }
@@ -58,14 +58,10 @@ class CaseStudyPresenterTest < ActiveSupport::TestCase
     with_extras['links']['related_policies'] = [
       { "title" => "Cheese", "base_path" => "/policy/cheese" }
     ]
-    with_extras['links']['worldwide_priorities'] = [
-      { "title" => "Cheese around the world", "base_path" => "/world_prior/cheese" }
-    ]
 
     expected_part_of_links = [
       link_to('Work Programme real life stories', '/government/collections/work-programme-real-life-stories'),
       link_to('Cheese', '/policy/cheese'),
-      link_to('Cheese around the world', '/world_prior/cheese'),
       link_to('Pakistan', '/government/world/pakistan'),
     ]
     assert_equal expected_part_of_links, presented_case_study(with_extras).part_of
