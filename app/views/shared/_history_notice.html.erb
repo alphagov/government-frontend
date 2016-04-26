@@ -1,0 +1,5 @@
+<% if content_item.historically_political? %>
+  <div class="history-notice">
+    <h2>This <%= t("content_item.format.#{content_item.format}", count: 1).downcase %> was published under the <%= content_item.publishing_government %></h2>
+  </div>
+<% end %>

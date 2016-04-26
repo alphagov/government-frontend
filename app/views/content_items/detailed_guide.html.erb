@@ -21,13 +21,13 @@
     <%= render 'govuk_component/metadata',
         from: @content_item.from,
         part_of: @content_item.part_of,
-        other: {
-          "First published" => @content_item.published,
-          "Last updated" => [@content_item.updated,"<a href=\"#history\">see all updates</a>"].join(", ")
-        }
+        first_published: @content_item.published,
+        last_updated: @content_item.updated,
+        see_updates_link: true
     %>
   </div>
 </div>
+<%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">
