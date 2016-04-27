@@ -12,6 +12,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     link1 = "<a href=\"/topic/business-tax/paye\">PAYE</a>"
     link2 = "<a href=\"/topic/business-tax\">Business tax</a>"
     assert_has_component_metadata_pair("part_of", [link1, link2])
+    assert_has_component_document_footer_pair("part_of", [link1, link2])
   end
 
   test "withdrawn detailed guide" do
