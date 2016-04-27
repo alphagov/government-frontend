@@ -33,6 +33,16 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_has_component_document_footer_pair("Related guides", ['<a href="/guidance/offshore-wind-part-of-the-uks-energy-mix">Offshore wind: part of the UK&#39;s energy mix</a>'])
   end
 
+  test "shows related mainstream content" do
+    setup_and_visit_content_item('related_mainstream_detailed_guide')
+
+    within ".related-mainstream-content" do
+      assert page.has_text?('Too much detail?')
+      assert page.has_css?('a[href="/overseas-passports"]', text: 'Overseas British passport applications')
+      assert page.has_css?('a[href="/report-a-lost-or-stolen-passport"]', text: 'Cancel a lost or stolen passport')
+    end
+  end
+
   test "historically political detailed guide" do
     setup_and_visit_content_item('political_detailed_guide')
 
