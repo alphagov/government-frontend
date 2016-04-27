@@ -42,6 +42,8 @@ class DetailedGuidePresenter < ContentItemPresenter
 private
 
   def parent
-    content_item["links"]["parent"][0]
+    if content_item["links"].include?("parent")
+      content_item["links"]["parent"][0]
+    end
   end
 end
