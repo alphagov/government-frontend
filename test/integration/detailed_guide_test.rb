@@ -27,6 +27,11 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "shows related detailed guides" do
+    setup_and_visit_content_item('political_detailed_guide')
+    assert_has_component_document_footer_pair("Related guides", ['<a href="/guidance/offshore-wind-part-of-the-uks-energy-mix">Offshore wind: part of the UK&#39;s energy mix</a>'])
+  end
+
   test "historically political detailed guide" do
     setup_and_visit_content_item('political_detailed_guide')
 

@@ -35,6 +35,10 @@ class DetailedGuidePresenter < ContentItemPresenter
     parent["title"]
   end
 
+  def related_guides
+    links("related_guides")
+  end
+
 private
 
   def parent

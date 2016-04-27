@@ -48,5 +48,8 @@
     updated: @content_item.updated,
     history: @content_item.history,
     published: @content_item.published,
-    direction: page_text_direction
+    direction: page_text_direction,
+    other: {
+      "Related guides" => @content_item.related_guides
+    }
 %>
