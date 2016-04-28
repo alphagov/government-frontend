@@ -47,6 +47,16 @@ class DetailedGuidePresenterTest < PresenterTest
     assert_equal schema_item["details"]["government"]["title"], presented_item.publishing_government
   end
 
+  test 'presents related detailed guides' do
+    assert_equal ['<a href="/guidance/offshore-wind-part-of-the-uks-energy-mix">Offshore wind: part of the UK&#39;s energy mix</a>'], presented_item("political_detailed_guide").related_guides
+  end
+
+  test 'presents related mainstream content' do
+    assert_equal [
+      '<a href="/overseas-passports">Overseas British passport applications</a>',
+      '<a href="/report-a-lost-or-stolen-passport">Cancel a lost or stolen passport</a>'], presented_item("related_mainstream_detailed_guide").related_mainstream
+  end
+
   test 'content can be historically political' do
     example = schema_item("political_detailed_guide")
     presented = presented_item("political_detailed_guide")

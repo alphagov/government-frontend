@@ -24,7 +24,15 @@ class ActionDispatch::IntegrationTest
   include Slimmer::TestHelpers::SharedTemplates
 
   def assert_has_component_metadata_pair(label, value)
-    within shared_component_selector("metadata") do
+    assert_component_parameter("metadata", label, value)
+  end
+
+  def assert_has_component_document_footer_pair(label, value)
+    assert_component_parameter("document_footer", label, value)
+  end
+
+  def assert_component_parameter(component, label, value)
+    within shared_component_selector(component) do
       # Flatten top level / "other" args, for consistent hash access
       component_args = JSON.parse(page.text).tap do |args|
         args.merge!(args.delete("other")) if args.key?("other")

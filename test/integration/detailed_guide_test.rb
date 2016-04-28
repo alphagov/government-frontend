@@ -12,6 +12,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     link1 = "<a href=\"/topic/business-tax/paye\">PAYE</a>"
     link2 = "<a href=\"/topic/business-tax\">Business tax</a>"
     assert_has_component_metadata_pair("part_of", [link1, link2])
+    assert_has_component_document_footer_pair("part_of", [link1, link2])
   end
 
   test "withdrawn detailed guide" do
@@ -24,6 +25,21 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
       assert page.has_text?('This guidance was withdrawn'), "is withdrawn"
       assert_has_component_govspeak(@content_item["details"]["withdrawn_notice"]["explanation"])
       assert page.has_css?("time[datetime='#{@content_item['details']['withdrawn_notice']['withdrawn_at']}']")
+    end
+  end
+
+  test "shows related detailed guides" do
+    setup_and_visit_content_item('political_detailed_guide')
+    assert_has_component_document_footer_pair("Related guides", ['<a href="/guidance/offshore-wind-part-of-the-uks-energy-mix">Offshore wind: part of the UK&#39;s energy mix</a>'])
+  end
+
+  test "shows related mainstream content" do
+    setup_and_visit_content_item('related_mainstream_detailed_guide')
+
+    within ".related-mainstream-content" do
+      assert page.has_text?('Too much detail?')
+      assert page.has_css?('a[href="/overseas-passports"]', text: 'Overseas British passport applications')
+      assert page.has_css?('a[href="/report-a-lost-or-stolen-passport"]', text: 'Cancel a lost or stolen passport')
     end
   end
 

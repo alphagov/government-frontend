@@ -35,9 +35,19 @@ class DetailedGuidePresenter < ContentItemPresenter
     parent["title"]
   end
 
+  def related_guides
+    links("related_guides")
+  end
+
+  def related_mainstream
+    links("related_mainstream")
+  end
+
 private
 
   def parent
-    content_item["links"]["parent"][0]
+    if content_item["links"].include?("parent")
+      content_item["links"]["parent"][0]
+    end
   end
 end
