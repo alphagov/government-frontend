@@ -5,8 +5,41 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         context: t("content_item.format.#{@content_item.format}", count: 1),
-        title: @content_item.title %>
+        title: @content_item.title,
+        average_title_length: "long" %>
   </div>
 </div>
 
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from,
+        part_of: @content_item.part_of,
+        first_published: @content_item.published,
+        last_updated: @content_item.updated,
+        see_updates_link: true
+    %>
+  </div>
+</div>
+<%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-third">
+    <h1 class="section-title" id="details-title">Details</h1>
+  </div>
+  <div class="column-two-thirds" aria-labelledby="details-title">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.details,
+        direction: page_text_direction %>
+  </div>
+</div>
+
+<%= render 'govuk_component/document_footer',
+    from: @content_item.from,
+    updated: @content_item.updated,
+    history: @content_item.history,
+    published: @content_item.published,
+    part_of: @content_item.part_of,
+    direction: page_text_direction
+%>
