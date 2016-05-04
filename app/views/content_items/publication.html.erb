@@ -26,7 +26,22 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-third">
-    <h1 class="section-title" id="details-title">Details</h1>
+    <h1 class="section-title" id="documents-title">
+      <%= t("publications.documents", count: @content_item.documents_count) %>
+    </h1>
+  </div>
+  <div class="column-two-thirds" aria-labelledby="documents-title">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.documents,
+        direction: page_text_direction %>
+  </div>
+</div>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-third">
+    <h1 class="section-title" id="details-title">
+      <%= t("publications.details") %>
+    </h1>
   </div>
   <div class="column-two-thirds" aria-labelledby="details-title">
     <%= render 'govuk_component/govspeak',
