@@ -66,4 +66,20 @@ class DetailedGuidePresenterTest < PresenterTest
 
     assert presented.historically_political?
   end
+
+  test 'content can apply only to a set of nations' do
+    example = schema_item('national_applicability_detailed_guide')
+    presented = presented_item('national_applicability_detailed_guide')
+
+    assert example['details'].include?('national_applicability')
+    assert_equal presented.applies_to, 'England'
+  end
+
+  test 'content can apply only to a set of nations with alternative urls' do
+    example = schema_item('national_applicability_alternative_url_detailed_guide')
+    presented = presented_item('national_applicability_alternative_url_detailed_guide')
+
+    assert example['details'].include?('national_applicability')
+    assert_equal presented.applies_to, 'England, Scotland, and Wales (see detailed guidance for <a href="http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for" rel="external">Northern Ireland</a>)'
+  end
 end

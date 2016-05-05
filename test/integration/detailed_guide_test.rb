@@ -48,4 +48,16 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
       assert page.has_text?('This guidance was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
     end
   end
+
+  test 'detailed guide that only applies to a set of nations' do
+    setup_and_visit_content_item('national_applicability_detailed_guide')
+
+    assert_has_component_metadata_pair('Applies to', 'England')
+  end
+
+  test 'detailed guide that only applies to a set of nations, with alternative urls' do
+    setup_and_visit_content_item('national_applicability_alternative_url_detailed_guide')
+
+    assert_has_component_metadata_pair('Applies to', 'England, Scotland, and Wales (see detailed guidance for <a href="http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for" rel="external">Northern Ireland</a>)')
+  end
 end

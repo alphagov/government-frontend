@@ -23,7 +23,10 @@
         part_of: @content_item.part_of,
         first_published: @content_item.published,
         last_updated: @content_item.updated,
-        see_updates_link: true
+        see_updates_link: true,
+        other: {
+          'Applies to' => @content_item.applies_to
+        }
     %>
   </div>
 </div>
