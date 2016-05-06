@@ -37,16 +37,18 @@ class HtmlPublicationPresenterTest < PresenterTest
   test "presents the branding for organisations" do
     mo_presented_item = presented_item("multiple_organisations")
     mo_presented_item.organisations.each do |organisation|
-      assert_equal mo_presented_item.organisation_brand(organisation), organisation["brand"]
+      assert_equal mo_presented_item.organisation_brand(organisation), organisation["details"]["brand"]
     end
   end
 
   test "alters the branding for executive office organisations" do
     organisation = {
-      "brand" => "cabinet-office",
-      "logo" => {
-        "formatted_title" => "Prime Minister's Office, 10 Downing Street",
-        "crest" => "eo"
+      "details" => {
+        "brand" => "cabinet-office",
+        "logo" => {
+          "formatted_title" => "Prime Minister's Office, 10 Downing Street",
+          "crest" => "eo"
+        }
       }
     }
     assert_equal presented_item("prime_ministers_office").organisation_brand(organisation), "executive-office"

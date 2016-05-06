@@ -13,10 +13,10 @@
       <li class="organisation-logo">
         <%= render partial: 'govuk_component/organisation_logo', locals: {
           organisation: {
-            name: organisation["logo"]["formatted_title"],
+            name: organisation["details"]["logo"]["formatted_title"],
             url: organisation["base_path"],
             brand: @content_item.organisation_brand(organisation),
-            crest: organisation["logo"]["crest"]
+            crest: organisation["details"]["logo"]["crest"]
           }
         } %>
       </li>

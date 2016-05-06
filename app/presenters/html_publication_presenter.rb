@@ -34,8 +34,8 @@ class HtmlPublicationPresenter < ContentItemPresenter
   # Remove this in the future after migrating organisations to the content store API,
   # and updating them with the correct brand in the actual store.
   def organisation_brand(organisation)
-    brand = organisation["brand"]
-    brand = "executive-office" if organisation["logo"]["crest"] == "eo"
+    brand = organisation["details"]["brand"]
+    brand = "executive-office" if organisation["details"]["logo"]["crest"] == "eo"
     brand
   end
 
