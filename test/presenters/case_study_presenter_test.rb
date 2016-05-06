@@ -13,7 +13,6 @@ class CaseStudyPresenterTest < PresenterTest
     assert_equal schema_item['locale'], presented_item.locale
     assert_equal schema_item['title'], presented_item.title
     assert_equal schema_item['details']['body'], presented_item.body
-    assert_equal schema_item['details']['format_display_type'], presented_item.format_display_type
   end
 
   test '#published returns a formatted date of the day the content item became public' do

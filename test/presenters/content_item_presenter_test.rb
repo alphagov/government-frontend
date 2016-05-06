@@ -17,6 +17,10 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal "ar", ContentItemPresenter.new("locale" => "ar").locale
   end
 
+  test "#document_type" do
+    assert_equal "Type", ContentItemPresenter.new("document_type" => "Type").document_type
+  end
+
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example('case_study', 'translated')
     locales = ContentItemPresenter.new(translated).available_translations
