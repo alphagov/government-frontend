@@ -23,4 +23,15 @@ class PublicationTest < ActionDispatch::IntegrationTest
       assert_has_component_govspeak(@content_item["details"]["documents"].join(''))
     end
   end
+
+  test "withdrawn publication" do
+    setup_and_visit_content_item('withdrawn_publication')
+    assert page.has_css?('title', text: "[Withdrawn]", visible: false)
+
+    within ".withdrawal-notice" do
+      assert page.has_text?('This publication was withdrawn'), "is withdrawn"
+      assert_has_component_govspeak(@content_item["details"]["withdrawn_notice"]["explanation"])
+      assert page.has_css?("time[datetime='#{@content_item['details']['withdrawn_notice']['withdrawn_at']}']")
+    end
+  end
 end

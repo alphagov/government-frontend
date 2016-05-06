@@ -17,9 +17,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
   test "withdrawn detailed guide" do
     setup_and_visit_content_item('withdrawn_detailed_guide')
-
-    assert_has_component_title(@content_item["title"])
-    assert page.has_text?(@content_item["description"])
+    assert page.has_css?('title', text: "[Withdrawn]", visible: false)
 
     within ".withdrawal-notice" do
       assert page.has_text?('This guidance was withdrawn'), "is withdrawn"

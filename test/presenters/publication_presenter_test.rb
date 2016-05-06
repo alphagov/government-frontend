@@ -24,4 +24,14 @@ class PublicationPresenterTest < PresenterTest
   test 'presents the title of the publishing government' do
     assert_equal schema_item["details"]["government"]["title"], presented_item.publishing_government
   end
+
+  test 'presents withdrawn notices' do
+    example = schema_item("withdrawn_publication")
+    presented = presented_item("withdrawn_publication")
+
+    assert example["details"].include?("withdrawn_notice")
+    assert presented.withdrawn?
+    assert_equal example["details"]["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
+    assert_equal '<time datetime="2015-01-13T13:05:30Z">13 January 2015</time>', presented.withdrawal_notice[:time]
+  end
 end
