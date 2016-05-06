@@ -35,6 +35,16 @@ class PublicationPresenterTest < PresenterTest
     assert presented.historically_political?
   end
 
+  test '#from presents ministers' do
+    minister = schema_item["links"]["ministers"][0]
+    assert presented_item.from.include?("<a href=\"#{minister['base_path']}\">#{minister['title']}</a>")
+  end
+
+  test '#part_of presents topical events' do
+    event = schema_item["links"]["topical_events"][0]
+    assert presented_item.part_of.include?("<a href=\"#{event['base_path']}\">#{event['title']}</a>")
+  end
+
   test 'presents withdrawn notices' do
     example = schema_item("withdrawn_publication")
     presented = presented_item("withdrawn_publication")

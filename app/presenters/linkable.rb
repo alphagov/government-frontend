@@ -5,6 +5,7 @@ module Linkable
       organisations
       supporting_organisations
       worldwide_organisations
+      ministers
     })
   end
 
@@ -15,6 +16,7 @@ module Linkable
       policies
       world_locations
       topics
+      topical_events
     })
   end
 

@@ -10,11 +10,19 @@ class PublicationTest < ActionDispatch::IntegrationTest
     within '[aria-labelledby="details-title"]' do
       assert_has_component_govspeak(@content_item["details"]["body"])
     end
+  end
+
+  test "renders metadata and document footer" do
+    setup_and_visit_content_item('publication')
 
     assert_has_component_metadata_pair("first_published", "3 May 2016")
     link1 = "<a href=\"/government/organisations/environment-agency\">Environment Agency</a>"
-    assert_has_component_metadata_pair("from", [link1])
-    assert_has_component_document_footer_pair("from", [link1])
+    link2 = "<a href=\"/government/people/eric-pickles\">The Rt Hon Sir Eric Pickles MP</a>"
+    assert_has_component_metadata_pair("from", [link1, link2])
+    assert_has_component_document_footer_pair("from", [link1, link2])
+
+    assert_has_component_metadata_pair("part_of", ["<a href=\"/government/topical-events/anti-corruption-summit-london-2016\">Anti-Corruption Summit: London 2016</a>"])
+    assert_has_component_document_footer_pair("part_of", ["<a href=\"/government/topical-events/anti-corruption-summit-london-2016\">Anti-Corruption Summit: London 2016</a>"])
   end
 
   test "renders a govspeak block for attachments" do
