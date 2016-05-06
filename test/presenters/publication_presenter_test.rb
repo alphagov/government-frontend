@@ -25,6 +25,16 @@ class PublicationPresenterTest < PresenterTest
     assert_equal schema_item["details"]["government"]["title"], presented_item.publishing_government
   end
 
+  test 'content can be historically political' do
+    example = schema_item("political_publication")
+    presented = presented_item("political_publication")
+
+    refute example["details"]["government"]["current"]
+    assert example["details"]["political"]
+
+    assert presented.historically_political?
+  end
+
   test 'presents withdrawn notices' do
     example = schema_item("withdrawn_publication")
     presented = presented_item("withdrawn_publication")

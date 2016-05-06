@@ -34,4 +34,12 @@ class PublicationTest < ActionDispatch::IntegrationTest
       assert page.has_css?("time[datetime='#{@content_item['details']['withdrawn_notice']['withdrawn_at']}']")
     end
   end
+
+  test "historically political publication" do
+    setup_and_visit_content_item('political_publication')
+
+    within ".history-notice" do
+      assert page.has_text?('This publication was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
+    end
+  end
 end
