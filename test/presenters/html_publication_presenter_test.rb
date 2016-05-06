@@ -7,7 +7,7 @@ class HtmlPublicationPresenterTest < PresenterTest
 
   test 'presents the basic details of a content item' do
     assert_equal schema_item("published")['format'], presented_item("published").format
-    assert_equal schema_item("published")['links']['parent'][0]['format_sub_type'], presented_item("published").format_sub_type
+    assert_equal schema_item("published")['links']['parent'][0]['document_type'], presented_item("published").format_sub_type
     assert_equal schema_item("published")['title'], presented_item("published").title
     assert_equal schema_item("published")['details']['body'], presented_item("published").body
   end

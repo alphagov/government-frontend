@@ -8,7 +8,7 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def format_sub_type
-    parent["format_sub_type"]
+    parent["document_type"]
   end
 
   def last_changed
