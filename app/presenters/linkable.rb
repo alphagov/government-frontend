@@ -1,10 +1,17 @@
 module Linkable
   def from
-    links("lead_organisations") + links("supporting_organisations") + links("worldwide_organisations")
+    links("lead_organisations") +
+      links("organisations") +
+      links("supporting_organisations") +
+      links("worldwide_organisations")
   end
 
   def part_of
-    links("document_collections") + links("related_policies") + links("world_locations") + links("topics")
+    links("document_collections") +
+      links("related_policies") +
+      links("policies") +
+      links("world_locations") +
+      links("topics")
   end
 
 private
