@@ -64,4 +64,12 @@ class PublicationPresenterTest < PresenterTest
     assert_equal example["details"]["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
     assert_equal '<time datetime="2015-01-13T13:05:30Z">13 January 2015</time>', presented.withdrawal_notice[:time]
   end
+
+  test 'content can apply only to a set of nations (with alternative urls when provided)' do
+    example = schema_item('statistics_publication')
+    presented = presented_item('statistics_publication')
+
+    assert example['details'].include?('national_applicability')
+    assert_equal presented.applies_to, 'England (see publication for <a href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm" rel="external">Northern Ireland</a>, <a href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS" rel="external">Scotland</a>, and <a href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en" rel="external">Wales</a>)'
+  end
 end
