@@ -3,6 +3,7 @@ class PublicationPresenter < ContentItemPresenter
   include Linkable
   include Updatable
   include Withdrawable
+  include NationalApplicability
   include ActionView::Helpers::UrlHelper
 
   def details
