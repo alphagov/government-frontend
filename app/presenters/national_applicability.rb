@@ -10,12 +10,11 @@ module NationalApplicability
     if inapplicable_nations.any?
       nations_with_alt_urls = inapplicable_nations.select { |n| n["alternative_url"].present? }
       if nations_with_alt_urls.any?
-        additional_guidance_links = nations_with_alt_urls
+        alternate_links = nations_with_alt_urls
           .map { |n| link_to(n['label'], n['alternative_url'], rel: :external) }
           .to_sentence
 
-        additional_guidance = " (see detailed guidance for #{additional_guidance_links})"
-        applies_to += additional_guidance
+        applies_to += " (see #{translated_format_name} for #{alternate_links})"
       end
     end
 
@@ -23,6 +22,10 @@ module NationalApplicability
   end
 
 private
+
+  def translated_format_name
+    I18n.t("content_item.format.#{format}", count: 1).downcase
+  end
 
   def national_applicability
     content_item["details"]["national_applicability"]
