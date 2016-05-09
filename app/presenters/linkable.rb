@@ -17,6 +17,7 @@ module Linkable
       world_locations
       topics
       topical_events
+      related_statistical_data_sets
     })
   end
 

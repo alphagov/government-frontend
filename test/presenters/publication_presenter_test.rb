@@ -45,6 +45,11 @@ class PublicationPresenterTest < PresenterTest
     assert presented_item.part_of.include?("<a href=\"#{event['base_path']}\">#{event['title']}</a>")
   end
 
+  test '#part_of presents related statistical data sets' do
+    data_set = schema_item("statistics_publication")["links"]["related_statistical_data_sets"][0]
+    assert presented_item("statistics_publication").part_of.include?("<a href=\"#{data_set['base_path']}\">#{data_set['title']}</a>")
+  end
+
   test 'presents withdrawn notices' do
     example = schema_item("withdrawn_publication")
     presented = presented_item("withdrawn_publication")
