@@ -4,12 +4,11 @@ class CaseStudyPresenter < ContentItemPresenter
   include Updatable
   include Withdrawable
 
-  attr_reader :body, :format_display_type
+  attr_reader :body
 
   def initialize(content_item)
     super
     @body = content_item["details"]["body"]
-    @format_display_type = content_item["details"]["format_display_type"]
   end
 
   def image

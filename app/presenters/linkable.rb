@@ -1,17 +1,24 @@
 module Linkable
   def from
-    links("lead_organisations") +
-      links("organisations") +
-      links("supporting_organisations") +
-      links("worldwide_organisations")
+    links_group(%w{
+      lead_organisations
+      organisations
+      supporting_organisations
+      worldwide_organisations
+      ministers
+    })
   end
 
   def part_of
-    links("document_collections") +
-      links("related_policies") +
-      links("policies") +
-      links("world_locations") +
-      links("topics")
+    links_group(%w{
+      document_collections
+      related_policies
+      policies
+      world_locations
+      topics
+      topical_events
+      related_statistical_data_sets
+    })
   end
 
 private
@@ -21,5 +28,9 @@ private
     content_item["links"][type].map do |link|
       link_to(link["title"], link["base_path"])
     end
+  end
+
+  def links_group(types)
+    types.flat_map { |type| links(type) }.uniq
   end
 end

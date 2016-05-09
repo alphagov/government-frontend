@@ -17,6 +17,10 @@ class PublicationPresenter < ContentItemPresenter
     documents_list.size
   end
 
+  def national_statistics?
+    document_type === "national_statistics"
+  end
+
 private
 
   def documents_list

@@ -1,20 +1,16 @@
 <%= content_for :page_class, @content_item.format.dasherize %>
-<%= content_for :title, "#{@content_item.title} - #{t("content_item.format.#{@content_item.format}", count: 1)}" %>
+<%= content_for :title, "#{@content_item.title} - #{t("content_item.format.#{@content_item.document_type}", count: 1)}" %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.format}", count: 1),
+        context: t("content_item.format.#{@content_item.document_type}", count: 1),
         title: @content_item.title,
         average_title_length: "long" %>
   </div>
 
   <% if @content_item.national_statistics? %>
-  <div class="column-third">
-    <div class="national-statistics-logo">
-      <%= image_tag 'national-statistics.png', alt: 'National Statistics' %>
-    </div>
-  </div>
+    <%= render 'shared/national_statistics_logo' %>
   <% end %>
 </div>
 
