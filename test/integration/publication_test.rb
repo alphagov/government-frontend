@@ -50,4 +50,9 @@ class PublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?('This publication was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
     end
   end
+
+  test "national statistics publication shows a logo" do
+    setup_and_visit_content_item('statistics_publication')
+    assert page.has_css?(".national-statistics-logo img")
+  end
 end

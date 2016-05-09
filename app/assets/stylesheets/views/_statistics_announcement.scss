@@ -1,9 +1,6 @@
 .statistics-announcement {
   @include description;
-
-  .national-statistics-logo {
-    margin-top: $gutter;
-  }
+  @include national-statistics-logo;
 
   .cancellation-notice {
     @include notice;

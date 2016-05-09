@@ -10,11 +10,7 @@
   </div>
 
   <% if @content_item.national_statistics? %>
-  <div class="column-third">
-    <div class="national-statistics-logo">
-      <%= image_tag 'national-statistics.png', alt: 'National Statistics' %>
-    </div>
-  </div>
+    <%= render 'shared/national_statistics_logo' %>
   <% end %>
 </div>
 

@@ -50,6 +50,11 @@ class PublicationPresenterTest < PresenterTest
     assert presented_item("statistics_publication").part_of.include?("<a href=\"#{data_set['base_path']}\">#{data_set['title']}</a>")
   end
 
+  test '#national_statistics? matches national statistics documents' do
+    refute presented_item.national_statistics?
+    assert presented_item("statistics_publication").national_statistics?
+  end
+
   test 'presents withdrawn notices' do
     example = schema_item("withdrawn_publication")
     presented = presented_item("withdrawn_publication")
