@@ -36,13 +36,13 @@ class CaseStudyPresenterTest < PresenterTest
   end
 
   test '#from returns links to lead organisations, supporting organisations and worldwide organisations' do
-    with_organisations = schema_item
-    with_organisations['links']['lead_organisations'] = [
-      { "title" => 'Lead org', "base_path" => '/orgs/lead' }
-    ]
-    with_organisations['links']['supporting_organisations'] = [
-      { "title" => 'Supporting org', "base_path" => '/orgs/supporting' }
-    ]
+    with_organisations = {
+      "links" => {
+        "lead_organisations" => [{ "title" => 'Lead org', "base_path" => '/orgs/lead' }],
+        "worldwide_organisations" => [{ "title" => 'DFID Pakistan', "base_path" => '/government/world/organisations/dfid-pakistan' }],
+        "supporting_organisations" => [{ "title" => 'Supporting org', "base_path" => '/orgs/supporting' }],
+      }
+    }
 
     expected_from_links = [
       link_to('Lead org', '/orgs/lead'),
