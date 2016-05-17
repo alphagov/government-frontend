@@ -1,17 +1,13 @@
 #!/bin/bash
 set -x
-export DISPLAY=:99
-export GOVUK_APP_DOMAIN=test.gov.uk
-export GOVUK_ASSET_ROOT=http://static.test.gov.uk
-export REPO_NAME="alphagov/government-frontend"
-export RAILS_ENV=test
-env
+GH_STATUS_REPO_NAME=${INITIATING_REPO_NAME:-"alphagov/government-frontend"}
+CONTEXT_MESSAGE=${CONTEXT_MESSAGE:-"default"}
+GH_STATUS_GIT_COMMIT=${INITIATING_GIT_COMMIT:-${GIT_COMMIT}}
 
 function github_status {
-  REPO_NAME="$1"
-  STATUS="$2"
-  MESSAGE="$3"
-  gh-status "$REPO_NAME" "$GIT_COMMIT" "$STATUS" -d "Build #${BUILD_NUMBER} ${MESSAGE}" -u "$BUILD_URL" >/dev/null
+  STATUS="$1"
+  MESSAGE="$2"
+  gh-status "$GH_STATUS_REPO_NAME" "$GH_STATUS_GIT_COMMIT" "$STATUS" -d "Build #${BUILD_NUMBER} ${MESSAGE}" -u "$BUILD_URL" -c "$CONTEXT_MESSAGE" >/dev/null
 }
 
 function error_handler {
@@ -24,33 +20,34 @@ function error_handler {
   else
     echo "Error on or near line ${parent_lineno}; exiting with status ${code}"
   fi
-  github_status "$REPO_NAME" failure "failed on Jenkins"
+  github_status error "errored on Jenkins"
   exit "${code}"
 }
 
-trap "error_handler ${LINENO}" ERR
-github_status "$REPO_NAME" pending "is running on Jenkins"
+trap 'error_handler ${LINENO}' ERR
+github_status pending "is running on Jenkins"
+
+# Cleanup anything left from previous test runs
+git clean -fdx
 
 # Try to merge master into the current branch, and abort if it doesn't exit
 # cleanly (ie there are conflicts). This will be a noop if the current branch
 # is master.
 git merge --no-commit origin/master || git merge --abort
 
+export RAILS_ENV=test
+bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment --without development
+
 # Clone govuk-content-schemas depedency for contract tests
 rm -rf tmp/govuk-content-schemas
 git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-schemas
+export GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas
 
-bundle install --path "${HOME}/bundles/${JOB_NAME}" --deployment --without development
-
-GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas bundle exec rake
 bundle exec rake assets:precompile
 
-export EXIT_STATUS=$?
-
-if [ "$EXIT_STATUS" == "0" ]; then
-  github_status "$REPO_NAME" success "succeeded on Jenkins"
+if bundle exec rake ${TEST_TASK:-"default"}; then
+  github_status success "succeeded on Jenkins"
 else
-  github_status "$REPO_NAME" failure "failed on Jenkins"
+  github_status failure "failed on Jenkins"
+  exit 1
 fi
-
-exit $EXIT_STATUS
