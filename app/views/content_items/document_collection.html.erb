@@ -1,12 +1,60 @@
 <%= content_for :page_class, @content_item.format.dasherize %>
-<%= content_for :title, @content_item.title %>
+<%= content_for :title, @content_item.page_title %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
+        title: @content_item.title,
+        average_title_length: "long" %>
   </div>
 </div>
 
+<%= render 'shared/withdrawal_notice', content_item: @content_item %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from,
+        part_of: @content_item.part_of,
+        first_published: @content_item.published,
+        last_updated: @content_item.updated,
+        see_updates_link: true
+    %>
+  </div>
+</div>
+<%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-third">
+    <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+  </div>
+  <div class="column-two-thirds">
+    <% @content_item.groups.each do |group| %>
+      <%= @content_item.group_heading(group) %>
+      <% if group["body"].present? %>
+        <%= render 'govuk_component/govspeak',
+            content: group["body"],
+            direction: page_text_direction %>
+      <% end %>
+      <ol class="group-document-list">
+        <% @content_item.group_document_links(group).each do |link| %>
+          <li class="group-document-list-item">
+            <h3 class="collection-document-title"><%= link %></h3>
+            <%# TODO: Include document date and type when available %>
+          </li>
+        <% end %>
+      </ol>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'govuk_component/document_footer',
+    from: @content_item.from,
+    updated: @content_item.updated,
+    history: @content_item.history,
+    published: @content_item.published,
+    part_of: @content_item.part_of,
+    direction: page_text_direction
+%>
