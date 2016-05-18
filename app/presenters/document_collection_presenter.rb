@@ -1,0 +1,2 @@
+class DocumentCollectionPresenter < ContentItemPresenter
+end
