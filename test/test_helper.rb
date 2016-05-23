@@ -44,9 +44,10 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_component_title(title)
+  def assert_has_component_title(title, context = nil)
     within shared_component_selector("title") do
       assert_equal title, JSON.parse(page.text).fetch("title")
+      assert_equal context, JSON.parse(page.text).fetch("context") if context
     end
   end
 
