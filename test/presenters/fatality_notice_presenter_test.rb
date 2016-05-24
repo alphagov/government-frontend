@@ -18,7 +18,7 @@ class FatalityNoticePresenterTest < PresenterTest
       'should prefix context with "Operations in"'
     )
     assert(
-      presented_item.context.include?(schema_item['links']['fields_of_operation'][0]['title']),
+      presented_item.context.include?(schema_item['links']['field_of_operation'][0]['title']),
       'should also include the first field of operation\'s title'
     )
   end

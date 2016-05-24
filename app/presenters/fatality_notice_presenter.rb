@@ -4,8 +4,8 @@ class FatalityNoticePresenter < ContentItemPresenter
   include Updatable
 
   def context
-    fields_of_operation = content_item["links"]["fields_of_operation"][0]['title']
-    "Operations in #{fields_of_operation}"
+    field_of_operation = content_item["links"]["field_of_operation"][0]['title']
+    "Operations in #{field_of_operation}"
   end
 
   def body
@@ -13,7 +13,7 @@ class FatalityNoticePresenter < ContentItemPresenter
   end
 
   def field_of_operation
-    links("fields_of_operation")
+    links("field_of_operation")
   end
 
   def image
