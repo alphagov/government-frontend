@@ -1,6 +1,10 @@
 <% if image %>
   <figure class="sidebar-image">
-    <img src="<%= image["url"] %>" alt="<%= image["alt_text"] %>">
+    <% if image["path"].present? %>
+      <%= image_tag image["path"], alt: image["alt_text"] %>
+    <% else %>
+      <img src="<%= image["url"] %>" alt="<%= image["alt_text"] %>">
+    <% end %>
     <% if image["caption"].present? %><figcaption><%= image["caption"] %></figcaption><% end %>
   </figure>
 <% else %>
