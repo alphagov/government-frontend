@@ -16,6 +16,11 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert_has_component_document_footer_pair("from", from)
   end
 
+  test "renders body when provided" do
+    setup_and_visit_content_item('document_collection_with_body')
+    assert_has_component_govspeak(@content_item["details"]["body"])
+  end
+
   test "renders contents with link to each collection group" do
     setup_and_visit_content_item('document_collection')
     @content_item["details"]["collection_groups"].each do |group|

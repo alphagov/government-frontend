@@ -5,6 +5,10 @@ class DocumentCollectionPresenter < ContentItemPresenter
   include Withdrawable
   include ActionView::Helpers::UrlHelper
 
+  def body
+    content_item["details"]["body"]
+  end
+
   def contents
     groups.map do |group|
       title = group["title"]

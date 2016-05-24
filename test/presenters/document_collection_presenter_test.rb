@@ -9,6 +9,7 @@ class DocumentCollectionPresenterTest < PresenterTest
     assert_equal schema_item['description'], presented_item.description
     assert_equal schema_item['format'], presented_item.format
     assert_equal schema_item['title'], presented_item.title
+    assert_equal schema_item('document_collection_with_body')['details']['body'], presented_item('document_collection_with_body').body
   end
 
   test 'presents a contents list based on collection groups' do
