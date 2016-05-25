@@ -1,0 +1,35 @@
+.document-collection {
+  @include description;
+  @include sidebar-with-body;
+  @include history-notice;
+  @include withdrawal-notice;
+
+  .group-title {
+    @include bold-27;
+    margin-top: $gutter;
+    margin-bottom: $gutter-half;
+
+    @include media(desktop) {
+      margin-top: $gutter * 1.5;
+      margin-bottom: $gutter-two-thirds;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .group-document-list-item {
+    display: block;
+    list-style: none;
+    margin-bottom: $gutter-half;
+
+    @include media(desktop) {
+      margin-bottom: $gutter-two-thirds;
+    }
+  }
+
+  .collection-document-title {
+    @include bold-19;
+  }
+}
