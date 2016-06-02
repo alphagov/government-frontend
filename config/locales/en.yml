@@ -1,4 +1,7 @@
 en:
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   language_names:
     ar: Arabic
     de: German

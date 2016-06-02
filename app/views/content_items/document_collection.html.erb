@@ -46,8 +46,17 @@
       <ol class="group-document-list">
         <% @content_item.group_document_links(group).each do |link| %>
           <li class="group-document-list-item">
-            <h3 class="collection-document-title"><%= link %></h3>
-            <%# TODO: Include document date and type when available %>
+            <h3 class="group-document-list-item-title">
+              <%= link_to(link[:title], link[:base_path]) %>
+            </h3>
+            <ul class="group-document-list-item-attributes">
+              <li>
+                <time datetime="<%= link[:public_updated_at].iso8601 %>">
+                  <%= l(link[:public_updated_at], format: :short_ordinal) %>
+                </time>
+              </li>
+              <li><%= t("content_item.format.#{link[:document_type]}", count: 1) %></li>
+            </ul>
           </li>
         <% end %>
       </ol>

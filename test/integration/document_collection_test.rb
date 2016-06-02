@@ -48,10 +48,16 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     documents = @content_item["links"]["documents"]
 
     documents.each do |doc|
-      assert page.has_css?('.collection-document-title a', text: doc["title"])
+      assert page.has_css?('.group-document-list-item-title a', text: doc["title"])
     end
 
     assert page.has_css?('.group-document-list .group-document-list-item', count: documents.count)
+
+    within ".group-document-list:first-of-type .group-document-list-item:first-of-type .group-document-list-item-attributes" do
+      assert page.has_text?('16 March 2007'), "has properly formatted date"
+      assert page.has_css?('[datetime="2007-03-16T15:00:02+00:00"]'), "has iso8601 datetime attribute"
+      assert page.has_text?('Guidance'), "has formatted document_type"
+    end
   end
 
   test "withdrawn collection" do
