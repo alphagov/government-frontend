@@ -22,7 +22,12 @@ class DocumentCollectionPresenter < ContentItemPresenter
 
   def group_document_links(group)
     group_documents(group).map do |link|
-      link_to(link["title"], link["base_path"])
+      {
+        public_updated_at: Time.parse(link["public_updated_at"]),
+        document_type: link["document_type"],
+        title: link["title"],
+        base_path: link["base_path"]
+      }
     end
   end
 

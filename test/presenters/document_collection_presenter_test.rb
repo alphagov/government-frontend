@@ -32,11 +32,14 @@ class DocumentCollectionPresenterTest < PresenterTest
 
   test 'presents an ordered list of group documents' do
     documents = [
-      "<a href=\"/government/publications/national-standard-for-driving-cars-and-light-vans\">National standard for driving cars and light vans</a>",
-      "<a href=\"/government/publications/car-and-small-van-driving-syllabus\">Car and light van driving syllabus</a>",
-      "<a href=\"/government/publications/car-and-light-van-driver-competence-framework\">Car and light van driver competence framework</a>",
+      {
+        public_updated_at: Time.parse("2007-03-16 15:00:02 +0000"),
+        document_type: "guidance",
+        title: "National standard for driving cars and light vans",
+        base_path: "/government/publications/national-standard-for-driving-cars-and-light-vans"
+      }
     ]
     document_ids = schema_item["details"]["collection_groups"].first["documents"]
-    assert_equal documents, presented_item.group_document_links("documents" => document_ids)
+    assert_equal documents, presented_item.group_document_links("documents" => [document_ids.first])
   end
 end
