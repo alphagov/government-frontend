@@ -37,9 +37,9 @@ class DetailedGuidePresenterTest < PresenterTest
     example = schema_item("withdrawn_detailed_guide")
     presented = presented_item("withdrawn_detailed_guide")
 
-    assert example["details"].include?("withdrawn_notice")
+    assert example.include?("withdrawn_notice")
     assert presented.withdrawn?
-    assert_equal example["details"]["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
+    assert_equal example["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
     assert_equal '<time datetime="2015-01-28T13:05:30Z">28 January 2015</time>', presented.withdrawal_notice[:time]
   end
 

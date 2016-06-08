@@ -3,7 +3,6 @@ class DetailedGuidePresenter < ContentItemPresenter
   include ExtractsHeadings
   include Linkable
   include Updatable
-  include Withdrawable
   include NationalApplicability
   include ActionView::Helpers::UrlHelper
 

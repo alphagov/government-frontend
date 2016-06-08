@@ -1,4 +1,6 @@
 class ContentItemPresenter
+  include Withdrawable
+
   attr_reader :content_item, :title, :description, :format, :locale, :phase, :document_type
 
   def initialize(content_item)
