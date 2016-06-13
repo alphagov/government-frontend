@@ -21,11 +21,11 @@ private
   end
 
   def present(content_item)
-    presenter_name = content_item['format'].classify + 'Presenter'
+    presenter_name = content_item['schema_name'].classify + 'Presenter'
     presenter_class = Object.const_get(presenter_name)
     presenter_class.new(content_item)
   rescue NameError
-    raise "No support for format \"#{content_item['format']}\""
+    raise "No support for schema \"#{content_item['schema_name']}\""
   end
 
   def content_item_template
