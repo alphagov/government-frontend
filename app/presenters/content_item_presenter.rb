@@ -7,7 +7,7 @@ class ContentItemPresenter
     @content_item = content_item
     @title = content_item["title"]
     @description = content_item["description"]
-    @format = content_item["format"]
+    @format = content_item["schema_name"]
     @locale = content_item["locale"] || "en"
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
