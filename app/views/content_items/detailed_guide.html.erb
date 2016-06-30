@@ -12,6 +12,11 @@
         title: @content_item.title,
         average_title_length: "long" %>
   </div>
+  <div class="column-third">
+    <%= render 'shared/available_languages',
+      translations: @content_item.available_translations
+    %>
+  </div>
 </div>
 
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
