@@ -14,6 +14,7 @@ class ContentItemPresenter
   end
 
   def available_translations
+    return [] if @content_item["links"]["available_translations"].nil?
     sorted_locales(@content_item["links"]["available_translations"])
   end
 

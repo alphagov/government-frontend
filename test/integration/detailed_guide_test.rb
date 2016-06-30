@@ -60,4 +60,13 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert_has_component_metadata_pair('Applies to', 'England, Scotland, and Wales (see guidance for <a href="http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for" rel="external">Northern Ireland</a>)')
   end
+
+  test "translated detailed guide" do
+    setup_and_visit_content_item('translated_detailed_guide')
+
+    assert_has_component_title(@content_item["title"])
+    assert page.has_text?(@content_item["description"])
+
+    assert page.has_css?('.available-languages')
+  end
 end
