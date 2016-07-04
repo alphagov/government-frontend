@@ -1,29 +1,28 @@
 .available-languages {
-  margin-top: $gutter-half;
+  margin-bottom: $gutter;
+  border-bottom: 1px solid $border-colour;
+
+  // The following mixin usage could be a composable class in the future
+  // as components should not have layout that prevents reusability.
+  @include responsive-top-margin;
+  @include core-16;
 
   ul {
     @extend %contain-floats;
     list-style: none;
-    padding: $gutter-half 0 $gutter-one-third;
-    border-bottom: 1px solid $border-colour;
+    margin-left: -$gutter-one-third;
+    margin-right: -$gutter-one-third;
 
     li {
       float: left;
-      display: block;
+      padding-left: $gutter-one-third;
+      padding-right: $gutter-one-third;
+      margin-bottom: $gutter-one-third;
       border-right: 1px solid $border-colour;
-      padding: 0 $gutter-one-third 0 0;
       height: 16px;
-      margin: 3px $gutter-one-third 2px 0;
 
       &.last {
         border-right: 0;
-      }
-
-      a,
-      span {
-        display: block;
-        margin-top: -1px;
-        @include core-16;
       }
 
       .direction-rtl & {
@@ -32,8 +31,6 @@
         text-align: start;
         border-left: 1px solid $border-colour;
         border-right: 0;
-        margin: 3px 0 2px $gutter-one-third;
-        padding: 0 0 0 $gutter-one-third;
 
         &.last {
           border-left: 0;
