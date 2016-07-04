@@ -38,7 +38,11 @@
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
 
-<div class="grid-row sidebar-with-body">
+<div
+  class="grid-row sidebar-with-body"
+  data-module="sticky-element-container"
+  id="contents"
+>
   <% if @content_item.contents.any? %>
     <div class="column-third">
       <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
@@ -58,6 +62,9 @@
     <%= render 'govuk_component/govspeak',
         content: @content_item.body,
         direction: page_text_direction %>
+  </div>
+  <div data-sticky-element class="sticky-element">
+    <a class="back-to-content" href="#contents"><%= t("content_item.contents") %></a>
   </div>
 </div>
 

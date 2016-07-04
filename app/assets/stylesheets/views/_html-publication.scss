@@ -137,18 +137,4 @@
       text-decoration: underline;
     }
   }
-
-  .back-to-content {
-    @include core-19;
-    display: block;
-    padding-bottom: $gutter-half;
-
-    &:before {
-      content: "\2191";
-    }
-
-    @media print {
-      display: none;
-    }
-  }
 }

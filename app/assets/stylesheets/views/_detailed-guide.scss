@@ -19,4 +19,14 @@
       margin: 0 0 $gutter-half $gutter-half;
     }
   }
+
+  // To allow .back-to-content to settle in at the bottom after scrolling past.
+  .sidebar-with-body {
+    position: relative;
+  }
+
+  // To compensate for the -$gutter from @include sidebar-with-body.
+  .back-to-content {
+    margin-left: $gutter;
+  }
 }
