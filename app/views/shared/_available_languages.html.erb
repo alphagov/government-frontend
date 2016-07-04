@@ -4,7 +4,7 @@
       <% translations.each.with_index do |translation, i| %>
         <li class="translation<%= ' last' if i == translations.length-1 %>">
           <% if translation["locale"] == I18n.locale.to_s %>
-            <span><%= native_language_name_for(translation["locale"]) %></span>
+            <%= native_language_name_for(translation["locale"]) %>
           <% else %>
             <%= link_to native_language_name_for(translation["locale"]), translation["base_path"] %>
           <% end %>
