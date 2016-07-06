@@ -25,8 +25,8 @@
     position: relative;
   }
 
-  // To compensate for the -$gutter from @include sidebar-with-body.
+  // To compensate for the -$gutter-half from @include sidebar-with-body.
   .back-to-content {
-    margin-left: $gutter;
+    margin-left: $gutter-half;
   }
 }
