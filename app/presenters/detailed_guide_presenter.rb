@@ -42,12 +42,4 @@ class DetailedGuidePresenter < ContentItemPresenter
   def related_mainstream
     links("related_mainstream")
   end
-
-private
-
-  def parent
-    if content_item["links"].include?("parent")
-      content_item["links"]["parent"][0]
-    end
-  end
 end
