@@ -13,16 +13,18 @@ class DetailedGuidePresenter < ContentItemPresenter
   def breadcrumbs
     return [] unless parent
 
-    e = parent
-    res = []
+    direct_parent = parent
+    ordered_parents = []
 
-    while e
-      res << { title: e["title"], url: e["base_path"] }
-      e = e["parent"] && e["parent"].first
+    while direct_parent
+      ordered_parents.unshift(
+        title: direct_parent["title"],
+        url: direct_parent["base_path"],
+      )
+      direct_parent = direct_parent["parent"] && direct_parent["parent"].first
     end
 
-    res << { title: "Home", url: "/" }
-    res.reverse
+    ordered_parents.unshift(title: "Home", url: "/")
   end
 
   def contents
