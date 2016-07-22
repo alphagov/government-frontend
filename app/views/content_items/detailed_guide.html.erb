@@ -1,9 +1,7 @@
 <%= content_for :page_class, @content_item.format.dasherize %>
 <%= content_for :title, @content_item.page_title %>
 
-<% if @content_item.breadcrumbs.any? %>
-  <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
-<% end %>
+<%= render "shared/breadcrumbs" %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
