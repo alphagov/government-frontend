@@ -11,6 +11,11 @@ require 'slimmer/test_helpers/shared_templates'
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
+  include Slimmer::TestHelpers::SharedTemplates
+
+  def setup
+    stub_shared_component_locales
+  end
 end
 
 # Note: This is so that slimmer is skipped, preventing network requests for
@@ -25,6 +30,10 @@ class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
   include Slimmer::TestHelpers::SharedTemplates
+
+  def setup
+    stub_shared_component_locales
+  end
 
   def assert_has_component_metadata_pair(label, value)
     assert_component_parameter("metadata", label, value)
