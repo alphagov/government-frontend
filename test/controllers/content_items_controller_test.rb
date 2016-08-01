@@ -1,9 +1,7 @@
 require 'test_helper'
-require 'slimmer/test_helpers/shared_templates'
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
-  include Slimmer::TestHelpers::SharedTemplates
 
   test "routing handles translated content paths" do
     translated_path = 'government/case-studies/allez.fr'

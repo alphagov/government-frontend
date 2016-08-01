@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5.0.4'
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
 else
-  gem 'slimmer', '9.3.0'
+  gem 'slimmer', '9.3.1'
 end
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'

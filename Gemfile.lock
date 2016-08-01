@@ -172,7 +172,7 @@ GEM
     scss_lint (0.44.0)
       rake (~> 10.0)
       sass (~> 3.4.15)
-    slimmer (9.3.0)
+    slimmer (9.3.1)
       activesupport
       json
       nokogiri (>= 1.5.0, < 1.7.0)
@@ -239,7 +239,7 @@ DEPENDENCIES
   rails-i18n (>= 4.0.4)
   rails_translation_manager (~> 0.0.2)
   sass-rails (~> 5.0.4)
-  slimmer (= 9.3.0)
+  slimmer (= 9.3.1)
   uglifier (>= 1.3.0)
   unicorn (= 4.8)
   webmock (~> 1.18.0)
