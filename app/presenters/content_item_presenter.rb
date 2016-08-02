@@ -18,12 +18,6 @@ class ContentItemPresenter
     sorted_locales(@content_item["links"]["available_translations"])
   end
 
-  def parent
-    if content_item["links"].include?("parent")
-      content_item["links"]["parent"][0]
-    end
-  end
-
 private
 
   def display_time(timestamp)
