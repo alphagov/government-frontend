@@ -26,7 +26,6 @@ end
 
 group :development, :test do
   gem 'govuk-lint'
-  gem 'pry-byebug'
   gem 'wraith', '~> 3.1'
 end
 
@@ -39,4 +38,5 @@ group :test do
   gem 'capybara'
   gem 'webmock', '~> 1.18.0', require: false
   gem 'govuk-content-schema-test-helpers', '1.1.0'
+  gem 'pry-byebug'
 end

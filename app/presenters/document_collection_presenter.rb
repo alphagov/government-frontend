@@ -1,7 +1,6 @@
 class DocumentCollectionPresenter < ContentItemPresenter
-  include Breadcrumbs
-  include Linkable
   include Political
+  include Linkable
   include Updatable
   include ActionView::Helpers::UrlHelper
 

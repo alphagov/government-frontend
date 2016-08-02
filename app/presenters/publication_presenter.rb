@@ -1,9 +1,8 @@
 class PublicationPresenter < ContentItemPresenter
-  include Breadcrumbs
-  include Linkable
-  include NationalApplicability
   include Political
+  include Linkable
   include Updatable
+  include NationalApplicability
   include ActionView::Helpers::UrlHelper
 
   def details
