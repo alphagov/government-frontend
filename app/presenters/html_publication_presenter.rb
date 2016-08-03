@@ -38,10 +38,4 @@ class HtmlPublicationPresenter < ContentItemPresenter
     brand = "executive-office" if organisation["details"]["logo"]["crest"] == "eo"
     brand
   end
-
-private
-
-  def parent
-    content_item["links"]["parent"][0]
-  end
 end
