@@ -1,28 +1,14 @@
 class DetailedGuidePresenter < ContentItemPresenter
-  include Political
+  include Breadcrumbs
   include ExtractsHeadings
   include Linkable
-  include Updatable
   include NationalApplicability
+  include Political
+  include Updatable
   include ActionView::Helpers::UrlHelper
 
   def body
     content_item["details"]["body"]
-  end
-
-  def breadcrumbs
-    return [] unless parent
-
-    e = parent
-    res = []
-
-    while e
-      res << { title: e["title"], url: e["base_path"] }
-      e = e["parent"] && e["parent"].first
-    end
-
-    res << { title: "Home", url: "/" }
-    res.reverse
   end
 
   def contents
@@ -41,13 +27,5 @@ class DetailedGuidePresenter < ContentItemPresenter
 
   def related_mainstream
     links("related_mainstream")
-  end
-
-private
-
-  def parent
-    if content_item["links"].include?("parent")
-      content_item["links"]["parent"][0]
-    end
   end
 end
