@@ -25,10 +25,18 @@ This is a Ruby on Rails application that fetches documents from
 
 ### Running the application
 
-`./startup.sh`
+```
+./startup.sh
+```
 
 The app should start on http://localhost:3090 or
 http://government-frontend.dev.gov.uk on GOV.UK development machines.
+
+```
+./startup.sh --live
+```
+
+This will run the app and point it at the production GOV.UK `content-store` and `static` instances.
 
 ### Running the test suite
 
