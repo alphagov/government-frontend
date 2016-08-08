@@ -25,7 +25,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('fatality_notice')
     within '.sidebar-image' do
       assert(
-        page.has_css?('img[src$="mod-crest.png"]'),
+        page.has_css?('img[src*="mod-crest"]'),
         'image in sidebar should have correct path'
       )
     end
