@@ -59,6 +59,6 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "renders 'Applies to' block in metadata when there are excluded nations" do
     setup_and_visit_content_item('statistics_publication')
 
-    assert_has_component_metadata_pair('Applies to', 'England (see publications for <a href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm" rel="external">Northern Ireland</a>, <a href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS" rel="external">Scotland</a>, and <a href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en" rel="external">Wales</a>)')
+    assert_has_component_metadata_pair('Applies to', 'England (see publications for <a rel="external" href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm">Northern Ireland</a>, <a rel="external" href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS">Scotland</a>, and <a rel="external" href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en">Wales</a>)')
   end
 end

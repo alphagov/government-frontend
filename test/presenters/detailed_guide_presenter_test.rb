@@ -80,6 +80,6 @@ class DetailedGuidePresenterTest < PresenterTest
     presented = presented_item('national_applicability_alternative_url_detailed_guide')
 
     assert example['details'].include?('national_applicability')
-    assert_equal presented.applies_to, 'England, Scotland, and Wales (see guidance for <a href="http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for" rel="external">Northern Ireland</a>)'
+    assert_equal presented.applies_to, 'England, Scotland, and Wales (see guidance for <a rel="external" href="http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for">Northern Ireland</a>)'
   end
 end
