@@ -37,7 +37,7 @@ class TopicalEventAboutPagePresenterTest < PresenterTest
     end
 
     travel_to(topical_event_end_date) do
-      breadcrumbs[1].merge!(title: "Ebola virus: UK government response (Archived)")
+      breadcrumbs[1][:title] = "Ebola virus: UK government response (Archived)"
       assert_equal breadcrumbs, presented_item.breadcrumbs
     end
   end

@@ -39,7 +39,7 @@ private
     expires_in(max_age, public: !cache_private)
   end
 
-  def with_locale(&block)
+  def with_locale
     I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
   end
 
@@ -50,8 +50,6 @@ private
   def content_store
     @content_store ||= GdsApi::ContentStore.new(Plek.current.find("content-store"))
   end
-
-private
 
   def error_403(exception)
     render text: exception.message, status: 403

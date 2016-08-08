@@ -35,7 +35,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
 
     travel_to(topical_event_end_date) do
       visit @content_item["base_path"]
-      breadcrumbs[1].merge!(title: @content_item["links"]["parent"][0]["title"] + " (Archived)")
+      breadcrumbs[1][:title] = @content_item["links"]["parent"][0]["title"] + " (Archived)"
       assert_has_component_breadcrumbs(breadcrumbs)
     end
   end
