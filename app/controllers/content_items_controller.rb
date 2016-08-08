@@ -6,8 +6,9 @@ class ContentItemsController < ApplicationController
   def show
     if load_content_item
       set_expiry
-      set_locale
-      render content_item_template
+      with_locale do
+        render content_item_template
+      end
     else
       render text: 'Not found', status: :not_found
     end
@@ -38,8 +39,8 @@ private
     expires_in(max_age, public: !cache_private)
   end
 
-  def set_locale
-    I18n.locale = @content_item.locale || I18n.default_locale
+  def with_locale(&block)
+    I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
   end
 
   def content_item_path
