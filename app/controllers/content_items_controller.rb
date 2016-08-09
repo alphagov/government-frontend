@@ -10,7 +10,7 @@ class ContentItemsController < ApplicationController
         render content_item_template
       end
     else
-      render text: 'Not found', status: :not_found
+      render plain: 'Not found', status: :not_found
     end
   end
 
@@ -52,6 +52,6 @@ private
   end
 
   def error_403(exception)
-    render text: exception.message, status: 403
+    render plain: exception.message, status: 403
   end
 end

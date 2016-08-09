@@ -6,7 +6,7 @@ gem 'airbrake', '4.0'
 gem 'govuk_frontend_toolkit', '2.0.1'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
-gem 'rails', '~> 4.2'
+gem 'rails', '~> 5.0'
 gem 'sass-rails', '~> 5.0.4'
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
+gem 'rails-controller-testing', '~> 0.1'
 
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
