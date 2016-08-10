@@ -3,7 +3,7 @@ require 'test_helper'
 class PhaseLabelTest < ActionDispatch::IntegrationTest
   test "Alpha phase label is displayed for a Case Study in phase 'alpha'" do
     case_study = JSON.parse(GovukContentSchemaTestHelpers::Examples.new.get('case_study', 'case_study'))
-    case_study.merge!("phase" => "alpha")
+    case_study["phase"] = "alpha"
 
     content_store_has_item("/government/case-studies/get-britain-building-carlisle-park", case_study.to_json)
 

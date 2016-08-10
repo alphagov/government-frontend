@@ -53,7 +53,7 @@ private
     render plain: exception.message, status: 403
   end
 
-  def error_notfound(exception)
+  def error_notfound
     render plain: 'Not found', status: :not_found
   end
 end
