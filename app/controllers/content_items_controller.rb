@@ -2,15 +2,13 @@ require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
   rescue_from GdsApi::HTTPForbidden, with: :error_403
+  rescue_from GdsApi::HTTPNotFound, with: :error_notfound
 
   def show
-    if load_content_item
-      set_expiry
-      with_locale do
-        render content_item_template
-      end
-    else
-      render plain: 'Not found', status: :not_found
+    load_content_item
+    set_expiry
+    with_locale do
+      render content_item_template
     end
   end
 
@@ -18,7 +16,7 @@ private
 
   def load_content_item
     content_item = content_store.content_item(content_item_path)
-    @content_item = present(content_item) if content_item
+    @content_item = present(content_item)
   end
 
   def present(content_item)
@@ -53,5 +51,9 @@ private
 
   def error_403(exception)
     render plain: exception.message, status: 403
+  end
+
+  def error_notfound(exception)
+    render plain: 'Not found', status: :not_found
   end
 end

@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5.0.4'
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
 else
-  gem 'slimmer', '9.3.2'
+  gem 'slimmer', '9.5.0'
 end
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
@@ -22,7 +22,7 @@ gem 'rails-controller-testing', '~> 0.1'
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '27.0.0'
+  gem 'gds-api-adapters', '33.1.0'
 end
 
 group :development, :test do

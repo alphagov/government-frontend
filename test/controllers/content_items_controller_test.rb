@@ -68,7 +68,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns 403 for access-limited item" do
     path = 'government/case-studies/super-sekrit-document'
-    url = CONTENT_STORE_ENDPOINT + "/content/" + path
+    url = content_store_endpoint + "/content/" + path
     stub_request(:get, url).to_return(status: 403, headers: {})
 
     get :show, params: { path: path }
