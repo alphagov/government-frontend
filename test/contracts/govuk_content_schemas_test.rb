@@ -7,7 +7,7 @@ class GovukContentSchemasTest < ActionDispatch::IntegrationTest
     test "can successfully render #{content_item['base_path']} schema example" do
       content_store_has_item(content_item['base_path'], content_item)
 
-      get content_item['base_path'].sub(/^\//, '')
+      get content_item['base_path']
 
       assert_response :success
     end

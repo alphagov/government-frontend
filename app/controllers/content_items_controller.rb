@@ -2,14 +2,13 @@ require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
   rescue_from GdsApi::HTTPForbidden, with: :error_403
+  rescue_from GdsApi::HTTPNotFound, with: :error_notfound
 
   def show
-    if load_content_item
-      set_expiry
-      set_locale
+    load_content_item
+    set_expiry
+    with_locale do
       render content_item_template
-    else
-      render text: 'Not found', status: :not_found
     end
   end
 
@@ -17,7 +16,7 @@ private
 
   def load_content_item
     content_item = content_store.content_item(content_item_path)
-    @content_item = present(content_item) if content_item
+    @content_item = present(content_item)
   end
 
   def present(content_item)
@@ -38,8 +37,8 @@ private
     expires_in(max_age, public: !cache_private)
   end
 
-  def set_locale
-    I18n.locale = @content_item.locale || I18n.default_locale
+  def with_locale
+    I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
   end
 
   def content_item_path
@@ -50,9 +49,11 @@ private
     @content_store ||= GdsApi::ContentStore.new(Plek.current.find("content-store"))
   end
 
-private
-
   def error_403(exception)
-    render text: exception.message, status: 403
+    render plain: exception.message, status: 403
+  end
+
+  def error_notfound
+    render plain: 'Not found', status: :not_found
   end
 end

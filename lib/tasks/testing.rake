@@ -1,5 +1,7 @@
+require 'rake/testtask'
+
 namespace :test do
-  Rails::TestTask.new(presenters: "test:prepare") do |t|
+  Rake::TestTask.new(presenters: "test:prepare") do |t|
     t.pattern = "test/presenters/**/*_test.rb"
   end
 end

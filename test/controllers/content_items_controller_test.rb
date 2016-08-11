@@ -13,7 +13,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   test "gets item from content store" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
-    get :show, path: path_for(content_item)
+    get :show, params: { path: path_for(content_item) }
     assert_response :success
     assert_equal content_item['title'], assigns[:content_item].title
   end
@@ -22,7 +22,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example('coming_soon', 'coming_soon')
     content_store_has_item(content_item['base_path'], content_item, max_age: 20)
 
-    get :show, path: path_for(content_item)
+    get :show, params: { path: path_for(content_item) }
     assert_response :success
     assert_equal "max-age=20, public", @response.headers['Cache-Control']
   end
@@ -31,7 +31,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example('coming_soon', 'coming_soon')
     content_store_has_item(content_item['base_path'], content_item, private: true)
 
-    get :show, path: path_for(content_item)
+    get :show, params: { path: path_for(content_item) }
     assert_response :success
     assert_equal "max-age=900, private", @response.headers['Cache-Control']
   end
@@ -40,7 +40,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example('case_study', 'translated')
     translated_format_name = I18n.t("content_item.format.case_study", count: 1, locale: 'es')
 
-    get :show, path: path_for(content_item)
+    get :show, params: { path: path_for(content_item) }
 
     assert_response :success
     assert_select "title", %r(#{translated_format_name})
@@ -53,7 +53,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     content_store_has_item(content_item['base_path'], content_item)
 
-    get :show, path: utf8_path
+    get :show, params: { path: utf8_path }
     assert_response :success
   end
 
@@ -62,16 +62,16 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     content_store_does_not_have_item('/' + path)
 
-    get :show, path: path
+    get :show, params: { path: path }
     assert_response :not_found
   end
 
   test "returns 403 for access-limited item" do
     path = 'government/case-studies/super-sekrit-document'
-    url = CONTENT_STORE_ENDPOINT + "/content/" + path
+    url = content_store_endpoint + "/content/" + path
     stub_request(:get, url).to_return(status: 403, headers: {})
 
-    get :show, path: path
+    get :show, params: { path: path }
     assert_response :forbidden
   end
 
@@ -80,10 +80,10 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item_without_images['details'].delete('image')
     content_store_has_item(content_item_without_images['base_path'], content_item_without_images)
 
-    get :show, path: path_for(content_item_without_images)
+    get :show, params: { path: path_for(content_item_without_images) }
 
     assert_response :success
-    assert_select '.sidebar-image img[src="/government-frontend/placeholder.jpg"]', count: 1
+    assert_select '.sidebar-image img[src*="/government-frontend/placeholder"]', count: 1
   end
 
   def path_for(content_item)

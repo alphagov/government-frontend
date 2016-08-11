@@ -16,7 +16,8 @@
     @include media(desktop) {
       width: percentage(1 / 3);
       float: right;
-      margin: 0 0 $gutter-half $gutter-half;
+      margin-bottom: $gutter-half;
+      margin-left: $gutter-half;
     }
   }
 
