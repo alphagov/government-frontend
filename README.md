@@ -8,10 +8,24 @@ parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
 ![A  Case Study](https://raw.githubusercontent.com/alphagov/government-frontend/master/docs/assets/case-study-screenshot.png)
 
-## Live examples
+## Formats
 
-- [gov.uk/government/case-studies/2013-elections-in-swaziland](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland)
-- [gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015)
+Not all formats that this app can handle are rendered by it in production.
+
+| Format | Example | Production status |
+|---|---|---|
+| Case study | [View example](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |
+| Coming soon | | Rendered by Whitehall |
+| Detailed guide | | Rendered by Whitehall |
+| Document collection | | Rendered by Whitehall |
+| Fatality notice | | Rendered by Whitehall |
+| HTML Publication | | Rendered by Whitehall |
+| Publication | | Rendered by Whitehall |
+| Statistics announcement | [View example](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
+| Take part | [View example](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) | Migrated |
+| Topical event about page | [View example](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
+| Unpublishing | | Rendered by Whitehall, might not be migrated |
+| Working group | [View example](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
 
 ## Technical documentation
 
