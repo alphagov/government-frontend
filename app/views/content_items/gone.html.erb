@@ -13,11 +13,7 @@
 
     <% if @content_item.alternative_path.present? %>
       <p class="alternative">
-<<<<<<< HEAD
-      Visit: <%= alternative_path_link %>
-=======
-      Visit: <%= alernative_path_link %>
->>>>>>> 53ded35... Add mocha gem
+        Visit: <%= alternative_path_link(request, @content_item.alternative_path)%>
       </p>
     <% end %>
   </div>
