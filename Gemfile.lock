@@ -109,10 +109,13 @@ GEM
       PriorityQueue (~> 0.1.2)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (2.99.2)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     multi_json (1.12.1)
     netrc (0.11.0)
     nio4r (1.2.1)
@@ -260,6 +263,7 @@ DEPENDENCIES
   govuk-lint
   govuk_frontend_toolkit (= 2.0.1)
   logstasher (= 0.6.1)
+  mocha
   plek (= 1.11)
   pry-byebug
   rails (~> 5.0)

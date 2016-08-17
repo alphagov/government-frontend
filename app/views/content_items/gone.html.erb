@@ -1,0 +1,20 @@
+<%= content_for :page_class, "unpublishing" %>
+<%= content_for :title, "No longer available - GOV.UK" %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title', title: 'The page you\'re looking for is no longer available' %>
+
+    <p class="summary">
+      The information on this page has been removed because it was published in error.
+    </p>
+
+    <%= render 'govuk_component/govspeak', content: @content_item.explanation %>
+
+    <% if @content_item.alternative_path.present? %>
+      <p class="alternative">
+        Visit: <%= alternative_path_link(request, @content_item.alternative_path)%>
+      </p>
+    <% end %>
+  </div>
+</div>
