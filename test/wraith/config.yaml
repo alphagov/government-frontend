@@ -33,9 +33,9 @@ paths:
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
-  - 320
-  - 768
-  - 1024
+  - 320x5000
+  - 600x4000
+  - 1080x3000
 
 # (optional) Resize to each screen width (efficient), or reload at each screen width (costly). Default: 'reload'
 resize_or_reload: 'resize'

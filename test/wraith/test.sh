@@ -21,11 +21,11 @@ else
     git checkout master
 
     cd test/wraith
-    wraith history configs/history.yaml
+    wraith history config.yaml
 
     git checkout -
 
-    wraith latest configs/history.yaml
+    wraith latest config.yaml
     cd ../../
   fi
 fi
