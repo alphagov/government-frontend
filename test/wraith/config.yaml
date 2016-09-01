@@ -23,12 +23,17 @@ domains:
 
 # (required) The paths to capture. This particular config is using casperjs, so we can take screenshots of selectors rather than the entire page.
 paths:
-  case_study: '/government/case-studies/doing-business-in-spain.es'
+  case_study: '/government/case-studies/get-britain-building-carlisle-park'
+  case_study_translated: '/government/case-studies/doing-business-in-spain.es'
   case_study_withdrawn: '/government/case-studies/terence-age-33-stoke-on-trent'
-  take_part: '/government/get-involved/take-part/become-a-councillor'
-  statistics_national: '/government/statistics/announcements/uk-armed-forces-quarterly-personnel-report-october-2015'
-  statistics_announcement_release_date_changes: '/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015--1'
+  statistics_announcement_national: '/government/statistics/announcements/uk-armed-forces-quarterly-personnel-report-october-2015'
   statistics_announcement_cancelled: '/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015'
+  take_part: '/government/get-involved/take-part/become-a-councillor'
+  topical_event_slim: '/government/topical-events/battle-of-the-somme-centenary-commemorations/about'
+  topical_event: '/government/topical-events/ebola-virus-government-response/about'
+  working_group_long: '/government/groups/benefits-credits-consultation-group-bccg'
+  working_group_short: '/government/groups/aviation-statistics-team'
+  working_group_with_policies: '/government/groups/better-regulation-executive'
 
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
