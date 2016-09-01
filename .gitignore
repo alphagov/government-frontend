@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.DS_Store
+/test/wraith/shots
+/test/wraith/shots-staging-vs-production
