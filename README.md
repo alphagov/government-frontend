@@ -74,15 +74,14 @@ application.
 On the [Development VM](https://github.gds/gds/development) navigate to
 the project directory and run
 ```
-sudo npm install --global phantomjs-prebuilt@2.1.7
-sudo gem install wraith -v 3.2.1
 cd test/wraith
-wraith capture config.yaml
+bundle install # only need to run this once to grab the dependencies
+bundle exec wraith capture config.yaml
 ```
 
 Also if you'd like to test Production vs Staging you can use
 ```
-wraith capture config-staging-vs-production.yaml
+bundle exec wraith capture config-staging-vs-production.yaml
 ```
 
 This will generate image diffs comparing the two runs, including a browsable
