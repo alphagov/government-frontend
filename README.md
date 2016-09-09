@@ -69,20 +69,23 @@ Or to specify the location explicitly:
 
 Use [Wraith](http://bbc-news.github.io/wraith/) ("A responsive screenshot
 comparison tool") to generate a visual diff to compare rendering changes in this
-application. Wraith has some dependencies you'll [need to install](http://bbc-news.github.io/wraith/os-install.html).
+application.
 
-First, on `master` branch, run:
+On the [Development VM](https://github.gds/gds/development) navigate to
+the project directory and run
 ```
-wraith history test/wraith/config.yaml
-```
-
-Then, on a branch with your changes, run:
-```
-wraith latest test/wraith/config.yaml
+cd test/wraith
+bundle install # only need to run this once to grab the dependencies
+bundle exec wraith capture config.yaml
 ```
 
-This will generate image diffs comparing the two runs, including a browseable
-gallery of the output, in `tmp/wraith`.
+Also if you'd like to test Production vs Staging you can use
+```
+bundle exec wraith capture config-staging-vs-production.yaml
+```
+
+This will generate image diffs comparing the two runs, including a browsable
+gallery of the output, located at `test/wraith/shots/gallery.html`.
 
 ### Adding a new format
 

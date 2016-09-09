@@ -20,7 +20,7 @@ browser: "phantomjs"
 # (required) The domain to take screenshots of.
 domains:
   production: "https://www.gov.uk"
-  local: "http://government-frontend.dev.gov.uk"
+  staging: "https://www-origin.staging.publishing.service.gov.uk"
 
 # (required) The paths to capture.
 paths:
@@ -102,7 +102,7 @@ screen_widths:
 resize_or_reload: 'resize'
 
 # (required) The directory that your latest screenshots will be stored in
-directory: 'shots'
+directory: 'shots-staging-vs-production'
 
 # (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
 fuzz: '20%'

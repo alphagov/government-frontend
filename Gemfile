@@ -28,7 +28,6 @@ end
 group :development, :test do
   gem 'govuk-lint'
   gem 'pry-byebug'
-  gem 'wraith', '~> 3.1'
 end
 
 group :development do
