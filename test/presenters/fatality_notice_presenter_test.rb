@@ -24,4 +24,8 @@ class FatalityNoticePresenterTest < PresenterTest
   test 'is linkable' do
     assert presented_item.is_a?(Linkable)
   end
+
+  test 'is updatable' do
+    assert presented_item.is_a?(Updatable)
+  end
 end

@@ -1,5 +1,6 @@
 class FatalityNoticePresenter < ContentItemPresenter
   include Linkable
+  include Updatable
 
   def field_of_operation
     attributes = content_item["links"]["field_of_operation"].first

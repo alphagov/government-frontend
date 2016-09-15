@@ -17,6 +17,11 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "<a href=\"/government/fields-of-operation/zululand\">Zululand</a>"
     )
 
+    assert_has_component_metadata_pair(
+      "first_published",
+      "27 February 1881"
+    )
+
     within(".description") do
       assert_text <<-DESCRIPTION
        It is with great sadness that the Ministry of Defense

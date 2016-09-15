@@ -12,6 +12,7 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/metadata',
         from: @content_item.from,
+        first_published: @content_item.published,
         other: {
           "Field of operation" => link_to(@content_item.field_of_operation.title, @content_item.field_of_operation.path)
         }
