@@ -4,6 +4,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
   test "typical fatality notice" do
     setup_and_visit_content_item('fatality_notice')
 
+    assert_component_parameter("title", "context", "Operations in Zululand")
     assert_has_component_title("Sir George Pomeroy Colley killed in Boer War")
 
     within(".description") do
@@ -14,6 +15,5 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
        DESCRIPTION
     end
 
-    assert_text("Operations in Zululand")
   end
 end
