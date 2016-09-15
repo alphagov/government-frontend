@@ -1,0 +1,2 @@
+class FatalityNoticePresenter < ContentItemPresenter
+end
