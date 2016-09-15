@@ -28,4 +28,8 @@ class FatalityNoticePresenterTest < PresenterTest
   test 'is updatable' do
     assert presented_item.is_a?(Updatable)
   end
+
+  test 'it presents the body' do
+    assert_equal schema_item['details']['body'], presented_item.body
+  end
 end
