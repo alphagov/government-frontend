@@ -16,4 +16,8 @@ class FatalityNoticePresenterTest < PresenterTest
       presented_item.field_of_operation
     )
   end
+
+  test 'is linkable' do
+    assert presented_item.is_a?(Linkable)
+  end
 end

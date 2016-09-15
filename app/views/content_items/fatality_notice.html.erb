@@ -8,5 +8,11 @@
         title: @content_item.title %>
   </div>
 </div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from %>
+  </div>
+</div>
 
 <%= render 'shared/description', description: @content_item.description %>

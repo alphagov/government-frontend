@@ -1,4 +1,6 @@
 module Linkable
+  include ActionView::Helpers::UrlHelper
+
   def from
     organisations_ordered_by_importance + links_group(%w{worldwide_organisations ministers})
   end
