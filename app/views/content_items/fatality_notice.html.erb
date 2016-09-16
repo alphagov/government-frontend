@@ -21,6 +21,14 @@
 </div>
 
 <%= render 'shared/description', description: @content_item.description %>
-<%= render 'govuk_component/govspeak',
-    content: @content_item.body,
-    direction: page_text_direction %>
+
+<div class="grid-row">
+  <div class="column-one-third">
+    <%= image_tag "mod-crest", alt: '' %>
+  </div>
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/govspeak',
+      content: @content_item.body,
+      direction: page_text_direction %>
+  </div>
+</div>
