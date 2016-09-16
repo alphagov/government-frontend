@@ -10,7 +10,7 @@ module Breadcrumbs
         title: direct_parent["title"],
         url: direct_parent["base_path"],
       )
-      direct_parent = direct_parent["parent"] && direct_parent["parent"].first
+      direct_parent = direct_parent = direct_parent.dig("links", "parent", 0)
     end
 
     ordered_parents.unshift(title: "Home", url: "/")

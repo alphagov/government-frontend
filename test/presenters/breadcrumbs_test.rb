@@ -33,10 +33,12 @@ class BreadcrumbsTest < ActionView::TestCase
         {
           "title" => "A-parent",
           "base_path" => "/a-parent",
-          "parent" => [{
-            "title" => "Another-parent",
-            "base_path" => "/another-parent",
-          }]
+          "links" => {
+            "parent" => [{
+              "title" => "Another-parent",
+              "base_path" => "/another-parent",
+            }]
+          }
         }
       ]
     }
