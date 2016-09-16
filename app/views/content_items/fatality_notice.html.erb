@@ -22,13 +22,14 @@
 
 <%= render 'shared/description', description: @content_item.description %>
 
-<div class="grid-row">
-  <div class="column-one-third">
-    <%= image_tag "mod-crest", alt: '' %>
+<div class="grid-row sidebar-with-body">
+  <div class="column-third">
+    <%= render 'shared/sidebar_image',
+        image: { "url" => asset_path("mod-crest"), "alt_text" => "" } %>
   </div>
   <div class="column-two-thirds">
     <%= render 'govuk_component/govspeak',
-      content: @content_item.body,
-      direction: page_text_direction %>
+        content: @content_item.body,
+        direction: page_text_direction %>
   </div>
 </div>
