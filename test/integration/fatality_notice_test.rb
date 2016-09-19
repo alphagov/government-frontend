@@ -22,6 +22,11 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "27 February 1881"
     )
 
+    assert_has_component_metadata_pair(
+      "last_updated",
+      "14 September 2016"
+    )
+
     within(".description") do
       assert_text <<-DESCRIPTION
        It is with great sadness that the Ministry of Defense
