@@ -48,5 +48,20 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "from",
       ["<a href=\"/government/organisations/ministry-of-defence\">Ministry of Defence</a>"]
     )
+    assert_has_component_document_footer_pair(
+      "history",
+      [
+        {
+          "display_time" => "14 September 2016",
+          "note" => "Updated information.",
+          "timestamp" => "2016-09-14T18:19:27+01:00"
+        },
+        {
+          "display_time" => "27 February 1881",
+          "note" => "First published.",
+          "timestamp" => "1881-02-27T15:45:44.000+00:00"
+        }
+      ]
+    )
   end
 end
