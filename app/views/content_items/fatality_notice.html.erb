@@ -33,3 +33,8 @@
         direction: page_text_direction %>
   </div>
 </div>
+
+<%= render 'govuk_component/document_footer',
+    published: @content_item.published,
+    direction: page_text_direction
+%>
