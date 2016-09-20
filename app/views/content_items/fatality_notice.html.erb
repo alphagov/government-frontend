@@ -30,6 +30,8 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-third">
+    <%# The Ministry of Defence crest only has visual value so has an empty alt attribute.
+        See https://davidwalsh.name/accessibility-tip-empty-alt-attributes %>
     <%= render 'shared/sidebar_image',
         image: { "url" => asset_path("ministry-of-defence-crest"), "alt_text" => "" } %>
   </div>
