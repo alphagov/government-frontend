@@ -66,4 +66,16 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       ]
     )
   end
+
+  test "fatality notice with minister" do
+    setup_and_visit_content_item('fatality_notice_with_minister')
+    
+    assert_has_component_metadata_pair(
+      "from",
+      [
+        "<a href=\"/government/organisations/ministry-of-defence\">Ministry of Defence</a>",
+        "<a href=\"/government/people/eric-pickles\">The Rt Hon Sir Eric Pickles MP</a>"
+      ]
+    )
+  end
 end
