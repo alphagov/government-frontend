@@ -7,6 +7,8 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     assert_component_parameter("title", "context", "Operations in Zululand")
     assert_has_component_title("Sir George Pomeroy Colley killed in Boer War")
 
+    refute page.has_css?(".withdrawal-notices")
+
     assert_has_component_metadata_pair(
       "from",
       ["<a href=\"/government/organisations/ministry-of-defence\">Ministry of Defence</a>"]
@@ -69,7 +71,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
   test "fatality notice with minister" do
     setup_and_visit_content_item('fatality_notice_with_minister')
-    
+
     assert_has_component_metadata_pair(
       "from",
       [
@@ -85,5 +87,17 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
         "<a href=\"/government/people/eric-pickles\">The Rt Hon Sir Eric Pickles MP</a>"
       ]
     )
+  end
+
+  test "fatality notice with withdrawn notice" do
+    setup_and_visit_content_item('withdrawn_fatality_notice')
+
+    within ".withdrawal-notice" do
+      assert_text("This fatality notice was withdrawn on 14 September 2016")
+
+      assert_has_component_govspeak(
+        "<div class=\"govspeak\"><p>This content is not factually correct. For current information please go to <a rel=\"external\" href=\"https://en.wikipedia.org/wiki/George_Pomeroy_Colley\">https://en.wikipedia.org/wiki/George_Pomeroy_Colley</a></p></div>"
+      )
+    end
   end
 end
