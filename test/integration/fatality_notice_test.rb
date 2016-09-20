@@ -77,5 +77,13 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
         "<a href=\"/government/people/eric-pickles\">The Rt Hon Sir Eric Pickles MP</a>"
       ]
     )
+
+    assert_has_component_document_footer_pair(
+      "from",
+      [
+        "<a href=\"/government/organisations/ministry-of-defence\">Ministry of Defence</a>",
+        "<a href=\"/government/people/eric-pickles\">The Rt Hon Sir Eric Pickles MP</a>"
+      ]
+    )
   end
 end
