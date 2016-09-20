@@ -34,9 +34,7 @@
         image: { "url" => asset_path("mod-crest"), "alt_text" => "" } %>
   </div>
   <div class="column-two-thirds">
-    <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction %>
+    <%= render 'govuk_component/govspeak', content: @content_item.body %>
   </div>
 </div>
 
@@ -44,6 +42,5 @@
     from: @content_item.from,
     published: @content_item.published,
     updated: @content_item.updated,
-    history: @content_item.history,
-    direction: page_text_direction
+    history: @content_item.history
 %>
