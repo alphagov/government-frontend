@@ -9,7 +9,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     )
 
     assert page.has_css?(
-      "meta[name='description'][content='It is with great sadness that the Ministry of Defense must confirm that Sir George Pomeroy Colley, died in battle in Zululand on 27 February 1881.']",
+      "meta[name='description'][content='It is with great sadness that the Ministry of Defence must confirm that Sir George Pomeroy Colley, died in battle in Zululand on 27 February 1881.']",
       visible: false
     )
 
@@ -42,7 +42,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
     within(".description") do
       assert_text <<-DESCRIPTION
-       It is with great sadness that the Ministry of Defense
+       It is with great sadness that the Ministry of Defence
        must confirm that Sir George Pomeroy Colley, died in battle
        in Zululand on 27 February 1881.
        DESCRIPTION
