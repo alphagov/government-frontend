@@ -4,6 +4,10 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
   test "typical fatality notice" do
     setup_and_visit_content_item('fatality_notice')
 
+    assert page.has_title?(
+      "Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK"
+    )
+
     assert page.has_css?(
       "meta[name='description'][content='It is with great sadness that the Ministry of Defense must confirm that Sir George Pomeroy Colley, died in battle in Zululand on 27 February 1881.']",
       visible: false
@@ -96,6 +100,10 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
   test "fatality notice with withdrawn notice" do
     setup_and_visit_content_item('withdrawn_fatality_notice')
+
+    assert page.has_title?(
+      "[Withdrawn] Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK"
+    )
 
     within ".withdrawal-notice" do
       assert_text("This fatality notice was withdrawn on 14 September 2016")
