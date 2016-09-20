@@ -27,6 +27,8 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "14 September 2016"
     )
 
+    assert_has_component_metadata_pair("see_updates_link", true)
+
     within(".description") do
       assert_text <<-DESCRIPTION
        It is with great sadness that the Ministry of Defense
