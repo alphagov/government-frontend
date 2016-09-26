@@ -1,5 +1,4 @@
 class TopicalEventAboutPagePresenter < ContentItemPresenter
-  include Breadcrumbs
   include ExtractsHeadings
   include ActionView::Helpers::UrlHelper
 
@@ -11,6 +10,15 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
     extract_headings_with_ids(body).map do |heading|
       link_to(heading[:text], "##{heading[:id]}")
     end
+  end
+
+  # Old topical event pages have a "archived" string appended to their title
+  # which we also include in the breadcrumbs of topical event about pages
+  # for example: https://www.gov.uk/government/topical-events/ebola-virus-government-response/about
+  def breadcrumbs
+    result = super
+    result.last[:title] = parent['title']
+    result
   end
 
 private
