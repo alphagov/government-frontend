@@ -2,7 +2,6 @@ class CaseStudyPresenter < ContentItemPresenter
   include ActionView::Helpers::UrlHelper
   include Linkable
   include Updatable
-  include Breadcrumbs
 
   attr_reader :body
 

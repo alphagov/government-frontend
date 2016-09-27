@@ -25,6 +25,8 @@ else
   gem 'gds-api-adapters', '33.1.0'
 end
 
+gem 'govuk_navigation_helpers', '~> 1.0'
+
 group :development, :test do
   gem 'govuk-lint'
   gem 'pry-byebug'

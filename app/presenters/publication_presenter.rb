@@ -1,5 +1,4 @@
 class PublicationPresenter < ContentItemPresenter
-  include Breadcrumbs
   include Linkable
   include NationalApplicability
   include Political

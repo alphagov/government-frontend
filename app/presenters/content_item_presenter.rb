@@ -3,6 +3,8 @@ class ContentItemPresenter
 
   attr_reader :content_item, :title, :description, :format, :locale, :phase, :document_type
 
+  delegate :breadcrumbs, to: :@nav_helper
+
   def initialize(content_item)
     @content_item = content_item
     @title = content_item["title"]
@@ -11,6 +13,7 @@ class ContentItemPresenter
     @locale = content_item["locale"] || "en"
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
+    @nav_helper = GovukNavigationHelpers::NavigationHelper.new(content_item)
   end
 
   def available_translations

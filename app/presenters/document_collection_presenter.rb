@@ -1,5 +1,4 @@
 class DocumentCollectionPresenter < ContentItemPresenter
-  include Breadcrumbs
   include Linkable
   include Political
   include Updatable

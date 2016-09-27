@@ -1,5 +1,4 @@
 class DetailedGuidePresenter < ContentItemPresenter
-  include Breadcrumbs
   include ExtractsHeadings
   include Linkable
   include NationalApplicability
