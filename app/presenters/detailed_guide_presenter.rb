@@ -24,7 +24,7 @@ class DetailedGuidePresenter < ContentItemPresenter
     links("related_guides")
   end
 
-  def related_mainstream
-    links("related_mainstream")
+  def related_mainstream_content
+    links("related_mainstream_content")
   end
 end
