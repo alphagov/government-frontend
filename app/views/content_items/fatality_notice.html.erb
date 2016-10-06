@@ -33,7 +33,7 @@
     <%# The Ministry of Defence crest only has visual value so has an empty alt attribute.
         See https://davidwalsh.name/accessibility-tip-empty-alt-attributes %>
     <%= render 'shared/sidebar_image',
-        image: { "url" => asset_path("ministry-of-defence-crest"), "alt_text" => "" } %>
+      image: { "url" => image_url("ministry-of-defence-crest.png"), "alt_text" => "" } %>
   </div>
   <div class="column-two-thirds">
     <%= render 'govuk_component/govspeak', content: @content_item.body %>
