@@ -61,18 +61,18 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
   end
 
   test "withdrawn collection" do
-    setup_and_visit_content_item('document_collection')
+    setup_and_visit_content_item('document_collection_withdrawn')
     assert page.has_css?('title', text: "[Withdrawn]", visible: false)
 
     within ".withdrawal-notice" do
       assert page.has_text?('This collection was withdrawn'), "is withdrawn"
-      assert_has_component_govspeak(@content_item["details"]["withdrawn_notice"]["explanation"])
-      assert page.has_css?("time[datetime='#{@content_item['details']['withdrawn_notice']['withdrawn_at']}']")
+      assert_has_component_govspeak(@content_item["withdrawn_notice"]["explanation"])
+      assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
     end
   end
 
   test "historically political collection" do
-    setup_and_visit_content_item('document_collection')
+    setup_and_visit_content_item('document_collection_political')
 
     within ".history-notice" do
       assert page.has_text?('This collection was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
