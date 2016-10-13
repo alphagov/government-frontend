@@ -15,6 +15,9 @@
     <%= render 'shared/available_languages',
       translations: @content_item.available_translations
     %>
+    <% if @content_item.image.present? %>
+      <%= image_tag @content_item.image, class: "logo-image" %>
+    <% end %>
   </div>
 </div>
 

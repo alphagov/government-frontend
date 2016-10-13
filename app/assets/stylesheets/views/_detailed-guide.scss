@@ -30,4 +30,13 @@
   .back-to-content {
     margin-left: $gutter-half;
   }
+
+  .logo-image {
+    max-width: 70%;
+
+    @include media(tablet) {
+      max-width: 100%;
+      margin-top: 45px;
+    }
+  }
 }
