@@ -27,4 +27,8 @@ class DetailedGuidePresenter < ContentItemPresenter
   def related_mainstream_content
     links("related_mainstream_content")
   end
+
+  def image
+    content_item["details"]["image"]["url"] if content_item["details"]["image"]
+  end
 end
