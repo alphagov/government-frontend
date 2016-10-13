@@ -76,6 +76,17 @@ en:
     id: Indonesian
   content_item:
     format:
+      # `national` & `official` are old document types for
+      # `national_statistics_announcement` and `official_statistics_announcements`.
+      # They can be removed once https://github.com/alphagov/whitehall/pull/2783 is
+      # deployed and all statistics announcements have been republished.
+      national:
+        one: National statistics announcement
+        other: National statistics announcements
+      official:
+        one: Official statistics announcement
+        other: Official statistics announcements
+
       announcement:
         one: Announcement
         other: Announcements
@@ -145,6 +156,9 @@ en:
       national_statistics:
         one: National Statistics
         other: National Statistics
+      national_statistics_announcement:
+        one: National statistics announcement
+        other: National statistics announcements
       news_article:
         one: News article
         other: News articles
@@ -199,6 +213,9 @@ en:
       official_statistics:
         one: Official Statistics
         other: Official Statistics
+      official_statistics_announcements:
+        one: Official statistics announcement
+        other: Official statistics announcements
       take_part:
         one: Take part
         other: Take part
