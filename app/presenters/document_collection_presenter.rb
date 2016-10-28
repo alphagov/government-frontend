@@ -38,7 +38,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
 private
 
   def group_documents(group)
-    group["documents"].map { |id| documents_hash[id] }
+    group["documents"].map { |id| documents_hash[id] }.compact
   end
 
   def group_title_id(title)

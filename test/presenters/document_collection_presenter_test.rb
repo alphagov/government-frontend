@@ -43,3 +43,26 @@ class DocumentCollectionPresenterTest < PresenterTest
     assert_equal documents, presented_item.group_document_links("documents" => [document_ids.first])
   end
 end
+
+class DocumentCollectionWithGroupContainingMissingDocumentLinkPresenterTest < PresenterTest
+  def format_name
+    "document_collection"
+  end
+
+  test "does not present the withdrawn document" do
+    presenter = presented_item("document_collection_with_single_missing_document")
+
+    group_with_missing_document = presenter
+      .groups
+      .select { |g| g["title"] == "One document missing from links" }
+      .first
+
+    presented_links = presenter.group_document_links(group_with_missing_document)
+    presented_links_base_paths = presented_links.collect { |link| link[:base_path] }
+
+    assert_equal(
+      ["/government/publications/national-standard-for-developed-driving-competence"],
+      presented_links_base_paths
+    )
+  end
+end
