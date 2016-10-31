@@ -16,7 +16,9 @@ class DocumentCollectionPresenter < ContentItemPresenter
   end
 
   def groups
-    content_item["details"]["collection_groups"]
+    content_item["details"]["collection_groups"].reject do |group|
+      group_document_links(group).empty?
+    end
   end
 
   def group_document_links(group)

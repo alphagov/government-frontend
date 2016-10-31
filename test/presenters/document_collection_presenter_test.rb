@@ -66,3 +66,21 @@ class DocumentCollectionWithGroupContainingMissingDocumentLinkPresenterTest < Pr
     )
   end
 end
+
+class DocumentCollectionWithGroupContainingOnlyMissingDocumentLinksPresenterTest < PresenterTest
+  def format_name
+    "document_collection"
+  end
+
+  test "does not present the group" do
+    presenter = presented_item(
+      "document_collection_with_missing_links_documents"
+    )
+
+    group_with_missing_documents = presenter
+      .groups
+      .select { |g| g["title"] == "All documents missing from links" }
+
+    assert_empty group_with_missing_documents
+  end
+end
