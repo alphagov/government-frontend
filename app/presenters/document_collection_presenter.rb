@@ -16,7 +16,9 @@ class DocumentCollectionPresenter < ContentItemPresenter
   end
 
   def groups
-    content_item["details"]["collection_groups"]
+    content_item["details"]["collection_groups"].reject do |group|
+      group_document_links(group).empty?
+    end
   end
 
   def group_document_links(group)
@@ -38,7 +40,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
 private
 
   def group_documents(group)
-    group["documents"].map { |id| documents_hash[id] }
+    group["documents"].map { |id| documents_hash[id] }.compact
   end
 
   def group_title_id(title)
