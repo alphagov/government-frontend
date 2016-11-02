@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class DetailedGuidePresenterTest < PresenterTest
+class DetailedGuidePresenterTest < PresenterTestCase
   def format_name
     "detailed_guide"
   end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PresenterTest < ActiveSupport::TestCase
+class PresenterTestCase < ActiveSupport::TestCase
   def format_name
     raise NotImplementedError, "Override this method in your test class"
   end

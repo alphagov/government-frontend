@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class FatalityNoticePresenterTest < PresenterTest
+class FatalityNoticePresenterTest < PresenterTestCase
   def format_name
     "fatality_notice"
   end

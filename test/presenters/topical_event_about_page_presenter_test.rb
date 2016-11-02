@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class TopicalEventAboutPagePresenterTest < PresenterTest
+class TopicalEventAboutPagePresenterTest < PresenterTestCase
   def format_name
     "topical_event_about_page"
   end

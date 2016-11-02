@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class DocumentCollectionPresenterTest < PresenterTest
+class DocumentCollectionPresenterTest < PresenterTestCase
   def format_name
     "document_collection"
   end
@@ -44,7 +44,7 @@ class DocumentCollectionPresenterTest < PresenterTest
   end
 end
 
-class DocumentCollectionWithGroupContainingMissingDocumentLinkPresenterTest < PresenterTest
+class DocumentCollectionWithGroupContainingMissingDocumentLinkPresenterTest < PresenterTestCase
   def format_name
     "document_collection"
   end
@@ -67,7 +67,7 @@ class DocumentCollectionWithGroupContainingMissingDocumentLinkPresenterTest < Pr
   end
 end
 
-class DocumentCollectionWithGroupContainingNoDocumentsPresenterTest < PresenterTest
+class DocumentCollectionWithGroupContainingNoDocumentsPresenterTest < PresenterTestCase
   def format_name
     "document_collection"
   end
@@ -83,7 +83,7 @@ class DocumentCollectionWithGroupContainingNoDocumentsPresenterTest < PresenterT
   end
 end
 
-class DocumentCollectionWithGroupContainingOnlyMissingDocumentLinksPresenterTest < PresenterTest
+class DocumentCollectionWithGroupContainingOnlyMissingDocumentLinksPresenterTest < PresenterTestCase
   def format_name
     "document_collection"
   end

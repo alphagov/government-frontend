@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class HtmlPublicationPresenterTest < PresenterTest
+class HtmlPublicationPresenterTest < PresenterTestCase
   def format_name
     "html_publication"
   end

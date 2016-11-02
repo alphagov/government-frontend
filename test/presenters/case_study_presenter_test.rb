@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class CaseStudyPresenterTest < PresenterTest
+class CaseStudyPresenterTest < PresenterTestCase
   include ActionView::Helpers::UrlHelper
 
   def format_name
