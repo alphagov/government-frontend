@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class StatisticsAnnouncementPresenterTest < PresenterTest
+class StatisticsAnnouncementPresenterTest < PresenterTestCase
   include ActionView::Helpers::UrlHelper
 
   def format_name

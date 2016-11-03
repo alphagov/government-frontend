@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class ComingSoonPresenterTest < PresenterTest
+class ComingSoonPresenterTest < PresenterTestCase
   def format_name
     "coming_soon"
   end

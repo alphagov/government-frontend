@@ -1,6 +1,6 @@
 require 'presenter_test_helper'
 
-class TakePartPresenterTest < PresenterTest
+class TakePartPresenterTest < PresenterTestCase
   def format_name
     "take_part"
   end
