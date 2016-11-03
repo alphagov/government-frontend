@@ -1,7 +1,13 @@
 require 'presenter_test_helper'
 
-class <%= "#{@camel_name}PresenterTest" %> < PresenterTestCase
-  def format_name
-    "<%= @format_name %>"
+class <%= "#{@camel_name}PresenterTest" %>
+  class <%= "Presented#{@camel_name}" %> < PresenterTestCase
+    def format_name
+      " <%= @format_name %> "
+    end
+
+    test 'presents the format' do
+      assert_equal schema_item['format'], presented_item.format
+    end
   end
 end
