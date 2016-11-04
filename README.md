@@ -16,7 +16,7 @@ Not all formats that this app can handle are rendered by it in production.
 |---|---|---|
 | Case study | [View example](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |
 | Coming soon | | Rendered by Whitehall |
-| Detailed guide | | Rendered by Whitehall |
+| Detailed guide | [View example](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
 | Document collection | | Rendered by Whitehall |
 | Fatality notice | | Rendered by Whitehall |
 | HTML Publication | | Rendered by Whitehall |
