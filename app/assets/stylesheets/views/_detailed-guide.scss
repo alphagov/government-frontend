@@ -4,10 +4,6 @@
   @include history-notice;
   @include withdrawal-notice;
 
-  .offset-one-third {
-    margin-left: percentage(1 / 3);
-  }
-
   .related-mainstream-content {
     background: $panel-colour;
     padding: $gutter-half;
