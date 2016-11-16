@@ -30,10 +30,12 @@
 <%= render 'shared/description', description: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">
-  <div class="column-third">
-    <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
-  </div>
-  <div class="column-two-thirds">
+  <% if @content_item.contents.any? %>
+    <div class="column-third">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+    </div>
+  <% end %>
+  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
     <% if @content_item.body.present? %>
       <%= render 'govuk_component/govspeak',
           content: @content_item.body,
