@@ -27,6 +27,10 @@ class ContentItemPresenter
     end
   end
 
+  def content_id
+    content_item.parsed_content["content_id"]
+  end
+
 private
 
   def display_time(timestamp)
