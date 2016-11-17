@@ -1,3 +1,5 @@
 .statistical-data-set {
-
+  @include description;
+  @include sidebar-with-body;
+  @include history-notice;
 }
