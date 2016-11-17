@@ -109,4 +109,19 @@ class DocumentCollectionPresenterTest
       assert_empty group_with_missing_documents
     end
   end
+
+  class GroupWithDocumentsWhenThereIsNoLinksDocuments < TestCase
+    test "does not present the group" do
+      presenter = presented_item(
+        "document_collection_with_group_but_no_documents"
+      )
+
+      group_with_missing_documents =
+        presenter
+          .groups
+          .select { |g| g["title"] == "Missing documents" }
+
+      assert_empty group_with_missing_documents
+    end
+  end
 end
