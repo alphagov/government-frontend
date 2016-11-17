@@ -1,0 +1,2 @@
+class StatisticalDataSetPresenter < ContentItemPresenter
+end
