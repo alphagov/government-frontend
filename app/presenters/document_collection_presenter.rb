@@ -48,6 +48,6 @@ private
   end
 
   def documents_hash
-    @documents_hash ||= content_item["links"]["documents"].map { |d| [d["content_id"], d] }.to_h
+    @documents_hash ||= (content_item["links"]["documents"] || []).map { |d| [d["content_id"], d] }.to_h
   end
 end
