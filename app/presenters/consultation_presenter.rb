@@ -1,0 +1,2 @@
+class ConsultationPresenter < ContentItemPresenter
+end
