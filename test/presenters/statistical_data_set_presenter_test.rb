@@ -1,11 +1,13 @@
 require 'presenter_test_helper'
 
 class StatisticalDataSetPresenterTest
-  class PresentedStatisticalDataSet < PresenterTestCase
+  class StatisticalDataSetTestCase < PresenterTestCase
     def format_name
       "statistical_data_set"
     end
+  end
 
+  class PresentedStatisticalDataSet < StatisticalDataSetTestCase
     test 'presents the format' do
       assert_equal schema_item['format'], presented_item.format
     end
@@ -26,6 +28,35 @@ class StatisticalDataSetPresenterTest
       expected_body = schema_item['details']['body']
 
       assert_equal expected_body, presented_item.body
+    end
+  end
+
+  class WithdrawnStatisticalDataSet < StatisticalDataSetTestCase
+    def example_schema_name
+      "statistical_data_set_withdrawn"
+    end
+
+    def expected
+      schema_item(example_schema_name)
+    end
+
+    def presented
+      presented_item(example_schema_name)
+    end
+
+    test 'presents the withdrawn notice explanation' do
+      assert_equal expected["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
+    end
+
+    test 'presents the withdrawn notification time' do
+      expected_time = expected["withdrawn_notice"]["withdrawn_at"]
+      expected_date_as_string = I18n.l(
+        Date.parse(expected_time),
+        format: "%-d %B %Y"
+      )
+      expected_withdrawn_time_html = "<time datetime=\"#{expected_time}\">#{expected_date_as_string}</time>"
+
+      assert_equal expected_withdrawn_time_html, presented.withdrawal_notice[:time]
     end
   end
 end
