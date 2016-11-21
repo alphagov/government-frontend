@@ -1,10 +1,10 @@
 module Updatable
   def published
-    display_time(content_item["details"]["first_public_at"])
+    display_date(content_item["details"]["first_public_at"])
   end
 
   def updated
-    display_time(content_item["public_updated_at"]) if any_updates?
+    display_date(content_item["public_updated_at"]) if any_updates?
   end
 
   def short_history
@@ -19,7 +19,7 @@ module Updatable
     return [] unless any_updates?
     content_item["details"]["change_history"].map do |item|
       {
-        display_time: display_time(item["public_timestamp"]),
+        display_time: display_date(item["public_timestamp"]),
         note: item["note"],
         timestamp: item["public_timestamp"]
       }

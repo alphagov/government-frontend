@@ -33,7 +33,7 @@ class ContentItemPresenter
 
 private
 
-  def display_time(timestamp)
+  def display_date(timestamp)
     I18n.l(Date.parse(timestamp), format: "%-d %B %Y") if timestamp
   end
 

@@ -11,7 +11,7 @@ module Withdrawable
     notice = content_item["withdrawn_notice"]
     if notice
       {
-        time: content_tag(:time, display_time(notice["withdrawn_at"]), datetime: notice["withdrawn_at"]),
+        time: content_tag(:time, display_date(notice["withdrawn_at"]), datetime: notice["withdrawn_at"]),
         explanation: notice["explanation"]
       }
     end
