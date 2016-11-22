@@ -5,8 +5,144 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
+        title: @content_item.title,
+        average_title_length: 'long' %>
   </div>
 </div>
 
-<%= render 'shared/description', description: @content_item.description %>
+<%= render 'shared/withdrawal_notice', content_item: @content_item %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from,
+        part_of: @content_item.part_of,
+        first_published: @content_item.published,
+        last_updated: @content_item.updated,
+        see_updates_link: true
+    %>
+  </div>
+</div>
+<%= render 'shared/history_notice', content_item: @content_item %>
+
+<% if @content_item.pending_final_outcome? %>
+<div class="consultation-notice">
+  <h2>
+    We are analysing your feedback
+  </h2>
+  <p>Visit this page again soon to download the outcome to this public&nbsp;feedback.</p>
+</div>
+<% end %>
+
+<% if @content_item.final_outcome? %>
+  <div class="consultation-notice">
+    <h2>
+      This consultation has concluded
+    </h2>
+  </div>
+
+  <% if @content_item.final_outcome_documents? %>
+    <div class="grid-row sidebar-with-body">
+      <div class="column-third">
+        <h1 class="section-title" id="final-outcome-documents-title">
+          Download the full outcome
+        </h1>
+      </div>
+      <div class="column-two-thirds" aria-labelledby="final-outcome-documents-title">
+        <%= render 'govuk_component/govspeak',
+            content: @content_item.final_outcome_documents,
+            direction: page_text_direction %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="grid-row sidebar-with-body">
+    <div class="column-third">
+      <h1 class="section-title" id="final-outcome-detail-title">
+        <%= t("consultation.final_outcome_detail") %>
+      </h1>
+    </div>
+    <div class="column-two-thirds" aria-labelledby="final-outcome-detail-title">
+      <%= render 'govuk_component/govspeak',
+          content: @content_item.final_outcome_detail,
+          direction: page_text_direction %>
+    </div>
+  </div>
+<% end %>
+
+<% if @content_item.final_outcome? %>
+  <section class="original-consultation">
+    <h2 class="section-title">Original consultation</h2>
+<% end %>
+
+<div class="consultation-banner">
+  <div class="grid-row">
+    <div class="column-third consultation-dates">
+      <% if @content_item.closed? %>
+        <p>
+          This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
+          <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+        </p>
+      <% elsif @content_item.open? %>
+        <p>
+          This consultation closes at<br />
+          <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+        </p>
+      <% elsif @content_item.unopened? %>
+        <p>
+          This consultation opens at<br />
+          <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span>
+        </p>
+      <% end %>
+    </div>
+    <div class="column-two-thirds consultation-summary">
+      <h2>Summary</h2>
+      <%= render 'shared/description', description: @content_item.description %>
+
+      <% if @content_item.held_on_another_website? %>
+        <p><strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<% if @content_item.final_outcome? %>
+  </section>
+<% end %>
+
+<% if @content_item.documents? %>
+  <div class="grid-row sidebar-with-body">
+    <div class="column-third">
+      <h1 class="section-title" id="documents-title">
+        Documents
+      </h1>
+    </div>
+    <div class="column-two-thirds" aria-labelledby="documents-title">
+      <%= render 'govuk_component/govspeak',
+          content: @content_item.documents,
+          direction: page_text_direction %>
+    </div>
+  </div>
+<% end %>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-third">
+    <h1 class="section-title" id="description-title">
+      <%= t("consultation.description") %>
+    </h1>
+  </div>
+  <div class="column-two-thirds" aria-labelledby="description-title">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+  </div>
+</div>
+
+<%= render 'govuk_component/document_footer',
+    from: @content_item.from,
+    updated: @content_item.updated,
+    history: @content_item.history,
+    published: @content_item.published,
+    part_of: @content_item.part_of,
+    direction: page_text_direction
+%>
