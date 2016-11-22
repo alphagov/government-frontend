@@ -41,7 +41,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('open_consultation')
 
     assert page.has_text?("Open consultation")
-    assert page.has_text?("closes at 16 December 2216 4:00pm")
+    assert page.has_text?("closes at 4pm on 16 December 2216")
   end
 
   test "closed consultation pending outcome" do
@@ -51,7 +51,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.consultation-notice', text: "We are analysing your feedback")
 
     assert page.has_text?("ran from")
-    assert page.has_text?("5 September 2016 2:00pm to 31 October 2016 5:00pm")
+    assert page.has_text?("2pm on 5 September 2016 to 5pm on 31 October 2016")
   end
 
   test "consultation outcome" do
@@ -61,7 +61,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.consultation-notice', text: "This consultation has concluded")
     assert page.has_css?('h2', text: "Original consultation")
     assert page.has_text?("ran from")
-    assert page.has_text?("20 April 2016 4:00pm to 13 July 2016 10:45pm")
+    assert page.has_text?("4pm on 20 April 2016 to 10:45pm on 13 July 2016")
 
     within '[aria-labelledby="final-outcome-detail-title"]' do
       assert_has_component_govspeak(@content_item["details"]["final_outcome_detail"])

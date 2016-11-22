@@ -37,10 +37,6 @@ private
     I18n.l(Time.parse(timestamp), format: format) if timestamp
   end
 
-  def display_time(timestamp)
-    display_date(timestamp, "%-d %B %Y %-I:%M%P")
-  end
-
   def sorted_locales(translations)
     translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? '' : t["locale"] }
   end
