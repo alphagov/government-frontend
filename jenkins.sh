@@ -43,7 +43,7 @@ rm -rf tmp/govuk-content-schemas
 git clone git@github.com:alphagov/govuk-content-schemas.git tmp/govuk-content-schemas
 (
   cd tmp/govuk-content-schemas
-  git checkout ${SCHEMA_GIT_COMMIT:-"master"}
+  git checkout ${SCHEMA_GIT_COMMIT:-"deployed-to-production"}
 )
 export GOVUK_CONTENT_SCHEMAS_PATH=tmp/govuk-content-schemas
 
