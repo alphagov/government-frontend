@@ -59,4 +59,23 @@ class StatisticalDataSetPresenterTest
       assert_equal expected_withdrawn_time_html, presented.withdrawal_notice[:time]
     end
   end
+
+  class PoliticalStatisticalDataSet < StatisticalDataSetTestCase
+    def example_schema_name
+      "statistical_data_set_political"
+    end
+
+    def expected
+      schema_item(example_schema_name)
+    end
+
+    def presented
+      presented_item(example_schema_name)
+    end
+
+    test 'presents the political fields' do
+      assert_equal expected["details"]["political"], presented.historically_political?
+      assert_equal expected["details"]["government"]["title"], presented.publishing_government
+    end
+  end
 end
