@@ -11,6 +11,7 @@
   <% if content_for(:meta_description).present? %>
     <meta name="description" content="<%= content_for(:meta_description) %>" />
   <% end %>
+  <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
 </head>
 <body>
   <% unless content_for(:simple_header) %>
