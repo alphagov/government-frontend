@@ -49,6 +49,26 @@ class ConsultationPresenter < ContentItemPresenter
     content_item["details"]["final_outcome_detail"]
   end
 
+  def final_outcome_documents?
+    final_outcome_documents_list.any?
+  end
+
+  def final_outcome_documents
+    final_outcome_documents_list.join('')
+  end
+
+  def public_feedback_documents?
+    public_feedback_documents_list.any?
+  end
+
+  def public_feedback_documents
+    public_feedback_documents_list.join('')
+  end
+
+  def public_feedback_detail
+    content_item["details"]["public_feedback_detail"]
+  end
+
   def held_on_another_website?
     content_item["details"].include?("held_on_another_website_url")
   end
@@ -63,14 +83,6 @@ class ConsultationPresenter < ContentItemPresenter
 
   def documents
     documents_list.join('')
-  end
-
-  def final_outcome_documents?
-    final_outcome_documents_list.any?
-  end
-
-  def final_outcome_documents
-    final_outcome_documents_list.join('')
   end
 
 private
@@ -89,6 +101,10 @@ private
 
   def final_outcome_documents_list
     content_item["details"]["final_outcome_documents"] || []
+  end
+
+  def public_feedback_documents_list
+    content_item["details"]["public_feedback_documents"] || []
   end
 
   def documents_list

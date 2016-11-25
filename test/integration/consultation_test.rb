@@ -75,11 +75,29 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "public feedback" do
+    setup_and_visit_content_item('consultation_outcome_with_feedback')
+
+    assert page.has_text?("Detail of feedback received")
+    within '[aria-labelledby="public-feedback-detail-title"]' do
+      assert_has_component_govspeak(@content_item["details"]["public_feedback_detail"])
+    end
+  end
+
   test "consultation outcome documents render" do
     setup_and_visit_content_item('consultation_outcome')
 
     within '[aria-labelledby="final-outcome-documents-title"]' do
       assert_has_component_govspeak(@content_item["details"]["final_outcome_documents"].join(''))
+    end
+  end
+
+  test "public feedback documents render" do
+    setup_and_visit_content_item('consultation_outcome_with_feedback')
+
+    assert page.has_text?("Feedback received")
+    within '[aria-labelledby="public-feedback-documents-title"]' do
+      assert_has_component_govspeak(@content_item["details"]["public_feedback_documents"].join(''))
     end
   end
 

@@ -75,7 +75,39 @@
           direction: page_text_direction %>
     </div>
   </div>
+<% end %>
 
+<% if @content_item.public_feedback_documents? %>
+  <div class="grid-row sidebar-with-body">
+    <div class="column-third">
+      <h1 class="section-title" id="public-feedback-documents-title">
+        <%= t("consultation.feedback_received") %>
+      </h1>
+    </div>
+    <div class="column-two-thirds" aria-labelledby="public-feedback-documents-title">
+      <%= render 'govuk_component/govspeak',
+          content: @content_item.public_feedback_documents,
+          direction: page_text_direction %>
+    </div>
+  </div>
+<% end %>
+
+<% if @content_item.public_feedback_detail %>
+  <div class="grid-row sidebar-with-body">
+    <div class="column-third">
+      <h1 class="section-title" id="public-feedback-detail-title">
+        <%= t("consultation.public_feedback_detail") %>
+      </h1>
+    </div>
+    <div class="column-two-thirds" aria-labelledby="public-feedback-detail-title">
+      <%= render 'govuk_component/govspeak',
+          content: @content_item.public_feedback_detail,
+          direction: page_text_direction %>
+    </div>
+  </div>
+<% end %>
+
+<% if @content_item.final_outcome? %>
   <section class="original-consultation">
     <h2 class="section-title">Original consultation</h2>
 <% end %>

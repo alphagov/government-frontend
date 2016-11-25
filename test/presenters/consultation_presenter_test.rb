@@ -64,6 +64,14 @@ class ConsultationPresenterTest
       assert_equal schema['details']['final_outcome_documents'].join(''), presented.final_outcome_documents
     end
 
+    test 'presents public feedback documents' do
+      presented = presented_item("consultation_outcome_with_feedback")
+      schema = schema_item("consultation_outcome_with_feedback")
+
+      assert presented.public_feedback_documents?
+      assert_equal schema['details']['public_feedback_documents'].join(''), presented.public_feedback_documents
+    end
+
     test 'presents URL for consultations held on another website' do
       assert presented_item("open_consultation").held_on_another_website?
       refute presented_item("closed_consultation").held_on_another_website?
