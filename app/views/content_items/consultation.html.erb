@@ -19,6 +19,9 @@
         part_of: @content_item.part_of,
         first_published: @content_item.published,
         last_updated: @content_item.updated,
+        other: {
+          'Applies to' => @content_item.applies_to
+        },
         see_updates_link: true
     %>
   </div>

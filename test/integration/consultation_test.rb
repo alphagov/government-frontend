@@ -75,4 +75,10 @@ class ConsultationTest < ActionDispatch::IntegrationTest
       assert_has_component_govspeak(@content_item["details"]["final_outcome_documents"].join(''))
     end
   end
+
+  test "consultation that only applies to a set of nations" do
+    setup_and_visit_content_item('consultation_outcome_with_feedback')
+
+    assert_has_component_metadata_pair('Applies to', 'England')
+  end
 end

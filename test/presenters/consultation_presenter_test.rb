@@ -68,5 +68,13 @@ class ConsultationPresenterTest
       assert_equal "https://consult.education.gov.uk/part-time-maintenance-loans/post-graduate-doctoral-loans/", presented_item("open_consultation").held_on_another_website_url
       refute presented_item("closed_consultation").held_on_another_website_url
     end
+
+    test 'content can apply only to a set of nations' do
+      example = schema_item('consultation_outcome_with_feedback')
+      presented = presented_item('consultation_outcome_with_feedback')
+
+      assert example['details'].include?('national_applicability')
+      assert_equal presented.applies_to, 'England'
+    end
   end
 end
