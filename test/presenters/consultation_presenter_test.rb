@@ -43,6 +43,9 @@ class ConsultationPresenterTest
 
       assert presented_item("consultation_outcome").closed?
       refute presented_item("consultation_outcome").open?
+
+      refute presented_item("unopened_consultation").closed?
+      refute presented_item("unopened_consultation").open?
     end
 
     test 'presents consultation documents' do

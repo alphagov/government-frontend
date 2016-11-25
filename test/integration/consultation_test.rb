@@ -44,6 +44,13 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert page.has_text?("closes at 4pm on 16 December 2216")
   end
 
+  test "unopened consultation" do
+    setup_and_visit_content_item('unopened_consultation')
+
+    assert page.has_text?("Consultation")
+    assert page.has_css?('.consultation-notice', text: "This consultation opens at 2pm on 5 October 2200")
+  end
+
   test "closed consultation pending outcome" do
     setup_and_visit_content_item('closed_consultation')
 
