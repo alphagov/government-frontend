@@ -31,7 +31,7 @@
 <% if @content_item.unopened? %>
   <div class="consultation-notice">
     <h2>
-      This consultation opens at <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
+      This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %> <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
     </h2>
   </div>
 <% elsif @content_item.pending_final_outcome? %>
@@ -127,7 +127,7 @@
         </p>
       <% elsif @content_item.unopened? %>
         <p>
-          This consultation opens at<br />
+          This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
           <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span>
         </p>
       <% end %>

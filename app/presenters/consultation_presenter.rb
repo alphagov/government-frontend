@@ -21,8 +21,12 @@ class ConsultationPresenter < ContentItemPresenter
     display_date_and_time(opening_date_time)
   end
 
+  def opening_date_midnight?
+    Time.parse(opening_date_time).strftime("%l:%M%P") == "12:00am"
+  end
+
   def closing_date
-    display_date_and_time(closing_date_time)
+    display_date_and_time(closing_date_time, true)
   end
 
   def open?
@@ -87,16 +91,18 @@ class ConsultationPresenter < ContentItemPresenter
 
 private
 
-  def display_date_and_time(date)
+  def display_date_and_time(date, rollback_midnight = false)
     time = Time.parse(date)
     date_format = "%-e %B %Y"
     time_format = "%l:%M%P"
 
-    # 12am, 12:00am and "midnight on" can all be misinterpreted
-    # Use 11:59pm on the day before to remove ambiguity
-    # 12am on 10 January becomes 11:59pm on 9 January
-    time = time - 1.second if time.strftime(time_format) == "12:00am"
-    I18n.l(time, format: "#{time_format} on #{date_format}").gsub(':00', '').gsub('12pm', 'midday').strip
+    if rollback_midnight
+      # 12am, 12:00am and "midnight on" can all be misinterpreted
+      # Use 11:59pm on the day before to remove ambiguity
+      # 12am on 10 January becomes 11:59pm on 9 January
+      time = time - 1.second if time.strftime(time_format) == "12:00am"
+    end
+    I18n.l(time, format: "#{time_format} on #{date_format}").gsub(':00', '').gsub('12pm', 'midday').gsub('12am on ', '').strip
   end
 
   def final_outcome_documents_list

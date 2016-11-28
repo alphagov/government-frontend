@@ -16,14 +16,23 @@ class ConsultationPresenterTest
       assert_equal "4pm on 16 December 2216", presented_item("open_consultation").closing_date
     end
 
-    test 'presents 12am as 11:59pm on the day before' do
+    test 'presents closing dates at 12am as 11:59pm on the day before' do
       schema = schema_item("open_consultation")
-      schema['details']['opening_date'] = "2016-11-04T00:00:00+01:00"
-      schema['details']['closing_date'] = "2016-11-04T00:01:00+01:00"
+      schema['details']['opening_date'] = "2016-11-03T00:01:00+01:00"
+      schema['details']['closing_date'] = "2016-11-04T00:00:00+01:00"
       presented = presented_item("open_consultation", schema)
 
-      assert_equal "11:59pm on 3 November 2016", presented.opening_date
-      assert_equal "12:01am on 4 November 2016", presented.closing_date
+      assert_equal "12:01am on 3 November 2016", presented.opening_date
+      assert_equal "11:59pm on 3 November 2016", presented.closing_date
+    end
+
+    test 'presents opening dates at 12am as the date without a time' do
+      schema = schema_item("open_consultation")
+      schema['details']['opening_date'] = "2016-11-03T00:00:00+01:00"
+      schema['details']['closing_date'] = "2016-11-04T00:00:00+01:00"
+      presented = presented_item("open_consultation", schema)
+
+      assert_equal "3 November 2016", presented.opening_date
     end
 
     test 'presents 12pm as midday' do
