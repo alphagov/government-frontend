@@ -106,4 +106,32 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
     assert_has_component_metadata_pair('Applies to', 'England')
   end
+
+  test "ways to respond renders" do
+    setup_and_visit_content_item('open_consultation_with_participation')
+
+    within '[aria-labelledby="ways-to-respond-title"]' do
+      within_component_govspeak do |component_args|
+        content = component_args.fetch("content")
+        html = Nokogiri::HTML.parse(content)
+        assert html.at_css(".call-to-action a[href='https://beisgovuk.citizenspace.com/ukgi/post-office-network-consultation']", text: 'Respond online')
+        assert html.at_css("a[href='mailto:po.consultation@ukgi.gov.uk']", text: 'po.consultation@ukgi.gov.uk')
+        assert html.at_css(".contact", text: '2016 Post Office Network Consultation')
+        assert html.at_css("a[href='https://www.gov.uk/government/uploads/system/uploads/consultation_response_form_data/file/533/beis-16-36rf-post-office-network-consultation-response-form.docx']", text: 'response form')
+      end
+    end
+  end
+
+  test "ways to respond postal address is formatted with line breaks" do
+    setup_and_visit_content_item('open_consultation_with_participation')
+
+    within '[aria-labelledby="ways-to-respond-title"]' do
+      within_component_govspeak do |component_args|
+        content = component_args.fetch("content")
+        html = Nokogiri::HTML.parse(content)
+        assert html.at_css(".contact .content p", text: '2016 Post Office Network Consultation')
+        assert html.at_css(".contact .content p br")
+      end
+    end
+  end
 end

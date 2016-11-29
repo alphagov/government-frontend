@@ -175,6 +175,53 @@
   </div>
 </div>
 
+<% if @content_item.ways_to_respond? %>
+  <div class="grid-row sidebar-with-body">
+    <div class="column-third">
+      <h1 class="section-title" id="ways-to-respond-title">
+        <%= t("consultation.ways_to_respond") %>
+      </h1>
+    </div>
+    <div class="column-two-thirds" aria-labelledby="ways-to-respond-title">
+      <% @ways_to_respond_body = capture do %>
+        <% if @content_item.respond_online_url %>
+          <div class="call-to-action">
+            <p><%= link_to 'Respond online', @content_item.respond_online_url %></p>
+          </div>
+
+          <% if @content_item.email || @content_item.postal_address %>
+            <p>or</p>
+          <% end %>
+        <% end %>
+
+        <% if @content_item.response_form? %>
+          <p>
+            Complete a <%= link_to 'response form', @content_item.attachment_url %> and
+            <% if @content_item.email && @content_item.postal_address %>either<% end %>
+          </p>
+        <% end %>
+
+        <% if @content_item.email %>
+          <h3>Email to:</h3>
+          <p><%= mail_to @content_item.email, @content_item.email %></p>
+        <% end %>
+
+        <% if @content_item.postal_address %>
+          <h3>Write to:</h3>
+          <div class="contact">
+            <div class="content">
+              <%= simple_format(@content_item.postal_address) %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+      <%= render 'govuk_component/govspeak',
+          content: @ways_to_respond_body,
+          direction: page_text_direction %>
+    </div>
+  </div>
+<% end %>
+
 <%= render 'govuk_component/document_footer',
     from: @content_item.from,
     updated: @content_item.updated,

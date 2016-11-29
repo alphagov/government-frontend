@@ -89,6 +89,30 @@ class ConsultationPresenter < ContentItemPresenter
     documents_list.join('')
   end
 
+  def ways_to_respond?
+    open? && ways_to_respond && (respond_online_url || email || postal_address)
+  end
+
+  def email
+    ways_to_respond["email"]
+  end
+
+  def postal_address
+    ways_to_respond["postal_address"]
+  end
+
+  def respond_online_url
+    ways_to_respond["link_url"]
+  end
+
+  def response_form?
+    attachment_url && (email || postal_address)
+  end
+
+  def attachment_url
+    ways_to_respond["attachment_url"]
+  end
+
 private
 
   def display_date_and_time(date, rollback_midnight = false)
@@ -103,6 +127,10 @@ private
       time = time - 1.second if time.strftime(time_format) == "12:00am"
     end
     I18n.l(time, format: "#{time_format} on #{date_format}").gsub(':00', '').gsub('12pm', 'midday').gsub('12am on ', '').strip
+  end
+
+  def ways_to_respond
+    content_item["details"]["ways_to_respond"]
   end
 
   def final_outcome_documents_list

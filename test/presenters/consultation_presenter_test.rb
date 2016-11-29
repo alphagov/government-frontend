@@ -96,5 +96,48 @@ class ConsultationPresenterTest
       assert example['details'].include?('national_applicability')
       assert_equal presented.applies_to, 'England'
     end
+
+    test 'presents ways to respond' do
+      example_ways_to_respond = schema_item('open_consultation_with_participation')['details']['ways_to_respond']
+      presented = presented_item('open_consultation_with_participation')
+
+      assert presented.ways_to_respond?
+      assert_equal example_ways_to_respond['email'], presented.email
+      assert_equal example_ways_to_respond['link_url'], presented.respond_online_url
+      assert_equal example_ways_to_respond['postal_address'], presented.postal_address
+    end
+
+    test 'presents a response form when included with email or postal address' do
+      example_ways_to_respond = schema_item('open_consultation_with_participation')['details']['ways_to_respond']
+      presented = presented_item('open_consultation_with_participation')
+
+      assert presented.response_form?
+      assert_equal example_ways_to_respond['attachment_url'], presented.attachment_url
+
+      example_without_email = schema_item("open_consultation_with_participation")
+      example_without_email['details']['ways_to_respond'].delete('email')
+      example_without_email['details']['ways_to_respond'].delete('postal_address')
+      presented_without_email = presented_item("open_consultation_with_participation", example_without_email)
+
+      refute presented_without_email.response_form?
+    end
+
+    test 'does not show ways to respond when consultation is closed' do
+      example = schema_item("closed_consultation")
+      example['details']['ways_to_respond'] = { 'email' => 'email@email.com' }
+      presented = presented_item("closed_consultation", example)
+
+      refute presented.ways_to_respond?
+    end
+
+    test 'does not show ways to respond when only an attachment url is provided' do
+      example = schema_item("open_consultation_with_participation")
+      example['details']['ways_to_respond'].delete('email')
+      example['details']['ways_to_respond'].delete('postal_address')
+      example['details']['ways_to_respond'].delete('link_url')
+      presented = presented_item("open_consultation_with_participation", example)
+
+      refute presented.ways_to_respond?
+    end
   end
 end
