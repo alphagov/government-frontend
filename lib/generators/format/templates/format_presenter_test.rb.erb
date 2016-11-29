@@ -3,7 +3,7 @@ require 'presenter_test_helper'
 class <%= "#{@camel_name}PresenterTest" %>
   class <%= "Presented#{@camel_name}" %> < PresenterTestCase
     def format_name
-      " <%= @format_name %> "
+      "<%= @format_name %>"
     end
 
     test 'presents the format' do
