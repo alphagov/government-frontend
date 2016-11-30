@@ -7,7 +7,7 @@ class ComingSoonPresenterTest < PresenterTestCase
 
   test 'presents the basic details required to display a coming soon item' do
     assert_equal schema_item['title'], presented_item.title
-    assert_equal schema_item['format'], presented_item.format
+    assert_equal schema_item['schema_name'], presented_item.format
     assert_equal schema_item['locale'], presented_item.locale
     assert_equal schema_item['details']['publish_time'], presented_item.publish_time
   end
