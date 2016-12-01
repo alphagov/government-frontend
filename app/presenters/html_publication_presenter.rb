@@ -12,7 +12,7 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def last_changed
-    timestamp = display_time(content_item["details"]["public_timestamp"])
+    timestamp = display_date(content_item["details"]["public_timestamp"])
 
     # This assumes that a translation doesn't need the date to come beforehand.
     if content_item["details"]["first_published_version"]
