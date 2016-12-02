@@ -117,18 +117,27 @@
 <div class="consultation-banner">
   <div class="grid-row">
     <div class="column-third consultation-dates">
-      <p>
+
         <% if @content_item.closed? %>
-          This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
-          <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+          <p>
+            This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
+            <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+          </p>
         <% elsif @content_item.open? %>
-          This consultation closes at<br />
-          <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+          <p>
+            This consultation closes at<br />
+            <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+          </p>
         <% elsif @content_item.unopened? %>
-          This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
-          <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span>
+          <p>
+            This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
+            <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span>
+          </p>
+          <p>
+            It closes at<br />
+            <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+          </p>
         <% end %>
-      </p>
     </div>
     <div class="column-two-thirds consultation-summary">
       <h2>Summary</h2>
