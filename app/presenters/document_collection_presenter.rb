@@ -16,9 +16,14 @@ class DocumentCollectionPresenter < ContentItemPresenter
   end
 
   def groups
-    content_item["details"]["collection_groups"].reject do |group|
+    groups = content_item["details"]["collection_groups"].reject { |group|
       group_document_links(group).empty?
-    end
+    }
+
+    groups.map { |group|
+      group["documents"] = reject_withdrawn_documents(group)
+      group
+    }
   end
 
   def group_document_links(group)
@@ -49,5 +54,11 @@ private
 
   def documents_hash
     @documents_hash ||= Array(content_item["links"]["documents"]).map { |d| [d["content_id"], d] }.to_h
+  end
+
+  def reject_withdrawn_documents(group)
+    group_documents(group)
+      .reject { |document| document["withdrawn"] }
+      .map { |document| document["content_id"] }
   end
 end

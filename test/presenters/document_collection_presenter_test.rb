@@ -124,4 +124,21 @@ class DocumentCollectionPresenterTest
       assert_empty group_with_missing_documents
     end
   end
+
+  class GroupWithDocumentsWhenThereAreWithdrawnDocuments < TestCase
+    test "does not present withdrawn documents" do
+      presenter = presented_item(
+        "document_collection_with_withdrawn_links_documents"
+      )
+
+      presented_documents = presenter.groups.first["documents"]
+
+      expected_number_of_presented_documents = 2
+
+      assert_equal(
+        presented_documents.size,
+        expected_number_of_presented_documents
+      )
+    end
+  end
 end
