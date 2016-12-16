@@ -229,6 +229,23 @@
   </div>
 <% end %>
 
+<div class="grid-row sidebar-with-body">
+  <div class="column-two-thirds offset-one-third">
+    <h2>Share this page</h2>
+    <div class="share-buttons">
+      <%= link_to @content_item.facebook_share_url,
+          target: "_blank",
+          class: "share-button-link" do %>
+        <span class="share-button share-button-facebook"></span><span class="visually-hidden">Share on </span>Facebook<% end %>
+
+      <%= link_to @content_item.twitter_share_url,
+          target: "_blank",
+          class: "share-button-link" do %>
+        <span class="share-button share-button-twitter"></span><span class="visually-hidden">Share on </span>Twitter<% end %>
+    </div>
+  </div>
+</div>
+
 <%= render 'govuk_component/document_footer',
     from: @content_item.from,
     updated: @content_item.updated,
