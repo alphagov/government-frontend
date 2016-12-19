@@ -4,6 +4,7 @@ class ConsultationPresenter < ContentItemPresenter
   include NationalApplicability
   include Political
   include Withdrawable
+  include ERB::Util
 
   def body
     content_item["details"]["body"]
@@ -113,7 +114,19 @@ class ConsultationPresenter < ContentItemPresenter
     ways_to_respond["attachment_url"]
   end
 
+  def facebook_share_url
+    "https://www.facebook.com/sharer/sharer.php?u=#{share_url}"
+  end
+
+  def twitter_share_url
+    "https://twitter.com/share?url=#{share_url}&text=#{url_encode(title)}"
+  end
+
 private
+
+  def share_url
+    url_encode(Plek.current.website_root + content_item["base_path"])
+  end
 
   def display_date_and_time(date, rollback_midnight = false)
     time = Time.parse(date)

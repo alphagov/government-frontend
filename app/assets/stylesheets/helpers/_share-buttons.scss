@@ -1,0 +1,44 @@
+@mixin share-buttons {
+  $share-button-width: 25px;
+  $share-button-height: 25px;
+
+  .share-buttons {
+    @include core-16;
+    margin-top: $gutter-one-third;
+
+    .share-button-link {
+      margin-right: $gutter;
+
+      .share-button {
+        display: inline-block;
+        width: $share-button-width;
+        height: $share-button-height;
+        margin-right: $gutter-one-third;
+        background-color: $link-colour;
+        background-image: image-url("social-icons-white.png");
+        background-repeat: no-repeat;
+        vertical-align: top;
+      }
+
+      &:visited .share-button {
+        background-color: $link-visited-colour;
+      }
+
+      &:active .share-button {
+        background-color: $link-active-colour;
+      }
+
+      &:hover .share-button {
+        background-color: $link-hover-colour;
+      }
+    }
+
+    .share-button-facebook {
+      background-position: -2px -2px;
+    }
+
+    .share-button-twitter {
+      background-position: -2px -32px;
+    }
+  }
+}
