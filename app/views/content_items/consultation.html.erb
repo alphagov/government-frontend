@@ -231,18 +231,7 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-two-thirds offset-one-third">
-    <h2>Share this page</h2>
-    <div class="share-buttons" data-module="track-share-button-clicks">
-      <%= link_to @content_item.facebook_share_url,
-          target: "_blank",
-          class: "share-button-link js-share-facebook" do %>
-        <span class="share-button share-button-facebook"></span><span class="visually-hidden">Share on </span>Facebook<% end %>
-
-      <%= link_to @content_item.twitter_share_url,
-          target: "_blank",
-          class: "share-button-link js-share-twitter" do %>
-        <span class="share-button share-button-twitter"></span><span class="visually-hidden">Share on </span>Twitter<% end %>
-    </div>
+    <%= render 'shared/share_icons', share_urls: @content_item.share_urls %>
   </div>
 </div>
 
