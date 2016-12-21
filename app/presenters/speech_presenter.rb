@@ -1,0 +1,2 @@
+class SpeechPresenter < ContentItemPresenter
+end
