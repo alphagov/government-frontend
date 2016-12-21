@@ -3,8 +3,4 @@
     <img src="<%= image["url"] %>" alt="<%= image["alt_text"] %>">
     <% if image["caption"].present? %><figcaption><%= image["caption"] %></figcaption><% end %>
   </figure>
-<% else %>
-  <div class="sidebar-image">
-    <%= image_tag 'placeholder.jpg', alt: '' %>
-  </div>
 <% end %>

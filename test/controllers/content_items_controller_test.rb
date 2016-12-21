@@ -75,17 +75,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'content item without images is rendered with a placeholder image' do
-    content_item_without_images = govuk_content_schema_example('case_study', 'case_study')
-    content_item_without_images['details'].delete('image')
-    content_store_has_item(content_item_without_images['base_path'], content_item_without_images)
-
-    get :show, params: { path: path_for(content_item_without_images) }
-
-    assert_response :success
-    assert_select '.sidebar-image img[src*="/government-frontend/placeholder"]', count: 1
-  end
-
   def path_for(content_item)
     content_item['base_path'].sub(/^\//, '')
   end
