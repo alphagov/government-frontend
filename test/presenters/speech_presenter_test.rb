@@ -80,4 +80,17 @@ class SpeechPresenterTest
       assert_equal '<time datetime="2016-04-05T00:00:00+01:00">5 April 2016</time>', presented_item(example_schema_name).delivered_on_metadata
     end
   end
+
+  class SpeakerWithoutProfilePresentedSpeech < SpeechTestCase
+    def example_schema_name
+      'speech-speaker-without-profile'
+    end
+
+    test 'includes speaker without profile in from_with_speaker' do
+      assert_equal [
+        "<a href=\"/government/organisations/prime-ministers-office-10-downing-street\">Prime Minister&#39;s Office, 10 Downing Street</a>",
+        "<a href=\"/government/organisations/cabinet-office\">Cabinet Office</a>",
+        "Her Majesty the Queen"], presented_item(example_schema_name).from
+    end
+  end
 end

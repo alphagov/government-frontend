@@ -27,6 +27,12 @@ class SpeechPresenter < ContentItemPresenter
     content_item["details"]["location"]
   end
 
+  def from
+    super.tap do |f|
+      f.push(speaker_without_profile) if speaker_without_profile
+    end
+  end
+
 private
 
   def delivered_on
@@ -37,5 +43,9 @@ private
   def speech_type_explanation
     explanation = content_item["details"]["speech_type_explanation"]
     " (#{explanation})" if explanation
+  end
+
+  def speaker_without_profile
+    content_item["details"]["speaker_without_profile"]
   end
 end

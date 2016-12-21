@@ -34,4 +34,14 @@ class SpeechTest < ActionDispatch::IntegrationTest
     assert_has_component_metadata_pair("part_of", [link1, link2, link3])
     assert_has_component_document_footer_pair("part_of", [link1, link2, link3])
   end
+
+  test "renders speaker without a profile as text in metadata" do
+    setup_and_visit_content_item('speech-speaker-without-profile')
+
+    link1 = "<a href=\"/government/organisations/prime-ministers-office-10-downing-street\">Prime Minister&#39;s Office, 10 Downing Street</a>"
+    link2 = "<a href=\"/government/organisations/cabinet-office\">Cabinet Office</a>"
+    speaker = "Her Majesty the Queen"
+    assert_has_component_metadata_pair("from", [link1, link2, speaker])
+    assert_has_component_document_footer_pair("from", [link1, link2, speaker])
+  end
 end
