@@ -1,9 +1,13 @@
-module JasmineRails
-  class ApplicationController < ActionController::Base
-    before_action :skip_slimmer
+module JasmineRailsSkipSlimmer
+  extend ActiveSupport::Concern
 
-    def skip_slimmer
-      response.headers[Slimmer::Headers::SKIP_HEADER] = "true"
-    end
+  included do
+    before_action :skip_slimmer
+  end
+
+  def skip_slimmer
+    response.headers[Slimmer::Headers::SKIP_HEADER] = "true"
   end
 end
+
+JasmineRails::ApplicationController.include(JasmineRailsSkipSlimmer) if defined?(JasmineRails)
