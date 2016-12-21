@@ -1,3 +1,6 @@
 .speech {
-
+  @include sidebar-with-body;
+  @include description;
+  @include history-notice;
+  @include withdrawal-notice;
 }
