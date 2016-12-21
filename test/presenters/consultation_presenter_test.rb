@@ -141,8 +141,8 @@ class ConsultationPresenterTest
     end
 
     test 'presents share urls with encoded url and title' do
-      assert_equal 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fconsultations%2Fpostgraduate-doctoral-loans', presented_item("open_consultation").facebook_share_url
-      assert_equal 'https://twitter.com/share?url=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fconsultations%2Fpostgraduate-doctoral-loans&text=Postgraduate%20doctoral%20loans', presented_item("open_consultation").twitter_share_url
+      assert_equal 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fconsultations%2Fpostgraduate-doctoral-loans', presented_item("open_consultation").share_urls[:facebook]
+      assert_equal 'https://twitter.com/share?url=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fconsultations%2Fpostgraduate-doctoral-loans&text=Postgraduate%20doctoral%20loans', presented_item("open_consultation").share_urls[:twitter]
     end
   end
 end
