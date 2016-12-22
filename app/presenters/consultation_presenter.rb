@@ -1,6 +1,5 @@
 class ConsultationPresenter < ContentItemPresenter
-  include Linkable
-  include Updatable
+  include Metadata
   include NationalApplicability
   include Political
   include Withdrawable
