@@ -13,27 +13,7 @@
 </div>
 
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
-
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/metadata',
-        from: @content_item.from,
-        first_published: @content_item.published,
-        last_updated: @content_item.updated,
-        see_updates_link: true,
-        other: {
-          "Field of operation" => link_to(@content_item.field_of_operation.title, @content_item.field_of_operation.path)
-        }
-      %>
-  </div>
-</div>
-
+<%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
 <%= render 'shared/sidebar_with_body', content_item: @content_item %>
-
-<%= render 'govuk_component/document_footer',
-    from: @content_item.from,
-    published: @content_item.published,
-    updated: @content_item.updated,
-    history: @content_item.history
-%>
+<%= render 'govuk_component/document_footer', @content_item.document_footer %>
