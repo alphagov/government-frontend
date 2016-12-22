@@ -1,7 +1,6 @@
 class DocumentCollectionPresenter < ContentItemPresenter
-  include Linkable
+  include Metadata
   include Political
-  include Updatable
   include ActionView::Helpers::UrlHelper
 
   def body
