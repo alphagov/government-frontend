@@ -1,4 +1,6 @@
 module NationalApplicability
+  include Metadata
+
   def applies_to
     return nil if !national_applicability
     all_nations = national_applicability.values
@@ -19,6 +21,14 @@ module NationalApplicability
     end
 
     applies_to
+  end
+
+  def metadata
+    super.tap do |m|
+      m[:other] = {
+        'Applies to' => applies_to
+      }
+    end
   end
 
 private

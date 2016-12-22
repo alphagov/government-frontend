@@ -1,9 +1,8 @@
 class DetailedGuidePresenter < ContentItemPresenter
   include ExtractsHeadings
-  include Linkable
+  include Metadata
   include NationalApplicability
   include Political
-  include Updatable
   include ActionView::Helpers::UrlHelper
 
   def body
@@ -30,5 +29,13 @@ class DetailedGuidePresenter < ContentItemPresenter
 
   def image
     content_item["details"]["image"]["url"] if content_item["details"]["image"]
+  end
+
+  def document_footer
+    super.tap do |m|
+      m[:other] = {
+        I18n.t('detailed_guide.related_guides') => related_guides
+      }
+    end
   end
 end
