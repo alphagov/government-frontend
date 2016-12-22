@@ -2,7 +2,6 @@ class ConsultationPresenter < ContentItemPresenter
   include Metadata
   include NationalApplicability
   include Political
-  include Withdrawable
   include Shareable
 
   def body
