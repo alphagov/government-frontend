@@ -1,0 +1,46 @@
+<%= content_for :page_class, @content_item.format.dasherize %>
+<%= content_for :title, @content_item.page_title %>
+<%= content_for :meta_description, @content_item.description %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: t("content_item.format.#{@content_item.document_type}", count: 1),
+        title: @content_item.title,
+        average_title_length: "long" %>
+  </div>
+</div>
+
+<%= render 'shared/withdrawal_notice', content_item: @content_item %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/metadata',
+        from: @content_item.from,
+        part_of: @content_item.part_of,
+        first_published: @content_item.published,
+        last_updated: @content_item.updated,
+        see_updates_link: true
+    %>
+  </div>
+</div>
+<%= render 'shared/history_notice', content_item: @content_item %>
+
+<%= render 'shared/description', description: @content_item.description %>
+
+<%= render 'shared/sidebar_with_body', content_item: @content_item %>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-two-thirds offset-one-third">
+    <%= render 'shared/share_buttons', share_urls: @content_item.share_urls %>
+  </div>
+</div>
+
+<%= render 'govuk_component/document_footer',
+    from: @content_item.from,
+    updated: @content_item.updated,
+    history: @content_item.history,
+    published: @content_item.published,
+    part_of: @content_item.part_of,
+    direction: page_text_direction
+%>
