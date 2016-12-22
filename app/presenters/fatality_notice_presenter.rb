@@ -7,6 +7,10 @@ class FatalityNoticePresenter < ContentItemPresenter
     OpenStruct.new(title: attributes["title"], path: attributes["base_path"])
   end
 
+  def image
+    { "url" => ActionController::Base.helpers.asset_url("ministry-of-defence-crest.png"), "alt_text" => "Ministry of Defence crest" }
+  end
+
   def body
     content_item['details']['body']
   end
