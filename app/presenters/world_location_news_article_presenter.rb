@@ -4,6 +4,7 @@ class WorldLocationNewsArticlePresenter < ContentItemPresenter
   include Withdrawable
   include Linkable
   include Updatable
+  include Shareable
 
   def body
     content_item["details"]["body"]
