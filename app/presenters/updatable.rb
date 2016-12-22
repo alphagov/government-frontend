@@ -7,14 +7,6 @@ module Updatable
     display_date(content_item["public_updated_at"]) if any_updates?
   end
 
-  def short_history
-    if any_updates?
-      "#{I18n.t('content_item.metadata.updated')} #{updated}"
-    else
-      "#{I18n.t('content_item.metadata.published')} #{published}"
-    end
-  end
-
   def history
     return [] unless any_updates?
     content_item["details"]["change_history"].map do |item|

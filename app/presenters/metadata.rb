@@ -7,7 +7,9 @@ module Metadata
       from: from,
       first_published: published,
       last_updated: updated,
-      see_updates_link: true
+      see_updates_link: true,
+      part_of: part_of,
+      direction: text_direction
     }
   end
 
@@ -16,7 +18,9 @@ module Metadata
       from: from,
       published: published,
       updated: updated,
-      history: history
+      history: history,
+      part_of: part_of,
+      direction: text_direction
     }
   end
 end
