@@ -1,8 +1,10 @@
 <div class="grid-row sidebar-with-body">
-  <div class="column-third">
-    <%= render 'shared/sidebar_image', image: content_item.image %>
-  </div>
-  <div class="column-two-thirds">
+  <% if content_item.image %>
+    <div class="column-third">
+      <%= render 'shared/sidebar_image', image: content_item.image %>
+    </div>
+  <% end %>
+  <div class="column-two-thirds <%= 'offset-one-third' unless content_item.image %>">
     <%= render 'govuk_component/govspeak',
         content: content_item.body,
         direction: page_text_direction %>
