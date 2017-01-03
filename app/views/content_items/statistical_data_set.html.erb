@@ -12,20 +12,8 @@
 </div>
 
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
-
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/metadata',
-        from: @content_item.from,
-        part_of: @content_item.part_of,
-        first_published: @content_item.published,
-        last_updated: @content_item.updated,
-        see_updates_link: true
-    %>
-  </div>
-</div>
+<%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>
-
 <%= render 'shared/description', description: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">
@@ -39,11 +27,4 @@
   </div>
 </div>
 
-<%= render 'govuk_component/document_footer',
-    from: @content_item.from,
-    updated: @content_item.updated,
-    history: @content_item.history,
-    published: @content_item.published,
-    part_of: @content_item.part_of,
-    direction: page_text_direction
-%>
+<%= render 'govuk_component/document_footer', @content_item.document_footer %>

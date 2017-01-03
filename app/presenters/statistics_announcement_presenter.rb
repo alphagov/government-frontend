@@ -1,17 +1,5 @@
 class StatisticsAnnouncementPresenter < ContentItemPresenter
-  include ActionView::Helpers::UrlHelper
-
-  def from
-    content_item["links"]["organisations"].map { |org|
-      link_to(org["title"], org["base_path"])
-    }
-  end
-
-  def part_of
-    content_item["links"]["policy_areas"].map { |policy_area|
-      link_to(policy_area["title"], policy_area["base_path"])
-    }
-  end
+  include Metadata
 
   def release_date
     content_item["details"]["display_date"]
@@ -30,14 +18,18 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     content_item["details"].include?("previous_display_date")
   end
 
-  def other_metadata
-    if cancelled?
-      {
-        "Proposed release" => release_date,
-        "Cancellation date" => cancellation_date,
-      }
-    else
-      { "Release date" => release_date_and_status }
+  def metadata
+    super.tap do |m|
+      m[:other] = if cancelled?
+                    {
+                      "Proposed release" => release_date,
+                      "Cancellation date" => cancellation_date,
+                    }
+                  else
+                    {
+                      "Release date" => release_date_and_status
+                    }
+                  end
     end
   end
 

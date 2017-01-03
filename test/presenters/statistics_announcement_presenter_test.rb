@@ -14,13 +14,6 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
     assert_equal links, statistics_announcement.from
   end
 
-  test 'presents part_of as links to a topic' do
-    links = [
-      link_to('National Health Service', '/government/topics/national-health-service')
-    ]
-    assert_equal links, statistics_announcement.part_of
-  end
-
   test 'presents release_date' do
     assert_equal '20 January 2016 9:30am', statistics_announcement.release_date
   end
@@ -45,7 +38,7 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
     other = {
       "Release date" => "20 January 2016 9:30am (confirmed)"
     }
-    assert_equal other, statistics_announcement.other_metadata
+    assert_equal other, statistics_announcement.metadata[:other]
   end
 
   test "present other metadata when cancelled" do
@@ -53,7 +46,7 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
       "Proposed release" => "20 January 2016 9:30am",
       "Cancellation date" => "17 January 2016 2:19pm"
     }
-    assert_equal other, statistics_announcement_cancelled.other_metadata
+    assert_equal other, statistics_announcement_cancelled.metadata[:other]
   end
 
   test "shows the cancellation reason when cancelled" do

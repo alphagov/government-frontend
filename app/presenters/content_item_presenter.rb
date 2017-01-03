@@ -40,4 +40,8 @@ private
   def sorted_locales(translations)
     translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? '' : t["locale"] }
   end
+
+  def text_direction
+    I18n.t("i18n.direction", locale: I18n.locale, default: "ltr")
+  end
 end

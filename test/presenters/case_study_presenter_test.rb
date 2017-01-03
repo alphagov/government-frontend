@@ -27,14 +27,6 @@ class CaseStudyPresenterTest < PresenterTestCase
     assert_equal '21 March 2013', presented_case_study_with_updates.updated
   end
 
-  test '#short_history returns the published day of a non-updated content item' do
-    assert_equal 'Published 17 December 2012', presented_item.short_history
-  end
-
-  test '#short_history returns the last update day for a content item that has updates' do
-    assert_equal 'Updated 21 March 2013', presented_case_study_with_updates.short_history
-  end
-
   test '#from returns links to lead organisations, supporting organisations and worldwide organisations' do
     with_organisations = {
       "details" => {

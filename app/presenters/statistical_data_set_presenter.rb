@@ -1,9 +1,7 @@
 class StatisticalDataSetPresenter < ContentItemPresenter
   include ExtractsHeadings
   include Political
-  include Withdrawable
-  include Linkable
-  include Updatable
+  include Metadata
   include ActionView::Helpers::UrlHelper
 
   def body

@@ -20,26 +20,7 @@
 </div>
 
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
-
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/metadata',
-        from: @content_item.from,
-        history: @content_item.short_history,
-        direction: page_text_direction,
-        part_of: @content_item.part_of
-    %>
-  </div>
-</div>
-
+<%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
 <%= render 'shared/sidebar_with_body', content_item: @content_item %>
-
-<%= render 'govuk_component/document_footer',
-        from: @content_item.from,
-        updated: @content_item.updated,
-        history: @content_item.history,
-        published: @content_item.published,
-        direction: page_text_direction,
-        part_of: @content_item.part_of
-%>
+<%= render 'govuk_component/document_footer', @content_item.document_footer %>
