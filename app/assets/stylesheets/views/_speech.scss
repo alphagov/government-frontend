@@ -3,4 +3,9 @@
   @include description;
   @include history-notice;
   @include withdrawal-notice;
+
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
 }
