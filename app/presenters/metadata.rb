@@ -9,7 +9,8 @@ module Metadata
       last_updated: updated,
       see_updates_link: true,
       part_of: part_of,
-      direction: text_direction
+      direction: text_direction,
+      other: {}
     }
   end
 
@@ -20,7 +21,8 @@ module Metadata
       updated: updated,
       history: history,
       part_of: part_of,
-      direction: text_direction
+      direction: text_direction,
+      other: {}
     }
   end
 end

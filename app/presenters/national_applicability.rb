@@ -25,9 +25,7 @@ module NationalApplicability
 
   def metadata
     super.tap do |m|
-      m[:other] = {
-        'Applies to' => applies_to
-      }
+      m[:other]['Applies to'] = applies_to
     end
   end
 

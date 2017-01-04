@@ -17,9 +17,7 @@ class FatalityNoticePresenter < ContentItemPresenter
   def metadata
     super.tap do |m|
       if field_of_operation
-        m[:other] = {
-          "Field of operation" => link_to(field_of_operation.title, field_of_operation.path)
-        }
+        m[:other]['Field of operation'] = link_to(field_of_operation.title, field_of_operation.path)
       end
     end
   end
