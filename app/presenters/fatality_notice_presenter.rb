@@ -2,8 +2,11 @@ class FatalityNoticePresenter < ContentItemPresenter
   include Metadata
 
   def field_of_operation
-    attributes = content_item["links"]["field_of_operation"].first
-    OpenStruct.new(title: attributes["title"], path: attributes["base_path"])
+    content_item_links = content_item["links"]["field_of_operation"]
+    if content_item_links
+      attributes = content_item_links.first
+      OpenStruct.new(title: attributes["title"], path: attributes["base_path"])
+    end
   end
 
   def image
@@ -12,9 +15,11 @@ class FatalityNoticePresenter < ContentItemPresenter
 
   def metadata
     super.tap do |m|
-      m[:other] = {
-        "Field of operation" => link_to(field_of_operation.title, field_of_operation.path)
-      }
+      if field_of_operation
+        m[:other] = {
+          "Field of operation" => link_to(field_of_operation.title, field_of_operation.path)
+        }
+      end
     end
   end
 
