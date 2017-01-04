@@ -5,7 +5,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        context: "Operations in #{@content_item.field_of_operation.title}",
+        context: "Operations in #{@content_item.field_of_operation.try(:title)}",
         title: @content_item.title,
         average_title_length: "long"
       %>
