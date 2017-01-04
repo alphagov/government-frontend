@@ -39,12 +39,14 @@
     </div>
     <%= @content_item.last_changed %>
   </div>
-  <nav class="in-page-navigation">
-    <h2>
-      <%= t("content_item.contents") %>
-    </h2>
-    <%= @content_item.contents %>
-  </nav>
+  <% if @content_item.contents? %>
+    <nav class="in-page-navigation">
+      <h2>
+        <%= t("content_item.contents") %>
+      </h2>
+      <%= @content_item.contents %>
+    </nav>
+  <% end %>
 </header>
 
 <%= render partial: 'govuk_component/govspeak_html_publication',
