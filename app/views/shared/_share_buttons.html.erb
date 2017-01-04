@@ -2,11 +2,13 @@
 <div class="share-buttons" data-module="track-share-button-clicks">
   <%= link_to share_urls[:facebook],
     target: "_blank",
+    rel: "noopener noreferrer",
     class: "share-button-link js-share-facebook" do %>
     <span class="share-button share-button-facebook"></span><span class="visually-hidden">Share on </span>Facebook<% end %>
 
   <%= link_to share_urls[:twitter],
     target: "_blank",
+    rel: "noopener noreferrer",
     class: "share-button-link js-share-twitter" do %>
     <span class="share-button share-button-twitter"></span><span class="visually-hidden">Share on </span>Twitter<% end %>
 </div>
