@@ -2,16 +2,7 @@
 <%= content_for :title, "#{@content_item.page_title} - #{t("content_item.format.#{@content_item.document_type}", count: 1)}" %>
 <%= content_for :meta_description, @content_item.description %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: "Operations in #{@content_item.field_of_operation.try(:title)}",
-        title: @content_item.title,
-        average_title_length: "long"
-      %>
-  </div>
-</div>
-
+<%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
 <%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>

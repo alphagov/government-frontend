@@ -4,12 +4,8 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title,
-        average_title_length: "long" %>
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
   </div>
-
   <% if @content_item.national_statistics? %>
     <%= render 'shared/national_statistics_logo' %>
   <% end %>

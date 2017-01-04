@@ -4,6 +4,7 @@ class DetailedGuidePresenter < ContentItemPresenter
   include NationalApplicability
   include Political
   include ActionView::Helpers::UrlHelper
+  include TitleAndContext
 
   def body
     content_item["details"]["body"]

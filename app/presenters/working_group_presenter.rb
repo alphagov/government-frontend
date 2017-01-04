@@ -1,5 +1,6 @@
 class WorkingGroupPresenter < ContentItemPresenter
   include ExtractsHeadings
+  include TitleAndContext
   include ActionView::Helpers::UrlHelper
 
   def email
@@ -22,6 +23,13 @@ class WorkingGroupPresenter < ContentItemPresenter
     # http://ruby-doc.org/core-2.3.0/Hash.html#method-i-dig
     return [] unless content_item["links"] && content_item["links"]["policies"]
     content_item["links"]["policies"]
+  end
+
+  def title_and_context
+    super.tap do |t|
+      t.delete(:average_title_length)
+      t.delete(:context)
+    end
   end
 
 private

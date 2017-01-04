@@ -1,5 +1,6 @@
 class StatisticalDataSetPresenter < ContentItemPresenter
   include ExtractsHeadings
+  include TitleAndContext
   include Political
   include Metadata
   include ActionView::Helpers::UrlHelper

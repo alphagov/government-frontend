@@ -1,5 +1,6 @@
 class StatisticsAnnouncementPresenter < ContentItemPresenter
   include Metadata
+  include TitleAndContext
 
   def release_date
     content_item["details"]["display_date"]

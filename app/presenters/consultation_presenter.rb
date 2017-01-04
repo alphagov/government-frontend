@@ -3,6 +3,7 @@ class ConsultationPresenter < ContentItemPresenter
   include NationalApplicability
   include Political
   include Shareable
+  include TitleAndContext
 
   def body
     content_item["details"]["body"]
