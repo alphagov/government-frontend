@@ -1,5 +1,6 @@
 class CaseStudyPresenter < ContentItemPresenter
   include Metadata
+  include TitleAndContext
 
   def body
     content_item['details']['body']

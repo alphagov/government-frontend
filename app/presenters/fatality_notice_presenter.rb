@@ -1,4 +1,5 @@
 class FatalityNoticePresenter < ContentItemPresenter
+  include TitleAndContext
   include Metadata
 
   def field_of_operation
@@ -16,9 +17,15 @@ class FatalityNoticePresenter < ContentItemPresenter
   def metadata
     super.tap do |m|
       if field_of_operation
-        m[:other] = {
-          "Field of operation" => link_to(field_of_operation.title, field_of_operation.path)
-        }
+        m[:other]['Field of operation'] = link_to(field_of_operation.title, field_of_operation.path)
+      end
+    end
+  end
+
+  def title_and_context
+    super.tap do |t|
+      if field_of_operation
+        t[:context] = "Operations in #{field_of_operation.try(:title)}"
       end
     end
   end

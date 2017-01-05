@@ -4,6 +4,7 @@ class DetailedGuidePresenter < ContentItemPresenter
   include NationalApplicability
   include Political
   include ActionView::Helpers::UrlHelper
+  include TitleAndContext
 
   def body
     content_item["details"]["body"]
@@ -33,9 +34,13 @@ class DetailedGuidePresenter < ContentItemPresenter
 
   def document_footer
     super.tap do |m|
-      m[:other] = {
-        I18n.t('detailed_guide.related_guides') => related_guides
-      }
+      m[:other][related_guides_title] = related_guides
     end
+  end
+
+private
+
+  def related_guides_title
+    I18n.t('detailed_guide.related_guides')
   end
 end

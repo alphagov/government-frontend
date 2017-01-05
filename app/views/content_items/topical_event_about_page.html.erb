@@ -4,12 +4,7 @@
 
 <%= render "shared/breadcrumbs" %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/title', title: @content_item.title %>
-  </div>
-</div>
-
+<%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">

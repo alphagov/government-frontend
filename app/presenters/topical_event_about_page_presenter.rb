@@ -1,5 +1,6 @@
 class TopicalEventAboutPagePresenter < ContentItemPresenter
   include ExtractsHeadings
+  include TitleAndContext
   include ActionView::Helpers::UrlHelper
 
   def body
@@ -19,6 +20,13 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
     result = super
     result.last[:title] = parent['title']
     result
+  end
+
+  def title_and_context
+    super.tap do |t|
+      t.delete(:average_title_length)
+      t.delete(:context)
+    end
   end
 
 private

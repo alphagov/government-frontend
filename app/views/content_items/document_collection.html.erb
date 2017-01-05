@@ -3,16 +3,7 @@
 <%= content_for :meta_description, @content_item.description %>
 
 <%= render "shared/breadcrumbs" %>
-
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title,
-        average_title_length: "long" %>
-  </div>
-</div>
-
+<%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
 <%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>

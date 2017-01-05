@@ -1,5 +1,6 @@
 class StatisticsAnnouncementPresenter < ContentItemPresenter
   include Metadata
+  include TitleAndContext
 
   def release_date
     content_item["details"]["display_date"]
@@ -20,16 +21,12 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
 
   def metadata
     super.tap do |m|
-      m[:other] = if cancelled?
-                    {
-                      "Proposed release" => release_date,
-                      "Cancellation date" => cancellation_date,
-                    }
-                  else
-                    {
-                      "Release date" => release_date_and_status
-                    }
-                  end
+      if cancelled?
+        m[:other]["Proposed release"] = release_date
+        m[:other]["Cancellation date"] = cancellation_date
+      else
+        m[:other]["Release date"] = release_date_and_status
+      end
     end
   end
 
