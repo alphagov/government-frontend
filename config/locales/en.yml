@@ -77,7 +77,7 @@ en:
   content_item:
     format:
       # `national` & `official` are old document types for
-      # `national_statistics_announcement` and `official_statistics_announcements`.
+      # `national_statistics_announcement` and `official_statistics_announcement`.
       # They can be removed once https://github.com/alphagov/whitehall/pull/2783 is
       # deployed and all statistics announcements have been republished.
       national:
@@ -213,7 +213,7 @@ en:
       official_statistics:
         one: Official Statistics
         other: Official Statistics
-      official_statistics_announcements:
+      official_statistics_announcement:
         one: Official statistics announcement
         other: Official statistics announcements
       take_part:
