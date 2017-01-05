@@ -8,6 +8,16 @@ class ExtractsHeadingsTest < ActiveSupport::TestCase
     assert_equal [{ text: "A heading", id: 'custom' }], extract_headings_with_ids(html)
   end
 
+  test "removes trailing colons from headings" do
+    html = '<h2 id="custom">List:</h2>'
+    assert_equal [{ text: "List", id: 'custom' }], extract_headings_with_ids(html)
+  end
+
+  test "removes only trailing colons from headings" do
+    html = '<h2 id="custom">Part 2: List:</h2>'
+    assert_equal [{ text: "Part 2: List", id: 'custom' }], extract_headings_with_ids(html)
+  end
+
   test "ignores headings without an id" do
     html = '<h2>John Doe</h2>'
     assert_empty extract_headings_with_ids(html)
