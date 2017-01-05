@@ -71,6 +71,11 @@
 
     background: $light-blue;
     padding: $gutter $gutter $gutter / 3;
+    margin-bottom: $gutter;
+
+    @include media(tablet) {
+      margin-bottom: $gutter * 2;
+    }
 
     &.direction-rtl {
       direction: rtl;
