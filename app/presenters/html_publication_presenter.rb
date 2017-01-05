@@ -3,6 +3,10 @@ class HtmlPublicationPresenter < ContentItemPresenter
     content_item["details"]["body"]
   end
 
+  def contents?
+    contents && contents != '<ol></ol>'
+  end
+
   def contents
     content_item["details"]["headings"].html_safe
   end

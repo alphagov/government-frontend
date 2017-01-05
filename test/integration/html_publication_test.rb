@@ -27,6 +27,14 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     assert_has_component_organisation_logo_with_brand("executive-office", 4)
   end
 
+  test "no contents are shown when headings are an empty list" do
+    setup_and_visit_content_item("prime_ministers_office")
+
+    within ".publication-header" do
+      refute page.has_text?("Contents")
+    end
+  end
+
   test "html publication with rtl text direction" do
     setup_and_visit_content_item("arabic_translation")
     assert page.has_css?(".publication-header.direction-rtl"), "has .direction-rtl class on .publication-header element"

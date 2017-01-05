@@ -83,8 +83,11 @@
     }
   }
 
+  .headings {
+    margin-bottom: $gutter;
+  }
+
   .in-page-navigation {
-    margin-top: $gutter;
     margin-bottom: $gutter;
 
     @include media(tablet) {

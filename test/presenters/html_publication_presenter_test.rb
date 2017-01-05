@@ -10,6 +10,12 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     assert_equal schema_item("published")['links']['parent'][0]['document_type'], presented_item("published").format_sub_type
     assert_equal schema_item("published")['title'], presented_item("published").title
     assert_equal schema_item("published")['details']['body'], presented_item("published").body
+    assert_equal schema_item("published")['details']['headings'], presented_item("published").contents
+  end
+
+  test 'presents no contents when headings is an empty list' do
+    assert_equal schema_item("prime_ministers_office")['details']['headings'], '<ol></ol>'
+    refute presented_item("prime_ministers_office").contents?
   end
 
   test 'presents the last change date' do
