@@ -9,6 +9,14 @@ class SpeechTest < ActionDispatch::IntegrationTest
     assert_has_component_govspeak(@content_item["details"]["body"])
   end
 
+  test "translated speech" do
+    setup_and_visit_content_item('speech-translated')
+
+    assert_has_component_title(@content_item["title"])
+    assert page.has_text?(@content_item["description"])
+    assert page.has_css?('.available-languages')
+  end
+
   test "renders metadata and document footer, including speaker" do
     setup_and_visit_content_item('speech')
 

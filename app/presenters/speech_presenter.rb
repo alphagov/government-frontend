@@ -3,6 +3,7 @@ class SpeechPresenter < ContentItemPresenter
   include Political
   include Updatable
   include TitleAndContext
+  include Metadata
 
   def body
     content_item["details"]["body"]
@@ -24,17 +25,26 @@ class SpeechPresenter < ContentItemPresenter
     "#{delivered_on}#{speech_type_explanation}"
   end
 
-  def location
-    content_item["details"]["location"]
-  end
-
   def from
     super.tap do |f|
       f.push(speaker_without_profile) if speaker_without_profile
     end
   end
 
+  def metadata
+    super.tap do |m|
+      m[:other] = {
+        "Location" => location,
+        delivery_type => delivered_on_metadata
+      }
+    end
+  end
+
 private
+
+  def location
+    content_item["details"]["location"]
+  end
 
   def delivered_on
     delivered_on_date = content_item["details"]["delivered_on"]
