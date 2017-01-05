@@ -52,4 +52,12 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?("img[src*=placeholder-a6e35fc15d4bfcc9d0781f3888dc548b39288f0fe10a65a4b51fef603540b0c5][alt='placeholder']")
   end
+
+  test "renders history notice" do
+    setup_and_visit_content_item("world_location_news_article_history_mode")
+
+    within ".history-notice" do
+      assert page.has_text?("This world location news article was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
+    end
+  end
 end
