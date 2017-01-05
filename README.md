@@ -12,20 +12,23 @@ parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
 Not all formats that this app can handle are rendered by it in production.
 
-| Format | Example | Production status |
+| Format | Live example | Production status |
 |---|---|---|
-| Case study | [View example](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |
+| Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |
 | Coming soon | | Rendered by Whitehall |
-| Detailed guide | [View example](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
-| Document collection | | Rendered by Whitehall |
-| Fatality notice | | Rendered by Whitehall |
+| Consultation | | Rendered by Whitehall |
+| Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
+| Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated |
+| Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
 | HTML Publication | | Rendered by Whitehall |
 | Publication | | Rendered by Whitehall |
-| Statistics announcement | [View example](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
-| Take part | [View example](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) | Migrated |
-| Topical event about page | [View example](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
+| Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
+| Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) | Migrated |
+| Speech | | Rendered by Whitehall |
+| Take part | [View on GOV.UK](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) | Migrated |
+| Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
 | Unpublishing | | Rendered by Whitehall, might not be migrated |
-| Working group | [View example](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
+| Working group | [View on GOV.UK](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
 
 ## Technical documentation
 
