@@ -5,6 +5,8 @@ class WorldLocationNewsArticlePresenter < ContentItemPresenter
   include Linkable
   include Updatable
   include Shareable
+  include TitleAndContext
+  include Metadata
 
   def body
     content_item["details"]["body"]
