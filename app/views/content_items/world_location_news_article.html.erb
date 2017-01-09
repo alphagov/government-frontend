@@ -8,11 +8,5 @@
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
 <%= render 'shared/sidebar_with_body', content_item: @content_item %>
-
-<div class="grid-row sidebar-with-body">
-  <div class="column-two-thirds offset-one-third">
-    <%= render 'shared/share_buttons', share_urls: @content_item.share_urls %>
-  </div>
-</div>
-
+<%= render 'shared/share_buttons', share_urls: @content_item.share_urls %>
 <%= render 'govuk_component/document_footer', @content_item.document_footer %>
