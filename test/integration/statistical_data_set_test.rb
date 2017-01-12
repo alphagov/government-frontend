@@ -40,7 +40,7 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('statistical_data_set_political')
 
     within ".history-notice" do
-      assert page.has_text?('This statistical data set was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
+      assert page.has_text?('This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
     end
   end
 end

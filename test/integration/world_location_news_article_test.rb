@@ -57,7 +57,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("world_location_news_article_history_mode")
 
     within ".history-notice" do
-      assert page.has_text?("This world location news article was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
+      assert page.has_text?("This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
     end
   end
 end
