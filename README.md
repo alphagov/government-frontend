@@ -68,27 +68,46 @@ Or to specify the location explicitly:
 
 `GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
 
-#### Visual regression tests
+### Visual regression tests
 
 Use [Wraith](http://bbc-news.github.io/wraith/) ("A responsive screenshot
 comparison tool") to generate a visual diff to compare rendering changes in this
 application.
 
-On the [Development VM](https://github.gds/gds/development) navigate to
+With government-frontend running on the [development VM](https://github.gds/gds/development), navigate to
 the project directory and run
 ```
 cd test/wraith
 bundle install # only need to run this once to grab the dependencies
+```
+
+#### Compare with production
+
+Compare development with production:
+```
 bundle exec wraith capture config.yaml
 ```
 
-Also if you'd like to test Production vs Staging you can use
+Compare staging with production:
 ```
 bundle exec wraith capture config-staging-vs-production.yaml
 ```
 
 This will generate image diffs comparing the two runs, including a browsable
 gallery of the output, located at `test/wraith/shots/gallery.html`.
+
+#### Compare examples on master with examples on branch
+
+With government-frontend running master on the development VM and while [pointing at the dummy content store](https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md), create a set of historical screenshots using:
+```
+cd test/wraith
+bundle exec wraith history config-examples.yaml
+```
+
+Then switch to your branch and create a set of screenshots to compare against using:
+```
+bundle exec wraith latest config-examples.yaml
+```
 
 ### Adding a new format
 
