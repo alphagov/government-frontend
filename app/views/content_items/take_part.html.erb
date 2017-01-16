@@ -1,6 +1,4 @@
-<%= content_for :page_class, @content_item.format.dasherize %>
 <%= content_for :title, @content_item.title %>
-<%= content_for :meta_description, @content_item.description %>
 
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
