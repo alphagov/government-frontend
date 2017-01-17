@@ -206,10 +206,5 @@
   </div>
 <% end %>
 
-<div class="grid-row sidebar-with-body">
-  <div class="column-two-thirds offset-one-third">
-    <%= render 'shared/share_buttons', share_urls: @content_item.share_urls %>
-  </div>
-</div>
-
+<%= render 'shared/share_buttons', share_urls: @content_item.share_urls %>
 <%= render 'govuk_component/document_footer', @content_item.document_footer %>
