@@ -1,0 +1,2 @@
+class NewsArticlePresenter < ContentItemPresenter
+end
