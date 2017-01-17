@@ -1,11 +1,10 @@
-<%= content_for :title, @content_item.title %>
+<%= content_for :title, @content_item.page_title %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
-  </div>
-</div>
-
+<%= render 'shared/title_and_translations', content_item: @content_item %>
+<%= render 'shared/withdrawal_notice', content_item: @content_item %>
+<%= render 'shared/metadata', content_item: @content_item %>
+<%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
+<%= render 'shared/sidebar_with_body', content_item: @content_item %>
+<%= render 'shared/share_buttons', share_urls: @content_item.share_urls %>
+<%= render 'govuk_component/document_footer', @content_item.document_footer %>
