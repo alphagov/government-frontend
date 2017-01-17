@@ -4,4 +4,9 @@
   @include history-notice;
   @include withdrawal-notice;
   @include share-buttons;
+
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
 }
