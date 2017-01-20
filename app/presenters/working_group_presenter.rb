@@ -1,7 +1,6 @@
 class WorkingGroupPresenter < ContentItemPresenter
-  include ExtractsHeadings
+  include ContentsList
   include TitleAndContext
-  include ActionView::Helpers::UrlHelper
 
   def email
     content_item["details"]["email"]
@@ -11,11 +10,8 @@ class WorkingGroupPresenter < ContentItemPresenter
     content_item["details"]["body"]
   end
 
-  def contents
-    body_headings = extract_headings_with_ids(body)
-    (body_headings + extra_headings).map do |heading|
-      link_to(heading[:text], "##{heading[:id]}")
-    end
+  def contents_items
+    super + extra_headings
   end
 
   def policies

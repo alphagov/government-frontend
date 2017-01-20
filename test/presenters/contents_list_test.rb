@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class ExtractsHeadingsTest < ActiveSupport::TestCase
-  include ExtractsHeadings
+class ContentsListTest < ActiveSupport::TestCase
+  include ContentsList
 
   test "extracts a single h2" do
     html = '<h2 id="custom">A heading</h2>'
