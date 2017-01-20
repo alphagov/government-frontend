@@ -13,7 +13,7 @@ class StatisticalDataSetPresenterTest
     end
 
     test 'presents a list of contents extracted from headings in the body' do
-      assert_equal '<a href="#olympics">Olympics</a>', presented_item.contents[0]
+      assert_equal "<a #{contents_link_attributes} data-track-label=\"olympics\" href=\"#olympics\">Olympics</a>", presented_item.contents[0]
     end
 
     test '#published returns a formatted date of the day the content item became public' do

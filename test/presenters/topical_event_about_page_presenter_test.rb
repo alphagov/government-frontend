@@ -13,13 +13,14 @@ class TopicalEventAboutPagePresenterTest < PresenterTestCase
   end
 
   test 'presents a list of contents extracted from headings in the body' do
-    assert_equal ['<a href="#response-in-the-uk">Response in the UK</a>',
-                  '<a href="#response-in-africa">Response in Africa</a>',
-                  '<a href="#advice-for-travellers">Advice for travellers</a>',
-                  '<a href="#advice-for-medics">Advice for medics</a>',
-                  '<a href="#advice-for-aid-workers">Advice for aid workers</a>',
-                  '<a href="#how-you-can-help">How you can help</a>'
-                 ], presented_item.contents
+    assert_equal [
+        "<a #{contents_link_attributes} data-track-label=\"response-in-the-uk\" href=\"#response-in-the-uk\">Response in the UK</a>",
+        "<a #{contents_link_attributes} data-track-label=\"response-in-africa\" href=\"#response-in-africa\">Response in Africa</a>",
+        "<a #{contents_link_attributes} data-track-label=\"advice-for-travellers\" href=\"#advice-for-travellers\">Advice for travellers</a>",
+        "<a #{contents_link_attributes} data-track-label=\"advice-for-medics\" href=\"#advice-for-medics\">Advice for medics</a>",
+        "<a #{contents_link_attributes} data-track-label=\"advice-for-aid-workers\" href=\"#advice-for-aid-workers\">Advice for aid workers</a>",
+        "<a #{contents_link_attributes} data-track-label=\"how-you-can-help\" href=\"#how-you-can-help\">How you can help</a>"
+      ], presented_item.contents
   end
 
   test 'presents no contents when no headings in the body' do

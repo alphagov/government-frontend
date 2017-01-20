@@ -12,7 +12,14 @@ module ContentsList
   end
 
   def contents_link(text, id)
-    link_to(text, "##{id}")
+    link_to(
+      text,
+      "##{id}",
+      data: {
+        track_category: 'contentsClicked',
+        track_action: 'leftColumnH2',
+        track_label: id
+      })
   end
 
 private
