@@ -1,0 +1,122 @@
+#  From test/wraith run `bundle install`
+#  On master, create a historical set of screenshots to compare against:
+#
+#  `bundle exec wraith history config-examples.yaml`
+#
+#  Then on your branch run a comparison:
+#  `bundle exec wraith latest config-examples.yaml`
+#
+#  This will create a comparison HTML file in `test/wraith/shots`
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The domain to take screenshots of.
+domains:
+  local_examples: "http://government-frontend.dev.gov.uk"
+
+# (required) The paths to capture.
+paths:
+  detailed_guide_england-2014-to-2020-european-structural-and-investment-funds: /guidance/england-2014-to-2020-european-structural-and-investment-funds
+  detailed_guide_detailed_guide: /guidance/salary-sacrifice-and-the-effects-on-paye
+  detailed_guide_translated_detailed_guide: /guidance/prepare-a-charity-annual-return
+  detailed_guide_withdrawn_detailed_guide: /guidance/eu-rules-on-the-use-of-chemicals
+  detailed_guide_related_mainstream_detailed_guide: /guidance/living-in-fiji--2
+  detailed_guide_national_applicability_alternative_url_detailed_guide: /guidance/report-lost-or-stolen-cattle
+  detailed_guide_national_applicability_detailed_guide: /guidance/housing-finance-and-household-expenditure-notes-and-definitions
+  detailed_guide_political_detailed_guide: /guidance/onshore-wind-part-of-the-uks-energy-mix
+  publication_political_publication: /government/publications/climate-change-agreements-target-unit-tu-data-publication-discussion-paper
+  publication_publication: /government/publications/d17-9ly-veolia-es-uk-limited-environmental-permit-issued
+  publication_statistics_publication: /government/statistics/affordable-housing-supply-in-england-2011-to-2012
+  publication_withdrawn_publication: /government/publications/a-guide-for-pig-keepers
+  speech-translated: /government/speeches/this-resolution-marks-the-beginning-of-the-end-of-the-libyan-chemical-weapons-programme.ar
+  speech-written-statement-parliament: /government/speeches/school-revenue-funding-settlement-for-2017-to-2018
+  speech-speaker-without-profile: /government/speeches/queens-speech-2016
+  speech-oral-statement-parliament: /government/speeches/statement-to-commons-on-hmp-birmingham
+  speech-transcript: /government/speeches/anti-corruption-summit-2016-pms-closing-remarks
+  speech-speaking-notes: /government/speeches/home-secretary-speech-to-the-association-of-police-and-crime-commissioners
+  speech-authored-article: /government/speeches/britains-choice-economic-security-with-the-eu-or-a-leap-into-the-dark
+  speech: /government/speeches/andrea-leadsoms-speech-at-women-in-nuclear-uk-conference
+  html_publication_published: /government/publications/tr4-8ee-mr-derek-mears-environmental-permit-application-advertisement/tr4-8ee-mr-derek-mears-environmental-permit-application
+  html_publication_stats_headline_and_manually_numbered_headings: /government/publications/dwp-single-departmental-plan-2015-to-2020/dwp-single-departmental-plan-2015-to-2020
+  html_publication_updated: /government/publications/tr4-8ee-mr-derek-mears-environmental-permit-application-advertisement/tr4-8ee-mr-derek-mears-environmental-permit-application--1
+  html_publication_prime_ministers_office: /government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration
+  html_publication_long_form_and_automatically_numbered_headings: /government/publications/summer-budget-2015/summer-budget-2015
+  html_publication_fractions_and_unnumbered_headings: /government/publications/national-curriculum-in-england-mathematics-programmes-of-study/national-curriculum-in-england-mathematics-programmes-of-study
+  html_publication_multiple_organisations: /government/publications/proof-of-identity-checklist/proof-of-identity-checklist
+  html_publication_arabic_translation: /government/publications/why-overseas-companies-should-set-up-in-the-uk/1156044
+  withdrawn_fatality_notice: /government/fatalities/sir-george-pomeroy-colley-no-longer-killed-in-boer-war
+  fatality_notice: /government/fatalities/sir-george-pomeroy-colley-killed-in-boer-war
+  fatality_notice_with_minister: /government/fatalities/sir-george-pomeroy-colley-killed-in-boer-war-ministerial-announcement
+  document_collection_with_group_but_no_documents: /government/collections/with-group-but-no-documents
+  document_collection: /government/collections/national-driving-and-riding-standards
+  document_collection_with_no_documents: /government/collections/group-with-no-documents
+  document_collection_with_missing_links_documents: /government/collections/group-with-all-missing-document-links
+  document_collection_with_withdrawn_links_documents: /government/collections/with-withdrawn-links-documents
+  document_collection_withdrawn: /government/collections/national-driving-and-riding-standards-withdrawn
+  document_collection_political: /government/collections/national-driving-and-riding-standards-political
+  document_collection_with_history: /government/collections/financial-sanctions-regime-specific-consolidated-lists-and-releases-change-history
+  document_collection_with_body: /government/collections/financial-sanctions-regime-specific-consolidated-lists-and-releases
+  document_collection_with_single_missing_document: /government/collections/group-with-missing-document-link
+  statistics_announcement_national_statistics: /government/statistics/announcements/uk-armed-forces-quarterly-personnel-report-october-2015
+  statistics_announcement_release_date_changed: /government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015--1
+  statistics_announcement_cancelled_official_statistics: /government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015
+  statistics_announcement_official_statistics: /government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015--2
+  closed_consultation: /government/consultations/review-of-museums-in-england
+  consultation_outcome_with_feedback: /government/consultations/setting-the-grade-standards-of-new-gcses-in-england-2017-2018
+  open_consultation_with_participation: /government/consultations/post-office-network
+  consultation_outcome: /government/consultations/employee-share-schemes-nic-elections
+  open_consultation: /government/consultations/postgraduate-doctoral-loans
+  unopened_consultation: /government/consultations/gda-of-hitachi-ge-nuclear-energy-ltds-uk-advanced-boiling-water-reactor
+  statistical_data_set: /government/statistical-data-sets/tsgb10
+  statistical_data_set_with_csv: /government/statistical-data-sets/mot-testing-data-for-great-britain
+  statistical_data_set_political: /government/statistical-data-sets/example-statistical-data-set-political
+  statistical_data_set_with_block_attachments: /government/statistical-data-sets/fe-data-library-apprenticeship-vacancies
+  statistical_data_set_withdrawn: /government/statistical-data-sets/proportion-of-residents-who-walk-or-cycle-for-recreational-purposes-cw040
+  case_study_archived: /government/case-studies/terence-age-33-stoke-on-trent
+  case_study_translated: /government/case-studies/doing-business-in-spain.es
+  case_study_case_study: /government/case-studies/get-britain-building-carlisle-park
+  gone: /government/case-studies/intellectual-property-stuart-scott
+  gone_with_alternative_path: /government/case-studies/intellectual-property-stuart-scotty
+  topical_event_about_page_slim: /government/topical-events/battle-of-the-somme-centenary-commemorations/about
+  topical_event_about_page_topical_event_about_page: /government/topical-events/ebola-virus-government-response/about
+  working_group_long: /government/groups/benefits-credits-consultation-group-bccg
+  working_group_with_policies: /government/groups/better-regulation-executive
+  working_group_short: /government/groups/aviation-statistics-team
+  unpublishing: /government/case-studies/bubble-trouble
+  take_part_take_part: /government/get-involved/take-part/become-a-councillor
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+  - 320x5000
+  - 600x4000
+  - 1080x3000
+
+# (optional) Resize to each screen width (efficient), or reload at each screen width (costly). Default: 'reload'
+resize_or_reload: 'resize'
+
+# (required) The directory that your latest screenshots will be stored in
+directory: 'shots'
+history_dir: 'shots_history'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first
+
+# (optional) Choose to run Wraith in verbose mode, for easier debugging. Default: false
+verbose: true
