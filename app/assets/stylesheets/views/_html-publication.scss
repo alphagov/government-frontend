@@ -1,8 +1,6 @@
 @import "grid_layout";
 
 .html-publication {
-  @include responsive-top-margin;
-
   .publication-external {
     @extend %grid-row;
     margin-bottom: $gutter-two-thirds;
@@ -14,37 +12,6 @@
 
       .organisation-logo {
         padding-bottom: $gutter-one-third;
-      }
-    }
-
-    .see-more-about-container {
-      @include grid-column(3 / 4);
-
-      .see-more-about {
-        @include core-19;
-        padding-top: $gutter-one-third;
-        position: static;
-
-        @include media(tablet) {
-          bottom: 0;
-          position: absolute;
-          right: $gutter-half;
-        }
-      }
-
-      &.direction-rtl {
-        direction: rtl;
-        text-align: start;
-
-        // Chrome (and probably other browsers) does a weird thing where it changes
-        // the font kerning ever so slightly when RTL rendering latin characters,
-        // which will cause the glyphs to become slightly wider, which will cause
-        // them to collapse over multiple rows even though they do have enough space to fit.
-        // It's reproducible only for specific character strings, such as "See More".
-        // This is a sheepish fix, by giving the element much more space than it needs.
-        .see-more-about {
-          width: 100%;
-        }
       }
     }
   }

@@ -3,7 +3,6 @@ require 'test_helper'
 class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publications" do
     setup_and_visit_content_item('published')
-    assert page.has_text?("See more information about this Notice")
 
     within ".publication-header" do
       assert page.has_text?(@content_item["details"]["format_sub_type"])
@@ -38,7 +37,6 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publication with rtl text direction" do
     setup_and_visit_content_item("arabic_translation")
     assert page.has_css?(".publication-header.direction-rtl"), "has .direction-rtl class on .publication-header element"
-    assert page.has_css?(".see-more-about-container.direction-rtl"), "has .direction-rtl class on .see-more-about-container element"
   end
 
   def assert_has_component_govspeak_html_publication(content)
