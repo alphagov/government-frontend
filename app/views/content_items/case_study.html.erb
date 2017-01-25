@@ -1,6 +1,5 @@
 <%= content_for :title, "#{@content_item.page_title} - #{t("content_item.format.#{@content_item.document_type}", count: 1)}" %>
 
-<%= render "shared/breadcrumbs" %>
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
 <%= render 'shared/metadata', content_item: @content_item %>
