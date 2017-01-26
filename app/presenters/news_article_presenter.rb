@@ -1,4 +1,4 @@
-class WorldLocationNewsArticlePresenter < ContentItemPresenter
+class NewsArticlePresenter < ContentItemPresenter
   include Political
   include Linkable
   include Updatable

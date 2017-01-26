@@ -6,6 +6,24 @@
     @include core-16;
     margin-top: $gutter-one-third;
 
+    .direction-rtl & {
+      .share-button-link {
+        // By changing the link to inline-block the browser
+        // calculates the icon and the text as a single run of text
+        // rather than two. When they are considered to be two runs
+        // the browser splits the first link, putting the text before
+        // the second link, and the icon after the second link.
+        display: inline-block;
+        margin-right: 0;
+        margin-left: $gutter;
+
+        .share-button {
+          margin-right: 0;
+          margin-left: $gutter-one-third;
+        }
+      }
+    }
+
     .share-button-link {
       margin-right: $gutter;
 
