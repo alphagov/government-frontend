@@ -1,0 +1,30 @@
+<% content_for :simple_header, true %>
+<%= content_for :title, @content_item.title %>
+
+<%= render "shared/breadcrumbs" %>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: 'Help',
+        title: @content_item.title %>
+
+    <%= render 'shared/description', description: @content_item.description %>
+
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+  </div>
+  <div class="column-third">
+    <div style="margin-top: 45px">
+    <%= render partial: 'govuk_component/related_items', locals: {
+      sections: [
+        {
+          title: "Elsewhere on GOV.UK",
+          items: @content_item.related_items
+        }
+      ]
+    } %>
+    </div>
+  </div>
+</div>
