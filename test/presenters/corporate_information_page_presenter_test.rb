@@ -5,5 +5,13 @@ class CorporateInformationPagePresenterTest
     def format_name
       "corporate_information_page"
     end
+
+    test 'has contents list' do
+      assert presented_item.is_a?(ContentsList)
+    end
+
+    test 'has organisation branding' do
+      assert presented_item.is_a?(OrganisationBranding)
+    end
   end
 end

@@ -36,27 +36,7 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     assert_equal organisation_titles, presented_organisations
   end
 
-  test "presents the logo for organisations" do
-    mo_presented_item = presented_item("multiple_organisations")
-    mo_presented_item.organisations.each do |organisation|
-      logo = mo_presented_item.organisation_logo(organisation)
-      assert_equal logo[:organisation][:brand], organisation["details"]["brand"]
-    end
-  end
-
-  test "alters the logo for executive office organisations" do
-    organisation = {
-      "details" => {
-        "brand" => "cabinet-office",
-        "logo" => {
-          "formatted_title" => "Prime Minister's Office, 10 Downing Street",
-          "crest" => "eo"
-        }
-      }
-    }
-
-    logo = presented_item("prime_ministers_office").organisation_logo(organisation)
-
-    assert_equal logo[:organisation][:brand], "executive-office"
+  test 'has organisation branding' do
+    assert presented_item("published").is_a?(OrganisationBranding)
   end
 end

@@ -1,5 +1,5 @@
 module OrganisationBranding
-  def organisation_logo(organisation = first_organisation)
+  def organisation_logo(organisation = default_organisation)
     {
       organisation: {
         name: organisation["details"]["logo"]["formatted_title"],
@@ -10,13 +10,13 @@ module OrganisationBranding
     }
   end
 
-  def organisation_brand_class(organisation = first_organisation)
+  def organisation_brand_class(organisation = default_organisation)
     "#{organisation_brand(organisation)}-brand-colour"
   end
 
 private
 
-  def first_organisation
+  def default_organisation
     content_item["links"]["organisations"].first
   end
 
@@ -25,7 +25,11 @@ private
   # and updating them with the correct brand in the actual store.
   def organisation_brand(organisation)
     brand = organisation["details"]["brand"]
-    brand = "executive-office" if organisation["details"]["logo"]["crest"] == "eo"
+    brand = "executive-office" if executive_order_crest?(organisation)
     brand
+  end
+
+  def executive_order_crest?(organisation)
+    organisation["details"]["logo"]["crest"] == "eo"
   end
 end
