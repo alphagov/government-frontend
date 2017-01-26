@@ -6,6 +6,10 @@ class CorporateInformationPagePresenterTest
       "corporate_information_page"
     end
 
+    test 'presents the body' do
+      assert_equal schema_item['details']['body'], presented_item.body
+    end
+
     test 'has contents list' do
       assert presented_item.is_a?(ContentsList)
     end

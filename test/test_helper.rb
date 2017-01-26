@@ -62,7 +62,7 @@ class ActionDispatch::IntegrationTest
 
   def assert_has_component_govspeak(content, index: 1)
     within_component_govspeak(index: index) do
-      assert_equal content.gsub('  ', ' '), JSON.parse(page.text).fetch("content")
+      assert_equal content.gsub(/\s+/, ' '), JSON.parse(page.text).fetch("content").gsub(/\s+/, ' ')
     end
   end
 
@@ -76,6 +76,12 @@ class ActionDispatch::IntegrationTest
   def assert_has_component_breadcrumbs(breadcrumbs)
     within shared_component_selector("breadcrumbs") do
       assert_equal breadcrumbs, JSON.parse(page.text).deep_symbolize_keys.fetch(:breadcrumbs)
+    end
+  end
+
+  def assert_has_component_organisation_logo(logo, index = 1)
+    within(shared_component_selector("organisation_logo") + ":nth-of-type(#{index})") do
+      assert_equal logo, JSON.parse(page.text).deep_symbolize_keys
     end
   end
 
