@@ -5,7 +5,7 @@ ruby File.read(".ruby-version").strip
 gem 'airbrake', '~> 5.5'
 gem 'airbrake-ruby', '1.5'
 
-gem 'govuk_frontend_toolkit', '2.0.1'
+gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
 gem 'rails', '~> 5.0'
