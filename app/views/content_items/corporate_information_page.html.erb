@@ -1,11 +1,20 @@
 <%= content_for :title, @content_item.title %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
+<div class="<%= @content_item.organisation_brand_class %>">
+  <%= render 'govuk_component/organisation_logo', @content_item.organisation_logo %>
+  <%= render 'govuk_component/title', title: @content_item.title %>
+  <%= render 'shared/description', description: @content_item.description %>
+
+  <div class="grid-row sidebar-with-body">
+    <% if @content_item.contents.any? %>
+      <div class="column-third">
+        <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+      </div>
+    <% end %>
+    <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+      <%= render 'govuk_component/govspeak',
+          content: "#{@content_item.body}",
+          direction: page_text_direction %>
+    </div>
   </div>
 </div>
-
-<%= render 'shared/description', description: @content_item.description %>

@@ -1,3 +1,5 @@
 .corporate-information-page {
-
+  @include description;
+  @include sidebar-with-body;
+  @include organisation-links;
 }

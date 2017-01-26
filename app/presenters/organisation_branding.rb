@@ -10,6 +10,10 @@ module OrganisationBranding
     }
   end
 
+  def organisation_brand_class(organisation = first_organisation)
+    "#{organisation_brand(organisation)}-brand-colour"
+  end
+
 private
 
   def first_organisation
