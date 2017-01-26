@@ -26,10 +26,6 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     assert_equal "Updated 2 February 2016", updated.last_changed
   end
 
-  test 'presents the path to its parent' do
-    assert_equal schema_item("published")["links"]["parent"][0]["base_path"], presented_item("published").parent_base_path
-  end
-
   test 'presents the list of organisations' do
     multiple_organisations_html_publication = schema_item('multiple_organisations')
     organisation_titles = multiple_organisations_html_publication["links"]["organisations"].map { |o| o["title"] }

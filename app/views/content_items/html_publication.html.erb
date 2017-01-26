@@ -21,12 +21,6 @@
       </li>
     <% end %>
   </ol>
-
-  <div class="see-more-about-container<%= direction_css_class %>">
-    <p class="see-more-about">
-      <%= link_to t('html_publication.see_more', document_type: t("content_item.format.#{@content_item.format_sub_type}", count: 1)), @content_item.parent_base_path %>
-    </p>
-  </div>
 </div>
 
 <header class="publication-header<%= direction_css_class %>" id="contents">
