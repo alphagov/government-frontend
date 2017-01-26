@@ -10,6 +10,10 @@ class CorporateInformationPagePresenterTest
       assert_equal schema_item['details']['body'], presented_item.body
     end
 
+    test 'presents the organisation in the title' do
+      assert_equal "About us - Department of Health", presented_item.page_title
+    end
+
     test 'has contents list' do
       assert presented_item.is_a?(ContentsList)
     end

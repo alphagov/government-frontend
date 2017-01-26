@@ -6,6 +6,12 @@ class CorporateInformationPagePresenter < ContentItemPresenter
     content_item["details"]["body"]
   end
 
+  def page_title
+    "#{title} - #{default_organisation['title']}"
+  end
+
+private
+
   def default_organisation
     organisation_content_id = content_item["details"]["organisation"]
     organisation = content_item["links"]["organisations"].detect do |org|

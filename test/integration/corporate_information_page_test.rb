@@ -18,6 +18,11 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.department-of-health-brand-colour')
   end
 
+  test "includes organisation in title" do
+    setup_and_visit_content_item('corporate_information_page')
+    assert page.has_css?('title', text: 'About us - Department of Health - GOV.UK', visible: false)
+  end
+
   test "renders an organisation logo" do
     setup_and_visit_content_item('corporate_information_page')
     assert_has_component_organisation_logo(
