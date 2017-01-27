@@ -3,8 +3,6 @@ class ContentItemPresenter
 
   attr_reader :content_item, :title, :description, :format, :locale, :phase, :document_type
 
-  delegate :breadcrumbs, to: :@nav_helper
-
   def initialize(content_item)
     @content_item = content_item
     @title = content_item["title"]
@@ -29,6 +27,22 @@ class ContentItemPresenter
 
   def content_id
     content_item.parsed_content["content_id"]
+  end
+
+  def taxons
+    if content_item["links"].include?("taxons")
+      content_item["links"]["taxons"]
+    else
+      []
+    end
+  end
+
+  def breadcrumbs
+    @nav_helper.breadcrumbs[:breadcrumbs]
+  end
+
+  def taxon_breadcrumbs
+    @nav_helper.taxon_breadcrumbs[:breadcrumbs]
   end
 
 private
