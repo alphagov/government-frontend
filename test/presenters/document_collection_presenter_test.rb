@@ -30,12 +30,12 @@ class DocumentCollectionPresenterTest
 
     test 'presents a contents list based on collection groups' do
       contents = [
-        "<a href=\"#car-and-light-van\">Car and light van</a>",
-        "<a href=\"#moped-and-motorcycle\">Moped and motorcycle</a>",
-        "<a href=\"#lorry\">Lorry</a>",
-        "<a href=\"#bus-and-coach\">Bus and coach</a>",
-        "<a href=\"#driver-and-rider-trainer\">Driver and rider trainer</a>",
-        "<a href=\"#developed-driving-competence\">Developed driving competence</a>"
+        "<a #{contents_link_attributes} data-track-label=\"car-and-light-van\" href=\"#car-and-light-van\">Car and light van</a>",
+        "<a #{contents_link_attributes} data-track-label=\"moped-and-motorcycle\" href=\"#moped-and-motorcycle\">Moped and motorcycle</a>",
+        "<a #{contents_link_attributes} data-track-label=\"lorry\" href=\"#lorry\">Lorry</a>",
+        "<a #{contents_link_attributes} data-track-label=\"bus-and-coach\" href=\"#bus-and-coach\">Bus and coach</a>",
+        "<a #{contents_link_attributes} data-track-label=\"driver-and-rider-trainer\" href=\"#driver-and-rider-trainer\">Driver and rider trainer</a>",
+        "<a #{contents_link_attributes} data-track-label=\"developed-driving-competence\" href=\"#developed-driving-competence\">Developed driving competence</a>"
       ]
 
       assert_equal contents, presented_item.contents

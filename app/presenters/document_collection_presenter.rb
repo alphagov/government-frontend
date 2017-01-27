@@ -2,16 +2,16 @@ class DocumentCollectionPresenter < ContentItemPresenter
   include Metadata
   include Political
   include TitleAndContext
-  include ActionView::Helpers::UrlHelper
+  include ContentsList
 
   def body
     content_item["details"]["body"]
   end
 
-  def contents
+  def contents_items
     groups.map do |group|
       title = group["title"]
-      link_to(title, "##{group_title_id(title)}")
+      { text: title, id: group_title_id(title) }
     end
   end
 
