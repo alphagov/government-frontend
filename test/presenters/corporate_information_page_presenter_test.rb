@@ -18,6 +18,13 @@ class CorporateInformationPagePresenterTest
       assert presented_item.is_a?(ContentsList)
     end
 
+    test 'has title without context' do
+      assert presented_item.is_a?(TitleAndContext)
+      title_component_params = { title: "About us" }
+
+      assert_equal title_component_params, presented_item.title_and_context
+    end
+
     test 'has organisation branding' do
       assert presented_item.is_a?(OrganisationBranding)
     end

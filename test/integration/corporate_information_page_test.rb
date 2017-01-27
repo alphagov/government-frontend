@@ -23,6 +23,11 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
     assert page.has_css?('title', text: 'About us - Department of Health - GOV.UK', visible: false)
   end
 
+  test "includes translations" do
+    setup_and_visit_content_item('corporate_information_page_translated_custom_logo')
+    assert page.has_css?('.available-languages')
+  end
+
   test "renders an organisation logo" do
     setup_and_visit_content_item('corporate_information_page')
     assert_has_component_organisation_logo(

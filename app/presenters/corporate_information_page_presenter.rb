@@ -1,5 +1,6 @@
 class CorporateInformationPagePresenter < ContentItemPresenter
   include ContentsList
+  include TitleAndContext
   include OrganisationBranding
 
   def body
@@ -8,6 +9,13 @@ class CorporateInformationPagePresenter < ContentItemPresenter
 
   def page_title
     "#{title} - #{default_organisation['title']}"
+  end
+
+  def title_and_context
+    super.tap do |t|
+      t.delete(:average_title_length)
+      t.delete(:context)
+    end
   end
 
 private
