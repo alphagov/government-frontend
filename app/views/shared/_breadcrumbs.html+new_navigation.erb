@@ -1,0 +1,3 @@
+<% if @content_item.taxon_breadcrumbs.any? %>
+  <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.taxon_breadcrumbs %>
+<% end %>

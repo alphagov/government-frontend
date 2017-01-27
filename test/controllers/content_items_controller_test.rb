@@ -75,6 +75,43 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "honours Education Navigation AB Testing cookie" do
+    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
+
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+    path = 'government/abtest/easy-as-1-2'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = { 'taxons' => ['a_taxon'] }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    @request.headers['GOVUK-ABTest-EducationNavigation'] = 'B'
+    get :show, params: { path: path_for(content_item) }
+
+    assert @controller.should_present_new_navigation_view?
+
+    @request.headers['GOVUK-ABTest-EducationNavigation'] = 'A'
+    get :show, params: { path: path_for(content_item) }
+
+    assert_not @controller.should_present_new_navigation_view?
+  end
+
+  test "does not show new navigation when no taxons tagged to content" do
+    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
+
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+    path = 'government/abtest/easy-as-1-2'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = { 'taxons' => [] }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    @request.headers['GOVUK-ABTest-EducationNavigation'] = 'B'
+    get :show, params: { path: path_for(content_item) }
+
+    assert_not @controller.should_present_new_navigation_view?
+  end
+
   def path_for(content_item)
     content_item['base_path'].sub(/^\//, '')
   end
