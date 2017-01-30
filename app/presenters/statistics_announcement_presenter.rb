@@ -51,6 +51,10 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     content_item["details"]["latest_change_note"]
   end
 
+  def page_title
+    "#{super} - #{I18n.t("content_item.schema_name.#{document_type}", count: 1)}"
+  end
+
 private
 
   def state

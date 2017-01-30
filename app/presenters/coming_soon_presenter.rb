@@ -18,6 +18,10 @@ class ComingSoonPresenter < ContentItemPresenter
     display_time(DateTime.parse(@publish_time))
   end
 
+  def page_title
+    "Coming soon"
+  end
+
 private
 
   def display_date(date)

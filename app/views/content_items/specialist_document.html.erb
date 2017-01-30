@@ -1,7 +1,4 @@
-<%
-  content_for :simple_header, true
-  content_for :title, @content_item.page_title
-%>
+<% content_for :simple_header, true %>
 
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/metadata', content_item: @content_item %>
