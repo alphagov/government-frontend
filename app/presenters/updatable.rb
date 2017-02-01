@@ -9,6 +9,8 @@ module Updatable
 
   def history
     return [] unless any_updates?
+    return [] unless content_item["details"]["change_history"].present?
+
     content_item["details"]["change_history"].map do |item|
       {
         display_time: display_date(item["public_timestamp"]),
