@@ -1,0 +1,10 @@
+.corporate-information-page {
+  @include description;
+  @include sidebar-with-body;
+  @include organisation-links;
+
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
+}
