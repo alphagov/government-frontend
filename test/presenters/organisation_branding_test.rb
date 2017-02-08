@@ -36,4 +36,17 @@ class OrganisationBrandingTest < ActiveSupport::TestCase
     refute_equal organisation_brand(organisation), test_organisation["details"]["brand"]
     assert_equal organisation_brand(organisation), "executive-office"
   end
+
+  test "includes an image organisations with a custom logo" do
+    organisation = test_organisation
+    organisation["details"]["logo"]["image"] = {
+      "url" => "url",
+      "alt_text" => "alt_text"
+    }
+
+    logo = organisation_logo(organisation)
+
+    assert_equal logo[:organisation][:image][:url], organisation["details"]["logo"]["image"]["url"]
+    assert_equal logo[:organisation][:image][:alt_text], organisation["details"]["logo"]["image"]["alt_text"]
+  end
 end
