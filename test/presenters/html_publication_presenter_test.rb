@@ -39,4 +39,25 @@ class HtmlPublicationPresenterTest < PresenterTestCase
   test 'has organisation branding' do
     assert presented_item("published").is_a?(OrganisationBranding)
   end
+
+  test 'includes custom organisation logos when a single organisation is listed' do
+    presented = presented_item("updated")
+    organisation = presented.organisations.first
+    example_logo = schema_item("updated")["links"]["organisations"][0]["details"]["logo"]["image"].symbolize_keys
+    presented_logo = presented.organisation_logo(organisation)[:organisation][:image]
+
+    assert presented.organisations.count == 1
+    assert_equal example_logo, presented_logo
+  end
+
+  test 'hides custom organisation logos when multiple organisations listed together' do
+    presented = presented_item("multiple_organisations")
+    organisation = presented.organisations.first
+    organisation["details"]["logo"]["image"] = {
+      "url" => "url"
+    }
+
+    assert presented.organisations.count > 1
+    refute presented.organisation_logo(organisation)[:organisation][:image]
+  end
 end
