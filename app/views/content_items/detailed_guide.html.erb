@@ -1,6 +1,9 @@
 <% # THIS IS PART OF EDUCATION NAVIGATION A/B TESTING - PLEASE KEEP IN SYNC WITH +new_navigation.erb %>
 
 <%= content_for :title, @content_item.page_title %>
+<%= content_for :extra_head_content do %>
+  <%= @education_navigation_ab_test.analytics_meta_tag.html_safe %>
+<% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">

@@ -29,14 +29,6 @@ class ContentItemPresenter
     content_item.parsed_content["content_id"]
   end
 
-  def taxons
-    if content_item["links"].include?("taxons")
-      content_item["links"]["taxons"]
-    else
-      []
-    end
-  end
-
   def breadcrumbs
     @nav_helper.breadcrumbs[:breadcrumbs]
   end

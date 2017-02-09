@@ -13,6 +13,7 @@
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
+  <%= yield :extra_head_content %>
 </head>
 <body>
   <% unless content_for(:simple_header) %>

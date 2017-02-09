@@ -20,6 +20,7 @@ gem 'unicorn', '4.8'
 gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
 gem 'rails-controller-testing', '~> 0.1'
+gem 'govuk_ab_testing', '0.1.4'
 
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
@@ -27,7 +28,7 @@ else
   gem "gds-api-adapters", "39.1.0"
 end
 
-gem 'govuk_navigation_helpers', '~> 2.1.0'
+gem 'govuk_navigation_helpers', '~> 2.2.0'
 
 group :development, :test do
   gem 'govuk-lint'

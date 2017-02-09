@@ -2,6 +2,15 @@ require 'test_helper'
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
+  include GovukAbTesting::MinitestHelpers
+
+  setup do
+    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
+  end
+
+  teardown do
+    ENV['ENABLE_NEW_NAVIGATION'] = nil
+  end
 
   test "routing handles translated content paths" do
     translated_path = 'government/case-studies/allez.fr'
@@ -75,41 +84,88 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "honours Education Navigation AB Testing cookie" do
-    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
-
-    content_item = content_store_has_schema_example('case_study', 'case_study')
-    path = 'government/abtest/easy-as-1-2'
+  test "defaults to 'A' view without AB Testing cookie for Detailed Guides" do
+    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    path = 'government/abtest/detailed-guide'
     content_item['base_path'] = "/#{path}"
-    content_item['links'] = { 'taxons' => ['a_taxon'] }
+    content_item['links'] = {
+        'taxons' => [
+            {
+                'title' => 'A Taxon',
+                'base_path' => '/a-taxon',
+            }
+        ]
+    }
 
     content_store_has_item(content_item['base_path'], content_item)
 
-    @request.headers['GOVUK-ABTest-EducationNavigation'] = 'B'
     get :show, params: { path: path_for(content_item) }
-
-    assert @controller.should_present_new_navigation_view?
-
-    @request.headers['GOVUK-ABTest-EducationNavigation'] = 'A'
-    get :show, params: { path: path_for(content_item) }
-
-    assert_not @controller.should_present_new_navigation_view?
+    assert_equal [], @request.variant
   end
 
-  test "does not show new navigation when no taxons tagged to content" do
-    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
-
-    content_item = content_store_has_schema_example('case_study', 'case_study')
-    path = 'government/abtest/easy-as-1-2'
+  test "honours Education Navigation AB Testing cookie for Detailed Guides" do
+    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    path = 'government/abtest/detailed-guide'
     content_item['base_path'] = "/#{path}"
-    content_item['links'] = { 'taxons' => [] }
+    content_item['links'] = {
+        'taxons' => [
+            {
+                'title' => 'A Taxon',
+                'base_path' => '/a-taxon',
+            }
+        ]
+    }
 
     content_store_has_item(content_item['base_path'], content_item)
 
-    @request.headers['GOVUK-ABTest-EducationNavigation'] = 'B'
-    get :show, params: { path: path_for(content_item) }
+    with_variant educationnavigation: "A" do
+      get :show, params: { path: path_for(content_item) }
+      assert_equal [], @request.variant
+    end
 
-    assert_not @controller.should_present_new_navigation_view?
+    with_variant educationnavigation: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert_equal [:new_navigation], @request.variant
+    end
+  end
+
+  test "does not show new navigation when no taxons are tagged to Detailed Guides" do
+    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    path = 'government/abtest/detailed-guide'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = {}
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    with_variant educationnavigation: "A" do
+      get :show, params: { path: path_for(content_item) }
+      assert_equal [], @request.variant
+    end
+
+    with_variant educationnavigation: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert_equal [], @request.variant
+    end
+  end
+
+  test "Case Studies are not included in the AB Test" do
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+    path = 'government/abtest/case-study'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = {
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/a-taxon',
+        }
+      ]
+    }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    assert_equal [], @request.variant
+    assert_unaffected_by_ab_test
   end
 
   def path_for(content_item)
