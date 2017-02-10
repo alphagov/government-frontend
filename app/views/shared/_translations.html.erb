@@ -1,0 +1,7 @@
+<% if @content_item.available_translations.any? %>
+  <div class="column-third">
+    <%= render 'shared/available_languages',
+      translations: @content_item.available_translations
+    %>
+  </div>
+<% end %>

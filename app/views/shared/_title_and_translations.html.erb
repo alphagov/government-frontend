@@ -2,11 +2,5 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
   </div>
-  <% if @content_item.available_translations.any? %>
-    <div class="column-third">
-      <%= render 'shared/available_languages',
-        translations: @content_item.available_translations
-      %>
-    </div>
-  <% end %>
+  <%= render 'shared/translations' %>
 </div>
