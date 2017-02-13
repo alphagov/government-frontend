@@ -14,6 +14,12 @@ module Metadata
     }
   end
 
+  def metadata_for_new_navigation
+    data = metadata
+    data.delete(:part_of)
+    data
+  end
+
   def document_footer
     {
       from: from,
@@ -24,5 +30,11 @@ module Metadata
       direction: text_direction,
       other: {}
     }
+  end
+
+  def document_footer_for_new_navigation
+    data = document_footer
+    data.delete(:part_of)
+    data
   end
 end
