@@ -12,8 +12,24 @@
       </div>
     <% end %>
     <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+      <% @additional_body = capture do %>
+        <% if @content_item.corporate_information? %>
+          <%= @content_item.corporate_information_heading_tag %>
+          <% @content_item.corporate_information.each do |group| %>
+            <%= group[:heading] %>
+            <ul>
+              <% group[:links].each do |link| %>
+                <li>
+                  <%= link %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% end %>
+      <% end %>
+
       <%= render 'govuk_component/govspeak',
-          content: "#{@content_item.body}",
+          content: "#{@content_item.body}#{@additional_body}",
           direction: page_text_direction %>
     </div>
   </div>

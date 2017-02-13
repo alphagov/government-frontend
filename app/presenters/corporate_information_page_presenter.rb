@@ -2,6 +2,7 @@ class CorporateInformationPagePresenter < ContentItemPresenter
   include ContentsList
   include TitleAndContext
   include OrganisationBranding
+  include CorporateInformationGroups
 
   def body
     content_item["details"]["body"]
@@ -18,7 +19,17 @@ class CorporateInformationPagePresenter < ContentItemPresenter
     end
   end
 
+  def contents_items
+    super + extra_headings
+  end
+
 private
+
+  def extra_headings
+    extra_headings = []
+    extra_headings << corporate_information_heading if corporate_information?
+    extra_headings
+  end
 
   def default_organisation
     organisation_content_id = content_item["details"]["organisation"]
