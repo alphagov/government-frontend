@@ -149,3 +149,13 @@ el:
     documents:
       one: "Έγγραφο"
       other: "Έγγραφα"
+  corporate_information_page:
+    corporate_information: Πληροφορίες για τον Οργανισμό
+    publication_scheme_html: Μάθετε περισσότερα για τις πληροφορίας που δημοσιεύουμε
+      συνήθως στο %{link}
+    personal_information_charter_html: Το %{link} εξηγεί πώς χειριζόμαστε τα προσωπικά
+      σας δεδομένα
+    welsh_language_scheme_html: Μάθετε περισσότερα για την δέσμευση μας στη δημοσίευση
+      στο %{link}.
+    social_media_use_html: Μάθετε περισσότερα για την πολιτική μας στο %{link}.
+    about_our_services_html:
