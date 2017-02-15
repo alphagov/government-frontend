@@ -23,8 +23,6 @@
     <%= render 'govuk_component/govspeak', content: @body %>
   </div>
   <div class="column-one-third add-title-margin">
-    <%= render partial: 'govuk_component/related_items', locals: {
-      sections: @content_item.related_items
-    } %>
+    <%= render 'govuk_component/related_items', @content_item.related_items %>
   </div>
 </div>

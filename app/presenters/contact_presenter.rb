@@ -1,15 +1,17 @@
 class ContactPresenter < ContentItemPresenter
   def related_items
-    [
-      {
-        title: "Elsewhere on GOV.UK",
-        items: quick_links
-      },
-      {
-        title: "Other contacts",
-        items: related_contacts_links
-      }
-    ]
+    {
+      sections: [
+        {
+          title: "Elsewhere on GOV.UK",
+          items: quick_links
+        },
+        {
+          title: "Other contacts",
+          items: related_contacts_links
+        }
+      ]
+    }
   end
 
   def online_form_links
