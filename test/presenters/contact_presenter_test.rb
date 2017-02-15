@@ -25,5 +25,13 @@ class ContactPresenterTest
       assert_equal first_related_contact_link['title'], first_presented_contact_link[:title]
       assert_equal 'Other contacts', presented_item.related_items.last[:title]
     end
+
+    test 'presents online form links' do
+      assert_equal schema_item['details']['contact_form_links'].first['link'], presented_item.online_form_links.first[:url]
+    end
+
+    test 'presents online form body' do
+      assert_equal schema_item['details']['more_info_contact_form'], presented_item.online_form_body
+    end
   end
 end

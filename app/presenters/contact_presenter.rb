@@ -12,6 +12,24 @@ class ContactPresenter < ContentItemPresenter
     ]
   end
 
+  def online_form_links
+    content_item["details"]["contact_form_links"].map do |link|
+      {
+        url: link['link'],
+        title: link['title'],
+        description: link['description'].html_safe
+      }
+    end
+  end
+
+  def online_form_body
+    content_item["details"]["more_info_contact_form"].html_safe
+  end
+
+  def online_forms?
+    online_form_links.any?
+  end
+
 private
 
   def related_contacts_links
