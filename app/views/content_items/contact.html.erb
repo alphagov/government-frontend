@@ -8,7 +8,8 @@
     <%= render 'govuk_component/title',
         context: t("content_item.format.#{@content_item.document_type}", count: 1),
         title: @content_item.title %>
-    <% @body = capture do %>
+
+    <% body = capture do %>
       <% if @content_item.online_forms? %>
         <h2 id="online-forms">Online forms</h2>
         <% @content_item.online_form_links.each do |link| %>
@@ -20,7 +21,8 @@
         <%= @content_item.online_form_body %>
       <% end %>
     <% end %>
-    <%= render 'govuk_component/govspeak', content: @body %>
+
+    <%= render 'govuk_component/govspeak', content: body %>
   </div>
   <div class="column-one-third add-title-margin">
     <%= render 'govuk_component/related_items', @content_item.related_items %>
