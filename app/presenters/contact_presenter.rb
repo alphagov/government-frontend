@@ -1,0 +1,2 @@
+class ContactPresenter < ContentItemPresenter
+end
