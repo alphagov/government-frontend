@@ -18,10 +18,30 @@ module CorporateInformationGroups
     content_tag(:h2, corporate_information_heading[:text], id: corporate_information_heading[:id])
   end
 
+  def further_information
+    [
+      further_information_about("publication_scheme"),
+      further_information_about("welsh_language_scheme"),
+      further_information_about("personal_information_charter"),
+      further_information_about("social_media_use"),
+      further_information_about("about_our_services")
+    ].join(' ').html_safe
+  end
+
 private
 
+  def further_information_link(type)
+    link = corporate_information_page_links.find { |l| l["document_type"] == type }
+    link_to(link["title"], link["base_path"]) if link
+  end
+
+  def further_information_about(type)
+    link = further_information_link(type)
+    I18n.t("corporate_information_page.#{type}_html", link: link) if link
+  end
+
   def corporate_information_heading
-    heading_text = "Corporate information"
+    heading_text = I18n.t('corporate_information_page.corporate_information')
 
     {
       text: heading_text,

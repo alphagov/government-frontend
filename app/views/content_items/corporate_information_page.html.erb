@@ -25,6 +25,12 @@
               <% end %>
             </ul>
           <% end %>
+
+          <% if @content_item.further_information.present? %>
+            <p>
+              <%= @content_item.further_information %>
+            </p>
+          <% end %>
         <% end %>
       <% end %>
 

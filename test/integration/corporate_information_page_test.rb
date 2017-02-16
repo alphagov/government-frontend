@@ -35,6 +35,15 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "renders further information with body when present" do
+    setup_and_visit_content_item('corporate_information_page')
+
+    within_component_govspeak do |component_args|
+      content = component_args.fetch("content")
+      assert content.gsub(/\s+/, ' ').include? "Read about the types of information we routinely"
+    end
+  end
+
   test "renders with organisation branding" do
     setup_and_visit_content_item('corporate_information_page')
     assert page.has_css?('.department-of-health-brand-colour')

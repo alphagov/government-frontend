@@ -56,5 +56,15 @@ class CorporateInformationPagePresenterTest
       presented_groups = presented_item.corporate_information
       assert_equal '<h3 id="access-our-information">Access our information</h3>', presented_groups.first[:heading]
     end
+
+    test 'presents further information based on corporate information page links' do
+      publication_scheme = schema_item['links']['corporate_information_pages'].find { |l| l['document_type'] == 'publication_scheme' }
+      information_charter = schema_item['links']['corporate_information_pages'].find { |l| l['document_type'] == 'personal_information_charter' }
+
+      assert presented_item.further_information.include?(publication_scheme['base_path'])
+      assert presented_item.further_information.include?(publication_scheme['title'])
+      assert presented_item.further_information.include?(information_charter['base_path'])
+      assert presented_item.further_information.include?(information_charter['title'])
+    end
   end
 end
