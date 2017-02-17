@@ -39,8 +39,6 @@ class ContactPresenter < ContentItemPresenter
     content_item["details"]["more_info_contact_form"].html_safe
   end
 
-  def online_forms?
-    online_form_links.any?
   end
 
 private
