@@ -31,4 +31,12 @@ class HtmlPublicationPresenter < ContentItemPresenter
   def organisations
     content_item["links"]["organisations"].sort_by { |o| o["title"] }
   end
+
+  def organisation_logo(organisation)
+    super.tap do |logo|
+      if organisations.count > 1
+        logo[:organisation].delete(:image)
+      end
+    end
+  end
 end

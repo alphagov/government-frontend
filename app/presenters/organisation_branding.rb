@@ -1,13 +1,24 @@
 module OrganisationBranding
   def organisation_logo(organisation = default_organisation)
-    {
+    logo = organisation["details"]["logo"]
+
+    logo_component_params = {
       organisation: {
-        name: organisation["details"]["logo"]["formatted_title"],
+        name: logo["formatted_title"],
         url: organisation["base_path"],
         brand: organisation_brand(organisation),
-        crest: organisation["details"]["logo"]["crest"]
+        crest: logo["crest"],
       }
     }
+
+    if logo["image"]
+      logo_component_params[:organisation][:image] = {
+        url: logo["image"]["url"],
+        alt_text: logo["image"]["alt_text"],
+      }
+    end
+
+    logo_component_params
   end
 
   def organisation_brand_class(organisation = default_organisation)
