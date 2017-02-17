@@ -3,4 +3,27 @@
     @include responsive-top-margin;
   }
 
+  .part-navigation-container {
+    @include responsive-bottom-margin;
+    border-bottom: 1px solid $grey-2;
+    padding-bottom: $gutter-half;
+  }
+
+  .part-navigation {
+    @include responsive-bottom-margin;
+    @include core-19;
+
+    @include media(tablet) {
+      @include core-16;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0.75em;
+
+      a {
+        display: block;
+      }
+    }
+  }
 }

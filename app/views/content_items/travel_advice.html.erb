@@ -5,6 +5,19 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
+    <aside class="part-navigation-container" role="complementary">
+      <nav role="navigation" class="grid-row part-navigation" aria-label="Travel advice pages">
+        <% @content_item.parts_navigation.each_with_index do |part_group, i| %>
+          <ol class="column-half" <% if i > 0 %>start="<%= @content_item.parts_navigation_second_list_start %>"<% end %>>
+            <% part_group.each do |link| %>
+              <li>
+                <%= link_to link[:title], link[:path] %>
+              </li>
+            <% end %>
+          </ol>
+        <% end %>
+      </nav>
+    </aside>
   </div>
   <div class="column-one-third add-title-margin">
     <%= render 'govuk_component/related_items', @content_item.related_items %>
