@@ -6,7 +6,7 @@ class EducationNavigationAbTestRequest
   delegate :analytics_meta_tag, to: :requested_variant
 
   def initialize(request)
-    @ab_test = GovukAbTesting::AbTest.new("educationnavigation", dimension: 41)
+    @ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: 41)
     @requested_variant = @ab_test.requested_variant request
   end
 

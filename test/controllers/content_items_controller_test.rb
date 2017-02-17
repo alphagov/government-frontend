@@ -118,12 +118,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     content_store_has_item(content_item['base_path'], content_item)
 
-    with_variant educationnavigation: "A" do
+    with_variant EducationNavigation: "A" do
       get :show, params: { path: path_for(content_item) }
       assert_equal [], @request.variant
     end
 
-    with_variant educationnavigation: "B" do
+    with_variant EducationNavigation: "B" do
       get :show, params: { path: path_for(content_item) }
       assert_equal [:new_navigation], @request.variant
     end
@@ -137,12 +137,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     content_store_has_item(content_item['base_path'], content_item)
 
-    with_variant educationnavigation: "A" do
+    with_variant EducationNavigation: "A" do
       get :show, params: { path: path_for(content_item) }
       assert_equal [], @request.variant
     end
 
-    with_variant educationnavigation: "B" do
+    with_variant EducationNavigation: "B" do
       get :show, params: { path: path_for(content_item) }
       assert_equal [], @request.variant
     end
