@@ -1,0 +1,2 @@
+class TravelAdvicePresenter < ContentItemPresenter
+end

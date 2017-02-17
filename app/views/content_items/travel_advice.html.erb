@@ -1,0 +1,11 @@
+<%= content_for :title, @content_item.title %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        context: t("content_item.format.#{@content_item.document_type}", count: 1),
+        title: @content_item.title %>
+  </div>
+</div>
+
+<%= render 'shared/description', description: @content_item.description %>
