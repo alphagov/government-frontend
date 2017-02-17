@@ -12,7 +12,7 @@ class ContactTest < ActionDispatch::IntegrationTest
       assert content.include? first_contact_form_link['description']
 
       html = Nokogiri::HTML.parse(content)
-      assert_not_nil html.at_css("h2#online-forms")
+      assert_not_nil html.at_css("h2#online-forms-title")
       assert_not_nil html.at_css("a[href='#{first_contact_form_link['link']}']")
     end
   end
