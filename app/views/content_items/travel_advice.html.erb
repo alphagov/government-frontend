@@ -18,6 +18,7 @@
         <% end %>
       </nav>
     </aside>
+    <%= render 'govuk_component/metadata', @content_item.metadata %>
   </div>
   <div class="column-one-third add-title-margin">
     <%= render 'govuk_component/related_items', @content_item.related_items %>

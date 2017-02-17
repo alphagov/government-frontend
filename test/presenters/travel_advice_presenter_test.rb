@@ -44,4 +44,50 @@ class TravelAdvicePresenterTest
       presented = presented_item("full-country")
       assert_equal presented.parts_navigation.first.size + 1, presented.parts_navigation_second_list_start
     end
+
+    test "metadata uses today for 'Still current at'" do
+      presented = presented_item("full-country").metadata[:other]["Still current at"]
+
+      assert Date.parse(presented).today?
+    end
+
+    test "metadata uses review date for 'Updated'" do
+      schema_updated = schema_item("full-country")["details"]["reviewed_at"]
+      presented_updated = presented_item("full-country").metadata[:other]["Updated"]
+
+      assert Date.parse(schema_updated) == Date.parse(presented_updated)
+    end
+
+    test "metadata uses updated date when no review date" do
+      example = schema_item("full-country")
+      schema_updated = example["details"]["updated_at"]
+      example["details"].delete("reviewed_at")
+      presented_updated = presented_item("full-country", example).metadata[:other]["Updated"]
+
+      assert Date.parse(schema_updated) == Date.parse(presented_updated)
+    end
+
+    test "metadata avoids duplication of 'Latest update' from change description" do
+      [
+        { original: "Latest update: Changes", presented: "<p>Changes</p>" },
+        { original: "Latest update - changes", presented: "<p>Changes</p>" },
+        { original: "Latest update changes", presented: "<p>Changes</p>" },
+        { original: "Latest Update: Summary of changes. Next sentence", presented: "<p>Summary of changes. Next sentence</p>" },
+      ].each do |i|
+        assert_equal i[:presented], present_latest(i[:original])
+      end
+    end
+
+  private
+
+    def present_latest(latest)
+      with_custom_change_description = {
+        "details" => {
+          "change_description" => latest,
+        }
+      }
+      presented = presented_item("full-country", with_custom_change_description)
+      presented.metadata[:other]["Latest update"]
+    end
+  end
 end

@@ -1,4 +1,19 @@
 class TravelAdvicePresenter < ContentItemPresenter
+  include ActionView::Helpers::TextHelper
+
+  def metadata
+    reviewed_at = content_item['details']['reviewed_at']
+    updated_at = content_item['details']['updated_at']
+
+    {
+      other: {
+        "Still current at" => I18n.l(Time.now, format: "%-d %B %Y"),
+        "Updated" => display_date(reviewed_at || updated_at),
+        "Latest update" => simple_format(latest_update)
+      }
+    }
+  end
+
   def title_and_context
     {
       context: 'Foreign travel advice',
@@ -69,5 +84,19 @@ private
 
   def ordered_related_items
     content_item["links"]["ordered_related_items"] || []
+  end
+
+  # FIXME: Update publishing app UI and remove from content
+  # Change description is used as "Latest update" but isn't labelled that way
+  # in the publisher. The frontend didn't add this label before.
+  # This led to users appending (in a variety of formats)
+  # "Latest update:" to the start of the change description. The frontend now
+  # has a latest update label, so we can strip this out.
+  # Avoids: "Latest update: Latest update - …"
+  def latest_update
+    change_description = content_item['details']['change_description']
+    change_description.sub(/^Latest update:?\s-?\s?/i, '').tap do |latest|
+      latest[0] = latest[0].capitalize
+    end
   end
 end
