@@ -75,7 +75,41 @@ class ContactPresenter < ContentItemPresenter
     content_item["details"]["more_info_phone_number"].html_safe
   end
 
+  def post
+    post_address_groups.map do |group|
+      details = {
+        description: group['description'].strip.html_safe,
+        v_card: [
+          v_card_part('fn', group['title']),
+          v_card_part('street-address', group['street_address']),
+          v_card_part('locality', group['locality']),
+          v_card_part('postal-code', group['postal_code']),
+          v_card_part('region', group['region']),
+          v_card_part('country-name', group['world_location']),
+        ]
+      }
+
+      details[:v_card].select! { |v| v[:value].present? }
+      details
+    end
+  end
+
+  def post_body
+    content_item["details"]["more_info_post_address"].html_safe
+  end
+
 private
+
+  def v_card_part(v_card_class, value)
+    {
+      v_card_class: v_card_class,
+      value: value.strip.html_safe
+    }
+  end
+
+  def post_address_groups
+    content_item["details"]["post_addresses"] || []
+  end
 
   def phone_number_groups
     content_item["details"]["phone_numbers"] || []

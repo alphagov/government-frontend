@@ -53,6 +53,23 @@
           <%= link_to "Find out about call charges", "/call-charges" %>
         </p>
       <% end %>
+
+      <% if @content_item.post.any? %>
+        <h2 id="post-title">Post</h2>
+        <% @content_item.post.each do |post_group| %>
+          <%= post_group[:description] %>
+          <div class="contact vcard">
+            <p class="content">
+              <% post_group[:v_card].each do |v_card_part| %>
+                <span class="<%= v_card_part[:v_card_class] %>">
+                  <%= v_card_part[:value] %>
+                </span><br />
+              <% end %>
+            </p>
+          </div>
+        <% end %>
+        <%= @content_item.post_body %>
+      <% end %>
     <% end %>
 
     <%= render 'govuk_component/govspeak', content: body %>

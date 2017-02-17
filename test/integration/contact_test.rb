@@ -29,4 +29,16 @@ class ContactTest < ActionDispatch::IntegrationTest
       assert_not_nil html.at("p:contains(\"24 hours a day, 7 days a week\")")
     end
   end
+
+
+  test "post are rendered" do
+    setup_and_visit_content_item('contact')
+    within_component_govspeak do |component_args|
+      content = component_args.fetch("content")
+      html = Nokogiri::HTML.parse(content)
+
+      assert_not_nil html.at_css("h2#post-title")
+      assert_not_nil html.at_css(".street-address")
+    end
+  end
 end

@@ -58,5 +58,15 @@ class ContactPresenterTest
     test 'phone_body returns correctly' do
       assert_equal schema_item['details']['more_info_phone_number'], presented_item.phone_body
     end
+
+    test 'post' do
+      assert_equal schema_item['details']['post_addresses'][0]['description'].strip, presented_item.post[0][:description]
+      assert_equal schema_item['details']['post_addresses'][0]['title'].strip, presented_item.post[0][:v_card][0][:value]
+      assert_equal presented_item.post[0][:v_card][0][:v_card_class], 'fn'
+    end
+
+    test 'post_body returns correctly' do
+      assert_equal schema_item['details']['more_info_post_address'], presented_item.post_body
+    end
   end
 end
