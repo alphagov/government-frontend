@@ -1,4 +1,13 @@
 class ContactPresenter < ContentItemPresenter
+  include TitleAndContext
+
+  def title_and_context
+    super.tap do |t|
+      t.delete(:average_title_length)
+      t.delete(:context)
+    end
+  end
+
   def related_items
     sections = []
     sections << {

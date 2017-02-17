@@ -10,6 +10,9 @@ class ContactPresenterTest
       assert_equal schema_item['format'], presented_item.format
     end
 
+    test 'presents the title' do
+      assert_equal schema_item['title'], presented_item.title
+    end
 
     test 'only presents related item sections when section has items' do
       schema = schema_item('contact_with_email_and_no_other_contacts')
