@@ -1,3 +1,6 @@
 .travel-advice {
+  .add-title-margin {
+    @include responsive-top-margin;
+  }
 
 }

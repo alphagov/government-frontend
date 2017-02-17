@@ -1,11 +1,12 @@
-<%= content_for :title, @content_item.title %>
-
+<%
+  content_for :title, @content_item.title
+  content_for :simple_header, true
+%>
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
+  </div>
+  <div class="column-one-third add-title-margin">
+    <%= render 'govuk_component/related_items', @content_item.related_items %>
   </div>
 </div>
-
-<%= render 'shared/description', description: @content_item.description %>
