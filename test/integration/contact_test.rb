@@ -17,6 +17,17 @@ class ContactTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "emails are rendered" do
+    setup_and_visit_content_item('contact')
+    within_component_govspeak do |component_args|
+      content = component_args.fetch("content")
+
+      html = Nokogiri::HTML.parse(content)
+      assert_not_nil html.at_css("h2#email-title")
+      assert_not_nil html.at_css(".email:first-of-type")
+    end
+  end
+
   test "phones are rendered" do
     setup_and_visit_content_item('contact')
     within_component_govspeak do |component_args|

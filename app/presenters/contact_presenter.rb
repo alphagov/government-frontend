@@ -98,6 +98,23 @@ class ContactPresenter < ContentItemPresenter
     content_item["details"]["more_info_post_address"].html_safe
   end
 
+  def email
+    email_address_groups.map do |group|
+      details = {
+        description: group['description'] ? group['description'].strip.html_safe : '',
+        email: group['email'].strip,
+        v_card: [v_card_part('fn', group['title'])],
+      }
+
+      details[:v_card].select! { |v| v[:value].present? }
+      details
+    end
+  end
+
+  def email_body
+    content_item["details"]["more_info_email_address"].html_safe
+  end
+
 private
 
   def v_card_part(v_card_class, value)
@@ -105,6 +122,10 @@ private
       v_card_class: v_card_class,
       value: value.strip.html_safe
     }
+  end
+
+  def email_address_groups
+    content_item["details"]["email_addresses"] || []
   end
 
   def post_address_groups

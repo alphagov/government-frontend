@@ -68,5 +68,14 @@ class ContactPresenterTest
     test 'post_body returns correctly' do
       assert_equal schema_item['details']['more_info_post_address'], presented_item.post_body
     end
+
+    test 'email' do
+      assert_equal schema_item['details']['email_addresses'][0]['email'].strip, presented_item.email[0][:email]
+      assert_equal schema_item['details']['email_addresses'][0]['title'].strip, presented_item.email[0][:v_card][0][:value]
+    end
+
+    test 'email_body' do
+      assert_equal schema_item['details']['more_info_email_address'], presented_item.email_body
+    end
   end
 end

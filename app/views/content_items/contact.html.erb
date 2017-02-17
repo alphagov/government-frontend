@@ -19,6 +19,23 @@
         <%= @content_item.online_form_body %>
       <% end %>
 
+      <% if @content_item.email.any? %>
+        <h2 id="email-title">Email</h2>
+        <% @content_item.email.each do |email_group| %>
+          <p class="vcard">
+            <% email_group[:v_card].each do |v_card_part| %>
+              <span class="<%= v_card_part[:v_card_class] %>">
+                <%= v_card_part[:value] %>
+              </span><br />
+            <% end %>
+            <%= mail_to email_group[:email], email_group[:email], class: 'email' %>
+          </p>
+
+          <%= email_group[:description] %>
+        <% end %>
+        <%= @content_item.email_body %>
+      <% end %>
+
       <% if @content_item.phone.any? %>
         <h2 id="phone-title">Phone</h2>
         <% @content_item.phone.each do |phone_group| %>
