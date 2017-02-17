@@ -45,5 +45,18 @@ class ContactPresenterTest
     test 'presents online form body' do
       assert_equal schema_item['details']['more_info_contact_form'], presented_item.online_form_body
     end
+
+    test 'phone returns correctly' do
+      assert_equal schema_item['details']['phone_numbers'][0]["number"], presented_item.phone[0][:numbers][0][:number]
+      assert_equal schema_item['details']['phone_numbers'][0]["textphone"].blank?, presented_item.phone[0][:numbers][0][:textphone].nil?
+      assert_equal schema_item['details']['phone_numbers'][0]["title"], presented_item.phone[0][:title]
+      assert_equal schema_item['details']['phone_numbers'][0]["description"].strip, presented_item.phone[0][:description]
+      assert_equal schema_item['details']['phone_numbers'][0]["open_hours"].strip, presented_item.phone[0][:opening_times]
+      assert_equal schema_item['details']['phone_numbers'][0]["best_time_to_call"].strip, presented_item.phone[0][:best_time_to_call]
+    end
+
+    test 'phone_body returns correctly' do
+      assert_equal schema_item['details']['more_info_phone_number'], presented_item.phone_body
+    end
   end
 end

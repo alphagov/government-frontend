@@ -18,6 +18,41 @@
         <% end %>
         <%= @content_item.online_form_body %>
       <% end %>
+
+      <% if @content_item.phone.any? %>
+        <h2 id="phone-title">Phone</h2>
+        <% @content_item.phone.each do |phone_group| %>
+          <h3><%= phone_group[:title] %></h3>
+
+          <% if phone_group[:numbers].any? %>
+            <div class="contact">
+              <div class="content">
+                <% phone_group[:numbers].each do |number| %>
+                  <p><%= number[:label] %>:<br /><%= number[:number] %></p>
+                <% end%>
+              </div>
+            </div>
+          <% end %>
+
+          <%= phone_group[:description] %>
+
+          <% if phone_group[:opening_times].present? %>
+            <h4>Opening times</h4>
+            <%= phone_group[:opening_times] %>
+          <% end %>
+
+          <% if phone_group[:best_time_to_call].present? %>
+            <h4>Best time to call</h4>
+            <%= phone_group[:best_time_to_call] %>
+          <% end %>
+        <% end %>
+
+        <%= @content_item.phone_body %>
+
+        <p class="call-charges">
+          <%= link_to "Find out about call charges", "/call-charges" %>
+        </p>
+      <% end %>
     <% end %>
 
     <%= render 'govuk_component/govspeak', content: body %>
