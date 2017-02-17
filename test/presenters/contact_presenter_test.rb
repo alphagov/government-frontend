@@ -10,7 +10,16 @@ class ContactPresenterTest
       assert_equal schema_item['format'], presented_item.format
     end
 
-    test 'presents the quick links in related items' do
+
+    test 'only presents related item sections when section has items' do
+      schema = schema_item('contact_with_email_and_no_other_contacts')
+      presented = presented_item('contact_with_email_and_no_other_contacts')
+
+      refute schema['links']['related']
+      assert_empty presented.related_items[:sections].select { |section| section[:title] == 'Other contacts' }
+    end
+
+    test 'presents quick links in related items' do
       first_quick_link = schema_item['details']['quick_links'].first
       first_presented_quick_link = presented_item.related_items[:sections].first[:items].first
 
@@ -18,7 +27,7 @@ class ContactPresenterTest
       assert_equal 'Elsewhere on GOV.UK', presented_item.related_items[:sections].first[:title]
     end
 
-    test 'presents the related contacts links in related items' do
+    test 'presents related contacts links in related items' do
       first_related_contact_link = schema_item['links']['related'].first
       first_presented_contact_link = presented_item.related_items[:sections].last[:items].first
 
