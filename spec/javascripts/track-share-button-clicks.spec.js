@@ -9,7 +9,8 @@ describe('A share button click tracker', function () {
   var tracker
   var element
 
-  GOVUK.analytics = GOVUK.analytics || {trackShare: function () {}}
+  GOVUK.analytics = GOVUK.analytics || {}
+  GOVUK.analytics.trackShare = function () {}
 
   beforeEach(function () {
     tracker = new GOVUK.Modules.TrackShareButtonClicks()

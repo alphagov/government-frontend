@@ -12,7 +12,8 @@
 
 describe('Webchat', function () {
   // Stub analytics.
-  GOVUK.analytics = { trackEvent: function () {} };
+  GOVUK.analytics = GOVUK.analytics || {};
+  GOVUK.analytics.trackEvent = function () {};
 
   var INSERTION_HOOK = '<div class="js-webchat">' +
     '<div class="js-webchat-advisers-error">Error</div>' +
