@@ -36,11 +36,26 @@ class TravelAdvicePresenterTest
     end
 
     test "the summary is included as the first navigation item" do
-      base_path = schema_item("full-country")["base_path"]
       first_nav_item = presented_item("full-country").parts_navigation.first.first
+      assert_equal 'Current travel advice', first_nav_item
+    end
 
-      assert_equal base_path, first_nav_item[:path]
-      assert_equal 'Current travel advice', first_nav_item[:title]
+    test "navigation items are presented as links unless they are the current part" do
+      example = schema_item("full-country")
+      base_path = example["base_path"]
+      current_part = example["details"]["parts"].first
+      another_part = example["details"]["parts"][1]
+
+      first_part_presented = presented_item("full-country", current_part["slug"])
+      navigation_items = first_part_presented.parts_navigation
+
+      summary_nav_item = navigation_items[0][0]
+      current_part_nav_item = navigation_items[0][1]
+      another_part_nav_item = navigation_items[0][2]
+
+      assert_equal summary_nav_item, "<a href=\"#{base_path}\">Current travel advice</a>"
+      assert_equal current_part_nav_item, current_part['title']
+      assert_equal another_part_nav_item, "<a href=\"#{base_path}/#{another_part['slug']}\">#{another_part['title']}</a>"
     end
 
     test "navigation items link to all parts" do
@@ -48,8 +63,8 @@ class TravelAdvicePresenterTest
       part_links = presented_item("full-country").parts_navigation.flatten
 
       assert_equal parts.size + 1, part_links.size
-      assert_equal parts[0]['title'], part_links[1][:title]
-      assert part_links[1][:path].include?(parts[0]['slug'])
+      assert part_links[1].include?(parts[0]['title'])
+      assert part_links[1].include?(parts[0]['slug'])
     end
 
     test "part navigation is in one group when 3 or fewer navigation items (2 parts + summary)" do

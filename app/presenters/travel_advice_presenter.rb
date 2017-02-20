@@ -1,5 +1,6 @@
 class TravelAdvicePresenter < ContentItemPresenter
   include ActionView::Helpers::TextHelper
+  include ActionView::Helpers::UrlHelper
 
   attr_reader :part_slug
 
@@ -104,18 +105,15 @@ private
   end
 
   def part_links
-    links = [
-      {
-        title: 'Current travel advice',
-        path: @base_path
-      }
-    ]
+    summary_link_title = 'Current travel advice'
+    summary_part_link = is_summary? ? summary_link_title : link_to(summary_link_title, @base_path)
 
-    links + parts.map do |part|
-      {
-        title: part['title'],
-        path: "#{@base_path}/#{part['slug']}"
-      }
+    [summary_part_link] + parts.map do |part|
+      if part['slug'] != @part_slug
+        link_to part['title'], "#{@base_path}/#{part['slug']}"
+      else
+        part['title']
+      end
     end
   end
 
