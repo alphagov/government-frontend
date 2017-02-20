@@ -1,5 +1,5 @@
-/* global describe it expect beforeEach spyOn */
-/* eslint-disable no-multi-str */
+/* global describe beforeEach it spyOn expect */
+
 var $ = window.jQuery
 
 describe('A share button click tracker', function () {
@@ -18,10 +18,12 @@ describe('A share button click tracker', function () {
 
   it('tracks click events on share buttons', function () {
     spyOn(GOVUK.analytics, 'trackShare')
-    element = $('<div>\
-      <a href="#" class="js-share-facebook" data-network="facebook">Share</a>\
-      <a href="#" class="js-share-twitter" data-network="twitter">Share</a>\
-    </div>')
+    element = $(
+      '<div>' +
+        '<a href="#" class="js-share-facebook" data-network="facebook">Share</a>' +
+        '<a href="#" class="js-share-twitter" data-network="twitter">Share</a>' +
+      '</div>'
+    )
 
     tracker.start(element)
     element.find('.js-share-facebook').trigger('click')
