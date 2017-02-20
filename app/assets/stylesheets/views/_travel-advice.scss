@@ -26,4 +26,33 @@
       }
     }
   }
+
+  .map {
+    @include responsive-bottom-margin;
+
+    img {
+      max-width: 100%;
+    }
+
+    .map-download {
+      margin-top: $gutter-half;
+
+      @include media(tablet) {
+        margin-top: $gutter;
+      }
+
+      a {
+        display: block;
+        @include bold-19;
+        min-height: 2.5em;
+        padding-left: 2.5em;
+        background: image-url("icon-file-download.png") no-repeat scroll 0 0;
+
+        @include device-pixel-ratio() {
+          background-image: image-url("icon-file-download-2x.png");
+          background-size: 25px 25px;
+        }
+      }
+    }
+  }
 }

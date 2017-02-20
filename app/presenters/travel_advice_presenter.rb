@@ -47,6 +47,14 @@ class TravelAdvicePresenter < ContentItemPresenter
     part_navigation_group_size + 1
   end
 
+  def map
+    content_item["details"]["image"]
+  end
+
+  def map_download_url
+    content_item["details"].dig("document", "url")
+  end
+
 private
 
   def country_name

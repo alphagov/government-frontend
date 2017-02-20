@@ -19,6 +19,17 @@
       </nav>
     </aside>
     <%= render 'govuk_component/metadata', @content_item.metadata %>
+
+    <% if @content_item.map %>
+      <figure class="map">
+        <img src="<%= @content_item.map["url"] %>" alt="<%= @content_item.map["alt_text"] %>">
+        <% if @content_item.map_download_url %>
+          <figcaption class="map-download">
+            <a href="<%= @content_item.map_download_url %>">Download map (PDF)</a>
+          </figcaption>
+        <% end %>
+      </figure>
+    <% end %>
   </div>
   <div class="column-one-third add-title-margin">
     <%= render 'govuk_component/related_items', @content_item.related_items %>

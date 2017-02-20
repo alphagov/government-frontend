@@ -78,6 +78,30 @@ class TravelAdvicePresenterTest
       end
     end
 
+    test "presents a map image and download link" do
+      presented = presented_item("full-country")
+      example = schema_item("full-country")
+
+      example_map_url = example["details"]["image"]["url"]
+      presented_map_url = presented.map["url"]
+
+      example_map_download_url = example["details"]["document"]["url"]
+      presented_map_download_url = presented.map_download_url
+
+      assert_equal example_map_url, presented_map_url
+      assert_equal example_map_download_url, presented_map_download_url
+    end
+
+    test "handles travel advice without maps" do
+      example = schema_item("full-country")
+      example['details'].delete('image')
+      example['details'].delete('document')
+      presented = presented_item("full-country", example)
+
+      assert_equal nil, presented.map
+      assert_equal nil, presented.map_download_url
+    end
+
   private
 
     def present_latest(latest)
