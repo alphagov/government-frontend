@@ -1,10 +1,11 @@
 class ContentItemPresenter
   include Withdrawable
 
-  attr_reader :content_item, :title, :description, :format, :locale, :phase, :document_type
+  attr_reader :content_item, :base_path, :title, :description, :format, :locale, :phase, :document_type
 
   def initialize(content_item)
     @content_item = content_item
+    @base_path = content_item["base_path"]
     @title = content_item["title"]
     @description = content_item["description"]
     @format = content_item["schema_name"]

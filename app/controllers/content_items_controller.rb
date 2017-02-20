@@ -10,9 +10,7 @@ class ContentItemsController < ApplicationController
     load_content_item
     set_up_education_navigation_ab_testing
     set_expiry
-    with_locale do
-      render content_item_template
-    end
+    render_template
   end
 
 private
@@ -32,6 +30,12 @@ private
 
   def content_item_template
     @content_item.format
+  end
+
+  def render_template
+    with_locale do
+      render content_item_template
+    end
   end
 
   def set_expiry

@@ -6,6 +6,35 @@ class TravelAdvicePresenterTest
       "travel_advice"
     end
 
+    test "presents summary as the current part when no part slug provided" do
+      example = schema_item("full-country")
+      presented = presented_item("full-country")
+
+      assert presented.is_summary?
+      assert presented.has_valid_part?
+      assert_equal 'Summary', presented.current_part_title
+      assert_equal example['details']['summary'], presented.current_part_body
+    end
+
+    test "presents the current part when a part slug is provided" do
+      example_parts = schema_item("full-country")["details"]["parts"]
+      first_part = example_parts.first
+      presented = presented_item("full-country", first_part["slug"])
+
+      refute presented.is_summary?
+      assert presented.has_valid_part?
+      assert_equal first_part['title'], presented.current_part_title
+      assert_equal first_part['body'], presented.current_part_body
+    end
+
+    test "marks parts not in the content item as invalid" do
+      example_part_slugs = schema_item("full-country")["details"]["parts"].map { |part| part['slug'] }
+      presented = presented_item("full-country", "not-a-valid-part")
+
+      refute example_part_slugs.include?("not-a-valid-part")
+      refute presented.has_valid_part?
+    end
+
     test "the summary is included as the first navigation item" do
       base_path = schema_item("full-country")["base_path"]
       first_nav_item = presented_item("full-country").parts_navigation.first.first
@@ -27,13 +56,13 @@ class TravelAdvicePresenterTest
       example = schema_item("full-country")
 
       example["details"]["parts"] = example["details"]["parts"].first(3)
-      assert_equal 2, presented_item("full-country", example).parts_navigation.size
+      assert_equal 2, presented_item("full-country", nil, example).parts_navigation.size
 
       example["details"]["parts"] = example["details"]["parts"].first(2)
-      assert_equal 1, presented_item("full-country", example).parts_navigation.size
+      assert_equal 1, presented_item("full-country", nil, example).parts_navigation.size
 
       example["details"]["parts"] = []
-      assert_equal 1, presented_item("full-country", example).parts_navigation.size
+      assert_equal 1, presented_item("full-country", nil, example).parts_navigation.size
     end
 
     test "part navigation is split into two groups" do
@@ -62,7 +91,7 @@ class TravelAdvicePresenterTest
       example = schema_item("full-country")
       schema_updated = example["details"]["updated_at"]
       example["details"].delete("reviewed_at")
-      presented_updated = presented_item("full-country", example).metadata[:other]["Updated"]
+      presented_updated = presented_item("full-country", nil, example).metadata[:other]["Updated"]
 
       assert Date.parse(schema_updated) == Date.parse(presented_updated)
     end
@@ -96,7 +125,7 @@ class TravelAdvicePresenterTest
       example = schema_item("full-country")
       example['details'].delete('image')
       example['details'].delete('document')
-      presented = presented_item("full-country", example)
+      presented = presented_item("full-country", nil, example)
 
       assert_equal nil, presented.map
       assert_equal nil, presented.map_download_url
@@ -110,8 +139,13 @@ class TravelAdvicePresenterTest
           "change_description" => latest,
         }
       }
-      presented = presented_item("full-country", with_custom_change_description)
+      presented = presented_item("full-country", nil, with_custom_change_description)
       presented.metadata[:other]["Latest update"]
+    end
+
+    def presented_item(type = format_name, part_slug = nil, overrides = {})
+      schema_example_content_item = schema_item(type)
+      TravelAdvicePresenter.new(schema_example_content_item.merge(overrides), part_slug)
     end
   end
 end

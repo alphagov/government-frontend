@@ -1,6 +1,13 @@
 class TravelAdvicePresenter < ContentItemPresenter
   include ActionView::Helpers::TextHelper
 
+  attr_reader :part_slug
+
+  def initialize(content_item, part_slug = nil)
+    super(content_item)
+    @part_slug = part_slug
+  end
+
   def metadata
     reviewed_at = content_item['details']['reviewed_at']
     updated_at = content_item['details']['updated_at']
@@ -47,12 +54,16 @@ class TravelAdvicePresenter < ContentItemPresenter
     part_navigation_group_size + 1
   end
 
+  def is_summary?
+    @part_slug.nil?
+  end
+
   def current_part_title
-    'Summary'
+    current_part["title"]
   end
 
   def current_part_body
-    content_item["details"]["summary"]
+    current_part["body"]
   end
 
   def map
@@ -63,7 +74,26 @@ class TravelAdvicePresenter < ContentItemPresenter
     content_item["details"].dig("document", "url")
   end
 
+  def has_valid_part?
+    !!current_part
+  end
+
 private
+
+  def summary_part
+    {
+      "title" => "Summary",
+      "body" => content_item["details"]["summary"]
+    }
+  end
+
+  def current_part
+    if is_summary?
+      summary_part
+    else
+      parts.find { |part| part["slug"] == @part_slug }
+    end
+  end
 
   def country_name
     content_item["details"]["country"]["name"]
@@ -77,14 +107,14 @@ private
     links = [
       {
         title: 'Current travel advice',
-        path: content_item["base_path"]
+        path: @base_path
       }
     ]
 
     links + parts.map do |part|
       {
         title: part['title'],
-        path: "#{content_item["base_path"]}/#{part['slug']}"
+        path: "#{@base_path}/#{part['slug']}"
       }
     end
   end
