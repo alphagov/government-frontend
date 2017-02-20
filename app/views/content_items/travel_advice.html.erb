@@ -18,6 +18,10 @@
         <% end %>
       </nav>
     </aside>
+
+    <h1 class="part-title">
+      <%= @content_item.current_part_title %>
+    </h1>
     <%= render 'govuk_component/metadata', @content_item.metadata %>
 
     <% if @content_item.map %>
@@ -30,6 +34,11 @@
         <% end %>
       </figure>
     <% end %>
+
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.current_part_body,
+        direction: page_text_direction %>
+
   </div>
   <div class="column-one-third add-title-margin">
     <%= render 'govuk_component/related_items', @content_item.related_items %>

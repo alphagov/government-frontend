@@ -47,6 +47,14 @@ class TravelAdvicePresenter < ContentItemPresenter
     part_navigation_group_size + 1
   end
 
+  def current_part_title
+    'Summary'
+  end
+
+  def current_part_body
+    content_item["details"]["summary"]
+  end
+
   def map
     content_item["details"]["image"]
   end
