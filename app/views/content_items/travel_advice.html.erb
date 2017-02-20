@@ -27,23 +27,24 @@
     <h1 class="part-title">
       <%= @content_item.current_part_title %>
     </h1>
-    <%= render 'govuk_component/metadata', @content_item.metadata %>
 
-    <% if @content_item.map %>
-      <figure class="map">
-        <img src="<%= @content_item.map["url"] %>" alt="<%= @content_item.map["alt_text"] %>">
-        <% if @content_item.map_download_url %>
-          <figcaption class="map-download">
-            <a href="<%= @content_item.map_download_url %>">Download map (PDF)</a>
-          </figcaption>
-        <% end %>
-      </figure>
+    <% if @content_item.is_summary? %>
+      <%= render 'govuk_component/metadata', @content_item.metadata %>
+      <% if @content_item.map %>
+        <figure class="map">
+          <img src="<%= @content_item.map["url"] %>" alt="<%= @content_item.map["alt_text"] %>">
+          <% if @content_item.map_download_url %>
+            <figcaption class="map-download">
+              <a href="<%= @content_item.map_download_url %>">Download map (PDF)</a>
+            </figcaption>
+          <% end %>
+        </figure>
+      <% end %>
     <% end %>
 
     <%= render 'govuk_component/govspeak',
         content: @content_item.current_part_body,
         direction: page_text_direction %>
-
   </div>
   <div class="column-one-third add-title-margin">
     <%= render 'govuk_component/related_items', @content_item.related_items %>
