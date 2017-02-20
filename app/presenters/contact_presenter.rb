@@ -115,6 +115,25 @@ class ContactPresenter < ContentItemPresenter
     content_item["details"]["more_info_email_address"].html_safe
   end
 
+  def show_webchat?
+    # These are the routes on which we plan to roll out webchat, in stages.
+    whitelisted_paths = [
+      '/government/organisations/hm-revenue-customs/contact/child-benefit',
+      '/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees',
+      '/government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk',
+      '/government/organisations/hm-revenue-customs/contact/national-insurance-numbers',
+      '/government/organisations/hm-revenue-customs/contact/self-assessment-online-services-helpdesk',
+      '/government/organisations/hm-revenue-customs/contact/self-assessment',
+      '/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries',
+      '/government/organisations/hm-revenue-customs/contact/vat-enquiries',
+      '/government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries',
+      '/government/organisations/hm-revenue-customs/contact/trusts',
+      '/government/organisations/hm-revenue-customs/contact/employer-enquiries',
+      '/government/organisations/hm-revenue-customs/contact/construction-industry-scheme',
+    ]
+    whitelisted_paths.include?(content_item["base_path"])
+  end
+
 private
 
   def v_card_part(v_card_class, value)

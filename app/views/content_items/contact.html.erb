@@ -36,6 +36,26 @@
         <%= @content_item.email_body %>
       <% end %>
 
+      <% if @content_item.show_webchat? %>
+        <h2 class="details-header">Webchat</h2>
+        <div class="details js-webchat">
+          <div class="description govspeak">
+            <p class="js-webchat-advisers-error">
+              Webchat is unavailable at the moment because of technical problems.
+            </p>
+            <p class="js-webchat-advisers-unavailable hidden">
+              Webchat is closed at the moment.
+            </p>
+            <p class="js-webchat-advisers-busy hidden">
+              All webchat advisers are busy at the moment.
+            </p>
+            <p class="js-webchat-advisers-available hidden">
+              Advisers are available to chat. <a href="#" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
+            </p>
+          </div>
+        </div>
+      <% end %>
+
       <% if @content_item.phone.any? %>
         <h2 id="phone-title">Phone</h2>
         <% @content_item.phone.each do |phone_group| %>
