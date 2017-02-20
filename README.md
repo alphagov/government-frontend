@@ -98,6 +98,8 @@ gallery of the output, located at `test/wraith/shots/gallery.html`.
 
 #### Compare examples on master with examples on branch
 
+Examples are referencing https://github.com/alphagov/govuk-content-schemas
+
 With government-frontend running master on the development VM and while [pointing at the dummy content store](https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md), create a set of historical screenshots using:
 ```
 cd test/wraith
