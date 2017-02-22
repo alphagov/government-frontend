@@ -9,6 +9,14 @@ class TravelAdvicePresenter < ContentItemPresenter
     @part_slug = part_slug
   end
 
+  def page_title
+    if is_summary?
+      title
+    else
+      "#{current_part_title} - #{title}"
+    end
+  end
+
   def metadata
     reviewed_at = content_item['details']['reviewed_at']
     updated_at = content_item['details']['updated_at']

@@ -4,6 +4,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
   test "travel advice header and navigation" do
     setup_and_visit_content_item('full-country')
 
+    assert page.has_css?("title", visible: false, text: @content_item['title'])
     assert_has_component_title(@content_item["details"]["country"]["name"])
 
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
@@ -47,6 +48,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     first_part = example['details']['parts'].first
     setup_and_visit_travel_advice_part('full-country', first_part['slug'])
 
+    assert page.has_css?("title", visible: false, text: "#{first_part['title']} - #{@content_item['title']}")
     assert page.has_css?("h1", text: first_part['title'])
     assert_has_component_govspeak(first_part['body'])
 

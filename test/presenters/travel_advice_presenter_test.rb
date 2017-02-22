@@ -6,6 +6,16 @@ class TravelAdvicePresenterTest
       "travel_advice"
     end
 
+    test "presents unique titles for each part" do
+      example = schema_item("full-country")
+      presented = presented_item("full-country")
+      assert_equal example['title'], presented.page_title
+
+      first_part = example['details']['parts'].first
+      presented_part = presented_item("full-country", first_part['slug'])
+      assert_equal "#{first_part['title']} - #{example['title']}", presented_part.page_title
+    end
+
     test "presents summary as the current part when no part slug provided" do
       example = schema_item("full-country")
       presented = presented_item("full-country")
