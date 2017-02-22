@@ -17,6 +17,8 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     @content_item['details']['parts'].each do |part|
       assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['name'])
     end
+
+    assert page.has_css?('.print-link a[href$="/print"]')
   end
 
   test "travel advice summary has latest updates and map" do

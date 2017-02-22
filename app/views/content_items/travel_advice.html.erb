@@ -63,6 +63,10 @@
     <%= render 'govuk_component/govspeak',
         content: @content_item.current_part_body,
         direction: page_text_direction %>
+
+    <div class="print-link">
+      <%= link_to "Print entire guide", @content_item.print_link %>
+    </div>
   </div>
   <div class="column-one-third add-title-margin">
     <%= render 'govuk_component/related_items', @content_item.related_items %>

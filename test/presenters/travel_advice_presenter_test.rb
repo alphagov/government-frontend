@@ -97,6 +97,10 @@ class TravelAdvicePresenterTest
       assert_equal "#{schema_item('full-country')['base_path']}.atom", presented_item("full-country").feed_link
     end
 
+    test "presents a print link" do
+      assert_equal "#{schema_item('full-country')['base_path']}/print", presented_item("full-country").print_link
+    end
+
     test "presents alert statuses" do
       example = schema_item("full-country")
       example["details"]["alert_status"] = %w{avoid_all_but_essential_travel_to_parts avoid_all_travel_to_parts}

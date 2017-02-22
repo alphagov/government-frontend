@@ -87,6 +87,10 @@ class TravelAdvicePresenter < ContentItemPresenter
     "#{base_path}.atom"
   end
 
+  def print_link
+    "#{base_path}/print"
+  end
+
   # Deprecated feature
   # Exists in travel advice publisher but isn't used by FCO
   # Feature included as it _could_ still be used
