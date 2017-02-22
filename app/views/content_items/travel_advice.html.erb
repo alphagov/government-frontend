@@ -22,6 +22,13 @@
           </ol>
         <% end %>
       </nav>
+      <section class="subscriptions">
+        <h2 class="visuallyhidden">Subscriptions</h2>
+        <ul>
+          <li><%= link_to "Get email alerts", @content_item.email_signup_link, class: "email-alerts" %></li>
+          <li><%= link_to "Subscribe to feed", @content_item.feed_link, class: "feed" %></li>
+        </ul>
+      </section>
     </aside>
 
     <h1 class="part-title">

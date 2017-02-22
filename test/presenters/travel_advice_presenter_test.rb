@@ -89,6 +89,14 @@ class TravelAdvicePresenterTest
       assert_equal presented.parts_navigation.first.size + 1, presented.parts_navigation_second_list_start
     end
 
+    test "presents an email signup link" do
+      assert_equal schema_item("full-country")["details"]["email_signup_link"], presented_item("full-country").email_signup_link
+    end
+
+    test "presents a feed link" do
+      assert_equal "#{schema_item('full-country')['base_path']}.atom", presented_item("full-country").feed_link
+    end
+
     test "metadata uses today for 'Still current at'" do
       presented = presented_item("full-country").metadata[:other]["Still current at"]
 

@@ -79,6 +79,14 @@ class TravelAdvicePresenter < ContentItemPresenter
     !!current_part
   end
 
+  def email_signup_link
+    content_item["details"]["email_signup_link"]
+  end
+
+  def feed_link
+    "#{base_path}.atom"
+  end
+
 private
 
   def summary_part
