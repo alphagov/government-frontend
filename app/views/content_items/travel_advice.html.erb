@@ -36,6 +36,17 @@
     </h1>
 
     <% if @content_item.is_summary? %>
+      <% if @content_item.alert_status.present? %>
+        <% alert_body = capture do %>
+          <div class="help-notice">
+            <%= @content_item.alert_status %>
+          </div>
+        <% end %>
+        <%= render 'govuk_component/govspeak',
+            content: alert_body,
+            direction: page_text_direction %>
+      <% end %>
+
       <%= render 'govuk_component/metadata', @content_item.metadata %>
       <% if @content_item.map %>
         <figure class="map">

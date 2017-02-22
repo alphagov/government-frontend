@@ -97,6 +97,13 @@ class TravelAdvicePresenterTest
       assert_equal "#{schema_item('full-country')['base_path']}.atom", presented_item("full-country").feed_link
     end
 
+    test "presents alert statuses" do
+      example = schema_item("full-country")
+      example["details"]["alert_status"] = %w{avoid_all_but_essential_travel_to_parts avoid_all_travel_to_parts}
+      assert present_example(example).alert_status.include?('advise against all but essential travel')
+      assert present_example(example).alert_status.include?('advise against all travel to parts')
+    end
+
     test "metadata uses today for 'Still current at'" do
       presented = presented_item("full-country").metadata[:other]["Still current at"]
 

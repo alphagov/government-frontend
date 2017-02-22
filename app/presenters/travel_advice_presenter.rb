@@ -87,6 +87,19 @@ class TravelAdvicePresenter < ContentItemPresenter
     "#{base_path}.atom"
   end
 
+  # Deprecated feature
+  # Exists in travel advice publisher but isn't used by FCO
+  # Feature included as it _could_ still be used
+  # Remove when alert status boxes no longer in travel advice publisher
+  def alert_status
+    alert_statuses = content_item["details"]["alert_status"] || []
+    alert_statuses.map! do |alert|
+      content_tag(:p, I18n.t("travel_advice.alert_status.#{alert}").html_safe)
+    end
+
+    alert_statuses.join('').html_safe
+  end
+
 private
 
   def summary_part
