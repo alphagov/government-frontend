@@ -43,12 +43,14 @@ class ContactPresenterTest
     end
 
     test 'phone returns correctly' do
-      assert_equal schema_item['details']['phone_numbers'][0]["number"], presented_item.phone[0][:numbers][0][:number]
-      assert_equal schema_item['details']['phone_numbers'][0]["textphone"].blank?, presented_item.phone[0][:numbers][0][:textphone].nil?
-      assert_equal schema_item['details']['phone_numbers'][0]["title"], presented_item.phone[0][:title]
-      assert_equal schema_item['details']['phone_numbers'][0]["description"].strip, presented_item.phone[0][:description]
-      assert_equal schema_item['details']['phone_numbers'][0]["open_hours"].strip, presented_item.phone[0][:opening_times]
-      assert_equal schema_item['details']['phone_numbers'][0]["best_time_to_call"].strip, presented_item.phone[0][:best_time_to_call]
+      phone_number = schema_item['details']['phone_numbers'][0]
+      presented_phone_number = presented_item.phone[0]
+      assert_equal phone_number["number"], presented_phone_number[:numbers][0][:number]
+      assert_equal phone_number["textphone"].blank?, presented_phone_number[:numbers][0][:textphone].nil?
+      assert_equal phone_number["title"], presented_phone_number[:title]
+      assert_equal phone_number["description"].strip, presented_phone_number[:description]
+      assert_equal phone_number["open_hours"].strip, presented_phone_number[:opening_times]
+      assert_equal phone_number["best_time_to_call"].strip, presented_phone_number[:best_time_to_call]
     end
 
     test 'phone_body returns correctly' do
@@ -56,9 +58,11 @@ class ContactPresenterTest
     end
 
     test 'post' do
-      assert_equal schema_item['details']['post_addresses'][0]['description'].strip, presented_item.post[0][:description]
-      assert_equal schema_item['details']['post_addresses'][0]['title'].strip, presented_item.post[0][:v_card][0][:value]
-      assert_equal presented_item.post[0][:v_card][0][:v_card_class], 'fn'
+      post_address = schema_item['details']['post_addresses'][0]
+      presented_post_address = presented_item.post[0]
+      assert_equal post_address['description'].strip, presented_post_address[:description]
+      assert_equal post_address['title'].strip, presented_post_address[:v_card][0][:value]
+      assert_equal 'fn', presented_post_address[:v_card][0][:v_card_class]
     end
 
     test 'post_body returns correctly' do
