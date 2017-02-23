@@ -1,5 +1,5 @@
 class EducationNavigationAbTestRequest
-  NEW_NAVIGATION_CONTENT_ITEM_SCHEMAS = %w{detailed_guide}.freeze
+  NEW_NAVIGATION_CONTENT_ITEM_SCHEMAS = %w{detailed_guide publication}.freeze
 
   attr_accessor :requested_variant
 
