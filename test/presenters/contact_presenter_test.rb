@@ -6,10 +6,6 @@ class ContactPresenterTest
       "contact"
     end
 
-    test 'presents the format' do
-      assert_equal schema_item['format'], presented_item.format
-    end
-
     test 'presents the title' do
       assert_equal schema_item['title'], presented_item.title
     end
