@@ -1,0 +1,53 @@
+<%= content_for :title, @content_item.page_title %>
+
+<div class="grid-row" data-module="sticky-element-container">
+  <div class="column-two-thirds">
+    <%= render 'shared/title_and_translations', content_item: @content_item %>
+    <%= render 'shared/withdrawal_notice', content_item: @content_item %>
+    <%= render 'shared/metadata', content_item: @content_item %>
+    <%= render 'shared/history_notice', content_item: @content_item %>
+    <%= render 'shared/description', description: @content_item.description %>
+    <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+
+    <% if @content_item.body.present? %>
+      <%= render 'govuk_component/govspeak',
+                 content: @content_item.body,
+                 direction: page_text_direction %>
+    <% end %>
+    <% @content_item.groups.each do |group| %>
+      <%= @content_item.group_heading(group) %>
+      <% if group["body"].present? %>
+        <%= render 'govuk_component/govspeak',
+                   content: group["body"],
+                   direction: page_text_direction %>
+      <% end %>
+      <ol class="group-document-list">
+        <% @content_item.group_document_links(group).each do |link| %>
+          <li class="group-document-list-item">
+            <h3 class="group-document-list-item-title">
+              <%= link_to(link[:title], link[:base_path]) %>
+            </h3>
+            <ul class="group-document-list-item-attributes">
+              <li>
+                <time datetime="<%= link[:public_updated_at].iso8601 %>">
+                  <%= l(link[:public_updated_at], format: :short_ordinal) %>
+                </time>
+              </li>
+              <li><%= t("content_item.format.#{link[:document_type]}", count: 1) %></li>
+            </ul>
+          </li>
+        <% end %>
+      </ol>
+    <% end %>
+  </div>
+
+  <div class="column-third">
+    <% if @content_item.contents.any? %>
+      <div data-sticky-element class="sticky-element">
+        <a class="back-to-content" href="#contents"><%= t("content_item.contents") %></a>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'shared/footer', @content_item.document_footer %>
