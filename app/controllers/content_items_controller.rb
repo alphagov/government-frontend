@@ -41,8 +41,8 @@ private
   end
 
   def set_up_education_navigation_ab_testing
-    @education_navigation_ab_test = EducationNavigationAbTestRequest.new(request)
-    return unless @education_navigation_ab_test.content_schema_has_new_navigation?(@content_item.content_item)
+    @education_navigation_ab_test = EducationNavigationAbTestRequest.new(request, @content_item.content_item)
+    return unless @education_navigation_ab_test.ab_test_applies?
 
     @education_navigation_ab_test.set_response_vary_header response
 
@@ -52,7 +52,7 @@ private
     # will attempt to load _breadcrumbs.html+new_navigation.erb instead. If such a file does not exist, then it falls
     # back to _breadcrumbs.html.erb.
     # See: http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
-    request.variant = :new_navigation if @education_navigation_ab_test.should_present_new_navigation_view?(@content_item.content_item)
+    request.variant = :new_navigation if @education_navigation_ab_test.should_present_new_navigation_view?
   end
 
   def with_locale

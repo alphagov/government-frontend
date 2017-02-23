@@ -137,15 +137,15 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     content_store_has_item(content_item['base_path'], content_item)
 
-    with_variant EducationNavigation: "A" do
-      get :show, params: { path: path_for(content_item) }
-      assert_equal [], @request.variant
-    end
+    setup_ab_variant('EducationNavigation', 'A')
+    get :show, params: { path: path_for(content_item) }
+    assert_equal [], @request.variant
+    assert_unaffected_by_ab_test
 
-    with_variant EducationNavigation: "B" do
-      get :show, params: { path: path_for(content_item) }
-      assert_equal [], @request.variant
-    end
+    setup_ab_variant('EducationNavigation', 'B')
+    get :show, params: { path: path_for(content_item) }
+    assert_equal [], @request.variant
+    assert_unaffected_by_ab_test
   end
 
   test "Case Studies are not included in the AB Test" do
