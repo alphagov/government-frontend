@@ -128,6 +128,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "returns 406 for schema types which don't support provided format" do
+    content_item_without_atom = content_store_has_schema_example('case_study', 'case_study')
+    get :show, params: { path: path_for(content_item_without_atom), format: 'atom' }
+
+    assert_response :not_acceptable
+  end
+
   test "defaults to 'A' view without AB Testing cookie for Detailed Guides" do
     content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
     path = 'government/abtest/detailed-guide'
