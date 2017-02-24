@@ -4,12 +4,18 @@
   }
 
   .part-navigation-container {
-    @include responsive-bottom-margin;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    @include media(tablet) {
+      margin-bottom: $gutter * 1.5;
+    }
+
     border-bottom: 1px solid $grey-2;
   }
 
   .part-navigation {
-    @include responsive-bottom-margin;
+    margin-bottom: $gutter * 1.5;
     @include core-19;
 
     @include media(tablet) {
@@ -72,12 +78,13 @@
     margin-bottom: $gutter-half;
 
     @include media(tablet) {
-      margin-bottom: $gutter;
+      margin-bottom: $gutter-two-thirds;
     }
   }
 
   .map {
-    @include responsive-bottom-margin;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
 
     img {
       max-width: 100%;
