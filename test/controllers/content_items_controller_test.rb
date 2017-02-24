@@ -12,11 +12,46 @@ class ContentItemsControllerTest < ActionController::TestCase
     ENV['ENABLE_NEW_NAVIGATION'] = nil
   end
 
-  test "routing handles translated content paths" do
-    translated_path = 'government/case-studies/allez.fr'
+  test 'routing handles paths with no format or locale' do
+    assert_routing(
+      '/government/news/statement-the-status-of-eu-nationals-in-the-uk',
+      controller: 'content_items',
+      action: 'show',
+      path: 'government/news/statement-the-status-of-eu-nationals-in-the-uk',
+    )
+  end
 
-    assert_routing({ path: translated_path, method: :get },
-      controller: 'content_items', action: 'show', path: translated_path)
+  test 'routing handles paths for all supported locales' do
+    I18n.available_locales.each do |locale|
+      assert_routing(
+        "/government/news/statement-the-status-of-eu-nationals-in-the-uk.#{locale}",
+        controller: 'content_items',
+        action: 'show',
+        path: 'government/news/statement-the-status-of-eu-nationals-in-the-uk',
+        locale: locale.to_s
+      )
+    end
+  end
+
+  test 'routing handles paths with just format' do
+    assert_routing(
+      '/government/news/statement-the-status-of-eu-nationals-in-the-uk.atom',
+      controller: 'content_items',
+      action: 'show',
+      path: 'government/news/statement-the-status-of-eu-nationals-in-the-uk',
+      format: 'atom',
+    )
+  end
+
+  test 'routing handles paths with format and locale' do
+    assert_routing(
+      '/government/news/statement-the-status-of-eu-nationals-in-the-uk.es.atom',
+      controller: 'content_items',
+      action: 'show',
+      path: 'government/news/statement-the-status-of-eu-nationals-in-the-uk',
+      format: 'atom',
+      locale: 'es'
+    )
   end
 
   test "gets item from content store" do
@@ -47,9 +82,10 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "renders translated content items in their locale" do
     content_item = content_store_has_schema_example('case_study', 'translated')
-    translated_format_name = I18n.t("content_item.format.case_study", count: 1, locale: 'es')
+    locale = content_item['locale']
+    translated_format_name = I18n.t("content_item.format.case_study", count: 1, locale: locale)
 
-    get :show, params: { path: path_for(content_item) }
+    get :show, params: { path: path_for(content_item, locale), locale: locale }
 
     assert_response :success
     assert_select "title", %r(#{translated_format_name})
@@ -172,8 +208,10 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response_not_modified_for_ab_test
   end
 
-  def path_for(content_item)
-    content_item['base_path'].sub(/^\//, '')
+  def path_for(content_item, locale = nil)
+    base_path = content_item['base_path'].sub(/^\//, '')
+    base_path.gsub!(/\.#{locale}$/, '') if locale
+    base_path
   end
 
   def taxonomy_sidebar

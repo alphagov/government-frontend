@@ -69,7 +69,12 @@ private
   end
 
   def content_item_path
-    '/' + URI.encode(params[:path])
+    path_and_optional_locale = params
+                                 .values_at(:path, :locale)
+                                 .compact
+                                 .join('.')
+
+    '/' + URI.encode(path_and_optional_locale)
   end
 
   def content_store
