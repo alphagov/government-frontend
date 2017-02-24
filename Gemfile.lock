@@ -89,6 +89,7 @@ GEM
       sass (>= 3.2.0)
     govuk_navigation_helpers (3.0.0)
       gds-api-adapters (~> 40.1)
+    htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -260,6 +261,7 @@ DEPENDENCIES
   govuk_ab_testing (= 1.0.1)
   govuk_frontend_toolkit (= 5.1.0)
   govuk_navigation_helpers (~> 3.0)
+  htmlentities (= 4.3.4)
   jasmine-rails (~> 0.14.0)
   logstasher (= 0.6.1)
   mocha

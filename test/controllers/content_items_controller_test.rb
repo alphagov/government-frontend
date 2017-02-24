@@ -91,6 +91,14 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_select "title", %r(#{translated_format_name})
   end
 
+  test "renders atom feeds" do
+    content_item = content_store_has_schema_example('travel_advice', 'full-country')
+    get :show, params: { path: path_for(content_item), format: 'atom' }
+
+    assert_response :success
+    assert_select "feed title", 'Travel Advice Summary'
+  end
+
   test "gets item from content store even when url contains multi-byte UTF8 character" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
     utf8_path    = "government/case-studies/caf\u00e9-culture"

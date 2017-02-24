@@ -175,6 +175,12 @@ class TravelAdvicePresenterTest
       assert_equal nil, presented.map_download_url
     end
 
+    test "formats change description for an atom feed" do
+      example = schema_item("full-country")
+      example['details']['change_description'] = 'Test<br>XML'
+      assert_equal "<p>Test&lt;br&gt;XML</p>", present_example(example).atom_change_description
+    end
+
   private
 
     def present_latest(latest)
