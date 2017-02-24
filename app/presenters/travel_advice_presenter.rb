@@ -116,7 +116,7 @@ private
 
   def summary_part
     {
-      "title" => "Summary",
+      "title" => "Current travel advice",
       "body" => content_item["details"]["summary"]
     }
   end

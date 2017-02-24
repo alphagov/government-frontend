@@ -25,7 +25,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
   test "travel advice summary has latest updates and map" do
     setup_and_visit_content_item('full-country')
 
-    assert page.has_css?("h1", text: "Summary")
+    assert page.has_css?("h1", text: "Current travel advice")
     assert_has_component_govspeak(@content_item["details"]["summary"])
 
     assert_has_component_metadata_pair("Still current at", Date.today.strftime("%-d %B %Y"))

@@ -22,7 +22,7 @@ class TravelAdvicePresenterTest
 
       assert presented.is_summary?
       assert presented.has_valid_part?
-      assert_equal 'Summary', presented.current_part_title
+      assert_equal 'Current travel advice', presented.current_part_title
       assert_equal example['details']['summary'], presented.current_part_body
     end
 
