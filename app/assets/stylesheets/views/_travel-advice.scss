@@ -1,0 +1,129 @@
+.travel-advice {
+  .add-title-margin {
+    @include responsive-top-margin;
+  }
+
+  .part-navigation-container {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    @include media(tablet) {
+      margin-bottom: $gutter * 1.5;
+    }
+
+    border-bottom: 1px solid $grey-2;
+  }
+
+  .part-navigation {
+    margin-bottom: $gutter * 1.5;
+    @include core-19;
+
+    @include media(tablet) {
+      @include core-16;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0.75em;
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .subscriptions {
+    @include bold-19;
+
+    ul {
+      list-style: none;
+      margin-left: -$gutter-half / 2;
+      margin-right: -$gutter-half / 2;
+    }
+
+    li {
+      display: inline-block;
+      margin-left: $gutter-half / 2;
+      margin-right: $gutter-half / 2;
+      margin-bottom: $gutter / 2;
+    }
+
+    a {
+      text-decoration: none;
+      padding-left: 28px;
+      background-repeat: no-repeat;
+      background-position: 0 20%;
+
+      @include media(tablet) {
+        background-position: 0 35%;
+      }
+    }
+
+    .feed {
+      background-image: image-url("feed-icon-black.png");
+    }
+
+    .email-alerts {
+      background-image: image-url("mail-icon.png");
+
+      @include device-pixel-ratio() {
+        background-image: image-url("mail-icon-x2.png");
+        background-size: 20px 14px;
+      }
+    }
+  }
+
+  .part-title {
+    @include bold-27;
+    margin-bottom: $gutter-half;
+
+    @include media(tablet) {
+      margin-bottom: $gutter-two-thirds;
+    }
+  }
+
+  .map {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+
+    img {
+      max-width: 100%;
+    }
+
+    .map-download {
+      margin-top: $gutter-half;
+
+      @include media(tablet) {
+        margin-top: $gutter;
+      }
+
+      a {
+        display: block;
+        @include bold-19;
+        min-height: 2.5em;
+        padding-left: 2.5em;
+        background: image-url("icon-file-download.png") no-repeat scroll 0 0;
+
+        @include device-pixel-ratio() {
+          background-image: image-url("icon-file-download-2x.png");
+          background-size: 25px 25px;
+        }
+      }
+    }
+  }
+
+  .print-link {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    a {
+      background: image-url("icon-print.png") no-repeat 0 50%;
+      padding: 0.5em 0 0.5em 28px;
+
+      @include device-pixel-ratio() {
+        background-image: image-url("icon-print-2x.png");
+        background-size: 16px 18px;
+      }
+    }
+  }
+}

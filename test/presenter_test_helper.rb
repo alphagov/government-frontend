@@ -12,8 +12,12 @@ class PresenterTestCase < ActiveSupport::TestCase
 private
 
   def presented_item(type = format_name, overrides = {})
-    schema_example_content_item = schema_item(type)
-    "#{format_name.classify}Presenter".safe_constantize.new(schema_example_content_item.merge(overrides))
+    example = schema_item(type)
+    present_example(example.merge(overrides))
+  end
+
+  def present_example(example)
+    "#{format_name.classify}Presenter".safe_constantize.new(example)
   end
 
   def schema_item(type = format_name)
