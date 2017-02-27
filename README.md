@@ -68,6 +68,11 @@ Or to specify the location explicitly:
 
 `GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
 
+#### Debugging Integration tests
+If you want to see the page that is being tested in our integration tests, you can use
+`save_and_open_page` to see what's rendered. This is helpful when a page is mostly comprised of
+GOV.UK Publishing Components
+
 ### Visual regression tests
 
 Use [Wraith](http://bbc-news.github.io/wraith/) ("A responsive screenshot
