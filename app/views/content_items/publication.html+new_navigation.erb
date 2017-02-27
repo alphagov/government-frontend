@@ -36,6 +36,10 @@
                  direction: page_text_direction %>
     </div>
   </div>
+
+  <div class="column-third">
+    <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
+  </div>
 </div>
 
 <%= render 'shared/footer', @content_item.document_footer %>

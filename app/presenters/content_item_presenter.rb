@@ -38,6 +38,10 @@ class ContentItemPresenter
     @nav_helper.taxon_breadcrumbs[:breadcrumbs]
   end
 
+  def taxonomy_sidebar
+    @nav_helper.taxonomy_sidebar
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")

@@ -89,18 +89,19 @@ class ContentItemsControllerTest < ActionController::TestCase
     path = 'government/abtest/detailed-guide'
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {
-        'taxons' => [
-            {
-                'title' => 'A Taxon',
-                'base_path' => '/a-taxon',
-            }
-        ]
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/a-taxon',
+        }
+      ]
     }
 
     content_store_has_item(content_item['base_path'], content_item)
 
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
+    refute_match(/A Taxon/, taxonomy_sidebar)
   end
 
   test "honours Education Navigation AB Testing cookie for Detailed Guides" do
@@ -108,12 +109,12 @@ class ContentItemsControllerTest < ActionController::TestCase
     path = 'government/abtest/detailed-guide'
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {
-        'taxons' => [
-            {
-                'title' => 'A Taxon',
-                'base_path' => '/a-taxon',
-            }
-        ]
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/a-taxon',
+        }
+      ]
     }
 
     content_store_has_item(content_item['base_path'], content_item)
@@ -126,6 +127,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     with_variant EducationNavigation: "B" do
       get :show, params: { path: path_for(content_item) }
       assert_equal [:new_navigation], @request.variant
+      assert_match(/A Taxon/, taxonomy_sidebar)
     end
   end
 
@@ -140,11 +142,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     setup_ab_variant('EducationNavigation', 'A')
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
+    refute_match(/A Taxon/, taxonomy_sidebar)
     assert_unaffected_by_ab_test
 
     setup_ab_variant('EducationNavigation', 'B')
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
+    refute_match(/A Taxon/, taxonomy_sidebar)
     assert_unaffected_by_ab_test
   end
 
@@ -165,10 +169,15 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
+    refute_match(/A Taxon/, taxonomy_sidebar)
     assert_unaffected_by_ab_test
   end
 
   def path_for(content_item)
     content_item['base_path'].sub(/^\//, '')
+  end
+
+  def taxonomy_sidebar
+    Nokogiri::HTML.parse(response.body).at_css(".column-third")
   end
 end

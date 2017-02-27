@@ -3,6 +3,7 @@
   @include sidebar-with-body;
   @include history-notice;
   @include withdrawal-notice;
+  @include taxonomy-sidebar;
 
   .group-title {
     @include bold-27;
