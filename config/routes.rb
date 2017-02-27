@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
-  get '*path/:format' => 'content_items#show',
+  get '*path/:variant' => 'content_items#show',
       constraints: {
-        format: /print/
+        variant: /print/
       }
 
   # FIXME: Update when https://trello.com/c/w8HN3M4A/ is ready

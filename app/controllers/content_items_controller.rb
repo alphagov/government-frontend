@@ -34,6 +34,8 @@ private
   end
 
   def render_template
+    request.variant = :print if params[:variant] == "print"
+
     with_locale do
       render content_item_template
     end
