@@ -41,8 +41,7 @@ class ContactTest < ActionDispatch::IntegrationTest
     end
   end
 
-
-  test "post are rendered" do
+  test "posts are rendered" do
     setup_and_visit_content_item('contact')
     within_component_govspeak do |component_args|
       content = component_args.fetch("content")
