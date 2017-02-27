@@ -54,6 +54,16 @@ class ContentItemsControllerTest < ActionController::TestCase
     )
   end
 
+  test 'routing handles paths with print format' do
+    assert_routing(
+      '/government/news/statement-the-status-of-eu-nationals-in-the-uk/print',
+      controller: 'content_items',
+      action: 'show',
+      path: 'government/news/statement-the-status-of-eu-nationals-in-the-uk',
+      format: 'print'
+    )
+  end
+
   test "gets item from content store" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
