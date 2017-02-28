@@ -17,6 +17,15 @@
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "phantomjs"
 
+# Use TLS v1 when requesting https://www.gov.uk/… from within the VM
+# Ignore SSL errors when accessing staging
+# Stops "Error with page" problems
+#
+# PhantomJS depends on the system OpenSSL library.
+# http://phantomjs.org/api/command-line.html
+# Default is SSLv3
+phantomjs_options: --ignore-ssl-errors=true --ssl-protocol=tlsv1
+
 # (required) The domain to take screenshots of.
 domains:
   production: "https://www.gov.uk"
