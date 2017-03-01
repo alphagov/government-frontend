@@ -1,6 +1,6 @@
 module Updatable
   def published
-    display_date(content_item["details"]["first_public_at"])
+    display_date(first_public_at)
   end
 
   def updated
@@ -9,9 +9,14 @@ module Updatable
 
   def history
     return [] unless any_updates?
-    return [] unless content_item["details"]["change_history"].present?
+    reverse_chronological_change_history
+  end
 
-    content_item["details"]["change_history"].map do |item|
+private
+
+  def change_history
+    changes = content_item["details"]["change_history"] || []
+    changes.map do |item|
       {
         display_time: display_date(item["public_timestamp"]),
         note: item["note"],
@@ -20,13 +25,21 @@ module Updatable
     end
   end
 
-private
+  # The direction of change history isn’t guaranteed
+  # https://github.com/alphagov/govuk-content-schemas/issues/545
+  def reverse_chronological_change_history
+    change_history.sort_by { |item| DateTime.parse(item[:timestamp]) }.reverse
+  end
 
   def any_updates?
-    if (first_public_at = content_item["details"]["first_public_at"]).present?
+    if first_public_at.present?
       DateTime.parse(content_item["public_updated_at"]) != DateTime.parse(first_public_at)
     else
       false
     end
+  end
+
+  def first_public_at
+    content_item["details"]["first_public_at"]
   end
 end

@@ -36,7 +36,7 @@ class UpdatableTest < ActiveSupport::TestCase
             'change_history' => [
               {
                 'note' => 'notes',
-                'public_timestamp' => 'timestamp',
+                'public_timestamp' => '2016-02-29T09:24:10.000+00:00',
               }
             ]
           }
@@ -47,9 +47,44 @@ class UpdatableTest < ActiveSupport::TestCase
     assert_equal @updatable.history,
                  [
                    {
-                     display_time: 'timestamp',
+                     display_time: '2016-02-29T09:24:10.000+00:00',
                      note: 'notes',
-                     timestamp: 'timestamp' }
+                     timestamp: '2016-02-29T09:24:10.000+00:00' }
                  ]
+  end
+
+  test '#history returns a reverse chronologically sorted array of hashes when there is change history' do
+    class << @updatable
+      def any_updates?
+        true
+      end
+
+      def display_date(date)
+        date
+      end
+
+      def content_item
+        {
+          'details' => {
+            'change_history' => [
+              {
+                'note' => 'first',
+                'public_timestamp' => '2001-01-01',
+              },
+              {
+                'note' => 'third',
+                'public_timestamp' => '2003-03-03',
+              },
+              {
+                'note' => 'second',
+                'public_timestamp' => '2002-02-02',
+              }
+            ]
+          }
+        }
+      end
+    end
+
+    assert_equal @updatable.history.map { |i| i[:timestamp] }, ['2003-03-03', '2002-02-02', '2001-01-01']
   end
 end
