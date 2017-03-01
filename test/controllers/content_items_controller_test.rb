@@ -121,12 +121,11 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     with_variant EducationNavigation: "A" do
       get :show, params: { path: path_for(content_item) }
-      assert_equal [], @request.variant
+      refute_match(/A Taxon/, taxonomy_sidebar)
     end
 
     with_variant EducationNavigation: "B" do
       get :show, params: { path: path_for(content_item) }
-      assert_equal [:new_navigation], @request.variant
       assert_match(/A Taxon/, taxonomy_sidebar)
     end
   end
@@ -143,13 +142,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_unaffected_by_ab_test
+    assert_response_not_modified_for_ab_test
 
     setup_ab_variant('EducationNavigation', 'B')
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_unaffected_by_ab_test
+    assert_response_not_modified_for_ab_test
   end
 
   test "Case Studies are not included in the AB Test" do
@@ -170,7 +169,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_unaffected_by_ab_test
+    assert_response_not_modified_for_ab_test
   end
 
   def path_for(content_item)
