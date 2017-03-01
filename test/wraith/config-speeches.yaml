@@ -1,0 +1,162 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'history' mode, which is best suited to
+# making sure your site's appearance remains consistent over
+# time.
+#
+# `wraith history history.yaml` # generate base screenshots
+# `wraith latest history.yaml`  # take new shots and compare
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# (required) The domain to take screenshots of.
+domains:
+  production: "https://www.gov.uk"
+  local: "http://government-frontend.dev.gov.uk"
+
+# (required) The paths to capture.
+paths:
+  speech_1: '/government/speeches/we-have-voted-to-leave-the-eu-but-not-europe-article-by-theresa-may'
+  speech_2: '/government/speeches/nick-gibb-the-importance-of-an-evidence-informed-profession'
+  speech_3: '/government/speeches/justine-greening-teachers-the-experts-driving-social-mobility'
+  speech_4: '/government/speeches/final-local-government-finance-settlement-2017-to-2018'
+  speech_5: '/government/speeches/the-governments-negotiating-objectives-for-exiting-the-eu-pm-speech'
+  speech_6: '/government/speeches/a-speech-on-criminal-justice-reform-by-the-secretary-of-state-for-justice'
+  speech_7: '/government/speeches/environment-secretary-speaks-at-nfu-conference'
+  speech_8: '/government/speeches/housing-white-paper-statement'
+  speech_9: '/government/speeches/minister-duncan-statement-on-us-state-visit-petitions'
+  speech_10: '/government/speeches/cpre-annual-lecture'
+  speech_11: '/government/speeches/big-data-in-government-the-challenges-and-opportunities'
+  speech_12: '/government/speeches/nhs-dental-charges-from-april-2016'
+  speecg_13: '/government/speeches/mental-health-and-nhs-performance'
+  speech_14: '/government/speeches/chancellors-speech-at-the-national-cyber-security-centre-opening'
+  speech_15: '/government/speeches/fire-ministers-speech-to-reform'
+  speech_16: '/government/speeches/the-world-is-sleepwalking-towards-catastrophic-famine-britain-will-help-prevent-this'
+  speech_17: '/government/speeches/funding-for-smart-parking-and-traffic-management-schemes'
+  speech_18: '/government/speeches/speech-on-families-and-relationships'
+  speech_19: '/government/speeches/nick-gibb-the-importance-of-high-quality-arts-education'
+  speech_20: '/government/speeches/the-shared-society-prime-ministers-speech-at-the-charity-commission-annual-meeting'
+  speech_21: '/government/speeches/the-purpose-of-education'
+  speech_22: '/government/speeches/pm-press-conference-with-italian-prime-minister-gentiloni-9-february-2017'
+  speech_23: '/government/speeches/creating-a-modern-nursing-workforce'
+  speech_24: '/government/speeches/nick-gibb-the-evidence-in-favour-of-teacher-led-instruction'
+  speech_25: '/government/speeches/coping-with-russia'
+  speech_26: '/government/speeches/agricultural-tractor-and-trailer-weight-and-speed-limit-regulations'
+  speech_27: '/government/speeches/nhs-charges-from-april-2016'
+  speech_28: '/government/speeches/statement-from-the-new-prime-minister-theresa-may'
+  speech_29: '/government/speeches/the-uk-post-brexit-a-stronger-and-even-closer-ally-to-latvia'
+  speech_30: '/government/speeches/david-davis-estonia-and-the-uk-will-remain-close-partners-after-brexit'
+  speech_31: '/government/speeches/provisional-local-government-finance-settlement-2017-to-2018'
+  speech_32: '/government/speeches/what-makes-a-good-leader'
+  speech_33: '/government/speeches/the-importance-of-the-curriculum'
+  speech_34: '/government/speeches/animal-research-then-and-now'
+  speech_35: '/government/speeches/autumn-statement-2016-philip-hammonds-speech'
+  speech_36: '/government/speeches/justine-greening-education-at-the-core-of-social-mobility'
+  speech_37: '/government/speeches/school-revenue-funding-settlement-for-2017-to-2018'
+  speech_38: '/government/speeches/review-of-health-and-care-data-security-and-consent'
+  speech_39: '/government/speeches/the-issuing-withdrawal-or-refusal-of-passports'
+  speech_40: '/government/speeches/eu-speech-at-bloomberg'
+  speech_41: '/government/speeches/planning-update-march-2015'
+  speech_42: '/government/speeches/mental-health-problems-are-everyones-problem-article-by-theresa-may'
+  speech_43: '/government/speeches/pm-press-conference-with-us-president-donald-trump-27-january-2017'
+  speech_44: '/government/speeches/to-govern-is-to-serve-chris-skidmore-on-countering-fraud-in-government'
+  speech_45: '/government/speeches/building-a-strong-new-partnership-with-lithuania'
+  speech_46: '/government/speeches/exiting-the-european-union-ministerial-statement-2-february-2017'
+  speech_47: '/government/speeches/queens-speech-2016'
+  speech_48: '/government/speeches/historic-vehicles-mot-exemption-review'
+  speech_49: '/government/speeches/prime-ministers-speech-to-the-republican-party-conference-2017'
+  speech_50: '/government/speeches/britain-the-great-meritocracy-prime-ministers-speech'
+  speech_51: '/government/speeches/fire-service-reform-must-go-further-and-faster-article-by-brandon-lewis'
+  speech_52: '/government/speeches/speech-to-the-school-games-conference'
+  speech_53: '/government/speeches/defeating-modern-slavery-theresa-may-article'
+  speech_54: '/government/speeches/pm-statement-on-european-council-6-february-2017'
+  speech_55: '/government/speeches/robert-halfon-careers-speech-at-westminster-academy'
+  speech_56: '/government/speeches/social-care-monthly-commentary-january-2017'
+  speech_57: '/government/speeches/this-council-has-a-responsibility-to-sustain-the-peace-won-in-europe-seven-decades-ago'
+  speech_58: '/government/speeches/davos-2017-prime-ministers-speech-to-the-world-economic-forum'
+  speech_59: '/government/speeches/statement-in-debate-on-the-local-government-finance-settlement'
+  speech_60: '/government/speeches/mark-garnier-speech-to-the-british-chamber-of-commerce-in-mexico'
+  speech_61: '/government/speeches/empowering-women-and-girls-around-the-world'
+  speech_62: '/government/speeches/international-womens-day-address-women-peace-and-security'
+  speech_63: '/government/speeches/the-power-of-education'
+  speech_64: '/government/speeches/prison-reform-prime-ministers-speech'
+  speech_65: '/government/speeches/this-is-beyond-doubt-a-critical-time-for-gender-equality'
+  speech_66: '/government/speeches/primary-education'
+  speech_67: '/government/speeches/government-at-your-service-ben-gummer-speech'
+  speech_68: '/government/speeches/minister-harriett-baldwins-address-to-the-make-in-india-conference'
+  speech_69: '/government/speeches/final-local-government-finance-settlement-2016-to-2017'
+  speech_70: '/government/speeches/home-secretarys-speech-on-the-uk-eu-and-our-place-in-the-world'
+  speech_71: '/government/speeches/prisons-and-probation'
+  speech_72: '/government/speeches/airport-capacity-and-airspace-policy'
+  speech_73: '/government/speeches/environment-secretary-sets-out-ambition-for-food-and-farming-industry'
+  speech_74: '/government/speeches/workshop-on-climate-risk-management-strategies-for-kolkata'
+  speech_75: '/government/speeches/british-high-commissioner-welcomes-returning-zambian-chevening-scholars'
+  speech_76: '/government/speeches/prime-ministers-speech-on-europe'
+  speech_77: '/government/speeches/michael-gove-speaks-about-the-importance-of-teaching'
+  speech_78: '/government/speeches/prime-ministers-speech-on-life-chances'
+  speech_79: '/government/speeches/the-role-of-magistrates'
+  speech_80: '/government/speeches/chancellor-speech-launching-the-national-cyber-security-strategy'
+  speech_81: '/government/speeches/the-ethnic-diversity-of-uk-boards-launch-of-the-parker-review'
+  speech_82: '/government/speeches/night-flights-consultation-2017'
+  speech_83: '/government/speeches/high-speed-two-update'
+  speech_84: '/government/speeches/a-definition-of-antisemitism'
+  speech_85: '/government/speeches/estate-regeneration-article-by-david-cameron'
+  speech_86: '/government/speeches/maths-and-english-provision-in-post-16-education'
+  speech_87: '/government/speeches/cbi-annual-conference-2016-prime-ministers-speech'
+  speech_88: '/government/speeches/commercial-spaceflight'
+  speech_89: '/government/speeches/prison-reform-justice-secretary-speech'
+  speech_90: '/government/speeches/pms-speech-at-munich-security-conference'
+  speech_91: '/government/speeches/care-bill-becomes-care-act-2014'
+  speech_92: '/government/speeches/safeguarding-unaccompanied-asylum-seeking-and-refugee-children'
+  speech_93: '/government/speeches/fixed-penalty-levels-for-motoring-offences'
+  speech_94: '/government/speeches/crime-and-justice-speech'
+  speech_95: '/government/speeches/budget-2016-george-osbornes-speech'
+  speech_96: '/government/speeches/eu-referendum-outcome-pm-statement-24-june-2016'
+  speech_97: '/government/speeches/food-matters'
+  speech_98: '/government/speeches/beyond-brexit-a-global-britain'
+  speech_99: '/government/speeches/role-of-media-in-society'
+  speech_100: '/government/speeches/hmcis-monthly-commentary-june-2016'
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+  - 320x5000
+  - 600x4000
+  - 1080x3000
+
+# (optional) Resize to each screen width (efficient), or reload at each screen width (costly). Default: 'reload'
+resize_or_reload: 'resize'
+
+# (required) The directory that your latest screenshots will be stored in
+directory: 'shots'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first
+
+# (optional) Choose to run Wraith in verbose mode, for easier debugging. Default: false
+verbose: true
+
+phantomjs_options: --ssl-protocol=tlsv1
