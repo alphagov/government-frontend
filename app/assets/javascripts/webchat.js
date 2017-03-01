@@ -1,5 +1,5 @@
 /* eslint-disable */
-//= require ./modules/webchat.js
+//= require ./legacy-modules/webchat.js
 /*eslint-enable */
 
 var $ = window.$
