@@ -40,5 +40,7 @@
         <a class="back-to-content" href="#contents"><%= t("content_item.contents") %></a>
       </div>
     <% end %>
+
+    <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
   </div>
 </div>

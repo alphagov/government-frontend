@@ -45,18 +45,23 @@ private
   end
 
   def set_up_education_navigation_ab_testing
-    @education_navigation_ab_test = EducationNavigationAbTestRequest.new(request, @content_item.content_item)
+    @education_navigation_ab_test = EducationNavigationAbTestRequest.new(
+      request, @content_item.content_item
+    )
     return unless @education_navigation_ab_test.ab_test_applies?
 
     @education_navigation_ab_test.set_response_vary_header response
 
-    # Setting a variant on a request is a type of Rails Dark Magic that will use a convention to automagically load
-    # an alternative partial/view/layout.
-    # For example, if I set a variant of :new_navigation and we render a partial called _breadcrumbs.html.erb then Rails
-    # will attempt to load _breadcrumbs.html+new_navigation.erb instead. If such a file does not exist, then it falls
-    # back to _breadcrumbs.html.erb.
-    # See: http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
-    request.variant = :new_navigation if @education_navigation_ab_test.should_present_new_navigation_view?
+    # Setting a variant on a request is a type of Rails Dark Magic that will
+    # use a convention to automagically load an alternative partial, view or
+    # layout.  For example, if I set a variant of :new_navigation and we render
+    # a partial called _breadcrumbs.html.erb then Rails will attempt to load
+    # _breadcrumbs.html+new_navigation.erb instead. If this file doesn't exist,
+    # then it falls back to _breadcrumbs.html.erb.  See:
+    # http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
+    if @education_navigation_ab_test.should_present_new_navigation_view?
+      request.variant = :new_navigation
+    end
   end
 
   def with_locale
