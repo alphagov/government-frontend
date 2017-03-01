@@ -20,6 +20,54 @@ class UpdatableTest < ActiveSupport::TestCase
     assert_empty @updatable.history
   end
 
+  test '#history returns updates when first_public_at does not match public_updated_at' do
+    class << @updatable
+      def content_item
+        {
+          'public_updated_at' => '2002-02-02',
+          'details' => {
+            'first_public_at' => '2001-01-01',
+            'change_history' => [
+              {
+                'note' => 'note',
+                'public_timestamp' => '2002-02-02'
+              }
+            ]
+          }
+        }
+      end
+
+      def display_date(date)
+        date
+      end
+    end
+
+    assert @updatable.history.any?
+    assert_equal @updatable.updated, '2002-02-02'
+  end
+
+  test '#history returns no updates when first_public_at matches public_updated_at' do
+    class << @updatable
+      def content_item
+        {
+          'public_updated_at' => '2002-02-02',
+          'details' => {
+            'first_public_at' => '2002-02-02',
+            'change_history' => [
+              {
+                'note' => 'note',
+                'public_timestamp' => '2002-02-02'
+              }
+            ]
+          }
+        }
+      end
+    end
+
+    assert @updatable.history.empty?
+    refute @updatable.updated
+  end
+
   test '#history returns an array of hashes when there is change history' do
     class << @updatable
       def any_updates?
