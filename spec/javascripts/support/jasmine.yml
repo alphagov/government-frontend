@@ -19,7 +19,6 @@ css_dir: "app/assets/stylesheets"
 src_files:
   - "../../../spec/javascripts/helpers/jquery-1.12.4.js"
   - "../../../spec/javascripts/helpers/jasmine-jquery-2.0.5.js"
-  - "../../../spec/javascripts/helpers/cookie-functions.js"
   - "application.js"
   - "webchat.js"
 
