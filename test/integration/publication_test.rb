@@ -4,6 +4,8 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "publication" do
     setup_and_visit_content_item('publication')
 
+    assert_has_component_government_navigation_active("publications")
+
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 

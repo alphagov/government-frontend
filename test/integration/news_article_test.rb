@@ -3,6 +3,7 @@ require 'test_helper'
 class NewsArticleTest < ActionDispatch::IntegrationTest
   test "news article renders title, description and body" do
     setup_and_visit_content_item("news_article")
+    assert_has_component_government_navigation_active("announcements")
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert_has_component_govspeak(@content_item["details"]["body"])

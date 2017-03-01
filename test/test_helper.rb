@@ -85,6 +85,10 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def assert_has_component_government_navigation_active(active)
+    assert_component_parameter("government_navigation", "active", active)
+  end
+
   def assert_has_contents_list(contents)
     assert page.has_css?(".dash-list"), "Failed to find an element with a class of dash-list"
     within ".dash-list" do
