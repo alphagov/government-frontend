@@ -65,11 +65,11 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     debug_inspector (0.0.2)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
-    gds-api-adapters (39.1.0)
+    gds-api-adapters (40.2.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -87,7 +87,8 @@ GEM
     govuk_frontend_toolkit (5.1.0)
       rails (>= 3.1.0)
       sass (>= 3.2.0)
-    govuk_navigation_helpers (2.4.0)
+    govuk_navigation_helpers (3.0.0)
+      gds-api-adapters (~> 40.1)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -114,7 +115,9 @@ GEM
       mime-types (>= 1.16, < 4)
     metaclass (0.0.4)
     method_source (0.8.2)
-    mime-types (2.99.2)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     mocha (1.1.0)
@@ -139,7 +142,7 @@ GEM
       byebug (~> 9.0)
       pry (~> 0.10)
     rack (2.0.1)
-    rack-cache (1.6.1)
+    rack-cache (1.7.0)
       rack (>= 0.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -180,7 +183,7 @@ GEM
     raindrops (0.17.0)
     rake (11.2.2)
     request_store (1.3.1)
-    rest-client (2.0.0)
+    rest-client (2.0.1)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
@@ -251,12 +254,12 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara
-  gds-api-adapters (= 39.1.0)
+  gds-api-adapters (~> 40.1)
   govuk-content-schema-test-helpers (= 1.1.0)
   govuk-lint
   govuk_ab_testing (= 0.1.4)
   govuk_frontend_toolkit (= 5.1.0)
-  govuk_navigation_helpers (~> 2.4.0)
+  govuk_navigation_helpers (~> 3.0)
   jasmine-rails (~> 0.14.0)
   logstasher (= 0.6.1)
   mocha
@@ -271,9 +274,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn (= 4.8)
   webmock (~> 1.18.0)
-
-RUBY VERSION
-   ruby 2.3.1p112
 
 BUNDLED WITH
    1.14.5
