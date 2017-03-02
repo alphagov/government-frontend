@@ -101,6 +101,18 @@ paths:
   working_group_8: '/government/groups/uk-national-screening-committee-uk-nsc'
   working_group_9: '/government/groups/uk-council-for-child-internet-safety-ukccis'
 
+  # Most visited WLNA (2nd March 2017)
+  world_location_news_article_1: /government/world-location-news/youth-mobility-scheme-2017-for-japanese-nationals.ja
+  world_location_news_article_2: /government/world-location-news/youth-mobility-scheme-2017-for-taiwanese-youth--2.zh-tw
+  world_location_news_article_3: /government/world-location-news/rear-admiral-simon-ancona-uk-acdsde-visit-to-thailand-13-14-october
+  world_location_news_article_4: /government/world-location-news/changes-for-settlement-visa-applications-submitted-in-pakistan
+  world_location_news_article_5: /government/world-location-news/264303.es
+  world_location_news_article_6: /government/world-location-news/applications-for-chevening-scholarships-open-3-august-in-thailand.th
+  world_location_news_article_7: /government/world-location-news/new-round-for-uk-bilateral-projects-programme-2017-2018-to-accept-bids-in-russia.ru
+  world_location_news_article_8: /government/world-location-news/youth-mobility-scheme-2017-for-taiwanese-youth--2
+  world_location_news_article_9: /government/world-location-news/changes-to-the-visa-service-in-russia--2
+  world_location_news_article_10: /government/world-location-news/changes-to-uk-visa-requirements-for-venezuelan-nationals.es-419
+
 # (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
 screen_widths:
   - 320x5000
