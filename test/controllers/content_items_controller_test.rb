@@ -172,6 +172,24 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response_not_modified_for_ab_test
   end
 
+  test "document collections are tracked as 'finding' pages" do
+    content_item = content_store_has_schema_example('document_collection', 'document_collection')
+
+    get :show, params: { path: path_for(content_item) }
+
+    assert_select "meta[name='govuk:user-journey-stage'][content='finding']", 1
+  end
+
+  test "content pages are tracked as the default user journey stage" do
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+
+    get :show, params: { path: path_for(content_item) }
+
+    # Assert that the meta tag is missing, which will be interpreted by the
+    # analytics code as the default value
+    assert_select "meta[name='govuk:user-journey-stage']", false
+  end
+
   def path_for(content_item)
     content_item['base_path'].sub(/^\//, '')
   end

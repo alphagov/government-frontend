@@ -13,6 +13,9 @@
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
+  <% if @content_item.user_journey_stage %>
+    <meta name="govuk:user-journey-stage" content="<%= @content_item.user_journey_stage %>" />
+  <% end %>
   <%= @education_navigation_ab_test.analytics_meta_tag.html_safe if @education_navigation_ab_test.ab_test_applies? %>
   <%= yield :extra_head_content %>
 </head>
