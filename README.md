@@ -29,6 +29,7 @@ Not all formats that this app can handle are rendered by it in production.
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
 | Unpublishing | | Rendered by Whitehall, might not be migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
+| World Location News Article | [View on GOV.UK](https://www.gov.uk/government/world-location-news/youth-mobility-scheme-2017-for-japanese-nationals.ja) | Migrated |
 
 ## Technical documentation
 
