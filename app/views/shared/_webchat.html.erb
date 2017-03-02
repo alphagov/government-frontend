@@ -1,0 +1,17 @@
+<span class="js-webchat">
+  <span class="js-webchat-advisers-error">
+    Webchat is unavailable at the moment because of technical problems.
+  </span>
+  <span class="js-webchat-advisers-unavailable hidden">
+    Webchat is closed at the moment.
+  </span>
+  <span class="js-webchat-advisers-busy hidden">
+    All webchat advisers are busy at the moment.
+  </span>
+  <span class="js-webchat-advisers-available hidden">
+    Advisers are available to chat.
+    <a href="#" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
+  </span>
+</span>
+<% # This is inline in the source however slimmer will optimize this. %>
+<%= javascript_include_tag "webchat" %>

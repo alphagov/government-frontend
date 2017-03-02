@@ -17,6 +17,7 @@ Not all formats that this app can handle are rendered by it in production.
 | Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |
 | Coming soon | | Rendered by Whitehall |
 | Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) | Migrated |
+| Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) | Currently rendered by Contacts frontend |
 | Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
 | Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated on live. Draft rendered by Whitehall. |
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
@@ -69,6 +70,11 @@ Or to specify the location explicitly:
 
 `GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
 
+#### Debugging Integration tests
+If you want to see the page that is being tested in our integration tests, you can use
+`save_and_open_page` to see what's rendered. This is helpful when a page is mostly comprised of
+GOV.UK Publishing Components
+
 ### Visual regression tests
 
 Use [Wraith](http://bbc-news.github.io/wraith/) ("A responsive screenshot
@@ -98,6 +104,8 @@ This will generate image diffs comparing the two runs, including a browsable
 gallery of the output, located at `test/wraith/shots/gallery.html`.
 
 #### Compare examples on master with examples on branch
+
+Examples are referencing https://github.com/alphagov/govuk-content-schemas
 
 With government-frontend running master on the development VM and while [pointing at the dummy content store](https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md), create a set of historical screenshots using:
 ```

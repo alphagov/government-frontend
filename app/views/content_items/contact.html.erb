@@ -1,0 +1,102 @@
+<%
+  content_for :title, @content_item.title
+  content_for :simple_header, true
+%>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
+
+    <% body = capture do %>
+      <% if @content_item.online_form_links.any? %>
+        <h2 id="online-forms-title">Online forms</h2>
+        <% @content_item.online_form_links.each do |link| %>
+          <p>
+            <%= link_to(link[:title], link[:url]) %>
+          </p>
+          <%= link[:description] %>
+        <% end %>
+        <%= @content_item.online_form_body %>
+      <% end %>
+
+      <% if @content_item.email.any? %>
+        <h2 id="email-title">Email</h2>
+        <% @content_item.email.each do |email_group| %>
+          <p class="vcard">
+            <% email_group[:v_card].each do |v_card_part| %>
+              <span class="<%= v_card_part[:v_card_class] %>">
+                <%= v_card_part[:value] %>
+              </span><br />
+            <% end %>
+            <%= mail_to email_group[:email], email_group[:email], class: 'email' %>
+          </p>
+
+          <%= email_group[:description] %>
+        <% end %>
+        <%= @content_item.email_body %>
+      <% end %>
+
+      <% if @content_item.show_webchat? %>
+        <h2 id="webchat-title">Webchat</h2>
+        <p><%= render 'shared/webchat' %></p>
+      <% end %>
+
+      <% if @content_item.phone.any? %>
+        <h2 id="phone-title">Phone</h2>
+        <% @content_item.phone.each do |phone_group| %>
+          <h3><%= phone_group[:title] %></h3>
+
+          <% if phone_group[:numbers].any? %>
+            <div class="contact">
+              <div class="content">
+                <% phone_group[:numbers].each do |number| %>
+                  <p><%= number[:label] %>:<br /><%= number[:number] %></p>
+                <% end%>
+              </div>
+            </div>
+          <% end %>
+
+          <%= phone_group[:description] %>
+
+          <% if phone_group[:opening_times].present? %>
+            <h4>Opening times</h4>
+            <%= phone_group[:opening_times] %>
+          <% end %>
+
+          <% if phone_group[:best_time_to_call].present? %>
+            <h4>Best time to call</h4>
+            <%= phone_group[:best_time_to_call] %>
+          <% end %>
+        <% end %>
+
+        <%= @content_item.phone_body %>
+
+        <p class="call-charges">
+          <%= link_to "Find out about call charges", "/call-charges" %>
+        </p>
+      <% end %>
+
+      <% if @content_item.post.any? %>
+        <h2 id="post-title">Post</h2>
+        <% @content_item.post.each do |post_group| %>
+          <%= post_group[:description] %>
+          <div class="contact vcard">
+            <p class="content">
+              <% post_group[:v_card].each do |v_card_part| %>
+                <span class="<%= v_card_part[:v_card_class] %>">
+                  <%= v_card_part[:value] %>
+                </span><br />
+              <% end %>
+            </p>
+          </div>
+        <% end %>
+        <%= @content_item.post_body %>
+      <% end %>
+    <% end %>
+
+    <%= render 'govuk_component/govspeak', content: body, rich_govspeak: true %>
+  </div>
+  <div class="column-one-third add-title-margin">
+    <%= render 'govuk_component/related_items', @content_item.related_items %>
+  </div>
+</div>

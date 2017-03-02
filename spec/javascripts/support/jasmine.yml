@@ -17,7 +17,10 @@ css_dir: "app/assets/stylesheets"
 # list of file expressions to include as source files
 # relative path from src_dir
 src_files:
-  - "application.{js.coffee,js,coffee}"
+  - "../../../spec/javascripts/helpers/jquery-1.12.4.js"
+  - "../../../spec/javascripts/helpers/jasmine-jquery-2.0.5.js"
+  - "application.js"
+  - "webchat.js"
 
 # list of file expressions to include as css files
 # relative path from css_dir
