@@ -21,13 +21,15 @@ Not all formats that this app can handle are rendered by it in production.
 | Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated on live. Draft rendered by Whitehall. |
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)| Migrated |
-| Publication | | Rendered by Whitehall |
+| News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) | Migrated |
+| Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) | Migrated on live. Draft rendered by Whitehall |
 | Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
 | Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) | Migrated |
 | Speech | | Rendered by Whitehall |
 | Take part | [View on GOV.UK](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) | Migrated |
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
 | Unpublishing | | Rendered by Whitehall, might not be migrated |
+| World Location News Article | [View on GOV.UK](https://www.gov.uk/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas) | Migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
 
 ## Technical documentation
