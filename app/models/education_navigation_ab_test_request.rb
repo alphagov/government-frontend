@@ -8,7 +8,7 @@ class EducationNavigationAbTestRequest
   def initialize(request, content_item)
     @content_item = content_item
     @ab_test = GovukAbTesting::AbTest.new("EducationNavigation", dimension: 41)
-    @requested_variant = @ab_test.requested_variant request
+    @requested_variant = @ab_test.requested_variant(request.headers)
   end
 
   def ab_test_applies?

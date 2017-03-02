@@ -10,6 +10,10 @@ require 'capybara/rails'
 require 'slimmer/test_helpers/govuk_components'
 require 'mocha/mini_test'
 
+GovukAbTesting.configure do |config|
+  config.acceptance_test_framework = :active_support
+end
+
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
   include Slimmer::TestHelpers::GovukComponents
