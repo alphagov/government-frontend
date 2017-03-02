@@ -42,6 +42,10 @@ class DocumentCollectionPresenter < ContentItemPresenter
     content_tag :h3, title, class: "group-title", id: group_title_id(title)
   end
 
+  def user_journey_stage
+    "finding"
+  end
+
 private
 
   def group_documents(group)
