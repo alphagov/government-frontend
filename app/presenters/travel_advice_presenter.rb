@@ -105,7 +105,7 @@ class TravelAdvicePresenter < ContentItemPresenter
   # Remove when alert status boxes no longer in travel advice publisher
   def alert_status
     alert_statuses = content_item["details"]["alert_status"] || []
-    alert_statuses.map! do |alert|
+    alert_statuses = alert_statuses.map do |alert|
       content_tag(:p, I18n.t("travel_advice.alert_status.#{alert}").html_safe)
     end
 
