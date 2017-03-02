@@ -99,6 +99,23 @@ paths:
   topical_event_about_page_8: '/government/topical-events/farming/about'
   topical_event_about_page_9: '/government/topical-events/girl-summit-2014/about'
 
+  # Most visited travel advice (2nd March 2017)
+  travel_advice_1: '/foreign-travel-advice/usa/entry-requirements'
+  travel_advice_2: '/foreign-travel-advice/turkey'
+  travel_advice_3: '/foreign-travel-advice/usa'
+  travel_advice_4: '/foreign-travel-advice/egypt'
+  travel_advice_5: '/foreign-travel-advice/morocco'
+  travel_advice_6: '/foreign-travel-advice/spain'
+  travel_advice_7: '/foreign-travel-advice/india/entry-requirements'
+  travel_advice_8: '/foreign-travel-advice/australia/entry-requirements'
+  travel_advice_9: '/foreign-travel-advice/thailand'
+  travel_advice_10: '/foreign-travel-advice/france'
+
+  # Travel advice atom feeds
+  travel_advice_atom_1: '/foreign-travel-advice/turkey.atom'
+  travel_advice_atom_2: '/foreign-travel-advice/usa.atom'
+  travel_advice_atom_3: '/foreign-travel-advice/egypt.atom'
+
   working_group_long: '/government/groups/benefits-credits-consultation-group-bccg'
   working_group_short: '/government/groups/aviation-statistics-team'
   working_group_with_policies: '/government/groups/better-regulation-executive'
