@@ -5,16 +5,5 @@
 <%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
-
-<div class="grid-row sidebar-with-body">
-  <% if @content_item.contents.any? %>
-    <div class="column-third">
-      <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
-    </div>
-  <% end %>
-  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
-    <%= render 'govuk_component/govspeak', content: @content_item.body %>
-  </div>
-</div>
-
+<%= render 'shared/sidebar_contents_with_body', content_item: @content_item %>
 <%= render 'shared/footer', @content_item.document_footer %>

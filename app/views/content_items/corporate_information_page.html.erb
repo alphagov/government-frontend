@@ -9,38 +9,29 @@
   <%= render 'shared/title_and_translations', content_item: @content_item %>
   <%= render 'shared/description', description: @content_item.description %>
 
-  <div class="grid-row sidebar-with-body">
-    <% if @content_item.contents.any? %>
-      <div class="column-third">
-        <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
-      </div>
-    <% end %>
-    <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
-      <% @additional_body = capture do %>
-        <% if @content_item.corporate_information? %>
-          <%= @content_item.corporate_information_heading_tag %>
-          <% @content_item.corporate_information.each do |group| %>
-            <%= group[:heading] %>
-            <ul>
-              <% group[:links].each do |link| %>
-                <li>
-                  <%= link %>
-                </li>
-              <% end %>
-            </ul>
+  <% @additional_body = capture do %>
+    <% if @content_item.corporate_information? %>
+      <%= @content_item.corporate_information_heading_tag %>
+      <% @content_item.corporate_information.each do |group| %>
+        <%= group[:heading] %>
+        <ul>
+          <% group[:links].each do |link| %>
+            <li>
+              <%= link %>
+            </li>
           <% end %>
-
-          <% if @content_item.further_information.present? %>
-            <p>
-              <%= @content_item.further_information %>
-            </p>
-          <% end %>
-        <% end %>
+        </ul>
       <% end %>
 
-      <%= render 'govuk_component/govspeak',
-          content: "#{@content_item.body}#{@additional_body}",
-          direction: page_text_direction %>
-    </div>
-  </div>
+      <% if @content_item.further_information.present? %>
+        <p>
+          <%= @content_item.further_information %>
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= render 'shared/sidebar_contents_with_body',
+        content_item: @content_item,
+        body: "#{@content_item.body}#{@additional_body}" %>
 </div>
