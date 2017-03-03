@@ -3,6 +3,7 @@ require 'gds_api/content_store'
 class ContentItemsController < ApplicationController
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
+  rescue_from ActionView::MissingTemplate, with: :error_406
 
   attr_accessor :content_item
 
@@ -69,7 +70,12 @@ private
   end
 
   def content_item_path
-    '/' + URI.encode(params[:path])
+    path_and_optional_locale = params
+                                 .values_at(:path, :locale)
+                                 .compact
+                                 .join('.')
+
+    '/' + URI.encode(path_and_optional_locale)
   end
 
   def content_store
@@ -82,5 +88,9 @@ private
 
   def error_notfound
     render plain: 'Not found', status: :not_found
+  end
+
+  def error_406
+    render plain: 'Not acceptable', status: 406
   end
 end

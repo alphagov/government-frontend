@@ -59,6 +59,11 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     refute page.has_css?('.part-navigation li a', text: first_part['title'])
   end
 
+  test "travel advice includes a discoverable atom feed link" do
+    setup_and_visit_content_item('full-country')
+    assert page.has_css?("link[type*='atom'][href='#{@content_item['base_path']}.atom']", visible: false)
+  end
+
   def setup_and_visit_travel_advice_part(name, part)
     @content_item = JSON.parse(get_content_example(name)).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)

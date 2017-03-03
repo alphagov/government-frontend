@@ -37,6 +37,10 @@ class TravelAdvicePresenter < ContentItemPresenter
     }
   end
 
+  def country_name
+    content_item["details"]["country"]["name"]
+  end
+
   def related_items
     items = ordered_related_items.map do |link|
       {
@@ -112,6 +116,18 @@ class TravelAdvicePresenter < ContentItemPresenter
     alert_statuses.join('').html_safe
   end
 
+  def atom_change_description
+    simple_format(HTMLEntities.new.encode(change_description, :basic, :decimal))
+  end
+
+  def atom_public_updated_at
+    DateTime.parse(content_item["public_updated_at"])
+  end
+
+  def web_url
+    Plek.current.website_root + content_item["base_path"]
+  end
+
 private
 
   def summary_part
@@ -127,10 +143,6 @@ private
     else
       parts.find { |part| part["slug"] == @part_slug }
     end
-  end
-
-  def country_name
-    content_item["details"]["country"]["name"]
   end
 
   def parts
@@ -163,6 +175,10 @@ private
     content_item["links"]["ordered_related_items"] || []
   end
 
+  def change_description
+    content_item['details']['change_description']
+  end
+
   # FIXME: Update publishing app UI and remove from content
   # Change description is used as "Latest update" but isn't labelled that way
   # in the publisher. The frontend didn't add this label before.
@@ -171,7 +187,6 @@ private
   # has a latest update label, so we can strip this out.
   # Avoids: "Latest update: Latest update - …"
   def latest_update
-    change_description = content_item['details']['change_description']
     change_description.sub(/^Latest update:?\s-?\s?/i, '').tap do |latest|
       latest[0] = latest[0].capitalize
     end
