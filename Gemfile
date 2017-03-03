@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby File.read(".ruby-version").strip
-
+gem 'envyable', require: 'envyable/rails-now'
 gem 'airbrake', '~> 5.5'
 gem 'airbrake-ruby', '1.5'
 
@@ -10,7 +10,7 @@ gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
 gem 'rails', '~> 5.0'
 gem 'sass-rails', '~> 5.0.4'
-if ENV['SLIMMER_DEV']
+if ENV['SLIMMER_DEV'] == "true"
   gem 'slimmer', path: '../slimmer'
 else
   gem 'slimmer', '9.6.0'
@@ -21,7 +21,7 @@ gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
 gem 'rails-controller-testing', '~> 0.1'
 
-if ENV['API_DEV']
+if ENV['API_DEV'] == "true"
   gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
   gem "gds-api-adapters", "39.1.0"

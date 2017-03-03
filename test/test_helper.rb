@@ -1,6 +1,6 @@
 ENV['RAILS_ENV'] ||= 'test'
-ENV['GOVUK_APP_DOMAIN'] = 'test.gov.uk'
-ENV['GOVUK_ASSET_ROOT'] = 'http://static.test.gov.uk'
+
+require 'envyable'
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
@@ -23,7 +23,7 @@ end
 # content from static (i.e. core_layout.html.erb).
 class ActionController::Base
   before_action proc {
-    response.headers[Slimmer::Headers::SKIP_HEADER] = "true" unless ENV["USE_SLIMMER"]
+    response.headers[Slimmer::Headers::SKIP_HEADER] = "true" unless ENV["USE_SLIMMER"] == "true"
   }
 end
 

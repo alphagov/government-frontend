@@ -16,3 +16,6 @@
 /tmp
 
 /public/government-frontend
+
+# Don't check in credentials 
+config/env.yml

@@ -40,6 +40,16 @@ This is a Ruby on Rails application that fetches documents from
 - [content-store](https://github.com/alphagov/content-store) - provides documents
 - [static](https://github.com/alphagov/static) - provides shared GOV.UK assets and templates.
 
+
+### enviroment variables
+
+environment is handled in development by (envyable)[https://github.com/philnash/envyable]
+
+```
+cp config/env.yml.example config/env.yml
+
+```
+
 ### Running the application
 
 ```

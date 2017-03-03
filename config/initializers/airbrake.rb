@@ -1,4 +1,4 @@
-if ENV['ERRBIT_API_KEY'].present?
+unless ENV['ERRBIT_API_KEY'].blank?
   errbit_uri = Plek.find('errbit')
 
   Airbrake.configure do |config|

@@ -67,6 +67,8 @@ GEM
     debug_inspector (0.0.2)
     domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
+    envyable (1.2.0)
+      thor (>= 0.18.1, < 2.0)
     erubis (2.7.0)
     execjs (2.7.0)
     gds-api-adapters (39.1.0)
@@ -250,6 +252,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara
+  envyable
   gds-api-adapters (= 39.1.0)
   govuk-content-schema-test-helpers (= 1.1.0)
   govuk-lint
@@ -270,5 +273,8 @@ DEPENDENCIES
   unicorn (= 4.8)
   webmock (~> 1.18.0)
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.12.5
+   1.14.3

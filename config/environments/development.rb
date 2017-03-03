@@ -52,7 +52,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  if ENV['GOVUK_ASSET_ROOT'].present?
+  unless ENV['GOVUK_ASSET_ROOT'].blank?
     config.asset_host = ENV['GOVUK_ASSET_ROOT']
   end
 end

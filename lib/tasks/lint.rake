@@ -1,6 +1,6 @@
 desc "run ruby and sass linters"
 task :lint do
-  if ENV["JENKINS"]
+  if ENV["JENKINS"] == "true"
     sh "govuk-lint-ruby --format html --out rubocop-${GIT_COMMIT}.html --format clang Gemfile app test config"
   else
     sh "govuk-lint-ruby --format clang Gemfile app test config"
