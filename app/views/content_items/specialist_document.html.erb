@@ -1,0 +1,23 @@
+<%
+  content_for :simple_header, true
+  content_for :title, @content_item.page_title
+%>
+
+<%= render 'shared/title_and_translations', content_item: @content_item %>
+<%= render 'shared/metadata', content_item: @content_item %>
+<%= render 'shared/description', description: @content_item.description %>
+
+<div class="grid-row sidebar-with-body">
+  <% if @content_item.contents.any? %>
+    <div class="column-third">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+    </div>
+  <% end %>
+  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+  </div>
+</div>
+
+<%= render 'shared/footer', @content_item.document_footer %>
