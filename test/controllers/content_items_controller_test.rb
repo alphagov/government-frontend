@@ -4,14 +4,6 @@ class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
   include GovukAbTesting::MinitestHelpers
 
-  setup do
-    ENV['ENABLE_NEW_NAVIGATION'] = 'yes'
-  end
-
-  teardown do
-    ENV['ENABLE_NEW_NAVIGATION'] = nil
-  end
-
   test 'routing handles paths with no format or locale' do
     assert_routing(
       '/government/news/statement-the-status-of-eu-nationals-in-the-uk',
