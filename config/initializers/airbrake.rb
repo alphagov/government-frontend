@@ -1,5 +1,5 @@
 unless ENV['ERRBIT_API_KEY'].blank?
-  errbit_uri = Plek.find('errbit')
+  errbit_uri = ENV['ERRBIT_HOST']
 
   Airbrake.configure do |config|
     config.project_key = ENV['ERRBIT_API_KEY']

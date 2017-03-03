@@ -14,7 +14,7 @@ end
 
 class ShareablePresenterTest < ActiveSupport::TestCase
   def expected_path
-    url_encode(Plek.current.website_root + "/a/base/path")
+    url_encode(env['WEBSITE_ROOT'] + "/a/base/path")
   end
 
   test 'presents the twitter share url' do

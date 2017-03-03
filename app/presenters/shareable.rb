@@ -19,6 +19,6 @@ private
   end
 
   def share_url
-    url_encode(Plek.current.website_root + content_item["base_path"])
+    url_encode(ENV['WEBSITE_ROOT'] + content_item["base_path"])
   end
 end

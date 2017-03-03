@@ -46,7 +46,7 @@ private
   end
 
   def content_store
-    @content_store ||= GdsApi::ContentStore.new(Plek.current.find("content-store"))
+    @content_store ||= GdsApi::ContentStore.new(ENV['PLEK_SERVICE_CONTENT_STORE_URI'])
   end
 
   def error_403(exception)

@@ -28,9 +28,10 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = Plek.current.asset_root
+  # NOT TOO SURE WHAT THIS WOUlD COME OUT AS
+  config.action_controller.asset_host = "HTTP://foo"
   config.slimmer.use_cache = true
-  config.slimmer.asset_host = Plek.current.find('static')
+  config.slimmer.asset_host = ENV['PLEK_SERVICE_STATIC_URI']
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache

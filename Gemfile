@@ -7,7 +7,6 @@ gem 'airbrake-ruby', '1.5'
 
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'logstasher', '0.6.1'
-gem 'plek', '1.11'
 gem 'rails', '~> 5.0'
 gem 'sass-rails', '~> 5.0.4'
 if ENV['SLIMMER_DEV'] == "true"
