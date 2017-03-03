@@ -22,6 +22,7 @@ Not all formats that this app can handle are rendered by it in production.
 | Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated on live. Draft rendered by Whitehall. |
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)| Migrated |
+| News Artcile | [View on GOV.UK](https://www.gov.uk/government/news/avian-influenza-bird-flu-in-winter-2016-to-2017) | Migrated |
 | Publication | | Rendered by Whitehall |
 | Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
 | Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) | Migrated |
@@ -31,6 +32,7 @@ Not all formats that this app can handle are rendered by it in production.
 | Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) | Rendered by multipage-frontend |
 | Unpublishing | | Rendered by Whitehall, might not be migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
+| World Location News Article | [View on GOV.UK](https://www.gov.uk/government/world-location-news/youth-mobility-scheme-2017-for-japanese-nationals.ja) | Migrated |
 
 ## Technical documentation
 
