@@ -68,6 +68,27 @@ class UpdatableTest < ActiveSupport::TestCase
     refute @updatable.updated
   end
 
+  test '#history returns no updates when first_public_at is not present' do
+    class << @updatable
+      def content_item
+        {
+          'public_updated_at' => '2002-02-02',
+          'details' => {
+            'change_history' => [
+              {
+                'note' => 'note',
+                'public_timestap' => '2002-02-02'
+              }
+            ]
+          }
+        }
+      end
+    end
+
+    assert @updatable.history.empty?
+    refute @updatable.updated
+  end
+
   test '#history returns an array of hashes when there is change history' do
     class << @updatable
       def any_updates?
