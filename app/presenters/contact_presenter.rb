@@ -134,6 +134,31 @@ class ContactPresenter < ContentItemPresenter
     whitelisted_paths.include?(content_item["base_path"])
   end
 
+  def breadcrumbs
+    orgs = content_item["links"]['organisations']
+    return [] if orgs.length != 1
+
+    org         = orgs.first
+    title       = org['title']
+    base        = org['base_path']
+    contact_url = "#{base}/contact"
+
+    [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: title,
+        url: base,
+      },
+      {
+        title: "Contact #{title}",
+        url: contact_url,
+      }
+    ]
+  end
+
 private
 
   def v_card_part(v_card_class, value)

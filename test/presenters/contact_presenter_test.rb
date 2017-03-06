@@ -99,5 +99,22 @@ class ContactPresenterTest
       assert_equal nil, present_example(example).email_body
       assert_equal nil, present_example(example).post_body
     end
+
+    test 'breadcrumbs' do
+      assert_equal [
+        {
+          title: "Home",
+          url: "/"
+        },
+        {
+          title: "HM Revenue & Customs",
+          url: "/government/organisations/hm-revenue-customs"
+        },
+        {
+          title: "Contact HM Revenue & Customs",
+          url: "/government/organisations/hm-revenue-customs/contact"
+        }
+      ], presented_item.breadcrumbs
+    end
   end
 end
