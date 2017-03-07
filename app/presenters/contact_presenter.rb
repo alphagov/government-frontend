@@ -72,7 +72,7 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def phone_body
-    content_item["details"]["more_info_phone_number"].html_safe
+    content_item.dig("details", "more_info_phone_number").try(:html_safe)
   end
 
   def post
@@ -95,7 +95,7 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def post_body
-    content_item["details"]["more_info_post_address"].html_safe
+    content_item.dig("details", "more_info_post_address").try(:html_safe)
   end
 
   def email
@@ -112,7 +112,7 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def email_body
-    content_item["details"]["more_info_email_address"].html_safe
+    content_item.dig("details", "more_info_email_address").try(:html_safe)
   end
 
   def show_webchat?

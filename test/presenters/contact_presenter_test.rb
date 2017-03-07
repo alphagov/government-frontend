@@ -77,5 +77,27 @@ class ContactPresenterTest
     test 'email_body' do
       assert_equal schema_item['details']['more_info_email_address'], presented_item.email_body
     end
+
+    test 'handles more info when set to nil' do
+      example = schema_item
+      example['details']['more_info_phone_number'] = nil
+      example['details']['more_info_email_address'] = nil
+      example['details']['more_info_post_address'] = nil
+
+      assert_equal nil, present_example(example).phone_body
+      assert_equal nil, present_example(example).email_body
+      assert_equal nil, present_example(example).post_body
+    end
+
+    test 'handles more info when not set' do
+      example = schema_item
+      example['details'].delete('more_info_phone_number')
+      example['details'].delete('more_info_email_address')
+      example['details'].delete('more_info_post_address')
+
+      assert_equal nil, present_example(example).phone_body
+      assert_equal nil, present_example(example).email_body
+      assert_equal nil, present_example(example).post_body
+    end
   end
 end
