@@ -47,7 +47,7 @@
           <% if @content_item.phone.size > 1 %>
             <h3><%= phone_group[:title] %></h3>
           <% end %>
-
+          <%= phone_group[:description] %>
           <% if phone_group[:numbers].any? %>
             <div class="contact">
               <div class="content">
@@ -57,9 +57,6 @@
               </div>
             </div>
           <% end %>
-
-          <%= phone_group[:description] %>
-
           <% if phone_group[:opening_times].present? %>
             <h4>Opening times</h4>
             <%= phone_group[:opening_times] %>
