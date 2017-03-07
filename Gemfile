@@ -22,6 +22,7 @@ gem 'rails_translation_manager', '~> 0.0.2'
 gem 'rails-controller-testing', '~> 0.1'
 gem 'govuk_ab_testing', '1.0.1'
 gem 'htmlentities', '4.3.4'
+gem 'statsd-ruby', '1.3.0', require: 'statsd'
 
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
