@@ -44,7 +44,9 @@
       <% if @content_item.phone.any? %>
         <h2 id="phone-title">Phone</h2>
         <% @content_item.phone.each do |phone_group| %>
-          <h3><%= phone_group[:title] %></h3>
+          <% if @content_item.phone.size > 1 %>
+            <h3><%= phone_group[:title] %></h3>
+          <% end %>
 
           <% if phone_group[:numbers].any? %>
             <div class="contact">
