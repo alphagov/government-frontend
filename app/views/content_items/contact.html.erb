@@ -44,27 +44,26 @@
       <% if @content_item.phone.any? %>
         <h2 id="phone-title">Phone</h2>
         <% @content_item.phone.each do |phone_group| %>
-          <h3><%= phone_group[:title] %></h3>
-
+          <% if @content_item.phone.size > 1 %>
+            <h3><%= phone_group[:title] %></h3>
+          <% end %>
+          <%= phone_group[:description] %>
           <% if phone_group[:numbers].any? %>
             <div class="contact">
               <div class="content">
                 <% phone_group[:numbers].each do |number| %>
-                  <p><%= number[:label] %>:<br /><%= number[:number] %></p>
+                  <p><%= number[:label] %>:<br /><strong><%= number[:number] %></strong></p>
                 <% end%>
               </div>
             </div>
           <% end %>
-
-          <%= phone_group[:description] %>
-
           <% if phone_group[:opening_times].present? %>
-            <h4>Opening times</h4>
+            <h4 class="normal-weight">Opening times:</h4>
             <%= phone_group[:opening_times] %>
           <% end %>
 
           <% if phone_group[:best_time_to_call].present? %>
-            <h4>Best time to call</h4>
+            <h4 class="normal-weight">Best time to call:</h4>
             <%= phone_group[:best_time_to_call] %>
           <% end %>
         <% end %>

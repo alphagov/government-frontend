@@ -2,4 +2,13 @@
   .add-title-margin {
     @include responsive-top-margin;
   }
+
+  // FIXME: Overrides specific govspeak heading styles while h3s & h4s look similar
+  // Govspeak component renders h3s and h4s at the same font size with different margins
+  // Reduce the visual importance of specific h4s by making them a normal font weight.
+  // This gives content correct visual hierarchy and semantics
+  // `normal-weight` is not a class used by the govspeak component
+  .govuk-govspeak .normal-weight {
+    font-weight: normal;
+  }
 }
