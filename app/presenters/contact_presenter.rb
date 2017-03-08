@@ -135,6 +135,8 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def breadcrumbs
+    return [] if content_item["links"]['organisations'].try(:length) != 1
+
     org         = content_item["links"]['organisations'].first
     title       = org['title']
     base        = org['base_path']

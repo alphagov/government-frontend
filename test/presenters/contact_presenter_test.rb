@@ -116,5 +116,29 @@ class ContactPresenterTest
         }
       ], presented_item.breadcrumbs
     end
+
+    test 'no breadcrumbs render with no organisations' do
+      schema = schema_item('contact')
+      schema["links"]["organisations"] = []
+
+      assert_equal [], present_example(schema).breadcrumbs
+    end
+
+    test 'no breadcrumbs render with no organisations set' do
+      schema = schema_item('contact')
+      schema["links"].delete("organisations")
+      assert_equal [], present_example(schema).breadcrumbs
+    end
+
+    test 'no breadcrumbs render with two organisations' do
+      schema = schema_item('contact')
+      two_orgs = [
+        schema["links"]["organisations"],
+        schema["links"]["organisations"]
+      ].flatten
+
+      schema["links"]["organisations"] = two_orgs
+      assert_equal [], present_example(schema).breadcrumbs
+    end
   end
 end
