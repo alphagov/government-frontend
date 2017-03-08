@@ -59,6 +59,10 @@ class TravelAdvicePresenter < ContentItemPresenter
     }
   end
 
+  def parts
+    content_item["details"]["parts"] || []
+  end
+
   def parts_navigation
     part_links.each_slice(part_navigation_group_size).to_a
   end
@@ -143,10 +147,6 @@ private
     else
       parts.find { |part| part["slug"] == @part_slug }
     end
-  end
-
-  def parts
-    content_item["details"]["parts"] || []
   end
 
   def part_links

@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
+  get '*path/:variant' => 'content_items#show',
+      constraints: {
+        variant: /print/
+      }
 
   # FIXME: Update when https://trello.com/c/w8HN3M4A/ is ready
   get 'foreign-travel-advice/:country/:part' => 'travel_advice#show'

@@ -39,28 +39,7 @@
     </h1>
 
     <% if @content_item.is_summary? %>
-      <% if @content_item.alert_status.present? %>
-        <% alert_body = capture do %>
-          <div class="help-notice">
-            <%= @content_item.alert_status %>
-          </div>
-        <% end %>
-        <%= render 'govuk_component/govspeak',
-            content: alert_body,
-            direction: page_text_direction %>
-      <% end %>
-
-      <%= render 'govuk_component/metadata', @content_item.metadata %>
-      <% if @content_item.map %>
-        <figure class="map">
-          <img src="<%= @content_item.map["url"] %>" alt="<%= @content_item.map["alt_text"] %>">
-          <% if @content_item.map_download_url %>
-            <figcaption class="map-download">
-              <a href="<%= @content_item.map_download_url %>">Download map (PDF)</a>
-            </figcaption>
-          <% end %>
-        </figure>
-      <% end %>
+      <%= render 'shared/travel_advice_summary', content_item: @content_item %>
     <% end %>
 
     <%= render 'govuk_component/govspeak',
@@ -68,7 +47,7 @@
         direction: page_text_direction %>
 
     <div class="print-link">
-      <%= link_to "Print entire guide", @content_item.print_link %>
+      <%= link_to "Print entire guide", @content_item.print_link, rel: 'alternate' %>
     </div>
   </div>
   <div class="column-one-third add-title-margin">

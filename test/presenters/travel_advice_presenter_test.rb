@@ -181,6 +181,13 @@ class TravelAdvicePresenterTest
       assert_equal "<p>Test&lt;br&gt;XML</p>", present_example(example).atom_change_description
     end
 
+    test "presents all parts for the print view" do
+      example_parts = schema_item("full-country")["details"]["parts"]
+      presented = presented_item("full-country")
+
+      assert_equal example_parts, presented.parts
+    end
+
   private
 
     def present_latest(latest)

@@ -46,6 +46,16 @@ class ContentItemsControllerTest < ActionController::TestCase
     )
   end
 
+  test 'routing handles paths with print variant' do
+    assert_routing(
+      '/government/news/statement-the-status-of-eu-nationals-in-the-uk/print',
+      controller: 'content_items',
+      action: 'show',
+      path: 'government/news/statement-the-status-of-eu-nationals-in-the-uk',
+      variant: 'print'
+    )
+  end
+
   test "gets item from content store" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
@@ -89,6 +99,15 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select "feed title", 'Travel Advice Summary'
+  end
+
+  test "renders print variants" do
+    content_item = content_store_has_schema_example('travel_advice', 'full-country')
+    get :show, params: { path: path_for(content_item), variant: 'print' }
+
+    assert_response :success
+    assert_equal request.variant, [:print]
+    assert_select ".travel-advice-print"
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do
