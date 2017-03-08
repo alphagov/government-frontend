@@ -30,7 +30,7 @@ else
   gem 'gds-api-adapters', '~> 40.1'
 end
 
-gem 'govuk_navigation_helpers', '~> 3.1'
+gem 'govuk_navigation_helpers', '~> 3.1.1'
 
 group :development, :test do
   gem 'govuk-lint'
