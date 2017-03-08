@@ -135,10 +135,7 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def breadcrumbs
-    orgs = content_item["links"]['organisations']
-    return [] if orgs.length != 1
-
-    org         = orgs.first
+    org         = content_item["links"]['organisations'].first
     title       = org['title']
     base        = org['base_path']
     contact_url = "#{base}/contact"
