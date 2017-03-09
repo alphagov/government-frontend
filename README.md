@@ -120,6 +120,9 @@ Then switch to your branch and create a set of screenshots to compare against us
 bundle exec wraith latest config-examples.yaml
 ```
 
+If you wish to have your own local wip configs, wip* is in the .gitignore, so as an example
+`wip-kittens.yaml` will be ignored
+
 ### Adding a new format
 
 There’s a rails generator you can use to stub the basic files needed for a new format. It stubs the following:
