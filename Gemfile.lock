@@ -129,6 +129,7 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     null_logger (0.0.1)
+    parallel (1.10.0)
     parser (2.4.0.0)
       ast (~> 2.2)
     phantomjs (2.1.1.0)
@@ -266,6 +267,7 @@ DEPENDENCIES
   jasmine-rails (~> 0.14.0)
   logstasher (= 0.6.1)
   mocha
+  parallel
   plek (= 1.11)
   pry-byebug
   rails (~> 5.0)
