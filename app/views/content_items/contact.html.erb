@@ -9,7 +9,7 @@
 
     <% body = capture do %>
       <% if @content_item.online_form_links.any? %>
-        <h2 id="online-forms-title">Online forms</h2>
+        <h2 id="online-forms-title">Online</h2>
         <% @content_item.online_form_links.each do |link| %>
           <p>
             <%= link_to(link[:title], link[:url]) %>
