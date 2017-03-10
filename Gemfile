@@ -33,6 +33,7 @@ end
 gem 'govuk_navigation_helpers', '~> 3.2'
 
 group :development, :test do
+  gem 'govuk_schemas'
   gem 'govuk-lint'
   gem 'pry-byebug'
   gem 'jasmine-rails', '~> 0.14.0'
