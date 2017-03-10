@@ -36,7 +36,7 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def online_form_body
-    content_item["details"]["more_info_contact_form"].html_safe
+    content_item.dig("details", "more_info_contact_form").try(:html_safe)
   end
 
   def phone

@@ -83,10 +83,12 @@ class ContactPresenterTest
       example['details']['more_info_phone_number'] = nil
       example['details']['more_info_email_address'] = nil
       example['details']['more_info_post_address'] = nil
+      example['details']['more_info_contact_form'] = nil
 
       assert_equal nil, present_example(example).phone_body
       assert_equal nil, present_example(example).email_body
       assert_equal nil, present_example(example).post_body
+      assert_equal nil, present_example(example).online_form_body
     end
 
     test 'handles more info when not set' do
@@ -94,10 +96,12 @@ class ContactPresenterTest
       example['details'].delete('more_info_phone_number')
       example['details'].delete('more_info_email_address')
       example['details'].delete('more_info_post_address')
+      example['details'].delete('more_info_contact_form')
 
       assert_equal nil, present_example(example).phone_body
       assert_equal nil, present_example(example).email_body
       assert_equal nil, present_example(example).post_body
+      assert_equal nil, present_example(example).online_form_body
     end
 
     test 'breadcrumbs' do
