@@ -26,11 +26,12 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def online_form_links
-    content_item["details"]["contact_form_links"].map do |link|
+    contact_form_links = content_item["details"]["contact_form_links"] || []
+    contact_form_links.map do |link|
       {
         url: link['link'],
         title: link['title'],
-        description: link['description'].html_safe
+        description: link['description'].try(:html_safe)
       }
     end
   end
@@ -61,9 +62,9 @@ class ContactPresenter < ContentItemPresenter
           }
         ],
         title: group['title'],
-        description: group['description'].strip.html_safe,
-        opening_times: group['open_hours'].strip.html_safe,
-        best_time_to_call: group['best_time_to_call'].strip.html_safe
+        description: group['description'].try(:strip).try(:html_safe),
+        opening_times: group['open_hours'].try(:strip).try(:html_safe),
+        best_time_to_call: group['best_time_to_call'].try(:strip).try(:html_safe)
       }
 
       details[:numbers].select! { |n| n[:number].present? }
@@ -78,7 +79,7 @@ class ContactPresenter < ContentItemPresenter
   def post
     post_address_groups.map do |group|
       details = {
-        description: group['description'].strip.html_safe,
+        description: group['description'].try(:strip).try(:html_safe),
         v_card: [
           v_card_part('fn', group['title']),
           v_card_part('street-address', group['street_address']),
@@ -101,7 +102,7 @@ class ContactPresenter < ContentItemPresenter
   def email
     email_address_groups.map do |group|
       details = {
-        description: group['description'] ? group['description'].strip.html_safe : '',
+        description: group['description'].try(:strip).try(:html_safe),
         email: group['email'].strip,
         v_card: [v_card_part('fn', group['title'])],
       }
@@ -163,7 +164,7 @@ private
   def v_card_part(v_card_class, value)
     {
       v_card_class: v_card_class,
-      value: value.strip.html_safe
+      value: value.try(:strip).try(:html_safe)
     }
   end
 
