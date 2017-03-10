@@ -1,7 +1,7 @@
 <%= content_for :title, @content_item.page_title %>
 <%= content_for :simple_header, true %>
 
-<div class="grid-row" data-module="sticky-element-container">
+<div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'shared/title_and_translations', content_item: @content_item %>
     <%= render 'shared/withdrawal_notice', content_item: @content_item %>
@@ -43,12 +43,6 @@
   </div>
 
   <div class="column-third">
-    <% if @content_item.contents.any? %>
-      <div data-sticky-element class="sticky-element">
-        <a class="back-to-content" href="#contents"><%= t("content_item.contents") %></a>
-      </div>
-    <% end %>
-
     <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
   </div>
 </div>
