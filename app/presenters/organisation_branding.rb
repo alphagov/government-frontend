@@ -1,7 +1,8 @@
 module OrganisationBranding
   def organisation_logo(organisation = default_organisation)
-    logo = organisation["details"]["logo"]
+    return nil unless organisation && organisation.dig("details", "logo")
 
+    logo = organisation["details"]["logo"]
     logo_component_params = {
       organisation: {
         name: logo["formatted_title"],
@@ -28,7 +29,8 @@ module OrganisationBranding
 private
 
   def default_organisation
-    content_item["links"]["organisations"].first
+    orgs = content_item["links"]["organisations"] || []
+    orgs.first
   end
 
   # HACK: Replaces the organisation_brand for executive office organisations.

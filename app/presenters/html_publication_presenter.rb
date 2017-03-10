@@ -10,11 +10,11 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def contents
-    content_item["details"]["headings"].html_safe
+    content_item["details"]["headings"].try(:html_safe)
   end
 
   def format_sub_type
-    parent["document_type"]
+    parent["document_type"] if parent && parent["document_type"].present?
   end
 
   def last_changed
@@ -29,12 +29,13 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def organisations
-    content_item["links"]["organisations"].sort_by { |o| o["title"] }
+    orgs = content_item["links"]["organisations"] || []
+    orgs.sort_by { |o| o["title"] }
   end
 
   def organisation_logo(organisation)
     super.tap do |logo|
-      if organisations.count > 1
+      if logo && organisations.count > 1
         logo[:organisation].delete(:image)
       end
     end
