@@ -4,7 +4,7 @@ module Updatable
   end
 
   def updated
-    display_date(content_item["public_updated_at"]) if any_updates?
+    display_date(public_updated_at) if any_updates?
   end
 
   def history
@@ -32,8 +32,8 @@ private
   end
 
   def any_updates?
-    if first_public_at.present?
-      DateTime.parse(content_item["public_updated_at"]) != DateTime.parse(first_public_at)
+    if public_updated_at && first_public_at
+      DateTime.parse(public_updated_at) != DateTime.parse(first_public_at)
     else
       false
     end
@@ -41,5 +41,9 @@ private
 
   def first_public_at
     content_item["details"]["first_public_at"]
+  end
+
+  def public_updated_at
+    content_item["public_updated_at"]
   end
 end
