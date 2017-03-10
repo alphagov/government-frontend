@@ -22,7 +22,7 @@ class TravelAdvicePresenterTest
 
       assert presented.is_summary?
       assert presented.has_valid_part?
-      assert_equal 'Current travel advice', presented.current_part_title
+      assert_equal 'Summary', presented.current_part_title
       assert_equal example['details']['summary'], presented.current_part_body
     end
 
@@ -47,7 +47,7 @@ class TravelAdvicePresenterTest
 
     test "the summary is included as the first navigation item" do
       first_nav_item = presented_item("full-country").parts_navigation.first.first
-      assert_equal 'Current travel advice', first_nav_item
+      assert_equal 'Summary', first_nav_item
     end
 
     test "navigation items are presented as links unless they are the current part" do
@@ -63,7 +63,7 @@ class TravelAdvicePresenterTest
       current_part_nav_item = navigation_items[0][1]
       another_part_nav_item = navigation_items[0][2]
 
-      assert_equal summary_nav_item, "<a href=\"#{base_path}\">Current travel advice</a>"
+      assert_equal summary_nav_item, "<a href=\"#{base_path}\">Summary</a>"
       assert_equal current_part_nav_item, current_part['title']
       assert_equal another_part_nav_item, "<a href=\"#{base_path}/#{another_part['slug']}\">#{another_part['title']}</a>"
     end

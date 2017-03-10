@@ -12,8 +12,8 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('.part-navigation ol', count: 2)
     assert page.has_css?('.part-navigation li', count: @content_item['details']['parts'].size + 1)
-    assert page.has_css?('.part-navigation li', text: 'Current travel advice')
-    refute page.has_css?('.part-navigation li a', text: 'Current travel advice')
+    assert page.has_css?('.part-navigation li', text: 'Summary')
+    refute page.has_css?('.part-navigation li a', text: 'Summary')
 
     @content_item['details']['parts'].each do |part|
       assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['name'])
@@ -25,7 +25,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
   test "travel advice summary has latest updates and map" do
     setup_and_visit_content_item('full-country')
 
-    assert page.has_css?("h1", text: "Current travel advice")
+    assert page.has_css?("h1", text: "Summary")
     assert_has_component_govspeak(@content_item["details"]["summary"])
 
     assert_has_component_metadata_pair("Still current at", Date.today.strftime("%-d %B %Y"))

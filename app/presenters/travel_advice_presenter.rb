@@ -136,7 +136,7 @@ private
 
   def summary_part
     {
-      "title" => "Current travel advice",
+      "title" => "Summary",
       "body" => content_item["details"]["summary"]
     }
   end
@@ -150,7 +150,7 @@ private
   end
 
   def part_links
-    summary_link_title = 'Current travel advice'
+    summary_link_title = 'Summary'
     summary_part_link = is_summary? ? summary_link_title : link_to(summary_link_title, @base_path)
 
     [summary_part_link] + parts.map do |part|
