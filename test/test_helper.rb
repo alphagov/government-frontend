@@ -116,13 +116,17 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def setup_and_visit_random_content_item
+  def setup_and_visit_random_content_item(document_type: schema_format)
     schema = GovukSchemas::Schema.find(frontend_schema: schema_format)
-    random_example = GovukSchemas::RandomExample.new(schema: schema).payload
-    stub_request(:get, %r{#{random_example["base_path"]}})
-      .to_return(status: 200, body: random_example.to_json, headers: {})
+    random_example = GovukSchemas::RandomExample.new(schema: schema)
 
-    visit random_example["base_path"]
+    payload = random_example.merge_and_validate(document_type: document_type)
+    path = payload["base_path"]
+
+    stub_request(:get, %r{#{path}})
+      .to_return(status: 200, body: payload.to_json, headers: {})
+
+    visit path
   end
 
   def get_content_example(name)
