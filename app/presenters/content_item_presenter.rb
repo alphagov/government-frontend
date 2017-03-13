@@ -27,7 +27,7 @@ class ContentItemPresenter
   end
 
   def content_id
-    content_item.parsed_content["content_id"]
+    content_item["content_id"]
   end
 
   def breadcrumbs

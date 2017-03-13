@@ -1,6 +1,12 @@
 require 'test_helper'
 
 class ContactTest < ActionDispatch::IntegrationTest
+  test "random but valid items do not error" do
+    10.times do
+      setup_and_visit_random_content_item
+    end
+  end
+
   test "online forms are rendered" do
     setup_and_visit_content_item('contact')
     within_component_govspeak do |component_args|
