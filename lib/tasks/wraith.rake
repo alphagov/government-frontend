@@ -1,5 +1,6 @@
 require 'rest-client'
 require 'parallel'
+require 'colorize'
 
 desc "check response codes"
 task :wraith_check_codes, [:arg1] do |t, args|
@@ -24,17 +25,24 @@ task :wraith_check_codes, [:arg1] do |t, args|
   end
 
 
-  Parallel.each(wraith['paths'], in_processes: 2) do |path_name,path|
+  Parallel.each(wraith['paths'], in_processes: 2) do |path_name, path|
     response_types = get_paths(path_name, path, wraith['domains'])
     response_codes = response_types.map do |response_type|
       response_type[:code]
     end
     same_response_codes = response_codes.uniq.length == 1
-    unless same_response_codes
-      abort("failed on #{path_name} " + response_types.to_s )
+    if same_response_codes
+      code = response_codes.uniq.first
+      text = "#{path_name} #{path} status: #{code}"
+      if code == 200
+        puts text.green
+      else
+        puts text.yellow
+      end
+    else
+      abort("failed on #{path_name} " + response_types.to_s ).red
     end
   end
-  puts 'all response codes match'
-
+  puts "\n all response codes match".green
 end
 

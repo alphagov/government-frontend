@@ -10,7 +10,6 @@ gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
 gem 'rails', '~> 5.0'
 gem 'sass-rails', '~> 5.0.4'
-gem 'parallel'
 if ENV['SLIMMER_DEV']
   gem 'slimmer', path: '../slimmer'
 else
@@ -37,6 +36,8 @@ group :development, :test do
   gem 'govuk-lint'
   gem 'pry-byebug'
   gem 'jasmine-rails', '~> 0.14.0'
+  gem 'parallel'
+  gem 'colorize'
 end
 
 group :development do

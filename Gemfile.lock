@@ -61,6 +61,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     coderay (1.1.1)
+    colorize (0.8.1)
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara
+  colorize
   gds-api-adapters (~> 40.1)
   govuk-content-schema-test-helpers (= 1.1.0)
   govuk-lint
