@@ -21,12 +21,15 @@ class TravelAdvicePresenter < ContentItemPresenter
     reviewed_at = content_item['details']['reviewed_at']
     updated_at = content_item['details']['updated_at']
 
+    other = {
+      "Still current at" => I18n.l(Time.now, format: "%-d %B %Y"),
+      "Updated" => display_date(reviewed_at || updated_at),
+    }
+
+    other["Latest update"] = simple_format(latest_update) if latest_update.present?
+
     {
-      other: {
-        "Still current at" => I18n.l(Time.now, format: "%-d %B %Y"),
-        "Updated" => display_date(reviewed_at || updated_at),
-        "Latest update" => simple_format(latest_update)
-      }
+      other: other
     }
   end
 
@@ -196,7 +199,7 @@ private
   # Avoids: "Latest update: Latest update - …"
   def latest_update
     change_description.sub(/^Latest update:?\s-?\s?/i, '').tap do |latest|
-      latest[0] = latest[0].capitalize
+      latest[0] = latest[0].capitalize if latest.present?
     end
   end
 end
