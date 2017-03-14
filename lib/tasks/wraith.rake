@@ -8,7 +8,7 @@ task :wraith_check_codes, [:arg1] do |t, args|
   def request_url(domain, path)
     url = domain + path
     begin
-      response = RestClient.get(url)
+      response = RestClient::Request.execute(method: :get, url: url, max_redirects: 0)
       response_code = { domain: domain, code: response.code }
     rescue RestClient::ExceptionWithResponse => e
       response_code = { domain: domain, code: e.response.code }
@@ -18,13 +18,13 @@ task :wraith_check_codes, [:arg1] do |t, args|
 
   def get_paths(path_name, path, domains)
     puts "checking #{path_name} #{path}"
-    Parallel.map(domains, in_processes: 3) do |domain_name,domain|
+    Parallel.map(domains) do |domain_name,domain|
       request_url(domain, path)
     end
   end
 
 
-  Parallel.each(wraith['paths']) do |path_name,path|
+  Parallel.each(wraith['paths'], in_processes: 2) do |path_name,path|
     response_types = get_paths(path_name, path, wraith['domains'])
     response_codes = response_types.map do |response_type|
       response_type[:code]
@@ -34,7 +34,6 @@ task :wraith_check_codes, [:arg1] do |t, args|
       abort("failed on #{path_name} " + response_types.to_s )
     end
   end
-
   puts 'all response codes match'
 
 end
