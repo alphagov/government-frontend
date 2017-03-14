@@ -112,9 +112,17 @@ class TravelAdvicePresenter < ContentItemPresenter
   # Feature included as it _could_ still be used
   # Remove when alert status boxes no longer in travel advice publisher
   def alert_status
+    allowed_statuses = %w{
+      avoid_all_but_essential_travel_to_parts
+      avoid_all_travel_to_parts
+      avoid_all_but_essential_travel_to_whole_country
+      avoid_all_travel_to_whole_country
+    }
     alert_statuses = content_item["details"]["alert_status"] || []
     alert_statuses = alert_statuses.map do |alert|
-      content_tag(:p, I18n.t("travel_advice.alert_status.#{alert}").html_safe)
+      if allowed_statuses.include?(alert)
+        content_tag(:p, I18n.t("travel_advice.alert_status.#{alert}").html_safe)
+      end
     end
 
     alert_statuses.join('').html_safe
