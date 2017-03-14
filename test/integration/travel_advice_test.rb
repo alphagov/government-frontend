@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class TravelAdviceTest < ActionDispatch::IntegrationTest
+  test "random but valid items do not error" do
+    setup_and_visit_random_content_item
+  end
+
   test "travel advice header and navigation" do
     setup_and_visit_content_item('full-country')
 

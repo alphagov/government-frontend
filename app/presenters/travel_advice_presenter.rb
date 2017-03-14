@@ -21,12 +21,15 @@ class TravelAdvicePresenter < ContentItemPresenter
     reviewed_at = content_item['details']['reviewed_at']
     updated_at = content_item['details']['updated_at']
 
+    other = {
+      "Still current at" => I18n.l(Time.now, format: "%-d %B %Y"),
+      "Updated" => display_date(reviewed_at || updated_at),
+    }
+
+    other["Latest update"] = simple_format(latest_update) if latest_update.present?
+
     {
-      other: {
-        "Still current at" => I18n.l(Time.now, format: "%-d %B %Y"),
-        "Updated" => display_date(reviewed_at || updated_at),
-        "Latest update" => simple_format(latest_update)
-      }
+      other: other
     }
   end
 
@@ -112,9 +115,17 @@ class TravelAdvicePresenter < ContentItemPresenter
   # Feature included as it _could_ still be used
   # Remove when alert status boxes no longer in travel advice publisher
   def alert_status
+    allowed_statuses = %w{
+      avoid_all_but_essential_travel_to_parts
+      avoid_all_travel_to_parts
+      avoid_all_but_essential_travel_to_whole_country
+      avoid_all_travel_to_whole_country
+    }
     alert_statuses = content_item["details"]["alert_status"] || []
     alert_statuses = alert_statuses.map do |alert|
-      content_tag(:p, I18n.t("travel_advice.alert_status.#{alert}").html_safe)
+      if allowed_statuses.include?(alert)
+        content_tag(:p, I18n.t("travel_advice.alert_status.#{alert}").html_safe)
+      end
     end
 
     alert_statuses.join('').html_safe
@@ -188,7 +199,7 @@ private
   # Avoids: "Latest update: Latest update - …"
   def latest_update
     change_description.sub(/^Latest update:?\s-?\s?/i, '').tap do |latest|
-      latest[0] = latest[0].capitalize
+      latest[0] = latest[0].capitalize if latest.present?
     end
   end
 end

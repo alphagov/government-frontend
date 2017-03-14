@@ -146,6 +146,7 @@ class TravelAdvicePresenterTest
         { original: "Latest update - changes", presented: "<p>Changes</p>" },
         { original: "Latest update changes", presented: "<p>Changes</p>" },
         { original: "Latest Update: Summary of changes. Next sentence", presented: "<p>Summary of changes. Next sentence</p>" },
+        { original: "", presented: nil },
       ].each do |i|
         assert_equal i[:presented], present_latest(i[:original])
       end
