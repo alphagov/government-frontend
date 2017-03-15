@@ -1,6 +1,13 @@
 require 'test_helper'
 
 class SpecialistDocumentTest < ActionDispatch::IntegrationTest
+  test "random but valid items do not error" do
+    setup_and_visit_random_content_item(document_type: 'aaib_report')
+    setup_and_visit_random_content_item(document_type: 'raib_report')
+    setup_and_visit_random_content_item(document_type: 'tax_tribunal_decision')
+    setup_and_visit_random_content_item(document_type: 'cma_case')
+  end
+
   test "renders title, description and body" do
     setup_and_visit_content_item('aaib-reports')
 
