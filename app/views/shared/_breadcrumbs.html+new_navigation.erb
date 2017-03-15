@@ -15,5 +15,7 @@
       }
     )
   %>
-  <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.taxon_breadcrumbs %>
+  <%= render 'govuk_component/breadcrumbs',
+    breadcrumbs: @content_item.taxon_breadcrumbs,
+    collapse_on_mobile: true %>
 <% end %>
