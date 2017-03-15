@@ -27,6 +27,21 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     end
   end
 
+  def breadcrumbs
+    return [] unless finder
+
+    [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: finder['title'],
+        url: finder['base_path'],
+      }
+    ]
+  end
+
 private
 
   # Maximum of one finder
