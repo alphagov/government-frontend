@@ -1,7 +1,7 @@
 FROM ruby:2.3.1
 RUN apt-get update -qq && apt-get upgrade -y
 
-RUN apt-get install -y build-essential && apt-get clean
+RUN apt-get install -y build-essential nodejs && apt-get clean
 
 ENV GOVUK_APP_NAME government-frontend
 ENV GOVUK_ASSET_ROOT http://assets-origin.dev.gov.uk
