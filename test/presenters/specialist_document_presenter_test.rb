@@ -161,5 +161,27 @@ class SpecialistDocumentPresenterTest
       presented_metadata = present_example(example).metadata[:other]
       assert_equal "1 January 2010", presented_metadata["Facet name"]
     end
+
+    test 'breadcrumbs' do
+      assert_equal [
+        {
+          title: "Home",
+          url: "/"
+        },
+        {
+          title: "Finder title",
+          url: "/finder-base-path"
+        }
+      ], present_example(example_with_finder_facets).breadcrumbs
+    end
+
+    test 'no breadcrumbs render with no finder' do
+      example = schema_item('aaib-reports')
+      example['links']['finder'] = []
+      assert_equal [], present_example(example).breadcrumbs
+
+      example['links'].delete('finder')
+      assert_equal [], present_example(example).breadcrumbs
+    end
   end
 end
