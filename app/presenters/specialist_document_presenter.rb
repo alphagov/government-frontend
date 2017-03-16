@@ -17,13 +17,19 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def metadata
     super.tap do |m|
-      m[:other] = facet_metadata
+      facets_with_values.each do |facet|
+        m[:other][facet['name']] = facet['values'].join(', ')
+      end
     end
   end
 
   def document_footer
     super.tap do |m|
-      m[:other] = facet_metadata
+      m[:other_dates] = {}
+      facets_with_values.each do |facet|
+        type = facet['type'] == 'date' ? :other_dates : :other
+        m[type][facet['name']] = facet['values'].join(', ')
+      end
     end
   end
 
@@ -107,15 +113,6 @@ private
     key = facet['key']
 
     link_to(allowed_value['label'], "#{finder_base_path}?#{key}%5B%5D=#{allowed_value['value']}")
-  end
-
-  def facet_metadata
-    metadata = {}
-    facets_with_values.each do |facet|
-      metadata[facet['name']] = facet['values'].join(', ')
-    end
-
-    metadata
   end
 
   # first_published_at does not have reliable data
