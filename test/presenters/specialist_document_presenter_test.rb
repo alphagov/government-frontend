@@ -26,6 +26,31 @@ class SpecialistDocumentPresenterTest
       assert presented_item('aaib-reports').is_a?(ContentsList)
     end
 
+    test 'presents updates based on change history' do
+      example = schema_item('aaib-reports')
+      example["details"]["change_history"] = [
+        {
+          "note" => "First published",
+          "public_timestamp" => "2003-03-03"
+        }
+      ]
+
+      refute present_example(example).updated
+
+      example["details"]["change_history"] = [
+        {
+          "note" => "First published",
+          "public_timestamp" => "2003-03-03"
+        },
+        {
+          "note" => "Modified since first published",
+          "public_timestamp" => "2013-04-05"
+        }
+      ]
+
+      assert present_example(example).updated
+    end
+
     test 'presents the published date using the oldest date in the change history' do
       example = schema_item('aaib-reports')
       example["first_published_at"] = "2001-01-01"
