@@ -89,15 +89,16 @@ class SpecialistDocumentPresenterTest
       }.merge(overrides)
     end
 
-    test 'includes non-filterable facet as text in metadata' do
+    test 'includes non-filterable facet as text in metadata and document footer' do
       values = { "facet-key" => "document-value" }
       example = example_with_finder_facets([example_facet], values)
 
-      presented_metadata = present_example(example).metadata[:other]
-      assert_equal "document-value", presented_metadata["Facet name"]
+      presented = present_example(example)
+      assert_equal "document-value", presented.metadata[:other]["Facet name"]
+      assert_equal "document-value", presented.document_footer[:other]["Facet name"]
     end
 
-    test 'includes friendly label for facet value in metadata' do
+    test 'includes friendly label for facet value in metadata and document footer' do
       overrides = {
         "allowed_values" => [
           {
@@ -110,8 +111,9 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "document-value" }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
-      presented_metadata = present_example(example).metadata[:other]
-      assert_equal "Document value from label", presented_metadata["Facet name"]
+      presented = present_example(example)
+      assert_equal "Document value from label", presented.metadata[:other]["Facet name"]
+      assert_equal "Document value from label", presented.document_footer[:other]["Facet name"]
     end
 
     test 'handles multiple values for facets' do
@@ -131,8 +133,9 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => %w{one two} }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
-      presented_metadata = present_example(example).metadata[:other]
-      assert_equal "One, Two", presented_metadata["Facet name"]
+      presented = present_example(example)
+      assert_equal "One, Two", presented.metadata[:other]["Facet name"]
+      assert_equal "One, Two", presented.document_footer[:other]["Facet name"]
     end
 
     test 'creates links for filterable friendly values' do
@@ -149,8 +152,10 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "something" }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
-      presented_metadata = present_example(example).metadata[:other]
-      assert_equal "<a href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>", presented_metadata["Facet name"]
+      presented = present_example(example)
+      expected_link = "<a href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
+      assert_equal expected_link, presented.metadata[:other]["Facet name"]
+      assert_equal expected_link, presented.document_footer[:other]["Facet name"]
     end
 
     test 'includes friendly dates for date facets in metadata' do
@@ -159,6 +164,15 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented_metadata = present_example(example).metadata[:other]
+      assert_equal "1 January 2010", presented_metadata["Facet name"]
+    end
+
+    test 'includes friendly dates in other_dates for date facets in document footer' do
+      overrides = { "type" => "date" }
+      values = { "facet-key" => "2010-01-01" }
+      example = example_with_finder_facets([example_facet(overrides)], values)
+
+      presented_metadata = present_example(example).document_footer[:other_dates]
       assert_equal "1 January 2010", presented_metadata["Facet name"]
     end
 
