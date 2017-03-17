@@ -4,11 +4,17 @@ ENV['GOVUK_ASSET_ROOT'] = 'http://static.test.gov.uk'
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
-require 'webmock/minitest'
-require 'support/govuk_content_schema_examples'
 require 'capybara/rails'
 require 'slimmer/test_helpers/govuk_components'
 require 'mocha/mini_test'
+
+Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
+
+class Minitest::Test
+  def teardown
+    Capybara.current_session.driver.clear_memory_cache
+  end
+end
 
 GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
@@ -64,14 +70,14 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_component_govspeak(content, index: 1)
-    within_component_govspeak(index: index) do
+  def assert_has_component_govspeak(content)
+    within_component_govspeak do
       assert_equal content.gsub(/\s+/, ' '), JSON.parse(page.text).fetch("content").gsub(/\s+/, ' ')
     end
   end
 
-  def within_component_govspeak(index: 1)
-    within(shared_component_selector("govspeak") + ":nth-of-type(#{index})") do
+  def within_component_govspeak
+    within(shared_component_selector("govspeak")) do
       component_args = JSON.parse(page.text)
       yield component_args
     end
