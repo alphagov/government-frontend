@@ -1,0 +1,27 @@
+<p>
+  <%= image_tag "open-government-licence-min.png", class: "print-meta-data-licence" %>
+</p>
+<p>
+  © Crown copyright <%= @content_item.copyright_year %>
+</p>
+<p>
+  This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gsi.gov.uk">psi@nationalarchives.gsi.gov.uk</a>.
+</p>
+<p>
+  Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+</p>
+<p>
+  This publication is available at <%= @content_item.full_path(request) %>
+</p>
+<% unless @content_item.print_meta_data_contact_address.blank? %>
+    <p>
+      Any enquiries regarding this publication should be sent to us at:<br/>
+    </p>
+    <%= simple_format(@content_item.print_meta_data_contact_address) %>
+<% end %>
+
+<% unless @content_item.isbn.blank? %>
+    <p>
+      Web ISBN: <%= @content_item.isbn %>
+    </p>
+<% end %>

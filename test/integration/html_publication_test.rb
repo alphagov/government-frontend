@@ -21,6 +21,32 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     assert_has_component_govspeak_html_publication(@content_item["details"]["body"])
   end
 
+  test "html publications with meta data" do
+    setup_and_visit_content_item("print_with_meta_data")
+
+    within ".publication-header" do
+      assert page.find(".print-meta-data", visible: false)
+
+      assert page.has_no_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
+      assert page.has_no_text?("Any enquiries regarding this publication should be sent to us at:")
+      assert page.has_no_text?((@content_item['details']['print_meta_data_contact_address']).to_s)
+      assert page.has_no_text?("Web ISBN: #{@content_item['details']['isbn']}")
+    end
+  end
+
+  test "html publications with meta data - print version" do
+    setup_and_visit_content_item("print_with_meta_data", true)
+
+    within ".publication-header" do
+      assert page.find(".print-meta-data", visible: true)
+
+      assert page.has_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
+      assert page.has_text?("Any enquiries regarding this publication should be sent to us at:")
+      assert page.has_text?((@content_item['details']['print_meta_data_contact_address']).to_s)
+      assert page.has_text?("Web ISBN: #{@content_item['details']['isbn']}")
+    end
+  end
+
   test "prime minister office organisation html publication" do
     setup_and_visit_content_item("prime_ministers_office")
     assert_has_component_organisation_logo_with_brand("executive-office", 4)

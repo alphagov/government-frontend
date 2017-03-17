@@ -13,12 +13,24 @@ class HtmlPublicationPresenter < ContentItemPresenter
     content_item["details"]["headings"].html_safe
   end
 
+  def isbn
+    content_item["details"]["isbn"]
+  end
+
+  def print_meta_data_contact_address
+    content_item["details"]["print_meta_data_contact_address"]
+  end
+
+  def copyright_year
+    content_item["details"]["public_timestamp"].to_date.year if public_timestamp.present?
+  end
+
   def format_sub_type
     parent["document_type"]
   end
 
   def last_changed
-    timestamp = display_date(content_item["details"]["public_timestamp"])
+    timestamp = display_date(public_timestamp)
 
     # This assumes that a translation doesn't need the date to come beforehand.
     if content_item["details"]["first_published_version"]
@@ -38,5 +50,15 @@ class HtmlPublicationPresenter < ContentItemPresenter
         logo[:organisation].delete(:image)
       end
     end
+  end
+
+  def full_path(request)
+    request.base_url + request.path
+  end
+
+private
+
+  def public_timestamp
+    content_item["details"]["public_timestamp"]
   end
 end

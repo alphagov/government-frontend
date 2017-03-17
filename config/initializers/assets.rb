@@ -13,4 +13,5 @@ Rails.application.config.assets.precompile += %w(
   application-ie7.css
   application-ie8.css
   webchat.js
+  print.css
 )

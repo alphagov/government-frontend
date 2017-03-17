@@ -115,10 +115,10 @@ class ActionDispatch::IntegrationTest
     assert page.has_css? "meta[#{key}=\"#{value}\"]", visible: false
   end
 
-  def setup_and_visit_content_item(name)
+  def setup_and_visit_content_item(name, print = false)
     @content_item = JSON.parse(get_content_example(name)).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)
-      visit item["base_path"]
+      print ? visit("#{item['base_path']}?medium=print") : visit(item['base_path'])
     end
   end
 
