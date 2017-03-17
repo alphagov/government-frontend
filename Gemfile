@@ -37,6 +37,8 @@ group :development, :test do
   gem 'govuk-lint'
   gem 'pry-byebug'
   gem 'jasmine-rails', '~> 0.14.0'
+  gem 'parallel'
+  gem 'colorize'
 end
 
 group :development do
