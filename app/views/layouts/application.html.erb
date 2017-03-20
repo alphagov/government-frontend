@@ -14,6 +14,7 @@
   <% end %>
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
   <%= @education_navigation_ab_test.analytics_meta_tag.html_safe if @education_navigation_ab_test.ab_test_applies? %>
+  <%= benchmarking_ab_test.requested_variant.analytics_meta_tag.html_safe %>
   <%= yield :extra_head_content %>
 </head>
 <body>
@@ -28,5 +29,9 @@
       <%= yield %>
     </main>
   </div>
+
+  <% if should_track_mouse_movements? %>
+    <%= javascript_include_tag 'mouseflow' %>
+  <% end %>
 </body>
 </html>
