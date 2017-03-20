@@ -46,6 +46,9 @@ module GovernmentFrontend
     # Path within public/ where assets are compiled to
     config.assets.prefix = '/government-frontend'
 
+    # Google Analytics dimension assigned to the benchmarking A/B test
+    config.benchmarking_ab_test_dimension = 49
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
   end

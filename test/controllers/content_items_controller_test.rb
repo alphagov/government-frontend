@@ -204,13 +204,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_response_not_modified_for_ab_test
+    assert_response_not_modified_for_ab_test('EducationNavigation')
 
     setup_ab_variant('EducationNavigation', 'B')
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_response_not_modified_for_ab_test
+    assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
   test "Case Studies are not included in the AB Test" do
@@ -231,7 +231,25 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_response_not_modified_for_ab_test
+    assert_response_not_modified_for_ab_test('EducationNavigation')
+  end
+
+  test "shows the mouseflow tag when in the benchmarking test" do
+    with_variant Benchmarking: "B" do
+      content_item = content_store_has_schema_example('case_study', 'case_study')
+      get :show, params: { path: path_for(content_item) }
+
+      assert_select("script[src*=mouseflow-]", 1, "Expected to find one script tag with the mouseflow js code on the page")
+    end
+  end
+
+  test "does not show the mouseflow tag when not in the benchmarking test" do
+    with_variant Benchmarking: "A" do
+      content_item = content_store_has_schema_example('case_study', 'case_study')
+      get :show, params: { path: path_for(content_item) }
+
+      assert_select("script[src*=mouseflow-]", 0, "Did not expect to find a script tag with the mouseflow js code on the page")
+    end
   end
 
   def path_for(content_item, locale = nil)
