@@ -26,7 +26,9 @@
 <header class="publication-header<%= direction_css_class %>" id="contents">
   <div class="headings">
     <div class="html-publication-title">
-      <p class="context"><%= I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1) %></p>
+      <% if @content_item.format_sub_type %>
+        <p class="context"><%= I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1) %></p>
+      <% end %>
       <h1><%= @content_item.title %></h1>
     </div>
     <%= @content_item.last_changed %>

@@ -11,7 +11,7 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
   # for example: https://www.gov.uk/government/topical-events/ebola-virus-government-response/about
   def breadcrumbs
     result = super
-    result.last[:title] = parent['title']
+    result.last[:title] = parent['title'] if parent
     result
   end
 
@@ -25,7 +25,8 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
 private
 
   def parent
-    topical_event_end_date = super["details"]["end_date"]
+    return nil unless super
+    topical_event_end_date = super.dig("details", "end_date")
 
     if topical_event_end_date && DateTime.parse(topical_event_end_date) <= Date.today
       super.merge("title" => "#{super['title']} (Archived)")

@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class WorkingGroupTest < ActionDispatch::IntegrationTest
+  test "random but valid items do not error" do
+    setup_and_visit_random_content_item
+  end
+
   test "working groups" do
     setup_and_visit_content_item('long')
     assert_has_component_title(@content_item["title"])

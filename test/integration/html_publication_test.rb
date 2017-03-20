@@ -1,6 +1,12 @@
 require 'test_helper'
 
 class HtmlPublicationTest < ActionDispatch::IntegrationTest
+  test "random but valid items do not error" do
+    10.times do
+      setup_and_visit_random_content_item
+    end
+  end
+
   test "html publications" do
     setup_and_visit_content_item('published')
 
