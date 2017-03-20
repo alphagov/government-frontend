@@ -1,3 +1,10 @@
+<%- if params[:medium] == 'print' %>
+  <%= stylesheet_link_tag "print.css", :media => "screen" %>
+<%- else %>
+  <%= stylesheet_link_tag "screen", :media => "screen" %>
+  <%= stylesheet_link_tag "print.css", :media => "print" %>
+<%- end %>
+
 <%
   content_for :title, @content_item.title
   content_for :simple_header, true
@@ -24,6 +31,7 @@
     </div>
     <%= @content_item.last_changed %>
   </div>
+
   <% if @content_item.contents? %>
     <nav class="in-page-navigation">
       <h2>
@@ -32,7 +40,14 @@
       <%= @content_item.contents %>
     </nav>
   <% end %>
+
+  <div class="print-wrapper">
+    <div class="print-meta-data">
+      <%= render partial: "content_items/html_publication/print_meta_data" %>
+    </div>
+  </div>
 </header>
+
 
 <%= render partial: 'govuk_component/govspeak_html_publication',
     locals: {

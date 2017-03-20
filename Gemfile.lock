@@ -60,6 +60,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    cliver (0.3.2)
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
     crack (0.4.3)
@@ -136,6 +137,10 @@ GEM
     phantomjs (2.1.1.0)
     pkg-config (1.1.7)
     plek (1.11.0)
+    poltergeist (1.12.0)
+      capybara (~> 2.1)
+      cliver (~> 0.3.1)
+      websocket-driver (>= 0.2.0)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -269,7 +274,9 @@ DEPENDENCIES
   jasmine-rails (~> 0.14.0)
   logstasher (= 0.6.1)
   mocha
+  phantomjs
   plek (= 1.11)
+  poltergeist
   pry-byebug
   rails (~> 5.0)
   rails-controller-testing (~> 0.1)

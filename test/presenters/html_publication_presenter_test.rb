@@ -13,6 +13,11 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     assert_equal schema_item("published")['details']['headings'], presented_item("published").contents
   end
 
+  test 'presents the meta data info of a content item' do
+    assert_equal schema_item("print_with_meta_data")['details']['isbn'], presented_item("print_with_meta_data").isbn
+    assert_equal schema_item("print_with_meta_data")['details']['print_meta_data_contact_address'], presented_item("print_with_meta_data").print_meta_data_contact_address
+  end
+
   test 'presents no contents when headings is an empty list' do
     assert_equal schema_item("prime_ministers_office")['details']['headings'], '<ol></ol>'
     refute presented_item("prime_ministers_office").contents?

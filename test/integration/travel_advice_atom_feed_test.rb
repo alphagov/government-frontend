@@ -8,26 +8,26 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
   end
 
   test "it sets the alternative link correctly" do
-    assert page.has_css?("//feed/link[rel='alternate'][href$='#{@base_path}']")
+    assert page.has_css?("feed>link[rel='alternate'][href$='#{@base_path}']")
   end
 
   test "it sets the entry's id to the url concatenated with updated_at" do
-    id = page.find("//feed/entry/id").text
+    id = page.find("feed>entry>id").text(:all)
     assert id.end_with?("#{@base_path}##{@updated_at}")
   end
 
   test "it sets the entry's title correctly" do
-    title = page.find("//feed/entry/title").text
+    title = page.find("feed>entry>title").text(:all)
     assert_equal title, @content_item['title']
   end
 
   test "it sets the entry's summary correctly" do
-    summary = page.find("//feed/entry/summary").text
+    summary = page.find("feed>entry>summary").text(:all)
     assert_equal summary, @content_item['details']['change_description'].strip
   end
 
   test "it sets the entry's updated correctly" do
-    updated = page.find("//feed/entry/updated").text
+    updated = page.find("feed>entry>updated").text(:all)
     assert_equal updated, @updated_at
   end
 
