@@ -55,5 +55,5 @@
     locals: {
       content: @content_item.body,
       direction: page_text_direction,
-      sticky_footer_html: %(<a class="back-to-content" href="#contents">#{ t("content_item.contents") }</a>)
+      sticky_footer_html: (render partial: 'shared/back_to_content_link'),
     } %>

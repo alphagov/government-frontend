@@ -1,0 +1,11 @@
+<%= link_to(
+  t('content_item.contents'),
+  '#contents',
+  class: 'back-to-content',
+  data: {
+    track_category: 'contentsClicked',
+    track_action: 'backToContentsLinkClicked',
+    track_label: t('content_item.contents'),
+    module: 'track-click',
+  },
+) %>
