@@ -6,8 +6,8 @@ class BenchmarkingAbTestRequest
   def initialize(request)
     dimension = Rails.application.config.benchmarking_ab_test_dimension
     ab_test = GovukAbTesting::AbTest.new(
-        "Benchmarking",
-        dimension: dimension
+      "Benchmarking",
+      dimension: dimension
     )
     @requested_variant = ab_test.requested_variant(request.headers)
   end
