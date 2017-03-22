@@ -9,21 +9,5 @@
         content: @content_item.body,
         direction: page_text_direction %>
   </div>
-
-  <div class="column-third">
-    <div class="add-title-margin">
-    <%= render partial: 'govuk_component/related_items', locals: {
-      sections: [
-        {
-          title: "Elsewhere on GOV.UK",
-          items: @content_item.related_items
-        }
-      ]
-    } %>
-    </div>
-  </div>
+  <%= render 'shared/related_items', content_item: @content_item  %>
 </div>
-
-
-
-
