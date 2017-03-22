@@ -73,4 +73,12 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('.available-languages')
   end
+
+  test 'return to contents link is tracked' do
+    setup_and_visit_content_item('detailed_guide')
+
+    assert page.has_css?("a.back-to-content[data-track-category='contentsClicked']")
+    assert page.has_css?("a.back-to-content[data-track-action='backToContentsLinkClicked']")
+    assert page.has_css?("a.back-to-content[data-track-label='Contents']")
+  end
 end
