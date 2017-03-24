@@ -79,6 +79,6 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?("a.back-to-content[data-track-category='contentsClicked']")
     assert page.has_css?("a.back-to-content[data-track-action='backToContentsLinkClicked']")
-    assert page.has_css?("a.back-to-content[data-track-label='Contents']")
+    assert page.has_css?("a.back-to-content[data-track-label='contents']")
   end
 end
