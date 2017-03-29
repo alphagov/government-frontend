@@ -40,7 +40,18 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     within shared_component_selector("document_footer") do
       component_args = JSON.parse(page.text)
       history = component_args.fetch("history")
+      assert_equal history.first["note"], @content_item["details"]["change_history"].last["note"]
+      assert_equal history.last["note"], @content_item["details"]["change_history"].first["note"]
+      assert_equal history.size, @content_item["details"]["change_history"].size
+    end
+  end
 
+  test "renders facets correctly" do
+    setup_and_visit_content_item('countryside-stewardship-grants')
+
+    within shared_component_selector("document_footer") do
+      component_args = JSON.parse(page.text)
+      history = component_args.fetch("history")
       assert_equal history.first["note"], @content_item["details"]["change_history"].last["note"]
       assert_equal history.last["note"], @content_item["details"]["change_history"].first["note"]
       assert_equal history.size, @content_item["details"]["change_history"].size

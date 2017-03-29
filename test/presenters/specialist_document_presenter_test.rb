@@ -214,6 +214,16 @@ class SpecialistDocumentPresenterTest
       ], present_example(example_with_finder_facets).breadcrumbs
     end
 
+    test 'sends an Airbrake notification when there is no finder' do
+      example = schema_item('aaib-reports')
+      example['links']['finder'] = []
+
+      Airbrake.expects(:notify).with('Finder not found',
+        error_message: 'Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item')
+
+      present_example(example).metadata
+    end
+
     test 'no breadcrumbs render with no finder' do
       example = schema_item('aaib-reports')
       example['links']['finder'] = []
