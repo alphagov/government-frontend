@@ -50,11 +50,13 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
 private
 
-  # Maximum of one finder
-  # but finder may be empty
   def finder
-    content_item.dig("links", "finder", 0)
-    # TODO: Shout loudly if missing parent finder
+    first_finder = content_item.dig("links", "finder", 0)
+    Airbrake.notify("Finder not found", {
+      error_message:
+        "All specialist documents should have at least one finder"
+    }) if first_finder.nil?
+    first_finder
   end
 
   def facets
@@ -77,10 +79,10 @@ private
       values = [facet_values[facet_key]].flatten
 
       facet['values'] = case facet['type']
-                        when 'text'
-                          friendly_facet_text(facet, values)
                         when 'date'
                           friendly_facet_date(values)
+                        when 'text'
+                          friendly_facet_text(facet, values)
                         else
                           values
                         end
@@ -89,31 +91,51 @@ private
     end
   end
 
+  def friendly_facet_date(dates)
+    dates.map { |date| display_date(date) }
+  end
+
   def friendly_facet_text(facet, values)
     if facet['allowed_values'] && facet['allowed_values'].any?
-      friendly_facet_allowed_values(facet, values)
+      check_allowed_values(facet, values)
+      facet_blocks(facet, values)
     else
       values
     end
   end
 
-  def friendly_facet_allowed_values(facet, values)
-    # TODO: Shout loudly if a value isn't one of the allowed ones
-    facet['allowed_values'].select { |v| values.include?(v['value']) }.map do |allowed_value|
-      facet['filterable'] ? filterable_facet_link(facet, allowed_value) : allowed_value['label']
+  def check_allowed_values(facet, values)
+    allowed_values = facet['allowed_values'].map { |av| av["value"] }
+    not_allowed = "facet value not in list of allowed values"
+
+    values.each do |v|
+      Airbrake.notify(not_allowed) unless allowed_values.include?(v)
     end
   end
 
-  def friendly_facet_date(dates)
-    dates.map { |date| display_date(date) }
+  # the facet value comes back bare, and without a label
+  # so we use the value in the url, and cross reference
+  # the allowed_values to get the label ##funky
+  def facet_blocks(facet, values)
+    values.map do |value|
+      values_with_label = facet["allowed_values"]
+      with_label = values_with_label.select { |av|
+        av["value"] == value
+      }.first
+      facet_block(facet, with_label)
+    end
   end
 
-  def filterable_facet_link(facet, allowed_value)
+  def facet_block(facet, allowed_value)
+    return allowed_value['label'] unless facet['filterable']
+    facet_link(allowed_value['label'], allowed_value['value'], facet['key'])
+  end
+
+  def facet_link(label, value, key)
     finder_base_path = finder['base_path']
-    key = facet['key']
-
-    link_to(allowed_value['label'], "#{finder_base_path}?#{key}%5B%5D=#{allowed_value['value']}")
+    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}")
   end
+
 
   # first_published_at does not have reliable data
   # at time of writing dates could be after public_updated_at
