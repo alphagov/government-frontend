@@ -17,6 +17,17 @@
     <%= render 'govuk_component/govspeak',
         content: @content_item.body,
         direction: page_text_direction %>
+
+    <% if @content_item.continuation_link %>
+      <%= render(
+          'shared/button',
+          start: true,
+          href: @content_item.continuation_link,
+          info: @content_item.will_continue_on
+      ) do %>
+        Find out more
+      <% end %>
+    <% end %>
   </div>
 </div>
 

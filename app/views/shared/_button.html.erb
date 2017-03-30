@@ -1,0 +1,19 @@
+<a
+  class="
+    button
+    <% if local_assigns.include?(:start) && start == true %>
+      button-start
+    <% end %>
+  "
+  <% if local_assigns.include?(:href) %>
+    href="<%= href.try(:html_safe) %>"
+  <% end %>
+  role="button"
+>
+  <%= yield %>
+</a>
+<% if local_assigns.include?(:info) %>
+  <span class="button-info">
+    <%= info.try(:html_safe) %>
+  </span>
+<% end %>

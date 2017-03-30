@@ -85,6 +85,10 @@ GEM
       rubocop (~> 0.39.0)
       scss_lint
     govuk_ab_testing (2.0.0)
+    govuk_elements_rails (3.0.1)
+      govuk_frontend_toolkit (>= 5.0.2)
+      rails (>= 4.1.0)
+      sass (>= 3.2.0)
     govuk_frontend_toolkit (5.1.0)
       rails (>= 3.1.0)
       sass (>= 3.2.0)
@@ -267,6 +271,7 @@ DEPENDENCIES
   govuk-content-schema-test-helpers (= 1.1.0)
   govuk-lint
   govuk_ab_testing (~> 2.0)
+  govuk_elements_rails (= 3.0.1)
   govuk_frontend_toolkit (= 5.1.0)
   govuk_navigation_helpers (~> 5.1)
   govuk_schemas
