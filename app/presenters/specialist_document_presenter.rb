@@ -52,10 +52,10 @@ private
 
   def finder
     first_finder = content_item.dig("links", "finder", 0)
-    Airbrake.notify("Finder not found", {
+    Airbrake.notify("Finder not found",
       error_message:
         "All specialist documents should have at least one finder"
-    }) if first_finder.nil?
+    ) if first_finder.nil?
     first_finder
   end
 
@@ -119,10 +119,10 @@ private
   def facet_blocks(facet, values)
     values.map do |value|
       values_with_label = facet["allowed_values"]
-      with_label = values_with_label.select { |av|
+      allowed_value = values_with_label.select { |av|
         av["value"] == value
       }.first
-      facet_block(facet, with_label)
+      facet_block(facet, allowed_value)
     end
   end
 
