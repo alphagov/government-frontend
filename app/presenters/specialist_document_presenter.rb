@@ -18,7 +18,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def metadata
     super.tap do |m|
       facets_with_values.each do |facet|
-        m[:other][facet['name']] = facet['values'].join(', ')
+        m[:other][facet['name']] = join_facets(facet)
       end
     end
   end
@@ -28,7 +28,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
       m[:other_dates] = {}
       facets_with_values.each do |facet|
         type = facet['type'] == 'date' ? :other_dates : :other
-        m[type][facet['name']] = facet['values'].join(', ')
+        m[type][facet['name']] = join_facets(facet)
       end
     end
   end
@@ -124,10 +124,10 @@ private
   def facet_blocks(facet, values)
     values.map do |value|
       values_with_label = facet["allowed_values"]
-      with_label = values_with_label.select { |av|
+      allowed_value = values_with_label.select { |av|
         av["value"] == value
       }.first
-      facet_block(facet, with_label)
+      facet_block(facet, allowed_value)
     end
   end
 
