@@ -18,7 +18,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def metadata
     super.tap do |m|
       facets_with_values.each do |facet|
-        m[:other][facet['name']] = facet['values'].join(', ')
+        m[:other][facet['name']] = join_facets(facet)
       end
     end
   end
@@ -28,7 +28,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
       m[:other_dates] = {}
       facets_with_values.each do |facet|
         type = facet['type'] == 'date' ? :other_dates : :other
-        m[type][facet['name']] = facet['values'].join(', ')
+        m[type][facet['name']] = join_facets(facet)
       end
     end
   end
@@ -49,6 +49,10 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   end
 
 private
+
+  def join_facets(facet)
+    facet['values'].join(', ')
+  end
 
   def finder
     first_finder = content_item.dig("links", "finder", 0)
