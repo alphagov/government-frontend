@@ -18,6 +18,7 @@ Not all formats that this app can handle are rendered by it in production.
 | Coming soon | | Rendered by Whitehall |
 | Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) | Migrated |
 | Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) | Migrated |
+| Corporate information page | [View on GOV.UK](https://www.gov.uk/government/organisations/government-digital-service/about) | Migrated |
 | Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
 | Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated on live. Draft rendered by Whitehall. |
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
