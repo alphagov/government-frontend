@@ -26,7 +26,7 @@ Not all formats that this app can handle are rendered by it in production.
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) | Migrated on live. Draft rendered by Whitehall |
 | Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
 | Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) | Migrated |
-| Speech | | Rendered by Whitehall |
+| Speech | [View on GOV.UK](https://www.gov.uk/government/speeches/government-at-your-service-ben-gummer-speech) | Migrated |
 | Take part | [View on GOV.UK](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) | Migrated |
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
 | Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) | Migrated |
