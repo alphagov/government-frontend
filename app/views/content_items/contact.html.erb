@@ -2,19 +2,6 @@
   content_for :title, @content_item.title
   content_for :simple_header, true
 %>
-<% if @content_item.show_webchat? %>
-<% content_for :extra_head_content do %>
-
-<script type="text/javascript">
-window.webChatDetails = {
-  openUrl: "<%= @content_item.webchat_open_url %>",
-  proxyUrl: "<%= @content_item.webchat_proxy_url %>"
-};
-
-</script>
-
-<% end %>
-<% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">

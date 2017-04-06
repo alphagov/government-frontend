@@ -8,8 +8,9 @@ describe('Webchat', function () {
   // Stub analytics.
   GOVUK.analytics = GOVUK.analytics || {}
   GOVUK.analytics.trackEvent = function () {}
-
-  var INSERTION_HOOK = '<div class="js-webchat">' +
+  var CHILD_BENEFIT_API_URL = 'https://online.hmrc.gov.uk/webchatprod/egain/chat/entrypoint/checkEligibility/' +
+    1027
+  var INSERTION_HOOK = '<div class="js-webchat" data-availability-url="' + CHILD_BENEFIT_API_URL + '" data-open-url="' + CHILD_BENEFIT_API_URL + '">' +
     '<div class="js-webchat-advisers-error">Error</div>' +
     '<div class="js-webchat-advisers-unavailable hidden">Unavailable</div>' +
     '<div class="js-webchat-advisers-busy hidden">Busy</div>' +
@@ -23,25 +24,23 @@ describe('Webchat', function () {
   var $advisersAvailable
   var $advisersError
 
-  var CHILD_BENEFIT_API_URL = 'https://online.hmrc.gov.uk/webchatprod/egain/chat/entrypoint/checkEligibility/' +
-    1027
-
-  var xmlResponse = function (responseType) {
-    return $.parseXML(
-      '<checkEligibility ' +
-        'xmlns:ns5="http://jabber.org/protocol/httpbind" ' +
-        'xmlns:ns2="http://bindings.egain.com/chat" ' +
-        'xmlns:ns4="urn:ietf:params:xml:ns:xmpp-stanzas" ' +
-        'xmlns:ns3="jabber:client" ' +
-        'responseType="' +
-        responseType +
-        '" />'
-    )
+  var jsonNormalised = function (status, response) {
+    return {
+      status: status,
+      response: response
+    }
   }
-  var xmlResponseAvailable = xmlResponse(0)
-  var xmlResponseUnavailable = xmlResponse(1)
-  var xmlResponseBusy = xmlResponse(2)
-  var xmlResponseError = '404 not found'
+
+
+  var jsonNormalisedAvailable = jsonNormalised("success","AVAILABLE")
+  var jsonNormalisedUnavailable = jsonNormalised("success","UNAVAILABLE")
+  var jsonNormalisedBusy = jsonNormalised("success","BUSY")
+  var jsonNormalisedError = '404 not found'
+
+  var jsonMangledAvailable = jsonNormalised("success","FOOAVAILABLE")
+  var jsonMangledUnavailable = jsonNormalised("success","FOOUNAVAILABLE")
+  var jsonMangledBusy = jsonNormalised("success","FOOBUSY")
+  var jsonMangledError = 'FOO404 not found'
 
   beforeEach(function () {
     setFixtures(INSERTION_HOOK)
@@ -52,12 +51,14 @@ describe('Webchat', function () {
     $advisersError = $webchat.find('.js-webchat-advisers-error')
   })
 
-  describe('on valid application locations', function () {
+
+  describe('on valid application locations that are pre normalised', function () {
     function mount () {
       $webchat.map(function () {
         return new GOVUK.Webchat({
           $el: $(this),
-          location: '/government/organisations/hm-revenue-customs/contact/child-benefit'
+          location: '/government/organisations/hm-revenue-customs/contact/child-benefit',
+          pollingEnabled: true
         })
       })
     }
@@ -72,7 +73,7 @@ describe('Webchat', function () {
 
     it('should inform user whether advisors are available', function () {
       spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(xmlResponseAvailable)
+        options.success(jsonNormalisedAvailable)
       })
       mount()
       expect($advisersAvailable.hasClass('hidden')).toBe(false)
@@ -84,7 +85,7 @@ describe('Webchat', function () {
 
     it('should inform user whether advisors are unavailable', function () {
       spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(xmlResponseUnavailable)
+        options.success(jsonNormalisedUnavailable)
       })
       mount()
       expect($advisersUnavailable.hasClass('hidden')).toBe(false)
@@ -96,7 +97,7 @@ describe('Webchat', function () {
 
     it('should inform user whether advisors are busy', function () {
       spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(xmlResponseBusy)
+        options.success(jsonNormalisedBusy)
       })
       mount()
       expect($advisersBusy.hasClass('hidden')).toBe(false)
@@ -108,7 +109,7 @@ describe('Webchat', function () {
 
     it('should inform user whether there was an error', function () {
       spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(xmlResponseError)
+        options.success(jsonNormalisedError)
       })
       mount()
       expect($advisersError.hasClass('hidden')).toBe(false)
@@ -119,17 +120,79 @@ describe('Webchat', function () {
     })
   })
 
-  describe('on invalid locations', function () {
+  describe('on valid application locations that are not normalised and get normalised in js', function () {
     function mount () {
       $webchat.map(function () {
-        return new GOVUK.Webchat({ $el: $(this), location: '/' })
+        return new GOVUK.Webchat({
+          $el: $(this),
+          location: '/government/organisations/hm-revenue-customs/contact/child-benefit',
+          pollingEnabled: true,
+          endPoints: {
+            openUrl: CHILD_BENEFIT_API_URL,
+            proxyUrl: CHILD_BENEFIT_API_URL,
+          },
+          responseNormalisation: function(res){
+            res.response = (res.response) ? res.response.replace("FOO", "") : ""
+            return res;
+          }
+        })
       })
     }
 
-    it('should not poll', function () {
+    it('should poll for availability', function () {
       spyOn($, 'ajax')
       mount()
-      expect($.ajax).not.toHaveBeenCalled()
+      expect(
+        $.ajax
+      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
+    })
+
+    it('should inform user whether advisors are available', function () {
+      spyOn($, 'ajax').and.callFake(function (options) {
+        options.success(jsonMangledAvailable)
+      })
+      mount()
+      expect($advisersAvailable.hasClass('hidden')).toBe(false)
+
+      expect($advisersBusy.hasClass('hidden')).toBe(true)
+      expect($advisersError.hasClass('hidden')).toBe(true)
+      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+    })
+
+    it('should inform user whether advisors are unavailable', function () {
+      spyOn($, 'ajax').and.callFake(function (options) {
+        options.success(jsonMangledUnavailable)
+      })
+      mount()
+      expect($advisersUnavailable.hasClass('hidden')).toBe(false)
+
+      expect($advisersAvailable.hasClass('hidden')).toBe(true)
+      expect($advisersBusy.hasClass('hidden')).toBe(true)
+      expect($advisersError.hasClass('hidden')).toBe(true)
+    })
+
+    it('should inform user whether advisors are busy', function () {
+      spyOn($, 'ajax').and.callFake(function (options) {
+        options.success(jsonMangledBusy)
+      })
+      mount()
+      expect($advisersBusy.hasClass('hidden')).toBe(false)
+
+      expect($advisersAvailable.hasClass('hidden')).toBe(true)
+      expect($advisersError.hasClass('hidden')).toBe(true)
+      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+    })
+
+    it('should inform user whether there was an error', function () {
+      spyOn($, 'ajax').and.callFake(function (options) {
+        options.success(jsonMangledError)
+      })
+      mount()
+      expect($advisersError.hasClass('hidden')).toBe(false)
+
+      expect($advisersAvailable.hasClass('hidden')).toBe(true)
+      expect($advisersBusy.hasClass('hidden')).toBe(true)
+      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
     })
   })
 })

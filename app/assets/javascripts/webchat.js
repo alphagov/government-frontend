@@ -1,8 +1,32 @@
 /* eslint-disable */
-//= require ./legacy-modules/webchat.js
+//= require ./webchat/library.js
 /*eslint-enable */
 
 var $ = window.$
+
+
+EGAIN_NORMALISATION = {
+  0: "AVAILABLE",
+  1: "UNAVAILABLE",
+  2: "BUSY"
+}
+
+var normalise = function(res){
+  var $xml = $(res)
+  var proxyResponse = parseInt($xml.find('checkEligibility').attr('responseType'), 10)
+  var response = EGAIN_NORMALISATION[proxyResponse]
+  if (!response) {
+    return {
+      status: "failure",
+      response: "unknown"
+    }
+  }
+
+  return {
+    status: "success",
+      response: response
+  }
+}
 
 $(document).ready(function () {
   var GOVUK = window.GOVUK
@@ -10,8 +34,7 @@ $(document).ready(function () {
     $('.js-webchat').map(function () {
       return new GOVUK.Webchat({
         $el: $(this),
-        endPoints: window.webChatDetails,
-        pollingEnabled: true
+        responseNormalisation: normalise
       })
     })
   }
