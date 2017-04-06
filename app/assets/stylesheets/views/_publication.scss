@@ -16,4 +16,9 @@
       margin-bottom: $gutter;
     }
   }
+
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
 }
