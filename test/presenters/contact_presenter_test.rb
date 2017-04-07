@@ -144,5 +144,13 @@ class ContactPresenterTest
       schema["links"]["organisations"] = two_orgs
       assert_equal [], present_example(schema).breadcrumbs
     end
+
+    test 'presents webchat' do
+      schema = schema_item('contact_with_webchat')
+      presented = present_example(schema)
+      assert_equal true, presented.show_webchat?
+      assert_equal presented.webchat_availability_url, "https://online.hmrc.gov.uk/webchatprod/egain/chat/entrypoint/checkEligibility/1030"
+      assert_equal presented.webchat_open_url, "https://online.hmrc.gov.uk/webchatprod/templates/chat/hmrc7/chat.html?entryPointId=1030&templateName=hmrc7&languageCode=en&countryCode=US&ver=v11"
+    end
   end
 end

@@ -117,23 +117,17 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def show_webchat?
-    # These are the routes on which we plan to roll out webchat, in stages.
-    whitelisted_paths = [
-      '/government/organisations/hm-revenue-customs/contact/child-benefit',
-      '/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees',
-      '/government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk',
-      '/government/organisations/hm-revenue-customs/contact/national-insurance-numbers',
-      '/government/organisations/hm-revenue-customs/contact/self-assessment-online-services-helpdesk',
-      '/government/organisations/hm-revenue-customs/contact/self-assessment',
-      '/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries',
-      '/government/organisations/hm-revenue-customs/contact/vat-enquiries',
-      '/government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries',
-      '/government/organisations/hm-revenue-customs/contact/trusts',
-      '/government/organisations/hm-revenue-customs/contact/employer-enquiries',
-      '/government/organisations/hm-revenue-customs/contact/construction-industry-scheme',
-    ]
-    whitelisted_paths.include?(content_item["base_path"])
+    webchat_ids.include?(content_item["base_path"])
   end
+
+  def webchat_availability_url
+    "https://online.hmrc.gov.uk/webchatprod/egain/chat/entrypoint/checkEligibility/#{webchat_id}"
+  end
+
+  def webchat_open_url
+    "https://online.hmrc.gov.uk/webchatprod/templates/chat/hmrc7/chat.html?entryPointId=#{webchat_id}&templateName=hmrc7&languageCode=en&countryCode=US&ver=v11"
+  end
+
 
   def breadcrumbs
     return [] if content_item["links"]['organisations'].try(:length) != 1
@@ -160,6 +154,27 @@ class ContactPresenter < ContentItemPresenter
   end
 
 private
+
+  def webchat_id
+    webchat_ids[content_item["base_path"]]
+  end
+
+  def webchat_ids
+    {
+      '/government/organisations/hm-revenue-customs/contact/child-benefit' => 1027,
+      '/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees' => 1030,
+      '/government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk' => 1026,
+      '/government/organisations/hm-revenue-customs/contact/national-insurance-numbers' => 1021,
+      '/government/organisations/hm-revenue-customs/contact/self-assessment-online-services-helpdesk' => 1003,
+      '/government/organisations/hm-revenue-customs/contact/self-assessment' => 1004,
+      '/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries' => 1016,
+      '/government/organisations/hm-revenue-customs/contact/vat-enquiries' => 1028,
+      '/government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries' => 1034,
+      '/government/organisations/hm-revenue-customs/contact/trusts' => 1036,
+      '/government/organisations/hm-revenue-customs/contact/employer-enquiries' => 1023,
+      '/government/organisations/hm-revenue-customs/contact/construction-industry-scheme' => 1048,
+    }
+  end
 
   def v_card_part(v_card_class, value)
     {
