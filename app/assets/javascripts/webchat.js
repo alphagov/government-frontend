@@ -11,7 +11,7 @@ EGAIN_NORMALISATION = {
   2: "BUSY"
 }
 
-var normalise = function(res){
+var webChatNormalise = function(res){
   var $xml = $(res)
   var proxyResponse = parseInt($xml.find('checkEligibility').attr('responseType'), 10)
   var response = EGAIN_NORMALISATION[proxyResponse]
@@ -34,7 +34,7 @@ $(document).ready(function () {
     $('.js-webchat').map(function () {
       return new GOVUK.Webchat({
         $el: $(this),
-        responseNormalisation: normalise
+        responseNormaliser: webChatNormalise
       })
     })
   }

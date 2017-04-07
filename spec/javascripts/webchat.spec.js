@@ -4,7 +4,6 @@ var $ = window.jQuery
 
 describe('Webchat', function () {
   var GOVUK = window.GOVUK
-
   // Stub analytics.
   GOVUK.analytics = GOVUK.analytics || {}
   GOVUK.analytics.trackEvent = function () {}
@@ -131,7 +130,7 @@ describe('Webchat', function () {
             openUrl: CHILD_BENEFIT_API_URL,
             proxyUrl: CHILD_BENEFIT_API_URL,
           },
-          responseNormalisation: function(res){
+          responseNormaliser: function(res){
             res.response = (res.response) ? res.response.replace("FOO", "") : ""
             return res;
           }
@@ -194,5 +193,34 @@ describe('Webchat', function () {
       expect($advisersBusy.hasClass('hidden')).toBe(true)
       expect($advisersUnavailable.hasClass('hidden')).toBe(true)
     })
+  })
+
+  describe('egain normalisaton', function () {
+
+    var egainResponse = function (responseType) {
+      return $.parseXML(
+        '<checkEligibility ' +
+        'xmlns:ns5="http://jabber.org/protocol/httpbind" ' +
+        'xmlns:ns2="http://bindings.egain.com/chat" ' +
+        'xmlns:ns4="urn:ietf:params:xml:ns:xmpp-stanzas" ' +
+        'xmlns:ns3="jabber:client" ' +
+        'responseType="' +
+        responseType +
+        '" />'
+      )
+    }
+
+    it('should normalise the responses to the api', function () {
+      expect(webChatNormalise(egainResponse(0))).toEqual(jsonNormalisedAvailable)
+      expect(webChatNormalise(egainResponse(1))).toEqual(jsonNormalisedUnavailable)
+      expect(webChatNormalise(egainResponse(2))).toEqual(jsonNormalisedBusy)
+      expect(webChatNormalise(egainResponse(3))).toEqual({
+        status: "failure",
+        response: "unknown"
+      })
+
+    })
+
+
   })
 })

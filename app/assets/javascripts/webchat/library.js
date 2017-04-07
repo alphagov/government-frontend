@@ -20,7 +20,7 @@
     var availabilityUrl     = $el.attr('data-availability-url')
     var $openButton         = $el.find('.js-webchat-open-button')
     var webchatStateClass   = 'js-webchat-advisers-'
-    var responseNormaliser  = options.responseNormalisation
+    var responseNormaliser  = options.responseNormaliser
     var intervalID          = null
 
     function init () {
@@ -61,7 +61,8 @@
     }
 
     function advisorStateChange (state) {
-      var currentState = $el.find("." + webchatStateClass + state.toLowerCase())
+      state = state.toLowerCase()
+      var currentState = $el.find("." + webchatStateClass + state)
       $el.find('[class^="' + webchatStateClass + '"]').addClass('hidden')
       currentState.removeClass('hidden')
       GOVUK.analytics.trackEvent('webchat', state)
