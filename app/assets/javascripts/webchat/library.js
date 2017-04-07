@@ -7,7 +7,7 @@
 
 
   function Webchat (options) {
-    var POLL_INTERVAL = 30 * 1000
+    var POLL_INTERVAL = 15 * 1000
     var AJAX_TIMEOUT  = 5 * 1000
     var API_STATES = [
       "BUSY",
