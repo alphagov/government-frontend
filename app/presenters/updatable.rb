@@ -33,7 +33,7 @@ private
 
   def any_updates?
     if public_updated_at && first_public_at
-      DateTime.parse(public_updated_at) != DateTime.parse(first_public_at)
+      Time.zone.parse(public_updated_at) != Time.zone.parse(first_public_at)
     else
       false
     end

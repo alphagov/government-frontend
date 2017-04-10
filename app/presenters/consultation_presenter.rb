@@ -22,7 +22,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def opening_date_midnight?
-    Time.parse(opening_date_time).strftime("%l:%M%P") == "12:00am"
+    Time.zone.parse(opening_date_time).strftime("%l:%M%P") == "12:00am"
   end
 
   def closing_date
@@ -116,7 +116,7 @@ class ConsultationPresenter < ContentItemPresenter
 private
 
   def display_date_and_time(date, rollback_midnight = false)
-    time = Time.parse(date)
+    time = Time.zone.parse(date)
     date_format = "%-e %B %Y"
     time_format = "%l:%M%P"
 
