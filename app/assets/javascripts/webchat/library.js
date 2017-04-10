@@ -22,6 +22,7 @@
     var webchatStateClass   = 'js-webchat-advisers-'
     var responseNormaliser  = options.responseNormaliser
     var intervalID          = null
+    var lastRecordedState   = null
 
     function init () {
       if (!availabilityUrl || !openUrl) throw 'urls for webchat not defined'
@@ -33,7 +34,7 @@
     function handleOpenChat (evt) {
       evt.preventDefault()
       global.open(openUrl, 'newwin', 'width=200,height=100')
-      GOVUK.analytics.trackEvent('webchat', 'opened')
+      trackEvent('opened')
     }
 
     function checkAvailability () {
@@ -65,7 +66,15 @@
       var currentState = $el.find("." + webchatStateClass + state)
       $el.find('[class^="' + webchatStateClass + '"]').addClass('hidden')
       currentState.removeClass('hidden')
+      trackEvent(state)
+    }
+
+    function trackEvent (state) {
+      state = state.toLowerCase()
+      if (lastRecordedState === state) return
+
       GOVUK.analytics.trackEvent('webchat', state)
+      lastRecordedState = state
     }
 
     init()

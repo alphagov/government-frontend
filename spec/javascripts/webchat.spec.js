@@ -117,6 +117,50 @@ describe('Webchat', function () {
       expect($advisersBusy.hasClass('hidden')).toBe(true)
       expect($advisersUnavailable.hasClass('hidden')).toBe(true)
     })
+
+    it('should only track once per state change', function () {
+      var returns = [
+        jsonNormalisedAvailable,
+        jsonNormalisedError,
+        jsonNormalisedError,
+        jsonNormalisedError,
+        jsonNormalisedError
+      ]
+      var analyticsExpects = ['available','error']
+      var analyticsReceived = []
+      returnsNumber = 0
+      analyticsCalled = 0
+      var clock = lolex.install();
+      spyOn($, 'ajax').and.callFake(function (options) {
+        options.success(returns[returnsNumber])
+        returnsNumber++
+      })
+
+      spyOn(GOVUK.analytics, 'trackEvent').and.callFake(function (webchatKey, webchatValue) {
+        analyticsReceived.push(webchatValue)
+        analyticsCalled++
+      })
+
+      mount()
+      expect($advisersAvailable.hasClass('hidden')).toBe(false)
+
+      expect($advisersBusy.hasClass('hidden')).toBe(true)
+      expect($advisersError.hasClass('hidden')).toBe(true)
+      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+
+      clock.tick("31");
+
+      expect($advisersError.hasClass('hidden')).toBe(false)
+      expect($advisersAvailable.hasClass('hidden')).toBe(true)
+      expect($advisersBusy.hasClass('hidden')).toBe(true)
+      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+      expect(analyticsCalled).toBe(2)
+      expect(analyticsReceived).toEqual(analyticsExpects)
+      clock.tick("31");
+      expect(analyticsCalled).toBe(2)
+      expect(analyticsReceived).toEqual(analyticsExpects)
+      clock.uninstall();
+    })
   })
 
   describe('on valid application locations that are not normalised and get normalised in js', function () {
@@ -218,9 +262,6 @@ describe('Webchat', function () {
         status: "failure",
         response: "unknown"
       })
-
     })
-
-
   })
 })
