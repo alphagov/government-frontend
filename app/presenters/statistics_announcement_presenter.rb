@@ -36,7 +36,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
 
   def cancellation_date
     cancelled_at = content_item["details"]["cancelled_at"]
-    DateTime.parse(cancelled_at).strftime("%e %B %Y %-l:%M%P")
+    Time.zone.parse(cancelled_at).strftime("%e %B %Y %-l:%M%P")
   end
 
   def cancelled?

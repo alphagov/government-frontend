@@ -22,7 +22,7 @@ class TravelAdvicePresenter < ContentItemPresenter
     updated_at = content_item['details']['updated_at']
 
     other = {
-      "Still current at" => I18n.l(Time.now, format: "%-d %B %Y"),
+      "Still current at" => I18n.l(Time.zone.now, format: "%-d %B %Y"),
       "Updated" => display_date(reviewed_at || updated_at),
     }
 

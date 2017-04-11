@@ -28,7 +28,7 @@ private
     return nil unless super
     topical_event_end_date = super.dig("details", "end_date")
 
-    if topical_event_end_date && DateTime.parse(topical_event_end_date) <= Date.today
+    if topical_event_end_date && Time.zone.parse(topical_event_end_date) <= Time.zone.today
       super.merge("title" => "#{super['title']} (Archived)")
     else
       super

@@ -12,14 +12,19 @@ class ConsultationPresenterTest
     end
 
     test 'presents friendly dates for opening and closing dates, including time' do
-      assert_equal "10am on 4 November 2016", presented_item("open_consultation").opening_date
-      assert_equal "4pm on 16 December 2216", presented_item("open_consultation").closing_date
+      schema = schema_item("open_consultation")
+      schema['details']['opening_date'] = "2016-11-04T10:00:00+00:00"
+      schema['details']['closing_date'] = "2216-12-16T16:00:00+00:00"
+      presented = presented_item("open_consultation", schema)
+
+      assert_equal "10am on 4 November 2016", presented.opening_date
+      assert_equal "4pm on 16 December 2216", presented.closing_date
     end
 
     test 'presents closing dates at 12am as 11:59pm on the day before' do
       schema = schema_item("open_consultation")
-      schema['details']['opening_date'] = "2016-11-03T00:01:00+01:00"
-      schema['details']['closing_date'] = "2016-11-04T00:00:00+01:00"
+      schema['details']['opening_date'] = "2016-11-03T00:01:00+00:00"
+      schema['details']['closing_date'] = "2016-11-04T00:00:00+00:00"
       presented = presented_item("open_consultation", schema)
 
       assert_equal "12:01am on 3 November 2016", presented.opening_date
@@ -28,8 +33,8 @@ class ConsultationPresenterTest
 
     test 'presents opening dates at 12am as the date without a time' do
       schema = schema_item("open_consultation")
-      schema['details']['opening_date'] = "2016-11-03T00:00:00+01:00"
-      schema['details']['closing_date'] = "2016-11-04T00:00:00+01:00"
+      schema['details']['opening_date'] = "2016-11-03T00:00:00+00:00"
+      schema['details']['closing_date'] = "2016-11-04T00:00:00+00:00"
       presented = presented_item("open_consultation", schema)
 
       assert_equal "3 November 2016", presented.opening_date
@@ -37,7 +42,7 @@ class ConsultationPresenterTest
 
     test 'presents 12pm as midday' do
       schema = schema_item("open_consultation")
-      schema['details']['opening_date'] = "2016-11-04T12:00:00+01:00"
+      schema['details']['opening_date'] = "2016-11-04T12:00:00+00:00"
       presented = presented_item("open_consultation", schema)
 
       assert_equal "midday on 4 November 2016", presented.opening_date

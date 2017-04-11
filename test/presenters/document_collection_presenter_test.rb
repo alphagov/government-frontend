@@ -50,7 +50,7 @@ class DocumentCollectionPresenterTest
     test 'presents an ordered list of group documents' do
       documents = [
         {
-          public_updated_at: Time.parse("2007-03-16 15:00:02 +0000"),
+          public_updated_at: Time.zone.parse("2007-03-16 15:00:02 +0000"),
           document_type: "guidance",
           title: "National standard for driving cars and light vans",
           base_path: "/government/publications/national-standard-for-driving-cars-and-light-vans"
