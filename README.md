@@ -44,6 +44,7 @@ This is a Ruby on Rails application that fetches documents from
 
 - [content-store](https://github.com/alphagov/content-store) - provides documents
 - [static](https://github.com/alphagov/static) - provides shared GOV.UK assets and templates.
+- [phantomjs](http://phantomjs.org/) Used by poltergeist for integration testing
 
 ### Running the application
 

@@ -274,7 +274,6 @@ DEPENDENCIES
   jasmine-rails (~> 0.14.0)
   logstasher (= 0.6.1)
   mocha
-  phantomjs
   plek (= 1.11)
   poltergeist
   pry-byebug
@@ -293,4 +292,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.14.5
+   1.14.6
