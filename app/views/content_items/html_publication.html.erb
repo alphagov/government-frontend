@@ -1,7 +1,6 @@
 <%- if params[:medium] == 'print' %>
   <%= stylesheet_link_tag "print.css", :media => "screen" %>
 <%- else %>
-  <%= stylesheet_link_tag "screen", :media => "screen" %>
   <%= stylesheet_link_tag "print.css", :media => "print" %>
 <%- end %>
 
