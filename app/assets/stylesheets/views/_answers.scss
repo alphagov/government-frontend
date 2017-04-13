@@ -2,8 +2,4 @@
   .add-title-margin {
     @include responsive-top-margin;
   }
-
-  strong {
-    font-weight: bold;
-  }
 }

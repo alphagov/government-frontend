@@ -7,7 +7,7 @@
         title: @content_item.title %>
     <%= render 'govuk_component/govspeak',
         content: @content_item.body,
-        direction: page_text_direction %>
+        direction: page_text_direction, rich_govspeak: true %>
   </div>
   <%= render 'shared/related_items', content_item: @content_item  %>
 </div>
