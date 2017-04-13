@@ -162,6 +162,15 @@ class SpecialistDocumentPresenterTest
       assert_equal "not-an-allowed-value", presented.document_footer[:other]["Facet name"]
     end
 
+    test 'ignores facets in metadata if not a valid finder facet' do
+      values = { "random-invalid-facet" => "something-odd" }
+      example = example_with_finder_facets([example_facet], values)
+
+      presented = present_example(example)
+      assert_empty presented.metadata[:other]
+      assert_empty presented.document_footer[:other]
+    end
+
     test 'handles multiple values for facets' do
       overrides = {
         "allowed_values" => [
