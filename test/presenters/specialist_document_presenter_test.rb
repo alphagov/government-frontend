@@ -141,6 +141,27 @@ class SpecialistDocumentPresenterTest
       assert_equal "Document value from label", presented.document_footer[:other]["Facet name"]
     end
 
+    test 'falls back to provided value if value not found in allowed list' do
+      overrides = {
+        "allowed_values" => [
+          {
+            "label" => "Document value from label",
+            "value" => "document-value"
+          }
+        ]
+      }
+
+      values = { "facet-key" => "not-an-allowed-value" }
+      example = example_with_finder_facets([example_facet(overrides)], values)
+
+      Airbrake.expects(:notify).twice.with('Facet value not in list of allowed values',
+        error_message: "Facet value 'not-an-allowed-value' not an allowed value for facet 'Facet name' on /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item")
+
+      presented = present_example(example)
+      assert_equal "not-an-allowed-value", presented.metadata[:other]["Facet name"]
+      assert_equal "not-an-allowed-value", presented.document_footer[:other]["Facet name"]
+    end
+
     test 'handles multiple values for facets' do
       overrides = {
         "allowed_values" => [

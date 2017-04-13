@@ -102,38 +102,34 @@ private
 
   def friendly_facet_text(facet, values)
     if facet['allowed_values'] && facet['allowed_values'].any?
-      check_allowed_values(facet, values)
       facet_blocks(facet, values)
     else
       values
     end
   end
 
-  def check_allowed_values(facet, values)
-    allowed_values = facet['allowed_values'].map { |av| av["value"] }
-    values.each do |v|
-      Airbrake.notify("Facet value not in list of allowed values",
-        error_message: "Facet value '#{v}' not found in allowed values for #{base_path} content item"
-      ) unless allowed_values.include?(v)
-    end
-  end
-
-  # the facet value comes back bare, and without a label
-  # so we use the value in the url, and cross reference
-  # the allowed_values to get the label ##funky
+  # The facet value is hyphenated, map this to the
+  # friendly readable version provided in `allowed_values`
   def facet_blocks(facet, values)
     values.map do |value|
-      values_with_label = facet["allowed_values"]
-      allowed_value = values_with_label.select { |av|
-        av["value"] == value
-      }.first
-      facet_block(facet, allowed_value)
+      allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
+
+      if allowed_value
+        facet_block(facet, allowed_value)
+      else
+        Airbrake.notify("Facet value not in list of allowed values",
+          error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item"
+        )
+        value
+      end
     end
   end
 
   def facet_block(facet, allowed_value)
-    return allowed_value['label'] unless facet['filterable']
-    facet_link(allowed_value['label'], allowed_value['value'], facet['key'])
+    friendly_value = allowed_value['label']
+
+    return friendly_value unless facet['filterable']
+    facet_link(friendly_value, allowed_value['value'], facet['key'])
   end
 
   def facet_link(label, value, key)
