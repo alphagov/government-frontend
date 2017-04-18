@@ -22,6 +22,12 @@
 
 <% unless @content_item.isbn.blank? %>
     <p>
-      Web ISBN: <%= @content_item.isbn %>
+      Print ISBN: <%= @content_item.isbn %>
+    </p>
+<% end %>
+
+<% unless @content_item.web_isbn.blank? %>
+    <p>
+      Web ISBN: <%= @content_item.web_isbn %>
     </p>
 <% end %>
