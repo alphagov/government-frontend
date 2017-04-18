@@ -1,0 +1,24 @@
+<%
+  start ||= false
+  href ||= false
+  info ||= false
+%>
+<a
+  class="
+    button
+    <% if start == true %>
+      button-start
+    <% end %>
+  "
+  <% if href %>
+    href="<%= href.try(:html_safe) %>"
+  <% end %>
+  role="button"
+>
+  <%= yield %>
+</a>
+<% if info %>
+  <span class="button-info">
+    <%= info.try(:html_safe) %>
+  </span>
+<% end %>

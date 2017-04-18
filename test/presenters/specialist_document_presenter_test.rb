@@ -82,6 +82,28 @@ class SpecialistDocumentPresenterTest
 
       assert_equal title_component_params, presented_item('aaib-reports').title_and_context
     end
+
+    test 'should not present continuation_link' do
+      assert_equal(presented_item('aaib-reports').continuation_link, nil)
+    end
+
+    test 'should not present will_continue_on' do
+      assert_equal(presented_item('aaib-reports').will_continue_on, nil)
+    end
+
+    test 'should present continuation_link' do
+      assert_equal(
+        presented_item('business-finance-support-scheme').continuation_link,
+        'http://www.bigissueinvest.com'
+      )
+    end
+
+    test 'should present will_continue_on' do
+      assert_equal(
+        presented_item('business-finance-support-scheme').will_continue_on,
+        'on the Big Issue Invest website'
+      )
+    end
   end
 
   class PresentedSpecialistDocumentWithFinderFacets < SpecialistDocumentTestCase

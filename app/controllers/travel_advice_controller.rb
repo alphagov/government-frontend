@@ -1,5 +1,4 @@
 class TravelAdviceController < ContentItemsController
-
 private
 
   def present(content_item)

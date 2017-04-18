@@ -48,6 +48,20 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     ]
   end
 
+  def continuation_link
+    content_item
+      .dig("details", "metadata", "continuation_link")
+      .try(:strip)
+      .try(:html_safe)
+  end
+
+  def will_continue_on
+    content_item
+      .dig("details", "metadata", "will_continue_on")
+      .try(:strip)
+      .try(:html_safe)
+  end
+
 private
 
   def join_facets(facet)

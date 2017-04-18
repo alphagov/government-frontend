@@ -6,6 +6,7 @@ gem 'airbrake', '~> 5.5'
 gem 'airbrake-ruby', '1.5'
 
 gem 'govuk_frontend_toolkit', '5.1.0'
+gem 'govuk_elements_rails', '3.0.1'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
 gem 'rails', '~> 5.0'

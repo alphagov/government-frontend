@@ -109,4 +109,34 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       { text: "Summary", id: "summary" },
     ])
   end
+
+  test 'renders no start button when not set' do
+    setup_and_visit_content_item('aaib-reports')
+
+    assert page.has_no_css?('.button')
+  end
+
+  test 'renders start button' do
+    setup_and_visit_content_item('business-finance-support-scheme')
+
+    button_base_selector = '.button.button-start'
+    correct_role_selector = '[role=button]'
+    correct_href_selector = '[href="http://www.bigissueinvest.com"]'
+
+    expected_button_selector =
+      button_base_selector +
+      correct_role_selector +
+      correct_href_selector
+
+    assert page.has_css?(expected_button_selector)
+    within expected_button_selector do
+      assert_text('Find out more')
+    end
+
+    button_info_selector = '.button-info'
+    assert page.has_css?(button_info_selector)
+    within button_info_selector do
+      assert_text('on the Big Issue Invest website')
+    end
+  end
 end
