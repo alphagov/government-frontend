@@ -234,6 +234,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
+  test "sets the Access-Control-Allow-Origin header for atom pages" do
+    content_store_has_schema_example('travel_advice', 'full-country')
+    get :show, params: { path: 'foreign-travel-advice/albania', format: 'atom' }
+
+    assert_equal response.headers["Access-Control-Allow-Origin"], "*"
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item['base_path'].sub(/^\//, '')
     base_path.gsub!(/\.#{locale}$/, '') if locale

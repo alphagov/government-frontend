@@ -35,6 +35,8 @@ class TravelAdviceControllerTest < ActionController::TestCase
     assert_equal part_slug, assigns[:content_item].part_slug
   end
 
+  # This is a duplicate test to one in content_items_controller_test.rb to
+  # cover the additional route GET /foreign-travel-advice/:country/:part(.:format) travel_advice#show
   test "sets the Access-Control-Allow-Origin header to atom feed" do
     content_item = content_store_has_schema_example('travel_advice', 'full-country')
     part_slug = content_item['details']['parts'][0]['slug']

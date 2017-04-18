@@ -11,6 +11,7 @@ class ContentItemsController < ApplicationController
     load_content_item
     set_up_education_navigation_ab_testing
     set_expiry
+    set_access_control_allow_origin_header if request.format.atom?
     render_template
   end
 
@@ -39,6 +40,10 @@ private
     with_locale do
       render content_item_template
     end
+  end
+
+  def set_access_control_allow_origin_header
+    response.headers["Access-Control-Allow-Origin"] = "*"
   end
 
   def set_expiry
