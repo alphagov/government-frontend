@@ -17,6 +17,10 @@ class HtmlPublicationPresenter < ContentItemPresenter
     content_item["details"]["isbn"]
   end
 
+  def web_isbn
+    content_item["details"]["web_isbn"]
+  end
+
   def print_meta_data_contact_address
     content_item["details"]["print_meta_data_contact_address"]
   end
