@@ -1,6 +1,4 @@
 class TravelAdviceController < ContentItemsController
-  after_action :set_access_control_allow_origin_header,
-    only: :show, if: ->(controller) { controller.request.format.atom? }
 
 private
 
@@ -18,9 +16,5 @@ private
 
   def content_item_path
     "/foreign-travel-advice/#{URI.encode(params[:country])}"
-  end
-
-  def set_access_control_allow_origin_header
-    response.headers["Access-Control-Allow-Origin"] = "*"
   end
 end
