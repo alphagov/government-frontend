@@ -15,7 +15,127 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     end
   end
 
+  def metadata
+    super.tap do |m|
+      facets_with_values.each do |facet|
+        m[:other][facet['name']] = join_facets(facet)
+      end
+    end
+  end
+
+  def document_footer
+    super.tap do |m|
+      m[:other_dates] = {}
+      facets_with_values.each do |facet|
+        type = facet['type'] == 'date' ? :other_dates : :other
+        m[type][facet['name']] = join_facets(facet)
+      end
+    end
+  end
+
+  def breadcrumbs
+    return [] unless finder
+
+    [
+      {
+        title: "Home",
+        url: "/",
+      },
+      {
+        title: finder['title'],
+        url: finder['base_path'],
+      }
+    ]
+  end
+
 private
+
+  def join_facets(facet)
+    facet['values'].join(', ')
+  end
+
+  # Finder is a required link that must have 1 item
+  def finder
+    parent_finder = content_item.dig("links", "finder", 0)
+    Airbrake.notify("Finder not found",
+      error_message: "Finder not found in #{base_path} content item"
+    ) if parent_finder.nil?
+
+    parent_finder
+  end
+
+  def facets
+    return nil unless finder
+    finder.dig('details', 'facets')
+  end
+
+  def facet_values
+    # Metadata is a required field
+    content_item["details"]["metadata"]
+  end
+
+  def facets_with_values
+    return [] unless facets && facet_values.any?
+    only_facets_with_values = facets.select { |f| facet_values[f['key']] }
+
+    only_facets_with_values.map do |facet|
+      facet_key = facet['key']
+      # Cast all values into an array
+      values = [facet_values[facet_key]].flatten
+
+      facet['values'] = case facet['type']
+                        when 'date'
+                          friendly_facet_date(values)
+                        when 'text'
+                          friendly_facet_text(facet, values)
+                        else
+                          values
+                        end
+
+      facet
+    end
+  end
+
+  def friendly_facet_date(dates)
+    dates.map { |date| display_date(date) }
+  end
+
+  def friendly_facet_text(facet, values)
+    if facet['allowed_values'] && facet['allowed_values'].any?
+      facet_blocks(facet, values)
+    else
+      values
+    end
+  end
+
+  # The facet value is hyphenated, map this to the
+  # friendly readable version provided in `allowed_values`
+  def facet_blocks(facet, values)
+    values.map do |value|
+      allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
+
+      if allowed_value
+        facet_block(facet, allowed_value)
+      else
+        Airbrake.notify("Facet value not in list of allowed values",
+          error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item"
+        )
+        value
+      end
+    end
+  end
+
+  def facet_block(facet, allowed_value)
+    friendly_value = allowed_value['label']
+
+    return friendly_value unless facet['filterable']
+    facet_link(friendly_value, allowed_value['value'], facet['key'])
+  end
+
+  def facet_link(label, value, key)
+    finder_base_path = finder['base_path']
+    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}")
+  end
 
   # first_published_at does not have reliable data
   # at time of writing dates could be after public_updated_at
@@ -26,5 +146,15 @@ private
   def first_public_at
     changes = reverse_chronological_change_history
     changes.any? ? changes.last[:timestamp] : nil
+  end
+
+  # specialist document change history can have a modified date that is
+  # slightly different to the public_updated_at, eg milliseconds different
+  # this means the direct comparison in updatable gives a false positive
+  # Use change_history as specialist-frontend did
+  #
+  # Can be removed when first_published_at is reliable
+  def any_updates?
+    change_history.size > 1
   end
 end
