@@ -34,4 +34,12 @@ class TravelAdviceControllerTest < ActionController::TestCase
 
     assert_equal part_slug, assigns[:content_item].part_slug
   end
+
+  test "sets the Access-Control-Allow-Origin header to atom feed" do
+    content_item = content_store_has_schema_example('travel_advice', 'full-country')
+    part_slug = content_item['details']['parts'][0]['slug']
+    get :show, params: { country: 'albania', part: part_slug, format: 'atom' }
+
+    assert_equal response.headers["Access-Control-Allow-Origin"], "*"
+  end
 end
