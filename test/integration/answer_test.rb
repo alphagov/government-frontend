@@ -5,7 +5,7 @@ class AnswerTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('answer')
     assert page.has_text?(@content_item["title"])
     assert_has_component_govspeak(@content_item["details"]["body"])
-    assert page.has_text?("Last Updated: 28 Mai 2015")
+    assert page.has_text?("Diweddarwyd diwethaf: 28 Mai 2015")
   end
 
   test "related links are rendered" do
