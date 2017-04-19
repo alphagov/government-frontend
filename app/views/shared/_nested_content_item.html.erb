@@ -1,0 +1,18 @@
+<% heading_level ||= 2 %>
+<% headings.each do |heading| %>
+  <li class="nested-contents-item-h<%= heading_level %>">
+    <a
+      class="nested-contents-link-h<%= heading_level %>"
+      href="#<%= heading['id']%>"
+      data-track-category="contentsClicked"
+      data-track-action="leftColumnH<%= heading_level %>"
+      data-track-label="<%= heading['id']%>">
+      <%= strip_trailing_colons(heading['text']) %>
+    </a>
+    <% if heading['headers'].present? && heading_level < 3 %>
+      <ol>
+        <%= render 'shared/nested_content_item', headings: heading['headers'], heading_level: heading_level + 1 %>
+      </ol>
+    <% end %>
+   </li>
+ <% end %>

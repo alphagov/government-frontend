@@ -102,12 +102,44 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders a contents list" do
+  test "renders a nested contents list" do
     setup_and_visit_content_item('aaib-reports')
 
-    assert_has_contents_list([
-      { text: "Summary", id: "summary" },
-    ])
+    assert page.has_css?(".dash-list")
+    within ".dash-list" do
+      @content_item['details']['headers'].each do |heading|
+        assert_nested_content_item(heading)
+      end
+    end
+  end
+
+  test "renders a nested contents list with level 2 and 3 headings only" do
+    setup_and_visit_content_item('drug-device-alerts')
+
+    within ".dash-list" do
+      @content_item['details']['headers'].each do |heading|
+        assert_nested_content_item(heading)
+      end
+    end
+  end
+
+  def assert_nested_content_item(heading)
+    heading_level = heading["level"]
+    selector = ".nested-contents-link-h#{heading_level}[href=\"##{heading['id']}\"]"
+    text = heading["text"].gsub(/\:$/, '')
+
+    if heading_level < 4
+      assert page.has_css?(selector), "Failed to find an element matching: #{selector}"
+      assert page.has_css?(selector, text: text), "Failed to find an element matching #{selector} with text: #{text}"
+    else
+      refute page.has_css?(selector), "Found a nested heading too deep, there should be no element matching: #{selector}"
+    end
+
+    if heading["headers"].present?
+      heading["headers"].each do |h|
+        assert_nested_content_item(h)
+      end
+    end
   end
 
   test 'renders no start button when not set' do

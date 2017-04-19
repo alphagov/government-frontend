@@ -20,6 +20,21 @@
     }
   }
 
+  // When nesting contents lists, the top level items have no
+  // list marker and are styled in bold
+  .nested-contents-item-h2 {
+    margin-left: 0;
+    list-style-type: none;
+
+    &:before {
+      content: '';
+    }
+  }
+
+  .nested-contents-link-h2 {
+    font-weight: bold;
+  }
+
   // Remove underlines from lists of links
   // to improve legibility
   a {
