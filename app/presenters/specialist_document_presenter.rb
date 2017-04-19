@@ -1,12 +1,15 @@
 class SpecialistDocumentPresenter < ContentItemPresenter
   include Updatable
   include Linkable
-  include ContentsList
   include TitleAndContext
   include Metadata
 
   def body
     content_item["details"]["body"]
+  end
+
+  def nested_contents
+    content_item["details"]["headers"] || []
   end
 
   def title_and_context

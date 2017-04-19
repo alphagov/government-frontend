@@ -2,22 +2,37 @@
   margin-bottom: $gutter-two-thirds;
 
   li {
-    list-style-type: disc;
-    margin-left: $gutter-half;
-    padding-right: $gutter-half;
+    margin-left: $gutter-half + 5;
+    padding-right: $gutter-half + 5;
     padding-top: $gutter / 6;
+    list-style-type: disc;
 
-    @media (min-width: 1px) { // target modern browsers
+    @supports (content: "—") {
       list-style-type: none;
 
       &:before {
-        content: "-";
+        content: "— ";
         position: relative;
         float: left;
-        width: $gutter-half;
-        margin-left: $gutter-half * -1;
+        width: $gutter-half + 5;
+        margin-left: -($gutter-half + 5);
       }
     }
+  }
+
+  // When nesting contents lists, the top level items have no
+  // list marker and are styled in bold
+  .nested-contents-item-h2 {
+    margin-left: 0;
+    list-style-type: none;
+
+    &:before {
+      content: '';
+    }
+  }
+
+  .nested-contents-link-h2 {
+    font-weight: bold;
   }
 
   // Remove underlines from lists of links

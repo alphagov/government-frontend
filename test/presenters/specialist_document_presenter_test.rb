@@ -22,8 +22,9 @@ class SpecialistDocumentPresenterTest
       assert presented_item('aaib-reports').is_a?(Metadata)
     end
 
-    test 'has contents list' do
-      assert presented_item('aaib-reports').is_a?(ContentsList)
+    test 'presents headers as nested contents' do
+      expected_headers = schema_item('aaib-reports')['details']['headers']
+      assert_equal expected_headers, presented_item('aaib-reports').nested_contents
     end
 
     test 'presents updates based on change history' do

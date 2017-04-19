@@ -1,5 +1,6 @@
 module ContentsList
   include ActionView::Helpers::UrlHelper
+  include TypographyHelper
 
   def contents
     contents_items.map do |item|
@@ -30,9 +31,5 @@ private
       { text: strip_trailing_colons(heading.text), id: id.value } if id
     end
     headings.compact
-  end
-
-  def strip_trailing_colons(heading)
-    heading.gsub(/\:$/, '')
   end
 end
