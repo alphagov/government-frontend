@@ -1,4 +1,6 @@
 module Parts
+  include ActionView::Helpers::UrlHelper
+
   def parts
     content_item.dig("details", "parts") || []
   end
@@ -11,6 +13,47 @@ module Parts
   end
 
   def has_valid_part?
-    !!parts.find { |part| part["slug"] == @part_slug }
+    !!current_part
+  end
+
+  def current_part_title
+    current_part["title"]
+  end
+
+  def current_part_body
+    current_part["body"]
+  end
+
+  def parts_navigation
+    part_links.each_slice(part_navigation_group_size).to_a
+  end
+
+  def parts_navigation_second_list_start
+    part_navigation_group_size + 1
+  end
+
+private
+
+  def current_part
+    parts.find { |part| part["slug"] == @part_slug }
+  end
+
+  def part_links
+    parts.map do |part|
+      if part['slug'] != @part_slug
+        link_to part['title'], "#{@base_path}/#{part['slug']}"
+      else
+        part['title']
+      end
+    end
+  end
+
+  def part_navigation_group_size
+    size = part_links.size.to_f / 2
+    if size < 2
+      3
+    else
+      size.ceil
+    end
   end
 end

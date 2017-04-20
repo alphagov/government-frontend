@@ -1,6 +1,5 @@
 class TravelAdvicePresenter < ContentItemPresenter
   include ActionView::Helpers::TextHelper
-  include ActionView::Helpers::UrlHelper
 
   def page_title
     if is_summary?
@@ -55,24 +54,8 @@ class TravelAdvicePresenter < ContentItemPresenter
     }
   end
 
-  def parts_navigation
-    part_links.each_slice(part_navigation_group_size).to_a
-  end
-
-  def parts_navigation_second_list_start
-    part_navigation_group_size + 1
-  end
-
   def is_summary?
     @part_slug.nil?
-  end
-
-  def current_part_title
-    current_part["title"]
-  end
-
-  def current_part_body
-    current_part["body"]
   end
 
   def map
@@ -141,30 +124,14 @@ private
     if is_summary?
       summary_part
     else
-      parts.find { |part| part["slug"] == @part_slug }
+      super
     end
   end
 
   def part_links
     summary_link_title = 'Summary'
     summary_part_link = is_summary? ? summary_link_title : link_to(summary_link_title, @base_path)
-
-    [summary_part_link] + parts.map do |part|
-      if part['slug'] != @part_slug
-        link_to part['title'], "#{@base_path}/#{part['slug']}"
-      else
-        part['title']
-      end
-    end
-  end
-
-  def part_navigation_group_size
-    size = part_links.size.to_f / 2
-    if size < 2
-      3
-    else
-      size.ceil
-    end
+    [summary_part_link] + super
   end
 
   def ordered_related_items
