@@ -35,12 +35,16 @@ module Parts
 private
 
   def current_part
-    parts.find { |part| part["slug"] == @part_slug }
+    if part_slug
+      parts.find { |part| part["slug"] == part_slug }
+    else
+      parts.first
+    end
   end
 
   def part_links
     parts.map do |part|
-      if part['slug'] != @part_slug
+      if part['slug'] != current_part['slug']
         link_to part['title'], "#{@base_path}/#{part['slug']}"
       else
         part['title']
