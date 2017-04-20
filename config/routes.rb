@@ -11,9 +11,6 @@ Rails.application.routes.draw do
         variant: /print/
       }
 
-  # FIXME: Update when https://trello.com/c/w8HN3M4A/ is ready
-  get 'foreign-travel-advice/:country/:part' => 'travel_advice#show'
-
   get '*path(.:locale)(.:format)' => 'content_items#show',
       constraints: {
         format: /atom/,

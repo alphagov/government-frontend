@@ -2,13 +2,6 @@ class TravelAdvicePresenter < ContentItemPresenter
   include ActionView::Helpers::TextHelper
   include ActionView::Helpers::UrlHelper
 
-  attr_reader :part_slug
-
-  def initialize(content_item, part_slug = nil)
-    super(content_item)
-    @part_slug = part_slug
-  end
-
   def page_title
     if is_summary?
       title
@@ -62,10 +55,6 @@ class TravelAdvicePresenter < ContentItemPresenter
     }
   end
 
-  def parts
-    content_item["details"]["parts"] || []
-  end
-
   def parts_navigation
     part_links.each_slice(part_navigation_group_size).to_a
   end
@@ -92,10 +81,6 @@ class TravelAdvicePresenter < ContentItemPresenter
 
   def map_download_url
     content_item["details"].dig("document", "url")
-  end
-
-  def has_valid_part?
-    !!current_part
   end
 
   def email_signup_link

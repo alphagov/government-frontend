@@ -21,7 +21,6 @@ class TravelAdvicePresenterTest
       presented = presented_item("full-country")
 
       assert presented.is_summary?
-      assert presented.has_valid_part?
       assert_equal 'Summary', presented.current_part_title
       assert_equal example['details']['summary'], presented.current_part_body
     end
@@ -203,7 +202,12 @@ class TravelAdvicePresenterTest
 
     def presented_item(type = format_name, part_slug = nil, overrides = {})
       schema_example_content_item = schema_item(type)
-      TravelAdvicePresenter.new(schema_example_content_item.merge(overrides), part_slug)
+      part_slug = "/#{part_slug}" if part_slug
+
+      TravelAdvicePresenter.new(
+        schema_example_content_item.merge(overrides),
+        "#{schema_example_content_item['base_path']}#{part_slug}"
+      )
     end
   end
 end
