@@ -1,11 +1,28 @@
-<%= content_for :title, @content_item.title %>
+<%
+  content_for :simple_header, true
+  content_for :title, @content_item.page_title
+%>
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.format.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
+    <%= render 'govuk_component/title', { title: @content_item.title } %>
+    <aside class="part-navigation-container" role="complementary">
+      <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Pages in this guide' %>
+    </aside>
+
+    <h1 class="part-title">
+      <%= @content_item.current_part_title_with_index %>
+    </h1>
+
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.current_part_body,
+        direction: page_text_direction %>
+
+    <div class="print-link">
+      <%= link_to "Print entire guide", @content_item.print_link, rel: 'alternate' %>
+    </div>
+  </div>
+  <div class="column-one-third add-title-margin">
+    <%= render 'govuk_component/related_items', @content_item.related_items %>
   </div>
 </div>
-
-<%= render 'shared/description', description: @content_item.description %>
