@@ -33,6 +33,18 @@ domains:
 
 # (required) The paths to capture.
 paths:
+  # Most visited Answers (19th April 2017)
+  answers0: '/national-minimum-wage-rates'
+  answers1: '/apply-uk-visa'
+  answers2: '/when-is-your-next-tax-credits-payment'
+  answers3: '/benefits-calculators'
+  answers4: '/apply-apprenticeship'
+  answers5: '/contact-hmrc'
+  answers6: '/dvla-change-address'
+  answers7: '/passport-fees'
+  answers8: '/vehicle-tax-refund'
+  answers9: '/car-tax-disc-without-v11-reminder'
+
   case_study: '/government/case-studies/get-britain-building-carlisle-park'
   case_study_translated: '/government/case-studies/doing-business-in-spain.es'
   case_study_withdrawn: '/government/case-studies/terence-age-33-stoke-on-trent'

@@ -42,6 +42,10 @@ class ContentItemPresenter
     @nav_helper.taxonomy_sidebar
   end
 
+  def related_items
+    @nav_helper.related_items
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
