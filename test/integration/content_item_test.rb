@@ -24,4 +24,13 @@ class ContentItemTest < ActionDispatch::IntegrationTest
       has_component_meta_tag("name", "govuk:content-id", @content_item["content_id"])
     end
   end
+
+  test "meta tags include schema-name" do
+    test_examples.each do |format, example|
+      define_singleton_method("schema_format") { format }
+
+      setup_and_visit_content_item(example)
+      has_component_meta_tag("name", "govuk:schema-name", @content_item["schema_name"])
+    end
+  end
 end
