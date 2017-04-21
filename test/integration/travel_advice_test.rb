@@ -20,7 +20,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     refute page.has_css?('.part-navigation li a', text: 'Summary')
 
     @content_item['details']['parts'].each do |part|
-      assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['name'])
+      assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['title'])
     end
 
     assert page.has_css?('.print-link a[href$="/print"]')
