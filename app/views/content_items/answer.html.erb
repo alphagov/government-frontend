@@ -10,6 +10,13 @@
         direction: page_text_direction,
         rich_govspeak: true
     %>
+    <div class="meta-data group">
+      <% if @content_item.updated %>
+        <p class="modified-date">
+          <%= t 'common.last_updated' %>: <%= @content_item.updated %>
+        </p>
+      <% end %>
+    </div>
   </div>
   <%= render 'shared/related_items', content_item: @content_item  %>
 </div>

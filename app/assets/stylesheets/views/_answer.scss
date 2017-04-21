@@ -2,4 +2,8 @@
   .add-title-margin {
     @include responsive-top-margin;
   }
+
+  .meta-data {
+    padding-bottom: 15px;
+  }
 }
