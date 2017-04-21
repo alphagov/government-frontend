@@ -16,13 +16,12 @@ class ContentItemTest < ActionDispatch::IntegrationTest
     result
   end
 
-  test "content id" do
+  test "meta tags include content-id" do
     test_examples.each do |format, example|
       define_singleton_method("schema_format") { format }
 
       setup_and_visit_content_item(example)
-      has_component_metadata("name", "govuk:content-id")
-      has_component_metadata("content", @content_item["content_id"])
+      has_component_meta_tag("name", "govuk:content-id", @content_item["content_id"])
     end
   end
 end

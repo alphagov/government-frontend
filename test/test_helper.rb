@@ -111,8 +111,8 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def has_component_metadata(key, value)
-    assert page.has_css? "meta[#{key}=\"#{value}\"]", visible: false
+  def has_component_meta_tag(key, value, content)
+    assert page.has_css? "meta[#{key}=\"#{value}\"][content=\"#{content}\"]", visible: false
   end
 
   def setup_and_visit_content_item(name, print = false)
