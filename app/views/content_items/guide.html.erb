@@ -6,14 +6,18 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', { title: @content_item.title } %>
-    <aside class="part-navigation-container" role="complementary">
-      <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Pages in this guide' %>
-    </aside>
+    <% if @content_item.multi_page_guide? %>
+      <aside class="part-navigation-container" role="complementary">
+        <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Pages in this guide' %>
+      </aside>
+    <% end %>
 
     <% if @content_item.has_parts? %>
-      <h1 class="part-title">
-        <%= @content_item.current_part_title_with_index %>
-      </h1>
+      <% if @content_item.multi_page_guide? %>
+        <h1 class="part-title">
+          <%= @content_item.current_part_title_with_index %>
+        </h1>
+      <% end %>
 
       <%= render 'govuk_component/govspeak',
           content: @content_item.current_part_body,
@@ -21,9 +25,11 @@
 
       <%= render 'govuk_component/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
-      <div class="print-link">
-        <%= link_to "Print entire guide", @content_item.print_link, rel: 'alternate' %>
-      </div>
+      <% if @content_item.multi_page_guide? %>
+        <div class="print-link">
+          <%= link_to "Print entire guide", @content_item.print_link, rel: 'alternate' %>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div class="column-one-third add-title-margin">

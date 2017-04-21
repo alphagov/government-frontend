@@ -27,4 +27,12 @@ class GuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('.print-link a[href$="/print"]')
   end
+
+  test "does not show part navigation, print link or part title when only one part" do
+    setup_and_visit_content_item('single-page-guide')
+
+    refute page.has_css?('h1', text: @content_item['details']['parts'].first['title'])
+    refute page.has_css?('.part-navigation')
+    refute page.has_css?('.print-link')
+  end
 end

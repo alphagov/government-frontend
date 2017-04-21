@@ -15,6 +15,10 @@ class GuidePresenter < ContentItemPresenter
     parts.any?
   end
 
+  def multi_page_guide?
+    parts.size > 1
+  end
+
   def current_part_title_with_index
     "#{current_part_index + 1}. #{current_part_title}"
   end
