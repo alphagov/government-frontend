@@ -1,3 +1,5 @@
-<p class="description">
-  <%= nbsp_between_last_two_words(description) %>
-</p>
+<% if description.present? %>
+  <p class="description">
+    <%= nbsp_between_last_two_words(description) %>
+  </p>
+<% end %>
