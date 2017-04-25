@@ -33,22 +33,23 @@ domains:
 
 # (required) The paths to capture.
 paths:
-  # Most visited Answers (19th April 2017)
-  answers0: '/national-minimum-wage-rates'
-  answers1: '/apply-uk-visa'
-  answers2: '/when-is-your-next-tax-credits-payment'
-  answers3: '/benefits-calculators'
-  answers4: '/apply-apprenticeship'
-  answers5: '/contact-hmrc'
-  answers6: '/dvla-change-address'
-  answers7: '/passport-fees'
-  answers8: '/vehicle-tax-refund'
-  answers9: '/car-tax-disc-without-v11-reminder'
+  # Most visited Answers (19 April 2017)
+  answers_0: '/national-minimum-wage-rates'
+  answers_1: '/apply-uk-visa'
+  answers_2: '/when-is-your-next-tax-credits-payment'
+  answers_3: '/benefits-calculators'
+  answers_4: '/apply-apprenticeship'
+  answers_5: '/contact-hmrc'
+  answers_6: '/dvla-change-address'
+  answers_7: '/passport-fees'
+  answers_8: '/vehicle-tax-refund'
+  answers_9: '/car-tax-disc-without-v11-reminder'
 
   case_study: '/government/case-studies/get-britain-building-carlisle-park'
   case_study_translated: '/government/case-studies/doing-business-in-spain.es'
   case_study_withdrawn: '/government/case-studies/terence-age-33-stoke-on-trent'
-  # Most visited case_study pages (2nd September 2016)
+
+  # Most visited case_study pages (2 September 2016)
   case_study_1: '/government/case-studies/ww1-canadian-vc-recipient-charles-smith-rutherford'
   case_study_2: '/government/case-studies/the-expert-patients-programme'
   case_study_3: '/government/case-studies/case-study-darwin-initiative-main-round-project'
@@ -73,18 +74,63 @@ paths:
   contact_10: /government/organisations/hm-revenue-customs/contact/welsh-language-helpline-for-debt-management
 
   # Most popular from https://docs.publishing.service.gov.uk/document-types/help+page.html (19 april 2017)
-  help_pages0: '/help/cookies'
-  help_pages1: '/help/accessibility'
-  help_pages2: '/help/browsers'
-  help_pages3: '/help/terms-conditions'
-  help_pages4: '/help/beta'
-  help_pages5: '/help/privacy-policy'
-  help_pages6: '/help/about-govuk'
-  help_pages7: '/help/update-email-notifications'
+  help_page_0: '/help/cookies'
+  help_page_1: '/help/accessibility'
+  help_page_2: '/help/browsers'
+  help_page_3: '/help/terms-conditions'
+  help_page_4: '/help/beta'
+  help_page_5: '/help/privacy-policy'
+  help_page_6: '/help/about-govuk'
+  help_page_7: '/help/update-email-notifications'
+
+  # Most popular specialist docs (25 April 2017)
+  specialist_document_1: /business-finance-support/start-up-loans-uk
+  specialist_document_2: /drug-device-alerts/class-2-medicines-recall-diclo-sr-75-tablets-diclofenac-sodium
+  specialist_document_3: /drug-device-alerts/field-safety-notice-27-march-to-31-march-2017
+  specialist_document_4: /drug-device-alerts/field-safety-notice-03-april-to-07-april-2017
+  specialist_document_5: /drug-device-alerts/field-safety-notices-20-march-24-march-2017
+  specialist_document_6: /maib-reports/accidents-on-board-yacht-cv21-resulting-in-loss-of-2-lives
+  specialist_document_7: /drug-safety-update/sglt2-inhibitors-updated-advice-on-increased-risk-of-lower-limb-amputation-mainly-toes
+  specialist_document_8: /drug-device-alerts/field-safety-notice-10-april-to-14-april-2017
+  specialist_document_9: /cma-cases/digital-comparison-tools-market-study
+  specialist_document_10: /cma-cases/review-of-banking-for-small-and-medium-sized-businesses-smes-in-the-uk
+
+  # Top 2 specialist docs for each specialist document type, excluding those above (25 April 2017)
+  specialist_document_11: /drug-safety-update/paracetamol-updated-dosing-for-children-to-be-introduced
+  specialist_document_12: /drug-safety-update/hyoscine-butylbromide-buscopan-injection-risk-of-serious-adverse-effects-in-patients-with-underlying-cardiac-disease
+  specialist_document_13: /international-development-funding/uk-aid-match
+  specialist_document_14: /international-development-funding/uk-aid-direct
+  specialist_document_15: /aaib-reports/aircraft-accident-report-aar-1-2017-g-bxfi-22-august-2015
+  specialist_document_16: /aaib-reports/aaib-investigation-to-piper-l18c-super-cub-g-axlz
+  specialist_document_17: /raib-reports/fatal-accident-near-david-lane-tram-stop
+  specialist_document_18: /raib-reports/track-workers-class-investigation
+  specialist_document_19: /maib-reports/contact-made-by-passenger-ferry-uriah-heep-with-hythe-pier
+  specialist_document_20: /maib-reports/collision-between-ro-ro-freight-ferry-petunia-seaways-and-historic-motor-launch-peggotty
+  specialist_document_21: /countryside-stewardship-grants/permanent-grassland-with-very-low-inputs-outside-sdas-gs2
+  specialist_document_22: /countryside-stewardship-grants/management-of-hedgerows-be3
+  specialist_document_23: /business-finance-support/childcare-business-grants-england
+  specialist_document_24: /business-finance-support/business-solutions-south-west-england
+  specialist_document_25: /dfid-research-outputs/fair-society-healthy-lives-the-marmot-review-strategic-review-of-health-inequalities-in-england-post-2010
+  specialist_document_26: /dfid-research-outputs/girl-landscaping-studies-pakistan-nepal-and-bangladesh
+  specialist_document_27: /tax-and-chancery-tribunal-decisions/seven-individuals-v-the-commissioners-for-hm-revenue-and-customs-2017-ukut-0132-tcc
+  specialist_document_28: /tax-and-chancery-tribunal-decisions/tayo-bailey-others-and-trusteees-of-manchester-new-moston-v-the-charity-commission-for-england-and-wales-2017-ukut-0134-tcc
+  specialist_document_29: /employment-tribunal-decisions/mr-d-kinnear-v-marley-eternit-ltd-t-a-marley-contract-services-4105271-2016
+  specialist_document_30: /employment-tribunal-decisions/mr-d-templeton-and-others-v-the-rangers-football-club-ltd-4105211-2016
+  specialist_document_31: /employment-appeal-tribunal-decisions/london-borough-of-haringey-v-mrs-c-a-o-brien-ukeat-0004-16-la
+  specialist_document_32: /employment-appeal-tribunal-decisions/kingsmoor-packaging-ltd-v-mr-t-fytch-ukeat-0011-16-joj
+  specialist_document_33: /administrative-appeals-tribunal-decisions/rj-gmcl-and-cs-v-secretary-of-state-for-work-and-pensions-v-rj-pip-2017-ukut-105-aac
+  specialist_document_34: /administrative-appeals-tribunal-decisions/mr-v-secretary-of-state-for-work-and-pensions-pip-2017-ukut-46-aac
+  specialist_document_35: /service-standard-reports/apply-for-a-budgeting-loan-alpha-assessment
+  specialist_document_36: /service-standard-reports/apply-for-a-budgeting-loan
+  specialist_document_37: /european-structural-investment-funds/business-development
+  specialist_document_38: /european-structural-investment-funds/learning-and-skills-project-call-in-sheffield-city-region-lep-oc28s17p0733
+  specialist_document_39: /asylum-support-tribunal-decisions/cs-v-secretary-of-state-for-the-home-department-as-12-12-29244
+  specialist_document_40: /asylum-support-tribunal-decisions/am-v-secretary-of-state-for-the-home-department-as-14-11-32141
 
   statistics_announcement_national: '/government/statistics/announcements/uk-armed-forces-quarterly-personnel-report-october-2015'
   statistics_announcement_cancelled: '/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015'
-  # Most visited statistics_announcement pages (2nd September 2016)
+
+  # Most visited statistics_announcement pages (2 September 2016)
   statistics_announcement_1: '/government/statistics/announcements/national-curriculum-assessments-at-key-stage-2-2015-to-2016'
   statistics_announcement_2: '/government/statistics/announcements/national-diet-and-nutrition-survey-results-from-years-5-and-6-combined-of-the-rolling-programme-for-2012-to-2013-and-2013-to-2014'
   statistics_announcement_3: '/government/statistics/announcements/provisional-gcse-and-equivalent-results-in-england-2015-to-2016'
@@ -97,7 +143,8 @@ paths:
   statistics_announcement_10: '/government/statistics/announcements/independent-schools-inspection-outcomes-official-statistics-as-at-31-march-2016'
 
   take_part: '/government/get-involved/take-part/become-a-councillor'
-  # Most visited take_part pages (2nd September 2016)
+
+  # Most visited take_part pages (2 September 2016)
   take_part_1: '/government/get-involved/take-part/volunteer'
   take_part_2: '/government/get-involved/take-part/national-citizen-service'
   take_part_3: '/government/get-involved/take-part/set-up-a-new-school'
@@ -110,7 +157,8 @@ paths:
 
   topical_event_about_page_slim: '/government/topical-events/battle-of-the-somme-centenary-commemorations/about'
   topical_event_about_page: '/government/topical-events/ebola-virus-government-response/about'
-  # Most visited topical_event_about_page pages (2nd September 2016)
+
+  # Most visited topical_event_about_page pages (2 September 2016)
   topical_event_about_page_1: '/government/topical-events/eu-referendum/about'
   topical_event_about_page_2: '/government/topical-events/daesh/about'
   topical_event_about_page_3: '/government/topical-events/anti-corruption-summit-london-2016/about'
@@ -121,7 +169,7 @@ paths:
   topical_event_about_page_8: '/government/topical-events/farming/about'
   topical_event_about_page_9: '/government/topical-events/girl-summit-2014/about'
 
-  # Most visited travel advice (2nd March 2017)
+  # Most visited travel advice (2 March 2017)
   travel_advice_1: '/foreign-travel-advice/usa/entry-requirements'
   travel_advice_2: '/foreign-travel-advice/turkey'
   travel_advice_3: '/foreign-travel-advice/usa'
@@ -141,7 +189,8 @@ paths:
   working_group_long: '/government/groups/benefits-credits-consultation-group-bccg'
   working_group_short: '/government/groups/aviation-statistics-team'
   working_group_with_policies: '/government/groups/better-regulation-executive'
-  # Most visited working_group pages (2nd September 2016)
+
+  # Most visited working_group pages (2 September 2016)
   working_group_1: '/government/groups/claims-management-regulator'
   working_group_2: '/government/groups/disposal-services-authority'
   working_group_3: '/government/groups/public-services-network'
@@ -152,7 +201,7 @@ paths:
   working_group_8: '/government/groups/uk-national-screening-committee-uk-nsc'
   working_group_9: '/government/groups/uk-council-for-child-internet-safety-ukccis'
 
-  # Most visited WLNA (2nd March 2017)
+  # Most visited WLNA (2 March 2017)
   world_location_news_article_1: /government/world-location-news/youth-mobility-scheme-2017-for-japanese-nationals.ja
   world_location_news_article_2: /government/world-location-news/youth-mobility-scheme-2017-for-taiwanese-youth--2.zh-tw
   world_location_news_article_3: /government/world-location-news/rear-admiral-simon-ancona-uk-acdsde-visit-to-thailand-13-14-october
