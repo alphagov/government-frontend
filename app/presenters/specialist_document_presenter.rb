@@ -95,7 +95,7 @@ private
     return [] unless facets && facet_values.any?
     only_facets_with_values = facets.select { |f| facet_values[f['key']] }
 
-    only_facets_with_values.map do |facet|
+    only_facets_with_values.sort_by { |facet| facet['type'] }.map do |facet|
       facet_key = facet['key']
       # Cast all values into an array
       values = [facet_values[facet_key]].flatten
