@@ -50,21 +50,23 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('countryside-stewardship-grants')
 
     def test_meta(component)
+      tiers = [
+        "<a href=\"/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=higher-tier\">Higher Tier</a>",
+        "<a href=\"/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier\">Mid Tier</a>"
+      ]
+
+      land_use = [
+        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=arable-land\">Arable land</a>",
+        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=wildlife-package\">Wildlife package</a>",
+        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=water-quality\">Water quality</a>",
+        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=wildlife-package\">Wildlife package</a>"
+      ]
+
       within shared_component_selector(component) do
         component_args = JSON.parse(page.text)
         assert_equal component_args["other"]["Grant type"], "<a href=\"/countryside-stewardship-grants?grant_type%5B%5D=option\">Option</a>"
-        assert_equal component_args["other"]["Tiers or standalone items"],
-        [
-          "<a href=\"/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=higher-tier\">Higher Tier</a>",
-          "<a href=\"/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier\">Mid Tier</a>"
-        ].join(", ")
-        assert_equal component_args["other"]["Land use"],
-        [
-          "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=arable-land\">Arable land</a>",
-          "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=wildlife-package\">Wildlife package</a>",
-          "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=water-quality\">Water quality</a>",
-          "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=wildlife-package\">Wildlife package</a>"
-        ].join(", ")
+        assert_equal component_args["other"]["Tiers or standalone items"], tiers
+        assert_equal component_args["other"]["Land use"], land_use
         assert_equal component_args["other"]["Funding (per unit per year)"],
         "<a href=\"/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500\">More than £500</a>"
       end

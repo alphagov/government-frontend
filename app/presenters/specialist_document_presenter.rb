@@ -21,7 +21,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def metadata
     super.tap do |m|
       facets_with_values.each do |facet|
-        m[:other][facet['name']] = join_facets(facet)
+        m[:other][facet['name']] = value_or_array_of_values(facet['values'])
       end
     end
   end
@@ -31,7 +31,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
       m[:other_dates] = {}
       facets_with_values.each do |facet|
         type = facet['type'] == 'date' ? :other_dates : :other
-        m[type][facet['name']] = join_facets(facet)
+        m[type][facet['name']] = value_or_array_of_values(facet['values'])
       end
     end
   end
@@ -67,8 +67,8 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
 private
 
-  def join_facets(facet)
-    facet['values'].join(', ')
+  def value_or_array_of_values(values)
+    values.length == 1 ? values.first : values
   end
 
   # Finder is a required link that must have 1 item

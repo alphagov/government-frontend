@@ -194,7 +194,7 @@ class SpecialistDocumentPresenterTest
       assert_empty presented.document_footer[:other]
     end
 
-    test 'handles multiple values for facets' do
+    test 'passes array of multiple values to metadata and document_footer components' do
       overrides = {
         "allowed_values" => [
           {
@@ -212,8 +212,8 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      assert_equal "One, Two", presented.metadata[:other]["Facet name"]
-      assert_equal "One, Two", presented.document_footer[:other]["Facet name"]
+      assert_equal %w{One Two}, presented.metadata[:other]["Facet name"]
+      assert_equal %w{One Two}, presented.document_footer[:other]["Facet name"]
     end
 
     test 'creates links for filterable friendly values' do
