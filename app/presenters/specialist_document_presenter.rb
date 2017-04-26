@@ -20,7 +20,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def metadata
     super.tap do |m|
-      facets_with_values.each do |facet|
+      facets_with_friendly_values.each do |facet|
         m[:other][facet['name']] = value_or_array_of_values(facet['values'])
       end
     end
@@ -29,7 +29,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def document_footer
     super.tap do |m|
       m[:other_dates] = {}
-      facets_with_values.each do |facet|
+      facets_with_friendly_values.each do |facet|
         type = facet['type'] == 'date' ? :other_dates : :other
         m[type][facet['name']] = value_or_array_of_values(facet['values'])
       end
@@ -91,11 +91,8 @@ private
     content_item["details"]["metadata"]
   end
 
-  def facets_with_values
-    return [] unless facets && facet_values.any?
-    only_facets_with_values = facets.select { |f| facet_values[f['key']] }
-
-    only_facets_with_values.sort_by { |facet| facet['type'] }.map do |facet|
+  def facets_with_friendly_values
+    sorted_facets_with_values.map do |facet|
       facet_key = facet['key']
       # Cast all values into an array
       values = [facet_values[facet_key]].flatten
@@ -111,6 +108,15 @@ private
 
       facet
     end
+  end
+
+  def sorted_facets_with_values
+    return [] unless facets && facet_values.any?
+
+    facets
+      .select { |f| facet_values[f['key']] }
+      .reject { |f| f['key'] == first_published_at_facet_key }
+      .sort_by { |f| f['type'] }
   end
 
   def friendly_facet_date(dates)
@@ -154,6 +160,10 @@ private
     link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}")
   end
 
+  def first_published_at_facet_key
+    'first_published_at'
+  end
+
   # first_published_at does not have reliable data
   # at time of writing dates could be after public_updated_at
   # details.first_public_at is not provided
@@ -161,8 +171,12 @@ private
   #
   # Instead use first date in change history
   def first_public_at
-    changes = reverse_chronological_change_history
-    changes.any? ? changes.last[:timestamp] : nil
+    if facet_values[first_published_at_facet_key]
+      facet_values[first_published_at_facet_key]
+    else
+      changes = reverse_chronological_change_history
+      changes.any? ? changes.last[:timestamp] : nil
+    end
   end
 
   # specialist document change history can have a modified date that is

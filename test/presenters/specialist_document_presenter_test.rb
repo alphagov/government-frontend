@@ -52,7 +52,7 @@ class SpecialistDocumentPresenterTest
       assert present_example(example).updated
     end
 
-    test 'presents the published date using the oldest date in the change history' do
+    test 'presents the published date using the oldest date in the change history (when no first published facet)' do
       example = schema_item('aaib-reports')
       example["first_published_at"] = "2001-01-01"
       example["details"]["change_history"] = [
@@ -317,6 +317,42 @@ class SpecialistDocumentPresenterTest
 
       example['links'].delete('finder')
       assert_equal [], present_example(example).breadcrumbs
+    end
+
+    test 'omits first_published_at facet values from `other` section of component parameters to avoid duplicates' do
+      facets = [
+                  {
+                    "name" => "Published",
+                    "key" => "first_published_at",
+                    "type" => "date",
+                  }
+                ]
+      example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
+
+      presented = present_example(example)
+      refute presented.document_footer[:other_dates]['Published']
+      refute presented.metadata[:other]['Published']
+    end
+
+    test 'uses first published date in facets as canonical publish date if provided' do
+      facets = [
+                  {
+                    "name" => "Published",
+                    "key" => "first_published_at",
+                    "type" => "date",
+                  }
+                ]
+      example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
+
+      example["details"]["change_history"] = [
+        {
+          "note" => "A date in the change history",
+          "public_timestamp" => "2002-02-02"
+        },
+      ]
+
+      presented = present_example(example)
+      assert DateTime.parse(presented.published) == DateTime.parse("2010-01-01")
     end
   end
 end
