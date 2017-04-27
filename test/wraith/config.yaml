@@ -72,6 +72,16 @@ paths:
   contact_9: /government/organisations/hm-revenue-customs/contact/gambling-duties
   contact_10: /government/organisations/hm-revenue-customs/contact/welsh-language-helpline-for-debt-management
 
+  # Most popular from https://docs.publishing.service.gov.uk/document-types/help+page.html (19 april 2017)
+  help_pages0: '/help/cookies'
+  help_pages1: '/help/accessibility'
+  help_pages2: '/help/browsers'
+  help_pages3: '/help/terms-conditions'
+  help_pages4: '/help/beta'
+  help_pages5: '/help/privacy-policy'
+  help_pages6: '/help/about-govuk'
+  help_pages7: '/help/update-email-notifications'
+
   statistics_announcement_national: '/government/statistics/announcements/uk-armed-forces-quarterly-personnel-report-october-2015'
   statistics_announcement_cancelled: '/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015'
   # Most visited statistics_announcement pages (2nd September 2016)

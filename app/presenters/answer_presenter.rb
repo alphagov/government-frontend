@@ -1,7 +1,4 @@
 class AnswerPresenter < ContentItemPresenter
-  include Linkable
-
-  def body
-    content_item["details"]["body"]
-  end
+  include Body
+  include LastUpdated
 end

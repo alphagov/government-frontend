@@ -72,7 +72,7 @@ class ActionDispatch::IntegrationTest
 
   def assert_has_component_govspeak(content)
     within_component_govspeak do
-      assert_equal content.gsub(/\s+/, ' '), JSON.parse(page.text).fetch("content").gsub(/\s+/, ' ')
+      assert_equal content.squish, JSON.parse(page.text).fetch("content").squish
     end
   end
 

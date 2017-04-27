@@ -1,9 +1,8 @@
 require 'presenter_test_helper'
 
-class AnswerPresenterTest < PresenterTestCase
-
+class HelpPagePresenterTest < PresenterTestCase
   def format_name
-    "answer"
+    "help_page"
   end
 
   test 'presents the title' do

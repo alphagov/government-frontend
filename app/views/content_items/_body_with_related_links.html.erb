@@ -1,0 +1,19 @@
+<% content_for :simple_header, true %>
+<%= content_for :title, @content_item.title %>
+
+<div class="grid-row sidebar-with-body">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+        title: @content_item.title %>
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+        <% #https://github.com/alphagov/government-frontend/pull/329#issuecomment-297681738 %>
+      <% if false && @content_item.last_updated %>
+        <p class="last-updated">
+          <%= t 'common.last_updated' %>: <%= @content_item.last_updated %>
+        </p>
+      <% end %>
+  </div>
+  <%= render 'shared/related_items', content_item: @content_item  %>
+</div>
