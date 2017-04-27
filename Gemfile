@@ -28,10 +28,10 @@ gem 'statsd-ruby', '1.3.0', require: 'statsd'
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '~> 41.0'
+  gem 'gds-api-adapters', '~> 42.0'
 end
 
-gem 'govuk_navigation_helpers', '~> 5.1'
+gem 'govuk_navigation_helpers', '~> 6.0'
 
 group :development, :test do
   gem 'govuk_schemas'
