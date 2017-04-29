@@ -7,7 +7,6 @@ require 'rails/test_help'
 require 'webmock/minitest'
 require 'support/govuk_content_schema_examples'
 require 'capybara/rails'
-require 'slimmer/test_helpers/govuk_components'
 require 'mocha/mini_test'
 
 GovukAbTesting.configure do |config|
@@ -16,28 +15,18 @@ end
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
-  include Slimmer::TestHelpers::GovukComponents
 
   def setup
-    stub_shared_component_locales
+    # stub_shared_component_locales
   end
-end
-
-# Note: This is so that slimmer is skipped, preventing network requests for
-# content from static (i.e. core_layout.html.erb).
-class ActionController::Base
-  before_action proc {
-    response.headers[Slimmer::Headers::SKIP_HEADER] = "true" unless ENV["USE_SLIMMER"]
-  }
 end
 
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
-  include Slimmer::TestHelpers::GovukComponents
 
   def setup
-    stub_shared_component_locales
+    # stub_shared_component_locales
   end
 
   def assert_has_component_metadata_pair(label, value)

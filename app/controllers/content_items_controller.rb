@@ -1,10 +1,6 @@
 require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
-  rescue_from GdsApi::HTTPForbidden, with: :error_403
-  rescue_from GdsApi::HTTPNotFound, with: :error_notfound
-  rescue_from ActionView::MissingTemplate, with: :error_406
-
   attr_accessor :content_item
 
   def show
@@ -68,7 +64,8 @@ private
   end
 
   def with_locale
-    I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
+    yield
+    # I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
   end
 
   def content_item_path

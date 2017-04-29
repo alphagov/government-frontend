@@ -6,15 +6,11 @@ gem 'airbrake', '~> 5.5'
 gem 'airbrake-ruby', '1.5'
 
 gem 'govuk_frontend_toolkit', '5.1.0'
+
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
 gem 'rails', '~> 5.0'
 gem 'sass-rails', '~> 5.0.4'
-if ENV['SLIMMER_DEV']
-  gem 'slimmer', path: '../slimmer'
-else
-  gem 'slimmer', '~> 10.1.3'
-end
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 gem 'rails-i18n', '>= 4.0.4'
@@ -28,6 +24,12 @@ if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
   gem 'gds-api-adapters', '~> 40.1'
+end
+
+if ENV['TEMPLATE_DEV']
+  gem 'govuk_template', path: '../govuk_template'
+else
+  gem 'govuk_template'
 end
 
 gem 'govuk_navigation_helpers', '~> 3.2'

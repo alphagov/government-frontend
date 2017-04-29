@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title><%= yield :title %> - GOV.UK</title>
-  <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application" %><!--<![endif]-->
-  <!--[if IE 6]><%= stylesheet_link_tag "application-ie6" %><script>var ieVersion = 6;</script><![endif]-->
-  <!--[if IE 7]><%= stylesheet_link_tag "application-ie7" %><script>var ieVersion = 7;</script><![endif]-->
-  <!--[if IE 8]><%= stylesheet_link_tag "application-ie8" %><script>var ieVersion = 8;</script><![endif]-->
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
-  <% if @content_item.description %>
-    <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
-  <% end %>
-  <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
-  <%= @education_navigation_ab_test.analytics_meta_tag.html_safe if @education_navigation_ab_test.ab_test_applies? %>
-  <%= yield :extra_head_content %>
-</head>
-<body>
-  <% unless content_for(:simple_header) %>
-    <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
-  <% end %>
+<%= render file: 'layouts/govuk_template' %>
 
-  <div id="wrapper" class="<%= wrapper_class %>">
-    <main role="main" id="content" class="<%= @content_item.format.dasherize %>" lang="<%= I18n.locale %>">
-      <%= render_phase_label @content_item, content_for(:phase_message) %>
-      <%= render 'shared/breadcrumbs' %>
-      <%= yield %>
-    </main>
-  </div>
-</body>
-</html>
+<link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/core-layout-43be823f924b55a39593daefddfb7aa9e92f80ef6ff2725dcd4d786376a3ab6a.css">
+
+<%= stylesheet_link_tag 'application.css' %>

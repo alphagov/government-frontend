@@ -1,5 +1,10 @@
 // The main application stylesheet
 
+body > .grid-row {
+  width:960px;
+  margin: 0 auto;
+}
+
 // govuk_frontend_toolkit imports
 @import 'colours';
 @import 'measurements';
