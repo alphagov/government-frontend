@@ -1,4 +1,11 @@
 .specialist-document {
   @include description;
   @include sidebar-with-body;
+
+  // FIXME: Remove when metadata component design is improved
+  // https://trello.com/c/2pik3I0j/
+  // Metadata hack ported from specialist-frontend
+  .govuk-metadata dt {
+    min-width: 134px;
+  }
 }

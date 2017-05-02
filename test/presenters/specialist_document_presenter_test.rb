@@ -52,7 +52,7 @@ class SpecialistDocumentPresenterTest
       assert present_example(example).updated
     end
 
-    test 'presents the published date using the oldest date in the change history' do
+    test 'presents the published date using the oldest date in the change history (when no first published facet)' do
       example = schema_item('aaib-reports')
       example["first_published_at"] = "2001-01-01"
       example["details"]["change_history"] = [
@@ -194,7 +194,7 @@ class SpecialistDocumentPresenterTest
       assert_empty presented.document_footer[:other]
     end
 
-    test 'handles multiple values for facets' do
+    test 'passes array of multiple values to metadata and document_footer components' do
       overrides = {
         "allowed_values" => [
           {
@@ -212,8 +212,8 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      assert_equal "One, Two", presented.metadata[:other]["Facet name"]
-      assert_equal "One, Two", presented.document_footer[:other]["Facet name"]
+      assert_equal %w{One Two}, presented.metadata[:other]["Facet name"]
+      assert_equal %w{One Two}, presented.document_footer[:other]["Facet name"]
     end
 
     test 'creates links for filterable friendly values' do
@@ -254,6 +254,39 @@ class SpecialistDocumentPresenterTest
       assert_equal "1 January 2010", presented_metadata["Facet name"]
     end
 
+    test 'puts date facets together and before text facets' do
+      example = example_with_finder_facets([
+                                            {
+                                              "name" => "Facet name",
+                                              "key" => "facet-key",
+                                              "type" => "text",
+                                            },
+                                            {
+                                              "name" => "First date facet",
+                                              "key" => "first-date-facet",
+                                              "type" => "date",
+                                            },
+                                            {
+                                              "name" => "Second date facet",
+                                              "key" => "second-date-facet",
+                                              "type" => "date",
+                                            },
+                                            {
+                                              "name" => "More text",
+                                              "key" => "more-text",
+                                              "type" => "text",
+                                            }
+                                          ],
+                                            "facet-key" => "Text",
+                                            "first-date-facet" => "2010-01-01",
+                                            "second-date-facet" => "2010-02-03",
+                                            "more-text" => "More text"
+                                        )
+
+      expected_order = ["First date facet", "Second date facet", "Facet name", "More text"]
+      assert_equal expected_order, present_example(example).metadata[:other].keys
+    end
+
     test 'breadcrumbs' do
       assert_equal [
         {
@@ -284,6 +317,42 @@ class SpecialistDocumentPresenterTest
 
       example['links'].delete('finder')
       assert_equal [], present_example(example).breadcrumbs
+    end
+
+    test 'omits first_published_at facet values from `other` section of component parameters to avoid duplicates' do
+      facets = [
+                  {
+                    "name" => "Published",
+                    "key" => "first_published_at",
+                    "type" => "date",
+                  }
+                ]
+      example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
+
+      presented = present_example(example)
+      refute presented.document_footer[:other_dates]['Published']
+      refute presented.metadata[:other]['Published']
+    end
+
+    test 'uses first published date in facets as canonical publish date if provided' do
+      facets = [
+                  {
+                    "name" => "Published",
+                    "key" => "first_published_at",
+                    "type" => "date",
+                  }
+                ]
+      example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
+
+      example["details"]["change_history"] = [
+        {
+          "note" => "A date in the change history",
+          "public_timestamp" => "2002-02-02"
+        },
+      ]
+
+      presented = present_example(example)
+      assert DateTime.parse(presented.published) == DateTime.parse("2010-01-01")
     end
   end
 end
