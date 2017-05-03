@@ -114,7 +114,7 @@ private
     return [] unless facets && facet_values.any?
 
     facets
-      .select { |f| facet_values[f['key']] }
+      .select { |f| facet_values[f['key']] && facet_values[f['key']].present? }
       .reject { |f| f['key'] == first_published_at_facet_key }
       .sort_by { |f| f['type'] }
   end
