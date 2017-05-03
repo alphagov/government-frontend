@@ -2,7 +2,7 @@ require 'pry'
 require 'rest-client'
 
 desc "check top 10 content items for document_type using wraith"
-task :wraith_format, [:document_type] do |_t, args|
+task :wraith_document_type, [:document_type] do |_t, args|
   document_type = args[:document_type]
   wraith = YAML::load(File.open('test/wraith/config.yaml'))
   search = RestClient.get "https://www.gov.uk/api/search.json?filter_content_store_document_type=#{document_type}&count=10"

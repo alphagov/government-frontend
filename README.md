@@ -100,6 +100,7 @@ bundle exec wraith capture test/wraith/config-staging-vs-production.yaml
 This will generate image diffs comparing the two runs, including a browsable
 gallery of the output, located at `shots/gallery.html`.
 
+
 #### Compare examples on master with examples on branch
 
 Examples are referencing https://github.com/alphagov/govuk-content-schemas
@@ -114,6 +115,14 @@ Then switch to your branch and create a set of screenshots to compare against us
 ```
 bundle exec wraith latest test/wraith/config-examples.yaml
 ```
+
+#### Compare a document_type
+
+A rake task has been made to make this easy, given a document_type of about
+bundle exec wraith_document_type[about]
+
+this will run against the 10 most popular pages as defined by the search api
+
 
 If you wish to have your own local wip configs, wip* is in the .gitignore, so as an example
 `wip-kittens.yaml` will be ignored
