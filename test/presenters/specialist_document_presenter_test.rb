@@ -194,6 +194,26 @@ class SpecialistDocumentPresenterTest
       assert_empty presented.document_footer[:other]
     end
 
+    test 'ignores facets if valid key but set to an empty string' do
+      example = example_with_finder_facets([
+                                              {
+                                                "name" => "Facet name",
+                                                "key" => "facet-key",
+                                                "type" => "text",
+                                              },
+                                              {
+                                                "name" => "Date facet",
+                                                "key" => "date-facet",
+                                                "type" => "date",
+                                              }
+                                            ],
+                                            "facet-key" => "",
+                                            "date-facet" => ""
+                                          )
+
+      assert_empty present_example(example).metadata[:other]
+    end
+
     test 'passes array of multiple values to metadata and document_footer components' do
       overrides = {
         "allowed_values" => [
