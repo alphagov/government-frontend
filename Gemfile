@@ -44,7 +44,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'wraith', '~> 3.0'
-  gem 'phantomjs', '~> 2.0'
 end
 
 group :test do
