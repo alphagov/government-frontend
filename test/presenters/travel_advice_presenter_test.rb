@@ -6,6 +6,33 @@ class TravelAdvicePresenterTest
       "travel_advice"
     end
 
+    test 'has parts' do
+      assert presented_item("full-country").is_a?(Parts)
+    end
+
+    test "part slug set to nil when content item has parts but base path requested" do
+      refute presented_item("full-country").requesting_a_part?
+      assert presented_item("full-country").part_slug.nil?
+    end
+
+    test "part slug set to last segment of requested content item path when content item has parts" do
+      example = schema_item("full-country")
+      first_part = example['details']['parts'].first
+      presented = presented_item("full-country", first_part['slug'])
+
+      assert presented.requesting_a_part?
+      assert_equal presented.part_slug, first_part['slug']
+      assert presented.has_valid_part?
+    end
+
+    test "knows when an invalid part has been requested" do
+      presented = presented_item("full-country", 'not-a-valid-part')
+
+      assert presented.requesting_a_part?
+      assert_equal presented.part_slug, 'not-a-valid-part'
+      refute presented.has_valid_part?
+    end
+
     test "presents unique titles for each part" do
       example = schema_item("full-country")
       presented = presented_item("full-country")
@@ -21,7 +48,6 @@ class TravelAdvicePresenterTest
       presented = presented_item("full-country")
 
       assert presented.is_summary?
-      assert presented.has_valid_part?
       assert_equal 'Summary', presented.current_part_title
       assert_equal example['details']['summary'], presented.current_part_body
     end
@@ -203,7 +229,12 @@ class TravelAdvicePresenterTest
 
     def presented_item(type = format_name, part_slug = nil, overrides = {})
       schema_example_content_item = schema_item(type)
-      TravelAdvicePresenter.new(schema_example_content_item.merge(overrides), part_slug)
+      part_slug = "/#{part_slug}" if part_slug
+
+      TravelAdvicePresenter.new(
+        schema_example_content_item.merge(overrides),
+        "#{schema_example_content_item['base_path']}#{part_slug}"
+      )
     end
   end
 end

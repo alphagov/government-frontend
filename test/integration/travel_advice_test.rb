@@ -20,7 +20,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     refute page.has_css?('.part-navigation li a', text: 'Summary')
 
     @content_item['details']['parts'].each do |part|
-      assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['name'])
+      assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['title'])
     end
 
     assert page.has_css?('.print-link a[href$="/print"]')
@@ -70,7 +70,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
 
   def setup_and_visit_travel_advice_part(name, part)
     @content_item = JSON.parse(get_content_example(name)).tap do |item|
-      content_store_has_item(item["base_path"], item.to_json)
+      content_store_has_item("#{item['base_path']}/#{part}", item.to_json)
       visit "#{item['base_path']}/#{part}"
     end
   end

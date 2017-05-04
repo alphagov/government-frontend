@@ -1,13 +1,6 @@
 class TravelAdvicePresenter < ContentItemPresenter
+  include Parts
   include ActionView::Helpers::TextHelper
-  include ActionView::Helpers::UrlHelper
-
-  attr_reader :part_slug
-
-  def initialize(content_item, part_slug = nil)
-    super(content_item)
-    @part_slug = part_slug
-  end
 
   def page_title
     if is_summary?
@@ -62,28 +55,8 @@ class TravelAdvicePresenter < ContentItemPresenter
     }
   end
 
-  def parts
-    content_item["details"]["parts"] || []
-  end
-
-  def parts_navigation
-    part_links.each_slice(part_navigation_group_size).to_a
-  end
-
-  def parts_navigation_second_list_start
-    part_navigation_group_size + 1
-  end
-
   def is_summary?
     @part_slug.nil?
-  end
-
-  def current_part_title
-    current_part["title"]
-  end
-
-  def current_part_body
-    current_part["body"]
   end
 
   def map
@@ -92,10 +65,6 @@ class TravelAdvicePresenter < ContentItemPresenter
 
   def map_download_url
     content_item["details"].dig("document", "url")
-  end
-
-  def has_valid_part?
-    !!current_part
   end
 
   def email_signup_link
@@ -156,30 +125,14 @@ private
     if is_summary?
       summary_part
     else
-      parts.find { |part| part["slug"] == @part_slug }
+      super
     end
   end
 
   def part_links
     summary_link_title = 'Summary'
     summary_part_link = is_summary? ? summary_link_title : link_to(summary_link_title, @base_path)
-
-    [summary_part_link] + parts.map do |part|
-      if part['slug'] != @part_slug
-        link_to part['title'], "#{@base_path}/#{part['slug']}"
-      else
-        part['title']
-      end
-    end
-  end
-
-  def part_navigation_group_size
-    size = part_links.size.to_f / 2
-    if size < 2
-      3
-    else
-      size.ceil
-    end
+    [summary_part_link] + super
   end
 
   def ordered_related_items

@@ -56,6 +56,22 @@ class ContentItemsControllerTest < ActionController::TestCase
     )
   end
 
+  test "redirects route with invalid parts to base path" do
+    content_item = content_store_has_schema_example('travel_advice', 'full-country')
+    invalid_part_path = "#{path_for(content_item)}/not-a-valid-part"
+
+    # The content store performs a 301 to the base path when requesting a content item
+    # with any part URL. Simulate this by stubbing a request that returns the content
+    # item.
+    stub_request(:get, %r{#{invalid_part_path}})
+      .to_return(status: 200, body: content_item.to_json, headers: {})
+
+    get :show, params: { path: invalid_part_path }
+
+    assert_response :redirect
+    assert_redirected_to content_item['base_path']
+  end
+
   test "gets item from content store" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
 

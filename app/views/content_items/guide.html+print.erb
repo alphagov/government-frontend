@@ -1,0 +1,23 @@
+<%
+  content_for :title, "Print #{@content_item.title}"
+  content_for :simple_header, true
+  content_for :extra_head_content do %>
+  <meta name="robots" content="noindex, nofollow">
+  <script>window.onload = function() { window.print(); }</script>
+<% end %>
+
+<div class="grid-row guide-print">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title', { title: @content_item.title } %>
+    <% @content_item.parts.each_with_index do |part, index| %>
+      <section>
+        <h1 class="part-title">
+          <%= "#{index + 1}. #{part['title']}" %>
+        </h1>
+        <%= render 'govuk_component/govspeak',
+            content: part['body'],
+            direction: page_text_direction %>
+      </section>
+    <% end %>
+  </div>
+</div>

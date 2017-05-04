@@ -26,4 +26,12 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     locales = ContentItemPresenter.new(translated).available_translations
     assert_equal %w(en ar es), locales.map { |t| t["locale"] }
   end
+
+  test "part slug is nil when requesting a content item without parts" do
+    example_without_parts = govuk_content_schema_example('case_study', 'translated')
+    presented_example = ContentItemPresenter.new(example_without_parts, example_without_parts['base_path'])
+
+    refute presented_example.requesting_a_part?
+    assert presented_example.part_slug.nil?
+  end
 end

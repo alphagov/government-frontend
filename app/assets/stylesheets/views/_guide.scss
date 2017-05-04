@@ -1,0 +1,14 @@
+.guide {
+  @include parts;
+  @include print-link;
+
+  .add-title-margin {
+    @include responsive-top-margin;
+  }
+
+  .part-navigation li {
+    list-style: decimal;
+    margin-left: 1.5em;
+    padding-left: 0.3em;
+  }
+}

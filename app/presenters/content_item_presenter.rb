@@ -1,10 +1,20 @@
 class ContentItemPresenter
   include Withdrawable
 
-  attr_reader :content_item, :base_path, :title, :description, :format, :locale, :phase, :document_type
+  attr_reader :content_item,
+              :requested_content_item_path,
+              :base_path,
+              :title,
+              :description,
+              :format,
+              :locale,
+              :phase,
+              :part_slug,
+              :document_type
 
-  def initialize(content_item)
+  def initialize(content_item, requested_content_item_path = nil)
     @content_item = content_item
+    @requested_content_item_path = requested_content_item_path
     @base_path = content_item["base_path"]
     @title = content_item["title"]
     @description = content_item["description"]
@@ -13,6 +23,11 @@ class ContentItemPresenter
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
     @nav_helper = GovukNavigationHelpers::NavigationHelper.new(content_item)
+    @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
+  end
+
+  def requesting_a_part?
+    false
   end
 
   def available_translations

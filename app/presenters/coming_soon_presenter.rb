@@ -1,7 +1,7 @@
 class ComingSoonPresenter < ContentItemPresenter
   attr_reader :publish_time
 
-  def initialize(content_item)
+  def initialize(content_item, requested_content_item_path = nil)
     super
     @publish_time = content_item["details"]["publish_time"]
   end

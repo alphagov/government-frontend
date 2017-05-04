@@ -25,7 +25,7 @@ private
   def present(content_item)
     presenter_name = content_item['schema_name'].classify + 'Presenter'
     presenter_class = Object.const_get(presenter_name)
-    presenter_class.new(content_item)
+    presenter_class.new(content_item, content_item_path)
   rescue NameError
     raise "No support for schema \"#{content_item['schema_name']}\""
   end
@@ -35,6 +35,11 @@ private
   end
 
   def render_template
+    if @content_item.requesting_a_part? && !@content_item.has_valid_part?
+      redirect_to @content_item.base_path
+      return
+    end
+
     request.variant = :print if params[:variant] == "print"
 
     with_locale do
