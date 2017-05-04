@@ -1,4 +1,3 @@
-require 'pry'
 require 'rest-client'
 
 desc "check top 10 content items for document_type using wraith"
