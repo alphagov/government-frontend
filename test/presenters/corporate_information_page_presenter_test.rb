@@ -14,6 +14,11 @@ class CorporateInformationPagePresenterTest
       assert_equal "About us - Department of Health", presented_item.page_title
     end
 
+    test 'does not present an organisation in the title when it is not present in links' do
+      presented_item = presented_item(format_name, "links" => {})
+      assert_equal "About us", presented_item.page_title
+    end
+
     test 'has contents list' do
       assert presented_item.is_a?(ContentsList)
     end
