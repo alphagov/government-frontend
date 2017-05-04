@@ -70,6 +70,10 @@ the government-frontend repository then run the tests with:
 
 `bundle exec rake`
 
+To test a specific file you can run (for example content_item_test):
+
+`bundle exec rake test TEST=test/integration/content_item_test.rb`
+
 Or to specify the location explicitly:
 
 `GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
