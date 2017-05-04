@@ -6,6 +6,10 @@ class GuidePresenterTest
       "guide"
     end
 
+    test 'has parts' do
+      assert presented_item.is_a?(Parts)
+    end
+
     test "presents unique page titles for each part" do
       assert_equal presented_item.page_title, schema_item['title']
       schema_item['details']['parts'].each do |part|

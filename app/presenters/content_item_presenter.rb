@@ -1,6 +1,5 @@
 class ContentItemPresenter
   include Withdrawable
-  include Parts
 
   attr_reader :content_item,
               :requested_content_item_path,
@@ -25,6 +24,10 @@ class ContentItemPresenter
     @document_type = content_item["document_type"]
     @nav_helper = GovukNavigationHelpers::NavigationHelper.new(content_item)
     @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
+  end
+
+  def requesting_a_part?
+    false
   end
 
   def available_translations

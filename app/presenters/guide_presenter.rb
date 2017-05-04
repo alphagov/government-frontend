@@ -1,4 +1,6 @@
 class GuidePresenter < ContentItemPresenter
+  include Parts
+
   def page_title
     if @part_slug
       "#{title}: #{current_part_title}"

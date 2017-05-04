@@ -6,6 +6,33 @@ class TravelAdvicePresenterTest
       "travel_advice"
     end
 
+    test 'has parts' do
+      assert presented_item("full-country").is_a?(Parts)
+    end
+
+    test "part slug set to nil when content item has parts but base path requested" do
+      refute presented_item("full-country").requesting_a_part?
+      assert presented_item("full-country").part_slug.nil?
+    end
+
+    test "part slug set to last segment of requested content item path when content item has parts" do
+      example = schema_item("full-country")
+      first_part = example['details']['parts'].first
+      presented = presented_item("full-country", first_part['slug'])
+
+      assert presented.requesting_a_part?
+      assert_equal presented.part_slug, first_part['slug']
+      assert presented.has_valid_part?
+    end
+
+    test "knows when an invalid part has been requested" do
+      presented = presented_item("full-country", 'not-a-valid-part')
+
+      assert presented.requesting_a_part?
+      assert_equal presented.part_slug, 'not-a-valid-part'
+      refute presented.has_valid_part?
+    end
+
     test "presents unique titles for each part" do
       example = schema_item("full-country")
       presented = presented_item("full-country")
