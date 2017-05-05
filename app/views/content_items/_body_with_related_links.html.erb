@@ -7,13 +7,15 @@
         title: @content_item.title %>
     <%= render 'govuk_component/govspeak',
         content: @content_item.body,
-        direction: page_text_direction %>
-        <% #https://github.com/alphagov/government-frontend/pull/329#issuecomment-297681738 %>
-      <% if false && @content_item.last_updated %>
-        <p class="last-updated">
-          <%= t 'common.last_updated' %>: <%= @content_item.last_updated %>
-        </p>
-      <% end %>
+        direction: page_text_direction,
+        disable_youtube_expansions: true %>
+
+    <% #https://github.com/alphagov/government-frontend/pull/329#issuecomment-297681738 %>
+    <% if false && @content_item.last_updated %>
+      <p class="last-updated">
+        <%= t 'common.last_updated' %>: <%= @content_item.last_updated %>
+      </p>
+    <% end %>
   </div>
   <%= render 'shared/related_items', content_item: @content_item  %>
 </div>

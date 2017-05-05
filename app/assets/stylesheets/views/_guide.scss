@@ -18,7 +18,8 @@
   // Distinguish between part titles (27px) and h2s
   // within content of part by reducing font-size
   //
-  // Override h2 sizes to match frontend typography
+  // Override h2 sizes to match layout used by alphagov/frontend
+  // https://github.com/alphagov/static/blob/f44470edc4e4159ea37481985c641034741623ac/app/assets/stylesheets/helpers/_text.scss#L38
   .govuk-govspeak {
     h2 {
       @include bold-24;
