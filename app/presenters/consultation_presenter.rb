@@ -1,13 +1,10 @@
 class ConsultationPresenter < ContentItemPresenter
+  include Body
   include Metadata
   include NationalApplicability
   include Political
   include Shareable
   include TitleAndContext
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def opening_date_time
     content_item["details"]["opening_date"]

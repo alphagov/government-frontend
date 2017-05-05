@@ -1,13 +1,10 @@
 class WorkingGroupPresenter < ContentItemPresenter
+  include Body
   include ContentsList
   include TitleAndContext
 
   def email
     content_item["details"]["email"]
-  end
-
-  def body
-    content_item["details"]["body"]
   end
 
   def contents_items

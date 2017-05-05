@@ -1,10 +1,7 @@
 class TopicalEventAboutPagePresenter < ContentItemPresenter
+  include Body
   include ContentsList
   include TitleAndContext
-
-  def body
-    content_item["details"]["body"]
-  end
 
   # Old topical event pages have a "archived" string appended to their title
   # which we also include in the breadcrumbs of topical event about pages

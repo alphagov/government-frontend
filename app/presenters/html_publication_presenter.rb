@@ -1,9 +1,6 @@
 class HtmlPublicationPresenter < ContentItemPresenter
+  include Body
   include OrganisationBranding
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def contents?
     contents && contents != '<ol></ol>'

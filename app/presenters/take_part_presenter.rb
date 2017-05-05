@@ -1,9 +1,6 @@
 class TakePartPresenter < ContentItemPresenter
+  include Body
   include TitleAndContext
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def image
     content_item["details"]["image"]
