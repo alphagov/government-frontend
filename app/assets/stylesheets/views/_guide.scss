@@ -11,4 +11,17 @@
     margin-left: 1.5em;
     padding-left: 0.3em;
   }
+
+  // FIXME: Remove when typography improvements made to
+  //        govspeak component
+  //
+  // Distinguish between part titles (27px) and h2s
+  // within content of part by reducing font-size
+  //
+  // Override h2 sizes to match frontend typography
+  .govuk-govspeak {
+    h2 {
+      @include bold-24;
+    }
+  }
 }
