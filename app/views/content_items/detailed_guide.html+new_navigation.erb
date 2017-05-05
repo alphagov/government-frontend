@@ -28,9 +28,7 @@
           <% end %>
         </aside>
       <% end %>
-      <%= render 'govuk_component/govspeak',
-                 content: @content_item.body,
-                 direction: page_text_direction %>
+      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
     </div>
     <%= render 'shared/footer', @content_item.document_footer %>
   </div>

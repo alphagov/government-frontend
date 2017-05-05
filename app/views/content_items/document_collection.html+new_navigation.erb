@@ -11,9 +11,7 @@
     <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
 
     <% if @content_item.body.present? %>
-      <%= render 'govuk_component/govspeak',
-                 content: @content_item.body,
-                 direction: page_text_direction %>
+      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
     <% end %>
     <% @content_item.groups.each do |group| %>
       <%= @content_item.group_heading(group) %>
