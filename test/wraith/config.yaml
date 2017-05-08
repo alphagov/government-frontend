@@ -73,7 +73,7 @@ paths:
   contact_9: /government/organisations/hm-revenue-customs/contact/gambling-duties
   contact_10: /government/organisations/hm-revenue-customs/contact/welsh-language-helpline-for-debt-management
 
-  # Most popular from https://docs.publishing.service.gov.uk/document-types/help+page.html (19 april 2017)
+  # Most popular from https://docs.publishing.service.gov.uk/document-types/help+page.html (19 April 2017)
   help_page_0: '/help/cookies'
   help_page_1: '/help/accessibility'
   help_page_2: '/help/browsers'
@@ -82,6 +82,18 @@ paths:
   help_page_5: '/help/privacy-policy'
   help_page_6: '/help/about-govuk'
   help_page_7: '/help/update-email-notifications'
+
+  # Most popular guides (8 May 2017)
+  guide_0: '/log-in-register-hmrc-online-services'
+  guide_1: '/log-in-file-self-assessment-tax-return'
+  guide_2: '/log-in-register-hmrc-online-services/sign-in'
+  guide_3: '/change-address-driving-licence'
+  guide_4: '/standard-visitor-visa'
+  guide_5: '/renew-adult-passport/renew'
+  guide_6: '/self-assessment-tax-returns'
+  guide_7: '/claim-tax-refund/too-much-tax-taken-from-your-pay'
+  guide_8: '/vehicle-tax-rate-tables'
+  guide_9: '/claim-tax-refund/overview'
 
   # Most popular specialist docs (25 April 2017)
   specialist_document_1: /business-finance-support/start-up-loans-uk
