@@ -162,49 +162,51 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :not_acceptable
   end
 
-  test "defaults to 'A' view without AB Testing cookie for Detailed Guides" do
-    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
-    path = 'government/abtest/detailed-guide'
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {
-      'taxons' => [
-        {
-          'title' => 'A Taxon',
-          'base_path' => '/a-taxon',
-        }
-      ]
-    }
+  EducationNavigationAbTestRequest::NEW_NAVIGATION_CONTENT_ITEM_SCHEMAS.each do |schema_name|
+    test "defaults to 'A' view without AB Testing cookie for #{schema_name}" do
+      content_item = content_store_has_schema_example(schema_name, schema_name)
+      path = "government/abtest/#{schema_name}"
+      content_item['base_path'] = "/#{path}"
+      content_item['links'] = {
+        'taxons' => [
+          {
+            'title' => 'A Taxon',
+            'base_path' => '/a-taxon',
+          }
+        ]
+      }
 
-    content_store_has_item(content_item['base_path'], content_item)
+      content_store_has_item(content_item['base_path'], content_item)
 
-    get :show, params: { path: path_for(content_item) }
-    assert_equal [], @request.variant
-    refute_match(/A Taxon/, taxonomy_sidebar)
-  end
-
-  test "honours Education Navigation AB Testing cookie for Detailed Guides" do
-    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
-    path = 'government/abtest/detailed-guide'
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {
-      'taxons' => [
-        {
-          'title' => 'A Taxon',
-          'base_path' => '/a-taxon',
-        }
-      ]
-    }
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    with_variant EducationNavigation: "A" do
       get :show, params: { path: path_for(content_item) }
+      assert_equal [], @request.variant
       refute_match(/A Taxon/, taxonomy_sidebar)
     end
 
-    with_variant EducationNavigation: "B" do
-      get :show, params: { path: path_for(content_item) }
-      assert_match(/A Taxon/, taxonomy_sidebar)
+    test "honours Education Navigation AB Testing cookie for #{schema_name}" do
+      content_item = content_store_has_schema_example(schema_name, schema_name)
+      path = "government/abtest/#{schema_name}"
+      content_item['base_path'] = "/#{path}"
+      content_item['links'] = {
+        'taxons' => [
+          {
+            'title' => 'A Taxon',
+            'base_path' => '/a-taxon',
+          }
+        ]
+      }
+
+      content_store_has_item(content_item['base_path'], content_item)
+
+      with_variant EducationNavigation: "A" do
+        get :show, params: { path: path_for(content_item) }
+        refute_match(/A Taxon/, taxonomy_sidebar)
+      end
+
+      with_variant EducationNavigation: "B" do
+        get :show, params: { path: path_for(content_item) }
+        assert_match(/A Taxon/, taxonomy_sidebar)
+      end
     end
   end
 

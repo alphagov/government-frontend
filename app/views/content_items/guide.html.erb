@@ -33,7 +33,5 @@
       <% end %>
     <% end %>
   </div>
-  <div class="column-one-third add-title-margin">
-    <%= render 'govuk_component/related_items', @content_item.related_items %>
-  </div>
+  <%= render 'shared/related_items', content_item: @content_item  %>
 </div>
