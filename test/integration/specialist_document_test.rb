@@ -167,7 +167,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       assert_text('Find out more')
     end
 
-    button_info_selector = '.button-info'
+    button_info_selector = '.button-info-text'
     assert page.has_css?(button_info_selector)
     within button_info_selector do
       assert_text('on the Big Issue Invest website')
