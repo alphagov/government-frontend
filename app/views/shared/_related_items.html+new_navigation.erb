@@ -1,3 +1,15 @@
 <div class="column-third add-title-margin">
-  <%= render partial: 'govuk_component/taxonomy_sidebar', locals: content_item.taxonomy_sidebar %>
+  <% if MainstreamContentFetcher.with_curated_sidebar.include?(content_item.base_path) %>
+    <%=
+      render(
+        partial: 'govuk_component/related_items',
+        locals: content_item.related_items
+      ) %>
+  <% else %>
+    <%=
+      render(
+        partial: 'govuk_component/taxonomy_sidebar',
+        locals: content_item.taxonomy_sidebar
+      ) %>
+  <% end %>
 </div>
