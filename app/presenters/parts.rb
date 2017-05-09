@@ -5,6 +5,14 @@ module Parts
     content_item.dig("details", "parts") || []
   end
 
+  def decorated_parts
+    parts.each_with_index.map do |part, i|
+      # Link to base_path for first part
+      part['full_path'] = (i == 0) ? base_path : "#{base_path}/#{part['slug']}"
+      part
+    end
+  end
+
   # When requesting a part, the content store will return a content item
   # with a base path that's different to the one requested. That content
   # item contains all the parts for that document.
@@ -43,11 +51,9 @@ private
   end
 
   def part_links
-    parts.each_with_index.map do |part, i|
+    decorated_parts.map do |part|
       if part['slug'] != current_part['slug']
-        # Link to base_path for first part
-        link_href = (i == 0) ? base_path : "#{base_path}/#{part['slug']}"
-        link_to part['title'], link_href
+        link_to part['title'], part['full_path']
       else
         part['title']
       end
