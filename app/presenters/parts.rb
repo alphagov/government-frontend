@@ -43,9 +43,11 @@ private
   end
 
   def part_links
-    parts.map do |part|
+    parts.each_with_index.map do |part, i|
       if part['slug'] != current_part['slug']
-        link_to part['title'], "#{@base_path}/#{part['slug']}"
+        # Link to base_path for first part
+        link_href = (i == 0) ? base_path : "#{base_path}/#{part['slug']}"
+        link_to part['title'], link_href
       else
         part['title']
       end

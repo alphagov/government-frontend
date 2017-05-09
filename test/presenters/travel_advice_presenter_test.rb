@@ -208,11 +208,14 @@ class TravelAdvicePresenterTest
       assert_equal "<p>Test&lt;br&gt;XML</p>", present_example(example).atom_change_description
     end
 
-    test "presents all parts for the print view" do
+    test "presents all parts including summary for the print view" do
       example_parts = schema_item("full-country")["details"]["parts"]
-      presented = presented_item("full-country")
+      parts = presented_item("full-country").parts.clone
+      summary = parts.shift
 
-      assert_equal example_parts, presented.parts
+      assert_equal example_parts, parts
+      assert_equal "Summary", summary["title"]
+      assert_equal schema_item("full-country")["details"]["summary"], summary["body"]
     end
 
   private

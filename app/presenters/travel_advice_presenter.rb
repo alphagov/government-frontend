@@ -112,27 +112,19 @@ class TravelAdvicePresenter < ContentItemPresenter
     Plek.current.website_root + content_item["base_path"]
   end
 
+  # Treat summary as the first part
+  def parts
+    [summary_part].concat(super)
+  end
+
 private
 
   def summary_part
     {
       "title" => "Summary",
+      "slug" => "",
       "body" => content_item["details"]["summary"]
     }
-  end
-
-  def current_part
-    if is_summary?
-      summary_part
-    else
-      super
-    end
-  end
-
-  def part_links
-    summary_link_title = 'Summary'
-    summary_part_link = is_summary? ? summary_link_title : link_to(summary_link_title, @base_path)
-    [summary_part_link] + super
   end
 
   def ordered_related_items
