@@ -227,12 +227,26 @@ class ContentItemsControllerTest < ActionController::TestCase
 
       with_variant EducationNavigation: "A" do
         get :show, params: { path: path_for(content_item) }
-        refute_match(/A Taxon/, taxonomy_sidebar)
+        assert(
+          related_links_sidebar,
+          "Expected to find the related links component"
+        )
+        assert_nil(
+          taxonomy_sidebar,
+          "Does not expect to find the new taxonomy sidebar"
+        )
       end
 
       with_variant EducationNavigation: "B" do
         get :show, params: { path: path_for(content_item) }
-        refute_match(/A Taxon/, taxonomy_sidebar)
+        assert(
+          related_links_sidebar,
+          "Expected to find the related links component"
+        )
+        assert_nil(
+          taxonomy_sidebar,
+          "Does not expect to find the new taxonomy sidebar"
+        )
       end
     end
   end
@@ -292,7 +306,15 @@ class ContentItemsControllerTest < ActionController::TestCase
     base_path
   end
 
+  def related_links_sidebar
+    Nokogiri::HTML.parse(response.body).at_css(
+      shared_component_selector("related_items")
+    )
+  end
+
   def taxonomy_sidebar
-    Nokogiri::HTML.parse(response.body).at_css(".column-third")
+    Nokogiri::HTML.parse(response.body).at_css(
+      shared_component_selector("taxonomy_sidebar")
+    )
   end
 end
