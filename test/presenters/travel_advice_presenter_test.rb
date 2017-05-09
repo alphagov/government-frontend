@@ -137,6 +137,52 @@ class TravelAdvicePresenterTest
       assert_equal "#{schema_item('full-country')['base_path']}/print", presented_item("full-country").print_link
     end
 
+    test "presents only next navigation when on the summary" do
+      example = schema_item('full-country')
+      parts = example['details']['parts']
+      nav = presented_item('full-country').previous_and_next_navigation
+      expected_nav = {
+        next_page: {
+          url: "#{example['base_path']}/#{parts[0]['slug']}",
+          title: "Next",
+          label: parts[0]['title'] }
+      }
+
+      assert_equal nav, expected_nav
+    end
+
+    test "presents previous and next navigation" do
+      example = schema_item('full-country')
+      parts = example['details']['parts']
+      nav = presented_item('full-country', parts[0]['slug']).previous_and_next_navigation
+      expected_nav = {
+        next_page: {
+          url: "#{example['base_path']}/#{parts[1]['slug']}",
+          title: "Next",
+          label: parts[1]['title'] },
+        previous_page: {
+          url: example['base_path'],
+          title: "Previous",
+          label: 'Summary' }
+      }
+
+      assert_equal nav, expected_nav
+    end
+
+    test "presents only previous navigation when last part" do
+      example = schema_item('full-country')
+      parts = example['details']['parts']
+      nav = presented_item('full-country', parts.last['slug']).previous_and_next_navigation
+      expected_nav = {
+        previous_page: {
+          url: "#{example['base_path']}/#{parts[-2]['slug']}",
+          title: "Previous",
+          label: parts[-2]['title'] }
+      }
+
+      assert_equal nav, expected_nav
+    end
+
     test "presents alert statuses" do
       example = schema_item("full-country")
       example["details"]["alert_status"] = %w{avoid_all_but_essential_travel_to_parts avoid_all_travel_to_parts}

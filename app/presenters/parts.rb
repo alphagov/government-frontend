@@ -40,6 +40,24 @@ module Parts
     part_navigation_group_size + 1
   end
 
+  def previous_and_next_navigation
+    nav = {}
+
+    nav[:previous_page] = {
+      url: previous_part['full_path'],
+      title: I18n.t('multi_page.previous_page'),
+      label: previous_part['title']
+    } if previous_part
+
+    nav[:next_page] = {
+      url: next_part['full_path'],
+      title: I18n.t('multi_page.next_page'),
+      label: next_part['title']
+    } if next_part
+
+    nav
+  end
+
 private
 
   def current_part
@@ -67,5 +85,17 @@ private
     else
       size.ceil
     end
+  end
+
+  def next_part
+    decorated_parts[current_part_index + 1]
+  end
+
+  def previous_part
+    decorated_parts[current_part_index - 1] if current_part_index > 0
+  end
+
+  def current_part_index
+    parts.index(current_part)
   end
 end
