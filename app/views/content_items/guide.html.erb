@@ -28,7 +28,7 @@
 
       <% if @content_item.multi_page_guide? %>
         <div class="print-link">
-          <%= link_to "Print entire guide", @content_item.print_link, rel: 'alternate' %>
+          <%= link_to t("multi_page.print_entire_guide"), @content_item.print_link, rel: 'alternate' %>
         </div>
       <% end %>
     <% end %>

@@ -345,3 +345,7 @@ cy:
     welsh_language_scheme_html: Dysgwch am ein hymrwymiad i %{link}.
     social_media_use_html: Darllenwch ein polisi ar %{link}
     about_our_services_html: Canfod %{link}
+  multi_page:
+      print_entire_guide: "Tudalen hawdd ei hargraffu"
+      previous_page: "Llywio i’r rhan flaenorol"
+      next_page: "Llywio i’r rhan nesaf"
