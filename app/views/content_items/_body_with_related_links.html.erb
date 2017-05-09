@@ -8,7 +8,8 @@
     <%= render 'govuk_component/govspeak',
         content: @content_item.body,
         direction: page_text_direction,
-        disable_youtube_expansions: true %>
+        disable_youtube_expansions: true,
+        rich_govspeak: true %>
 
     <% #https://github.com/alphagov/government-frontend/pull/329#issuecomment-297681738 %>
     <% if false && @content_item.last_updated %>
