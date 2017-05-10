@@ -112,12 +112,12 @@ class TravelAdvicePresenter < ContentItemPresenter
     Plek.current.website_root + content_item["base_path"]
   end
 
+private
+
   # Treat summary as the first part
-  def parts
+  def raw_parts
     [summary_part].concat(super)
   end
-
-private
 
   def summary_part
     {

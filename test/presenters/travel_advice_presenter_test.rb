@@ -259,7 +259,10 @@ class TravelAdvicePresenterTest
       parts = presented_item("full-country").parts.clone
       summary = parts.shift
 
-      assert_equal example_parts, parts
+      parts.each_with_index do |part, i|
+        assert_equal example_parts[i]['body'], part['body']
+        assert_equal example_parts[i]['slug'], part['slug']
+      end
       assert_equal "Summary", summary["title"]
       assert_equal schema_item("full-country")["details"]["summary"], summary["body"]
     end

@@ -2,11 +2,7 @@ module Parts
   include ActionView::Helpers::UrlHelper
 
   def parts
-    content_item.dig("details", "parts") || []
-  end
-
-  def decorated_parts
-    parts.each_with_index.map do |part, i|
+    raw_parts.each_with_index.map do |part, i|
       # Link to base_path for first part
       part['full_path'] = (i == 0) ? base_path : "#{base_path}/#{part['slug']}"
       part
@@ -60,6 +56,10 @@ module Parts
 
 private
 
+  def raw_parts
+    content_item.dig("details", "parts") || []
+  end
+
   def current_part
     if part_slug
       parts.find { |part| part["slug"] == part_slug }
@@ -69,7 +69,7 @@ private
   end
 
   def part_links
-    decorated_parts.map do |part|
+    parts.map do |part|
       if part['slug'] != current_part['slug']
         link_to part['title'], part['full_path']
       else
@@ -88,11 +88,11 @@ private
   end
 
   def next_part
-    decorated_parts[current_part_index + 1]
+    parts[current_part_index + 1]
   end
 
   def previous_part
-    decorated_parts[current_part_index - 1] if current_part_index > 0
+    parts[current_part_index - 1] if current_part_index > 0
   end
 
   def current_part_index
