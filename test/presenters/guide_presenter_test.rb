@@ -48,7 +48,7 @@ class GuidePresenterTest
           title: "Next",
           label: parts[2]['title'] },
         previous_page: {
-          url: "#{schema_item['base_path']}/#{parts[0]['slug']}",
+          url: schema_item['base_path'],
           title: "Previous",
           label: parts[0]['title'] }
       }

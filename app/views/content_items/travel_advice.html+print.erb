@@ -9,22 +9,14 @@
 <div class="grid-row travel-advice-print">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
-
-    <section>
-      <h1 class="part-title">
-        <%= @content_item.current_part_title %>
-      </h1>
-      <%= render 'shared/travel_advice_summary', content_item: @content_item %>
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.current_part_body,
-          direction: page_text_direction %>
-    </section>
-
-    <% @content_item.parts.each do |part| %>
+    <% @content_item.parts.each_with_index do |part, i| %>
       <section>
         <h1 class="part-title">
           <%= part['title'] %>
         </h1>
+
+        <%= render 'shared/travel_advice_summary', content_item: @content_item if i == 0 %>
+
         <%= render 'govuk_component/govspeak',
             content: part['body'],
             direction: page_text_direction %>

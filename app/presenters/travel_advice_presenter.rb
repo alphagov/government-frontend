@@ -114,25 +114,17 @@ class TravelAdvicePresenter < ContentItemPresenter
 
 private
 
+  # Treat summary as the first part
+  def raw_parts
+    [summary_part].concat(super)
+  end
+
   def summary_part
     {
       "title" => "Summary",
+      "slug" => "",
       "body" => content_item["details"]["summary"]
     }
-  end
-
-  def current_part
-    if is_summary?
-      summary_part
-    else
-      super
-    end
-  end
-
-  def part_links
-    summary_link_title = 'Summary'
-    summary_part_link = is_summary? ? summary_link_title : link_to(summary_link_title, @base_path)
-    [summary_part_link] + super
   end
 
   def ordered_related_items

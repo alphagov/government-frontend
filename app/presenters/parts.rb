@@ -2,7 +2,11 @@ module Parts
   include ActionView::Helpers::UrlHelper
 
   def parts
-    content_item.dig("details", "parts") || []
+    raw_parts.each_with_index.map do |part, i|
+      # Link to base_path for first part
+      part['full_path'] = (i == 0) ? base_path : "#{base_path}/#{part['slug']}"
+      part
+    end
   end
 
   # When requesting a part, the content store will return a content item
@@ -32,7 +36,29 @@ module Parts
     part_navigation_group_size + 1
   end
 
+  def previous_and_next_navigation
+    nav = {}
+
+    nav[:previous_page] = {
+      url: previous_part['full_path'],
+      title: I18n.t('multi_page.previous_page'),
+      label: previous_part['title']
+    } if previous_part
+
+    nav[:next_page] = {
+      url: next_part['full_path'],
+      title: I18n.t('multi_page.next_page'),
+      label: next_part['title']
+    } if next_part
+
+    nav
+  end
+
 private
+
+  def raw_parts
+    content_item.dig("details", "parts") || []
+  end
 
   def current_part
     if part_slug
@@ -45,7 +71,7 @@ private
   def part_links
     parts.map do |part|
       if part['slug'] != current_part['slug']
-        link_to part['title'], "#{@base_path}/#{part['slug']}"
+        link_to part['title'], part['full_path']
       else
         part['title']
       end
@@ -59,5 +85,17 @@ private
     else
       size.ceil
     end
+  end
+
+  def next_part
+    parts[current_part_index + 1]
+  end
+
+  def previous_part
+    parts[current_part_index - 1] if current_part_index > 0
+  end
+
+  def current_part_index
+    parts.index(current_part)
   end
 end

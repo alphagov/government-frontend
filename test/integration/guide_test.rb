@@ -24,7 +24,7 @@ class GuideTest < ActionDispatch::IntegrationTest
     end
 
     assert page.has_css?('h1', text: "1. #{@content_item['details']['parts'].first['title']}")
-
+    assert page.has_css?(shared_component_selector("previous_and_next_navigation"))
     assert page.has_css?('.print-link a[href$="/print"]')
   end
 

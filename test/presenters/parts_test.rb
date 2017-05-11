@@ -35,6 +35,16 @@ module PresentingFirstPartInContentItem
   end
 end
 
+module PresentingSecondPartInContentItem
+  def part_slug
+    'second-slug'
+  end
+
+  def requested_content_item_path
+    base_path
+  end
+end
+
 class PartsTest < ActiveSupport::TestCase
   def setup
     @parts = Object.new
@@ -44,6 +54,10 @@ class PartsTest < ActiveSupport::TestCase
 
   def presenting_first_part_in_content_item
     @parts.extend(PresentingFirstPartInContentItem)
+  end
+
+  def presenting_second_part_in_content_item
+    @parts.extend(PresentingSecondPartInContentItem)
   end
 
   test 'is not requesting a part when no parts exist' do
@@ -122,7 +136,13 @@ class PartsTest < ActiveSupport::TestCase
   test 'navigation items are presented as links unless they are the current part' do
     presenting_first_part_in_content_item
     assert_equal @parts.current_part_title, 'first-title'
-    assert_equal @parts.parts_navigation, [["first-title", "<a href=\"/second-slug\">second-title</a>"]]
+    assert_equal @parts.parts_navigation, [["first-title", "<a href=\"/base-path/second-slug\">second-title</a>"]]
+  end
+
+  test 'links to the first part ignore the part\'s slug and use the base path' do
+    presenting_second_part_in_content_item
+    assert_equal @parts.current_part_title, 'second-title'
+    assert_equal @parts.parts_navigation, [["<a href=\"/base-path\">first-title</a>", "second-title"]]
   end
 
   test 'navigation items link to all parts' do
@@ -197,8 +217,8 @@ class PartsTest < ActiveSupport::TestCase
     end
 
     assert_equal @parts.parts_navigation, [
-        ["first-title", "<a href=\"/second-slug\">second-title</a>"],
-        ["<a href=\"/third-slug\">third-title</a>", "<a href=\"/fourth-slug\">fourth-title</a>"]
+        ["first-title", "<a href=\"/base-path/second-slug\">second-title</a>"],
+        ["<a href=\"/base-path/third-slug\">third-title</a>", "<a href=\"/base-path/fourth-slug\">fourth-title</a>"]
       ]
   end
 end
