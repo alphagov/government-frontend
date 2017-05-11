@@ -1,5 +1,6 @@
 class GuidePresenter < ContentItemPresenter
   include Parts
+  include UkviABTest
 
   def page_title
     if @part_slug
