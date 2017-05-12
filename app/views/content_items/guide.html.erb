@@ -25,6 +25,12 @@
           disable_youtube_expansions: true,
           rich_govspeak: true %>
 
+      <% if @content_item.ukvi_overview_section_test? %>
+        <%= render partial: "ab_testing/ukvi_overview_section" %>
+      <% elsif @content_item.ukvi_knowledge_section_test? %>
+        <%= render partial: "ab_testing/ukvi_knowledge_of_english_section" %>
+      <% end %>
+
       <%= render 'govuk_component/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
       <% if @content_item.multi_page_guide? %>
