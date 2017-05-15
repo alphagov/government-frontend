@@ -153,9 +153,7 @@
     </h1>
   </div>
   <div class="column-two-thirds" aria-labelledby="description-title">
-    <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction %>
+    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
   </div>
 </div>
 

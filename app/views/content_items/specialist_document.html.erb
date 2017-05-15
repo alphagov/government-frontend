@@ -19,9 +19,7 @@
     </div>
   <% end %>
   <div class="column-two-thirds <% unless @content_item.nested_contents.any? %>offset-one-third<% end %>">
-    <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction %>
+    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
 
     <% if @content_item.continuation_link %>
       <%= render(

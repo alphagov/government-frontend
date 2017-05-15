@@ -1,13 +1,10 @@
 class SpeechPresenter < ContentItemPresenter
+  include Body
   include Linkable
   include Political
   include Updatable
   include TitleAndContext
   include Metadata
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def image
     content_item["details"]["image"]

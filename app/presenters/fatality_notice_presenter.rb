@@ -1,4 +1,5 @@
 class FatalityNoticePresenter < ContentItemPresenter
+  include Body
   include TitleAndContext
   include Metadata
 
@@ -28,9 +29,5 @@ class FatalityNoticePresenter < ContentItemPresenter
         t[:context] = "Operations in #{field_of_operation.try(:title)}"
       end
     end
-  end
-
-  def body
-    content_item['details']['body']
   end
 end

@@ -1,12 +1,9 @@
 class CorporateInformationPagePresenter < ContentItemPresenter
+  include Body
   include ContentsList
   include TitleAndContext
   include OrganisationBranding
   include CorporateInformationGroups
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def page_title
     page_title = title.to_s

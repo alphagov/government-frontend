@@ -1,13 +1,10 @@
 class DetailedGuidePresenter < ContentItemPresenter
+  include Body
   include ContentsList
   include Metadata
   include NationalApplicability
   include Political
   include TitleAndContext
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def context
     parent["title"]

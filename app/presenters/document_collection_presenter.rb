@@ -1,12 +1,9 @@
 class DocumentCollectionPresenter < ContentItemPresenter
+  include Body
   include Metadata
   include Political
   include TitleAndContext
   include ContentsList
-
-  def body
-    content_item["details"]["body"]
-  end
 
   def contents_items
     groups.map do |group|

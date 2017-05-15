@@ -14,9 +14,7 @@
   <% end %>
   <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
     <% if @content_item.body.present? %>
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.body,
-          direction: page_text_direction %>
+      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
     <% end %>
     <% @content_item.groups.each do |group| %>
       <%= @content_item.group_heading(group) %>
