@@ -1,25 +1,29 @@
 require 'rest-client'
+require "#{Rails.root}/lib/helpers/wraith_config_helper.rb"
 
-desc "check top 10 content items for document_type using wraith"
-task :wraith_document_type, [:document_type] do |_t, args|
-  document_type = args[:document_type]
+namespace :wraith do
+  desc "check top 10 content items for document_type using wraith"
+  task :document_type, [:document_type] do |_t, args|
+    document_type = args[:document_type]
+    paths = get_paths(document_type)
+    wraith_config_file = WraithConfigHelper.new(document_type, paths).create_config
 
-  paths = get_paths(document_type)
+    exec("bundle exec wraith capture #{wraith_config_file}")
+  end
 
-  file_name = create_config_file(document_type, paths)
+  desc "check top 10 content items for all known document types"
+  task :all_document_types do
+    paths = {}
+    document_types = %w(case_study about)
 
-  exec("bundle exec wraith capture #{file_name}")
-end
+    document_types.each do |type|
+      paths[type] = get_paths(type)
+    end
 
-def create_config_file(run_name, paths)
-  file_name = "test/wraith/wip-config-#{run_name}.yaml"
-  wraith = YAML::load(File.open('test/wraith/config.yaml'))
-  wraith["paths"] = {}
+    wraith_config_file = WraithConfigHelper.new("all-document-types", paths).create_config
 
-  paths.each_with_index { |path, index| wraith["paths"]["#{run_name}#{index}"] = path }
-
-  File.open(file_name, 'w') { |f| f.write wraith.to_yaml }
-  file_name
+    exec("bundle exec wraith capture #{wraith_config_file}")
+  end
 end
 
 def get_paths(document_type)
