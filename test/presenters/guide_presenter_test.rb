@@ -81,6 +81,25 @@ class GuidePresenterTest
       presented_item('no-part-guide').has_parts?
     end
 
+    test "presents access tokens in part links when provided" do
+      presented = presented_item('guide')
+      presented.draft_access_token = 'some_token'
+      expected_param = '?token=some_token'
+
+      presented.parts.each do |part|
+        assert part['full_path'].ends_with?(expected_param)
+      end
+
+      presented.parts_navigation.flatten.each_with_index do |link, i|
+        if i > 0
+          assert expected_param.in?(link)
+        end
+      end
+
+      nav = presented.previous_and_next_navigation
+      assert nav[:next_page][:url].ends_with?(expected_param)
+    end
+
   private
 
     def presented_item(type = format_name, part_slug = nil, overrides = {})
