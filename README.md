@@ -48,6 +48,7 @@ This is a Ruby on Rails application that fetches documents from
 - [content-store](https://github.com/alphagov/content-store) - provides documents
 - [static](https://github.com/alphagov/static) - provides shared GOV.UK assets and templates.
 - [phantomjs](http://phantomjs.org/) Used by poltergeist for integration testing
+- [ImageMagick](http://brewformulas.org/Imagemagick) Used by Wraith for visual regression testing
 
 ### Running the application
 
@@ -121,14 +122,35 @@ bundle exec wraith latest test/wraith/config-examples.yaml
 
 #### Compare a document_type
 
-A rake task has been made to make this easy, given a document_type of about
-bundle exec wraith_document_type[about]
+A rake task has been made to make this easy, given a `document_type` of `about`
+
+```
+bundle exec rake wraith:document_type[about]
+```
 
 this will run against the 10 most popular pages as defined by the search api
 
+#### Compare all document_types
 
-If you wish to have your own local wip configs, wip* is in the .gitignore, so as an example
+```
+bundle exec rake wraith:all_document_types[:sample_size]
+```
+
+This will run against the 10 (can be overidden with `:sample_size`) most popular pages as defined by the search api,
+for each known `document_type` in the app (see: [Generate a config for known document_types and example pages](#generate-a-config-for-known-document_types-and-example-pages)).
+
+*Note:* If you wish to have your own local wip configs, wip* is in the .gitignore, so as an example
 `wip-kittens.yaml` will be ignored
+
+#### Generate a config for known document_types and example pages
+
+Running the rake task below will retrieve the `document_types` where `rendering_app = government-frontend` from the search api. It will then generate `test/wraith/wip-config-all-document-types.yaml`, this is a wraith config file containing the top 10 (can be overidden with `:sample_size`) example pages for each type. 
+
+The yaml file contains a custom key of `:document_types` not used by wraith but can be used to quickly scan and see which types the search api believes `government-frontend` is responsible for.
+
+```
+bundle exec rake wraith:update_document_types[:sample_size]
+```
 
 ### Adding a new format
 
