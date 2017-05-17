@@ -77,7 +77,7 @@ en:
     uz: Uzbeki
     id: Indonesian
   content_item:
-    format:
+    schema_name:
       # `national` & `official` are old document types for
       # `national_statistics_announcement` and `official_statistics_announcement`.
       # They can be removed once https://github.com/alphagov/whitehall/pull/2783 is
