@@ -9,7 +9,7 @@ class WraithConfigHelper
     @paths = paths
   end
 
-  def create_config(extra_config)
+  def create_config(extra_config = {})
     config = load_template
     config["paths"] = build_paths
     config.merge!(extra_config) if extra_config.present?
