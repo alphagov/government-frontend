@@ -1,7 +1,7 @@
 require 'presenter_test_helper'
 
 class AnswerPresenterTest < PresenterTestCase
-  def format_name
+  def schema_name
     "answer"
   end
 

@@ -2,7 +2,7 @@ require 'presenter_test_helper'
 
 class GuidePresenterTest
   class PresentedGuide < PresenterTestCase
-    def format_name
+    def schema_name
       "guide"
     end
 
@@ -102,7 +102,7 @@ class GuidePresenterTest
 
   private
 
-    def presented_item(type = format_name, part_slug = nil, overrides = {})
+    def presented_item(type = schema_name, part_slug = nil, overrides = {})
       schema_example_content_item = schema_item(type)
       part_slug = "/#{part_slug}" if part_slug
 

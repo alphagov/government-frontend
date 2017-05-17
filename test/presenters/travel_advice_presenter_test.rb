@@ -2,7 +2,7 @@ require 'presenter_test_helper'
 
 class TravelAdvicePresenterTest
   class PresentedTravelAdvice < PresenterTestCase
-    def format_name
+    def schema_name
       "travel_advice"
     end
 
@@ -279,7 +279,7 @@ class TravelAdvicePresenterTest
       presented.metadata[:other]["Latest update"]
     end
 
-    def presented_item(type = format_name, part_slug = nil, overrides = {})
+    def presented_item(type = schema_name, part_slug = nil, overrides = {})
       schema_example_content_item = schema_item(type)
       part_slug = "/#{part_slug}" if part_slug
 

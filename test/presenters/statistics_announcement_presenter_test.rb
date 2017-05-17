@@ -3,7 +3,7 @@ require 'presenter_test_helper'
 class StatisticsAnnouncementPresenterTest < PresenterTestCase
   include ActionView::Helpers::UrlHelper
 
-  def format_name
+  def schema_name
     "statistics_announcement"
   end
 

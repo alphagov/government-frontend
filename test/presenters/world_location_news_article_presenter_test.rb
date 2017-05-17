@@ -4,7 +4,7 @@ class WorldLocationNewsArticlePresenterTest
   class WorldLocationNewsArticlePresenterTestCase < PresenterTestCase
     attr_accessor :example_schema_name
 
-    def format_name
+    def schema_name
       "world_location_news_article"
     end
   end
@@ -30,8 +30,8 @@ class WorldLocationNewsArticlePresenterTest
       assert presented_item.is_a?(Political)
     end
 
-    test 'presents the format' do
-      assert_equal schema_item['schema_name'], presented_item.format
+    test 'presents the schema name' do
+      assert_equal schema_item['schema_name'], presented_item.schema_name
     end
 
     test 'presents a description' do

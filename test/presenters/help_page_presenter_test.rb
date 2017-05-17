@@ -1,7 +1,7 @@
 require 'presenter_test_helper'
 
 class HelpPagePresenterTest < PresenterTestCase
-  def format_name
+  def schema_name
     "help_page"
   end
 

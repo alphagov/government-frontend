@@ -4,7 +4,7 @@ class NewsArticlePresenterTest
   class NewsArticlePresenterTestCase < PresenterTestCase
     attr_accessor :example_schema_name
 
-    def format_name
+    def schema_name
       "news_article"
     end
   end

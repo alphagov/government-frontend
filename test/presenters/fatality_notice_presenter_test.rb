@@ -1,7 +1,7 @@
 require 'presenter_test_helper'
 
 class FatalityNoticePresenterTest < PresenterTestCase
-  def format_name
+  def schema_name
     "fatality_notice"
   end
 

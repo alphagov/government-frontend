@@ -2,11 +2,11 @@ require 'presenter_test_helper'
 
 class ConsultationPresenterTest
   class PresentedConsultation < PresenterTestCase
-    def format_name
+    def schema_name
       "consultation"
     end
 
-    test 'presents the format' do
+    test 'presents the schema name' do
       assert_equal schema_item("open_consultation")['document_type'], presented_item("open_consultation").document_type
       assert_equal schema_item("open_consultation")['details']['body'], presented_item("open_consultation").body
     end

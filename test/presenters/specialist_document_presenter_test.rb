@@ -2,14 +2,14 @@ require 'presenter_test_helper'
 
 class SpecialistDocumentPresenterTest
   class SpecialistDocumentTestCase < PresenterTestCase
-    def format_name
+    def schema_name
       "specialist_document"
     end
   end
 
   class PresentedSpecialistDocument < SpecialistDocumentTestCase
-    test 'presents the format' do
-      assert_equal schema_item('aaib-reports')['schema_name'], presented_item('aaib-reports').format
+    test 'presents the schema name' do
+      assert_equal schema_item('aaib-reports')['schema_name'], presented_item('aaib-reports').schema_name
     end
 
     test 'presents the body' do
