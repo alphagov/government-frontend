@@ -12,10 +12,17 @@ class ContentItemsController < ApplicationController
     set_up_education_navigation_ab_testing
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
+    set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
     render_template
   end
 
 private
+
+  # Allow guides to pass access token to each part to allow
+  # fact checking of all content
+  def set_guide_draft_access_token
+    @content_item.draft_access_token = params[:token]
+  end
 
   def load_content_item
     content_item = content_store.content_item(content_item_path)

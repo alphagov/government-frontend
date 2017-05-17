@@ -28,6 +28,14 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.print-link a[href$="/print"]')
   end
 
+  test "draft access tokens are appended to part links within navigation" do
+    @content_item = JSON.parse(get_content_example("guide")).tap do |item|
+      visit("#{item['base_path']}?token=some_token")
+    end
+
+    assert page.has_css?('.part-navigation a[href$="?token=some_token"]')
+  end
+
   test "does not show part navigation, print link or part title when only one part" do
     setup_and_visit_content_item('single-page-guide')
 
