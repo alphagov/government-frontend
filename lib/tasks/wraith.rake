@@ -1,15 +1,33 @@
 require 'rest-client'
+require "#{Rails.root}/lib/helpers/wraith_config_helper.rb"
+require "#{Rails.root}/lib/helpers/document_types_helper.rb"
 
-desc "check top 10 content items for document_type using wraith"
-task :wraith_document_type, [:document_type] do |_t, args|
-  document_type = args[:document_type]
-  wraith = YAML::load(File.open('test/wraith/config.yaml'))
-  search = RestClient.get "https://www.gov.uk/api/search.json?filter_content_store_document_type=#{document_type}&count=10"
-  links  = JSON.parse(search.body)["results"].map { |result| result["link"] }
-  file_name = "test/wraith/wip-config-#{document_type}.yaml"
-  wraith["paths"] = {}
+namespace :wraith do
+  desc "check top 10 content items for document_type using wraith"
+  task :document_type, [:document_type] do |_t, args|
+    document_type = args[:document_type]
+    document_type_paths = DocumentTypesHelper.new.type_paths(document_type)
+    wraith_config_file = WraithConfigHelper.new(document_type, document_type_paths).create_config
 
-  links.each_with_index { |link, index| wraith["paths"]["#{document_type}#{index}"] = link }
-  File.open(file_name, 'w') { |f| f.write wraith.to_yaml }
-  exec("bundle exec wraith capture #{file_name}")
+    exec("bundle exec wraith capture #{wraith_config_file}")
+  end
+
+  desc "check top 10 content items for all known document types"
+  task :all_document_types, [:sample_size] do |_t, args|
+    args.with_defaults(sample_size: 10)
+    # Make sure an up to date document_types file exists
+    Rake::Task["wraith:update_document_types"].invoke args[:sample_size]
+    wraith_config_file = "test/wraith/wip-config-all-document-types.yaml"
+
+    exec("bundle exec wraith capture #{wraith_config_file}")
+  end
+
+  desc "creates a wraith config of document type examples from the search api"
+  task :update_document_types, [:sample_size] do |_t, args|
+    args.with_defaults(sample_size: 10)
+    document_type_paths = DocumentTypesHelper.new(args[:sample_size]).all_type_paths
+    document_types = { "document_types" => document_type_paths.keys }
+
+    WraithConfigHelper.new("all-document-types", document_type_paths).create_config(document_types)
+  end
 end
