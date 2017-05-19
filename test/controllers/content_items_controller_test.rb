@@ -293,30 +293,28 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
-  test "show original body for 'A' version" do
-    setup_ab_variant "EpilepsyDrivingStart", "A"
-
+  test "shows start button for B variant of DVLA Epilepsy and driving AB Test" do
     content_item = content_store_has_schema_example("answer", "answer")
     path = "epilepsy-and-driving"
     content_item["base_path"] = "/#{path}"
 
-    content_store_has_item(content_item["base_path"], content_item)
+    content_store_has_item(content_item['base_path'], content_item)
 
-    get :show, params: { path: path_for(content_item) }
-    refute_match(/get-started group/, response.body)
-  end
+    with_variant EpilepsyDrivingStart: "A" do
+      get :show, params: { path: path_for(content_item) }
+      refute(
+          start_button,
+          "Expected no start button"
+      )
+    end
 
-  test "show variant body for 'B' version" do
-    setup_ab_variant "EpilepsyDrivingStart", "B"
-
-    content_item = content_store_has_schema_example("answer", "answer")
-    path = "epilepsy-and-driving"
-    content_item["base_path"] = "/#{path}"
-
-    content_store_has_item(content_item["base_path"], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-    assert_match(/get-started group/, response.body)
+    with_variant EpilepsyDrivingStart: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert(
+          start_button,
+          "Expected to find start button"
+      )
+    end
   end
 
   test "sets the Access-Control-Allow-Origin header for atom pages" do
@@ -342,5 +340,9 @@ class ContentItemsControllerTest < ActionController::TestCase
     Nokogiri::HTML.parse(response.body).at_css(
       shared_component_selector("taxonomy_sidebar")
     )
+  end
+
+  def start_button
+    Nokogiri::HTML.parse(response.body).css("p[class='get-started']")
   end
 end

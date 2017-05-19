@@ -9,9 +9,13 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         title: @content_item.title %>
-    
+
     <% if should_show_dvla_start_button_variant? %>
-      <%= render 'ab_testing/dvla_epilepsy_driving_start_button' %>
+      <%= render 'govuk_component/govspeak',
+          content: @content_item.ab_body,
+          direction: page_text_direction,
+          disable_youtube_expansions: true,
+          rich_govspeak: true %>
     <% else %>
       <%= render 'govuk_component/govspeak',
           content: @content_item.body,
