@@ -293,6 +293,32 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
+  test "show original body for 'A' version" do
+    setup_ab_variant "EpilepsyDrivingStart", "A"
+
+    content_item = content_store_has_schema_example("answer", "answer")
+    path = "epilepsy-and-driving"
+    content_item["base_path"] = "/#{path}"
+
+    content_store_has_item(content_item["base_path"], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    refute_match(/get-started group/, response.body)
+  end
+
+  test "show variant body for 'B' version" do
+    setup_ab_variant "EpilepsyDrivingStart", "B"
+
+    content_item = content_store_has_schema_example("answer", "answer")
+    path = "epilepsy-and-driving"
+    content_item["base_path"] = "/#{path}"
+
+    content_store_has_item(content_item["base_path"], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    assert_match(/get-started group/, response.body)
+  end
+
   test "sets the Access-Control-Allow-Origin header for atom pages" do
     content_store_has_schema_example('travel_advice', 'full-country')
     get :show, params: { path: 'foreign-travel-advice/albania', format: 'atom' }
