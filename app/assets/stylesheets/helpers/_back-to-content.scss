@@ -1,10 +1,16 @@
 .back-to-content {
-  @include core-19;
+  @include core-16;
   display: inline-block;
   margin-bottom: $gutter-half;
 
   &:before {
-    content: "\2191";
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 17px;
+    margin-right: 5px;
+    background: url("arrow-up.svg") no-repeat 50% 50%;
+    vertical-align: top;
   }
 
   @media print {
