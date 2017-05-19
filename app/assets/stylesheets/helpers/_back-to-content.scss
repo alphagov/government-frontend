@@ -3,14 +3,9 @@
   display: inline-block;
   margin-bottom: $gutter-half;
 
-  &:before {
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 17px;
+  .icon {
+    float: left;
     margin-right: 5px;
-    background: url("arrow-up.svg") no-repeat 50% 50%;
-    vertical-align: top;
   }
 
   @media print {
