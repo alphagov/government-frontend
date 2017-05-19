@@ -2,11 +2,11 @@
 <html>
 <head>
   <title><%= yield :title %> - GOV.UK</title>
-  <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application", integrity: true, crossorigin: "anonymous" %><!--<![endif]-->
+  <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application" %><!--<![endif]-->
   <!--[if IE 6]><%= stylesheet_link_tag "application-ie6" %><script>var ieVersion = 6;</script><![endif]-->
   <!--[if IE 7]><%= stylesheet_link_tag "application-ie7" %><script>var ieVersion = 7;</script><![endif]-->
   <!--[if IE 8]><%= stylesheet_link_tag "application-ie8" %><script>var ieVersion = 8;</script><![endif]-->
-  <%= javascript_include_tag "application", integrity: true, crossorigin: "anonymous" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
   <% if @content_item.description %>
