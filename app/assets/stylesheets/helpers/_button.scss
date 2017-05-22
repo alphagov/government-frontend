@@ -21,6 +21,7 @@
     // We can't easily update .button-start to a placeholder pattern
     // scss-lint:disable PlaceholderInExtend
     @extend .button-start;
+    margin: 0.75em 0;
   }
 
   .button:focus,
