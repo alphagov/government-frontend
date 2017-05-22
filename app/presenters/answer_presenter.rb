@@ -16,8 +16,8 @@ class AnswerPresenter < ContentItemPresenter
 EOD
 
     body.gsub(
-        /<p>You can either <a href="\/report-driving-medical-condition">report your condition online<\/a> or <a href="\/government\/publications\/fep1-confidential-medical-information">fill in form FEP1<\/a> and send it to <abbr title="Driver Vehicle and Licensing Agency">DVLA<\/abbr>. The address is on the form.<\/p>/,
-        b_button
+      /<p>You can either <a href="\/report-driving-medical-condition">report your condition online<\/a> or <a href="\/government\/publications\/fep1-confidential-medical-information">fill in form FEP1<\/a> and send it to <abbr title="Driver Vehicle and Licensing Agency">DVLA<\/abbr>. The address is on the form.<\/p>/,
+      b_button
     )
   end
 end

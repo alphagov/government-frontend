@@ -304,23 +304,10 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     get :show, params: { path: path_for(content_item) }
 
-    refute_match /epilepsy-driving-variant-b/, response.body, "Expected to not find Start button"
+    refute_match(/epilepsy-driving-variant-b/, response.body, "Expected to not find Start button")
   end
 
-  test "defaults to no start button in A variant for DVLA Epilepsy and driving AB Test" do
-    content_item = content_store_has_schema_example("answer", "answer")
-    path = "epilepsy-and-driving"
-    content_item["base_path"] = "/#{path}"
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    with_variant EpilepsyDrivingStart: "A" do
-      get :show, params: { path: path_for(content_item) }
-      refute_match /epilepsy-driving-variant-b/, response.body, "Expected to not find Start button"
-    end
-  end
-
-  test "shows start button for B variant of DVLA Epilepsy and driving AB Test" do
+  test "test each variant for DVLA Epilepsy and driving AB Test" do
     content_item = content_store_has_schema_example("answer", "answer")
     path = "epilepsy-and-driving"
     content_item["base_path"] = "/#{path}"
@@ -328,10 +315,15 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     content_store_has_item(content_item['base_path'], content_item)
 
+    with_variant EpilepsyDrivingStart: "A" do
+      get :show, params: { path: path_for(content_item) }
+      refute_match(/epilepsy-driving-variant-b/, response.body, "Expected to not find Start button")
+    end
+
     with_variant EpilepsyDrivingStart: "B" do
       get :show, params: { path: path_for(content_item) }
 
-      assert_match /epilepsy-driving-variant-b/, response.body
+      assert_match(/epilepsy-driving-variant-b/, response.body, "Expected to find Start button")
     end
   end
 
