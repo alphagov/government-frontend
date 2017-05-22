@@ -6,7 +6,7 @@ class AnswerPresenter < ContentItemPresenter
     b_button = <<EOD
       <div class="transaction">
         <p class="get-started group">
-          <a id="epilepsy-driving-variant-b" class="button" href="https://www.driving-medical-condition.service.gov.uk/eligibility/entitlement-gb">
+          <a id="epilepsy-driving-variant-b" class="button button-start" href="https://www.driving-medical-condition.service.gov.uk/">
             Report your condition online
           </a>
         </p>
