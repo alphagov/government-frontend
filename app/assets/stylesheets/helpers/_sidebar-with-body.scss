@@ -1,5 +1,6 @@
 @mixin sidebar-with-body {
   .sidebar-with-body {
+    position: relative;
     margin-bottom: $gutter * 1.5;
   }
 
