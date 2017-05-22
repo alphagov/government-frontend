@@ -68,6 +68,7 @@ GEM
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    dalli (2.7.6)
     debug_inspector (0.0.2)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
@@ -283,6 +284,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara
+  dalli
   gds-api-adapters (~> 42.0)
   govuk-content-schema-test-helpers (= 1.1.0)
   govuk-lint
