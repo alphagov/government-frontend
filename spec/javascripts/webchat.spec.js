@@ -30,15 +30,14 @@ describe('Webchat', function () {
     }
   }
 
-
-  var jsonNormalisedAvailable = jsonNormalised("success","AVAILABLE")
-  var jsonNormalisedUnavailable = jsonNormalised("success","UNAVAILABLE")
-  var jsonNormalisedBusy = jsonNormalised("success","BUSY")
+  var jsonNormalisedAvailable = jsonNormalised('success', 'AVAILABLE')
+  var jsonNormalisedUnavailable = jsonNormalised('success', 'UNAVAILABLE')
+  var jsonNormalisedBusy = jsonNormalised('success', 'BUSY')
   var jsonNormalisedError = '404 not found'
 
-  var jsonMangledAvailable = jsonNormalised("success","FOOAVAILABLE")
-  var jsonMangledUnavailable = jsonNormalised("success","FOOUNAVAILABLE")
-  var jsonMangledBusy = jsonNormalised("success","FOOBUSY")
+  var jsonMangledAvailable = jsonNormalised('success', 'FOOAVAILABLE')
+  var jsonMangledUnavailable = jsonNormalised('success', 'FOOUNAVAILABLE')
+  var jsonMangledBusy = jsonNormalised('success', 'FOOBUSY')
   var jsonMangledError = 'FOO404 not found'
 
   beforeEach(function () {
@@ -49,7 +48,6 @@ describe('Webchat', function () {
     $advisersAvailable = $webchat.find('.js-webchat-advisers-available')
     $advisersError = $webchat.find('.js-webchat-advisers-error')
   })
-
 
   describe('on valid application locations that are pre normalised', function () {
     function mount () {
@@ -126,11 +124,11 @@ describe('Webchat', function () {
         jsonNormalisedError,
         jsonNormalisedError
       ]
-      var analyticsExpects = ['available','error']
+      var analyticsExpects = ['available', 'error']
       var analyticsReceived = []
       returnsNumber = 0
       analyticsCalled = 0
-      var clock = lolex.install();
+      var clock = lolex.install()
       spyOn($, 'ajax').and.callFake(function (options) {
         options.success(returns[returnsNumber])
         returnsNumber++
@@ -148,7 +146,7 @@ describe('Webchat', function () {
       expect($advisersError.hasClass('hidden')).toBe(true)
       expect($advisersUnavailable.hasClass('hidden')).toBe(true)
 
-      clock.tick("31");
+      clock.tick('31')
 
       expect($advisersError.hasClass('hidden')).toBe(false)
       expect($advisersAvailable.hasClass('hidden')).toBe(true)
@@ -156,10 +154,10 @@ describe('Webchat', function () {
       expect($advisersUnavailable.hasClass('hidden')).toBe(true)
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
-      clock.tick("31");
+      clock.tick('31')
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
-      clock.uninstall();
+      clock.uninstall()
     })
   })
 
@@ -172,11 +170,11 @@ describe('Webchat', function () {
           pollingEnabled: true,
           endPoints: {
             openUrl: CHILD_BENEFIT_API_URL,
-            proxyUrl: CHILD_BENEFIT_API_URL,
+            proxyUrl: CHILD_BENEFIT_API_URL
           },
-          responseNormaliser: function(res){
-            res.response = (res.response) ? res.response.replace("FOO", "") : ""
-            return res;
+          responseNormaliser: function (res) {
+            res.response = (res.response) ? res.response.replace('FOO', '') : ''
+            return res
           }
         })
       })
@@ -240,7 +238,6 @@ describe('Webchat', function () {
   })
 
   describe('egain normalisaton', function () {
-
     var egainResponse = function (responseType) {
       return $.parseXML(
         '<checkEligibility ' +
@@ -259,8 +256,8 @@ describe('Webchat', function () {
       expect(webChatNormalise(egainResponse(1))).toEqual(jsonNormalisedUnavailable)
       expect(webChatNormalise(egainResponse(2))).toEqual(jsonNormalisedBusy)
       expect(webChatNormalise(egainResponse(3))).toEqual({
-        status: "failure",
-        response: "unknown"
+        status: 'failure',
+        response: 'unknown'
       })
     })
   })
