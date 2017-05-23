@@ -1,5 +1,9 @@
 <% body ||= content_item.body %>
-<div class="grid-row sidebar-with-body">
+<div
+  class="grid-row sidebar-with-body"
+  data-module="sticky-element-container"
+  id="contents"
+>
   <% if content_item.contents.any? %>
     <div class="column-third">
       <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
@@ -9,5 +13,8 @@
     <%= render 'govuk_component/govspeak',
         content: body,
         direction: page_text_direction %>
+  </div>
+  <div data-sticky-element class="sticky-element">
+    <%= render 'shared/back_to_content_link' %>
   </div>
 </div>
