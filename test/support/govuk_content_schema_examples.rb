@@ -36,13 +36,13 @@ module GovukContentSchemaExamples
   end
 
   module ClassMethods
-    def all_examples_for_supported_formats
-      GovukContentSchemaTestHelpers::Examples.new.get_all_for_formats(supported_formats).map do |string|
+    def all_examples_for_supported_schemas
+      GovukContentSchemaTestHelpers::Examples.new.get_all_for_formats(supported_schemas).map do |string|
         JSON.parse(string)
       end
     end
 
-    def supported_formats
+    def supported_schemas
       %w{
         case_study
         coming_soon

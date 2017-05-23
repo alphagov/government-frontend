@@ -8,11 +8,11 @@ parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
 ![A  Case Study](https://raw.githubusercontent.com/alphagov/government-frontend/master/docs/assets/case-study-screenshot.png)
 
-## Formats
+## Schemas
 
-Not all formats that this app can handle are rendered by it in production.
+Not all schemas that this app can handle are rendered by it in production.
 
-| Format | Live example | Production status |
+| Schema | Live example | Production status |
 |---|---|---|
 | Answer | [View on GOV.UK](https://www.gov.uk/national-minimum-wage-rates) | Migrated |
 | Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |

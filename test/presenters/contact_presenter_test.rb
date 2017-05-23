@@ -2,7 +2,7 @@ require 'presenter_test_helper'
 
 class ContactPresenterTest
   class PresentedContact < PresenterTestCase
-    def format_name
+    def schema_name
       "contact"
     end
 

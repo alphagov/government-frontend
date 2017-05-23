@@ -6,7 +6,7 @@ class ContentItemPresenter
               :base_path,
               :title,
               :description,
-              :format,
+              :schema_name,
               :locale,
               :phase,
               :part_slug,
@@ -18,7 +18,7 @@ class ContentItemPresenter
     @base_path = content_item["base_path"]
     @title = content_item["title"]
     @description = content_item["description"]
-    @format = content_item["schema_name"]
+    @schema_name = content_item["schema_name"]
     @locale = content_item["locale"] || "en"
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]

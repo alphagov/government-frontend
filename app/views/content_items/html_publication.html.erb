@@ -26,7 +26,7 @@
   <div class="headings">
     <div class="html-publication-title">
       <% if @content_item.format_sub_type %>
-        <p class="context"><%= I18n.t("content_item.format.#{@content_item.format_sub_type}", count: 1) %></p>
+        <p class="context"><%= I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1) %></p>
       <% end %>
       <h1><%= @content_item.title %></h1>
     </div>

@@ -9,8 +9,8 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal "Description", ContentItemPresenter.new("description" => "Description").description
   end
 
-  test "#format" do
-    assert_equal "Format", ContentItemPresenter.new("schema_name" => "Format").format
+  test "#schema_name" do
+    assert_equal "Schema name", ContentItemPresenter.new("schema_name" => "Schema name").schema_name
   end
 
   test "#locale" do

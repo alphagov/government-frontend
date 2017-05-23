@@ -101,12 +101,12 @@ class ContentItemsControllerTest < ActionController::TestCase
   test "renders translated content items in their locale" do
     content_item = content_store_has_schema_example('case_study', 'translated')
     locale = content_item['locale']
-    translated_format_name = I18n.t("content_item.format.case_study", count: 1, locale: locale)
+    translated_schema_name = I18n.t("content_item.schema_name.case_study", count: 1, locale: locale)
 
     get :show, params: { path: path_for(content_item, locale), locale: locale }
 
     assert_response :success
-    assert_select "title", %r(#{translated_format_name})
+    assert_select "title", %r(#{translated_schema_name})
   end
 
   test "renders atom feeds" do

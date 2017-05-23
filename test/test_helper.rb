@@ -122,8 +122,8 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def setup_and_visit_random_content_item(document_type: schema_format)
-    schema = GovukSchemas::Schema.find(frontend_schema: schema_format)
+  def setup_and_visit_random_content_item(document_type: schema_type)
+    schema = GovukSchemas::Schema.find(frontend_schema: schema_type)
     random_example = GovukSchemas::RandomExample.new(schema: schema)
 
     payload = random_example.merge_and_validate(document_type: document_type)
@@ -136,15 +136,15 @@ class ActionDispatch::IntegrationTest
   end
 
   def get_content_example(name)
-    get_content_example_by_format_and_name(schema_format, name)
+    get_content_example_by_schema_and_name(schema_type, name)
   end
 
-  def get_content_example_by_format_and_name(format, name)
-    GovukContentSchemaTestHelpers::Examples.new.get(format, name)
+  def get_content_example_by_schema_and_name(schema_type, name)
+    GovukContentSchemaTestHelpers::Examples.new.get(schema_type, name)
   end
 
   # Override this method if your test file doesn't match the convention
-  def schema_format
+  def schema_type
     self.class.to_s.gsub('Test', '').underscore
   end
 end

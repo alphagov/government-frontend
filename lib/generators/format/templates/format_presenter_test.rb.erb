@@ -2,12 +2,12 @@ require 'presenter_test_helper'
 
 class <%= "#{@camel_name}PresenterTest" %>
   class <%= "Presented#{@camel_name}" %> < PresenterTestCase
-    def format_name
+    def schema_name
       "<%= @format_name %>"
     end
 
-    test 'presents the format' do
-      assert_equal schema_item['format'], presented_item.format
+    test 'presents the schema_name' do
+      assert_equal schema_item['schema_name'], presented_item.schema_name
     end
   end
 end

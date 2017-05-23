@@ -2,14 +2,14 @@ require 'presenter_test_helper'
 
 class SpeechPresenterTest
   class SpeechTestCase < PresenterTestCase
-    def format_name
+    def schema_name
       "speech"
     end
   end
 
   class PresentedSpeech < SpeechTestCase
-    test 'presents the format' do
-      assert_equal schema_item['schema_name'], presented_item.format
+    test 'presents the schema name' do
+      assert_equal schema_item['schema_name'], presented_item.schema_name
     end
 
     test '#published returns a formatted date of the day the content item became public' do

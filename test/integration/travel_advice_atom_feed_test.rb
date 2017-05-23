@@ -32,7 +32,7 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
   end
 
   def setup_and_visit_travel_advice_atom_feed(name)
-    example = get_content_example_by_format_and_name('travel_advice', name)
+    example = get_content_example_by_schema_and_name('travel_advice', name)
     @content_item = JSON.parse(example).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)
       visit "#{item['base_path']}.atom"

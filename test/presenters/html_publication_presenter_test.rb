@@ -1,12 +1,12 @@
 require 'presenter_test_helper'
 
 class HtmlPublicationPresenterTest < PresenterTestCase
-  def format_name
+  def schema_name
     "html_publication"
   end
 
   test 'presents the basic details of a content item' do
-    assert_equal schema_item("published")['schema_name'], presented_item("published").format
+    assert_equal schema_item("published")['schema_name'], presented_item("published").schema_name
     assert_equal schema_item("published")['links']['parent'][0]['document_type'], presented_item("published").format_sub_type
     assert_equal schema_item("published")['title'], presented_item("published").title
     assert_equal schema_item("published")['details']['body'], presented_item("published").body

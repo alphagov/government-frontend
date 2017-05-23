@@ -22,7 +22,7 @@
   <% end %>
 
   <div id="wrapper" class="<%= wrapper_class %>">
-    <main role="main" id="content" class="<%= @content_item.format.dasherize %>" lang="<%= I18n.locale %>">
+    <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= render_phase_label @content_item, content_for(:phase_message) %>
       <%= render 'shared/breadcrumbs' %>
       <%= yield %>

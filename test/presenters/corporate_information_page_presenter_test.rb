@@ -2,7 +2,7 @@ require 'presenter_test_helper'
 
 class CorporateInformationPagePresenterTest
   class PresentedCorporateInformationPage < PresenterTestCase
-    def format_name
+    def schema_name
       "corporate_information_page"
     end
 
@@ -15,7 +15,7 @@ class CorporateInformationPagePresenterTest
     end
 
     test 'does not present an organisation in the title when it is not present in links' do
-      presented_item = presented_item(format_name, "links" => {})
+      presented_item = presented_item(schema_name, "links" => {})
       assert_equal "About us", presented_item.page_title
     end
 

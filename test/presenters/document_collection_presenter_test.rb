@@ -2,7 +2,7 @@ require 'presenter_test_helper'
 
 class DocumentCollectionPresenterTest
   class TestCase < PresenterTestCase
-    def format_name
+    def schema_name
       "document_collection"
     end
   end
@@ -16,8 +16,8 @@ class DocumentCollectionPresenterTest
       assert_equal schema_item['description'], presented_item.description
     end
 
-    test 'presents the format' do
-      assert_equal schema_item['schema_name'], presented_item.format
+    test 'presents the schema name' do
+      assert_equal schema_item['schema_name'], presented_item.schema_name
     end
 
     test 'presents the body' do

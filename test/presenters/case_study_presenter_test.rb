@@ -3,13 +3,13 @@ require 'presenter_test_helper'
 class CaseStudyPresenterTest < PresenterTestCase
   include ActionView::Helpers::UrlHelper
 
-  def format_name
+  def schema_name
     "case_study"
   end
 
   test 'presents the basic details of a content item' do
     assert_equal schema_item['description'], presented_item.description
-    assert_equal schema_item['schema_name'], presented_item.format
+    assert_equal schema_item['schema_name'], presented_item.schema_name
     assert_equal schema_item['locale'], presented_item.locale
     assert_equal schema_item['title'], presented_item.title
     assert_equal schema_item['details']['body'], presented_item.body
@@ -47,7 +47,7 @@ class CaseStudyPresenterTest < PresenterTestCase
       link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan'),
     ]
 
-    assert_equal expected_from_links, presented_item(format_name, with_organisations).from
+    assert_equal expected_from_links, presented_item(schema_name, with_organisations).from
   end
 
   test '#part_of returns an array of document_collections, related policies and world locations' do
@@ -64,7 +64,7 @@ class CaseStudyPresenterTest < PresenterTestCase
       link_to('Cheese', '/policy/cheese'),
       link_to('Pakistan', '/government/world/pakistan'),
     ]
-    assert_equal expected_part_of_links, presented_item(format_name, with_extras).part_of
+    assert_equal expected_part_of_links, presented_item(schema_name, with_extras).part_of
   end
 
   test '#history returns an empty array if the content item has no updates' do
@@ -102,6 +102,6 @@ class CaseStudyPresenterTest < PresenterTestCase
     with_history['details']['change_history'] = [{ 'note' => 'Something changed', 'public_timestamp' => march_21_2013 }]
     with_history['public_updated_at'] = march_21_2013
 
-    presented_item(format_name, with_history)
+    presented_item(schema_name, with_history)
   end
 end

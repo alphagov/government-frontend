@@ -2,14 +2,14 @@ require 'presenter_test_helper'
 
 class StatisticalDataSetPresenterTest
   class StatisticalDataSetTestCase < PresenterTestCase
-    def format_name
+    def schema_name
       "statistical_data_set"
     end
   end
 
   class PresentedStatisticalDataSet < StatisticalDataSetTestCase
-    test 'presents the format' do
-      assert_equal schema_item['schema_name'], presented_item.format
+    test 'presents the schema name' do
+      assert_equal schema_item['schema_name'], presented_item.schema_name
     end
 
     test 'presents a list of contents extracted from headings in the body' do
