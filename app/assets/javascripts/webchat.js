@@ -4,27 +4,26 @@
 
 var $ = window.$
 
-
 EGAIN_NORMALISATION = {
-  0: "AVAILABLE",
-  1: "UNAVAILABLE",
-  2: "BUSY"
+  0: 'AVAILABLE',
+  1: 'UNAVAILABLE',
+  2: 'BUSY'
 }
 
-var webChatNormalise = function(res){
+var webChatNormalise = function (res) {
   var $xml = $(res)
   var proxyResponse = parseInt($xml.find('checkEligibility').attr('responseType'), 10)
   var response = EGAIN_NORMALISATION[proxyResponse]
   if (!response) {
     return {
-      status: "failure",
-      response: "unknown"
+      status: 'failure',
+      response: 'unknown'
     }
   }
 
   return {
-    status: "success",
-      response: response
+    status: 'success',
+    response: response
   }
 }
 

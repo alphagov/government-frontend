@@ -5,24 +5,23 @@
   if (typeof global.GOVUK === 'undefined') { global.GOVUK = {} }
   var GOVUK = global.GOVUK
 
-
   function Webchat (options) {
     var POLL_INTERVAL = 15 * 1000
-    var AJAX_TIMEOUT  = 5 * 1000
+    var AJAX_TIMEOUT = 5 * 1000
     var API_STATES = [
-      "BUSY",
-      "UNAVAILABLE",
-      "AVAILABLE",
-      "ERROR"
+      'BUSY',
+      'UNAVAILABLE',
+      'AVAILABLE',
+      'ERROR'
     ]
-    var $el                 = $(options.$el)
-    var openUrl             = $el.attr('data-open-url')
-    var availabilityUrl     = $el.attr('data-availability-url')
-    var $openButton         = $el.find('.js-webchat-open-button')
-    var webchatStateClass   = 'js-webchat-advisers-'
-    var responseNormaliser  = options.responseNormaliser
-    var intervalID          = null
-    var lastRecordedState   = null
+    var $el = $(options.$el)
+    var openUrl = $el.attr('data-open-url')
+    var availabilityUrl = $el.attr('data-availability-url')
+    var $openButton = $el.find('.js-webchat-open-button')
+    var webchatStateClass = 'js-webchat-advisers-'
+    var responseNormaliser = options.responseNormaliser
+    var intervalID = null
+    var lastRecordedState = null
 
     function init () {
       if (!availabilityUrl || !openUrl) throw 'urls for webchat not defined'
@@ -51,8 +50,8 @@
     function apiSuccess (result) {
       if (responseNormaliser) result = responseNormaliser(result)
 
-      var validState  = API_STATES.indexOf(result.response) != -1
-      var state       = validState ? result.response : "ERROR"
+      var validState = API_STATES.indexOf(result.response) != -1
+      var state = validState ? result.response : 'ERROR'
       advisorStateChange(state)
     }
 
@@ -63,7 +62,7 @@
 
     function advisorStateChange (state) {
       state = state.toLowerCase()
-      var currentState = $el.find("." + webchatStateClass + state)
+      var currentState = $el.find('.' + webchatStateClass + state)
       $el.find('[class^="' + webchatStateClass + '"]').addClass('hidden')
       currentState.removeClass('hidden')
       trackEvent(state)
