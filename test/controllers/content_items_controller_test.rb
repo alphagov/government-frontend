@@ -293,6 +293,30 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
+  test "shows start button for B variant of DVLA Epilepsy and driving AB Test" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    path = "epilepsy-and-driving"
+    content_item["base_path"] = "/#{path}"
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    with_variant EpilepsyDrivingStart: "A" do
+      get :show, params: { path: path_for(content_item) }
+      refute(
+          start_button,
+          "Expected no start button"
+      )
+    end
+
+    with_variant EpilepsyDrivingStart: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert(
+          start_button,
+          "Expected to find start button"
+      )
+    end
+  end
+
   test "sets the Access-Control-Allow-Origin header for atom pages" do
     content_store_has_schema_example('travel_advice', 'full-country')
     get :show, params: { path: 'foreign-travel-advice/albania', format: 'atom' }
@@ -316,5 +340,9 @@ class ContentItemsControllerTest < ActionController::TestCase
     Nokogiri::HTML.parse(response.body).at_css(
       shared_component_selector("taxonomy_sidebar")
     )
+  end
+
+  def start_button
+    Nokogiri::HTML.parse(response.body).css("p[class='get-started']")
   end
 end
