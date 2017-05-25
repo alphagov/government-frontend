@@ -10,7 +10,8 @@
     height: .968em;
   }
 
-  .sidebar-with-body & .icon {
+  // TODO: Update grid to allow this behaviour without this hack
+  .sidebar-with-body & {
     margin-left: $gutter-half;
   }
 
