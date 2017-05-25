@@ -9,9 +9,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.start = function ($el) {
       var testType = $el.data('test-type'),
           testLabel = $el.data('test-label'),
-          newContent = $el.html(),
-          testCallback = testType === "overview" ? updateOverviewSection : UpdateKnowledgeOfEnglishSection;
-      
+          newContent = $el.html();
+
       new GOVUK.MultivariateTest({
         name: testLabel,
         cookieDuration: 30, // set cookie expiry to 30 days
@@ -19,7 +18,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         cohorts: {
           original: { callback: function() {}, weight: 50},
           spouseProminent: {
-            callback: testCallback,
+            callback: updateOverviewSection,
             weight: 50
           }
         }
@@ -28,11 +27,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       function updateOverviewSection() {
         $("#exceptions").prevAll().hide();
         $("#exceptions").before(newContent);
-      }
-
-      function UpdateKnowledgeOfEnglishSection() {
-        $("#exemptions").prevAll().hide();
-        $("#exemptions").before(newContent);
       }
     }
   }

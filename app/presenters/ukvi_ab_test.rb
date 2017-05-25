@@ -3,10 +3,6 @@ module UkviABTest
     guide_in_ukvi_test? && (part_slug.nil? || part_slug == 'overview')
   end
 
-  def ukvi_knowledge_section_test?
-    guide_in_ukvi_test? && part_slug == 'knowledge-of-english'
-  end
-
   def ukvi_test_label
     if guide_under_test.include?("remain-in-uk-family")
       "ukviSpouseVisa_Remain_2017"
