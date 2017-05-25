@@ -42,19 +42,8 @@ class UkviABTestTest < ActiveSupport::TestCase
   end
 
   [
-    '/remain-in-uk-family/knowledge-of-english',
-    '/join-family-in-uk/knowledge-of-english'
-  ].each do |test_path|
-    test "#{test_path} is in knowledge of English test" do
-      @ukvi_test.test_path = test_path
-      assert @ukvi_test.ukvi_knowledge_section_test?
-    end
-  end
-
-  [
     '/remain-in-uk-family',
-    '/remain-in-uk-family/overview',
-    '/remain-in-uk-family/knowledge-of-english'
+    '/remain-in-uk-family/overview'
   ].each do |test_path|
     test "#{test_path} is labelled as remain test" do
       @ukvi_test.test_path = test_path
@@ -64,8 +53,7 @@ class UkviABTestTest < ActiveSupport::TestCase
 
   [
     '/join-family-in-uk',
-    '/join-family-in-uk/overview',
-    '/join-family-in-uk/knowledge-of-english'
+    '/join-family-in-uk/overview'
   ].each do |test_path|
     test "#{test_path} is labelled as join test" do
       @ukvi_test.test_path = test_path

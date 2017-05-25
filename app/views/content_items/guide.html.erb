@@ -27,8 +27,6 @@
 
       <% if @content_item.ukvi_overview_section_test? %>
         <%= render partial: "ab_testing/ukvi_overview_section" %>
-      <% elsif @content_item.ukvi_knowledge_section_test? %>
-        <%= render partial: "ab_testing/ukvi_knowledge_of_english_section" %>
       <% end %>
 
       <%= render 'govuk_component/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
