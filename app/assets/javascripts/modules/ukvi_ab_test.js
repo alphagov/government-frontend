@@ -9,7 +9,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.start = function ($el) {
       var testType = $el.data('test-type'),
           testLabel = $el.data('test-label'),
-          newContent = $el.html()
+          newContent = $el.html();
 
       new GOVUK.MultivariateTest({
         name: testLabel,
