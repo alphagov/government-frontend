@@ -1,6 +1,7 @@
 /* global describe beforeEach setFixtures it spyOn expect jasmine */
 
 var $ = window.jQuery
+var POLL_INTERVAL = '11' // Offset by one
 
 describe('Webchat', function () {
   var GOVUK = window.GOVUK
@@ -148,7 +149,7 @@ describe('Webchat', function () {
       expect($advisersError.hasClass('hidden')).toBe(true)
       expect($advisersUnavailable.hasClass('hidden')).toBe(true)
 
-      clock.tick("31");
+      clock.tick(POLL_INTERVAL)
 
       expect($advisersError.hasClass('hidden')).toBe(false)
       expect($advisersAvailable.hasClass('hidden')).toBe(true)
@@ -156,7 +157,7 @@ describe('Webchat', function () {
       expect($advisersUnavailable.hasClass('hidden')).toBe(true)
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
-      clock.tick("31");
+      clock.tick(POLL_INTERVAL);
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
       clock.uninstall();
