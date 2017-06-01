@@ -24,6 +24,7 @@ gem 'rails-controller-testing', '~> 0.1'
 gem 'govuk_ab_testing', '~> 2.0'
 gem 'htmlentities', '4.3.4'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
+gem 'dalli'
 
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
