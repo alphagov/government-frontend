@@ -210,47 +210,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
-  MainstreamContentFetcher.with_curated_sidebar.each do |base_path|
-    test "defaults to the old related links for #{base_path} in Education Navigation AB Testing" do
-      content_item = content_store_has_schema_example('answer', 'answer')
-      content_item['base_path'] = base_path
-      content_item['links'] = {
-        'taxons' => [
-          {
-            'title' => 'A Taxon',
-            'base_path' => '/a-taxon',
-          }
-        ]
-      }
-
-      content_store_has_item(content_item['base_path'], content_item)
-
-      with_variant EducationNavigation: "A" do
-        get :show, params: { path: path_for(content_item) }
-        assert(
-          related_links_sidebar,
-          "Expected to find the related links component"
-        )
-        assert_nil(
-          taxonomy_sidebar,
-          "Does not expect to find the new taxonomy sidebar"
-        )
-      end
-
-      with_variant EducationNavigation: "B" do
-        get :show, params: { path: path_for(content_item) }
-        assert(
-          related_links_sidebar,
-          "Expected to find the related links component"
-        )
-        assert_nil(
-          taxonomy_sidebar,
-          "Does not expect to find the new taxonomy sidebar"
-        )
-      end
-    end
-  end
-
   test "does not show new navigation when no taxons are tagged to Detailed Guides" do
     content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
     path = 'government/abtest/detailed-guide'
