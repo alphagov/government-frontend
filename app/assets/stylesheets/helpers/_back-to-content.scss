@@ -1,10 +1,18 @@
 .back-to-content {
-  @include core-19;
+  @include core-16;
   display: inline-block;
   margin-bottom: $gutter-half;
 
-  &:before {
-    content: "\2191";
+  .icon {
+    float: left;
+    margin-right: .3em;
+    width: .8em;
+    height: .968em;
+  }
+
+  // TODO: Update grid to allow this behaviour without this hack
+  .sidebar-with-body & {
+    margin-left: $gutter-half;
   }
 
   @media print {
