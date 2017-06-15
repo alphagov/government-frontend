@@ -1,10 +1,14 @@
+<%
+  list_class ||= "dash-list"
+%>
+
 <% if contents.any? %>
   <nav role="navigation">
     <h2><%= t("content_item.contents") %></h2>
-    <ol class="dash-list" data-module="track-click">
+    <ol class="<%= list_class %>" data-module="track-click">
       <% contents.each do |heading| %>
         <li>
-          <%= heading %>
+          <%= insert_spans(heading) %>
         </li>
       <% end %>
     </ol>

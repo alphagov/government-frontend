@@ -15,9 +15,11 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?(@content_item["title"])
 
       assert page.has_text?("Published 17 January 2016")
+    end
 
+    within ".sidebar-with-body" do
       assert page.has_text?("Contents")
-      assert page.has_css?('ol.unnumbered')
+      assert page.has_css?('ol.contents-list')
     end
 
     within ".organisation-logos" do

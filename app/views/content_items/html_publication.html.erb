@@ -33,20 +33,6 @@
     <%= @content_item.last_changed %>
   </div>
 
-  <% if @content_item.contents? %>
-    <nav
-      class="in-page-navigation"
-      data-module="track-html-publication-contents"
-      data-track-category="contentsClicked"
-      data-track-action="blueBoxH2"
-    >
-      <h2>
-        <%= t("content_item.contents") %>
-      </h2>
-      <%= @content_item.contents %>
-    </nav>
-  <% end %>
-
   <div class="print-wrapper">
     <div class="print-meta-data">
       <%= render partial: "content_items/html_publication/print_meta_data" %>
@@ -54,10 +40,21 @@
   </div>
 </header>
 
+<div
+  class="html-publication-grid-row sidebar-with-body"
+  data-module="sticky-element-container"
+>
+  <% if @content_item.contents.any? %>
+    <div class="column-sidebar">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents, list_class: 'contents-list' %>
+    </div>
+  <% end %>
+  <div class="column-content <% unless @content_item.contents.any? %>offset-one-quarter<% end %>">
+    <%= render 'govuk_component/govspeak_html_publication', @content_item.govspeak_body %>
+  </div>
+  <div data-sticky-element class="govuk-sticky-element">
+    <%= render 'shared/back_to_content_link' %>
+  </div>
+</div>
 
-<%= render partial: 'govuk_component/govspeak_html_publication',
-    locals: {
-      content: @content_item.body,
-      direction: page_text_direction,
-      sticky_footer_html: (render partial: 'shared/back_to_content_link'),
-    } %>
+
