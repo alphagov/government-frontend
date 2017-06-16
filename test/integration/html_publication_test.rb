@@ -42,7 +42,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "html publications with meta data - print version" do
-    setup_and_visit_content_item("print_with_meta_data", true)
+    setup_and_visit_content_item("print_with_meta_data", "?medium=print")
 
     within ".publication-header" do
       assert page.find(".print-meta-data", visible: true)
