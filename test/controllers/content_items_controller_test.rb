@@ -137,6 +137,15 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "returns 404 for invalid url" do
+    path = 'foreign-travel-advice/egypt]'
+
+    content_store_does_not_have_item('/' + path)
+
+    get :show, params: { path: path }
+    assert_response :not_found
+  end
+
   test "returns 404 for item not in content store" do
     path = 'government/case-studies/boost-chocolate-production'
 
