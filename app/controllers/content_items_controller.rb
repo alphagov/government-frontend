@@ -5,6 +5,7 @@ class ContentItemsController < ApplicationController
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
+  rescue_from GdsApi::InvalidUrl, with: :error_notfound
   rescue_from ActionView::MissingTemplate, with: :error_406
 
   attr_accessor :content_item
