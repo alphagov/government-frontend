@@ -1,19 +1,12 @@
 require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
-  include EpilepsyDrivingStartButtonVariantABTestable
-
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
   rescue_from ActionView::MissingTemplate, with: :error_406
 
   attr_accessor :content_item
-
-  helper_method(:should_show_dvla_start_button_variant?,
-                :is_epilepsy_driving_tested_path?,
-                :epilepsy_driving_start_button_variant)
-
 
   def show
     load_content_item
@@ -56,10 +49,6 @@ private
     end
 
     request.variant = :print if params[:variant] == "print"
-
-    if is_epilepsy_driving_tested_path?
-      set_epilepsy_driving_start_button_response_header
-    end
 
     with_locale do
       render content_item_template

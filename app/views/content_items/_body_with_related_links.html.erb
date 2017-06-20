@@ -1,7 +1,3 @@
-<% if is_epilepsy_driving_tested_path? %>
-    <%= epilepsy_driving_start_button_variant.analytics_meta_tag.html_safe %>
-<% end %>
-
 <% content_for :simple_header, true %>
 <%= content_for :title, @content_item.title %>
 
@@ -9,20 +5,11 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         title: @content_item.title %>
-
-    <% if should_show_dvla_start_button_variant? %>
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.ab_body,
-          direction: page_text_direction,
-          disable_youtube_expansions: true,
-          rich_govspeak: true %>
-    <% else %>
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.body,
-          direction: page_text_direction,
-          disable_youtube_expansions: true,
-          rich_govspeak: true %>
-    <% end %>
+    <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction,
+        disable_youtube_expansions: true,
+        rich_govspeak: true %>
 
     <% #https://github.com/alphagov/government-frontend/pull/329#issuecomment-297681738 %>
     <% if false && @content_item.last_updated %>

@@ -21,9 +21,6 @@
     // We can't easily update .button-start to a placeholder pattern
     // scss-lint:disable PlaceholderInExtend
     @extend .button-start;
-    // TODO: remove this when AB Test for DVLA Epilepsy and driving is finished:
-    // (see Trello card: https://trello.com/c/Q91ppDXf/628-remove-dvla-epilepsy-ab-test-when-finished)
-    margin: 0.75em 0;
   }
 
   .button:focus,
