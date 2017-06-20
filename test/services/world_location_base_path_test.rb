@@ -1,0 +1,35 @@
+require "test_helper"
+
+class WorldLocationBasePathWhenPathExists < ActiveSupport::TestCase
+  test "returns the base_path" do
+    link = {
+      "base_path" => "/government/world/usa",
+      "government" => "USA"
+    }
+    assert_equal "/government/world/usa", WorldLocationBasePath.for(link)
+  end
+end
+
+class WorldLocationBasePathWithoutBasePath < ActiveSupport::TestCase
+  test "returns /world/usa" do
+    link = {
+      "title" => "USA"
+    }
+    assert_equal "/government/world/usa", WorldLocationBasePath.for(link)
+  end
+end
+
+class WorldLocationBasePathForExceptionalCase < ActiveSupport::TestCase
+  {
+   "Democratic Republic of Congo" => "democratic-republic-of-congo",
+   "South Georgia and the South Sandwich Islands" => "south-georgia-and-the-south-sandwich-islands",
+   "St Pierre & Miquelon" => "st-pierre-miquelon"
+  }.each do |title, expected_slug|
+    test "returns /government/world/#{expected_slug}" do
+      link = {
+        "title" => title
+      }
+      assert_equal "/government/world/#{expected_slug}", WorldLocationBasePath.for(link)
+    end
+  end
+end
