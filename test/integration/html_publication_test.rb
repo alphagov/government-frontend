@@ -32,7 +32,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publications with meta data" do
     setup_and_visit_content_item("print_with_meta_data")
 
-    within ".publication-header" do
+    within ".grid-row" do
       assert page.find(".print-meta-data", visible: false)
 
       assert page.has_no_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
@@ -46,7 +46,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publications with meta data - print version" do
     setup_and_visit_content_item("print_with_meta_data", "?medium=print")
 
-    within ".publication-header" do
+    within ".grid-row" do
       assert page.find(".print-meta-data", visible: true)
 
       assert page.has_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
@@ -54,6 +54,11 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?((@content_item['details']['print_meta_data_contact_address']).to_s)
       assert page.has_text?("Print ISBN: #{@content_item['details']['isbn']}")
     end
+  end
+
+  test "renders back to contents elements" do
+    setup_and_visit_content_item('published')
+    assert page.has_css?(".back-to-content[href='#contents']")
   end
 
   test "prime minister office organisation html publication" do
@@ -71,7 +76,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
   test "html publication with rtl text direction" do
     setup_and_visit_content_item("arabic_translation")
-    assert page.has_css?(".publication-header.direction-rtl"), "has .direction-rtl class on .publication-header element"
+    assert page.has_css?("#wrapper.direction-rtl"), "has .direction-rtl class on #wrapper element"
   end
 
   def assert_has_component_govspeak_html_publication(content)

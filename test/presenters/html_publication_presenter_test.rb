@@ -13,7 +13,6 @@ class HtmlPublicationPresenterTest < PresenterTestCase
   end
 
   test 'presents a list of contents extracted from headings in the body' do
-    #assert_equal schema_item("published")['details']['headings'], presented_item("published").contents
     assert_equal "<a #{contents_link_attributes} data-track-label=\"details-of-the-application\" href=\"#details-of-the-application\">Details of the application</a>", presented_item("published").contents[0]
   end
 

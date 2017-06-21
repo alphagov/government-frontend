@@ -12,4 +12,10 @@ class ContentsListHelperTest < ActionView::TestCase
     expected = '<a data-track-category="contentsClicked" data-track-action="leftColumnH2" data-track-label="vision" href="#vision">Vision</a>'
     assert_equal expected, insert_spans(input)
   end
+
+  test "it does nothing if a number is present but not at the start" do
+    input = '<a href="#run-an-effective-welfare-system">Run an effective welfare system part 1. Social Care</a>'
+    expected = '<a href="#run-an-effective-welfare-system">Run an effective welfare system part 1. Social Care</a>'
+    assert_equal expected, insert_spans(input)
+  end
 end

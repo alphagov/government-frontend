@@ -1,13 +1,22 @@
-.print-meta-data {
-  page-break-before: always;
-  page-break-after: always;
-  display: block;
+.print-wrapper {
+  .print-meta-data {
+    page-break-before: always;
+    page-break-after: always;
+    display: block;
 
-  .print-meta-data-licence {
-    width: 78px;
-    height: auto;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    .print-meta-data-licence {
+      width: 78px;
+      height: auto;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
   }
 }
 
+.html-publication {
+  .contents-list {
+    li {
+      list-style: none;
+    }
+  }
+}

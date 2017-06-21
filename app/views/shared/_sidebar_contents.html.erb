@@ -1,5 +1,6 @@
 <%
   list_class ||= "dash-list"
+  format_numbers ||= nil
 %>
 
 <% if contents.any? %>
@@ -8,7 +9,11 @@
     <ol class="<%= list_class %>" data-module="track-click">
       <% contents.each do |heading| %>
         <li>
-          <%= insert_spans(heading) %>
+          <% if format_numbers %>
+            <%= insert_spans(heading) %>
+          <% else %>
+            <%= heading %>
+          <% end %>
         </li>
       <% end %>
     </ol>

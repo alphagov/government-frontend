@@ -7,9 +7,6 @@
 <%
   content_for :title, @content_item.title
   content_for :simple_header, true
-
-  direction_css_class = ""
-  direction_css_class = " direction-#{page_text_direction}" if page_text_direction
 %>
 
 <div class="publication-external">
@@ -22,7 +19,7 @@
   </ol>
 </div>
 
-<header class="publication-header<%= direction_css_class %>" id="contents">
+<header class="publication-header" id="contents">
   <div class="headings">
     <div class="html-publication-title">
       <% if @content_item.format_sub_type %>
@@ -32,29 +29,30 @@
     </div>
     <%= @content_item.last_changed %>
   </div>
+</header>
+
+<div
+  class="grid-row sidebar-with-body"
+  data-module="sticky-element-container"
+>
+  <% if @content_item.contents.any? %>
+    <div class="column-quarter contents-list-wrapper">
+      <%= render 'shared/sidebar_contents', contents: @content_item.contents, list_class: 'contents-list', format_numbers: true %>
+    </div>
+  <% end %>
 
   <div class="print-wrapper">
     <div class="print-meta-data">
       <%= render partial: "content_items/html_publication/print_meta_data" %>
     </div>
   </div>
-</header>
 
-<div
-  class="html-publication-grid-row sidebar-with-body"
-  data-module="sticky-element-container"
->
-  <% if @content_item.contents.any? %>
-    <div class="column-sidebar">
-      <%= render 'shared/sidebar_contents', contents: @content_item.contents, list_class: 'contents-list' %>
-    </div>
-  <% end %>
-  <div class="column-content <% unless @content_item.contents.any? %>offset-one-quarter<% end %>">
+  <div class="column-three-quarters <% unless @content_item.contents.any? %>offset-one-quarter<% end %>">
     <%= render 'govuk_component/govspeak_html_publication', @content_item.govspeak_body %>
   </div>
+
   <div data-sticky-element class="govuk-sticky-element">
     <%= render 'shared/back_to_content_link' %>
   </div>
 </div>
-
 
