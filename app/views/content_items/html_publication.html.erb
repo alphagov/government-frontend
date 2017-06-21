@@ -34,7 +34,12 @@
   </div>
 
   <% if @content_item.contents? %>
-    <nav class="in-page-navigation">
+    <nav
+      class="in-page-navigation"
+      data-module="track-html-publication-contents"
+      data-track-category="contentsClicked"
+      data-track-action="blueBoxH2"
+    >
       <h2>
         <%= t("content_item.contents") %>
       </h2>
