@@ -18,7 +18,7 @@ else
 end
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
-gem 'rack_strip_client_ip', '~> 0.0.0'
+gem 'rack_strip_client_ip', '~> 0.0.2'
 gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
 gem 'rails-controller-testing', '~> 0.1'
