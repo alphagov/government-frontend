@@ -29,8 +29,6 @@
   }
 
   .publication-header {
-    @include white-links;
-    @include core-19;
     color: $white;
     background: $light-blue;
     padding: $gutter;
