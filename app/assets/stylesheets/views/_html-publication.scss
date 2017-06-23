@@ -58,6 +58,7 @@
     @include grid-column( 1 / 4, $full-width: desktop );
 
     .direction-rtl & {
+      float: right;
       direction: rtl;
       text-align: start;
     }
@@ -111,6 +112,10 @@
 
   .contents-wrapper {
     @include grid-column( 3 / 4, $full-width: desktop );
+
+    .direction-rtl & {
+      float: right;
+    }
   }
 
   .offset-one-quarter {
