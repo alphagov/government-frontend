@@ -36,7 +36,7 @@
   data-module="sticky-element-container"
 >
   <% if @content_item.contents.any? %>
-    <div class="column-quarter contents-list-wrapper">
+    <div class="contents-list-wrapper">
       <%= render 'shared/sidebar_contents', contents: @content_item.contents, list_class: 'contents-list', format_numbers: true %>
     </div>
   <% end %>
@@ -47,7 +47,7 @@
     </div>
   </div>
 
-  <div class="column-three-quarters <% unless @content_item.contents.any? %>offset-one-quarter<% end %>">
+  <div class="contents-wrapper <% unless @content_item.contents.any? %>offset-one-quarter<% end %>">
     <%= render 'govuk_component/govspeak_html_publication', @content_item.govspeak_body %>
   </div>
 

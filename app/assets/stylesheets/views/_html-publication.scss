@@ -22,6 +22,7 @@
       }
     }
 
+    // design calls for the logos at the top to always be left aligned
     .direction-rtl & {
       direction: ltr;
     }
@@ -55,24 +56,9 @@
     }
   }
 
-  .offset-one-quarter {
-    margin-left: 25%;
-
-    .direction-rtl & {
-      margin-left: 0;
-      margin-right: 25%;
-    }
-
-    @include media(mobile) {
-      margin: 0;
-
-      .direction-rtl & {
-        margin: 0;
-      }
-    }
-  }
-
   .contents-list-wrapper {
+    @include grid-column( 1/4, $full-width: desktop );
+
     .direction-rtl & {
       direction: rtl;
       text-align: start;
@@ -99,6 +85,10 @@
         }
       }
 
+      @include media(false, $desktop-breakpoint) {
+        box-shadow: none;
+      }
+
       .contents-number {
         float: left;
       }
@@ -121,6 +111,27 @@
     }
   }
 
+  .contents-wrapper {
+    @include grid-column( 3/4, $full-width: desktop );
+  }
+
+  .offset-one-quarter {
+    margin-left: 25%;
+
+    .direction-rtl & {
+      margin-left: 0;
+      margin-right: 25%;
+    }
+
+    @include media(false, $desktop-breakpoint) {
+      margin: 0;
+
+      .direction-rtl & {
+        margin: 0;
+      }
+    }
+  }
+
   h3 .number,
   h4 .number,
   h5 .number,
@@ -135,5 +146,11 @@
 
   .print-meta-data {
     display: none;
+  }
+
+  @include media(false, $desktop-breakpoint) {
+    .govuk-sticky-element--enabled {
+      position: static;
+    }
   }
 }
