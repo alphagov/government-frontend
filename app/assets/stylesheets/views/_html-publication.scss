@@ -130,18 +130,6 @@
     }
   }
 
-  h3 .number,
-  h4 .number,
-  h5 .number,
-  h6 .number {
-    margin-right: 0.1em;
-
-    .direction-rtl & {
-      margin-right: 0;
-      margin-left: 0.1em;
-    }
-  }
-
   .print-meta-data {
     display: none;
   }
