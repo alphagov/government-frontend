@@ -1,6 +1,5 @@
 class GuidePresenter < ContentItemPresenter
   include Parts
-  include UkviABTest
 
   attr_accessor :draft_access_token
 
