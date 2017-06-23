@@ -21,7 +21,7 @@ private
 
   def links(type)
     expanded_links_from_content_item(type).map do |link|
-      link_to(link["title"], link["base_path"])
+      link_for_type(type, link)
     end
   end
 
@@ -49,5 +49,15 @@ private
 
   def emphasised_organisations
     content_item["details"]["emphasised_organisations"] || []
+  end
+
+  def link_for_type(type, link)
+    return link_for_world_location(link) if type == "world_locations"
+    link_to(link["title"], link["base_path"])
+  end
+
+  def link_for_world_location(link)
+    base_path = WorldLocationBasePath.for(link)
+    link_to(link["title"], base_path)
   end
 end
