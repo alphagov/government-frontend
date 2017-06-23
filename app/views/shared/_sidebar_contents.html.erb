@@ -1,6 +1,6 @@
 <%
   list_class ||= "dash-list"
-  format_numbers ||= nil
+  format_numbers ||= false
 %>
 
 <% if contents.any? %>
@@ -10,7 +10,7 @@
       <% contents.each do |heading| %>
         <li>
           <% if format_numbers %>
-            <%= insert_spans(heading) %>
+            <%= wrap_numbers_with_spans(heading) %>
           <% else %>
             <%= heading %>
           <% end %>

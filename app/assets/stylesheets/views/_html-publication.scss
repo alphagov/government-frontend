@@ -55,7 +55,7 @@
   }
 
   .contents-list-wrapper {
-    @include grid-column( 1/4, $full-width: desktop );
+    @include grid-column( 1 / 4, $full-width: desktop );
 
     .direction-rtl & {
       direction: rtl;
@@ -110,7 +110,7 @@
   }
 
   .contents-wrapper {
-    @include grid-column( 3/4, $full-width: desktop );
+    @include grid-column( 3 / 4, $full-width: desktop );
   }
 
   .offset-one-quarter {
