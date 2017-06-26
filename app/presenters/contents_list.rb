@@ -3,7 +3,7 @@ module ContentsList
   include TypographyHelper
 
   def contents
-    contents_items.map do |item|
+    @contents ||= contents_items.map do |item|
       contents_link(item[:text], item[:id])
     end
   end
