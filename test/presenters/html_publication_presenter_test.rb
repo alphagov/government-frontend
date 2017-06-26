@@ -22,11 +22,6 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     assert_equal schema_item("print_with_meta_data")['details']['print_meta_data_contact_address'], presented_item("print_with_meta_data").print_meta_data_contact_address
   end
 
-  test 'presents no contents when headings is an empty list' do
-    assert_equal schema_item("prime_ministers_office")['details']['headings'], '<ol></ol>'
-    assert_empty presented_item("prime_ministers_office").contents
-  end
-
   test 'presents the last change date' do
     published = presented_item("published")
     assert_equal "Published 17 January 2016", published.last_changed
