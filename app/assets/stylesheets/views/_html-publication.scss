@@ -79,6 +79,16 @@
       a {
         text-decoration: none;
 
+        // Child spans are floated which creates a focus box around
+        // just the number. Set parent link to inline-block for
+        // correct appearance
+        display: inline-block;
+
+        // IE8 and below don't render inline-block correctly
+        @include ie-lte(8) {
+          display: block;
+        }
+
         &:hover {
           text-decoration: underline;
         }
