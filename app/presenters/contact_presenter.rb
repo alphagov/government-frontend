@@ -84,8 +84,8 @@ class ContactPresenter < ContentItemPresenter
           v_card_part('fn', group['title']),
           v_card_part('street-address', group['street_address']),
           v_card_part('locality', group['locality']),
-          v_card_part('postal-code', group['postal_code']),
           v_card_part('region', group['region']),
+          v_card_part('postal-code', group['postal_code']),
           v_card_part('country-name', group['world_location']),
         ]
       }
