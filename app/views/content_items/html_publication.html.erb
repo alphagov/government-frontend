@@ -20,15 +20,13 @@
 </div>
 
 <header class="publication-header" id="contents">
-  <div class="headings">
-    <div class="html-publication-title">
-      <% if @content_item.format_sub_type %>
-        <p class="context"><%= I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1) %></p>
-      <% end %>
-      <h1><%= @content_item.title %></h1>
-    </div>
-    <%= @content_item.last_changed %>
+  <div class="html-publication-title">
+    <% if @content_item.format_sub_type %>
+      <p class="context"><%= I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1) %></p>
+    <% end %>
+    <h1><%= @content_item.title %></h1>
   </div>
+  <%= @content_item.last_changed %>
 </header>
 
 <div
@@ -55,4 +53,3 @@
     <%= render 'shared/back_to_content_link' %>
   </div>
 </div>
-

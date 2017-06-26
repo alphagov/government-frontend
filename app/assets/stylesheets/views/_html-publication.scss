@@ -29,19 +29,16 @@
   }
 
   .publication-header {
+    @include core-19;
     color: $white;
     background: $light-blue;
     padding: $gutter;
     margin-bottom: $gutter * 2;
   }
 
-  .headings {
-    @include core-16;
-  }
-
   // Based on the govuk-title component
   .html-publication-title {
-    margin-bottom: 10px;
+    margin-bottom: $gutter;
 
     .context {
       @include core-27;
