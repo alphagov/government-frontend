@@ -302,40 +302,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
-  test "no change for pages not in test" do
-    content_item = content_store_has_schema_example("answer", "answer")
-    path = "another-page"
-    content_item["base_path"] = "/#{path}"
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    setup_ab_variant "EpilepsyDrivingStart", "B"
-
-    get :show, params: { path: path_for(content_item) }
-
-    refute_match(/epilepsy-driving-variant-b/, response.body, "Expected to not find Start button")
-  end
-
-  test "test each variant for DVLA Epilepsy and driving AB Test" do
-    content_item = content_store_has_schema_example("answer", "answer")
-    path = "epilepsy-and-driving"
-    content_item["base_path"] = "/#{path}"
-    content_item["details"]["body"].insert(0, '<p>You can either <a href="/report-driving-medical-condition">report your condition online</a> or <a href="/government/publications/fep1-confidential-medical-information">fill in form FEP1</a> and send it to <abbr title="Driver Vehicle and Licensing Agency">DVLA</abbr>. The address is on the form.</p>')
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    with_variant EpilepsyDrivingStart: "A" do
-      get :show, params: { path: path_for(content_item) }
-      refute_match(/epilepsy-driving-variant-b/, response.body, "Expected to not find Start button")
-    end
-
-    with_variant EpilepsyDrivingStart: "B" do
-      get :show, params: { path: path_for(content_item) }
-
-      assert_match(/epilepsy-driving-variant-b/, response.body, "Expected to find Start button")
-    end
-  end
-
   test "sets the Access-Control-Allow-Origin header for atom pages" do
     content_store_has_schema_example('travel_advice', 'full-country')
     get :show, params: { path: 'foreign-travel-advice/albania', format: 'atom' }
