@@ -1,12 +1,11 @@
 <%
-  list_class ||= "dash-list"
   format_numbers ||= false
 %>
 
 <% if contents.any? %>
   <nav role="navigation">
     <h2><%= t("content_item.contents") %></h2>
-    <ol class="<%= list_class %>" data-module="track-click">
+    <ol class="contents-list contents-list-<% if format_numbers %>numbered<% else %>dashed<% end %>" data-module="track-click">
       <% contents.each do |heading| %>
         <li>
           <% if format_numbers %>

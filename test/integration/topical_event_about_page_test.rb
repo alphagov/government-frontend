@@ -46,7 +46,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
 
   test "slim topical event about pages have no contents" do
     setup_and_visit_content_item('slim')
-    refute page.has_css?('.dash-list')
+    refute page.has_css?('.contents-list.contents-list-dashed')
   end
 
 private
