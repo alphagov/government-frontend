@@ -13,6 +13,11 @@
   // TODO: Update grid to allow this behaviour without this hack
   .sidebar-with-body & {
     margin-left: $gutter-half;
+
+    .direction-rtl & {
+      margin-left: 0;
+      margin-right: $gutter-half;
+    }
   }
 
   @media print {

@@ -1,14 +1,7 @@
 class HtmlPublicationPresenter < ContentItemPresenter
   include Body
   include OrganisationBranding
-
-  def contents?
-    contents && contents != '<ol></ol>'
-  end
-
-  def contents
-    content_item["details"]["headings"].try(:html_safe)
-  end
+  include ContentsList
 
   def isbn
     content_item["details"]["isbn"]
