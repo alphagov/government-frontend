@@ -18,7 +18,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('world_location_news_article')
 
     from = "<a href=\"/government/world/organisations/british-high-commission-nairobi\">British High Commission Nairobi</a>"
-    part_of = "<a href=\"/government/world/kenya\">Kenya</a>"
+    part_of = "<a href=\"/world/kenya\">Kenya</a>"
 
     assert_has_component_metadata_pair("first_published", "24 November 2015")
     assert_has_component_document_footer_pair("published", "24 November 2015")

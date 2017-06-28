@@ -30,7 +30,7 @@ class CaseStudyTest < ActionDispatch::IntegrationTest
   test "world location part of link" do
     setup_and_visit_content_item('translated')
 
-    part_of = "<a href=\"/government/world/spain\">Spain</a>"
+    part_of = "<a href=\"/world/spain\">Spain</a>"
 
     assert_has_component_metadata_pair("part_of", [part_of])
     assert_has_component_document_footer_pair("part_of", [part_of])
