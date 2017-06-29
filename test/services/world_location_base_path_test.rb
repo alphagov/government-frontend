@@ -15,7 +15,7 @@ class WorldLocationBasePathWithoutBasePath < ActiveSupport::TestCase
     link = {
       "title" => "USA"
     }
-    assert_equal "/government/world/usa", WorldLocationBasePath.for(link)
+    assert_equal "/world/usa", WorldLocationBasePath.for(link)
   end
 end
 
@@ -29,7 +29,7 @@ class WorldLocationBasePathForExceptionalCase < ActiveSupport::TestCase
       link = {
         "title" => title
       }
-      assert_equal "/government/world/#{expected_slug}", WorldLocationBasePath.for(link)
+      assert_equal "/world/#{expected_slug}", WorldLocationBasePath.for(link)
     end
   end
 end

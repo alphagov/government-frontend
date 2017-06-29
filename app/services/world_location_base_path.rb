@@ -35,7 +35,7 @@ class WorldLocationBasePath
       slug = EXCEPTIONAL_CASES[title] ||
         title.parameterize
 
-      "/government/world/#{slug}"
+      "/world/#{slug}"
     end
   end
 end
