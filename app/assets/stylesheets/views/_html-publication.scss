@@ -73,18 +73,22 @@
         line-height: 1.3;
       }
 
+      .contents-text,
+      .contents-number {
+        display: table-cell;
+      }
+
+      .contents-number {
+        min-width: 1.3em;
+      }
+
+      .contents-text {
+        padding-left: 0.2em;
+      }
+
       a {
+        display: table;
         text-decoration: none;
-
-        // Child spans are floated which creates a focus box around
-        // just the number. Set parent link to inline-block for
-        // correct appearance
-        display: inline-block;
-
-        // IE8 and below don't render inline-block correctly
-        @include ie-lte(8) {
-          display: block;
-        }
 
         &:hover {
           text-decoration: underline;
@@ -93,15 +97,6 @@
 
       @include media(false, $desktop-breakpoint) {
         box-shadow: none;
-      }
-
-      .contents-number {
-        float: left;
-      }
-
-      .contents-text {
-        display: block;
-        margin-left: 1.5em;
       }
 
       .direction-rtl & {
