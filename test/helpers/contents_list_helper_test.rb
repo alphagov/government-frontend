@@ -2,8 +2,8 @@ require 'test_helper'
 
 class ContentsListHelperTest < ActionView::TestCase
   test "it wraps the number and text in span elements" do
-    input = '<a href="#run-an-effective-welfare-system-that-enables-people-to-achieve-financial-independence-by-providing-assistance-and-guidance-into-employment">1. Run an effective welfare system that enables people to achieve financial independence by providing assistance and guidance into employment</a>'
-    expected = '<a href="#run-an-effective-welfare-system-that-enables-people-to-achieve-financial-independence-by-providing-assistance-and-guidance-into-employment"><span class="contents-number">1.</span><span class="contents-text">Run an effective welfare system that enables people to achieve financial independence by providing assistance and guidance into employment</span></a>'
+    input = '<a href="#first">1. Thing</a>'
+    expected = '<a href="#first"><span class="contents-number">1.</span><span class="contents-text">Thing</span></a>'
     assert_equal expected, wrap_numbers_with_spans(input)
   end
 
