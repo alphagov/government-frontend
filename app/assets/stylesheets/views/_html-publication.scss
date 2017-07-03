@@ -79,11 +79,11 @@
       }
 
       .contents-number {
-        min-width: 1.3em;
+        min-width: 1.5em;
       }
 
       .contents-text {
-        $contents-text-padding: 0.2em;
+        $contents-text-padding: 0.3em;
         padding-left: $contents-text-padding;
 
         .direction-rtl & {
