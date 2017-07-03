@@ -18,7 +18,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
   end
 
   test "breadcrumbs show whether a topical event is archived" do
-    @content_item = JSON.parse(get_content_example("topical_event_about_page"))
+    @content_item = get_content_example("topical_event_about_page")
     content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
     breadcrumbs = [
