@@ -3,7 +3,7 @@ require 'test_helper'
 class GovernmentNavigationTest < ActionDispatch::IntegrationTest
   test "includes government navigation and sets the correct active item" do
     example_body = get_content_example_by_schema_and_name("case_study", "case_study")
-    base_path = JSON.parse(example_body).fetch("base_path")
+    base_path = example_body.fetch("base_path")
     content_store_has_item(base_path, example_body)
 
     visit base_path

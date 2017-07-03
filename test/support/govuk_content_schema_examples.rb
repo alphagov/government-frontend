@@ -12,11 +12,6 @@ require 'gds_api/test_helpers/content_store'
 # Including this module will automatically stub out all the available examples
 # with the content store.
 
-GovukContentSchemaTestHelpers.configure do |config|
-  config.schema_type = 'frontend'
-  config.project_root = Rails.root
-end
-
 module GovukContentSchemaExamples
   extend ActiveSupport::Concern
 
@@ -31,15 +26,12 @@ module GovukContentSchemaExamples
   end
 
   def govuk_content_schema_example(schema_name, example_name)
-    string = GovukContentSchemaTestHelpers::Examples.new.get(schema_name, example_name)
-    JSON.parse(string)
+    GovukSchemas::Example.find(schema_name, example_name: example_name)
   end
 
   module ClassMethods
     def all_examples_for_supported_schemas
-      GovukContentSchemaTestHelpers::Examples.new.get_all_for_formats(supported_schemas).map do |string|
-        JSON.parse(string)
-      end
+      GovukSchemas::Example.find_all(supported_schemas)
     end
 
     def supported_schemas

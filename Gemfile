@@ -51,7 +51,6 @@ end
 group :test do
   gem 'capybara'
   gem 'webmock', '~> 1.18.0', require: false
-  gem 'govuk-content-schema-test-helpers', '1.1.0'
   gem 'mocha'
   gem 'poltergeist', require: false
 end

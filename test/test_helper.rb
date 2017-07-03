@@ -116,7 +116,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def setup_and_visit_content_item(name, parameter_string = '')
-    @content_item = JSON.parse(get_content_example(name)).tap do |item|
+    @content_item = get_content_example(name).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)
       visit("#{item['base_path']}#{parameter_string}")
     end
@@ -140,7 +140,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def get_content_example_by_schema_and_name(schema_type, name)
-    GovukContentSchemaTestHelpers::Examples.new.get(schema_type, name)
+    GovukSchemas::Example.find(schema_type, example_name: name)
   end
 
   # Override this method if your test file doesn't match the convention

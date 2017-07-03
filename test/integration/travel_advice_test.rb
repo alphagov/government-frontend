@@ -49,7 +49,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
   end
 
   test "travel advice part renders just that part" do
-    example = JSON.parse(get_content_example('full-country'))
+    example = get_content_example('full-country')
     first_part = example['details']['parts'].first
     setup_and_visit_travel_advice_part('full-country', first_part['slug'])
 
@@ -70,7 +70,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
   end
 
   def setup_and_visit_travel_advice_part(name, part)
-    @content_item = JSON.parse(get_content_example(name)).tap do |item|
+    @content_item = get_content_example(name).tap do |item|
       content_store_has_item("#{item['base_path']}/#{part}", item.to_json)
       visit "#{item['base_path']}/#{part}"
     end
