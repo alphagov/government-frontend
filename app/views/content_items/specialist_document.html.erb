@@ -12,7 +12,7 @@
     <div class="column-third">
       <nav role="navigation">
         <h2><%= t("content_item.contents") %></h2>
-        <ol class="dash-list" data-module="track-click">
+        <ol class="contents-list contents-list-nested" data-module="track-click">
           <%= render 'shared/nested_content_item', headings: @content_item.nested_contents %>
         </ol>
       </nav>

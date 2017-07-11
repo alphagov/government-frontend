@@ -107,8 +107,8 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders a nested contents list" do
     setup_and_visit_content_item('aaib-reports')
 
-    assert page.has_css?(".dash-list")
-    within ".dash-list" do
+    assert page.has_css?(".contents-list.contents-list-nested")
+    within ".contents-list.contents-list-nested" do
       @content_item['details']['headers'].each do |heading|
         assert_nested_content_item(heading)
       end
@@ -118,7 +118,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders a nested contents list with level 2 and 3 headings only" do
     setup_and_visit_content_item('drug-device-alerts')
 
-    within ".dash-list" do
+    within ".contents-list.contents-list-nested" do
       @content_item['details']['headers'].each do |heading|
         assert_nested_content_item(heading)
       end
