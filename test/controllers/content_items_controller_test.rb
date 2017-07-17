@@ -190,6 +190,18 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test "returns 404 if content store falls through to special route" do
+    path = 'government/item-not-here'
+
+    content_item = content_store_has_schema_example('special_route', 'special_route')
+    content_item['base_path'] = '/government'
+
+    content_store_has_item("/#{path}", content_item)
+
+    get :show, params: { path: path }
+    assert_response :not_found
+  end
+
   test "returns 403 for access-limited item" do
     path = 'government/case-studies/super-sekrit-document'
     url = content_store_endpoint + "/content/" + path
