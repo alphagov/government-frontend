@@ -60,6 +60,56 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test 'includes tracking data on all collection documents' do
+    setup_and_visit_content_item('document_collection')
+    groups = page.all('.group-document-list')
+
+    groups.each do |group|
+      assert_equal(
+        "track-click",
+        group['data-module'],
+        "Expected the module 'track-click' to be set in the group #{group.inspect}"
+      )
+    end
+
+    first_section_links = groups.first.all('.group-document-list-item-title a')
+    first_link = first_section_links.first
+
+    assert_equal(
+      'navDocumentCollectionLinkClicked',
+      first_link['data-track-category'],
+      'Expected a tracking category to be set in the data attributes'
+    )
+
+    assert_equal(
+      '1.1',
+      first_link['data-track-action'],
+      'Expected the link position to be set in the data attributes'
+    )
+
+    assert_match(
+      first_link['data-track-label'],
+      first_link[:href],
+      'Expected the content item base path to be set in the data attributes'
+    )
+
+    assert first_link['data-track-options'].present?
+
+    data_options = JSON.parse(first_link['data-track-options'])
+
+    assert_equal(
+      first_section_links.count.to_s,
+      data_options['dimension28'],
+      'Expected the total number of content items within the section to be present in the tracking options'
+    )
+
+    assert_equal(
+      first_link.text,
+      data_options['dimension29'],
+      'Expected the subtopic title to be present in the tracking options'
+    )
+  end
+
   test "withdrawn collection" do
     setup_and_visit_content_item('document_collection_withdrawn')
     assert page.has_css?('title', text: "[Withdrawn]", visible: false)
