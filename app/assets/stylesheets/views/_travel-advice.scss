@@ -1,6 +1,5 @@
 .travel-advice {
   @include parts;
-  @include print-link;
 
   .add-title-margin {
     @include responsive-top-margin;
