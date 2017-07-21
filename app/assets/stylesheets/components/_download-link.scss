@@ -1,0 +1,21 @@
+.app-c-download-link {
+  display: inline-block;
+  @include bold-19;
+  margin-top: $gutter-half;
+  margin-bottom: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter;
+  }
+}
+
+
+// scss-lint:disable SelectorFormat
+.app-c-download-link__icon {
+  margin-right: 0.5em;
+  height: 1.31578947368em; // 25 / 19
+  width: 1.31578947368em;
+  vertical-align: middle;
+}
+// scss-lint:enable SelectorFormat
+

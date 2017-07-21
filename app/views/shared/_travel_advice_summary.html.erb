@@ -14,8 +14,8 @@
   <figure class="map">
     <img src="<%= content_item.map["url"] %>" alt="<%= content_item.map["alt_text"] %>">
     <% if content_item.map_download_url %>
-      <figcaption class="map-download">
-        <a href="<%= content_item.map_download_url %>">Download map (PDF)</a>
+      <figcaption>
+        <%= render 'components/download-link', href: content_item.map_download_url, link_text: "Download map (PDF)" %>
       </figcaption>
     <% end %>
   </figure>
