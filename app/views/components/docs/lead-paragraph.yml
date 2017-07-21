@@ -1,0 +1,8 @@
+name: Lead paragraph
+description: A paragraph of text
+accessibility_criteria: |
+  The lead paragraph must:
+  - be visually distinct from other paragraphs
+fixtures:
+  default:
+    description: 'UK Visas and Immigration is making changes to the Immigration Rules affecting various categories.'

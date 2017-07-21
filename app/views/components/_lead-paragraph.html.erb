@@ -1,0 +1,8 @@
+<%
+  description ||= ""
+%>
+<% if description.length > 0 %>
+  <p class="app-c-lead-paragraph">
+    <%= nbsp_between_last_two_words(description) %>
+  </p>
+<% end %>

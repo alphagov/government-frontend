@@ -4,7 +4,7 @@
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
 <%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'shared/description', description: @content_item.description %>
+<%= render 'components/lead-paragraph', description: @content_item.description %>
 <%= render 'shared/sidebar_image_with_body', content_item: @content_item %>
 <%= render 'shared/share_buttons', share_urls: @content_item.share_urls %>
 <%= render 'shared/footer', @content_item.document_footer %>

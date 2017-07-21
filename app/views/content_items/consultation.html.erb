@@ -118,7 +118,7 @@
     </div>
     <div class="column-two-thirds consultation-summary">
       <h2>Summary</h2>
-      <%= render 'shared/description', description: @content_item.description %>
+      <%= render 'components/lead-paragraph', description: @content_item.description %>
 
       <% if @content_item.held_on_another_website? %>
         <p><strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong></p>

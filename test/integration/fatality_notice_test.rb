@@ -42,7 +42,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
     assert_has_component_metadata_pair("see_updates_link", true)
 
-    within(".description") do
+    within(".app-c-lead-paragraph") do
       assert_text <<-DESCRIPTION
        It is with great sadness that the Ministry of Defence
        must confirm that Sir George Pomeroy Colley, died in battle
