@@ -25,7 +25,7 @@ class GuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('h1', text: "1. #{@content_item['details']['parts'].first['title']}")
     assert page.has_css?(shared_component_selector("previous_and_next_navigation"))
-    assert page.has_css?('.print-link a[href$="/print"]')
+    assert page.has_css?('.app-c-print-link a[href$="/print"]')
   end
 
   test "draft access tokens are appended to part links within navigation" do
@@ -39,6 +39,6 @@ class GuideTest < ActionDispatch::IntegrationTest
 
     refute page.has_css?('h1', text: @content_item['details']['parts'].first['title'])
     refute page.has_css?('.part-navigation')
-    refute page.has_css?('.print-link')
+    refute page.has_css?('.app-c-print-link')
   end
 end

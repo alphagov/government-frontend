@@ -1,0 +1,16 @@
+name: Print link
+description: A link with a print icon
+accessibility_criteria: |
+  The print link must:
+  - accept focus
+  - be focusable with a keyboard
+  - be usable with a keyboard
+  - indicate when it has focus
+  The print icon must:
+  - be presentational and ignored by screen readers
+fixtures:
+  default:
+    href: '/print-this'
+  custom_link_text:
+    link_text: 'Print me'
+    href: '/print-me'
