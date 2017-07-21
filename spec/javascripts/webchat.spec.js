@@ -1,7 +1,7 @@
 /* global describe beforeEach setFixtures it spyOn expect jasmine */
 
 var $ = window.jQuery
-var POLL_INTERVAL = '11' // Offset by one
+var POLL_INTERVAL = '6' // Offset by one
 
 describe('Webchat', function () {
   var GOVUK = window.GOVUK
