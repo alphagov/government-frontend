@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
     get 'random/:schema' => 'randomly_generated_content_item#show'
 
-    mount GovukPublishingComponents::Engine, at: "/component-guide"
+    mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
   end
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
