@@ -1,0 +1,16 @@
+name: Download link
+description: A link with a file download icon
+accessibility_criteria: |
+  The download link must:
+  - accept focus
+  - be focusable with a keyboard
+  - be usable with a keyboard
+  - indicate when it has focus
+  The download icon must:
+  - be presentational and ignored by screen readers
+fixtures:
+  default:
+    href: '/download-this'
+  custom_link_text:
+    href: '/download-map'
+    link_text: 'Download Map (PDF)'
