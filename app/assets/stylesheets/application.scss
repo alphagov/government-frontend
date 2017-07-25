@@ -18,10 +18,8 @@
 @import 'helpers/sidebar-with-body';
 @import 'helpers/share-buttons';
 @import 'helpers/national_statistics_logo';
-@import 'helpers/notice';
 @import 'helpers/organisation-links';
 @import 'helpers/history-notice';
-@import 'helpers/withdrawal-notice';
 @import 'helpers/taxonomy-sidebar';
 @import 'helpers/button';
 @import 'helpers/parts';
@@ -54,3 +52,4 @@
 
 // components
 @import 'components/print-link';
+@import 'components/notice';

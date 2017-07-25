@@ -13,7 +13,7 @@
   <% end %>
 </div>
 
-<%= render 'shared/withdrawal_notice', content_item: @content_item %>
+<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 <%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>

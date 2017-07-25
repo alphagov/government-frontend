@@ -1,7 +1,13 @@
 <%= content_for :title, "#{@content_item.page_title} - #{t("content_item.schema_name.#{@content_item.document_type}", count: 1)}" %>
 
 <%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'shared/withdrawal_notice', content_item: @content_item %>
+
+<% title = capture do %>
+  This <%= t("content_item.schema_name.#{@content_item.schema_name}", count: 1).downcase %>
+  was withdrawn on <%= @content_item.withdrawal_notice[:time] %>
+<% end %>
+<%= render 'components/notice', title: title, description_govspeak: @content_item.withdrawal_notice[:explanation] %>
+
 <%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/description', description: @content_item.description %>
 <%= render 'shared/sidebar_image_with_body', content_item: @content_item %>
