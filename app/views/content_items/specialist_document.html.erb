@@ -5,7 +5,7 @@
 
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'components/lead-paragraph', description: @content_item.description %>
+<%= render 'components/lead-paragraph', text: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">
   <% if @content_item.nested_contents.any? %>

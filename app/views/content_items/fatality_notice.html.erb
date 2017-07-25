@@ -3,6 +3,6 @@
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'shared/withdrawal_notice', content_item: @content_item %>
 <%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'components/lead-paragraph', description: @content_item.description %>
+<%= render 'components/lead-paragraph', text: @content_item.description %>
 <%= render 'shared/sidebar_image_with_body', content_item: @content_item %>
 <%= render 'shared/footer', @content_item.document_footer %>

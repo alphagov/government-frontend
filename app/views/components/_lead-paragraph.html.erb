@@ -1,8 +1,8 @@
 <%
-  description ||= ""
+  text ||= ""
 %>
-<% if description.length > 0 %>
+<% if text.present? %>
   <p class="app-c-lead-paragraph">
-    <%= nbsp_between_last_two_words(description) %>
+    <%= nbsp_between_last_two_words(text) %>
   </p>
 <% end %>

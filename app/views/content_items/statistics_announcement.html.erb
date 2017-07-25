@@ -18,7 +18,7 @@
     <p><%= @content_item.cancellation_reason %></p>
   </div>
 <% end %>
-<%= render 'components/lead-paragraph', description: @content_item.description %>
+<%= render 'components/lead-paragraph', text: @content_item.description %>
 
 <% if @content_item.release_date_changed? %>
 <div class="grid-row">
