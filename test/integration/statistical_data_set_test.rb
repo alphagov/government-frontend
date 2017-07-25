@@ -29,7 +29,7 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     withdrawn_notice_explanation = @content_item["withdrawn_notice"]["explanation"]
     withdrawn_at = @content_item["withdrawn_notice"]["withdrawn_at"]
 
-    within ".withdrawal-notice" do
+    within ".app-c-notice" do
       assert page.has_text?("This statistical data set was withdrawn"), "is withdrawn"
       assert_has_component_govspeak(withdrawn_notice_explanation)
       assert page.has_css?("time[datetime='#{withdrawn_at}']")

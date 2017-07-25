@@ -1,4 +1,4 @@
-@mixin notice {
+.app-c-notice {
   clear: both;
   @include responsive-bottom-margin;
   padding: $gutter-two-thirds;
@@ -8,7 +8,8 @@
     padding: $gutter-half;
   }
 
-  h2 {
+  // scss-lint:disable SelectorFormat
+  .app-c-notice__title {
     @include bold-36;
     margin-bottom: $gutter-one-third;
 
@@ -17,15 +18,13 @@
     }
   }
 
-  p {
+  .app-c-notice__description {
     @include core-19;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
+  // scss-lint:enable SelectorFormat
 
-  a {
-    word-break: break-word;
+  p:last-child {
+    margin-bottom: 0;
   }
 }

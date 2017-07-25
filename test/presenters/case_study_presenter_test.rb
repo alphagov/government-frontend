@@ -92,8 +92,8 @@ class CaseStudyPresenterTest < PresenterTestCase
 
     assert example.include?("withdrawn_notice")
     assert presented.withdrawn?
-    assert_equal example["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
-    assert_equal '<time datetime="2014-08-22T10:29:02+01:00">22 August 2014</time>', presented.withdrawal_notice[:time]
+    assert_equal example["withdrawn_notice"]["explanation"], presented.withdrawal_notice_component[:description_govspeak]
+    assert_equal '<time datetime="2014-08-22T10:29:02+01:00">22 August 2014</time>', presented.withdrawal_notice_component[:time]
   end
 
   def presented_case_study_with_updates

@@ -2,10 +2,6 @@
   @include description;
   @include national-statistics-logo;
 
-  .cancellation-notice {
-    @include notice;
-  }
-
   .release-date-change-notice {
     h2 {
       font-weight: bold;

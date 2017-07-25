@@ -1,0 +1,15 @@
+<% if defined?(title) %>
+  <%
+    description_text ||= ""
+    description_govspeak ||= ""
+  %>
+  <div class="app-c-notice">
+    <h2 class="app-c-notice__title"><%= title %></h2>
+    <% if description_text.present? %>
+      <p class="app-c-notice__description"><%= description_text %></p>
+    <% end %>
+    <% if description_govspeak.present? %>
+      <%= render 'govuk_component/govspeak', content: description_govspeak %>
+    <% end %>
+  </div>
+<% end %>
