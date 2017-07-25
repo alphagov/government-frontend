@@ -1,6 +1,6 @@
 require 'component_test_helper'
 
-class PrintLinkTest < ComponentTestCase
+class LeadParagraphTest < ComponentTestCase
   def component_name
     "lead-paragraph"
   end
@@ -10,7 +10,9 @@ class PrintLinkTest < ComponentTestCase
   end
 
   test "renders a lead paragraph" do
+    nbsp = HTMLEntities.new.decode('&nbsp;')
+
     render_component(description: 'UK Visas and Immigration is making changes to the Immigration Rules affecting various categories.')
-    assert_select ".app-c-lead-paragraph", text: "UK Visas and Immigration is making changes to the Immigration Rules affecting various categories."
+    assert_select ".app-c-lead-paragraph", text: "UK Visas and Immigration is making changes to the Immigration Rules affecting various#{nbsp}categories."
   end
 end
