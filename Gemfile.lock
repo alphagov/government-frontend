@@ -74,7 +74,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
-    gds-api-adapters (42.0.0)
+    gds-api-adapters (43.0.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -94,8 +94,8 @@ GEM
     govuk_frontend_toolkit (5.1.0)
       rails (>= 3.1.0)
       sass (>= 3.2.0)
-    govuk_navigation_helpers (6.0.1)
-      gds-api-adapters (~> 42.0)
+    govuk_navigation_helpers (6.3.0)
+      gds-api-adapters (>= 43.0)
     govuk_publishing_components (0.1.0)
       govuk_frontend_toolkit
       rails (~> 5.0.0, >= 5.0.0.1)
@@ -163,7 +163,7 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-    rack (2.0.1)
+    rack (2.0.3)
     rack-cache (1.7.0)
       rack (>= 0.4)
     rack-test (0.6.3)
@@ -289,12 +289,12 @@ DEPENDENCIES
   binding_of_caller
   capybara
   dalli
-  gds-api-adapters (~> 42.0)
+  gds-api-adapters (~> 43.0)
   govuk-lint
   govuk_ab_testing (~> 2.0)
   govuk_elements_rails (= 3.0.1)
   govuk_frontend_toolkit (= 5.1.0)
-  govuk_navigation_helpers (~> 6.0)
+  govuk_navigation_helpers (~> 6.3)
   govuk_publishing_components (~> 0.1.0)
   govuk_schemas
   htmlentities (= 4.3.4)
