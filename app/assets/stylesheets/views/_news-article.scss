@@ -1,6 +1,5 @@
 .news-article {
   @include sidebar-with-body;
-  @include withdrawal-notice;
   @include share-buttons;
 
   .direction-rtl & {

@@ -61,8 +61,8 @@ class PublicationPresenterTest < PresenterTestCase
 
     assert example.include?("withdrawn_notice")
     assert presented.withdrawn?
-    assert_equal example["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
-    assert_equal '<time datetime="2015-01-13T13:05:30Z">13 January 2015</time>', presented.withdrawal_notice[:time]
+    assert_equal example["withdrawn_notice"]["explanation"], presented.withdrawal_notice_component[:description_govspeak]
+    assert_equal '<time datetime="2015-01-13T13:05:30Z">13 January 2015</time>', presented.withdrawal_notice_component[:time]
   end
 
   test 'content can apply only to a set of nations (with alternative urls when provided)' do

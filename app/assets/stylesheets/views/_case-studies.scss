@@ -1,6 +1,5 @@
 .case-study {
   @include sidebar-with-body;
-  @include withdrawal-notice;
 
   .direction-rtl & {
     direction: rtl;

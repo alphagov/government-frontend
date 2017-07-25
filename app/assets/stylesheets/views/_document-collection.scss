@@ -1,6 +1,5 @@
 .document-collection {
   @include sidebar-with-body;
-  @include withdrawal-notice;
   @include taxonomy-sidebar;
 
   .group-title {
