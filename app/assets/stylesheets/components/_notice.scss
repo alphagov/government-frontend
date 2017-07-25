@@ -8,6 +8,7 @@
     padding: $gutter-half;
   }
 
+  // scss-lint:disable SelectorFormat
   .app-c-notice__title {
     @include bold-36;
     margin-bottom: $gutter-one-third;
@@ -21,6 +22,7 @@
     @include core-19;
     margin-bottom: 0;
   }
+  // scss-lint:enable SelectorFormat
 
   p:last-child {
     margin-bottom: 0;

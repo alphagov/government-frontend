@@ -45,7 +45,7 @@ class StatisticalDataSetPresenterTest
     end
 
     test 'presents the withdrawn notice explanation' do
-      assert_equal expected["withdrawn_notice"]["explanation"], presented.withdrawal_notice[:explanation]
+      assert_equal expected["withdrawn_notice"]["explanation"], presented.withdrawal_notice_component[:description_govspeak]
     end
 
     test 'presents the withdrawn notification time' do
@@ -56,7 +56,7 @@ class StatisticalDataSetPresenterTest
       )
       expected_withdrawn_time_html = "<time datetime=\"#{expected_time}\">#{expected_date_as_string}</time>"
 
-      assert_equal expected_withdrawn_time_html, presented.withdrawal_notice[:time]
+      assert_equal expected_withdrawn_time_html, presented.withdrawal_notice_component[:time]
     end
   end
 

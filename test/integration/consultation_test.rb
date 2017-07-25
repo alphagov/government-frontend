@@ -51,7 +51,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
     # There’s no daylight savings after 2037
     # http://timezonesjl.readthedocs.io/en/stable/faq/#far-future-zoneddatetime-with-variabletimezone
-    assert page.has_css?('.consultation-notice', text: "This consultation opens at 1pm on 5 October 2200")
+    assert page.has_css?('.app-c-notice', text: "This consultation opens at 1pm on 5 October 2200")
     assert page.has_text?("It closes at 4pm on 31 October 2210")
   end
 
@@ -59,7 +59,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('closed_consultation')
 
     assert page.has_text?("Closed consultation")
-    assert page.has_css?('.consultation-notice', text: "We are analysing your feedback")
+    assert page.has_css?('.app-c-notice', text: "We are analysing your feedback")
 
     assert page.has_text?("ran from")
     assert page.has_text?("2pm on 5 September 2016 to 4pm on 31 October 2016")
@@ -69,7 +69,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('consultation_outcome')
 
     assert page.has_text?("Consultation outcome")
-    assert page.has_css?('.consultation-notice', text: "This consultation has concluded")
+    assert page.has_css?('.app-c-notice', text: "This consultation has concluded")
     assert page.has_css?('h2', text: "Original consultation")
     assert page.has_text?("ran from")
     assert page.has_text?("4pm on 20 April 2016 to 10:45pm on 13 July 2016")

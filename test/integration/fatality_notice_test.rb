@@ -18,7 +18,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     assert_component_parameter("title", "context", "Operations in Zululand")
     assert_has_component_title("Sir George Pomeroy Colley killed in Boer War")
 
-    refute page.has_css?(".withdrawal-notices")
+    refute page.has_css?(".app-c-notice")
 
     assert_has_component_metadata_pair(
       "from",
@@ -107,7 +107,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "[Withdrawn] Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK"
     )
 
-    within ".withdrawal-notice" do
+    within ".app-c-notice" do
       assert_text("This fatality notice was withdrawn on 14 September 2016")
 
       assert_has_component_govspeak(
