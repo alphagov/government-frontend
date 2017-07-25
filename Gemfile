@@ -31,10 +31,10 @@ gem 'asset_bom_removal-rails', '~> 1.0.0'
 if ENV['API_DEV']
   gem 'gds-api-adapters', path: '../gds-api-adapters'
 else
-  gem 'gds-api-adapters', '~> 42.0'
+  gem 'gds-api-adapters', '~> 43.0'
 end
 
-gem 'govuk_navigation_helpers', '~> 6.0'
+gem 'govuk_navigation_helpers', '~> 6.3'
 
 group :development, :test do
   gem 'govuk_schemas'
