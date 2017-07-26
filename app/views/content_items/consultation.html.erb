@@ -131,6 +131,17 @@
   </section>
 <% end %>
 
+<div class="grid-row sidebar-with-body">
+  <div class="column-third">
+    <h1 class="section-title" id="description-title">
+      Consultation description
+    </h1>
+  </div>
+  <div class="column-two-thirds" aria-labelledby="description-title">
+    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+  </div>
+</div>
+
 <% if @content_item.documents? %>
   <div class="grid-row sidebar-with-body">
     <div class="column-third">
@@ -145,17 +156,6 @@
     </div>
   </div>
 <% end %>
-
-<div class="grid-row sidebar-with-body">
-  <div class="column-third">
-    <h1 class="section-title" id="description-title">
-      Consultation description
-    </h1>
-  </div>
-  <div class="column-two-thirds" aria-labelledby="description-title">
-    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
-  </div>
-</div>
 
 <% if @content_item.ways_to_respond? %>
   <div class="grid-row sidebar-with-body">
