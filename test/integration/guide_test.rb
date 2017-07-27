@@ -15,7 +15,7 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.part-navigation li', count: @content_item['details']['parts'].size)
 
     @content_item["details"]["parts"].each_with_index do |part, i|
-      if i == 0
+      if i.zero?
         assert page.has_css?('.part-navigation li', text: part['title'])
         refute page.has_css?('.part-navigation li a', text: part['title'])
       else

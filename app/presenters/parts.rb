@@ -4,7 +4,7 @@ module Parts
   def parts
     raw_parts.each_with_index.map do |part, i|
       # Link to base_path for first part
-      part['full_path'] = i == 0 ? base_path : "#{base_path}/#{part['slug']}"
+      part['full_path'] = i.zero? ? base_path : "#{base_path}/#{part['slug']}"
       part
     end
   end
@@ -96,7 +96,7 @@ private
   end
 
   def previous_part
-    parts[current_part_index - 1] if current_part_index > 0
+    parts[current_part_index - 1] if current_part_index.positive?
   end
 
   def current_part_index

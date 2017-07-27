@@ -95,7 +95,7 @@ class GuidePresenterTest
       end
 
       presented.parts_navigation.flatten.each_with_index do |link, i|
-        if i > 0
+        if i.positive?
           assert expected_param.in?(link)
         end
       end
