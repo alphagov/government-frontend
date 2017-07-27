@@ -1,7 +1,8 @@
 name: Lead paragraph
-description: A paragraph of text
+description: The opening paragraph of content. Typically a content item’s description field.
 accessibility_criteria: |
   The lead paragraph must:
+
   - be visually distinct from other paragraphs
 fixtures:
   default:
