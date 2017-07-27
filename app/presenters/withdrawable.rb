@@ -10,11 +10,13 @@ module Withdrawable
   end
 
   def withdrawal_notice_component
-    {
-      title: withdrawal_notice_title,
-      description_govspeak: withdrawal_notice["explanation"],
-      time: withdrawal_notice_time
-    } if withdrawn?
+    if withdrawn?
+      {
+        title: withdrawal_notice_title,
+        description_govspeak: withdrawal_notice["explanation"],
+        time: withdrawal_notice_time
+      }
+    end
   end
 
 private

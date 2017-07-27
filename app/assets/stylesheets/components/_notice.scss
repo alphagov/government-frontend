@@ -8,8 +8,10 @@
     padding: $gutter-half;
   }
 
-  p:last-child {
-    margin-bottom: 0;
+  .govuk-govspeak {
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
