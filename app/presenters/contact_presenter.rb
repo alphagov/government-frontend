@@ -46,33 +46,13 @@ class ContactPresenter < ContentItemPresenter
 
   def phone
     phone_number_groups.map do |group|
-      details = {
-        numbers: [
-          {
-            label: 'Telephone',
-            number: group['number']
-          },
-          {
-            label: 'Textphone',
-            number: group['textphone']
-          },
-          {
-            label: 'Outside UK',
-            number: group['international_phone']
-          },
-          {
-            label: 'Fax',
-            number: group['fax']
-          }
-        ],
+      {
+        numbers: phone_numbers_in_group(group),
         title: group['title'],
         description: group['description'].try(:strip).try(:html_safe),
         opening_times: group['open_hours'].try(:strip).try(:html_safe),
         best_time_to_call: group['best_time_to_call'].try(:strip).try(:html_safe)
       }
-
-      details[:numbers].select! { |n| n[:number].present? }
-      details
     end
   end
 
@@ -157,6 +137,27 @@ class ContactPresenter < ContentItemPresenter
   end
 
 private
+
+  def phone_numbers_in_group(group)
+    [
+      {
+        label: 'Telephone',
+        number: group['number']
+      },
+      {
+        label: 'Textphone',
+        number: group['textphone']
+      },
+      {
+        label: 'Outside UK',
+        number: group['international_phone']
+      },
+      {
+        label: 'Fax',
+        number: group['fax']
+      }
+    ].select { |n| n[:number].present? }
+  end
 
   def webchat_id
     webchat_ids[content_item["base_path"]]
