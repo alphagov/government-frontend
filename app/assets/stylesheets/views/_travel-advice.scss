@@ -9,47 +9,6 @@
     margin-bottom: $gutter * 1.5;
   }
 
-  .subscriptions {
-    @include bold-19;
-
-    ul {
-      list-style: none;
-      margin-left: -$gutter-half / 2;
-      margin-right: -$gutter-half / 2;
-    }
-
-    li {
-      display: inline-block;
-      margin-left: $gutter-half / 2;
-      margin-right: $gutter-half / 2;
-      margin-bottom: $gutter / 2;
-    }
-
-    a {
-      text-decoration: none;
-      padding-left: 28px;
-      background-repeat: no-repeat;
-      background-position: 0 20%;
-
-      @include media(tablet) {
-        background-position: 0 35%;
-      }
-    }
-
-    .feed {
-      background-image: image-url("feed-icon-black.png");
-    }
-
-    .email-alerts {
-      background-image: image-url("mail-icon.png");
-
-      @include device-pixel-ratio() {
-        background-image: image-url("mail-icon-x2.png");
-        background-size: 20px 14px;
-      }
-    }
-  }
-
   .map {
     margin-top: $gutter;
     margin-bottom: $gutter;
