@@ -10,15 +10,19 @@ class ContactPresenter < ContentItemPresenter
 
   def related_items
     sections = []
-    sections << {
-      title: "Elsewhere on GOV.UK",
-      items: quick_links
-    } if quick_links.any?
+    if quick_links.any?
+      sections << {
+        title: "Elsewhere on GOV.UK",
+        items: quick_links
+      }
+    end
 
-    sections << {
-      title: "Other contacts",
-      items: related_contacts_links
-    } if related_contacts_links.any?
+    if related_contacts_links.any?
+      sections << {
+        title: "Other contacts",
+        items: related_contacts_links
+      }
+    end
 
     {
       sections: sections
@@ -127,7 +131,6 @@ class ContactPresenter < ContentItemPresenter
   def webchat_open_url
     "https://online.hmrc.gov.uk/webchatprod/templates/chat/hmrc7/chat.html?entryPointId=#{webchat_id}&templateName=hmrc7&languageCode=en&countryCode=US&ver=v11"
   end
-
 
   def breadcrumbs
     return [] if content_item["links"]['organisations'].try(:length) != 1

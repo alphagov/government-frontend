@@ -10,6 +10,5 @@ private
     @content_item = present(random_example)
   end
 
-  def set_expiry
-  end
+  def set_expiry; end
 end

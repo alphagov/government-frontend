@@ -54,7 +54,8 @@ class DetailedGuidePresenterTest < PresenterTestCase
   test 'presents related mainstream content' do
     assert_equal [
       '<a href="/overseas-passports">Overseas British passport applications</a>',
-      '<a href="/report-a-lost-or-stolen-passport">Cancel a lost or stolen passport</a>'], presented_item("related_mainstream_detailed_guide").related_mainstream_content
+      '<a href="/report-a-lost-or-stolen-passport">Cancel a lost or stolen passport</a>'
+    ], presented_item("related_mainstream_detailed_guide").related_mainstream_content
   end
 
   test 'content can be historically political' do

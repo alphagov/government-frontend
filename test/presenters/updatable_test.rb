@@ -143,7 +143,8 @@ class UpdatableTest < ActiveSupport::TestCase
                    {
                      display_time: '2016-02-29T09:24:10.000+00:00',
                      note: 'notes',
-                     timestamp: '2016-02-29T09:24:10.000+00:00' }
+                     timestamp: '2016-02-29T09:24:10.000+00:00'
+                   }
                  ]
   end
 

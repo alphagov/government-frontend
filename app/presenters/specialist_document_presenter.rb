@@ -71,9 +71,10 @@ private
   # Finder is a required link that must have 1 item
   def finder
     parent_finder = content_item.dig("links", "finder", 0)
-    Airbrake.notify("Finder not found",
-      error_message: "Finder not found in #{base_path} content item"
-    ) if parent_finder.nil?
+    if parent_finder.nil?
+      Airbrake.notify("Finder not found",
+        error_message: "Finder not found in #{base_path} content item")
+    end
 
     parent_finder
   end
@@ -138,8 +139,7 @@ private
         facet_block(facet, allowed_value)
       else
         Airbrake.notify("Facet value not in list of allowed values",
-          error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item"
-        )
+          error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item")
         value
       end
     end

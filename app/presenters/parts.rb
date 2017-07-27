@@ -4,7 +4,7 @@ module Parts
   def parts
     raw_parts.each_with_index.map do |part, i|
       # Link to base_path for first part
-      part['full_path'] = (i == 0) ? base_path : "#{base_path}/#{part['slug']}"
+      part['full_path'] = i == 0 ? base_path : "#{base_path}/#{part['slug']}"
       part
     end
   end
@@ -39,17 +39,21 @@ module Parts
   def previous_and_next_navigation
     nav = {}
 
-    nav[:previous_page] = {
-      url: previous_part['full_path'],
-      title: I18n.t('multi_page.previous_page'),
-      label: previous_part['title']
-    } if previous_part
+    if previous_part
+      nav[:previous_page] = {
+        url: previous_part['full_path'],
+        title: I18n.t('multi_page.previous_page'),
+        label: previous_part['title']
+      }
+    end
 
-    nav[:next_page] = {
-      url: next_part['full_path'],
-      title: I18n.t('multi_page.next_page'),
-      label: next_part['title']
-    } if next_part
+    if next_part
+      nav[:next_page] = {
+        url: next_part['full_path'],
+        title: I18n.t('multi_page.next_page'),
+        label: next_part['title']
+      }
+    end
 
     nav
   end

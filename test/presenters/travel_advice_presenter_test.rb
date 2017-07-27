@@ -145,7 +145,8 @@ class TravelAdvicePresenterTest
         next_page: {
           url: "#{example['base_path']}/#{parts[0]['slug']}",
           title: "Next",
-          label: parts[0]['title'] }
+          label: parts[0]['title']
+        }
       }
 
       assert_equal nav, expected_nav
@@ -159,11 +160,13 @@ class TravelAdvicePresenterTest
         next_page: {
           url: "#{example['base_path']}/#{parts[1]['slug']}",
           title: "Next",
-          label: parts[1]['title'] },
+          label: parts[1]['title']
+        },
         previous_page: {
           url: example['base_path'],
           title: "Previous",
-          label: 'Summary' }
+          label: 'Summary'
+        }
       }
 
       assert_equal nav, expected_nav
@@ -177,7 +180,8 @@ class TravelAdvicePresenterTest
         previous_page: {
           url: "#{example['base_path']}/#{parts[-2]['slug']}",
           title: "Previous",
-          label: parts[-2]['title'] }
+          label: parts[-2]['title']
+        }
       }
 
       assert_equal nav, expected_nav
