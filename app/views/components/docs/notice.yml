@@ -1,5 +1,9 @@
 name: Notice
-description: A notification to convey and highlight information
+description: A notice to convey and highlight information
+body: |
+  The notice component replaces the notice and withdrawal notice patterns on GOV.UK.
+
+  The component accepts either a simple string description_text parameter that it wraps in a paragraph, or a description_govspeak parameter that is rendered through govspeak for more complex HTML layout.
 accessibility_criteria: |
   The notice must:
 fixtures:
