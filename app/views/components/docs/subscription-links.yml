@@ -1,0 +1,21 @@
+name: Subscription links
+description: Links to 'Get email alerts' and 'Subscribe to feed'
+accessibility_criteria: |
+  The subscription links must:
+
+  - accept focus
+  - be focusable with a keyboard
+  - be usable with a keyboard
+  - indicate when they have focus
+
+  Icons in subscription links must:
+
+  - be presentational and ignored by screen readers
+fixtures:
+  default:
+    email_signup_link: '/foreign-travel-advice/singapore/email-signup'
+    feed_link: '/foreign-travel-advice/singapore.atom'
+  with_only_email_signup_link:
+    email_signup_link: '/foreign-travel-advice/singapore/email-signup'
+  with_only_feed_link:
+    feed_link: '/foreign-travel-advice/singapore.atom'
