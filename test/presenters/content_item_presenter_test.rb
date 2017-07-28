@@ -24,13 +24,14 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example('case_study', 'translated')
     locales = ContentItemPresenter.new(translated).available_translations
-    assert_equal %w(en ar es), (locales.map { |t| t["locale"] })
+    assert_equal %w(en ar es), (locales.map { |t| t[:locale] })
   end
 
   test "available_translations returns native locale names using native_language_name_for" do
     translated = govuk_content_schema_example('case_study', 'translated')
     locales = ContentItemPresenter.new(translated).available_translations
-    assert_equal %w(English العربية Español), locales.map { |t| t[:text] }
+
+    assert_equal %w(English العربية Español), (locales.map { |t| t[:text] })
   end
 
   test "part slug is nil when requesting a content item without parts" do
