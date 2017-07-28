@@ -11,7 +11,6 @@
 @import 'mixins/white-links';
 
 // helpers for common page elements
-@import 'helpers/available-languages';
 @import 'helpers/back-to-content';
 @import 'helpers/contents-list';
 @import 'helpers/sidebar-with-body';
@@ -57,3 +56,4 @@
 @import 'components/lead-paragraph';
 @import 'components/subscription-links';
 @import 'components/heading';
+@import 'components/translation-nav';

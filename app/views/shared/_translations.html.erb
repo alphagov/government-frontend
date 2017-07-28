@@ -1,7 +1,6 @@
-<% if @content_item.available_translations.any? %>
+<% if @content_item.available_translations.any? && @content_item.available_translations.length > 1 %>
   <div class="column-third">
-    <%= render 'shared/available_languages',
-      translations: @content_item.available_translations
-    %>
+    <%= render 'components/translation-nav',
+        translations: @content_item.available_translations %>
   </div>
 <% end %>

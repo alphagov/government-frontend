@@ -1,19 +1,17 @@
-.available-languages {
+// scss-lint:disable SelectorFormat
+.app-c-translation-nav {
   margin-bottom: $gutter;
   border-bottom: 1px solid $border-colour;
-
-  // The following mixin usage could be a composable class in the future
-  // as components should not have layout that prevents reusability.
   @include responsive-top-margin;
   @include core-16;
 
-  ul {
+  .app-c-translation-nav__list {
     @extend %contain-floats;
     list-style: none;
     margin-left: -$gutter-one-third;
     margin-right: -$gutter-one-third;
 
-    li {
+    .app-c-translation-nav__list__language {
       float: left;
       padding-left: $gutter-one-third;
       padding-right: $gutter-one-third;
@@ -38,4 +36,5 @@
       }
     }
   }
-}
+} // scss-lint:enable SelectorFormat
+

@@ -27,6 +27,12 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal %w(en ar es), (locales.map { |t| t["locale"] })
   end
 
+  test "available_translations returns native locale names using native_language_name_for" do
+    translated = govuk_content_schema_example('case_study', 'translated')
+    locales = ContentItemPresenter.new(translated).available_translations
+    assert_equal %w(English العربية Español), locales.map { |t| t[:text] }
+  end
+
   test "part slug is nil when requesting a content item without parts" do
     example_without_parts = govuk_content_schema_example('case_study', 'translated')
     presented_example = ContentItemPresenter.new(example_without_parts, example_without_parts['base_path'])

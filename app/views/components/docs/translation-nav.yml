@@ -1,0 +1,21 @@
+name: Translation Nav
+description: A navigation item for available language translations.
+body: The active property should be used to indicate the currently selected language.
+accessibility_criteria: |
+  The translation nav must:
+  - accept focus
+  - be focusable with a keyboard
+  - indicate when it has focus
+  - be usable with a keyboard
+  - inform the user of the language option, if the user has that language installed
+fixtures:
+  default:
+    translations:
+    - locale: 'en'
+      base_path: '/en'
+      text: 'English'
+      active: true
+    - locale: 'hi'
+      base_path: '/hi'
+      text: 'हिंदी'
+

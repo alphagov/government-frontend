@@ -34,8 +34,8 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
   test "renders translation links when there is more than one translation" do
     setup_and_visit_content_item("news_article")
 
-    assert page.has_css?("div[class='available-languages']")
-    assert page.has_css?("li[class='translation']")
+    assert page.has_css?("div[class='app-c-translation-nav']")
+    assert page.has_css?("li[class='app-c-translation-nav__list__language']")
     assert page.has_link?("ردو", href: "/government/news/christmas-2016-prime-ministers-message.ur")
   end
 
