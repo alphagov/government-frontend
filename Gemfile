@@ -11,6 +11,7 @@ gem 'gds-api-adapters', '~> 43.0'
 gem 'govuk_ab_testing', '~> 2.0'
 gem 'govuk_elements_rails', '3.0.1'
 gem 'govuk_frontend_toolkit', '5.1.0'
+gem 'govuk_publishing_components', '~> 0.3.1', require: ENV['RAILS_ENV'] != "production" || ENV['HEROKU_APP_NAME'].to_s.length.positive?
 gem 'htmlentities', '4.3.4'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
@@ -29,7 +30,6 @@ gem 'govuk_navigation_helpers', '~> 6.3'
 
 group :development, :test do
   gem 'govuk-lint'
-  gem 'govuk_publishing_components', '~> 0.3.0'
   gem 'govuk_schemas'
   gem 'jasmine-rails', '~> 0.14.0'
   gem 'pry-byebug'

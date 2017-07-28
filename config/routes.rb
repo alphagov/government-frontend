@@ -3,9 +3,9 @@ Rails.application.routes.draw do
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
     get 'random/:schema' => 'randomly_generated_content_item#show'
-
-    mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
   end
+
+  mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
   get '*path/:variant' => 'content_items#show',
