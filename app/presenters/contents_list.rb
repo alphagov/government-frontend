@@ -20,7 +20,8 @@ module ContentsList
         track_category: 'contentsClicked',
         track_action: 'leftColumnH2',
         track_label: id
-      })
+      }
+    )
   end
 
 private

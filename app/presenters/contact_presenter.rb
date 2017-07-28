@@ -10,15 +10,19 @@ class ContactPresenter < ContentItemPresenter
 
   def related_items
     sections = []
-    sections << {
-      title: "Elsewhere on GOV.UK",
-      items: quick_links
-    } if quick_links.any?
+    if quick_links.any?
+      sections << {
+        title: "Elsewhere on GOV.UK",
+        items: quick_links
+      }
+    end
 
-    sections << {
-      title: "Other contacts",
-      items: related_contacts_links
-    } if related_contacts_links.any?
+    if related_contacts_links.any?
+      sections << {
+        title: "Other contacts",
+        items: related_contacts_links
+      }
+    end
 
     {
       sections: sections
@@ -42,33 +46,13 @@ class ContactPresenter < ContentItemPresenter
 
   def phone
     phone_number_groups.map do |group|
-      details = {
-        numbers: [
-          {
-            label: 'Telephone',
-            number: group['number']
-          },
-          {
-            label: 'Textphone',
-            number: group['textphone']
-          },
-          {
-            label: 'Outside UK',
-            number: group['international_phone']
-          },
-          {
-            label: 'Fax',
-            number: group['fax']
-          }
-        ],
+      {
+        numbers: phone_numbers_in_group(group),
         title: group['title'],
         description: group['description'].try(:strip).try(:html_safe),
         opening_times: group['open_hours'].try(:strip).try(:html_safe),
         best_time_to_call: group['best_time_to_call'].try(:strip).try(:html_safe)
       }
-
-      details[:numbers].select! { |n| n[:number].present? }
-      details
     end
   end
 
@@ -128,7 +112,6 @@ class ContactPresenter < ContentItemPresenter
     "https://online.hmrc.gov.uk/webchatprod/templates/chat/hmrc7/chat.html?entryPointId=#{webchat_id}&templateName=hmrc7&languageCode=en&countryCode=US&ver=v11"
   end
 
-
   def breadcrumbs
     return [] if content_item["links"]['organisations'].try(:length) != 1
 
@@ -154,6 +137,27 @@ class ContactPresenter < ContentItemPresenter
   end
 
 private
+
+  def phone_numbers_in_group(group)
+    [
+      {
+        label: 'Telephone',
+        number: group['number']
+      },
+      {
+        label: 'Textphone',
+        number: group['textphone']
+      },
+      {
+        label: 'Outside UK',
+        number: group['international_phone']
+      },
+      {
+        label: 'Fax',
+        number: group['fax']
+      }
+    ].select { |n| n[:number].present? }
+  end
 
   def webchat_id
     webchat_ids[content_item["base_path"]]

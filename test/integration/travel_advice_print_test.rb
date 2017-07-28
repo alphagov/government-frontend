@@ -34,7 +34,7 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
     page.all(shared_component_selector("govspeak")).each_with_index do |govspeak_component, i|
       within(govspeak_component) do
         content_passed_to_component = JSON.parse(page.text).fetch("content").gsub(/\s+/, ' ')
-        if i == 0
+        if i.zero?
           assert_equal @content_item["details"]["summary"].gsub(/\s+/, ' '), content_passed_to_component
         else
           assert_equal parts[i - 1]['body'].gsub(/\s+/, ' '), content_passed_to_component

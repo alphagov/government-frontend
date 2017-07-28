@@ -208,8 +208,7 @@ class SpecialistDocumentPresenterTest
                                               }
                                             ],
                                             "facet-key" => "",
-                                            "date-facet" => ""
-                                          )
+                                            "date-facet" => "")
 
       assert_empty present_example(example).metadata[:other]
     end
@@ -300,8 +299,7 @@ class SpecialistDocumentPresenterTest
                                             "facet-key" => "Text",
                                             "first-date-facet" => "2010-01-01",
                                             "second-date-facet" => "2010-02-03",
-                                            "more-text" => "More text"
-                                        )
+                                            "more-text" => "More text")
 
       expected_order = ["First date facet", "Second date facet", "Facet name", "More text"]
       assert_equal expected_order, present_example(example).metadata[:other].keys

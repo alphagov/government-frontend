@@ -15,7 +15,8 @@ class ContactPresenterTest
       presented = presented_item('contact_with_email_and_no_other_contacts')
 
       refute schema['links']['related']
-      assert_empty presented.related_items[:sections].select { |section| section[:title] == 'Other contacts' }
+      other_contacts_section = presented.related_items[:sections].select { |section| section[:title] == 'Other contacts' }
+      assert_empty other_contacts_section
     end
 
     test 'presents quick links in related items' do

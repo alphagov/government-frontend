@@ -1,17 +1,27 @@
 require 'test_helper'
 
+module UpdatableStubs
+  def display_date(date)
+    date
+  end
+end
+
+module UpdatableWithUpdates
+  def any_updates?
+    true
+  end
+end
+
 class UpdatableTest < ActiveSupport::TestCase
   def setup
     @updatable = Object.new
     @updatable.extend(Updatable)
+    @updatable.extend(UpdatableStubs)
   end
 
   test '#history returns an empty array when there is no change history' do
+    @updatable.extend(UpdatableWithUpdates)
     class << @updatable
-      def any_updates?
-        true
-      end
-
       def content_item
         { 'details' => {} }
       end
@@ -35,10 +45,6 @@ class UpdatableTest < ActiveSupport::TestCase
             ]
           }
         }
-      end
-
-      def display_date(date)
-        date
       end
     end
 
@@ -104,10 +110,6 @@ class UpdatableTest < ActiveSupport::TestCase
           }
         }
       end
-
-      def display_date(date)
-        date
-      end
     end
 
     assert @updatable.history.empty?
@@ -115,15 +117,8 @@ class UpdatableTest < ActiveSupport::TestCase
   end
 
   test '#history returns an array of hashes when there is change history' do
+    @updatable.extend(UpdatableWithUpdates)
     class << @updatable
-      def any_updates?
-        true
-      end
-
-      def display_date(date)
-        date
-      end
-
       def content_item
         {
           'details' => {
@@ -143,20 +138,14 @@ class UpdatableTest < ActiveSupport::TestCase
                    {
                      display_time: '2016-02-29T09:24:10.000+00:00',
                      note: 'notes',
-                     timestamp: '2016-02-29T09:24:10.000+00:00' }
+                     timestamp: '2016-02-29T09:24:10.000+00:00'
+                   }
                  ]
   end
 
   test '#history returns a reverse chronologically sorted array of hashes when there is change history' do
+    @updatable.extend(UpdatableWithUpdates)
     class << @updatable
-      def any_updates?
-        true
-      end
-
-      def display_date(date)
-        date
-      end
-
       def content_item
         {
           'details' => {

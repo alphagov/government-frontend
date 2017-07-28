@@ -158,21 +158,9 @@ class PartsTest < ActiveSupport::TestCase
         {
           'details' => {
             'parts' => [
-              {
-                'title' => 'first-title',
-                'slug' => 'first-slug',
-                'body' => 'first-body',
-              },
-              {
-                'title' => 'second-title',
-                'slug' => 'second-slug',
-                'body' => 'second-body',
-              },
-              {
-                'title' => 'third-title',
-                'slug' => 'third-slug',
-                'body' => 'third-body',
-              }
+              { 'title' => 'title', 'slug' => 'slug', 'body' => 'body' },
+              { 'title' => 'title', 'slug' => 'slug', 'body' => 'body' },
+              { 'title' => 'title', 'slug' => 'slug', 'body' => 'body' }
             ]
           }
         }
@@ -190,26 +178,10 @@ class PartsTest < ActiveSupport::TestCase
         {
           'details' => {
             'parts' => [
-              {
-                'title' => 'first-title',
-                'slug' => 'first-slug',
-                'body' => 'first-body',
-              },
-              {
-                'title' => 'second-title',
-                'slug' => 'second-slug',
-                'body' => 'second-body',
-              },
-              {
-                'title' => 'third-title',
-                'slug' => 'third-slug',
-                'body' => 'third-body',
-              },
-              {
-                'title' => 'fourth-title',
-                'slug' => 'fourth-slug',
-                'body' => 'fourth-body',
-              }
+              { 'title' => 'first-title', 'slug' => 'first-slug', 'body' => 'first-body' },
+              { 'title' => 'second-title', 'slug' => 'second-slug', 'body' => 'second-body' },
+              { 'title' => 'third-title', 'slug' => 'third-slug', 'body' => 'third-body' },
+              { 'title' => 'fourth-title', 'slug' => 'fourth-slug', 'body' => 'fourth-body' }
             ]
           }
         }

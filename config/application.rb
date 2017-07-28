@@ -34,7 +34,8 @@ module GovernmentFrontend
       :es, 'es-419', :et, :fa, :fr, :he, :hi, :hu, :hy, :id,
       :it, :ja, :ka, :ko, :lt, :lv, :ms, :pl, :ps, :pt, :ro,
       :ru, :si, :sk, :so, :sq, :sr, :sw, :ta, :th, :tk, :tr,
-      :uk, :ur, :uz, :vi, :zh, 'zh-hk', 'zh-tw']
+      :uk, :ur, :uz, :vi, :zh, 'zh-hk', 'zh-tw'
+    ]
 
     # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
     # the I18n.default_locale when a translation can not be found).

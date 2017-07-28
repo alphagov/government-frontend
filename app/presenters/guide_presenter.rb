@@ -12,9 +12,10 @@ class GuidePresenter < ContentItemPresenter
   end
 
   def has_parts?
-    Airbrake.notify("Guide with no parts",
-      error_message: "Guide rendered without any parts at #{base_path}"
-    ) unless parts.any?
+    unless parts.any?
+      Airbrake.notify("Guide with no parts",
+        error_message: "Guide rendered without any parts at #{base_path}")
+    end
 
     parts.any?
   end
