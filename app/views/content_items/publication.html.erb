@@ -20,9 +20,7 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-third">
-    <h1 class="section-title" id="documents-title">
-      <%= t("publications.documents", count: @content_item.documents_count) %>
-    </h1>
+    <%= render 'components/heading', text: t("publications.documents", count: @content_item.documents_count), id: "documents-title" %>
   </div>
   <div class="column-two-thirds" aria-labelledby="documents-title">
     <%= render 'govuk_component/govspeak',
@@ -33,9 +31,7 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-third">
-    <h1 class="section-title" id="details-title">
-      <%= t("publications.details") %>
-    </h1>
+    <%= render 'components/heading', text: t("publications.details"), id: "details-title" %>
   </div>
   <div class="column-two-thirds" aria-labelledby="details-title">
     <%= render 'govuk_component/govspeak',

@@ -1,0 +1,18 @@
+name: Heading
+description: A text heading
+body: |
+  Provides a heading tag with an optional id attribute, used predominantly to the left of content on consultations and publications.
+accessibility_criteria: |
+  The heading must:
+
+  - be part of a correct heading structure for a page
+
+fixtures:
+  default:
+    text: 'Download the full outcome'
+  with_id_attribute:
+    text: 'Detail of outcome'
+    id: 'detail_of_outcome'
+  specific_heading_level:
+    text: 'Original consultation'
+    heading_level: 3
