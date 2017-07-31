@@ -48,6 +48,16 @@ class ActionDispatch::IntegrationTest
     stub_shared_component_locales
   end
 
+  def assert_no_component(name)
+    assert page.has_no_css?(shared_component_selector(name)), "Found a component named #{name}"
+  end
+
+  def assert_component_locals(name, locals)
+    within shared_component_selector(name) do
+      assert_equal locals, JSON.parse(page.text).deep_symbolize_keys
+    end
+  end
+
   def assert_has_component_metadata_pair(label, value)
     assert_component_parameter("metadata", label, value)
   end
