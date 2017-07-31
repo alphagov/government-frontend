@@ -5,7 +5,7 @@
         <% if translation[:active] %>
           <%= translation[:text] %>
         <% else %>
-          <%= link_to translation[:text], translation[:base_path], lang: translation[:locale], :rel => "alternate" %>
+          <%= link_to translation[:text], translation[:base_path], lang: translation[:locale], rel: "alternate" %>
         <% end %>
       </li>
     <% end %>
