@@ -3,12 +3,15 @@ description: A navigation item for available language translations.
 body: The active property should be used to indicate the currently selected language.
 accessibility_criteria: |
   The translation nav must:
+
   - accept focus
   - be focusable with a keyboard
   - indicate when it has focus
   - be usable with a keyboard
   - inform the user of the language option, if the user has that language installed
 fixtures:
+  # TODO: We need to add a fixture to show component rendering right-to-left.
+  # This is dependant on being able to provide context to fixtures.
   default:
     translations:
     - locale: 'en'
@@ -18,4 +21,25 @@ fixtures:
     - locale: 'hi'
       base_path: '/hi'
       text: 'हिंदी'
+  multiple_translations:
+    translations:
+    - locale: 'en'
+      base_path: '/en'
+      text: 'English'
+      active: true
+    - locale: 'fr'
+      base_path: '/fr'
+      text: 'French'
+    - locale: 'hi'
+      base_path: '/hi'
+      text: 'हिंदी'
+    - locale: 'ja'
+      base_path: '/ja'
+      text: '日本語'
+    - locale: 'ur'
+      base_path: '/ur'
+      text: 'اردو'
+    - locale: 'zh'
+      base_path: '/zh'
+      text: '中文'
 

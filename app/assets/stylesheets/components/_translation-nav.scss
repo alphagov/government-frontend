@@ -1,40 +1,35 @@
-// scss-lint:disable SelectorFormat
 .app-c-translation-nav {
   margin-bottom: $gutter;
   border-bottom: 1px solid $border-colour;
   @include responsive-top-margin;
   @include core-16;
+}
 
-  .app-c-translation-nav__list {
-    @extend %contain-floats;
-    list-style: none;
-    margin-left: -$gutter-one-third;
-    margin-right: -$gutter-one-third;
+.app-c-translation-nav__list {
+  @extend %contain-floats;
+  list-style: none;
+  margin-left: -$gutter-one-third;
+  margin-right: -$gutter-one-third;
+}
 
-    .app-c-translation-nav__list__language {
-      float: left;
-      padding-left: $gutter-one-third;
-      padding-right: $gutter-one-third;
-      margin-bottom: $gutter-one-third;
-      border-right: 1px solid $border-colour;
-      height: 16px;
+.app-c-translation-nav__list__language {
+  float: left;
+  padding-left: $gutter-one-third;
+  padding-right: $gutter-one-third;
+  margin-bottom: $gutter-one-third;
+  border-right: 1px solid $border-colour;
+  height: 16px;
 
-      &.last {
-        border-right: 0;
-      }
-
-      .direction-rtl & {
-        direction: rtl;
-        float: right;
-        text-align: start;
-        border-left: 1px solid $border-colour;
-        border-right: 0;
-
-        &.last {
-          border-left: 0;
-        }
-      }
-    }
+  .direction-rtl & {
+    direction: rtl;
+    float: right;
+    text-align: start;
+    border-left: 1px solid $border-colour;
+    border-right: 0;
   }
-} // scss-lint:enable SelectorFormat
+}
 
+.app-c-translation-nav__list__language:last-child {
+  border-right: 0;
+  border-left: 0;
+}
