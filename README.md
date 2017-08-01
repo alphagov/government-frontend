@@ -6,7 +6,7 @@ parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
 ## Screenshots
 
-![A  Case Study](https://raw.githubusercontent.com/alphagov/government-frontend/master/docs/assets/case-study-screenshot.png)
+![A Case Study](https://raw.githubusercontent.com/alphagov/government-frontend/master/docs/assets/case-study-screenshot.png)
 
 ## Schemas
 
@@ -37,6 +37,16 @@ Not all schemas that this app can handle are rendered by it in production.
 | Unpublishing | | Rendered by Whitehall, might not be migrated |
 | World Location News Article | [View on GOV.UK](https://www.gov.uk/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas) | Migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
+
+## Components
+
+Pages are rendered using components. Components can be specific to government-frontend or shared between applications.
+
+Shared components are provided by static and are documented in the [GOV.UK component guide](http://govuk-component-guide.herokuapp.com/).
+
+Components specific to government-frontend are [within the application](https://github.com/alphagov/government-frontend/tree/master/app/views/components) and follow rules set out by the [govuk_publishing_components](https://github.com/alphagov/govuk_publishing_components) gem. They are documented in the [government-frontend component guide](https://government-frontend.herokuapp.com/component-guide).
+
+When [running government-frontend](#running-the-application) locally the component guide is available at: http://government-frontend.dev.gov.uk/component-guide
 
 ## Technical documentation
 
@@ -144,7 +154,7 @@ for each known `document_type` in the app (see: [Generate a config for known doc
 
 #### Generate a config for known document_types and example pages
 
-Running the rake task below will retrieve the `document_types` where `rendering_app = government-frontend` from the search api. It will then generate `test/wraith/wip-config-all-document-types.yaml`, this is a wraith config file containing the top 10 (can be overidden with `:sample_size`) example pages for each type. 
+Running the rake task below will retrieve the `document_types` where `rendering_app = government-frontend` from the search api. It will then generate `test/wraith/wip-config-all-document-types.yaml`, this is a wraith config file containing the top 10 (can be overidden with `:sample_size`) example pages for each type.
 
 The yaml file contains a custom key of `:document_types` not used by wraith but can be used to quickly scan and see which types the search api believes `government-frontend` is responsible for.
 
