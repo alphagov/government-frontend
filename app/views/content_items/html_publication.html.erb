@@ -35,7 +35,7 @@
 >
   <% if @content_item.contents.any? %>
     <div class="column-quarter-desktop-only">
-      <%= render 'shared/sidebar_contents', contents: @content_item.contents, format_numbers: true %>
+      <%= render 'components/contents-list', contents: @content_item.contents, format_numbers: true %>
     </div>
   <% end %>
 

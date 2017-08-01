@@ -2,29 +2,17 @@ require 'test_helper'
 
 class ContentsListHelperTest < ActionView::TestCase
   test "it wraps a number and text in separate span elements" do
-    input = '<a href="#first">1. Thing</a>'
-    expected = '<a href="#first"><span class="contents-number">1.</span><span class="contents-text">Thing</span></a>'
-    assert_equal expected, wrap_numbers_with_spans(input)
-
-    input = '<a href="#vision">10. Vision</a>'
-    expected = '<a href="#vision"><span class="contents-number">10.</span><span class="contents-text">Vision</span></a>'
-    assert_equal expected, wrap_numbers_with_spans(input)
-
-    input = '<a href="#vision">100. Vision</a>'
-    expected = '<a href="#vision"><span class="contents-number">100.</span><span class="contents-text">Vision</span></a>'
-    assert_equal expected, wrap_numbers_with_spans(input)
+    assert_split_number_and_text('1. Thing', '1.', 'Thing')
+    assert_split_number_and_text('10. Thing', '10.', 'Thing')
+    assert_split_number_and_text('100. Thing', '100.', 'Thing')
   end
 
   test "it wraps a number and text in span elements if it's a number without a period" do
-    input = '<a href="#first">1 Thing</a>'
-    expected = '<a href="#first"><span class="contents-number">1</span><span class="contents-text">Thing</span></a>'
-    assert_equal expected, wrap_numbers_with_spans(input)
+    assert_split_number_and_text('1 Thing', '1', 'Thing')
   end
 
   test "it wraps a number in the form X.Y" do
-    input = '<a href="#vision">1.2 Vision</a>'
-    expected = '<a href="#vision"><span class="contents-number">1.2</span><span class="contents-text">Vision</span></a>'
-    assert_equal expected, wrap_numbers_with_spans(input)
+    assert_split_number_and_text('1.2 Vision', '1.2', 'Vision')
   end
 
   test "it does nothing if no number is found" do
@@ -66,6 +54,15 @@ class ContentsListHelperTest < ActionView::TestCase
   test "it does nothing if a number is present but not at the start" do
     input = '<a href="#run-an-effective-welfare-system">Run an effective welfare system part 1. Social Care</a>'
     expected = '<a href="#run-an-effective-welfare-system">Run an effective welfare system part 1. Social Care</a>'
+    assert_equal expected, wrap_numbers_with_spans(input)
+  end
+
+  def assert_split_number_and_text(number_and_text, number, text)
+    number_class = "app-c-contents-list__number"
+    numbered_text_class = "app-c-contents-list__numbered-text"
+
+    input = "<a href=\"#link\">#{number_and_text}</a>"
+    expected = "<a href=\"#link\"><span class=\"#{number_class}\">#{number}</span><span class=\"#{numbered_text_class}\">#{text}</span></a>"
     assert_equal expected, wrap_numbers_with_spans(input)
   end
 end

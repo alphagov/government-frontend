@@ -1,6 +1,6 @@
 require 'component_test_helper'
 
-class ContentsListTest < ComponentTestCase
+class ContentsListComponentTest < ComponentTestCase
   def component_name
     "contents-list"
   end

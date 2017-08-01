@@ -14,12 +14,12 @@ class TopicalEventAboutPagePresenterTest < PresenterTestCase
 
   test 'presents a list of contents extracted from headings in the body' do
     assert_equal [
-        "<a #{contents_link_attributes} data-track-label=\"response-in-the-uk\" href=\"#response-in-the-uk\">Response in the UK</a>",
-        "<a #{contents_link_attributes} data-track-label=\"response-in-africa\" href=\"#response-in-africa\">Response in Africa</a>",
-        "<a #{contents_link_attributes} data-track-label=\"advice-for-travellers\" href=\"#advice-for-travellers\">Advice for travellers</a>",
-        "<a #{contents_link_attributes} data-track-label=\"advice-for-medics\" href=\"#advice-for-medics\">Advice for medics</a>",
-        "<a #{contents_link_attributes} data-track-label=\"advice-for-aid-workers\" href=\"#advice-for-aid-workers\">Advice for aid workers</a>",
-        "<a #{contents_link_attributes} data-track-label=\"how-you-can-help\" href=\"#how-you-can-help\">How you can help</a>"
+        { text: "Response in the UK", id: "response-in-the-uk", href: "#response-in-the-uk" },
+        { text: "Response in Africa", id: "response-in-africa", href: "#response-in-africa" },
+        { text: "Advice for travellers", id: "advice-for-travellers", href: "#advice-for-travellers" },
+        { text: "Advice for medics", id: "advice-for-medics", href: "#advice-for-medics" },
+        { text: "Advice for aid workers", id: "advice-for-aid-workers", href: "#advice-for-aid-workers" },
+        { text: "How you can help", id: "how-you-can-help", href: "#how-you-can-help" },
       ], presented_item.contents
   end
 

@@ -37,7 +37,8 @@ class CorporateInformationPagePresenterTest
     test 'presents corporate information groups on about pages' do
       assert presented_item.is_a?(CorporateInformationGroups)
 
-      assert_equal '<a data-track-category="contentsClicked" data-track-action="leftColumnH2" data-track-label="corporate-information" href="#corporate-information">Corporate information</a>', presented_item.contents.last
+      expected_contents_list = { text: 'Corporate information', id: 'corporate-information', href: '#corporate-information' }
+      assert_equal expected_contents_list, presented_item.contents.last
 
       assert presented_item.corporate_information?
     end

@@ -30,12 +30,12 @@ class DocumentCollectionPresenterTest
 
     test 'presents a contents list based on collection groups' do
       contents = [
-        "<a #{contents_link_attributes} data-track-label=\"car-and-light-van\" href=\"#car-and-light-van\">Car and light van</a>",
-        "<a #{contents_link_attributes} data-track-label=\"moped-and-motorcycle\" href=\"#moped-and-motorcycle\">Moped and motorcycle</a>",
-        "<a #{contents_link_attributes} data-track-label=\"lorry\" href=\"#lorry\">Lorry</a>",
-        "<a #{contents_link_attributes} data-track-label=\"bus-and-coach\" href=\"#bus-and-coach\">Bus and coach</a>",
-        "<a #{contents_link_attributes} data-track-label=\"driver-and-rider-trainer\" href=\"#driver-and-rider-trainer\">Driver and rider trainer</a>",
-        "<a #{contents_link_attributes} data-track-label=\"developed-driving-competence\" href=\"#developed-driving-competence\">Developed driving competence</a>"
+        { text: "Car and light van", id: "car-and-light-van", href: "#car-and-light-van" },
+        { text: "Moped and motorcycle", id: "moped-and-motorcycle", href: "#moped-and-motorcycle" },
+        { text: "Lorry", id: "lorry", href: "#lorry" },
+        { text: "Bus and coach", id: "bus-and-coach", href: "#bus-and-coach" },
+        { text: "Driver and rider trainer", id: "driver-and-rider-trainer", href: "#driver-and-rider-trainer" },
+        { text: "Developed driving competence", id: "developed-driving-competence", href: "#developed-driving-competence" },
       ]
 
       assert_equal contents, presented_item.contents

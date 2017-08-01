@@ -13,7 +13,8 @@ class HtmlPublicationPresenterTest < PresenterTestCase
   end
 
   test 'presents a list of contents extracted from headings in the body' do
-    assert_equal "<a #{contents_link_attributes} data-track-label=\"details-of-the-application\" href=\"#details-of-the-application\">Details of the application</a>", presented_item("published").contents[0]
+    expected_contents_list_item = { text: "Details of the application", id: "details-of-the-application", href: "#details-of-the-application" }
+    assert_equal expected_contents_list_item, presented_item("published").contents[0]
   end
 
   test 'presents the meta data info of a content item' do

@@ -8,17 +8,12 @@
 <%= render 'components/lead-paragraph', text: @content_item.description %>
 
 <div class="grid-row sidebar-with-body">
-  <% if @content_item.nested_contents.any? %>
+  <% if @content_item.contents.any? %>
     <div class="column-third">
-      <nav role="navigation">
-        <h2><%= t("content_item.contents") %></h2>
-        <ol class="contents-list contents-list-nested" data-module="track-click">
-          <%= render 'shared/nested_content_item', headings: @content_item.nested_contents %>
-        </ol>
-      </nav>
+      <%= render 'components/contents-list', contents: @content_item.contents %>
     </div>
   <% end %>
-  <div class="column-two-thirds <% unless @content_item.nested_contents.any? %>offset-one-third<% end %>">
+  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
     <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
 
     <% if @content_item.continuation_link %>

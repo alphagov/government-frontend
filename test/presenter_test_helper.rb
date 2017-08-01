@@ -5,10 +5,6 @@ class PresenterTestCase < ActiveSupport::TestCase
     raise NotImplementedError, "Override this method in your test class"
   end
 
-  def contents_link_attributes
-    'data-track-category="contentsClicked" data-track-action="leftColumnH2"'
-  end
-
 private
 
   def presented_item(type = schema_name, overrides = {})
