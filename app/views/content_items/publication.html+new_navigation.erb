@@ -18,18 +18,14 @@
     <%= render 'shared/history_notice', content_item: @content_item %>
     <%= render 'components/lead-paragraph', text: @content_item.description %>
 
-    <h1 class="section-title" id="documents-title">
-      <%= t("publications.documents", count: @content_item.documents_count) %>
-    </h1>
+    <%= render 'components/heading', text: t("publications.documents", count: @content_item.documents_count), id: "documents-title" %>
     <div aria-labelledby="documents-title">
       <%= render 'govuk_component/govspeak',
                  content: @content_item.documents,
                  direction: page_text_direction %>
     </div>
 
-    <h1 class="section-title" id="details-title">
-      <%= t("publications.details") %>
-    </h1>
+    <%= render 'components/heading', text: t("publications.details"), id: "details-title" %>
 
     <div aria-labelledby="details-title">
       <%= render 'govuk_component/govspeak',

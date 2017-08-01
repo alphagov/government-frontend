@@ -28,9 +28,7 @@
   <% if @content_item.final_outcome_documents? %>
     <div class="grid-row sidebar-with-body">
       <div class="column-third">
-        <h1 class="section-title" id="final-outcome-documents-title">
-          Download the full outcome
-        </h1>
+        <%= render 'components/heading', text: "Download the full outcome", id: "final-outcome-documents-title" %>
       </div>
       <div class="column-two-thirds" aria-labelledby="final-outcome-documents-title">
         <%= render 'govuk_component/govspeak',
@@ -42,9 +40,7 @@
 
   <div class="grid-row sidebar-with-body">
     <div class="column-third">
-      <h1 class="section-title" id="final-outcome-detail-title">
-        Detail of outcome
-      </h1>
+      <%= render 'components/heading', text: "Detail of outcome", id: "final-outcome-detail-title" %>
     </div>
     <div class="column-two-thirds" aria-labelledby="final-outcome-detail-title">
       <%= render 'govuk_component/govspeak',
@@ -57,9 +53,7 @@
 <% if @content_item.public_feedback_documents? %>
   <div class="grid-row sidebar-with-body">
     <div class="column-third">
-      <h1 class="section-title" id="public-feedback-documents-title">
-        Feedback received
-      </h1>
+      <%= render 'components/heading', text: "Feedback received", id: "public-feedback-documents-title" %>
     </div>
     <div class="column-two-thirds" aria-labelledby="public-feedback-documents-title">
       <%= render 'govuk_component/govspeak',
@@ -72,9 +66,7 @@
 <% if @content_item.public_feedback_detail %>
   <div class="grid-row sidebar-with-body">
     <div class="column-third">
-      <h1 class="section-title" id="public-feedback-detail-title">
-        Detail of feedback received
-      </h1>
+      <%= render 'components/heading', text: "Detail of feedback received", id: "public-feedback-detail-title" %>
     </div>
     <div class="column-two-thirds" aria-labelledby="public-feedback-detail-title">
       <%= render 'govuk_component/govspeak',
@@ -87,7 +79,7 @@
 <% if @content_item.final_outcome? %>
   <section class="original-consultation">
     <header>
-      <h2 class="section-title">Original consultation</h2>
+      <%= render 'components/heading', text: "Original consultation", heading_level: 2 %>
     </header>
 <% end %>
 
@@ -133,9 +125,7 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-third">
-    <h1 class="section-title" id="description-title">
-      Consultation description
-    </h1>
+    <%= render 'components/heading', text: "Consultation description", id: "description-title" %>
   </div>
   <div class="column-two-thirds" aria-labelledby="description-title">
     <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
@@ -145,9 +135,7 @@
 <% if @content_item.documents? %>
   <div class="grid-row sidebar-with-body">
     <div class="column-third">
-      <h1 class="section-title" id="documents-title">
-        Documents
-      </h1>
+      <%= render 'components/heading', text: "Documents", id: "documents-title" %>
     </div>
     <div class="column-two-thirds" aria-labelledby="documents-title">
       <%= render 'govuk_component/govspeak',
@@ -160,9 +148,7 @@
 <% if @content_item.ways_to_respond? %>
   <div class="grid-row sidebar-with-body">
     <div class="column-third">
-      <h1 class="section-title" id="ways-to-respond-title">
-        Ways to respond
-      </h1>
+      <%= render 'components/heading', text: "Ways to respond", id: "ways-to-respond-title" %>
     </div>
     <div class="column-two-thirds" aria-labelledby="ways-to-respond-title">
       <% @ways_to_respond_body = capture do %>
