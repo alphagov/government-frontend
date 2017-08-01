@@ -1,0 +1,41 @@
+<%
+  format_numbers ||= false
+  contents ||= []
+  nested = !!contents.find { |c| c[:items] && c[:items].any? }
+  parent_list_item_modifier = if nested
+                                'parent'
+                              elsif format_numbers
+                                'numbered'
+                              else
+                                'dashed'
+                              end
+%>
+<% if contents.any? %>
+  <nav role="navigation" class="app-c-contents-list">
+    <h2>
+      <%= t("content_item.contents") %>
+    </h2>
+    <ol>
+      <% contents.each do |contents_item| %>
+        <li
+          class="app-c-contents-list__list-item app-c-contents-list__list-item--<%= parent_list_item_modifier %>"
+        >
+          <%= link_to contents_item[:href], class: 'app-c-contents-list__link' do %>
+            <%= format_numbers ? wrap_numbers_with_spans(contents_item[:text]) : contents_item[:text] %>
+          <% end %>
+          <% if contents_item[:items] && contents_item[:items].any? %>
+            <ol>
+              <% contents_item[:items].each do |nested_contents_item| %>
+                <li class="app-c-contents-list__list-item app-c-contents-list__list-item--dashed">
+                  <%= link_to nested_contents_item[:href], class: 'app-c-contents-list__link' do %>
+                    <%= nested_contents_item[:text] %>
+                  <% end %>
+                </li>
+              <% end %>
+            </ol>
+          <% end %>
+        </li>
+      <% end %>
+    </ol>
+  </nav>
+<% end %>
