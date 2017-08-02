@@ -1,6 +1,5 @@
 .speech {
   @include sidebar-with-body;
-  @include history-notice;
   @include withdrawal-notice;
 
   .direction-rtl & {

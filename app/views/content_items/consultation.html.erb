@@ -83,41 +83,28 @@
     </header>
 <% end %>
 
-<div class="consultation-banner">
-  <div class="grid-row">
-    <div class="column-third consultation-dates">
+<% consultation_date = capture do %>
+  <% if @content_item.closed? %>
+    This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
+    <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+  <% elsif @content_item.open? %>
+    This consultation closes at<br />
+    <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+  <% elsif @content_item.unopened? %>
+    This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
+    <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span><br />
+    It closes at<br />
+    <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+  <% end %>
+<% end %>
 
-        <% if @content_item.closed? %>
-          <p>
-            This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
-            <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
-          </p>
-        <% elsif @content_item.open? %>
-          <p>
-            This consultation closes at<br />
-            <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
-          </p>
-        <% elsif @content_item.unopened? %>
-          <p>
-            This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
-            <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span>
-          </p>
-          <p>
-            It closes at<br />
-            <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
-          </p>
-        <% end %>
-    </div>
-    <div class="column-two-thirds consultation-summary">
-      <h2>Summary</h2>
-      <%= render 'components/lead-paragraph', text: @content_item.description %>
-
-      <% if @content_item.held_on_another_website? %>
-        <p><strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong></p>
-      <% end %>
-    </div>
-  </div>
-</div>
+<% consultation_desc = capture do %>
+  <%= @content_item.description %>
+  <% if @content_item.held_on_another_website? %>
+    <strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong>
+  <% end %>
+<% end %>
+<%= render 'components/banner', text: consultation_desc, title: 'Summary', aside: consultation_date %>
 
 <% if @content_item.final_outcome? %>
   </section>

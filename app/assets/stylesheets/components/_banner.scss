@@ -1,0 +1,51 @@
+.app-c-banner {
+  @include responsive-bottom-margin;
+  @include core-19;
+  @include white-links;
+  background: $govuk-blue;
+  color: $white;
+  padding: $gutter-half;
+  clear: both;
+
+  @include media(tablet) {
+    padding: $gutter-two-thirds $gutter;
+  }
+}
+
+.app-c-banner--grid {
+  @include media(tablet) {
+    padding: $gutter;
+  }
+}
+
+.app-c-banner__main {
+  margin-top: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: 0;
+    margin-left: -$gutter-one-third;
+    padding-right: 0;
+    border-left: 1px solid $white;
+  }
+}
+
+.app-c-banner__aside {
+  @include media(tablet) {
+    padding-right: $gutter;
+  }
+}
+
+.app-c-banner__text {
+  @include bold-36;
+}
+
+.app-c-banner__title {
+  @include bold-27;
+  margin-bottom: $gutter-one-third;
+}
+
+.app-c-banner__desc {
+  @include core-24;
+  // Ensure the text has a line-length of around 60 characters
+  max-width: 30em;
+}

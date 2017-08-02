@@ -1,5 +1,3 @@
 <% if content_item.historically_political? %>
-  <div class="history-notice">
-    <h2>This was published under the <%= content_item.publishing_government %></h2>
-  </div>
+  <%= render 'components/banner', text: "This was published under the #{content_item.publishing_government}" %>
 <% end %>

@@ -124,7 +124,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
   test "historically political collection" do
     setup_and_visit_content_item('document_collection_political')
 
-    within ".history-notice" do
+    within ".app-c-banner" do
       assert page.has_text?('This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
     end
   end
