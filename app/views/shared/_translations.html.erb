@@ -1,4 +1,4 @@
-<% if @content_item.available_translations.any? && @content_item.available_translations.length > 1 %>
+<% if @content_item.available_translations.length > 1 %>
   <div class="column-third">
     <%= render 'components/translation-nav',
         translations: @content_item.available_translations %>
