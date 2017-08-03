@@ -31,8 +31,9 @@ class ContentItemPresenter
   end
 
   def available_translations
-    return [] if @content_item["links"]["available_translations"].nil?
-    sorted_locales(@content_item["links"]["available_translations"])
+    translations = @content_item["links"]["available_translations"] || []
+
+    mapped_locales(sorted_locales(translations))
   end
 
   def parent
@@ -71,7 +72,23 @@ private
     translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? '' : t["locale"] }
   end
 
+  def mapped_locales(translations)
+    translations.map do |translation|
+      {
+        locale: translation["locale"],
+        base_path: translation["base_path"],
+        text: native_language_name_for(translation["locale"])
+      }.tap do |h|
+        h[:active] = true if h[:locale] == I18n.locale.to_s
+      end
+    end
+  end
+
   def text_direction
     I18n.t("i18n.direction", locale: I18n.locale, default: "ltr")
+  end
+
+  def native_language_name_for(locale)
+    I18n.t("language_names.#{locale}", locale: locale)
   end
 end

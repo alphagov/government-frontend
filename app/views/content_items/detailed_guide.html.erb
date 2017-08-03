@@ -7,9 +7,7 @@
     <%= render 'govuk_component/title', @content_item.title_and_context %>
   </div>
   <div class="column-third">
-    <%= render 'shared/available_languages',
-      translations: @content_item.available_translations
-    %>
+    <%= render 'components/translation-nav', translations: @content_item.available_translations %>
     <% if @content_item.image.present? %>
       <%= image_tag @content_item.image, class: "logo-image" %>
     <% end %>

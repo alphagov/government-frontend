@@ -56,7 +56,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
 
   test "includes translations" do
     setup_and_visit_content_item('corporate_information_page_translated_custom_logo')
-    assert page.has_css?('.available-languages')
+    assert page.has_css?('.app-c-translation-nav')
   end
 
   test "renders an organisation logo" do

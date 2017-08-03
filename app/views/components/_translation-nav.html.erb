@@ -1,0 +1,13 @@
+<div class="app-c-translation-nav">
+  <ul class="app-c-translation-nav__list">
+    <% translations.each.with_index do |translation, i| %>
+      <li class="app-c-translation-nav__list__language">
+        <% if translation[:active] %>
+          <%= translation[:text] %>
+        <% else %>
+          <%= link_to translation[:text], translation[:base_path], lang: translation[:locale], rel: "alternate" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

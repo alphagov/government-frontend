@@ -91,7 +91,8 @@ class WorldLocationNewsArticlePresenterTest
     end
 
     test 'presents the translations' do
-      assert_equal @expected_translations, @presented_translations
+      assert_equal @expected_translations.first['locale'], @presented_translations.first[:locale]
+      assert_equal @expected_translations.first['base_path'], @presented_translations.first[:base_path]
     end
   end
 end

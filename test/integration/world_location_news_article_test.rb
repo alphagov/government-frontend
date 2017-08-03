@@ -33,9 +33,9 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
   test "renders translation links when there is more than one translation" do
     setup_and_visit_content_item("world_location_news_article_with_multiple_translations")
 
-    assert page.has_css?("div[class='available-languages']")
+    assert page.has_css?("div[class='app-c-translation-nav']")
 
-    assert page.has_css?("li[class='translation']")
+    assert page.has_css?("li[class='app-c-translation-nav__list__language']")
 
     assert page.has_content?("English हिंदी 日本語 中文 中文")
 

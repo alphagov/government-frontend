@@ -1,5 +1,4 @@
-<% if @content_item.available_translations.any? %>
-  <%= render 'shared/available_languages',
-    translations: @content_item.available_translations
-  %>
+<% if @content_item.available_translations.length > 1 %>
+  <%= render 'components/translation-nav',
+      translations: @content_item.available_translations %>
 <% end %>
