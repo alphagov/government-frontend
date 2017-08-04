@@ -4,7 +4,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'shared/title_and_translations', content_item: @content_item %>
-    <%= render 'shared/withdrawal_notice', content_item: @content_item %>
+    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/metadata', content_item: @content_item %>
     <%= render 'shared/history_notice', content_item: @content_item %>
     <%= render 'components/lead-paragraph', text: @content_item.description %>

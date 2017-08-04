@@ -23,7 +23,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    within '.cancellation-notice' do
+    within '.app-c-notice' do
       assert page.has_text?('Statistics release cancelled'), "is cancelled"
       assert page.has_text?(@content_item["details"]["cancellation_reason"]), "displays cancelleation reason"
     end

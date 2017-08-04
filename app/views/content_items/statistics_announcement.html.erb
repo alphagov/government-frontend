@@ -12,11 +12,9 @@
 <div class="primary-metadata">
   <%= render 'shared/metadata', content_item: @content_item %>
 </div>
+
 <% if @content_item.cancelled? %>
-  <div class="cancellation-notice">
-    <h2>Statistics release cancelled</h2>
-    <p><%= @content_item.cancellation_reason %></p>
-  </div>
+  <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason %>
 <% end %>
 <%= render 'components/lead-paragraph', text: @content_item.description %>
 
