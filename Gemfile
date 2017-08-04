@@ -9,7 +9,6 @@ gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
 gem 'gds-api-adapters', '~> 43.0'
 gem 'govuk_ab_testing', '~> 2.0'
-gem 'govuk_elements_rails', '3.0.1'
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'govuk_publishing_components', '~> 0.4.0', require: ENV['RAILS_ENV'] != "production" || ENV['HEROKU_APP_NAME'].to_s.length.positive?
 gem 'htmlentities', '4.3.4'

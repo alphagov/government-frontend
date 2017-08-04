@@ -27,7 +27,7 @@ Not all schemas that this app can handle are rendered by it in production.
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)| Migrated |
 | News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) | Migrated |
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) | Migrated |
-| Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/start-up-loans-uk) | Migrated
+| Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/access-to-finance-advice-north-west-england) | Migrated
 | Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
 | Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) | Migrated |
 | Speech | [View on GOV.UK](https://www.gov.uk/government/speeches/government-at-your-service-ben-gummer-speech) | Migrated |
