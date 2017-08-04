@@ -96,6 +96,7 @@
 <% consultation_desc = capture do %>
   <%= @content_item.description %>
   <% if @content_item.held_on_another_website? %>
+    <br/><br/>
     <strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong>
   <% end %>
 <% end %>
