@@ -1,0 +1,32 @@
+<%
+  title ||= false
+  aside ||= false
+  large_text = !title && !aside
+%>
+
+<% content_block = capture do %>
+  <% if title %>
+    <h2 class="app-c-banner__title"><%= title %></h2>
+  <% end %>
+  <p class="app-c-banner__<% if large_text %>text<% else %>desc<% end %>">
+    <%= text %>
+  </p>
+<% end %>
+
+<% if aside %>
+ <div class="app-c-banner app-c-banner--grid">
+  <div class="grid-row app-c-banner__aside">
+    <div class="column-third">
+      <p><%= aside %></p>
+    </div>
+
+    <div class="column-two-thirds app-c-banner__main">
+      <%= content_block %>
+    </div>
+  </div>
+ </div>
+<% else %>
+  <div class="app-c-banner">
+      <%= content_block %>
+  </div>
+<% end %>

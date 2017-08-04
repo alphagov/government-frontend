@@ -1,50 +1,14 @@
 .consultation {
   @include sidebar-with-body;
-  @include history-notice;
   @include withdrawal-notice;
   @include share-buttons;
 
-  .consultation-notice {
-    @include notice;
+  .consultation-date {
+    @include core-24;
   }
 
-  .consultation-banner {
-    @include responsive-bottom-margin;
-    @include core-19;
-    @include white-links;
-    background-color: $govuk-blue;
-    color: $white;
-    padding: $gutter-half;
-
-    @include media(tablet) {
-      padding: $gutter;
-    }
-
-    h2 {
-      @include bold-27;
-      margin-bottom: $gutter-one-third;
-    }
-
-    .consultation-dates {
-      @include media(tablet) {
-        padding-right: $gutter;
-      }
-    }
-
-    .consultation-summary {
-      margin-top: $gutter-half;
-
-      @include media(tablet) {
-        margin-top: 0;
-        margin-left: -$gutter-one-third;
-        padding-right: 0;
-        border-left: 1px solid $white;
-      }
-    }
-
-    .consultation-date {
-      @include core-24;
-    }
+  .consultation-notice {
+    @include notice;
   }
 
   .original-consultation {

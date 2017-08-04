@@ -1,6 +1,5 @@
 .publication {
   @include sidebar-with-body;
-  @include history-notice;
   @include withdrawal-notice;
   @include national-statistics-logo;
   @include taxonomy-sidebar;
