@@ -5,10 +5,21 @@ class TranslationNavTest < ComponentTestCase
     "translation-nav"
   end
 
-  test "fails to render a translation nav when no translations are given" do
-    assert_raise do
-      render_component({})
-    end
+  test "renders nothing when no translations are given" do
+    assert_empty render_component({})
+  end
+
+  test "renders nothing when only one translation given" do
+    assert_empty render_component(
+      translations: [
+        {
+          locale: 'en',
+          base_path: '/en',
+          text: 'English',
+          active: true
+        }
+      ]
+    )
   end
 
   test "renders an active translation nav item with a text description" do
