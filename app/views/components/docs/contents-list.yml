@@ -9,7 +9,12 @@ body: |
   `format_numbers` option will pull out numbers in the link text to render them as though they were the list style type. Applies to
   numbers at the start of text, with or without a decimal. See the [format complex numbers fixture](/component-guide/contents-list/formats_complex_numbers) for details.
 accessibility_criteria: |
-  The contents links must:
+  The contents list must:
+
+  - have a navigation role
+  - inform the user how many items are in the list
+
+  The contents item links must:
 
   - accept focus
   - be focusable with a keyboard
