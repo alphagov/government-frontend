@@ -19,6 +19,9 @@
 @import 'helpers/taxonomy-sidebar';
 @import 'helpers/parts';
 
+// components
+@import 'components/*';
+
 // pages specific view imports
 @import 'views/case-studies';
 @import 'views/coming-soon';
@@ -44,14 +47,3 @@
 @import 'views/answer';
 @import 'views/help-page';
 @import "views/guide";
-
-// components
-@import 'components/contents-list';
-@import 'components/print-link';
-@import 'components/download-link';
-@import 'components/lead-paragraph';
-@import 'components/subscription-links';
-@import 'components/heading';
-@import 'components/translation-nav';
-@import 'components/banner';
-@import 'components/notice';
