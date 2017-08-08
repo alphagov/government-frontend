@@ -22,9 +22,16 @@ class SpecialistDocumentPresenterTest
       assert presented_item('aaib-reports').is_a?(Metadata)
     end
 
-    test 'presents headers as nested contents' do
-      expected_headers = schema_item('aaib-reports')['details']['headers']
-      assert_equal expected_headers, presented_item('aaib-reports').nested_contents
+    test 'presents headers as nested contents (with trailing colons removed)' do
+      expected_headers = [
+        {
+          text: "Summary", id: "summary", href: "#summary", items: [
+            { text: "Download report", id: "download-report", href: "#download-report" },
+            { text: "Download glossary of abbreviations", id: "download-glossary-of-abbreviations", href: "#download-glossary-of-abbreviations" }
+          ]
+        }
+      ]
+      assert_equal expected_headers, presented_item('aaib-reports').contents
     end
 
     test 'presents updates based on change history' do

@@ -4,15 +4,16 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   include Linkable
   include TitleAndContext
   include Metadata
-
-  def nested_contents
-    content_item["details"]["headers"] || []
-  end
+  include TypographyHelper
 
   def title_and_context
     super.tap do |t|
       t.delete(:context)
     end
+  end
+
+  def contents
+    @contents ||= headers_to_contents(nested_headers.clone)
   end
 
   def metadata
@@ -63,6 +64,26 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   end
 
 private
+
+  def nested_headers
+    content_item["details"]["headers"] || []
+  end
+
+  def headers_to_contents(headers)
+    headers.map do |header|
+      header.deep_symbolize_keys!
+      header[:href] = "##{header[:id]}"
+      header.delete(:level)
+      header[:text] = strip_trailing_colons(header[:text])
+
+      if header[:headers]
+        header[:items] = headers_to_contents(header[:headers])
+        header.delete(:headers)
+      end
+
+      header
+    end
+  end
 
   def value_or_array_of_values(values)
     values.length == 1 ? values.first : values

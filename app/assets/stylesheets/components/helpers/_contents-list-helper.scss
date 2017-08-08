@@ -1,0 +1,25 @@
+// Contents list helper is used in both print and screen stylesheets
+.app-c-contents-list__list-item--numbered {
+  .app-c-contents-list__link {
+    display: table;
+  }
+}
+
+.app-c-contents-list__number,
+.app-c-contents-list__numbered-text {
+  display: table-cell;
+}
+
+.app-c-contents-list__number {
+  min-width: 1.5em;
+}
+
+.app-c-contents-list__numbered-text {
+  $contents-text-padding: 0.3em;
+  padding-left: $contents-text-padding;
+
+  .direction-rtl & {
+    padding-left: 0;
+    padding-right: $contents-text-padding;
+  }
+}

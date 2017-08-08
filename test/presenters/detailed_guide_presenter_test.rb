@@ -13,7 +13,8 @@ class DetailedGuidePresenterTest < PresenterTestCase
   end
 
   test 'presents a list of contents extracted from headings in the body' do
-    assert_equal "<a #{contents_link_attributes} data-track-label=\"the-basics\" href=\"#the-basics\">The basics</a>", presented_item.contents[0]
+    expected_contents_list_item = { text: "The basics", id: "the-basics", href: "#the-basics" }
+    assert_equal expected_contents_list_item, presented_item.contents[0]
   end
 
   test '#published returns a formatted date of the day the content item became public' do

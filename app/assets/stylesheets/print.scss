@@ -1,3 +1,5 @@
-// PRINT STYLESHEET COMPILER
+// govuk_frontend_toolkit imports
+@import 'measurements';
 
-@import "print/html-publication";
+@import 'components/print/*';
+@import 'print/html-publication';

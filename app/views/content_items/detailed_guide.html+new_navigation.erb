@@ -16,7 +16,7 @@
 
     <div class="sidebar-with-body" id="contents">
       <% if @content_item.contents.any? %>
-        <%= render 'shared/sidebar_contents', contents: @content_item.contents %>
+        <%= render 'components/contents-list', contents: @content_item.contents %>
       <% end %>
       <% if @content_item.related_mainstream_content.any? %>
         <aside class="related-mainstream-content" role="complementary">

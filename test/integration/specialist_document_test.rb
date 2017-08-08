@@ -107,8 +107,8 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders a nested contents list" do
     setup_and_visit_content_item('aaib-reports')
 
-    assert page.has_css?(".contents-list.contents-list-nested")
-    within ".contents-list.contents-list-nested" do
+    assert page.has_css?(".app-c-contents-list")
+    within ".app-c-contents-list" do
       @content_item['details']['headers'].each do |heading|
         assert_nested_content_item(heading)
       end
@@ -118,7 +118,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders a nested contents list with level 2 and 3 headings only" do
     setup_and_visit_content_item('drug-device-alerts')
 
-    within ".contents-list.contents-list-nested" do
+    within ".app-c-contents-list" do
       @content_item['details']['headers'].each do |heading|
         assert_nested_content_item(heading)
       end
@@ -127,7 +127,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
   def assert_nested_content_item(heading)
     heading_level = heading["level"]
-    selector = ".nested-contents-link-h#{heading_level}[href=\"##{heading['id']}\"]"
+    selector = "a[href=\"##{heading['id']}\"]"
     text = heading["text"].gsub(/\:$/, '')
 
     if heading_level < 4
