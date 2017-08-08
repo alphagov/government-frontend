@@ -11,7 +11,7 @@
     <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %>
     <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
   <% end %>
-  <%= render 'components/notice', title: 'Statistics release cancelled', description_text: content_item_unopened %>
+  <%= render 'components/notice', title: "This consultation isn't open yet", description_text: content_item_unopened %>
 <% elsif @content_item.pending_final_outcome? %>
   <% content_item_final_outcome = capture do %>
     Visit this page again soon to download the outcome to this public&nbsp;feedback.
