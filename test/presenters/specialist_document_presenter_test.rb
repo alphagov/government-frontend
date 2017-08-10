@@ -112,6 +112,22 @@ class SpecialistDocumentPresenterTest
         'on the Big Issue Invest website'
       )
     end
+
+    test 'removes first published dates for bulk published documents' do
+      example = schema_item('aaib-reports')
+      example["details"]["metadata"]["bulk_published"] = true
+
+      refute present_example(example).metadata[:first_published]
+      refute present_example(example).document_footer[:published]
+
+      example["details"]["metadata"]["bulk_published"] = false
+      assert present_example(example).metadata[:first_published]
+      assert present_example(example).document_footer[:published]
+
+      example["details"]["metadata"] = {}
+      assert present_example(example).metadata[:first_published]
+      assert present_example(example).document_footer[:published]
+    end
   end
 
   class PresentedSpecialistDocumentWithFinderFacets < SpecialistDocumentTestCase
