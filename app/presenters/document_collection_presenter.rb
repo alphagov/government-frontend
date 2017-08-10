@@ -14,7 +14,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
 
   def groups
     groups = content_item["details"]["collection_groups"].reject { |group|
-      group_document_links(group).empty?
+      group_documents(group).empty?
     }
 
     groups.map { |group|
@@ -23,13 +23,26 @@ class DocumentCollectionPresenter < ContentItemPresenter
     }
   end
 
-  def group_document_links(group)
-    group_documents(group).map do |link|
+  def group_document_links(group, group_index)
+    group_documents(group).each_with_index.map do |link, link_index|
       {
-        public_updated_at: Time.zone.parse(link["public_updated_at"]),
-        document_type: link["document_type"],
-        title: link["title"],
-        base_path: link["base_path"]
+        link: {
+          text: link["title"],
+          path: link["base_path"],
+          data_attributes: {
+            track_category: 'navDocumentCollectionLinkClicked',
+            track_action: "#{group_index + 1}.#{link_index + 1}",
+            track_label: link["base_path"],
+            track_options: {
+              dimension28: group['documents'].count.to_s,
+              dimension29: link["title"]
+            }
+          }
+        },
+        metadata: {
+          public_updated_at: Time.zone.parse(link["public_updated_at"]),
+          document_type: link["document_type"],
+        },
       }
     end
   end

@@ -16,22 +16,4 @@
       margin-top: 0;
     }
   }
-
-  .group-document-list-item {
-    overflow: hidden;
-    margin-bottom: $gutter-one-third;
-    padding-bottom: $gutter-one-third;
-    border-bottom: 1px solid $border-colour;
-  }
-
-  .group-document-list-item-title {
-    @include bold-19;
-  }
-
-  .group-document-list-item-attributes li {
-    @include core-14;
-    float: left;
-    list-style: none;
-    padding-right: $gutter-two-thirds;
-  }
 }
