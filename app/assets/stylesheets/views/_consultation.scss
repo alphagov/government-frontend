@@ -1,6 +1,5 @@
 .consultation {
   @include sidebar-with-body;
-  @include share-buttons;
 
   .consultation-date {
     @include core-24;

@@ -19,13 +19,13 @@ class ShareablePresenterTest < ActiveSupport::TestCase
 
   test 'presents the twitter share url' do
     expected_twitter_url = "https://twitter.com/share?url=#{expected_path}&text=A%20Title"
-    actual = DummyContentItem.new.share_urls[:twitter]
+    actual = DummyContentItem.new.share_links[:twitter_href]
     assert_equal expected_twitter_url, actual
   end
 
   test 'presents the facebook share url' do
     expected_facebook_url = "https://www.facebook.com/sharer/sharer.php?u=#{expected_path}"
-    actual = DummyContentItem.new.share_urls[:facebook]
+    actual = DummyContentItem.new.share_links[:facebook_href]
     assert_equal expected_facebook_url, actual
   end
 end
