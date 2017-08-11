@@ -92,11 +92,11 @@ class SpecialistDocumentPresenterTest
     end
 
     test 'should not present continuation_link' do
-      assert_equal(presented_item('aaib-reports').continuation_link, nil)
+      assert_nil presented_item('aaib-reports').continuation_link
     end
 
     test 'should not present will_continue_on' do
-      assert_equal(presented_item('aaib-reports').will_continue_on, nil)
+      assert_nil presented_item('aaib-reports').will_continue_on
     end
 
     test 'should present continuation_link' do
