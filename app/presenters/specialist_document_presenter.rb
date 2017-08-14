@@ -18,6 +18,8 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def metadata
     super.tap do |m|
+      m.delete(:first_published) if bulk_published?
+
       facets_with_friendly_values.each do |facet|
         m[:other][facet['name']] = value_or_array_of_values(facet['values'])
       end
@@ -26,6 +28,8 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def document_footer
     super.tap do |m|
+      m.delete(:published) if bulk_published?
+
       m[:other_dates] = {}
       facets_with_friendly_values.each do |facet|
         type = facet['type'] == 'date' ? :other_dates : :other
@@ -189,12 +193,12 @@ private
   #
   # Instead use first date in change history
   def first_public_at
-    if facet_values[first_published_at_facet_key]
-      facet_values[first_published_at_facet_key]
-    else
-      changes = reverse_chronological_change_history
-      changes.any? ? changes.last[:timestamp] : nil
-    end
+    @first_public_at ||= if facet_values[first_published_at_facet_key]
+                           facet_values[first_published_at_facet_key]
+                         else
+                           changes = reverse_chronological_change_history
+                           changes.any? ? changes.last[:timestamp] : nil
+                         end
   end
 
   # specialist document change history can have a modified date that is
@@ -205,5 +209,18 @@ private
   # Can be removed when first_published_at is reliable
   def any_updates?
     change_history.size > 1
+  end
+
+  # Bulk published essentially means published without a correct first published date
+  # eg For certain AAIB reports the publish date is the date the site was scraped
+  # rather than the date the report was first published
+  #
+  # https://trello.com/c/FhAbqDhg/77-3-aaib-dates-prior-to-10-dec-2014-needs-to-be-suppressed
+  # https://govuk.zendesk.com/agent/tickets/2293473
+  #
+  # Example:
+  # https://www.gov.uk/aaib-reports/lockheed-l1011-385-1-15-g-bhbr-19-december-1989
+  def bulk_published?
+    !!facet_values["bulk_published"]
   end
 end
