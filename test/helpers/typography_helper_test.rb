@@ -24,7 +24,7 @@ class TypographyHelperTest < ActionView::TestCase
 
   test "nbsp_between_last_two_words handles nil descriptions" do
     assert_nothing_raised do
-      assert_equal nil, nbsp_between_last_two_words(nil)
+      assert_nil nbsp_between_last_two_words(nil)
     end
   end
 end

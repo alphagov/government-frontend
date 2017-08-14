@@ -13,12 +13,12 @@ gem 'htmlentities', '4.3.4'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
 gem 'rack_strip_client_ip', '~> 0.0.2'
-gem 'rails', '~> 5.0'
+gem 'rails', '~> 5.0.5'
 gem 'rails-controller-testing', '~> 0.1'
 gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
 gem 'sass-rails', '~> 5.0.4'
-gem 'slimmer', '~> 10.1.5'
+gem 'slimmer', '~> 11.0.0'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
@@ -35,7 +35,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'wraith', '~> 3.0'
+  gem 'wraith', '~> 4.0'
 end
 
 group :test do

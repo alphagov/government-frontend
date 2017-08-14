@@ -222,10 +222,11 @@ class TravelAdvicePresenterTest
         { original: "Latest update - changes", presented: "<p>Changes</p>" },
         { original: "Latest update changes", presented: "<p>Changes</p>" },
         { original: "Latest Update: Summary of changes. Next sentence", presented: "<p>Summary of changes. Next sentence</p>" },
-        { original: "", presented: nil },
       ].each do |i|
         assert_equal i[:presented], present_latest(i[:original])
       end
+
+      assert_nil present_latest("")
     end
 
     test "presents a map image and download link" do
@@ -248,8 +249,8 @@ class TravelAdvicePresenterTest
       example['details'].delete('document')
       presented = presented_item("full-country", nil, example)
 
-      assert_equal nil, presented.map
-      assert_equal nil, presented.map_download_url
+      assert_nil presented.map
+      assert_nil presented.map_download_url
     end
 
     test "formats change description for an atom feed" do
