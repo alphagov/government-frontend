@@ -72,6 +72,41 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_redirected_to content_item['base_path']
   end
 
+  test "returns HTML when an unspecific accepts header is requested (eg by IE8 and below)" do
+    request.headers["Accept"] = "*/*"
+    content_item = content_store_has_schema_example('travel_advice', 'full-country')
+
+    get :show, params: {
+      path: path_for(content_item)
+    }
+
+    assert_match(/text\/html/, response.headers['Content-Type'])
+    assert_response :success
+    assert_select '#wrapper'
+  end
+
+  test "returns a 406 for XMLHttpRequests" do
+    request.headers["X-Requested-With"] = "XMLHttpRequest"
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+
+    get :show, params: {
+      path: path_for(content_item)
+    }
+
+    assert_response :not_acceptable
+  end
+
+  test "returns a 406 for unsupported format requests, eg text/javascript" do
+    request.headers["Accept"] = "text/javascript"
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+
+    get :show, params: {
+      path: path_for(content_item)
+    }
+
+    assert_response :not_acceptable
+  end
+
   test "gets item from content store" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
