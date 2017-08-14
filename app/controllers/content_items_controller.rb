@@ -5,6 +5,7 @@ class ContentItemsController < ApplicationController
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
   rescue_from ActionView::MissingTemplate, with: :error_406
+  rescue_from ActionController::UnknownFormat, with: :error_406
 
   attr_accessor :content_item
 
@@ -49,6 +50,11 @@ private
     end
 
     request.variant = :print if params[:variant] == "print"
+
+    respond_to do |format|
+      format.html
+      format.atom
+    end
 
     with_locale do
       render content_item_template
