@@ -1,10 +1,20 @@
 require 'test_helper'
 
 class ContentsListHelperTest < ActionView::TestCase
+  include ActionView::Helpers::SanitizeHelper
+
   test "it wraps a number and text in separate span elements" do
     assert_split_number_and_text('1. Thing', '1.', 'Thing')
     assert_split_number_and_text('10. Thing', '10.', 'Thing')
     assert_split_number_and_text('100. Thing', '100.', 'Thing')
+  end
+
+  test "it keeps a space between number and text for screen reader pronunciation" do
+    # 1.Thing can be pronounced "1 dot Thing"
+    # 1. Thing is always pronounced "1 Thing"
+    text = "1. Thing"
+    wrapped_html = wrap_numbers_with_spans("<a href=\"#link\">#{text}</a>")
+    assert_equal text, strip_tags(wrapped_html)
   end
 
   test "it wraps a number and text in span elements if it's a number without a period" do
@@ -62,7 +72,7 @@ class ContentsListHelperTest < ActionView::TestCase
     numbered_text_class = "app-c-contents-list__numbered-text"
 
     input = "<a href=\"#link\">#{number_and_text}</a>"
-    expected = "<a href=\"#link\"><span class=\"#{number_class}\">#{number}</span><span class=\"#{numbered_text_class}\">#{text}</span></a>"
+    expected = "<a href=\"#link\"><span class=\"#{number_class}\">#{number} </span><span class=\"#{numbered_text_class}\">#{text}</span></a>"
     assert_equal expected, wrap_numbers_with_spans(input)
   end
 end
