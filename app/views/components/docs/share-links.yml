@@ -4,6 +4,13 @@ body: |
   Pass complete share URls to the component - the component will not process a URL into a share link itself.
 
   The component also  contains Javascript classes (js-share-facebook and js-share-twitter) which are used to track the number of clicks on the share links.
+
+  Examples:
+
+    - [News Article with Share Links](/government/news/fast-tracking-uk-innovation-apply-for-business-funding)
+    - [Consultation Page with Share Links](/government/consultations/soft-drinks-industry-levy)
+    - [Right to Left Page with Share Links](/government/news/uk-sets-out-long-term-support-for-stable-secure-and-prosperous-afghanistan-to-2020.ur)
+
 accessibility_criteria: |
   The share link must:
 
