@@ -85,7 +85,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_select '#wrapper'
   end
 
-  test "returns a 406 for XMLHttpRequests" do
+  test "returns a 406 for XMLHttpRequests without an Accept header set to a supported format" do
     request.headers["X-Requested-With"] = "XMLHttpRequest"
     content_item = content_store_has_schema_example('case_study', 'case_study')
 

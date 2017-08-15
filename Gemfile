@@ -18,7 +18,7 @@ gem 'rails-controller-testing', '~> 0.1'
 gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
 gem 'sass-rails', '~> 5.0.4'
-gem 'slimmer', github: 'alphagov/slimmer', branch: 'raise-error'
+gem 'slimmer', '~> 11.0.1'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
@@ -28,7 +28,7 @@ gem 'govuk_navigation_helpers', '~> 6.3'
 group :development, :test do
   gem 'govuk-lint'
   gem 'govuk_schemas'
-  gem 'jasmine-rails', '~> 0.14.0'
+  gem 'jasmine-rails', github: 'alphagov/jasmine-rails', branch: 'fix-monkey-patch'
   gem 'pry-byebug'
 end
 
