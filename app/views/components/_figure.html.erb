@@ -1,0 +1,8 @@
+<%
+  alt ||= false
+  caption ||= false
+%>
+<figure class="app-c-figure">
+  <img class="app-c-figure__image" src="<%= src %>" <% if alt %>alt="<%= alt %>"<% end %>>
+  <% if caption %><figcaption class="app-c-figure__figcaption"><%= caption %></figcaption><% end %>
+</figure>

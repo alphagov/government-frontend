@@ -1,0 +1,24 @@
+name: Figure
+description: A figure containing an image that never exceeds the component’s width
+body: |
+  A figure should be used for images that are referenced within a page, but which can be moved around without affecting the flow of the page [(see guidance here)](https://developer.mozilla.org/en/docs/Web/HTML/Element/figure)
+
+  Examples:
+
+  - [Case Study containing an image](/government/case-studies/2013-elections-in-swaziland)
+  - [Travel Advice containing a map (image)](/foreign-travel-advice/nepal)
+accessibility_criteria: |
+  The figure must:
+
+  - provide an informative text description, as alt text or caption
+
+fixtures:
+  default:
+    src: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54374/s630_the_lords_chamber.jpg'
+  figure_with_alt_text:
+    src: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54374/s630_the_lords_chamber.jpg'
+    alt: 'An image of the lords chamber'
+  figure_with_caption:
+    src: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54374/s630_the_lords_chamber.jpg'
+    alt: 'An image of the lords chamber'
+    caption: 'The Lords Chamber'

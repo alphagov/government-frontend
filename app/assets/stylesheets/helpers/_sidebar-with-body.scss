@@ -4,18 +4,6 @@
     margin-bottom: $gutter * 1.5;
   }
 
-  .sidebar-image {
-    @include responsive-bottom-margin;
-
-    img {
-      max-width: 100%;
-    }
-
-    figcaption {
-      @include core-16;
-    }
-  }
-
   .offset-one-third {
     @include media(tablet) {
       margin-left: percentage(1 / 3);

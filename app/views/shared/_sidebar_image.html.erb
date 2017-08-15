@@ -1,6 +1,3 @@
 <% if image %>
-  <figure class="sidebar-image">
-    <img src="<%= image["url"] %>" alt="<%= image["alt_text"] %>">
-    <% if image["caption"].present? %><figcaption><%= image["caption"] %></figcaption><% end %>
-  </figure>
+  <%= render 'components/figure', src: image["url"], alt: image["alt_text"], caption: image["caption"] %>
 <% end %>

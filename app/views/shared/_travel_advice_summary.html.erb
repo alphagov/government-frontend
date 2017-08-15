@@ -10,13 +10,14 @@
 <% end %>
 
 <%= render 'govuk_component/metadata', content_item.metadata %>
+
+<div class="map">
 <% if content_item.map %>
-  <figure class="map">
-    <img src="<%= content_item.map["url"] %>" alt="<%= content_item.map["alt_text"] %>">
+  <% download_caption = capture do %>
     <% if content_item.map_download_url %>
-      <figcaption>
         <%= render 'components/download-link', href: content_item.map_download_url, link_text: "Download map (PDF)" %>
-      </figcaption>
     <% end %>
-  </figure>
+  <% end %>
+  <%= render 'components/figure', src: content_item.map["url"], alt: content_item.map["alt_text"], caption: download_caption %>
 <% end %>
+</div>
