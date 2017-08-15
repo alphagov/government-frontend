@@ -1,5 +1,7 @@
 name: Download link
 description: A link with a file download icon
+body: |
+  For usability the provided link text should indicate the file type and size of the download.
 accessibility_criteria: |
   The download link must:
 
@@ -7,6 +9,11 @@ accessibility_criteria: |
   - be focusable with a keyboard
   - be usable with a keyboard
   - indicate when it has focus
+  - change in appearance when touched (in the touch-down state)
+  - change in appearance when hovered
+  - be usable with touch
+  - be usable with speech
+  - have visible text
 
   The download icon must:
 

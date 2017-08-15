@@ -1,12 +1,18 @@
 name: Heading
 description: A text heading
 body: |
-  Provides a heading tag with an optional id attribute, used predominantly to the left of content on consultations and publications.
+  A heading tag with an optional id attribute, used predominantly to the left of content on consultations and publications.
+
+  Real world examples:
+
+  - [Publication](/government/publications/recognising-the-terrorist-threat)
+  - [Consultation](/government/consultations/proposal-for-the-future-of-rotherham-goldthorpe-jobcentre)
 accessibility_criteria: |
   The heading must:
 
   - be part of a correct heading structure for a page
-
+  - be semantically represented as a heading
+  - convey the heading level
 fixtures:
   default:
     text: 'Download the full outcome'

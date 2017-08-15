@@ -1,5 +1,5 @@
 name: Subscription links
-description: Links to 'Get email alerts' and 'Subscribe to feed'
+description: Links to ‘Get email alerts’ and ‘Subscribe to feed’
 accessibility_criteria: |
   The subscription links must:
 
@@ -7,10 +7,13 @@ accessibility_criteria: |
   - be focusable with a keyboard
   - be usable with a keyboard
   - indicate when they have focus
+  - change in appearance when touched (in the touch-down state)
+  - change in appearance when hovered
+  - be usable with touch
+  - be usable with speech
+  - have visible text
 
-  Icons in subscription links must:
-
-  - be presentational and ignored by screen readers
+  Icons in subscription links must be presentational and ignored by screen readers.
 fixtures:
   default:
     email_signup_link: '/foreign-travel-advice/singapore/email-signup'

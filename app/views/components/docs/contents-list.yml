@@ -9,10 +9,12 @@ body: |
   `format_numbers` option will pull out numbers in the link text to render them as though they were the list style type. Applies to
   numbers at the start of text, with or without a decimal. See the [format complex numbers fixture](/component-guide/contents-list/formats_complex_numbers) for details.
 accessibility_criteria: |
+  The component must be [a landmark with a navigation role](https://accessibility.blog.gov.uk/2016/05/27/using-navigation-landmarks/).
+
   The contents list must:
 
-  - have a navigation role
   - inform the user how many items are in the list
+  - convey the content structure
 
   The contents item links must:
 
@@ -20,6 +22,13 @@ accessibility_criteria: |
   - be focusable with a keyboard
   - be usable with a keyboard
   - indicate when it has focus
+  - change in appearance when touched (in the touch-down state)
+  - change in appearance when hovered
+  - be usable with touch
+  - be usable with speech
+  - have visible text
+
+  Links with formatted numbers must separate the number and text with a space for correct screen reader pronunciation. This changes pronunciation from "1 dot Item" to "1 Item".
 fixtures:
   default:
     contents:
