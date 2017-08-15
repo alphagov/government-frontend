@@ -3,7 +3,7 @@
     description_text ||= ""
     description_govspeak ||= ""
   %>
-  <div class="app-c-notice">
+  <section class="app-c-notice" aria-label="Notice">
     <h2 class="app-c-notice__title"><%= title %></h2>
     <% if description_text.present? %>
       <p class="app-c-notice__description"><%= description_text %></p>
@@ -11,5 +11,5 @@
     <% if description_govspeak.present? %>
       <%= render 'govuk_component/govspeak', content: description_govspeak %>
     <% end %>
-  </div>
+  </section>
 <% end %>

@@ -18,6 +18,11 @@ class BannerTest < ComponentTestCase
     assert_select ".app-c-banner__desc", text: 'This was published under the 2010 to 2015 Conservative government'
   end
 
+  test "renders a banner with an aria label" do
+    render_component(title: 'Summary', text: 'Text')
+    assert_select "section[aria-label]"
+  end
+
   test "renders a banner with title and text correctly" do
     render_component(title: 'Summary', text: 'This was published under the 2010 to 2015 Conservative government')
 

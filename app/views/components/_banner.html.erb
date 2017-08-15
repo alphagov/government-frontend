@@ -3,7 +3,6 @@
   aside ||= false
   large_text = !title && !aside
 %>
-
 <% content_block = capture do %>
   <% if title %>
     <h2 class="app-c-banner__title"><%= title %></h2>
@@ -12,23 +11,19 @@
     <%= text %>
   </p>
 <% end %>
-
-<% if aside %>
- <div class="app-c-banner app-c-banner--grid">
-  <div class="grid-row">
-    <div class="column-third">
-      <div class="app-c-banner__aside">
-        <p><%= aside %></p>
+<section class="app-c-banner<% if aside %> app-c-banner--grid<% end %>" aria-label="Notice">
+  <% if aside %>
+    <div class="grid-row">
+      <div class="column-third">
+        <div class="app-c-banner__aside">
+          <p><%= aside %></p>
+        </div>
+      </div>
+      <div class="column-two-thirds app-c-banner__main">
+        <%= content_block %>
       </div>
     </div>
-
-    <div class="column-two-thirds app-c-banner__main">
-      <%= content_block %>
-    </div>
-  </div>
- </div>
-<% else %>
-  <div class="app-c-banner">
-      <%= content_block %>
-  </div>
-<% end %>
+  <% else %>
+    <%= content_block %>
+  <% end %>
+</section>

@@ -1,6 +1,9 @@
 name: Banner
 description: A page banner, designed to highlight important information
-body: Passing an aside to the banner will mean the banner renders in a grid layout.
+body: |
+  Passing an aside to the banner will mean the banner renders in a grid layout.
+
+  Real world example: [Consultation with history banner](/government/consultations/child-trust-fund-consultation-on-allowing-the-transfer-of-savings-from-a-child-trust-fund-to-a-junior-isa)
 accessibility_criteria: |
   The banner must:
 
