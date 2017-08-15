@@ -1,6 +1,5 @@
 .world-location-news-article {
   @include sidebar-with-body;
-  @include share-buttons;
 
   .direction-rtl & {
     direction: rtl;

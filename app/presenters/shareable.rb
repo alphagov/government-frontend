@@ -1,10 +1,11 @@
 module Shareable
   include ERB::Util
 
-  def share_urls
+  def share_links
     {
-      facebook: facebook_share_url,
-      twitter: twitter_share_url
+      title: "Share this page",
+      facebook_href: facebook_share_url,
+      twitter_href: twitter_share_url
     }
   end
 
