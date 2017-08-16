@@ -11,7 +11,7 @@ module ContentsListHelper
 
     if number
       words = content_item_text.sub(number.to_s, '').strip #remove the number from the text
-      content_item_link.sub(content_item_text, "<span class=\"app-c-contents-list__number\">#{number}</span><span class=\"app-c-contents-list__numbered-text\">#{words}</span>").squish.html_safe
+      content_item_link.sub(content_item_text, "<span class=\"app-c-contents-list__number\">#{number} </span><span class=\"app-c-contents-list__numbered-text\">#{words}</span>").squish.html_safe
     else
       content_item_link
     end

@@ -1,14 +1,19 @@
-name: Translation Nav
-description: A navigation item for available language translations.
-body: The active property should be used to indicate the currently selected language.
+name: Translation navigation
+description: A list of links to available translations
+body: The active property indicates the current language.
 accessibility_criteria: |
-  The translation nav must:
+  The translation navigation links must:
 
+  - identify the language of the link
   - accept focus
   - be focusable with a keyboard
   - indicate when it has focus
   - be usable with a keyboard
-  - inform the user of the language option, if the user has that language installed
+  - change in appearance when touched (in the touch-down state)
+  - change in appearance when hovered
+  - be usable with touch
+  - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
+  - have visible text
 fixtures:
   # TODO: We need to add a fixture to show component rendering right-to-left.
   # This is dependant on being able to provide context to fixtures.
@@ -42,4 +47,3 @@ fixtures:
     - locale: 'zh'
       base_path: '/zh'
       text: '中文'
-

@@ -5,9 +5,7 @@ body: |
 
   The component accepts either a simple string description_text parameter that it wraps in a paragraph, or a description_govspeak parameter that is rendered through govspeak for more complex HTML layout.
 accessibility_criteria: |
-  The notice must:
-
-  - have a border of AA contrast ratio 4.5:1
+  The notice border colour must have a contrast ratio of more than 4.5:1 with its background to be visually distinct.
 fixtures:
   default:
     title: 'Statistics release cancelled'

@@ -1,11 +1,15 @@
 name: Banner
 description: A page banner, designed to highlight important information
-body: Passing an aside to the banner will mean the banner renders in a grid layout.
+body: |
+  Passing an aside to the banner will mean the banner renders in a grid layout.
+
+  Real world example: [Consultation with history banner](/government/consultations/child-trust-fund-consultation-on-allowing-the-transfer-of-savings-from-a-child-trust-fund-to-a-junior-isa)
 accessibility_criteria: |
   The banner must:
 
   - be visually distinct from other content on the page
-  - have a contrast ratio higher than 4.5:1 against the background colour to meet WCAG AA
+  - have an accessible name that describes the banner as a notice
+  - have a text contrast ratio higher than 4.5:1 against the background colour to meet [WCAG AA](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast)
 fixtures:
   default:
     text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
