@@ -25,7 +25,7 @@ accessibility_criteria: |
   - change in appearance when touched (in the touch-down state)
   - change in appearance when hovered
   - be usable with touch
-  - be usable with speech
+  - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
   - have visible text
 
   Links with formatted numbers must separate the number and text with a space for correct screen reader pronunciation. This changes pronunciation from "1 dot Item" to "1 Item".

@@ -12,7 +12,7 @@ accessibility_criteria: |
   - change in appearance when touched (in the touch-down state)
   - change in appearance when hovered
   - be usable with touch
-  - be usable with speech
+  - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
   - have visible text
 fixtures:
   # TODO: We need to add a fixture to show component rendering right-to-left.
