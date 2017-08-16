@@ -1,0 +1,11 @@
+.app-c-figure {
+  @include responsive-bottom-margin;
+}
+
+.app-c-figure__image {
+  max-width: 100%;
+}
+
+.app-c-figure__figcaption {
+  @include core-16;
+}
