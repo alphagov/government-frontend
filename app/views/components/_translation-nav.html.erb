@@ -1,6 +1,6 @@
 <% translations ||= [] %>
 <% if translations.length > 1 %>
-  <div class="app-c-translation-nav">
+  <nav role="navigation" class="app-c-translation-nav">
     <ul class="app-c-translation-nav__list">
       <% translations.each.with_index do |translation, i| %>
         <li class="app-c-translation-nav__list-item">
@@ -12,5 +12,5 @@
         </li>
       <% end %>
     </ul>
-  </div>
+  </nav>
 <% end %>

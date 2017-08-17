@@ -2,6 +2,8 @@ name: Translation navigation
 description: A list of links to available translations
 body: The active property indicates the current language.
 accessibility_criteria: |
+  The component must be [a landmark with a navigation role](https://accessibility.blog.gov.uk/2016/05/27/using-navigation-landmarks/).
+
   The translation navigation links must:
 
   - identify the language of the link
