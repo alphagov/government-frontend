@@ -2,7 +2,10 @@ name: Translation navigation
 description: A list of links to available translations
 body: The active property indicates the current language.
 accessibility_criteria: |
-  The component must be [a landmark with a navigation role](https://accessibility.blog.gov.uk/2016/05/27/using-navigation-landmarks/).
+  The component must:
+
+  - be [a landmark with a navigation role](https://accessibility.blog.gov.uk/2016/05/27/using-navigation-landmarks/)
+  - have an accessible name in the current language, eg "Translations"
 
   The translation links must:
 
@@ -36,7 +39,7 @@ fixtures:
       active: true
     - locale: 'fr'
       base_path: '/fr'
-      text: 'French'
+      text: 'Français'
     - locale: 'hi'
       base_path: '/hi'
       text: 'हिंदी'

@@ -64,4 +64,9 @@ class TranslationNavTest < ComponentTestCase
     render_component(translations: multiple_translations)
     assert_select "a[hreflang='hi']", text: "हिंदी"
   end
+
+  test "is labelled as translation navigation" do
+    render_component(translations: multiple_translations)
+    assert_select "nav[role='navigation'][aria-label='Translations']"
+  end
 end

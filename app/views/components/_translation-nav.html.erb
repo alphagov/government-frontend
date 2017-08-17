@@ -1,6 +1,6 @@
 <% translations ||= [] %>
 <% if translations.length > 1 %>
-  <nav role="navigation" class="app-c-translation-nav">
+  <nav role="navigation" class="app-c-translation-nav" aria-label="<%= t("common.translations") %>">
     <ul class="app-c-translation-nav__list">
       <% translations.each.with_index do |translation, i| %>
         <li class="app-c-translation-nav__list-item">
