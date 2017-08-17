@@ -5,7 +5,10 @@ body: |
 
   The component accepts either a simple string description_text parameter that it wraps in a paragraph, or a description_govspeak parameter that is rendered through govspeak for more complex HTML layout.
 accessibility_criteria: |
-  The notice border colour must have a contrast ratio of more than 4.5:1 with its background to be visually distinct.
+  The notice must:
+
+  - have a border colour contrast ratio of more than 4.5:1 with its background to be visually distinct.
+  - always render headings with associated description content, so there are no isolated heading elements inside the component
 fixtures:
   default:
     title: 'Statistics release cancelled'

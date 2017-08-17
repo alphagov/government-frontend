@@ -46,4 +46,22 @@ class NoticeGovspeakTest < ActionDispatch::IntegrationTest
       assert_has_component_govspeak("<p>The Oil &amp; Gas Authority launched a new website on 3 October 2016 to reflect its new status as a government company.</p><p>This formalises the transfer of the Secretary of State’s regulatory powers in respect of oil and gas to the OGA, and grants it new powers. This website will no longer be updated. Visitors should refer to <a rel=\"external\" href=\"https://www.ogauthority.co.uk/news-publications/announcements/2015/establishment-of-the-oil-and-gas-authority-1/\">www.ogauthority.co.uk</a></p>")
     end
   end
+
+  test "renders title as heading only if description present" do
+    visit '/component-guide/notice/with_description_text'
+
+    within '.component-guide-preview' do
+      assert page.has_selector?("h2.app-c-notice__title", text: "Statistics release cancelled")
+      assert page.has_selector?("p.app-c-notice__description", text: "Duplicate, added in error")
+    end
+  end
+
+  test "render title as paragraph if no description present" do
+    visit '/component-guide/notice/default'
+
+    within '.component-guide-preview' do
+      assert page.has_selector?("span.app-c-notice__title", text: "Statistics release cancelled")
+      assert page.has_no_selector?(".app-c-notice__description")
+    end
+  end
 end
