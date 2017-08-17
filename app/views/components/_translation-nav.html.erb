@@ -7,7 +7,7 @@
           <% if translation[:active] %>
             <span lang="<%= translation[:locale] %>"><%= translation[:text] %></span>
           <% else %>
-            <%= link_to translation[:text], translation[:base_path], lang: translation[:locale], rel: "alternate" %>
+            <%= link_to translation[:text], translation[:base_path], hreflang: translation[:locale], lang: translation[:locale], rel: "alternate" %>
           <% end %>
         </li>
       <% end %>

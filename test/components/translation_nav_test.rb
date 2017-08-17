@@ -59,4 +59,9 @@ class TranslationNavTest < ComponentTestCase
     assert_select "span[lang='en']", text: "English"
     assert_select "a[lang='hi']", text: "हिंदी"
   end
+
+  test "identifies the language of the target page" do
+    render_component(translations: multiple_translations)
+    assert_select "a[hreflang='hi']", text: "हिंदी"
+  end
 end
