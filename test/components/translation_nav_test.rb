@@ -47,6 +47,12 @@ class TranslationNavTest < ComponentTestCase
     assert_select ".app-c-translation-nav__list-item a[href=\"/hi\"]"
   end
 
+  test "identifies the language of the text" do
+    render_component(translations: multiple_translations)
+    assert_select "span[lang='en']", text: "English"
+    assert_select "a[lang='hi']", text: "हिंदी"
+  end
+
   test "does not render an active translation item with a link" do
     render_component(translations: multiple_translations)
 

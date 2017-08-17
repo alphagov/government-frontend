@@ -5,7 +5,7 @@
       <% translations.each.with_index do |translation, i| %>
         <li class="app-c-translation-nav__list-item">
           <% if translation[:active] %>
-            <%= translation[:text] %>
+            <span lang="<%= translation[:locale] %>"><%= translation[:text] %></span>
           <% else %>
             <%= link_to translation[:text], translation[:base_path], lang: translation[:locale], rel: "alternate" %>
           <% end %>
