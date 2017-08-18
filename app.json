@@ -25,18 +25,24 @@
     },
     "HEROKU_APP_NAME": {
       "required": true
+    },
+    "DEPLOY_TASKS": {
+      "value": "wraith:all_document_types"
     }
-  },
-  "scripts": {
-    "postdeploy": "bundle exec rake wraith:all_document_types"
   },
   "image": "heroku/ruby",
   "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    },
     {
       "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
     },
     {
       "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    },
+    {
+      "url": "https://github.com/gunpowderlabs/buildpack-ruby-rake-deploy-tasks"
     }
   ],
   "addons": []
