@@ -1,4 +1,5 @@
 require 'rest-client'
+require 'phantomjs' if ENV['HEROKU_APP_NAME'].to_s.length.positive?
 require "#{Rails.root}/lib/helpers/wraith_config_helper.rb"
 require "#{Rails.root}/lib/helpers/document_types_helper.rb"
 
@@ -19,7 +20,7 @@ namespace :wraith do
     Rake::Task["wraith:update_document_types"].invoke args[:sample_size]
     wraith_config_file = "test/wraith/wip-config-all-document-types.yaml"
 
-    exec("bundle exec wraith capture #{wraith_config_file}; mv shots/ public/")
+    exec("bundle exec wraith capture #{wraith_config_file}; rm -rf public/shots/; mv shots/ public/")
   end
 
   desc "creates a wraith config of document type examples from the search api"
