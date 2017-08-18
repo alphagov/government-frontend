@@ -22,6 +22,7 @@ gem 'slimmer', '~> 11.0.1'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
+gem 'wraith', '~> 4.0', require: ENV['RAILS_ENV'] != "production" || ENV['HEROKU_APP_NAME'].to_s.length.positive?
 
 gem 'govuk_navigation_helpers', '~> 6.3'
 
@@ -35,7 +36,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'wraith', '~> 4.0'
 end
 
 group :test do
