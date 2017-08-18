@@ -6,13 +6,10 @@ class AllComponentsTest < ActionDispatch::IntegrationTest
   test "renders all component guide pages without erroring" do
     visit '/component-guide'
     components = all(:css, '.component-list a').map do |el|
-      {
-        text: el[:text],
-        href: el[:href]
-      }
+      "#{el[:href]}/preview"
     end
     components.each do |component|
-      visit component[:href] + '/preview'
+      visit component
     end
   end
 end
