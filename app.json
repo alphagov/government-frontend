@@ -33,6 +33,9 @@
   "image": "heroku/ruby",
   "buildpacks": [
     {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+    },
+    {
       "url": "https://github.com/heroku/heroku-buildpack-ruby"
     }
   ],
