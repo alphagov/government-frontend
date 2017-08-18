@@ -27,6 +27,9 @@
       "required": true
     }
   },
+  "scripts": {
+    "postdeploy": "bundle exec rake wraith:all_document_types"
+  },
   "image": "heroku/ruby",
   "buildpacks": [
     {
