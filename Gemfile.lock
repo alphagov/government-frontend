@@ -332,6 +332,7 @@ DEPENDENCIES
   jasmine-rails!
   logstasher (= 0.6.1)
   mocha
+  phantomjs
   plek (= 1.11)
   poltergeist
   pry-byebug

@@ -12,6 +12,7 @@ gem 'govuk_publishing_components', '~> 1.0.0', require: ENV['RAILS_ENV'] != "pro
 gem 'htmlentities', '4.3.4'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
+gem 'phantomjs', require: ENV['HEROKU_APP_NAME'].to_s.length.positive?
 gem 'rack_strip_client_ip', '~> 0.0.2'
 gem 'rails', '~> 5.1.3'
 gem 'rails-controller-testing', '~> 0.1'
