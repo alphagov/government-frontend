@@ -12,8 +12,12 @@ class WraithConfigHelper
   def create_config(extra_config = {})
     config = load_template
     config["paths"] = build_paths
-    config.merge!(extra_config) if extra_config.present?
 
+    if ENV['HEROKU_APP_NAME'].present?
+      config["domains"]["local"] = "https://#{ENV['HEROKU_APP_NAME']}.herokuapp.com"
+    end
+
+    config.merge!(extra_config) if extra_config.present?
     write_config(config)
   end
 
