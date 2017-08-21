@@ -41,6 +41,10 @@ private
     end
 
     config_paths
+
+    {
+      'answers_0' => '/national-minimum-wage-rates'
+    }
   end
 
   def path_index(prefix, index)

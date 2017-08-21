@@ -20,6 +20,9 @@
     "RAILS_SERVE_STATIC_ASSETS": {
       "value": "yes"
     },
+    "RAILS_SERVE_STATIC_FILES": {
+      "value": "yes"
+    },
     "SECRET_KEY_BASE": {
       "generator": "secret"
     },
