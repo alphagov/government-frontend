@@ -12,7 +12,7 @@
   margin-right: -$gutter-one-third;
 }
 
-.app-c-translation-nav__list__language {
+.app-c-translation-nav__list-item {
   float: left;
   padding-left: $gutter-one-third;
   padding-right: $gutter-one-third;
@@ -29,7 +29,7 @@
   }
 }
 
-.app-c-translation-nav__list__language:last-child {
+.app-c-translation-nav__list-item:last-child {
   border-right: 0;
   border-left: 0;
 }
