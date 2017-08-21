@@ -20,6 +20,9 @@
     "RAILS_SERVE_STATIC_ASSETS": {
       "value": "yes"
     },
+    "RAILS_SERVE_STATIC_FILES": {
+      "value": "yes"
+    },
     "SECRET_KEY_BASE": {
       "generator": "secret"
     },
@@ -31,7 +34,13 @@
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    },
+    {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
     }
   ],
-  "addons": []
+  "addons": [],
+  "scripts": {
+    "postdeploy": "bundle exec rake wraith:all_document_types[1]"
+  }
 }

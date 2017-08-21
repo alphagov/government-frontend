@@ -12,6 +12,7 @@ gem 'govuk_publishing_components', '~> 0.5.0', require: ENV['RAILS_ENV'] != "pro
 gem 'htmlentities', '4.3.4'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
+gem 'phantomjs', require: ENV['HEROKU_APP_NAME'].to_s.length.positive?
 gem 'rack_strip_client_ip', '~> 0.0.2'
 gem 'rails', '~> 5.0.5'
 gem 'rails-controller-testing', '~> 0.1'
@@ -22,6 +23,7 @@ gem 'slimmer', '~> 11.0.1'
 gem 'statsd-ruby', '1.3.0', require: 'statsd'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
+gem 'wraith', '~> 4.0', require: ENV['RAILS_ENV'] != "production" || ENV['HEROKU_APP_NAME'].to_s.length.positive?
 
 gem 'govuk_navigation_helpers', '~> 6.3'
 
@@ -35,7 +37,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'wraith', '~> 4.0'
 end
 
 group :test do
