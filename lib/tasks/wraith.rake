@@ -20,7 +20,7 @@ namespace :wraith do
     Rake::Task["wraith:update_document_types"].invoke args[:sample_size]
     wraith_config_file = "test/wraith/wip-config-all-document-types.yaml"
 
-    exec("bundle exec wraith capture #{wraith_config_file}; rm -rf public/shots/; mv shots/ public/")
+    exec("bundle exec wraith capture #{wraith_config_file}")
   end
 
   desc "creates a wraith config of document type examples from the search api"
