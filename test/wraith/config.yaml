@@ -252,7 +252,7 @@ screen_widths:
 resize_or_reload: 'resize'
 
 # (required) The directory that your latest screenshots will be stored in
-directory: 'shots'
+directory: 'public/shots'
 
 # (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
 fuzz: '20%'
@@ -262,8 +262,8 @@ threshold: 5
 
 # (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
 gallery:
-  thumb_width:  200
-  thumb_height: 200
+  thumb_width:  300
+  thumb_height: 300
 
 # (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
 # Options:
