@@ -1,14 +1,20 @@
 <% if defined?(title) %>
   <%
-    description_text ||= ""
-    description_govspeak ||= ""
+    description_text ||= false
+    description_govspeak ||= false
   %>
   <section class="app-c-notice" aria-label="Notice">
-    <h2 class="app-c-notice__title"><%= title %></h2>
-    <% if description_text.present? %>
+    <% if description_text || description_govspeak %>
+      <h2 class="app-c-notice__title"><%= title %></h2>
+    <% else %>
+      <span class="app-c-notice__title"><%= title %></span>
+    <% end %>
+
+    <% if description_text %>
       <p class="app-c-notice__description"><%= description_text %></p>
     <% end %>
-    <% if description_govspeak.present? %>
+
+    <% if description_govspeak %>
       <%= render 'govuk_component/govspeak', content: description_govspeak %>
     <% end %>
   </section>
