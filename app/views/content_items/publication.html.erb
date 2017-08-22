@@ -20,7 +20,7 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-third">
-    <%= render 'components/heading', text: t("publications.documents", count: @content_item.documents_count), id: "documents-title" %>
+    <%= render 'components/heading', text: t("publication.documents", count: @content_item.documents_count), id: "documents-title" %>
   </div>
   <div class="column-two-thirds" aria-labelledby="documents-title">
     <%= render 'govuk_component/govspeak',
@@ -31,7 +31,7 @@
 
 <div class="grid-row sidebar-with-body">
   <div class="column-third">
-    <%= render 'components/heading', text: t("publications.details"), id: "details-title" %>
+    <%= render 'components/heading', text: t("publication.details"), id: "details-title" %>
   </div>
   <div class="column-two-thirds" aria-labelledby="details-title">
     <%= render 'govuk_component/govspeak',
