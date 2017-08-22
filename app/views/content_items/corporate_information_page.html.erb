@@ -7,6 +7,7 @@
     </div>
   </div>
   <%= render 'shared/title_and_translations', content_item: @content_item %>
+  <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
   <%= render 'components/lead-paragraph', text: @content_item.description %>
 
   <% @additional_body = capture do %>
