@@ -3,7 +3,7 @@
 #following problems have arisen that this approach temporarily solves:
 #
 # * we require world locations to be associated with content in Whitehall
-#   for email subscriptionas to work so we can't just get rid of them
+#   for email subscriptions to work so we can't just get rid of them
 # * we also need them as not all content will be part of the taxonomy
 #   (e.g. news about the country)
 # * the taxon will take the base path (/world/<country-slug>) and so the
@@ -15,10 +15,10 @@
 #
 #A slightly better solution will be for Whitehall to retrieve the taxon path from
 #publishing API and send that with the world location link as an additional field
-#in the links. We'll need the taxonomy to exist in order to implement this. Thiw
+#in the links. We'll need the taxonomy to exist in order to implement this. This
 #will still require frontend code to know about the links but will be similar
 #to prior art we have for some links to be affected by elements with `detail`.
-#
+
 class WorldLocationBasePath
   EXCEPTIONAL_CASES = {
     "Democratic Republic of Congo" => "democratic-republic-of-congo",
@@ -32,10 +32,9 @@ class WorldLocationBasePath
       title = world_location_link["title"]
       return base_path if base_path.present?
 
-      slug = EXCEPTIONAL_CASES[title] ||
-        title.parameterize
+      slug = EXCEPTIONAL_CASES[title] || title.parameterize
 
-      "/world/#{slug}"
+      "/world/#{slug}/news"
     end
   end
 end
