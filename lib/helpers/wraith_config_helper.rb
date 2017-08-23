@@ -29,11 +29,13 @@ private
     if @paths.is_a? Hash
       @paths.keys.each do |key|
         @paths.fetch(key).each_with_index do |path, index|
-          config_paths[path_index(key, index + 1)] = path
+          config_paths[path_index(key, index + 1)] = path unless path_blacklisted?(path)
         end
       end
     else
-      @paths.each_with_index { |path, index| config_paths[path_index(name, index + 1)] = path }
+      @paths.each_with_index do |path, index|
+        config_paths[path_index(name, index + 1)] = path unless path_blacklisted?(path)
+      end
     end
 
     config_paths
@@ -41,6 +43,19 @@ private
 
   def path_index(prefix, index)
     "#{prefix}_#{index}"
+  end
+
+  # Remove paths that aren't useful
+  #
+  # TODO: Remove when Wraith patched
+  # Paths containing "path" in them break Wraith:
+  # https://github.com/BBC-News/wraith/issues/536
+  #
+  # TODO: Remove when Search API no longer returns
+  # Search API incorrectly returns government-frontend as
+  # renderer for travel advice index
+  def path_blacklisted?(path)
+    path.include?('path') || path == "/foreign-travel-advice"
   end
 
   def write_config(config)
