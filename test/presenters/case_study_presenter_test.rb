@@ -62,7 +62,7 @@ class CaseStudyPresenterTest < PresenterTestCase
     expected_part_of_links = [
       link_to('Work Programme real life stories', '/government/collections/work-programme-real-life-stories'),
       link_to('Cheese', '/policy/cheese'),
-      link_to('Pakistan', '/world/pakistan'),
+      link_to('Pakistan', '/world/pakistan/news'),
     ]
     assert_equal expected_part_of_links, presented_item(schema_name, with_extras).part_of
   end
