@@ -14,6 +14,10 @@ module ApplicationHelper
     active_proposition_mapping.fetch(active, active)
   end
 
+  def current_path_without_query_string
+    request.original_fullpath.split("?", 2).first
+  end
+
 private
 
   def active_proposition_mapping
