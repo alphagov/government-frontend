@@ -86,4 +86,18 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
       }
     )
   end
+
+  test 'renders a withdrawal notice on withdrawn page' do
+    content_item = GovukSchemas::Example.find('corporate_information_page', example_name: 'corporate_information_page')
+    content_item['withdrawn_notice'] = {
+      'explanation': 'This is out of date',
+      'withdrawn_at': '2014-08-09T11:39:05Z'
+    }
+    content_store_has_item("/government/organisations/department-of-health/about", content_item.to_json)
+
+    visit "/government/organisations/department-of-health/about"
+
+    assert page.has_css?(".app-c-notice__title", text: "This information page was withdrawn on 9 August 2014")
+    assert page.has_css?(".app-c-notice", text: "This is out of date")
+  end
 end
