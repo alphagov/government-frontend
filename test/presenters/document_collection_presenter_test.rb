@@ -50,15 +50,28 @@ class DocumentCollectionPresenterTest
     test 'presents an ordered list of group documents' do
       documents = [
         {
-          public_updated_at: Time.zone.parse("2007-03-16 15:00:02 +0000"),
-          document_type: "guidance",
-          title: "National standard for driving cars and light vans",
-          base_path: "/government/publications/national-standard-for-driving-cars-and-light-vans"
+          link: {
+            text: "National standard for driving cars and light vans",
+            path: "/government/publications/national-standard-for-driving-cars-and-light-vans",
+            data_attributes: {
+              track_category: "navDocumentCollectionLinkClicked",
+              track_action: "1.1",
+              track_label: "/government/publications/national-standard-for-driving-cars-and-light-vans",
+              track_options: {
+                dimension28: "1",
+                dimension29: "National standard for driving cars and light vans"
+              }
+            }
+          },
+          metadata: {
+            public_updated_at: Time.zone.parse("2007-03-16 15:00:02 +0000"),
+            document_type: "guidance"
+          }
         }
       ]
       document_ids = schema_item["details"]["collection_groups"].first["documents"]
 
-      assert_equal documents, presented_item.group_document_links("documents" => [document_ids.first])
+      assert_equal documents, presented_item.group_document_links({ "documents" => [document_ids.first] }, 0)
     end
   end
 
@@ -72,8 +85,8 @@ class DocumentCollectionPresenterTest
           .select { |g| g["title"] == "One document missing from links" }
           .first
 
-      presented_links = presenter.group_document_links(group_with_missing_document)
-      presented_links_base_paths = presented_links.collect { |link| link[:base_path] }
+      presented_links = presenter.group_document_links(group_with_missing_document, 0)
+      presented_links_base_paths = presented_links.collect { |link| link[:link][:path] }
 
       assert_equal(
         ["/government/publications/national-standard-for-developed-driving-competence"],
