@@ -1,4 +1,4 @@
-require 'component_test_helper'
+require 'test_helper'
 
 # TODO: Move this logic to the GOVUK Publishing Components gem
 # and have the tests visit each component.
