@@ -39,4 +39,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
+
+  # TODO: Re-enable tests to run against compiled assets with digests
+  #       Add a performant assets compilation step before tests run
+  # Don't depend on precompiled JS assets. We are not currently precompiling
+  # javascript before tests run. Meaning failing JS will not be detected
+  # in integration tests.
+  config.assets.digest = false
 end
