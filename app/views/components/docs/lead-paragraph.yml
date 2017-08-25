@@ -2,6 +2,7 @@ name: Lead paragraph
 description: The opening paragraph of content. Typically a content item’s description field.
 accessibility_criteria: |
   The lead paragraph must be visually distinct from other paragraphs.
-fixtures:
+examples:
   default:
-    text: 'UK Visas and Immigration is making changes to the Immigration Rules affecting various categories.'
+    data:
+      text: 'UK Visas and Immigration is making changes to the Immigration Rules affecting various categories.'
