@@ -118,3 +118,44 @@ examples:
             text: No numbers here
           - href: "#third-thing"
             text: None here either
+  right_to_left:
+    data:
+      contents:
+        - href: "#section"
+          text: "هل يمكنك تقديم"
+        - href: "#section-1"
+          text: "أعد مستند"
+        - href: "#section-2"
+          text: "تقديم الطلب"
+    context:
+      right_to_left: true
+  right_to_left_with_formatted_numbers:
+    data:
+      format_numbers: true
+      contents:
+        - href: "#section"
+          text: "هل يمكنك تقديم"
+        - href: "#section-1"
+          text: "أعد مستند"
+        - href: "#section-2"
+          text: "تقديم الطلب"
+    context:
+      right_to_left: true
+  right_to_left_with_nested_contents_lists:
+    data:
+      contents:
+        - href: "#section"
+          text: "هل يمكنك تقديم"
+        - href: "#section-1"
+          text: "أعد مستند"
+        - href: "#section-2"
+          text: "تقديم الطلب"
+          items:
+            - href: "#section"
+              text: "هل يمكنك تقديم"
+            - href: "#section-1"
+              text: "أعد مستند"
+            - href: "#section-2"
+              text: "تقديم الطلب"
+    context:
+      right_to_left: true

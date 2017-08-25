@@ -56,3 +56,15 @@ examples:
       - locale: 'zh'
         base_path: '/zh'
         text: '中文'
+  right_to_left:
+    data:
+      translations:
+        - locale: 'en'
+          base_path: '/en'
+          text: 'English'
+        - locale: 'ar'
+          base_path: '/ar'
+          text: 'العربية'
+          active: true
+    context:
+      right_to_left: true

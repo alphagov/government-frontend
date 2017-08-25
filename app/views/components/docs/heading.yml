@@ -17,6 +17,11 @@ examples:
   default:
     data:
       text: 'Download the full outcome'
+  right_to_left:
+    data:
+      text: 'مستندات'
+    context:
+      right_to_left: true
   with_id_attribute:
     data:
       text: 'Detail of outcome'

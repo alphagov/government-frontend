@@ -6,3 +6,8 @@ examples:
   default:
     data:
       text: 'UK Visas and Immigration is making changes to the Immigration Rules affecting various categories.'
+  right_to_left:
+    data:
+      text: 'قرارات تحقيقات وزارة الدفاع في الانتهاكات المزعومة للمادة ٢ والمادة ٣ من المعاهدة الاوروبية لحقوق الانسان خلال العمليات العسكرية في العراق.'
+    context:
+      right_to_left: true

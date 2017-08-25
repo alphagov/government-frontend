@@ -35,3 +35,9 @@ examples:
   with_only_one_link_provided:
     data:
       facebook_href: '/only-facebook-link'
+  right_to_left:
+    data:
+      facebook_href: '/facebook-link'
+      twitter_href: '/twitter-link'
+    context:
+      right_to_left: true

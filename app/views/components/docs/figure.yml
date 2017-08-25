@@ -25,3 +25,10 @@ examples:
       src: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54374/s630_the_lords_chamber.jpg'
       alt: 'An image of the lords chamber'
       caption: 'The Lords Chamber'
+  right_to_left_with_caption:
+    data:
+      src: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/31637/s300_Visas_-_Website.jpg'
+      alt: 'تأشيرات'
+      caption: 'تأشيرات'
+    context:
+      right_to_left: true
