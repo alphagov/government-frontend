@@ -22,8 +22,6 @@ accessibility_criteria: |
   - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
   - have visible text
 examples:
-  # TODO: We need to add a fixture to show component rendering right-to-left.
-  # This is dependant on being able to provide context to fixtures.
   default:
     data:
       translations:
