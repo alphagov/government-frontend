@@ -1,11 +1,14 @@
 require 'gds_api/content_store'
 
 class ContentItemsController < ApplicationController
+  class SpecialRouteReturned < StandardError; end
+
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
   rescue_from ActionView::MissingTemplate, with: :error_406
   rescue_from ActionController::UnknownFormat, with: :error_406
+  rescue_from SpecialRouteReturned, with: :error_notfound
 
   attr_accessor :content_item
 
@@ -28,7 +31,12 @@ private
 
   def load_content_item
     content_item = content_store.content_item(content_item_path)
+    raise SpecialRouteReturned if special_route?(content_item)
     @content_item = present(content_item)
+  end
+
+  def special_route?(content_item)
+    content_item && content_item['document_type'] == "special_route"
   end
 
   def present(content_item)
