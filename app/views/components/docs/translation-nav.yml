@@ -21,36 +21,48 @@ accessibility_criteria: |
   - be usable with touch
   - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
   - have visible text
-fixtures:
-  # TODO: We need to add a fixture to show component rendering right-to-left.
-  # This is dependant on being able to provide context to fixtures.
+examples:
   default:
-    translations:
-    - locale: 'en'
-      base_path: '/en'
-      text: 'English'
-      active: true
-    - locale: 'hi'
-      base_path: '/hi'
-      text: 'हिंदी'
+    data:
+      translations:
+      - locale: 'en'
+        base_path: '/en'
+        text: 'English'
+        active: true
+      - locale: 'hi'
+        base_path: '/hi'
+        text: 'हिंदी'
   multiple_translations:
-    translations:
-    - locale: 'en'
-      base_path: '/en'
-      text: 'English'
-      active: true
-    - locale: 'fr'
-      base_path: '/fr'
-      text: 'Français'
-    - locale: 'hi'
-      base_path: '/hi'
-      text: 'हिंदी'
-    - locale: 'ja'
-      base_path: '/ja'
-      text: '日本語'
-    - locale: 'ur'
-      base_path: '/ur'
-      text: 'اردو'
-    - locale: 'zh'
-      base_path: '/zh'
-      text: '中文'
+    data:
+      translations:
+      - locale: 'en'
+        base_path: '/en'
+        text: 'English'
+        active: true
+      - locale: 'fr'
+        base_path: '/fr'
+        text: 'Français'
+      - locale: 'hi'
+        base_path: '/hi'
+        text: 'हिंदी'
+      - locale: 'ja'
+        base_path: '/ja'
+        text: '日本語'
+      - locale: 'ur'
+        base_path: '/ur'
+        text: 'اردو'
+      - locale: 'zh'
+        base_path: '/zh'
+        text: '中文'
+  right_to_left:
+    data:
+      translations:
+        - locale: 'en'
+          base_path: '/en'
+          text: 'English'
+        - locale: 'ar'
+          base_path: '/ar'
+          text: 'العربية'
+          active: true
+    context:
+      right_to_left: true

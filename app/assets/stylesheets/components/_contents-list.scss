@@ -40,6 +40,11 @@
   &:before {
     content: "— ";
     margin-left: -$contents-spacing;
+
+    .direction-rtl & {
+      margin-left: 0;
+      margin-right: -$contents-spacing;
+    }
   }
 
   // Focus styles on IE8 and older include the

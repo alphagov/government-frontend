@@ -18,9 +18,11 @@ accessibility_criteria: |
   The download icon must:
 
   - be presentational and ignored by screen readers
-fixtures:
+examples:
   default:
-    href: '/download-this'
+    data:
+      href: '/download-this'
   custom_link_text:
-    href: '/download-map'
-    link_text: 'Download Map (PDF)'
+    data:
+      href: '/download-map'
+      link_text: 'Download Map (PDF)'

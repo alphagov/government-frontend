@@ -29,86 +29,133 @@ accessibility_criteria: |
   - have visible text
 
   Links with formatted numbers must separate the number and text with a space for correct screen reader pronunciation. This changes pronunciation from "1 dot Item" to "1 Item".
-fixtures:
+examples:
   default:
-    contents:
-      - href: "#first-thing"
-        text: First thing
-      - href: "#second-thing"
-        text: Second thing
-      - href: "#third-thing"
-        text: Third thing
+    data:
+      contents:
+        - href: "#first-thing"
+          text: First thing
+        - href: "#second-thing"
+          text: Second thing
+        - href: "#third-thing"
+          text: Third thing
   long_text:
-    contents:
-      - href: "#first-thing"
-        text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      - href: "#second-thing"
-        text: Another pretty long contents list entry, not as long as the first, but still a little.
-      - href: "#third-thing"
-        text: Third thing
+    data:
+      contents:
+        - href: "#first-thing"
+          text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        - href: "#second-thing"
+          text: Another pretty long contents list entry, not as long as the first, but still a little.
+        - href: "#third-thing"
+          text: Third thing
   nested_contents_lists:
-    contents:
-      - href: "#first-thing"
-        text: First thing
-      - href: "#second-thing"
-        text: Second thing
-      - href: "#third-thing"
-        text: Third thing
-        items:
-          - href: "#sub-third-thing"
-            text: Sub third thing
-          - href: "#another-third-thing"
-            text: Another third thing
-      - href: "#fourth-thing"
-        text: Fourth thing
+    data:
+      contents:
+        - href: "#first-thing"
+          text: First thing
+        - href: "#second-thing"
+          text: Second thing
+        - href: "#third-thing"
+          text: Third thing
+          items:
+            - href: "#sub-third-thing"
+              text: Sub third thing
+            - href: "#another-third-thing"
+              text: Another third thing
+        - href: "#fourth-thing"
+          text: Fourth thing
   formats_numbers:
-    format_numbers: true
-    contents:
-      - href: "#first-thing"
-        text: 1. First thing
-      - href: "#second-thing"
-        text: 2. Second thing
-      - href: "#third-thing"
-        text: 3. Third thing
+    data:
+      format_numbers: true
+      contents:
+        - href: "#first-thing"
+          text: 1. First thing
+        - href: "#second-thing"
+          text: 2. Second thing
+        - href: "#third-thing"
+          text: 3. Third thing
   formats_complex_numbers:
-    format_numbers: true
-    contents:
-      - href: "#"
-        text: 1. Item
-      - href: "#"
-        text: 1.1 Sub item
-      - href: "#"
-        text: 1.2 Sub item
-      - href: "#"
-        text: "1.02 longer decimals allowed"
-      - href: "#"
-        text: "1.021 even longer decimals ignored"
-      - href: "#"
-        text: 1 Number without period
-      - href: "#"
-        text: 10. Two digit numbers
-      - href: "#"
-        text: 99. Two digit numbers
-      - href: "#"
-        text: 100. Three digit numbers
-      - href: "#"
-        text: 2017 four digit numbers ignored
-      - href: "#"
-        text: "2001: A space odyssey"
+    data:
+      format_numbers: true
+      contents:
+        - href: "#"
+          text: 1. Item
+        - href: "#"
+          text: 1.1 Sub item
+        - href: "#"
+          text: 1.2 Sub item
+        - href: "#"
+          text: "1.02 longer decimals allowed"
+        - href: "#"
+          text: "1.021 even longer decimals ignored"
+        - href: "#"
+          text: 1 Number without period
+        - href: "#"
+          text: 10. Two digit numbers
+        - href: "#"
+          text: 99. Two digit numbers
+        - href: "#"
+          text: 100. Three digit numbers
+        - href: "#"
+          text: 2017 four digit numbers ignored
+        - href: "#"
+          text: "2001: A space odyssey"
   nested_with_formatted_numbers:
-    format_numbers: true
-    contents:
-      - href: "#first-thing"
-        text: 1. First thing
-        items:
-        - href: "#second-thing"
-          text: 2. Numbers not parsed
-        - href: "#third-thing"
-          text: 3. Numbers are just text
-      - href: "#first-thing"
-        text: 2. Next thing
-        items:
-        - href: "#second-thing"
-          text: No numbers here
-        - href: "#third-thing"
-          text: None here either
+    data:
+      format_numbers: true
+      contents:
+        - href: "#first-thing"
+          text: 1. First thing
+          items:
+          - href: "#second-thing"
+            text: 2. Numbers not parsed
+          - href: "#third-thing"
+            text: 3. Numbers are just text
+        - href: "#first-thing"
+          text: 2. Next thing
+          items:
+          - href: "#second-thing"
+            text: No numbers here
+          - href: "#third-thing"
+            text: None here either
+  right_to_left:
+    data:
+      contents:
+        - href: "#section"
+          text: "هل يمكنك تقديم"
+        - href: "#section-1"
+          text: "أعد مستند"
+        - href: "#section-2"
+          text: "تقديم الطلب"
+    context:
+      right_to_left: true
+  right_to_left_with_formatted_numbers:
+    data:
+      format_numbers: true
+      contents:
+        - href: "#section"
+          text: "هل يمكنك تقديم"
+        - href: "#section-1"
+          text: "أعد مستند"
+        - href: "#section-2"
+          text: "تقديم الطلب"
+    context:
+      right_to_left: true
+  right_to_left_with_nested_contents_lists:
+    data:
+      contents:
+        - href: "#section"
+          text: "هل يمكنك تقديم"
+        - href: "#section-1"
+          text: "أعد مستند"
+        - href: "#section-2"
+          text: "تقديم الطلب"
+          items:
+            - href: "#section"
+              text: "هل يمكنك تقديم"
+            - href: "#section-1"
+              text: "أعد مستند"
+            - href: "#section-2"
+              text: "تقديم الطلب"
+    context:
+      right_to_left: true

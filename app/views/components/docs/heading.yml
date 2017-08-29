@@ -13,12 +13,20 @@ accessibility_criteria: |
   - be part of a correct heading structure for a page
   - be semantically represented as a heading
   - convey the heading level
-fixtures:
+examples:
   default:
-    text: 'Download the full outcome'
+    data:
+      text: 'Download the full outcome'
+  right_to_left:
+    data:
+      text: 'مستندات'
+    context:
+      right_to_left: true
   with_id_attribute:
-    text: 'Detail of outcome'
-    id: 'detail_of_outcome'
+    data:
+      text: 'Detail of outcome'
+      id: 'detail_of_outcome'
   specific_heading_level:
-    text: 'Original consultation'
-    heading_level: 3
+    data:
+      text: 'Original consultation'
+      heading_level: 3

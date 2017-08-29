@@ -9,12 +9,15 @@ accessibility_criteria: |
 
   - have a border colour contrast ratio of more than 4.5:1 with its background to be visually distinct.
   - always render headings with associated description content, so there are no isolated heading elements inside the component
-fixtures:
+examples:
   default:
-    title: 'Statistics release cancelled'
+    data:
+      title: 'Statistics release cancelled'
   with_description_text:
-    title: 'Statistics release cancelled'
-    description_text: 'Duplicate, added in error'
+    data:
+      title: 'Statistics release cancelled'
+      description_text: 'Duplicate, added in error'
   with_description_govspeak:
-    title: 'Statistics release update'
-    description_govspeak: '<p>The Oil &amp; Gas Authority launched a new website on 3 October 2016 to reflect its new status as a government company.</p><p>This formalises the transfer of the Secretary of State’s regulatory powers in respect of oil and gas to the OGA, and grants it new powers. This website will no longer be updated. Visitors should refer to <a rel="external" href="https://www.ogauthority.co.uk/news-publications/announcements/2015/establishment-of-the-oil-and-gas-authority-1/">www.ogauthority.co.uk</a></p>'
+    data:
+      title: 'Statistics release update'
+      description_govspeak: '<p>The Oil &amp; Gas Authority launched a new website on 3 October 2016 to reflect its new status as a government company.</p><p>This formalises the transfer of the Secretary of State’s regulatory powers in respect of oil and gas to the OGA, and grants it new powers. This website will no longer be updated. Visitors should refer to <a rel="external" href="https://www.ogauthority.co.uk/news-publications/announcements/2015/establishment-of-the-oil-and-gas-authority-1/">www.ogauthority.co.uk</a></p>'

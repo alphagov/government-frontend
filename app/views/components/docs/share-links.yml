@@ -22,13 +22,22 @@ accessibility_criteria: |
   - indicate when it has focus
 
   The share link icons must be presentational and ignored by screen readers.
-fixtures:
+examples:
   default:
-    facebook_href: '/facebook-link'
-    twitter_href: '/twitter-link'
+    data:
+      facebook_href: '/facebook-link'
+      twitter_href: '/twitter-link'
   with_custom_text:
-    title: 'Share this news article'
-    facebook_href: '/facebook-share-link'
-    twitter_href: '/twitter-share-link'
+    data:
+      title: 'Share this news article'
+      facebook_href: '/facebook-share-link'
+      twitter_href: '/twitter-share-link'
   with_only_one_link_provided:
-    facebook_href: '/only-facebook-link'
+    data:
+      facebook_href: '/only-facebook-link'
+  right_to_left:
+    data:
+      facebook_href: '/facebook-link'
+      twitter_href: '/twitter-link'
+    context:
+      right_to_left: true

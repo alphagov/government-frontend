@@ -14,11 +14,14 @@ accessibility_criteria: |
   - have visible text
 
   Icons in subscription links must be presentational and ignored by screen readers.
-fixtures:
+examples:
   default:
-    email_signup_link: '/foreign-travel-advice/singapore/email-signup'
-    feed_link: '/foreign-travel-advice/singapore.atom'
+    data:
+      email_signup_link: '/foreign-travel-advice/singapore/email-signup'
+      feed_link: '/foreign-travel-advice/singapore.atom'
   with_only_email_signup_link:
-    email_signup_link: '/foreign-travel-advice/singapore/email-signup'
+    data:
+      email_signup_link: '/foreign-travel-advice/singapore/email-signup'
   with_only_feed_link:
-    feed_link: '/foreign-travel-advice/singapore.atom'
+    data:
+      feed_link: '/foreign-travel-advice/singapore.atom'
