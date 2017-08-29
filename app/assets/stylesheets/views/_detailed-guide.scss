@@ -2,6 +2,11 @@
   @include sidebar-with-body;
   @include taxonomy-sidebar;
 
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
+
   .related-mainstream-content {
     background: $panel-colour;
     padding: $gutter-half;
