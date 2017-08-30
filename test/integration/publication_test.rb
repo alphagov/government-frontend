@@ -61,7 +61,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
 
   test "national statistics publication shows a logo" do
     setup_and_visit_content_item('statistics_publication')
-    assert page.has_css?(".national-statistics-logo img")
+    assert page.has_css?('img[alt="National Statistics"]')
   end
 
   test "renders 'Applies to' block in metadata when there are excluded nations" do

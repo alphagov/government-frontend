@@ -1,7 +1,5 @@
 .answer {
-  .add-title-margin {
-    @include responsive-top-margin;
-  }
+  @include add-title-margin;
 
   .last-updated {
     padding-bottom: $gutter-half;

@@ -14,7 +14,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert page.has_css?('.national-statistics-logo img')
+    assert page.has_css?('img[alt="National Statistics"]')
     assert_has_component_metadata_pair("Release date", "January 2016 (provisional)")
   end
 
