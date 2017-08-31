@@ -1,19 +1,14 @@
 .travel-advice {
   @include parts;
-
-  .add-title-margin {
-    @include responsive-top-margin;
-  }
+  @include add-title-margin;
 
   .part-navigation {
     margin-bottom: $gutter * 1.5;
   }
 
+  // TODO: Remove this when components can accept variable unidirectional spacing,
+  // the component above should have a bigger margin-bottom.
   .map {
     margin-top: $gutter;
-
-    img {
-      max-width: 100%;
-    }
   }
 }

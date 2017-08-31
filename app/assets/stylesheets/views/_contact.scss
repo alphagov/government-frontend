@@ -1,7 +1,5 @@
 .contact {
-  .add-title-margin {
-    @include responsive-top-margin;
-  }
+  @include add-title-margin;
 
   // FIXME: Overrides specific govspeak heading styles while h3s & h4s look similar
   // Govspeak component renders h3s and h4s at the same font size with different margins

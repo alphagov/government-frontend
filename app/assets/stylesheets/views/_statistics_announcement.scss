@@ -1,5 +1,5 @@
 .statistics-announcement {
-  @include national-statistics-logo;
+  @include add-title-margin;
 
   .release-date-change-notice {
     h2 {

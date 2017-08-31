@@ -1,9 +1,6 @@
 .guide {
   @include parts;
-
-  .add-title-margin {
-    @include responsive-top-margin;
-  }
+  @include add-title-margin;
 
   .part-navigation li {
     list-style: decimal;
