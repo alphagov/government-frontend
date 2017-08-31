@@ -1,0 +1,14 @@
+.app-c-back-to-top {
+  @include core-16;
+  display: inline-block;
+  margin-bottom: $gutter-half;
+  margin-left: $gutter-half;
+  margin-right: $gutter-half;
+}
+
+.app-c-back-to-top__icon {
+  float: left;
+  margin-right: .3em;
+  width: .8em;
+  height: .968em;
+}

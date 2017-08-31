@@ -17,7 +17,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
   test "renders back to contents elements" do
     setup_and_visit_content_item('detailed_guide')
-    assert page.has_css?(".back-to-content[href='#contents']")
+    assert page.has_css?(".app-c-back-to-top[href='#contents']")
   end
 
   test "withdrawn detailed guide" do
@@ -76,13 +76,5 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
 
     assert page.has_css?('.app-c-translation-nav')
-  end
-
-  test 'return to contents link is tracked' do
-    setup_and_visit_content_item('detailed_guide')
-
-    assert page.has_css?("a.back-to-content[data-track-category='contentsClicked']")
-    assert page.has_css?("a.back-to-content[data-track-action='backToContentsLinkClicked']")
-    assert page.has_css?("a.back-to-content[data-track-label='contents']")
   end
 end

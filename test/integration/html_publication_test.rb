@@ -58,7 +58,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
   test "renders back to contents elements" do
     setup_and_visit_content_item('published')
-    assert page.has_css?(".back-to-content[href='#contents']")
+    assert page.has_css?(".app-c-back-to-top[href='#contents']")
   end
 
   test "prime minister office organisation html publication" do
