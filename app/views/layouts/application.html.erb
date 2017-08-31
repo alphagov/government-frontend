@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield :title %> - GOV.UK</title>
+  <title>
+    <%if content_for?(:title) %>
+      <%= yield :title %> - GOV.UK
+    <% else %>
+      <%= @content_item.page_title %> - GOV.UK
+    <% end %>
+  </title>
   <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application", integrity: true, crossorigin: 'anonymous' %><!--<![endif]-->
   <!--[if IE 6]><%= stylesheet_link_tag "application-ie6" %><script>var ieVersion = 6;</script><![endif]-->
   <!--[if IE 7]><%= stylesheet_link_tag "application-ie7" %><script>var ieVersion = 7;</script><![endif]-->

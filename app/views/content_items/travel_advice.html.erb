@@ -1,5 +1,4 @@
 <%
-  content_for :title, @content_item.page_title
   content_for :simple_header, true
   content_for :extra_head_content do %>
   <%= auto_discovery_link_tag :atom, @content_item.feed_link,

@@ -6,4 +6,8 @@ class GonePresenter < ContentItemPresenter
     @explanation = content_item['details']['explanation']
     @alternative_path = content_item['details']['alternative_path']
   end
+
+  def page_title
+    "No longer available"
+  end
 end

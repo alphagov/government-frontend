@@ -1,5 +1,3 @@
-<%= content_for :title, "#{@content_item.page_title} - #{t("content_item.schema_name.#{@content_item.document_type}", count: 1)}" %>
-
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 <%= render 'shared/metadata', content_item: @content_item %>
