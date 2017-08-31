@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>
-    <%if content_for?(:page) %>
-      <%= yield :page %> - GOV.UK
+    <%if content_for?(:title) %>
+      <%= yield :title %> - GOV.UK
     <% else %>
       <%= @content_item.page_title %> - GOV.UK
     <% end %>
