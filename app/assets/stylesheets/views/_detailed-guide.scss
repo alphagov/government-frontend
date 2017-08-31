@@ -25,11 +25,6 @@
     position: relative;
   }
 
-  // To compensate for the -$gutter-half from @include sidebar-with-body.
-  .back-to-content {
-    margin-left: $gutter-half;
-  }
-
   .logo-image {
     max-width: 70%;
 
