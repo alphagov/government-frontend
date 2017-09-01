@@ -6,7 +6,7 @@ class CorporateInformationPagePresenter < ContentItemPresenter
   include CorporateInformationGroups
 
   def page_title
-    page_title = title.to_s
+    page_title = super
     page_title += " - #{default_organisation['title']}" if default_organisation
     page_title
   end

@@ -22,6 +22,11 @@ class GuidePresenterTest
       assert_equal presented_item.current_part_title_with_index, "1. #{first_part_title}"
     end
 
+    test 'presents withdrawn in the title for withdrawn content' do
+      presented_item = presented_item(schema_name, nil, "withdrawn_notice" => { "explanation": "Withdrawn", "withdrawn_at": "2014-08-22T10:29:02+01:00" })
+      assert_equal "[Withdrawn] The national curriculum", presented_item.page_title
+    end
+
     test "presents a print link" do
       assert_equal "#{schema_item['base_path']}/print", presented_item.print_link
     end

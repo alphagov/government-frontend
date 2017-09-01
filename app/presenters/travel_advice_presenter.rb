@@ -4,9 +4,9 @@ class TravelAdvicePresenter < ContentItemPresenter
 
   def page_title
     if is_summary?
-      title
+      super
     else
-      "#{current_part_title} - #{title}"
+      "#{current_part_title} - #{super}"
     end
   end
 

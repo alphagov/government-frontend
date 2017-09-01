@@ -5,9 +5,9 @@ class GuidePresenter < ContentItemPresenter
 
   def page_title
     if @part_slug
-      "#{title}: #{current_part_title}"
+      "#{super}: #{current_part_title}"
     else
-      title
+      super
     end
   end
 

@@ -43,6 +43,11 @@ class TravelAdvicePresenterTest
       assert_equal "#{first_part['title']} - #{example['title']}", presented_part.page_title
     end
 
+    test 'presents withdrawn in the title for withdrawn content' do
+      presented_item = presented_item("full-country", nil, "withdrawn_notice" => { "explanation": "Withdrawn", "withdrawn_at": "2014-08-22T10:29:02+01:00" })
+      assert_equal "[Withdrawn] Albania travel advice", presented_item.page_title
+    end
+
     test "presents summary as the current part when no part slug provided" do
       example = schema_item("full-country")
       presented = presented_item("full-country")
