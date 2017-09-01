@@ -19,6 +19,11 @@ class CorporateInformationPagePresenterTest
       assert_equal "About us", presented_item.page_title
     end
 
+    test 'presents withdrawn in the title for withdrawn content' do
+      presented_item = presented_item(schema_name, "withdrawn_notice" => { "explanation": "Withdrawn", "withdrawn_at": "2014-08-22T10:29:02+01:00" })
+      assert_equal "[Withdrawn] About us - Department of Health", presented_item.page_title
+    end
+
     test 'has contents list' do
       assert presented_item.is_a?(ContentsList)
     end
