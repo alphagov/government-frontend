@@ -1,3 +1,5 @@
+@import "grid_layout";
+
 .app-c-banner {
   @include responsive-bottom-margin;
   @include core-19;
@@ -19,18 +21,19 @@
 }
 
 .app-c-banner__main {
-  margin-top: $gutter-half;
+  @include grid-column( 2 / 3, $full-width: tablet, $float: right );
 
   @include media(tablet) {
-    margin-top: 0;
-    margin-left: -$gutter-one-third;
     padding-right: 0;
     border-left: 1px solid $white;
   }
 }
 
 .app-c-banner__aside {
+  margin-top: $gutter-half;
+
   @include media(tablet) {
+    margin-top: 0;
     padding-right: $gutter / 2;
   }
 }
