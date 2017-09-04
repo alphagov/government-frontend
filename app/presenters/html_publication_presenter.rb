@@ -20,7 +20,11 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def format_sub_type
-    parent["document_type"] if parent && parent["document_type"].present?
+    if parent && parent["document_type"].present?
+      parent["document_type"]
+    else
+      "publication"
+    end
   end
 
   def last_changed
@@ -55,5 +59,9 @@ private
 
   def public_timestamp
     content_item["details"]["public_timestamp"]
+  end
+
+  def withdrawal_notice_context
+    I18n.t("content_item.schema_name.#{format_sub_type}", count: 1)
   end
 end
