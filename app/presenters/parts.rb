@@ -17,7 +17,7 @@ module Parts
   end
 
   def has_valid_part?
-    !!current_part
+    !!current_part && current_part != parts.first
   end
 
   def current_part_title

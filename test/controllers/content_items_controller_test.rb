@@ -72,6 +72,18 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_redirected_to content_item['base_path']
   end
 
+  test "redirects route for first path to base path" do
+    content_item = content_store_has_schema_example('guide', 'guide')
+    invalid_part_path = "#{path_for(content_item)}/#{content_item['details']['parts'].first['slug']}"
+
+    stub_request(:get, %r{#{invalid_part_path}}).to_return(status: 200, body: content_item.to_json, headers: {})
+
+    get :show, params: { path: invalid_part_path }
+
+    assert_response :redirect
+    assert_redirected_to content_item['base_path']
+  end
+
   test "returns HTML when an unspecific accepts header is requested (eg by IE8 and below)" do
     request.headers["Accept"] = "*/*"
     content_item = content_store_has_schema_example('travel_advice', 'full-country')
