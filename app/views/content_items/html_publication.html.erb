@@ -13,13 +13,13 @@
 </div>
 
 <header class="publication-header" id="contents">
-  <div class="html-publication-title">
-    <% if @content_item.format_sub_type %>
-      <p class="context"><%= I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1) %></p>
-    <% end %>
-    <h1><%= @content_item.title %></h1>
-  </div>
-  <%= @content_item.last_changed %>
+  <%= render partial: 'govuk_component/title', locals: {
+    title: @content_item.title,
+    context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1),
+    inverse: true,
+    margin_bottom: 0
+  } %>
+  <p class="last-changed"><%= @content_item.last_changed %></p>
 </header>
 
 <div
