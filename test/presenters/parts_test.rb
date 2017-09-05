@@ -125,6 +125,21 @@ class PartsTest < ActiveSupport::TestCase
     refute @parts.has_valid_part?
   end
 
+  test 'invalid when slug for first part is present in URL' do
+    class << @parts
+      def part_slug
+        'first-slug'
+      end
+
+      def requested_content_item_path
+        base_path + '/' + part_slug
+      end
+    end
+
+    assert @parts.requesting_a_part?
+    refute @parts.has_valid_part?
+  end
+
   test 'defaults to first part as current part when parts exist but no part requested' do
     presenting_first_part_in_content_item
 
