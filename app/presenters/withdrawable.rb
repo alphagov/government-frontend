@@ -26,8 +26,11 @@ private
   end
 
   def withdrawal_notice_title
-    friendly_schema_name = I18n.t("content_item.schema_name.#{schema_name}", count: 1).downcase
-    "This #{friendly_schema_name} was withdrawn on #{withdrawal_notice_time}".html_safe
+    "This #{withdrawal_notice_context.downcase} was withdrawn on #{withdrawal_notice_time}".html_safe
+  end
+
+  def withdrawal_notice_context
+    I18n.t("content_item.schema_name.#{schema_name}", count: 1)
   end
 
   def withdrawal_notice_time

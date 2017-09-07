@@ -22,6 +22,8 @@
   <%= @content_item.last_changed %>
 </header>
 
+<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+
 <div
   class="grid-row sidebar-with-body"
   data-module="sticky-element-container"
