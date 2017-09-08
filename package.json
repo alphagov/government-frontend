@@ -1,0 +1,13 @@
+{
+  "name": "government-frontend",
+  "version": "1.0.0",
+  "description": "government-frontend",
+  "main": "index.js",
+  "repository": "git@github.com:alphagov/government-frontend.git",
+  "author": "GOV.UK Dev <govuk-dev@digital.cabinet-office.gov.uk>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "surge": "^0.19.0"
+  }
+}
