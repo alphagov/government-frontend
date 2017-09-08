@@ -35,6 +35,12 @@
     "S3_SECRET_ACCESS_KEY": {
       "required": true
     },
+    "SURGE_LOGIN": {
+      "required": true
+    },
+    "SURGE_TOKEN": {
+      "required": true
+    },
     "DEPLOY_TASKS": {
       "value": "wraith:all_document_types"
     }
