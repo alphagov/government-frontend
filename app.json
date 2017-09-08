@@ -50,6 +50,6 @@
   ],
   "addons": [],
   "scripts": {
-    "postdeploy": "bundle exec rake wraith:all_document_types[1]"
+    "postdeploy": "bundle exec rake wraith:all_document_types[1]; yarn global add surge; surge --project public/shots/ --domain govuk-vr.surge.sh"
   }
 }
