@@ -84,4 +84,10 @@ class DetailedGuidePresenterTest < PresenterTestCase
     assert example['details'].include?('national_applicability')
     assert_equal presented.applies_to, 'England, Scotland, and Wales (see guidance for <a rel="external" href="http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for">Northern Ireland</a>)'
   end
+
+  test 'context in title is overridden to display as guidance' do
+    I18n.with_locale("fr") do
+      assert_equal I18n.t("content_item.schema_name.guidance", count: 1), presented_item.title_and_context[:context]
+    end
+  end
 end

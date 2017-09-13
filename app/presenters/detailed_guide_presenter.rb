@@ -6,8 +6,10 @@ class DetailedGuidePresenter < ContentItemPresenter
   include Political
   include TitleAndContext
 
-  def context
-    parent["title"]
+  def title_and_context
+    super.tap do |t|
+      t[:context] = I18n.t("content_item.schema_name.guidance", count: 1)
+    end
   end
 
   def related_guides
