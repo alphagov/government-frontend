@@ -12,15 +12,8 @@ accessibility_criteria: |
   - [identify the language of the text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html#meaning-other-lang-id-examples-head)
 
     [Watch a screen reader pronounce text differently based on lang attribute](https://bit.ly/screenreaderpronunciation)
-  - accept focus
-  - be focusable with a keyboard
-  - indicate when it has focus
-  - be usable with a keyboard
-  - change in appearance when touched (in the touch-down state)
-  - change in appearance when hovered
-  - be usable with touch
-  - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
-  - have visible text
+shared_accessibility_criteria:
+  - link
 examples:
   default:
     data:
