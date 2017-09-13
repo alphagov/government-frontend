@@ -20,6 +20,9 @@
     "RAILS_SERVE_STATIC_ASSETS": {
       "value": "yes"
     },
+    "RAILS_SERVE_STATIC_FILES": {
+      "value": "yes"
+    },
     "SECRET_KEY_BASE": {
       "generator": "secret"
     },
@@ -31,13 +34,28 @@
     },
     "S3_SECRET_ACCESS_KEY": {
       "required": true
+    },
+    "SURGE_LOGIN": {
+      "required": true
+    },
+    "SURGE_TOKEN": {
+      "required": true
+    },
+    "DEPLOY_TASKS": {
+      "value": "wraith:all_document_types"
     }
   },
   "image": "heroku/ruby",
   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    },
+    {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
     }
   ],
-  "addons": []
+  "addons": [],
+  "scripts": {
+    "postdeploy": "bundle exec rake wraith:all_document_types[1]; yarn global add surge; surge --project public/shots/ --domain govuk-vr.surge.sh"
+  }
 }

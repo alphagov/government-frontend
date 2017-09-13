@@ -1,4 +1,5 @@
 require 'rest-client'
+require 'phantomjs' if ENV['HEROKU_APP_NAME'].to_s.length.positive?
 require "#{Rails.root}/lib/helpers/wraith_config_helper.rb"
 require "#{Rails.root}/lib/helpers/document_types_helper.rb"
 
