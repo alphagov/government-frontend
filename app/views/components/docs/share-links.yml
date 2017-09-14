@@ -14,14 +14,9 @@ body: |
     - [Right to left](/government/news/uk-sets-out-long-term-support-for-stable-secure-and-prosperous-afghanistan-to-2020.ur)
 
 accessibility_criteria: |
-  The share link must:
-
-  - accept focus
-  - be focusable with a keyboard
-  - be usable with a keyboard
-  - indicate when it has focus
-
   The share link icons must be presentational and ignored by screen readers.
+shared_accessibility_criteria:
+  - link
 examples:
   default:
     data:

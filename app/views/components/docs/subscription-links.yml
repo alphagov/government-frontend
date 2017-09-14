@@ -1,19 +1,9 @@
 name: Subscription links
 description: Links to ‘Get email alerts’ and ‘Subscribe to feed’
 accessibility_criteria: |
-  The subscription links must:
-
-  - accept focus
-  - be focusable with a keyboard
-  - be usable with a keyboard
-  - indicate when they have focus
-  - change in appearance when touched (in the touch-down state)
-  - change in appearance when hovered
-  - be usable with touch
-  - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
-  - have visible text
-
   Icons in subscription links must be presentational and ignored by screen readers.
+shared_accessibility_criteria:
+  - link
 examples:
   default:
     data:

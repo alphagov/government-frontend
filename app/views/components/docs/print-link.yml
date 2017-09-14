@@ -1,19 +1,9 @@
 name: Print link
 description: A link with a print icon
 accessibility_criteria: |
-  The print link must:
-
-  - accept focus
-  - be focusable with a keyboard
-  - be usable with a keyboard
-  - indicate when it has focus
-  - change in appearance when touched (in the touch-down state)
-  - change in appearance when hovered
-  - be usable with touch
-  - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
-  - have visible text
-
   The print icon must be presentational and ignored by screen readers.
+shared_accessibility_criteria:
+  - link
 examples:
   default:
     data:
