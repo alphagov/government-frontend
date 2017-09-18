@@ -125,7 +125,7 @@ GEM
       sass (>= 3.2.0)
     govuk_navigation_helpers (6.3.0)
       gds-api-adapters (>= 43.0)
-    govuk_publishing_components (1.7.0)
+    govuk_publishing_components (1.8.0)
       govspeak (>= 5.0.3)
       govuk_frontend_toolkit
       rails (>= 5.0.0.1)
@@ -326,7 +326,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.0)
   govuk_frontend_toolkit (= 5.1.0)
   govuk_navigation_helpers (~> 6.3)
-  govuk_publishing_components (~> 1.7.0)
+  govuk_publishing_components (~> 1.8.0)
   govuk_schemas
   htmlentities (= 4.3.4)
   jasmine-rails!
