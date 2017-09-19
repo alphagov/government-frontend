@@ -42,7 +42,7 @@ Not all schemas that this app can handle are rendered by it in production.
 
 Pages are rendered using components. Components can be specific to government-frontend or shared between applications.
 
-Shared components are provided by static and are documented in the [GOV.UK component guide](http://govuk-component-guide.herokuapp.com/).
+Shared components are provided by static and are documented in the [static component guide](https://govuk-static.herokuapp.com/component-guide).
 
 Components specific to government-frontend are [within the application](https://github.com/alphagov/government-frontend/tree/master/app/views/components) and follow rules set out by the [govuk_publishing_components](https://github.com/alphagov/govuk_publishing_components) gem. They are documented in the [government-frontend component guide](https://government-frontend.herokuapp.com/component-guide).
 
