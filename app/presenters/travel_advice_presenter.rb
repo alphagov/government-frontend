@@ -1,5 +1,5 @@
 class TravelAdvicePresenter < ContentItemPresenter
-  include Parts
+  include ContentParts
   include ActionView::Helpers::TextHelper
 
   def page_title

@@ -7,7 +7,7 @@ class TravelAdvicePresenterTest
     end
 
     test 'has parts' do
-      assert presented_item("full-country").is_a?(Parts)
+      assert presented_item("full-country").is_a?(ContentParts)
     end
 
     test "part slug set to nil when content item has parts but base path requested" do

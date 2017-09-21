@@ -7,7 +7,7 @@ class GuidePresenterTest
     end
 
     test 'has parts' do
-      assert presented_item.is_a?(Parts)
+      assert presented_item.is_a?(ContentParts)
     end
 
     test "presents unique page titles for each part" do
