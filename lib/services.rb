@@ -1,6 +1,11 @@
+require 'gds_api/content_store'
 require 'statsd'
 
 module Services
+  def self.content_store
+    @content_store ||= GdsApi::ContentStore.new(Plek.current.find("content-store"))
+  end
+
   def self.statsd
     @statsd ||= begin
       statsd_client = Statsd.new("localhost")
