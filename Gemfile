@@ -5,7 +5,7 @@ ruby File.read(".ruby-version").strip
 gem 'airbrake', github: 'alphagov/airbrake', branch: 'silence-dep-warnings-for-rails-5'
 gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
-gem 'gds-api-adapters', '~> 43.0'
+gem 'gds-api-adapters', '~> 48.0'
 gem 'govuk_ab_testing', '~> 2.0'
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'govuk_publishing_components', '~> 1.10.0', require: false
