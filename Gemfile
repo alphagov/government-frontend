@@ -18,7 +18,6 @@ gem 'rails-i18n', '>= 4.0.4'
 gem 'rails_translation_manager', '~> 0.0.2'
 gem 'sass-rails', '~> 5.0.4'
 gem 'slimmer', '~> 11.1.0'
-gem 'statsd-ruby', '1.4.0', require: 'statsd'
 gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 

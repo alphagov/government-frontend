@@ -1,4 +1,4 @@
 GovukNavigationHelpers.configure do |config|
   config.error_handler = GovukError
-  config.statsd = Services.statsd
+  config.statsd = GovukStatsd
 end
