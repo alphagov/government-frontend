@@ -1,4 +1,4 @@
-module Parts
+module ContentParts
   include ActionView::Helpers::UrlHelper
 
   def parts

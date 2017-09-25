@@ -1,5 +1,3 @@
-require 'gds_api/content_store'
-
 class ContentItemsController < ApplicationController
   class SpecialRouteReturned < StandardError; end
 
@@ -30,7 +28,7 @@ private
   end
 
   def load_content_item
-    content_item = content_store.content_item(content_item_path)
+    content_item = Services.content_store.content_item(content_item_path)
     raise SpecialRouteReturned if special_route?(content_item)
     @content_item = present(content_item)
   end
@@ -110,10 +108,6 @@ private
                                  .join('.')
 
     '/' + URI.encode(path_and_optional_locale)
-  end
-
-  def content_store
-    @content_store ||= GdsApi::ContentStore.new(Plek.current.find("content-store"))
   end
 
   def error_403(exception)

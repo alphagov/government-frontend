@@ -1,5 +1,5 @@
 class GuidePresenter < ContentItemPresenter
-  include Parts
+  include ContentParts
 
   attr_accessor :draft_access_token
 
@@ -13,8 +13,10 @@ class GuidePresenter < ContentItemPresenter
 
   def has_parts?
     unless parts.any?
-      Airbrake.notify("Guide with no parts",
-        error_message: "Guide rendered without any parts at #{base_path}")
+      GovukError.notify(
+        "Guide with no parts",
+        extra: { error_message: "Guide rendered without any parts at #{base_path}" }
+      )
     end
 
     parts.any?

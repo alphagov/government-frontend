@@ -97,8 +97,10 @@ private
   def finder
     parent_finder = content_item.dig("links", "finder", 0)
     if parent_finder.nil?
-      Airbrake.notify("Finder not found",
-        error_message: "Finder not found in #{base_path} content item")
+      GovukError.notify(
+        "Finder not found",
+        extra: { error_message: "Finder not found in #{base_path} content item" }
+      )
     end
 
     parent_finder
@@ -163,8 +165,10 @@ private
       if allowed_value
         facet_block(facet, allowed_value)
       else
-        Airbrake.notify("Facet value not in list of allowed values",
-          error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item")
+        GovukError.notify(
+          "Facet value not in list of allowed values",
+          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" }
+        )
         value
       end
     end

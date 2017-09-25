@@ -7,7 +7,7 @@ class GuidePresenterTest
     end
 
     test 'has parts' do
-      assert presented_item.is_a?(Parts)
+      assert presented_item.is_a?(ContentParts)
     end
 
     test "presents unique page titles for each part" do
@@ -83,9 +83,11 @@ class GuidePresenterTest
       assert_equal nav, {}
     end
 
-    test "sends Airbrake notification for guide with no parts" do
-      Airbrake.expects(:notify).with('Guide with no parts',
-        error_message: 'Guide rendered without any parts at /correct-marriage-registration')
+    test "sends an error notification for guide with no parts" do
+      GovukError.expects(:notify).with(
+        'Guide with no parts',
+        extra: { error_message: 'Guide rendered without any parts at /correct-marriage-registration' }
+      )
 
       presented_item('no-part-guide').has_parts?
     end

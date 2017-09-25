@@ -200,8 +200,10 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "not-an-allowed-value" }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
-      Airbrake.expects(:notify).twice.with('Facet value not in list of allowed values',
-        error_message: "Facet value 'not-an-allowed-value' not an allowed value for facet 'Facet name' on /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item")
+      GovukError.expects(:notify).twice.with(
+        'Facet value not in list of allowed values',
+        extra: { error_message: "Facet value 'not-an-allowed-value' not an allowed value for facet 'Facet name' on /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item" }
+      )
 
       presented = present_example(example)
       assert_equal "not-an-allowed-value", presented.metadata[:other]["Facet name"]
@@ -341,12 +343,14 @@ class SpecialistDocumentPresenterTest
       ], present_example(example_with_finder_facets).breadcrumbs
     end
 
-    test 'sends an Airbrake notification when there is no finder' do
+    test 'sends an error notification when there is no finder' do
       example = schema_item('aaib-reports')
       example['links']['finder'] = []
 
-      Airbrake.expects(:notify).with('Finder not found',
-        error_message: 'Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item')
+      GovukError.expects(:notify).with(
+        'Finder not found',
+        extra: { error_message: 'Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item' }
+      )
 
       present_example(example).metadata
     end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module PartsStubs
+module ContentPartsStubs
   def base_path
     '/base-path'
   end
@@ -45,11 +45,11 @@ module PresentingSecondPartInContentItem
   end
 end
 
-class PartsTest < ActiveSupport::TestCase
+class ContentPartsTest < ActiveSupport::TestCase
   def setup
     @parts = Object.new
-    @parts.extend(Parts)
-    @parts.extend(PartsStubs)
+    @parts.extend(ContentParts)
+    @parts.extend(ContentPartsStubs)
   end
 
   def presenting_first_part_in_content_item
