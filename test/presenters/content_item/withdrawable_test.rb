@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class WithdrawalTest < ActiveSupport::TestCase
+class ContentItemWithdrawableTest < ActiveSupport::TestCase
   def setup
     @withdrawable = Object.new
-    @withdrawable.extend(Withdrawable)
+    @withdrawable.extend(ContentItem::Withdrawable)
   end
 
   test 'content item is withdrawn' do

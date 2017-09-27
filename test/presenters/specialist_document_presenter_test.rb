@@ -19,7 +19,7 @@ class SpecialistDocumentPresenterTest
     end
 
     test 'has metadata' do
-      assert presented_item('aaib-reports').is_a?(Metadata)
+      assert presented_item('aaib-reports').is_a?(ContentItem::Metadata)
     end
 
     test 'presents headers as nested contents (with trailing colons removed)' do
@@ -82,7 +82,7 @@ class SpecialistDocumentPresenterTest
     end
 
     test 'has title without context' do
-      assert presented_item('aaib-reports').is_a?(TitleAndContext)
+      assert presented_item('aaib-reports').is_a?(ContentItem::TitleAndContext)
       title_component_params = {
                                   title: schema_item('aaib-reports')['title'],
                                   average_title_length: 'long'

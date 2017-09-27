@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class OrganisationBrandingTest < ActiveSupport::TestCase
-  include OrganisationBranding
+class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
+  include ContentItem::OrganisationBranding
 
   def test_organisation
     {
