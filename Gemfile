@@ -7,7 +7,7 @@ gem 'dalli'
 gem 'gds-api-adapters', '~> 48.0'
 gem 'govuk_ab_testing', '~> 2.0'
 gem 'govuk_frontend_toolkit', '5.1.0'
-gem 'govuk_publishing_components', '~> 1.10.0', require: false
+gem 'govuk_publishing_components', '~> 1.11.0', require: false
 gem 'htmlentities', '4.3.4'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
