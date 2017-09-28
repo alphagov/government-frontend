@@ -1,26 +1,26 @@
 require 'test_helper'
 
-module UpdatableStubs
+module ContentItemUpdatableStubs
   def display_date(date)
     date
   end
 end
 
-module UpdatableWithUpdates
+module ContentItemUpdatableWithUpdates
   def any_updates?
     true
   end
 end
 
-class UpdatableTest < ActiveSupport::TestCase
+class ContentItemUpdatableTest < ActiveSupport::TestCase
   def setup
     @updatable = Object.new
-    @updatable.extend(Updatable)
-    @updatable.extend(UpdatableStubs)
+    @updatable.extend(ContentItem::Updatable)
+    @updatable.extend(ContentItemUpdatableStubs)
   end
 
   test '#history returns an empty array when there is no change history' do
-    @updatable.extend(UpdatableWithUpdates)
+    @updatable.extend(ContentItemUpdatableWithUpdates)
     class << @updatable
       def content_item
         { 'details' => {} }
@@ -117,7 +117,7 @@ class UpdatableTest < ActiveSupport::TestCase
   end
 
   test '#history returns an array of hashes when there is change history' do
-    @updatable.extend(UpdatableWithUpdates)
+    @updatable.extend(ContentItemUpdatableWithUpdates)
     class << @updatable
       def content_item
         {
@@ -144,7 +144,7 @@ class UpdatableTest < ActiveSupport::TestCase
   end
 
   test '#history returns a reverse chronologically sorted array of hashes when there is change history' do
-    @updatable.extend(UpdatableWithUpdates)
+    @updatable.extend(ContentItemUpdatableWithUpdates)
     class << @updatable
       def content_item
         {

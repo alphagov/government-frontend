@@ -22,11 +22,11 @@ class FatalityNoticePresenterTest < PresenterTestCase
   end
 
   test 'is linkable' do
-    assert presented_item.is_a?(Linkable)
+    assert presented_item.is_a?(ContentItem::Linkable)
   end
 
   test 'is updatable' do
-    assert presented_item.is_a?(Updatable)
+    assert presented_item.is_a?(ContentItem::Updatable)
   end
 
   test 'it presents the body' do

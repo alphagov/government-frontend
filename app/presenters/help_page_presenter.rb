@@ -1,4 +1,4 @@
 class HelpPagePresenter < ContentItemPresenter
-  include Body
-  include LastUpdated
+  include ContentItem::Body
+  include ContentItem::LastUpdated
 end

@@ -1,7 +1,7 @@
 class PublicationPresenter < ContentItemPresenter
-  include Metadata
-  include NationalApplicability
-  include Political
+  include ContentItem::Metadata
+  include ContentItem::NationalApplicability
+  include ContentItem::Political
 
   def details
     content_item["details"]["body"]

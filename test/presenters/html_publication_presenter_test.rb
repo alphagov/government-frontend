@@ -42,7 +42,7 @@ class HtmlPublicationPresenterTest < PresenterTestCase
   end
 
   test 'has organisation branding' do
-    assert presented_item("published").is_a?(OrganisationBranding)
+    assert presented_item("published").is_a?(ContentItem::OrganisationBranding)
   end
 
   test 'includes custom organisation logos when a single organisation is listed' do

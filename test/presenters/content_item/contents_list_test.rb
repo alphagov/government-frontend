@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class ContentsListTest < ActiveSupport::TestCase
+class ContentItemContentsListTest < ActiveSupport::TestCase
   def setup
     @contents_list = Object.new
-    @contents_list.extend(ContentsList)
+    @contents_list.extend(ContentItem::ContentsList)
   end
 
   test "memoises the contents to avoid repeated processing and extraction" do

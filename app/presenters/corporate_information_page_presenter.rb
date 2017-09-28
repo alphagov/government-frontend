@@ -1,9 +1,9 @@
 class CorporateInformationPagePresenter < ContentItemPresenter
-  include Body
-  include ContentsList
-  include TitleAndContext
-  include OrganisationBranding
-  include CorporateInformationGroups
+  include ContentItem::Body
+  include ContentItem::ContentsList
+  include ContentItem::TitleAndContext
+  include ContentItem::OrganisationBranding
+  include ContentItem::CorporateInformationGroups
 
   def page_title
     page_title = super

@@ -11,23 +11,23 @@ class WorldLocationNewsArticlePresenterTest
 
   class PresentedWorldLocationNewsArticleTest < WorldLocationNewsArticlePresenterTestCase
     test 'is linkable' do
-      assert presented_item.is_a?(Linkable)
+      assert presented_item.is_a?(ContentItem::Linkable)
     end
 
     test 'is updatable' do
-      assert presented_item.is_a?(Updatable)
+      assert presented_item.is_a?(ContentItem::Updatable)
     end
 
     test 'is withdrawable' do
-      assert presented_item.is_a?(Withdrawable)
+      assert presented_item.is_a?(ContentItem::Withdrawable)
     end
 
     test 'is shareable' do
-      assert presented_item.is_a?(Shareable)
+      assert presented_item.is_a?(ContentItem::Shareable)
     end
 
     test 'includes political' do
-      assert presented_item.is_a?(Political)
+      assert presented_item.is_a?(ContentItem::Political)
     end
 
     test 'presents the schema name' do

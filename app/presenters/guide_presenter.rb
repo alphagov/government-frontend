@@ -1,5 +1,5 @@
 class GuidePresenter < ContentItemPresenter
-  include ContentParts
+  include ContentItem::Parts
 
   attr_accessor :draft_access_token
 

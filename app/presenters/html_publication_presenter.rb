@@ -1,7 +1,7 @@
 class HtmlPublicationPresenter < ContentItemPresenter
-  include Body
-  include OrganisationBranding
-  include ContentsList
+  include ContentItem::Body
+  include ContentItem::OrganisationBranding
+  include ContentItem::ContentsList
 
   def isbn
     content_item["details"]["isbn"]

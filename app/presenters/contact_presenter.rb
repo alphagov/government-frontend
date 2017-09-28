@@ -1,5 +1,5 @@
 class ContactPresenter < ContentItemPresenter
-  include TitleAndContext
+  include ContentItem::TitleAndContext
 
   def title_and_context
     super.tap do |t|

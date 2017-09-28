@@ -1,7 +1,7 @@
 class FatalityNoticePresenter < ContentItemPresenter
-  include Body
-  include TitleAndContext
-  include Metadata
+  include ContentItem::Body
+  include ContentItem::TitleAndContext
+  include ContentItem::Metadata
 
   def field_of_operation
     content_item_links = content_item["links"]["field_of_operation"]

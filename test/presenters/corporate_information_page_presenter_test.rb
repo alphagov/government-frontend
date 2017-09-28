@@ -25,22 +25,22 @@ class CorporateInformationPagePresenterTest
     end
 
     test 'has contents list' do
-      assert presented_item.is_a?(ContentsList)
+      assert presented_item.is_a?(ContentItem::ContentsList)
     end
 
     test 'has title without context' do
-      assert presented_item.is_a?(TitleAndContext)
+      assert presented_item.is_a?(ContentItem::TitleAndContext)
       title_component_params = { title: "About us" }
 
       assert_equal title_component_params, presented_item.title_and_context
     end
 
     test 'has organisation branding' do
-      assert presented_item.is_a?(OrganisationBranding)
+      assert presented_item.is_a?(ContentItem::OrganisationBranding)
     end
 
     test 'presents corporate information groups on about pages' do
-      assert presented_item.is_a?(CorporateInformationGroups)
+      assert presented_item.is_a?(ContentItem::CorporateInformationGroups)
 
       expected_contents_list = { text: 'Corporate information', id: 'corporate-information', href: '#corporate-information' }
       assert_equal expected_contents_list, presented_item.contents.last

@@ -1,11 +1,11 @@
 class WorldLocationNewsArticlePresenter < ContentItemPresenter
-  include Body
-  include Political
-  include Linkable
-  include Updatable
-  include Shareable
-  include TitleAndContext
-  include Metadata
+  include ContentItem::Body
+  include ContentItem::Political
+  include ContentItem::Linkable
+  include ContentItem::Updatable
+  include ContentItem::Shareable
+  include ContentItem::TitleAndContext
+  include ContentItem::Metadata
 
   def image
     content_item["details"]["image"]

@@ -1,9 +1,9 @@
 class SpecialistDocumentPresenter < ContentItemPresenter
-  include Body
-  include Updatable
-  include Linkable
-  include TitleAndContext
-  include Metadata
+  include ContentItem::Body
+  include ContentItem::Updatable
+  include ContentItem::Linkable
+  include ContentItem::TitleAndContext
+  include ContentItem::Metadata
   include TypographyHelper
 
   def title_and_context

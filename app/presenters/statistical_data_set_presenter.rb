@@ -1,7 +1,7 @@
 class StatisticalDataSetPresenter < ContentItemPresenter
-  include Body
-  include ContentsList
-  include TitleAndContext
-  include Political
-  include Metadata
+  include ContentItem::Body
+  include ContentItem::ContentsList
+  include ContentItem::TitleAndContext
+  include ContentItem::Political
+  include ContentItem::Metadata
 end

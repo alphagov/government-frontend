@@ -2,7 +2,7 @@ require 'test_helper'
 include ERB::Util
 
 class DummyContentItem
-  include Shareable
+  include ContentItem::Shareable
   attr_accessor :content_item, :title
 
   def initialize
@@ -12,7 +12,7 @@ class DummyContentItem
   end
 end
 
-class ShareablePresenterTest < ActiveSupport::TestCase
+class ContentItemShareableTest < ActiveSupport::TestCase
   def expected_path
     url_encode(Plek.current.website_root + "/a/base/path")
   end

@@ -1,10 +1,10 @@
 class DetailedGuidePresenter < ContentItemPresenter
-  include Body
-  include ContentsList
-  include Metadata
-  include NationalApplicability
-  include Political
-  include TitleAndContext
+  include ContentItem::Body
+  include ContentItem::ContentsList
+  include ContentItem::Metadata
+  include ContentItem::NationalApplicability
+  include ContentItem::Political
+  include ContentItem::TitleAndContext
 
   def title_and_context
     super.tap do |t|
