@@ -64,6 +64,14 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
     refute statistics_announcement_national.release_date_changed?
   end
 
+  test 'an announcement is forthcoming if it is not cancelled' do
+    assert statistics_announcement.forthcoming_publication?
+  end
+
+  test 'a cancelled announcement takes precedence over a forthcoming announcement' do
+    refute statistics_announcement_cancelled.forthcoming_publication?
+  end
+
   def statistics_announcement_cancelled
     presented_item('cancelled_official_statistics')
   end
