@@ -48,4 +48,18 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
       assert_has_component_metadata_pair("Reason for change", @content_item["details"]["latest_change_note"])
     end
   end
+
+  test "statistics announcement that are not cancelled display forthcoming notice" do
+    setup_and_visit_content_item('official_statistics')
+
+    within(".app-c-notice") do
+      assert_text "#{StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE} #{@content_item['details']['display_date']}"
+    end
+  end
+
+  test "cancelled statistics announcements do not display the forthcoming notice" do
+    setup_and_visit_content_item('cancelled_official_statistics')
+
+    refute page.has_text?(StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE)
+  end
 end
