@@ -17,8 +17,10 @@ class ContentsListHelperTest < ActionView::TestCase
     assert_equal text, strip_tags(wrapped_html)
   end
 
-  test "it wraps a number and text in span elements if it's a number without a period" do
-    assert_split_number_and_text('1 Thing', '1', 'Thing')
+  test "it does not wrap a number and text in span elements if it's a number without a period" do
+    input = '<a href="#thing">1 Thing</a>'
+    expected = '<a href="#thing">1 Thing</a>'
+    assert_equal expected, wrap_numbers_with_spans(input)
   end
 
   test "it wraps a number in the form X.Y" do
