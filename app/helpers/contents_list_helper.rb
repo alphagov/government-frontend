@@ -7,7 +7,7 @@ module ContentsListHelper
     # Must be followed by a space
     # May contain a period `1.`
     # May be a decimal `1.2`
-    number = /^\d{1,3}(\.?|\.\d{1,2})(?=\s)/.match(content_item_text)
+    number = /^\d{1,3}(\.|\.\d{1,2})(?=\s)/.match(content_item_text)
 
     if number
       words = content_item_text.sub(number.to_s, '').strip #remove the number from the text
