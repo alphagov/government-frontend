@@ -16,7 +16,7 @@
 <% end %>
 
 <% if @content_item.forthcoming_publication? %>
-  <%= render 'components/notice', title: @content_item.forthcoming_notice_title %>
+  <%= render 'components/notice', title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
 <% end %>
 
 <%= render 'components/lead-paragraph', text: @content_item.description %>
