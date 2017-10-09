@@ -12,21 +12,14 @@
   </ol>
 </div>
 
-<header class="publication-header" id="contents">
-  <%= render partial: 'govuk_component/title', locals: {
-    title: @content_item.title,
-    context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1),
-    inverse: true,
-    margin_bottom: 0
-  } %>
-  <p class="last-changed"><%= @content_item.last_changed %></p>
-</header>
+<%= render 'components/publication-header', title: @content_item.title, context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1), last_changed: @content_item.last_changed %>
 
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 
 <div
   class="grid-row sidebar-with-body"
   data-module="sticky-element-container"
+  id="contents"
 >
   <% if @content_item.contents.any? %>
     <div class="column-quarter-desktop-only">
