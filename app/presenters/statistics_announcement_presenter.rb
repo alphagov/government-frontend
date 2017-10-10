@@ -1,8 +1,9 @@
 class StatisticsAnnouncementPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::TitleAndContext
+  include StatisticsAnnouncementHelper
 
-  FORTHCOMING_NOTICE = "These statistics will be available".freeze
+  FORTHCOMING_NOTICE = "These statistics will be released".freeze
 
   def release_date
     content_item["details"]["display_date"]
@@ -58,7 +59,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   end
 
   def forthcoming_notice_title
-    "#{FORTHCOMING_NOTICE} #{release_date}"
+    "#{FORTHCOMING_NOTICE} #{on_in_between_for_release_date(release_date)}"
   end
 
   def forthcoming_publication?

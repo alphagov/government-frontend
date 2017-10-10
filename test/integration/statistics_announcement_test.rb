@@ -53,7 +53,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('official_statistics')
 
     within(".app-c-notice") do
-      assert_text "#{StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE} #{@content_item['details']['display_date']}"
+      assert_text "#{StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE} on #{@content_item['details']['display_date']}"
     end
   end
 
