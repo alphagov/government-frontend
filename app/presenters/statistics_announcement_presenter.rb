@@ -2,6 +2,8 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::TitleAndContext
 
+  FORTHCOMING_NOTICE = "These statistics will be available".freeze
+
   def release_date
     content_item["details"]["display_date"]
   end
@@ -53,6 +55,14 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
 
   def page_title
     "#{super} - #{I18n.t("content_item.schema_name.#{document_type}", count: 1)}"
+  end
+
+  def forthcoming_notice_title
+    "#{FORTHCOMING_NOTICE} #{release_date}"
+  end
+
+  def forthcoming_publication?
+    !cancelled?
   end
 
 private

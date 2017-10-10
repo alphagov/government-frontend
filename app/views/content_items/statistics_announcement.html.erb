@@ -14,6 +14,11 @@
 <% if @content_item.cancelled? %>
   <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason %>
 <% end %>
+
+<% if @content_item.forthcoming_publication? %>
+  <%= render 'components/notice', title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
+<% end %>
+
 <%= render 'components/lead-paragraph', text: @content_item.description %>
 
 <% if @content_item.release_date_changed? %>
