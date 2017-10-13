@@ -2,7 +2,7 @@
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 <%= render 'shared/metadata', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'components/lead-paragraph', text: @content_item.description %>
+<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
 <%= render 'shared/sidebar_image_with_body', content_item: @content_item %>
 <%= render 'shared/share_links_offset_in_grid', share_links: @content_item.share_links %>
 <%= render 'govuk_component/document_footer', @content_item.document_footer %>

@@ -19,7 +19,7 @@
   <%= render 'components/notice', title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
 <% end %>
 
-<%= render 'components/lead-paragraph', text: @content_item.description %>
+<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
 
 <% if @content_item.release_date_changed? %>
 <div class="grid-row">
