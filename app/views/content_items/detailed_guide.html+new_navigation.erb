@@ -11,7 +11,7 @@
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/metadata', content_item: @content_item %>
     <%= render 'shared/history_notice', content_item: @content_item %>
-    <%= render 'components/lead-paragraph', text: @content_item.description %>
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
 
     <div class="sidebar-with-body" id="contents">
       <% if @content_item.contents.any? %>

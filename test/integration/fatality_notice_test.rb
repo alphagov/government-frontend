@@ -42,13 +42,11 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
     assert_has_component_metadata_pair("see_updates_link", true)
 
-    within(".app-c-lead-paragraph") do
-      assert_text <<-DESCRIPTION
-       It is with great sadness that the Ministry of Defence
-       must confirm that Sir George Pomeroy Colley, died in battle
-       in Zululand on 27 February 1881.
-       DESCRIPTION
-    end
+    assert_component_parameter(
+      "lead_paragraph",
+      "text",
+      "It is with great sadness that the Ministry of Defence must confirm that Sir George Pomeroy Colley, died in battle in Zululand on 27 February 1881."
+    )
 
     assert(
       page.has_css?("img[src*=ministry-of-defence-crest][alt='Ministry of Defence crest']"),

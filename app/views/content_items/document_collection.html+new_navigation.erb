@@ -6,7 +6,7 @@
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/metadata', content_item: @content_item %>
     <%= render 'shared/history_notice', content_item: @content_item %>
-    <%= render 'components/lead-paragraph', text: @content_item.description %>
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'components/contents-list', contents: @content_item.contents %>
 
     <%= render 'document_collection_body' %>
