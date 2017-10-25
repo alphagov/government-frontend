@@ -44,3 +44,8 @@
 @import 'views/answer';
 @import 'views/help-page';
 @import "views/guide";
+
+.govuk-metadata,
+.govuk-document-footer {
+  display: none;
+}
