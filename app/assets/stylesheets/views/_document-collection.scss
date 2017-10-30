@@ -1,6 +1,5 @@
 .document-collection {
   @include sidebar-with-body;
-  @include taxonomy-sidebar;
 
   .group-title {
     @include bold-27;
