@@ -16,6 +16,10 @@ class Minitest::Test
   end
 end
 
+GovukAbTesting.configure do |config|
+  config.acceptance_test_framework = :active_support
+end
+
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
   include Slimmer::TestHelpers::GovukComponents
