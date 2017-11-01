@@ -25,12 +25,6 @@
     },
     "HEROKU_APP_NAME": {
       "required": true
-    },
-    "S3_AWS_ACCESS_KEY_ID": {
-      "required": true
-    },
-    "S3_SECRET_ACCESS_KEY": {
-      "required": true
     }
   },
   "image": "heroku/ruby",
