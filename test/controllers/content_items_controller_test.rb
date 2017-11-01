@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
-  include GovukAbTesting::MinitestHelpers
 
   test 'routing handles paths with no format or locale' do
     assert_routing(
@@ -230,78 +229,91 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :not_acceptable
   end
 
-  EducationNavigationAbTestRequest::NEW_NAVIGATION_CONTENT_ITEM_SCHEMAS.each do |schema_name|
-    test "defaults to 'A' view without AB Testing cookie for #{schema_name}" do
-      content_item = content_store_has_schema_example(schema_name, schema_name)
-      path = "government/abtest/#{schema_name}"
-      content_item['base_path'] = "/#{path}"
-      content_item['links'] = {
-        'taxons' => [
-          {
-            'title' => 'A Taxon',
-            'base_path' => '/a-taxon',
-          }
-        ]
-      }
-
-      content_store_has_item(content_item['base_path'], content_item)
-
-      get :show, params: { path: path_for(content_item) }
-      assert_equal [], @request.variant
-      refute_match(/A Taxon/, taxonomy_sidebar)
-    end
-
-    test "honours Education Navigation AB Testing cookie for #{schema_name}" do
-      content_item = content_store_has_schema_example(schema_name, schema_name)
-      path = "government/abtest/#{schema_name}"
-      content_item['base_path'] = "/#{path}"
-      content_item['links'] = {
-        'taxons' => [
-          {
-            'title' => 'A Taxon',
-            'base_path' => '/a-taxon',
-          }
-        ]
-      }
-
-      content_store_has_item(content_item['base_path'], content_item)
-
-      with_variant EducationNavigation: "A" do
-        get :show, params: { path: path_for(content_item) }
-        refute_match(/A Taxon/, taxonomy_sidebar)
-      end
-
-      with_variant EducationNavigation: "B" do
-        get :show, params: { path: path_for(content_item) }
-        assert_match(/A Taxon/, taxonomy_sidebar)
-      end
-    end
-  end
-
-  test "does not show new navigation when no taxons are tagged to Detailed Guides" do
+  test "does not show taxonomy-navigation when no taxons are tagged to Detailed Guides" do
     content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
-    path = 'government/abtest/detailed-guide'
+    path = 'government/test/detailed-guide'
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {}
 
     content_store_has_item(content_item['base_path'], content_item)
 
-    setup_ab_variant('EducationNavigation', 'A')
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_response_not_modified_for_ab_test('EducationNavigation')
-
-    setup_ab_variant('EducationNavigation', 'B')
-    get :show, params: { path: path_for(content_item) }
-    assert_equal [], @request.variant
-    refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
-  test "Case Studies are not included in the AB Test" do
+  test "does not show taxonomy-navigation when page is tagged to mainstream browse" do
+    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    path = 'government/test/detailed-guide'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = {
+      'mainstream_browse_pages' => [
+        {
+          'content_id' => 'something'
+        }
+      ],
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/a-taxon',
+        }
+      ]
+    }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    assert_equal [], @request.variant
+    refute_match(/A Taxon/, taxonomy_sidebar)
+  end
+
+  test "show taxonomy-navigation when page is tagged to a world wide taxon" do
+    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    path = 'government/test/detailed-guide'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = {
+      'mainstream_browse_pages' => [
+        {
+          'content_id' => 'something'
+        }
+      ],
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/world/zanzibar',
+        }
+      ]
+    }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+
+    assert_match(/A Taxon/, taxonomy_sidebar)
+  end
+
+  test "shows the taxonomy-navigation if tagged to taxonomy" do
+    content_item = content_store_has_schema_example("guide", "guide")
+    path = "government/abtest/guide"
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = {
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/a-taxon',
+        }
+      ]
+    }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    assert_match(/A Taxon/, taxonomy_sidebar)
+  end
+
+  test "Case Studies don't have the taxonomy-navigation" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
-    path = 'government/abtest/case-study'
+    path = 'government/test/case-study'
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {
       'taxons' => [
@@ -317,7 +329,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_equal [], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
-    assert_response_not_modified_for_ab_test('EducationNavigation')
   end
 
   test "sets the Access-Control-Allow-Origin header for atom pages" do
