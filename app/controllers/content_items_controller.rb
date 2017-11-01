@@ -12,7 +12,7 @@ class ContentItemsController < ApplicationController
 
   def show
     load_content_item
-    set_up_education_navigation_ab_testing
+    set_up_navigation
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
     set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
@@ -77,13 +77,8 @@ private
     expires_in(max_age, public: !cache_private)
   end
 
-  def set_up_education_navigation_ab_testing
-    @education_navigation_ab_test = EducationNavigationAbTestRequest.new(
-      request, @content_item.content_item
-    )
-    return unless @education_navigation_ab_test.ab_test_applies?
-
-    @education_navigation_ab_test.set_response_vary_header response
+  def set_up_navigation
+    @navigation = NavigationType.new(@content_item.content_item)
 
     # Setting a variant on a request is a type of Rails Dark Magic that will
     # use a convention to automagically load an alternative partial, view or
@@ -92,7 +87,7 @@ private
     # _breadcrumbs.html+new_navigation.erb instead. If this file doesn't exist,
     # then it falls back to _breadcrumbs.html.erb.  See:
     # http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
-    if @education_navigation_ab_test.should_present_new_navigation_view?
+    if @navigation.should_present_new_navigation_view?
       request.variant = :new_navigation
     end
   end

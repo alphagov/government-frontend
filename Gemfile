@@ -5,7 +5,6 @@ ruby File.read(".ruby-version").strip
 gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
 gem 'gds-api-adapters', '~> 48.0'
-gem 'govuk_ab_testing', '~> 2.0'
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'govuk_publishing_components', '~> 1.11.0', require: false
 gem 'htmlentities', '4.3.4'
