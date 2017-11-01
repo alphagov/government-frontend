@@ -36,6 +36,7 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     raise SpecialRouteReturned if special_route?(content_item)
+    replace_self_assessment_part_one(content_item)
     @content_item = present(content_item)
   end
 
@@ -89,6 +90,13 @@ private
     max_age = @content_item.content_item.cache_control.max_age
     cache_private = @content_item.content_item.cache_control.private?
     expires_in(max_age, public: !cache_private)
+  end
+
+  def replace_self_assessment_part_one(content_item)
+    return unless content_item["base_path"] == "/log-in-file-self-assessment-tax-return"
+
+    b_variant_content = File.read(Rails.root.join("app", "assets", "html", "self_assessment_b_variant.html"))
+    content_item["details"]["parts"].first["body"] = b_variant_content.to_s
   end
 
   def set_up_navigation
