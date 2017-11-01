@@ -229,7 +229,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :not_acceptable
   end
 
-  test "does not show new navigation when no taxons are tagged to Detailed Guides" do
+  test "does not show taxonomy-navigation when no taxons are tagged to Detailed Guides" do
     content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
     path = 'government/test/detailed-guide'
     content_item['base_path'] = "/#{path}"
@@ -242,7 +242,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     refute_match(/A Taxon/, taxonomy_sidebar)
   end
 
-  test "does not show new navigation when page is tagged to mainstream browse" do
+  test "does not show taxonomy-navigation when page is tagged to mainstream browse" do
     content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
     path = 'government/test/detailed-guide'
     content_item['base_path'] = "/#{path}"
@@ -267,7 +267,32 @@ class ContentItemsControllerTest < ActionController::TestCase
     refute_match(/A Taxon/, taxonomy_sidebar)
   end
 
-  test "shows the new navigation if tagged to taxonomy" do
+  test "show taxonomy-navigation when page is tagged to a world wide taxon" do
+    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    path = 'government/test/detailed-guide'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = {
+      'mainstream_browse_pages' => [
+        {
+          'content_id' => 'something'
+        }
+      ],
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/world/zanzibar',
+        }
+      ]
+    }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+
+    assert_match(/A Taxon/, taxonomy_sidebar)
+  end
+
+  test "shows the taxonomy-navigation if tagged to taxonomy" do
     content_item = content_store_has_schema_example("guide", "guide")
     path = "government/abtest/guide"
     content_item['base_path'] = "/#{path}"
@@ -286,7 +311,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_match(/A Taxon/, taxonomy_sidebar)
   end
 
-  test "Case Studies don't have the new navigation" do
+  test "Case Studies don't have the taxonomy-navigation" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
     path = 'government/test/case-study'
     content_item['base_path'] = "/#{path}"
