@@ -1,16 +1,16 @@
 class NavigationType
-  NEW_NAVIGATION_CONTENT_ITEM_SCHEMAS =
+  GUIDANCE_SCHEMAS =
     %w{answer contact guide detailed_guide document_collection publication}.freeze
 
   def initialize(content_item)
     @content_item = content_item
   end
 
-  def should_present_new_navigation_view?
+  def should_present_taxonomy_navigation?
     tagged_to_world_wide_taxonomy? ||
       (!content_is_tagged_to_browse_pages? &&
       content_is_tagged_to_a_taxon? &&
-      content_schema_has_new_navigation?)
+      content_schema_is_guidance?)
   end
 
 private
@@ -29,7 +29,7 @@ private
     @content_item.dig("links", "mainstream_browse_pages").present?
   end
 
-  def content_schema_has_new_navigation?
-    NEW_NAVIGATION_CONTENT_ITEM_SCHEMAS.include? @content_item["schema_name"]
+  def content_schema_is_guidance?
+    GUIDANCE_SCHEMAS.include? @content_item["schema_name"]
   end
 end

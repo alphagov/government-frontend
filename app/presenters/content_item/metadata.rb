@@ -15,7 +15,7 @@ module ContentItem
       }
     end
 
-    def metadata_for_new_navigation
+    def metadata_for_taxonomy_navigation
       data = metadata
       data.delete(:part_of)
       data
@@ -33,7 +33,7 @@ module ContentItem
       }
     end
 
-    def document_footer_for_new_navigation
+    def document_footer_for_taxonomy_navigation
       data = document_footer
       data.delete(:part_of)
       data
