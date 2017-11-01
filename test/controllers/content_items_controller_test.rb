@@ -242,6 +242,31 @@ class ContentItemsControllerTest < ActionController::TestCase
     refute_match(/A Taxon/, taxonomy_sidebar)
   end
 
+  test "does not show new navigation when page is tagged to mainstream browse" do
+    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    path = 'government/test/detailed-guide'
+    content_item['base_path'] = "/#{path}"
+    content_item['links'] = {
+      'mainstream_browse_pages' => [
+        {
+          'content_id' => 'something'
+        }
+      ],
+      'taxons' => [
+        {
+          'title' => 'A Taxon',
+          'base_path' => '/a-taxon',
+        }
+      ]
+    }
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    assert_equal [], @request.variant
+    refute_match(/A Taxon/, taxonomy_sidebar)
+  end
+
   test "shows the new navigation if tagged to taxonomy" do
     content_item = content_store_has_schema_example("guide", "guide")
     path = "government/abtest/guide"
