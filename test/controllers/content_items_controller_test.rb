@@ -338,6 +338,17 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
+  test "overwrites content for the first page of the self assessment guide" do
+    content_item = content_store_has_schema_example('guide', 'guide')
+    path = 'log-in-file-self-assessment-tax-return'
+    content_item['base_path'] = "/#{path}"
+
+    content_store_has_item(content_item['base_path'], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    assert @response.body.include?('Hello World!')
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item['base_path'].sub(/^\//, '')
     base_path.gsub!(/\.#{locale}$/, '') if locale
