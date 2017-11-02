@@ -339,15 +339,57 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
-  test "overwrites content for the first page of the self assessment guide" do
-    content_item = content_store_has_schema_example('guide', 'guide')
-    path = 'log-in-file-self-assessment-tax-return'
-    content_item['base_path'] = "/#{path}"
+  class SelfAssessmentABTest < ContentItemsControllerTest
+    test "shows the original page content on the control version of the self assessment guide" do
+      with_variant SelfAssessmentSigninTest: "A" do
+        content_item = content_store_has_schema_example('guide', 'guide')
+        path = 'log-in-file-self-assessment-tax-return'
+        content_item['base_path'] = "/#{path}"
+        content_item['details'] = {
+          parts: [
+            body: "The original part one"
+          ]
+        }
 
-    content_store_has_item(content_item['base_path'], content_item)
+        content_store_has_item(content_item['base_path'], content_item)
 
-    get :show, params: { path: path_for(content_item) }
-    assert @response.body.include?('***** Add updated content here *****')
+        get :show, params: { path: path_for(content_item) }
+        assert @response.body.include?('The original part one')
+      end
+    end
+
+    test "overwrites content for the first page of the self assessment guide" do
+      with_variant SelfAssessmentSigninTest: "B" do
+        content_item = content_store_has_schema_example('guide', 'guide')
+        path = 'log-in-file-self-assessment-tax-return'
+        content_item['base_path'] = "/#{path}"
+
+        content_store_has_item(content_item['base_path'], content_item)
+
+        get :show, params: { path: path_for(content_item) }
+        assert @response.body.include?('***** Add updated content here *****')
+      end
+    end
+
+    test "other guide pages are not overwritten" do
+      %w(A B).each do |variant|
+        with_variant SelfAssessmentSigninTest: variant do
+          content_item = content_store_has_schema_example('guide', 'guide')
+          path = 'guide-page'
+          content_item['base_path'] = "/#{path}"
+          content_item['details'] = {
+            parts: [
+              body: "The original part one"
+            ]
+          }
+
+          content_store_has_item(content_item['base_path'], content_item)
+
+          get :show, params: { path: path_for(content_item) }
+          assert @response.body.include?('The original part one')
+        end
+      end
+    end
   end
 
   def path_for(content_item, locale = nil)

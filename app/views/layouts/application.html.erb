@@ -25,6 +25,7 @@
   <% end %>
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
   <%= yield :extra_head_content %>
+  <%= @self_assessment_requested_variant.analytics_meta_tag.html_safe %>
 </head>
 <body>
   <% unless content_for(:simple_header) %>
