@@ -1,4 +1,5 @@
 .detailed-guide {
+  @include add-title-margin;
   @include sidebar-with-body;
 
   .direction-rtl & {
