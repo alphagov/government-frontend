@@ -16,6 +16,7 @@ class ContentItemsController < ApplicationController
     load_content_item
     set_up_navigation
     setup_tasklist_ab_testing
+    set_up_traffic_signs_summary_ab_testing
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
     set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
@@ -100,6 +101,19 @@ private
     # http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
     if @navigation.should_present_taxonomy_navigation?
       request.variant = :taxonomy_navigation
+    end
+  end
+
+  def set_up_traffic_signs_summary_ab_testing
+    @traffic_signs_summary_ab_test = TrafficSignsSummaryAbTestRequest.new(
+      request, @content_item.content_item
+    )
+    return unless @traffic_signs_summary_ab_test.ab_test_applies?
+
+    @traffic_signs_summary_ab_test.set_response_vary_header response
+
+    if @traffic_signs_summary_ab_test.should_present_old_summary?
+      @content_item = @traffic_signs_summary_ab_test.with_old_summary(@content_item)
     end
   end
 

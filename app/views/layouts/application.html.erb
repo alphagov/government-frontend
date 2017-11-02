@@ -25,6 +25,7 @@
   <% end %>
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
   <%= tasklist_variant.analytics_meta_tag.html_safe if tasklist_ab_test_applies? %>
+  <%= @traffic_signs_summary_ab_test.analytics_meta_tag.html_safe if @traffic_signs_summary_ab_test.ab_test_applies? %>
   <%= yield :extra_head_content %>
 </head>
 <body>
