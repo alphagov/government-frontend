@@ -18,3 +18,7 @@
   @include responsive-bottom-margin;
   @include responsive-top-margin;
 }
+
+@mixin add-page-bottom-margin {
+  margin-bottom: $gutter * 2;
+}
