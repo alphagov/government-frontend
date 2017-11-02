@@ -14,6 +14,7 @@ class ContentItemsController < ApplicationController
   attr_accessor :content_item
 
   def show
+    set_up_self_assessment_ab_test
     load_content_item
     set_up_navigation
     setup_tasklist_header_ab_testing
@@ -92,11 +93,23 @@ private
     expires_in(max_age, public: !cache_private)
   end
 
-  def replace_self_assessment_part_one(content_item)
-    return unless content_item["base_path"] == "/log-in-file-self-assessment-tax-return"
+  def set_up_self_assessment_ab_test
+    ab_test = GovukAbTesting::AbTest.new("SelfAssessmentSigninTest", dimension: 65)
 
-    b_variant_content = File.read(Rails.root.join("app", "assets", "html", "self_assessment_b_variant.html"))
-    content_item["details"]["parts"].first["body"] = b_variant_content.to_s
+    @self_assessment_requested_variant = ab_test.requested_variant(request.headers)
+    @self_assessment_requested_variant.configure_response(response)
+  end
+
+  def replace_self_assessment_part_one(content_item)
+    if self_assessment_start_page?(content_item) && @self_assessment_requested_variant.variant?('B')
+      b_variant_content = File.read(Rails.root.join("app", "assets", "html", "self_assessment_b_variant.html"))
+      content_item["details"]["parts"].first["body"] = b_variant_content.to_s
+    end
+    content_item
+  end
+
+  def self_assessment_start_page?(content_item)
+    content_item["base_path"] == "/log-in-file-self-assessment-tax-return"
   end
 
   def set_up_navigation

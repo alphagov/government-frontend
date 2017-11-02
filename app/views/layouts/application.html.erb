@@ -28,6 +28,7 @@
   <%= @traffic_signs_summary_ab_test.analytics_meta_tag.html_safe if @traffic_signs_summary_ab_test.ab_test_applies? %>
   <%= tasklist_header_variant.analytics_meta_tag.html_safe if tasklist_header_ab_test_applies? %>
   <%= yield :extra_head_content %>
+  <%= @self_assessment_requested_variant.analytics_meta_tag.html_safe %>
 </head>
 <body>
   <% unless content_for(:simple_header) %>
