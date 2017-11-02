@@ -398,7 +398,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_store_has_item(content_item['base_path'], content_item)
 
     get :show, params: { path: path_for(content_item) }
-    assert @response.body.include?('Hello World!')
+    assert @response.body.include?('***** Add updated content here *****')
+  end
 
   def path_for(content_item, locale = nil)
     base_path = content_item['base_path'].sub(/^\//, '')
