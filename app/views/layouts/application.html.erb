@@ -28,13 +28,7 @@
   <%= yield :extra_head_content %>
 </head>
 <body>
-  <% unless content_for(:simple_header) %>
-    <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
-  <% end %>
-
   <div id="wrapper" class="<%= wrapper_class %>">
-    <%= render_phase_label @content_item, content_for(:phase_message) %>
-    <%= render 'shared/breadcrumbs' %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
     </main>

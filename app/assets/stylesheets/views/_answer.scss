@@ -1,5 +1,6 @@
 .answer {
   @include add-title-margin;
+  @include add-page-bottom-margin;
 
   .last-updated {
     padding-bottom: $gutter-half;

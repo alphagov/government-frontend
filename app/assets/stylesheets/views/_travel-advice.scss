@@ -1,6 +1,7 @@
 .travel-advice {
   @include parts;
   @include add-title-margin;
+  @include add-page-bottom-margin;
 
   .part-navigation {
     margin-bottom: $gutter * 1.5;

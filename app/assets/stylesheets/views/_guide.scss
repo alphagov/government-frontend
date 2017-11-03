@@ -1,6 +1,7 @@
 .guide {
   @include parts;
   @include add-title-margin;
+  @include add-page-bottom-margin;
 
   .part-navigation li {
     list-style: decimal;
