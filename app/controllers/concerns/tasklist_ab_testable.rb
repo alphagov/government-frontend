@@ -3,7 +3,7 @@ module TasklistABTestable
 
   TASKLIST_PRIMARY_PAGES = %w(
     /legal-obligations-drivers-riders
-    /driving-lessons-learning-to-drive/
+    /driving-lessons-learning-to-drive
     /government/publications/car-show-me-tell-me-vehicle-safety-questions
     /theory-test/revision-and-practice
     /theory-test/what-to-take
