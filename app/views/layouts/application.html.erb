@@ -34,7 +34,9 @@
 
   <div id="wrapper" class="<%= wrapper_class %>">
     <%= render_phase_label @content_item, content_for(:phase_message) %>
-    <%= render 'shared/breadcrumbs' %>
+    <% unless content_for(:no_breadcrumbs) %>
+      <%= render 'shared/breadcrumbs' %>
+    <% end %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
     </main>
