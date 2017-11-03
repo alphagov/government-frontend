@@ -1,20 +1,4 @@
 <% if @content_item.taxon_breadcrumbs.any? %>
-  <%=
-    render(
-      partial: 'govuk_component/beta_label',
-      locals: {
-        message: <<-MESSAGE
-        This is a test version of the layout of this page.
-        <a id=taxonomy-survey
-           href='https://www.smartsurvey.co.uk/s/betasurvey2017?c=#{current_path_without_query_string}'
-           target='_blank'
-           rel='noopener noreferrer'>
-          Take the survey to help us improve it
-        </a>
-        MESSAGE
-      }
-    )
-  %>
   <%= render 'govuk_component/breadcrumbs',
     breadcrumbs: @content_item.taxon_breadcrumbs,
     collapse_on_mobile: true %>
