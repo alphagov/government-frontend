@@ -1,6 +1,8 @@
 class ContentItemsController < ApplicationController
   class SpecialRouteReturned < StandardError; end
 
+  include TasklistABTestable
+
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
@@ -13,6 +15,7 @@ class ContentItemsController < ApplicationController
   def show
     load_content_item
     set_up_navigation
+    setup_tasklist_ab_testing
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
     set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
@@ -63,7 +66,15 @@ private
     end
 
     with_locale do
-      render content_item_template
+      locals = {}
+
+      if tasklist_ab_test_applies?
+        locals[:locals] = {
+          tasklist: configure_current_task(TasklistContent.learn_to_drive_config)
+        }
+      end
+
+      render content_item_template, locals
     end
   end
 
@@ -94,6 +105,10 @@ private
 
   def with_locale
     I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
+  end
+
+  def setup_tasklist_ab_testing
+    set_tasklist_response_header
   end
 
   def content_item_path

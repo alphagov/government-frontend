@@ -1,0 +1,158 @@
+{
+  "title": "Learn to drive a car: step by step",
+  "base_path": "/learn-to-drive-a-car",
+  "description": "Check what you need to do to learn to drive.",
+  "links": {
+    "breadcrumbs": [
+      { "title": "Home", "url": "/" },
+      { "title": "Driving and transport", "url": "/browse/driving"},
+      { "title": "Learning to drive", "url": "/browse/driving/learning-to-drive"}
+    ]
+  },
+  "tasklist": {
+    "small": true,
+    "heading_level": 3,
+    "steps": [
+      [
+        {
+          "title": "Check you're allowed to drive",
+          "panel_descriptions": ["Most people can start learning to drive when they’re 17."],
+          "panel_links": [
+            {
+              "href": "/vehicles-can-drive",
+              "text": "Check what age you can drive"
+            },
+            {
+              "href": "/legal-obligations-drivers-riders",
+              "text": "Requirements for driving legally"
+            },
+            {
+              "href": "/driving-eyesight-rules",
+              "text": "Driving eyesight rules"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "title": "Get a provisional driving licence",
+          "panel_links": [
+            {
+              "href": "/apply-first-provisional-driving-licence",
+              "text": "Apply for your first provisional driving licence"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "title": "Driving lessons and practice",
+          "panel_descriptions": ["You need a provisional driving licence to take lessons or practice."],
+          "panel_links": [
+            {
+              "href": "/guidance/the-highway-code",
+              "text": "The Highway Code"
+            },
+            {
+              "href": "/driving-lessons-learning-to-drive",
+              "text": "Taking driving lessons"
+            },
+            {
+              "href": "/find-driving-schools-and-lessons",
+              "text": "Find driving schools, lessons and instructors"
+            },
+            {
+              "href": "/government/publications/car-show-me-tell-me-vehicle-safety-questions",
+              "text": "Practise vehicle safety questions"
+            }
+          ]
+        },
+        {
+          "title": "Prepare for your theory test",
+          "panel_links": [
+            {
+              "href": "/theory-test/revision-and-practice",
+              "text": "Theory test revision and practice"
+            },
+            {
+              "href": "/take-practice-theory-test",
+              "text": "Take a practice theory test"
+            },
+            {
+              "href": "https://www.safedrivingforlife.info/shop/product/official-dvsa-theory-test-kit-app-app",
+              "text": "Theory and hazard perception test app"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "title": "Book and manage your theory test",
+          "panel_descriptions": ["You need a provisional driving licence to book your theory test."],
+          "panel_links": [
+            {
+              "href": "/book-theory-test",
+              "text": "Book your theory test"
+            },
+            {
+              "href": "/theory-test/what-to-take",
+              "text": "What to take to your test"
+            },
+            {
+              "href": "/change-theory-test",
+              "text": "Change your theory test appointment"
+            },
+            {
+              "href": "/check-theory-test",
+              "text": "Check your theory test appointment details"
+            },
+            {
+              "href": "/cancel-theory-test",
+              "text": "Cancel your theory test"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "title": "Book and manage your driving test",
+          "panel_descriptions": ["You must pass your theory test before you can book your driving test."],
+          "panel_links": [
+            {
+              "href": "/book-driving-test",
+              "text": "Book your driving test"
+            },
+            {
+              "href": "/driving-test/what-to-take",
+              "text": "What to take to your test"
+            },
+            {
+              "href": "/change-driving-test",
+              "text": "Change your driving test appointment"
+            },
+            {
+              "href": "/check-driving-test",
+              "text": "Check your driving test appointment details"
+            },
+            {
+              "href": "/cancel-driving-test",
+              "text": "Cancel your driving test"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "title": "When you pass",
+          "panel_descriptions": ["You can start driving as soon as you pass your driving test."],
+          "panel_links": [
+            {
+              "href": "/pass-plus",
+              "text": "Find out about Pass Plus training courses"
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}
