@@ -26,6 +26,13 @@ class ContentItemsController < ApplicationController
     render_template
   end
 
+  def interstitial
+    set_up_self_assessment_ab_test
+    content_item = Services.content_store.content_item(content_item_path)
+    @content_item = ContentItemPresenter.new(content_item, content_item_path)
+    render template: 'content_items/signin/interstitial'
+  end
+
 private
 
   # Allow guides to pass access token to each part to allow
