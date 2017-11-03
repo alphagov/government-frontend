@@ -15,12 +15,6 @@ module ContentItem
       }
     end
 
-    def metadata_for_taxonomy_navigation
-      data = metadata
-      data.delete(:part_of)
-      data
-    end
-
     def document_footer
       {
         from: from,
@@ -31,12 +25,6 @@ module ContentItem
         direction: text_direction,
         other: {}
       }
-    end
-
-    def document_footer_for_taxonomy_navigation
-      data = document_footer
-      data.delete(:part_of)
-      data
     end
   end
 end
