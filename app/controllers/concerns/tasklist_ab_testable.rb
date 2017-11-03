@@ -30,6 +30,24 @@ module TasklistABTestable
     /government/publications/drivers-record-for-learner-drivers
   ).freeze
 
+  MATCHING_PAGES = %w(
+    /driving-lessons-learning-to-drive/practising-with-family-or-friends
+    /driving-lessons-learning-to-drive/taking-driving-lessons
+    /driving-lessons-learning-to-drive/using-l-and-p-plates
+    /driving-test
+    /driving-test/changes-december-2017
+    /driving-test/disability-health-condition-or-learning-difficulty
+    /driving-test/driving-test-faults-result
+    /driving-test/test-cancelled-bad-weather
+    /driving-test/using-your-own-car
+    /driving-test/what-happens-during-test
+    /theory-test
+    /theory-test/hazard-perception-test
+    /theory-test/if-you-have-safe-road-user-award
+    /theory-test/multiple-choice-questions
+    /theory-test/pass-mark-and-result
+  ).freeze
+
   def self.included(base)
     base.helper_method(
       :tasklist_variant,
@@ -67,6 +85,7 @@ module TasklistABTestable
 
   def page_is_included_in_test?
     TASKLIST_PRIMARY_PAGES.include?(request.path) ||
-      TASKLIST_SECONDARY_PAGES.include?(request.path)
+      TASKLIST_SECONDARY_PAGES.include?(request.path) ||
+      MATCHING_PAGES.include?(request.path)
   end
 end
