@@ -40,7 +40,9 @@
     <% if show_tasklist_header? %>
       <%= render 'shared/tasklist_header' %>
     <% else %>
-      <%= render 'shared/breadcrumbs' %>
+      <% unless content_for(:no_breadcrumbs) %>
+        <%= render 'shared/breadcrumbs' %>
+      <% end %>
     <% end %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>

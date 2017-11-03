@@ -1,2 +1,107 @@
 <% content_for :title, "Pick method" %>
-<p>The interstitial page</p>
+
+<% content_for :simple_header, true %>
+<% content_for :no_breadcrumbs, true %>
+<% # Should we remove the search? %>
+
+<% content_for :extra_head_content do %>
+  <%= stylesheet_link_tag "self_assessment_b_variant.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
+<% end %>
+
+<% error = false %>
+
+<a
+  href="/log-in-file-self-assessment-tax-return"
+  class="govuk-c-link govuk-c-link--back govuk-u-mt-3 govuk-u-mb-6 app-u-mb-5--small"
+>Back</a>
+
+<% if error %>
+  <div
+    class="govuk-u-mb-6 app-u-mb-5--small govuk-c-error-summary optional-extra-class"
+    aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+  >
+    <h2 class="govuk-c-error-summary__title" id="error-summary-title">
+      You haven't selected an option
+    </h2>
+    <div class="govuk-c-error-summary__body">
+      <ul class="govuk-c-list govuk-c-error-summary__list">
+        <li>
+          <a href="#options">Please select an option</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<form action="/" method="post" class="govuk-u-mb-6">
+
+  <fieldset class="govuk-u-mb-5 govuk-c-fieldset" id="radio-stacked">
+    <legend class="govuk-c-fieldset__legend">
+      <h2 class="govuk-u-bold-48 govuk-u-mb-6 app-u-mb-4--small">Pick method</h2>
+    </legend>
+    <%= render "govuk_component/lead_paragraph", {
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua."
+    } %>
+    <% if error %>
+      <div class="app-c-error-inset">
+        <span class="govuk-c-error-message govuk-u-mb-1" id="options">
+          Please select an option
+        </span>
+      <% end %>
+      <div class="govuk-c-radio">
+        <input
+          class="govuk-c-radio__input"
+          id="government-gateway-input"
+          type="radio"
+          name="radio-stacked-group"
+          value="Email"
+          aria-describedby="government-gateway-input-desc"
+        >
+        <label class="govuk-c-radio__label" for="government-gateway-input">
+          Yes, Government Gateway
+        </label>
+        <div id="government-gateway-input-desc" class="app-c-radio__label--description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet debitis, odio.
+          Maiores possimus enim voluptate asperiores dolores.
+        </div>
+      </div>
+      <div class="govuk-c-radio">
+        <input
+          class="govuk-c-radio__input"
+          id="verify-input"
+          type="radio"
+          name="radio-stacked-group"
+          value="Phone"
+          aria-describedby="verify-input-desc"
+        >
+        <label class="govuk-c-radio__label" for="verify-input">
+          Yes, GOV.UK Verify
+        </label>
+        <div id="verify-input-desc" class="app-c-radio__label--description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet debitis, odio.
+          Maiores possimus enim voluptate asperiores dolores.
+        </div>
+      </div>
+      <div class="govuk-c-radio">
+        <input
+          class="govuk-c-radio__input"
+          id="i-dont-know-input"
+          type="radio"
+          name="radio-stacked-group"
+          value="Text"
+        >
+        <label class="govuk-c-radio__label" for="i-dont-know-input">
+          I don't know
+        </label>
+      </div>
+    <% if error %>
+      </div>
+    <% end %>
+  </fieldset>
+
+  <div class="govuk-u-core-19">
+    <%= render "govuk_component/button", {
+      text: "Continue"
+      } %>
+  </div>
+</form>
