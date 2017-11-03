@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
   get '*path/interstitial', to: 'content_items#interstitial'
+  get '*path/create-account', to: 'content_items#create_account'
 
   get '*path/:variant' => 'content_items#show',
       constraints: {
