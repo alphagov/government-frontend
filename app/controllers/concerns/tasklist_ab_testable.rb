@@ -60,6 +60,11 @@ module TasklistABTestable
     /driving-test/test-cancelled-bad-weather
     /driving-test/using-your-own-car
     /driving-test/what-happens-during-test
+    /pass-plus/apply-for-a-pass-plus-certificate
+    /pass-plus/booking-pass-plus
+    /pass-plus/car-insurance-discounts
+    /pass-plus/local-councils-offering-discounts
+    /pass-plus/how-pass-plus-training-works
     /theory-test
     /theory-test/hazard-perception-test
     /theory-test/if-you-have-safe-road-user-award
