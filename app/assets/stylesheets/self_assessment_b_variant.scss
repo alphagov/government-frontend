@@ -1,5 +1,7 @@
 // copy paste from govuk frontend http://govuk-frontend-review.herokuapp.com/ //
 
+// scss-lint:disable all
+
 @import "vendor/govuk_frontend/typography";
 @import "vendor/govuk_frontend/spacing";
 @import "vendor/govuk_frontend/link";
@@ -9,3 +11,5 @@
 @import "vendor/govuk_frontend/error-message";
 @import "vendor/govuk_frontend/error-summary";
 @import "vendor/govuk_frontend/error-inset";
+
+// scss-lint:enable all
