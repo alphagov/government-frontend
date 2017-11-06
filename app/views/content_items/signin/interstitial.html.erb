@@ -1,4 +1,4 @@
-<% content_for :title, "Pick method" %>
+<% content_for :title, "Choose how to sign in" %>
 
 <% content_for :simple_header, true %>
 <% content_for :no_breadcrumbs, true %>
@@ -37,11 +37,12 @@
 
   <fieldset class="govuk-u-mb-5 govuk-c-fieldset" id="radio-stacked">
     <legend class="govuk-c-fieldset__legend">
-      <h2 class="govuk-u-bold-48 govuk-u-mb-6 app-u-mb-4--small">Pick method</h2>
+      <h2 class="govuk-u-bold-48 govuk-u-mb-6 app-u-mb-4--small">Choose how to sign in</h2>
     </legend>
-    <%= render "govuk_component/lead_paragraph", {
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua."
-    } %>
+    <p class="govuk-u-core-19 app-u-mb-4--small govuk-u-mb-4">
+      You can’t file online until you’ve activated a Government Gateway account using your Unique Taxpayer Reference (UTR). Find out what to do if <a href='/log-in-file-self-assessment-tax-return/create-account'>you haven’t activated an account yet</a>.
+    </p>
+
     <% if error %>
       <div class="app-c-error-inset">
         <span class="govuk-c-error-message govuk-u-mb-1" id="options">
@@ -54,16 +55,11 @@
           id="government-gateway-input"
           type="radio"
           name="radio-stacked-group"
-          value="Email"
-          aria-describedby="government-gateway-input-desc"
+          value="government-gateway"
         >
         <label class="govuk-c-radio__label" for="government-gateway-input">
-          Yes, Government Gateway
+          Sign in with Government Gateway
         </label>
-        <div id="government-gateway-input-desc" class="app-c-radio__label--description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet debitis, odio.
-          Maiores possimus enim voluptate asperiores dolores.
-        </div>
       </div>
       <div class="govuk-c-radio">
         <input
@@ -71,16 +67,11 @@
           id="verify-input"
           type="radio"
           name="radio-stacked-group"
-          value="Phone"
-          aria-describedby="verify-input-desc"
+          value="govuk-verify"
         >
         <label class="govuk-c-radio__label" for="verify-input">
-          Yes, GOV.UK Verify
+          Sign in with GOV.UK Verify
         </label>
-        <div id="verify-input-desc" class="app-c-radio__label--description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet debitis, odio.
-          Maiores possimus enim voluptate asperiores dolores.
-        </div>
       </div>
       <div class="govuk-c-radio">
         <input
@@ -88,10 +79,10 @@
           id="i-dont-know-input"
           type="radio"
           name="radio-stacked-group"
-          value="Text"
+          value="forgotten"
         >
         <label class="govuk-c-radio__label" for="i-dont-know-input">
-          I don't know
+          Get help if you’ve forgotten your username or password
         </label>
       </div>
     <% if error %>
