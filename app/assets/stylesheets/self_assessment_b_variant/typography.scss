@@ -1,0 +1,29 @@
+.govuk-u-bold-48 {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 32px;
+  line-height: 1.09375;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-u-bold-48 {
+    font-size: 48px;
+    line-height: 1.04167;
+  }
+}
+
+.govuk-u-core-19 {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-u-core-19 {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
