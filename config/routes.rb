@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'healthcheck', to: proc { [200, {}, ['']] }
   get '*path/choose-sign-in', to: 'content_items#choose_sign_in'
   get '*path/not-registered', to: 'content_items#not_registered'
-  get '*path/forgot-password', to: 'content_items#forgot_password'
+  get '*path/lost-account-details', to: 'content_items#lost_account_details'
 
   get '*path/:variant' => 'content_items#show',
       constraints: {
