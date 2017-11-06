@@ -1,15 +1,12 @@
-// copy paste from govuk frontend http://govuk-frontend-review.herokuapp.com/ //
+// copy paste from govuk frontend http://govuk-frontend-review.herokuapp.com/
+// this is temporary code - remove after AB test
 
-// scss-lint:disable all
-
-@import "vendor/govuk_frontend/typography";
-@import "vendor/govuk_frontend/spacing";
-@import "vendor/govuk_frontend/link";
-@import "vendor/govuk_frontend/list";
-@import "vendor/govuk_frontend/fieldset";
-@import "vendor/govuk_frontend/radio";
-@import "vendor/govuk_frontend/error-message";
-@import "vendor/govuk_frontend/error-summary";
-@import "vendor/govuk_frontend/error-inset";
-
-// scss-lint:enable all
+@import "self_assessment_b_variant/typography";
+@import "self_assessment_b_variant/spacing";
+@import "self_assessment_b_variant/link";
+@import "self_assessment_b_variant/list";
+@import "self_assessment_b_variant/fieldset";
+@import "self_assessment_b_variant/radio";
+@import "self_assessment_b_variant/error-message";
+@import "self_assessment_b_variant/error-summary";
+@import "self_assessment_b_variant/error-inset";

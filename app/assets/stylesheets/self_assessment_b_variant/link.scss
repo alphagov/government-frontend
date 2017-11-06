@@ -1,0 +1,74 @@
+$text-color: #0b0c0c;
+$text-muted-color: #6f777b;
+
+.govuk-c-link {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.25;
+  text-decoration: underline;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-c-link {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.govuk-c-link--back {
+  display: inline-block;
+  position: relative;
+  padding-left: 14px;
+  border-bottom: 1px solid $text-color;
+  color: $text-color;
+  background: url("/icons/icon-arrow-left.png") no-repeat 0 4px;
+  text-decoration: none;
+}
+
+.govuk-c-link--back:link,
+.govuk-c-link--back:visited,
+.govuk-c-link--back:hover,
+.govuk-c-link--back:active {
+  color: $text-color;
+}
+
+.govuk-c-link--back::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin-top: -6px;
+  border-top: 5px solid transparent;
+  border-right: 6px solid $text-color;
+  border-bottom: 5px solid transparent;
+}
+
+.govuk-c-link--muted:link,
+.govuk-c-link--muted:visited,
+.govuk-c-link--muted:hover,
+.govuk-c-link--muted:active {
+  color: $text-muted-color;
+}
+
+.govuk-c-link--muted:focus {
+  color: $text-color;
+}
+
+.govuk-c-link--download {
+  display: block;
+  min-height: 40px;
+  padding: 0 0 0 40px;
+  background: url("/icons/icon-file-download.png") no-repeat scroll 0 0;
+  font-weight: 700;
+}
+
+.govuk-c-link--download a:focus {
+  color: $text-color;
+}
