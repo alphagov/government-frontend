@@ -422,7 +422,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         content_store_has_item(content_item['base_path'], content_item)
 
         get :show, params: { path: path_for(content_item) }
-        assert @response.body.include?('***** Add updated content here *****')
+        assert @response.body.include?('Sign in to continue')
       end
     end
 
