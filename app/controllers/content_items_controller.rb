@@ -33,11 +33,11 @@ class ContentItemsController < ApplicationController
     render template: 'content_items/signin/choose-sign-in'
   end
 
-  def create_account
+  def not_registered
     set_up_self_assessment_ab_test
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = ContentItemPresenter.new(content_item, content_item_path)
-    render template: 'content_items/signin/create_account'
+    render template: 'content_items/signin/not-registered'
   end
 
   def forgot_password
