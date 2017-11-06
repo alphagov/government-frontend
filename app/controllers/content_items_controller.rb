@@ -26,11 +26,11 @@ class ContentItemsController < ApplicationController
     render_template
   end
 
-  def interstitial
+  def choose_sign_in
     set_up_self_assessment_ab_test
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = ContentItemPresenter.new(content_item, content_item_path)
-    render template: 'content_items/signin/interstitial'
+    render template: 'content_items/signin/choose-sign-in'
   end
 
   def create_account

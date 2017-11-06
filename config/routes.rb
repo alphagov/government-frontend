@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
-  get '*path/interstitial', to: 'content_items#interstitial'
+  get '*path/choose-sign-in', to: 'content_items#choose_sign_in'
   get '*path/create-account', to: 'content_items#create_account'
   get '*path/forgot-password', to: 'content_items#forgot_password'
 
