@@ -70,6 +70,7 @@ module TasklistABTestable
     /theory-test/if-you-have-safe-road-user-award
     /theory-test/multiple-choice-questions
     /theory-test/pass-mark-and-result
+    /theory-test/reading-difficulty-disability-or-health-condition
   ).freeze
 
   def self.included(base)
