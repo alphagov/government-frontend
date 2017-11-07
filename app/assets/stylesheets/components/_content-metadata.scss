@@ -1,0 +1,16 @@
+.app-c-content-metadata {
+  @include responsive-bottom-margin;
+  @include core-16;
+  padding-top: $gutter-half;
+  padding-bottom: $gutter-half;
+  border-top: 1px solid $border-colour;
+  border-bottom: 1px solid $border-colour;
+}
+
+.app-c-content-metadata__from {
+  margin-top: $gutter-half;
+}
+
+.app-c-content-metadata__from a {
+  font-weight: bold;
+}

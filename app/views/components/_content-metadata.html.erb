@@ -1,0 +1,21 @@
+<%
+  published ||= false
+  last_updated ||= false
+  from ||= false
+  link_to_history ||= false
+  metadata = [published, last_updated, from]
+%>
+<% if metadata.any? %>
+  <div class="app-c-content-metadata">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render 'components/published-dates', published: published, last_updated: last_updated, link_to_history: link_to_history %>
+        <% if from %>
+          <div class="app-c-content-metadata__from">
+            <%= t("govuk_component.content-metadata.from", default: "From") %>: <%= from.to_sentence.html_safe %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
