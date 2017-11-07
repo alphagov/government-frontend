@@ -14,8 +14,8 @@ module TasklistHeaderABTestable
   def tasklist_header_ab_test
     @tasklist_header_ab_test ||=
       GovukAbTesting::AbTest.new(
-       "TaskListHeader",
-       dimension: TASKLIST_HEADER_DIMENSION
+        "TaskListHeader",
+        dimension: TASKLIST_HEADER_DIMENSION
      )
   end
 
@@ -24,7 +24,7 @@ module TasklistHeaderABTestable
   end
 
   def should_show_tasklist_header?
-      tasklist_header_ab_test_applies? && tasklist_header_variant.variant?("B")
+    tasklist_header_ab_test_applies? && tasklist_header_variant.variant?("B")
   end
 
   def tasklist_header_variant
