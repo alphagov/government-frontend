@@ -231,7 +231,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "does not show taxonomy-navigation when no taxons are tagged to Detailed Guides" do
-    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
+    content_item = content_store_has_schema_example('document_collection', 'document_collection')
     path = 'government/test/detailed-guide'
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {}
@@ -244,8 +244,8 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "does not show taxonomy-navigation when page is tagged to mainstream browse" do
-    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
-    path = 'government/test/detailed-guide'
+    content_item = content_store_has_schema_example('document_collection', 'document_collection')
+    path = 'government/test/document_collection'
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {
       'mainstream_browse_pages' => [
@@ -269,8 +269,8 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "show taxonomy-navigation when page is tagged to a world wide taxon" do
-    content_item = content_store_has_schema_example('detailed_guide', 'detailed_guide')
-    path = 'government/test/detailed-guide'
+    content_item = content_store_has_schema_example('document_collection', 'document_collection')
+    path = 'government/test/document_collection'
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {
       'mainstream_browse_pages' => [
@@ -294,8 +294,8 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "shows the taxonomy-navigation if tagged to taxonomy" do
-    content_item = content_store_has_schema_example("guide", "guide")
-    path = "government/abtest/guide"
+    content_item = content_store_has_schema_example("document_collection", "document_collection")
+    path = "government/abtest/document_collection"
     content_item['base_path'] = "/#{path}"
     content_item['links'] = {
       'taxons' => [
