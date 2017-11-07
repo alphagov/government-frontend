@@ -1,5 +1,11 @@
 name: Published dates
 description: Dates to reflect when content was published and updated
+accessibility_criteria: |
+  The published dates component must:
+
+    - indicate to users that the full history section can be expanded and collapsed
+    - inform the user of the state of the full history section (expanded or collapsed)
+    - be usable with a keyboard
 shared_accessibility_criteria:
   - link
 examples:
