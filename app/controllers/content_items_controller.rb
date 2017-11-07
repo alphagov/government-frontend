@@ -30,6 +30,7 @@ class ContentItemsController < ApplicationController
     set_up_self_assessment_ab_test
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = ContentItemPresenter.new(content_item, content_item_path)
+    @error = params[:error]
     render template: 'content_items/signin/choose-sign-in'
   end
 
@@ -45,6 +46,18 @@ class ContentItemsController < ApplicationController
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = ContentItemPresenter.new(content_item, content_item_path)
     render template: 'content_items/signin/lost-account-details'
+  end
+
+  def sign_in_options
+    if params["sign-in-option"] == "government-gateway"
+      redirect_to "https://www.tax.service.gov.uk/account"
+    elsif params["sign-in-option"] == "govuk-verify"
+      redirect_to "https://www.tax.service.gov.uk/ida/sa/login?SelfAssessmentSigninTestVariant=B"
+    elsif params["sign-in-option"] == "lost-account-details"
+      redirect_to lost_account_details_path
+    else
+      redirect_to choose_sign_in_path error: true
+    end
   end
 
 private
