@@ -35,7 +35,11 @@
 
   <div id="wrapper" class="<%= wrapper_class %>">
     <%= render_phase_label @content_item, content_for(:phase_message) %>
-    <%= render 'shared/breadcrumbs' %>
+    <% if local_assigns.has_key?(:tasklist) && show_tasklist_header? %>
+      <%= render 'shared/tasklist_header', tasklist: @tasklist %>
+    <% else %>
+      <%= render 'shared/breadcrumbs' %>
+    <% end %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
     </main>
