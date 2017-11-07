@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  def show_tasklist_header?
+    if defined?(should_show_tasklist_header?)
+      should_show_tasklist_header?
+    end
+  end
+  helper_method :show_tasklist_header?
+
   def show_tasklist_sidebar?
     if defined?(should_show_tasklist_sidebar?)
       should_show_tasklist_sidebar?
