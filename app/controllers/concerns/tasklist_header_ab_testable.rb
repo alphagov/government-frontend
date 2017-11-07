@@ -24,7 +24,7 @@ module TasklistHeaderABTestable
   end
 
   def should_show_tasklist_header?
-      tasklist_header_ab_test_applies? && tasklist_header_variant.variant_b?
+      tasklist_header_ab_test_applies? && tasklist_header_variant.variant?("B")
   end
 
   def tasklist_header_variant
