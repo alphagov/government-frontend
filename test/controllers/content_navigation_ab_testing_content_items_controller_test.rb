@@ -67,5 +67,25 @@ class ContentItemsControllerTest < ActionController::TestCase
       assert_equal [], @request.variant
       assert_equal ContentItemsController::CONTENT_NAVIGATION_ORIGINAL, requested_variant_name
     end
+
+    test "#{document_type} does not mark itself as in variant when ab test does not apply" do
+      content_item = content_store_has_schema_example(schema_name, schema_name)
+      path = "government/abtest/#{schema_name}"
+      content_item['document_type'] = document_type
+      content_item['base_path'] = "/#{path}"
+      content_item['links'] = {}
+      content_store_has_item(content_item['base_path'], content_item)
+
+      ContentItemsController::CONTENT_NAVIGATION_ALLOWED_VARIANTS.each do |variant|
+        request.headers["GOVUK-ABTest-#{ContentItemsController::CONTENT_NAVIGATION_TEST_NAME}"] = variant
+        get :show, params: { path: path }
+        assert_response 200
+        refute @controller.content_navigation_ab_test_applies?
+
+        refute @controller.universal_navigation_without_nav?
+        refute @controller.universal_navigation_with_taxon_nav?
+        refute @controller.universal_navigation_with_mainstream_nav?
+      end
+    end
   end
 end

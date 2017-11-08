@@ -1,4 +1,5 @@
 module ContentNavigationABTestable
+  CONTENT_NAVIGATION_TEST_NAME = "ContentNavigation".freeze
   CONTENT_NAVIGATION_DIMENSION = 67
   CONTENT_NAVIGATION_ORIGINAL = "Original".freeze
   CONTENT_NAVIGATION_UNIVERSAL_NO_NAVIGATION = "UniversalNoNav".freeze
@@ -23,7 +24,6 @@ module ContentNavigationABTestable
     base.helper_method(
       :content_navigation_variant,
       :content_navigation_ab_test_applies?,
-      :content_navigation_test_original_variant?,
       :universal_navigation_without_nav?,
       :universal_navigation_with_taxon_nav?,
       :universal_navigation_with_mainstream_nav?
@@ -35,7 +35,7 @@ module ContentNavigationABTestable
   def content_navigation_ab_test
     @content_navigation_ab_test ||=
       GovukAbTesting::AbTest.new(
-        "ContentNavigation",
+        CONTENT_NAVIGATION_TEST_NAME,
         dimension: CONTENT_NAVIGATION_DIMENSION,
         allowed_variants: CONTENT_NAVIGATION_ALLOWED_VARIANTS,
         control_variant: CONTENT_NAVIGATION_ORIGINAL
@@ -49,7 +49,7 @@ module ContentNavigationABTestable
   # * in the multivariate test
   # * not showing the original variant
   def should_present_universal_navigation?
-    content_navigation_ab_test_applies? && !content_navigation_test_original_variant?
+    content_navigation_ab_test_applies? && !content_navigation_variant.variant?(CONTENT_NAVIGATION_ORIGINAL)
   end
 
   def content_navigation_ab_test_applies?
@@ -60,20 +60,19 @@ module ContentNavigationABTestable
     GUIDANCE_DOCUMENT_TYPES.include? @content_item.document_type
   end
 
-  def content_navigation_test_original_variant?
-    content_navigation_variant.variant?(CONTENT_NAVIGATION_ORIGINAL)
-  end
-
   def universal_navigation_without_nav?
-    content_navigation_variant.variant?(CONTENT_NAVIGATION_UNIVERSAL_NO_NAVIGATION)
+    content_navigation_ab_test_applies? &&
+      content_navigation_variant.variant?(CONTENT_NAVIGATION_UNIVERSAL_NO_NAVIGATION)
   end
 
   def universal_navigation_with_taxon_nav?
-    content_navigation_variant.variant?(CONTENT_NAVIGATION_UNIVERSAL_TAXON_NAVIGATION)
+    content_navigation_ab_test_applies? &&
+      content_navigation_variant.variant?(CONTENT_NAVIGATION_UNIVERSAL_TAXON_NAVIGATION)
   end
 
   def universal_navigation_with_mainstream_nav?
-    content_navigation_variant.variant?(CONTENT_NAVIGATION_UNIVERSAL_MAINSTREAM_NAVIGATION)
+    content_navigation_ab_test_applies? &&
+      content_navigation_variant.variant?(CONTENT_NAVIGATION_UNIVERSAL_MAINSTREAM_NAVIGATION)
   end
 
   def content_navigation_variant
