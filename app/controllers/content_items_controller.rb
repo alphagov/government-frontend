@@ -14,6 +14,7 @@ class ContentItemsController < ApplicationController
   attr_accessor :content_item
 
   def show
+    set_up_self_assessment_ab_test
     load_content_item
     set_up_navigation
     setup_tasklist_header_ab_testing
@@ -23,6 +24,37 @@ class ContentItemsController < ApplicationController
     set_access_control_allow_origin_header if request.format.atom?
     set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
     render_template
+  end
+
+  def choose_sign_in
+    @content_item = set_up_self_assessment_ab_content_item
+    set_up_traffic_signs_summary_ab_testing
+    @error = params[:error]
+    render template: 'content_items/signin/choose-sign-in'
+  end
+
+  def not_registered
+    @content_item = set_up_self_assessment_ab_content_item
+    set_up_traffic_signs_summary_ab_testing
+    render template: 'content_items/signin/not-registered'
+  end
+
+  def lost_account_details
+    @content_item = set_up_self_assessment_ab_content_item
+    set_up_traffic_signs_summary_ab_testing
+    render template: 'content_items/signin/lost-account-details'
+  end
+
+  def sign_in_options
+    if params["sign-in-option"] == "government-gateway"
+      redirect_to "https://www.tax.service.gov.uk/account"
+    elsif params["sign-in-option"] == "govuk-verify"
+      redirect_to "https://www.tax.service.gov.uk/ida/sa/login?SelfAssessmentSigninTestVariant=B"
+    elsif params["sign-in-option"] == "lost-account-details"
+      redirect_to lost_account_details_path
+    else
+      redirect_to choose_sign_in_path error: true
+    end
   end
 
 private
@@ -36,6 +68,7 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     raise SpecialRouteReturned if special_route?(content_item)
+    replace_self_assessment_part_one(content_item)
     @content_item = present(content_item)
   end
 
@@ -89,6 +122,31 @@ private
     max_age = @content_item.content_item.cache_control.max_age
     cache_private = @content_item.content_item.cache_control.private?
     expires_in(max_age, public: !cache_private)
+  end
+
+  def set_up_self_assessment_ab_test
+    ab_test = GovukAbTesting::AbTest.new("SelfAssessmentSigninTest", dimension: 65)
+
+    @self_assessment_requested_variant = ab_test.requested_variant(request.headers)
+    @self_assessment_requested_variant.configure_response(response)
+  end
+
+  def replace_self_assessment_part_one(content_item)
+    if self_assessment_start_page?(content_item) && @self_assessment_requested_variant.variant?('B')
+      b_variant_content = File.read(Rails.root.join("app", "assets", "html", "self_assessment_b_variant.html"))
+      content_item["details"]["parts"].first["body"] = b_variant_content.to_s
+    end
+    content_item
+  end
+
+  def self_assessment_start_page?(content_item)
+    content_item["base_path"] == "/log-in-file-self-assessment-tax-return"
+  end
+
+  def set_up_self_assessment_ab_content_item
+    set_up_self_assessment_ab_test
+    content_item = Services.content_store.content_item(content_item_path)
+    ContentItemPresenter.new(content_item, content_item_path)
   end
 
   def set_up_navigation

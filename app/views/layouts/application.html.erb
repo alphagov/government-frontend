@@ -28,6 +28,7 @@
   <%= @traffic_signs_summary_ab_test.analytics_meta_tag.html_safe if @traffic_signs_summary_ab_test.ab_test_applies? %>
   <%= tasklist_header_variant.analytics_meta_tag.html_safe if tasklist_header_ab_test_applies? %>
   <%= yield :extra_head_content %>
+  <%= @self_assessment_requested_variant.analytics_meta_tag.html_safe %>
 </head>
 <body>
   <% unless content_for(:simple_header) %>
@@ -39,7 +40,9 @@
     <% if show_tasklist_header? %>
       <%= render 'shared/tasklist_header' %>
     <% else %>
-      <%= render 'shared/breadcrumbs' %>
+      <% unless content_for(:no_breadcrumbs) %>
+        <%= render 'shared/breadcrumbs' %>
+      <% end %>
     <% end %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>

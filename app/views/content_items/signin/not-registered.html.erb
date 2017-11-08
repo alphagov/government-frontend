@@ -1,0 +1,50 @@
+<% content_for :title, "Register for Self Assessment" %>
+
+<% content_for :simple_header, true %>
+<% content_for :no_breadcrumbs, true %>
+
+<% content_for :extra_head_content do %>
+  <%= stylesheet_link_tag "self_assessment_b_variant.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
+<% end %>
+
+<a
+  href="/log-in-file-self-assessment-tax-return/choose-sign-in"
+  class="govuk-c-link govuk-c-link--back govuk-u-mt-3 govuk-u-mb-6 app-u-mb-5--small"
+>Back</a>
+
+<h1 class="govuk-u-bold-48 govuk-u-mb-6 app-u-mb-4--small">Register for Self Assessment</h1>
+
+<% page_content = capture do %>
+
+
+<p>You need to register for Self Assessment before you file your tax return.</p>
+
+<p>There are different ways to register if you’re:</p>
+
+<ul>
+  <li><a href="/log-in-file-self-assessment-tax-return/register-if-youre-self-employed">self-employed or a sole trader</a></li>
+  <li><a href="/log-in-file-self-assessment-tax-return/register-if-youre-not-self-employed">not self-employed</a></li>
+  <li><a href="/log-in-file-self-assessment-tax-return/register-if-youre-a-partner-or-partnership">registering a partner or partnership</a></li>
+</ul>
+
+<div role="note" aria-label="Information" class="application-notice info-notice">
+<p>Allow enough time to complete the registration process so you can send your return by the <a href="/self-assessment-tax-returns/deadlines">deadline</a>.</p>
+</div>
+
+<h2 id="if-you-have-already-registered">If you have already registered</h2>
+
+<p>Once you’re registered, you have to activate your Government Gateway account using your Unique Taxpayer Reference (UTR).</p>
+
+<p>You can <a rel="external" href="https://www.tax.service.gov.uk/government-gateway-registration-frontend/choose-your-account?continue=%2Faccount&amp;origin=unknown">create a Government Gateway account</a> if you don’t have one.</p>
+
+<div role="note" aria-label="Information" class="application-notice info-notice">
+<p>Don’t create a new account if you’ve activated one before. You can only link your UTR to one Government Gateway account.</p>
+</div>
+
+<% end %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/govspeak', content: page_content %>
+  </div>
+</div>
