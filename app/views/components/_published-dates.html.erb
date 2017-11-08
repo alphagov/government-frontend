@@ -6,7 +6,7 @@
   link_to_history ||= false
 %>
 
-<div class="app-c-published-dates" <% if history%>id="history"<% end %>>
+<div class="app-c-published-dates" <% if history%>id="history" data-module="toggle"<% end %>>
   Published <%= published %>
   <% if last_updated %>
     <% if published %><br /><% end %>
@@ -28,16 +28,3 @@
     <% end %>
   <% end %>
 </div>
-
-<% if history %>
-  <div class="app-c-published-dates__page-history" id="full-history">
-    <ol>
-      <% history.each do |change| %>
-        <li class="app-c-published-dates__change-item">
-          <time class="app-c-published-dates__change-date" datetime="<%= change[:timestamp] %>" class="timestamp"><%= change[:display_time] %></time>
-          <%= change[:note] %>
-        </li>
-      <% end %>
-    </ol>
-  </div>
-<% end %>
