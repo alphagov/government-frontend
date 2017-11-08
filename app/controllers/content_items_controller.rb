@@ -27,24 +27,18 @@ class ContentItemsController < ApplicationController
   end
 
   def choose_sign_in
-    set_up_self_assessment_ab_test
-    content_item = Services.content_store.content_item(content_item_path)
-    @content_item = ContentItemPresenter.new(content_item, content_item_path)
+    @content_item = set_up_self_assessment_ab_content_item
     @error = params[:error]
     render template: 'content_items/signin/choose-sign-in'
   end
 
   def not_registered
-    set_up_self_assessment_ab_test
-    content_item = Services.content_store.content_item(content_item_path)
-    @content_item = ContentItemPresenter.new(content_item, content_item_path)
+    @content_item = set_up_self_assessment_ab_content_item
     render template: 'content_items/signin/not-registered'
   end
 
   def lost_account_details
-    set_up_self_assessment_ab_test
-    content_item = Services.content_store.content_item(content_item_path)
-    @content_item = ContentItemPresenter.new(content_item, content_item_path)
+    @content_item = set_up_self_assessment_ab_content_item
     render template: 'content_items/signin/lost-account-details'
   end
 
@@ -144,6 +138,12 @@ private
 
   def self_assessment_start_page?(content_item)
     content_item["base_path"] == "/log-in-file-self-assessment-tax-return"
+  end
+
+  def set_up_self_assessment_ab_content_item
+    set_up_self_assessment_ab_test
+    content_item = Services.content_store.content_item(content_item_path)
+    ContentItemPresenter.new(content_item, content_item_path)
   end
 
   def set_up_navigation
