@@ -62,8 +62,10 @@ class ContentItemsControllerTest < ActionController::TestCase
       content_store_has_item(content_item['base_path'], content_item)
 
       get :show, params: { path: path }
+      requested_variant_name = @controller.content_navigation_ab_test.requested_variant(request.headers).variant_name
       assert_response 200
       assert_equal [], @request.variant
+      assert_equal ContentItemsController::CONTENT_NAVIGATION_ORIGINAL, requested_variant_name
     end
   end
 end

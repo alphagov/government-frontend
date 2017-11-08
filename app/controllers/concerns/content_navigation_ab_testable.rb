@@ -37,7 +37,8 @@ module ContentNavigationABTestable
       GovukAbTesting::AbTest.new(
         "ContentNavigation",
         dimension: CONTENT_NAVIGATION_DIMENSION,
-        allowed_variants: CONTENT_NAVIGATION_ALLOWED_VARIANTS
+        allowed_variants: CONTENT_NAVIGATION_ALLOWED_VARIANTS,
+        control_variant: CONTENT_NAVIGATION_ORIGINAL
       )
   end
 
