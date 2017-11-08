@@ -26,6 +26,7 @@
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
   <%= tasklist_variant.analytics_meta_tag.html_safe if tasklist_ab_test_applies? %>
   <%= @traffic_signs_summary_ab_test.analytics_meta_tag.html_safe if @traffic_signs_summary_ab_test.ab_test_applies? %>
+  <%= tasklist_header_variant.analytics_meta_tag.html_safe if tasklist_header_ab_test_applies? %>
   <%= yield :extra_head_content %>
 </head>
 <body>
@@ -35,7 +36,11 @@
 
   <div id="wrapper" class="<%= wrapper_class %>">
     <%= render_phase_label @content_item, content_for(:phase_message) %>
-    <%= render 'shared/breadcrumbs' %>
+    <% if show_tasklist_header? %>
+      <%= render 'shared/tasklist_header' %>
+    <% else %>
+      <%= render 'shared/breadcrumbs' %>
+    <% end %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
     </main>
