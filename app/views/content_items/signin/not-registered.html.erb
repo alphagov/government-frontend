@@ -3,6 +3,15 @@
 <% content_for :simple_header, true %>
 <% content_for :no_breadcrumbs, true %>
 
+<% content_for :extra_head_content do %>
+  <%= stylesheet_link_tag "self_assessment_b_variant.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
+<% end %>
+
+<a
+  href="/log-in-file-self-assessment-tax-return/choose-sign-in"
+  class="govuk-c-link govuk-c-link--back govuk-u-mt-3 govuk-u-mb-6 app-u-mb-5--small"
+>Back</a>
+
 <%= render 'govuk_component/title', title: "Register for Self Assessment" %>
 
 <% page_content = capture do %>
