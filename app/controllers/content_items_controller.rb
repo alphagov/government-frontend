@@ -28,17 +28,20 @@ class ContentItemsController < ApplicationController
 
   def choose_sign_in
     @content_item = set_up_self_assessment_ab_content_item
+    set_up_traffic_signs_summary_ab_testing
     @error = params[:error]
     render template: 'content_items/signin/choose-sign-in'
   end
 
   def not_registered
     @content_item = set_up_self_assessment_ab_content_item
+    set_up_traffic_signs_summary_ab_testing
     render template: 'content_items/signin/not-registered'
   end
 
   def lost_account_details
     @content_item = set_up_self_assessment_ab_content_item
+    set_up_traffic_signs_summary_ab_testing
     render template: 'content_items/signin/lost-account-details'
   end
 

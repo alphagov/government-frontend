@@ -390,11 +390,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     refute_match(/Guidance on road traffic signage in Great Britain/, response.body)
   end
 
-  test "overwrites content for the first page of the self assessment guide" do
-    content_item = content_store_has_schema_example('guide', 'guide')
-    path = 'log-in-file-self-assessment-tax-return'
-    content_item['base_path'] = "/#{path}"
-
   class SelfAssessmentABTest < ContentItemsControllerTest
     test "shows the original page content on the control version of the self assessment guide" do
       with_variant SelfAssessmentSigninTest: "A" do
