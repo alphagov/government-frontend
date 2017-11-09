@@ -7,19 +7,12 @@ class NavigationType
   end
 
   def should_present_taxonomy_navigation?
-    tagged_to_world_wide_taxonomy? ||
-      (!content_is_tagged_to_browse_pages? &&
+    !content_is_tagged_to_browse_pages? &&
       content_is_tagged_to_a_taxon? &&
-      content_schema_is_guidance?)
+      content_schema_is_guidance?
   end
 
 private
-
-  def tagged_to_world_wide_taxonomy?
-    @content_item.dig("links", "taxons").to_a.any? do |content_item|
-      content_item.fetch("base_path").starts_with?("/world")
-    end
-  end
 
   def content_is_tagged_to_a_taxon?
     @content_item.dig("links", "taxons").present?
