@@ -4,6 +4,7 @@ class ContentItemsController < ApplicationController
   include TasklistHeaderABTestable
   include TasklistABTestable
   include ContentNavigationABTestable
+  include SelfAssessmentABTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -13,7 +14,6 @@ class ContentItemsController < ApplicationController
   rescue_from SpecialRouteReturned, with: :error_notfound
 
   attr_accessor :content_item
-  helper_method :self_assessment_start_page?
 
   def show
     set_up_self_assessment_ab_test
@@ -60,16 +60,6 @@ class ContentItemsController < ApplicationController
     else
       redirect_to choose_sign_in_path error: true
     end
-  end
-
-  def self_assessment_start_page?(content_item)
-    self_assessment_pages = %w(
-      /log-in-file-self-assessment-tax-return
-      /log-in-file-self-assessment-tax-return/choose-sign-in
-      /log-in-file-self-assessment-tax-return/not-registered
-      /log-in-file-self-assessment-tax-return/lost-account-details
-    )
-    self_assessment_pages.include?(content_item["base_path"])
   end
 
 private
@@ -137,27 +127,6 @@ private
     max_age = @content_item.content_item.cache_control.max_age
     cache_private = @content_item.content_item.cache_control.private?
     expires_in(max_age, public: !cache_private)
-  end
-
-  def set_up_self_assessment_ab_test
-    ab_test = GovukAbTesting::AbTest.new("SelfAssessmentSigninTest", dimension: 65)
-
-    @self_assessment_requested_variant = ab_test.requested_variant(request.headers)
-    @self_assessment_requested_variant.configure_response(response)
-  end
-
-  def replace_self_assessment_part_one(content_item)
-    if self_assessment_start_page?(content_item) && @self_assessment_requested_variant.variant?('B')
-      b_variant_content = File.read(Rails.root.join("app", "assets", "html", "self_assessment_b_variant.html"))
-      content_item["details"]["parts"].first["body"] = b_variant_content.to_s
-    end
-    content_item
-  end
-
-  def set_up_self_assessment_ab_content_item
-    set_up_self_assessment_ab_test
-    content_item = Services.content_store.content_item(content_item_path)
-    ContentItemPresenter.new(content_item, content_item_path)
   end
 
   def set_up_navigation
