@@ -132,15 +132,6 @@ private
     set_content_navigation_response_header
   end
 
-  def content_item_path
-    path_and_optional_locale = params
-                                 .values_at(:path, :locale)
-                                 .compact
-                                 .join('.')
-
-    '/' + URI.encode(path_and_optional_locale)
-  end
-
   def error_403(exception)
     render plain: exception.message, status: 403
   end

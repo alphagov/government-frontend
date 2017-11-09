@@ -36,13 +36,4 @@ module SelfAssessmentABTestable
     end
     content_item
   end
-
-  def content_item_path
-    path_and_optional_locale = params
-                                 .values_at(:path, :locale)
-                                 .compact
-                                 .join('.')
-
-    '/' + URI.encode(path_and_optional_locale)
-  end
 end

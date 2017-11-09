@@ -59,4 +59,13 @@ private
       @content_item = @traffic_signs_summary_ab_test.with_old_summary(@content_item)
     end
   end
+
+  def content_item_path
+    path_and_optional_locale = params
+                                 .values_at(:path, :locale)
+                                 .compact
+                                 .join('.')
+
+    '/' + URI.encode(path_and_optional_locale)
+  end
 end
