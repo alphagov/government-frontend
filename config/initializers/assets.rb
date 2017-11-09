@@ -16,4 +16,5 @@ Rails.application.config.assets.precompile += %w(
   application-ie8.css
   print.css
   webchat.js
+  self_assessment_b_variant.js
 )

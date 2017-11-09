@@ -8,6 +8,9 @@
   <%= stylesheet_link_tag "self_assessment_b_variant.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
 <% end %>
 
+<% # This is inline in the source however slimmer will optimize this. %>
+<%= javascript_include_tag "self_assessment_b_variant", integrity: true, crossorigin: 'anonymous' %>
+
 <a
   href="/log-in-file-self-assessment-tax-return"
   class="govuk-c-link govuk-c-link--back govuk-u-mt-3 govuk-u-mb-6 app-u-mb-5--small"
@@ -15,7 +18,7 @@
 
 <% if @error %>
   <div
-    class="govuk-u-mb-6 app-u-mb-5--small govuk-c-error-summary optional-extra-class"
+    class="govuk-u-mb-6 app-u-mb-5--small js-error-summary govuk-c-error-summary optional-extra-class"
     aria-labelledby="error-summary-title" role="alert" tabindex="-1"
   >
     <h2 class="govuk-c-error-summary__title" id="error-summary-title">
@@ -31,7 +34,7 @@
   </div>
 <% end %>
 
-<%= form_tag({controller: 'content_items', action: 'sign_in_options'}, { method: :post, class: 'govuk-u-mb-6' }) do %>
+<%= form_tag({controller: 'content_items', action: 'sign_in_options'}, { method: :post, class: 'js-radio-button-track-form govuk-u-mb-6' }) do %>
   <fieldset class="govuk-u-mb-5 govuk-c-fieldset" id="radio-stacked">
     <legend class="govuk-c-fieldset__legend">
       <h1 class="govuk-u-bold-48 govuk-u-mb-6 app-u-mb-4--small">Choose how to sign in</h1>
