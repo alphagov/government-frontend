@@ -22,6 +22,7 @@ src_files:
   - "../../../spec/javascripts/helpers/lolex.js"
   - "application.js"
   - "webchat.js"
+  - "self_assessment_b_variant.js"
 
 # list of file expressions to include as css files
 # relative path from css_dir

@@ -8,6 +8,9 @@
   <%= stylesheet_link_tag "self_assessment_b_variant.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
 <% end %>
 
+<% # This is inline in the source however slimmer will optimize this. %>
+<%= javascript_include_tag "self_assessment_b_variant", integrity: true, crossorigin: 'anonymous' %>
+
 <a
   href="/log-in-file-self-assessment-tax-return"
   class="govuk-c-link govuk-c-link--back govuk-u-mt-3 govuk-u-mb-6 app-u-mb-5--small"
