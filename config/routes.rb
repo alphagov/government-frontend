@@ -9,10 +9,10 @@ Rails.application.routes.draw do
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
 
-  get 'log-in-file-self-assessment-tax-return/choose-sign-in', to: 'content_items#choose_sign_in', as: :choose_sign_in, defaults: { path: '/log-in-file-self-assessment-tax-return/choose-sign-in' }
-  get 'log-in-file-self-assessment-tax-return/not-registered', to: 'content_items#not_registered', defaults: { path: '/log-in-file-self-assessment-tax-return/not-registered' }
-  get 'log-in-file-self-assessment-tax-return/lost-account-details', to: 'content_items#lost_account_details', as: :lost_account_details, defaults: { path: '/log-in-file-self-assessment-tax-return/lost-account-details' }
-  post 'log-in-file-self-assessment-tax-return/choose-sign-in', to: 'content_items#sign_in_options'
+  get 'log-in-file-self-assessment-tax-return/choose-sign-in', to: 'self_assessment_signin#choose_sign_in', as: :choose_sign_in, defaults: { path: '/log-in-file-self-assessment-tax-return/choose-sign-in' }
+  get 'log-in-file-self-assessment-tax-return/not-registered', to: 'self_assessment_signin#not_registered', defaults: { path: '/log-in-file-self-assessment-tax-return/not-registered' }
+  get 'log-in-file-self-assessment-tax-return/lost-account-details', to: 'self_assessment_signin#lost_account_details', as: :lost_account_details, defaults: { path: '/log-in-file-self-assessment-tax-return/lost-account-details' }
+  post 'log-in-file-self-assessment-tax-return/choose-sign-in', to: 'self_assessment_signin#sign_in_options'
 
   get '*path/:variant' => 'content_items#show',
       constraints: {

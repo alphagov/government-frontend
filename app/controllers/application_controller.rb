@@ -46,4 +46,17 @@ private
     end
     tasklist
   end
+
+  def set_up_traffic_signs_summary_ab_testing
+    @traffic_signs_summary_ab_test = TrafficSignsSummaryAbTestRequest.new(
+      request, @content_item.content_item
+    )
+    return unless @traffic_signs_summary_ab_test.ab_test_applies?
+
+    @traffic_signs_summary_ab_test.set_response_vary_header response
+
+    if @traffic_signs_summary_ab_test.should_present_old_summary?
+      @content_item = @traffic_signs_summary_ab_test.with_old_summary(@content_item)
+    end
+  end
 end

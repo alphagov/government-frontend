@@ -31,37 +31,6 @@ class ContentItemsController < ApplicationController
     render_template
   end
 
-  def choose_sign_in
-    @content_item = set_up_self_assessment_ab_content_item
-    set_up_traffic_signs_summary_ab_testing
-    @error = params[:error]
-    render template: 'content_items/signin/choose-sign-in'
-  end
-
-  def not_registered
-    @content_item = set_up_self_assessment_ab_content_item
-    set_up_traffic_signs_summary_ab_testing
-    render template: 'content_items/signin/not-registered'
-  end
-
-  def lost_account_details
-    @content_item = set_up_self_assessment_ab_content_item
-    set_up_traffic_signs_summary_ab_testing
-    render template: 'content_items/signin/lost-account-details'
-  end
-
-  def sign_in_options
-    if params["sign-in-option"] == "government-gateway"
-      redirect_to "https://www.tax.service.gov.uk/account"
-    elsif params["sign-in-option"] == "govuk-verify"
-      redirect_to "https://www.tax.service.gov.uk/ida/sa/login?SelfAssessmentSigninTestVariant=B"
-    elsif params["sign-in-option"] == "lost-account-details"
-      redirect_to lost_account_details_path
-    else
-      redirect_to choose_sign_in_path error: true
-    end
-  end
-
 private
 
   # Allow guides to pass access token to each part to allow
@@ -144,19 +113,6 @@ private
       if @navigation.should_present_taxonomy_navigation?
         request.variant = :taxonomy_navigation
       end
-    end
-  end
-
-  def set_up_traffic_signs_summary_ab_testing
-    @traffic_signs_summary_ab_test = TrafficSignsSummaryAbTestRequest.new(
-      request, @content_item.content_item
-    )
-    return unless @traffic_signs_summary_ab_test.ab_test_applies?
-
-    @traffic_signs_summary_ab_test.set_response_vary_header response
-
-    if @traffic_signs_summary_ab_test.should_present_old_summary?
-      @content_item = @traffic_signs_summary_ab_test.with_old_summary(@content_item)
     end
   end
 
