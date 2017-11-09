@@ -31,8 +31,8 @@ module SelfAssessmentABTestable
 
   def replace_self_assessment_part_one(content_item)
     if self_assessment_start_page?(content_item) && @self_assessment_requested_variant.variant?('B')
-      b_variant_content = File.read(Rails.root.join("app", "assets", "html", "self_assessment_b_variant.html"))
-      content_item["details"]["parts"].first["body"] = b_variant_content.to_s
+      @b_variant_content ||= File.read(Rails.root.join("app", "assets", "html", "self_assessment_b_variant.html"))
+      content_item["details"]["parts"].first["body"] = @b_variant_content.to_s
     end
     content_item
   end
