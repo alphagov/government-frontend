@@ -26,6 +26,12 @@ en:
   common:
     last_updated: "Last updated"
     translations: "Translations"
+  components:
+    published_dates:
+      full_page_history: "full page history"
+      last_updated: "Last updated %{date}"
+      published: "Published %{date}"
+      see_all_updates: "see all updates"
   language_names:
     ar: Arabic
     de: German
