@@ -392,79 +392,79 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   class SelfAssessmentABTest < ContentItemsControllerTest
     test "shows the original page content on the control version of the self assessment guide" do
-      with_variant SelfAssessmentSigninTest: "A" do
+      content_item = content_store_has_schema_example('guide', 'guide')
+      path = 'log-in-file-self-assessment-tax-return'
+      content_item['base_path'] = "/#{path}"
+      content_item['details'] = {
+        parts: [
+          body: "The original part one"
+        ]
+      }
+      content_store_has_item(content_item['base_path'], content_item)
+
+      setup_ab_variant("SelfAssessmentSigninTest", "A")
+
+      get :show, params: { path: path_for(content_item) }
+      assert @response.body.include?('The original part one')
+    end
+
+    test "overwrites content for the first page of the self assessment guide" do
+      content_item = content_store_has_schema_example('guide', 'guide')
+      path = 'log-in-file-self-assessment-tax-return'
+      content_item['base_path'] = "/#{path}"
+
+      content_store_has_item(content_item['base_path'], content_item)
+
+      setup_ab_variant("SelfAssessmentSigninTest", "B")
+
+      get :show, params: { path: path_for(content_item) }
+      assert @response.body.include?('Sign in to continue')
+    end
+
+    test "other guide pages are not overwritten" do
+      %w(A B).each do |variant|
         content_item = content_store_has_schema_example('guide', 'guide')
-        path = 'log-in-file-self-assessment-tax-return'
+        path = 'guide-page'
         content_item['base_path'] = "/#{path}"
         content_item['details'] = {
           parts: [
             body: "The original part one"
           ]
         }
+
         content_store_has_item(content_item['base_path'], content_item)
+
+        setup_ab_variant("SelfAssessmentSigninTest", variant)
 
         get :show, params: { path: path_for(content_item) }
         assert @response.body.include?('The original part one')
       end
     end
 
-    test "overwrites content for the first page of the self assessment guide" do
-      with_variant SelfAssessmentSigninTest: "B" do
-        content_item = content_store_has_schema_example('guide', 'guide')
-        path = 'log-in-file-self-assessment-tax-return'
-        content_item['base_path'] = "/#{path}"
-
-        content_store_has_item(content_item['base_path'], content_item)
-
-        get :show, params: { path: path_for(content_item) }
-        assert @response.body.include?('Sign in to continue')
-      end
-    end
-
-    test "other guide pages are not overwritten" do
-      %w(A B).each do |variant|
-        with_variant SelfAssessmentSigninTest: variant do
-          content_item = content_store_has_schema_example('guide', 'guide')
-          path = 'guide-page'
-          content_item['base_path'] = "/#{path}"
-          content_item['details'] = {
-            parts: [
-              body: "The original part one"
-            ]
-          }
-
-          content_store_has_item(content_item['base_path'], content_item)
-
-          get :show, params: { path: path_for(content_item) }
-          assert @response.body.include?('The original part one')
-        end
-      end
-    end
-
     test "choose_sign_in" do
-      with_variant SelfAssessmentSigninTest: "B" do
-        content_item = content_store_has_schema_example("guide", "guide")
-        content_item["base_path"] = "/log-in-file-self-assessment-tax-return/choose-sign-in"
-        content_store_has_item(content_item["base_path"], content_item)
+      content_item = content_store_has_schema_example("guide", "guide")
+      content_item["base_path"] = "/log-in-file-self-assessment-tax-return/choose-sign-in"
+      content_store_has_item(content_item["base_path"], content_item)
 
-        get :choose_sign_in, params: { path: path_for(content_item) }
-        assert_response 200
-        assert_not @response.body.include?("You haven't selected an option")
-        assert_template("content_items/signin/choose-sign-in")
-      end
+      setup_ab_variant("SelfAssessmentSigninTest", "B")
+
+      get :choose_sign_in, params: { path: path_for(content_item) }
+      assert_response 200
+      assert_not @response.body.include?("You haven't selected an option")
+      assert_template("content_items/signin/choose-sign-in")
     end
 
     test "choose_sign_in with error" do
-      with_variant SelfAssessmentSigninTest: "B" do
-        content_item = content_store_has_schema_example("guide", "guide")
-        content_item["base_path"] = "/log-in-file-self-assessment-tax-return/choose-sign-in"
-        content_store_has_item(content_item["base_path"], content_item)
+      content_item = content_store_has_schema_example("guide", "guide")
+      content_item["base_path"] = "/log-in-file-self-assessment-tax-return/choose-sign-in"
+      content_store_has_item(content_item["base_path"], content_item)
 
-        get :choose_sign_in, params: { path: path_for(content_item), error: true }
-        assert_response 200
-        assert_template("content_items/signin/choose-sign-in")
-        assert @response.body.include?("You haven't selected an option")
-      end
+      setup_ab_variant("SelfAssessmentSigninTest", "B")
+
+      get :choose_sign_in, params: { path: path_for(content_item), error: true }
+      assert_response 200
+      assert_template("content_items/signin/choose-sign-in")
+      assert @response.body.include?("You haven't selected an option")
     end
 
     test "sign_in_options with sign-in-option param set" do

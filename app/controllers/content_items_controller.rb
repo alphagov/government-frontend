@@ -13,6 +13,7 @@ class ContentItemsController < ApplicationController
   rescue_from SpecialRouteReturned, with: :error_notfound
 
   attr_accessor :content_item
+  helper_method :self_assessment_start_page?
 
   def show
     set_up_self_assessment_ab_test
@@ -59,6 +60,16 @@ class ContentItemsController < ApplicationController
     else
       redirect_to choose_sign_in_path error: true
     end
+  end
+
+  def self_assessment_start_page?(content_item)
+    self_assessment_pages = %w(
+      /log-in-file-self-assessment-tax-return
+      /log-in-file-self-assessment-tax-return/choose-sign-in
+      /log-in-file-self-assessment-tax-return/not-registered
+      /log-in-file-self-assessment-tax-return/lost-account-details
+    )
+    self_assessment_pages.include?(content_item["base_path"])
   end
 
 private
@@ -141,10 +152,6 @@ private
       content_item["details"]["parts"].first["body"] = b_variant_content.to_s
     end
     content_item
-  end
-
-  def self_assessment_start_page?(content_item)
-    content_item["base_path"] == "/log-in-file-self-assessment-tax-return"
   end
 
   def set_up_self_assessment_ab_content_item
