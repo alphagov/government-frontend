@@ -1,0 +1,18 @@
+.app-c-published-dates {
+  margin-bottom: $gutter / 2;
+  @include core-16;
+}
+
+.app-c-published-dates__change-history {
+  margin: 20px 0;
+}
+
+.app-c-published-dates__change-item {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.app-c-published-dates__change-date {
+  display: block;
+  @include bold-16;
+}
