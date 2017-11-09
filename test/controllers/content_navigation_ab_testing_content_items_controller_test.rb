@@ -74,6 +74,10 @@ class ContentItemsControllerTest < ActionController::TestCase
         refute_partial('shared/_related_items')
         refute_partial('govuk_component/metadata')
         refute_partial('govuk_component/document_footer')
+
+        if document_type.in? %w{detailed_guide statutory_guidance}
+          assert_template 'components/_published-dates'
+        end
       end
     end
   end

@@ -25,6 +25,13 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'publication_inline_body' %>
+    <div class="responsive-bottom-margin">
+      <%= render 'publication_inline_body' %>
+    </div>
+    <%= render 'components/published-dates', {
+          published: @content_item.published,
+          last_updated: @content_item.updated,
+          history: @content_item.history
+        } %>
   </div>
 </div>
