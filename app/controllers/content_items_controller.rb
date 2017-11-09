@@ -3,6 +3,7 @@ class ContentItemsController < ApplicationController
 
   include TasklistHeaderABTestable
   include TasklistABTestable
+  include ContentNavigationABTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -16,10 +17,13 @@ class ContentItemsController < ApplicationController
   def show
     set_up_self_assessment_ab_test
     load_content_item
-    set_up_navigation
+
     setup_tasklist_header_ab_testing
     setup_tasklist_ab_testing
     set_up_traffic_signs_summary_ab_testing
+    setup_content_navigation_ab_testing
+
+    set_up_navigation
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
     set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
@@ -150,8 +154,6 @@ private
   end
 
   def set_up_navigation
-    @navigation = NavigationType.new(@content_item.content_item)
-
     # Setting a variant on a request is a type of Rails Dark Magic that will
     # use a convention to automagically load an alternative partial, view or
     # layout.  For example, if I set a variant of :taxonomy_navigation and we render
@@ -159,8 +161,13 @@ private
     # _breadcrumbs.html+taxonomy_navigation.erb instead. If this file doesn't exist,
     # then it falls back to _breadcrumbs.html.erb.  See:
     # http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
-    if @navigation.should_present_taxonomy_navigation?
-      request.variant = :taxonomy_navigation
+    if should_present_universal_navigation?
+      request.variant = :universal_navigation
+    else
+      @navigation = NavigationType.new(@content_item.content_item)
+      if @navigation.should_present_taxonomy_navigation?
+        request.variant = :taxonomy_navigation
+      end
     end
   end
 
@@ -187,6 +194,10 @@ private
 
   def setup_tasklist_ab_testing
     set_tasklist_response_header
+  end
+
+  def setup_content_navigation_ab_testing
+    set_content_navigation_response_header
   end
 
   def content_item_path

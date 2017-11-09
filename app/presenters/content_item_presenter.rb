@@ -62,6 +62,10 @@ class ContentItemPresenter
     @nav_helper.related_items
   end
 
+  def tagged_to_a_taxon?
+    content_item.dig("links", "taxons").present?
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
