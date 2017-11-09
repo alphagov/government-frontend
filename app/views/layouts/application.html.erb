@@ -41,7 +41,7 @@
     <% if show_tasklist_header? %>
       <%= render 'shared/tasklist_header' %>
     <% else %>
-      <% unless content_for(:no_breadcrumbs) %>
+      <% if !content_for(:no_breadcrumbs) && !universal_navigation_without_nav? %>
         <%= render 'shared/breadcrumbs' %>
       <% end %>
     <% end %>

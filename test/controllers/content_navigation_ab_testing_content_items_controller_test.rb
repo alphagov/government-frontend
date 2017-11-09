@@ -63,6 +63,19 @@ class ContentItemsControllerTest < ActionController::TestCase
         refute @controller.universal_navigation_with_mainstream_nav?
       end
     end
+
+    test "#{document_type} shows no navigation elements for universal no navigation variant" do
+      path = "government/abtest/#{schema_name}"
+      content_item_inside_of_test(document_type, schema_name, path)
+
+      with_variant ContentNavigation: ContentItemsController::CONTENT_NAVIGATION_UNIVERSAL_NO_NAVIGATION do
+        get :show, params: { path: path }
+        refute_partial('shared/_breadcrumbs')
+        refute_partial('shared/_related_items')
+        refute_partial('govuk_component/metadata')
+        refute_partial('govuk_component/document_footer')
+      end
+    end
   end
 
   def content_item_inside_of_test(document_type, schema_name, path)
@@ -89,5 +102,9 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item['document_type'] = document_type
     content_item['base_path'] = "/#{path}"
     content_item
+  end
+
+  def refute_partial(partial)
+    assert_template partial: partial, count: 0
   end
 end
