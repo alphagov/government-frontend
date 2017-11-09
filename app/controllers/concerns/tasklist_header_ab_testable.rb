@@ -20,7 +20,7 @@ module TasklistHeaderABTestable
   end
 
   def tasklist_header_ab_test_applies?
-    TasklistABTestable::TASKLIST_PRIMARY_PAGES.include?(request.path)
+    page_is_included_in_test?
   end
 
   def should_show_tasklist_header?
@@ -34,5 +34,11 @@ module TasklistHeaderABTestable
 
   def set_tasklist_header_response_header
     tasklist_header_variant.configure_response(response) if tasklist_header_ab_test_applies?
+  end
+
+  def page_is_included_in_test?
+    TasklistPages::PRIMARY_PAGES.include?(request.path) ||
+      TasklistPages::SECONDARY_PAGES.include?(request.path) ||
+      TasklistPages::MATCHING_PAGES.include?(request.path)
   end
 end
