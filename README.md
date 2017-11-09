@@ -156,10 +156,24 @@ for each known `document_type` in the app (see: [Generate a config for known doc
 
 Running the rake task below will retrieve the `document_types` where `rendering_app = government-frontend` from the search api. It will then generate `test/wraith/wip-config-all-document-types.yaml`, this is a wraith config file containing the top 10 (can be overidden with `:sample_size`) example pages for each type.
 
-The yaml file contains a custom key of `:document_types` not used by wraith but can be used to quickly scan and see which types the search api believes `government-frontend` is responsible for.
-
 ```
 bundle exec rake wraith:update_document_types[:sample_size]
+```
+
+#### Compare a pull request review app with production
+
+Compares production with government-frontend-pr-[pr_number].herokuapp.com
+
+```
+bundle exec rake wraith:pr[:pr_number]
+```
+
+#### Compare master with production
+
+Compares production with government-frontend.herokuapp.com (an automatic deployment of the master branch)
+
+```
+bundle exec rake wraith:master
 ```
 
 ### Adding a new format
