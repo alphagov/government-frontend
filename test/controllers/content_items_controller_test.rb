@@ -268,31 +268,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     refute_match(/A Taxon/, taxonomy_sidebar)
   end
 
-  test "show taxonomy-navigation when page is tagged to a world wide taxon" do
-    content_item = content_store_has_schema_example('document_collection', 'document_collection')
-    path = 'government/test/document_collection'
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {
-      'mainstream_browse_pages' => [
-        {
-          'content_id' => 'something'
-        }
-      ],
-      'taxons' => [
-        {
-          'title' => 'A Taxon',
-          'base_path' => '/world/zanzibar',
-        }
-      ]
-    }
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-
-    assert_match(/A Taxon/, taxonomy_sidebar)
-  end
-
   test "shows the taxonomy-navigation if tagged to taxonomy" do
     content_item = content_store_has_schema_example("document_collection", "document_collection")
     path = "government/abtest/document_collection"
