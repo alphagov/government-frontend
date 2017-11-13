@@ -2,9 +2,7 @@ require 'test_helper'
 
 class ContactTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
-    10.times do
-      setup_and_visit_random_content_item
-    end
+    setup_and_visit_random_content_item
   end
 
   test "online forms are rendered" do
