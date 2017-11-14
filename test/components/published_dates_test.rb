@@ -35,6 +35,18 @@ class PublishedDatesTest < ComponentTestCase
     assert_select ".app-c-published-dates .app-c-published-dates__change-date", text: "23 August 2013"
   end
 
+  test "only adds history id when passed page history" do
+    render_component(published: "1st November 2000")
+    assert_select "#history", false, "should only render history id if passed history item"
+
+    render_component(
+      published: "1st November 2000",
+      last_updated: "15th July 2015",
+      history: [display_time: "23 August 2013", note: "Updated with new data"]
+    )
+    assert_select "#history"
+  end
+
   test "full page history is hidden on page load" do
     render_component(
       published: "1st November 2000",
