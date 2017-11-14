@@ -1,5 +1,9 @@
-name: Content Metadata
+name: Content metadata
 description: Lists publication dates and publishers.
+body: |
+  A replacement for the [metadata component](https://govuk-static.herokuapp.com/component-guide/metadata) with only the important details. Dates are rendered by the [published dates component](/component-guide/published-dates).
+
+  Part of the universal navigation design and only used as part of a multivariate test.
 shared_accessibility_criteria:
 - link
 
@@ -8,27 +12,35 @@ examples:
     data:
       from:
         - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
-      published: "31 July 2017"
-      last_updated: "20 September 2017"
+      published: 31 July 2017
+      last_updated: 20 September 2017
   with_history_link:
     data:
       from:
         - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
-      published: "31 July 2017"
-      last_updated: "20 September 2017"
+      published: 31 July 2017
+      last_updated: 20 September 2017
+      link_to_history: true
+  no_last_updated:
+    data:
+      published: 31 July 2017
+  no_publishers:
+    data:
+      published: 31 July 2017
+      last_updated: 20 September 2017
       link_to_history: true
   two_publishers:
     data:
       from:
         - <a href='/government/organisations/department-for-education'>Department for Education</a>
         - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
-      published: "31 July 2017"
-      last_updated: "20 September 2017"
+      published: 31 July 2017
+      last_updated: 20 September 2017
   multiple_publishers_and_no_link_to_history:
     data:
       from:
         - <a href='/government/organisations/department-for-education'>Department for Education</a>
         - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
         - <a href='/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>
-      published: "31 July 2017"
-      last_updated: "20 September 2017"
+      published: 31 July 2017
+      last_updated: 20 September 2017
