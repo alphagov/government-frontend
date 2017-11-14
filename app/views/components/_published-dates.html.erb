@@ -6,7 +6,7 @@
   link_to_history ||= false
 %>
 <% if published || last_updated %>
-<div class="app-c-published-dates" <% if history%>id="history" data-module="toggle"<% end %>>
+<div class="app-c-published-dates" <% if history.any? %>id="history" data-module="toggle"<% end %>>
   <% if published %>
     <%= t('components.published_dates.published', date: published) %>
   <% end %>
