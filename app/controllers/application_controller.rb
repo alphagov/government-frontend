@@ -31,14 +31,14 @@ private
 
   def set_task_as_active_if_current_page(tasklist)
     counter = 0
-    tasklist[:steps].each do |grouped_steps|
+    tasklist[:groups].each do |grouped_steps|
       grouped_steps.each do |step|
         counter = counter + 1
 
         step[:panel_links].each do |link|
           if link[:href] == request.path
             link[:active] = true
-            tasklist[:open_section] = counter
+            tasklist[:open_step] = counter
             return tasklist
           end
         end
