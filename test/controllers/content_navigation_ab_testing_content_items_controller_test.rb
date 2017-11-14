@@ -76,7 +76,8 @@ class ContentItemsControllerTest < ActionController::TestCase
         refute_partial('govuk_component/document_footer')
 
         if document_type.in? %w{detailed_guide statutory_guidance}
-          assert_template 'components/_published-dates'
+          assert_template partial: 'components/_published-dates', count: 2
+          assert_template 'components/_content-metadata'
         end
       end
     end
