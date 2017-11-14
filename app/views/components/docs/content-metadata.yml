@@ -1,0 +1,34 @@
+name: Content Metadata
+description: Lists publication dates and publishers.
+shared_accessibility_criteria:
+- link
+
+examples:
+  default:
+    data:
+      from:
+        - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
+      published: "31 July 2017"
+      last_updated: "20 September 2017"
+  with_history_link:
+    data:
+      from:
+        - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
+      published: "31 July 2017"
+      last_updated: "20 September 2017"
+      link_to_history: true
+  two_publishers:
+    data:
+      from:
+        - <a href='/government/organisations/department-for-education'>Department for Education</a>
+        - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
+      published: "31 July 2017"
+      last_updated: "20 September 2017"
+  multiple_publishers_and_no_link_to_history:
+    data:
+      from:
+        - <a href='/government/organisations/department-for-education'>Department for Education</a>
+        - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
+        - <a href='/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>
+      published: "31 July 2017"
+      last_updated: "20 September 2017"
