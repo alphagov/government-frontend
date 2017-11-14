@@ -1,0 +1,15 @@
+<%= render 'components/heading', text: t("publication.documents", count: @content_item.documents_count), id: "documents-title" %>
+
+<div aria-labelledby="documents-title">
+  <%= render 'govuk_component/govspeak',
+             content: @content_item.documents,
+             direction: page_text_direction %>
+</div>
+
+<%= render 'components/heading', text: t("publication.details"), id: "details-title" %>
+
+<div aria-labelledby="details-title">
+  <%= render 'govuk_component/govspeak',
+             content: @content_item.details,
+             direction: page_text_direction %>
+</div>

@@ -16,21 +16,7 @@
     <%= render 'shared/metadata', content_item: @content_item %>
     <%= render 'shared/history_notice', content_item: @content_item %>
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-
-    <%= render 'components/heading', text: t("publication.documents", count: @content_item.documents_count), id: "documents-title" %>
-    <div aria-labelledby="documents-title">
-      <%= render 'govuk_component/govspeak',
-                 content: @content_item.documents,
-                 direction: page_text_direction %>
-    </div>
-
-    <%= render 'components/heading', text: t("publication.details"), id: "details-title" %>
-
-    <div aria-labelledby="details-title">
-      <%= render 'govuk_component/govspeak',
-                 content: @content_item.details,
-                 direction: page_text_direction %>
-    </div>
+    <%= render 'publication_inline_body' %>
   </div>
 
   <div class="column-third add-title-margin">

@@ -18,3 +18,7 @@
   @include responsive-bottom-margin;
   @include responsive-top-margin;
 }
+
+.responsive-bottom-margin {
+  @include responsive-bottom-margin;
+}
