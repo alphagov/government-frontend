@@ -10,17 +10,19 @@ shared_accessibility_criteria:
 examples:
   default:
     data:
-      from:
-        - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
       published: 31 July 2017
       last_updated: 20 September 2017
+      other:
+        From:
+          - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
   with_history_link:
     data:
-      from:
-        - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
       published: 31 July 2017
       last_updated: 20 September 2017
       link_to_history: true
+      other:
+        From:
+          - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
   no_last_updated:
     data:
       published: 31 July 2017
@@ -31,16 +33,27 @@ examples:
       link_to_history: true
   two_publishers:
     data:
-      from:
-        - <a href='/government/organisations/department-for-education'>Department for Education</a>
-        - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
       published: 31 July 2017
       last_updated: 20 September 2017
+      other:
+        From:
+          - <a href='/government/organisations/department-for-education'>Department for Education</a>
+          - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
   multiple_publishers_and_no_link_to_history:
     data:
-      from:
-        - <a href='/government/organisations/department-for-education'>Department for Education</a>
-        - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
-        - <a href='/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>
       published: 31 July 2017
       last_updated: 20 September 2017
+      other:
+        From:
+          - <a href='/government/organisations/department-for-education'>Department for Education</a>
+          - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
+          - <a href='/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>
+  nothing:
+    description: |
+      If an `other` object is provided with keys that have no values the component does not render.
+    data:
+      other:
+        From:
+        Another: []
+        "Empty thing": false
+        "Also empty": {}

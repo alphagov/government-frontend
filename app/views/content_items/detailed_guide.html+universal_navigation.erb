@@ -16,7 +16,9 @@
       published: @content_item.published,
       last_updated: @content_item.updated,
       link_to_history: !!@content_item.updated,
-      from: @content_item.organisations_ordered_by_importance
+      other: {
+        From: @content_item.organisations_ordered_by_importance
+      }
     } %>
 
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>

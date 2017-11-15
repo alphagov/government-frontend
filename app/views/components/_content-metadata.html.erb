@@ -1,18 +1,27 @@
 <%
   published ||= false
   last_updated ||= false
-  from ||= false
   link_to_history ||= false
-  metadata = [published, last_updated, from]
+  other ||= {}
+  other_has_values = other.values.compact.reject(&:blank?).any?
+  metadata = [published, last_updated]
 %>
-<% if metadata.any? %>
+<% if metadata.any? || other_has_values %>
   <div class="app-c-content-metadata">
     <div class="grid-row">
       <div class="column-two-thirds">
         <%= render 'components/published-dates', published: published, last_updated: last_updated, link_to_history: link_to_history %>
-        <% if from %>
-          <div class="app-c-content-metadata__from">
-            <%= t("govuk_component.content-metadata.from", default: "From") %>: <%= from.to_sentence.html_safe %>
+        <% if other_has_values %>
+          <div class="app-c-content-metadata__other">
+            <% other.each do |title, values| %>
+              <%
+                values ||= []
+                values = Array(values)
+              %>
+              <% if values.any? %>
+                <p><%= title %>: <%= values.to_sentence.html_safe %></p>
+              <% end %>
+            <% end %>
           </div>
         <% end %>
       </div>
