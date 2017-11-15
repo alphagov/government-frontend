@@ -18,12 +18,6 @@ module ContentItem
       })
     end
 
-    def organisations_ordered_by_importance
-      organisations_with_emphasised_first.map do |link|
-        link_to(link["title"], link["base_path"])
-      end
-    end
-
   private
 
     def links(type)
@@ -39,6 +33,12 @@ module ContentItem
 
     def links_group(types)
       types.flat_map { |type| links(type) }.uniq
+    end
+
+    def organisations_ordered_by_importance
+      organisations_with_emphasised_first.map do |link|
+        link_to(link["title"], link["base_path"])
+      end
     end
 
     def organisations_with_emphasised_first
