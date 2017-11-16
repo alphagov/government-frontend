@@ -7,10 +7,15 @@
   border-bottom: 1px solid $border-colour;
 }
 
-.app-c-content-metadata__from {
+.app-c-content-metadata__other {
   margin-top: $gutter-half;
+
+  // Don't include a margin if there’s no published dates above
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
-.app-c-content-metadata__from a {
+.app-c-content-metadata__other a {
   font-weight: bold;
 }

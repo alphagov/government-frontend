@@ -30,6 +30,12 @@ module ContentItem
       end
     end
 
+    def content_metadata
+      super.tap do |m|
+        m[:other] = { 'Applies to': applies_to }.merge(m[:other])
+      end
+    end
+
   private
 
     def translated_schema_name(count)

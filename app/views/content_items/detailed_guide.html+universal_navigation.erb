@@ -12,13 +12,7 @@
   </div>
 </div>
 
-<%= render 'components/content-metadata', {
-      published: @content_item.published,
-      last_updated: @content_item.updated,
-      link_to_history: !!@content_item.updated,
-      from: @content_item.organisations_ordered_by_importance
-    } %>
-
+<%= render 'components/content-metadata', @content_item.content_metadata %>
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 
