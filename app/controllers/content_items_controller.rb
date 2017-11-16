@@ -3,7 +3,6 @@ class ContentItemsController < ApplicationController
 
   include TasklistHeaderABTestable
   include TasklistABTestable
-  include ContentNavigationABTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -20,7 +19,6 @@ class ContentItemsController < ApplicationController
     setup_tasklist_header_ab_testing
     setup_tasklist_ab_testing
     set_up_traffic_signs_summary_ab_testing
-    setup_content_navigation_ab_testing
 
     set_up_navigation
     set_expiry
@@ -107,13 +105,9 @@ private
     # _breadcrumbs.html+taxonomy_navigation.erb instead. If this file doesn't exist,
     # then it falls back to _breadcrumbs.html.erb.  See:
     # http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
-    if should_present_universal_navigation?
-      request.variant = :universal_navigation
-    else
-      @navigation = NavigationType.new(@content_item.content_item)
-      if @navigation.should_present_taxonomy_navigation?
-        request.variant = :taxonomy_navigation
-      end
+    @navigation = NavigationType.new(@content_item.content_item)
+    if @navigation.should_present_taxonomy_navigation?
+      request.variant = :taxonomy_navigation
     end
   end
 
