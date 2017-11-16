@@ -1,41 +1,37 @@
+<%= content_for :simple_header, true %>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
-        context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-        title: @content_item.title,
-        average_title_length: "long" %>
+               context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
+               title: @content_item.title,
+               average_title_length: "long" %>
+
+    <% if @content_item.national_statistics? %>
+      <%= image_tag 'national-statistics.png', alt: 'National Statistics' %>
+    <% end %>
+
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'components/content-metadata', @content_item.content_metadata %>
+    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <%= render 'shared/history_notice', content_item: @content_item %>
+
+    <div class="responsive-bottom-margin">
+      <%= render 'publication_inline_body' %>
+    </div>
   </div>
-  <%= render 'shared/translations' %>
-  <% if @content_item.national_statistics? %>
-    <%= render 'shared/national_statistics_logo' %>
-  <% end %>
+
+  <%= render 'shared/sidebar_navigation' %>
 </div>
 
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-
-<div class="grid-row sidebar-with-body">
-  <div class="column-third">
-    <%= render 'components/heading', text: t("publication.documents", count: @content_item.documents_count), id: "documents-title" %>
-  </div>
-  <div class="column-two-thirds" aria-labelledby="documents-title">
-    <%= render 'govuk_component/govspeak',
-        content: @content_item.documents,
-        direction: page_text_direction %>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="responsive-bottom-margin">
+      <%= render 'components/published-dates', {
+            published: @content_item.published,
+            last_updated: @content_item.updated,
+            history: @content_item.history
+          } %>
+    </div>
   </div>
 </div>
-
-<div class="grid-row sidebar-with-body">
-  <div class="column-third">
-    <%= render 'components/heading', text: t("publication.details"), id: "details-title" %>
-  </div>
-  <div class="column-two-thirds" aria-labelledby="details-title">
-    <%= render 'govuk_component/govspeak',
-        content: @content_item.details,
-        direction: page_text_direction %>
-  </div>
-</div>
-
-<%= render 'shared/footer', @content_item.document_footer %>
