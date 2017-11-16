@@ -1,7 +1,6 @@
 class SelfAssessmentSigninController < ApplicationController
   include TasklistHeaderABTestable
   include TasklistABTestable
-  include ContentNavigationABTestable
   include SelfAssessmentABTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
