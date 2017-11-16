@@ -8,8 +8,6 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "publication" do
     setup_and_visit_content_item('publication')
 
-    assert_has_component_government_navigation_active("publications")
-
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
@@ -21,14 +19,17 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "renders metadata and document footer" do
     setup_and_visit_content_item('publication')
 
-    assert_has_component_metadata_pair("first_published", "3 May 2016")
-    link1 = "<a href=\"/government/organisations/environment-agency\">Environment Agency</a>"
-    link2 = "<a href=\"/government/people/eric-pickles\">The Rt Hon Sir Eric Pickles MP</a>"
-    assert_has_component_metadata_pair("from", [link1, link2])
-    assert_has_component_document_footer_pair("from", [link1, link2])
+    within(".app-c-content-metadata") do
+      assert page.has_css?(".app-c-published-dates", text: "Published 3 May 2016")
 
-    assert_has_component_metadata_pair("part_of", ["<a href=\"/government/topical-events/anti-corruption-summit-london-2016\">Anti-Corruption Summit: London 2016</a>"])
-    assert_has_component_document_footer_pair("part_of", ["<a href=\"/government/topical-events/anti-corruption-summit-london-2016\">Anti-Corruption Summit: London 2016</a>"])
+      within(".app-c-content-metadata__other") do
+        assert page.has_link?("Environment Agency", href: "/government/organisations/environment-agency")
+      end
+    end
+
+    within(".responsive-bottom-margin .app-c-published-dates") do
+      assert page.has_content?("Published 3 May 2016")
+    end
   end
 
   test "renders a govspeak block for attachments" do
@@ -65,6 +66,11 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "renders 'Applies to' block in metadata when there are excluded nations" do
     setup_and_visit_content_item('statistics_publication')
 
-    assert_has_component_metadata_pair('Applies to', 'England (see publications for <a rel="external" href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm">Northern Ireland</a>, <a rel="external" href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS">Scotland</a>, and <a rel="external" href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en">Wales</a>)')
+    within(".app-c-content-metadata .app-c-content-metadata__other") do
+      assert page.has_content?("Applies to: England (see publications for Northern Ireland, Scotland, and Wales)")
+      assert page.has_link?("Northern Ireland", href: "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm")
+      assert page.has_link?("Scotland", href: "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS")
+      assert page.has_link?("Wales", href: "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en")
+    end
   end
 end
