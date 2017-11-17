@@ -1,0 +1,104 @@
+require 'component_test_helper'
+
+class NavigationSidebarTest < ComponentTestCase
+  def component_name
+    "navigation-sidebar"
+  end
+
+  test "renders nothing when no parameters given" do
+    assert_empty render_component({})
+  end
+
+  test "renders related content section when passed related items" do
+    render_component(
+      related_items: [
+        {
+          text: "Apprenticeships",
+          href: '/apprenticeships'
+        }
+      ]
+    )
+
+    assert_select ".app-c-navigation-sidebar__main-heading", text: 'Related content'
+    assert_select ".app-c-navigation-sidebar__related-link[href=\"/apprenticeships\"]", text: 'Apprenticeships'
+  end
+
+  test "renders topics section when passed topic items" do
+    render_component(
+      topics: [
+        {
+          text: "Finding a job",
+          href: '/finding-a-job'
+        }
+      ]
+    )
+
+    assert_select ".app-c-navigation-sidebar__sub-heading", text: 'Explore the topic'
+    assert_select ".app-c-navigation-sidebar__section-link[href=\"/finding-a-job\"]", text: 'Finding a job'
+  end
+
+  test "renders publisher section when passed publisher items" do
+    render_component(
+      publishers: [
+        {
+          text: "Department for Education",
+          href: '/government/organisation/department-for-education'
+        }
+      ]
+    )
+
+    assert_select ".app-c-navigation-sidebar__sub-heading", text: 'Detailed guidance from'
+    assert_select ".app-c-navigation-sidebar__section-link[href=\"/government/organisation/department-for-education\"]", text: 'Department for Education'
+  end
+
+  test "renders collection section when passed collection items" do
+    render_component(
+      collections: [
+        {
+          text: "The future of jobs and skills",
+          href: '/government/collections/the-future-of-jobs-and-skills'
+        }
+      ]
+    )
+
+    assert_select ".app-c-navigation-sidebar__sub-heading", text: 'Collections'
+    assert_select ".app-c-navigation-sidebar__section-link[href=\"/government/collections/the-future-of-jobs-and-skills\"]", text: 'The future of jobs and skills'
+  end
+
+  test "renders policy section when passed policy items" do
+    render_component(
+      policies: [
+        {
+          text: "Further education and training",
+          href: '/government/policies/further-education-and-training'
+        }
+      ]
+    )
+
+    assert_select ".app-c-navigation-sidebar__sub-heading", text: 'Policy'
+    assert_select ".app-c-navigation-sidebar__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
+  end
+
+  test "renders multiple items when passed data for multiple sections" do
+    render_component(
+      related_items: [
+        {
+          text: "Apprenticeships",
+          href: '/apprenticeships'
+        }
+      ],
+      policies: [
+        {
+          text: "Further education and training",
+          href: '/government/policies/further-education-and-training'
+        }
+      ]
+    )
+
+    assert_select ".app-c-navigation-sidebar__main-heading", text: 'Related content'
+    assert_select ".app-c-navigation-sidebar__related-link[href=\"/apprenticeships\"]", text: 'Apprenticeships'
+
+    assert_select ".app-c-navigation-sidebar__sub-heading", text: 'Policy'
+    assert_select ".app-c-navigation-sidebar__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
+  end
+end
