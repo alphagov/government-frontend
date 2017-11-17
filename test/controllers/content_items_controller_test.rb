@@ -270,6 +270,10 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "shows the taxonomy-navigation if tagged to taxonomy" do
+    GovukNavigationHelpers::ContentItem
+      .stubs(:whitelisted_root_taxon_content_ids)
+      .returns(["aaaa-bbbb"])
+
     content_item = content_store_has_schema_example("document_collection", "document_collection")
     path = "government/abtest/document_collection"
     content_item['base_path'] = "/#{path}"
