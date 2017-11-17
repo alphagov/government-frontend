@@ -1,15 +1,25 @@
 .app-c-figure {
   @include responsive-bottom-margin;
-  display: flex;
+  display: block;
+
+  @include media(tablet) {
+    align-items: left;
+    display: flex;
+  }
 }
 
 .app-c-figure__image {
-  max-width: 100%;
   margin-right: 15px;
+  max-width: 100%;
 }
 
 .app-c-figure__figcaption {
   @include core-16;
   padding-top: 15px;
-  border-top: 2px solid $border-colour;
+
+  @include media(tablet) {
+    @include core-14;
+    border-top: 1px solid $border-colour;
+    display: block;
+  }
 }
