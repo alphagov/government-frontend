@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
+  include GdsApi::TestHelpers::Rummager
   include GovukAbTesting::MinitestHelpers
 
   test 'routing handles paths with no format or locale' do
@@ -277,9 +278,14 @@ class ContentItemsControllerTest < ActionController::TestCase
         {
           'title' => 'A Taxon',
           'base_path' => '/a-taxon',
+          'content_id' => 'aaaa-bbbb',
         }
       ]
     }
+
+    # GovukNavigationHelpers::NavigationHelper.taxonomy_sidebar makes requests
+    # to Rummager for related content for given taxons
+    stub_any_rummager_search
 
     content_store_has_item(content_item['base_path'], content_item)
 

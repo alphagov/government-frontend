@@ -1,4 +1,5 @@
 require 'gds_api/test_helpers/content_store'
+require 'gds_api/test_helpers/rummager'
 
 # Include this module to get access to the GOVUK Content Schema examples in the
 # tests.
