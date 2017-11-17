@@ -1,0 +1,7 @@
+<% image = content_item.image -%>
+<% if image %>
+  <%= render 'components/figure', src: image["url"], alt: image["alt_text"], caption: image["caption"] %>
+<% end %>
+<%= render 'govuk_component/govspeak',
+    content: content_item.body,
+    direction: page_text_direction %>

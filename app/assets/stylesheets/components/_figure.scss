@@ -1,11 +1,15 @@
 .app-c-figure {
   @include responsive-bottom-margin;
+  display: flex;
 }
 
 .app-c-figure__image {
   max-width: 100%;
+  margin-right: 15px;
 }
 
 .app-c-figure__figcaption {
   @include core-16;
+  padding-top: 15px;
+  border-top: 2px solid $border-colour;
 }
