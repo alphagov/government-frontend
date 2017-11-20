@@ -1,8 +1,30 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-<%= render 'shared/sidebar_image_with_body', content_item: @content_item %>
-<%= render 'shared/share_links_offset_in_grid', share_links: @content_item.share_links %>
-<%= render 'shared/footer', @content_item.document_footer %>
+<%= content_for :simple_header, true %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'shared/title_and_translations', content_item: @content_item %>
+    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <%= render 'components/content-metadata', @content_item.content_metadata %>
+    <%= render 'shared/history_notice', content_item: @content_item %>
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'shared/image_with_body', content_item: @content_item %>
+  </div>
+
+  <%= render 'shared/sidebar_navigation' %>
+</div>
+<div class="grid-row sidebar-with-body dont-print">
+  <div class="column-two-thirds">
+    <%= render 'components/share-links', @content_item.share_links %>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="responsive-bottom-margin">
+      <%= render 'components/published-dates', {
+            published: @content_item.published,
+            last_updated: @content_item.updated,
+            history: @content_item.history
+          } %>
+    </div>
+  </div>
+</div>
