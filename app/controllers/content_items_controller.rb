@@ -59,7 +59,11 @@ private
   end
 
   def content_item_template
-    @content_item.schema_name
+    if publication_with_sidebar?
+      publication_with_sidebar_template_name
+    else
+      @content_item.schema_name
+    end
   end
 
   def render_template
