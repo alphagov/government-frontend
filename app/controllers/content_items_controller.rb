@@ -4,7 +4,6 @@ class ContentItemsController < ApplicationController
   include TasklistHeaderABTestable
   include TasklistABTestable
   include ContentNavigationABTestable
-  include SelfAssessmentABTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -16,7 +15,6 @@ class ContentItemsController < ApplicationController
   attr_accessor :content_item
 
   def show
-    set_up_self_assessment_ab_test
     load_content_item
 
     setup_tasklist_header_ab_testing
@@ -42,7 +40,6 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     raise SpecialRouteReturned if special_route?(content_item)
-    replace_self_assessment_part_one(content_item)
     @content_item = present(content_item)
   end
 
