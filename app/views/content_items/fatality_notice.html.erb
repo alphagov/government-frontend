@@ -1,15 +1,16 @@
 <%= content_for :simple_header, true %>
 
+<%= render 'shared/title_and_translations', content_item: @content_item %>
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'shared/title_and_translations', content_item: @content_item %>
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'components/publisher-metadata', @content_item.content_metadata %>
+    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
   </div>
 </div>
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'shared/image_with_body', content_item: @content_item %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
