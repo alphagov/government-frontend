@@ -1,12 +1,10 @@
 .app-c-publisher-metadata {
-  @include responsive-bottom-margin;
   @include core-16;
   padding-top: $gutter-half;
   padding-bottom: $gutter-half;
   padding-left: $gutter-half;
   padding-right: $gutter-half;
   border-top: 1px solid $border-colour;
-  border-bottom: 1px solid $border-colour;
 }
 
 .app-c-publisher-metadata__other {
