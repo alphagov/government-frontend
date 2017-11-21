@@ -10,16 +10,17 @@
     <% if @content_item.national_statistics? %>
       <%= image_tag 'national-statistics.png', alt: 'National Statistics' %>
     <% end %>
-
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-    <%= render 'components/content-metadata', @content_item.content_metadata %>
+    <%= render 'components/publisher-metadata', @content_item.content_metadata %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/history_notice', content_item: @content_item %>
-
     <div class="responsive-bottom-margin">
       <%= render 'publication_inline_body' %>
     </div>
   </div>
+</div>
+
+<div class="grid-row">
 
   <%= render 'shared/sidebar_navigation' %>
 </div>

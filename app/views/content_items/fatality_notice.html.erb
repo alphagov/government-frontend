@@ -4,11 +4,14 @@
   <div class="column-two-thirds">
     <%= render 'shared/title_and_translations', content_item: @content_item %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-    <%= render 'components/content-metadata', @content_item.content_metadata %>
+    <%= render 'components/publisher-metadata', @content_item.content_metadata %>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="column-two-thirds">
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'shared/image_with_body', content_item: @content_item %>
   </div>
-
   <%= render 'shared/sidebar_navigation' %>
 </div>
 <div class="grid-row">

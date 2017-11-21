@@ -1,9 +1,10 @@
-name: Content metadata
+name: Publisher metadata
 description: Lists publication dates and publishers.
 body: |
-  A replacement for the [metadata component](https://govuk-static.herokuapp.com/component-guide/metadata) with only the important details. Dates are rendered by the [published dates component](/component-guide/published-dates).
+  A replacement for the [metadata component](https://govuk-static.herokuapp.com/component-guide/metadata) with only the publisher details.
+  Dates are rendered by the [published dates component](/component-guide/published-dates).
 
-  Part of the universal navigation design and only used as part of a multivariate test.
+  Part of the universal navigation design.
 shared_accessibility_criteria:
 - link
 
