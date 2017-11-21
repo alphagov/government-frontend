@@ -1,0 +1,17 @@
+name: Important metadata
+description: Short description of component
+body: |
+  Optional markdown providing further detail about the component
+accessibility_criteria: |
+  Markdown listing what this component must do to be accessible. For example:
+
+  The link must:
+
+  * be keyboard focusable
+examples:
+  default:
+    data:
+      items:
+        Date of occurrence: 29 November 2013
+        Aircraft category: General Aviation
+        Report type: Formal Report
