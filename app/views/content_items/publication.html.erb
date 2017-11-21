@@ -11,8 +11,9 @@
       <%= image_tag 'national-statistics.png', alt: 'National Statistics' %>
     <% end %>
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-    <%= render 'components/publisher-metadata', @content_item.content_metadata %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <%= render 'components/publisher-metadata', @content_item.content_metadata %>
+    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
     <%= render 'shared/history_notice', content_item: @content_item %>
     <div class="responsive-bottom-margin">
       <%= render 'publication_inline_body' %>
