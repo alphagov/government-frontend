@@ -1,7 +1,3 @@
-<%
-  content_for :simple_header, true
-%>
-
 <div class="publication-external">
   <ol class="organisation-logos">
     <% @content_item.organisations.each do |organisation| %>
@@ -11,33 +7,4 @@
     <% end %>
   </ol>
 </div>
-
-<%= render 'components/publication-header', title: @content_item.title, context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1), last_changed: @content_item.last_changed %>
-
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-
-<div
-  class="grid-row sidebar-with-body"
-  data-module="sticky-element-container"
-  id="contents"
->
-  <% if @content_item.contents.any? %>
-    <div class="column-quarter-desktop-only">
-      <%= render 'components/contents-list', contents: @content_item.contents, format_numbers: true %>
-    </div>
-  <% end %>
-
-  <div class="print-wrapper">
-    <div class="print-meta-data">
-      <%= render partial: "content_items/html_publication/print_meta_data" %>
-    </div>
-  </div>
-
-  <div class="column-three-quarters-desktop-only <% unless @content_item.contents.any? %>offset-quarter-desktop-only<% end %>">
-    <%= render 'govuk_component/govspeak_html_publication', @content_item.govspeak_body %>
-  </div>
-
-  <div data-sticky-element class="govuk-sticky-element">
-    <%= render 'components/back-to-top', href: "#contents" %>
-  </div>
-</div>
+<%= render 'shared/body_with_contents_list', content_item: @content_item, print_meta_data: true, last_changed: true %>

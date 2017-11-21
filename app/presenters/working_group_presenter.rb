@@ -2,6 +2,7 @@ class WorkingGroupPresenter < ContentItemPresenter
   include ContentItem::Body
   include ContentItem::ContentsList
   include ContentItem::TitleAndContext
+  include ContentItem::Metadata
 
   def email
     content_item["details"]["email"]

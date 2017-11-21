@@ -1,25 +1,3 @@
 <%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+<%= render 'shared/body_with_contents_list', content_item: @content_item, notice: true, history_notice: true, body: 'document_collection_body' %>
 
-<div
-  class="grid-row sidebar-with-body"
-  data-module="sticky-element-container"
-  id="contents"
->
-  <% if @content_item.contents.any? %>
-    <div class="column-third">
-      <%= render 'components/contents-list', contents: @content_item.contents %>
-    </div>
-  <% end %>
-  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
-    <%= render 'document_collection_body' %>
-  </div>
-  <div data-sticky-element class="govuk-sticky-element">
-    <%= render 'components/back-to-top', href: "#contents" %>
-  </div>
-</div>
-
-<%= render 'shared/footer', @content_item.document_footer %>

@@ -4,6 +4,7 @@ class CorporateInformationPagePresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include ContentItem::OrganisationBranding
   include ContentItem::CorporateInformationGroups
+  include ContentItem::Metadata
 
   def page_title
     page_title = super

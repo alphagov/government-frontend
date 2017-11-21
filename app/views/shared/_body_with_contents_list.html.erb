@@ -1,0 +1,61 @@
+<%
+body ||= content_item.body
+notice ||= false
+history_notice ||= false
+continuation_link ||= false
+print_meta_data ||= false
+last_updated ||= false
+last_changed ||= false
+%>
+<div class="grid-row">
+  <div class="body-with-contents-list column-two-thirds">
+    <% if print_meta_data %>
+      <div class="print-wrapper">
+        <div class="print-meta-data">
+          <%= render partial: "content_items/html_publication/print_meta_data" %>
+        </div>
+      </div>
+    <% end %>
+    <% if notice %>
+      <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <% end %>
+    <% if history_notice %>
+      <%= render 'shared/history_notice', content_item: @content_item %>
+    <% end %>
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'components/publisher-metadata', @content_item.content_metadata %>
+    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
+    <% if content_item.contents.any? %>
+      <div id="contents-list">
+        <%= render 'components/contents-list', contents: @content_item.contents %>
+      </div>
+    <% end %>
+    <% if body == 'document_collection_body' %>
+      <%= render 'document_collection_body' %>
+    <% else %>
+      <%= render 'govuk_component/govspeak', content: body, direction: page_text_direction %>
+    <% end %>
+    <% if continuation_link && @content_item.continuation_link %>
+        <%= render(
+            'govuk_component/button',
+            start: true,
+            href: @content_item.continuation_link,
+            text: "Find out more",
+            info_text: @content_item.will_continue_on
+        ) %>
+    <% end %>
+    <div class="responsive-bottom-margin">
+      <%= render 'components/published-dates', {
+            published: @content_item.published,
+            last_updated: @content_item.updated,
+            history: @content_item.history
+          } %>
+      <% if last_changed %>
+        <%= @content_item.last_changed  %>
+      <% end %>
+    </div>
+    <div class="contents-list-link-wrapper" data-sticky-element>
+      <%= render 'components/back-to-top', href: "#contents-list" %>
+    </div>
+  </div>
+</div>

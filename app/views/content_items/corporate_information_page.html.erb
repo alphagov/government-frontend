@@ -4,33 +4,27 @@
       <%= render 'govuk_component/organisation_logo', @content_item.organisation_logo %>
     </div>
   </div>
-  <%= render 'shared/title_and_translations', content_item: @content_item %>
-  <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-  <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+</div>
+<%= render 'shared/title_and_translations', content_item: @content_item %>
+<% @additional_body = capture do %>
+  <% if @content_item.corporate_information? %>
+    <%= @content_item.corporate_information_heading_tag %>
+    <% @content_item.corporate_information.each do |group| %>
+      <%= group[:heading] %>
+      <ul>
+        <% group[:links].each do |link| %>
+          <li>
+            <%= link %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
 
-  <% @additional_body = capture do %>
-    <% if @content_item.corporate_information? %>
-      <%= @content_item.corporate_information_heading_tag %>
-      <% @content_item.corporate_information.each do |group| %>
-        <%= group[:heading] %>
-        <ul>
-          <% group[:links].each do |link| %>
-            <li>
-              <%= link %>
-            </li>
-          <% end %>
-        </ul>
-      <% end %>
-
-      <% if @content_item.further_information.present? %>
-        <p>
-          <%= @content_item.further_information %>
-        </p>
-      <% end %>
+    <% if @content_item.further_information.present? %>
+      <p>
+        <%= @content_item.further_information %>
+      </p>
     <% end %>
   <% end %>
-
-  <%= render 'shared/sidebar_contents_with_body',
-        content_item: @content_item,
-        body: "#{@content_item.body}#{@additional_body}" %>
-</div>
+<% end %>
+<%= render 'shared/body_with_contents_list', content_item: @content_item, body: "#{@content_item.body} #{@additional_body}", notice: true %>
