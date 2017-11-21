@@ -1,4 +1,4 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
+<% body ||= content_item.body %>
 <div class="grid-row">
   <div class="body-with-contents-list column-two-thirds">
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
@@ -6,12 +6,12 @@
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'components/publisher-metadata', @content_item.publisher_metadata %>
     <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
-    <% if @content_item.contents.any? %>
+    <% if content_item.contents.any? %>
       <div id="contents-list">
         <%= render 'components/contents-list', contents: @content_item.contents %>
       </div>
     <% end %>
-    <%= render 'document_collection_body' %>
+    <%= render 'govuk_component/govspeak', content: body, direction: page_text_direction %>
     <div class="responsive-bottom-margin app-c-content-footer">
       <%= render 'components/published-dates', {
             published: @content_item.published,
@@ -19,7 +19,7 @@
             history: @content_item.history
           } %>
     </div>
-    <% if @content_item.contents.any? %>
+    <% if content_item.contents.any? %>
       <div class="contents-list-link-wrapper" data-sticky-element>
         <%= render 'components/back-to-top', href: "#contents-list" %>
       </div>

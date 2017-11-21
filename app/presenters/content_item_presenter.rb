@@ -1,5 +1,6 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
+  include ContentItem::Metadata
 
   attr_reader :content_item,
               :requested_content_item_path,

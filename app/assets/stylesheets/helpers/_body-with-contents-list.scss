@@ -1,0 +1,10 @@
+@mixin body-with-contents-list {
+  .body-with-contents-list {
+    position: relative;
+    margin-bottom: $gutter * 1.5;
+  }
+}
+
+.contents-list-link-wrapper .app-c-back-to-top {
+  margin: $gutter 0;
+}

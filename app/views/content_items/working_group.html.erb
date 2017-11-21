@@ -1,6 +1,4 @@
 <%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-
 <% @additional_body = capture do %>
   <% if @content_item.policies.any? %>
     <h2 id="policies">Policies</h2>
@@ -10,13 +8,9 @@
       <% end %>
     </ul>
   <% end %>
-
   <% if @content_item.email.present? %>
     <h2 id="contact-details">Contact details</h2>
     <p><%= mail_to @content_item.email, @content_item.email %></p>
   <% end %>
 <% end %>
-
-<%= render 'shared/sidebar_contents_with_body',
-      content_item: @content_item,
-      body: "#{@content_item.body} #{@additional_body}" %>
+<%= render 'shared/body_with_contents_list', content_item: @content_item, body: "#{@content_item.body} #{@additional_body}" %>

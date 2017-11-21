@@ -1,18 +1,18 @@
 <% content_for :simple_header, true %>
-
 <%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
 
-<div class="grid-row sidebar-with-body">
-  <% if @content_item.contents.any? %>
-    <div class="column-third">
-      <%= render 'components/contents-list', contents: @content_item.contents %>
-    </div>
-  <% end %>
-  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
+<div class="grid-row">
+  <div class="body-with-contents-list column-two-thirds">
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'components/publisher-metadata', @content_item.publisher_metadata %>
+    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
+    <% if @content_item.contents.any? %>
+      <div id="contents-list">
+        <%= render 'components/contents-list', contents: @content_item.contents %>
+      </div>
+    <% end %>
+
     <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
-
     <% if @content_item.continuation_link %>
       <%= render(
           'govuk_component/button',
@@ -22,7 +22,18 @@
           info_text: @content_item.will_continue_on
       ) %>
     <% end %>
+
+    <div class="responsive-bottom-margin app-c-content-footer">
+      <%= render 'components/published-dates', {
+            published: @content_item.published,
+            last_updated: @content_item.updated,
+            history: @content_item.history
+          } %>
+    </div>
+    <% if @content_item.contents.any? %>
+      <div class="contents-list-link-wrapper" data-sticky-element>
+        <%= render 'components/back-to-top', href: "#contents-list" %>
+      </div>
+    <% end %>
   </div>
 </div>
-
-<%= render 'shared/footer', @content_item.document_footer %>

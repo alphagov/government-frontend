@@ -2,6 +2,7 @@ class WorkingGroupPresenter < ContentItemPresenter
   include ContentItem::Body
   include ContentItem::ContentsList
   include ContentItem::TitleAndContext
+  include ContentItem::Metadata
 
   def email
     content_item["details"]["email"]
@@ -23,6 +24,10 @@ class WorkingGroupPresenter < ContentItemPresenter
       t.delete(:average_title_length)
       t.delete(:context)
     end
+  end
+
+  def historically_political?
+    false
   end
 
 private
