@@ -29,7 +29,6 @@
   <%= tasklist_header_variant.analytics_meta_tag.html_safe if tasklist_header_ab_test_applies? %>
   <%= content_navigation_variant.analytics_meta_tag.html_safe if content_navigation_ab_test_applies? %>
   <%= yield :extra_head_content %>
-  <%= @self_assessment_requested_variant.analytics_meta_tag.html_safe if self_assessment_start_page?(@content_item.content_item) %>
 </head>
 <body>
   <% unless content_for(:simple_header) %>
