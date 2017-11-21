@@ -1,6 +1,7 @@
 .app-c-figure {
   @include responsive-bottom-margin;
   display: block;
+  width: 100%;
 
   @include media(tablet) {
     align-items: left;
@@ -10,12 +11,13 @@
 
 .app-c-figure__image {
   margin-right: 15px;
-  max-width: 100%;
+  width: 50%;
 }
 
 .app-c-figure__figcaption {
   @include core-16;
   padding-top: 15px;
+  width: 50%;
 
   @include media(tablet) {
     @include core-14;
