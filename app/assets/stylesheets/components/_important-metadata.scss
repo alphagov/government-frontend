@@ -1,0 +1,13 @@
+.app-c-important-metadata {
+  @include responsive-bottom-margin;
+  @include core-16;
+  @include white-links;
+  background: $govuk-blue;
+  color: $white;
+  padding: $gutter-half;
+  clear: both;
+
+  @include media(tablet) {
+    padding: $gutter-two-thirds $gutter;
+  }
+}

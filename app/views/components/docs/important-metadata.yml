@@ -1,0 +1,17 @@
+name: Important metadata
+description: List of document-type specific metadata
+body: |
+    A replacement for the [metadata component](https://govuk-static.herokuapp.com/component-guide/metadata) with only the format specific details. This component separates facet metadata from [publisher metadata](/component-guide/publisher-metadata).
+
+    Part of the universal navigation design.
+
+shared_accessibility_criteria:
+- link
+
+examples:
+  default:
+    data:
+      items:
+        Date of occurrence: 29 November 2013
+        Aircraft category: <a href="https://www.gov.uk/aaib-reports?aircraft_category%5B%5D=general-aviation">General Aviation</a>
+        Report type: <a href="https://www.gov.uk/aaib-reports?report-type%5B%5D=%5B%5D=formal-report">Formal Report</a>
