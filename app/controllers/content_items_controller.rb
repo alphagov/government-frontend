@@ -110,7 +110,7 @@ private
     if should_present_universal_navigation?
       request.variant = :universal_navigation
     else
-      @navigation = NavigationType.new(@content_item.content_item)
+      @navigation = NavigationType.new(@content_item)
       if @navigation.should_present_taxonomy_navigation?
         request.variant = :taxonomy_navigation
       end

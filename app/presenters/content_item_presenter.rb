@@ -66,6 +66,10 @@ class ContentItemPresenter
     content_item.dig("links", "taxons").present?
   end
 
+  def tagged_to_browse_pages?
+    content_item.dig("links", "mainstream_browse_pages").present?
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
