@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    government-frontend development page
+  </title>
+</head>
+<body>
+  <div id="wrapper">
+    <main class="govspeak">
+      <%= render 'govuk_component/title', title: 'government-frontend' %>
+
+      <% html = capture do %>
+        <p>
+          Hi, this is the root of the <%= link_to 'government-frontend', 'https://github.com/alphagov/government-frontend' %> application.
+          This page is intended to be shown in development and on Heroku review apps. It
+          won't be shown to users on GOV.UK because there are no routes to it.
+        </p>
+
+        <h2>Component guide</h2>
+
+        <p>
+          To see the available components, take a look at the <%= link_to 'component guide', '/component-guide' %>.
+        </p>
+
+        <h2>Configuration</h2>
+
+        <table>
+          <tr>
+            <td>Content store</td>
+            <td><%= link_to Plek.find('content-store'), Plek.find('content-store') %></td>
+          </tr>
+          <tr>
+            <td>Static</td>
+            <td><%= link_to Plek.find('static'), Plek.find('static') %></td>
+          </tr>
+          <tr>
+            <td>Rummager (search)</td>
+            <td><%= link_to Plek.find('rummager'), Plek.find('rummager') %></td>
+          </tr>
+        </table>
+
+        <h2>Examples</h2>
+
+        <p>
+          The content schemas contain <%= link_to 'handmade examples', 'https://github.com/alphagov/govuk-content-schemas/tree/master/examples' %>
+          for each schema rendered by this app. These are used in tests.
+        </p>
+
+        <p>
+          If this application is pointed at the <%= link_to 'dummy content store', 'https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md' %>
+          you can use the links below to view pages using the examples. For a
+          full list of examples, see <%= link_to 'govspeak-examples guide', 'https://govuk-content-store-examples.herokuapp.com' %>.
+        </p>
+        <table>
+          <% @schema_names.each do |schema_name| %>
+            <tr>
+              <td>
+                <%= schema_name %>
+              </td>
+              <td>
+                <%= link_to "Canonical example", "/examples/#{schema_name}/#{schema_name}" %>*
+              </td>
+              <td>
+                <%= link_to "Random example", "/examples/#{schema_name}/random" %>*
+              </td>
+            </tr>
+          <% end %>
+        </table>
+
+        * Will only work if this app is pointed at the <%= link_to 'dummy content store', 'https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md' %>.
+
+        <h2>Examples from GOV.UK</h2>
+
+        <p>These pages are used to run visual regression tests. They're good examples
+          of the types of pages rendered by this application.</p>
+        <table>
+          <% @paths.each do |name, path| %>
+            <tr>
+              <td>
+                <%= name %>
+              </td>
+              <td>
+                <%= link_to path, path %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+      <% end %>
+
+      <%= render 'govuk_component/govspeak', content: html %>
+    </main>
+  </div>
+</body>
+</html>

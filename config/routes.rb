@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     get 'random/:schema' => 'randomly_generated_content_item#show'
   end
 
+  root to: 'development#index'
+
   mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
