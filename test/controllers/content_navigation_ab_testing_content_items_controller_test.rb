@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
+  include GdsApi::TestHelpers::Rummager
   include GovukAbTesting::MinitestHelpers
 
   ContentItemsController::GUIDANCE_DOCUMENT_TYPES.each do |document_type|
@@ -20,6 +21,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     test "#{document_type} honours content navigation AB Testing cookie" do
       path = "government/abtest/#{schema_name}"
       content_item_inside_of_test(document_type, schema_name, path)
+      whitelist_root_taxon_of_linked_taxon
+      stub_rummager_search_for_taxonomy_sidebar
 
       ContentItemsController::CONTENT_NAVIGATION_ALLOWED_VARIANTS.each do |variant|
         with_variant ContentNavigation: variant do
@@ -40,6 +43,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     test "defaults to original view without AB testing cookie for #{document_type}" do
       path = "government/abtest/#{schema_name}"
       content_item_inside_of_test(document_type, schema_name, path)
+      whitelist_root_taxon_of_linked_taxon
+      stub_rummager_search_for_taxonomy_sidebar
 
       get :show, params: { path: path }
       requested_variant_name = @controller.content_navigation_ab_test.requested_variant(request.headers).variant_name
@@ -67,6 +72,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     test "#{document_type} shows no navigation elements for universal no navigation variant" do
       path = "government/abtest/#{schema_name}"
       content_item_inside_of_test(document_type, schema_name, path)
+      whitelist_root_taxon_of_linked_taxon
+      stub_rummager_search_for_taxonomy_sidebar
 
       with_variant ContentNavigation: ContentItemsController::CONTENT_NAVIGATION_UNIVERSAL_NO_NAVIGATION do
         get :show, params: { path: path }
@@ -90,6 +97,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         {
           'title' => 'A Taxon',
           'base_path' => '/a-taxon',
+          'content_id' => 'aaaa-bbbb',
         }
       ]
     }
@@ -111,5 +119,18 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   def refute_partial(partial)
     assert_template partial: partial, count: 0
+  end
+
+  def whitelist_root_taxon_of_linked_taxon
+    GovukNavigationHelpers::ContentItem
+      .stubs(:whitelisted_root_taxon_content_ids)
+      .returns(["aaaa-bbbb"])
+  end
+
+  def stub_rummager_search_for_taxonomy_sidebar
+    # GovukNavigationHelpers::NavigationHelper.taxonomy_sidebar() is called as
+    # part of the controller request and makes requests to Rummager for related
+    # content for given taxons
+    stub_any_rummager_search
   end
 end

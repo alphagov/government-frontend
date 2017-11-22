@@ -23,6 +23,7 @@ class ContentItemPresenter
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
     @nav_helper = GovukNavigationHelpers::NavigationHelper.new(content_item)
+    @nav_helper_content_item = GovukNavigationHelpers::ContentItem.new(content_item)
     @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
   end
 
@@ -63,7 +64,7 @@ class ContentItemPresenter
   end
 
   def tagged_to_a_taxon?
-    content_item.dig("links", "taxons").present?
+    @nav_helper_content_item.parent_taxons.any?
   end
 
   def tagged_to_browse_pages?
