@@ -8,15 +8,6 @@
   border-top: 1px solid $border-colour;
 }
 
-.app-c-publisher-metadata__other {
-  margin-top: $gutter-half;
-
-  // Don't include a margin if there’s no published dates above
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
 .app-c-publisher-metadata__other a {
   font-weight: bold;
 }
