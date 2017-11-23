@@ -297,26 +297,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_match(/A Taxon/, taxonomy_sidebar)
   end
 
-  test "Case Studies don't have the taxonomy-navigation" do
-    content_item = content_store_has_schema_example('case_study', 'case_study')
-    path = 'government/test/case-study'
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {
-      'taxons' => [
-        {
-          'title' => 'A Taxon',
-          'base_path' => '/a-taxon',
-        }
-      ]
-    }
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-    assert_equal [], @request.variant
-    refute_match(/A Taxon/, taxonomy_sidebar)
-  end
-
   test "sets the Access-Control-Allow-Origin header for atom pages" do
     content_store_has_schema_example('travel_advice', 'full-country')
     get :show, params: { path: 'foreign-travel-advice/albania', format: 'atom' }
