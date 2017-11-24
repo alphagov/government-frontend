@@ -27,6 +27,13 @@ en:
     last_updated: "Last updated"
     translations: "Translations"
   components:
+    navigation_sidebar:
+      collections: "Collections"
+      external_links: "Elsewhere on the web"
+      policies: "Policy"
+      publishers: "Detailed guidance from"
+      related_content: "Related content"
+      topics: "Explore the topic"
     published_dates:
       full_page_history: "full page history"
       last_updated: "Last updated %{date}"
