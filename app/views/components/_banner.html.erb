@@ -12,18 +12,8 @@
   </p>
 <% end %>
 <section class="app-c-banner<% if aside %> app-c-banner--grid<% end %>" aria-label="Notice">
+  <%= content_block %>
   <% if aside %>
-    <div class="grid-row">
-      <div class="app-c-banner__main">
-        <%= content_block %>
-      </div>
-      <div class="column-third">
-        <div class="app-c-banner__aside">
-          <p><%= aside %></p>
-        </div>
-      </div>
-    </div>
-  <% else %>
-    <%= content_block %>
+    <p class="app-c-banner__desc"><%= aside %></p>
   <% end %>
 </section>
