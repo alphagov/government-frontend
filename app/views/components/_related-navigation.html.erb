@@ -11,7 +11,7 @@
   other ||= []
   format_data_for_related_navigation(related_content, other)
 %>
-<% if related_content.map(&:values).flatten.any? || other.any? %>
+<% if related_content.map(&:values).flatten.any? || other.flatten.any? %>
   <aside class="app-c-related-navigation" role="complementary">
     <h2 id="related-nav-related_items" class="app-c-related-navigation__main-heading" >
       <%= t('components.related_navigation.related_content') %>
