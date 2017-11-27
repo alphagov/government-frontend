@@ -62,15 +62,15 @@
 
 <% consultation_date = capture do %>
   <% if @content_item.closed? %>
-    This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
+    This consultation ran from <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
     <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
   <% elsif @content_item.open? %>
-    This consultation closes at<br />
+    This consultation closes at
     <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
   <% elsif @content_item.unopened? %>
-    This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
-    <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span><br />
-    It closes at<br />
+    This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %>
+  <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span><br />
+    It closes at
     <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
   <% end %>
 <% end %>
