@@ -18,11 +18,41 @@ module ContentItem
       })
     end
 
+    def related_whitehall_topics
+      links_for_navigation_sidebar('topics', 'whitehall')
+    end
+
+    def related_policies
+      links_for_navigation_sidebar('related_policies', 'policy')
+    end
+
+    def related_organisations
+      links_for_navigation_sidebar('organisations', 'organisation')
+    end
+
+    def related_collections
+      links_for_navigation_sidebar('document_collections', 'document_collection')
+    end
+
+    def related_ordered_items
+      links_for_navigation_sidebar('ordered_related_items', 'related')
+    end
+
   private
 
     def links(type)
       expanded_links_from_content_item(type).map do |link|
         link_for_type(type, link)
+      end
+    end
+
+    def links_for_navigation_sidebar(type, rendering_type)
+      expanded_links_from_content_item(type).map do |link|
+        {
+          path: link["base_path"],
+          text: link["title"],
+          type: rendering_type
+        }
       end
     end
 
