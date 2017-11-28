@@ -13,7 +13,7 @@
   padding-top: $gutter-half;
 }
 
-.app-c-navigation-sidebar__external-heading {
+.app-c-related-navigation-sidebar__sub-heading--bold {
   @include bold-19;
 }
 
@@ -27,8 +27,7 @@
   margin-bottom: $gutter-one-third;
 }
 
-.app-c-navigation-sidebar__related-link,
-.app-c-navigation-sidebar__external-related-link {
+.app-c-navigation-sidebar__related-link {
   text-decoration: none;
 }
 

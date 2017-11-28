@@ -79,31 +79,37 @@ class NavigationSidebarTest < ComponentTestCase
     assert_select ".app-c-navigation-sidebar__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
   end
 
-  test "renders external related links section when passed external related links" do
+  test "renders other links section when passed external related links" do
     render_component(
-      external_links: [
-        {
-          text: "The Student Room repaying your student loan",
-          path: 'https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan'
-        }
+      other: [
+        [
+          {
+            title: "Elsewhere on the web",
+            links: [{
+              text: "The Student Room repaying your student loan",
+              path: 'https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan'
+            }]
+          }
+        ]
       ]
     )
 
     assert_select ".app-c-navigation-sidebar__sub-heading", text: 'Elsewhere on the web'
-    assert_select ".app-c-navigation-sidebar__external-related-link[href=\"https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan\"]", text: 'The Student Room repaying your student loan'
+    assert_select ".app-c-navigation-sidebar__related-link[href=\"https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan\"]", text: 'The Student Room repaying your student loan'
   end
 
   test "renders external links with rel=external" do
     render_component(
-      external_links: [
+      policies: [
         {
-          text: "The Student Room repaying your student loan",
-          path: 'https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan'
+          text: "Further education and training",
+          path: '/government/policies/further-education-and-training',
+          rel: "external"
         }
       ]
     )
 
-    assert_select ".app-c-navigation-sidebar__external-related-link[rel=\"external\"]"
+    assert_select ".app-c-navigation-sidebar__section-link[rel=\"external\"]"
   end
 
   test "adds aria labelledby to navigation sections" do
