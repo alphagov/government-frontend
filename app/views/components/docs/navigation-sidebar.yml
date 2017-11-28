@@ -84,11 +84,15 @@ examples:
           path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
           path: /careers-helpline-for-teenagers
-      external_links:
-        - text: The Student Room repaying your student loan
-          path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
-        - text: Student finance data protection statements
-          path: http://www.sfengland.slc.co.uk/dataprotection.aspx
+      other:
+        title: "Elsewhere on the web"
+        links:
+          - text: The Student Room repaying your student loan
+            path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
+            rel: external
+          - text: Student finance data protection statements
+            path: http://www.sfengland.slc.co.uk/dataprotection.aspx
+            rel: external
   with_all_related-content:
     data:
       related_items:
@@ -122,9 +126,13 @@ examples:
       policies:
         - text: Further education and training
           path: /government/policies/further-education-and-training
-      external_links:
-        - text: The Student Room repaying your student loan
-          path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
-        - text: Student finance data protection statements
-          path: http://www.sfengland.slc.co.uk/dataprotection.aspx
+      other:
+        title: "Elsewhere on the web"
+        links:
+          - text: The Student Room repaying your student loan
+            path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
+            rel: external
+          - text: Student finance data protection statements
+            path: http://www.sfengland.slc.co.uk/dataprotection.aspx
+            rel: external
 
