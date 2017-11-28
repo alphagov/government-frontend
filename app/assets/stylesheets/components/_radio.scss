@@ -58,12 +58,24 @@ $govuk-focus-colour: $focus-colour;
 
 .app-c-radio__label {
   display: block;
-  padding: em(8px, 19px) em($govuk-spacing-scale-3, 19px) em($govuk-spacing-scale-1, 19px);
   border: 2px solid transparent;
+}
+
+.app-c-radio__label__text {
   cursor: pointer;
   // remove 300ms pause on mobile
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+
+  display: block;
+  padding-top: em(8px, 19px);
+  padding-bottom: em($govuk-spacing-scale-1, 19px);
+}
+
+.app-c-radio__label__text,
+.app-c-radio__label__hint {
+  padding-left: em($govuk-spacing-scale-3, 19px);
+  padding-right: em($govuk-spacing-scale-3, 19px);
 }
 
 .app-c-radio__input + .app-c-radio__label::before {
@@ -109,7 +121,7 @@ $govuk-focus-colour: $focus-colour;
 
 // Disabled state
 .app-c-radio__input:disabled,
-.app-c-radio__input:disabled + .app-c-radio__label {
+.app-c-radio__input:disabled + .app-c-radio__label__text {
   cursor: default;
 }
 

@@ -13,6 +13,7 @@ accessibility_criteria: |
   - indicate when they have focus
   - change in appearance when touched (in the touch-down state)
   - be usable with touch
+  - have label with a touch area similar to the input
   - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
   - have visible text
   - have a meaningful accessible name

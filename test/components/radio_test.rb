@@ -32,7 +32,7 @@ class RadioTest < ComponentTestCase
     )
 
     assert_select ".app-c-radio__input[name=radio-group-one-item]"
-    assert_select ".app-c-radio:first-child .app-c-radio__label", text: "Use Government Gateway"
+    assert_select ".app-c-radio:first-child .app-c-radio__label__text", text: "Use Government Gateway"
   end
 
   test "renders radio-group with multiple items" do
@@ -51,8 +51,8 @@ class RadioTest < ComponentTestCase
     )
 
     assert_select ".app-c-radio__input[name=radio-group-multiple-items]"
-    assert_select ".app-c-radio:first-child .app-c-radio__label", text: "Use Government Gateway"
-    assert_select ".app-c-radio:last-child .app-c-radio__label", text: "Use GOV.UK Verify"
+    assert_select ".app-c-radio:first-child .app-c-radio__label__text", text: "Use Government Gateway"
+    assert_select ".app-c-radio:last-child .app-c-radio__label__text", text: "Use GOV.UK Verify"
   end
 
   test "renders radio-group with bold labels" do
@@ -94,9 +94,9 @@ class RadioTest < ComponentTestCase
     )
 
     assert_select ".app-c-radio__input[name=radio-group-hint-text]"
-    assert_select ".app-c-radio:first-child .app-c-radio__label", text: "Use Government Gateway"
+    assert_select ".app-c-radio:first-child .app-c-radio__label__text", text: "Use Government Gateway"
     assert_select ".app-c-radio:first-child .app-c-label__hint", text: "You'll have a user ID if you've signed up to do things like sign up Self Assessment tax return online."
-    assert_select ".app-c-radio:last-child .app-c-radio__label", text: "Use GOV.UK Verify"
+    assert_select ".app-c-radio:last-child .app-c-radio__label__text", text: "Use GOV.UK Verify"
     assert_select ".app-c-radio:last-child .app-c-label__hint", text: "You'll have an account if you've already proved your identity with a certified company, such as the Post Office."
   end
 
@@ -138,9 +138,9 @@ class RadioTest < ComponentTestCase
 
     assert_select ".app-c-radio__input[name=radio-group-custom-id-prefix]"
     assert_select ".app-c-radio__input[id=custom-0]", value: "government-gateway"
-    assert_select ".app-c-radio__label[for=custom-0]", text: "Use Government Gateway"
+    assert_select ".app-c-radio__label__text[for=custom-0]", text: "Use Government Gateway"
     assert_select ".app-c-radio__input[id=custom-1]", value: "govuk-verify"
-    assert_select ".app-c-radio__label[for=custom-1]", text: "Use GOV.UK Verify"
+    assert_select ".app-c-radio__label__text[for=custom-1]", text: "Use GOV.UK Verify"
   end
 
   test "renders radio-group with or divider" do
@@ -160,9 +160,9 @@ class RadioTest < ComponentTestCase
     )
 
     assert_select ".app-c-radio__input[name=radio-group-or-divider]"
-    assert_select ".app-c-radio:first-child .app-c-radio__label", text: "Use Government Gateway"
+    assert_select ".app-c-radio:first-child .app-c-radio__label__text", text: "Use Government Gateway"
     assert_select ".app-c-radio__block-text", text: "or"
-    assert_select ".app-c-radio:last-child .app-c-radio__label", text: "Use GOV.UK Verify"
+    assert_select ".app-c-radio:last-child .app-c-radio__label__text", text: "Use GOV.UK Verify"
   end
 
   # This component can be interacted with, so use integration tests for these cases.
