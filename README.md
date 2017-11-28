@@ -75,6 +75,12 @@ http://government-frontend.dev.gov.uk on GOV.UK development machines.
 
 This will run the app and point it at the production GOV.UK `content-store` and `static` instances.
 
+```
+./startup.sh --dummy
+```
+
+This will run the app and point it at the [dummy content store](https://govuk-content-store-examples.herokuapp.com/), which serves the content schema examples and random content.
+
 ### Running the test suite
 
 The test suite relies on the presence of the
