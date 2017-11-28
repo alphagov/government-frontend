@@ -62,6 +62,17 @@ class ContentItemPresenter
     @nav_helper.related_items
   end
 
+  def external_items
+    external_links = @content_item["details"]["external_related_links"] || []
+
+    external_links.map do |link|
+      {
+        path: link["url"],
+        text: link["title"]
+      }
+    end
+  end
+
   def tagged_to_a_taxon?
     content_item.dig("links", "taxons").present?
   end

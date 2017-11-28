@@ -4,27 +4,24 @@
   publishers ||= []
   collections ||= []
   policies ||= []
-  external_links ||= []
+  other ||= []
   related_content = [
     {"related_items" => related_items},
     {"topics" => topics},
     {"publishers" => publishers},
     {"collections" => collections},
     {"policies" => policies},
-    {"external_links" => external_links}
   ]
 %>
-<% if related_content.map(&:values).flatten.any? %>
+<% if related_content.map(&:values).flatten.any? || external_links.any? %>
   <aside class="app-c-navigation-sidebar" role="complementary">
+    <h2 id="nav-sidebar-related-content" class="app-c-navigation-sidebar__main-heading" >
+      <%= t('components.navigation_sidebar.related_content') %>
+    </h2>
     <% related_content.each do |section| %>
       <% section.each do |section_title, links| %>
-
-        <% if section_title === "related_items" %>
-          <h2 id="nav-sidebar-<%= section_title %>"
-              class="app-c-navigation-sidebar__main-heading" >
-            <%= t('components.navigation_sidebar.related_content') %>
-          </h2>
-          <nav role="navigation" class="app-c-navigation-sidebar__nav-section" aria-labelledby="nav-sidebar-<%= section_title %>" %>
+        <% if section_title === "related_items" && links.any? %>
+          <nav role="navigation" class="app-c-navigation-sidebar__nav-section" aria-labelledby="nav-sidebar-related-content" %>
             <ul class="app-c-navigation-sidebar__link-list">
               <% links.each do |link| %>
                 <li class="app-c-navigation-sidebar__link">
@@ -53,5 +50,21 @@
         <% end %>
       <% end %>
     <% end %>
+
+    <% if other.any? %>
+      <h3 class="app-c-navigation-sidebar__sub-heading app-c-navigation-sidebar__external-heading">
+        <%= other["title"] %>
+      </h3>
+      <nav role="navigation" class="app-c-navigation-sidebar__nav-section">
+        <ul class="app-c-navigation-sidebar__link-list">
+          <% other["links"].each do |link| %>
+            <li class="app-c-navigation-sidebar__link">
+              <%= sidebar_link_to(link, "other") %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    <% end %>
+
   </aside>
 <% end %>

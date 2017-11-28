@@ -10,121 +10,129 @@ examples:
     data:
       related_items:
         - text: Find an apprenticeship
-          href: /apply-apprenticeship
+          path: /apply-apprenticeship
         - text: Training and study at work
-          href: /training-study-work-your-rights
+          path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
-          href: /careers-helpline-for-teenagers
+          path: /careers-helpline-for-teenagers
   with_curated_topics:
     data:
       related_items:
         - text: Find an apprenticeship
-          href: /apply-apprenticeship
+          path: /apply-apprenticeship
         - text: Training and study at work
-          href: /training-study-work-your-rights
+          path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
-          href: /careers-helpline-for-teenagers
+          path: /careers-helpline-for-teenagers
       topics:
         - text: Apprenticeships, 14 to 19 education and training for work
-          href: /browse/education/find-course
+          path: /browse/education/find-course
         - text: Finding a job
-          href: /browse/working/finding-job
+          path: /browse/working/finding-job
         - text: Apprenticeships
-          href: /topic/further-education-skills/apprenticeships
+          path: /topic/further-education-skills/apprenticeships
   with_publishing_entities:
     data:
       related_items:
         - text: Find an apprenticeship
-          href: /apply-apprenticeship
+          path: /apply-apprenticeship
         - text: Training and study at work
-          href: /training-study-work-your-rights
+          path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
-          href: /careers-helpline-for-teenagers
+          path: /careers-helpline-for-teenagers
       publishers:
         - text: Department for Education
-          href: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
+          path: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
         - text: Minister of State for Apprenticeships and Skills
-          href: /government/ministers/minister-of-state--44
+          path: /government/ministers/minister-of-state--44
         - text: The Rt Hon Anne Milton Mp
-          href: /government/people/anne-milton
+          path: /government/people/anne-milton
         - text: Kenya
-          href: /world/kenya
+          path: /world/kenya
   with_collections:
     data:
       related_items:
         - text: Find an apprenticeship
-          href: /apply-apprenticeship
+          path: /apply-apprenticeship
         - text: Training and study at work
-          href: /training-study-work-your-rights
+          path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
-          href: /careers-helpline-for-teenagers
+          path: /careers-helpline-for-teenagers
       collections:
         - text: Recruit an apprentice (formerly apprenticeship vacancies)
-          href: /government/collections/apprenticeship-vacancies
+          path: /government/collections/apprenticeship-vacancies
         - text: The future of jobs and skills
-          href: /government/collections/the-future-of-jobs-and-skills
+          path: /government/collections/the-future-of-jobs-and-skills
   with_policies:
     data:
       related_items:
         - text: Find an apprenticeship
-          href: /apply-apprenticeship
+          path: /apply-apprenticeship
         - text: Training and study at work
-          href: /training-study-work-your-rights
+          path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
-          href: /careers-helpline-for-teenagers
+          path: /careers-helpline-for-teenagers
       policies:
         - text: Further education and training
-          href: /government/policies/further-education-and-training
+          path: /government/policies/further-education-and-training
   with_external_related_links:
     data:
       related_items:
         - text: Find an apprenticeship
-          href: /apply-apprenticeship
+          path: /apply-apprenticeship
         - text: Training and study at work
-          href: /training-study-work-your-rights
+          path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
-          href: /careers-helpline-for-teenagers
-      external_links:
-        - text: The Student Room repaying your student loan
-          href: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
-        - text: Student finance data protection statements
-          href: http://www.sfengland.slc.co.uk/dataprotection.aspx
+          path: /careers-helpline-for-teenagers
+      other:
+        title: "Elsewhere on the web"
+        links:
+          - text: The Student Room repaying your student loan
+            path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
+            rel: external
+          - text: Student finance data protection statements
+            path: http://www.sfengland.slc.co.uk/dataprotection.aspx
+            rel: external
   with_all_related-content:
     data:
       related_items:
         - text: Find an apprenticeship
-          href: /apply-apprenticeship
+          path: /apply-apprenticeship
         - text: Training and study at work
-          href: /training-study-work-your-rights
+          path: /training-study-work-your-rights
         - text: Careers helpline for teenagers
-          href: /careers-helpline-for-teenagers
+          path: /careers-helpline-for-teenagers
       topics:
         - text: Apprenticeships, 14 to 19 education and training for work
-          href: /browse/education/find-course
+          path: /browse/education/find-course
         - text: Finding a job
-          href: /browse/working/finding-job
+          path: /browse/working/finding-job
         - text: Apprenticeships
-          href: /topic/further-education-skills/apprenticeships
+          path: /topic/further-education-skills/apprenticeships
       publishers:
         - text: Department for Education
-          href: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
+          path: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
         - text: Minister of State for Apprenticeships and Skills
-          href: /government/ministers/minister-of-state--44
+          path: /government/ministers/minister-of-state--44
         - text: The Rt Hon Anne Milton Mp
-          href: /government/people/anne-milton
+          path: /government/people/anne-milton
         - text: Kenya
-          href: /world/kenya
+          path: /world/kenya
       collections:
         - text: Recruit an apprentice (formerly apprenticeship vacancies)
-          href: /government/collections/apprenticeship-vacancies
+          path: /government/collections/apprenticeship-vacancies
         - text: The future of jobs and skills
-          href: /government/collections/the-future-of-jobs-and-skills
+          path: /government/collections/the-future-of-jobs-and-skills
       policies:
         - text: Further education and training
-          href: /government/policies/further-education-and-training
-      external_links:
-        - text: The Student Room repaying your student loan
-          href: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
-        - text: Student finance data protection statements
-          href: http://www.sfengland.slc.co.uk/dataprotection.aspx
+          path: /government/policies/further-education-and-training
+      other:
+        title: "Elsewhere on the web"
+        links:
+          - text: The Student Room repaying your student loan
+            path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
+            rel: external
+          - text: Student finance data protection statements
+            path: http://www.sfengland.slc.co.uk/dataprotection.aspx
+            rel: external
 

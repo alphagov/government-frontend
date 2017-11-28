@@ -14,7 +14,7 @@ class NavigationSidebarTest < ComponentTestCase
       related_items: [
         {
           text: "Apprenticeships",
-          href: '/apprenticeships'
+          path: '/apprenticeships'
         }
       ]
     )
@@ -28,7 +28,7 @@ class NavigationSidebarTest < ComponentTestCase
       topics: [
         {
           text: "Finding a job",
-          href: '/finding-a-job'
+          path: '/finding-a-job'
         }
       ]
     )
@@ -42,7 +42,7 @@ class NavigationSidebarTest < ComponentTestCase
       publishers: [
         {
           text: "Department for Education",
-          href: '/government/organisation/department-for-education'
+          path: '/government/organisation/department-for-education'
         }
       ]
     )
@@ -56,7 +56,7 @@ class NavigationSidebarTest < ComponentTestCase
       collections: [
         {
           text: "The future of jobs and skills",
-          href: '/government/collections/the-future-of-jobs-and-skills'
+          path: '/government/collections/the-future-of-jobs-and-skills'
         }
       ]
     )
@@ -70,7 +70,7 @@ class NavigationSidebarTest < ComponentTestCase
       policies: [
         {
           text: "Further education and training",
-          href: '/government/policies/further-education-and-training'
+          path: '/government/policies/further-education-and-training'
         }
       ]
     )
@@ -84,7 +84,7 @@ class NavigationSidebarTest < ComponentTestCase
       external_links: [
         {
           text: "The Student Room repaying your student loan",
-          href: 'https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan'
+          path: 'https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan'
         }
       ]
     )
@@ -98,7 +98,7 @@ class NavigationSidebarTest < ComponentTestCase
       external_links: [
         {
           text: "The Student Room repaying your student loan",
-          href: 'https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan'
+          path: 'https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan'
         }
       ]
     )
@@ -111,7 +111,7 @@ class NavigationSidebarTest < ComponentTestCase
       topics: [
         {
           text: "Apprenticeships",
-          href: '/apprenticeships'
+          path: '/apprenticeships'
         }
       ]
     )
@@ -124,13 +124,13 @@ class NavigationSidebarTest < ComponentTestCase
       related_items: [
         {
           text: "Apprenticeships",
-          href: '/apprenticeships'
+          path: '/apprenticeships'
         }
       ],
       policies: [
         {
           text: "Further education and training",
-          href: '/government/policies/further-education-and-training'
+          path: '/government/policies/further-education-and-training'
         }
       ]
     )
