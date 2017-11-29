@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 
 gem 'govuk_app_config', '~> 0.3.0'
-gem 'govuk_navigation_helpers', '~> 7.0'
+gem 'govuk_navigation_helpers', '~> 7.1.0'
 
 group :development, :test do
   gem 'govuk-lint'
