@@ -17,8 +17,7 @@ class PublisherMetadataTest < ComponentTestCase
   test "renders a from link when from data is given" do
     render_component(other: { From: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>"] })
     assert_select ".app-c-publisher-metadata__other a[href='/government/organisations/ministry-of-defence']", text: 'Ministry of Defence'
-    assert_select ".app-c-publisher-metadata__other dt", text: 'From:'
-    assert_select ".app-c-publisher-metadata__other dd", text: 'Ministry of Defence'
+    assert_select ".app-c-publisher-metadata__other", text: 'From: Ministry of Defence'
   end
 
 
@@ -30,8 +29,7 @@ class PublisherMetadataTest < ComponentTestCase
 
   test "renders a sentence when multiple publishers are given" do
     render_component(other: { From: ["<a href='/government/organisations/department-for-education'>Department for Education</a>", "<a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>"] })
-    assert_select ".app-c-publisher-metadata__other dt", text: 'From:'
-    assert_select ".app-c-publisher-metadata__other dd", text: 'Department for Education and Education Funding Agency'
+    assert_select ".app-c-publisher-metadata__other", text: 'From: Department for Education and Education Funding Agency'
   end
 
   test "renders published dates component when only published date is given" do
@@ -48,8 +46,7 @@ class PublisherMetadataTest < ComponentTestCase
     render_component(other: { From: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>"] }, published: "31 July 2017", last_updated: "20 September 2017", link_to_history: true)
     assert_select ".app-c-published-dates"
     assert_select ".app-c-publisher-metadata__other a[href='/government/organisations/ministry-of-defence']", text: 'Ministry of Defence'
-    assert_select ".app-c-publisher-metadata__other dt", text: 'From:'
-    assert_select ".app-c-publisher-metadata__other dd", text: 'Ministry of Defence'
+    assert_select ".app-c-publisher-metadata__other", text: 'From: Ministry of Defence'
   end
 
   test "link tracking is enabled" do
