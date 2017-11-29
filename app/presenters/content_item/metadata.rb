@@ -15,7 +15,7 @@ module ContentItem
       }
     end
 
-    def content_metadata
+    def publisher_metadata
       {
         published: published,
         last_updated: updated,
