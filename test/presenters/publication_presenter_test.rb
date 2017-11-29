@@ -75,4 +75,13 @@ class PublicationPresenterTest < PresenterTestCase
       'England (see publications for <a rel="external" href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm">Northern Ireland</a>, <a rel="external" href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS">Scotland</a>, and <a rel="external" href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en">Wales</a>)'
     )
   end
+
+  test 'does not contain national applicability in other metadata' do
+    presented = presented_item('statistics_publication')
+
+    refute(presented.metadata[:other].keys.map(&:to_s).include?("Applies to"),
+           "'other' metadata shouldn't contain 'Applies to'")
+    assert(presented.publisher_metadata[:other].keys.map(&:to_s).include?("Applies to"),
+           "publisher metadata should contain 'Applies to'")
+  end
 end
