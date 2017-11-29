@@ -8,22 +8,21 @@
 %>
 <% if metadata.any? || other_has_values %>
   <div class="app-c-publisher-metadata">
-    <%= render 'components/published-dates', published: published, last_updated: last_updated, link_to_history: link_to_history %>
-    <% if other_has_values %>
-      <div class="app-c-publisher-metadata__other">
-        <dl>
-        <% other.each do |title, values| %>
-          <%
-            values ||= []
-            values = Array(values)
-          %>
-          <% if values.any? %>
-            <dt class="app-c-publisher-metadata__term"><%= title %>: </dt>
-            <dd class="app-c-publisher-metadata_definition"><%= values.to_sentence.html_safe %></dd>
+    <div class="grid-row">
+      <%= render 'components/published-dates', published: published, last_updated: last_updated, link_to_history: link_to_history %>
+      <% if other_has_values %>
+        <div class="app-c-publisher-metadata__other">
+          <% other.each do |title, values| %>
+            <%
+              values ||= []
+              values = Array(values)
+            %>
+            <% if values.any? %>
+              <p><%= title %>: <%= values.to_sentence.html_safe %></p>
+            <% end %>
           <% end %>
-        <% end %>
-        </dl>
-      </div>
-    <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 <% end %>

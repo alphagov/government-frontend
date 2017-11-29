@@ -2,29 +2,22 @@
   @include responsive-bottom-margin;
   @include core-16;
   padding-top: $gutter-half;
+  padding-bottom: $gutter-half;
+  padding-left: $gutter-half;
+  padding-right: $gutter-half;
   border-top: 1px solid $border-colour;
+  border-bottom: 1px solid $border-colour;
+}
+
+.app-c-publisher-metadata__other {
+  margin-top: $gutter-half;
+
+  // Don't include a margin if there’s no published dates above
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .app-c-publisher-metadata__other a {
   font-weight: bold;
-}
-
-.app-c-publisher-metadata__term {
-  line-height: normal;
-
-  @include media(tablet) {
-    box-sizing: border-box;
-    clear: left;
-    float: left;
-    max-width: 11em;
-    padding-right: $gutter-one-third / 2;
-  }
-}
-
-.app-c-publisher-metadata__definition {
-  line-height: normal;
-
-  @include media(tablet) {
-    box-sizing: border-box;
-  }
 }
