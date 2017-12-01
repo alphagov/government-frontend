@@ -1,4 +1,4 @@
-module RelatedNavigationSidebarHelper
+module RelatedNavigationHelper
   def format_data_for_related_navigation(related_content, other_links)
     other_links.each do |sections|
       sections.each do |section|
@@ -12,7 +12,7 @@ module RelatedNavigationSidebarHelper
 
   def construct_section_heading(section_title)
     unless section_title === "related_items"
-      t('components.navigation_sidebar.' + section_title, default: section_title.tr('_', ' '))
+      t('components.related_navigation.' + section_title, default: section_title.tr('_', ' '))
     end
   end
 

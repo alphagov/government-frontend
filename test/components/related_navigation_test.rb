@@ -1,8 +1,8 @@
 require 'component_test_helper'
 
-class RelatedNavigationSidebarTest < ComponentTestCase
+class RelatedNavigationTest < ComponentTestCase
   def component_name
-    "related-navigation-sidebar"
+    "related-navigation"
   end
 
   test "renders nothing when no parameters given" do
@@ -19,8 +19,8 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__main-heading", text: 'Related content'
-    assert_select ".app-c-related-navigation-sidebar__section-link--other[href=\"/apprenticeships\"]", text: 'Apprenticeships'
+    assert_select ".app-c-related-navigation__main-heading", text: 'Related content'
+    assert_select ".app-c-related-navigation__section-link--other[href=\"/apprenticeships\"]", text: 'Apprenticeships'
   end
 
   test "renders topics section when passed topic items" do
@@ -33,8 +33,8 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__sub-heading", text: 'Explore the topic'
-    assert_select ".app-c-related-navigation-sidebar__section-link[href=\"/finding-a-job\"]", text: 'Finding a job'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Explore the topic'
+    assert_select ".app-c-related-navigation__section-link[href=\"/finding-a-job\"]", text: 'Finding a job'
   end
 
   test "renders publisher section when passed publisher items" do
@@ -47,8 +47,8 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__sub-heading", text: 'Detailed guidance from'
-    assert_select ".app-c-related-navigation-sidebar__section-link[href=\"/government/organisation/department-for-education\"]", text: 'Department for Education'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Detailed guidance from'
+    assert_select ".app-c-related-navigation__section-link[href=\"/government/organisation/department-for-education\"]", text: 'Department for Education'
   end
 
   test "renders collection section when passed collection items" do
@@ -61,8 +61,8 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__sub-heading", text: 'Collections'
-    assert_select ".app-c-related-navigation-sidebar__section-link[href=\"/government/collections/the-future-of-jobs-and-skills\"]", text: 'The future of jobs and skills'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Collections'
+    assert_select ".app-c-related-navigation__section-link[href=\"/government/collections/the-future-of-jobs-and-skills\"]", text: 'The future of jobs and skills'
   end
 
   test "renders policy section when passed policy items" do
@@ -75,8 +75,8 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__sub-heading", text: 'Policy'
-    assert_select ".app-c-related-navigation-sidebar__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Policy'
+    assert_select ".app-c-related-navigation__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
   end
 
   test "renders other links section when passed external related links" do
@@ -94,8 +94,8 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__sub-heading--other", text: 'Elsewhere on the web'
-    assert_select ".app-c-related-navigation-sidebar__section-link--other[href=\"https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan\"]", text: 'The Student Room repaying your student loan'
+    assert_select ".app-c-related-navigation__sub-heading--other", text: 'Elsewhere on the web'
+    assert_select ".app-c-related-navigation__section-link--other[href=\"https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan\"]", text: 'The Student Room repaying your student loan'
   end
 
   test "renders external links with rel=external" do
@@ -109,7 +109,7 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__section-link[rel=\"external\"]"
+    assert_select ".app-c-related-navigation__section-link[rel=\"external\"]"
   end
 
   test "adds aria labelledby to navigation sections" do
@@ -122,7 +122,7 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__nav-section[aria-labelledby]"
+    assert_select ".app-c-related-navigation__nav-section[aria-labelledby]"
   end
 
   test "renders multiple items when passed data for multiple sections" do
@@ -141,10 +141,10 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__main-heading", text: 'Related content'
-    assert_select ".app-c-related-navigation-sidebar__section-link--other[href=\"/apprenticeships\"]", text: 'Apprenticeships'
+    assert_select ".app-c-related-navigation__main-heading", text: 'Related content'
+    assert_select ".app-c-related-navigation__section-link--other[href=\"/apprenticeships\"]", text: 'Apprenticeships'
 
-    assert_select ".app-c-related-navigation-sidebar__sub-heading", text: 'Policy'
-    assert_select ".app-c-related-navigation-sidebar__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Policy'
+    assert_select ".app-c-related-navigation__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
   end
 end
