@@ -1,0 +1,78 @@
+name: Radio button
+description: A radio button is a GOV.UK element that allows users to answer a question by selecting an option. If you have a question with more than one option you should stack radio buttons.
+body: |
+  Forked from the upcoming [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend), when GOV.UK Frontend release we can replace these source files.
+accessibility_criteria: |
+  Radio buttons should
+
+  - accept focus
+  - be focusable with a keyboard
+  - be usable with a keyboard
+  - indicate when they have focus
+  - change in appearance when touched (in the touch-down state)
+  - be usable with touch
+  - be usable with [voice commands](https://www.w3.org/WAI/perspectives/voice.html)
+  - have visible text
+  - have a meaningful accessible name
+  - be usable when interacting with the label
+  - additional information in hint text should be read out found when focusing inputs
+
+  [Keyboard interaction](https://www.w3.org/TR/wai-aria-practices-1.1/#radiobutton)
+
+  - when a radio group receives focus:
+    - if a radio button is checked, focus is set on the checked button.
+    - if none of the radio buttons are checked, focus is set on the first radio button in the group.
+  - Space: checks the focused radio button if it is not already checked.
+  - Right Arrow and Down Arrow: move focus to the next radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the last button, focus moves to the first button.
+  - Left Arrow and Up Arrow: move focus to the previous radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the first button, focus moves to the last button.
+
+examples:
+  default:
+    data:
+      name: "radio-group"
+      items:
+      - value: "government-gateway"
+        text: "Use Government Gateway"
+      - value: "govuk-verify"
+        text: "Use GOV.UK Verify"
+  with_bold:
+    description: 'Used to provide better contrast between long labels and hint text, Note that the `:or` option [is documented as a string due to a bug](https://github.com/alphagov/govuk_publishing_components/issues/102)'
+    data:
+      name: "radio-group-bold"
+      items:
+      - value: "government-gateway"
+        text: "Use Government Gateway"
+        hint_text: "You'll have a user ID if you've signed up to do things like sign up Self Assessment tax return online."
+        bold: true
+      - value: "govuk-verify"
+        text: "Use GOV.UK Verify"
+        hint_text: "You'll have an account if you've already proved your identity with a certified company, such as the Post Office."
+        bold: true
+  with_hint_text:
+    data:
+      name: "radio-group-hint-text"
+      items:
+      - value: "government-gateway"
+        hint_text: "You'll have a user ID if you've signed up to do things like sign up Self Assessment tax return online."
+        text: "Use Government Gateway"
+      - value: "govuk-verify"
+        hint_text: "You'll have an account if you've already proved your identity with a certified company, such as the Post Office."
+        text: "Use GOV.UK Verify"
+  with_checked_option:
+    data:
+      name: "radio-group-checked"
+      items:
+      - value: "government-gateway"
+        text: "Use Government Gateway"
+      - value: "govuk-verify"
+        text: "Use GOV.UK Verify"
+        checked: true
+  with_custom_id_prefix:
+    data:
+      id_prefix: 'custom'
+      name: "radio-custom-id-prefix"
+      items:
+      - value: "government-gateway"
+        text: "Use Government Gateway"
+      - value: "govuk-verify"
+        text: "Use GOV.UK Verify"

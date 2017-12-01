@@ -1,0 +1,19 @@
+$govuk-text-colour: $text-colour;
+$govuk-secondary-text-colour: $grey-1;
+
+.app-c-label {
+  display: block;
+  color: $govuk-text-colour;
+  @include core-19;
+}
+
+.app-c-label--bold {
+  font-weight: 700;
+}
+
+// Hint text sits inside a label, to be read by AT
+.app-c-label__hint {
+  display: block;
+  color: $govuk-secondary-text-colour;
+  font-weight: 400;
+}

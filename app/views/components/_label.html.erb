@@ -1,0 +1,24 @@
+<%
+  classes ||= ''
+  html_for ||= ''
+  hint_text ||= ''
+  bold ||= false
+%>
+
+<label
+  class="
+    app-c-label
+    <%= "app-c-label--bold" if bold %>
+    <%= classes if classes %>
+  "
+  <% if html_for %>
+    for="<%= html_for %>"
+  <% end %>
+>
+  <%= text %>
+  <% if hint_text.present? %>
+    <span class="app-c-label__hint">
+      <%= hint_text %>
+    </span>
+  <% end %>
+</label>
