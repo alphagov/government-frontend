@@ -143,6 +143,28 @@ class RadioTest < ComponentTestCase
     assert_select ".app-c-radio__label[for=custom-1]", text: "Use GOV.UK Verify"
   end
 
+  test "renders radio-group with or divider" do
+    render_component(
+      name: "radio-group-or-divider",
+      items: [
+        {
+          value: "government-gateway",
+          text: "Use Government Gateway"
+        },
+        :or,
+        {
+          value: "govuk-verify",
+          text: "Use GOV.UK Verify"
+        }
+      ]
+    )
+
+    assert_select ".app-c-radio__input[name=radio-group-or-divider]"
+    assert_select ".app-c-radio:first-child .app-c-radio__label", text: "Use Government Gateway"
+    assert_select ".app-c-radio__block-text", text: "or"
+    assert_select ".app-c-radio:last-child .app-c-radio__label", text: "Use GOV.UK Verify"
+  end
+
   # This component can be interacted with, so use integration tests for these cases.
   class RadioIntegrationTest < ActionDispatch::IntegrationTest
     def input_visible

@@ -3,23 +3,36 @@
   items ||= []
 %>
 <% items.each_with_index do |item, index| %>
-  <% label_id = item[:id] ? item[:id] : "#{id_prefix}-#{index}" %>
-  <div class="app-c-radio">
-    <input
-      class="app-c-radio__input"
-      id="<%= label_id %>"
-      name="<%= name %>"
-      type="radio"
-      value="<%= item[:value] %>"
-      <%= "checked" if item[:checked] %>
-      <%= "disabled" if item[:disabled] %>
+  <% if item === :or %>
+    <span class="app-c-radio__block-text">
+      <%= t('components.radio.or') %>
+    </span>
+  <% else %>
+    <%
+      label_id = item[:id] ? item[:id] : "#{id_prefix}-#{index}"
+      item_next = items[index + 1] unless index === items.size - 1
+    %>
+    <div
+      class="
+        app-c-radio
+        <%= 'app-c-radio--margin-bottom-0' if item_next === :or %>
+      "
     >
-    <%= render "components/label", {
-      html_for: label_id,
-      classes: 'app-c-radio__label',
-      hint_text: item[:hint_text],
-      text: item[:text],
-      bold: item[:bold]
-    } %>
-  </div>
+      <input
+        class="app-c-radio__input"
+        id="<%= label_id %>"
+        name="<%= name %>"
+        type="radio"
+        value="<%= item[:value] %>"
+        <%= "checked" if item[:checked] %>
+      >
+      <%= render "components/label", {
+        html_for: label_id,
+        classes: 'app-c-radio__label',
+        hint_text: item[:hint_text],
+        text: item[:text],
+        bold: item[:bold]
+      } %>
+    </div>
+  <% end %>
 <% end %>

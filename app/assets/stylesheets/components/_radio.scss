@@ -116,3 +116,15 @@ $govuk-focus-colour: $focus-colour;
 .app-c-radio__input:disabled + .app-c-radio__label {
   opacity: .5;
 }
+
+// TODO: Can be replaced by spacing + typography helpers from GOV.UK Frontend
+.app-c-radio--margin-bottom-0 {
+  margin-bottom: $govuk-spacing-scale-0 !important;
+}
+
+// TODO: Can be replaced by spacing + typography helpers from GOV.UK Frontend
+.app-c-radio__block-text {
+  display: block;
+  @include core-19;
+  margin-bottom: $govuk-spacing-scale-3;
+}

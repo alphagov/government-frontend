@@ -2,6 +2,8 @@ name: Radio button
 description: A radio button is a GOV.UK element that allows users to answer a question by selecting an option. If you have a question with more than one option you should stack radio buttons.
 body: |
   Forked from the upcoming [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend), when GOV.UK Frontend release we can replace these source files.
+
+  You can also use 'or' as an item to [break up radios](https://www.gov.uk/service-manual/design/writing-for-user-interfaces#ask-questions-that-users-can-understand)
 accessibility_criteria: |
   Radio buttons should
 
@@ -79,3 +81,38 @@ examples:
         text: "Use Government Gateway"
       - value: "govuk-verify"
         text: "Use GOV.UK Verify"
+  with_or_divider:
+    description: "See [related service manual gudiance for this pattern](https://www.gov.uk/service-manual/design/writing-for-user-interfaces#ask-questions-that-users-can-understand)"
+    data:
+      name: "radio-group-or-divider"
+      items:
+      - value: "government-gateway"
+        text: "Use Government Gateway"
+      - value: "govuk-verify"
+        text: "Use GOV.UK Verify"
+      - :or
+      - value: "create-an-account"
+        text: "Create an account"
+  extreme:
+    description: 'Note that the `:or` option [is documented as a string due to a bug](https://github.com/alphagov/govuk_publishing_components/issues/102)'
+    data:
+      id_prefix: 'extreme'
+      name: "radio-custom-extreme"
+      items:
+      - value: "extreme-value-1"
+        hint_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien justo, lobortis elementum tortor in, luctus interdum turpis. Nam sit amet nulla nec arcu condimentum dapibus quis varius metus. Suspendisse cursus tristique diam et vestibulum. Proin nec lacinia tortor. Morbi at nisi id lorem aliquam ullamcorper. Pellentesque laoreet sit amet leo sodales ultricies. Suspendisse maximus efficitur odio in tristique."
+        text: "Quisque tincidunt venenatis bibendum. Morbi volutpat magna euismod ipsum consequat cursus. Etiam bibendum interdum ultricies."
+        bold: true
+      - value: "extreme-value-2"
+        hint_text: "Cras mi neque, porttitor mattis ultricies id, fringilla non ipsum. Etiam non elit ac magna tincidunt ultrices. Morbi eu quam sed justo scelerisque efficitur sed ut risus. Integer commodo, lectus et venenatis maximus, augue erat egestas nulla, eget fermentum augue lacus tempor nulla. Aenean ultricies suscipit erat, vitae hendrerit neque varius nec. Etiam ac euismod massa. Ut at erat id sapien mollis posuere."
+        text: "Aliquam rutrum lobortis blandit. Praesent sit amet lacinia libero. Morbi nulla tellus, euismod et ipsum id, porta volutpat enim. Ut mauris libero"
+        bold: true
+      - :or
+      - value: "extreme-value-3"
+        hint_text: "Nullam congue neque et tempor tincidunt. In ornare lacus ac arcu maximus ultricies. Quisque et ultrices nulla. Suspendisse potenti. Nunc imperdiet ornare leo ut ultrices. Praesent in quam in tellus dictum lacinia vitae vitae lacus. Nulla hendrerit feugiat urna eu gravida. Nam a molestie nisi, at semper neque. Quisque tincidunt venenatis bibendum. Morbi volutpat magna euismod ipsum consequat cursus. Etiam bibendum interdum ultricies."
+        text: "Duis tempus est metus, in varius enim lobortis non. Nunc laoreet nisi vel lectus consequat, sed venenatis tellus dictum. Nunc ut nibh blandit ipsum bibendum dictum."
+        bold: true
+      - value: "extreme-value-4"
+        hint_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien justo, lobortis elementum tortor in, luctus interdum turpis. Nam sit amet nulla nec arcu condimentum dapibus quis varius metus. Suspendisse cursus tristique diam et vestibulum. Proin nec lacinia tortor. Morbi at nisi id lorem aliquam ullamcorper. Pellentesque laoreet sit amet leo sodales ultricies. Suspendisse maximus efficitur odio in tristique."
+        text: "Quisque tincidunt venenatis bibendum. Morbi volutpat magna euismod ipsum consequat cursus. Etiam bibendum interdum ultricies."
+        bold: true
