@@ -13,7 +13,7 @@
   padding-top: $gutter-half;
 }
 
-.app-c-related-navigation-sidebar__sub-heading--bold {
+.app-c-related-navigation-sidebar__sub-heading--other {
   @include bold-19;
 }
 
@@ -27,13 +27,13 @@
   margin-bottom: $gutter-one-third;
 }
 
-.app-c-related-navigation-sidebar__related-link {
-  text-decoration: none;
-}
-
 .app-c-related-navigation-sidebar__section-link {
   text-decoration: none;
   @include bold-19;
+}
+
+.app-c-related-navigation-sidebar__section-link--other {
+  text-decoration: none;
 }
 
 // reset the default browser styles

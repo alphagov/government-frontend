@@ -20,7 +20,7 @@ class RelatedNavigationSidebarTest < ComponentTestCase
     )
 
     assert_select ".app-c-related-navigation-sidebar__main-heading", text: 'Related content'
-    assert_select ".app-c-related-navigation-sidebar__related-link[href=\"/apprenticeships\"]", text: 'Apprenticeships'
+    assert_select ".app-c-related-navigation-sidebar__section-link--other[href=\"/apprenticeships\"]", text: 'Apprenticeships'
   end
 
   test "renders topics section when passed topic items" do
@@ -94,8 +94,8 @@ class RelatedNavigationSidebarTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation-sidebar__sub-heading", text: 'Elsewhere on the web'
-    assert_select ".app-c-related-navigation-sidebar__related-link[href=\"https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan\"]", text: 'The Student Room repaying your student loan'
+    assert_select ".app-c-related-navigation-sidebar__sub-heading--other", text: 'Elsewhere on the web'
+    assert_select ".app-c-related-navigation-sidebar__section-link--other[href=\"https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan\"]", text: 'The Student Room repaying your student loan'
   end
 
   test "renders external links with rel=external" do
@@ -142,7 +142,7 @@ class RelatedNavigationSidebarTest < ComponentTestCase
     )
 
     assert_select ".app-c-related-navigation-sidebar__main-heading", text: 'Related content'
-    assert_select ".app-c-related-navigation-sidebar__related-link[href=\"/apprenticeships\"]", text: 'Apprenticeships'
+    assert_select ".app-c-related-navigation-sidebar__section-link--other[href=\"/apprenticeships\"]", text: 'Apprenticeships'
 
     assert_select ".app-c-related-navigation-sidebar__sub-heading", text: 'Policy'
     assert_select ".app-c-related-navigation-sidebar__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'

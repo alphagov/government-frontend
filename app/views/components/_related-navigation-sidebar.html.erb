@@ -1,47 +1,36 @@
 <%
-  related_items ||= []
-  topics ||= []
-  publishers ||= []
-  collections ||= []
-  policies ||= []
-  other ||= []
+  defined_sections = ["topics", "publishers", "collections", "policies"]
   related_content = [
-    {"related_items" => related_items},
-    {"topics" => topics},
-    {"publishers" => publishers},
-    {"collections" => collections},
-    {"policies" => policies},
+    {"related_items" => related_items ||= [] },
+    {"topics" => topics ||= [] },
+    {"publishers" => publishers ||= [] },
+    {"collections" => collections ||= [] },
+    {"policies" => policies ||= [] },
   ]
+  other ||= []
+  format_data_for_related_navigation(related_content, other)
 %>
 <% if related_content.map(&:values).flatten.any? || other.any? %>
   <aside class="app-c-related-navigation-sidebar" role="complementary">
-    <h2 id="nav-sidebar-related-content" class="app-c-related-navigation-sidebar__main-heading" >
+    <h2 id="related-nav-related_items" class="app-c-related-navigation-sidebar__main-heading" >
       <%= t('components.navigation_sidebar.related_content') %>
     </h2>
     <% related_content.each do |section| %>
       <% section.each do |section_title, links| %>
-
-        <% if section_title === "related_items" && links.any? %>
-          <nav role="navigation" class="app-c-related-navigation-sidebar__nav-section" aria-labelledby="nav-sidebar-related-content" %>
+        <% if links.any?%>
+          <% unless section_title === "related_items" %>
+            <h3 id="related-nav-<%= section_title %>" class="
+              app-c-related-navigation-sidebar__sub-heading
+              app-c-related-navigation-sidebar__sub-heading<%= construct_section_styling(section_title, defined_sections) %>"
+            >
+              <%= construct_section_heading(section_title) %>
+            </h3>
+          <% end %>
+          <nav role="navigation" class="app-c-related-navigation-sidebar__nav-section" aria-labelledby="related-nav-<%= section_title %>">
             <ul class="app-c-related-navigation-sidebar__link-list">
               <% links.each do |link| %>
                 <li class="app-c-related-navigation-sidebar__link">
-                  <%= link_to link[:text], link[:path], class: "app-c-related-navigation-sidebar__related-link", rel: link[:rel] %>
-                </li>
-              <% end %>
-            </ul>
-          </nav>
-
-        <% elsif links.any? %>
-          <h3 id="nav-sidebar-<%= section_title %>"
-              class="app-c-related-navigation-sidebar__sub-heading">
-            <%= t('components.navigation_sidebar.' + section_title) %>
-          </h3>
-          <nav role="navigation" class="app-c-related-navigation-sidebar__nav-section" aria-labelledby="nav-sidebar-<%= section_title %>">
-            <ul class="app-c-related-navigation-sidebar__link-list">
-              <% links.each do |link| %>
-                <li class="app-c-related-navigation-sidebar__link">
-                  <%= link_to link[:text], link[:path], class: "app-c-related-navigation-sidebar__section-link", rel: link[:rel] %>
+                  <%= link_to link[:text], link[:path], class: "app-c-related-navigation-sidebar__section-link" + construct_section_styling(section_title, defined_sections), rel: link[:rel] %>
                 </li>
               <% end %>
             </ul>
@@ -49,25 +38,5 @@
         <% end %>
       <% end %>
     <% end %>
-
-    <% if other.any? %>
-      <% other.each do |other_sections| %>
-        <% other_sections.each do |section| %>
-          <h3 class="app-c-related-navigation-sidebar__sub-heading app-c-related-navigation-sidebar__sub-heading--bold" id="nav-sidebar-<%= section[:title].parameterize.underscore %>">
-            <%= section[:title] %>
-          </h3>
-          <nav role="navigation" class="app-c-related-navigation-sidebar__nav-section" aria-labelledby="nav-sidebar-<%= section[:title].parameterize.underscore %>">
-            <ul class="app-c-related-navigation-sidebar__link-list">
-              <% section[:links].each do |link| %>
-                <li class="app-c-related-navigation-sidebar__link">
-                  <%= link_to link[:text], link[:path], class: "app-c-related-navigation-sidebar__related-link", rel: link[:rel] %>
-                </li>
-              <% end %>
-            </ul>
-          </nav>
-        <% end %>
-      <% end %>
-    <% end %>
-
   </aside>
 <% end %>
