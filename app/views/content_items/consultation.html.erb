@@ -89,15 +89,8 @@
 <% end %>
 
     <%= render 'components/heading', text: "Consultation description", id: "description-title" %>
-	</div>
-</div>
-<div class="grid-row">
-  <div class="column-two-thirds responsive-bottom-margin">
     <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
-	</div>
-  <%= render 'shared/sidebar_navigation' %>
-</div>
-<div class=""
+
 <% if @content_item.documents? %>
     <%= render 'components/heading', text: "Documents", id: "documents-title" %>
     <%= render 'govuk_component/govspeak',
@@ -144,6 +137,8 @@
         direction: page_text_direction %>
 <% end %>
 	</div>
+
+  <%= render 'shared/sidebar_navigation' %>
 </div>
 <div class="grid-row sidebar-with-body dont-print">
 	<div class="column-two-thirds">

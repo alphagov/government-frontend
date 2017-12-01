@@ -1,7 +1,11 @@
 <% if local_assigns.has_key?(:tasklist) && should_show_tasklist_sidebar? %>
   <%= render 'shared/sidebar_tasklist', tasklist: tasklist %>
 <% elsif @navigation.should_present_taxonomy_navigation? -%>
-  <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
+<%# FIXME: Markup can wrap all three sidebar navigation
+      once we've migrated the appropriate formats %>
+  <div class="column-third add-title-margin">
+    <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
+  </div>
 <% else %>
   <%= render 'shared/related_items', content_item: @content_item %>
 <% end %>
