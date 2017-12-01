@@ -1,0 +1,141 @@
+name: Related Navigation
+description: Component showing related content, including topics, guidance, collections and policies (where applicable)
+accessibility_criteria: |
+  - Should have a role of 'complementary' as it complements the main page content
+  - Should have a role of 'navigation' on any navigation elements inside the component
+shared_accessibility_criteria:
+  - link
+examples:
+  default:
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+  with_curated_topics:
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+      topics:
+        - text: Apprenticeships, 14 to 19 education and training for work
+          path: /browse/education/find-course
+        - text: Finding a job
+          path: /browse/working/finding-job
+        - text: Apprenticeships
+          path: /topic/further-education-skills/apprenticeships
+  with_publishing_entities:
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+      publishers:
+        - text: Department for Education
+          path: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
+        - text: Minister of State for Apprenticeships and Skills
+          path: /government/ministers/minister-of-state--44
+        - text: The Rt Hon Anne Milton Mp
+          path: /government/people/anne-milton
+        - text: Kenya
+          path: /world/kenya
+  with_collections:
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+      collections:
+        - text: Recruit an apprentice (formerly apprenticeship vacancies)
+          path: /government/collections/apprenticeship-vacancies
+        - text: The future of jobs and skills
+          path: /government/collections/the-future-of-jobs-and-skills
+  with_policies:
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+      policies:
+        - text: Further education and training
+          path: /government/policies/further-education-and-training
+  with_external_related_links:
+    description: The component can accept other related links, such as external links or other contacts. In these cases, the component must also be passed a heading for that section
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+      other:
+        -
+          - title: "Elsewhere on the web"
+            links:
+              - path: "http://media.slc.co.uk/sfe/1718/ft/sfe_terms_and_conditions_guide_1718_d.pdf"
+                rel: external
+                text: "Student loans: terms and conditions 2017 to 2018 (PDF, 136KB)"
+              - path: "https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan"
+                rel: external
+                text: "The Student Room: repaying your student loan"
+  with_all_related-content:
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+      topics:
+        - text: Apprenticeships, 14 to 19 education and training for work
+          path: /browse/education/find-course
+        - text: Finding a job
+          path: /browse/working/finding-job
+        - text: Apprenticeships
+          path: /topic/further-education-skills/apprenticeships
+      publishers:
+        - text: Department for Education
+          path: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
+        - text: Minister of State for Apprenticeships and Skills
+          path: /government/ministers/minister-of-state--44
+        - text: The Rt Hon Anne Milton Mp
+          path: /government/people/anne-milton
+        - text: Kenya
+          path: /world/kenya
+      collections:
+        - text: Recruit an apprentice (formerly apprenticeship vacancies)
+          path: /government/collections/apprenticeship-vacancies
+        - text: The future of jobs and skills
+          path: /government/collections/the-future-of-jobs-and-skills
+      policies:
+        - text: Further education and training
+          path: /government/policies/further-education-and-training
+      other:
+        -
+          - title: "Elsewhere on the web"
+            links:
+              - path: "http://media.slc.co.uk/sfe/1718/ft/sfe_terms_and_conditions_guide_1718_d.pdf"
+                rel: external
+                text: "Student loans: terms and conditions 2017 to 2018 (PDF, 136KB)"
+              - text: The Student Room repaying your student loan
+                path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
+                rel: external
+
