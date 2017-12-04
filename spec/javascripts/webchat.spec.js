@@ -8,7 +8,7 @@ describe('Webchat', function () {
   // Stub analytics.
   GOVUK.analytics = GOVUK.analytics || {}
   GOVUK.analytics.trackEvent = function () {}
-  var CHILD_BENEFIT_API_URL = 'https://online.hmrc.gov.uk/webchatprod/egain/chat/entrypoint/checkEligibility/' +
+  var CHILD_BENEFIT_API_URL = 'https://www.tax.service.gov.uk/csp-partials/open/' +
     1027
   var INSERTION_HOOK = '<div class="js-webchat" data-availability-url="' + CHILD_BENEFIT_API_URL + '" data-open-url="' + CHILD_BENEFIT_API_URL + '">' +
     '<div class="js-webchat-advisers-error">Error</div>' +
