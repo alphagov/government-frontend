@@ -13,6 +13,11 @@
   padding-top: $gutter-half;
 }
 
+.app-c-related-navigation__main-heading  + .app-c-related-navigation__sub-heading {
+  border-top: none;
+  padding-top: 0;
+}
+
 .app-c-related-navigation__sub-heading--other {
   @include bold-19;
 }
