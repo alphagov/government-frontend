@@ -1,0 +1,13 @@
+name: Form error message
+description: Component to show a red error message - used for form validation. Use inside a label or legend.
+accessibility_criteria: |
+  - have a text contrast ratio higher than 4.5:1 against the background colour to meet [WCAG AA](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast)
+examples:
+  default:
+    data:
+      text: 'Descriptive error message'
+  outside_label_or_legend:
+    description: 'Used if the error message is not inside a label or legend, for example with `aria-describedby`'
+    data:
+      id: 'unique-error-id'
+      text: 'Descriptive error message'
