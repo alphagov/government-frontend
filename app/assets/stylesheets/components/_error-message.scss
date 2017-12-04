@@ -1,0 +1,15 @@
+$govuk-error-colour: $red;
+
+.app-c-error-message {
+  display: block;
+
+  margin: 0;
+  // TODO: use a var for padding
+  padding: 2px 0;
+
+  clear: both;
+
+  color: $govuk-error-colour;
+
+  @include bold-19;
+}

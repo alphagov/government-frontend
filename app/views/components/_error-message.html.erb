@@ -1,0 +1,9 @@
+<% id ||= false %>
+<span
+  class="app-c-error-message"
+  <% if id %>
+    id="<%= id %>"
+  <% end %>
+>
+   <%= text %>
+</span>
