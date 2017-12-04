@@ -1,0 +1,42 @@
+@import "helpers/clearfix";
+
+$govuk-spacing-scale-0: 0;
+$govuk-spacing-scale-1: 5px;
+$govuk-spacing-scale-2: 10px;
+$govuk-spacing-scale-3: 15px;
+$govuk-spacing-scale-4: 20px;
+$govuk-spacing-scale-5: 30px;
+$govuk-spacing-scale-6: 40px;
+$govuk-spacing-scale-7: 50px;
+$govuk-spacing-scale-8: 60px;
+
+$govuk-text-colour: $text-colour;
+$govuk-secondary-text-colour: $grey-1;
+
+.app-c-fieldset {
+  margin: 0 0 $govuk-spacing-scale-4;
+
+  @include media(tablet) {
+    margin-bottom: $govuk-spacing-scale-5;
+  }
+
+  padding: 0;
+  border: 0;
+  @include govuk-h-clearfix;
+}
+
+.app-c-fieldset__legend {
+  // Fix legend text wrapping in Edge and IE
+  // 1. IE9-11 & Edge 12-13
+  // 2. IE8-11
+  box-sizing: border-box; // 1
+  display: table;         // 2
+  max-width: 100%;        // 1
+  padding: 0;
+  // Hack to let legends or elements within legends have margins in webkit browsers
+  overflow: hidden;
+
+  color: $govuk-text-colour;
+  white-space: normal;    // 1
+  @include core-19;
+}
