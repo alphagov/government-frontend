@@ -16,6 +16,7 @@ accessibility_criteria: |
   - have a meaningful accessible name
   - be usable when interacting with the label
   - additional information in hint text should be read out found when focusing inputs
+  - should always be used nested in a fieldset so that it has proper context, useful for users of assistive technologies.
 
   [Keyboard interaction](https://www.w3.org/TR/wai-aria-practices-1.1/#radiobutton)
 
@@ -26,6 +27,8 @@ accessibility_criteria: |
   - Right Arrow and Down Arrow: move focus to the next radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the last button, focus moves to the first button.
   - Left Arrow and Up Arrow: move focus to the previous radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the first button, focus moves to the last button.
 
+accessibility_excluded_rules:
+- radiogroup # Since this is in isolation we don't want to wrap a fieldset here.
 examples:
   default:
     data:
