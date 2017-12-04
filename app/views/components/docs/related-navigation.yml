@@ -5,6 +5,8 @@ accessibility_criteria: |
   - Should have a role of 'navigation' on any navigation elements inside the component
 shared_accessibility_criteria:
   - link
+accessibility_excluded_rules:
+  - duplicate-id
 examples:
   default:
     data:
@@ -138,4 +140,3 @@ examples:
               - text: The Student Room repaying your student loan
                 path: https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan
                 rel: external
-
