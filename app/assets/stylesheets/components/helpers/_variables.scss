@@ -13,7 +13,13 @@ $app-spacing-scale-8: 60px;
 $app-text-colour: $text-colour;
 $app-secondary-text-colour: $grey-1;
 
+// Border widths
+$app-border-width-mobile: 4px;
+$app-border-width-tablet: 5px;
 $app-border-width-form-element: 2px;
+
+// Focus
+$app-focus-width: 3px;
 $app-focus-colour: $focus-colour;
 
 $app-error-colour: $red;
