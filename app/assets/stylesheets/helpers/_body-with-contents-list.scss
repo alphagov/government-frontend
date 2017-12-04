@@ -6,5 +6,36 @@
 }
 
 .contents-list-link-wrapper .app-c-back-to-top {
-  margin: $gutter 0;
+  margin: $gutter-half 0;
+}
+
+// sticky
+.body-with-contents-list .app-c-contents-list {
+  z-index: 0;
+}
+
+.contents-list-link-wrapper.govuk-sticky-element--stuck-to-window {
+  background-color: $panel-colour;
+  margin-left: 0;
+  padding: $gutter-half;
+}
+
+.contents-list-link-wrapper.govuk-sticky-element--stuck-to-window {
+  margin-left: -25%;
+  width: 150%;
+  padding-left: 25%;
+}
+
+.contents-list-link-wrapper.govuk-sticky-element--stuck-to-window .app-c-back-to-top {
+  padding: 0;
+  margin: 0 0;
+}
+
+.contents-list-link-wrapper.govuk-sticky-element--stuck-to-window {
+  opacity: 1;
+
+  @include media(mobile) {
+    position: fixed;
+  }
+
 }

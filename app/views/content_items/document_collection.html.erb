@@ -1,6 +1,6 @@
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <div class="grid-row">
-  <div class="body-with-contents-list column-two-thirds">
+  <div class="body-with-contents-list column-two-thirds" data-module="sticky-element-container">
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/history_notice', content_item: @content_item %>
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>

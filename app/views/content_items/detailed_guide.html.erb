@@ -1,6 +1,6 @@
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 <div class="grid-row">
-  <div class="column-two-thirds">
+  <div class="body-with-contents-list column-two-thirds" data-module="sticky-element-container">
     <% if @content_item.image.present? %>
       <%= image_tag @content_item.image, class: "logo-image" %>
     <% end %>
