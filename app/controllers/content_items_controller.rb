@@ -1,8 +1,8 @@
 class ContentItemsController < ApplicationController
   class SpecialRouteReturned < StandardError; end
 
-  include TasklistHeaderABTestable
-  include TasklistABTestable
+  include GovukNavigationHelpers::Tasklist::HeaderAbTestable
+  include GovukNavigationHelpers::Tasklist::AbTestable
   include ContentNavigationABTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
@@ -17,8 +17,8 @@ class ContentItemsController < ApplicationController
   def show
     load_content_item
 
-    setup_tasklist_header_ab_testing
-    setup_tasklist_ab_testing
+    setup_current_task_list
+
     set_up_traffic_signs_summary_ab_testing
     setup_content_navigation_ab_testing
 
@@ -81,12 +81,18 @@ private
 
       if tasklist_ab_test_applies?
         locals[:locals] = {
-          tasklist: configure_current_task(TasklistContent.learn_to_drive_config)
+          tasklist_content: configure_current_task
         }
       end
 
       render content_item_template, locals
     end
+  end
+
+  def setup_current_task_list
+    current_tasklist_content(
+      GovukNavigationHelpers::TasklistContent.new('learn-to-drive-a-car')
+    )
   end
 
   def set_access_control_allow_origin_header
@@ -119,14 +125,6 @@ private
 
   def with_locale
     I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
-  end
-
-  def setup_tasklist_header_ab_testing
-    set_tasklist_header_response_header
-  end
-
-  def setup_tasklist_ab_testing
-    set_tasklist_response_header
   end
 
   def setup_content_navigation_ab_testing

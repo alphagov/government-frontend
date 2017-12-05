@@ -1,6 +1,6 @@
 <div class="column-third add-title-margin">
   <h2 class="task-list-title">
-     <a href="<%= tasklist[:base_path] %>"><%= tasklist[:title] %></a>
+     <a href="<%= tasklist_content.base_path %>"><%= tasklist_content.title %></a>
   </h2>
-  <%= render 'govuk_component/task_list', tasklist[:tasklist] %>
+  <%= render 'govuk_component/task_list', tasklist_content.tasklist %>
 </div>

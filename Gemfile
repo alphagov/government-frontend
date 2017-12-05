@@ -5,7 +5,6 @@ ruby File.read(".ruby-version").strip
 gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
 gem 'gds-api-adapters', '~> 48.0'
-gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_frontend_toolkit', '5.1.0'
 gem 'govuk_publishing_components', '~> 2.0.0', require: false
 gem 'htmlentities', '4.3.4'
@@ -22,7 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 
 gem 'govuk_app_config', '~> 0.3.0'
-gem 'govuk_navigation_helpers', '~> 7.1.0'
+gem 'govuk_navigation_helpers', github: 'alphagov/govuk_navigation_helpers', branch: 'add-tasklist-functionality'
 
 group :development, :test do
   gem 'govuk-lint'
