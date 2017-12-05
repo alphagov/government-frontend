@@ -1,8 +1,42 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-<%= render 'shared/sidebar_image_with_body', content_item: @content_item %>
-<%= render 'shared/share_links_offset_in_grid', share_links: @content_item.share_links %>
-<%= render 'govuk_component/document_footer', @content_item.document_footer %>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
+    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <%= render 'shared/history_notice', content_item: @content_item %>
+  </div>
+  <%= render 'shared/translations' %>
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'components/publisher-metadata', @content_item.publisher_metadata %>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds content-bottom-margin">
+    <div class="responsive-bottom-margin">
+      <%= render 'components/figure',
+          src: @content_item.image["url"],
+          alt: @content_item.image["alt_text"],
+          caption: @content_item.image["caption"] if @content_item.image %>
+
+      <%= render 'components/important-metadata',
+          items: @content_item.metadata[:other] %>
+
+      <%= render 'govuk_component/govspeak',
+        content: @content_item.body,
+        direction: page_text_direction %>
+    </div>
+
+    <div class="dont-print responsive-bottom-margin">
+      <%= render 'components/share-links', @content_item.share_links %>
+    </div>
+
+    <%= render 'components/published-dates', {
+        published: @content_item.published,
+        last_updated: @content_item.updated,
+        history: @content_item.history
+      } %>
+  </div>
+
+  <%= render 'shared/sidebar_navigation' %>
+</div>
