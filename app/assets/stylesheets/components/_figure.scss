@@ -1,7 +1,6 @@
 .app-c-figure {
   @extend %contain-floats;
   @include responsive-bottom-margin;
-  width: 100%;
 }
 
 .app-c-figure__image {
