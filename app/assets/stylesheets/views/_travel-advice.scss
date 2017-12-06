@@ -9,6 +9,8 @@
   // TODO: Remove this when components can accept variable unidirectional spacing,
   // the component above should have a bigger margin-bottom.
   .map {
+    @include responsive-bottom-margin;
+
     margin-top: $gutter;
   }
 }
