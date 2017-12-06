@@ -5,7 +5,6 @@
   background: $govuk-blue;
   color: $white;
   padding: $gutter-half;
-  clear: both;
 
   @include media(tablet) {
     padding: $gutter-two-thirds $gutter;
