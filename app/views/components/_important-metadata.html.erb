@@ -1,12 +1,12 @@
 <%
-    items = local_assigns[:items] || {}
-    items = items.reject { |k,v| v.nil? }
-    items = items.merge(items) { |k,v| Array(v).join(",").html_safe }
+  items = local_assigns[:items] || {}
+  items = items.reject { |k,v| v.nil? }
+  items = items.merge(items) { |k,v| Array(v).join(",").html_safe }
 -%>
-<% if items.any? %>
+<% if items.any? -%>
   <div class="app-c-important-metadata">
-    <% items.each do |title, definition| %>
+    <% items.each do |title, definition| -%>
       <p><%= title %>: <strong><%= definition %></strong></p>
-    <% end %>
+    <% end -%>
   </div>
-<% end %>
+<% end -%>
