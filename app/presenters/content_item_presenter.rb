@@ -58,6 +58,10 @@ class ContentItemPresenter
     @nav_helper.taxonomy_sidebar
   end
 
+  def related_navigation
+    @nav_helper.related_navigation_sidebar
+  end
+
   def related_items
     @nav_helper.related_items
   end
