@@ -44,13 +44,9 @@ examples:
           path: /careers-helpline-for-teenagers
       publishers:
         - text: Department for Education
-          path: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
-        - text: Minister of State for Apprenticeships and Skills
-          path: /government/ministers/minister-of-state--44
-        - text: The Rt Hon Anne Milton Mp
-          path: /government/people/anne-milton
-        - text: Kenya
-          path: /world/kenya
+          path: /government/department-for-education
+        - text: Department for Work and Pensions
+          path: /government/department-for-work-pensions
   with_collections:
     data:
       related_items:
@@ -77,6 +73,20 @@ examples:
       policies:
         - text: Further education and training
           path: /government/policies/further-education-and-training
+  with_world_locations:
+    data:
+      related_items:
+        - text: Find an apprenticeship
+          path: /apply-apprenticeship
+        - text: Training and study at work
+          path: /training-study-work-your-rights
+        - text: Careers helpline for teenagers
+          path: /careers-helpline-for-teenagers
+      world_locations:
+        - text: South Sudan
+          path: /world/south-sudan/news
+        - text: USA
+          path: /world/usa/news
   with_external_related_links:
     description: The component can accept other related links, such as external links or other contacts. In these cases, the component must also be passed a heading for that section
     data:
@@ -115,13 +125,7 @@ examples:
           path: /topic/further-education-skills/apprenticeships
       publishers:
         - text: Department for Education
-          path: /government/publications?keywords=&publication_filter_option=guidance&topics%5B%5D=all&departments%5B%5D=department-for-education&official_document_status=all&world_locations%5B%5D=all&from_date=&to_date=
-        - text: Minister of State for Apprenticeships and Skills
-          path: /government/ministers/minister-of-state--44
-        - text: The Rt Hon Anne Milton Mp
-          path: /government/people/anne-milton
-        - text: Kenya
-          path: /world/kenya
+          path: /government/department-for-education
       collections:
         - text: Recruit an apprentice (formerly apprenticeship vacancies)
           path: /government/collections/apprenticeship-vacancies
@@ -130,6 +134,11 @@ examples:
       policies:
         - text: Further education and training
           path: /government/policies/further-education-and-training
+      world_locations:
+        - text: South Sudan
+          path: /world/south-sudan/news
+        - text: USA
+          path: /world/usa/news
       other:
         -
           - title: "Elsewhere on the web"
