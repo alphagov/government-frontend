@@ -1,11 +1,12 @@
 <%
-  defined_sections = ["topics", "publishers", "collections", "policies"]
+  defined_sections = ["topics", "publishers", "collections", "policies", "world_locations"]
   related_content = [
     {"related_items" => related_items ||= [] },
     {"topics" => topics ||= [] },
     {"publishers" => publishers ||= [] },
     {"collections" => collections ||= [] },
     {"policies" => policies ||= [] },
+    {"world_locations" => world_locations ||= [] }
   ]
   other ||= []
   format_data_for_related_navigation(related_content, other)

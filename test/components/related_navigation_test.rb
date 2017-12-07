@@ -37,6 +37,20 @@ class RelatedNavigationTest < ComponentTestCase
     assert_select ".app-c-related-navigation__section-link[href=\"/finding-a-job\"]", text: 'Finding a job'
   end
 
+  test "renders world locations section when passed world location items" do
+    render_component(
+      world_locations: [
+        {
+          text: "USA",
+          path: '/world/usa/news'
+        }
+      ]
+    )
+
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Location'
+    assert_select ".app-c-related-navigation__section-link[href=\"/world/usa/news\"]", text: 'USA'
+  end
+
   test "renders publisher section when passed publisher items" do
     render_component(
       publishers: [
@@ -61,7 +75,7 @@ class RelatedNavigationTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation__sub-heading", text: 'Collections'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Collection'
     assert_select ".app-c-related-navigation__section-link[href=\"/government/collections/the-future-of-jobs-and-skills\"]", text: 'The future of jobs and skills'
   end
 

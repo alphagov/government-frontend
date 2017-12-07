@@ -28,6 +28,7 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
       topics: [],
       policies: [],
       publishers: [],
+      world_locations: [],
       other: [[], []]
     }
 
