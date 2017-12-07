@@ -5,8 +5,11 @@
 -%>
 <% if items.any? -%>
   <div class="app-c-important-metadata">
+    <dl>
     <% items.each do |title, definition| -%>
-      <p><%= title %>: <strong><%= definition %></strong></p>
+      <dt class="app-c-important-metadata__term"><%= title %>: </dt>
+      <dd class="app-c-important-metadata__definition"><%= definition %></dd>
     <% end -%>
+    </dl>
   </div>
 <% end -%>
