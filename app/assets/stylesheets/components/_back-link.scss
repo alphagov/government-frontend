@@ -1,0 +1,40 @@
+$govuk-spacing-scale-0: 0;
+$govuk-spacing-scale-1: 5px;
+$govuk-spacing-scale-2: 10px;
+$govuk-spacing-scale-3: 15px;
+$govuk-spacing-scale-4: 20px;
+$govuk-spacing-scale-5: 30px;
+$govuk-spacing-scale-6: 40px;
+$govuk-spacing-scale-7: 50px;
+$govuk-spacing-scale-8: 60px;
+
+.app-c-back-link {
+  position: relative;
+  display: inline-block;
+  margin-top: $govuk-spacing-scale-3;
+  margin-bottom: $govuk-spacing-scale-3;
+  @include core-16;
+
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+
+  &:link,
+  &:link:focus,
+  &:visited,
+  &:active {
+    color: currentColor;
+  }
+
+  &:hover {
+    color: $link-colour;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: .3em;
+    border-top: 0.3125em solid transparent;
+    border-right: 0.375em solid currentColor;
+    border-bottom: 0.3125em solid transparent;
+  }
+}
