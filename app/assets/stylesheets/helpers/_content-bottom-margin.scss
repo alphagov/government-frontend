@@ -1,5 +1,5 @@
 .content-bottom-margin {
-  margin-bottom: $gutter-half + 5;
+  margin-bottom: $gutter-two-thirds;
 
   @include media(tablet) {
     @include responsive-bottom-margin;
