@@ -1,16 +1,4 @@
-$govuk-spacing-scale-0: 0;
-$govuk-spacing-scale-1: 5px;
-$govuk-spacing-scale-2: 10px;
-$govuk-spacing-scale-3: 15px;
-$govuk-spacing-scale-4: 20px;
-$govuk-spacing-scale-5: 30px;
-$govuk-spacing-scale-6: 40px;
-$govuk-spacing-scale-7: 50px;
-$govuk-spacing-scale-8: 60px;
-
-$govuk-border-width-form-element: 2px;
-$govuk-focus-colour: $focus-colour;
-
+@import "helpers/variables";
 @import "helpers/px-to-em";
 
 .app-c-radio {
@@ -18,7 +6,7 @@ $govuk-focus-colour: $focus-colour;
 
   position: relative;
 
-  margin-bottom: $govuk-spacing-scale-2;
+  margin-bottom: $app-spacing-scale-2;
   padding: 0 0 0 em(40px, 19px);
 
   clear: left;
@@ -32,7 +20,7 @@ $govuk-focus-colour: $focus-colour;
 }
 
 .app-c-radio--inline {
-  margin-right: $govuk-spacing-scale-4;
+  margin-right: $app-spacing-scale-4;
   float: left;
   clear: none;
 }
@@ -69,13 +57,13 @@ $govuk-focus-colour: $focus-colour;
 
   display: block;
   padding-top: em(8px, 19px);
-  padding-bottom: em($govuk-spacing-scale-1, 19px);
+  padding-bottom: em($app-spacing-scale-1, 19px);
 }
 
 .app-c-radio__label__text,
 .app-c-radio__label__hint {
-  padding-left: em($govuk-spacing-scale-3, 19px);
-  padding-right: em($govuk-spacing-scale-3, 19px);
+  padding-left: em($app-spacing-scale-3, 19px);
+  padding-right: em($app-spacing-scale-3, 19px);
 }
 
 .app-c-radio__input + .app-c-radio__label::before {
@@ -88,7 +76,7 @@ $govuk-focus-colour: $focus-colour;
   width: em(40px, 19px);
   height: em(40px, 19px);
 
-  border: $govuk-border-width-form-element solid;
+  border: $app-border-width-form-element solid;
   border-radius: 50%;
   background: transparent;
 }
@@ -97,13 +85,13 @@ $govuk-focus-colour: $focus-colour;
   content: "";
 
   position: absolute;
-  top: em($govuk-spacing-scale-2, 19px);
-  left: em($govuk-spacing-scale-2, 19px);
+  top: em($app-spacing-scale-2, 19px);
+  left: em($app-spacing-scale-2, 19px);
 
   width: 0;
   height: 0;
 
-  border: em($govuk-spacing-scale-2, 19px) solid;
+  border: em($app-spacing-scale-2, 19px) solid;
   border-radius: 50%;
   background: currentColor;
   opacity: 0;
@@ -111,7 +99,7 @@ $govuk-focus-colour: $focus-colour;
 
 // Focused state
 .app-c-radio__input:focus + .app-c-radio__label::before {
-  box-shadow: 0 0 0 4px $govuk-focus-colour;
+  box-shadow: 0 0 0 4px $app-focus-colour;
 }
 
 // Selected state
@@ -131,12 +119,12 @@ $govuk-focus-colour: $focus-colour;
 
 // TODO: Can be replaced by spacing + typography helpers from GOV.UK Frontend
 .app-c-radio--margin-bottom-0 {
-  margin-bottom: $govuk-spacing-scale-0 !important;
+  margin-bottom: $app-spacing-scale-0 !important;
 }
 
 // TODO: Can be replaced by spacing + typography helpers from GOV.UK Frontend
 .app-c-radio__block-text {
   display: block;
   @include core-19;
-  margin-bottom: $govuk-spacing-scale-3;
+  margin-bottom: $app-spacing-scale-3;
 }
