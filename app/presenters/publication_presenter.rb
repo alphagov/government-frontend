@@ -19,6 +19,12 @@ class PublicationPresenter < ContentItemPresenter
     document_type === "national_statistics"
   end
 
+  def metadata
+    super.tap do |m|
+      m[:other].delete('Applies to')
+    end
+  end
+
 private
 
   def documents_list

@@ -1,13 +1,11 @@
-.app-c-content-metadata {
+.app-c-publisher-metadata {
   @include responsive-bottom-margin;
   @include core-16;
   padding-top: $gutter-half;
-  padding-bottom: $gutter-half;
   border-top: 1px solid $border-colour;
-  border-bottom: 1px solid $border-colour;
 }
 
-.app-c-content-metadata__other {
+.app-c-publisher-metadata__other {
   margin-top: $gutter-half;
 
   // Don't include a margin if there’s no published dates above
@@ -16,6 +14,6 @@
   }
 }
 
-.app-c-content-metadata__other a {
+.app-c-publisher-metadata__other a {
   font-weight: bold;
 }
