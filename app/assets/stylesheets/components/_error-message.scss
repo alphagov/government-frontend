@@ -1,4 +1,4 @@
-$govuk-error-colour: $red;
+@import "helpers/variables";
 
 .app-c-error-message {
   display: block;
@@ -9,7 +9,7 @@ $govuk-error-colour: $red;
 
   clear: both;
 
-  color: $govuk-error-colour;
+  color: $app-error-colour;
 
   @include bold-19;
 }
