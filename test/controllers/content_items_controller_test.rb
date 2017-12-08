@@ -85,6 +85,17 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_redirected_to content_item['base_path']
   end
 
+  test "renders choose_sign_in template for service_sign_in page" do
+    content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
+    path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
+
+    stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
+
+    get :show, params: { path: path }
+
+    assert_template :service_sign_in
+  end
+
   test "returns HTML when an unspecific accepts header is requested (eg by IE8 and below)" do
     request.headers["Accept"] = "*/*"
     content_item = content_store_has_schema_example('travel_advice', 'full-country')
