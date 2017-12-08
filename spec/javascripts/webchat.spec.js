@@ -52,7 +52,7 @@ describe('Webchat', function () {
   })
 
 
-  describe('on valid application locations that are pre normalised', function () {
+  describe('on valid application locations', function () {
     function mount () {
       $webchat.map(function () {
         return new GOVUK.Webchat({
@@ -161,108 +161,6 @@ describe('Webchat', function () {
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
       clock.uninstall();
-    })
-  })
-
-  describe('on valid application locations that are not normalised and get normalised in js', function () {
-    function mount () {
-      $webchat.map(function () {
-        return new GOVUK.Webchat({
-          $el: $(this),
-          location: '/government/organisations/hm-revenue-customs/contact/child-benefit',
-          pollingEnabled: true,
-          endPoints: {
-            openUrl: CHILD_BENEFIT_API_URL,
-            proxyUrl: CHILD_BENEFIT_API_URL,
-          },
-          responseNormaliser: function(res){
-            res.response = (res.response) ? res.response.replace("FOO", "") : ""
-            return res;
-          }
-        })
-      })
-    }
-
-    it('should poll for availability', function () {
-      spyOn($, 'ajax')
-      mount()
-      expect(
-        $.ajax
-      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
-    })
-
-    it('should inform user whether advisors are available', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonMangledAvailable)
-      })
-      mount()
-      expect($advisersAvailable.hasClass('hidden')).toBe(false)
-
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersError.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
-    })
-
-    it('should inform user whether advisors are unavailable', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonMangledUnavailable)
-      })
-      mount()
-      expect($advisersUnavailable.hasClass('hidden')).toBe(false)
-
-      expect($advisersAvailable.hasClass('hidden')).toBe(true)
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersError.hasClass('hidden')).toBe(true)
-    })
-
-    it('should inform user whether advisors are busy', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonMangledBusy)
-      })
-      mount()
-      expect($advisersBusy.hasClass('hidden')).toBe(false)
-
-      expect($advisersAvailable.hasClass('hidden')).toBe(true)
-      expect($advisersError.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
-    })
-
-    it('should inform user whether there was an error', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonMangledError)
-      })
-      mount()
-      expect($advisersError.hasClass('hidden')).toBe(false)
-
-      expect($advisersAvailable.hasClass('hidden')).toBe(true)
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
-    })
-  })
-
-  describe('egain normalisaton', function () {
-
-    var egainResponse = function (responseType) {
-      return $.parseXML(
-        '<checkEligibility ' +
-        'xmlns:ns5="http://jabber.org/protocol/httpbind" ' +
-        'xmlns:ns2="http://bindings.egain.com/chat" ' +
-        'xmlns:ns4="urn:ietf:params:xml:ns:xmpp-stanzas" ' +
-        'xmlns:ns3="jabber:client" ' +
-        'responseType="' +
-        responseType +
-        '" />'
-      )
-    }
-
-    it('should normalise the responses to the api', function () {
-      expect(webChatNormalise(egainResponse(0))).toEqual(jsonNormalisedAvailable)
-      expect(webChatNormalise(egainResponse(1))).toEqual(jsonNormalisedUnavailable)
-      expect(webChatNormalise(egainResponse(2))).toEqual(jsonNormalisedBusy)
-      expect(webChatNormalise(egainResponse(3))).toEqual({
-        status: "failure",
-        response: "unknown"
-      })
     })
   })
 })
