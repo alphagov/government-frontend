@@ -23,4 +23,8 @@ module RelatedNavigationHelper
       "--other"
     end
   end
+
+  def remaining_links(links, max_section_length)
+    links.length - max_section_length
+  end
 end
