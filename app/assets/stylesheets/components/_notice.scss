@@ -2,7 +2,7 @@
   clear: both;
   @include responsive-bottom-margin;
   padding: $gutter-two-thirds;
-  border: 5px solid $govuk-blue;
+  border: 2px solid $govuk-blue;
 
   @include media(mobile) {
     padding: $gutter-half;
@@ -16,7 +16,7 @@
 }
 
 .app-c-notice__title {
-  @include bold-36;
+  @include bold-27;
   margin-bottom: $gutter-one-third;
 
   &:last-child {

@@ -27,7 +27,6 @@
   <%= tasklist_variant.analytics_meta_tag.html_safe if tasklist_ab_test_applies? %>
   <%= @traffic_signs_summary_ab_test.analytics_meta_tag.html_safe if @traffic_signs_summary_ab_test.ab_test_applies? %>
   <%= tasklist_header_variant.analytics_meta_tag.html_safe if tasklist_header_ab_test_applies? %>
-  <%= content_navigation_variant.analytics_meta_tag.html_safe if content_navigation_ab_test_applies? %>
   <%= yield :extra_head_content %>
 </head>
 <body>
@@ -40,7 +39,7 @@
     <% if show_tasklist_header? %>
       <%= render 'shared/tasklist_header' %>
     <% else %>
-      <% if !content_for(:no_breadcrumbs) && !universal_navigation_without_nav? %>
+      <% if !content_for(:no_breadcrumbs) %>
         <%= render 'shared/breadcrumbs' %>
       <% end %>
     <% end %>

@@ -1,11 +1,46 @@
 .app-c-figure {
+  @extend %contain-floats;
   @include responsive-bottom-margin;
 }
 
 .app-c-figure__image {
-  max-width: 100%;
+  display: block;
+  width: 100%;
+
+  @include media(tablet) {
+    float: left;
+    width: 50%;
+  }
+}
+
+.app-c-figure__figcaption-wrapper {
+  @include media(tablet) {
+    box-sizing: border-box;
+    float: left;
+    padding-left: $gutter-half;
+    width: 50%;
+  }
 }
 
 .app-c-figure__figcaption {
   @include core-16;
+
+  padding-top: $gutter-half;
+  width: 100%;
+
+  @include media(tablet) {
+    @include core-14;
+
+    border-top: 1px solid $border-colour;
+    display: block;
+    vertical-align: top;
+  }
 }
+
+.app-c-figure__icon {
+  margin-right: 2px;
+  position: relative;
+  top: 1px;
+  overflow: visible;
+}
+

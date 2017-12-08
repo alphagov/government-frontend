@@ -1,0 +1,34 @@
+.app-c-important-metadata {
+  @include responsive-bottom-margin;
+  @include core-16;
+  @include white-links;
+  background: $govuk-blue;
+  color: $white;
+  padding: $gutter-half;
+
+  @include media(tablet) {
+    overflow: auto;
+    padding: $gutter-two-thirds $gutter;
+  }
+}
+
+.app-c-important-metadata__term {
+  line-height: normal;
+
+  @include media(tablet) {
+    box-sizing: border-box;
+    clear: left;
+    float: left;
+    max-width: 11em;
+    padding-right: $gutter-one-third / 2;
+  }
+}
+
+.app-c-important-metadata__definition {
+  font-weight: bold;
+  line-height: normal;
+
+  @include media(tablet) {
+    box-sizing: border-box;
+  }
+}

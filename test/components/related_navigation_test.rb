@@ -61,7 +61,7 @@ class RelatedNavigationTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation__sub-heading", text: 'Detailed guidance from'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Published by'
     assert_select ".app-c-related-navigation__section-link[href=\"/government/organisation/department-for-education\"]", text: 'Department for Education'
   end
 

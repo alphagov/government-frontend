@@ -30,7 +30,7 @@ module ContentItem
       end
     end
 
-    def content_metadata
+    def publisher_metadata
       super.tap do |m|
         m[:other] = { 'Applies to': applies_to }.merge(m[:other])
       end

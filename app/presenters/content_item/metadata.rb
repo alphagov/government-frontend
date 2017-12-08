@@ -15,13 +15,13 @@ module ContentItem
       }
     end
 
-    def content_metadata
+    def publisher_metadata
       {
         published: published,
         last_updated: updated,
         link_to_history: !!updated,
         other: {
-          'From': organisations_ordered_by_importance
+          'From': from
         }
       }
     end
