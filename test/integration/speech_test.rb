@@ -44,15 +44,14 @@ class SpeechTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders part of in metadata and document footer" do
-    # FIXME: These links are moving
-    skip
+  test "renders related policy links" do
     setup_and_visit_content_item('speech-transcript')
 
-    link1 = "<a href=\"/government/policies/government-transparency-and-accountability\">Government transparency and accountability</a>"
-    link2 = "<a href=\"/government/policies/tax-evasion-and-avoidance\">Tax evasion and avoidance</a>"
-    link3 = "<a href=\"/government/topical-events/anti-corruption-summit-london-2016\">Anti-Corruption Summit: London 2016</a>"
-    assert_has_component_metadata_pair("part_of", [link1, link2, link3])
-    assert_has_component_document_footer_pair("part_of", [link1, link2, link3])
+    within(".app-c-related-navigation__nav-section[aria-labelledby='related-nav-policies']") do
+      assert page.has_css?(".app-c-related-navigation__section-link", text: "Government transparency and accountability")
+      assert page.has_link?("Government transparency and accountability", href: "/government/policies/government-transparency-and-accountability")
+      assert page.has_css?(".app-c-related-navigation__section-link", text: "Tax evasion and avoidance")
+      assert page.has_link?("Tax evasion and avoidance", href: "/government/policies/tax-evasion-and-avoidance")
+    end
   end
 end

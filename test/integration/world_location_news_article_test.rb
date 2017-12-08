@@ -26,18 +26,19 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders 'from' and 'part of' links" do
-    # FIXME: These are moving to sidebar.
-    skip
+  test "renders organisation and location links" do
+    setup_and_visit_content_item('world_location_news_article')
 
-    from = "<a href=\"/government/world/organisations/british-high-commission-nairobi\">British High Commission Nairobi</a>"
-    part_of = "<a href=\"/world/kenya/news\">Kenya</a>"
+    within(".app-c-publisher-metadata__other") do
+      assert page.has_css?(".app-c-publisher-metadata__term", text: "From:")
+      assert page.has_css?(".app-c-publisher-metadata__definition", text: "British High Commission Nairobi")
+      assert page.has_link?("British High Commission Nairobi", href: "/government/world/organisations/british-high-commission-nairobi")
+    end
 
-    assert_has_component_metadata_pair("from", [from])
-    assert_has_component_document_footer_pair("from", [from])
-
-    assert_has_component_metadata_pair("part_of", [part_of])
-    assert_has_component_document_footer_pair("part_of", [part_of])
+    within(".app-c-related-navigation__nav-section[aria-labelledby='related-nav-world_locations']") do
+      assert page.has_css?(".app-c-related-navigation__section-link", text: "Kenya")
+      assert page.has_link?("Kenya", href: "/world/kenya/news")
+    end
   end
 
   test "renders translation links when there is more than one translation" do
