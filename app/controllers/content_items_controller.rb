@@ -45,7 +45,11 @@ private
   end
 
   def present(content_item)
-    presenter_name = content_item['schema_name'].classify + 'Presenter'
+    presenter_name = if service_sign_in_format?(content_item["schema_name"])
+                       service_sign_in_presenter_name(content_item)
+                     else
+                       content_item['schema_name'].classify + 'Presenter'
+                     end
     presenter_class = Object.const_get(presenter_name)
     presenter_class.new(content_item, content_item_path)
   rescue NameError
@@ -112,6 +116,20 @@ private
 
   def with_locale
     I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
+  end
+
+  def service_sign_in_format?(schema_name)
+    schema_name == "service_sign_in"
+  end
+
+  def service_sign_in_presenter_name(content_item)
+    slug = content_item_path.split("/").last
+
+    content_item["details"].each do |key, value|
+      if value["slug"] == slug
+        return "ServiceSignIn::#{key.classify}Presenter"
+      end
+    end
   end
 
   def setup_tasklist_header_ab_testing
