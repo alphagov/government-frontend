@@ -324,57 +324,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
-  test "updates Know your traffic signs description for B variant only" do
-    content_item = content_store_has_schema_example("publication", "publication")
-    path = "government/publications/know-your-traffic-signs"
-    content_item["base_path"] = "/#{path}"
-    content_item["description"] = "The current description"
-
-    content_store_has_item(content_item["base_path"], content_item)
-
-    with_variant TrafficSignsSummary: "A", dimension: 81 do
-      get :show, params: { path: path_for(content_item) }
-      assert_match(/The current description/, response.body)
-      refute_match(/Guidance on road traffic signage in Great Britain/, response.body)
-    end
-
-    with_variant TrafficSignsSummary: "B", dimension: 81 do
-      get :show, params: { path: path_for(content_item) }
-      refute_match(/The current description/, response.body)
-      assert_match(/Guidance on road traffic signage in Great Britain/, response.body)
-    end
-  end
-
-  test "Traffic signs summary test does not affect other pages in A" do
-    content_item = content_store_has_schema_example("publication", "publication")
-    path = "government/publications/some-other-publication"
-    content_item["base_path"] = "/#{path}"
-    content_item["description"] = "The current description"
-
-    content_store_has_item(content_item["base_path"], content_item)
-
-    setup_ab_variant("TrafficSignsSummary", "A")
-
-    get :show, params: { path: path_for(content_item) }
-    assert_match(/The current description/, response.body)
-    refute_match(/Guidance on road traffic signage in Great Britain/, response.body)
-  end
-
-  test "Traffic signs summary test does not affect other pages in B" do
-    content_item = content_store_has_schema_example("publication", "publication")
-    path = "government/publications/some-other-publication"
-    content_item["base_path"] = "/#{path}"
-    content_item["description"] = "The current description"
-
-    content_store_has_item(content_item["base_path"], content_item)
-
-    setup_ab_variant("TrafficSignsSummary", "B")
-
-    get :show, params: { path: path_for(content_item) }
-    assert_match(/The current description/, response.body)
-    refute_match(/Guidance on road traffic signage in Great Britain/, response.body)
-  end
-
   def path_for(content_item, locale = nil)
     base_path = content_item['base_path'].sub(/^\//, '')
     base_path.gsub!(/\.#{locale}$/, '') if locale
