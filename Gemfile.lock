@@ -89,7 +89,7 @@ GEM
     execjs (2.7.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
-    gds-api-adapters (48.0.0)
+    gds-api-adapters (50.5.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -322,7 +322,7 @@ DEPENDENCIES
   binding_of_caller
   capybara
   dalli
-  gds-api-adapters (~> 48.0)
+  gds-api-adapters (~> 50.5)
   govuk-lint
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 0.3.0)
