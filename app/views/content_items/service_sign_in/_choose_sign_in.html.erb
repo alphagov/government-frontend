@@ -1,8 +1,7 @@
 <%= form_tag("/", method: "post") do %>
-  <fieldset>
-    <legend>
-      <%= render 'govuk_component/title', title: @content_item.title %>
-    </legend>
+  <% legend_text = render 'govuk_component/title', title: @content_item.title %>
+  <%= render "components/fieldset", legend_text: legend_text do %>
     <%= render 'govuk_component/govspeak', content: @content_item.description %>
-  </fieldset>
+    <%= render "components/radio", name: "option", items: @content_item.options %>
+  <% end %>
 <% end %>
