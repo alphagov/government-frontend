@@ -8,6 +8,7 @@ class ServiceSignInPresenterTest
 
     def setup
       @presented_item = present_example(schema_item)
+      @choose_sign_in = schema_item["details"]["choose_sign_in"]
     end
 
     def present_example(example)
@@ -20,6 +21,10 @@ class ServiceSignInPresenterTest
 
     test 'presents the schema_name' do
       assert_equal schema_item['schema_name'], @presented_item.schema_name
+    end
+
+    test "presents the title" do
+      assert_equal @choose_sign_in["title"], @presented_item.title
     end
   end
 end
