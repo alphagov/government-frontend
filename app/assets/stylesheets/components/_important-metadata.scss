@@ -13,8 +13,6 @@
 }
 
 .app-c-important-metadata__term {
-  line-height: normal;
-
   @include media(tablet) {
     box-sizing: border-box;
     clear: left;
@@ -25,7 +23,6 @@
 
 .app-c-important-metadata__definition {
   font-weight: bold;
-  line-height: normal;
 
   @include media(tablet) {
     box-sizing: border-box;
