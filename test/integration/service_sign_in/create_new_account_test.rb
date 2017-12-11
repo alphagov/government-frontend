@@ -22,6 +22,10 @@ module ServiceSignIn
       within shared_component_selector('title') do
         assert page.has_text?("Create an account")
       end
+
+      assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
+      refute page.has_css?(shared_component_selector('breadcrumbs'))
+      refute page.has_css?(shared_component_selector('government_navigation'))
     end
 
     def setup_and_visit_create_new_account_page
