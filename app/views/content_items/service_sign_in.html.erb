@@ -1,4 +1,8 @@
 <% content_for :no_breadcrumbs, true %>
 <% content_for :simple_header, true %>
+<% content_for :extra_head_content do %>
+  <% # prevent search engines from indexing this page %>
+  <meta name="robots" content="noindex, nofollow">
+<% end %>
 
 <%= render partial: "content_items/service_sign_in/#{@content_item.page_type}" %>
