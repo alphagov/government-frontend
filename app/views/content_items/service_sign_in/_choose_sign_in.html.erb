@@ -1,9 +1,7 @@
-<div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'govuk_component/title',
-        context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-        title: @content_item.title %>
-  </div>
-</div>
-
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+<%= form_tag("/", method: "post") do %>
+  <fieldset>
+    <legend>
+      <%= render 'govuk_component/title', title: @content_item.title %>
+    </legend>
+  </fieldset>
+<% end %>
