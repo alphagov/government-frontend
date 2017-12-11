@@ -28,7 +28,7 @@
             </h3>
           <% end %>
           <nav role="navigation" class="app-c-related-navigation__nav-section" aria-labelledby="related-nav-<%= section_title %>">
-            <ul class="app-c-related-navigation_link-list">
+            <ul class="app-c-related-navigation_link-list" data-module="track-click">
               <% links.each do |link| %>
                 <li class="app-c-related-navigation__link">
                   <%= link_to link[:text], link[:path], class: "app-c-related-navigation__section-link" + construct_section_styling(section_title, defined_sections), rel: link[:rel] %>

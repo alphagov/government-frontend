@@ -161,4 +161,17 @@ class RelatedNavigationTest < ComponentTestCase
     assert_select ".app-c-related-navigation__sub-heading", text: 'Policy'
     assert_select ".app-c-related-navigation__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
   end
+
+  test "link tracking is enabled" do
+    render_component(
+      topics: [
+        {
+          text: "Apprenticeships",
+          path: '/apprenticeships'
+        }
+      ]
+    )
+
+    assert_select ".app-c-related-navigation__nav-section ul[data-module='track-click']"
+  end
 end
