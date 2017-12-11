@@ -5,7 +5,7 @@
 -%>
 <% if items.any? -%>
   <div class="app-c-important-metadata">
-    <dl>
+    <dl data-module="track-click">
     <% items.each do |title, definition| -%>
       <dt class="app-c-important-metadata__term"><%= title %>: </dt>
       <dd class="app-c-important-metadata__definition"><%= definition %></dd>
