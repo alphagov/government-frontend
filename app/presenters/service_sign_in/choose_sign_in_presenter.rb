@@ -13,13 +13,19 @@ module ServiceSignIn
     end
 
     def options
-      symbolized_options.map do |option|
+      mapped_options = symbolized_options.map do |option|
         {
           text: option[:text],
           value: option[:text].parameterize,
           hint_text: option[:hint_text],
           bold: true
         }
+      end
+      # TODO: Move to decision of when or should be applied to schema
+      if mapped_options.length > 2
+        mapped_options.insert(-2, :or)
+      else
+        mapped_options
       end
     end
 

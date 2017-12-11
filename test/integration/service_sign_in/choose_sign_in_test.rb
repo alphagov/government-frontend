@@ -47,6 +47,8 @@ module ServiceSignIn
             assert page.has_css?(".app-c-radio__label__hint", text: "You'll have an account if you've proved your identity with a certified company, such as the Post Office.")
           end
 
+          assert page.has_css?(".app-c-radio__block-text", text: "or")
+
           within ".app-c-radio:last-of-type" do
             assert page.has_css?(".app-c-radio__label__text", text: "Create an account")
           end
