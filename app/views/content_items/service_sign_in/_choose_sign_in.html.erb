@@ -1,8 +1,12 @@
 <%= form_tag("/", method: "post") do %>
   <% legend_text = render 'govuk_component/title', title: @content_item.title %>
   <%= render "components/fieldset", legend_text: legend_text do %>
-    <%= render 'govuk_component/govspeak', content: @content_item.description %>
-    <%= render "components/radio", name: "option", items: @content_item.options %>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render 'govuk_component/govspeak', content: @content_item.description %>
+        <%= render "components/radio", name: "option", items: @content_item.options %>
+      </div>
+    </div>
   <% end %>
 
   <%= render 'govuk_component/button', text: t('service_sign_in.continue'), margin_bottom: true %>
