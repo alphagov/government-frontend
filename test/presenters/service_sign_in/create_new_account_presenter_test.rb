@@ -22,5 +22,9 @@ class ServiceSignInPresenterTest
     test 'presents the schema_name' do
       assert_equal schema_item['schema_name'], @presented_item.schema_name
     end
+
+    test "presents the title" do
+      assert_equal @create_new_account["title"], @presented_item.title
+    end
   end
 end
