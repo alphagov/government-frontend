@@ -23,6 +23,8 @@ module ServiceSignIn
         assert page.has_text?("Create an account")
       end
 
+      assert_has_component_govspeak("<p>To use this service, you need to create either a Government Gateway or GOV.UK Verify account. These are used to help fight identity theft.</p><p>Once you have an account, you can use it to access other government services online. </p><h2>Choose a way to prove your identity</h2><h3>Government Gateway</h3><p>Registering with Government Gateway usually takes about 10 minutes. It works best if you have:</p><ul><li>your National Insurance number</li><li>a recent payslip or a P60 or valid UK passport</li></ul><a href='#'>Create a Government Gateway account</a>")
+
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
       refute page.has_css?(shared_component_selector('breadcrumbs'))
       refute page.has_css?(shared_component_selector('government_navigation'))
