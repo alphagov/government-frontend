@@ -23,6 +23,8 @@ module ServiceSignIn
       refute page.has_css?(shared_component_selector('breadcrumbs'))
       refute page.has_css?(shared_component_selector('government_navigation'))
 
+      assert page.has_css?('.app-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
+
       within "form" do
         within ".app-c-fieldset" do
           within ".app-c-fieldset__legend" do
