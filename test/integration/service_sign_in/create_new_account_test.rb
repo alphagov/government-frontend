@@ -15,6 +15,22 @@ module ServiceSignIn
       visit path
     end
 
+    test "page renders correctly" do
+      setup_and_visit_create_new_account_page
+
+      assert page.has_css?("title", text: 'Create an account - GOV.UK', visible: false)
+      within shared_component_selector('title') do
+        assert page.has_text?("Create an account")
+      end
+    end
+
+    def setup_and_visit_create_new_account_page
+      content_item = get_content_example("service_sign_in")
+      path = content_item["base_path"] + "/create-new-account"
+      content_store_has_item(path, content_item.to_json)
+      visit(path)
+    end
+
     def schema_type
       "service_sign_in"
     end
