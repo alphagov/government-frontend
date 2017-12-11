@@ -31,6 +31,10 @@ class ServiceSignInPresenterTest
       assert_equal @create_new_account["title"], @presented_item.title
     end
 
+    test "presents the body" do
+      assert_equal @create_new_account["body"], @presented_item.body
+    end
+
     test 'presents the back_link' do
       assert_equal "#{schema_item['base_path']}/#{parent_slug}", @presented_item.back_link
     end
