@@ -30,5 +30,13 @@ class ServiceSignInPresenterTest
     test "presents the description" do
       assert_equal @choose_sign_in["description"], @presented_item.description
     end
+
+    test "presents options" do
+      @presented_item.options.each_with_index do |option, index|
+        assert_equal option[:text], @choose_sign_in["options"][index]["text"]
+        assert_equal option[:hint_text], @choose_sign_in["options"][index]["hint_text"]
+        assert_equal option[:value], @choose_sign_in["options"][index]["text"].parameterize
+      end
+    end
   end
 end
