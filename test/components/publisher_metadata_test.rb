@@ -51,4 +51,9 @@ class PublisherMetadataTest < ComponentTestCase
     assert_select ".app-c-publisher-metadata__other dt", text: 'From:'
     assert_select ".app-c-publisher-metadata__other dd", text: 'Ministry of Defence'
   end
+
+  test "link tracking is enabled" do
+    render_component(other: { From: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>"] })
+    assert_select ".app-c-publisher-metadata__other dl[data-module='track-click']"
+  end
 end

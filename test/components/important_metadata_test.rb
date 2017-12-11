@@ -42,4 +42,9 @@ class ImportantMetadataTest < ComponentTestCase
     assert_select ".app-c-important-metadata dd a[href='https://www.gov.uk/cma-cases?outcome_type%5B%5D=mergers-phase-2-clearance-with-remedies']",
                   text: "Mergers - phase 2 clearance with remedies"
   end
+
+  test "link tracking is enabled" do
+    render_component(items: { "Case type": ["<a href='https://www.gov.uk/cma-cases?case_type%5B%5D=mergers'>Mergers</a>"] })
+    assert_select ".app-c-important-metadata dl[data-module='track-click']"
+  end
 end
