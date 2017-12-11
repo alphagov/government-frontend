@@ -38,5 +38,9 @@ class ServiceSignInPresenterTest
         assert_equal option[:value], @choose_sign_in["options"][index]["text"].parameterize
       end
     end
+
+    test 'presents the back_link' do
+      assert_equal schema_item['links']['parent'].first['base_path'], @presented_item.back_link
+    end
   end
 end
