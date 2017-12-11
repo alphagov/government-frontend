@@ -26,6 +26,11 @@ module ServiceSignIn
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
       refute page.has_css?(shared_component_selector('breadcrumbs'))
       refute page.has_css?(shared_component_selector('government_navigation'))
+
+      assert page.has_css?(
+        '.app-c-back-link[href="/log-in-file-self-assessment-tax-return/sign-in/choose-sign-in"]',
+        text: 'Back'
+      )
     end
 
     def setup_and_visit_create_new_account_page

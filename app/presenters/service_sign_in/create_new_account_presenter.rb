@@ -8,7 +8,15 @@ module ServiceSignIn
       create_new_account["title"]
     end
 
+    def back_link
+      "#{content_item['base_path']}/#{parent_slug}"
+    end
+
   private
+
+    def parent_slug
+      content_item["details"]["choose_sign_in"]["slug"]
+    end
 
     def create_new_account
       content_item["details"]["create_new_account"]
