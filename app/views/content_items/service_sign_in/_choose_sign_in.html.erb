@@ -3,5 +3,6 @@
     <legend>
       <%= render 'govuk_component/title', title: @content_item.title %>
     </legend>
+    <%= render 'govuk_component/govspeak', content: @content_item.description %>
   </fieldset>
 <% end %>

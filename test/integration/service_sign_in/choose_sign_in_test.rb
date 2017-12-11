@@ -30,6 +30,9 @@ module ServiceSignIn
             end
           end
 
+          within shared_component_selector('govspeak') do
+            assert page.has_text?("You can't file online until you've activated Government Gateway account using your Unique Taxpayer Reference(UTR).")
+          end
         end
       end
     end
