@@ -4,4 +4,6 @@
     <%= render 'govuk_component/govspeak', content: @content_item.description %>
     <%= render "components/radio", name: "option", items: @content_item.options %>
   <% end %>
+
+  <%= render 'govuk_component/button', text: t('service_sign_in.continue'), margin_bottom: true %>
 <% end %>
