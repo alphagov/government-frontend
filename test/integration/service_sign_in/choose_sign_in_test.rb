@@ -19,6 +19,7 @@ module ServiceSignIn
       setup_and_visit_choose_sign_in_page
 
       assert page.has_css?("title", text: 'Prove your identity to continue - GOV.UK', visible: false)
+      assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
       refute page.has_css?(shared_component_selector('breadcrumbs'))
       refute page.has_css?(shared_component_selector('government_navigation'))
 
