@@ -41,5 +41,5 @@ group :test do
   gem 'capybara'
   gem 'mocha'
   gem 'poltergeist', require: false
-  gem 'webmock', '~> 2.3.0', require: false
+  gem 'webmock', '~> 3.1.1', require: false
 end
