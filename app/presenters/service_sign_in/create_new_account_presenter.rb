@@ -8,6 +8,10 @@ module ServiceSignIn
       create_new_account["title"]
     end
 
+    def body
+      create_new_account["body"]
+    end
+
     def back_link
       "#{content_item['base_path']}/#{parent_slug}"
     end
