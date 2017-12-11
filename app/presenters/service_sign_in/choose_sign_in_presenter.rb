@@ -8,6 +8,9 @@ module ServiceSignIn
       choose_sign_in["title"]
     end
 
+    def description
+      choose_sign_in["description"]
+    end
   private
 
     def choose_sign_in
