@@ -24,6 +24,7 @@ module ServiceSignIn
       refute page.has_css?(shared_component_selector('government_navigation'))
 
       assert page.has_css?('.app-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
+      assert page.has_css?('form[data-module="track-radio-group"]')
 
       within "form" do
         within ".app-c-fieldset" do
