@@ -26,5 +26,9 @@ class ServiceSignInPresenterTest
     test "presents the title" do
       assert_equal @choose_sign_in["title"], @presented_item.title
     end
+
+    test "presents the description" do
+      assert_equal @choose_sign_in["description"], @presented_item.description
+    end
   end
 end
