@@ -18,7 +18,6 @@ class ContentItemsController < ApplicationController
 
     setup_tasklist_header_ab_testing
     setup_tasklist_ab_testing
-    set_up_traffic_signs_summary_ab_testing
 
     set_up_navigation
     set_expiry
