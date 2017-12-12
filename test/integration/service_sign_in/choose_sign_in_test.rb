@@ -58,6 +58,18 @@ module ServiceSignIn
       end
     end
 
+    test "renders errors correctly" do
+      setup_and_visit_choose_sign_in_page
+
+      page.execute_script('document.querySelector(\'form\').submit()')
+
+      assert page.has_css?(".app-c-error-summary")
+      assert page.has_css?(".app-c-error-summary__title", text: 'You haven’t selected an option')
+      assert page.has_css?(".app-c-error-summary__link[href='#option-0']", text: 'Please select an option')
+
+      assert page.has_css?(".app-c-error-message", text: 'Please select an option')
+    end
+
     def setup_and_visit_choose_sign_in_page
       content_item = get_content_example("service_sign_in")
       path = content_item["base_path"] + "/choose-sign-in"

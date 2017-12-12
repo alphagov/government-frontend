@@ -27,10 +27,14 @@ class ContentItemsController < ApplicationController
   end
 
   def service_sign_in_options
-    load_content_item
-    selected = @content_item.selected_option(params[:option])
-
-    redirect_to selected[:url]
+    if params[:option].blank?
+      @error = true
+      show
+    else
+      load_content_item
+      selected = @content_item.selected_option(params[:option])
+      redirect_to selected[:url]
+    end
   end
 
 private

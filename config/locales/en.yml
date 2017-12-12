@@ -295,4 +295,7 @@ en:
     previous_page: "Previous"
     next_page: "Next"
   service_sign_in:
+    error:
+      title: You haven’t selected an option
+      option: "Please select an option"
     continue: "Continue"
