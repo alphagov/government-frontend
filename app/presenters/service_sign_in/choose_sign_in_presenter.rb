@@ -13,19 +13,19 @@ module ServiceSignIn
     end
 
     def options
-      mapped_options = symbolized_options.map do |option|
+      radio_options = mapped_options.map do |option|
         {
           text: option[:text],
-          value: option[:text].parameterize,
+          value: option[:value],
           hint_text: option[:hint_text],
           bold: true
         }
       end
       # TODO: Move to decision of when or should be applied to schema
-      if mapped_options.length > 2
-        mapped_options.insert(-2, :or)
+      if radio_options.length > 2
+        radio_options.insert(-2, :or)
       else
-        mapped_options
+        radio_options
       end
     end
 
@@ -34,8 +34,8 @@ module ServiceSignIn
     end
 
     def selected_option(selected_value)
-      symbolized_options.each do |option|
-        return option if option[:text].parameterize == selected_value
+      mapped_options.each do |option|
+        return option if option[:value] == selected_value
       end
     end
 
@@ -43,6 +43,17 @@ module ServiceSignIn
 
     def choose_sign_in
       content_item["details"]["choose_sign_in"]
+    end
+
+    def mapped_options
+      symbolized_options.map do |option|
+        {
+          text: option[:text],
+          value: option[:text].parameterize,
+          hint_text: option[:hint_text],
+          url: option[:url],
+        }
+      end
     end
 
     def symbolized_options
