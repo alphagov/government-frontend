@@ -16,92 +16,92 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     assert_has_component_govspeak(@content_item["details"]["body"])
   end
 
-  test "renders from in metadata and document footer" do
+  test "renders from in metadata" do
     setup_and_visit_content_item('aaib-reports')
 
-    aaib = "<a href=\"/government/organisations/air-accidents-investigation-branch\">Air Accidents Investigation Branch</a>"
-    assert_has_component_metadata_pair("from", [aaib])
-    assert_has_component_document_footer_pair("from", [aaib])
+    within(".app-c-publisher-metadata") do
+      within(".app-c-publisher-metadata__other") do
+        assert page.has_content?("From: Air Accidents Investigation Branch")
+        assert page.has_link?('Air Accidents Investigation Branch', href: '/government/organisations/air-accidents-investigation-branch')
+      end
+    end
   end
 
-  test "renders published and updated in metadata and document footer" do
+  test "renders publisher metadata" do
     setup_and_visit_content_item('countryside-stewardship-grants')
 
-    assert_has_component_metadata_pair("first_published", "2 April 2015")
-    assert_has_component_metadata_pair("last_updated", "29 March 2016")
-
-    assert_has_component_document_footer_pair("published", "2 April 2015")
-    assert_has_component_document_footer_pair("updated", "29 March 2016")
+    within(".app-c-publisher-metadata") do
+      within(".app-c-published-dates") do
+        assert page.has_content?("Published 2 April 2015")
+        assert page.has_content?("Last updated 29 March 2016")
+      end
+    end
+    within(".app-c-content-footer") do
+      assert page.has_content?("Published 2 April 2015")
+      assert page.has_content?("14 October 2015")
+    end
   end
 
   test "renders change history in reverse chronological order" do
     setup_and_visit_content_item('countryside-stewardship-grants')
 
-    within shared_component_selector("document_footer") do
-      component_args = JSON.parse(page.text)
-      history = component_args.fetch("history")
-      assert_equal history.first["note"], @content_item["details"]["change_history"].last["note"]
-      assert_equal history.last["note"], @content_item["details"]["change_history"].first["note"]
-      assert_equal history.size, @content_item["details"]["change_history"].size
+    within(".app-c-content-footer") do
+      assert_equal page.all(".app-c-published-dates__change-item").count, @content_item["details"]["change_history"].size
+      within(".app-c-published-dates__change-item:last-child") do
+        assert page.has_content?(@content_item["details"]["change_history"].first["note"])
+      end
+      within(".app-c-published-dates__change-item:first-child") do
+        assert page.has_content?(@content_item["details"]["change_history"].last["note"])
+      end
     end
   end
 
   test "renders text facets correctly" do
     setup_and_visit_content_item('countryside-stewardship-grants')
+    tiers = {
+      "Higher Tier" => "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=higher-tier",
+      "Mid Tier"    => "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier"
+    }
+    land_use = {
+     "Arable land" => "/countryside-stewardship-grants?land_use%5B%5D=arable-land",
+     "Wildlife package" => "/countryside-stewardship-grants?land_use%5B%5D=wildlife-package",
+     "Water quality" => "/countryside-stewardship-grants?land_use%5B%5D=water-quality"
+    }
+    within(".app-c-important-metadata") do
+      assert page.has_content?("Grant type: Option")
+      assert page.has_link?('Option', href: '/countryside-stewardship-grants?grant_type%5B%5D=option')
+      assert page.has_content?("Funding (per unit per year): More than £500")
+      assert page.has_link?('More than £500', href: '/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500')
 
-    def test_meta(component)
-      tiers = [
-        "<a href=\"/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=higher-tier\">Higher Tier</a>",
-        "<a href=\"/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier\">Mid Tier</a>"
-      ]
+      tiers.each do |key, value|
+        assert page.has_link?(key.to_s, href: value.to_s)
+        assert page.has_content?(tiers.keys.join(","))
+      end
 
-      land_use = [
-        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=arable-land\">Arable land</a>",
-        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=wildlife-package\">Wildlife package</a>",
-        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=water-quality\">Water quality</a>",
-        "<a href=\"/countryside-stewardship-grants?land_use%5B%5D=wildlife-package\">Wildlife package</a>"
-      ]
-
-      within shared_component_selector(component) do
-        component_args = JSON.parse(page.text)
-        assert_equal component_args["other"]["Grant type"], "<a href=\"/countryside-stewardship-grants?grant_type%5B%5D=option\">Option</a>"
-        assert_equal component_args["other"]["Tiers or standalone items"], tiers
-        assert_equal component_args["other"]["Land use"], land_use
-        assert_equal component_args["other"]["Funding (per unit per year)"],
-        "<a href=\"/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500\">More than £500</a>"
+      land_use.each do |key, value|
+        assert page.has_link?(key.to_s, href: value.to_s)
       end
     end
-    test_meta("document_footer")
-    test_meta("metadata")
   end
 
   test "renders date facets correctly" do
     setup_and_visit_content_item('drug-device-alerts')
 
-    within shared_component_selector("document_footer") do
-      component_args = JSON.parse(page.text)
-      assert_equal component_args["other_dates"]["Issued"], "6 July 2015"
-    end
-
-    within shared_component_selector("metadata") do
-      component_args = JSON.parse(page.text)
-      assert_equal component_args["other"]["Issued"], "6 July 2015"
+    within(".app-c-important-metadata") do
+      assert page.has_content?("Issued: 6 July 2015")
     end
   end
 
   test "renders when no facet or finder" do
     setup_and_visit_content_item('business-finance-support-scheme')
-    assert_has_component_metadata_pair("first_published", "9 July 2015")
 
-    within shared_component_selector("document_footer") do
-      component_args = JSON.parse(page.text)
-      assert_equal component_args["other_dates"], {}
+    within(".app-c-publisher-metadata") do
+      within(".app-c-published-dates") do
+        assert page.has_content?("Published 9 July 2015")
+      end
     end
-
-    within shared_component_selector("metadata") do
-      component_args = JSON.parse(page.text)
-      assert_equal component_args["other"], {}
-    end
+    assert page.has_no_selector?(:css, '#full-history')
+    assert page.has_no_selector?(:css, '.app-c-publisher-metadata__other')
   end
 
   test "renders a nested contents list" do

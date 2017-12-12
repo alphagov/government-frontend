@@ -1,4 +1,4 @@
-<% if local_assigns.has_key?(:tasklist) && show_tasklist_sidebar? %>
+<% if local_assigns.has_key?(:tasklist) %>
   <%= render 'shared/sidebar_tasklist', tasklist: tasklist %>
 <% elsif @navigation.should_present_taxonomy_navigation? -%>
   <%# FIXME: Markup can wrap all three sidebar navigation

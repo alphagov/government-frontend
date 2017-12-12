@@ -4,6 +4,7 @@ class CorporateInformationPagePresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include ContentItem::OrganisationBranding
   include ContentItem::CorporateInformationGroups
+  include ContentItem::Metadata
 
   def page_title
     page_title = super
@@ -20,6 +21,10 @@ class CorporateInformationPagePresenter < ContentItemPresenter
 
   def contents_items
     super + extra_headings
+  end
+
+  def historically_political?
+    false
   end
 
 private

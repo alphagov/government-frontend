@@ -1,4 +1,5 @@
 class TopicalEventAboutPagePresenter < ContentItemPresenter
+  include ContentItem::Metadata
   include ContentItem::Body
   include ContentItem::ContentsList
   include ContentItem::TitleAndContext
@@ -6,6 +7,7 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
   # Old topical event pages have a "archived" string appended to their title
   # which we also include in the breadcrumbs of topical event about pages
   # for example: https://www.gov.uk/government/topical-events/ebola-virus-government-response/about
+
   def breadcrumbs
     result = super
     result.last[:title] = parent['title'] if parent
@@ -17,6 +19,10 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
       t.delete(:average_title_length)
       t.delete(:context)
     end
+  end
+
+  def historically_political?
+    false
   end
 
 private

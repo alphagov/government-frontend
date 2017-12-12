@@ -1,32 +1,17 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
+<% body ||= content_item.body %>
 <div class="grid-row">
   <div class="body-with-contents-list column-two-thirds" data-module="sticky-element-container">
-    <% if @content_item.image.present? %>
-      <%= image_tag @content_item.image, class: "logo-image" %>
-    <% end %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/history_notice', content_item: @content_item %>
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'components/publisher-metadata', @content_item.publisher_metadata %>
     <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
-
-    <% if @content_item.contents.any? %>
+    <% if content_item.contents.any? %>
       <div id="contents-list">
         <%= render 'components/contents-list', contents: @content_item.contents %>
       </div>
     <% end %>
-
-    <% if @content_item.related_mainstream_content.any? %>
-      <aside class="related-mainstream-content" role="complementary">
-        <h4>
-          <%= raw( t('detailed_guide.related_mainstream_content') ) %>
-        </h4>
-        <% @content_item.related_mainstream_content.each do |link| %>
-          <%= link %><br />
-        <% end %>
-      </aside>
-    <% end %>
-    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+    <%= render 'govuk_component/govspeak', content: body, direction: page_text_direction %>
     <div class="responsive-bottom-margin app-c-content-footer">
       <%= render 'components/published-dates', {
             published: @content_item.published,
@@ -34,10 +19,10 @@
             history: @content_item.history
           } %>
     </div>
-    <% if @content_item.contents.any? %>
+    <% if content_item.contents.any? %>
       <div class="contents-list-link-wrapper" data-sticky-element>
         <%= render 'components/back-to-top', href: "#contents-list" %>
       </div>
     <% end %>
+  </div>
 </div>
-

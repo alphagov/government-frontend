@@ -9,16 +9,18 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     assert_has_component_govspeak(@content_item["details"]["body"])
   end
 
-  test "renders metadata and document footer" do
+  test "renders publisher metadata" do
     setup_and_visit_content_item('statistical_data_set')
 
-    assert_has_component_metadata_pair("first_published", "13 December 2012")
-    link1 = "<a href=\"/government/organisations/department-for-transport\">Department for Transport</a>"
-    assert_has_component_metadata_pair("from", [link1])
-    assert_has_component_document_footer_pair("from", [link1])
-
-    assert_has_component_metadata_pair("part_of", ["<a href=\"/government/collections/transport-statistics-great-britain\">Transport Statistics Great Britain</a>"])
-    assert_has_component_document_footer_pair("part_of", ["<a href=\"/government/collections/transport-statistics-great-britain\">Transport Statistics Great Britain</a>"])
+    within(".app-c-publisher-metadata") do
+      within(".app-c-publisher-metadata__other") do
+        assert page.has_content?("From: Department for Transport")
+        assert page.has_link?('Department for Transport', href: '/government/organisations/department-for-transport')
+      end
+      within(".app-c-published-dates") do
+        assert page.has_content?("Published 13 December 2012")
+      end
+    end
   end
 
   test "renders withdrawn notification" do

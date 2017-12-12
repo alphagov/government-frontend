@@ -7,13 +7,18 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
   end
 
-  test "renders metadata and document footer" do
+  test "renders publisher metadata" do
     setup_and_visit_content_item('document_collection')
-    assert_has_component_metadata_pair("first_published", "29 February 2016")
 
-    from = ["<a href=\"/government/organisations/driver-and-vehicle-standards-agency\">Driver and Vehicle Standards Agency</a>"]
-    assert_has_component_metadata_pair("from", from)
-    assert_has_component_document_footer_pair("from", from)
+    within(".app-c-publisher-metadata") do
+      within(".app-c-publisher-metadata__other") do
+        assert page.has_content?("From: Driver and Vehicle Standards Agency")
+        assert page.has_link?('Driver and Vehicle Standards Agency', href: '/government/organisations/driver-and-vehicle-standards-agency')
+      end
+      within(".app-c-published-dates") do
+        assert page.has_content?("Published 29 February 2016")
+      end
+    end
   end
 
   test "renders body when provided" do
@@ -37,7 +42,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       assert page.has_css?('.group-title', text: group["title"])
     end
 
-    within ".sidebar-with-body" do
+    within ".body-with-contents-list" do
       assert page.has_css?(shared_component_selector("govspeak"), count: group_count)
       assert page.has_css?('.app-c-document-list', count: group_count)
     end
@@ -67,6 +72,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
   test 'includes tracking data on all collection documents' do
     setup_and_visit_content_item('document_collection')
+
     groups = page.all('.app-c-document-list')
     assert page.has_css?('[data-module="track-click"]'), count: groups.length
 
