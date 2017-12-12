@@ -70,10 +70,6 @@ class ContentItemPresenter
     content_item.dig("links", "taxons").present?
   end
 
-  def related_navigation_sidebar
-    @nav_helper.related_navigation_sidebar
-  end
-
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
