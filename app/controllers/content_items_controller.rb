@@ -26,6 +26,13 @@ class ContentItemsController < ApplicationController
     render_template
   end
 
+  def service_sign_in_options
+    load_content_item
+    selected = @content_item.selected_option(params[:option])
+
+    redirect_to selected[:url]
+  end
+
 private
 
   # Allow guides to pass access token to each part to allow

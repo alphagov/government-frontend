@@ -1,6 +1,6 @@
 <%= render "components/back-link", href: @content_item.back_link %>
 
-<%= form_tag("/", method: "post", data: { module: 'track-radio-group' }) do %>
+<%= form_tag({controller: 'content_items', action: 'service_sign_in_options'}, method: "post", data: { module: 'track-radio-group' }) do %>
   <% legend_text = render 'govuk_component/title', title: @content_item.title %>
   <%= render "components/fieldset", legend_text: legend_text do %>
     <div class="grid-row">
