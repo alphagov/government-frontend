@@ -64,10 +64,10 @@ class PublicationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('img[alt="National Statistics"]')
   end
 
-  test "renders 'Applies to' block in metadata when there are excluded nations" do
+  test "renders 'Applies to' block in important metadata when there are excluded nations" do
     setup_and_visit_content_item('statistics_publication')
 
-    within(".app-c-publisher-metadata .app-c-publisher-metadata__other") do
+    within(".app-c-important-metadata") do
       assert page.has_content?("Applies to: England (see publications for Northern Ireland, Scotland, and Wales)")
       assert page.has_link?("Northern Ireland", href: "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm")
       assert page.has_link?("Scotland", href: "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS")
