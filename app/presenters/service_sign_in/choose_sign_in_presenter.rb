@@ -33,6 +33,12 @@ module ServiceSignIn
       content_item['links']['parent'].first['base_path']
     end
 
+    def selected_option(selected_value)
+      symbolized_options.each do |option|
+        return option if option[:text].parameterize == selected_value
+      end
+    end
+
   private
 
     def choose_sign_in
