@@ -139,6 +139,41 @@ class RelatedNavigationTest < ComponentTestCase
     assert_select ".app-c-related-navigation__nav-section[aria-labelledby]"
   end
 
+  test "adds a show more toggle link to long sections" do
+    render_component(
+      world_locations: [
+        {
+          text: 'USA',
+          path: '/usa'
+        },
+        {
+          text: 'Wales',
+          path: '/wales'
+        },
+        {
+          text: 'Fiji',
+          path: '/fiji'
+        },
+        {
+          text: 'Iceland',
+          path: '/iceland'
+        },
+        {
+          text: 'Sweden',
+          path: '/sweden'
+        },
+        {
+          text: 'Mauritius',
+          path: '/mauritius'
+        }
+      ]
+    )
+
+    assert_select ".app-c-related-navigation__section-link[href=\"/wales\"]", text: 'Wales'
+    assert_select ".app-c-related-navigation__link.toggle-wrap", text: '+ 1 more'
+    assert_select "#toggle_world_locations .app-c-related-navigation__section-link[href=\"/mauritius\"]", text: 'Mauritius'
+  end
+
   test "renders multiple items when passed data for multiple sections" do
     render_component(
       related_items: [

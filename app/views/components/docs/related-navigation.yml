@@ -107,6 +107,54 @@ examples:
               - path: "https://www.thestudentroom.co.uk/content.php?r=5967-Repaying-your-student-loan"
                 rel: external
                 text: "The Student Room: repaying your student loan"
+  with_extensive_world_locations:
+    description: The component handles having a long list of content passed to it, by only showing the first few items and hiding the rest behind a Show More toggle.
+    data:
+      world_locations:
+        - text: Algeria
+          path: /world/algeria/news
+        - text: Austria
+          path: /world/austria/news
+        - text: Belarus
+          path: /world/belarus/news
+        - text: Belgium
+          path: /world/belgium/news
+        - text: Bolivia
+          path: /world/bolivia/news
+        - text: Brazil
+          path: /world/brazil/news
+        - text: Canada
+          path: /world/canada/news
+        - text: Chile
+          path: /world/chile/news
+        - text: China
+          path: /world/China/news
+        - text: Cuba
+          path: /world/cuba/news
+        - text: Denmark
+          path: /world/denmark/news
+        - text: Egypt
+          path: /world/egypt/news
+        - text: Fiji
+          path: /world/fiji/news
+        - text: Finland
+          path: /world/finland/news
+        - text: France
+          path: /world/france/news
+        - text: Germany
+          path: /world/germany/news
+        - text: Greece
+          path: /world/greece/news
+        - text: Norway
+          path: /world/norway/news
+        - text: Russia
+          path: /world/russia/news
+        - text: Sweden
+          path: /world/sweden/news
+        - text: United Kingdom
+          path: /world/united-kingdom/news
+        - text: USA
+          path: /world/usa/news
   with_all_related-content:
     data:
       related_items:
