@@ -40,12 +40,12 @@ module ServiceSignIn
 
           within ".app-c-radio:first-of-type" do
             assert page.has_css?(".app-c-radio__label__text", text: "Use Government Gateway")
-            assert page.has_css?(".app-c-radio__label__hint", text: "You'll have a user ID if you've registered to file your Self Assessment tax return online before.")
+            assert page.has_css?(".app-c-radio__label__hint", text: "You’ll have a user ID if you’ve signed up to do things like file your Self Assessment tax return online.")
           end
 
           within ".app-c-radio:nth-of-type(2)" do
             assert page.has_css?(".app-c-radio__label__text", text: "Use GOV.UK Verify")
-            assert page.has_css?(".app-c-radio__label__hint", text: "You'll have an account if you've proved your identity with a certified company, such as the Post Office.")
+            assert page.has_css?(".app-c-radio__label__hint", text: "You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.")
           end
 
           assert page.has_css?(".app-c-radio__block-text", text: "or")
