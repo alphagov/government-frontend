@@ -6,18 +6,20 @@
        average_title_length: "long" %>
   </div>
   <%= render 'shared/translations' %>
-  <% if @content_item.national_statistics? %>
-    <%= render 'shared/national_statistics_logo' %>
-  <% end %>
   <div class="column-two-thirds">
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/history_notice', content_item: @content_item %>
-    <%= render 'components/publisher-metadata', @content_item.publisher_metadata %>
-    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
   </div>
 </div>
 
+<%= render 'shared/publisher_metadata_with_logo' %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
+  </div>
+</div>
 <div class="grid-row">
   <div class="column-two-thirds responsive-bottom-margin">
     <div class="responsive-bottom-margin">
