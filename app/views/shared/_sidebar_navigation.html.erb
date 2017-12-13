@@ -1,5 +1,5 @@
 <div class="column-third">
-  <% if local_assigns.has_key?(:tasklist) -%>
+  <% if local_assigns.has_key?(:tasklist) && show_tasklist_sidebar? -%>
     <% tasklist = local_assigns[:tasklist] -%>
     <h2 class="task-list-title">
        <a href="<%= tasklist[:base_path] %>"><%= tasklist[:title] %></a>

@@ -1,3 +1,5 @@
+<%= content_for :no_breadcrumbs, show_tasklist_header? %>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
@@ -16,12 +18,8 @@
 <%= render 'shared/publisher_metadata_with_logo' %>
 
 <div class="grid-row">
-  <div class="column-two-thirds">
-    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
-  </div>
-</div>
-<div class="grid-row">
   <div class="column-two-thirds responsive-bottom-margin">
+    <%= render 'components/important-metadata', items: @content_item.metadata[:other] %>
     <div class="responsive-bottom-margin">
        <%= render 'publication_inline_body' %>
     </div>
