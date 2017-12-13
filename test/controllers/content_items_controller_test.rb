@@ -346,6 +346,32 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
+  test "service_sign_in_options with option param set" do
+    content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
+    path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
+
+    option = content_item['details']['choose_sign_in']['options'][0]
+    value = option['text'].parameterize
+    link = option['url']
+
+    stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
+
+    post :service_sign_in_options, params: { path: path, option: value }
+
+    assert_response :redirect
+    assert_redirected_to link
+  end
+
+  test "service_sign_in_options with no option param set displays choose_sign_in page" do
+    content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
+    path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
+
+    post :service_sign_in_options, params: { path: path }
+
+    assert_response :redirect
+    assert_redirected_to "/#{path}"
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item['base_path'].sub(/^\//, '')
     base_path.gsub!(/\.#{locale}$/, '') if locale
