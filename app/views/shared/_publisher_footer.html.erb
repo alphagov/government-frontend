@@ -1,0 +1,11 @@
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="responsive-bottom-margin">
+      <%= render 'components/published-dates', {
+            published: content_item.published,
+            last_updated: content_item.updated,
+            history: content_item.history
+          } %>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,13 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
 
   FORTHCOMING_NOTICE = "These statistics will be released".freeze
 
+  def publisher_metadata_and_release_date
+    publisher_metadata_and_release_date = publisher_metadata
+    publisher_metadata_and_release_date[:other].merge!(metadata[:other])
+
+    publisher_metadata_and_release_date
+  end
+
   def release_date
     content_item["details"]["display_date"]
   end
