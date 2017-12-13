@@ -1,25 +1,34 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
   </div>
-  <% if @content_item.national_statistics? %>
-    <%= render 'shared/national_statistics_logo' %>
-  <% end %>
 </div>
 
-<div class="primary-metadata">
-  <%= render 'shared/metadata', content_item: @content_item %>
+<div class="grid-row">
+  <div class="column-full metadata-logo-wrapper">
+    <%= render "components/publisher-metadata", @content_item.publisher_metadata_and_release_date %>
+    <% if @content_item.national_statistics? %>
+      <%= image_tag 'national-statistics.png', alt: 'National Statistics', class: 'national-statistics-logo' %>
+    <% end %>
+  </div>
 </div>
 
-<% if @content_item.cancelled? %>
-  <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason %>
-<% end %>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <% if @content_item.cancelled? %>
+      <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason %>
+    <% end %>
+    <% if @content_item.forthcoming_publication? %>
+      <%= render 'components/notice', title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
+    <% end %>
+  </div>
 
-<% if @content_item.forthcoming_publication? %>
-  <%= render 'components/notice', title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
-<% end %>
+  <div class="column-one-third">
+    <%= render 'components/related-navigation', @content_item.related_navigation %>
+  </div>
+</div>
 
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
 
 <% if @content_item.release_date_changed? %>
 <div class="grid-row">

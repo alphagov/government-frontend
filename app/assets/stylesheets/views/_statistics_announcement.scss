@@ -7,4 +7,15 @@
       margin-bottom: $gutter-half;
     }
   }
+
+  .metadata-logo-wrapper {
+    position: relative;
+    padding: 0 $gutter-half;
+  }
+
+  .national-statistics-logo {
+    position: absolute;
+    top: $gutter-one-third;
+    right: $gutter;
+  }
 }

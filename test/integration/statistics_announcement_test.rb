@@ -6,7 +6,10 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_metadata_pair("Release date", "20 January 2016 9:30am (confirmed)")
+
+    within '.app-c-publisher-metadata' do
+      assert page.has_text?("Release date: 20 January 2016 9:30am (confirmed)")
+    end
   end
 
   test "national statistics" do
@@ -15,7 +18,10 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert page.has_css?('img[alt="National Statistics"]')
-    assert_has_component_metadata_pair("Release date", "January 2016 (provisional)")
+
+    within '.app-c-publisher-metadata' do
+      assert page.has_text?("Release date: January 2016 (provisional)")
+    end
   end
 
   test "cancelled statistics" do
@@ -28,8 +34,10 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
       assert page.has_text?(@content_item["details"]["cancellation_reason"]), "displays cancelleation reason"
     end
 
-    assert_has_component_metadata_pair("Proposed release", "20 January 2016 9:30am")
-    assert_has_component_metadata_pair("Cancellation date", "17 January 2016 2:19pm")
+    within '.app-c-publisher-metadata' do
+      assert page.has_text?("Proposed release: 20 January 2016 9:30am")
+      assert page.has_text?("Cancellation date: 17 January 2016 2:19pm")
+    end
   end
 
   test "statistics with a changed release date" do
@@ -38,8 +46,8 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    within '.primary-metadata' do
-      assert_has_component_metadata_pair("Release date", "20 January 2016 9:30am (confirmed)")
+    within '.app-c-publisher-metadata' do
+      assert page.has_text?("Release date: 20 January 2016 9:30am (confirmed)")
     end
 
     within '.release-date-change-notice' do
