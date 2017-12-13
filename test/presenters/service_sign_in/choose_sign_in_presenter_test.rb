@@ -40,6 +40,7 @@ class ServiceSignInPresenterTest
         assert_equal option[:hint_text], @choose_sign_in["options"][index]["hint_text"]
         assert_equal option[:value], @choose_sign_in["options"][index]["text"].parameterize
       end
+      assert_equal "option", @presented_item.options_id
     end
 
     test 'presents :or before last radio button option' do
