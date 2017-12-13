@@ -89,6 +89,49 @@ module ServiceSignIn
       refute page.has_css?(".app-c-radio__block-text", text: "or")
     end
 
+    test "page renders welsh correctly" do
+      setup_and_visit_choose_sign_in_page("welsh", "/dewiswch-lofnodi")
+
+
+      assert page.has_css?("title", text: 'Profwch pwy ydych chi i fwrw ymlaen - GOV.UK', visible: false)
+
+      # TODO: This needs to be translated
+      assert page.has_css?('.app-c-back-link', text: 'Back')
+
+      within "form" do
+        within ".app-c-fieldset" do
+          within ".app-c-fieldset__legend" do
+            within shared_component_selector('title') do
+              assert page.has_text?("Profwch pwy ydych chi i fwrw ymlaen")
+            end
+          end
+
+          within shared_component_selector('govspeak') do
+            assert page.has_text?("Os ydych chi’n ffeilio ar-lein am y tro cyntaf, bydd angen i chi gofrestru ar gyfer Hunanasesiad yn gyntaf.")
+          end
+
+          within ".app-c-radio:first-of-type" do
+            assert page.has_css?(".app-c-radio__label__text", text: "Defnyddio Porth y Llywodraeth")
+            assert page.has_css?(".app-c-radio__label__hint", text: "Bydd gennych chi ID defnyddiwr os ydych chi wedi cofrestru ar gyfer Hunanasesiad neu wedi ffeilio ffurflen dreth ar-lein yn y gorffennol.")
+          end
+
+          within ".app-c-radio:nth-of-type(2)" do
+            assert page.has_css?(".app-c-radio__label__text", text: "Defnyddio GOV.UK Verify")
+            assert page.has_css?(".app-c-radio__label__hint", text: "Bydd gennych chi gyfrif os ydych chi wedi profi'n barod pwy ydych chi naill ai gyda Barclays, CitizenSafe, Digidentity, Experian, Swyddfa'r Post, y Post Brenhinol neu SecureIdentity.")
+          end
+
+          assert page.has_css?(".app-c-radio__block-text", text: "neu")
+
+          within ".app-c-radio:last-of-type" do
+            assert page.has_css?(".app-c-radio__label__text", text: "Cofrestru ar gyfer Hunanasesiad")
+          end
+        end
+
+        # TODO: This needs to be translated
+        assert page.has_css?(shared_component_selector('button'), text: "Continue")
+      end
+    end
+
     def setup_and_visit_choose_sign_in_page(example_name, example_path)
       content_item = get_content_example(example_name)
       content_path = content_item["base_path"] + example_path
