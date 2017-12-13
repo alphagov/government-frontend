@@ -13,18 +13,10 @@
 }
 
 .app-c-important-metadata__term {
-  @include media(tablet) {
-    box-sizing: border-box;
-    clear: left;
-    float: left;
-    padding-right: $gutter-one-third / 2;
-  }
+  float: left;
+  padding-right: $gutter-one-third / 2;
 }
 
 .app-c-important-metadata__definition {
   font-weight: bold;
-
-  @include media(tablet) {
-    box-sizing: border-box;
-  }
 }
