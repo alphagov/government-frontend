@@ -16,7 +16,7 @@ module ServiceSignIn
     end
 
     test "page renders correctly" do
-      setup_and_visit_choose_sign_in_page
+      setup_and_visit_choose_sign_in_page("service_sign_in", "/choose-sign-in")
 
       assert page.has_css?("title", text: 'Prove your identity to continue - GOV.UK', visible: false)
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
@@ -59,7 +59,7 @@ module ServiceSignIn
     end
 
     test "renders errors correctly" do
-      setup_and_visit_choose_sign_in_page
+      setup_and_visit_choose_sign_in_page("service_sign_in", "/choose-sign-in")
 
       page.execute_script('document.querySelector(\'form\').submit()')
 
@@ -73,11 +73,27 @@ module ServiceSignIn
       assert page.has_css?(".app-c-error-message", text: 'Please select an option')
     end
 
-    def setup_and_visit_choose_sign_in_page
-      content_item = get_content_example("service_sign_in")
-      path = content_item["base_path"] + "/choose-sign-in"
-      content_store_has_item(path, content_item.to_json)
-      visit(path)
+    test "page less options without an or divider" do
+      setup_and_visit_choose_sign_in_page("view_driving_licence", "/choose-sign-in")
+
+      within ".app-c-radio:first-of-type" do
+        assert page.has_css?(".app-c-radio__label__text", text: "Use your driving licence and National Insurance number")
+        assert page.has_css?(".app-c-radio__label__hint", text: "Your driving licence must have been issued in England, Scotland or Wales.")
+      end
+
+      within ".app-c-radio:last-of-type" do
+        assert page.has_css?(".app-c-radio__label__text", text: "Use GOV.UK Verify")
+        assert page.has_css?(".app-c-radio__label__hint", text: "You can use an existing identity account or create a new one. It usually takes about 5 minutes to create an account.")
+      end
+
+      refute page.has_css?(".app-c-radio__block-text", text: "or")
+    end
+
+    def setup_and_visit_choose_sign_in_page(example_name, example_path)
+      content_item = get_content_example(example_name)
+      content_path = content_item["base_path"] + example_path
+      content_store_has_item(content_path, content_item.to_json)
+      visit(content_path)
     end
 
     def schema_type
