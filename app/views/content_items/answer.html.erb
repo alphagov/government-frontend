@@ -1,5 +1,5 @@
-<% if local_assigns.has_key?(:tasklist) %>
-  <%= render 'content_items/body_with_related_links', tasklist: tasklist %>
+<% if current_tasklist_ab_test.show_tasklist_sidebar? %>
+  <%= render 'content_items/body_with_related_links', tasklist_content: tasklist_content %>
 <% else %>
   <%= render 'content_items/body_with_related_links' %>
 <% end %>

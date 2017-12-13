@@ -21,6 +21,9 @@
 
 // components
 @import 'components/*';
+@import 'components/task-list';
+@import 'components/task-list-header';
+@import 'components/task-list-related';
 
 // pages specific view imports
 @import 'views/case-studies';

@@ -1,14 +1,8 @@
-.task-list-title {
-  @include bold-24;
-
+.task-list-sidebar {
   margin-bottom: 0;
 
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  @include media(tablet) {
+    margin-top: 180px;
   }
 }
 

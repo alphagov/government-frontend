@@ -1,5 +1,8 @@
 // govuk_frontend_toolkit imports
 @import 'measurements';
+@import 'typography';
 
 @import 'components/print/*';
+@import 'components/task-list-print';
+@import 'components/task-list-header-print';
 @import 'print/html-publication';

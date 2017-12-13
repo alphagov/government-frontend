@@ -1,6 +1,7 @@
-<div class="column-third add-title-margin">
-  <h2 class="task-list-title task-list-responsive-top-margin">
-     <a href="<%= tasklist[:base_path] %>"><%= tasklist[:title] %></a>
-  </h2>
-  <%= render 'govuk_component/task_list', tasklist[:tasklist] %>
-</div>
+<nav class="column-third task-list-sidebar">
+  <%= render 'components/task_list_related', links: [{
+      href: tasklist_content.base_path,
+      text: tasklist_content.title
+  }] %>
+  <%= render 'components/task_list', tasklist_content.set_current_task %>
+</nav>

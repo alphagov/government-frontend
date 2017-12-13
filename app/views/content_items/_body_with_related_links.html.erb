@@ -17,8 +17,8 @@
       </p>
     <% end %>
   </div>
-  <% if local_assigns.has_key?(:tasklist) && show_tasklist_sidebar? %>
-    <%= render 'shared/sidebar_tasklist', tasklist: tasklist %>
+  <% if current_tasklist_ab_test.show_tasklist_sidebar? %>
+    <%= render 'shared/sidebar_tasklist', tasklist_content: tasklist_content %>
   <% else %>
     <%= render 'shared/related_items', content_item: @content_item %>
   <% end %>
