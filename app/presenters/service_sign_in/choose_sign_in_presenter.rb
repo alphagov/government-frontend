@@ -29,6 +29,10 @@ module ServiceSignIn
       end
     end
 
+    def options_id
+      "option"
+    end
+
     def back_link
       content_item['links']['parent'].first['base_path']
     end

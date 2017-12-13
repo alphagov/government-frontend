@@ -8,7 +8,7 @@
         items: [
           {
             text: t('service_sign_in.error.option'),
-            href: "#option-0"
+            href: "##{@content_item.options_id}-0"
           }
         ]
       } %>
@@ -25,7 +25,7 @@
         <% if @error %>
           <%= render "components/error-message", text: t('service_sign_in.error.option') %>
         <% end %>
-        <%= render "components/radio", id_prefix: "option", name: "option", items: @content_item.options %>
+        <%= render "components/radio", id_prefix: @content_item.options_id, name: "option", items: @content_item.options %>
       </div>
     </div>
   <% end %>

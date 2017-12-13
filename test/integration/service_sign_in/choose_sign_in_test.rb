@@ -67,6 +67,9 @@ module ServiceSignIn
       assert page.has_css?(".app-c-error-summary__title", text: 'You haven’t selected an option')
       assert page.has_css?(".app-c-error-summary__link[href='#option-0']", text: 'Please select an option')
 
+      # Make sure the id is the same as the link href so that they'll link together properly.
+      assert page.has_css?(".app-c-radio__input[id='option-0'][value='use-government-gateway']", visible: false)
+
       assert page.has_css?(".app-c-error-message", text: 'Please select an option')
     end
 
