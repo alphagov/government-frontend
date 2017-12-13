@@ -3,9 +3,7 @@
 .app-c-error-message {
   display: block;
 
-  margin: 0;
-  // TODO: use a var for padding
-  padding: 2px 0;
+  margin-bottom: $app-spacing-scale-3;
 
   clear: both;
 
