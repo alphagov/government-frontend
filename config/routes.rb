@@ -21,4 +21,6 @@ Rails.application.routes.draw do
         format: /atom/,
         locale: /\w{2}(-[\d\w]{2,3})?/,
       }
+
+  post '*path' => 'content_items#service_sign_in_options'
 end

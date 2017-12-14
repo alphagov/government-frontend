@@ -1,0 +1,34 @@
+<%= render "components/back-link", href: @content_item.back_link %>
+
+<% if @error %>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= render "components/error-summary", {
+        title: t('service_sign_in.error.title'),
+        items: [
+          {
+            text: t('service_sign_in.error.option'),
+            href: "##{@content_item.options_id}-0"
+          }
+        ]
+      } %>
+    </div>
+  </div>
+<% end %>
+
+<%= form_tag({controller: 'content_items', action: 'service_sign_in_options'}, method: "post", data: { module: 'track-radio-group' }) do %>
+  <% legend_text = render 'govuk_component/title', title: @content_item.title %>
+  <%= render "components/fieldset", legend_text: legend_text do %>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <%= render 'govuk_component/govspeak', content: @content_item.description %>
+        <% if @error %>
+          <%= render "components/error-message", text: t('service_sign_in.error.option') %>
+        <% end %>
+        <%= render "components/radio", id_prefix: @content_item.options_id, name: "option", items: @content_item.options %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render 'govuk_component/button', text: t('service_sign_in.continue'), margin_bottom: true %>
+<% end %>
