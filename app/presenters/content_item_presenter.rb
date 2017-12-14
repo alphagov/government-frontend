@@ -59,7 +59,7 @@ class ContentItemPresenter
   end
 
   def related_navigation
-    @nav_helper.related_navigation_sidebar
+    merge_publishers_and_worldwide_organisations(@nav_helper.related_navigation_sidebar)
   end
 
   def related_items
@@ -68,10 +68,6 @@ class ContentItemPresenter
 
   def tagged_to_a_taxon?
     content_item.dig("links", "taxons").present?
-  end
-
-  def related_navigation_sidebar
-    @nav_helper.related_navigation_sidebar
   end
 
 private
@@ -102,5 +98,10 @@ private
 
   def native_language_name_for(locale)
     I18n.t("language_names.#{locale}", locale: locale)
+  end
+
+  def merge_publishers_and_worldwide_organisations(related_navigation)
+    related_navigation[:publishers] += related_navigation.delete(:worldwide_organisations)
+    related_navigation
   end
 end
