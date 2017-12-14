@@ -7,6 +7,12 @@ module ServiceSignIn
       random_example = GovukSchemas::RandomExample.new(schema: schema)
 
       payload = random_example.merge_and_validate(document_type: schema_type)
+
+      # Create new account is an optional field
+      if payload["details"]["create_new_account"].nil?
+        return
+      end
+
       path = payload["details"]["create_new_account"]["slug"]
 
       stub_request(:get, %r{#{path}})
