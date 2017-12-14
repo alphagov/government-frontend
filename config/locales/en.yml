@@ -218,6 +218,9 @@ en:
       research:
         one: Research and analysis
         other: Research and analysis
+      service_sign_in:
+        one: Service sign in
+        other: Service sign in
       speaking_notes:
         one: Speaking notes
         other: Speaking notes
@@ -291,3 +294,8 @@ en:
     print_entire_guide: "Print entire guide"
     previous_page: "Previous"
     next_page: "Next"
+  service_sign_in:
+    error:
+      title: You haven’t selected an option
+      option: "Please select an option"
+    continue: "Continue"

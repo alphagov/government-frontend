@@ -3,6 +3,9 @@ cy:
     cy: Cymraeg
   common:
     last_updated: "Diweddarwyd diwethaf"
+  components:
+    radio:
+      or: 'neu'
   content_item:
     schema_name:
       announcement:
