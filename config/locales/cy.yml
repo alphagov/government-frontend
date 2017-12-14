@@ -6,6 +6,8 @@ cy:
   components:
     radio:
       or: 'neu'
+    back_link:
+      back: "Yn ôl"
   content_item:
     schema_name:
       announcement:
@@ -260,6 +262,9 @@ cy:
         few:
         many:
         other: Nodiadau siarad
+      service_sign_in:
+        one: Gwasanaeth Mewngofnodi
+        other: Gwasanaeth Mewngofnodi
       speech:
         zero:
         one: Araith
@@ -352,3 +357,8 @@ cy:
       print_entire_guide: "Tudalen hawdd ei hargraffu"
       previous_page: "Llywio i’r rhan flaenorol"
       next_page: "Llywio i’r rhan nesaf"
+  service_sign_in:
+    error:
+      title: Dydych chi ddim wedi dewis
+      option: Dewiswch
+    continue: Bwrw ymlaen
