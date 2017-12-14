@@ -1,12 +1,13 @@
 <%
   max_section_length = 5
-  defined_sections = ["topics", "publishers", "collections", "policies", "world_locations"]
+  defined_sections = ["topics", "publishers", "collections", "policies", "topical_events", "world_locations"]
   related_content = [
     {"related_items" => related_items ||= [] },
     {"topics" => topics ||= [] },
     {"publishers" => publishers ||= [] },
     {"collections" => collections ||= [] },
     {"policies" => policies ||= [] },
+    {"topical_events" => topical_events ||= [] },
     {"world_locations" => world_locations ||= [] }
   ]
   other ||= []
