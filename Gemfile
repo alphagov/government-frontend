@@ -6,7 +6,7 @@ gem 'asset_bom_removal-rails', '~> 1.0.0'
 gem 'dalli'
 gem 'gds-api-adapters', '~> 48.0'
 gem 'govuk_ab_testing', '~> 2.4'
-gem 'govuk_frontend_toolkit', '5.1.0'
+gem 'govuk_frontend_toolkit', '7.2.0'
 gem 'govuk_publishing_components', '~> 2.0.0', require: false
 gem 'htmlentities', '4.3.4'
 gem 'logstasher', '0.6.1'
