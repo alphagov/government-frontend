@@ -26,6 +26,7 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
       related_items: [],
       collections: [],
       topics: [],
+      topical_events: [],
       policies: [],
       publishers: [],
       world_locations: [],

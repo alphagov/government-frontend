@@ -93,6 +93,20 @@ class RelatedNavigationTest < ComponentTestCase
     assert_select ".app-c-related-navigation__section-link[href=\"/government/policies/further-education-and-training\"]", text: 'Further education and training'
   end
 
+  test "renders topical events section when passed topical event items" do
+    render_component(
+      topical_events: [
+        {
+          text: "UK-China High-Level People to People Dialogue 2017",
+          path: '/government/topical-events/uk-china-high-level-people-to-people-dialogue-2017'
+        }
+      ]
+    )
+
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Topical event'
+    assert_select ".app-c-related-navigation__section-link[href=\"/government/topical-events/uk-china-high-level-people-to-people-dialogue-2017\"]", text: 'UK-China High-Level People to People Dialogue 2017'
+  end
+
   test "renders other links section when passed external related links" do
     render_component(
       other: [

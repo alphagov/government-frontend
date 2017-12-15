@@ -19,13 +19,6 @@ examples:
           path: /careers-helpline-for-teenagers
   with_curated_topics:
     data:
-      related_items:
-        - text: Find an apprenticeship
-          path: /apply-apprenticeship
-        - text: Training and study at work
-          path: /training-study-work-your-rights
-        - text: Careers helpline for teenagers
-          path: /careers-helpline-for-teenagers
       topics:
         - text: Apprenticeships, 14 to 19 education and training for work
           path: /browse/education/find-course
@@ -35,13 +28,6 @@ examples:
           path: /topic/further-education-skills/apprenticeships
   with_publishing_entities:
     data:
-      related_items:
-        - text: Find an apprenticeship
-          path: /apply-apprenticeship
-        - text: Training and study at work
-          path: /training-study-work-your-rights
-        - text: Careers helpline for teenagers
-          path: /careers-helpline-for-teenagers
       publishers:
         - text: Department for Education
           path: /government/department-for-education
@@ -49,13 +35,6 @@ examples:
           path: /government/department-for-work-pensions
   with_collections:
     data:
-      related_items:
-        - text: Find an apprenticeship
-          path: /apply-apprenticeship
-        - text: Training and study at work
-          path: /training-study-work-your-rights
-        - text: Careers helpline for teenagers
-          path: /careers-helpline-for-teenagers
       collections:
         - text: Recruit an apprentice (formerly apprenticeship vacancies)
           path: /government/collections/apprenticeship-vacancies
@@ -63,25 +42,18 @@ examples:
           path: /government/collections/the-future-of-jobs-and-skills
   with_policies:
     data:
-      related_items:
-        - text: Find an apprenticeship
-          path: /apply-apprenticeship
-        - text: Training and study at work
-          path: /training-study-work-your-rights
-        - text: Careers helpline for teenagers
-          path: /careers-helpline-for-teenagers
       policies:
         - text: Further education and training
           path: /government/policies/further-education-and-training
+        - text: Primary school education
+          path: /government/policies/primary-school-education
+  with_topical_events:
+    data:
+      topical_events:
+        - text: UK-China High-Level People to People Dialogue 2017
+          path: /government/topical-events/uk-china-high-level-people-to-people-dialogue-2017
   with_world_locations:
     data:
-      related_items:
-        - text: Find an apprenticeship
-          path: /apply-apprenticeship
-        - text: Training and study at work
-          path: /training-study-work-your-rights
-        - text: Careers helpline for teenagers
-          path: /careers-helpline-for-teenagers
       world_locations:
         - text: South Sudan
           path: /world/south-sudan/news
@@ -90,13 +62,6 @@ examples:
   with_external_related_links:
     description: The component can accept other related links, such as external links or other contacts. In these cases, the component must also be passed a heading for that section
     data:
-      related_items:
-        - text: Find an apprenticeship
-          path: /apply-apprenticeship
-        - text: Training and study at work
-          path: /training-study-work-your-rights
-        - text: Careers helpline for teenagers
-          path: /careers-helpline-for-teenagers
       other:
         -
           - title: "Elsewhere on the web"
