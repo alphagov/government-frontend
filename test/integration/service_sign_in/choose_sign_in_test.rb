@@ -96,7 +96,7 @@ module ServiceSignIn
       assert page.has_css?("title", text: 'Profwch pwy ydych chi i fwrw ymlaen - GOV.UK', visible: false)
 
       # TODO: This needs to be translated
-      assert page.has_css?('.app-c-back-link', text: 'Back')
+      assert page.has_css?('.app-c-back-link', text: 'Yn ôl')
 
       within "form" do
         within ".app-c-fieldset" do
@@ -128,7 +128,7 @@ module ServiceSignIn
         end
 
         # TODO: This needs to be translated
-        assert page.has_css?(shared_component_selector('button'), text: "Continue")
+        assert page.has_css?(shared_component_selector('button'), text: "Bwrw ymlaen")
       end
     end
 
