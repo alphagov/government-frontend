@@ -34,7 +34,7 @@ module TasklistABTestable
   end
 
   def publication_with_sidebar_template_name
-    "publication_with_tasklist_sidebar"
+    "publication"
   end
 
   def tasklist_variant

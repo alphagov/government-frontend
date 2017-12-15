@@ -6,4 +6,36 @@
     direction: rtl;
     text-align: start;
   }
+
+  // FIXME: These styles will become ubiquitous as we
+  // roll out the combination of metadata + logo across
+  // formats so they can ultimately become component styles.
+  .metadata-logo-wrapper {
+    @extend %contain-floats;
+    border-top: 1px solid $border-colour;
+    margin-left: $gutter-half;
+    margin-right: $gutter-half;
+
+    .metadata-column {
+      padding-left: 0;
+    }
+
+    // FIXME: This override can be removed once all formats
+    // with the publisher-metadata component are converted
+    // to render metadata + optional logo
+    .app-c-publisher-metadata {
+      border: 0;
+    }
+
+    .metadata-logo {
+      padding-bottom: $gutter-half;
+      padding-top: $gutter-half;
+
+      @include media(tablet) {
+        float: right;
+      }
+    }
+  }
 }
+
+

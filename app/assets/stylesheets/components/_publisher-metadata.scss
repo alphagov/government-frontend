@@ -1,8 +1,8 @@
 .app-c-publisher-metadata {
   @include responsive-bottom-margin;
   @include core-16;
-  padding-top: $gutter-half;
   border-top: 1px solid $border-colour;
+  padding-top: $gutter-half;
 }
 
 .app-c-publisher-metadata__other a {
@@ -10,21 +10,6 @@
 }
 
 .app-c-publisher-metadata__term {
-  line-height: normal;
-
-  @include media(tablet) {
-    box-sizing: border-box;
-    clear: left;
-    float: left;
-    max-width: 11em;
-    padding-right: $gutter-one-third / 2;
-  }
-}
-
-.app-c-publisher-metadata__definition {
-  line-height: normal;
-
-  @include media(tablet) {
-    box-sizing: border-box;
-  }
+  float: left;
+  padding-right: $gutter-one-third / 2;
 }

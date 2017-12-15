@@ -55,7 +55,9 @@ class ContentItemPresenter
   end
 
   def taxonomy_sidebar
-    @nav_helper.taxonomy_sidebar
+    @nav_helper.taxonomy_sidebar.merge(
+      collections: related_navigation[:collections]
+    )
   end
 
   def related_navigation

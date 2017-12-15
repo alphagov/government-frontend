@@ -155,10 +155,6 @@ private
     set_tasklist_response_header
   end
 
-  def setup_content_navigation_ab_testing
-    set_content_navigation_response_header
-  end
-
   def error_403(exception)
     render plain: exception.message, status: 403
   end
