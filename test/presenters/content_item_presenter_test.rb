@@ -42,7 +42,7 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
       .returns(items: :some_taxonomy_data)
     GovukNavigationHelpers::NavigationHelper.any_instance
       .stubs(:related_navigation_sidebar)
-      .returns(collections: :some_collections_data)
+      .returns(collections: :some_collections_data, publishers: [], worldwide_organisations: [])
 
     expected = { items: :some_taxonomy_data, collections: :some_collections_data }
     assert_equal expected, ContentItemPresenter.new("schema_name" => "Schema name").taxonomy_sidebar
