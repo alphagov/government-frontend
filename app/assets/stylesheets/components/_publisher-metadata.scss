@@ -1,7 +1,6 @@
 .app-c-publisher-metadata {
   @include responsive-bottom-margin;
   @include core-16;
-  border-top: 1px solid $border-colour;
   padding-top: $gutter-half;
 }
 
