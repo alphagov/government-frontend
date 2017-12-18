@@ -1,6 +1,5 @@
 .app-c-notice {
   clear: both;
-  @include responsive-bottom-margin;
   padding: $gutter-two-thirds;
   border: 2px solid $govuk-blue;
 
@@ -13,6 +12,10 @@
       margin-bottom: 0;
     }
   }
+}
+
+.app-c-notice--bottom-margin {
+  @include responsive-bottom-margin;
 }
 
 .app-c-notice__title {
