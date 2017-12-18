@@ -7,7 +7,7 @@ gem 'dalli'
 gem 'gds-api-adapters', '~> 48.0'
 gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_frontend_toolkit', '7.2.0'
-gem 'govuk_publishing_components', '~> 3.0.0', require: false
+gem 'govuk_publishing_components', '~> 3.0.0'
 gem 'htmlentities', '4.3.4'
 gem 'logstasher', '0.6.1'
 gem 'plek', '1.11'
@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', '4.8'
 
 gem 'govuk_app_config', '~> 0.3.0'
-gem 'govuk_navigation_helpers', '~> 7.4.0'
+gem 'govuk_navigation_helpers', '~> 7.5.1'
 
 group :development, :test do
   gem 'govuk-lint'
