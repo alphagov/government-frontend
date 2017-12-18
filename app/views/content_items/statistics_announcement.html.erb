@@ -9,7 +9,7 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render "components/important-metadata", items: @content_item.metadata[:other] %>
+    <%= render "components/important-metadata", items: @content_item.metadata[:other], margin_bottom: 0 %>
     <% if @content_item.cancelled? %>
       <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason %>
     <% end %>
