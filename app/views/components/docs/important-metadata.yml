@@ -20,3 +20,10 @@ examples:
         Date of occurrence: 29 November 2013
         Aircraft category: <a href="https://www.gov.uk/aaib-reports?aircraft_category%5B%5D=general-aviation">General Aviation</a>
         Report type: <a href="https://www.gov.uk/aaib-reports?report-type%5B%5D=%5B%5D=formal-report">Formal Report</a>
+  with_title:
+    description: Used on statistics announcements to display release date changed information, [see example](https://gov.uk/government/statistics/announcements/museums-and-galleries-monthly-visits--8)
+    data:
+      title: "The release date has been changed"
+      items:
+        Previous Date: 4 February 2016 9:00pm
+        Reason for change: Incorrectly input as 2015 instead of 2016
