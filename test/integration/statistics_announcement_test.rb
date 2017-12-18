@@ -7,7 +7,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    within '.app-c-publisher-metadata' do
+    within '.app-c-important-metadata' do
       assert page.has_text?("Release date: 20 January 2016 9:30am (confirmed)")
     end
   end
@@ -19,7 +19,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
     assert page.has_css?('img[alt="National Statistics"]')
 
-    within '.app-c-publisher-metadata' do
+    within '.app-c-important-metadata' do
       assert page.has_text?("Release date: January 2016 (provisional)")
     end
   end
@@ -34,7 +34,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
       assert page.has_text?(@content_item["details"]["cancellation_reason"]), "displays cancelleation reason"
     end
 
-    within '.app-c-publisher-metadata' do
+    within '.app-c-important-metadata' do
       assert page.has_text?("Proposed release: 20 January 2016 9:30am")
       assert page.has_text?("Cancellation date: 17 January 2016 2:19pm")
     end
@@ -46,7 +46,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    within '.app-c-publisher-metadata' do
+    within '.app-c-important-metadata' do
       assert page.has_text?("Release date: 20 January 2016 9:30am (confirmed)")
     end
 

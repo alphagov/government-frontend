@@ -5,14 +5,11 @@
   </div>
 </div>
 
-<% if @content_item.national_statistics? %>
-  <%= render 'shared/publisher_metadata_with_logo', metadata: @content_item.publisher_metadata_and_release_date %>
-<% else %>
-  <%= render "components/publisher-metadata", @content_item.publisher_metadata_and_release_date %>
-<% end %>
+<%= render 'shared/publisher_metadata_with_logo' %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
+    <%= render "components/important-metadata", items: @content_item.metadata[:other] %>
     <% if @content_item.cancelled? %>
       <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason %>
     <% end %>
