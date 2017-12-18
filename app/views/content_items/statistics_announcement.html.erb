@@ -5,14 +5,11 @@
   </div>
 </div>
 
-<div class="grid-row">
-  <div class="column-full metadata-logo-wrapper">
-    <%= render "components/publisher-metadata", @content_item.publisher_metadata_and_release_date %>
-    <% if @content_item.national_statistics? %>
-      <%= image_tag 'national-statistics.png', alt: 'National Statistics', class: 'national-statistics-logo' %>
-    <% end %>
-  </div>
-</div>
+<% if @content_item.national_statistics? %>
+  <%= render 'shared/publisher_metadata_with_logo', metadata: @content_item.publisher_metadata_and_release_date %>
+<% else %>
+  <%= render "components/publisher-metadata", @content_item.publisher_metadata_and_release_date %>
+<% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">

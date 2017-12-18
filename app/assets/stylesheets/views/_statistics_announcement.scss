@@ -1,21 +1,3 @@
 .statistics-announcement {
   @include add-title-margin;
-
-  .release-date-change-notice {
-    h2 {
-      font-weight: bold;
-      margin-bottom: $gutter-half;
-    }
-  }
-
-  .metadata-logo-wrapper {
-    position: relative;
-    padding: 0 $gutter-half;
-  }
-
-  .national-statistics-logo {
-    position: absolute;
-    top: $gutter-one-third;
-    right: $gutter;
-  }
 }

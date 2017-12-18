@@ -1,8 +1,10 @@
+<% metadata ||= @content_item.publisher_metadata %>
+
 <% render_logo = @content_item.try(:national_statistics?) -%>
 <div class="grid-row">
   <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if render_logo %>">
     <div class="column-two-thirds metadata-column">
-      <%= render "components/publisher-metadata", @content_item.publisher_metadata %>
+      <%= render "components/publisher-metadata", metadata %>
     </div>
     <div class="column-one-third">
       <% if render_logo %>
