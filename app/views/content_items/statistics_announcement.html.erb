@@ -9,12 +9,25 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render "components/important-metadata", items: @content_item.metadata[:other], margin_bottom: 0 %>
     <% if @content_item.cancelled? %>
-      <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason %>
+      <%= render 'components/notice', title: 'Statistics release cancelled', description_text: @content_item.cancellation_reason, margin_bottom: true %>
     <% end %>
     <% if @content_item.forthcoming_publication? %>
-      <%= render 'components/notice', title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
+      <%= render 'components/notice', title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title), margin_bottom: true %>
+    <% end %>
+
+    <%= render "components/important-metadata", items: @content_item.metadata[:other], margin_bottom: @content_item.release_date_changed? %>
+
+    <% if @content_item.release_date_changed? %>
+      <div class="release-date-changed">
+        <%= render "components/important-metadata",
+          title: "The release date has been changed",
+          items: {
+            "Previous date" => @content_item.previous_release_date,
+            "Reason for change" => @content_item.release_date_change_reason,
+          }
+        %>
+      </div>
     <% end %>
   </div>
 
@@ -22,18 +35,3 @@
     <%= render 'components/related-navigation', @content_item.related_navigation %>
   </div>
 </div>
-
-
-<% if @content_item.release_date_changed? %>
-<div class="grid-row">
-  <div class="column-two-thirds release-date-change-notice">
-    <h2>The release date has been changed</h2>
-    <%= render 'govuk_component/metadata',
-        other: {
-          "Previous date" => @content_item.previous_release_date,
-          "Reason for change" => @content_item.release_date_change_reason,
-        }
-    %>
-  </div>
-</div>
-<% end %>
