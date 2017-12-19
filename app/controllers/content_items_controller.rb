@@ -38,14 +38,6 @@ private
     current_tasklist_ab_test.set_response_header(response)
   end
 
-  def publication_with_sidebar?
-    current_tasklist_ab_test.publication_with_sidebar?
-  end
-
-  def publication_with_sidebar_template_name
-    current_tasklist_ab_test.publication_with_sidebar_template_name
-  end
-
   # Allow guides to pass access token to each part to allow
   # fact checking of all content
   def set_guide_draft_access_token
