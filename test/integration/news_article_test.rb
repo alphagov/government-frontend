@@ -30,14 +30,13 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
   end
 
 
-  test "renders 'part of' in metadata and document footer" do
-    # FIXME: 'Part of' links are moving
-    skip
+  test "renders policy links" do
     setup_and_visit_content_item('news_article_government_response')
 
-    part_of = "<a href=\"/government/policies/marine-environment\">Marine environment</a>"
-    assert_has_component_metadata_pair("part_of", [part_of])
-    assert_has_component_document_footer_pair("part_of", [part_of])
+    within(".app-c-related-navigation__nav-section[aria-labelledby='related-nav-policies']") do
+      assert page.has_css?(".app-c-related-navigation__section-link", text: "Marine environment")
+      assert page.has_link?("Marine environment", href: "/government/policies/marine-environment")
+    end
   end
 
   test "renders translation links when there is more than one translation" do

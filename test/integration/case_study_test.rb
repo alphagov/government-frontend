@@ -27,14 +27,12 @@ class CaseStudyTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "world location part of link" do
-    # FIXME: 'Part of' links are moving
-    skip
+  test "world location link" do
     setup_and_visit_content_item('translated')
 
-    part_of = "<a href=\"/world/spain/news\">Spain</a>"
-
-    assert_has_component_metadata_pair("part_of", [part_of])
-    assert_has_component_document_footer_pair("part_of", [part_of])
+    within(".app-c-related-navigation__nav-section[aria-labelledby='related-nav-world_locations']") do
+      assert page.has_css?(".app-c-related-navigation__section-link", text: "Spain")
+      assert page.has_link?("Spain", href: "/world/spain/news")
+    end
   end
 end
