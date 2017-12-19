@@ -34,7 +34,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'wraith', '~> 4.0'
+  gem 'wraith', '~> 4.2'
 end
 
 group :test do
