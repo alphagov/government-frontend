@@ -1,5 +1,7 @@
 module ServiceSignIn
   class CreateNewAccountPresenter < ContentItemPresenter
+    include ServiceSignIn::Paths
+
     def page_type
       "create_new_account"
     end

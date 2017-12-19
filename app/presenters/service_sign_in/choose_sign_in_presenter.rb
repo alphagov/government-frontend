@@ -1,5 +1,7 @@
 module ServiceSignIn
   class ChooseSignInPresenter < ContentItemPresenter
+    include ServiceSignIn::Paths
+
     def page_type
       "choose_sign_in"
     end

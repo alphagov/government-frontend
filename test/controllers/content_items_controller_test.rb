@@ -85,6 +85,32 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_redirected_to content_item['base_path']
   end
 
+  test "redirects route for root service_sign_in page" do
+    content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
+    invalid_part_path = "#{path_for(content_item)}"
+
+    stub_request(:get, %r{#{invalid_part_path}}).to_return(status: 200, body: content_item.to_json, headers: {})
+
+    get :show, params: { path: invalid_part_path }
+
+    assert_response :redirect
+    redirect_path = "#{content_item['base_path']}/#{content_item['details']['choose_sign_in']['slug']}"
+    assert_redirected_to redirect_path
+  end
+
+  test "redirects route for leaf service_sign_in page" do
+    content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
+    invalid_part_path = "#{path_for(content_item)}/invalid-slug"
+
+    stub_request(:get, %r{#{invalid_part_path}}).to_return(status: 200, body: content_item.to_json, headers: {})
+
+    get :show, params: { path: invalid_part_path }
+
+    assert_response :redirect
+    redirect_path = "#{content_item['base_path']}/#{content_item['details']['choose_sign_in']['slug']}"
+    assert_redirected_to redirect_path
+  end
+
   test "renders choose_sign_in template for service_sign_in page" do
     content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
     path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
