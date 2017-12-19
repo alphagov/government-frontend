@@ -333,7 +333,7 @@ DEPENDENCIES
   govuk_app_config (~> 0.3.0)
   govuk_frontend_toolkit (= 7.2.0)
   govuk_navigation_helpers (~> 7.5.1)
-  govuk_publishing_components (~> 3.0.0)
+  govuk_publishing_components (~> 3.0.2)
   govuk_schemas
   htmlentities (= 4.3.4)
   jasmine-rails!
