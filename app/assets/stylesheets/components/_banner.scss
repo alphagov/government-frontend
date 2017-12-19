@@ -20,26 +20,8 @@
   }
 }
 
-.app-c-banner__main {
-  @include grid-column( 2 / 3, $full-width: tablet, $float: right );
-
-  @include media(tablet) {
-    padding-right: 0;
-    border-left: 1px solid $white;
-  }
-}
-
-.app-c-banner__aside {
-  margin-top: $gutter-half;
-
-  @include media(tablet) {
-    margin-top: 0;
-    padding-right: $gutter / 2;
-  }
-}
-
 .app-c-banner__text {
-  @include bold-36;
+  @include core-24;
 }
 
 .app-c-banner__title {
@@ -48,7 +30,8 @@
 }
 
 .app-c-banner__desc {
-  @include core-24;
+  @include core-19;
   // Ensure the text has a line-length of around 60 characters
   max-width: 30em;
+  padding-top: $gutter-one-third;
 }
