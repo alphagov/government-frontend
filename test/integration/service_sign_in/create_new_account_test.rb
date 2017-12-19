@@ -6,11 +6,13 @@ module ServiceSignIn
       schema = GovukSchemas::Schema.find(frontend_schema: schema_type)
       random_example = GovukSchemas::RandomExample.new(schema: schema)
 
-      payload = random_example.merge_and_validate(document_type: schema_type)
 
-      # Create new account is an optional field
-      if payload["details"]["create_new_account"].nil?
-        return
+      # Create new account is an optional field, so we need to try a few times to
+      # get an example with it present.
+      payload = nil
+      loop do
+        payload = random_example.merge_and_validate(document_type: schema_type)
+        break if payload["details"]["create_new_account"].present?
       end
 
       path = payload["details"]["create_new_account"]["slug"]
