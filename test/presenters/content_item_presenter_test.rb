@@ -25,6 +25,7 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     expected = {
       related_items: [],
       collections: [],
+      statistical_data_sets: [],
       topics: [],
       topical_events: [],
       policies: [],

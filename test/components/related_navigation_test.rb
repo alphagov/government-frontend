@@ -37,6 +37,21 @@ class RelatedNavigationTest < ComponentTestCase
     assert_select ".app-c-related-navigation__section-link[href=\"/finding-a-job\"]", text: 'Finding a job'
   end
 
+  test "renders statistical data set section when passed statistical data set items" do
+    render_component(
+      statistical_data_sets: [
+        {
+          text: "Air quality statistics",
+          path: '/air-quality-statistics'
+        }
+      ]
+    )
+
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Statistical data set'
+    assert_select ".app-c-related-navigation__section-link[href=\"/air-quality-statistics\"]", text: 'Air quality statistics'
+  end
+
+
   test "renders world locations section when passed world location items" do
     render_component(
       world_locations: [
