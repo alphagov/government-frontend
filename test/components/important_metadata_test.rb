@@ -14,6 +14,17 @@ class ImportantMetadataTest < ComponentTestCase
     assert_empty render_component(other: { a: false, b: "", c: [], d: {}, e: nil })
   end
 
+  test "renders a title when a title is provided" do
+    render_component(
+      title: 'The release date has been changed',
+      items: {
+      "Release Date": "14 October 2016"
+      }
+    )
+
+    assert_select ".app-c-important-metadata__title", text: "The release date has been changed"
+  end
+
   test "renders metadata link pairs from data it is given" do
     render_component(items: {
       "Opened": "14 October 2016",

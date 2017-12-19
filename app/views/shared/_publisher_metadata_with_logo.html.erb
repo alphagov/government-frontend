@@ -1,3 +1,5 @@
+<% metadata ||= @content_item.publisher_metadata %>
+
 <% render_logo = @content_item.try(:national_statistics?) -%>
 <div class="grid-row">
   <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if render_logo %>">

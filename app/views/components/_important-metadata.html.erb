@@ -1,10 +1,15 @@
 <%
+  title = local_assigns[:title]
   items = local_assigns[:items] || {}
   items = items.reject { |k,v| v.nil? }
   items = items.merge(items) { |k,v| Array(v).join(",").html_safe }
+  margin_bottom_class = " app-c-important-metadata--bottom-margin" unless local_assigns[:margin_bottom]
 -%>
 <% if items.any? -%>
-  <div class="app-c-important-metadata">
+  <div class="app-c-important-metadata<%= margin_bottom_class %>">
+    <% if title %>
+      <h2 class="app-c-important-metadata__title"><%= title %></h2>
+    <% end %>
     <dl data-module="track-click">
     <% items.each do |title, definition| -%>
       <dt class="app-c-important-metadata__term"><%= title %>: </dt>

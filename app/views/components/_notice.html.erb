@@ -2,8 +2,9 @@
   <%
     description_text ||= false
     description_govspeak ||= false
+    margin_bottom_class = " app-c-notice--bottom-margin" unless local_assigns[:margin_bottom]
   %>
-  <section class="app-c-notice" aria-label="Notice">
+  <section class="app-c-notice<%= margin_bottom_class %>" aria-label="Notice">
     <% if description_text || description_govspeak %>
       <h2 class="app-c-notice__title"><%= title %></h2>
     <% else %>
