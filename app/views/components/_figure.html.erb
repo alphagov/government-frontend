@@ -4,10 +4,11 @@
 %>
 <figure class="app-c-figure">
   <img class="app-c-figure__image" src="<%= src %>" alt="<%= alt %>">
+  <% unless caption.blank? %>
   <div class="app-c-figure__figcaption-wrapper">
     <figcaption class="app-c-figure__figcaption">
-      <svg class="app-c-figure__icon" aria-hidden="true" width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M4 2L4 1C4 0.4 4.5 0 5 0L11 0C11.6 0 12 0.5 12 1L12 2 14 2C15.1 2 16 2.9 16 4L16 12C16 13.1 15.1 14 14 14L2 14C0.9 14 0 13.1 0 12L0 4C0 2.9 0.9 2 2 2L4 2ZM8 12C10.2 12 12 10.2 12 8 12 5.8 10.2 4 8 4 5.8 4 4 5.8 4 8 4 10.2 5.8 12 8 12ZM8 10C6.9 10 6 9.1 6 8 6 6.9 6.9 6 8 6 9.1 6 10 6.9 10 8 10 9.1 9.1 10 8 10Z" fill="#6F777B"/></g></svg>
       <%= caption %>
     </figcaption>
   </div>
+  <% end %>
 </figure>

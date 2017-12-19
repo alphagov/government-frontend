@@ -1,6 +1,9 @@
 .app-c-figure {
   @extend %contain-floats;
   @include responsive-bottom-margin;
+
+  border-top: 1px solid $border-colour;
+  padding-top: $gutter-half;
 }
 
 .app-c-figure__image {
@@ -25,22 +28,12 @@
 .app-c-figure__figcaption {
   @include core-16;
 
-  padding-top: $gutter-half;
   width: 100%;
 
   @include media(tablet) {
     @include core-14;
 
-    border-top: 1px solid $border-colour;
     display: block;
     vertical-align: top;
   }
 }
-
-.app-c-figure__icon {
-  margin-right: 2px;
-  position: relative;
-  top: 1px;
-  overflow: visible;
-}
-
