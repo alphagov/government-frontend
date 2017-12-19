@@ -1,0 +1,78 @@
+##############################################################
+##############################################################
+# This is an example configuration provided by Wraith.
+# Feel free to amend for your own requirements.
+# ---
+# This particular config is intended to demonstrate how
+# to use Wraith in 'history' mode, which is best suited to
+# making sure your site's appearance remains consistent over
+# time.
+#
+# `wraith history history.yaml` # generate base screenshots
+# `wraith latest history.yaml`  # take new shots and compare
+#
+##############################################################
+##############################################################
+
+# (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
+browser: "phantomjs"
+
+# Use TLS v1 when requesting https://www.gov.uk/… from within the VM
+# Ignore SSL errors when accessing staging
+# Stops "Error with page" problems
+#
+# PhantomJS depends on the system OpenSSL library.
+# http://phantomjs.org/api/command-line.html
+# Default is SSLv3
+phantomjs_options: --ignore-ssl-errors=true --ssl-protocol=tlsv1
+
+# (required) The domain to take screenshots of.
+domains:
+  production: "https://www.gov.uk"
+  local: "http://government-frontend.dev.gov.uk"
+
+# (required) The paths to capture.
+paths:
+  # Service sign-in pages as published from https://github.com/alphagov/publisher/tree/master/lib/service_sign_in (19 December 2017)
+  service_sign_in_choose_sign_in_1: /check-income-tax-current-year/sign-in/prove-identity
+  service_sign_in_create_account_1: /check-income-tax-current-year/sign-in/create-account
+  service_sign_in_choose_sign_in_2: /update-company-car-details/sign-in/prove-identity
+  service_sign_in_create_account_2: /update-company-car-details/sign-in/create-account
+  service_sign_in_choose_sign_in_3: /log-in-file-self-assessment-tax-return/sign-in/prove-identity
+  service_sign_in_create_account_3: /log-in-file-self-assessment-tax-return/sign-in/register-self-assessment
+  service_sign_in_choose_sign_in_4: /mewngofnodi-chyflwynoch-ffurflen-dreth-huanasesiad/sign-in/profi-pwy-ydw-i
+  service_sign_in_create_account_4: /mewngofnodi-chyflwynoch-ffurflen-dreth-huanasesiad/sign-in/cofrestru-hunan-asesiad
+
+# (required) Screen widths (and optional height) to resize the browser to before taking the screenshot.
+screen_widths:
+  - 320x3000
+  - 600x2000
+  - 1080x1000
+
+# (optional) Resize to each screen width (efficient), or reload at each screen width (costly). Default: 'reload'
+resize_or_reload: 'resize'
+
+# (required) The directory that your latest screenshots will be stored in
+directory: 'shots'
+
+# (required) Amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
+fuzz: '20%'
+
+# (optional) The maximum acceptable level of difference (in %) between two images before Wraith reports a failure. Default: 0
+threshold: 5
+
+# (optional) Specify the template (and generated thumbnail sizes) for the gallery output.
+gallery:
+  thumb_width:  200
+  thumb_height: 200
+
+# (optional) Choose which results are displayed in the gallery, and in what order. Default: alphanumeric
+# Options:
+#   alphanumeric - all paths (with or without a difference) are shown, sorted by path
+#   diffs_first - all paths (with or without a difference) are shown, sorted by difference size (largest first)
+#   diffs_only - only paths with a difference are shown, sorted by difference size (largest first)
+# Note: different screen widths are always grouped together.
+mode: diffs_first
+
+# (optional) Choose to run Wraith in verbose mode, for easier debugging. Default: false
+verbose: true
