@@ -6,7 +6,6 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   %w(guide answer publication).each do |schema_name|
     test "#{schema_name} honours Tasklist Header AB Testing cookie" do
-      schema_name = "guide"
       content_item = content_store_has_schema_example(schema_name, schema_name)
       content_item['base_path'] = "/pass-plus"
       path = content_item['base_path'][1..-1]
