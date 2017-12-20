@@ -27,7 +27,7 @@
       <% content_item_final_outcome = capture do %>
         Visit this page again soon to download the outcome to this public&nbsp;feedback.
       <% end %>
-      <%= render 'components/notice', title: 'We are analysing your feedback', description_text: content_item_final_outcome %>
+      <%= render 'components/notice', title: 'We are analysing your feedback', description_text: content_item_final_outcome, margin_bottom: 0 %>
 
     <% elsif @content_item.final_outcome? %>
       <%= render 'components/notice', title: 'This consultation has concluded' %>
