@@ -1,4 +1,7 @@
-<nav class="column-third task-list-sidebar">
+<%
+  no_margin ||= false
+%>
+<nav class="column-third <%= "task-list-sidebar" unless no_margin %>">
   <%= render 'components/task_list_related', links: [{
       href: tasklist_content.base_path,
       text: tasklist_content.title
