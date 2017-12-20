@@ -72,6 +72,11 @@ private
       return
     end
 
+    if @content_item.requesting_a_service_sign_in_page? && !@content_item.has_valid_path?
+      redirect_to @content_item.path
+      return
+    end
+
     request.variant = :print if params[:variant] == "print"
 
     respond_to do |format|
@@ -139,11 +144,11 @@ private
   def service_sign_in_presenter_name(content_item)
     slug = content_item_path.split("/").last
 
-    content_item["details"].each do |key, value|
-      if value["slug"] == slug
-        return "ServiceSignIn::#{key.classify}Presenter"
-      end
+    if content_item.dig("details", "create_new_account", "slug") == slug
+      return "ServiceSignIn::CreateNewAccountPresenter"
     end
+
+    "ServiceSignIn::ChooseSignInPresenter"
   end
 
   def setup_tasklist_header_ab_testing

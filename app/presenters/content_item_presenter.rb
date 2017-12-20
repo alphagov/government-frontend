@@ -30,6 +30,10 @@ class ContentItemPresenter
     false
   end
 
+  def requesting_a_service_sign_in_page?
+    false
+  end
+
   def available_translations
     translations = @content_item["links"]["available_translations"] || []
 
