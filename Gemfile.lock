@@ -193,7 +193,7 @@ GEM
     parser (2.4.0.2)
       ast (~> 2.3)
     phantomjs (2.1.1.0)
-    plek (1.11.0)
+    plek (2.0.0)
     poltergeist (1.17.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -363,7 +363,7 @@ DEPENDENCIES
   jasmine-rails!
   logstasher (= 1.2.2)
   mocha
-  plek (= 1.11)
+  plek (= 2.0.0)
   poltergeist
   pry-byebug
   rack_strip_client_ip (~> 0.0.2)
