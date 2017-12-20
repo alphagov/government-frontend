@@ -1,175 +1,193 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-
-<% if @content_item.unopened? %>
-  <% content_item_unopened = capture do %>
-    This consultation opens
-    <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %>
-    <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
-  <% end %>
-  <%= render 'components/notice', title: "This consultation isn't open yet", description_text: content_item_unopened %>
-<% elsif @content_item.pending_final_outcome? %>
-  <% content_item_final_outcome = capture do %>
-    Visit this page again soon to download the outcome to this public&nbsp;feedback.
-  <% end %>
-  <%= render 'components/notice', title: 'We are analysing your feedback', description_text: content_item_final_outcome %>
-<% elsif @content_item.final_outcome? %>
-  <%= render 'components/notice', title: 'This consultation has concluded' %>
-
-  <% if @content_item.final_outcome_documents? %>
-    <div class="grid-row sidebar-with-body">
-      <div class="column-third">
-        <%= render 'components/heading', text: "Download the full outcome", id: "final-outcome-documents-title" %>
-      </div>
-      <div class="column-two-thirds" aria-labelledby="final-outcome-documents-title">
-        <%= render 'govuk_component/govspeak',
-            content: @content_item.final_outcome_documents,
-            direction: page_text_direction %>
-      </div>
-    </div>
-  <% end %>
-
-  <div class="grid-row sidebar-with-body">
-    <div class="column-third">
-      <%= render 'components/heading', text: "Detail of outcome", id: "final-outcome-detail-title" %>
-    </div>
-    <div class="column-two-thirds" aria-labelledby="final-outcome-detail-title">
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.final_outcome_detail,
-          direction: page_text_direction %>
-    </div>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
   </div>
-<% end %>
-
-<% if @content_item.public_feedback_documents? %>
-  <div class="grid-row sidebar-with-body">
-    <div class="column-third">
-      <%= render 'components/heading', text: "Feedback received", id: "public-feedback-documents-title" %>
-    </div>
-    <div class="column-two-thirds" aria-labelledby="public-feedback-documents-title">
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.public_feedback_documents,
-          direction: page_text_direction %>
-    </div>
-  </div>
-<% end %>
-
-<% if @content_item.public_feedback_detail %>
-  <div class="grid-row sidebar-with-body">
-    <div class="column-third">
-      <%= render 'components/heading', text: "Detail of feedback received", id: "public-feedback-detail-title" %>
-    </div>
-    <div class="column-two-thirds" aria-labelledby="public-feedback-detail-title">
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.public_feedback_detail,
-          direction: page_text_direction %>
-    </div>
-  </div>
-<% end %>
-
-<% if @content_item.final_outcome? %>
-  <section class="original-consultation">
-    <header>
-      <%= render 'components/heading', text: "Original consultation", id: "original-consultation-title", heading_level: 2 %>
-    </header>
-<% end %>
-
-<% consultation_date = capture do %>
-  <% if @content_item.closed? %>
-    This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
-    <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
-  <% elsif @content_item.open? %>
-    This consultation closes at<br />
-    <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
-  <% elsif @content_item.unopened? %>
-    This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
-    <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span><br />
-    It closes at<br />
-    <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
-  <% end %>
-<% end %>
-
-<% consultation_desc = capture do %>
-  <%= @content_item.description %>
-  <% if @content_item.held_on_another_website? %>
-    <br/><br/>
-    <strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong>
-  <% end %>
-<% end %>
-<%= render 'components/banner', text: consultation_desc, title: 'Summary', aside: consultation_date %>
-
-<% if @content_item.final_outcome? %>
-  </section>
-<% end %>
-
-<div class="grid-row sidebar-with-body">
-  <div class="column-third">
-    <%= render 'components/heading', text: "Consultation description", id: "description-title" %>
-  </div>
-  <div class="column-two-thirds" aria-labelledby="description-title">
-    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+  <%= render 'shared/translations' %>
+  <div class="column-two-thirds">
+    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <%= render 'shared/history_notice', content_item: @content_item %>
   </div>
 </div>
 
-<% if @content_item.documents? %>
-  <div class="grid-row sidebar-with-body">
-    <div class="column-third">
-      <%= render 'components/heading', text: "Documents", id: "documents-title" %>
-    </div>
-    <div class="column-two-thirds" aria-labelledby="documents-title">
-      <%= render 'govuk_component/govspeak',
-          content: @content_item.documents,
-          direction: page_text_direction %>
-    </div>
+<%= render 'shared/publisher_metadata_with_logo', content_item: @content_item %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'components/important-metadata', items: @content_item.metadata[:other]  %>
+
+    <% if @content_item.unopened? %>
+      <% content_item_unopened = capture do %>
+        This consultation opens
+        <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %>
+        <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
+      <% end %>
+      <%= render 'components/notice', title: "This consultation isn't open yet", description_text: content_item_unopened %>
+
+    <% elsif @content_item.pending_final_outcome? %>
+      <% content_item_final_outcome = capture do %>
+        Visit this page again soon to download the outcome to this public&nbsp;feedback.
+      <% end %>
+      <%= render 'components/notice', title: 'We are analysing your feedback', description_text: content_item_final_outcome %>
+
+    <% elsif @content_item.final_outcome? %>
+      <%= render 'components/notice', title: 'This consultation has concluded' %>
+
+      <% if @content_item.final_outcome_documents? %>
+        <%= render 'components/heading', text: "Download the full outcome", id: "final-outcome-documents-title" %>
+        <div aria-labelledby="final-outcome-documents-title">
+          <%= render 'govuk_component/govspeak',
+              content: @content_item.final_outcome_documents,
+              direction: page_text_direction %>
+        </div>
+      <% end %>
+
+      <%= render 'components/heading', text: "Detail of outcome", id: "final-outcome-detail-title" %>
+      <div aria-labelledby="final-outcome-detail-title">
+        <%= render 'govuk_component/govspeak',
+            content: @content_item.final_outcome_detail,
+            direction: page_text_direction %>
+      </div>
+    <% end %>
+
+    <% if @content_item.public_feedback_documents? %>
+      <%= render 'components/heading', text: "Feedback received", id: "public-feedback-documents-title" %>
+      <div aria-labelledby="public-feedback-documents-title">
+        <%= render 'govuk_component/govspeak',
+            content: @content_item.public_feedback_documents,
+            direction: page_text_direction %>
+      </div>
+    <% end %>
+
+
+    <% if @content_item.public_feedback_detail %>
+      <%= render 'components/heading', text: "Detail of feedback received", id: "public-feedback-detail-title" %>
+      <div aria-labelledby="public-feedback-detail-title">
+        <%= render 'govuk_component/govspeak',
+            content: @content_item.public_feedback_detail,
+            direction: page_text_direction %>
+      </div>
+    <% end %>
+
+    <% if @content_item.final_outcome? %>
+      <section class="original-consultation">
+        <header>
+          <%= render 'components/heading', text: "Original consultation", id: "original-consultation-title", heading_level: 2 %>
+        </header>
+    <% end %>
+
+    <% consultation_date = capture do %>
+      <% if @content_item.closed? %>
+        This consultation ran from<br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
+        <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+      <% elsif @content_item.open? %>
+        This consultation closes at<br />
+        <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+      <% elsif @content_item.unopened? %>
+        This consultation opens <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %><br />
+        <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span><br />
+        It closes at<br />
+        <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+      <% end %>
+    <% end %>
+
+      <% consultation_desc = capture do %>
+        <%= @content_item.description %>
+        <% if @content_item.held_on_another_website? %>
+          <br/><br/>
+          <strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong>
+        <% end %>
+      <% end %>
+      <%= render 'components/banner', text: consultation_desc, title: 'Summary', aside: consultation_date %>
+
+      <% if @content_item.final_outcome? %>
+        </section>
+      <% end %>
   </div>
-<% end %>
+    <%= render 'shared/sidebar_navigation' %>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'components/heading', text: "Consultation description", id: "description-title" %>
+    <div aria-labelledby="description-title">
+      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+    </div>
+
+    <% if @content_item.documents? %>
+      <%= render 'components/heading', text: "Documents", id: "documents-title" %>
+      <div aria-labelledby="documents-title">
+        <%= render 'govuk_component/govspeak',
+            content: @content_item.documents,
+            direction: page_text_direction %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <% if @content_item.ways_to_respond? %>
-  <div class="grid-row sidebar-with-body">
-    <div class="column-third">
+  <div class="grid-row">
+    <div class="column-two-thirds">
       <%= render 'components/heading', text: "Ways to respond", id: "ways-to-respond-title" %>
-    </div>
-    <div class="column-two-thirds" aria-labelledby="ways-to-respond-title">
-      <% @ways_to_respond_body = capture do %>
-        <% if @content_item.respond_online_url %>
-          <div class="call-to-action">
-            <p><%= link_to 'Respond online', @content_item.respond_online_url %></p>
-          </div>
+      <div aria-labelledby="ways-to-respond-title">
+        <% @ways_to_respond_body = capture do %>
+          <% if @content_item.respond_online_url %>
+            <div class="call-to-action">
+              <p><%= link_to 'Respond online', @content_item.respond_online_url %></p>
+            </div>
 
-          <% if @content_item.email || @content_item.postal_address %>
-            <p>or</p>
+            <% if @content_item.email || @content_item.postal_address %>
+              <p>or</p>
+            <% end %>
+          <% end %>
+
+          <% if @content_item.response_form? %>
+            <p>
+              Complete a <%= link_to 'response form', @content_item.attachment_url %> and
+              <% if @content_item.email && @content_item.postal_address %>either<% end %>
+            </p>
+          <% end %>
+
+
+          <% if @content_item.response_form? %>
+            <p>
+              Complete a <%= link_to 'response form', @content_item.attachment_url %> and
+              <% if @content_item.email && @content_item.postal_address %>either<% end %>
+            </p>
+          <% end %>
+
+          <% if @content_item.email %>
+            <h3>Email to:</h3>
+            <p><%= mail_to @content_item.email, @content_item.email %></p>
+          <% end %>
+
+          <% if @content_item.postal_address %>
+            <h3>Write to:</h3>
+            <div class="contact">
+              <div class="content">
+                <%= simple_format(@content_item.postal_address) %>
+              </div>
+            </div>
           <% end %>
         <% end %>
 
-        <% if @content_item.response_form? %>
-          <p>
-            Complete a <%= link_to 'response form', @content_item.attachment_url %> and
-            <% if @content_item.email && @content_item.postal_address %>either<% end %>
-          </p>
-        <% end %>
-
-        <% if @content_item.email %>
-          <h3>Email to:</h3>
-          <p><%= mail_to @content_item.email, @content_item.email %></p>
-        <% end %>
-
-        <% if @content_item.postal_address %>
-          <h3>Write to:</h3>
-          <div class="contact">
-            <div class="content">
-              <%= simple_format(@content_item.postal_address) %>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-      <%= render 'govuk_component/govspeak',
+        <%= render 'govuk_component/govspeak',
           content: @ways_to_respond_body,
           direction: page_text_direction %>
+      </div>
     </div>
   </div>
 <% end %>
 
-<%= render 'shared/share_links_offset_in_grid', share_links: @content_item.share_links %>
-<%= render 'shared/footer', @content_item.document_footer %>
+<div class="grid-row">
+  <div class="column-two-thirds content-bottom-margin">
+     <div class="dont-print responsive-bottom-margin">
+        <%= render 'components/share-links', @content_item.share_links %>
+    </div>
+
+    <%= render 'components/published-dates', {
+        published: @content_item.published,
+        last_updated: @content_item.updated,
+        history: @content_item.history
+      } %>
+  </div>
+</div>
