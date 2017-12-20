@@ -19,7 +19,7 @@
     <h2 id="related-nav-related_items" class="app-c-related-navigation__main-heading" >
       <%= t('components.related_navigation.related_content') %>
     </h2>
-    <% related_content.each do |section| %>
+    <% related_content.each_with_index do |section, section_index| %>
       <% section.each do |section_title, links| %>
         <% if links.any? %>
           <% unless section_title === "related_items" %>
@@ -41,7 +41,16 @@
                         link[:text],
                         link[:path],
                         class: "app-c-related-navigation__section-link" + construct_section_styling(section_title, defined_sections),
-                        rel: link[:rel]
+                        rel: link[:rel],
+                        data: {
+                          track_category: 'relatedLinkClicked',
+                          track_action: "#{section_index + 1}.#{index} #{construct_section_heading(section_title)}",
+                          track_label: link[:path],
+                          track_options: {
+                            dimension28: links.length.to_s,
+                            dimension29: link[:text]
+                          }
+                        }
                       )
                     %>
                   </li>
