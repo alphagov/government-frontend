@@ -75,6 +75,14 @@ class ContentItemPresenter
     @content_item["links"]["organisations"].to_a.first
   end
 
+  def policy
+    @content_item["links"]["related_policies"].to_a.first
+  end
+
+  def person
+    @content_item["links"]["people"].to_a.first
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
