@@ -16,12 +16,14 @@ end
 <h2 class="app-c-related-navigation__main-heading">Popular pages published by <%= @content_item.publishing_organisation["title"] %></h2>
 
 <%= render "components/document-list", related_stuff(
+  reject_link: @content_item.base_path,
   filter_organisation_content_ids: @content_item.publishing_organisation["content_id"]
 ) %>
 
 <h2 class="app-c-related-navigation__main-heading">Recent pages published by <%= @content_item.publishing_organisation["title"] %></h2>
 
 <%= render "components/document-list", related_stuff(
+  reject_link: @content_item.base_path,
   filter_organisation_content_ids: @content_item.publishing_organisation["content_id"],
   order: '-public_timestamp'
 ) %>
@@ -29,20 +31,22 @@ end
 <h2 class="app-c-related-navigation__main-heading">Related pages published by <%= @content_item.publishing_organisation["title"] %></h2>
 
 <%= render "components/document-list", related_stuff(
+  reject_link: @content_item.base_path,
   filter_organisation_content_ids: @content_item.publishing_organisation["content_id"],
-  similar_to: @content_item.base_path,
-  reject_link: @content_item.base_path
+  similar_to: @content_item.base_path
 ) %>
 
 <h2 class="app-c-related-navigation__main-heading">Popular pages with document type <%= @content_item.document_type %></h2>
 
 <%= render "components/document-list", related_stuff(
+  reject_link: @content_item.base_path,
   filter_content_store_document_type: @content_item.document_type,
 ) %>
 
 <h2 class="app-c-related-navigation__main-heading">Recent pages with document type <%= @content_item.document_type %></h2>
 
 <%= render "components/document-list", related_stuff(
+  reject_link: @content_item.base_path,
   filter_content_store_document_type: @content_item.document_type,
   order: '-public_timestamp'
 ) %>
@@ -50,13 +54,14 @@ end
 <h2 class="app-c-related-navigation__main-heading">Related pages with document type <%= @content_item.document_type %></h2>
 
 <%= render "components/document-list", related_stuff(
+  reject_link: @content_item.base_path,
   filter_content_store_document_type: @content_item.document_type,
-  similar_to: @content_item.base_path,
-  reject_link: @content_item.base_path
+  similar_to: @content_item.base_path
 ) %>
 
 <h2 class="app-c-related-navigation__main-heading">Popular pages with document type <%= @content_item.document_type %></h2>
 
 <%= render "components/document-list", related_stuff(
+  reject_link: @content_item.base_path,
   filter_content_store_document_type: @content_item.document_type,
 ) %>
