@@ -88,6 +88,10 @@ class ContentItemPresenter
     @content_item["links"]["people"].to_a.first
   end
 
+  def taxon
+    @content_item["links"]["taxons"].to_a.first
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
