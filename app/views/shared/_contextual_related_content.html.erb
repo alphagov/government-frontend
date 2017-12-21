@@ -120,3 +120,28 @@ end
     filter_people: @content_item.person["base_path"].gsub("/government/people/", ""),
   ) %>
 <% end %>
+
+<% if @content_item.taxon %>
+  <h2 class="app-c-related-navigation__main-heading">Recent pages with taxon <%= @content_item.taxon["title"] %></h2>
+
+  <%= render "components/document-list", related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    order: '-public_timestamp'
+  ) %>
+
+  <h2 class="app-c-related-navigation__main-heading">Related pages with taxon <%= @content_item.taxon["title"] %></h2>
+
+  <%= render "components/document-list", related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    similar_to: @content_item.base_path
+  ) %>
+
+  <h2 class="app-c-related-navigation__main-heading">Popular pages with taxon <%= @content_item.taxon["title"] %></h2>
+
+  <%= render "components/document-list", related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+  ) %>
+<% end %>
