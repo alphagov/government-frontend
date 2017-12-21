@@ -71,6 +71,10 @@ class ContentItemPresenter
     !content_item.cache_control.private?
   end
 
+  def publishing_organisation
+    @content_item["links"]["organisations"].to_a.first
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
