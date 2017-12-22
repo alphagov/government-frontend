@@ -14,11 +14,11 @@ class AnswerTest < ActionDispatch::IntegrationTest
 
   test "related links are rendered" do
     setup_and_visit_content_item('answer')
-    within shared_component_selector("related_items") do
-      elsewhere = @content_item["details"]["external_related_links"].first
-      elsewhere_page = JSON.parse(page.text).fetch("sections").last["items"].first
-      assert_equal elsewhere["title"], elsewhere_page["title"]
-      assert_equal elsewhere["url"], elsewhere_page["url"]
+
+    first_related_link = @content_item["details"]["external_related_links"].first
+
+    within(".app-c-related-navigation") do
+      assert page.has_css?('.app-c-related-navigation__section-link--other[href="' + first_related_link["url"] + '"]', text: first_related_link["title"])
     end
   end
 end
