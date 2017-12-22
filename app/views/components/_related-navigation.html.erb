@@ -16,14 +16,16 @@
 %>
 <% if related_content.map(&:values).flatten.any? || other.flatten.any? %>
   <aside class="app-c-related-navigation" role="complementary">
-    <h2 id="related-nav-related_items" class="app-c-related-navigation__main-heading" >
+    <h2 id="related-nav-related_items" class="app-c-related-navigation__main-heading" data-track-count="sidebarRelatedItemSection" >
       <%= t('components.related_navigation.related_content') %>
     </h2>
-    <% related_content.each_with_index do |section, section_index| %>
+    <% section_index = 0 %>
+    <% related_content.each do |section| %>
       <% section.each do |section_title, links| %>
         <% if links.any? %>
+          <% section_index += 1 %>
           <% unless section_title === "related_items" %>
-            <h3 id="related-nav-<%= section_title %>" class="
+            <h3 id="related-nav-<%= section_title %>" data-track-count="sidebarRelatedItemSection" class="
               app-c-related-navigation__sub-heading
               app-c-related-navigation__sub-heading<%= construct_section_styling(section_title, defined_sections) %>"
             >
@@ -44,7 +46,7 @@
                         rel: link[:rel],
                         data: {
                           track_category: 'relatedLinkClicked',
-                          track_action: "#{section_index + 1}.#{index} #{construct_section_heading(section_title)}",
+                          track_action: "#{section_index}.#{index} #{construct_section_heading(section_title)}",
                           track_label: link[:path],
                           track_options: {
                             dimension28: links.length.to_s,
