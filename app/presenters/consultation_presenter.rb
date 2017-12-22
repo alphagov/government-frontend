@@ -110,6 +110,13 @@ class ConsultationPresenter < ContentItemPresenter
     ways_to_respond["attachment_url"]
   end
 
+  # FIXME: This is a temporary removal of National Applicability
+  # Once all formats have moved to new publisher/important metadata
+  # components, we can remove here: app/presenters/content_item/national_applicability.rb:33
+  def publisher_metadata
+    super.tap { |m| m[:other].delete(:"Applies to") }
+  end
+
 private
 
   def display_date_and_time(date, rollback_midnight = false)
