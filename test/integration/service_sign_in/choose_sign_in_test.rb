@@ -4,9 +4,8 @@ module ServiceSignIn
   class ChooseSignInTest < ActionDispatch::IntegrationTest
     test "random but valid items do not error" do
       schema = GovukSchemas::Schema.find(frontend_schema: schema_type)
-      random_example = GovukSchemas::RandomExample.new(schema: schema)
+      payload = GovukSchemas::RandomExample.new(schema: schema).payload
 
-      payload = random_example.merge_and_validate(document_type: schema_type)
       path = payload["details"]["choose_sign_in"]["slug"]
 
       stub_request(:get, %r{#{path}})

@@ -136,9 +136,8 @@ class ActionDispatch::IntegrationTest
 
   def setup_and_visit_random_content_item(document_type: schema_type)
     schema = GovukSchemas::Schema.find(frontend_schema: schema_type)
-    random_example = GovukSchemas::RandomExample.new(schema: schema)
+    payload = GovukSchemas::RandomExample.new(schema: schema).payload
 
-    payload = random_example.merge_and_validate(document_type: document_type)
     path = payload["base_path"]
 
     stub_request(:get, %r{#{path}})
