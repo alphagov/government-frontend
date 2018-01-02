@@ -33,8 +33,9 @@
           <nav role="navigation" class="app-c-related-navigation__nav-section" aria-labelledby="related-nav-<%= section_title %>" data-module="toggle">
             <ul class="app-c-related-navigation_link-list" data-module="track-click">
               <% constructed_link_array = [] %>
+              <% section_link_limit = calculate_section_link_limit(links, max_section_length) %>
               <% links.each.with_index(1) do |link, index| %>
-                <% if index <= max_section_length %>
+                <% if index <= section_link_limit %>
                   <li class="app-c-related-navigation__link">
                     <%=
                       link_to(
@@ -58,18 +59,18 @@
                   %>
                 <% end %>
               <% end %>
-              <% if links.length > max_section_length %>
-              <li class="app-c-related-navigation__link toggle-wrap">
-                <a href="#"
-                  data-controls="toggle_<%= section_title %>"
-                  data-expanded="false"
-                  data-toggled-text="<%= t("govuk_component.metadata.toggle_less", default: "Show fewer") %>">
-                    <%= t("govuk_component.metadata.toggle_more", number: remaining_links(links, max_section_length), default: "+ #{remaining_links(links, max_section_length)} more") %>
-                </a>
-              </li>
-              <li class="app-c-related-navigation__link">
-                <span id="toggle_<%= section_title %>" class="js-hidden"><%= constructed_link_array.to_sentence.html_safe %></span>
-              </li>
+              <% if links.length > section_link_limit %>
+                <li class="app-c-related-navigation__link toggle-wrap">
+                  <a href="#"
+                    data-controls="toggle_<%= section_title %>"
+                    data-expanded="false"
+                    data-toggled-text="<%= t("govuk_component.metadata.toggle_less", default: "Show fewer") %>">
+                      <%= t("govuk_component.metadata.toggle_more", number: remaining_links(links, section_link_limit), default: "+ #{remaining_links(links, section_link_limit)} more") %>
+                  </a>
+                </li>
+                <li class="app-c-related-navigation__link">
+                  <span id="toggle_<%= section_title %>" class="js-hidden"><%= constructed_link_array.to_sentence.html_safe %></span>
+                </li>
               <% end %>
             </ul>
           </nav>
