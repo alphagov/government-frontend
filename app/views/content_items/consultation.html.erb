@@ -33,16 +33,16 @@
       <%= render 'components/notice', title: 'This consultation has concluded' %>
 
       <% if @content_item.final_outcome_documents? %>
-        <%= render 'components/heading', text: "Download the full outcome", id: "final-outcome-documents-title" %>
-        <div aria-labelledby="final-outcome-documents-title">
+        <%= render 'components/heading', text: "Download the full outcome" %>
+        <div class="consultation-outcome">
           <%= render 'govuk_component/govspeak',
               content: @content_item.final_outcome_documents,
               direction: page_text_direction %>
         </div>
       <% end %>
 
-      <%= render 'components/heading', text: "Detail of outcome", id: "final-outcome-detail-title" %>
-      <div aria-labelledby="final-outcome-detail-title">
+      <%= render 'components/heading', text: "Detail of outcome" %>
+      <div class="consultation-outcome-detail">
         <%= render 'govuk_component/govspeak',
             content: @content_item.final_outcome_detail,
             direction: page_text_direction %>
@@ -50,18 +50,17 @@
     <% end %>
 
     <% if @content_item.public_feedback_documents? %>
-      <%= render 'components/heading', text: "Feedback received", id: "public-feedback-documents-title" %>
-      <div aria-labelledby="public-feedback-documents-title">
+      <%= render 'components/heading', text: "Feedback received" %>
+      <div class="consultation-feedback-documents">
         <%= render 'govuk_component/govspeak',
             content: @content_item.public_feedback_documents,
             direction: page_text_direction %>
-      </div>
+    </div >
     <% end %>
 
-
     <% if @content_item.public_feedback_detail %>
-      <%= render 'components/heading', text: "Detail of feedback received", id: "public-feedback-detail-title" %>
-      <div aria-labelledby="public-feedback-detail-title">
+      <%= render 'components/heading', text: "Detail of feedback received" %>
+      <div class="consultation-feedback">
         <%= render 'govuk_component/govspeak',
             content: @content_item.public_feedback_detail,
             direction: page_text_direction %>
@@ -106,16 +105,14 @@
     <%= render 'shared/sidebar_navigation' %>
 </div>
 
-<div class="grid-row">
+<div class="grid-row consultation-description">
   <div class="column-two-thirds">
-    <%= render 'components/heading', text: "Consultation description", id: "description-title" %>
-    <div aria-labelledby="description-title">
-      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
-    </div>
+    <%= render 'components/heading', text: "Consultation description" %>
+    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
 
     <% if @content_item.documents? %>
-      <%= render 'components/heading', text: "Documents", id: "documents-title" %>
-      <div aria-labelledby="documents-title">
+      <%= render 'components/heading', text: "Documents" %>
+      <div class="consultation-documents">
         <%= render 'govuk_component/govspeak',
             content: @content_item.documents,
             direction: page_text_direction %>
@@ -125,47 +122,45 @@
 </div>
 
 <% if @content_item.ways_to_respond? %>
-  <div class="grid-row">
+  <div class="grid-row consultation-ways-to-respond">
     <div class="column-two-thirds">
-      <%= render 'components/heading', text: "Ways to respond", id: "ways-to-respond-title" %>
-      <div aria-labelledby="ways-to-respond-title">
-        <% @ways_to_respond_body = capture do %>
-          <% if @content_item.respond_online_url %>
-            <div class="call-to-action">
-              <p><%= link_to 'Respond online', @content_item.respond_online_url %></p>
-            </div>
+      <%= render 'components/heading', text: "Ways to respond" %>
+      <% @ways_to_respond_body = capture do %>
+        <% if @content_item.respond_online_url %>
+          <div class="call-to-action">
+            <p><%= link_to 'Respond online', @content_item.respond_online_url %></p>
+          </div>
 
-            <% if @content_item.email || @content_item.postal_address %>
-              <p>or</p>
-            <% end %>
+          <% if @content_item.email || @content_item.postal_address %>
+            <p>or</p>
           <% end %>
+        <% end %>
 
-          <% if @content_item.response_form? %>
-            <p>
-              Complete a <%= link_to 'response form', @content_item.attachment_url %> and
-              <% if @content_item.email && @content_item.postal_address %>either<% end %>
-            </p>
-          <% end %>
+        <% if @content_item.response_form? %>
+          <p>
+            Complete a <%= link_to 'response form', @content_item.attachment_url %> and
+            <% if @content_item.email && @content_item.postal_address %>either<% end %>
+          </p>
+        <% end %>
 
         <% if @content_item.email %>
           <h3>Email to:</h3>
           <p><%= mail_to @content_item.email, @content_item.email %></p>
         <% end %>
 
-          <% if @content_item.postal_address %>
-            <h3>Write to:</h3>
-            <div class="contact">
-              <div class="content">
-                <%= simple_format(@content_item.postal_address) %>
-              </div>
+        <% if @content_item.postal_address %>
+          <h3>Write to:</h3>
+          <div class="contact">
+            <div class="content">
+              <%= simple_format(@content_item.postal_address) %>
             </div>
-          <% end %>
+          </div>
         <% end %>
+      <% end %>
 
-        <%= render 'govuk_component/govspeak',
-          content: @ways_to_respond_body,
-          direction: page_text_direction %>
-      </div>
+      <%= render 'govuk_component/govspeak',
+        content: @ways_to_respond_body,
+        direction: page_text_direction %>
     </div>
   </div>
 <% end %>
