@@ -63,7 +63,16 @@
                         link[:text],
                         link[:path],
                         class: "app-c-related-navigation__section-link" + construct_section_styling(section_title, defined_sections),
-                        rel: link[:rel]
+                        rel: link[:rel],
+                        data: {
+                          track_category: 'relatedLinkClicked',
+                          track_action: "#{section_index}.#{index} #{construct_section_heading(section_title)}",
+                          track_label: link[:path],
+                          track_options: {
+                            dimension28: links.length.to_s,
+                            dimension29: link[:text]
+                          }
+                        }
                       )
                     )
                   %>
