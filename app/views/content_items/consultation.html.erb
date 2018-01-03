@@ -55,7 +55,7 @@
         <%= render 'govuk_component/govspeak',
             content: @content_item.public_feedback_documents,
             direction: page_text_direction %>
-    </div >
+      </div >
     <% end %>
 
     <% if @content_item.public_feedback_detail %>
@@ -89,92 +89,87 @@
       <% end %>
     <% end %>
 
-      <% consultation_desc = capture do %>
-        <%= @content_item.description %>
-        <% if @content_item.held_on_another_website? %>
-          <br/><br/>
-          <strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong>
-        <% end %>
+    <% consultation_desc = capture do %>
+      <%= @content_item.description %>
+      <% if @content_item.held_on_another_website? %>
+        <br/><br/>
+        <strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong>
       <% end %>
-      <%= render 'components/banner', text: consultation_desc, title: 'Summary', aside: consultation_date %>
+    <% end %>
+    <%= render 'components/banner', text: consultation_desc, title: 'Summary', aside: consultation_date %>
 
-      <% if @content_item.final_outcome? %>
-        </section>
+    <% if @content_item.final_outcome? %>
+      </section>
+    <% end %>
+
+
+    <div class="consultation-description">
+      <%= render 'components/heading', text: "Consultation description" %>
+      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+
+      <% if @content_item.documents? %>
+        <%= render 'components/heading', text: "Documents" %>
+        <div class="consultation-documents">
+          <%= render 'govuk_component/govspeak',
+              content: @content_item.documents,
+              direction: page_text_direction %>
+        </div>
       <% end %>
-  </div>
-    <%= render 'shared/sidebar_navigation' %>
-</div>
+    </div>
 
-<div class="grid-row consultation-description">
-  <div class="column-two-thirds">
-    <%= render 'components/heading', text: "Consultation description" %>
-    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+    <% if @content_item.ways_to_respond? %>
+      <div class="consultation-ways-to-respond">
+        <%= render 'components/heading', text: "Ways to respond" %>
+          <% @ways_to_respond_body = capture do %>
+            <% if @content_item.respond_online_url %>
+              <div class="call-to-action">
+                <p><%= link_to 'Respond online', @content_item.respond_online_url %></p>
+              </div>
 
-    <% if @content_item.documents? %>
-      <%= render 'components/heading', text: "Documents" %>
-      <div class="consultation-documents">
+              <% if @content_item.email || @content_item.postal_address %>
+                <p>or</p>
+              <% end %>
+            <% end %>
+
+            <% if @content_item.response_form? %>
+              <p>
+                Complete a <%= link_to 'response form', @content_item.attachment_url %> and
+                <% if @content_item.email && @content_item.postal_address %>either<% end %>
+              </p>
+            <% end %>
+
+            <% if @content_item.email %>
+              <h3>Email to:</h3>
+              <p><%= mail_to @content_item.email, @content_item.email %></p>
+            <% end %>
+
+            <% if @content_item.postal_address %>
+              <h3>Write to:</h3>
+              <div class="contact">
+                <div class="content">
+                  <%= simple_format(@content_item.postal_address) %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+
         <%= render 'govuk_component/govspeak',
-            content: @content_item.documents,
-            direction: page_text_direction %>
+          content: @ways_to_respond_body,
+          direction: page_text_direction %>
       </div>
     <% end %>
-  </div>
-</div>
 
-<% if @content_item.ways_to_respond? %>
-  <div class="grid-row consultation-ways-to-respond">
-    <div class="column-two-thirds">
-      <%= render 'components/heading', text: "Ways to respond" %>
-      <% @ways_to_respond_body = capture do %>
-        <% if @content_item.respond_online_url %>
-          <div class="call-to-action">
-            <p><%= link_to 'Respond online', @content_item.respond_online_url %></p>
-          </div>
-
-          <% if @content_item.email || @content_item.postal_address %>
-            <p>or</p>
-          <% end %>
-        <% end %>
-
-        <% if @content_item.response_form? %>
-          <p>
-            Complete a <%= link_to 'response form', @content_item.attachment_url %> and
-            <% if @content_item.email && @content_item.postal_address %>either<% end %>
-          </p>
-        <% end %>
-
-        <% if @content_item.email %>
-          <h3>Email to:</h3>
-          <p><%= mail_to @content_item.email, @content_item.email %></p>
-        <% end %>
-
-        <% if @content_item.postal_address %>
-          <h3>Write to:</h3>
-          <div class="contact">
-            <div class="content">
-              <%= simple_format(@content_item.postal_address) %>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-
-      <%= render 'govuk_component/govspeak',
-        content: @ways_to_respond_body,
-        direction: page_text_direction %>
-    </div>
-  </div>
-<% end %>
-
-<div class="grid-row">
-  <div class="column-two-thirds content-bottom-margin">
-     <div class="dont-print responsive-bottom-margin">
+    <div class="content-bottom-margin">
+      <div class="dont-print responsive-bottom-margin">
         <%= render 'components/share-links', @content_item.share_links %>
-    </div>
+      </div>
 
     <%= render 'components/published-dates', {
         published: @content_item.published,
         last_updated: @content_item.updated,
         history: @content_item.history
       } %>
+    </div>
   </div>
+  <%= render 'shared/sidebar_navigation' %>
 </div>
