@@ -1,5 +1,5 @@
 <%= render "components/back-link", href: @content_item.back_link %>
-
+<%= render 'components/notice', @content_item.withdrawal_notice_component %>
 <% if @error %>
   <div class="grid-row">
     <div class="column-two-thirds">
