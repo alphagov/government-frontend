@@ -1,0 +1,28 @@
+.app-c-contents-list-with-body__link-container {
+  margin: 0 auto;
+
+  @include media(tablet) {
+    max-width: 990px;
+  }
+
+  .app-c-back-to-top {
+    margin-left: 0;
+  }
+}
+
+.app-c-contents-list-with-body__link-wrapper.govuk-sticky-element--stuck-to-window {
+  background-color: $panel-colour;
+  display: inline;
+  float: left;
+  left: 0;
+  padding: $gutter-half;
+  width: 100%;
+
+  @include media(mobile) {
+    position: fixed;
+  }
+
+  .app-c-back-to-top {
+    margin-bottom: 0;
+  }
+}

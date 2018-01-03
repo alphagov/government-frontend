@@ -1,0 +1,18 @@
+<% block = yield %>
+<% unless block.empty? %>
+  <%
+    contents ||= []
+    sticky_attr = ' data-module="sticky-element-container"'.html_safe if contents.any?
+  %>
+  <div id="contents" class="app-c-contents-list-with-body"<%= sticky_attr %>>
+    <%= render 'components/contents-list', contents: contents if contents.any? %>
+    <%= block %>
+    <% if contents.any? %>
+      <div data-sticky-element class="app-c-contents-list-with-body__link-wrapper">
+        <div class="app-c-contents-list-with-body__link-container">
+          <%= render 'components/back-to-top', href: "#contents" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
