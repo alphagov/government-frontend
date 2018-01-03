@@ -8,7 +8,12 @@
        title: @content_item.title,
        average_title_length: "long" %>
   </div>
-  <%= render 'shared/translations' %>
+  <% if @content_item.available_translations.length > 1 %>
+    <div class="column-third">
+      <%= render 'components/translation-nav',
+          translations: @content_item.available_translations %>
+    </div>
+  <% end %>
   <div class="column-two-thirds">
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
