@@ -1,11 +1,13 @@
+<% related_navigation ||=  @navigation.should_present_taxonomy_navigation? ? @content_item.taxonomy_sidebar : @content_item.related_navigation %>
+
 <% if local_assigns.has_key?(:tasklist_content) && current_tasklist_ab_test.show_tasklist_sidebar? %>
   <%= render 'shared/sidebar_tasklist', tasklist_content: tasklist_content, no_margin: true %>
 <% else %>
   <div class="column-third">
   <% if @navigation.should_present_taxonomy_navigation? -%>
-    <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
+    <%= render partial: 'govuk_component/taxonomy_sidebar', locals: related_navigation %>
   <% else %>
-    <%= render partial: 'components/related-navigation', locals: @content_item.related_navigation %>
+    <%= render partial: 'components/related-navigation', locals: related_navigation%>
   <% end %>
   </div>
 <% end %>

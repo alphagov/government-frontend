@@ -21,4 +21,8 @@ class AnswerTest < ActionDispatch::IntegrationTest
       assert page.has_css?('.app-c-related-navigation__section-link--other[href="' + related_links["url"] + '"]', text: related_links["title"])
     end
   end
+
+  test "does not show publishing organisation in sidebar" do
+    assert page.has_no_css?('.app-c-related-navigation #related-nav-publishers', text: 'Published by')
+  end
 end

@@ -68,6 +68,16 @@ class ContentItemPresenter
     merge_publishers_and_worldwide_organisations(@nav_helper.related_navigation_sidebar)
   end
 
+  # There are concerns around showing organisations on mainstream pages, namely:
+  # Organisation data is not always correct
+  # It reduces the influence of content designers by providing depts with ownership
+  # May not provide value to users as it will take them to a generic org page
+  def related_navigation_mainstream
+    related_navigation_mainstream = related_navigation
+    related_navigation_mainstream.delete(:publishers)
+    related_navigation_mainstream
+  end
+
   def related_items
     @nav_helper.related_items
   end
