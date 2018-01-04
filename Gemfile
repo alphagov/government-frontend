@@ -40,6 +40,7 @@ end
 group :test do
   gem 'capybara'
   gem 'mocha'
+  gem 'phantomjs', '~> 2.1'
   gem 'poltergeist', require: false
   gem 'webmock', '~> 2.3.0', require: false
 end
