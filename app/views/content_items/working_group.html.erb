@@ -1,6 +1,3 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-
 <% @additional_body = capture do %>
   <% if @content_item.policies.any? %>
     <h2 id="policies">Policies</h2>
@@ -17,6 +14,17 @@
   <% end %>
 <% end %>
 
-<%= render 'shared/sidebar_contents_with_body',
-      content_item: @content_item,
-      body: "#{@content_item.body} #{@additional_body}" %>
+<div class="grid-row">
+  <div class="column-two-thirds responsive-top-margin">
+    <%= render 'govuk_component/title', @content_item.title_and_context %>
+  </div>
+  <%= render 'shared/translations' %>
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'components/contents-list-with-body', contents: @content_item.contents do %>
+      <%= render 'govuk_component/govspeak',
+            content: "#{@content_item.body} #{@additional_body}",
+            direction: page_text_direction %>
+    <% end %>
+  </div>
+</div>
