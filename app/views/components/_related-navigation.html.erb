@@ -46,7 +46,7 @@
                         rel: link[:rel],
                         data: {
                           track_category: 'relatedLinkClicked',
-                          track_action: "#{section_index}.#{index} #{construct_section_heading(section_title)}",
+                          track_action: "#{section_index}.#{index} #{construct_section_heading(section_title) || t('components.related_navigation.related_content')}",
                           track_label: link[:path],
                           track_options: {
                             dimension28: links.length.to_s,
