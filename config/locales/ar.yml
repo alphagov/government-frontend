@@ -1,66 +1,69 @@
 ar:
-  i18n:
-    direction: rtl
-  language_names:
-    ar: "العربية"
   content_item:
     schema_name:
       announcement:
         zero:
-        one: "إعلان"
+        one: إعلان
         two:
         few:
         many:
-        other: "إعلانات"
+        other: إعلانات
       authored_article:
         zero:
-        one: "مقال مرخص"
+        one: مقال مرخص
         two:
         few:
         many:
-        other: "مقالات مرخصة"
+        other: مقالات مرخصة
       case_study:
         zero:
-        one: "دراسة حالة"
+        one: دراسة حالة
         two:
         few:
         many:
-        other: "دراسات حالة"
+        other: دراسات حالة
       closed_consultation:
         zero:
-        one: "مشاورة منتهية"
+        one: مشاورة منتهية
         two:
         few:
         many:
-        other: "مشاورات منتهية"
+        other: مشاورات منتهية
       consultation:
         zero:
-        one: "مشاورة"
+        one: مشاورة
         two:
         few:
         many:
-        other: "مشاورات"
+        other: مشاورات
       consultation_outcome:
         zero:
-        one: "نتيجة المشاورة"
+        one: نتيجة المشاورة
         two:
         few:
         many:
-        other: "نتائج المشاورات"
+        other: نتائج المشاورات
+      corporate_information_page:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       corporate_report:
         zero:
-        one: "تقرير الوزارة"
+        one: تقرير الوزارة
         two:
         few:
         many:
-        other: "تقارير الوزارة"
+        other: تقارير الوزارة
       correspondence:
         zero:
-        one: "مراسلة"
+        one: مراسلة
         two:
         few:
         many:
-        other: "مراسلات"
+        other: مراسلات
       decision:
         zero:
         one:
@@ -70,81 +73,81 @@ ar:
         other:
       detailed_guide:
         zero:
-        one: "توجيه مفصل"
+        one: توجيه مفصل
         two:
         few:
         many:
-        other: "توجيهات مفصل"
+        other: توجيهات مفصل
       document_collection:
         zero:
-        one: "سلسة"
+        one: سلسة
         two:
         few:
         many:
         other:
       draft_text:
         zero:
-        one: "مسودة النص"
+        one: مسودة النص
         two:
         few:
         many:
-        other: "مسودة النصوص"
+        other: مسودة النصوص
       fatality_notice:
         zero:
-        one: "إشعار وفاة"
+        one: إشعار وفاة
         two:
         few:
         many:
-        other: "إشعارات وفاة"
+        other: إشعارات وفاة
       foi_release:
         zero:
-        one: "نشرة وفق حرية الحصول على المعلومات"
+        one: نشرة وفق حرية الحصول على المعلومات
         two:
         few:
         many:
-        other: "نشرات وفق حرية الحصول على المعلومات"
+        other: نشرات وفق حرية الحصول على المعلومات
       form:
         zero:
-        one: "نموذج"
+        one: نموذج
         two:
         few:
         many:
-        other: "نماذج"
+        other: نماذج
       government_response:
         zero:
-        one: "رد من الحكومة"
+        one: رد من الحكومة
         two:
         few:
         many:
-        other: "ردود من الحكومة"
+        other: ردود من الحكومة
       guidance:
         zero:
-        one: "توجيه"
+        one: توجيه
         two:
         few:
         many:
-        other: "توجيهات"
+        other: توجيهات
       impact_assessment:
         zero:
-        one: "تقييم التأثير"
+        one: تقييم التأثير
         two:
         few:
         many:
-        other: "تقييمات التأثير"
+        other: تقييمات التأثير
       imported:
         zero:
-        one: "استلم - بانتظار الطباعة"
+        one: استلم - بانتظار الطباعة
         two:
         few:
         many:
-        other: "استلم - بانتظار الطباعة"
+        other: استلم - بانتظار الطباعة
       independent_report:
         zero:
-        one: "تقرير مستقل"
+        one: تقرير مستقل
         two:
         few:
         many:
-        other: "تقارير مستقلة"
+        other: تقارير مستقلة
       international_treaty:
         zero:
         one:
@@ -154,33 +157,68 @@ ar:
         other:
       map:
         zero:
-        one: "خريطة"
+        one: خريطة
         two:
         few:
         many:
-        other: "خرائط"
+        other: خرائط
+      national:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       national_statistics:
         zero:
-        one: "إحصائية - إحصائية محلية"
+        one: إحصائية - إحصائية محلية
         two:
         few:
         many:
-        other: "إحصائيات - إحصائيات محلية"
+        other: إحصائيات - إحصائيات محلية
+      national_statistics_announcement:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       news_article:
         zero:
-        one: "مقال إخباري"
+        one: مقال إخباري
         two:
         few:
         many:
-        other: "مقالات إخبارية"
+        other: مقالات إخبارية
       news_story:
         zero:
-        one: "قصة إخبارية"
+        one: قصة إخبارية
         two:
         few:
         many:
-        other: "قصص إخبارية"
+        other: قصص إخبارية
       notice:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      official:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      official_statistics:
+        zero:
+        one: إحصائية
+        two:
+        few:
+        many:
+        other: إحصائيات
+      official_statistics_announcement:
         zero:
         one:
         two:
@@ -189,53 +227,53 @@ ar:
         other:
       open_consultation:
         zero:
-        one: "مشاورة جارية"
+        one: مشاورة جارية
         two:
         few:
         many:
-        other: "مشاورات جارية"
+        other: مشاورات جارية
       oral_statement:
         zero:
-        one: "تصريح شفهي للبرلمان"
+        one: تصريح شفهي للبرلمان
         two:
         few:
         many:
-        other: "تصريحات شفهية للبرلمان"
+        other: تصريحات شفهية للبرلمان
       policy:
         zero:
-        one: "سياسة"
+        one: سياسة
         two:
         few:
         many:
-        other: "سياسات"
+        other: سياسات
       policy_paper:
         zero:
-        one: "ورقة عن السياسة"
+        one: ورقة عن السياسة
         two:
         few:
         many:
-        other: "ورقة عن السياسات"
+        other: ورقة عن السياسات
       press_release:
         zero:
-        one: "بيان صحفي"
+        one: بيان صحفي
         two:
         few:
         many:
-        other: "بيانات صحفية"
+        other: بيانات صحفية
       promotional:
         zero:
-        one: "مادة ترويجية"
+        one: مادة ترويجية
         two:
         few:
         many:
-        other: "مواد ترويجية"
+        other: مواد ترويجية
       publication:
         zero:
-        one: "مطبوعة"
+        one: مطبوعة
         two:
         few:
         many:
-        other: "مطبوعات"
+        other: مطبوعات
       regulation:
         zero:
         one:
@@ -245,47 +283,61 @@ ar:
         other:
       research:
         zero:
-        one: "بحث وتحليل"
+        one: بحث وتحليل
         two:
         few:
         many:
-        other: "بحوث وتحليلات"
+        other: بحوث وتحليلات
+      service_sign_in:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       speaking_notes:
         zero:
-        one: "مذكرات كلامية"
+        one: مذكرات كلامية
         two:
         few:
         many:
-        other: "مذكرات كلامية"
+        other: مذكرات كلامية
       speech:
         zero:
-        one: "كلمة"
+        one: كلمة
         two:
         few:
         many:
-        other: "كلمات"
+        other: كلمات
       statement_to_parliament:
         zero:
-        one: "تصريح للبرلمان"
+        one: تصريح للبرلمان
         two:
         few:
         many:
-        other: "تصريحات للبرلمان"
+        other: تصريحات للبرلمان
       statistical_data_set:
         zero:
-        one: "مجموعة بيانات إحصائية"
+        one: مجموعة بيانات إحصائية
         two:
         few:
         many:
-        other: "مجموعات بيانات إحصائية"
-      official_statistics:
+        other: مجموعات بيانات إحصائية
+      statistics_announcement:
         zero:
-        one: "إحصائية"
+        one:
         two:
         few:
         many:
-        other: "إحصائيات"
+        other:
       statutory_guidance:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      take_part:
         zero:
         one:
         two:
@@ -294,53 +346,104 @@ ar:
         other:
       transcript:
         zero:
-        one: "نص منسوخ"
+        one: نص منسوخ
         two:
         few:
         many:
-        other: "نصوص منسوخة"
+        other: نصوص منسوخة
       transparency:
         zero:
-        one: "بيانات تتعلق بالشفافية"
+        one: بيانات تتعلق بالشفافية
         two:
         few:
         many:
-        other: "بيانات تتعلق بالشفافية"
+        other: بيانات تتعلق بالشفافية
       world_location_news_article:
         zero:
-        one: "مقال إخباري"
+        one: مقال إخباري
         two:
         few:
         many:
-        other: "مقالات إخبارية"
+        other: مقالات إخبارية
+      world_news_story:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       written_statement:
         zero:
-        one: "تصريح خطي"
+        one: تصريح خطي
         two:
         few:
         many:
-        other: "تصريحات خطية"
-    metadata:
-      published: "نشر"
-      updated: "تحديث"
+        other: تصريحات خطية
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: نشر
+      updated: تحديث
   publication:
     documents:
       zero:
-      one: "وثيقة"
+      one: وثيقة
       two:
       few:
       many:
-      other: "وثائق"
+      other: وثائق
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: معلومات عن الوزارة
-    publication_scheme_html: إقرأ عن أنواع المعلومات التي ننشرها بشكل روتيني في موقعنا
-      %{link} الرابط.
     personal_information_charter_html: "%{link} يشرح كيفية التعامل مع المعلومات الشخصية
       الخاصة بك"
-    welsh_language_scheme_html: معرفة التزامنا النشر في%{link} الرابط.
+    publication_scheme_html: إقرأ عن أنواع المعلومات التي ننشرها بشكل روتيني في موقعنا
+      %{link} الرابط.
     social_media_use_html: اقرأ عن سياستنا تجاه %{link}
-    about_our_services_html:
+    welsh_language_scheme_html: معرفة التزامنا النشر في%{link} الرابط.
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    ar: العربية
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

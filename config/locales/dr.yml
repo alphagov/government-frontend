@@ -1,160 +1,229 @@
 dr:
-  language_names:
-    dr: "دری"
   content_item:
     schema_name:
       announcement:
-        one: "اعلان"
-        other: "اعلانات"
+        one: اعلان
+        other: اعلانات
       authored_article:
-        one: "مقاله نوشته شده"
-        other: "مقاله های نوشته شده"
+        one: مقاله نوشته شده
+        other: مقاله های نوشته شده
       case_study:
-        one: "بررسی  موردی"
-        other: "بررسی های موردی"
+        one: بررسی  موردی
+        other: بررسی های موردی
       closed_consultation:
-        one: "مشوره محرم"
-        other: "مشوره های محرم"
+        one: مشوره محرم
+        other: مشوره های محرم
       consultation:
-        one: "مشوره"
-        other: "مشوره ها"
+        one: مشوره
+        other: مشوره ها
       consultation_outcome:
-        one: "نتیجه مشوره"
-        other: "نتایج مشوره"
+        one: نتیجه مشوره
+        other: نتایج مشوره
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "گزارش توحیدی"
-        other: "گزارشات توحیدی"
+        one: گزارش توحیدی
+        other: گزارشات توحیدی
       correspondence:
-        one: "مطابقت"
-        other: "مطابقت ها"
+        one: مطابقت
+        other: مطابقت ها
       decision:
         one:
         other:
       detailed_guide:
         one: " رهنمود مفصل"
-        other: "رهنمود های مفصل"
+        other: رهنمود های مفصل
       document_collection:
-        one: "سلسله"
+        one: سلسله
         other:
       draft_text:
-        one: "متن مسوده"
-        other: "متون مسوده"
+        one: متن مسوده
+        other: متون مسوده
       fatality_notice:
-        one: "خبر  مرگ و میر"
-        other: "اخبار مرگ و میر"
+        one: خبر  مرگ و میر
+        other: اخبار مرگ و میر
       foi_release:
-        one: "نشرآزادی بیان"
-        other: "نشریه های آزادی بیان"
+        one: نشرآزادی بیان
+        other: نشریه های آزادی بیان
       form:
-        one: "فورمه"
-        other: "فورمه ها"
+        one: فورمه
+        other: فورمه ها
       government_response:
-        one: "جوابدهی دولت"
-        other: "جوابدهی های دولت"
+        one: جوابدهی دولت
+        other: جوابدهی های دولت
       guidance:
-        one: "رهنمود"
-        other: "رهنمود"
+        one: رهنمود
+        other: رهنمود
       impact_assessment:
-        one: "بررسی تاثیرات"
-        other: "بررسی های تاثیرات"
+        one: بررسی تاثیرات
+        other: بررسی های تاثیرات
       imported:
-        one: "وارد شده- نوع انتظار"
-        other: "وارد شده - نوع انتظار"
+        one: وارد شده- نوع انتظار
+        other: وارد شده - نوع انتظار
       independent_report:
-        one: "گزارش آزاد"
-        other: "گزارش های آزاد"
+        one: گزارش آزاد
+        other: گزارش های آزاد
       international_treaty:
         one:
         other:
       map:
-        one: "نقشه"
-        other: "نقشه ها"
+        one: نقشه
+        other: نقشه ها
+      national:
+        one:
+        other:
       national_statistics:
-        one: "احصایه ها - احصایه های ملی"
-        other: "احصایه ها - احصایه های ملی"
+        one: احصایه ها - احصایه های ملی
+        other: احصایه ها - احصایه های ملی
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "مقاله جدید"
-        other: "مقاله خبری"
+        one: مقاله جدید
+        other: مقاله خبری
       news_story:
-        one: "گزارش خبری"
-        other: "گزارش های خبری"
+        one: گزارش خبری
+        other: گزارش های خبری
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: احصائیه ها
+        other: احصائیه ها
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "مشاورت باز"
-        other: "مشاورت های باز"
+        one: مشاورت باز
+        other: مشاورت های باز
       oral_statement:
-        one: "بیانیه شفایی به پارلمان"
-        other: "بیانیه های شفایی به پارلمان"
+        one: بیانیه شفایی به پارلمان
+        other: بیانیه های شفایی به پارلمان
       policy:
-        one: "پالیسی"
-        other: "پالیسی ها"
+        one: پالیسی
+        other: پالیسی ها
       policy_paper:
-        one: "سند پالیسی"
-        other: "سندهای پالیسی"
+        one: سند پالیسی
+        other: سندهای پالیسی
       press_release:
-        one: "اعلامیه مطبوعاتی"
-        other: "اعلامیه های مصبوعاتی"
+        one: اعلامیه مطبوعاتی
+        other: اعلامیه های مصبوعاتی
       promotional:
-        one: "مواد تعلیمی"
-        other: "مواد تعلیمی"
+        one: مواد تعلیمی
+        other: مواد تعلیمی
       publication:
-        one: "نشر"
-        other: "نشریات"
+        one: نشر
+        other: نشریات
       regulation:
         one:
         other:
       research:
-        one: "تحقیق و تجزیه"
-        other: "تحقیق و تجزیه"
+        one: تحقیق و تجزیه
+        other: تحقیق و تجزیه
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "یادداشت سخنرانی"
-        other: "یادداشت سخنرانی"
+        one: یادداشت سخنرانی
+        other: یادداشت سخنرانی
       speech:
-        one: "سخنرانی"
-        other: "سخنرانی ها"
+        one: سخنرانی
+        other: سخنرانی ها
       statement_to_parliament:
-        one: "بیانیه به پارلمان"
-        other: "بیانیه ها به پارلمان"
+        one: بیانیه به پارلمان
+        other: بیانیه ها به پارلمان
       statistical_data_set:
-        one: "ارقام احصائیوی"
-        other: "ارقام احصائیوی"
-      official_statistics:
-        one: "احصائیه ها"
-        other: "احصائیه ها"
+        one: ارقام احصائیوی
+        other: ارقام احصائیوی
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "نسخه"
-        other: "نسخه ها"
+        one: نسخه
+        other: نسخه ها
       transparency:
-        one: "ارقام شفافیت"
-        other: "ارقام شفافیت"
+        one: ارقام شفافیت
+        other: ارقام شفافیت
       world_location_news_article:
-        one: "مقاله جدید"
-        other: "مقاله خبری"
+        one: مقاله جدید
+        other: مقاله خبری
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "بیانیه تحریری به پارلمان"
-        other: "بیانیه های تحریری به پارلمان"
-    metadata:
-      published: "نشر شده"
-      updated: "به روز شده"
+        one: بیانیه تحریری به پارلمان
+        other: بیانیه های تحریری به پارلمان
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: نشر شده
+      updated: به روز شده
   publication:
     documents:
-      one: "سند"
-      other: "اسناد"
+      one: سند
+      other: اسناد
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: معلومات یکی شده
-    publication_scheme_html: در مورد انواع معلوماتی بخوانید که ما به طور منظم نشر
-      می کنیم.
     personal_information_charter_html: "  %{link} ما شیوه برخود با معلومات شخصی را
       تشریح مینماید"
-    welsh_language_scheme_html: در مورد تعهد ما به نشر در %{link} معلومات حاصل نمایید
+    publication_scheme_html: در مورد انواع معلوماتی بخوانید که ما به طور منظم نشر
+      می کنیم.
     social_media_use_html: پالیسی ما را در %{link} بخوانید
-    about_our_services_html:
+    welsh_language_scheme_html: در مورد تعهد ما به نشر در %{link} معلومات حاصل نمایید
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    dr: دری
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

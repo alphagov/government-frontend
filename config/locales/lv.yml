@@ -1,6 +1,4 @@
 lv:
-  language_names:
-    lv: Latviešu
   content_item:
     schema_name:
       announcement:
@@ -21,6 +19,9 @@ lv:
       consultation_outcome:
         one: Konsultāciju rezultāts
         other: Konsultāciju rezultāti
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Korporatīvais ziņojums
         other: Korporatīvie ziņojumi
@@ -69,9 +70,15 @@ lv:
       map:
         one: Karte
         other: Kartes
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - valsts dati
         other: Statistika - valsts dati
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Raksts
         other: Raksti
@@ -79,6 +86,15 @@ lv:
         one: Ziņa
         other: Ziņas
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +124,9 @@ lv:
       research:
         one: Izpēte un analīze
         other: Izpēte un analīze
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: Runas piezīmes
         other: Runas piezīmes
@@ -120,10 +139,13 @@ lv:
       statistical_data_set:
         one: Statistiskas datu kopums
         other: Statistikas datu kopumi
-      official_statistics:
-        one: Statistika
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -135,27 +157,74 @@ lv:
       world_location_news_article:
         one: Raksts
         other: Raksti
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Rakstisks ziņojums parlamentam
         other: Rakstiski ziņojumi parlamentam
+    contents:
     metadata:
       published: publicēts
       updated: atjaunināts
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokuments
       other: Dokumenti
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Korporatīva informācija
-    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta
-      mūsu %{link}
     personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta
       Jūsu sniegtā personīgā informācija
+    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta
+      mūsu %{link}
+    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
     welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas
       pieejamību %{link}
-    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    lv: Latviešu
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

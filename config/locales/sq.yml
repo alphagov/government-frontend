@@ -1,6 +1,4 @@
 sq:
-  language_names:
-    sq: Shqip
   content_item:
     schema_name:
       announcement:
@@ -21,6 +19,9 @@ sq:
       consultation_outcome:
         one: Rezultati i konsultimit
         other: Rezultatet e konsultimit
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Raport i organizates
         other: Raporte te organizates
@@ -69,9 +70,15 @@ sq:
       map:
         one: Harte
         other: Harta
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - statistika kombetare
         other: Statistika - statistika kombetare
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikull lajm
         other: Artikuj lajme
@@ -79,6 +86,15 @@ sq:
         one: Ngjarje
         other: Ngjarje
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +124,9 @@ sq:
       research:
         one: kerkime dhe analiza
         other: kerkime dhe analiza
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: Pika fjalimi
         other: Pika fjalimi
@@ -120,10 +139,13 @@ sq:
       statistical_data_set:
         one: Grup te dhenash statistikore
         other: Grupe te dhenash stasistikore
-      official_statistics:
-        one: Statistika
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -135,26 +157,73 @@ sq:
       world_location_news_article:
         one: Artikull lajm
         other: Artikuj lajme
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Deklarate me shkrim per Parlamentin
         other: Deklarata me shkrim per Parlamentin
+    contents:
     metadata:
       published: publikuar
       updated: rifreskuar
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokument
       other: Dokumente
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informacion korporate
-    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht
-      ne %{link}.
     personal_information_charter_html: "%{link} shpjegon si trajtohet informacioni
       juaj personal"
-    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
+    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht
+      ne %{link}.
     social_media_use_html: Lexo politikat tona ne %{link}
-    about_our_services_html:
+    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    sq: Shqip
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

@@ -1,6 +1,4 @@
 de:
-  language_names:
-    de: Deutsch
   content_item:
     schema_name:
       announcement:
@@ -21,6 +19,9 @@ de:
       consultation_outcome:
         one: Konsultationsergebnis
         other: Konsultationsergebnisse
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Geschäftsbericht
         other: Geschäftsberichte
@@ -69,9 +70,15 @@ de:
       map:
         one: Karte
         other: Karten
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistik - Nationale Statistik
         other: Statistik - Nationale Statistik
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikel
         other: Artikel
@@ -79,6 +86,15 @@ de:
         one: Meldung
         other: Meldungen
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistik
+        other: Statistiken
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +124,9 @@ de:
       research:
         one: Forschung und Analyse
         other: Forschung und Analyse
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: Redenotizen
         other: Redenotizen
@@ -120,10 +139,13 @@ de:
       statistical_data_set:
         one: Statistischer Datensatz
         other: Statistische Datensätze
-      official_statistics:
-        one: Statistik
-        other: Statistiken
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -135,27 +157,74 @@ de:
       world_location_news_article:
         one: Artikel
         other: Artikel
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Schriftliche Erklärung vor dem Parlament
         other: Schriftliche Erklärungen vor dem Parlament
+    contents:
     metadata:
       published: Veröffentlicht
       updated: Aktualisiert
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokument
       other: Dokumente
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Administrative Informationen
-    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig
-      publizieren
     personal_information_charter_html: Unser %{link} erklärt, wie wir Ihre personenbezogenen
       Daten schützen.
+    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig
+      publizieren
+    social_media_use_html: Unsere Politik zu %{link}
     welsh_language_scheme_html: Mehr zu unserer Verpflichtung zur Veröffentlichung
       in %{link}
-    social_media_use_html: Unsere Politik zu %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    de: Deutsch
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

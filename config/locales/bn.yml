@@ -1,6 +1,4 @@
 bn:
-  language_names:
-    bn: "বাংলা"
   content_item:
     schema_name:
       announcement:
@@ -19,6 +17,9 @@ bn:
         one:
         other:
       consultation_outcome:
+        one:
+        other:
+      corporate_information_page:
         one:
         other:
       corporate_report:
@@ -69,7 +70,13 @@ bn:
       map:
         one:
         other:
+      national:
+        one:
+        other:
       national_statistics:
+        one:
+        other:
+      national_statistics_announcement:
         one:
         other:
       news_article:
@@ -79,6 +86,15 @@ bn:
         one:
         other:
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one:
+        other:
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +124,9 @@ bn:
       research:
         one:
         other:
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one:
         other:
@@ -120,10 +139,13 @@ bn:
       statistical_data_set:
         one:
         other:
-      official_statistics:
+      statistics_announcement:
         one:
         other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -135,24 +157,71 @@ bn:
       world_location_news_article:
         one:
         other:
+      world_news_story:
+        one:
+        other:
       written_statement:
         one:
         other:
+    contents:
     metadata:
       published:
       updated:
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one:
       other:
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
     about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    bn: বাংলা
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:
