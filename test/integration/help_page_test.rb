@@ -11,11 +11,11 @@ class HelpPageTest < ActionDispatch::IntegrationTest
 
   test "related links are rendered" do
     setup_and_visit_content_item('help_page')
-    within shared_component_selector("related_items") do
-      related = @content_item["links"]["ordered_related_items"].first
-      related_page = JSON.parse(page.text).fetch("sections").last["items"].first
-      assert_equal related["title"], related_page["title"]
-      assert_equal related["base_path"], related_page["url"]
+
+    related_links = @content_item["links"]["ordered_related_items"].first
+
+    within(".app-c-related-navigation") do
+      assert page.has_css?('.app-c-related-navigation__section-link--other[href="' + related_links["base_path"] + '"]', text: related_links["title"])
     end
   end
 end

@@ -1,14 +1,19 @@
 <% content_for :simple_header, true %>
 
-<div class="grid-row sidebar-with-body">
+<div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
         title: @content_item.title %>
+  </div>
+</div>
+
+<div class="grid-row responsive-bottom-margin">
+  <div class="column-two-thirds">
     <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction,
-        disable_youtube_expansions: true,
-        rich_govspeak: true %>
+      content: @content_item.body,
+      direction: page_text_direction,
+      disable_youtube_expansions: true,
+      rich_govspeak: true %>
 
     <% #https://github.com/alphagov/government-frontend/pull/329#issuecomment-297681738 %>
     <% if false && @content_item.last_updated %>
@@ -17,9 +22,6 @@
       </p>
     <% end %>
   </div>
-  <% if current_tasklist_ab_test.show_tasklist_sidebar? %>
-    <%= render 'shared/sidebar_tasklist', tasklist_content: tasklist_content %>
-  <% else %>
-    <%= render 'shared/related_items', content_item: @content_item %>
-  <% end %>
+
+  <%= render 'shared/sidebar_navigation', related_navigation: @content_item.related_navigation_mainstream %>
 </div>
