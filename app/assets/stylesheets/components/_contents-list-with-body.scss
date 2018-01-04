@@ -1,27 +1,51 @@
 .app-c-contents-list-with-body__link-container {
   margin: 0 auto;
+  padding: 0;
 
   @include media(tablet) {
-    max-width: 990px;
+    max-width: 1024px;
   }
 
   .app-c-back-to-top {
     margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.app-c-contents-list-with-body__link-wrapper {
+  padding-bottom: $gutter-one-third;
+
+  .app-c-back-to-top {
+    padding-bottom: $gutter-one-third;
   }
 }
 
 .app-c-contents-list-with-body__link-wrapper.govuk-sticky-element--stuck-to-window {
   background-color: $panel-colour;
+  bottom: -1px; // 'Fix' for anomalous 1px margin which sporadically appears below this element.
   left: 0;
-  padding: $gutter-half;
+  margin: 0;
+  padding: 0;
+  padding-left: $gutter-one-third;
   width: 100%;
   z-index: 1;
 
   @include media(mobile) {
+    padding-left: 0;
     position: fixed;
   }
 
   .app-c-back-to-top {
     margin-bottom: 0;
+    padding: $gutter-two-thirds;
+    width: percentage(2 / 3);
+
+    @include media(mobile) {
+      padding: $gutter-half;
+    }
+
+    @include media(laptop) {
+      padding: $gutter-two-thirds;
+    }
   }
 }
