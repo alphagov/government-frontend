@@ -1,161 +1,230 @@
 hi:
-  language_names:
-    hi: "हिंदी"
   content_item:
     schema_name:
       announcement:
-        one: "घोषणा"
-        other: "घोषणाएं"
+        one: घोषणा
+        other: घोषणाएं
       authored_article:
-        one: "मूल आलेख"
-        other: "मूल आलेख"
+        one: मूल आलेख
+        other: मूल आलेख
       case_study:
-        one: "विषय अध्ययन"
-        other: "विषय अध्ययन"
+        one: विषय अध्ययन
+        other: विषय अध्ययन
       closed_consultation:
-        one: "बंद कमरे में परामर्श"
-        other: "बंद कमरे में परामर्श"
+        one: बंद कमरे में परामर्श
+        other: बंद कमरे में परामर्श
       consultation:
-        one: "परामर्श"
-        other: "परामर्श"
+        one: परामर्श
+        other: परामर्श
       consultation_outcome:
-        one: "परामर्श का नतीजा"
-        other: "परामर्श के नतीजे"
+        one: परामर्श का नतीजा
+        other: परामर्श के नतीजे
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "कॉरपोरेट विवरण"
-        other: "कॉरपोरेट विवरण"
+        one: कॉरपोरेट विवरण
+        other: कॉरपोरेट विवरण
       correspondence:
-        one: "पत्र व्यवहार"
-        other: "पत्र व्यवहार"
+        one: पत्र व्यवहार
+        other: पत्र व्यवहार
       decision:
         one:
         other:
       detailed_guide:
-        one: "विस्तृत मार्गदर्शन"
-        other: "विस्तृत मार्गदर्शन"
+        one: विस्तृत मार्गदर्शन
+        other: विस्तृत मार्गदर्शन
       document_collection:
-        one: "श्रृंखला"
+        one: श्रृंखला
         other:
       draft_text:
-        one: "मसौदा पाठ"
-        other: "मसौदे के पाठ"
+        one: मसौदा पाठ
+        other: मसौदे के पाठ
       fatality_notice:
-        one: "विपत्ति की सूचना"
-        other: "विपत्ति की सूचना"
+        one: विपत्ति की सूचना
+        other: विपत्ति की सूचना
       foi_release:
-        one: "एफओआई की विज्ञप्ति"
-        other: "एफओआई की विज्ञप्तियां"
+        one: एफओआई की विज्ञप्ति
+        other: एफओआई की विज्ञप्तियां
       form:
-        one: "प्रपत्र"
-        other: "प्रपत्र"
+        one: प्रपत्र
+        other: प्रपत्र
       government_response:
-        one: "सरकारी जवाब"
-        other: "सरकारी जवाब"
+        one: सरकारी जवाब
+        other: सरकारी जवाब
       guidance:
-        one: "मार्गदर्शन"
-        other: "मार्गदर्शन"
+        one: मार्गदर्शन
+        other: मार्गदर्शन
       impact_assessment:
-        one: "प्रभाव का आंकलन"
-        other: "प्रभाव का आंकलन"
+        one: प्रभाव का आंकलन
+        other: प्रभाव का आंकलन
       imported:
-        one: "आयातित - प्रतीक्षा का प्रकार"
-        other: "आयातित - प्रतीक्षा का प्रकार"
+        one: आयातित - प्रतीक्षा का प्रकार
+        other: आयातित - प्रतीक्षा का प्रकार
       independent_report:
-        one: "स्वतंत्र रिपोर्ट"
-        other: "स्वतंत्र रिपोर्टें"
+        one: स्वतंत्र रिपोर्ट
+        other: स्वतंत्र रिपोर्टें
       international_treaty:
         one:
         other:
       map:
-        one: "मानचित्र"
-        other: "मानचित्रों"
+        one: मानचित्र
+        other: मानचित्रों
+      national:
+        one:
+        other:
       national_statistics:
-        one: "सांख्यिकी - राष्ट्रीय सांख्यिकी"
-        other: "सांख्यिकी - राष्ट्रीय सांख्यिकी"
+        one: सांख्यिकी - राष्ट्रीय सांख्यिकी
+        other: सांख्यिकी - राष्ट्रीय सांख्यिकी
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "समाचार लेख"
-        other: "समाचार लेख"
+        one: समाचार लेख
+        other: समाचार लेख
       news_story:
-        one: "समाचार कथा"
-        other: "समाचार कथाएं"
+        one: समाचार कथा
+        other: समाचार कथाएं
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: आंकड़े
+        other: आंकड़े
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "खुला परामर्श"
-        other: "खुले परामर्श"
+        one: खुला परामर्श
+        other: खुले परामर्श
       oral_statement:
-        one: "संसद में मौखिक बयान"
-        other: "संसद में मौखिक बयान"
+        one: संसद में मौखिक बयान
+        other: संसद में मौखिक बयान
       policy:
-        one: "नीति"
-        other: "नीतियां"
+        one: नीति
+        other: नीतियां
       policy_paper:
-        one: "नीति पत्र"
-        other: "नीति पत्र"
+        one: नीति पत्र
+        other: नीति पत्र
       press_release:
-        one: "प्रेस विज्ञप्ति"
-        other: "प्रेस विज्ञप्तियां"
+        one: प्रेस विज्ञप्ति
+        other: प्रेस विज्ञप्तियां
       promotional:
-        one: "प्रचार सामग्री"
-        other: "प्रचार सामग्री"
+        one: प्रचार सामग्री
+        other: प्रचार सामग्री
       publication:
-        one: "प्रकाशन"
-        other: "प्रकाशन"
+        one: प्रकाशन
+        other: प्रकाशन
       regulation:
         one:
         other:
       research:
-        one: "अनुसंधान एवं विश्लेषण"
-        other: "अनुसंधान एवं विश्लेषण"
+        one: अनुसंधान एवं विश्लेषण
+        other: अनुसंधान एवं विश्लेषण
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: " उदबोधन अंश"
         other: " उदबोधन अंश"
       speech:
-        one: "भाषण"
-        other: "भाषण"
+        one: भाषण
+        other: भाषण
       statement_to_parliament:
-        one: "संसद में बयान"
-        other: "संसद में बयान"
+        one: संसद में बयान
+        other: संसद में बयान
       statistical_data_set:
-        one: "सांख्यिकीय आंकड़े का समूह"
-        other: "सांख्यिकीय आंकड़े का समूह"
-      official_statistics:
-        one: "आंकड़े"
-        other: "आंकड़े"
+        one: सांख्यिकीय आंकड़े का समूह
+        other: सांख्यिकीय आंकड़े का समूह
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "प्रतिलिपि"
-        other: "प्रतिलिपियां"
+        one: प्रतिलिपि
+        other: प्रतिलिपियां
       transparency:
-        one: "पारदर्शिता आंकड़े"
-        other: "पारदर्शिता आंकड़े"
+        one: पारदर्शिता आंकड़े
+        other: पारदर्शिता आंकड़े
       world_location_news_article:
-        one: "समाचार लेख"
-        other: "समाचार लेख"
+        one: समाचार लेख
+        other: समाचार लेख
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "संसद में लिखित बयान"
-        other: "संसद में लिखित बयान"
-    metadata:
-      published: "प्रकाशित"
-      updated: "अद्यतन"
+        one: संसद में लिखित बयान
+        other: संसद में लिखित बयान
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: प्रकाशित
+      updated: अद्यतन
   publication:
     documents:
-      one: "दस्तावेज़"
-      other: "दस्तावेजों"
+      one: दस्तावेज़
+      other: दस्तावेजों
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: निकाय सूचना
-    publication_scheme_html: सूचना के उन प्रकारों के बारे में पढ़ें, जिन्हें हम अपने
-      %{link} में नियमित रूप से प्रकाशित करते हैं।
     personal_information_charter_html: हमारे %{link} बताते हैं कि हम कैसे आपकी व्यक्तिगत
       सूचना का उपयोग करते हैं।
+    publication_scheme_html: सूचना के उन प्रकारों के बारे में पढ़ें, जिन्हें हम अपने
+      %{link} में नियमित रूप से प्रकाशित करते हैं।
+    social_media_use_html: इस बारे में हमारी नीतियां पढ़ें %{link}
     welsh_language_scheme_html: हमारी प्रकाशन के प्रति वचनबद्धता के बारे में जानें
       %(link)।
-    social_media_use_html: इस बारे में हमारी नीतियां पढ़ें %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    hi: हिंदी
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

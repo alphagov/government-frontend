@@ -1,13 +1,4 @@
 cy:
-  language_names:
-    cy: Cymraeg
-  common:
-    last_updated: "Diweddarwyd diwethaf"
-  components:
-    radio:
-      or: 'neu'
-    back_link:
-      back: "Yn ôl"
   content_item:
     schema_name:
       announcement:
@@ -52,6 +43,13 @@ cy:
         few:
         many:
         other: Canlyniadau ymgynghoriadau
+      corporate_information_page:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       corporate_report:
         zero:
         one: Adroddiad corfforaethol
@@ -164,6 +162,13 @@ cy:
         few:
         many:
         other: Mapiau
+      national:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       national_statistics:
         zero:
         one: Ystadegau - ystadegau gwladol
@@ -171,6 +176,13 @@ cy:
         few:
         many:
         other: Ystadegau - ystadegau gwladol
+      national_statistics_announcement:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       news_article:
         zero:
         one: Erthygl newyddion
@@ -186,6 +198,27 @@ cy:
         many:
         other: Straeon newyddion
       notice:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      official:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      official_statistics:
+        zero:
+        one: Ystadegau
+        two:
+        few:
+        many:
+        other: Ystadegau
+      official_statistics_announcement:
         zero:
         one:
         two:
@@ -255,6 +288,13 @@ cy:
         few:
         many:
         other: Ymchwil a dadansoddiad
+      service_sign_in:
+        zero:
+        one: Gwasanaeth Mewngofnodi
+        two:
+        few:
+        many:
+        other: Gwasanaeth Mewngofnodi
       speaking_notes:
         zero:
         one: Nodiadau siarad
@@ -262,9 +302,6 @@ cy:
         few:
         many:
         other: Nodiadau siarad
-      service_sign_in:
-        one: Gwasanaeth Mewngofnodi
-        other: Gwasanaeth Mewngofnodi
       speech:
         zero:
         one: Araith
@@ -286,14 +323,21 @@ cy:
         few:
         many:
         other: Setiau data ystadegol
-      official_statistics:
+      statistics_announcement:
         zero:
-        one: Ystadegau
+        one:
         two:
         few:
         many:
-        other: Ystadegau
+        other:
       statutory_guidance:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
+      take_part:
         zero:
         one:
         two:
@@ -321,6 +365,13 @@ cy:
         few:
         many:
         other: Erthyglau newyddion
+      world_news_story:
+        zero:
+        one:
+        two:
+        few:
+        many:
+        other:
       written_statement:
         zero:
         one: Datganiad ysgrifenedig i'r Senedd
@@ -328,14 +379,10 @@ cy:
         few:
         many:
         other: Datganiadau ysgrifenedig i'r Senedd
+    contents: Cynnwys
     metadata:
       published: Cyhoeddwyd
       updated: Diweddarwyd
-    contents: Cynnwys
-  detailed_guide:
-    related_mainstream_content: Gormod o fanylion?<br/>Edrychwch ar y canllawiau cyflym
-      hyn
-    related_guides: Arweiniad manwl perthnasol
   publication:
     documents:
       zero:
@@ -344,21 +391,60 @@ cy:
       few:
       many:
       other: Dogfennau
+    details:
+  common:
+    last_updated: Diweddarwyd diwethaf
+    translations:
+  components:
+    back_link:
+      back: Yn ôl
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or: neu
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html: Canfod %{link}
     corporate_information: Gwybodaeth gorfforaethol
-    publication_scheme_html: Darllenwch am y mathau o wybodaeth rydym yn eu cyhoeddi'n
-      rheolaidd yn ein %{link}.
     personal_information_charter_html: Mae ein %{link} yn egluro sut rydym yn trin
       eich gwybodaeth bersonol.
-    welsh_language_scheme_html: Dysgwch am ein hymrwymiad i %{link}.
+    publication_scheme_html: Darllenwch am y mathau o wybodaeth rydym yn eu cyhoeddi'n
+      rheolaidd yn ein %{link}.
     social_media_use_html: Darllenwch ein polisi ar %{link}
-    about_our_services_html: Canfod %{link}
+    welsh_language_scheme_html: Dysgwch am ein hymrwymiad i %{link}.
+  detailed_guide:
+    related_guides: Arweiniad manwl perthnasol
+    related_mainstream_content: Gormod o fanylion?<br/>Edrychwch ar y canllawiau cyflym
+      hyn
+  language_names:
+    cy: Cymraeg
   multi_page:
-      print_entire_guide: "Tudalen hawdd ei hargraffu"
-      previous_page: "Llywio i’r rhan flaenorol"
-      next_page: "Llywio i’r rhan nesaf"
+    next_page: Llywio i’r rhan nesaf
+    previous_page: Llywio i’r rhan flaenorol
+    print_entire_guide: Tudalen hawdd ei hargraffu
   service_sign_in:
-    error:
-      title: Dydych chi ddim wedi dewis
-      option: Dewiswch
     continue: Bwrw ymlaen
+    error:
+      option: Dewiswch
+      title: Dydych chi ddim wedi dewis
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

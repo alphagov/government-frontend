@@ -1,6 +1,4 @@
 uz:
-  language_names:
-    uz: O'zbekcha
   content_item:
     schema_name:
       announcement:
@@ -21,6 +19,9 @@ uz:
       consultation_outcome:
         one: Fikr almashish natijasi
         other: Fikr almashish natijalari
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Korporativ hisobot
         other: Korporativ hisobotlar
@@ -69,9 +70,15 @@ uz:
       map:
         one: Xarita
         other: Xaritalar
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - milliy statistika
         other: Statistika - milliy statistika
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Yangi maqola
         other: Yangi maqolalar
@@ -79,6 +86,15 @@ uz:
         one: Yangilik
         other: Yangiliklar
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +124,9 @@ uz:
       research:
         one: Tadqiqot va tahlilllar
         other: Tadqiqot va tahlilllar
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: Nutq qaydlari
         other: Nutq qaydlari
@@ -120,10 +139,13 @@ uz:
       statistical_data_set:
         one: Statistika ma'lumot to'plami
         other: Statistika ma'lumot to'plamlari
-      official_statistics:
-        one: Statistika
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -135,29 +157,74 @@ uz:
       world_location_news_article:
         one: Yangi maqola
         other: Yangi maqolalar
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Parlament uchun yozma hisobot
         other: Parlament uchun yozma hisobotlar
+    contents:
     metadata:
       published: nashr qilindi
       updated: yangilandi
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
-  html_publication:
-    see_more:
   publication:
     documents:
       one: Hujjat
       other: Hujjatlar
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Korporativ ma'lumot
-    publication_scheme_html: "%{link} Biz doimiy tarzda nashr etayotgan ma'lumot haqida
-      o'qing"
     personal_information_charter_html: Bizning %{link} qanday qilib shaxsiy ma'lumot
       bilan ishlashimiz haqida sizga ma'lumot beradi 
+    publication_scheme_html: "%{link} Biz doimiy tarzda nashr etayotgan ma'lumot haqida
+      o'qing"
+    social_media_use_html: "%{link} Bizning dasturimiz haqida batafsil ma'lumot"
     welsh_language_scheme_html: "%{link} Nashr etish uchun biz olib borayotgan faoliyatimiz
       haqida o'qing"
-    social_media_use_html: "%{link} Bizning dasturimiz haqida batafsil ma'lumot"
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    uz: O'zbekcha
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

@@ -1,161 +1,230 @@
 bg:
-  language_names:
-    bg: "български"
   content_item:
     schema_name:
       announcement:
-        one: "Съобщение"
-        other: "Съобщения"
+        one: Съобщение
+        other: Съобщения
       authored_article:
-        one: "Авторска статия"
-        other: "Авторски статии"
+        one: Авторска статия
+        other: Авторски статии
       case_study:
-        one: "Казус"
-        other: "Казуси"
+        one: Казус
+        other: Казуси
       closed_consultation:
-        one: "Затворена консултация"
-        other: "Затворени консултации"
+        one: Затворена консултация
+        other: Затворени консултации
       consultation:
-        one: "Консултация"
-        other: "Консултации"
+        one: Консултация
+        other: Консултации
       consultation_outcome:
-        one: "Резултат от консултацията"
-        other: "Резултат от консултациите"
+        one: Резултат от консултацията
+        other: Резултат от консултациите
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "Корпоративен доклад"
-        other: "Корпоративни доклади"
+        one: Корпоративен доклад
+        other: Корпоративни доклади
       correspondence:
-        one: "Кореспонденция"
-        other: "Кореспонденции"
+        one: Кореспонденция
+        other: Кореспонденции
       decision:
         one:
         other:
       detailed_guide:
-        one: "Подробна насока"
-        other: "Подробни насоки"
+        one: Подробна насока
+        other: Подробни насоки
       document_collection:
-        one: "Серии"
+        one: Серии
         other:
       draft_text:
-        one: "Чернова"
-        other: "Чернови"
+        one: Чернова
+        other: Чернови
       fatality_notice:
-        one: "Уведомление за кончина"
-        other: "Уведомления за кончина"
+        one: Уведомление за кончина
+        other: Уведомления за кончина
       foi_release:
-        one: "Съобщение във връзка със свободен достъп до информация"
-        other: "Съобщения във връзка със свободен достъп до информация"
+        one: Съобщение във връзка със свободен достъп до информация
+        other: Съобщения във връзка със свободен достъп до информация
       form:
-        one: "Формуляр"
-        other: "Формуляри"
+        one: Формуляр
+        other: Формуляри
       government_response:
-        one: "Отговор на правителството"
-        other: "Отговори на правителството"
+        one: Отговор на правителството
+        other: Отговори на правителството
       guidance:
-        one: "Насоки"
-        other: "Насоки"
+        one: Насоки
+        other: Насоки
       impact_assessment:
-        one: "Оценка на влиянието"
-        other: "Оценки на влиянието"
+        one: Оценка на влиянието
+        other: Оценки на влиянието
       imported:
-        one: "импортирано-очаква тип "
-        other: "импортирано-очаква тип"
+        one: 'импортирано-очаква тип '
+        other: импортирано-очаква тип
       independent_report:
-        one: "Независим доклад"
-        other: "Независими доклади"
+        one: Независим доклад
+        other: Независими доклади
       international_treaty:
         one:
         other:
       map:
-        one: "Карта"
-        other: "Карти"
+        one: Карта
+        other: Карти
+      national:
+        one:
+        other:
       national_statistics:
-        one: "Статистика- национална статистика"
-        other: "Статистики- национални статистики"
+        one: Статистика- национална статистика
+        other: Статистики- национални статистики
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "Новинарска статия"
-        other: "Новинарски статии"
+        one: Новинарска статия
+        other: Новинарски статии
       news_story:
-        one: "Новина"
-        other: "Новини"
+        one: Новина
+        other: Новини
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Статистики
+        other: Статистики
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "Отворена консултация"
-        other: "Отворени консултации"
+        one: Отворена консултация
+        other: Отворени консултации
       oral_statement:
-        one: "Устно изказване в Парламента"
-        other: "Устни изказвания в Парламента"
+        one: Устно изказване в Парламента
+        other: Устни изказвания в Парламента
       policy:
-        one: "Политика"
-        other: "Политики"
+        one: Политика
+        other: Политики
       policy_paper:
-        one: "Документ, залагащ политика"
-        other: "Документи, залагащи политика"
+        one: Документ, залагащ политика
+        other: Документи, залагащи политика
       press_release:
-        one: "Съобщение до медиите"
-        other: "Съобщения до медиите"
+        one: Съобщение до медиите
+        other: Съобщения до медиите
       promotional:
-        one: "Промоционален материал"
-        other: "Промоционален материал"
+        one: Промоционален материал
+        other: Промоционален материал
       publication:
-        one: "Публикация"
-        other: "Публикации"
+        one: Публикация
+        other: Публикации
       regulation:
         one:
         other:
       research:
-        one: "Проучване и анализ"
-        other: "Проучване и анализи"
+        one: Проучване и анализ
+        other: Проучване и анализи
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "Устна нота"
-        other: "Устни ноти"
+        one: Устна нота
+        other: Устни ноти
       speech:
-        one: "Реч"
-        other: "Речи"
+        one: Реч
+        other: Речи
       statement_to_parliament:
-        one: "Изявление в парламента"
-        other: "Изявления в парламента"
+        one: Изявление в парламента
+        other: Изявления в парламента
       statistical_data_set:
-        one: "Набор от статистически данни"
-        other: "Набори от статистически данни"
-      official_statistics:
-        one: "Статистики"
-        other: "Статистики"
+        one: Набор от статистически данни
+        other: Набори от статистически данни
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "Препис"
-        other: "Преписи"
+        one: Препис
+        other: Преписи
       transparency:
-        one: "Информация за прозрачността"
-        other: "Информация за прозрачността"
+        one: Информация за прозрачността
+        other: Информация за прозрачността
       world_location_news_article:
-        one: "Новинарска статия"
-        other: "Новинарски статии"
+        one: Новинарска статия
+        other: Новинарски статии
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "Писмено изявление до парламента"
-        other: "Писмени изявления до парламента"
-    metadata:
-      published: "Публикувано"
-      updated: "обновено"
+        one: Писмено изявление до парламента
+        other: Писмени изявления до парламента
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: Публикувано
+      updated: обновено
   publication:
     documents:
-      one: "Документ"
-      other: "Документи"
+      one: Документ
+      other: Документи
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Корпоративна информация
-    publication_scheme_html: Прочетете какви видове информация публикуваме в нашия
-      %{link}.
     personal_information_charter_html: Нашият %{link} дава информация за начина на
       ползване на личните Ви данни
+    publication_scheme_html: Прочетете какви видове информация публикуваме в нашия
+      %{link}.
+    social_media_use_html: Вижте политиката ни по %{link}.
     welsh_language_scheme_html: Разберете повече за нашето задължение да публикуваме
       в %{link}.
-    social_media_use_html: Вижте политиката ни по %{link}.
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    bg: български
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

@@ -1,6 +1,4 @@
 pl:
-  language_names:
-    pl: Polski
   content_item:
     schema_name:
       announcement:
@@ -33,6 +31,11 @@ pl:
         few:
         many:
         other: Wyniki konsultacji
+      corporate_information_page:
+        one:
+        few:
+        many:
+        other:
       corporate_report:
         one: Raport korporacyjny
         few:
@@ -113,11 +116,21 @@ pl:
         few:
         many:
         other: Mapy
+      national:
+        one:
+        few:
+        many:
+        other:
       national_statistics:
         one: Statystyki - statystyki narodowe
         few:
         many:
         other: Statystyki - statystyki narodowe
+      national_statistics_announcement:
+        one:
+        few:
+        many:
+        other:
       news_article:
         one: Artykuł prasowy
         few:
@@ -129,6 +142,21 @@ pl:
         many:
         other: Aktualności
       notice:
+        one:
+        few:
+        many:
+        other:
+      official:
+        one:
+        few:
+        many:
+        other:
+      official_statistics:
+        one: Statystyki
+        few:
+        many:
+        other: Statystyki
+      official_statistics_announcement:
         one:
         few:
         many:
@@ -178,6 +206,11 @@ pl:
         few:
         many:
         other: Badania i analiza
+      service_sign_in:
+        one:
+        few:
+        many:
+        other:
       speaking_notes:
         one: Notatki do prelekcji
         few:
@@ -198,12 +231,17 @@ pl:
         few:
         many:
         other: Zestawy danych statystycznych
-      official_statistics:
-        one: Statystyki
+      statistics_announcement:
+        one:
         few:
         many:
-        other: Statystyki
+        other:
       statutory_guidance:
+        one:
+        few:
+        many:
+        other:
+      take_part:
         one:
         few:
         many:
@@ -223,31 +261,80 @@ pl:
         few:
         many:
         other: Artykuły prasowe
+      world_news_story:
+        one:
+        few:
+        many:
+        other:
       written_statement:
         one: Pisemne oświadczenie przed parlamentem
         few:
         many:
         other: Pisemne oświadczenia przed parlamentem
+    contents:
     metadata:
       published: opublikowano
       updated: Zaktualizowany
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: Dokument
       few:
       many:
       other: Dokumenty
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Informacje korporacyjne
-    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle
-      w naszym %{link}
     personal_information_charter_html: Nasz %{link} pokazuje, w jaki sposób traktujemy
       Państwa informacje osobiste
+    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle
+      w naszym %{link}
+    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}
     welsh_language_scheme_html: Poznaj nasze zobowiązania związane z publikowaniem
       w %{link}
-    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    pl: Polski
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

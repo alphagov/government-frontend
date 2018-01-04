@@ -1,7 +1,32 @@
 hu:
-  language_names:
-    hu: Magyar
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   content_item:
+    contents:
+    metadata:
+      published: közzététel dátuma
+      updated: 'Utolsó frissítés:'
     schema_name:
       announcement:
         one: Bejelentés
@@ -21,6 +46,9 @@ hu:
       consultation_outcome:
         one: Konzultációs eredmény
         other: Konzultációs eredmények
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Testületi beszámoló
         other: Testületi beszámolók
@@ -46,14 +74,14 @@ hu:
         one: Információhoz való joggal kapcsolatos közlemény
         other: Információhoz való joggal kapcsolatos közlemények
       form:
-        one: "Űrlap"
-        other: "Űrlapok"
+        one: Űrlap
+        other: Űrlapok
       government_response:
         one: Kormányválasz
         other: Kormányválaszok
       guidance:
-        one: "Útmutató"
-        other: "Útmutató"
+        one: Útmutató
+        other: Útmutató
       impact_assessment:
         one: Hatásvizsgálat
         other: Hatásvizsgálatok
@@ -69,9 +97,15 @@ hu:
       map:
         one: Térkép
         other: Térképek
+      national:
+        one:
+        other:
       national_statistics:
         one: Statisztikák - nemzeti adatok
         other: Statisztikák - nemzeti adatok
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Cikk
         other: Cikkek
@@ -79,6 +113,15 @@ hu:
         one: Hír
         other: Hírek
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statisztika
+        other: Statisztikák
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +151,9 @@ hu:
       research:
         one: Kutatás és elemzés
         other: Kutatás és elemzés
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: Feljegyzések
         other: Feljegyzések
@@ -120,42 +166,65 @@ hu:
       statistical_data_set:
         one: Statisztikai adatcsoport
         other: Statisztikai adatcsoportok
-      official_statistics:
-        one: Statisztika
-        other: Statisztikák
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "Átirat"
-        other: "Átiratok"
+        one: Átirat
+        other: Átiratok
       transparency:
-        one: "Átláthatósági adatok"
-        other: "Átláthatósági adatok"
+        one: Átláthatósági adatok
+        other: Átláthatósági adatok
       world_location_news_article:
         one: Cikk
         other: Cikkek
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "Írásbeli parlamenti nyilatkozat"
-        other: "Írásbeli parlamenti nyilatkozatok"
-    metadata:
-      published: közzététel dátuma
-      updated: 'Utolsó frissítés:'
-    contents:
+        one: Írásbeli parlamenti nyilatkozat
+        other: Írásbeli parlamenti nyilatkozatok
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Szervezeti információk
+    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan
+      kezeljük a személyes adatokat: %{link}'
+    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk
+      közzé: %{link}'
+    social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
+    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos
+      elkötelezettségünkről: %{link}'
   detailed_guide:
-    related_mainstream_content:
     related_guides:
+    related_mainstream_content:
+  language_names:
+    hu: Magyar
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Dokumentum
       other: Dokumentumok
-  corporate_information_page:
-    corporate_information: Szervezeti információk
-    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk
-      közzé: %{link}'
-    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan
-      kezeljük a személyes adatokat: %{link}'
-    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos
-      elkötelezettségünkről: %{link}'
-    social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

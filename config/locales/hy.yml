@@ -1,161 +1,230 @@
 hy:
-  language_names:
-    hy: "Հայերեն"
   content_item:
     schema_name:
       announcement:
-        one: "Հայտարարություն"
-        other: "Հայտարարություններ"
+        one: Հայտարարություն
+        other: Հայտարարություններ
       authored_article:
-        one: "Հեղինակային հոդված"
-        other: "Հեղինակային հոդվածներ"
+        one: Հեղինակային հոդված
+        other: Հեղինակային հոդվածներ
       case_study:
-        one: "Թեմատիկ ուսումնասիրություն"
-        other: "Թեմատիկ ուսումնասիրություններ"
+        one: Թեմատիկ ուսումնասիրություն
+        other: Թեմատիկ ուսումնասիրություններ
       closed_consultation:
-        one: "Փակ խորհրդատվություն"
-        other: "Փակ խորհրդատվություններ"
+        one: Փակ խորհրդատվություն
+        other: Փակ խորհրդատվություններ
       consultation:
-        one: "Խորհրդատվություն"
-        other: "Խորհրդատվություններ"
+        one: Խորհրդատվություն
+        other: Խորհրդատվություններ
       consultation_outcome:
-        one: "Խորհրդատվության արդյունք"
-        other: "Խորհրդատվության արդյունքներ"
+        one: Խորհրդատվության արդյունք
+        other: Խորհրդատվության արդյունքներ
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "Կորպորատիվ հաշվետվություն"
-        other: "Կորպորատիվ հաշվետվություններ"
+        one: Կորպորատիվ հաշվետվություն
+        other: Կորպորատիվ հաշվետվություններ
       correspondence:
-        one: "Նամակագրություն"
-        other: "Նամակագրություններ"
+        one: Նամակագրություն
+        other: Նամակագրություններ
       decision:
         one:
         other:
       detailed_guide:
-        one: "Մանրամասն ուղեցույց"
-        other: "Մանրամասն ուղեցույցեր"
+        one: Մանրամասն ուղեցույց
+        other: Մանրամասն ուղեցույցեր
       document_collection:
-        one: "Մի շարք"
+        one: Մի շարք
         other:
       draft_text:
-        one: "Սևագիր տեքստ"
-        other: "Սևագիր տեքստեր"
+        one: Սևագիր տեքստ
+        other: Սևագիր տեքստեր
       fatality_notice:
-        one: "Մահվան ծանուցում"
-        other: "Մահվան ծանուցումներ"
+        one: Մահվան ծանուցում
+        other: Մահվան ծանուցումներ
       foi_release:
-        one: "Ազատ տեղեկատվության հաղորդագրություն"
-        other: "Ազատ տեղեկատվության հաղորդագրություններ"
+        one: Ազատ տեղեկատվության հաղորդագրություն
+        other: Ազատ տեղեկատվության հաղորդագրություններ
       form:
-        one: "Ձևաթուղթ"
-        other: "Ձևաթղթեր"
+        one: Ձևաթուղթ
+        other: Ձևաթղթեր
       government_response:
-        one: "Կառավարության արձագանք"
-        other: "Կառավարության արձագանքներ"
+        one: Կառավարության արձագանք
+        other: Կառավարության արձագանքներ
       guidance:
-        one: "Ուղեցույց"
-        other: "Ուղեցույցեր"
+        one: Ուղեցույց
+        other: Ուղեցույցեր
       impact_assessment:
-        one: "Ազդեցության գնահատում"
-        other: "Ազդեցության գնահատումներ"
+        one: Ազդեցության գնահատում
+        other: Ազդեցության գնահատումներ
       imported:
-        one: "Ներկրված - սպասման տեսակ"
-        other: "Ներկրված - սպասման տեսակներ"
+        one: Ներկրված - սպասման տեսակ
+        other: Ներկրված - սպասման տեսակներ
       independent_report:
-        one: "Անկախ հաշվետվություն"
-        other: "Անկախ հաշվետվություններ"
+        one: Անկախ հաշվետվություն
+        other: Անկախ հաշվետվություններ
       international_treaty:
         one:
         other:
       map:
-        one: "Քարտեզ"
-        other: "Քարտեզներ"
+        one: Քարտեզ
+        other: Քարտեզներ
+      national:
+        one:
+        other:
       national_statistics:
-        one: "Վիճակագրություն-ազգային վիճակագրություն"
-        other: "Վիճակագրություն-ազգային վիճակագրություններ"
+        one: Վիճակագրություն-ազգային վիճակագրություն
+        other: Վիճակագրություն-ազգային վիճակագրություններ
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "Տեղեկատվական հոդված"
-        other: "Տեղեկատվական հոդվածներ"
+        one: Տեղեկատվական հոդված
+        other: Տեղեկատվական հոդվածներ
       news_story:
-        one: "Լուր"
-        other: "Լուրեր"
+        one: Լուր
+        other: Լուրեր
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Վիճակագրություն
+        other: Վիճակագրություն
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "Բաց խորհրդատվություն"
-        other: "Բաց խորհրդատվություններ"
+        one: Բաց խորհրդատվություն
+        other: Բաց խորհրդատվություններ
       oral_statement:
-        one: "Բանավոր դիմում խորհրդարան"
-        other: "Բանավոր դիմումներ խորհրդարան"
+        one: Բանավոր դիմում խորհրդարան
+        other: Բանավոր դիմումներ խորհրդարան
       policy:
-        one: "Քաղաքականություն"
-        other: "Քաղաքականություններ"
+        one: Քաղաքականություն
+        other: Քաղաքականություններ
       policy_paper:
-        one: "Ծրագրային փաստաթուղթ"
-        other: "Ծրագրային փաստաթղթեր"
+        one: Ծրագրային փաստաթուղթ
+        other: Ծրագրային փաստաթղթեր
       press_release:
-        one: "Մամլո հաղորդագրություն"
-        other: "Մամլո հաղորդագրություններ"
+        one: Մամլո հաղորդագրություն
+        other: Մամլո հաղորդագրություններ
       promotional:
-        one: "Քարոզչական նյութ"
-        other: "Քարոզչական նյութներ"
+        one: Քարոզչական նյութ
+        other: Քարոզչական նյութներ
       publication:
-        one: "Հրապարակում"
-        other: "Հրապարակումներ"
+        one: Հրապարակում
+        other: Հրապարակումներ
       regulation:
         one:
         other:
       research:
-        one: "Հետազոտություն և վերլուծություն"
-        other: "Հետազոտություններ և վերլուծություններ"
+        one: Հետազոտություն և վերլուծություն
+        other: Հետազոտություններ և վերլուծություններ
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "Խոսքի գրառում"
-        other: "Խոսքի գրառումներ"
+        one: Խոսքի գրառում
+        other: Խոսքի գրառումներ
       speech:
-        one: "Ելույթ"
-        other: "Ելույթներ"
+        one: Ելույթ
+        other: Ելույթներ
       statement_to_parliament:
-        one: "Դիմում խորհրդարան"
-        other: "Դիմումներ խորհրդարան"
+        one: Դիմում խորհրդարան
+        other: Դիմումներ խորհրդարան
       statistical_data_set:
-        one: "Վիճակագրական տվյալ"
-        other: "Վիճակագրական տվյալներ"
-      official_statistics:
-        one: "Վիճակագրություն"
-        other: "Վիճակագրություն"
+        one: Վիճակագրական տվյալ
+        other: Վիճակագրական տվյալներ
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "Վերծանում"
-        other: "Վերծանումներ"
+        one: Վերծանում
+        other: Վերծանումներ
       transparency:
-        one: "Բաց տեղեկատվություն"
-        other: "Բաց տեղեկատվություններ"
+        one: Բաց տեղեկատվություն
+        other: Բաց տեղեկատվություններ
       world_location_news_article:
-        one: "Տեղեկատվական հոդված"
-        other: "Տեղեկատվական հոդվածներ"
+        one: Տեղեկատվական հոդված
+        other: Տեղեկատվական հոդվածներ
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "Գրավոր դիմում խորհրդարան"
-        other: "Գրավոր դիմումներ խորհրդարան"
-    metadata:
-      published: "հրապարակված"
-      updated: "Թարմացված"
+        one: Գրավոր դիմում խորհրդարան
+        other: Գրավոր դիմումներ խորհրդարան
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: հրապարակված
+      updated: Թարմացված
   publication:
     documents:
-      one: "Փաստաթուղթ"
-      other: "Փաստաթղթեր"
+      one: Փաստաթուղթ
+      other: Փաստաթղթեր
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Կորպորատիվ տեղեկատվություն
-    publication_scheme_html: Կարդացեք այն ամնենի մասին ինչ մենք հրապարակում ենք մեր
-      %{link} ում
     personal_information_charter_html: 'Մեր %{link} ը կպարզաբանի մեր մոտեցումները
       անձնական տեղեկատվությանը '
+    publication_scheme_html: Կարդացեք այն ամնենի մասին ինչ մենք հրապարակում ենք մեր
+      %{link} ում
+    social_media_use_html: Կարդացեք մեր քաղաքականության մասին
     welsh_language_scheme_html: Գտեք այստեղ %{link} ում հրապարակելու մեր պարտավորության
       մասին
-    social_media_use_html: Կարդացեք մեր քաղաքականության մասին
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    hy: Հայերեն
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

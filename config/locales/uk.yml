@@ -1,255 +1,340 @@
 uk:
-  language_names:
-    uk: "Українська"
   content_item:
     schema_name:
       announcement:
-        one: "Оголошення"
+        one: Оголошення
         few:
         many:
-        other: "Оголошення"
+        other: Оголошення
       authored_article:
-        one: "Стаття"
+        one: Стаття
         few:
         many:
-        other: "Статті"
+        other: Статті
       case_study:
-        one: "Тематичне дослідження"
+        one: Тематичне дослідження
         few:
         many:
-        other: "Тематичні дослідження"
+        other: Тематичні дослідження
       closed_consultation:
-        one: "Закрите обговорення"
+        one: Закрите обговорення
         few:
         many:
-        other: "Закриті обговорення"
+        other: Закриті обговорення
       consultation:
-        one: "Обговорення"
+        one: Обговорення
         few:
         many:
-        other: "Обговорення"
+        other: Обговорення
       consultation_outcome:
-        one: "Результат обговорення"
+        one: Результат обговорення
         few:
         many:
-        other: "Результати обговорення"
+        other: Результати обговорення
+      corporate_information_page:
+        one:
+        few:
+        many:
+        other:
       corporate_report:
-        one: "Корпоративний звіт"
+        one: Корпоративний звіт
         few:
         many:
-        other: "Корпоративні звіти"
+        other: Корпоративні звіти
       correspondence:
-        one: "Кореспонденція"
+        one: Кореспонденція
         few:
         many:
-        other: "Кореспонденція"
+        other: Кореспонденція
       decision:
         one:
         few:
         many:
         other:
       detailed_guide:
-        one: "Детальні інструкції"
+        one: Детальні інструкції
         few:
         many:
-        other: "Детальні інструкції"
+        other: Детальні інструкції
       document_collection:
-        one: "Серія"
+        one: Серія
         few:
         many:
         other:
       draft_text:
-        one: "Проект документу"
+        one: Проект документу
         few:
         many:
-        other: "Проекти документів"
+        other: Проекти документів
       fatality_notice:
-        one: "Повідомлення про смерть"
+        one: Повідомлення про смерть
         few:
         many:
-        other: "Повідомлення про смерть"
+        other: Повідомлення про смерть
       foi_release:
-        one: "Відповідь на інформаційний запит"
+        one: Відповідь на інформаційний запит
         few:
         many:
-        other: "Відповіді на інформаційні запити "
+        other: 'Відповіді на інформаційні запити '
       form:
-        one: "Форма"
+        one: Форма
         few:
         many:
-        other: "Форми"
+        other: Форми
       government_response:
-        one: "Реакція уряду"
+        one: Реакція уряду
         few:
         many:
-        other: "Реакція уряду"
+        other: Реакція уряду
       guidance:
-        one: "Інструкції"
+        one: Інструкції
         few:
         many:
-        other: "Інструкції"
+        other: Інструкції
       impact_assessment:
-        one: "Оцінка впливу"
+        one: Оцінка впливу
         few:
         many:
-        other: "Оцінки впливу"
+        other: Оцінки впливу
       imported:
-        one: "імпортовано - в очікуванні"
+        one: імпортовано - в очікуванні
         few:
         many:
-        other: "імпортовано - в очікуванні"
+        other: імпортовано - в очікуванні
       independent_report:
-        one: "Незалежний звіт"
+        one: Незалежний звіт
         few:
         many:
-        other: "Незалежні звіти"
+        other: Незалежні звіти
       international_treaty:
         one:
         few:
         many:
         other:
       map:
-        one: "Мапа"
+        one: Мапа
         few:
         many:
-        other: "Мапи"
+        other: Мапи
+      national:
+        one:
+        few:
+        many:
+        other:
       national_statistics:
-        one: "Статистика - національна статистика"
+        one: Статистика - національна статистика
         few:
         many:
-        other: "Статистика - національна статистика"
+        other: Статистика - національна статистика
+      national_statistics_announcement:
+        one:
+        few:
+        many:
+        other:
       news_article:
-        one: "Стаття"
+        one: Стаття
         few:
         many:
-        other: "Статті"
+        other: Статті
       news_story:
-        one: "Новина"
+        one: Новина
         few:
         many:
-        other: "Новини"
+        other: Новини
       notice:
         one:
         few:
         many:
         other:
+      official:
+        one:
+        few:
+        many:
+        other:
+      official_statistics:
+        one: Статистика
+        few:
+        many:
+        other: Статистика
+      official_statistics_announcement:
+        one:
+        few:
+        many:
+        other:
       open_consultation:
-        one: "Відкрите обговорення"
+        one: Відкрите обговорення
         few:
         many:
-        other: "Відкриті обговорення"
+        other: Відкриті обговорення
       oral_statement:
-        one: "Усна заява у парламенті"
+        one: Усна заява у парламенті
         few:
         many:
-        other: "Усні заяви у парламенті"
+        other: Усні заяви у парламенті
       policy:
-        one: "Політика"
+        one: Політика
         few:
         many:
-        other: "Політики"
+        other: Політики
       policy_paper:
-        one: "Програмний документ"
+        one: Програмний документ
         few:
         many:
-        other: "Програмні документи"
+        other: Програмні документи
       press_release:
-        one: "Прес-реліз"
+        one: Прес-реліз
         few:
         many:
-        other: "Прес-релізи"
+        other: Прес-релізи
       promotional:
-        one: "Інформаційний матеріал"
+        one: Інформаційний матеріал
         few:
         many:
-        other: "Інформаційний матеріал"
+        other: Інформаційний матеріал
       publication:
-        one: "Публікація"
+        one: Публікація
         few:
         many:
-        other: "Публікації"
+        other: Публікації
       regulation:
         one:
         few:
         many:
         other:
       research:
-        one: "Дослідження та аналіз"
+        one: Дослідження та аналіз
         few:
         many:
-        other: "Дослідження та аналіз"
+        other: Дослідження та аналіз
+      service_sign_in:
+        one:
+        few:
+        many:
+        other:
       speaking_notes:
-        one: "Тези для промови"
+        one: Тези для промови
         few:
         many:
-        other: "Тези для промови"
+        other: Тези для промови
       speech:
-        one: "Промова"
+        one: Промова
         few:
         many:
-        other: "Промови"
+        other: Промови
       statement_to_parliament:
-        one: "Заява у парламенті"
+        one: Заява у парламенті
         few:
         many:
-        other: "Заяви у парламенті"
+        other: Заяви у парламенті
       statistical_data_set:
-        one: "Набір статистичних даних"
+        one: Набір статистичних даних
         few:
         many:
-        other: "Набори статистичних даних"
-      official_statistics:
-        one: "Статистика"
+        other: Набори статистичних даних
+      statistics_announcement:
+        one:
         few:
         many:
-        other: "Статистика"
+        other:
       statutory_guidance:
         one:
         few:
         many:
         other:
+      take_part:
+        one:
+        few:
+        many:
+        other:
       transcript:
-        one: "Транскрипт"
+        one: Транскрипт
         few:
         many:
-        other: "Транскрипти"
+        other: Транскрипти
       transparency:
-        one: "Прозорість інформації"
+        one: Прозорість інформації
         few:
         many:
-        other: "Прозорість інформації"
+        other: Прозорість інформації
       world_location_news_article:
-        one: "Стаття"
+        one: Стаття
         few:
         many:
-        other: "Статті"
+        other: Статті
+      world_news_story:
+        one:
+        few:
+        many:
+        other:
       written_statement:
-        one: "Письмова заява у парламенті"
+        one: Письмова заява у парламенті
         few:
         many:
-        other: "Письмові заяви у парламенті"
-    metadata:
-      published: "опубліковано"
-      updated: "оновлено"
+        other: Письмові заяви у парламенті
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
-  html_publication:
-    see_more:
+    metadata:
+      published: опубліковано
+      updated: оновлено
   publication:
     documents:
-      one: "Документ"
+      one: Документ
       few:
       many:
-      other: "Документи"
+      other: Документи
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Корпоративна інформація
-    publication_scheme_html: Прочитайти, яку інформацію ми регулярно публікуємо у
-      %{link}.
     personal_information_charter_html: 'Це %{link} пояснює наші принципи роботи з
       персональними даними. '
+    publication_scheme_html: Прочитайти, яку інформацію ми регулярно публікуємо у
+      %{link}.
+    social_media_use_html: Прочитайне про наші принципи роботи щодо %{link}.
     welsh_language_scheme_html: 'Дізнайтеся про наші зобов''язання щодо публікації
       інформації у %{link}. '
-    social_media_use_html: Прочитайне про наші принципи роботи щодо %{link}.
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    uk: Українська
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

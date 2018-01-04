@@ -1,159 +1,228 @@
 th:
-  language_names:
-    th: "ไทย"
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   content_item:
+    contents:
+    metadata:
+      published: ตีพิมพ์
+      updated: ปรับปรุง
     schema_name:
       announcement:
-        one: "ข่าวสาร"
-        other: "ข่าวสาร"
+        one: ข่าวสาร
+        other: ข่าวสาร
       authored_article:
-        one: "บทความที่เขียน"
-        other: "บทความที่เขียน"
+        one: บทความที่เขียน
+        other: บทความที่เขียน
       case_study:
-        one: "กรณีศึกษา"
-        other: "กรณีศึกษา"
+        one: กรณีศึกษา
+        other: กรณีศึกษา
       closed_consultation:
-        one: "การศึกษาแบบปิด"
-        other: "การศึกษาแบบปิด"
+        one: การศึกษาแบบปิด
+        other: การศึกษาแบบปิด
       consultation:
-        one: "การปรึกษา"
-        other: "การปรึกษา"
+        one: การปรึกษา
+        other: การปรึกษา
       consultation_outcome:
-        one: "ผลการปรึกษา"
-        other: "ผลการปรึกษา"
+        one: ผลการปรึกษา
+        other: ผลการปรึกษา
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "รายงานบริษัท"
-        other: "รายงานบริษัท"
+        one: รายงานบริษัท
+        other: รายงานบริษัท
       correspondence:
-        one: "จดหมาย"
-        other: "จดหมาย"
+        one: จดหมาย
+        other: จดหมาย
       decision:
         one:
         other:
       detailed_guide:
-        one: "คู่มือโดยละเอียด"
-        other: "คู่มือโดยละเอียด"
+        one: คู่มือโดยละเอียด
+        other: คู่มือโดยละเอียด
       document_collection:
-        one: "ตอน"
+        one: ตอน
         other:
       draft_text:
-        one: "ร่างข้อความ"
-        other: "ร่างข้อความ"
+        one: ร่างข้อความ
+        other: ร่างข้อความ
       fatality_notice:
-        one: "การแจ้งมรณะกรรม"
-        other: "การแจ้งมรณะกรรม"
+        one: การแจ้งมรณะกรรม
+        other: การแจ้งมรณะกรรม
       foi_release:
-        one: "ข้อมูลที่เปิดเผยได้"
-        other: "ข้อมูลที่เปิดเผยได้"
+        one: ข้อมูลที่เปิดเผยได้
+        other: ข้อมูลที่เปิดเผยได้
       form:
-        one: "แบบฟอร์ม"
-        other: "แบบฟอร์ม"
+        one: แบบฟอร์ม
+        other: แบบฟอร์ม
       government_response:
-        one: "การตอบสนองของรัฐบาล"
-        other: "การตอบสนองของรัฐบาล"
+        one: การตอบสนองของรัฐบาล
+        other: การตอบสนองของรัฐบาล
       guidance:
-        one: "คู่มือ"
-        other: "คู่มือ"
+        one: คู่มือ
+        other: คู่มือ
       impact_assessment:
-        one: "การประเมินผลกระทบ"
-        other: "การประเมินผลกระทบ"
+        one: การประเมินผลกระทบ
+        other: การประเมินผลกระทบ
       imported:
-        one: "ประเภทรอนำเข้า"
-        other: "ประเภทรอนำเข้า"
+        one: ประเภทรอนำเข้า
+        other: ประเภทรอนำเข้า
       independent_report:
-        one: "รายงานอิสระ"
-        other: "รายงานอิสระ"
+        one: รายงานอิสระ
+        other: รายงานอิสระ
       international_treaty:
         one:
         other:
       map:
-        one: "แผนที่"
-        other: "แผนที่"
+        one: แผนที่
+        other: แผนที่
+      national:
+        one:
+        other:
       national_statistics:
-        one: "สถิติ-สถิติแห่งชาน"
-        other: "สถิติ-สถิติแห่งชาติ"
+        one: สถิติ-สถิติแห่งชาน
+        other: สถิติ-สถิติแห่งชาติ
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "บทความข่าว"
-        other: "บทความข่าว"
+        one: บทความข่าว
+        other: บทความข่าว
       news_story:
-        one: "ข่าว"
-        other: "ข่าว"
+        one: ข่าว
+        other: ข่าว
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: สถิติ
+        other: สถิติ
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "การให้คำปรึกษาเปิด"
-        other: "การให้คำปรึกษาเปิด"
+        one: การให้คำปรึกษาเปิด
+        other: การให้คำปรึกษาเปิด
       oral_statement:
-        one: "แถลงการณ์ด้วยวาจาต่อรัฐสภา"
-        other: "แถลงการณ์ด้วยวาจาต่อรัฐสภา"
+        one: แถลงการณ์ด้วยวาจาต่อรัฐสภา
+        other: แถลงการณ์ด้วยวาจาต่อรัฐสภา
       policy:
-        one: "นโยบาย"
-        other: "นโยบาย"
+        one: นโยบาย
+        other: นโยบาย
       policy_paper:
-        one: "เอกสารนโยบาย"
-        other: "เอกสารนโยบาย"
+        one: เอกสารนโยบาย
+        other: เอกสารนโยบาย
       press_release:
-        one: "ข่าวประชาสัมพันธ์"
-        other: "ข่าวประชาสัมพันธ์"
+        one: ข่าวประชาสัมพันธ์
+        other: ข่าวประชาสัมพันธ์
       promotional:
-        one: "เอกสารเพี่อการประชาสัมพันธ์"
-        other: "เอกสารเพือการประชาสัมพันธ์"
+        one: เอกสารเพี่อการประชาสัมพันธ์
+        other: เอกสารเพือการประชาสัมพันธ์
       publication:
-        one: "สิ่งพิมพ์"
-        other: "สิ่งพิมพ์"
+        one: สิ่งพิมพ์
+        other: สิ่งพิมพ์
       regulation:
         one:
         other:
       research:
-        one: "บทวิจัยและบทวิเคราะห์"
-        other: "บทวิจัยและบทวิเคราะห์"
+        one: บทวิจัยและบทวิเคราะห์
+        other: บทวิจัยและบทวิเคราะห์
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "ประเด็นการพูด"
-        other: "ประเด็นการพูด"
+        one: ประเด็นการพูด
+        other: ประเด็นการพูด
       speech:
-        one: "สุนทรพจน์"
-        other: "สุนทรพจน์"
+        one: สุนทรพจน์
+        other: สุนทรพจน์
       statement_to_parliament:
-        one: "แถลงการณ์ต่อรัฐสภา"
-        other: "แถลงการณ์ต่อรัฐสภา"
+        one: แถลงการณ์ต่อรัฐสภา
+        other: แถลงการณ์ต่อรัฐสภา
       statistical_data_set:
-        one: "ชุดข้อมูลสถิติ"
-        other: "ชุดข้อมูลสถิติ"
-      official_statistics:
-        one: "สถิติ"
-        other: "สถิติ"
+        one: ชุดข้อมูลสถิติ
+        other: ชุดข้อมูลสถิติ
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "สำเนา"
-        other: "สำเนา"
+        one: สำเนา
+        other: สำเนา
       transparency:
-        one: "ข้อมูลโปร่งใส"
-        other: "ข้อมูลโปร่งใส"
+        one: ข้อมูลโปร่งใส
+        other: ข้อมูลโปร่งใส
       world_location_news_article:
-        one: "บทความข่าว"
-        other: "บทความข่าว"
+        one: บทความข่าว
+        other: บทความข่าว
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา "
-        other: "แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา "
-    metadata:
-      published: "ตีพิมพ์"
-      updated: "ปรับปรุง"
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
-  publication:
-    documents:
-      one: "เอกสาร"
-      other: "เอกสารต่างๆ"
+        one: 'แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา '
+        other: 'แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา '
   corporate_information_page:
+    about_our_services_html:
     corporate_information: ข้อมูลบริษัท
-    publication_scheme_html: อ่านประเภทข้อมูลซึ่งเราเผยแพร่เป็นประจำได้ที่ %{link}
     personal_information_charter_html: ลิงค์นี้อธิบายถึงวิธีการที่เราปฏิบัติต่อข้อมูลส่วนบุคคลของคุณ
+    publication_scheme_html: อ่านประเภทข้อมูลซึ่งเราเผยแพร่เป็นประจำได้ที่ %{link}
+    social_media_use_html: อ่านนโยบายของเราได้ที่ %{link}
     welsh_language_scheme_html: ค้นหาข้อมูลเกี่ยวกับพันธสัญญาในการตีพิมพ์ของเราได้ที่
       %{link}.
-    social_media_use_html: อ่านนโยบายของเราได้ที่ %{link}
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    th: ไทย
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      one: เอกสาร
+      other: เอกสารต่างๆ
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

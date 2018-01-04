@@ -1,7 +1,32 @@
 az:
-  language_names:
-    az: Azərbaycanca
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   content_item:
+    contents:
+    metadata:
+      published: dərc olunub
+      updated: yenilənib
     schema_name:
       announcement:
         one: Elan
@@ -10,8 +35,8 @@ az:
         one:
         other:
       case_study:
-        one: "Öyrənilib"
-        other: "Öyrənilib"
+        one: Öyrənilib
+        other: Öyrənilib
       closed_consultation:
         one: Bağlı məslətləşmə
         other: Bağlı məslətləşmələr
@@ -21,6 +46,9 @@ az:
       consultation_outcome:
         one: məsləhətləşmənin nəticəsi
         other: məsləhətləşmənin nəticələri
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: birgə məruzə
         other: birgə məruzələr
@@ -31,8 +59,8 @@ az:
         one:
         other:
       detailed_guide:
-        one: "ətraflı məlumat"
-        other: "ətraflı məlumat"
+        one: ətraflı məlumat
+        other: ətraflı məlumat
       document_collection:
         one: növlər
         other:
@@ -52,8 +80,8 @@ az:
         one:
         other:
       guidance:
-        one: "İnstruksiya"
-        other: "İnstruksiya"
+        one: İnstruksiya
+        other: İnstruksiya
       impact_assessment:
         one: Dəyərləndirmə
         other: Dəyərləndirmə
@@ -69,9 +97,15 @@ az:
       map:
         one: Xəritə
         other: xəritələr
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - milli statistika
         other: Statistika - milli statistika
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: məqalə
         other: məqalələr
@@ -79,6 +113,15 @@ az:
         one: Xəbərlər
         other: Xəbərlər
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: statistika
+        other: statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,51 +151,77 @@ az:
       research:
         one: Tətqiqat və analiz
         other: Tətqiqat və analiz
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "Çıxış üçün  qeydləri"
-        other: "Çıxış üçün  qeydləri"
+        one: Çıxış üçün  qeydləri
+        other: Çıxış üçün  qeydləri
       speech:
-        one: "çıxış"
-        other: "Çıxışlar"
+        one: çıxış
+        other: Çıxışlar
       statement_to_parliament:
         one: Parlamentə bəyanat
         other: Parlamentə bəyanatlar
       statistical_data_set:
         one: statistik məlumatlar bazası
         other: statistik məlumatlar bazaları
-      official_statistics:
-        one: statistika
-        other: statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
         one: Transkripsiya
         other: Transkripsiyalar
       transparency:
-        one: "Şəffaf məlumat"
-        other: "Şəffaf məlumat"
+        one: Şəffaf məlumat
+        other: Şəffaf məlumat
       world_location_news_article:
         one: məqalə
         other: məqalələr
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Parlamentə yazılı müraciət
         other: Parlamentə yazılı müraciət
-    metadata:
-      published: dərc olunub
-      updated: yenilənib
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
   detailed_guide:
-    related_mainstream_content:
     related_guides:
+    related_mainstream_content:
+  language_names:
+    az: Azərbaycanca
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one:
       other:
-  corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

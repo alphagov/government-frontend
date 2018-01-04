@@ -1,253 +1,340 @@
 ru:
-  language_names:
-    ru: "Русский"
   content_item:
     schema_name:
       announcement:
-        one: "Объявление"
+        one: Объявление
         few:
         many:
-        other: "Объявления"
+        other: Объявления
       authored_article:
-        one: "Авторская статья"
+        one: Авторская статья
         few:
         many:
-        other: "Авторские статьи"
+        other: Авторские статьи
       case_study:
-        one: "Ситуационный анализ"
+        one: Ситуационный анализ
         few:
         many:
-        other: "Ситуационные анализы"
+        other: Ситуационные анализы
       closed_consultation:
-        one: "Закрытая консультация"
+        one: Закрытая консультация
         few:
         many:
-        other: "Закрытые консультации"
+        other: Закрытые консультации
       consultation:
-        one: "Консультация"
+        one: Консультация
         few:
         many:
-        other: "Консультации"
+        other: Консультации
       consultation_outcome:
-        one: "Результат консультации"
+        one: Результат консультации
         few:
         many:
-        other: "Результаты консультаций"
+        other: Результаты консультаций
+      corporate_information_page:
+        one:
+        few:
+        many:
+        other:
       corporate_report:
-        one: "Корпоративный отчет"
+        one: Корпоративный отчет
         few:
         many:
-        other: "Корпоративные отчеты"
+        other: Корпоративные отчеты
       correspondence:
-        one: "Корреспонденция"
+        one: Корреспонденция
         few:
         many:
-        other: "Корреспонденция"
+        other: Корреспонденция
       decision:
         one:
         few:
         many:
         other:
       detailed_guide:
-        one: "Подробное руководство"
+        one: Подробное руководство
         few:
         many:
-        other: "Подробное руководство"
+        other: Подробное руководство
       document_collection:
-        one: "Серии"
+        one: Серии
         few:
         many:
         other:
       draft_text:
-        one: "Проект текста"
+        one: Проект текста
         few:
         many:
-        other: "Проект текстов"
+        other: Проект текстов
       fatality_notice:
-        one: "Уведомление о несчастном случае"
+        one: Уведомление о несчастном случае
         few:
         many:
-        other: "Уведомления о несчастных случаях"
+        other: Уведомления о несчастных случаях
       foi_release:
-        one: "Свобода распространения информации "
+        one: 'Свобода распространения информации '
         few:
         many:
-        other: "Свобода распространения информации "
+        other: 'Свобода распространения информации '
       form:
-        one: "Форма"
+        one: Форма
         few:
         many:
-        other: "Формы"
+        other: Формы
       government_response:
-        one: "Ответ правительства"
+        one: Ответ правительства
         few:
         many:
-        other: "Ответы правительства"
+        other: Ответы правительства
       guidance:
-        one: "Руководство"
+        one: Руководство
         few:
         many:
-        other: "Руководство"
+        other: Руководство
       impact_assessment:
-        one: "Оценка воздействия"
+        one: Оценка воздействия
         few:
         many:
-        other: "Оценки воздействия"
+        other: Оценки воздействия
       imported:
-        one: "импортировано - тип ожидания"
+        one: импортировано - тип ожидания
         few:
         many:
-        other: "импортировано - тип ожидания"
+        other: импортировано - тип ожидания
       independent_report:
-        one: "Независимый отчет"
+        one: Независимый отчет
         few:
         many:
-        other: "Независимые отчеты"
+        other: Независимые отчеты
       international_treaty:
         one:
         few:
         many:
         other:
       map:
-        one: "Карта"
+        one: Карта
         few:
         many:
-        other: "Карты"
+        other: Карты
+      national:
+        one:
+        few:
+        many:
+        other:
       national_statistics:
-        one: "Статистика - национальная статистика"
+        one: Статистика - национальная статистика
         few:
         many:
-        other: "Статистика - национальная статистика"
+        other: Статистика - национальная статистика
+      national_statistics_announcement:
+        one:
+        few:
+        many:
+        other:
       news_article:
-        one: "Новостная статья"
+        one: Новостная статья
         few:
         many:
-        other: "Новостные статьи"
+        other: Новостные статьи
       news_story:
-        one: "Новостная заметка"
+        one: Новостная заметка
         few:
         many:
-        other: "Новостные заметки"
+        other: Новостные заметки
       notice:
         one:
         few:
         many:
         other:
+      official:
+        one:
+        few:
+        many:
+        other:
+      official_statistics:
+        one: Статистика
+        few:
+        many:
+        other: Статистика
+      official_statistics_announcement:
+        one:
+        few:
+        many:
+        other:
       open_consultation:
-        one: "Открытая консультация"
+        one: Открытая консультация
         few:
         many:
-        other: "Открытые консультации"
+        other: Открытые консультации
       oral_statement:
-        one: "Устное заявление парламенту"
+        one: Устное заявление парламенту
         few:
         many:
-        other: "Устные заявления парламенту"
+        other: Устные заявления парламенту
       policy:
-        one: "Политика"
+        one: Политика
         few:
         many:
-        other: "Политика"
+        other: Политика
       policy_paper:
-        one: "Директивный документ"
+        one: Директивный документ
         few:
         many:
-        other: "Директивные документы"
+        other: Директивные документы
       press_release:
-        one: "Пресс-релиз"
+        one: Пресс-релиз
         few:
         many:
-        other: "Пресс-релизы"
+        other: Пресс-релизы
       promotional:
-        one: "Рекламный материал"
+        one: Рекламный материал
         few:
         many:
-        other: "Рекламные материалы"
+        other: Рекламные материалы
       publication:
-        one: "Публикация"
+        one: Публикация
         few:
         many:
-        other: "Публикации"
+        other: Публикации
       regulation:
         one:
         few:
         many:
         other:
       research:
-        one: "Исследования и аналитика"
+        one: Исследования и аналитика
         few:
         many:
-        other: "Исследования и аналитика"
+        other: Исследования и аналитика
+      service_sign_in:
+        one:
+        few:
+        many:
+        other:
       speaking_notes:
-        one: "Тезисы выступления"
+        one: Тезисы выступления
         few:
         many:
-        other: "Тезисы выступления"
+        other: Тезисы выступления
       speech:
-        one: "Текст выступления"
+        one: Текст выступления
         few:
         many:
-        other: "Тексты выступлений"
+        other: Тексты выступлений
       statement_to_parliament:
-        one: "Заявление парламенту"
+        one: Заявление парламенту
         few:
         many:
-        other: "Заявления парламенту"
+        other: Заявления парламенту
       statistical_data_set:
-        one: "Статистика"
+        one: Статистика
         few:
         many:
-        other: "Статистические данные"
-      official_statistics:
-        one: "Статистика"
+        other: Статистические данные
+      statistics_announcement:
+        one:
         few:
         many:
-        other: "Статистика"
+        other:
       statutory_guidance:
         one:
         few:
         many:
         other:
+      take_part:
+        one:
+        few:
+        many:
+        other:
       transcript:
-        one: "Текст"
+        one: Текст
         few:
         many:
-        other: "Тексты"
+        other: Тексты
       transparency:
-        one: "Прозрачность данных"
+        one: Прозрачность данных
         few:
         many:
-        other: "Прозрачность данных"
+        other: Прозрачность данных
       world_location_news_article:
-        one: "Новостная статья"
+        one: Новостная статья
         few:
         many:
-        other: "Новостные статьи"
+        other: Новостные статьи
+      world_news_story:
+        one:
+        few:
+        many:
+        other:
       written_statement:
-        one: "Письменное заявление парламенту"
+        one: Письменное заявление парламенту
         few:
         many:
-        other: "Письменные заявления парламенту"
-    metadata:
-      published: "Опубликовано"
-      updated: "обновлено"
+        other: Письменные заявления парламенту
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: Опубликовано
+      updated: обновлено
   publication:
     documents:
-      one: "Документ"
+      one: Документ
       few:
       many:
-      other: "Документы"
+      other: Документы
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: Корпоративная информация
-    publication_scheme_html: Прочитать информацию, которая обычно публикуется,  по
-      указанной %{link}.
     personal_information_charter_html: По %{link} объяснение о том, как мы обращаемся
       с вашей личной информацией
+    publication_scheme_html: Прочитать информацию, которая обычно публикуется,  по
+      указанной %{link}.
+    social_media_use_html: Ознакомиться с нашей политикой по %{link}.
     welsh_language_scheme_html: Выяснить о наших обязательствах по публикации можно
       по %{link}.
-    social_media_use_html: Ознакомиться с нашей политикой по %{link}.
-    about_our_services_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    ru: Русский
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

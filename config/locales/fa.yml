@@ -1,162 +1,229 @@
 fa:
-  i18n:
-    direction: rtl
-  language_names:
-    fa: "فارسی"
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   content_item:
+    contents:
+    metadata:
+      published: منتشر شده
+      updated: به روز رسانی شده
     schema_name:
       announcement:
-        one: "اعلامیه"
-        other: "اعلامیه ها"
+        one: اعلامیه
+        other: اعلامیه ها
       authored_article:
-        one: "مقاله"
-        other: "مقالات"
+        one: مقاله
+        other: مقالات
       case_study:
-        one: "مطالعه ی موردی"
-        other: "مطالعه های موردی"
+        one: مطالعه ی موردی
+        other: مطالعه های موردی
       closed_consultation:
-        one: "رایزنی بسته"
-        other: "رایزنی های بسته"
+        one: رایزنی بسته
+        other: رایزنی های بسته
       consultation:
-        one: "رایزنی"
-        other: "رایزنی ها"
+        one: رایزنی
+        other: رایزنی ها
       consultation_outcome:
-        one: "نتیجه رایزنی"
-        other: "نتایج رایزنی"
+        one: نتیجه رایزنی
+        other: نتایج رایزنی
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "گزارش سازمانی"
-        other: "گزارش های سازمانی"
+        one: گزارش سازمانی
+        other: گزارش های سازمانی
       correspondence:
-        one: "مکاتبه"
-        other: "مکاتبات"
+        one: مکاتبه
+        other: مکاتبات
       decision:
         one:
         other:
       detailed_guide:
-        one: "راهنمای تفصیلی"
-        other: "راهنمای تفصیلی"
+        one: راهنمای تفصیلی
+        other: راهنمای تفصیلی
       document_collection:
-        one: "ردیف"
+        one: ردیف
         other:
       draft_text:
-        one: "متن پیش نویس"
-        other: "متون پیش نویس"
+        one: متن پیش نویس
+        other: متون پیش نویس
       fatality_notice:
-        one: "اطلاعیه تلفات"
-        other: "اطلاعیه تلفات"
+        one: اطلاعیه تلفات
+        other: اطلاعیه تلفات
       foi_release:
-        one: "انتشار آزاد اطلاعات"
-        other: "انتشار آزاد اطلاعات"
+        one: انتشار آزاد اطلاعات
+        other: انتشار آزاد اطلاعات
       form:
-        one: "فرم"
-        other: "فرم ها"
+        one: فرم
+        other: فرم ها
       government_response:
-        one: "جوابیه دولت"
-        other: "جوابیه های دولت"
+        one: جوابیه دولت
+        other: جوابیه های دولت
       guidance:
-        one: "راهنمایی"
-        other: "راهنمایی"
+        one: راهنمایی
+        other: راهنمایی
       impact_assessment:
-        one: "ارزیابی تاثیرات"
-        other: "ارزیابی های تاثیرات"
+        one: ارزیابی تاثیرات
+        other: ارزیابی های تاثیرات
       imported:
-        one: "منتقل شده - در انتظار دسته بندی"
-        other: "منتقل شده - در انتظار دسته بندی"
+        one: منتقل شده - در انتظار دسته بندی
+        other: منتقل شده - در انتظار دسته بندی
       independent_report:
-        one: "گزارش مستقل"
-        other: "گزارش های مستقل"
+        one: گزارش مستقل
+        other: گزارش های مستقل
       international_treaty:
         one:
         other:
       map:
-        one: "نقشه"
-        other: "نقشه ها"
+        one: نقشه
+        other: نقشه ها
+      national:
+        one:
+        other:
       national_statistics:
-        one: "آمار - آمار ملی"
-        other: "آمار - آمار ملی"
+        one: آمار - آمار ملی
+        other: آمار - آمار ملی
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "مقاله ی خبری"
-        other: "مقالات خبری"
+        one: مقاله ی خبری
+        other: مقالات خبری
       news_story:
-        one: "خبر"
-        other: "اخبار"
+        one: خبر
+        other: اخبار
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: آمار
+        other: آمار
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "رایزنی باز"
-        other: "رایزنی های باز"
+        one: رایزنی باز
+        other: رایزنی های باز
       oral_statement:
-        one: "گزارش شفاهی به پارلمان"
-        other: "گزارش های شفاهی به پارلمان"
+        one: گزارش شفاهی به پارلمان
+        other: گزارش های شفاهی به پارلمان
       policy:
-        one: "سیاست"
-        other: "سیاست ها"
+        one: سیاست
+        other: سیاست ها
       policy_paper:
-        one: "مقاله ی سیاسی"
-        other: "مقاله های سیاسی"
+        one: مقاله ی سیاسی
+        other: مقاله های سیاسی
       press_release:
-        one: "بیانیه"
-        other: "بیانیه ها"
+        one: بیانیه
+        other: بیانیه ها
       promotional:
-        one: "مطالب تبلیغاتی"
-        other: "مطالب تبلیغاتی"
+        one: مطالب تبلیغاتی
+        other: مطالب تبلیغاتی
       publication:
-        one: "نشریه"
-        other: "نشریات"
+        one: نشریه
+        other: نشریات
       regulation:
         one:
         other:
       research:
-        one: "پژوهش و تحلیل"
-        other: "پژوهش و تحلیل"
+        one: پژوهش و تحلیل
+        other: پژوهش و تحلیل
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "موضوعات سخنرانی"
-        other: "موضوعات سخنرانی"
+        one: موضوعات سخنرانی
+        other: موضوعات سخنرانی
       speech:
-        one: "سخنرانی"
-        other: "سخنرانی ها"
+        one: سخنرانی
+        other: سخنرانی ها
       statement_to_parliament:
-        one: "گزارش به پارلمان"
-        other: "گزارش ها به پارلمان"
+        one: گزارش به پارلمان
+        other: گزارش ها به پارلمان
       statistical_data_set:
-        one: "بسته ی داده های آماری"
-        other: "بسته های داده های آماری"
-      official_statistics:
-        one: "آمار"
-        other: "آمار"
+        one: بسته ی داده های آماری
+        other: بسته های داده های آماری
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "رونوشت"
-        other: "رونوشت ها"
+        one: رونوشت
+        other: رونوشت ها
       transparency:
-        one: "داده های شفاف سازی"
-        other: "داده های شفاف سازی"
+        one: داده های شفاف سازی
+        other: داده های شفاف سازی
       world_location_news_article:
-        one: "مقاله ی خبری"
-        other: "مقالات خبری"
+        one: مقاله ی خبری
+        other: مقالات خبری
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "گزارش کتبی به پارلمان"
-        other: "گزارش های کتبی به پارلمان"
-    metadata:
-      published: "منتشر شده"
-      updated: "به روز رسانی شده"
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
-  publication:
-    documents:
-      one: "مدرک"
-      other: "مدارک"
+        one: گزارش کتبی به پارلمان
+        other: گزارش های کتبی به پارلمان
   corporate_information_page:
+    about_our_services_html:
     corporate_information: اطلاعات سازمانی
-    publication_scheme_html: 'درباره نوع اطلاعاتی که ما به طور روال در %{link} منتشر
-      می کنیم بخوانید '
     personal_information_charter_html: "%{link} چگونگی نگهداری از اطلاعات شخصی شما
       را توضیح می دهد"
-    welsh_language_scheme_html: درباره تعهد ما به انتشار مطالب به %{link} بخوانید
+    publication_scheme_html: 'درباره نوع اطلاعاتی که ما به طور روال در %{link} منتشر
+      می کنیم بخوانید '
     social_media_use_html: سیاست ما را درباره  %{link} بخوانید
-    about_our_services_html:
+    welsh_language_scheme_html: درباره تعهد ما به انتشار مطالب به %{link} بخوانید
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    fa: فارسی
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      one: مدرک
+      other: مدارک
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

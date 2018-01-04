@@ -1,162 +1,230 @@
 ta:
-  language_names:
-    ta: "தமிழ்"
   content_item:
     schema_name:
       announcement:
-        one: "அறிவிப்பு"
-        other: "அறிவிப்புகள்"
+        one: அறிவிப்பு
+        other: அறிவிப்புகள்
       authored_article:
         one: " எழுதப்பட்ட   கட்டுரை"
-        other: "எழுதப்பட்ட கட்டுரைகள்"
+        other: எழுதப்பட்ட கட்டுரைகள்
       case_study:
-        one: "சம்பவ ஆய்வுக் கற்கை"
-        other: "சம்பவ ஆய்வுக் கற்கைகள்"
+        one: சம்பவ ஆய்வுக் கற்கை
+        other: சம்பவ ஆய்வுக் கற்கைகள்
       closed_consultation:
-        one: "வரையறுக்கப்பட்ட நிலையிலான கலந்தாலோசனை"
-        other: "வரையறுக்கப்பட்ட நிலையிலான  கலந்தாலோசனைகள்"
+        one: வரையறுக்கப்பட்ட நிலையிலான கலந்தாலோசனை
+        other: வரையறுக்கப்பட்ட நிலையிலான  கலந்தாலோசனைகள்
       consultation:
-        one: "கலந்தாலோசனை"
-        other: "கலந்தாலோசனைகள்"
+        one: கலந்தாலோசனை
+        other: கலந்தாலோசனைகள்
       consultation_outcome:
-        one: "கலந்தாலோசனையின் முடிவு"
-        other: "கலந்தாலோசனைப்முடிவுகள்"
+        one: கலந்தாலோசனையின் முடிவு
+        other: கலந்தாலோசனைப்முடிவுகள்
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "கூட்டாண்மை அறிக்கை"
-        other: "கூட்டாண்மை அறிக்கைகள்"
+        one: கூட்டாண்மை அறிக்கை
+        other: கூட்டாண்மை அறிக்கைகள்
       correspondence:
-        one: "தொடர்பு"
-        other: "தொடர்புகள்"
+        one: தொடர்பு
+        other: தொடர்புகள்
       decision:
         one:
         other:
       detailed_guide:
-        one: "விளக்கமான வழிகாட்டல்"
-        other: "விளக்கமான வழிகாட்டல்"
+        one: விளக்கமான வழிகாட்டல்
+        other: விளக்கமான வழிகாட்டல்
       document_collection:
-        one: "தொடர்"
+        one: தொடர்
         other:
       draft_text:
-        one: "வரைபு உரை"
-        other: "வரைபு உரைகள்"
+        one: வரைபு உரை
+        other: வரைபு உரைகள்
       fatality_notice:
-        one: "இடர் அறிவித்தல்"
-        other: "இடர் அறிவித்தல்கள்"
+        one: இடர் அறிவித்தல்
+        other: இடர் அறிவித்தல்கள்
       foi_release:
-        one: "தகவலின் சுதந்திரமான  வெளியிடுதல்"
-        other: "தகவல்களின் சுதந்திரமான  வெளியிடுதல்கள்"
+        one: தகவலின் சுதந்திரமான  வெளியிடுதல்
+        other: தகவல்களின் சுதந்திரமான  வெளியிடுதல்கள்
       form:
-        one: "படிவம்"
-        other: "படிவங்கள்"
+        one: படிவம்
+        other: படிவங்கள்
       government_response:
-        one: "அரசாங்க பதிலிறுப்பு"
-        other: "அரசாங்க பதிலிறுப்புகள்"
+        one: அரசாங்க பதிலிறுப்பு
+        other: அரசாங்க பதிலிறுப்புகள்
       guidance:
-        one: "வழிகாட்டல்"
-        other: "வழிகாட்டல்"
+        one: வழிகாட்டல்
+        other: வழிகாட்டல்
       impact_assessment:
-        one: "தாக்க மதிப்பீடு"
-        other: "தாக்க மதிப்பீடுகள்"
+        one: தாக்க மதிப்பீடு
+        other: தாக்க மதிப்பீடுகள்
       imported:
-        one: "இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை"
-        other: "இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை"
+        one: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
+        other: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
       independent_report:
-        one: "சுயாதீன அறிக்கை"
-        other: "சுயாதீன அறிக்கைகள்"
+        one: சுயாதீன அறிக்கை
+        other: சுயாதீன அறிக்கைகள்
       international_treaty:
         one:
         other:
       map:
-        one: "வரைபடம்"
-        other: "வரைபடங்கள்"
+        one: வரைபடம்
+        other: வரைபடங்கள்
+      national:
+        one:
+        other:
       national_statistics:
-        one: "புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்"
-        other: "புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்"
+        one: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
+        other: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "செய்திக் கட்டுரை"
-        other: "செய்திக் கட்டுரைகள்"
+        one: செய்திக் கட்டுரை
+        other: செய்திக் கட்டுரைகள்
       news_story:
-        one: "செய்திக் கதை"
-        other: "செய்திக் கதைகள்"
+        one: செய்திக் கதை
+        other: செய்திக் கதைகள்
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: புள்ளிவிபரம்
+        other: புள்ளிவிபரம்
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "திறந்த கலந்தாலோசனை"
-        other: "திறந்த கலந்தாலோசனைகள்"
+        one: திறந்த கலந்தாலோசனை
+        other: திறந்த கலந்தாலோசனைகள்
       oral_statement:
-        one: "பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கை"
-        other: "பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கைகள்"
+        one: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கை
+        other: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கைகள்
       policy:
-        one: "கொள்கை"
-        other: "கொள்கைகள்"
+        one: கொள்கை
+        other: கொள்கைகள்
       policy_paper:
-        one: "கொள்கைப் பத்திரம்"
-        other: "கொள்கைப் பத்திரங்கள்"
+        one: கொள்கைப் பத்திரம்
+        other: கொள்கைப் பத்திரங்கள்
       press_release:
-        one: "செய்தி வெளியீடு"
-        other: "செய்தி வெளியீடுகள்"
+        one: செய்தி வெளியீடு
+        other: செய்தி வெளியீடுகள்
       promotional:
-        one: "விளம்பர ஊக்குவிப்பு பொருள்"
-        other: "விளம்பர ஊக்குவிப்பு பொருள்"
+        one: விளம்பர ஊக்குவிப்பு பொருள்
+        other: விளம்பர ஊக்குவிப்பு பொருள்
       publication:
-        one: "பிரசுரம்"
-        other: "பிரசுரங்கள்"
+        one: பிரசுரம்
+        other: பிரசுரங்கள்
       regulation:
         one:
         other:
       research:
-        one: "ஆராய்ச்சி மற்றும் பகுப்பாய்தல்"
-        other: "ஆராய்ச்சி மற்றும் பகுப்பாய்தல்"
+        one: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
+        other: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "உரைக் குறிப்புகள்"
-        other: "உரைக் குறிப்புகள்"
+        one: உரைக் குறிப்புகள்
+        other: உரைக் குறிப்புகள்
       speech:
-        one: "உரை"
-        other: "உரைகள்"
+        one: உரை
+        other: உரைகள்
       statement_to_parliament:
-        one: "பாராளுமன்றத்துக்கான அறிக்கை"
-        other: "பாராளுமன்றத்துக்கான அறிக்கைகள்"
+        one: பாராளுமன்றத்துக்கான அறிக்கை
+        other: பாராளுமன்றத்துக்கான அறிக்கைகள்
       statistical_data_set:
-        one: "புள்ளிவிபர தரவுத் தொகுதி"
-        other: "புள்ளிவிபர தரவுத் தொகுதிகள்"
-      official_statistics:
-        one: "புள்ளிவிபரம்"
-        other: "புள்ளிவிபரம்"
+        one: புள்ளிவிபர தரவுத் தொகுதி
+        other: புள்ளிவிபர தரவுத் தொகுதிகள்
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "உரை வடிவம்"
-        other: "உரை வடிவங்கள்"
+        one: உரை வடிவம்
+        other: உரை வடிவங்கள்
       transparency:
-        one: "வெளிப்படையான தரவு"
-        other: "வெளிப்படையான தரவு"
+        one: வெளிப்படையான தரவு
+        other: வெளிப்படையான தரவு
       world_location_news_article:
-        one: "செய்திக் கட்டுரை"
-        other: "செய்திக் கட்டுரைகள்"
+        one: செய்திக் கட்டுரை
+        other: செய்திக் கட்டுரைகள்
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கை"
-        other: "பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கைகள்"
-    metadata:
-      published: "பிரசுரிக்கப்பட்டது"
-      updated: "இற்றைப்படுத்தப்பட்டது"
+        one: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கை
+        other: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கைகள்
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
-  html_publication:
-    see_more:
+    metadata:
+      published: பிரசுரிக்கப்பட்டது
+      updated: இற்றைப்படுத்தப்பட்டது
   publication:
     documents:
       one: " ஆவணம்"
-      other: "ஆவணங்கள்"
+      other: ஆவணங்கள்
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: கூட்டாண்மைத் தகவல்
-    publication_scheme_html: எங்களது %{link} நாங்கள் வழமையாக வெளியிடும் தகவல்களின்  வகைகள்
-      பற்றி வாசிக்கவும்
     personal_information_charter_html: உங்களது தனிப்பட்ட தகவல்களை எப்படி நாங்கள் கையாள்கிறோம்
       என்பதை எங்களது %{link} விளக்கும்
+    publication_scheme_html: எங்களது %{link} நாங்கள் வழமையாக வெளியிடும் தகவல்களின்  வகைகள்
+      பற்றி வாசிக்கவும்
+    social_media_use_html: எங்களது  கொள்கையை %{link} இல் வாசிக்கவும்
     welsh_language_scheme_html: "%{link} இல் பிரசுரிப்பதற்கான எங்களது பற்றுறுதி பற்றி
       கண்டறியவும்"
-    social_media_use_html: எங்களது  கொள்கையை %{link} இல் வாசிக்கவும்
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    ta: தமிழ்
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

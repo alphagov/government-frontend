@@ -1,7 +1,32 @@
 id:
-  language_names:
-    id: Bahasa Indonesia
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   content_item:
+    contents:
+    metadata:
+      published: Diterbitkan
+      updated: Terkini
     schema_name:
       announcement:
         one: Pengumuman
@@ -21,6 +46,9 @@ id:
       consultation_outcome:
         one: Hasil konsultasi
         other: Hasil-hasil konsultasi
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Laporan korporat
         other: Laporan-laporan korporat
@@ -69,9 +97,15 @@ id:
       map:
         one: Peta
         other: Peta-peta
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistik-statistik nasional
         other: Statistik-statistik nasional
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikel berita
         other: Artikel-artikel berita
@@ -79,6 +113,15 @@ id:
         one: Berita
         other: Berita-berita
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistik
+        other: Statistik-statistik
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +151,9 @@ id:
       research:
         one: Riset dan analisis
         other: Riset dan analisis
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: Naskah Pembicara
         other: Naskah Pembicara
@@ -120,10 +166,13 @@ id:
       statistical_data_set:
         one: Set data statistik
         other: Set data statistik
-      official_statistics:
-        one: Statistik
-        other: Statistik-statistik
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -135,27 +184,47 @@ id:
       world_location_news_article:
         one: Artikel berita
         other: Artikel-artikel berita
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Pernyataan tertulis kepada parlemen
         other: Pernyataan-pernyatan tertulis kepada parlemen
-    metadata:
-      published: Diterbitkan
-      updated: Terkini
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Informasi korporat
+    personal_information_charter_html: "%{link} menjelaskan tentang bagaimana kami
+      memperlakukan informasi pribadi Anda"
+    publication_scheme_html: Baca jenis-jenis informasi yang secara rutin kami muat
+      di %{link}
+    social_media_use_html: Baca kebijakan kami di %{link}
+    welsh_language_scheme_html: Informasi lebih lanjut mengenai komitmen kami dalam
+      memuat informasi di %{link}
   detailed_guide:
-    related_mainstream_content:
     related_guides:
+    related_mainstream_content:
+  language_names:
+    id: Bahasa Indonesia
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Dokumen
       other: Dokumen-dokumen
-  corporate_information_page:
-    corporate_information: Informasi korporat
-    publication_scheme_html: Baca jenis-jenis informasi yang secara rutin kami muat
-      di %{link}
-    personal_information_charter_html: "%{link} menjelaskan tentang bagaimana kami
-      memperlakukan informasi pribadi Anda"
-    welsh_language_scheme_html: Informasi lebih lanjut mengenai komitmen kami dalam
-      memuat informasi di %{link}
-    social_media_use_html: Baca kebijakan kami di %{link}
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

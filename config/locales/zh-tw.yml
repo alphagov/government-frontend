@@ -1,158 +1,227 @@
 zh-tw:
-  language_names:
-    zh-tw: "中文"
   content_item:
     schema_name:
       announcement:
-        one: "公告"
-        other: "其他公告"
+        one: 公告
+        other: 其他公告
       authored_article:
-        one: "撰寫文章"
-        other: "撰寫其他文章"
+        one: 撰寫文章
+        other: 撰寫其他文章
       case_study:
-        one: "案例研究"
-        other: "其他案例研究"
+        one: 案例研究
+        other: 其他案例研究
       closed_consultation:
-        one: "專屬諮詢"
-        other: "其他專屬諮詢"
+        one: 專屬諮詢
+        other: 其他專屬諮詢
       consultation:
-        one: "諮詢"
-        other: "其他諮詢"
+        one: 諮詢
+        other: 其他諮詢
       consultation_outcome:
-        one: "諮詢結果"
-        other: "其他諮詢結果"
+        one: 諮詢結果
+        other: 其他諮詢結果
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "公司報告"
-        other: "其他公司報告"
+        one: 公司報告
+        other: 其他公司報告
       correspondence:
-        one: "對應"
-        other: "對應"
+        one: 對應
+        other: 對應
       decision:
         one:
         other:
       detailed_guide:
-        one: "詳細指引"
-        other: "詳細指引"
+        one: 詳細指引
+        other: 詳細指引
       document_collection:
-        one: "系列"
+        one: 系列
         other:
       draft_text:
-        one: "內容"
-        other: "其他內容"
+        one: 內容
+        other: 其他內容
       fatality_notice:
-        one: "安全事故通知"
-        other: "安全事故通知"
+        one: 安全事故通知
+        other: 安全事故通知
       foi_release:
-        one: "政府公開訊息"
-        other: "其他政府公開訊息"
+        one: 政府公開訊息
+        other: 其他政府公開訊息
       form:
-        one: "表格"
-        other: "其他表格"
+        one: 表格
+        other: 其他表格
       government_response:
-        one: "政府回應"
-        other: "政府其他回應"
+        one: 政府回應
+        other: 政府其他回應
       guidance:
-        one: "指引"
-        other: "指引"
+        one: 指引
+        other: 指引
       impact_assessment:
-        one: "影響評估"
-        other: "其他影響評估"
+        one: 影響評估
+        other: 其他影響評估
       imported:
-        one: "輸入 - 等待中"
-        other: "輸入 - 等待中"
+        one: 輸入 - 等待中
+        other: 輸入 - 等待中
       independent_report:
-        one: "獨立報告"
-        other: "其他獨立報告"
+        one: 獨立報告
+        other: 其他獨立報告
       international_treaty:
         one:
         other:
       map:
-        one: "地圖"
-        other: "其他地圖"
+        one: 地圖
+        other: 其他地圖
+      national:
+        one:
+        other:
       national_statistics:
-        one: "國家統計數據"
-        other: "國家統計數據"
+        one: 國家統計數據
+        other: 國家統計數據
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "新聞"
-        other: "其他新聞"
+        one: 新聞
+        other: 其他新聞
       news_story:
-        one: "新聞"
-        other: "其他新聞"
+        one: 新聞
+        other: 其他新聞
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: 統計
+        other: 統計
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "公開諮詢"
-        other: "其他公開諮詢"
+        one: 公開諮詢
+        other: 其他公開諮詢
       oral_statement:
-        one: "議會口頭聲明"
-        other: "其他議會口頭聲明"
+        one: 議會口頭聲明
+        other: 其他議會口頭聲明
       policy:
-        one: "政策"
-        other: "其他政策"
+        one: 政策
+        other: 其他政策
       policy_paper:
-        one: "政策報告"
-        other: "其他政策報告"
+        one: 政策報告
+        other: 其他政策報告
       press_release:
-        one: "新聞稿"
-        other: "其他新聞稿"
+        one: 新聞稿
+        other: 其他新聞稿
       promotional:
-        one: "宣傳資料"
-        other: "宣傳資料"
+        one: 宣傳資料
+        other: 宣傳資料
       publication:
-        one: "發行物"
-        other: "其他發行物"
+        one: 發行物
+        other: 其他發行物
       regulation:
         one:
         other:
       research:
-        one: "研究與分析"
-        other: "研究與分析"
+        one: 研究與分析
+        other: 研究與分析
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "演講稿"
-        other: "演講稿"
+        one: 演講稿
+        other: 演講稿
       speech:
-        one: "演講"
-        other: "其他演講"
+        one: 演講
+        other: 其他演講
       statement_to_parliament:
-        one: "議會聲明"
-        other: "議會聲明"
+        one: 議會聲明
+        other: 議會聲明
       statistical_data_set:
-        one: "統計數據資料"
-        other: "其他統計數據料"
-      official_statistics:
-        one: "統計"
-        other: "統計"
+        one: 統計數據資料
+        other: 其他統計數據料
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
       transcript:
-        one: "談話副本"
-        other: "其他談話副本"
+        one: 談話副本
+        other: 其他談話副本
       transparency:
-        one: "透明化數據"
-        other: "透明化數據"
+        one: 透明化數據
+        other: 透明化數據
       world_location_news_article:
-        one: "新聞"
-        other: "其他新聞"
+        one: 新聞
+        other: 其他新聞
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "提交國會的書面聲明"
-        other: "提交國會的其他書面聲明"
-    metadata:
-      published: "發行"
-      updated: "更新"
+        one: 提交國會的書面聲明
+        other: 提交國會的其他書面聲明
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: 發行
+      updated: 更新
   publication:
     documents:
-      one: "文件"
-      other: "其他文件"
+      one: 文件
+      other: 其他文件
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
-    corporate_information: 政府資訊
-    publication_scheme_html: 查閱我們在%{link}定期發布的資訊。
-    personal_information_charter_html: 我們的%{link}解釋我們如何處理你的個人資料。
-    welsh_language_scheme_html: 查閱我們在%{link}的發佈承諾。
-    social_media_use_html: 查閱我們在%{link}的政策。
     about_our_services_html:
+    corporate_information: 政府資訊
+    personal_information_charter_html: 我們的%{link}解釋我們如何處理你的個人資料。
+    publication_scheme_html: 查閱我們在%{link}定期發布的資訊。
+    social_media_use_html: 查閱我們在%{link}的政策。
+    welsh_language_scheme_html: 查閱我們在%{link}的發佈承諾。
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    zh-tw: 中文
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

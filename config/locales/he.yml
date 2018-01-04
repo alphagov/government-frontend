@@ -1,253 +1,228 @@
 he:
-  i18n:
-    direction: rtl
-  language_names:
-    he: "עברית"
   content_item:
     schema_name:
       announcement:
-        one: "הודעה"
-        two:
-        many:
-        other: "הודעות"
+        one:
+        other:
       authored_article:
-        one: "מאמר מאושר"
-        two:
-        many:
-        other: "מאמרים מאושרים"
+        one:
+        other:
       case_study:
-        one: "מקרה בוחן"
-        two:
-        many:
-        other: "מקרי בוחן"
+        one:
+        other:
       closed_consultation:
-        one: "דיון סגור"
-        two:
-        many:
-        other: "דיונים סגורים"
+        one:
+        other:
       consultation:
-        one: "דיון"
-        two:
-        many:
-        other: "דיונים"
+        one:
+        other:
       consultation_outcome:
-        one: "תוצאות דיון"
-        two:
-        many:
-        other: "תוצאות דיונים"
+        one:
+        other:
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: דו"ח משותף
-        two:
-        many:
-        other: דו"חות משותפים
+        one:
+        other:
       correspondence:
-        one: "תכתובת"
-        two:
-        many:
-        other: "תכתובות"
+        one:
+        other:
       decision:
         one:
-        two:
-        many:
         other:
       detailed_guide:
-        one: "מדריך מפורט"
-        two:
-        many:
-        other: "מדריך מפורט"
+        one:
+        other:
       document_collection:
-        one: "סדרות"
-        two:
-        many:
+        one:
         other:
       draft_text:
-        one: "טיוטה"
-        two:
-        many:
-        other: "טיוטות"
+        one:
+        other:
       fatality_notice:
-        one: "הודעת פטירה"
-        two:
-        many:
-        other: "הודעות פטירה"
+        one:
+        other:
       foi_release:
-        one: "פרסום חופש מידע"
-        two:
-        many:
-        other: "פרסומי חופש מידע"
+        one:
+        other:
       form:
-        one: "טופס"
-        two:
-        many:
-        other: "טפסים"
+        one:
+        other:
       government_response:
-        one: "תגובה ממשלתית"
-        two:
-        many:
-        other: "תגובות ממשלתיות"
+        one:
+        other:
       guidance:
-        one: "הדרכה"
-        two:
-        many:
-        other: "הדרכה"
+        one:
+        other:
       impact_assessment:
-        one: "הערכת השפעה"
-        two:
-        many:
-        other: "הערכת השפעות"
+        one:
+        other:
       imported:
-        one: "יבוא- המתנה לסוג"
-        two:
-        many:
-        other: "יבוא- המתנה לסוג"
+        one:
+        other:
       independent_report:
-        one: דו"ח עצמאי
-        two:
-        many:
-        other: דו"ות עצמאיים
+        one:
+        other:
       international_treaty:
         one:
-        two:
-        many:
         other:
       map:
-        one: "מפה"
-        two:
-        many:
-        other: "מפות"
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
-        one: "סטטיסטיקות- סטטיסטיקה לאומית"
-        two:
-        many:
-        other: "סטטיסטיקות- סטטסטיקה לאומית"
+        one:
+        other:
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "מאמר חדשות"
-        two:
-        many:
-        other: "מאמרי חדשות"
+        one:
+        other:
       news_story:
-        one: "חדשות"
-        two:
-        many:
-        other: "חדשות"
+        one:
+        other:
       notice:
         one:
-        two:
-        many:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one:
+        other:
+      official_statistics_announcement:
+        one:
         other:
       open_consultation:
-        one: "דיון פתוח"
-        two:
-        many:
-        other: "דיון פתוח"
+        one:
+        other:
       oral_statement:
-        one: "הצהרה בעל פה לפרלמנט"
-        two:
-        many:
-        other: "הצהרות בעל פה לפרלמנט"
+        one:
+        other:
       policy:
-        one: "מדיניות"
-        two:
-        many:
-        other: "מדיניות"
+        one:
+        other:
       policy_paper:
-        one: "נייר מדיניות"
-        two:
-        many:
-        other: "ניירות מדיניות"
+        one:
+        other:
       press_release:
-        one: "הודעה לעיתונות"
-        two:
-        many:
-        other: "הודעות לעיתונות"
+        one:
+        other:
       promotional:
-        one: "חומר פרסומי"
-        two:
-        many:
-        other: "חומר פרסומי"
+        one:
+        other:
       publication:
-        one: "פרסום"
-        two:
-        many:
-        other: "פרסומים"
+        one:
+        other:
       regulation:
         one:
-        two:
-        many:
         other:
       research:
-        one: "מחקר וניתוח"
-        two:
-        many:
-        other: "מחקר וניתוח"
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
-        one: "נאומים"
-        two:
-        many:
-        other: "נאומים"
+        one:
+        other:
       speech:
-        one: "נאום"
-        two:
-        many:
-        other: "נאומים"
+        one:
+        other:
       statement_to_parliament:
-        one: "הצהרה לפרלמנט"
-        two:
-        many:
-        other: "הצהרות לפרלמנט"
+        one:
+        other:
       statistical_data_set:
-        one: "מידע סטטיסטי"
-        two:
-        many:
-        other: "מידע סטטיסטי"
-      official_statistics:
-        one: "נתונים"
-        two:
-        many:
-        other: "נתונים"
+        one:
+        other:
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
-        two:
-        many:
+        other:
+      take_part:
+        one:
         other:
       transcript:
-        one: "תמלול"
-        two:
-        many:
-        other: "תמלולים"
+        one:
+        other:
       transparency:
-        one: "שקיפות מידע"
-        two:
-        many:
-        other: "שקיפות מידע"
+        one:
+        other:
       world_location_news_article:
-        one: "מאמר חדשות"
-        two:
-        many:
-        other: "מאמרי חדשות"
+        one:
+        other:
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "הצהרה בכתב לפרלמנט"
-        two:
-        many:
-        other: "הצהרות בכתב לפרלמנט"
-    metadata:
-      published: "פורסם"
-      updated: "מעודכן"
+        one:
+        other:
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
+    metadata:
+      published: פורסם
+      updated: מעודכן
   publication:
     documents:
-      one: "מסמך"
-      two:
-      many:
-      other: "מסמכים"
+      one:
+      other:
+    details:
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   corporate_information_page:
+    about_our_services_html:
     corporate_information: מידע מסחרי
-    publication_scheme_html: קרא/י אודות סוגי מידע שאנחנו מפרסמים %{link}
     personal_information_charter_html: ה%{link} מסביר אודות המדיניות שלנו כלפי מידע
       פרטי
-    welsh_language_scheme_html: מידע נוסף על המחויבות שלנו לפרסום %{link}
+    publication_scheme_html: קרא/י אודות סוגי מידע שאנחנו מפרסמים %{link}
     social_media_use_html: קרא/י אודות המדיניות שלנו %{link}
-    about_our_services_html:
+    welsh_language_scheme_html: מידע נוסף על המחויבות שלנו לפרסום %{link}
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    he: עברית
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

@@ -1,7 +1,32 @@
 tr:
-  language_names:
-    tr: Türkçe
+  common:
+    last_updated:
+    translations:
+  components:
+    back_link:
+      back:
+    published_dates:
+      full_page_history:
+      last_updated:
+      published:
+      see_all_updates:
+    radio:
+      or:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
   content_item:
+    contents:
+    metadata:
+      published: Yayında
+      updated: Güncellendi
     schema_name:
       announcement:
         one: Duyuru
@@ -10,8 +35,8 @@ tr:
         one: Yazılan makale
         other: Yazılan makaleler
       case_study:
-        one: "Örnek Olay"
-        other: "Örnek Olaylar"
+        one: Örnek Olay
+        other: Örnek Olaylar
       closed_consultation:
         one: Sona eren çalışmalar
         other: Sona eren çalışmalar
@@ -21,6 +46,9 @@ tr:
       consultation_outcome:
         one: Danışma sonucu
         other: Danışma sonuçları
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Kurumsal Rapor
         other: Kurumsal Raporlar
@@ -40,8 +68,8 @@ tr:
         one: Taslak metin
         other: Taslak metinler
       fatality_notice:
-        one: "Ölüm ilanı"
-        other: "Ölüm ilanları"
+        one: Ölüm ilanı
+        other: Ölüm ilanları
       foi_release:
         one: Bilgi edinme hakkı raporu
         other: Bilgi edinme hakkı raporları
@@ -69,9 +97,15 @@ tr:
       map:
         one: Harita
         other: Haritalar
+      national:
+        one:
+        other:
       national_statistics:
-        one: "İstatistikler - ulusal istatistikler"
-        other: "İstatistikler - ulusal istatistikler"
+        one: İstatistikler - ulusal istatistikler
+        other: İstatistikler - ulusal istatistikler
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Makale
         other: Makaleler
@@ -79,6 +113,15 @@ tr:
         one: Haber
         other: Haberler
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: İstatistikler
+        other: İstatistikler
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -108,6 +151,9 @@ tr:
       research:
         one: Araştırma ve analiz
         other: Araştırma ve analizler
+      service_sign_in:
+        one:
+        other:
       speaking_notes:
         one: Konuşma notu
         other: Konuşma notları
@@ -118,12 +164,15 @@ tr:
         one: Parlamento'ya yapılan açıklama
         other: Parlamento'ya yapılan açıklamalar
       statistical_data_set:
-        one: "İstatiksel veri setleri"
-        other: "İstatiksel veri setleri"
-      official_statistics:
-        one: "İstatistikler"
-        other: "İstatistikler"
+        one: İstatiksel veri setleri
+        other: İstatiksel veri setleri
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
         one:
         other:
       transcript:
@@ -135,28 +184,48 @@ tr:
       world_location_news_article:
         one: Makale
         other: Makaleler
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Parlamento'ya yapılan yazılı açıklama
         other: Parlamento'ya yapılan yazılı açıklamalar
-    metadata:
-      published: Yayında
-      updated: Güncellendi
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Kurumsal bilgi
+    personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız
+      açıklamaktadır
+    publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link}
+      'e bakınız
+    social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi için
+      %{link}
+    welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten
+      ulaşabilirsiniz.
   detailed_guide:
-    related_mainstream_content:
     related_guides:
+    related_mainstream_content:
+  language_names:
+    tr: Türkçe
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Belge
       other: Belgeler
-  corporate_information_page:
-    corporate_information: Kurumsal bilgi
-    publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link}
-      'e bakınız
-    personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız
-      açıklamaktadır
-    welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten
-      ulaşabilirsiniz.
-    social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi için
-      %{link}
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:
