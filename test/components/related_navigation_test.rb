@@ -237,5 +237,8 @@ class RelatedNavigationTest < ComponentTestCase
     )
 
     assert_select ".app-c-related-navigation__nav-section ul[data-module='track-click']"
+    assert_select ".app-c-related-navigation__section-link[data-track-category='relatedLinkClicked']"
+    assert_select ".app-c-related-navigation__section-link[data-track-action='1.1 Explore the topic']"
+    assert_select ".app-c-related-navigation__section-link[data-track-label='/apprenticeships']"
   end
 end
