@@ -4,7 +4,7 @@ cy:
   common:
     last_updated: "Diweddarwyd diwethaf"
   components:
-    radio:
+    radio: # TODO: Push this upstream to the govuk_publishing_gem and remove from here
       or: 'neu'
   content_item:
     schema_name:
