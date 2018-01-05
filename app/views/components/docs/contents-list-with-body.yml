@@ -2,7 +2,7 @@ name: Contents list with body
 description: Combines contents-list and back-to-top components with block of body markup
 body: |
   Wraps the HTML/ERB block passed with a content list and back to top link.
-  
+
   Expects one argument:
 
   * `contents` - The contents to build a contents list, if this item is empty the contents-list and back-to-top links are excluded but the block passed is still rendered.
@@ -79,7 +79,6 @@ examples:
             <p>Please send written representations about any competition issues to:</p>
             <div class="address"><div class="adr org fn"><p>
 
-            Nick Wright
             <br>Competition and Markets Authority 
             <br>Victoria House 
             <br>Southampton Row 
@@ -87,5 +86,4 @@ examples:
             <br>WC1B 4AD
             <br>
             </p></div></div>
-            <p><a href="mailto:Nick.Wright@cma.gsi.gov.uk">Nick.Wright@cma.gsi.gov.uk</a></p>
           </div>
