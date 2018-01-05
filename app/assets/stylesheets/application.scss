@@ -19,9 +19,12 @@
 @import "helpers/content-bottom-margin";
 @import "helpers/publisher-metadata-with-logo";
 
-// components
+// Components from this application
 @import 'components/*';
+
+// Components from govuk_publishing_components gem
 @import 'components/back-link';
+@import 'components/label';
 @import 'components/task-list';
 @import 'components/task-list-header';
 @import 'components/task-list-related';
