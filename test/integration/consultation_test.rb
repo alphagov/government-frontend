@@ -7,18 +7,18 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    assert_has_component_metadata_pair("first_published", "4 November 2016")
-    assert_has_component_metadata_pair("last_updated", "7 November 2016")
+    within '.app-c-publisher-metadata' do
+      assert page.has_text?("Published 4 November 2016")
+      assert page.has_text?("Last updated 7 November 2016")
+      assert page.has_css?(".app-c-publisher-metadata__term", text: 'From')
+      assert page.has_css?(".app-c-publisher-metadata__definition a[href=\"/government/organisations/department-for-education\"]", text: 'Department for Education')
+    end
 
-    link1 = "<a href=\"/topic/higher-education/administration\">Higher education administration</a>"
-    link2 = "<a href=\"/government/organisations/department-for-education\">Department for Education</a>"
+    within '.app-c-related-navigation' do
+      assert page.has_css?('.app-c-related-navigation__section-link[href="/topic/higher-education/administration"]', text: 'Higher education administration')
+    end
 
-    assert_has_component_metadata_pair("part_of", [link1])
-    assert_has_component_document_footer_pair("part_of", [link1])
-    assert_has_component_metadata_pair("from", [link2])
-    assert_has_component_document_footer_pair("from", [link2])
-
-    within '[aria-labelledby="description-title"]' do
+    within '.consultation-description' do
       assert_has_component_govspeak(@content_item["details"]["body"])
     end
   end
@@ -26,7 +26,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "consultation documents render" do
     setup_and_visit_content_item('closed_consultation')
 
-    within '[aria-labelledby="documents-title"]' do
+    within '.consultation-documents' do
       assert_has_component_govspeak(@content_item["details"]["documents"].join(''))
     end
   end
@@ -74,7 +74,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert page.has_text?("ran from")
     assert page.has_text?("4pm on 20 April 2016 to 10:45pm on 13 July 2016")
 
-    within '[aria-labelledby="final-outcome-detail-title"]' do
+    within '.consultation-outcome-detail' do
       assert_has_component_govspeak(@content_item["details"]["final_outcome_detail"])
     end
   end
@@ -83,7 +83,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('consultation_outcome_with_feedback')
 
     assert page.has_text?("Detail of feedback received")
-    within '[aria-labelledby="public-feedback-detail-title"]' do
+    within '.consultation-feedback' do
       assert_has_component_govspeak(@content_item["details"]["public_feedback_detail"])
     end
   end
@@ -91,7 +91,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "consultation outcome documents render" do
     setup_and_visit_content_item('consultation_outcome')
 
-    within '[aria-labelledby="final-outcome-documents-title"]' do
+    within '.consultation-outcome' do
       assert_has_component_govspeak(@content_item["details"]["final_outcome_documents"].join(''))
     end
   end
@@ -100,7 +100,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('consultation_outcome_with_feedback')
 
     assert page.has_text?("Feedback received")
-    within '[aria-labelledby="public-feedback-documents-title"]' do
+    within '.consultation-feedback-documents' do
       assert_has_component_govspeak(@content_item["details"]["public_feedback_documents"].join(''))
     end
   end
@@ -108,13 +108,15 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "consultation that only applies to a set of nations" do
     setup_and_visit_content_item('consultation_outcome_with_feedback')
 
-    assert_has_component_metadata_pair('Applies to', 'England')
+    within '.app-c-important-metadata' do
+      assert page.has_text?("Applies to: England")
+    end
   end
 
   test "ways to respond renders" do
     setup_and_visit_content_item('open_consultation_with_participation')
 
-    within '[aria-labelledby="ways-to-respond-title"]' do
+    within '.consultation-ways-to-respond' do
       within_component_govspeak do |component_args|
         content = component_args.fetch("content")
         html = Nokogiri::HTML.parse(content)
@@ -129,7 +131,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "ways to respond postal address is formatted with line breaks" do
     setup_and_visit_content_item('open_consultation_with_participation')
 
-    within '[aria-labelledby="ways-to-respond-title"]' do
+    within '.consultation-ways-to-respond' do
       within_component_govspeak do |component_args|
         content = component_args.fetch("content")
         html = Nokogiri::HTML.parse(content)
