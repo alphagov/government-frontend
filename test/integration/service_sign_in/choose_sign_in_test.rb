@@ -23,7 +23,7 @@ module ServiceSignIn
       refute page.has_css?(shared_component_selector('breadcrumbs'))
       refute page.has_css?(shared_component_selector('government_navigation'))
 
-      assert page.has_css?('.app-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
+      assert page.has_css?('.gem-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
       assert page.has_css?('form[data-module="track-radio-group"]')
 
       within "form" do
@@ -92,11 +92,8 @@ module ServiceSignIn
     test "page renders welsh correctly" do
       setup_and_visit_choose_sign_in_page("welsh", "/dewiswch-lofnodi")
 
-
       assert page.has_css?("title", text: 'Profwch pwy ydych chi i fwrw ymlaen - GOV.UK', visible: false)
-
-      # TODO: This needs to be translated
-      assert page.has_css?('.app-c-back-link', text: 'Yn ôl')
+      assert page.has_css?('.gem-c-back-link', text: 'Yn ôl')
 
       within "form" do
         within ".app-c-fieldset" do
@@ -127,7 +124,6 @@ module ServiceSignIn
           end
         end
 
-        # TODO: This needs to be translated
         assert page.has_css?(shared_component_selector('button'), text: "Bwrw ymlaen")
       end
     end
