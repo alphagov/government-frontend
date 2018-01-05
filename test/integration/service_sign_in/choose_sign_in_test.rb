@@ -27,8 +27,8 @@ module ServiceSignIn
       assert page.has_css?('form[data-module="track-radio-group"]')
 
       within "form" do
-        within ".app-c-fieldset" do
-          within ".app-c-fieldset__legend" do
+        within ".gem-c-fieldset" do
+          within ".gem-c-fieldset__legend" do
             within shared_component_selector('title') do
               assert page.has_text?("Prove your identity to continue")
             end
@@ -96,8 +96,8 @@ module ServiceSignIn
       assert page.has_css?('.gem-c-back-link', text: 'Yn ôl')
 
       within "form" do
-        within ".app-c-fieldset" do
-          within ".app-c-fieldset__legend" do
+        within ".gem-c-fieldset" do
+          within ".gem-c-fieldset__legend" do
             within shared_component_selector('title') do
               assert page.has_text?("Profwch pwy ydych chi i fwrw ymlaen")
             end
