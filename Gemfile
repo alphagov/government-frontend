@@ -4,7 +4,12 @@ ruby File.read(".ruby-version").strip
 
 gem 'asset_bom_removal-rails', '~> 1.0'
 gem 'dalli'
-gem 'htmlentities', '~> 4.3'
+gem 'gds-api-adapters', '~> 50.8'
+gem 'govuk_ab_testing', '~> 2.4'
+gem 'govuk_frontend_toolkit', '7.2.0'
+gem 'govuk_publishing_components', '~> 3.3'
+gem 'htmlentities', '4.3.4'
+gem 'plek', '2.0.0'
 gem 'rack_strip_client_ip', '~> 0.0.2'
 gem 'rails', '~> 5.2.0'
 gem 'rails-controller-testing', '~> 1.0'
