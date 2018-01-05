@@ -38,7 +38,7 @@ module ServiceSignIn
       refute page.has_css?(shared_component_selector('government_navigation'))
 
       assert page.has_css?(
-        '.app-c-back-link[href="/log-in-file-self-assessment-tax-return/sign-in/choose-sign-in"]',
+        '.gem-c-back-link[href="/log-in-file-self-assessment-tax-return/sign-in/choose-sign-in"]',
         text: 'Back'
       )
     end
