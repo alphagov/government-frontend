@@ -73,7 +73,7 @@ class RadioTest < ComponentTestCase
     )
 
     assert_select ".app-c-radio__input[name=radio-group-bold-labels]"
-    assert_select ".app-c-radio .app-c-label--bold"
+    assert_select ".app-c-radio .gem-c-label--bold"
   end
 
   test "renders radio-group with hint text" do
@@ -95,9 +95,9 @@ class RadioTest < ComponentTestCase
 
     assert_select ".app-c-radio__input[name=radio-group-hint-text]"
     assert_select ".app-c-radio:first-child .app-c-radio__label__text", text: "Use Government Gateway"
-    assert_select ".app-c-radio:first-child .app-c-label__hint", text: "You'll have a user ID if you've signed up to do things like sign up Self Assessment tax return online."
+    assert_select ".app-c-radio:first-child .gem-c-label__hint", text: "You'll have a user ID if you've signed up to do things like sign up Self Assessment tax return online."
     assert_select ".app-c-radio:last-child .app-c-radio__label__text", text: "Use GOV.UK Verify"
-    assert_select ".app-c-radio:last-child .app-c-label__hint", text: "You'll have an account if you've already proved your identity with a certified company, such as the Post Office."
+    assert_select ".app-c-radio:last-child .gem-c-label__hint", text: "You'll have an account if you've already proved your identity with a certified company, such as the Post Office."
   end
 
   test "renders radio-group with checked option" do
