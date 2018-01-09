@@ -2,7 +2,7 @@
   title = local_assigns[:title]
   items = local_assigns[:items] || {}
   items = items.reject { |k,v| v.nil? }
-  items = items.merge(items) { |k,v| Array(v).join(",").html_safe }
+  items = items.merge(items) { |k,v| Array(v).join(", ").html_safe }
   margin_bottom_class = " app-c-important-metadata--bottom-margin" unless local_assigns[:margin_bottom]
 -%>
 <% if items.any? -%>
