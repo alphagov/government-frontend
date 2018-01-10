@@ -23,13 +23,13 @@
 @import 'components/*';
 
 // Components from govuk_publishing_components gem
-@import 'components/back-link';
-@import 'components/fieldset';
-@import 'components/label';
-@import 'components/radio';
-@import 'components/task-list';
-@import 'components/task-list-header';
-@import 'components/task-list-related';
+@import 'govuk_publishing_components/components/back-link';
+@import 'govuk_publishing_components/components/fieldset';
+@import 'govuk_publishing_components/components/label';
+@import 'govuk_publishing_components/components/radio';
+@import 'govuk_publishing_components/components/task-list';
+@import 'govuk_publishing_components/components/task-list-header';
+@import 'govuk_publishing_components/components/task-list-related';
 
 // pages specific view imports
 @import 'views/case-studies';

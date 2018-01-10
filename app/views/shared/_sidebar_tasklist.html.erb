@@ -2,9 +2,9 @@
   no_margin ||= false
 %>
 <nav class="column-third <%= "task-list-sidebar" unless no_margin %>">
-  <%= render 'components/task_list_related', links: [{
+  <%= render 'govuk_publishing_components/components/task_list_related', links: [{
       href: tasklist_content.base_path,
       text: tasklist_content.title
   }] %>
-  <%= render 'components/task_list', tasklist_content.set_current_task %>
+  <%= render 'govuk_publishing_components/components/task_list', tasklist_content.set_current_task %>
 </nav>
