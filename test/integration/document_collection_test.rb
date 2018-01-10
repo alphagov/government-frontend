@@ -25,7 +25,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
   test "renders related navigation sidebar" do
     setup_and_visit_content_item('document_collection')
-    assert_has_nav_bar(
+    assert_has_related_navigation(
       [
         {
           section_name: "related-nav-topics",

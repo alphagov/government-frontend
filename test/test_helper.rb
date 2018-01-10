@@ -123,6 +123,62 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def assert_has_published_dates(published = nil, last_updated = nil, history_link = false, element_index = 0)
+    text = []
+    text << published if published
+    text << last_updated if last_updated
+    within(all(".app-c-published-dates")[element_index]) do
+      assert page.has_text?(text.join("\n"))
+      if history_link
+        assert page.has_link?("see all updates", href: "#history")
+      end
+    end
+  end
+
+  def assert_has_publisher_metadata_other(metadata)
+    within(".app-c-publisher-metadata__other") do
+      metadata.each do |key, value|
+        assert page.has_css?(".app-c-publisher-metadata__term", text: key)
+        within(".app-c-publisher-metadata__definition") do
+          if value.has_key?(:href)
+            assert page.has_link?(value[:text], href: value[:href])
+          else
+            assert page.has_text?(value[:text])
+          end
+        end
+      end
+    end
+  end
+
+  def assert_has_publisher_metadata(options)
+    within(".app-c-publisher-metadata") do
+      assert_has_published_dates(options[:published], options[:last_updated], options[:history_link])
+      assert_has_publisher_metadata_other(options[:metadata])
+    end
+  end
+
+  def assert_footer_has_published_dates(published = nil, last_updated = nil, history_link = false)
+    assert_has_published_dates(published, last_updated, history_link, 1)
+  end
+
+  def assert_has_nav_bar_section_and_links(section_name, section_text, links)
+    assert page.has_css?("##{section_name}", text: section_text)
+    within find("nav[aria-labelledby='#{section_name}']") do
+      links.each do |key, value|
+        assert page.has_link?(key, href: value)
+      end
+    end
+  end
+
+  def assert_has_related_navigation(sections)
+    within(".app-c-related-navigation") do
+      assert page.has_css?(".app-c-related-navigation__main-heading", text: "Related content")
+      sections.each do |section|
+        assert_has_nav_bar_section_and_links(section[:section_name], section[:section_text], section[:links])
+      end
+    end
+  end
+
   def has_component_metadata(key, value)
     assert page.has_css? "meta[#{key}=\"#{value}\"]", visible: false
   end
