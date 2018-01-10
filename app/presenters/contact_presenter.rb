@@ -105,11 +105,11 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def webchat_availability_url
-    "https://online.hmrc.gov.uk/webchatprod/egain/chat/entrypoint/checkEligibility/#{webchat_id}"
+    "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
   end
 
   def webchat_open_url
-    "https://online.hmrc.gov.uk/webchatprod/templates/chat/hmrc7/chat.html?entryPointId=#{webchat_id}&templateName=hmrc7&languageCode=en&countryCode=US&ver=v11"
+    "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
   end
 
   def breadcrumbs

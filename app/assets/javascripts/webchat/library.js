@@ -20,7 +20,6 @@
     var availabilityUrl     = $el.attr('data-availability-url')
     var $openButton         = $el.find('.js-webchat-open-button')
     var webchatStateClass   = 'js-webchat-advisers-'
-    var responseNormaliser  = options.responseNormaliser
     var intervalID          = null
     var lastRecordedState   = null
 
@@ -49,8 +48,6 @@
     }
 
     function apiSuccess (result) {
-      if (responseNormaliser) result = responseNormaliser(result)
-
       var validState  = API_STATES.indexOf(result.response) != -1
       var state       = validState ? result.response : "ERROR"
       advisorStateChange(state)
