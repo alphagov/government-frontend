@@ -9,11 +9,36 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
   test "renders metadata and document footer" do
     setup_and_visit_content_item('document_collection')
-    assert_has_component_metadata_pair("first_published", "29 February 2016")
+    assert_has_publisher_metadata(
+      published: "Published 29 February 2016",
+      metadata:
+      {
+        "From:":
+          {
+            text: "Driver and Vehicle Standards Agency",
+            href: "/government/organisations/driver-and-vehicle-standards-agency"
+          }
+      }
+    )
+    assert_footer_has_published_dates("Published 29 February 2016")
+  end
 
-    from = ["<a href=\"/government/organisations/driver-and-vehicle-standards-agency\">Driver and Vehicle Standards Agency</a>"]
-    assert_has_component_metadata_pair("from", from)
-    assert_has_component_document_footer_pair("from", from)
+  test "renders related navigation sidebar" do
+    setup_and_visit_content_item('document_collection')
+    assert_has_nav_bar(
+      [
+        {
+          section_name: "related-nav-topics",
+          section_text: "Explore the topic",
+          links: { "PAYE": "/topic/business-tax/paye" }
+        },
+        {
+          section_name: "related-nav-publishers",
+          section_text: "Published by",
+          links: { "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency" }
+        }
+      ]
+    )
   end
 
   test "renders body when provided" do
@@ -37,7 +62,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       assert page.has_css?('.group-title', text: group["title"])
     end
 
-    within ".sidebar-with-body" do
+    within ".app-c-contents-list-with-body" do
       assert page.has_css?(shared_component_selector("govspeak"), count: group_count)
       assert page.has_css?('.app-c-document-list', count: group_count)
     end
