@@ -15,7 +15,7 @@
     <% if link_to_history && history.empty? %>
       &mdash; <a href="#history"><%= t('components.published_dates.see_all_updates') %></a>
     <% elsif history.any? %>
-      <a href="#full-history" data-controls="full-history" data-expanded="false">+ <%= t('components.published_dates.full_page_history') %></a>
+      <a href="#full-history" data-controls="full-history" data-expanded="false">&#43;&nbsp;<%= t('components.published_dates.full_page_history') %></a>
       <div class="app-c-published-dates__change-history js-hidden" id="full-history">
         <ol>
           <% history.each do |change| %>
