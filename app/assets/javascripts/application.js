@@ -1,3 +1,3 @@
 //= require_tree ./modules
-//= require_tree ./components
 //= require components/task-list
+//= require govuk_publishing_components/components/error-summary
