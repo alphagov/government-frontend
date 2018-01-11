@@ -10,7 +10,7 @@
 <% end %>
 
 <%= render 'govuk_component/metadata', content_item.metadata %>
-<% if content_item.map -%>
+<% if content_item.map %>
   <figure class="map">
     <img src="<%= content_item.map["url"] %>" alt="<%= content_item.map["alt_text"] %>" class="map-image">
     <% if content_item.map_download_url %>
@@ -19,4 +19,4 @@
       </figcaption>
     <% end %>
   </figure>
-<% end -%>
+<% end %>
