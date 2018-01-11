@@ -3,7 +3,6 @@
 // formats so they may ultimately become component styles.
 .metadata-logo-wrapper {
   @extend %contain-floats;
-  border-top: 1px solid $border-colour;
   margin-left: $gutter-half;
   margin-right: $gutter-half;
 
