@@ -49,8 +49,10 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     within '.release-date-changed .app-c-important-metadata' do
       assert page.has_text?("The release date has been changed")
-      assert page.has_text?("Previous date", "19 January 2016 9:30am")
-      assert page.has_text?("Reason for change", @content_item["details"]["latest_change_note"])
+      assert page.has_text?("Previous date")
+      assert page.has_text?("19 January 2016 9:30am")
+      assert page.has_text?("Reason for change")
+      assert page.has_text?(@content_item["details"]["latest_change_note"])
     end
   end
 
