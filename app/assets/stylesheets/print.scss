@@ -3,6 +3,6 @@
 @import 'typography';
 
 @import 'components/print/*';
-@import 'components/task-list-print';
-@import 'components/task-list-header-print';
+@import 'govuk_publishing_components/components/print/task-list';
+@import 'govuk_publishing_components/components/print/task-list-header';
 @import 'print/html-publication';

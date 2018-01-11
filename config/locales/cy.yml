@@ -3,9 +3,6 @@ cy:
     cy: Cymraeg
   common:
     last_updated: "Diweddarwyd diwethaf"
-  components:
-    radio: # TODO: Push this upstream to the govuk_publishing_gem and remove from here
-      or: 'neu'
   content_item:
     schema_name:
       announcement:
