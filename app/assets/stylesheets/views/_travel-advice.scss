@@ -12,5 +12,9 @@
     @include responsive-bottom-margin;
 
     margin-top: $gutter;
+
+    .map-image {
+      max-width: 100%;
+    }
   }
 }
