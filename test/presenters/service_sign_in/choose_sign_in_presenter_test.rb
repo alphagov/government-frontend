@@ -37,8 +37,13 @@ class ServiceSignInPresenterTest
 
       options.each_with_index do |option, index|
         assert_equal option[:text], @choose_sign_in["options"][index]["text"]
-        assert_equal option[:hint_text], @choose_sign_in["options"][index]["hint_text"]
         assert_equal option[:value], @choose_sign_in["options"][index]["text"].parameterize
+
+        if option[:hint_text]
+          assert_equal option[:hint_text], @choose_sign_in["options"][index]["hint_text"]
+        else
+          assert_nil @choose_sign_in["options"][index]["hint_text"]
+        end
       end
       assert_equal "option", @presented_item.options_id
     end
