@@ -1,0 +1,19 @@
+---
+applications:
+- name: govuk-dev-government-frontend
+  memory: 256M
+  buildpack: ruby_buildpack
+  instances: 1
+  env:  
+    GOVUK_APP_DOMAIN: www.gov.uk
+    GOVUK_ASSET_ROOT: https://assets.publishing.service.gov.uk
+    GOVUK_WEBSITE_ROOT: https://www.gov.uk
+    # Public Production Content Store
+    PLEK_SERVICE_CONTENT_STORE_URI: https://www.gov.uk/api
+    
+    # Content Store running in PaaS
+    #PLEK_SERVICE_CONTENT_STORE_URI: https://srh-content-store.cloudapps.digital
+
+    PLEK_SERVICE_STATIC_URI: assets.publishing.service.gov.uk
+    RAILS_SERVE_STATIC_ASSETS: yes
+    SECRET_KEY_BASE: "can be anything"
