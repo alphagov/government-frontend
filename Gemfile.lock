@@ -1,14 +1,3 @@
-GIT
-  remote: git://github.com/alphagov/jasmine-rails.git
-  revision: a35b53f89c5f8d2a7862972ed4e83c65fe73cb48
-  branch: fix-monkey-patch
-  specs:
-    jasmine-rails (0.14.2)
-      jasmine-core (>= 1.3, < 3.0)
-      phantomjs (>= 1.9)
-      railties (>= 3.2.0)
-      sprockets-rails
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -153,6 +142,11 @@ GEM
     image_size (1.5.0)
     io-like (0.3.0)
     jasmine-core (2.8.0)
+    jasmine-rails (0.14.7)
+      jasmine-core (>= 1.3, < 3.0)
+      phantomjs (>= 1.9)
+      railties (>= 3.2.0)
+      sprockets-rails
     json (2.1.0)
     json-schema (2.5.2)
       addressable (~> 2.3.8)
@@ -363,7 +357,7 @@ DEPENDENCIES
   govuk_publishing_components (~> 4.1)
   govuk_schemas
   htmlentities (= 4.3.4)
-  jasmine-rails!
+  jasmine-rails
   mocha
   plek (= 2.0.0)
   poltergeist
