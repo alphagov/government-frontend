@@ -25,7 +25,7 @@ gem 'govuk_navigation_helpers', '~> 8.2.0'
 group :development, :test do
   gem 'govuk-lint'
   gem 'govuk_schemas'
-  gem 'jasmine-rails', github: 'alphagov/jasmine-rails', branch: 'fix-monkey-patch'
+  gem 'jasmine-rails'
   gem 'pry-byebug'
 end
 
