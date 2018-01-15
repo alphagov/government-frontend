@@ -24,7 +24,7 @@ gem 'govuk_navigation_helpers', '~> 8.2.0'
 
 group :development, :test do
   gem 'govuk-lint'
-  gem 'govuk_schemas'
+  gem 'govuk_schemas', '~> 3.1'
   gem 'jasmine-rails'
   gem 'pry-byebug'
 end
