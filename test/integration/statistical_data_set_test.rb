@@ -11,14 +11,36 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
 
   test "renders metadata and document footer" do
     setup_and_visit_content_item('statistical_data_set')
+    assert_has_publisher_metadata(
+      published: "Published 13 December 2012",
+      metadata:
+      {
+        "From:":
+        {
+          text: "Department for Transport",
+          href: "/government/organisations/department-for-transport"
+        }
+      }
+    )
+    assert_footer_has_published_dates("Published 13 December 2012")
+  end
 
-    assert_has_component_metadata_pair("first_published", "13 December 2012")
-    link1 = "<a href=\"/government/organisations/department-for-transport\">Department for Transport</a>"
-    assert_has_component_metadata_pair("from", [link1])
-    assert_has_component_document_footer_pair("from", [link1])
-
-    assert_has_component_metadata_pair("part_of", ["<a href=\"/government/collections/transport-statistics-great-britain\">Transport Statistics Great Britain</a>"])
-    assert_has_component_document_footer_pair("part_of", ["<a href=\"/government/collections/transport-statistics-great-britain\">Transport Statistics Great Britain</a>"])
+  test "render related side bar navigation" do
+    setup_and_visit_content_item('statistical_data_set')
+    assert_has_related_navigation(
+      [
+        {
+          section_name: "related-nav-publishers",
+          section_text: "Published by",
+          links: { "Department for Transport": "/government/organisations/department-for-transport" }
+        },
+        {
+          section_name: "related-nav-collections",
+          section_text: "Collection",
+          links: { "Transport Statistics Great Britain": "/government/collections/transport-statistics-great-britain" }
+        }
+      ]
+    )
   end
 
   test "renders withdrawn notification" do
