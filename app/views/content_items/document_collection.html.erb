@@ -1,25 +1,39 @@
-<%= render 'shared/title_and_translations', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+<%= content_for :simple_header, @navigation.should_present_taxonomy_navigation? %>
 
-<div
-  class="grid-row sidebar-with-body"
-  data-module="sticky-element-container"
-  id="contents"
->
-  <% if @content_item.contents.any? %>
-    <div class="column-third">
-      <%= render 'components/contents-list', contents: @content_item.contents %>
-    </div>
-  <% end %>
-  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
-    <%= render 'document_collection_body' %>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/title',
+       context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
+       title: @content_item.title,
+       average_title_length: "long" %>
   </div>
-  <div data-sticky-element class="govuk-sticky-element">
-    <%= render 'components/back-to-top', href: "#contents" %>
+  <%= render 'shared/translations', content_item: @content_item %>
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <%= render 'shared/history_notice', content_item: @content_item %>
   </div>
 </div>
 
-<%= render 'shared/footer', @content_item.document_footer %>
+<%= render 'shared/publisher_metadata_with_logo' %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'components/important-metadata',
+        items: @content_item.metadata[:other] %>
+
+    <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
+      <div class="responsive-bottom-margin">
+        <%= render 'document_collection_body' %>
+      </div>
+      <div class="responsive-bottom-margin">
+        <%= render 'components/published-dates', {
+            published: @content_item.published,
+            last_updated: @content_item.updated,
+            history: @content_item.history
+          } %>
+      </div>
+    <% end %>
+  </div>
+  <%= render "shared/sidebar_navigation" %>
+</div>
