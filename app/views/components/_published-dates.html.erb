@@ -4,9 +4,10 @@
   history = Array(history)
   last_updated ||= false
   link_to_history ||= false
+  history_class = "app-c-published-dates--history" if history.any?
 %>
 <% if published || last_updated %>
-<div class="app-c-published-dates" <% if history.any? %>id="history" data-module="toggle"<% end %>>
+<div class="app-c-published-dates <%= history_class %>" <% if history.any? %>id="history" data-module="toggle"<% end %>>
   <% if published %>
     <%= t('components.published_dates.published', date: published) %>
   <% end %>
@@ -15,7 +16,11 @@
     <% if link_to_history && history.empty? %>
       &mdash; <a href="#history"><%= t('components.published_dates.see_all_updates') %></a>
     <% elsif history.any? %>
-      <a href="#full-history" data-controls="full-history" data-expanded="false">+ <%= t('components.published_dates.full_page_history') %></a>
+      <a href="#full-history"
+      data-controls="full-history"
+      data-expanded="false"
+      data-toggled-text="&#45;&nbsp;<%= t('components.published_dates.hide_all_updates') %>">&#43;&nbsp;<%= t('components.published_dates.show_all_updates')
+       %></a>
       <div class="app-c-published-dates__change-history js-hidden" id="full-history">
         <ol>
           <% history.each do |change| %>
