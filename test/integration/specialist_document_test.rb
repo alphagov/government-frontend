@@ -64,8 +64,6 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       within(all(".app-c-important-metadata__definition")[1]) do
         assert page.has_link?("Arable land",
                               href: "/countryside-stewardship-grants?land_use%5B%5D=arable-land")
-        assert page.has_link?("Wildlife package",
-                              href: "/countryside-stewardship-grants?land_use%5B%5D=wildlife-package")
         assert page.has_link?("Water quality",
                               href: "/countryside-stewardship-grants?land_use%5B%5D=water-quality")
       end
