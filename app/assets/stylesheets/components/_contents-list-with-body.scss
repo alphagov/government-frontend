@@ -36,6 +36,7 @@
   }
 
   .app-c-back-to-top {
+    color: $link-colour;
     margin-bottom: 0;
     padding: $gutter-half;
     width: percentage(2 / 3);
@@ -44,4 +45,12 @@
       padding: $gutter-two-thirds;
     }
   }
+
+  .app-c-back-to-top:hover {
+    color: $link-hover-colour;
+  }
+
+  .app-c-back-to-top:active {
+    color: $link-active-colour;
+   }
 }
