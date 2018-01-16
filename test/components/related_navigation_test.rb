@@ -62,7 +62,7 @@ class RelatedNavigationTest < ComponentTestCase
       ]
     )
 
-    assert_select ".app-c-related-navigation__sub-heading", text: 'Location'
+    assert_select ".app-c-related-navigation__sub-heading", text: 'World locations'
     assert_select ".app-c-related-navigation__section-link[href=\"/world/usa/news\"]", text: 'USA'
   end
 
