@@ -15,17 +15,17 @@
 <div class="grid-row">
   <div class="column-two-thirds content-bottom-margin">
     <div class="responsive-bottom-margin">
+      <%= render 'components/important-metadata',
+      items: @content_item.metadata[:other] %>
+
       <%= render 'components/figure',
           src: @content_item.image["url"],
           alt: @content_item.image["alt_text"],
           caption: @content_item.image["caption"] if @content_item.image %>
 
-      <%= render 'components/important-metadata',
-          items: @content_item.metadata[:other] %>
-
       <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction %>
+          content: @content_item.body,
+          direction: page_text_direction %>
     </div>
 
     <%= render 'components/published-dates', {
