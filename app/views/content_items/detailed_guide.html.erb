@@ -2,44 +2,36 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
   </div>
-  <div class="column-third">
-    <%= render 'components/translation-nav', translations: @content_item.available_translations %>
-    <% if @content_item.image.present? %>
-      <%= image_tag @content_item.image, class: "logo-image" %>
-    <% end %>
-  </div>
-</div>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-<%= render 'shared/metadata', content_item: @content_item %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-
-<div
-  class="grid-row sidebar-with-body"
-  data-module="sticky-element-container"
-  id="contents"
->
-  <% if @content_item.contents.any? %>
+  <% if @content_item.available_translations.length > 1 %>
     <div class="column-third">
-      <%= render 'components/contents-list', contents: @content_item.contents %>
+      <%= render 'components/translation-nav',
+          translations: @content_item.available_translations %>
     </div>
   <% end %>
-  <div class="column-two-thirds <% unless @content_item.contents.any? %>offset-one-third<% end %>">
-    <% if @content_item.related_mainstream_content.any? %>
-      <aside class="related-mainstream-content" role="complementary">
-        <h4>
-          <%= raw( t('detailed_guide.related_mainstream_content') ) %>
-        </h4>
-        <% @content_item.related_mainstream_content.each do |link| %>
-          <%= link %><br />
-        <% end %>
-      </aside>
-    <% end %>
-    <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
-  </div>
-  <div data-sticky-element class="govuk-sticky-element">
-    <%= render 'components/back-to-top', href: "#contents" %>
+  <div class="column-two-thirds">
+    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+    <%= render 'shared/history_notice', content_item: @content_item %>
+    <%= render "components/publisher-metadata", @content_item.publisher_metadata %>
   </div>
 </div>
 
-<%= render 'shared/footer', @content_item.document_footer %>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <%= render 'components/important-metadata',
+        items: @content_item.metadata[:other] %>
+
+    <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
+      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+
+      <div class="responsive-bottom-margin">
+        <%= render 'components/published-dates', {
+            published: @content_item.published,
+            last_updated: @content_item.updated,
+            history: @content_item.history
+          } %>
+      </div>
+    <% end %>
+  </div>
+  <%= render "shared/sidebar_navigation" %>
+</div>

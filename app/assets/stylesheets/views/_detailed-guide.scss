@@ -7,19 +7,6 @@
     text-align: start;
   }
 
-  .related-mainstream-content {
-    background: $panel-colour;
-    padding: $gutter-half;
-    margin-bottom: $gutter;
-
-    @include media(desktop) {
-      width: percentage(1 / 3);
-      float: right;
-      margin-bottom: $gutter-half;
-      margin-left: $gutter-half;
-    }
-  }
-
   // To allow .back-to-content to settle in at the bottom after scrolling past.
   .sidebar-with-body {
     position: relative;
@@ -29,8 +16,8 @@
     max-width: 70%;
 
     @include media(tablet) {
-      max-width: 100%;
       margin-top: 45px;
+      max-width: 100%;
     }
   }
 }
