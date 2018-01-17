@@ -23,6 +23,20 @@ class RelatedNavigationTest < ComponentTestCase
     assert_select ".app-c-related-navigation__section-link--other[href=\"/apprenticeships\"]", text: 'Apprenticeships'
   end
 
+  test "renders related guides section when passed related guides" do
+    render_component(
+      related_guides: [
+        {
+          text: "Some other guidance",
+          path: '/something-a-bit-like-this'
+        }
+      ]
+    )
+
+    assert_select ".app-c-related-navigation__sub-heading", text: 'Detailed guidance'
+    assert_select ".app-c-related-navigation__section-link[href=\"/something-a-bit-like-this\"]", text: 'Some other guidance'
+  end
+
   test "renders topics section when passed topic items" do
     render_component(
       topics: [
