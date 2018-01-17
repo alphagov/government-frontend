@@ -20,9 +20,6 @@
           alt: @content_item.image["alt_text"],
           caption: @content_item.image["caption"] if @content_item.image %>
 
-      <%= render 'components/important-metadata',
-          items: @content_item.metadata[:other] %>
-
       <%= render 'govuk_component/govspeak',
         content: @content_item.body,
         direction: page_text_direction %>
