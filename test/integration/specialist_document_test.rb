@@ -19,20 +19,18 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders from in publisher metadata" do
     setup_and_visit_content_item('aaib-reports')
 
-    within(".app-c-publisher-metadata__other") do
-      assert page.has_content?("From: Air Accidents Investigation Branch")
-      assert page.has_link?("Air Accidents Investigation Branch",
-                            href: "/government/organisations/air-accidents-investigation-branch")
-    end
+    assert_has_publisher_metadata_other(
+      "From": {
+        "Air Accidents Investigation Branch":
+          "/government/organisations/air-accidents-investigation-branch"
+      }
+    )
   end
 
   test "renders published and updated in metadata" do
     setup_and_visit_content_item('countryside-stewardship-grants')
 
-    within(all(".app-c-published-dates").first) do
-      assert page.has_content?("Published 2 April 2015")
-      assert page.has_content?("Last updated 29 March 2016")
-    end
+    assert_has_published_dates("Published 2 April 2015", "Last updated 29 March 2016")
   end
 
   test "renders change history in reverse chronological order" do
@@ -53,56 +51,33 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders text facets correctly" do
     setup_and_visit_content_item('countryside-stewardship-grants')
 
-
-    within(".app-c-important-metadata") do
-      assert page.all(".app-c-important-metadata__term")[0].has_content?("Grant type")
-      within(all(".app-c-important-metadata__definition")[0]) do
-        assert page.has_link?("Option", href: "/countryside-stewardship-grants?grant_type%5B%5D=option")
-      end
-
-      assert page.all(".app-c-important-metadata__term")[1].has_content?("Land use")
-      within(all(".app-c-important-metadata__definition")[1]) do
-        assert page.has_link?("Arable land",
-                              href: "/countryside-stewardship-grants?land_use%5B%5D=arable-land")
-        assert page.has_link?("Water quality",
-                              href: "/countryside-stewardship-grants?land_use%5B%5D=water-quality")
-      end
-
-      assert page.all(".app-c-important-metadata__term")[2].has_content?("Tiers or standalone items")
-      within(all(".app-c-important-metadata__definition")[2]) do
-        assert page.has_link?("Higher Tier",
-                              href: "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=higher-tier")
-        assert page.has_link?("Mid Tier",
-                              href: "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier")
-      end
-
-      assert page.all(".app-c-important-metadata__term")[3].has_content?("Funding (per unit per year)")
-      within(all(".app-c-important-metadata__definition")[3]) do
-        assert page.has_link?("More than £500",
-                              href: "/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500")
-      end
-    end
+    assert_has_important_metadata(
+      "Grant type": { "Option": "/countryside-stewardship-grants?grant_type%5B%5D=option" },
+      "Land use": {
+        "Arable land": "/countryside-stewardship-grants?land_use%5B%5D=arable-land",
+        "Water quality": "/countryside-stewardship-grants?land_use%5B%5D=water-quality",
+      },
+      "Tiers or standalone items": {
+        "Higher Tier": "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=higher-tier",
+        "Mid Tier": "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier",
+      },
+      "Funding (per unit per year)": {
+        "More than £500": "/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500"
+      }
+    )
   end
 
   test "renders date facets correctly" do
     setup_and_visit_content_item('drug-device-alerts')
 
-    within(all(".app-c-published-dates").last) do
-      assert page.has_content?("Published 6 July 2015")
-    end
-
-    within(".app-c-important-metadata") do
-      assert page.has_css?(".app-c-important-metadata__term", text: "Issued")
-      assert page.has_css?(".app-c-important-metadata__definition", text: "6 July 2015")
-    end
+    assert_has_important_metadata("Issued": "6 July 2015")
+    assert_footer_has_published_dates("Published 6 July 2015")
   end
 
   test "renders when no facet or finder" do
     setup_and_visit_content_item('business-finance-support-scheme')
 
-    within(all(".app-c-published-dates").first) do
-      assert page.has_content?("Published 9 July 2015")
-    end
+    assert_has_published_dates("Published 9 July 2015")
   end
 
   test "renders a nested contents list" do
