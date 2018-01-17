@@ -20,25 +20,18 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
     refute page.has_css?(".app-c-notice")
 
-    within(".app-c-publisher-metadata") do
-      within(".app-c-published-dates") do
-        assert page.has_content?("Published 27 February 1881")
-        assert page.has_content?("Last updated 14 September 2016")
-        assert page.has_link?("see all updates", href: "#history")
-      end
+    assert_has_publisher_metadata(
+      published: "Published 27 February 1881",
+      last_updated: "Last updated 14 September 2016",
+      history_link: true,
+      metadata: {
+        "From": { "Ministry of Defence": "/government/organisations/ministry-of-defence" }
+      }
+    )
 
-      within(".app-c-publisher-metadata__other") do
-        assert page.has_content?("From: Ministry of Defence")
-        assert page.has_link?("Ministry of Defence",
-                              href: "/government/organisations/ministry-of-defence")
-      end
-    end
-
-    within(".app-c-important-metadata") do
-      assert page.has_content?("Field of operation: Zululand")
-      assert page.has_link?("Zululand",
-                            href: "/government/fields-of-operation/zululand")
-    end
+    assert_has_important_metadata(
+      "Field of operation": { "Zululand": "/government/fields-of-operation/zululand" }
+    )
 
     assert_component_parameter(
       "lead_paragraph",
@@ -72,14 +65,12 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
   test "fatality notice with minister" do
     setup_and_visit_content_item('fatality_notice_with_minister')
-
-    within(".app-c-publisher-metadata .app-c-publisher-metadata__other") do
-      assert page.has_content?("From: Ministry of Defence and The Rt Hon Sir Eric Pickles MP")
-      assert page.has_link?("Ministry of Defence",
-                            href: "/government/organisations/ministry-of-defence")
-      assert page.has_link?("The Rt Hon Sir Eric Pickles MP",
-                            href: "/government/people/eric-pickles")
-    end
+    assert_has_publisher_metadata_other(
+      "From": {
+        "Ministry of Defence": "/government/organisations/ministry-of-defence",
+        "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
+      }
+    )
   end
 
   test "fatality notice with withdrawn notice" do

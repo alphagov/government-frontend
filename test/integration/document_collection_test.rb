@@ -15,8 +15,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       {
         "From:":
           {
-            text: "Driver and Vehicle Standards Agency",
-            href: "/government/organisations/driver-and-vehicle-standards-agency"
+            "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency"
           }
       }
     )
@@ -35,7 +34,9 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
         {
           section_name: "related-nav-publishers",
           section_text: "Published by",
-          links: { "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency" }
+          links: {
+            "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency"
+          }
         }
       ]
     )

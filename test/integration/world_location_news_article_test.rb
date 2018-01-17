@@ -17,28 +17,25 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
   test "renders first published, from and part of in metadata and document footer" do
     setup_and_visit_content_item('world_location_news_article')
 
-    within(".app-c-publisher-metadata .app-c-published-dates") do
-      assert page.has_content?("Published 24 November 2015")
-    end
-
-    within(".content-bottom-margin .app-c-published-dates") do
-      assert page.has_content?("Published 24 November 2015")
-    end
+    assert_has_published_dates("Published 24 November 2015")
+    assert_footer_has_published_dates("Published 24 November 2015")
   end
 
   test "renders organisation and location links" do
     setup_and_visit_content_item('world_location_news_article')
 
-    within(".app-c-publisher-metadata__other") do
-      assert page.has_css?(".app-c-publisher-metadata__term", text: "From:")
-      assert page.has_css?(".app-c-publisher-metadata__definition", text: "British High Commission Nairobi")
-      assert page.has_link?("British High Commission Nairobi", href: "/government/world/organisations/british-high-commission-nairobi")
-    end
+    assert_has_publisher_metadata(metadata: {
+      "From": {
+        "British High Commission Nairobi":
+          "/government/world/organisations/british-high-commission-nairobi"
+      }
+    })
 
-    within(".app-c-related-navigation__nav-section[aria-labelledby='related-nav-world_locations']") do
-      assert page.has_css?(".app-c-related-navigation__section-link", text: "Kenya")
-      assert page.has_link?("Kenya", href: "/world/kenya/news")
-    end
+    assert_has_related_navigation(
+      section_name: "related-nav-world_locations",
+      section_text: "World locations",
+      links: { "Kenya": "/world/kenya/news" }
+    )
   end
 
   test "renders translation links when there is more than one translation" do

@@ -13,13 +13,8 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('statistical_data_set')
     assert_has_publisher_metadata(
       published: "Published 13 December 2012",
-      metadata:
-      {
-        "From:":
-        {
-          text: "Department for Transport",
-          href: "/government/organisations/department-for-transport"
-        }
+      metadata: {
+        "From:": { "Department for Transport": "/government/organisations/department-for-transport" }
       }
     )
     assert_footer_has_published_dates("Published 13 December 2012")
@@ -32,13 +27,19 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
         {
           section_name: "related-nav-publishers",
           section_text: "Published by",
-          links: { "Department for Transport": "/government/organisations/department-for-transport" }
+          links: {
+            "Department for Transport":
+              "/government/organisations/department-for-transport"
+          }
         },
         {
           section_name: "related-nav-collections",
           section_text: "Collection",
-          links: { "Transport Statistics Great Britain": "/government/collections/transport-statistics-great-britain" }
-        }
+          links: {
+            "Transport Statistics Great Britain":
+              "/government/collections/transport-statistics-great-britain"
+          }
+        },
       ]
     )
   end
