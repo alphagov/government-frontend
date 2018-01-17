@@ -12,11 +12,11 @@
 
   <div class="column-two-thirds">
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-    <%= render 'shared/history_notice', content_item: @content_item %>
   </div>
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo' %>
+<%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 
 <div class="grid-row">
