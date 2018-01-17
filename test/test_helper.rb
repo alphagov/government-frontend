@@ -128,22 +128,34 @@ class ActionDispatch::IntegrationTest
     text << published if published
     text << last_updated if last_updated
     within(all(".app-c-published-dates")[element_index]) do
-      assert page.has_text?(text.join("\n"))
+      assert page.has_text?(text.join("\n")), "Published dates #{text.join("\n")} not found"
       if history_link
-        assert page.has_link?("see all updates", href: "#history")
+        assert page.has_link?("see all updates", href: "#history"), "Updates link not found"
       end
     end
   end
 
   def assert_has_publisher_metadata_other(metadata)
     within(".app-c-publisher-metadata__other") do
-      metadata.each do |key, value|
-        assert page.has_css?(".app-c-publisher-metadata__term", text: key)
-        within(".app-c-publisher-metadata__definition") do
-          if value.has_key?(:href)
-            assert page.has_link?(value[:text], href: value[:href])
+      assert_has_metadata(
+        metadata, ".app-c-publisher-metadata__term", ".app-c-publisher-metadata__definition"
+      )
+    end
+  end
+
+  def assert_has_metadata(metadata, term_selector, definition_selector)
+    metadata.each do |key, value|
+      assert page.has_css?(term_selector, text: key),
+        "Metadata term '#{key}' not found"
+
+      value = { value => nil } if value.is_a?(String)
+
+      value.each do |text, href|
+        within(definition_selector, text: text) do
+          if href
+            assert page.has_link?(text, href: href), "Metadata link '#{text}' not found"
           else
-            assert page.has_text?(value[:text])
+            assert page.has_text?(text), "Metadata value '#{text}' not found"
           end
         end
       end
@@ -157,24 +169,42 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def assert_has_important_metadata(metadata)
+    within(".app-c-important-metadata") do
+      assert_has_metadata(
+        metadata, ".app-c-important-metadata__term", ".app-c-important-metadata__definition"
+      )
+    end
+  end
+
   def assert_footer_has_published_dates(published = nil, last_updated = nil, history_link = false)
     assert_has_published_dates(published, last_updated, history_link, 1)
   end
 
-  def assert_has_nav_bar_section_and_links(section_name, section_text, links)
-    assert page.has_css?("##{section_name}", text: section_text)
-    within find("nav[aria-labelledby='#{section_name}']") do
-      links.each do |key, value|
-        assert page.has_link?(key, href: value)
+  def assert_has_related_navigation_section_and_links(section_name, section_text, links)
+    unless section_name == "related-nav-related_items"
+      assert page.has_css?("##{section_name}", text: section_text),
+        "Related navigation section '#{section_text}' not found"
+    end
+
+    within("nav[aria-labelledby='#{section_name}']") do
+      links.each do |text, href|
+        assert page.has_link?(text, href: href),
+          "Related navigation link '#{text}' not found in '#{section_text}' links"
       end
     end
   end
 
   def assert_has_related_navigation(sections)
     within(".app-c-related-navigation") do
-      assert page.has_css?(".app-c-related-navigation__main-heading", text: "Related content")
+      assert page.has_css?(".app-c-related-navigation__main-heading", text: "Related content"),
+        "Related navigation 'Related content' section not found"
+
+      sections = [sections] unless sections.is_a?(Array)
       sections.each do |section|
-        assert_has_nav_bar_section_and_links(section[:section_name], section[:section_text], section[:links])
+        assert_has_related_navigation_section_and_links(
+          section[:section_name], section[:section_text], section[:links]
+        )
       end
     end
   end
