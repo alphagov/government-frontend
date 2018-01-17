@@ -46,6 +46,10 @@
     }
   }
 
+  .app-c-back-to-top:focus {
+    outline: 0;
+  }
+
   .app-c-back-to-top:hover {
     color: $link-hover-colour;
   }
