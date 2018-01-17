@@ -8,10 +8,11 @@ body: |
   * `contents` - The contents to build a contents list, if this item is empty the contents-list and back-to-top links are excluded but the block passed is still rendered.
 
 accessibility_criteria: |
-  The component embeds contents-list and back-to-top components. Please see the relevant accessibility criteria:
+  - The component must have a text contrast ratio higher than 4.5:1 against the background colour to meet WCAG AA.
+  - The component embeds contents-list and back-to-top components. Please see the relevant accessibility criteria:
 
-  * [back-to-top](/component-guide/back-to-top)
-  * [contents-list](/component-guide/contents-list)
+    * [back-to-top](/component-guide/back-to-top)
+    * [contents-list](/component-guide/contents-list)
 shared_accessibility_criteria:
   - link
 examples:
