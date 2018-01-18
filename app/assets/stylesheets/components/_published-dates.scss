@@ -15,3 +15,8 @@
   display: block;
   @include bold-16;
 }
+
+.app-c-published-dates--history {
+  padding-top: $gutter-one-third;
+  border-top: 1px solid $border-colour;
+}

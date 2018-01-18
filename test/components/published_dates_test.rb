@@ -32,7 +32,7 @@ class PublishedDatesTest < ComponentTestCase
       history: [display_time: "23 August 2013", note: "Updated with new data"]
     )
     assert_select ".app-c-published-dates__change-history#full-history"
-    assert_select ".app-c-published-dates .app-c-published-dates__change-date", text: "23 August 2013"
+    assert_select ".app-c-published-dates--history .app-c-published-dates__change-date", text: "23 August 2013"
   end
 
   test "only adds history id when passed page history" do
@@ -71,8 +71,8 @@ class PublishedDatesTest < ComponentTestCase
       last_updated: "15th July 2015",
       history: [display_time: "23 August 2013", note: "Updated with new data"]
     )
-    assert_select ".app-c-published-dates[data-module=\"toggle\"]"
-    assert_select ".app-c-published-dates a[href=\"#full-history\"][data-controls=\"full-history\"]"
-    assert_select ".app-c-published-dates a[href=\"#full-history\"][data-expanded=\"false\"]"
+    assert_select ".app-c-published-dates--history[data-module=\"toggle\"]"
+    assert_select ".app-c-published-dates--history a[href=\"#full-history\"][data-controls=\"full-history\"]"
+    assert_select ".app-c-published-dates--history a[href=\"#full-history\"][data-expanded=\"false\"]"
   end
 end
