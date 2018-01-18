@@ -26,7 +26,7 @@ examples:
       last_updated: 20th October 2016
       link_to_history: true
   display_page_history:
-    description: This will set up an expandable section on the page to let users toggle the display of the page history.
+    description: This will set up an expandable section on the page, with a top border, to let users toggle the display of the page history.
     data:
       published: 1st January 1990
       last_updated: 20th October 2016
