@@ -21,6 +21,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('international-development-funding')
     setup_and_visit_content_item('maib-reports')
     setup_and_visit_content_item('raib-reports')
+    setup_and_visit_content_item('residential-property-tribunal-decision')
     setup_and_visit_content_item('service-standard-report')
     setup_and_visit_content_item('tax-tribunal-decision')
     setup_and_visit_content_item('utaac-decision')
@@ -28,6 +29,14 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
   test "renders title, description and body" do
     setup_and_visit_content_item('aaib-reports')
+
+    assert_has_component_title(@content_item["title"])
+    assert page.has_text?(@content_item["description"])
+    assert_has_component_govspeak(@content_item["details"]["body"])
+  end
+
+  test "returns example for residential tribunal decision" do
+    setup_and_visit_content_item('residential-property-tribunal-decision')
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
