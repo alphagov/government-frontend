@@ -52,4 +52,10 @@ class ContentsListWithBodyTest < ComponentTestCase
                     .app-c-contents-list-with-body__link-container
                     .app-c-back-to-top[href='#contents']))
   end
+
+  test "passes 'format_numbers' param to contents-list component" do
+    render(component_path, contents: contents_list, format_numbers: true) { block }
+
+    assert_select(".app-c-contents-list__list-item--numbered a[href='/one']")
+  end
 end
