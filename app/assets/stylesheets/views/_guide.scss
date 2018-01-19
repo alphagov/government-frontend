@@ -21,4 +21,12 @@
       @include bold-24;
     }
   }
+
+  .task-list-sidebar {
+    margin-top: 0;
+
+    @include media(tablet) {
+      margin-top: 0;
+    }
+  }
 }
