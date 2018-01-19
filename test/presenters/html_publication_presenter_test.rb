@@ -65,4 +65,12 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     assert presented.organisations.count > 1
     refute presented.organisation_logo(organisation)[:organisation][:image]
   end
+
+  test 'prepends the parent publication to related items' do
+    presented = presented_item("published")
+    parent_publication_link = presented.content_item["links"]["parent"].first
+    parent_publication = presented.related_navigation[:related_items].first
+    assert_equal parent_publication_link["base_path"], parent_publication[:path]
+    assert_equal parent_publication_link["title"], parent_publication[:text]
+  end
 end

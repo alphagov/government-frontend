@@ -55,6 +55,17 @@ class HtmlPublicationPresenter < ContentItemPresenter
     request.base_url + request.path
   end
 
+  def related_navigation
+    nav = super
+    raw_links = content_item["links"]
+    parent_publication = raw_links.fetch("parent", []).first
+    nav[:related_items].unshift(
+      path: parent_publication["base_path"],
+      text: parent_publication["title"]
+    ) if parent_publication
+    nav
+  end
+
 private
 
   def public_timestamp
