@@ -6,10 +6,10 @@
   <%= render 'shared/translations' %>
   <div class="column-two-thirds">
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <span class="app-c-horizontal-rule"></span>
+    <%= render 'components/publisher-metadata', @content_item.publisher_metadata %>
   </div>
 </div>
-
-<%= render 'shared/publisher_metadata_with_logo' %>
 
 <div class="grid-row">
   <div class="column-two-thirds content-bottom-margin">

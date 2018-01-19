@@ -18,6 +18,7 @@
 @import "helpers/task-list-title";
 @import "helpers/content-bottom-margin";
 @import "helpers/publisher-metadata-with-logo";
+@import "helpers/horizontal-rule";
 
 // Components from this application
 @import 'components/*';
@@ -44,7 +45,6 @@
 @import 'views/detailed-guide';
 @import 'views/publication';
 @import 'views/document-collection';
-@import 'views/fatality-notice';
 @import 'views/statistical-data-set';
 @import 'views/consultation';
 @import 'views/speech';
