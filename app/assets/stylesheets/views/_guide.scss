@@ -1,5 +1,5 @@
 .guide {
-  @include parts-ul;
+  @include parts;
   @include add-title-margin;
 
   .part-navigation li {
@@ -19,14 +19,6 @@
   .govuk-govspeak {
     h2 {
       @include bold-24;
-    }
-  }
-
-  .task-list-sidebar {
-    margin-top: 0;
-
-    @include media(tablet) {
-      margin-top: 0;
     }
   }
 }
