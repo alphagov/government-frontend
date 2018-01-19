@@ -8,20 +8,16 @@
        title: @content_item.title,
        average_title_length: "long" %>
   </div>
-  <% if @content_item.available_translations.length > 1 %>
-    <div class="column-third">
-      <%= render 'components/translation-nav',
-          translations: @content_item.available_translations %>
-    </div>
-  <% end %>
+  <%= render 'shared/translations' %>
+
   <div class="column-two-thirds">
     <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
-    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-    <%= render 'shared/history_notice', content_item: @content_item %>
   </div>
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo' %>
+<%= render 'shared/history_notice', content_item: @content_item %>
+<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 
 <div class="grid-row">
   <div class="column-two-thirds responsive-bottom-margin">

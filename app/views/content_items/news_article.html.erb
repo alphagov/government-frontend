@@ -1,8 +1,6 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
-    <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
-    <%= render 'shared/history_notice', content_item: @content_item %>
   </div>
   <%= render 'shared/translations' %>
   <div class="column-two-thirds">
@@ -11,6 +9,8 @@
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo' %>
+<%= render 'shared/history_notice', content_item: @content_item %>
+<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 
 <div class="grid-row">
   <div class="column-two-thirds content-bottom-margin">
@@ -19,13 +19,9 @@
           src: @content_item.image["url"],
           alt: @content_item.image["alt_text"],
           caption: @content_item.image["caption"] if @content_item.image %>
-
-      <%= render 'components/important-metadata',
-          items: @content_item.metadata[:other] %>
-
       <%= render 'govuk_component/govspeak',
-        content: @content_item.body,
-        direction: page_text_direction %>
+          content: @content_item.body,
+          direction: page_text_direction %>
     </div>
 
     <div class="dont-print responsive-bottom-margin">
