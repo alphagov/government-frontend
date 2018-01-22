@@ -78,4 +78,45 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       { text: "Four", id: "four" }
     ], @contents_list.contents_items
   end
+
+  test "#show_contents_list? returns true if number of contents items is less than 3 and the first item's character count is above 100" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+         <p>#{Faker::Lorem.characters(50)}</p>
+         <p>#{Faker::Lorem.characters(51)}</p>
+         <h2 id='two'>Two</h2>
+         <p>#{Faker::Lorem.sentence}</p>"
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
+
+  test "#show_contents_list? returns true if number of contents items is 3 or more" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+         <p>#{Faker::Lorem.sentence}</p>
+         <h2 id='two'>Two</h2>
+         <p>#{Faker::Lorem.sentence}</p>
+         <h2 id='three'>Three</h2>
+         <h3>Pi</h3>
+         <h2 id='four'>#{Faker::Lorem.sentence}</h2>"
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
+
+  test "#show_contents_list? returns false if number of contents times is less than 3 and first item's character count is less than 100" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+         <p>#{Faker::Lorem.characters(10)}</p>
+         <p>#{Faker::Lorem.characters(10)}</p>
+         <h2 id='two'>Two</h2>
+         <p>#{Faker::Lorem.sentence}</p>"
+      end
+    end
+    refute @contents_list.show_contents_list?
+  end
 end
