@@ -9,7 +9,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render "components/contents-list-with-body", {
-      contents: @content_item.contents
+      contents: @content_item.contents,
     } do %>
       <%= render 'govuk_component/govspeak',
           content: @content_item.body,
