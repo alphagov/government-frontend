@@ -276,13 +276,15 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def setup_and_visit_random_content_item(document_type: schema_type)
-    payload = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type)
-    path = payload["base_path"]
+  def setup_and_visit_random_content_item(document_type: nil)
+    content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
+      payload.merge('document_type' => document_type) unless document_type.nil?
+      payload
+    end
+    path = content_item["base_path"]
 
     stub_request(:get, %r{#{path}})
-      .to_return(status: 200, body: payload.to_json, headers: {})
-
+      .to_return(status: 200, body: content_item.to_json, headers: {})
     visit path
   end
 

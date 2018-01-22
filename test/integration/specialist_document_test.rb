@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class SpecialistDocumentTest < ActionDispatch::IntegrationTest
-  test "random but valid items do not error" do
+  test "random but valid specialist documents do not error" do
     setup_and_visit_random_content_item(document_type: 'aaib_report')
     setup_and_visit_random_content_item(document_type: 'raib_report')
     setup_and_visit_random_content_item(document_type: 'tax_tribunal_decision')
