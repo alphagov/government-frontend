@@ -37,7 +37,7 @@ class PublicationPresenterTest < PresenterTestCase
 
   test '#from presents ministers' do
     minister = schema_item["links"]["ministers"][0]
-    assert presented_item.from.include?("<a href=\"#{minister['base_path']}\">#{minister['title']}</a>")
+    assert presented_item.from.include?("<a aria-labelledby=\"metadata-from\" href=\"#{minister['base_path']}\">#{minister['title']}</a>")
   end
 
   test '#part_of presents topical events' do

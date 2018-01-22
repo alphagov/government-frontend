@@ -178,12 +178,12 @@ private
     friendly_value = allowed_value['label']
 
     return friendly_value unless facet['filterable']
-    facet_link(friendly_value, allowed_value['value'], facet['key'])
+    facet_link(friendly_value, allowed_value['value'], facet['key'], facet['name'])
   end
 
-  def facet_link(label, value, key)
+  def facet_link(label, value, key, name)
     finder_base_path = finder['base_path']
-    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}")
+    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}", 'aria-labelledby': "metadata-" + name.to_s.parameterize)
   end
 
   def first_published_at_facet_key

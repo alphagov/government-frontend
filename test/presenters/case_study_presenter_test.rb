@@ -42,9 +42,9 @@ class CaseStudyPresenterTest < PresenterTestCase
     }
 
     expected_from_links = [
-      link_to('Lead org', '/orgs/lead'),
-      link_to('Supporting org', '/orgs/supporting'),
-      link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan'),
+      link_to('Lead org', '/orgs/lead', "aria-labelledby": 'metadata-from'),
+      link_to('Supporting org', '/orgs/supporting', "aria-labelledby": 'metadata-from'),
+      link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan', "aria-labelledby": 'metadata-from'),
     ]
 
     assert_equal expected_from_links, presented_item(schema_name, with_organisations).from

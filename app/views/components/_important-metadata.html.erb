@@ -12,7 +12,8 @@
     <% end %>
     <dl data-module="track-click">
     <% items.each do |title, definition| %>
-      <dt class="app-c-important-metadata__term"><%= title %>: </dt>
+      <% metadata_id = definition.to_s =~ /href/ ?  "id=metadata-" + title.to_s.parameterize : "" %>
+      <dt class="app-c-important-metadata__term" <%= metadata_id %>><%= title %>: </dt>
       <dd class="app-c-important-metadata__definition"><%= definition %></dd>
     <% end %>
     </dl>
