@@ -119,4 +119,29 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     end
     refute @contents_list.show_contents_list?
   end
+
+  test "#show_contents_list? returns true if number of table rows in the first item is more than 13" do
+    class << @contents_list
+      def body
+        base = "<h2 id='one'>One</h2><table>\n<tbody>\n"
+        14.times do
+          base += "<tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n"
+        end
+        base += "</tbody>\n</table><h2 id='two'>Two</h2>"
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
+
+  test "#show_contents_list? returns false if number of table rows in the first item is less than 13" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2><table>\n<tbody>\n
+        <tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n
+        <tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n
+        </tbody>\n</table><h2 id='two'>Two</h2>"
+      end
+    end
+    refute @contents_list.show_contents_list?
+  end
 end
