@@ -4,6 +4,7 @@ module ContentItem
     include TypographyHelper
 
     CHARACTER_LIMIT = 100
+    TABLE_ROW_LIMIT = 13
 
     def contents
       @contents ||=
@@ -21,7 +22,8 @@ module ContentItem
     def show_contents_list?
       return false if contents_items.count < 2
       return true if contents_items.count > 2
-      first_item_has_long_content? if first_item.next_element.name == 'p'
+      first_item_has_long_content? ||
+        first_item_has_long_table?
     end
 
   private
@@ -47,6 +49,23 @@ module ContentItem
         element = element.next_element
       end
       first_item_text.length
+    end
+
+    def first_item_has_long_table?
+      table = find_table
+      return unless table.present?
+
+      row_count = table.css('tr').count
+      row_count > TABLE_ROW_LIMIT
+    end
+
+    def find_table
+      element = first_item.next_element
+
+      until element.name == 'h2' do
+        return element if element.name == 'table'
+        element = element.next_element
+      end
     end
 
     def parsed_body
