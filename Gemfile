@@ -38,6 +38,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'faker'
   gem 'mocha'
   gem 'poltergeist', require: false
   gem 'webmock', '~> 3.3.0', require: false
