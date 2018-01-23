@@ -7,6 +7,7 @@ require 'rails/test_help'
 require 'capybara/rails'
 require 'slimmer/test_helpers/govuk_components'
 require 'mocha/mini_test'
+require 'faker'
 
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
 
