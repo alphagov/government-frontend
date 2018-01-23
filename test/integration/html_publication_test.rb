@@ -15,7 +15,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?("Published 17 January 2016")
     end
 
-    within ".sidebar-with-body" do
+    within ".app-c-contents-list-with-body" do
       assert page.has_text?("Contents")
       assert page.has_css?('.app-c-contents-list')
     end
