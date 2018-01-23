@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root to: 'development#index'
 
-  mount GovukPublishingComponents::Engine, at: "/component-guide" if defined?(GovukPublishingComponents)
+  mount GovukPublishingComponents::Engine, at: "/component-guide"
 
   get 'healthcheck', to: proc { [200, {}, ['']] }
 
