@@ -30,9 +30,10 @@ class CaseStudyTest < ActionDispatch::IntegrationTest
   test "world location link" do
     setup_and_visit_content_item('translated')
 
-    within(".app-c-related-navigation__nav-section[aria-labelledby='related-nav-world_locations']") do
-      assert page.has_css?(".app-c-related-navigation__section-link", text: "Spain")
-      assert page.has_link?("Spain", href: "/world/spain/news")
-    end
+    assert_has_related_navigation(
+      section_name: "related-nav-world_locations",
+      section_text: "World locations",
+      links: { "Spain": "/world/spain/news" }
+    )
   end
 end

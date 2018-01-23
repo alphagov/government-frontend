@@ -19,18 +19,17 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "renders metadata and document footer" do
     setup_and_visit_content_item('publication')
 
-    within(".app-c-publisher-metadata") do
-      assert page.has_css?(".app-c-published-dates", text: "Published 3 May 2016")
+    assert_has_publisher_metadata(
+      published: "Published 3 May 2016",
+      metadata: {
+        "From": {
+          "Environment Agency": "/government/organisations/environment-agency",
+          "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
+        }
+      }
+    )
 
-      within(".app-c-publisher-metadata__other") do
-        assert page.has_link?("Environment Agency", href: "/government/organisations/environment-agency")
-        assert page.has_link?("The Rt Hon Sir Eric Pickles MP", href: "/government/people/eric-pickles")
-      end
-    end
-
-    within(".responsive-bottom-margin .app-c-published-dates") do
-      assert page.has_content?("Published 3 May 2016")
-    end
+    assert_footer_has_published_dates("Published 3 May 2016")
   end
 
   test "renders a govspeak block for attachments" do
@@ -67,12 +66,15 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "renders 'Applies to' block in important metadata when there are excluded nations" do
     setup_and_visit_content_item('statistics_publication')
 
-    within(".app-c-important-metadata") do
-      assert page.has_content?("Applies to: England (see publications for Northern Ireland, Scotland, and Wales)")
-      assert page.has_link?("Northern Ireland", href: "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm")
-      assert page.has_link?("Scotland", href: "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS")
-      assert page.has_link?("Wales", href: "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en")
-    end
+    assert_has_important_metadata(
+      "Applies to": {
+        "England (see publications for Northern Ireland, Scotland, and Wales)": nil,
+        "Northern Ireland":
+          "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm",
+        "Scotland": "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS",
+        "Wales": "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en",
+      }
+    )
   end
 
   test "doesn't render government navigation for pages with taxonomy navigation" do

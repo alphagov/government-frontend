@@ -7,16 +7,22 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    within '.app-c-publisher-metadata' do
-      assert page.has_text?("Published 4 November 2016")
-      assert page.has_text?("Last updated 7 November 2016")
-      assert page.has_css?(".app-c-publisher-metadata__term", text: 'From')
-      assert page.has_css?(".app-c-publisher-metadata__definition a[href=\"/government/organisations/department-for-education\"]", text: 'Department for Education')
-    end
+    assert_has_publisher_metadata(
+      published: "Published 4 November 2016",
+      last_updated: "Last updated 7 November 2016",
+      metadata:  {
+        "From": { "Department for Education": "/government/organisations/department-for-education" }
+      }
+    )
 
-    within '.app-c-related-navigation' do
-      assert page.has_css?('.app-c-related-navigation__section-link[href="/topic/higher-education/administration"]', text: 'Higher education administration')
-    end
+    assert_footer_has_published_dates("Published 4 November 2016", "Last updated 7 November 2016")
+    assert_has_related_navigation([
+      {
+        section_name: "related-nav-topics",
+        section_text: "Explore the topic",
+        links: { "Higher education administration": "/topic/higher-education/administration" }
+      }
+    ])
 
     within '.consultation-description' do
       assert_has_component_govspeak(@content_item["details"]["body"])
@@ -108,9 +114,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "consultation that only applies to a set of nations" do
     setup_and_visit_content_item('consultation_outcome_with_feedback')
 
-    within '.app-c-important-metadata' do
-      assert page.has_text?("Applies to: England")
-    end
+    assert_has_important_metadata("Applies to": "England")
   end
 
   test "ways to respond renders" do

@@ -7,9 +7,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    within '.app-c-important-metadata' do
-      assert page.has_text?("Release date: 20 January 2016 9:30am (confirmed)")
-    end
+    assert_has_important_metadata("Release date": "20 January 2016 9:30am (confirmed)")
   end
 
   test "national statistics" do
@@ -34,10 +32,10 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
       assert page.has_text?(@content_item["details"]["cancellation_reason"]), "displays cancelleation reason"
     end
 
-    within '.app-c-important-metadata' do
-      assert page.has_text?("Proposed release: 20 January 2016 9:30am")
-      assert page.has_text?("Cancellation date: 17 January 2016 2:19pm")
-    end
+    assert_has_important_metadata(
+      "Proposed release": "20 January 2016 9:30am",
+      "Cancellation date": "17 January 2016 2:19pm"
+    )
   end
 
   test "statistics with a changed release date" do

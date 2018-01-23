@@ -12,31 +12,28 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
   test "renders first published and from in metadata and document footer" do
     setup_and_visit_content_item("news_article")
 
-    within(".app-c-publisher-metadata") do
-      within(".app-c-published-dates") do
-        assert page.has_content?("Published 25 December 2016")
-      end
+    assert_has_publisher_metadata(
+      published: "Published 25 December 2016",
+      metadata: {
+        "From": {
+          "Prime Minister's Office, 10 Downing Street":
+            "/government/organisations/prime-ministers-office-10-downing-street"
+        }
+      }
+    )
 
-      within(".app-c-publisher-metadata__other") do
-        assert page.has_content?("From: Prime Minister's Office, 10 Downing Street")
-        assert page.has_link?("Prime Minister's Office, 10 Downing Street",
-                              href: "/government/organisations/prime-ministers-office-10-downing-street")
-      end
-    end
-
-    within(".content-bottom-margin .app-c-published-dates") do
-      assert page.has_content?("Published 25 December 2016")
-    end
+    assert_footer_has_published_dates("Published 25 December 2016")
   end
 
 
   test "renders policy links" do
     setup_and_visit_content_item('news_article_government_response')
 
-    within(".app-c-related-navigation__nav-section[aria-labelledby='related-nav-policies']") do
-      assert page.has_css?(".app-c-related-navigation__section-link", text: "Marine environment")
-      assert page.has_link?("Marine environment", href: "/government/policies/marine-environment")
-    end
+    assert_has_related_navigation(
+      section_name: "related-nav-policies",
+      section_text: "Policy",
+      links: { "Marine environment": "/government/policies/marine-environment" }
+    )
   end
 
   test "renders translation links when there is more than one translation" do
