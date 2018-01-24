@@ -144,4 +144,17 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     end
     refute @contents_list.show_contents_list?
   end
+
+  test "#show_contents_list? returns true if image and over 50 characters are present in the first item" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+        <div class='img'><img src='www.gov.uk/img.png'></div>
+        <p>#{Faker::Lorem.characters(51)}</p>
+        <h2 id='two'>Two</h2>
+        <p>#{Faker::Lorem.sentence}</p>"
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
 end
