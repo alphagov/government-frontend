@@ -4,6 +4,7 @@ module ContentItem
     include TypographyHelper
 
     CHARACTER_LIMIT = 100
+    CHARACTER_LIMIT_WITH_IMAGE = 50
     TABLE_ROW_LIMIT = 13
 
     def contents
@@ -23,7 +24,8 @@ module ContentItem
       return false if contents_items.count < 2
       return true if contents_items.count > 2
       first_item_has_long_content? ||
-        first_item_has_long_table?
+        first_item_has_long_table? ||
+        first_item_has_image_and_long_content?
     end
 
   private
@@ -37,7 +39,7 @@ module ContentItem
     end
 
     def first_item_has_long_content?
-      first_item_content > CHARACTER_LIMIT
+      first_item_character_count > CHARACTER_LIMIT
     end
 
     def first_item_content
@@ -48,7 +50,11 @@ module ContentItem
         first_item_text += element.text if element.name == 'p'
         element = element.next_element
       end
-      first_item_text.length
+      first_item_text
+    end
+
+    def first_item_character_count
+      @first_item_character_count ||= first_item_content.length
     end
 
     def first_item_has_long_table?
@@ -66,6 +72,19 @@ module ContentItem
         return element if element.name == 'table'
         element = element.next_element
       end
+    end
+
+    def first_item_has_image?
+      element = first_item.next_element
+
+      until element.name == 'h2'
+        return true if element.name == 'div' && element['class'] == 'img'
+        element = element.next_element
+      end
+    end
+
+    def first_item_has_image_and_long_content?
+      first_item_has_image? && first_item_character_count > CHARACTER_LIMIT_WITH_IMAGE
     end
 
     def parsed_body
