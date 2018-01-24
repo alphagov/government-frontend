@@ -1,11 +1,29 @@
 require 'test_helper'
 
 class SpecialistDocumentTest < ActionDispatch::IntegrationTest
-  test "random but valid items do not error" do
+  test "random but valid specialist documents do not error" do
     setup_and_visit_random_content_item(document_type: 'aaib_report')
     setup_and_visit_random_content_item(document_type: 'raib_report')
     setup_and_visit_random_content_item(document_type: 'tax_tribunal_decision')
     setup_and_visit_random_content_item(document_type: 'cma_case')
+  end
+
+  test "specialist document subtypes do not error" do
+    setup_and_visit_content_item('aaib-reports')
+    setup_and_visit_content_item('asylum-support-decision')
+    setup_and_visit_content_item('business-finance-support-scheme')
+    setup_and_visit_content_item('cma-cases')
+    setup_and_visit_content_item('countryside-stewardship-grants')
+    setup_and_visit_content_item('drug-safety-update')
+    setup_and_visit_content_item('employment-appeal-tribunal-decision')
+    setup_and_visit_content_item('employment-tribunal-decision')
+    setup_and_visit_content_item('european-structural-investment-funds')
+    setup_and_visit_content_item('international-development-funding')
+    setup_and_visit_content_item('maib-reports')
+    setup_and_visit_content_item('raib-reports')
+    setup_and_visit_content_item('service-standard-report')
+    setup_and_visit_content_item('tax-tribunal-decision')
+    setup_and_visit_content_item('utaac-decision')
   end
 
   test "renders title, description and body" do
