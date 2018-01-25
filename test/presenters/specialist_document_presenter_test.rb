@@ -24,14 +24,12 @@ class SpecialistDocumentPresenterTest
 
     test 'presents headers as nested contents (with trailing colons removed)' do
       expected_headers = [
-        {
-          text: "Summary", id: "summary", href: "#summary", items: [
-            { text: "Download report", id: "download-report", href: "#download-report" },
-            { text: "Download glossary of abbreviations", id: "download-glossary-of-abbreviations", href: "#download-glossary-of-abbreviations" }
-          ]
-        }
+        { text: "Reports of diabetic acidosis", id: "reports-of-diabetic-acidosis", href: "#reports-of-diabetic-acidosis" },
+        { text: "SGLT2 inhibitors – medicines in this class", id: "sglt2-inhibitors--medicines-in-this-class", href: "#sglt2-inhibitors--medicines-in-this-class" },
+        { text: "Further information", id: "further-information", href: "#further-information" }
       ]
-      assert_equal expected_headers, presented_item('aaib-reports').contents
+
+      assert_equal expected_headers, presented_item('drug-safety-update').contents
     end
 
     test 'presents updates based on change history' do
