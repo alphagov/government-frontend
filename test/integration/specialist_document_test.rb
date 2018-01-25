@@ -108,7 +108,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   end
 
   test "renders a nested contents list" do
-    setup_and_visit_content_item('aaib-reports')
+    setup_and_visit_content_item('countryside-stewardship-grants')
 
     assert page.has_css?("#contents .app-c-contents-list")
     assert page.has_css?(%(#contents .app-c-contents-list-with-body__link-wrapper
@@ -179,5 +179,11 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       "land_use" => %w(arable-land water-quality wildlife-package wildlife-package),
       "tiers_or_standalone_items" => %w(higher-tier mid-tier)
     )
+  end
+
+  test 'does not render a contents list if there are fewer than three items in the contents list' do
+    setup_and_visit_content_item('aaib-reports')
+
+    refute page.has_css?('#contents .app-c-contents-list')
   end
 end
