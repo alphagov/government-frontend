@@ -76,6 +76,22 @@ class ContentItemPresenter
     content_item.dig("links", "taxons").present?
   end
 
+  def publishing_organisation
+    @content_item["links"]["organisations"].to_a.first
+  end
+
+  def policy
+    @content_item["links"]["related_policies"].to_a.first
+  end
+
+  def person
+    @content_item["links"]["people"].to_a.first
+  end
+
+  def taxon
+    @content_item["links"]["taxons"].to_a.first
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
