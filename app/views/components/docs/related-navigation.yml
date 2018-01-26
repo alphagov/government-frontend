@@ -26,13 +26,6 @@ examples:
           path: /browse/working/finding-job
         - text: Apprenticeships
           path: /topic/further-education-skills/apprenticeships
-  with_publishing_entities:
-    data:
-      publishers:
-        - text: Department for Education
-          path: /government/department-for-education
-        - text: Department for Work and Pensions
-          path: /government/department-for-work-pensions
   with_collections:
     data:
       collections:
@@ -136,9 +129,6 @@ examples:
           path: /browse/working/finding-job
         - text: Apprenticeships
           path: /topic/further-education-skills/apprenticeships
-      publishers:
-        - text: Department for Education
-          path: /government/department-for-education
       collections:
         - text: Recruit an apprentice (formerly apprenticeship vacancies)
           path: /government/collections/apprenticeship-vacancies
