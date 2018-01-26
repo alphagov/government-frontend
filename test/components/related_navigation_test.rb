@@ -66,20 +66,6 @@ class RelatedNavigationTest < ComponentTestCase
     assert_select ".app-c-related-navigation__section-link[href=\"/world/usa/news\"]", text: 'USA'
   end
 
-  test "renders publisher section when passed publisher items" do
-    render_component(
-      publishers: [
-        {
-          text: "Department for Education",
-          path: '/government/organisation/department-for-education'
-        }
-      ]
-    )
-
-    assert_select ".app-c-related-navigation__sub-heading", text: 'Published by'
-    assert_select ".app-c-related-navigation__section-link[href=\"/government/organisation/department-for-education\"]", text: 'Department for Education'
-  end
-
   test "renders collection section when passed collection items" do
     render_component(
       collections: [
