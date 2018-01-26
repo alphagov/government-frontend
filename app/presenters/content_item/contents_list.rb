@@ -6,6 +6,7 @@ module ContentItem
     CHARACTER_LIMIT = 100
     CHARACTER_LIMIT_WITH_IMAGE = 50
     TABLE_ROW_LIMIT = 13
+    TABLE_ROW_LIMIT_WITH_IMAGE = 6
 
     def contents
       @contents ||=
@@ -25,7 +26,8 @@ module ContentItem
       return true if contents_items.count > 2
       first_item_has_long_content? ||
         first_item_has_long_table? ||
-        first_item_has_image_and_long_content?
+        first_item_has_image_and_long_content? ||
+        first_item_has_image_and_long_table?
     end
 
   private
@@ -58,11 +60,7 @@ module ContentItem
     end
 
     def first_item_has_long_table?
-      table = find_table
-      return unless table.present?
-
-      row_count = table.css('tr').count
-      row_count > TABLE_ROW_LIMIT
+      first_item_table_rows > TABLE_ROW_LIMIT
     end
 
     def find_table
@@ -72,6 +70,11 @@ module ContentItem
         return element if element.name == 'table'
         element = element.next_element
       end
+    end
+
+    def first_item_table_rows
+      @table ||= find_table
+      @table.present? ? @table.css('tr').count : 0
     end
 
     def first_item_has_image?
@@ -85,6 +88,10 @@ module ContentItem
 
     def first_item_has_image_and_long_content?
       first_item_has_image? && first_item_character_count > CHARACTER_LIMIT_WITH_IMAGE
+    end
+
+    def first_item_has_image_and_long_table?
+      first_item_has_image? && first_item_table_rows > TABLE_ROW_LIMIT_WITH_IMAGE
     end
 
     def parsed_body

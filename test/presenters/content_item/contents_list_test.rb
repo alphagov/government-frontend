@@ -157,4 +157,18 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     end
     assert @contents_list.show_contents_list?
   end
+
+  test "#show_contents_list? returns true if image and table over 6 rows are present in the first item" do
+    class << @contents_list
+      def body
+        base = "<h2 id='one'>One</h2><div class='img'>
+          <img src='www.gov.uk/img.png'></div><table>\n<tbody>\n"
+        7.times do
+          base += "<tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n"
+        end
+        base += "</tbody>\n</table><h2 id='two'>Two</h2>"
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
 end
