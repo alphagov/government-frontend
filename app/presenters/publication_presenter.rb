@@ -2,6 +2,7 @@ class PublicationPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::NationalApplicability
   include ContentItem::Political
+  include Navigation::Publications
 
   def details
     content_item["details"]["body"]
