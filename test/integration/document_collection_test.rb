@@ -30,13 +30,6 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
           section_name: "related-nav-topics",
           section_text: "Explore the topic",
           links: { "PAYE": "/topic/business-tax/paye" }
-        },
-        {
-          section_name: "related-nav-publishers",
-          section_text: "Published by",
-          links: {
-            "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency"
-          }
         }
       ]
     )

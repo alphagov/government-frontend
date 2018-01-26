@@ -25,14 +25,6 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     assert_has_related_navigation(
       [
         {
-          section_name: "related-nav-publishers",
-          section_text: "Published by",
-          links: {
-            "Department for Transport":
-              "/government/organisations/department-for-transport"
-          }
-        },
-        {
           section_name: "related-nav-collections",
           section_text: "Collection",
           links: {
