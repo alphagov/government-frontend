@@ -12,14 +12,6 @@ class DetailedGuidePresenter < ContentItemPresenter
     end
   end
 
-  def related_guides
-    links("related_guides")
-  end
-
-  def related_mainstream_content
-    links("related_mainstream_content")
-  end
-
   def image
     content_item["details"]["image"]["url"] if content_item["details"]["image"]
   end
@@ -30,7 +22,27 @@ class DetailedGuidePresenter < ContentItemPresenter
     end
   end
 
+  def related_navigation
+    nav = super
+    nav[:related_items] += related_links("related_mainstream_content")
+    nav[:related_guides] = related_links("related_guides")
+    nav
+  end
+
+  # FIXME: This is a temporary removal of National Applicability
+  # Once all formats have moved to new publisher/important metadata
+  # components, we can remove here: app/presenters/content_item/national_applicability.rb:33
+  def publisher_metadata
+    super.tap { |m| m[:other].delete(:"Applies to") }
+  end
+
 private
+
+  def related_links(key)
+    raw_links = content_item["links"]
+    guides = raw_links.fetch(key, [])
+    guides.map { |g| { text: g["title"], path: g["base_path"] } }
+  end
 
   def related_guides_title
     I18n.t('detailed_guide.related_guides')
