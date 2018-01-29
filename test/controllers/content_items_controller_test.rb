@@ -230,6 +230,12 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :not_acceptable
   end
 
+  test "returns 410 for content items that are gone" do
+    content_store_has_gone_item('/gone-item')
+    get :show, params: { path: 'gone-item' }
+    assert_response :gone
+  end
+
   test "does not show taxonomy-navigation when no taxons are tagged to Detailed Guides" do
     content_item = content_store_has_schema_example('document_collection', 'document_collection')
     path = 'government/test/detailed-guide'
