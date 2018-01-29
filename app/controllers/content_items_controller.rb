@@ -4,6 +4,7 @@ class ContentItemsController < ApplicationController
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
+  rescue_from GdsApi::HTTPGone, with: :error_410
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
   rescue_from ActionView::MissingTemplate, with: :error_406
   rescue_from ActionController::UnknownFormat, with: :error_406
@@ -169,5 +170,9 @@ private
 
   def error_406
     render plain: 'Not acceptable', status: 406
+  end
+
+  def error_410
+    render plain: 'Gone', status: 410
   end
 end
