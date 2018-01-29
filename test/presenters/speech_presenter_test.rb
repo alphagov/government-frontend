@@ -39,7 +39,7 @@ class SpeechPresenterTest
     end
 
     test 'from includes speaker' do
-      assert presented_item.from.include?("<a aria-labelledby=\"metadata-from\" href=\"/government/people/andrea-leadsom\">The Rt Hon Andrea Leadsom MP</a>")
+      assert presented_item.from.include?("<a aria-describedby=\"metadata-from\" href=\"/government/people/andrea-leadsom\">The Rt Hon Andrea Leadsom MP</a>")
     end
   end
 
@@ -88,8 +88,8 @@ class SpeechPresenterTest
 
     test 'includes speaker without profile in from_with_speaker' do
       assert_equal [
-        "<a aria-labelledby=\"metadata-from\" href=\"/government/organisations/prime-ministers-office-10-downing-street\">Prime Minister&#39;s Office, 10 Downing Street</a>",
-        "<a aria-labelledby=\"metadata-from\" href=\"/government/organisations/cabinet-office\">Cabinet Office</a>",
+        "<a aria-describedby=\"metadata-from\" href=\"/government/organisations/prime-ministers-office-10-downing-street\">Prime Minister&#39;s Office, 10 Downing Street</a>",
+        "<a aria-describedby=\"metadata-from\" href=\"/government/organisations/cabinet-office\">Cabinet Office</a>",
         "Her Majesty the Queen"
         ], presented_item(example_schema_name).from
     end

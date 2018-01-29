@@ -183,7 +183,7 @@ private
 
   def facet_link(label, value, key, name)
     finder_base_path = finder['base_path']
-    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}", 'aria-labelledby': "metadata-" + name.to_s.parameterize)
+    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}", 'aria-describedby': "metadata-" + name.to_s.parameterize)
   end
 
   def first_published_at_facet_key

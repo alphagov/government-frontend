@@ -3,7 +3,7 @@ module ContentItem
     include ActionView::Helpers::UrlHelper
 
     def from
-      organisations_ordered_by_importance(labelledby: 'metadata-from') + links_group(%w{worldwide_organisations ministers speaker}, labelledby: 'metadata-from')
+      organisations_ordered_by_importance(describedby: 'metadata-from') + links_group(%w{worldwide_organisations ministers speaker}, describedby: 'metadata-from')
     end
 
     def part_of
@@ -20,9 +20,9 @@ module ContentItem
 
   private
 
-    def links(type, labelledby: nil)
+    def links(type, describedby: nil)
       expanded_links_from_content_item(type).map do |link|
-        link_for_type(type, link, (labelledby.nil? ? {} : { labelledby: labelledby }))
+        link_for_type(type, link, (describedby.nil? ? {} : { describedby: describedby }))
       end
     end
 
@@ -31,13 +31,13 @@ module ContentItem
       content_item["links"][type]
     end
 
-    def links_group(types, labelledby: nil)
-      types.flat_map { |type| links(type, (labelledby.nil? ? {} : { labelledby: labelledby })) }.uniq
+    def links_group(types, describedby: nil)
+      types.flat_map { |type| links(type, (describedby.nil? ? {} : { describedby: describedby })) }.uniq
     end
 
-    def organisations_ordered_by_importance(labelledby: nil)
+    def organisations_ordered_by_importance(describedby: nil)
       organisations_with_emphasised_first.map do |link|
-        link_to(link["title"], link["base_path"], (labelledby.nil? ? {} : { 'aria-labelledby': labelledby }))
+        link_to(link["title"], link["base_path"], (describedby.nil? ? {} : { 'aria-describedby': describedby }))
       end
     end
 
@@ -52,14 +52,14 @@ module ContentItem
       content_item["details"]["emphasised_organisations"] || []
     end
 
-    def link_for_type(type, link, labelledby: nil)
-      return link_for_world_location(link, (labelledby.nil? ? {} : { 'labelledby': labelledby })) if type == "world_locations"
-      link_to(link["title"], link["base_path"], (labelledby.nil? ? {} : { 'aria-labelledby': labelledby }))
+    def link_for_type(type, link, describedby: nil)
+      return link_for_world_location(link, (describedby.nil? ? {} : { 'describedby': describedby })) if type == "world_locations"
+      link_to(link["title"], link["base_path"], (describedby.nil? ? {} : { 'aria-describedby': describedby }))
     end
 
-    def link_for_world_location(link, labelledby: nil)
+    def link_for_world_location(link, describedby: nil)
       base_path = WorldLocationBasePath.for(link)
-      link_to(link["title"], base_path, (labelledby.nil? ? {} : { 'aria-labelledby': labelledby }))
+      link_to(link["title"], base_path, (describedby.nil? ? {} : { 'aria-describedby': describedby }))
     end
   end
 end
