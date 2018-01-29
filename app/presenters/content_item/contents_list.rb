@@ -24,6 +24,8 @@ module ContentItem
     def show_contents_list?
       return false if contents_items.count < 2
       return true if contents_items.count > 2
+      return false if no_first_item?
+
       first_item_has_long_content? ||
         first_item_has_long_table? ||
         first_item_has_image_and_long_content? ||
@@ -100,6 +102,10 @@ module ContentItem
 
     def first_item
       parsed_body.css('h2').first
+    end
+
+    def no_first_item?
+      first_item.nil?
     end
   end
 end
