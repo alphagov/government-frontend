@@ -18,7 +18,8 @@
             values = Array(values)
           %>
           <% if values.any? %>
-            <dt class="app-c-publisher-metadata__term"><%= title %>: </dt>
+            <% metadata_id = values.to_s =~ /href/ ?  "id=metadata-" + title.to_s.parameterize : "" %>
+            <dt class="app-c-publisher-metadata__term" <%= metadata_id %>><%= title %>: </dt>
             <dd class="app-c-publisher-metadata__definition"><%= values.to_sentence.html_safe %></dd>
           <% end %>
         <% end %>

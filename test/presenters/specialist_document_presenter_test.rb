@@ -275,7 +275,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      expected_link = "<a href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
+      expected_link = "<a aria-describedby=\"metadata-facet-name\" href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
       assert_equal expected_link, presented.metadata[:other]["Facet name"]
       assert_equal expected_link, presented.document_footer[:other]["Facet name"]
     end

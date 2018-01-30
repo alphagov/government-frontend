@@ -54,6 +54,19 @@ class ImportantMetadataTest < ComponentTestCase
                   text: "Mergers - phase 2 clearance with remedies"
   end
 
+  test "renders id and aria label for data it is given" do
+    render_component(items: {
+      "Market sector": ['<a aria-describedby="metadata-market-sector" href="https://www.gov.uk/cma-cases?market_sector%5B%5D=motor-industry">Motor industry</a>'],
+      "Outcome": ['<a aria-describedby="metadata-outcome" href="https://www.gov.uk/cma-cases?outcome_type%5B%5D=mergers-phase-2-clearance-with-remedies">Mergers - phase 2 clearance with remedies</a>'],
+    })
+
+    assert_select ".app-c-important-metadata #metadata-market-sector"
+    assert_select ".app-c-important-metadata dd a[aria-describedby=\"metadata-market-sector\"]"
+    assert_select ".app-c-important-metadata #metadata-outcome"
+    assert_select ".app-c-important-metadata dd a[aria-describedby=\"metadata-outcome\"]"
+  end
+
+
   test "link tracking is enabled" do
     render_component(items: { "Case type": ["<a href='https://www.gov.uk/cma-cases?case_type%5B%5D=mergers'>Mergers</a>"] })
     assert_select ".app-c-important-metadata dl[data-module='track-click']"

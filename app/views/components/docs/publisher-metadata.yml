@@ -6,8 +6,9 @@ body: |
 
   Part of the universal navigation design.
 shared_accessibility_criteria:
-- link
-
+  - link
+accessibility_excluded_rules:
+  - duplicate-id
 examples:
   default:
     data:
