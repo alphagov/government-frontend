@@ -37,6 +37,14 @@ class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
     assert_equal organisation_brand(organisation), "executive-office"
   end
 
+  test "no branding when organisation is not set" do
+    organisation = nil
+
+    assert_nil organisation_brand(organisation)
+    assert_nil executive_order_crest?(organisation)
+  end
+
+
   test "includes an image organisations with a custom logo" do
     organisation = test_organisation
     organisation["details"]["logo"]["image"] = {

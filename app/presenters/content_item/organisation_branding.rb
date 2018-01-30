@@ -38,12 +38,14 @@ module ContentItem
     # Remove this in the future after migrating organisations to the content store API,
     # and updating them with the correct brand in the actual store.
     def organisation_brand(organisation)
+      return unless organisation
       brand = organisation["details"]["brand"]
       brand = "executive-office" if executive_order_crest?(organisation)
       brand
     end
 
     def executive_order_crest?(organisation)
+      return unless organisation
       organisation["details"]["logo"]["crest"] == "eo"
     end
   end
