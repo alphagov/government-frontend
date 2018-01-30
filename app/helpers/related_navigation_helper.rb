@@ -24,6 +24,10 @@ module RelatedNavigationHelper
     end
   end
 
+  def calculate_section_link_limit(links, max_section_length)
+    links.length == max_section_length + 1 ? max_section_length + 1 : max_section_length
+  end
+
   def remaining_links(links, max_section_length)
     links.length - max_section_length
   end
