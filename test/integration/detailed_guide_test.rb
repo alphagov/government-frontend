@@ -115,4 +115,14 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('.app-c-translation-nav')
   end
+
+  test "renders a contents list" do
+    setup_and_visit_content_item("detailed_guide")
+    assert page.has_css?(".app-c-contents-list")
+  end
+
+  test "renders without contents list if it has fewer than 3 items" do
+    setup_and_visit_content_item("national_applicability_alternative_url_detailed_guide")
+    refute page.has_css?(".app-c-contents-list")
+  end
 end
