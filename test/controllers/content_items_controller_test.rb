@@ -236,6 +236,22 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :gone
   end
 
+  test "returns a redirect when content item is a redirect" do
+    content_item = content_store_has_schema_example('redirect', 'redirect')
+    content_store_has_item('/406beacon', content_item)
+
+    get :show, params: { path: '406beacon' }
+    assert_redirected_to 'https://www.test.gov.uk/maritime-safety-weather-and-navigation/register-406-mhz-beacons?query=answer#fragment'
+  end
+
+  test "returns a prefixed redirect when content item is a prefix redirect" do
+    content_item = content_store_has_schema_example('redirect', 'redirect')
+    content_store_has_item('/406beacon/prefix/to-preserve', content_item)
+
+    get :show, params: { path: '406beacon/prefix/to-preserve' }
+    assert_redirected_to 'https://www.test.gov.uk/new-406-beacons-destination/to-preserve'
+  end
+
   test "does not show taxonomy-navigation when no taxons are tagged to Detailed Guides" do
     content_item = content_store_has_schema_example('document_collection', 'document_collection')
     path = 'government/test/detailed-guide'
