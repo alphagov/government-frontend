@@ -25,17 +25,5 @@ module ContentItem
         }
       }
     end
-
-    def document_footer
-      {
-        from: from,
-        published: published,
-        updated: updated,
-        history: history,
-        part_of: part_of,
-        direction: text_direction,
-        other: {}
-      }
-    end
   end
 end
