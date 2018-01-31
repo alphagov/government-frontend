@@ -1,5 +1,5 @@
 .guide {
-  @include parts-ul;
+  @include parts;
   @include add-title-margin;
 
   .part-navigation li {

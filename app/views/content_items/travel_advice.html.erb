@@ -11,7 +11,11 @@
       <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Travel advice pages' %>
       <%= render 'components/subscription-links', email_signup_link: @content_item.email_signup_link, feed_link: @content_item.feed_link %>
     </aside>
+  </div>
+</div>
 
+<div class="grid-row">
+  <div class="column-two-thirds">
     <h1 class="part-title">
       <%= @content_item.current_part_title %>
     </h1>
@@ -28,7 +32,5 @@
 
     <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
   </div>
-  <div class="column-one-third add-title-margin">
-    <%= render 'govuk_component/related_items', @content_item.related_items %>
-  </div>
+  <%= render "shared/sidebar_navigation" %>
 </div>
