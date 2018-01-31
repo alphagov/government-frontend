@@ -19,8 +19,7 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'components/important-metadata',
-        items: @content_item.metadata[:other] %>
+    <%= render 'components/important-metadata', items: @content_item.important_metadata %>
 
     <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
       <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>

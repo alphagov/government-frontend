@@ -15,7 +15,7 @@
   <div class="column-two-thirds content-bottom-margin">
     <div class="responsive-bottom-margin">
       <%= render 'components/important-metadata',
-          items: @content_item.metadata[:other] %>
+          items: @content_item.important_metadata %>
       <%= render 'components/figure',
           src: @content_item.image["url"],
           alt: @content_item.image["alt_text"],
