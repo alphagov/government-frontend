@@ -11,7 +11,7 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'components/important-metadata', items: @content_item.metadata[:other]  %>
+    <%= render 'components/important-metadata', items: @content_item.important_metadata %>
 
     <% if @content_item.unopened? %>
       <% content_item_unopened = capture do %>
