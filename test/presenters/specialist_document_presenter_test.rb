@@ -162,7 +162,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet], values)
 
       presented = present_example(example)
-      assert_equal "document-value", presented.metadata[:other]["Facet name"]
+      assert_equal "document-value", presented.important_metadata["Facet name"]
     end
 
     test 'includes friendly label for facet value in metadata' do
@@ -179,7 +179,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      assert_equal "Document value from label", presented.metadata[:other]["Facet name"]
+      assert_equal "Document value from label", presented.important_metadata["Facet name"]
     end
 
     test 'falls back to provided value if value not found in allowed list' do
@@ -201,7 +201,7 @@ class SpecialistDocumentPresenterTest
       )
 
       presented = present_example(example)
-      assert_equal "not-an-allowed-value", presented.metadata[:other]["Facet name"]
+      assert_equal "not-an-allowed-value", presented.important_metadata["Facet name"]
     end
 
     test 'ignores facets in metadata if not a valid finder facet' do
@@ -249,7 +249,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      assert_equal %w{One Two}, presented.metadata[:other]["Facet name"]
+      assert_equal %w{One Two}, presented.important_metadata["Facet name"]
     end
 
     test 'creates links for filterable friendly values' do
@@ -268,7 +268,7 @@ class SpecialistDocumentPresenterTest
 
       presented = present_example(example)
       expected_link = "<a href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
-      assert_equal expected_link, presented.metadata[:other]["Facet name"]
+      assert_equal expected_link, presented.important_metadata["Facet name"]
     end
 
     test 'includes friendly dates for date facets in metadata' do
@@ -276,7 +276,7 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "2010-01-01" }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
-      presented_metadata = present_example(example).metadata[:other]
+      presented_metadata = present_example(example).important_metadata
       assert_equal "1 January 2010", presented_metadata["Facet name"]
     end
 
@@ -309,7 +309,7 @@ class SpecialistDocumentPresenterTest
                                             "more-text" => "More text")
 
       expected_order = ["First date facet", "Second date facet", "Facet name", "More text"]
-      assert_equal expected_order, present_example(example).metadata[:other].keys
+      assert_equal expected_order, present_example(example).important_metadata.keys
     end
 
     test 'breadcrumbs' do
@@ -334,7 +334,7 @@ class SpecialistDocumentPresenterTest
         extra: { error_message: 'Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item' }
       )
 
-      present_example(example).metadata
+      present_example(example).important_metadata
     end
 
     test 'no breadcrumbs render with no finder' do

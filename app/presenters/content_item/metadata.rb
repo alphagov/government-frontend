@@ -16,7 +16,7 @@ module ContentItem
     end
 
     def important_metadata
-      metadata[:other]
+      {}
     end
 
     def publisher_metadata

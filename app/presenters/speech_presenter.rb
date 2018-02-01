@@ -28,12 +28,9 @@ class SpeechPresenter < ContentItemPresenter
     end
   end
 
-  def metadata
+  def important_metadata
     super.tap do |m|
-      m[:other] = {
-        "Location" => location,
-        delivery_type => delivered_on_metadata
-      }
+      m.merge!("Location" => location, delivery_type => delivered_on_metadata)
     end
   end
 
