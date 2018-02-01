@@ -3,8 +3,8 @@ module ContentItem
     include ActionView::Helpers::UrlHelper
     include TypographyHelper
 
-    CHARACTER_LIMIT = 100
-    CHARACTER_LIMIT_WITH_IMAGE = 50
+    CHARACTER_LIMIT = 415
+    CHARACTER_LIMIT_WITH_IMAGE = 224
     TABLE_ROW_LIMIT = 13
     TABLE_ROW_LIMIT_WITH_IMAGE = 6
 

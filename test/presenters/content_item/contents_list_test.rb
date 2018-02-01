@@ -83,8 +83,8 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.characters(50)}</p>
-         <p>#{Faker::Lorem.characters(51)}</p>
+         <p>#{Faker::Lorem.characters(220)}</p>
+         <p>#{Faker::Lorem.characters(196)}</p>
          <h2 id='two'>Two</h2>
          <p>#{Faker::Lorem.sentence}</p>"
       end
@@ -150,7 +150,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       def body
         "<h2 id='one'>One</h2>
         <div class='img'><img src='www.gov.uk/img.png'></div>
-        <p>#{Faker::Lorem.characters(51)}</p>
+        <p>#{Faker::Lorem.characters(225)}</p>
         <h2 id='two'>Two</h2>
         <p>#{Faker::Lorem.sentence}</p>"
       end
