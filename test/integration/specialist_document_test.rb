@@ -179,4 +179,17 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     assert page.has_css?("a[href='/eu-withdrawal-act-2018-statutory-instruments']",
                          text: 'See all EU Withdrawal Act 2018 statutory instruments')
   end
+
+  test 'renders a link to finder' do
+    setup_and_visit_content_item('countryside-stewardship-grants')
+
+    assert_has_link_to_finder(
+      "Related Countryside Stewardship grants",
+      "/countryside-stewardship-grants",
+      "funding_amount" => %w(more-than-500),
+      "grant_type" => "option",
+      "land_use" => %w(arable-land water-quality wildlife-package wildlife-package),
+      "tiers_or_standalone_items" => %w(higher-tier mid-tier)
+    )
+  end
 end

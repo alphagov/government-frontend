@@ -126,6 +126,12 @@ en:
       transaction:
         one: Answer
         other: Answers
+      asylum_support_decision:
+        one: Asylum support tribunal decision
+        other: Asylum support tribunal decisions
+      business_finance_support_scheme:
+        one: Business finance support scheme
+        other: Business finance support schemes
       case_study:
         one: Case study
         other: Case studies
@@ -174,7 +180,7 @@ en:
       employment_appeal_tribunal_decision:
         one: Employment appeal tribunal decision
         other: Employment appeal tribunal decisions
-      employment_tribunal_decision:
+      employment__tribunal_decision:
         one: Employment tribunal decision
         other: Employment tribunal decisions
       esi_fund:
