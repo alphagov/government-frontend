@@ -21,7 +21,7 @@ class SpeechPresenterTest
     end
 
     test 'presents a speech location' do
-      assert_equal schema_item['details']['location'], presented_item.metadata[:other]["Location"]
+      assert_equal schema_item['details']['location'], presented_item.important_metadata["Location"]
     end
 
     test 'presents how speech was delivered' do

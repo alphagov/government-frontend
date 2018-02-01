@@ -22,13 +22,15 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     content_item["details"].include?("previous_display_date")
   end
 
-  def metadata
+  def important_metadata
     super.tap do |m|
       if cancelled?
-        m[:other]["Proposed release"] = release_date
-        m[:other]["Cancellation date"] = cancellation_date
+        m.merge!(
+          "Proposed release" => release_date,
+          "Cancellation date" => cancellation_date
+        )
       else
-        m[:other]["Release date"] = release_date_and_status
+        m.merge!("Release date" => release_date_and_status)
       end
     end
   end
