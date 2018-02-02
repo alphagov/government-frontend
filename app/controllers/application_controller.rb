@@ -5,19 +5,17 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery except: :service_sign_in_options
 
-  def current_tasklist_ab_test
-    GovukNavigationHelpers::CurrentTasklistAbTest.new(
-      current_tasklist: current_tasklist,
-      request: request
-    )
-  end
-  helper_method :current_tasklist_ab_test
-
 private
 
-  def current_tasklist
-    GovukNavigationHelpers::TasklistContent.current_tasklist(request.path)
+  def current_step_nav
+    @step_nav ||= GovukNavigationHelpers::StepNavContent.current_step_nav(request.path)
   end
+  helper_method :current_step_nav
+
+  def show_step_nav?
+    current_step_nav && current_step_nav.show_step_nav?
+  end
+  helper_method :show_step_nav?
 
   def content_item_path
     path_and_optional_locale = params

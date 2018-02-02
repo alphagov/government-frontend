@@ -1,5 +1,5 @@
-<% if local_assigns.has_key?(:tasklist_content) && current_tasklist_ab_test.show_tasklist_sidebar? %>
-  <%= render 'shared/sidebar_tasklist', tasklist_content: tasklist_content, no_margin: true %>
+<% if show_step_nav? %>
+  <%= render 'shared/sidebar_step_nav', no_margin: true %>
 <% else %>
   <div class="column-third">
   <% if @navigation.should_present_taxonomy_navigation? %>
