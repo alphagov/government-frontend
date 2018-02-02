@@ -1,0 +1,10 @@
+<%
+  no_margin ||= false
+%>
+<nav class="column-third <%= "step-by-step-nav-sidebar" unless no_margin %>">
+  <%= render 'govuk_publishing_components/components/step_by_step_nav_related', links: [{
+      href: current_step_nav.base_path,
+      text: current_step_nav.title
+  }] %>
+  <%= render 'govuk_publishing_components/components/step_by_step_nav', current_step_nav.set_current_step %>
+</nav>
