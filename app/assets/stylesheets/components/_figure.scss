@@ -16,24 +16,23 @@
   }
 }
 
-.app-c-figure__figcaption-wrapper {
-  @include media(tablet) {
-    box-sizing: border-box;
-    float: left;
-    padding-left: $gutter-half;
-    width: 50%;
-  }
-}
-
 .app-c-figure__figcaption {
   @include core-16;
 
-  width: 100%;
 
   @include media(tablet) {
     @include core-14;
 
     display: block;
     vertical-align: top;
+
+    box-sizing: border-box;
+    float: left;
+    padding-left: $gutter-half;
+    width: 50%;
+  }
+
+  @include media(mobile) {
+    margin-top: $gutter-one-third;
   }
 }
