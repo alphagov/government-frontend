@@ -4,6 +4,7 @@ ruby File.read(".ruby-version").strip
 
 gem 'asset_bom_removal-rails', '~> 1.0'
 gem 'dalli'
+gem 'foreman', '~> 0.84'
 gem 'htmlentities', '~> 4.3'
 gem 'rack_strip_client_ip', '~> 0.0.2'
 gem 'rails', '~> 5.1.3'
