@@ -1,5 +1,14 @@
 class ContentItemsController < ApplicationController
+  class RedirectRouteReturned < StandardError
+    attr_reader :content_item
+
+    def initialize(content_item)
+      super("Redirect content_item detected")
+      @content_item = content_item
+    end
+  end
   class SpecialRouteReturned < StandardError; end
+
   after_action :set_tasklist_ab_test_headers, only: [:show]
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
@@ -8,6 +17,7 @@ class ContentItemsController < ApplicationController
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
   rescue_from ActionView::MissingTemplate, with: :error_406
   rescue_from ActionController::UnknownFormat, with: :error_406
+  rescue_from RedirectRouteReturned, with: :error_redirect
   rescue_from SpecialRouteReturned, with: :error_notfound
 
   attr_accessor :content_item
@@ -48,11 +58,16 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     raise SpecialRouteReturned if special_route?(content_item)
+    raise RedirectRouteReturned, content_item if redirect_route?(content_item)
     @content_item = present(content_item)
   end
 
   def special_route?(content_item)
-    content_item && content_item['document_type'] == "special_route"
+    content_item && content_item["document_type"] == "special_route"
+  end
+
+  def redirect_route?(content_item)
+    content_item && content_item["schema_name"] == "redirect"
   end
 
   def present(content_item)
@@ -174,5 +189,12 @@ private
 
   def error_410
     render plain: 'Gone', status: 410
+  end
+
+  def error_redirect(exception)
+    destination, status_code = GdsApi::ContentStore.redirect_for_path(
+      exception.content_item, request.path, request.query_string
+    )
+    redirect_to destination, status: status_code
   end
 end
