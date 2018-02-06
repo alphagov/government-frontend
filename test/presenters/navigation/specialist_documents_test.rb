@@ -61,7 +61,6 @@ class SpecialistDocumentsTest < PresenterTestCase
     )
 
     assert_equal expected("/aaib-reports",
-      date_of_occurrence: "2017-06-18",
       aircraft_category: ["sport-aviation-and-balloons"],
       report_type: "correspondence-investigation",
       location: "Ince Airfield, Merseyside",
