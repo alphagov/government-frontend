@@ -4,4 +4,5 @@ class StatisticalDataSetPresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include ContentItem::Political
   include ContentItem::Metadata
+  include Navigation::Statistics
 end
