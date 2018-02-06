@@ -2,7 +2,12 @@ module Navigation
   module SpecialistDocuments
     include Finders
 
-    PARAMS_TO_IGNORE = %w(bulk_published opened_date closed_date).freeze
+    PARAMS_TO_IGNORE = %w(
+      bulk_published
+      opened_date
+      closed_date
+      date_of_occurrence
+    ).freeze
 
     def finder_path_and_params
       "#{finder_path}?#{facet_params}"
