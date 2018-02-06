@@ -2,13 +2,6 @@ module Navigation
   module SpecialistDocuments
     include Finders
 
-    PARAMS_TO_IGNORE = %w(
-      bulk_published
-      opened_date
-      closed_date
-      date_of_occurrence
-    ).freeze
-
     def finder_path_and_params
       "#{finder_path}?#{facet_params}"
     end
@@ -25,8 +18,18 @@ module Navigation
     def facet_params
       content_item["details"]["metadata"]
         .each_value { |v| v.try(:sort!) }
-        .except(*PARAMS_TO_IGNORE)
+        .except(*params_to_ignore)
         .to_query
+    end
+
+    def params_to_ignore
+      %w(bulk_published) + date_facet_keys
+    end
+
+    def date_facet_keys
+      return [] unless finder
+      finder_details = finder.fetch("details", {})
+      finder_details.fetch("facets", {}).map { |f| f["key"] if f["type"] == "date" }.compact
     end
 
     def pluralised_document_type
