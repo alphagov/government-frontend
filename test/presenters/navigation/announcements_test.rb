@@ -40,7 +40,7 @@ class AnnouncementsTest < PresenterTestCase
   test "filtering by different document type" do
     stub_content_item("document_type" => "world_location_news_article")
 
-    assert_equal expected, finder_path_and_params
+    assert_equal expected(announcement_filter_option: "all"), finder_path_and_params
 
     stub_content_item("document_type" => "fatality_notice")
     assert_equal expected(announcement_filter_option: "fatality-notices"), finder_path_and_params

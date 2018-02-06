@@ -5,7 +5,6 @@ module Navigation
     DOCUMENT_TYPE_MAPPINGS = {
       "fatality_notice" => "fatality-notices",
       "news_story" => "news-stories",
-      "world_location_news_article" => "news-stories"
     }.freeze
 
     def finder_path_and_params
