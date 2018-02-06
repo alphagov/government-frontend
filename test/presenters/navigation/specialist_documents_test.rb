@@ -26,7 +26,19 @@ class SpecialistDocumentsTest < PresenterTestCase
 
   test "finder_path_and_params" do
     stub_content_item(
-      "links" => { "finder" => [{ "base_path" => "/cma-cases" }] },
+      "links" => {
+        "finder" => [
+          {
+            "base_path" => "/cma-cases",
+            "details" => {
+              "facets" => [
+                { "key" => "opened_date", "type" => "date" },
+                { "key" => "closed_date", "type" => "date" }
+              ]
+            }
+          }
+        ]
+      },
       "details" => {
         "metadata" => {
           "case_type" => "markets",
@@ -47,7 +59,16 @@ class SpecialistDocumentsTest < PresenterTestCase
 
   test "finder_path_and_params for a different document type" do
     stub_content_item(
-      "links" => { "finder" => [{ "base_path" => "/aaib-reports" }] },
+      "links" => {
+        "finder" => [
+          {
+            "base_path" => "/aaib-reports",
+            "details" => {
+              "facets" => [{ "key" => "date_of_occurrence", "type" => "date" }]
+            }
+          }
+        ]
+      },
       "details" => {
         "metadata" => {
           "date_of_occurrence" => "2017-06-18",
