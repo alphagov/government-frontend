@@ -15,7 +15,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'components/important-metadata',
-        items: @content_item.metadata[:other] %>
+        items: @content_item.important_metadata %>
 
     <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
       <div class="responsive-bottom-margin">

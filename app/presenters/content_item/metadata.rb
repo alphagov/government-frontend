@@ -15,6 +15,10 @@ module ContentItem
       }
     end
 
+    def important_metadata
+      {}
+    end
+
     def publisher_metadata
       {
         published: published,
@@ -23,18 +27,6 @@ module ContentItem
         other: {
           'From': from
         }
-      }
-    end
-
-    def document_footer
-      {
-        from: from,
-        published: published,
-        updated: updated,
-        history: history,
-        part_of: part_of,
-        direction: text_direction,
-        other: {}
       }
     end
   end

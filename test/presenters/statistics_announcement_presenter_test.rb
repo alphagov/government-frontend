@@ -34,19 +34,19 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
     assert_equal '20 January 2016 9:30am', statistics_announcement_cancelled.release_date_and_status
   end
 
-  test "present other metadata when confirmed" do
-    other = {
+  test "present important metadata when confirmed" do
+    metadata = {
       "Release date" => "20 January 2016 9:30am (confirmed)"
     }
-    assert_equal other, statistics_announcement.metadata[:other]
+    assert_equal metadata, statistics_announcement.important_metadata
   end
 
-  test "present other metadata when cancelled" do
-    other = {
+  test "present important metadata when cancelled" do
+    metadata = {
       "Proposed release" => "20 January 2016 9:30am",
       "Cancellation date" => "17 January 2016 2:19pm"
     }
-    assert_equal other, statistics_announcement_cancelled.metadata[:other]
+    assert_equal metadata, statistics_announcement_cancelled.important_metadata
   end
 
   test "shows the cancellation reason when cancelled" do

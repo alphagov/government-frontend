@@ -118,15 +118,12 @@ class SpecialistDocumentPresenterTest
       example["details"]["metadata"]["bulk_published"] = true
 
       refute present_example(example).metadata[:first_published]
-      refute present_example(example).document_footer[:published]
 
       example["details"]["metadata"]["bulk_published"] = false
       assert present_example(example).metadata[:first_published]
-      assert present_example(example).document_footer[:published]
 
       example["details"]["metadata"] = {}
       assert present_example(example).metadata[:first_published]
-      assert present_example(example).document_footer[:published]
     end
   end
 
@@ -160,16 +157,15 @@ class SpecialistDocumentPresenterTest
       }.merge(overrides)
     end
 
-    test 'includes non-filterable facet as text in metadata and document footer' do
+    test 'includes non-filterable facet as text in metadata' do
       values = { "facet-key" => "document-value" }
       example = example_with_finder_facets([example_facet], values)
 
       presented = present_example(example)
-      assert_equal "document-value", presented.metadata[:other]["Facet name"]
-      assert_equal "document-value", presented.document_footer[:other]["Facet name"]
+      assert_equal "document-value", presented.important_metadata["Facet name"]
     end
 
-    test 'includes friendly label for facet value in metadata and document footer' do
+    test 'includes friendly label for facet value in metadata' do
       overrides = {
         "allowed_values" => [
           {
@@ -183,8 +179,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      assert_equal "Document value from label", presented.metadata[:other]["Facet name"]
-      assert_equal "Document value from label", presented.document_footer[:other]["Facet name"]
+      assert_equal "Document value from label", presented.important_metadata["Facet name"]
     end
 
     test 'falls back to provided value if value not found in allowed list' do
@@ -200,14 +195,13 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "not-an-allowed-value" }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
-      GovukError.expects(:notify).twice.with(
+      GovukError.expects(:notify).once.with(
         'Facet value not in list of allowed values',
         extra: { error_message: "Facet value 'not-an-allowed-value' not an allowed value for facet 'Facet name' on /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item" }
       )
 
       presented = present_example(example)
-      assert_equal "not-an-allowed-value", presented.metadata[:other]["Facet name"]
-      assert_equal "not-an-allowed-value", presented.document_footer[:other]["Facet name"]
+      assert_equal "not-an-allowed-value", presented.important_metadata["Facet name"]
     end
 
     test 'ignores facets in metadata if not a valid finder facet' do
@@ -216,7 +210,6 @@ class SpecialistDocumentPresenterTest
 
       presented = present_example(example)
       assert_empty presented.metadata[:other]
-      assert_empty presented.document_footer[:other]
     end
 
     test 'ignores facets if valid key but set to an empty string' do
@@ -238,7 +231,7 @@ class SpecialistDocumentPresenterTest
       assert_empty present_example(example).metadata[:other]
     end
 
-    test 'passes array of multiple values to metadata and document_footer components' do
+    test 'passes array of multiple values to metadata' do
       overrides = {
         "allowed_values" => [
           {
@@ -256,8 +249,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      assert_equal %w{One Two}, presented.metadata[:other]["Facet name"]
-      assert_equal %w{One Two}, presented.document_footer[:other]["Facet name"]
+      assert_equal %w{One Two}, presented.important_metadata["Facet name"]
     end
 
     test 'creates links for filterable friendly values' do
@@ -276,8 +268,7 @@ class SpecialistDocumentPresenterTest
 
       presented = present_example(example)
       expected_link = "<a href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
-      assert_equal expected_link, presented.metadata[:other]["Facet name"]
-      assert_equal expected_link, presented.document_footer[:other]["Facet name"]
+      assert_equal expected_link, presented.important_metadata["Facet name"]
     end
 
     test 'includes friendly dates for date facets in metadata' do
@@ -285,16 +276,7 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "2010-01-01" }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
-      presented_metadata = present_example(example).metadata[:other]
-      assert_equal "1 January 2010", presented_metadata["Facet name"]
-    end
-
-    test 'includes friendly dates in other_dates for date facets in document footer' do
-      overrides = { "type" => "date" }
-      values = { "facet-key" => "2010-01-01" }
-      example = example_with_finder_facets([example_facet(overrides)], values)
-
-      presented_metadata = present_example(example).document_footer[:other_dates]
+      presented_metadata = present_example(example).important_metadata
       assert_equal "1 January 2010", presented_metadata["Facet name"]
     end
 
@@ -327,7 +309,7 @@ class SpecialistDocumentPresenterTest
                                             "more-text" => "More text")
 
       expected_order = ["First date facet", "Second date facet", "Facet name", "More text"]
-      assert_equal expected_order, present_example(example).metadata[:other].keys
+      assert_equal expected_order, present_example(example).important_metadata.keys
     end
 
     test 'breadcrumbs' do
@@ -352,7 +334,7 @@ class SpecialistDocumentPresenterTest
         extra: { error_message: 'Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item' }
       )
 
-      present_example(example).metadata
+      present_example(example).important_metadata
     end
 
     test 'no breadcrumbs render with no finder' do
@@ -375,7 +357,6 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
 
       presented = present_example(example)
-      refute presented.document_footer[:other_dates]['Published']
       refute presented.metadata[:other]['Published']
     end
 

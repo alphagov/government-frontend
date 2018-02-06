@@ -19,21 +19,13 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def metadata
     super.tap do |m|
       m.delete(:first_published) if bulk_published?
-
-      facets_with_friendly_values.each do |facet|
-        m[:other][facet['name']] = value_or_array_of_values(facet['values'])
-      end
     end
   end
 
-  def document_footer
+  def important_metadata
     super.tap do |m|
-      m.delete(:published) if bulk_published?
-
-      m[:other_dates] = {}
       facets_with_friendly_values.each do |facet|
-        type = facet['type'] == 'date' ? :other_dates : :other
-        m[type][facet['name']] = value_or_array_of_values(facet['values'])
+        m.merge!(facet['name'] => value_or_array_of_values(facet['values']))
       end
     end
   end

@@ -15,10 +15,10 @@ class FatalityNoticePresenter < ContentItemPresenter
     { "url" => ActionController::Base.helpers.asset_url("ministry-of-defence-crest.png"), "alt_text" => "Ministry of Defence crest" }
   end
 
-  def metadata
+  def important_metadata
     super.tap do |m|
       if field_of_operation
-        m[:other]['Field of operation'] = link_to(field_of_operation.title, field_of_operation.path)
+        m.merge!('Field of operation' => link_to(field_of_operation.title, field_of_operation.path))
       end
     end
   end

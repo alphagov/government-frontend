@@ -24,15 +24,9 @@ module ContentItem
       applies_to
     end
 
-    def metadata
+    def important_metadata
       super.tap do |m|
-        m[:other]['Applies to'] = applies_to
-      end
-    end
-
-    def publisher_metadata
-      super.tap do |m|
-        m[:other] = { 'Applies to': applies_to }.merge(m[:other])
+        m.merge!('Applies to' => applies_to)
       end
     end
 
