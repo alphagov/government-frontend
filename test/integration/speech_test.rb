@@ -55,18 +55,4 @@ class SpeechTest < ActionDispatch::IntegrationTest
       }
     )
   end
-
-  test "renders related speech navigation" do
-    setup_and_visit_content_item('speech')
-
-    assert_has_link_to_finder(
-      "Related speeches",
-      "/government/announcements",
-      "departments[]" => "department-of-energy-climate-change",
-      "people[]" => "andrea-leadsom",
-      "announcement_filter_option" => "speeches",
-      "topics[]" => "energy",
-      "world_locations[]" => "all"
-    )
-  end
 end
