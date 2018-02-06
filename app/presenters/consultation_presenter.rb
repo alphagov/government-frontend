@@ -5,7 +5,6 @@ class ConsultationPresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::Shareable
   include ContentItem::TitleAndContext
-  include Navigation::Publications
 
   def opening_date_time
     content_item["details"]["opening_date"]

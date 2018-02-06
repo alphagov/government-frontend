@@ -1,7 +1,6 @@
 class StatisticsAnnouncementPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::TitleAndContext
-  include Navigation::Statistics
   include StatisticsAnnouncementHelper
 
   FORTHCOMING_NOTICE = "These statistics will be released".freeze

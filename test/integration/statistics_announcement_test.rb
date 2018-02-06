@@ -8,13 +8,6 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
 
     assert_has_important_metadata("Release date": "20 January 2016 9:30am (confirmed)")
-
-    assert_has_link_to_finder(
-      "Related official statistics announcements",
-      "/government/statistics/announcements",
-      "departments[]" => "nhs-commissioning-board",
-      "topics[]" => "national-health-service"
-    )
   end
 
   test "national statistics" do
