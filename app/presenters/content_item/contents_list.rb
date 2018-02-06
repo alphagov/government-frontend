@@ -65,7 +65,7 @@ module ContentItem
       first_item_table_rows > TABLE_ROW_LIMIT
     end
 
-    def find_table
+    def find_first_table
       element = first_item.next_element
 
       until element.name == 'h2' do
@@ -75,7 +75,7 @@ module ContentItem
     end
 
     def first_item_table_rows
-      @table ||= find_table
+      @table ||= find_first_table
       @table.present? ? @table.css('tr').count : 0
     end
 
