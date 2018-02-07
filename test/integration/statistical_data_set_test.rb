@@ -65,4 +65,30 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
       assert page.has_text?('This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
     end
   end
+
+  test "renders with contents list" do
+    setup_and_visit_content_item('statistical_data_set')
+
+    assert_has_contents_list([
+      { text: "Olympics", id: "olympics" },
+      { text: "Table TSGB1001", id: "table-tsgb1001" },
+      { text: "Table TSGB1002", id: "table-tsgb1002" },
+      { text: "Table TSGB1003", id: "table-tsgb1003" },
+      { text: "Table TSGB1004", id: "table-tsgb1004" },
+      { text: "Table TSGB1005", id: "table-tsgb1005" },
+    ])
+  end
+
+  test "renders without contents list if it has fewer than 3 items" do
+    item = get_content_example("statistical_data_set")
+    item["details"]["body"] = "<div class='govspeak'>
+      <h2>Item one</h2><p>Content about item one</p>
+      <h2>Item two</h2><p>Content about item two</p>
+      </div>"
+
+    content_store_has_item(item["base_path"], item.to_json)
+    visit(item["base_path"])
+
+    refute page.has_css?(".app-c-contents-list")
+  end
 end

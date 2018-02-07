@@ -34,13 +34,22 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Policies")
     assert page.has_text?(policy["title"])
 
-    # Should render the in-page navigation to Policies with a destination that exists
-    assert_has_contents_list([
-      { text: "Policies", id: "policies" },
-    ])
     within_component_govspeak do |component_args|
       html = Nokogiri::HTML.parse(component_args.fetch("content"))
       assert_not_nil html.at_css("h2#policies")
     end
+  end
+
+  test "renders without contents list if it has fewer than 3 items" do
+    item = get_content_example("short")
+    item["details"]["body"] = "<div class='govspeak'>
+      <h2>Item one</h2><p>Content about item one</p>
+      <h2>Item two</h2><p>Content about item two</p>
+      </div>"
+
+    content_store_has_item(item["base_path"], item.to_json)
+    visit(item["base_path"])
+
+    refute page.has_css?(".app-c-contents-list")
   end
 end

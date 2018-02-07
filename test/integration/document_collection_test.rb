@@ -47,6 +47,21 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "renders without contents list if it has fewer than 3 items" do
+    item = get_content_example("document_collection")
+    item["details"]["collection_groups"] = [
+      {
+        "title" => "Item one",
+        "body" => "<p>Content about item one</p>",
+        "documents" => ["a-content-id"]
+      },
+    ]
+    content_store_has_item(item["base_path"], item.to_json)
+    visit(item["base_path"])
+
+    refute page.has_css?(".app-c-contents-list")
+  end
+
   test "renders each collection group" do
     setup_and_visit_content_item('document_collection')
     groups = @content_item["details"]["collection_groups"]

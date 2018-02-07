@@ -6,6 +6,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include Navigation::SpecialistDocuments
   include TypographyHelper
+  include ContentItem::ContentsList
 
   def title_and_context
     super.tap do |t|
@@ -14,7 +15,8 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   end
 
   def contents
-    @contents ||= headers_to_contents(nested_headers.clone)
+    @contents ||=
+      show_contents_list? ? headers_to_contents(nested_headers.clone) : []
   end
 
   def metadata
