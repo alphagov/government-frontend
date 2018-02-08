@@ -79,7 +79,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     ], @contents_list.contents_items
   end
 
-  test "#show_contents_list? returns true if number of contents items is less than 3 and the first item's character count is above 100" do
+  test "#show_contents_list? returns true if number of contents items is less than 3 and the first item's character count is above 415" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
@@ -107,7 +107,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns false if number of contents times is less than 3 and first item's character count is less than 100" do
+  test "#show_contents_list? returns false if number of contents times is less than 3 and first item's character count is less than 415" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
@@ -145,7 +145,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     refute @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if image and over 50 characters are present in the first item" do
+  test "#show_contents_list? returns true if image and over 224 characters are present in the first item" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
