@@ -1,10 +1,20 @@
 require 'test_helper'
 
 class DocumentCollectionTest < ActionDispatch::IntegrationTest
-  test "document collection" do
+  test "document collection with no body" do
     setup_and_visit_content_item('document_collection')
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
+    assert page.has_css?(".app-c-contents-list")
+  end
+
+  test "document collection with no body and 2 collection groups where 1st group has long body" do
+    content_item = get_content_example('document_collection')
+    content_item['details']['collection_groups'][0]['body'] = Faker::Lorem.characters(416)
+    content_store_has_item(content_item['base_path'], content_item.to_json)
+    visit(content_item['base_path'])
+
+    assert page.has_css?('.app-c-contents-list')
   end
 
   test "renders metadata and document footer" do
