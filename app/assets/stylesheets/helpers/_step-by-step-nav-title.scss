@@ -1,4 +1,4 @@
-.task-list-sidebar {
+.step-by-step-nav-sidebar {
   margin-bottom: 0;
 
   @include media(tablet) {
@@ -8,7 +8,7 @@
 
 // FIXME This can be removed once all
 // formats are moved to universal layout.
-.task-list-responsive-top-margin {
+.step-by-step-nav-responsive-top-margin {
   margin-top: 30px;
 
   @include media(tablet) {

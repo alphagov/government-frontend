@@ -8,9 +8,6 @@ class ContentItemsController < ApplicationController
     end
   end
   class SpecialRouteReturned < StandardError; end
-
-  after_action :set_tasklist_ab_test_headers, only: [:show]
-
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::HTTPGone, with: :error_410
@@ -44,10 +41,6 @@ class ContentItemsController < ApplicationController
   end
 
 private
-
-  def set_tasklist_ab_test_headers
-    current_tasklist_ab_test.set_response_header(response)
-  end
 
   # Allow guides to pass access token to each part to allow
   # fact checking of all content
@@ -101,15 +94,7 @@ private
     end
 
     with_locale do
-      locals = {}
-
-      if current_tasklist && current_tasklist.is_page_included_in_ab_test?
-        locals[:locals] = {
-          tasklist_content: current_tasklist
-        }
-      end
-
-      render content_item_template, locals
+      render content_item_template
     end
   end
 
@@ -165,14 +150,6 @@ private
     end
 
     "ServiceSignIn::ChooseSignInPresenter"
-  end
-
-  def setup_tasklist_header_ab_testing
-    set_tasklist_header_response_header
-  end
-
-  def setup_tasklist_ab_testing
-    set_tasklist_response_header
   end
 
   def error_403(exception)

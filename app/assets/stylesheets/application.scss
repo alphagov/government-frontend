@@ -15,7 +15,7 @@
 @import 'helpers/organisation-links';
 @import 'helpers/parts';
 @import 'helpers/add-title-margin';
-@import "helpers/task-list-title";
+@import "helpers/step-by-step-nav-title";
 @import "helpers/content-bottom-margin";
 @import "helpers/publisher-metadata-with-logo";
 
@@ -28,9 +28,9 @@
 @import 'govuk_publishing_components/components/fieldset';
 @import 'govuk_publishing_components/components/label';
 @import 'govuk_publishing_components/components/radio';
-@import 'govuk_publishing_components/components/task-list';
-@import 'govuk_publishing_components/components/task-list-header';
-@import 'govuk_publishing_components/components/task-list-related';
+@import 'govuk_publishing_components/components/step-by-step-nav';
+@import 'govuk_publishing_components/components/step-by-step-nav-header';
+@import 'govuk_publishing_components/components/step-by-step-nav-related';
 
 // pages specific view imports
 @import 'views/case-studies';
