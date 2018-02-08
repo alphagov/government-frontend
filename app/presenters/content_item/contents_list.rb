@@ -53,6 +53,7 @@ module ContentItem
       until element.name == 'h2'
         first_item_text += element.text if element.name == 'p'
         element = element.next_element
+        break if element.nil?
       end
       first_item_text
     end
@@ -71,6 +72,7 @@ module ContentItem
       until element.name == 'h2' do
         return element if element.name == 'table'
         element = element.next_element
+        break if element.nil?
       end
     end
 
@@ -85,6 +87,7 @@ module ContentItem
       until element.name == 'h2'
         return true if element.name == 'div' && element['class'] == 'img'
         element = element.next_element
+        return false if element.nil?
       end
     end
 
@@ -101,7 +104,7 @@ module ContentItem
     end
 
     def first_item
-      parsed_body.css('h2').first.next_element
+      parsed_body.css('h2').first.try(:next_element)
     end
 
     def no_first_item?
