@@ -47,7 +47,7 @@ module ContentItem
     end
 
     def first_item_content
-      element = first_item.next_element
+      element = first_item
       first_item_text = ''
 
       until element.name == 'h2'
@@ -66,7 +66,7 @@ module ContentItem
     end
 
     def find_first_table
-      element = first_item.next_element
+      element = first_item
 
       until element.name == 'h2' do
         return element if element.name == 'table'
@@ -80,7 +80,7 @@ module ContentItem
     end
 
     def first_item_has_image?
-      element = first_item.next_element
+      element = first_item
 
       until element.name == 'h2'
         return true if element.name == 'div' && element['class'] == 'img'
@@ -101,7 +101,7 @@ module ContentItem
     end
 
     def first_item
-      parsed_body.css('h2').first
+      parsed_body.css('h2').first.next_element
     end
 
     def no_first_item?

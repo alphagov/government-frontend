@@ -171,4 +171,19 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     end
     assert @contents_list.show_contents_list?
   end
+
+  test "#show_contents_list? returns true if body is over 415 characters and has no h2s present" do
+    class << @contents_list
+      def body
+        "<div><p>#{Faker::Lorem.characters(416)}</p></div>"
+      end
+    end
+    @contents_list.stubs(:contents_items).returns(["item 1", "item2"])
+    @contents_list.stubs(:first_item).returns(first_element)
+    assert @contents_list.show_contents_list?
+  end
+
+  def first_element
+    Nokogiri::HTML(@contents_list.body).css("div").first.first_element_child
+  end
 end

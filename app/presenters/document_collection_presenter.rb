@@ -71,4 +71,9 @@ private
       .reject { |document| document["withdrawn"] }
       .map { |document| document["content_id"] }
   end
+
+  def first_item
+    @body ||= body.present? ? parsed_body : Nokogiri::HTML(groups.first["body"])
+    @body.css('div').first.first_element_child
+  end
 end
