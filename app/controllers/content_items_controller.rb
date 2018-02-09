@@ -126,10 +126,6 @@ private
     I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
   end
 
-  def setup_content_navigation_ab_testing
-    set_content_navigation_response_header
-  end
-
   def presenter_name(content_item)
     if service_sign_in_format?(content_item["schema_name"])
       return service_sign_in_presenter_name(content_item)
