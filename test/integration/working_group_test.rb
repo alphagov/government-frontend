@@ -40,6 +40,15 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "with a body that has no h2s" do
+    item = get_content_example("short")
+    item["details"]["body"] = "<div class='govspeak'><p>Some content<p></div>"
+    content_store_has_item(item["base_path"], item.to_json)
+    visit(item["base_path"])
+
+    assert page.has_text?("Some content")
+  end
+
   test "renders without contents list if it has fewer than 3 items" do
     item = get_content_example("short")
     item["details"]["body"] = "<div class='govspeak'>
