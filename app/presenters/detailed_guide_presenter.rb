@@ -12,10 +12,6 @@ class DetailedGuidePresenter < ContentItemPresenter
     end
   end
 
-  def image
-    content_item["details"]["image"]["url"] if content_item["details"]["image"]
-  end
-
   def related_navigation
     nav = super
     nav[:related_items] += related_links("related_mainstream_content")
