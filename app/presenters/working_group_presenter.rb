@@ -33,4 +33,13 @@ private
     extra_headings << { id: "contact-details", text: "Contact details" } if email.present?
     extra_headings
   end
+
+  def first_item
+    return if body.nil?
+    if parsed_body.css("h2").empty?
+      parsed_body.css("div").first.try(:first_element_child)
+    else
+      super
+    end
+  end
 end
