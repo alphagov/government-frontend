@@ -1,6 +1,7 @@
 class PublicationPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::NationalApplicability
+  include ContentItem::NationalStatisticsLogo
   include ContentItem::Political
   include Navigation::Publications
 

@@ -1,14 +1,12 @@
-<% render_logo = @content_item.try(:national_statistics?) %>
 <div class="grid-row">
-  <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if render_logo %>">
+  <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
     <div class="column-two-thirds metadata-column">
       <%= render "components/publisher-metadata", @content_item.publisher_metadata %>
     </div>
     <div class="column-one-third">
-      <% if render_logo %>
-        <%= image_tag "national-statistics.png",
-          alt: "National Statistics",
-          height: "90px",
+      <% if @content_item.try(:logo) %>
+        <%= image_tag @content_item.logo[:path],
+          alt: @content_item.logo[:alt_text],
           class: "metadata-logo" %>
       <% end %>
     </div>
