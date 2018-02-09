@@ -23,6 +23,12 @@ class DetailedGuidePresenter < ContentItemPresenter
     nav
   end
 
+  def logo
+    image = content_item.dig("details", "image")
+    return unless image
+    { path: image["url"], alt_text: "European structural investment funds" }
+  end
+
 private
 
   def related_links(key)

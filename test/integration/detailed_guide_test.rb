@@ -125,4 +125,10 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("national_applicability_alternative_url_detailed_guide")
     refute page.has_css?(".app-c-contents-list")
   end
+
+  test "conditionally renders a logo" do
+    setup_and_visit_content_item("england-2014-to-2020-european-structural-and-investment-funds")
+
+    assert page.has_css?(".metadata-logo[alt='European structural investment funds']")
+  end
 end
