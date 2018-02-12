@@ -32,6 +32,10 @@ class ContentsListComponentTest < ComponentTestCase
                      }
   end
 
+  def assert_tracking_link(name, value, total = 1)
+    assert_select "a[data-track-#{name}='#{value}']", total
+  end
+
   test "renders nothing without provided contents" do
     assert_empty render_component({})
   end
@@ -69,6 +73,20 @@ class ContentsListComponentTest < ComponentTestCase
     assert_select "#{nested_link_selector}[href='/nested-one']", text: "Nested one"
     assert_select "#{nested_link_selector}[href='/nested-two']", text: "Nested two"
   end
+
+  test "renders data attributes for tracking" do
+    render_component(contents: nested_contents_list)
+
+    assert_tracking_link("category", "contentsClicked", 6)
+    assert_tracking_link("action", "content_item 1")
+    assert_tracking_link("label", "/one")
+    assert_tracking_link("options", { dimension29: "1. One" }.to_json)
+
+    assert_tracking_link("action", "nested_content_item 3:1")
+    assert_tracking_link("label", "/nested-one")
+    assert_tracking_link("options", { dimension29: "Nested one" }.to_json)
+  end
+
 
   test "formats numbers in contents links" do
     render_component(contents: contents_list, format_numbers: true)
