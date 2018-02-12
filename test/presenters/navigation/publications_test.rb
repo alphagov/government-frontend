@@ -48,4 +48,18 @@ class PublicationsTest < PresenterTestCase
 
     assert_equal expected(publication_filter_option: "all"), finder_path_and_params
   end
+
+  test "pluralised_document_type capitalises certain document types" do
+    self.stubs(:document_type).returns("foi_release")
+    assert_equal("FOI releases", pluralised_document_type)
+
+    self.stubs(:document_type).returns("national_statistics")
+    assert_equal("National Statistics", pluralised_document_type)
+
+    self.stubs(:document_type).returns("official_statistics")
+    assert_equal("Official Statistics", pluralised_document_type)
+
+    self.stubs(:document_type).returns("press_release")
+    assert_equal("press releases", pluralised_document_type)
+  end
 end
