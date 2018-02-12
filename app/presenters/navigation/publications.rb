@@ -2,6 +2,12 @@ module Navigation
   module Publications
     include Finders
 
+    UPPERCASE_DOCTYPES = %w(
+      foi_release
+      national_statistics
+      official_statistics
+    ).freeze
+
     def finder_path_and_params
       "/government/publications?#{facet_params}"
     end
@@ -22,7 +28,7 @@ module Navigation
 
     def pluralised_document_type
       doctype = I18n.t("content_item.schema_name.#{document_type}", count: 2, locale: :en)
-      doctype[0] = doctype[0].downcase unless doctype.match?(/^(National|Official) Statistics$/)
+      doctype[0] = doctype[0].downcase unless UPPERCASE_DOCTYPES.include?(document_type)
       doctype
     end
   end
