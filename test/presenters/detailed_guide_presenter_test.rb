@@ -96,14 +96,4 @@ class DetailedGuidePresenterTest < PresenterTestCase
       assert_equal I18n.t("content_item.schema_name.guidance", count: 1), presented_item.title_and_context[:context]
     end
   end
-
-  test 'eu structural fund logo is presented where applicable' do
-    presented = presented_item('england-2014-to-2020-european-structural-and-investment-funds')
-
-    expected = {
-      alt_text: 'European structural investment funds',
-      path: 'https://assets.publishing.service.gov.uk/media/5540ab8aed915d15d8000030/european-structural-investment-funds.png'
-    }
-    assert_equal presented.logo, expected
-  end
 end
