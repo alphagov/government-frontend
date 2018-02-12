@@ -12,6 +12,14 @@ class ContentsListComponentTest < ComponentTestCase
     ]
   end
 
+  def contents_list_with_active_item
+    [
+      { href: '/one', text: "1. One" },
+      { href: '/two', text: "2. Two", active: true },
+      { href: '/three', text: "3. Three" }
+    ]
+  end
+
   def nested_contents_list
     contents_list << {
                        href: '/three',
@@ -33,6 +41,25 @@ class ContentsListComponentTest < ComponentTestCase
     assert_select ".app-c-contents-list"
     assert_select ".app-c-contents-list__link[href='/one']", text: "1. One"
     assert_select ".app-c-contents-list__link[href='/two']", text: "2. Two"
+  end
+
+  test "renders text only when link is active" do
+    render_component(contents: contents_list_with_active_item)
+    assert_select ".app-c-contents-list"
+    assert_select ".app-c-contents-list__link[href='/one']", text: "1. One"
+    assert_select ".app-c-contents-list__link[href='/two']", count: 0
+    assert_select ".app-c-contents-list__list-item[2]", text: '2. Two'
+    assert_select ".app-c-contents-list__list-item--active[aria-current='true']"
+  end
+
+  test "renders text only when link is active for numbered lists" do
+    render_component(contents: contents_list_with_active_item, format_numbers: true)
+    assert_select ".app-c-contents-list"
+    assert_select ".app-c-contents-list__link[href='/one']", text: "1. One"
+    assert_select ".app-c-contents-list__link[href='/two']", count: 0
+    assert_select ".app-c-contents-list__list-item[2]", text: '2. Two'
+    assert_select ".app-c-contents-list__list-item[2] .app-c-contents-list__number", text: '2.'
+    assert_select ".app-c-contents-list__list-item--active[aria-current='true']"
   end
 
   test "renders a nested list of contents links" do
