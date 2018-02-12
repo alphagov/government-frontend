@@ -1,21 +1,12 @@
 class ContentItemsController < ApplicationController
-  class RedirectRouteReturned < StandardError
-    attr_reader :content_item
-
-    def initialize(content_item)
-      super("Redirect content_item detected")
-      @content_item = content_item
-    end
-  end
-  class SpecialRouteReturned < StandardError; end
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::HTTPGone, with: :error_410
   rescue_from GdsApi::InvalidUrl, with: :error_notfound
   rescue_from ActionView::MissingTemplate, with: :error_406
   rescue_from ActionController::UnknownFormat, with: :error_406
-  rescue_from RedirectRouteReturned, with: :error_redirect
-  rescue_from SpecialRouteReturned, with: :error_notfound
+  rescue_from PresenterBuilder::RedirectRouteReturned, with: :error_redirect
+  rescue_from PresenterBuilder::SpecialRouteReturned, with: :error_notfound
 
   attr_accessor :content_item
 
@@ -50,25 +41,7 @@ private
 
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
-    raise SpecialRouteReturned if special_route?(content_item)
-    raise RedirectRouteReturned, content_item if redirect_route?(content_item)
-    @content_item = present(content_item)
-  end
-
-  def special_route?(content_item)
-    content_item && content_item["document_type"] == "special_route"
-  end
-
-  def redirect_route?(content_item)
-    content_item && content_item["schema_name"] == "redirect"
-  end
-
-  def present(content_item)
-    presenter_name = presenter_name(content_item)
-    presenter_class = Object.const_get(presenter_name)
-    presenter_class.new(content_item, content_item_path)
-  rescue NameError
-    raise "No support for schema \"#{content_item['schema_name']}\""
+    @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
   end
 
   def content_item_template
@@ -124,28 +97,6 @@ private
 
   def with_locale
     I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
-  end
-
-  def presenter_name(content_item)
-    if service_sign_in_format?(content_item["schema_name"])
-      return service_sign_in_presenter_name(content_item)
-    end
-
-    content_item['schema_name'].classify + 'Presenter'
-  end
-
-  def service_sign_in_format?(schema_name)
-    schema_name == "service_sign_in"
-  end
-
-  def service_sign_in_presenter_name(content_item)
-    slug = content_item_path.split("/").last
-
-    if content_item.dig("details", "create_new_account", "slug") == slug
-      return "ServiceSignIn::CreateNewAccountPresenter"
-    end
-
-    "ServiceSignIn::ChooseSignInPresenter"
   end
 
   def error_403(exception)
