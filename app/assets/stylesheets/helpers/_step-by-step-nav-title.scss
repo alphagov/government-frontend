@@ -5,13 +5,3 @@
     margin-top: 180px;
   }
 }
-
-// FIXME This can be removed once all
-// formats are moved to universal layout.
-.step-by-step-nav-responsive-top-margin {
-  margin-top: 30px;
-
-  @include media(tablet) {
-    margin-top: 180px;
-  }
-}
