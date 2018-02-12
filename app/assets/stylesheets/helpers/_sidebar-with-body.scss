@@ -3,10 +3,4 @@
     position: relative;
     margin-bottom: $gutter * 1.5;
   }
-
-  .offset-one-third {
-    @include media(tablet) {
-      margin-left: percentage(1 / 3);
-    }
-  }
 }
