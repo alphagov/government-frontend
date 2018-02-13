@@ -10,7 +10,6 @@ module ContentItem
       end
     end
 
-
     def part_link_elements
       parts.map do |part|
         if part['slug'] != current_part['slug']
@@ -20,7 +19,6 @@ module ContentItem
         end
       end
     end
-
 
     # When requesting a part, the content store will return a content item
     # with a base path that's different to the one requested. That content
