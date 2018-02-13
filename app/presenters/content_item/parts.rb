@@ -10,6 +10,18 @@ module ContentItem
       end
     end
 
+
+    def part_link_elements
+      parts.map do |part|
+        if part['slug'] != current_part['slug']
+          { href: part['full_path'], text: part['title'] }
+        else
+          { text: part['title'] }
+        end
+      end
+    end
+
+
     # When requesting a part, the content store will return a content item
     # with a base path that's different to the one requested. That content
     # item contains all the parts for that document.

@@ -1,16 +1,3 @@
-<nav role="navigation" class="grid-row part-navigation" aria-label="<%= navigation_label %>">
-  <% content_item.parts_navigation.each_with_index do |part_group, i| %>
-    <ol
-      class="column-half"
-      <% if i == 1 %>
-        start="<%= content_item.parts_navigation_second_list_start %>"
-      <% end %>
-    >
-      <% part_group.each do |part_nav_item| %>
-        <li>
-          <%= part_nav_item %>
-        </li>
-      <% end %>
-    </ol>
-  <% end %>
+<nav role="navigation" class="grid-row parts-navigation" aria-label="<%= navigation_label %>">
+  <%= render "components/contents-list", contents: content_item.part_link_elements %>
 </nav>
