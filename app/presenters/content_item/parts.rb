@@ -15,7 +15,7 @@ module ContentItem
         if part['slug'] != current_part['slug']
           { href: part['full_path'], text: part['title'] }
         else
-          { text: part['title'] }
+          { href: part['full_path'], text: part['title'], active: true }
         end
       end
     end

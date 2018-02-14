@@ -72,12 +72,8 @@ examples:
       contents:
         - href: "#first-thing"
           text: 1. First thing
-<<<<<<< HEAD
         - href: "#two"
           active: true
-=======
-        - href:
->>>>>>> Add support for blank hrefs
           text: 2. Second thing
         - href: "#third-thing"
           text: 3. Third thing
@@ -123,12 +119,8 @@ examples:
           items:
           - href: "#second-thing"
             text: No numbers here
-<<<<<<< HEAD
           - href: "#third-thing"
             active: true
-=======
-          - href:
->>>>>>> Add support for blank hrefs
             text: None here either
   right_to_left:
     data:
