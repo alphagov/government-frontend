@@ -92,6 +92,24 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
+  test "#show_contents_list? returns true if number of contents items is 2 and the first item's character count is above 415 including a list" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+         <p>#{Faker::Lorem.characters(40)}</p>
+         <ul>
+          <li>#{Faker::Lorem.characters(100)}</li>
+          <li>#{Faker::Lorem.characters(100)}</li>
+          <li>#{Faker::Lorem.characters(200)}</li>
+         </ul>
+         <p>#{Faker::Lorem.characters(40)}</p>
+         <h2 id='two'>Two</h2>
+         <p>#{Faker::Lorem.sentence}</p>"
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
+
   test "#show_contents_list? returns true if number of contents items is 3 or more" do
     class << @contents_list
       def body
