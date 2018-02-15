@@ -157,5 +157,31 @@ class ContactPresenterTest
       assert_equal presented.webchat_availability_url, "https://www.tax.service.gov.uk/csp-partials/availability/1030"
       assert_equal presented.webchat_open_url, "https://www.tax.service.gov.uk/csp-partials/open/1030"
     end
+
+    test 'webchat_ids include self-assessment-online-services-helpdesk before 19 Feb 2018 and after 25 Feb 2018' do
+      schema = schema_item('contact')
+      schema['base_path'] = '/government/organisations/hm-revenue-customs/contact/self-assessment-online-services-helpdesk'
+
+      travel_to(Date.new(2018, 2, 18)) do
+        assert present_example(schema).show_webchat?
+      end
+
+      travel_to(Date.new(2018, 2, 26)) do
+        assert present_example(schema).show_webchat?
+      end
+    end
+
+    test 'webchat_ids exclude self-assessment-online-services-helpdesk between 19 Feb 2018 and 25 Feb 2018' do
+      schema = schema_item('contact')
+      schema['base_path'] = '/government/organisations/hm-revenue-customs/contact/self-assessment-online-services-helpdesk'
+
+      travel_to(Date.new(2018, 2, 19)) do
+        refute present_example(schema).show_webchat?
+      end
+
+      travel_to(Date.new(2018, 2, 25)) do
+        refute present_example(schema).show_webchat?
+      end
+    end
   end
 end
