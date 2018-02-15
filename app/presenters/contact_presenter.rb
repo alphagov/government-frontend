@@ -164,12 +164,11 @@ private
   end
 
   def webchat_ids
-    {
+    ids = {
       '/government/organisations/hm-revenue-customs/contact/child-benefit' => 1027,
       '/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees' => 1030,
       '/government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk' => 1026,
       '/government/organisations/hm-revenue-customs/contact/national-insurance-numbers' => 1021,
-      '/government/organisations/hm-revenue-customs/contact/self-assessment-online-services-helpdesk' => 1003,
       '/government/organisations/hm-revenue-customs/contact/self-assessment' => 1004,
       '/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries' => 1016,
       '/government/organisations/hm-revenue-customs/contact/vat-enquiries' => 1028,
@@ -178,6 +177,13 @@ private
       '/government/organisations/hm-revenue-customs/contact/employer-enquiries' => 1023,
       '/government/organisations/hm-revenue-customs/contact/online-services-helpdesk' => 1003,
     }
+    # https://govuk.zendesk.com/agent/tickets/2582003
+    # The webchat service for this page will be suspended from 19 to 25 February.
+    if Date.today < Date.new(2018, 2, 19) || Date.today > Date.new(2018, 2, 25)
+      ids['/government/organisations/hm-revenue-customs/contact/self-assessment-online-services-helpdesk'] = 1003
+    end
+
+    ids
   end
 
   def v_card_part(v_card_class, value)
