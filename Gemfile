@@ -21,7 +21,7 @@ gem 'govuk_frontend_toolkit', '~> 7.3'
 gem 'govuk_navigation_helpers', '~> 9.0'
 gem 'govuk_publishing_components', '~> 5.0'
 gem 'plek', '~> 2.1'
-gem 'slimmer', '~> 11.1'
+gem 'slimmer', '~> 12.0'
 
 group :development, :test do
   gem 'govuk-lint'
