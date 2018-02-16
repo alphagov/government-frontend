@@ -17,6 +17,9 @@ accessibility_criteria: |
   - convey the content structure
   - indicate the current page when contents span different pages, and not link to itself
 
+  The contents list may:
+  - include an aria-label to contextualise the list if helpful
+
   Links with formatted numbers must separate the number and text with a space for correct screen reader pronunciation. This changes pronunciation from "1 dot Item" to "1 Item".
 shared_accessibility_criteria:
   - link
@@ -39,9 +42,21 @@ examples:
           text: Another pretty long contents list entry, not as long as the first, but still a little.
         - href: "#third-thing"
           text: Third thing
-  active content link:
+  active_content_link:
     description: 'An active state allows for "you are here" items in a contents list that spans different pages to avoid linking back to the current page.'
     data:
+      contents:
+        - href: "#first-thing"
+          text: First
+        - href: "#two"
+          text: Second
+          active: true
+        - href: "#third-thing"
+          text: Third thing
+  aria_label:
+    description: 'An aria-label string can be used to contextualise the navigation for assistive technology.'
+    data:
+      aria_label: "Pages in this guide"
       contents:
         - href: "#first-thing"
           text: First

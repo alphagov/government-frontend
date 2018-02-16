@@ -107,4 +107,9 @@ class ContentsListComponentTest < ComponentTestCase
     assert_select "#{nested_link_selector} .app-c-contents-list__number", count: 0
     assert_select "#{nested_link_selector} .app-c-contents-list__numbered-text", count: 0
   end
+
+  test "aria label is rendered when supplied" do
+    render_component(contents: contents_list_with_active_item, aria_label: "All pages in this guide")
+    assert_select ".app-c-contents-list[aria-label=\"All pages in this guide\"]"
+  end
 end
