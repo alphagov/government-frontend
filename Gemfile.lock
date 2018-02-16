@@ -90,8 +90,6 @@ GEM
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.21)
-    foreman (0.84.0)
-      thor (~> 0.19.1)
     gds-api-adapters (51.2.0)
       addressable
       link_header
@@ -312,7 +310,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     statsd-ruby (1.4.0)
-    thor (0.19.4)
+    thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
     tzinfo (1.2.5)
@@ -357,7 +355,6 @@ DEPENDENCIES
   capybara
   dalli
   faker
-  foreman (~> 0.84)
   gds-api-adapters (~> 51.2)
   govuk-lint
   govuk_ab_testing (~> 2.4)
