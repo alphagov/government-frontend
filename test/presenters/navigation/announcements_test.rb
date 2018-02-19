@@ -23,9 +23,7 @@ class AnnouncementsTest < PresenterTestCase
     expected_params = {
       announcement_filter_option: "news-stories",
       departments: ["cabinet-office"],
-      people: ["all"],
       topics: ["arts-and-culture"],
-      world_locations: ["all"]
     }.merge(params)
 
     "/government/announcements?#{expected_params.to_query}"

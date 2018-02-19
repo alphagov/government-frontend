@@ -47,4 +47,19 @@ class StatisticsTest < PresenterTestCase
 
     assert_equal expected("/government/statistics/announcements"), finder_path_and_params
   end
+
+  test "pluralised_document_type default" do
+    stub_content_item
+    self.stubs(:schema_name).returns("statistics")
+    self.stubs(:document_type).returns("statistical_data_set")
+
+    assert_equal "statistical data sets", pluralised_document_type
+  end
+
+  test "pluralise_document_type for announcements" do
+    stub_content_item
+    self.stubs(:schema_name).returns("statistics_announcement")
+
+    assert_equal "statistics announcements", pluralised_document_type
+  end
 end

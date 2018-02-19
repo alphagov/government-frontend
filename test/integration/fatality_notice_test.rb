@@ -63,13 +63,11 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     end
 
     assert_has_link_to_finder(
-      "Related fatality notices",
+      "More fatality notices about defence and armed forces from Ministry of Defence",
       "/government/announcements",
       "departments[]" => "ministry-of-defence",
-      "people[]" => "all",
       "announcement_filter_option" => "fatality-notices",
       "topics[]" => "defence-and-armed-forces",
-      "world_locations[]" => "all"
     )
   end
 

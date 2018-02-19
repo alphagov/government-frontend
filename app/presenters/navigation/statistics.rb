@@ -12,14 +12,19 @@ module Navigation
 
     def finder_path
       path = "statistics"
-      path += "/announcements" if schema_name == "statistics_announcement"
+      path += "/announcements" if announcement?
       path
     end
 
     def pluralised_document_type
+      return "statistics announcements" if announcement?
       doctype = I18n.t("content_item.schema_name.#{document_type}", count: 2, locale: :en)
       doctype[0] = doctype[0].downcase
       doctype
+    end
+
+    def announcement?
+      schema_name == "statistics_announcement"
     end
   end
 end
