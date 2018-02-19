@@ -1,5 +1,5 @@
 module GuideNavAbTestable
-  DIMENSION = 61
+  DIMENSION = 64
   TEST_NAME = "GuideChapterNav".freeze
 
   def self.included(base)
