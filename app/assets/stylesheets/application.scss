@@ -23,14 +23,7 @@
 @import 'components/*';
 
 // Components from govuk_publishing_components gem
-@import 'govuk_publishing_components/components/back-link';
-@import 'govuk_publishing_components/components/error-summary';
-@import 'govuk_publishing_components/components/fieldset';
-@import 'govuk_publishing_components/components/label';
-@import 'govuk_publishing_components/components/radio';
-@import 'govuk_publishing_components/components/step-by-step-nav';
-@import 'govuk_publishing_components/components/step-by-step-nav-header';
-@import 'govuk_publishing_components/components/step-by-step-nav-related';
+@import 'govuk_publishing_components/all_components';
 
 // pages specific view imports
 @import 'views/case-studies';
