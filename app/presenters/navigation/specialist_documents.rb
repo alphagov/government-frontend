@@ -35,5 +35,9 @@ module Navigation
     def pluralised_document_type
       I18n.t("content_item.schema_name.#{document_type}", count: 2, locale: :en)
     end
+
+    def link_text
+      "More #{pluralised_document_type}"
+    end
   end
 end
