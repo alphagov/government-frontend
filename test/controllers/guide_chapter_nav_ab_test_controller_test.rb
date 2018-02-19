@@ -26,7 +26,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         get :show, params: { path: path_for(content_item) }
         assert_response 200
 
-        ab_test = GovukAbTesting::AbTest.new("GuideChapterNav", dimension: 61)
+        ab_test = GovukAbTesting::AbTest.new("GuideChapterNav", dimension: 64)
         requested = ab_test.requested_variant(request.headers)
         assert requested.variant?(test_variant)
       end
