@@ -63,10 +63,8 @@ class SpeechTest < ActionDispatch::IntegrationTest
       "More speeches about energy from Department of Energy & Climate Change",
       "/government/announcements",
       "departments[]" => "department-of-energy-climate-change",
-      "people[]" => "andrea-leadsom",
       "announcement_filter_option" => "speeches",
       "topics[]" => "energy",
-      "world_locations[]" => "all"
     )
   end
 end

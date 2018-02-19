@@ -41,10 +41,8 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
       "More news articles",
       "/government/announcements",
       "departments[]" => "all",
-      "people[]" => "all",
       "announcement_filter_option" => "all",
       "topics[]" => "all",
-      "world_locations[]" => "kenya"
     )
   end
 

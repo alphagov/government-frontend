@@ -28,10 +28,8 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
       "More news stories from Prime Minister's Office, 10 Downing Street",
       "/government/announcements",
       "departments[]" => "prime-ministers-office-10-downing-street",
-      "people[]" => "all",
       "announcement_filter_option" => "news-stories",
       "topics[]" => "all",
-      "world_locations[]" => "all"
     )
   end
 

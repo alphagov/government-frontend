@@ -14,9 +14,7 @@ module Navigation
     def facet_params
       departments
         .merge(filter_option)
-        .merge(people)
-        .merge(topics)
-        .merge(world_locations).to_query
+        .merge(topics).to_query
     end
 
     def filter_option

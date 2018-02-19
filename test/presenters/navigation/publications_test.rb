@@ -29,9 +29,7 @@ class PublicationsTest < PresenterTestCase
     expected_params = {
       publication_filter_option: "policy-papers",
       departments: ["uk-visas-and-immigration"],
-      people: ["all"],
       topics: ["borders-and-immigration"],
-      world_locations: ["all"]
     }.merge(params)
 
     "/government/publications?#{expected_params.to_query}"

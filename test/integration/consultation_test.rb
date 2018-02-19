@@ -28,10 +28,8 @@ class ConsultationTest < ActionDispatch::IntegrationTest
       "More open consultations about higher education from Department for Education",
       "/government/publications",
       "departments[]" => "department-for-education",
-      "people[]" => "all",
       "publication_filter_option" => "consultations",
       "topics[]" => "higher-education",
-      "world_locations[]" => "all"
     )
 
     within '.consultation-description' do
