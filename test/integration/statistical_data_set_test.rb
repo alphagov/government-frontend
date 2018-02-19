@@ -36,7 +36,7 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     )
 
     assert_has_link_to_finder(
-      "Related statistical data sets",
+      "More statistical data sets from Department for Transport",
       "/government/statistics",
       "departments[]" => "department-for-transport",
       "topics[]" => "all"
