@@ -172,7 +172,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('countryside-stewardship-grants')
 
     assert_has_link_to_finder(
-      "Related Countryside Stewardship grants",
+      "More Countryside Stewardship grants",
       "/countryside-stewardship-grants",
       "funding_amount" => %w(more-than-500),
       "grant_type" => "option",
