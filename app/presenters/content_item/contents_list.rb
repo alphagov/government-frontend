@@ -49,9 +49,10 @@ module ContentItem
     def first_item_content
       element = first_item
       first_item_text = ''
+      allowed_elements = %w(p ul ol)
 
       until element.name == 'h2'
-        first_item_text += element.text if element.name == 'p'
+        first_item_text += element.text if element.name.in?(allowed_elements)
         element = element.next_element
         break if element.nil?
       end
