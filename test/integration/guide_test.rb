@@ -11,15 +11,15 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert page.has_css?("title", visible: false, text: @content_item['title'])
     assert_has_component_title(@content_item['title'])
 
-    assert page.has_css?('.part-navigation ol', count: 2)
-    assert page.has_css?('.part-navigation li', count: @content_item['details']['parts'].size)
+    assert page.has_css?('.parts-navigation ol')
+    assert page.has_css?('.parts-navigation li', count: @content_item['details']['parts'].size)
 
     @content_item["details"]["parts"].each_with_index do |part, i|
       if i.zero?
-        assert page.has_css?('.part-navigation li', text: part['title'])
-        refute page.has_css?('.part-navigation li a', text: part['title'])
+        assert page.has_css?('.parts-navigation li', text: part['title'])
+        refute page.has_css?('.parts-navigation li a', text: part['title'])
       else
-        assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['title'])
+        assert page.has_css?(".parts-navigation li a[href*=\"#{part['slug']}\"]", text: part['title'])
       end
     end
 
@@ -31,14 +31,14 @@ class GuideTest < ActionDispatch::IntegrationTest
   test "draft access tokens are appended to part links within navigation" do
     setup_and_visit_content_item('guide', '?token=some_token')
 
-    assert page.has_css?('.part-navigation a[href$="?token=some_token"]')
+    assert page.has_css?('.parts-navigation a[href$="?token=some_token"]')
   end
 
   test "does not show part navigation, print link or part title when only one part" do
     setup_and_visit_content_item('single-page-guide')
 
     refute page.has_css?('h1', text: @content_item['details']['parts'].first['title'])
-    refute page.has_css?('.part-navigation')
+    refute page.has_css?('.parts-navigation')
     refute page.has_css?('.app-c-print-link')
   end
 end

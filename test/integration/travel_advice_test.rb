@@ -14,13 +14,13 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
     assert page.has_css?("a[href=\"#{@content_item['base_path']}.atom\"]", text: "Subscribe to feed")
 
-    assert page.has_css?('.part-navigation ol', count: 2)
-    assert page.has_css?('.part-navigation li', count: @content_item['details']['parts'].size + 1)
-    assert page.has_css?('.part-navigation li', text: 'Summary')
-    refute page.has_css?('.part-navigation li a', text: 'Summary')
+    assert page.has_css?('.parts-navigation ol')
+    assert page.has_css?('.parts-navigation li', count: @content_item['details']['parts'].size + 1)
+    assert page.has_css?('.parts-navigation li', text: 'Summary')
+    refute page.has_css?('.parts-navigation li a', text: 'Summary')
 
     @content_item['details']['parts'].each do |part|
-      assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['title'])
+      assert page.has_css?(".parts-navigation li a[href*=\"#{part['slug']}\"]", text: part['title'])
     end
 
     assert page.has_css?(shared_component_selector("previous_and_next_navigation"))
@@ -60,8 +60,8 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     refute page.has_css?(".map")
     refute page.has_css?(shared_component_selector("metadata"))
 
-    assert page.has_css?('.part-navigation li', text: first_part['title'])
-    refute page.has_css?('.part-navigation li a', text: first_part['title'])
+    assert page.has_css?('.parts-navigation li', text: first_part['title'])
+    refute page.has_css?('.parts-navigation li a', text: first_part['title'])
   end
 
   test "travel advice includes a discoverable atom feed link" do
