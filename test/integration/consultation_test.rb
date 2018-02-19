@@ -25,7 +25,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     ])
 
     assert_has_link_to_finder(
-      "Related open consultations",
+      "More open consultations about higher education from Department for Education",
       "/government/publications",
       "departments[]" => "department-for-education",
       "people[]" => "all",
