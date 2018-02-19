@@ -16,7 +16,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
     end
 
     assert_has_link_to_finder(
-      "Related notices",
+      "More notices from Environment Agency",
       "/government/publications",
       "departments[]" => "environment-agency",
       "people[]" => "all",
