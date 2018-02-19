@@ -23,7 +23,7 @@ module ServiceSignIn
       assert page.has_css?('.gem-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
       assert page.has_css?('form[data-module="track-radio-group"]')
 
-      within "form" do
+      within "#content form" do
         within ".gem-c-fieldset" do
           within ".gem-c-fieldset__legend" do
             within shared_component_selector('title') do
@@ -92,7 +92,7 @@ module ServiceSignIn
       assert page.has_css?("title", text: 'Profwch pwy ydych chi i fwrw ymlaen - GOV.UK', visible: false)
       assert page.has_css?('.gem-c-back-link', text: 'Yn ôl')
 
-      within "form" do
+      within "#content form" do
         within ".gem-c-fieldset" do
           within ".gem-c-fieldset__legend" do
             within shared_component_selector('title') do

@@ -19,9 +19,9 @@ gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_app_config', '~> 1.2'
 gem 'govuk_frontend_toolkit', '~> 7.2'
 gem 'govuk_navigation_helpers', '~> 9.0'
-gem 'govuk_publishing_components', '~> 5.0'
+gem 'govuk_publishing_components', '~> 5.1'
 gem 'plek', '~> 2.1'
-gem 'slimmer', '~> 11.1'
+gem 'slimmer', '~> 12.0'
 
 group :development, :test do
   gem 'govuk-lint'
