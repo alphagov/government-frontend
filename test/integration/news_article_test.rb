@@ -25,7 +25,7 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 25 December 2016")
 
     assert_has_link_to_finder(
-      "Related news stories",
+      "More news stories from Prime Minister's Office, 10 Downing Street",
       "/government/announcements",
       "departments[]" => "prime-ministers-office-10-downing-street",
       "people[]" => "all",
