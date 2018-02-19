@@ -24,7 +24,7 @@
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
   <meta name="govuk:content-id" content="<%= @content_item.content_id %>" />
-
+  <%= guide_test_variant.analytics_meta_tag.html_safe if is_tested_guide? %>
   <%= yield :extra_head_content %>
 </head>
 <body>
