@@ -12,7 +12,11 @@
     <% if @content_item.has_parts? %>
       <% if @content_item.multi_page_guide? %>
         <h1 class="part-title">
-          <%= @content_item.current_part_title_with_index %>
+          <% if show_alternate_guide_chapters? %>
+            <%= @content_item.current_part_title %>
+          <% else %>
+            <%= @content_item.current_part_title_with_index %>
+          <% end %>
         </h1>
       <% end %>
       <%= render 'govuk_component/govspeak',
