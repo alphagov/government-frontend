@@ -27,16 +27,8 @@ module Navigation
       multiple_options_from_links("organisations", "departments")
     end
 
-    def people
-      multiple_options_from_links("people")
-    end
-
     def topics
       multiple_options_from_links("policy_areas", "topics")
-    end
-
-    def world_locations
-      multiple_options_from_links("world_locations")
     end
 
     def multiple_options_from_links(link_type, option_key = nil)
