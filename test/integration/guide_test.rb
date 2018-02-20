@@ -26,6 +26,12 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert page.has_css?('h1', text: "1. #{@content_item['details']['parts'].first['title']}")
     assert page.has_css?(shared_component_selector("previous_and_next_navigation"))
     assert page.has_css?('.app-c-print-link a[href$="/print"]')
+
+    assert page.has_css?(".part-navigation[data-module='track-click']")
+    assert_tracking_link("category", "contentsClicked", (@content_item['details']['parts'].size - 1))
+    assert_tracking_link("action", "content_item 2")
+    assert_tracking_link("label", "/national-curriculum/key-stage-1-and-2")
+    assert_tracking_link("options", { dimension29: "Key stage 1 and 2" }.to_json)
   end
 
   test "draft access tokens are appended to part links within navigation" do
@@ -40,5 +46,9 @@ class GuideTest < ActionDispatch::IntegrationTest
     refute page.has_css?('h1', text: @content_item['details']['parts'].first['title'])
     refute page.has_css?('.part-navigation')
     refute page.has_css?('.app-c-print-link')
+  end
+
+  def assert_tracking_link(name, value, total = 1)
+    assert page.has_css?("a[data-track-#{name}='#{value}']", count: total)
   end
 end
