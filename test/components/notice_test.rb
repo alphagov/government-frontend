@@ -24,9 +24,9 @@ class NoticeGovspeakTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders a notice with an aria label" do
+  test "renders a notice with an aria label and region" do
     visit '/component-guide/notice/default'
-    assert page.has_selector?(".component-guide-preview section[aria-label]")
+    assert page.has_selector?(".component-guide-preview section[aria-label][role=region]")
   end
 
   test "renders a notice with a title and description text" do
