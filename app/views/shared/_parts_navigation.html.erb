@@ -1,7 +1,7 @@
 <% if show_alternate_guide_chapters? %>
   <%= render "components/contents-list", aria_label: navigation_label, contents: content_item.part_link_elements %>
 <% else %>
-  <nav role="navigation" class="grid-row part-navigation" aria-label="<%= navigation_label %>">
+  <nav role="navigation" class="grid-row part-navigation" aria-label="<%= navigation_label %>" data-module="track-click">
     <% content_item.parts_navigation.each_with_index do |part_group, i| %>
       <ol
         class="column-half"

@@ -84,9 +84,17 @@ module ContentItem
     end
 
     def part_links
-      parts.map do |part|
+      parts.map.with_index(1) do |part, position|
         if part['slug'] != current_part['slug']
-          link_to part['title'], part['full_path']
+          link_to part['title'], part['full_path'],
+            data: {
+            track_category: 'contentsClicked',
+            track_action: "content_item #{position}",
+            track_label: part['full_path'],
+            track_options: {
+              dimension29: part['title']
+             }
+           }
         else
           part['title']
         end
