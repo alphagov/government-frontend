@@ -16,6 +16,9 @@
   padding-bottom: $gutter-one-third;
 
   .app-c-back-to-top {
+    // This ensures the link doesn't 'collapse' allowing elements
+    // below the link to briefly appear above the link
+    min-height: 1px;
     padding-bottom: $gutter-one-third;
   }
 }
