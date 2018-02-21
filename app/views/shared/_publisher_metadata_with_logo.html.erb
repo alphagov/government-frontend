@@ -4,11 +4,7 @@
       <%= render "components/publisher-metadata", @content_item.publisher_metadata %>
     </div>
     <div class="column-one-third">
-      <% if @content_item.try(:logo) %>
-        <%= image_tag @content_item.logo[:path],
-          alt: @content_item.logo[:alt_text],
-          class: "metadata-logo" %>
-      <% end %>
+      <%= content_logo(@content_item) %>
     </div>
   </div>
 </div>

@@ -1,6 +1,5 @@
 class StatisticsAnnouncementPresenter < ContentItemPresenter
   include ContentItem::Metadata
-  include ContentItem::NationalStatisticsLogo
   include ContentItem::TitleAndContext
   include Navigation::Statistics
   include StatisticsAnnouncementHelper
