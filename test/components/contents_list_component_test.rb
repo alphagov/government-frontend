@@ -77,6 +77,8 @@ class ContentsListComponentTest < ComponentTestCase
   test "renders data attributes for tracking" do
     render_component(contents: nested_contents_list)
 
+    assert_select ".app-c-contents-list[data-module='track-click']"
+
     assert_tracking_link("category", "contentsClicked", 6)
     assert_tracking_link("action", "content_item 1")
     assert_tracking_link("label", "/one")
