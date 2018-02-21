@@ -19,7 +19,7 @@ gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_app_config', '~> 1.2'
 gem 'govuk_frontend_toolkit', '~> 7.4'
 gem 'govuk_navigation_helpers', '~> 9.0'
-gem 'govuk_publishing_components', '~> 5.1.3'
+gem 'govuk_publishing_components', '~> 5.2.0'
 gem 'plek', '~> 2.1'
 gem 'slimmer', '~> 12.0'
 
