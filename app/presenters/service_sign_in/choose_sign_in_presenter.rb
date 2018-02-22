@@ -6,6 +6,10 @@ module ServiceSignIn
       "choose_sign_in"
     end
 
+    def partial_type
+      "choose_sign_in"
+    end
+
     def title
       choose_sign_in["title"]
     end

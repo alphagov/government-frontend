@@ -1,0 +1,98 @@
+<%= render "govuk_publishing_components/components/back_link", href: @content_item.back_link %>
+
+<%= render "components/heading", {
+    text: "Create an account",
+    heading_level: 1
+} %>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <div class="govuk-govspeak">
+      <p>You can choose to use Government Gateway or GOV.UK Verify. You'll be able to apply for a basic criminal record check with either.</p>
+    </div>
+  </div>
+</div>
+
+<div class="grid-row govuk-govspeak">
+  <div class="column-one-half">
+    <h3>Government Gateway</h3>
+    <hr>
+
+    <h4>What you need</h4>
+
+    <p class="fixed-height">Government Gateway works best if you have:</p>
+
+    <ul class="list list-bullet">
+      <li>your National Insurance number</li>
+    </ul>
+
+    <p>And one of the following:</p>
+
+    <ul class="list list-bullet">
+      <li>a P60</li>
+      <li>a recent payslip</li>
+      <li>a UK passport</li>
+    </ul>
+    <%= render 'govuk_component/button',
+               text: 'Create a Government Gateway account',
+               href: @content_item.govenment_gateway_url,
+               margin_bottom: true,
+               rel: "external"
+    %>
+      <hr>
+      <h4>How long it takes, on average</h4>
+      <p>10 minutes</p>
+      <hr>
+      <h4>How it works</h4>
+
+      <p>Your details will be shared with the department that runs the 'apply for a basic criminal record check certificate' service.</p>
+  </div>
+
+  <div class="column-one-half">
+    <h3>GOV.UK Verify</h3>
+    <hr>
+    <h4>What you need</h4>
+    <p class="fixed-height">GOV.UK Verify requires you to:</p>
+
+    <ul class="list list-bullet">
+      <li>have a UK address</li>
+      <li>be over 18 years old</li>
+    </ul>
+
+    <p>It works best if you can provide either:</p>
+
+    <ul class="list list-bullet">
+      <li>a valid passport</li>
+      <li>a driving licence</li>
+    </ul>
+    <%= render 'govuk_component/button',
+               text: 'Create an account with GOV.UK Verify',
+               href: @content_item.verify_url,
+               margin_bottom: true,
+               rel: "external"
+    %>
+    <hr>
+    <h4>How long it takes, on average</h4>
+
+    <p>15 minutes</p>
+    <hr>
+    <h4>How it works</h4>
+
+    <p>A certified company with double check your identity. All companies involved have met security standards set by government</p>
+  </div>
+
+  <div class="column-full">
+    <hr>
+  </div>
+
+  <div class="column-two-thirds">
+    <div></div>
+    <h4>Personal tax account</h4>
+
+    <p>
+      Signing in for the first time will activate your personal tax account. You can use this to check your HMRC records and manage your other details.
+    </p>
+  </div>
+</div>
+
+
