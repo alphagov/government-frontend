@@ -1,4 +1,4 @@
-module RelatedNavigationHelper
+module RelatedNavigationSidebarHelper
   MAX_SECTION_LENGTH = 5
   DEFINED_SECTIONS = %w(
     related_guides
