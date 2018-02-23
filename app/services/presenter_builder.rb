@@ -36,13 +36,26 @@ private
   end
 
   def service_sign_in_presenter_name
-    slug = content_item_path.split("/").last
-
-    if content_item.dig("details", "create_new_account", "slug") == slug
-      return "ServiceSignIn::CreateNewAccountPresenter"
+    if new_create_account_page?
+      "ServiceSignIn::VerifyHubTrialCreateNewAccountPresenter"
+    elsif content_path_create_account?
+      "ServiceSignIn::CreateNewAccountPresenter"
+    else
+      "ServiceSignIn::ChooseSignInPresenter"
     end
+  end
 
-    "ServiceSignIn::ChooseSignInPresenter"
+  def new_create_account_page?
+    content_path_create_account? && service_included_for_trial?
+  end
+
+  def service_included_for_trial?
+    content_item_path.include?("update-company-car-details") || content_item_path.include?("check-income-tax-current-year")
+  end
+
+  def content_path_create_account?
+    slug = content_item_path.split("/").last
+    content_item.dig("details", "create_new_account", "slug") == slug
   end
 
   class RedirectRouteReturned < StandardError
