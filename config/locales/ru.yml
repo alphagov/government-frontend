@@ -1,6 +1,15 @@
 ru:
   language_names:
     ru: "Русский"
+  components:
+    related_navigation:
+      collections: "Коллекции"
+      external_links: "внешние ссылки"
+      policies: "полисы"
+      related_content: "Связанный контент"
+      topical_events: "Актуальные события"
+      topics: "темы"
+      world_locations: "Мировые местоположения"
   content_item:
     schema_name:
       announcement:
