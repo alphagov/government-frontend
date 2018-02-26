@@ -4,6 +4,16 @@
   <div class="column-third">
   <% if @navigation.should_present_taxonomy_navigation? %>
     <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
+		<div>
+			<h3 class="govuk-taxonomy-sidebar__collections-heading"></h3>
+			<nav class="govuk-taxonomy-sidebar__navigation" role="navigation">
+				<ul class="govuk-taxonomy-sidebar__list">
+					<li>
+						<%= finder_link(@content_item.content_item) %>
+					</li>
+				</ul>
+			</nav>
+		</div>
   <% else %>
     <%= render partial: 'components/related-navigation', locals: @content_item.related_navigation %>
   <% end %>
