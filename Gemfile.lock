@@ -89,7 +89,7 @@ GEM
       i18n (>= 0.7)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.21)
+    ffi (1.9.23)
     gds-api-adapters (51.2.0)
       addressable
       link_header
@@ -120,14 +120,14 @@ GEM
       sentry-raven (~> 2.7.1)
       statsd-ruby (~> 1.4.0)
       unicorn (~> 5.4.0)
-    govuk_frontend_toolkit (7.4.1)
+    govuk_frontend_toolkit (7.4.2)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     govuk_navigation_helpers (9.0.0)
       activesupport (~> 5.1)
       gds-api-adapters (>= 43.0)
       govuk_ab_testing (~> 2.4)
-    govuk_publishing_components (5.2.0)
+    govuk_publishing_components (5.2.1)
       govspeak (>= 5.0.3)
       govuk_frontend_toolkit
       rails (>= 5.0.0.1)
