@@ -10,12 +10,20 @@ module ServiceSignIn
     VERIFY_URL_FOR_COMPANY_CAR = "https://www.tax.service.gov.uk/paye/company-car/start-verify".freeze
     VERIFY_URL_FOR_INCOME_TAX = "https://www.tax.service.gov.uk/check-income-tax/start-verify?_ga=2.114080007.145612230.1512381177-373904926.1473694521".freeze
 
+    SERVICE_TEXT_FOR_COMPANY_CAR = "check or update your company car tax".freeze
+    SERVICE_TEXT_FOR_INCOME_TAX = "check your income tax for the current year".freeze
+
     def page_type
       "create_new_account"
     end
 
     def partial_type
       "verify_hub_trial_create_new_account"
+    end
+
+    def service_specific_text
+      return SERVICE_TEXT_FOR_COMPANY_CAR if content_item['base_path'].include?("update-company-car-details")
+      return SERVICE_TEXT_FOR_INCOME_TAX if content_item['base_path'].include?("check-income-tax-current-year")
     end
 
     def govenment_gateway_url
