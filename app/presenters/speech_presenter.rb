@@ -6,6 +6,7 @@ class SpeechPresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include ContentItem::Metadata
   include Navigation::Announcements
+  include Navigation::Taxonomy
 
   def image
     content_item["details"]["image"]
