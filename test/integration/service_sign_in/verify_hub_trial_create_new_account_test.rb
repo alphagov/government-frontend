@@ -18,9 +18,11 @@ module ServiceSignIn
     end
 
     test "page renders correctly for company car details" do
+      SERVICE_TEXT_FOR_COMPANY_CAR = "check or update your company car tax".freeze
       setup_and_visit_create_new_account_page("/update-company-car-details/sign-in")
       assert page.has_text?('Create an account')
-      assert page.has_text?("You can choose to use Government Gateway or GOV.UK Verify. You'll be able to apply for a basic criminal record check with either.")
+      assert page.has_text?(SERVICE_TEXT_FOR_COMPANY_CAR)
+      assert page.has_text?("You can choose to use Government Gateway or GOV.UK Verify.")
       assert page.has_css?(shared_component_selector('button'), text: "Create a Government Gateway account")
       assert page.has_css?(shared_component_selector('button'), text: "Create an account with GOV.UK Verify")
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
@@ -28,9 +30,11 @@ module ServiceSignIn
     end
 
     test "page renders correctly for income tax details" do
+      SERVICE_TEXT_FOR_INCOME_TAX = "check your income tax for the current year".freeze
       setup_and_visit_create_new_account_page("/check-income-tax-current-year/sign-in")
       assert page.has_text?('Create an account')
-      assert page.has_text?("You can choose to use Government Gateway or GOV.UK Verify. You'll be able to apply for a basic criminal record check with either.")
+      assert page.has_text?(SERVICE_TEXT_FOR_INCOME_TAX)
+      assert page.has_text?("You can choose to use Government Gateway or GOV.UK Verify.")
       assert page.has_css?(shared_component_selector('button'), text: "Create a Government Gateway account")
       assert page.has_css?(shared_component_selector('button'), text: "Create an account with GOV.UK Verify")
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)

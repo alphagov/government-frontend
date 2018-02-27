@@ -7,6 +7,9 @@ class ServiceSignInPresenterTest
     VERIFY_URL_FOR_COMPANY_CAR = "https://www.tax.service.gov.uk/paye/company-car/start-verify".freeze
     VERIFY_URL_FOR_INCOME_TAX = "https://www.tax.service.gov.uk/check-income-tax/start-verify?_ga=2.114080007.145612230.1512381177-373904926.1473694521".freeze
 
+    SERVICE_TEXT_FOR_COMPANY_CAR = "check or update your company car tax".freeze
+    SERVICE_TEXT_FOR_INCOME_TAX = "check your income tax for the current year".freeze
+
     def schema_name
       "service_sign_in"
     end
@@ -50,6 +53,16 @@ class ServiceSignInPresenterTest
     test 'presents correct url for verify sign up - check income tax' do
       schema_item['base_path'] = "check-income-tax-current-year/sign-in"
       assert_equal VERIFY_URL_FOR_INCOME_TAX, @presented_item.verify_url
+    end
+
+    test 'presents correct service text - update company car details' do
+      schema_item['base_path'] = "update-company-car-details/sign-in"
+      assert_equal SERVICE_TEXT_FOR_COMPANY_CAR, @presented_item.service_specific_text
+    end
+
+    test 'presents correct service text  - check income tax' do
+      schema_item['base_path'] = "check-income-tax-current-year/sign-in"
+      assert_equal SERVICE_TEXT_FOR_INCOME_TAX, @presented_item.service_specific_text
     end
 
     test 'presents the back_link' do
