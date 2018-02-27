@@ -175,6 +175,7 @@ private
       '/government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries' => 1034,
       '/government/organisations/hm-revenue-customs/contact/trusts' => 1036,
       '/government/organisations/hm-revenue-customs/contact/employer-enquiries' => 1023,
+      '/government/organisations/hm-revenue-customs/contact/construction-industry-scheme' => 1048,
       '/government/organisations/hm-revenue-customs/contact/online-services-helpdesk' => 1003,
     }
     # https://govuk.zendesk.com/agent/tickets/2582003
