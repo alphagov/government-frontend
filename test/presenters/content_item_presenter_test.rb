@@ -24,10 +24,7 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
   test "#taxonomy_sidebar combines taxonomy links and collections links for the taxonomy sidebar component" do
     GovukNavigationHelpers::NavigationHelper.any_instance
       .stubs(:taxonomy_sidebar)
-      .returns(items: :some_taxonomy_data)
-    GovukNavigationHelpers::NavigationHelper.any_instance
-      .stubs(:related_navigation_sidebar)
-      .returns(collections: :some_collections_data, publishers: [], worldwide_organisations: [])
+      .returns(items: :some_taxonomy_data, collections: :some_collections_data)
 
     expected = { items: :some_taxonomy_data, collections: :some_collections_data }
     assert_equal expected, ContentItemPresenter.new("schema_name" => "Schema name").taxonomy_sidebar
