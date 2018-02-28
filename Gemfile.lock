@@ -127,7 +127,7 @@ GEM
       activesupport (~> 5.1)
       gds-api-adapters (>= 43.0)
       govuk_ab_testing (~> 2.4)
-    govuk_publishing_components (5.2.2)
+    govuk_publishing_components (5.2.3)
       govspeak (>= 5.0.3)
       govuk_frontend_toolkit
       rails (>= 5.0.0.1)
@@ -210,7 +210,7 @@ GEM
     rack (2.0.4)
     rack-cache (1.7.1)
       rack (>= 0.4)
-    rack-test (0.8.2)
+    rack-test (0.8.3)
       rack (>= 1.0, < 3)
     rack_strip_client_ip (0.0.2)
     rails (5.1.5)
