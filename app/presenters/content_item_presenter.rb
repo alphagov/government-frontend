@@ -64,10 +64,6 @@ class ContentItemPresenter
     )
   end
 
-  def related_navigation
-    merge_publishers_and_worldwide_organisations(@nav_helper.related_navigation_sidebar)
-  end
-
   def related_items
     @nav_helper.related_items
   end
@@ -104,10 +100,5 @@ private
 
   def native_language_name_for(locale)
     I18n.t("language_names.#{locale}", locale: locale)
-  end
-
-  def merge_publishers_and_worldwide_organisations(related_navigation)
-    related_navigation[:publishers] += related_navigation.delete(:worldwide_organisations)
-    related_navigation
   end
 end
