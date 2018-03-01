@@ -267,7 +267,7 @@ class ActionDispatch::IntegrationTest
 
   def assert_has_link_to_finder(text, path, params)
     href_value = "#{path}?#{params.to_query}"
-    within(".app-c-related-navigation") do
+    within(".gem-c-related-navigation") do
       assert page.has_link?(text, href: href_value),
         "Finder link '#{text}' (href: #{href_value}) not found."
     end
