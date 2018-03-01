@@ -184,11 +184,10 @@ class ActionDispatch::IntegrationTest
 
   def assert_has_related_navigation_section_and_links(section_name, section_text, links)
     unless section_name == "related-nav-related_items"
-      assert page.has_css?("##{section_name}", text: section_text),
-        "Related navigation section '#{section_text}' not found"
+      find("h3[id^='#{section_name}']", text: section_text)
     end
 
-    within("nav[aria-labelledby='#{section_name}']") do
+    within("nav[aria-labelledby^='#{section_name}']") do
       links.each do |text, href|
         assert page.has_link?(text, href: href),
           "Related navigation link '#{text}' not found in '#{section_text}' links"
@@ -197,8 +196,8 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_related_navigation(sections)
-    within(".app-c-related-navigation") do
-      assert page.has_css?(".app-c-related-navigation__main-heading", text: "Related content"),
+    within(".gem-c-related-navigation") do
+      assert page.has_css?(".gem-c-related-navigation__main-heading", text: "Related content"),
         "Related navigation 'Related content' section not found"
 
       sections = [sections] unless sections.is_a?(Array)
