@@ -36,14 +36,6 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
       section_text: "World locations",
       links: { "Kenya": "/world/kenya/news" }
     )
-
-    assert_has_link_to_finder(
-      "More news articles",
-      "/government/announcements",
-      "departments[]" => "all",
-      "announcement_filter_option" => "all",
-      "topics[]" => "all",
-    )
   end
 
   test "renders translation links when there is more than one translation" do

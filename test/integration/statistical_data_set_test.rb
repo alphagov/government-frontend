@@ -34,13 +34,6 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
         },
       ]
     )
-
-    assert_has_link_to_finder(
-      "More statistical data sets from Department for Transport",
-      "/government/statistics",
-      "departments[]" => "department-for-transport",
-      "topics[]" => "all"
-    )
   end
 
   test "renders withdrawn notification" do

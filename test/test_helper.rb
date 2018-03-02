@@ -265,14 +265,6 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_link_to_finder(text, path, params)
-    href_value = "#{path}?#{params.to_query}"
-    within(".gem-c-related-navigation") do
-      assert page.has_link?(text, href: href_value),
-        "Finder link '#{text}' (href: #{href_value}) not found."
-    end
-  end
-
   def has_component_metadata(key, value)
     assert page.has_css? "meta[#{key}=\"#{value}\"]", visible: false
   end

@@ -24,14 +24,6 @@ class ConsultationTest < ActionDispatch::IntegrationTest
       }
     ])
 
-    assert_has_link_to_finder(
-      "More open consultations about higher education from Department for Education",
-      "/government/publications",
-      "departments[]" => "department-for-education",
-      "publication_filter_option" => "consultations",
-      "topics[]" => "higher-education",
-    )
-
     within '.consultation-description' do
       assert_has_component_govspeak(@content_item["details"]["body"])
     end

@@ -55,16 +55,4 @@ class SpeechTest < ActionDispatch::IntegrationTest
       }
     )
   end
-
-  test "renders related speech navigation" do
-    setup_and_visit_content_item('speech')
-
-    assert_has_link_to_finder(
-      "More speeches about energy from Department of Energy & Climate Change",
-      "/government/announcements",
-      "departments[]" => "department-of-energy-climate-change",
-      "announcement_filter_option" => "speeches",
-      "topics[]" => "energy",
-    )
-  end
 end
