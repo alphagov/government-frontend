@@ -1,4 +1,4 @@
-<%= content_for :no_breadcrumbs, show_step_nav? %>
+<%= content_for :no_breadcrumbs, step_nav_helper.show_header? %>
 <%= content_for :simple_header, @navigation.should_present_taxonomy_navigation? %>
 
 <div class="grid-row">
