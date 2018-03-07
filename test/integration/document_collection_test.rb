@@ -83,7 +83,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
     within ".app-c-contents-list-with-body" do
       assert page.has_css?(shared_component_selector("govspeak"), count: group_count)
-      assert page.has_css?('.app-c-document-list', count: group_count)
+      assert page.has_css?('.gem-c-document-list', count: group_count)
     end
   end
 
@@ -92,15 +92,15 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     documents = @content_item["links"]["documents"]
 
     documents.each do |doc|
-      assert page.has_css?('.app-c-document-list__item-title a', text: doc["title"])
+      assert page.has_css?('.gem-c-document-list__item-title a', text: doc["title"])
     end
 
-    assert page.has_css?('.app-c-document-list .app-c-document-list__item', count: documents.count)
+    assert page.has_css?('.gem-c-document-list .gem-c-document-list__item', count: documents.count)
 
-    document_lists = page.all('.app-c-document-list')
+    document_lists = page.all('.gem-c-document-list')
 
     within document_lists[0] do
-      list_items = page.all(".app-c-document-list__item")
+      list_items = page.all(".gem-c-document-list__item")
       within list_items[0] do
         assert page.has_text?('16 March 2007'), "has properly formatted date"
         assert page.has_css?('[datetime="2007-03-16T15:00:02+00:00"]'), "has iso8601 datetime attribute"
@@ -111,10 +111,10 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
   test 'includes tracking data on all collection documents' do
     setup_and_visit_content_item('document_collection')
-    groups = page.all('.app-c-document-list')
+    groups = page.all('.gem-c-document-list')
     assert page.has_css?('[data-module="track-click"]'), count: groups.length
 
-    first_section_links = groups.first.all('.app-c-document-list__item-title a')
+    first_section_links = groups.first.all('.gem-c-document-list__item-title a')
     first_link = first_section_links.first
 
     assert_equal(
