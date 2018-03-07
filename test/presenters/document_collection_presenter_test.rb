@@ -65,7 +65,7 @@ class DocumentCollectionPresenterTest
           },
           metadata: {
             public_updated_at: Time.zone.parse("2007-03-16 15:00:02 +0000"),
-            document_type: "guidance"
+            document_type: "Guidance"
           }
         }
       ]
