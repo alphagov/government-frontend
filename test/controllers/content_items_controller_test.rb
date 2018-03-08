@@ -318,7 +318,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_match(/A Taxon/, taxonomy_sidebar)
   end
 
-  test "Case Studies don't have the taxonomy-navigation" do
+  test "Case Studies have the taxonomy-navigation" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
     path = 'government/test/case-study'
     content_item['base_path'] = "/#{path}"
@@ -334,7 +334,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_store_has_item(content_item['base_path'], content_item)
 
     get :show, params: { path: path_for(content_item) }
-    assert_equal [], @request.variant
+    assert_equal [:taxonomy_navigation], @request.variant
     refute_match(/A Taxon/, taxonomy_sidebar)
   end
 
