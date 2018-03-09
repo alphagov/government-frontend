@@ -50,7 +50,9 @@ private
   end
 
   def service_included_for_trial?
-    content_item_path.include?("update-company-car-details") || content_item_path.include?("check-income-tax-current-year")
+    content_item_path.include?("update-company-car-details") ||
+      content_item_path.include?("check-income-tax-current-year") ||
+      content_item_path.include?("personal-tax-account")
   end
 
   def content_path_create_account?
