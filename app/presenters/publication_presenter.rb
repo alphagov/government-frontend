@@ -3,7 +3,6 @@ class PublicationPresenter < ContentItemPresenter
   include ContentItem::NationalApplicability
   include ContentItem::NationalStatisticsLogo
   include ContentItem::Political
-  include Navigation::Publications
 
   def details
     content_item["details"]["body"]

@@ -21,29 +21,10 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal "Type", ContentItemPresenter.new("document_type" => "Type").document_type
   end
 
-  test "#related_navigation retrieves content for related navigation component" do
-    expected = {
-      related_items: [],
-      collections: [],
-      statistical_data_sets: [],
-      topics: [],
-      topical_events: [],
-      policies: [],
-      publishers: [],
-      world_locations: [],
-      other: [[], []]
-    }
-
-    assert_equal expected, ContentItemPresenter.new("schema_name" => "Schema name").related_navigation
-  end
-
   test "#taxonomy_sidebar combines taxonomy links and collections links for the taxonomy sidebar component" do
     GovukNavigationHelpers::NavigationHelper.any_instance
       .stubs(:taxonomy_sidebar)
-      .returns(items: :some_taxonomy_data)
-    GovukNavigationHelpers::NavigationHelper.any_instance
-      .stubs(:related_navigation_sidebar)
-      .returns(collections: :some_collections_data, publishers: [], worldwide_organisations: [])
+      .returns(items: :some_taxonomy_data, collections: :some_collections_data)
 
     expected = { items: :some_taxonomy_data, collections: :some_collections_data }
     assert_equal expected, ContentItemPresenter.new("schema_name" => "Schema name").taxonomy_sidebar

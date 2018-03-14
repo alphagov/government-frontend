@@ -168,19 +168,6 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     )
   end
 
-  test 'renders a link to finder' do
-    setup_and_visit_content_item('countryside-stewardship-grants')
-
-    assert_has_link_to_finder(
-      "More Countryside Stewardship grants",
-      "/countryside-stewardship-grants",
-      "funding_amount" => %w(more-than-500),
-      "grant_type" => "option",
-      "land_use" => %w(arable-land water-quality wildlife-package wildlife-package),
-      "tiers_or_standalone_items" => %w(higher-tier mid-tier)
-    )
-  end
-
   test 'does not render a contents list if there are fewer than three items in the contents list' do
     setup_and_visit_content_item('aaib-reports')
 

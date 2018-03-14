@@ -14,14 +14,6 @@ class PublicationTest < ActionDispatch::IntegrationTest
     within '[aria-labelledby="details-title"]' do
       assert_has_component_govspeak(@content_item["details"]["body"])
     end
-
-    assert_has_link_to_finder(
-      "More notices from Environment Agency",
-      "/government/publications",
-      "departments[]" => "environment-agency",
-      "publication_filter_option" => "notices",
-      "topics[]" => "all",
-    )
   end
 
   test "renders metadata and document footer" do

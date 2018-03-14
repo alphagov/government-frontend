@@ -59,13 +59,7 @@ class ContentItemPresenter
   end
 
   def taxonomy_sidebar
-    @nav_helper.taxonomy_sidebar.merge(
-      collections: related_navigation[:collections]
-    )
-  end
-
-  def related_navigation
-    merge_publishers_and_worldwide_organisations(@nav_helper.related_navigation_sidebar)
+    @nav_helper.taxonomy_sidebar
   end
 
   def related_items
@@ -104,10 +98,5 @@ private
 
   def native_language_name_for(locale)
     I18n.t("language_names.#{locale}", locale: locale)
-  end
-
-  def merge_publishers_and_worldwide_organisations(related_navigation)
-    related_navigation[:publishers] += related_navigation.delete(:worldwide_organisations)
-    related_navigation
   end
 end

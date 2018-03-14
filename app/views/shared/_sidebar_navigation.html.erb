@@ -5,7 +5,7 @@
   <% if @navigation.should_present_taxonomy_navigation? %>
     <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
   <% else %>
-    <%= render partial: 'components/related-navigation', locals: @content_item.related_navigation %>
+    <%= render 'govuk_publishing_components/components/related_navigation', @content_item.content_item.parsed_content %>
   <% end %>
   </div>
 <% end %>

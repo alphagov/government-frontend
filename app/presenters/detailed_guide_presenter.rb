@@ -12,13 +12,6 @@ class DetailedGuidePresenter < ContentItemPresenter
     end
   end
 
-  def related_navigation
-    nav = super
-    nav[:related_items] += related_links("related_mainstream_content")
-    nav[:related_guides] = related_links("related_guides")
-    nav
-  end
-
   def logo
     image = content_item.dig("details", "image")
     return unless image

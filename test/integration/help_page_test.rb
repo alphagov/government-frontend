@@ -14,8 +14,8 @@ class HelpPageTest < ActionDispatch::IntegrationTest
 
     related_links = @content_item["links"]["ordered_related_items"].first
 
-    within(".app-c-related-navigation") do
-      assert page.has_css?('.app-c-related-navigation__section-link--other[href="' + related_links["base_path"] + '"]', text: related_links["title"])
+    within(".gem-c-related-navigation") do
+      assert page.has_css?('.gem-c-related-navigation__section-link--other[href="' + related_links["base_path"] + '"]', text: related_links["title"])
     end
   end
 end
