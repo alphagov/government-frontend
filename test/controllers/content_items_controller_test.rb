@@ -290,34 +290,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     refute_match(/A Taxon/, taxonomy_sidebar)
   end
 
-  test "shows the taxonomy-navigation if tagged to taxonomy" do
-    GovukNavigationHelpers::ContentItem
-      .stubs(:whitelisted_root_taxon_content_ids)
-      .returns(["aaaa-bbbb"])
-
-    content_item = content_store_has_schema_example("document_collection", "document_collection")
-    path = "government/abtest/document_collection"
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {
-      'taxons' => [
-        {
-          'title' => 'A Taxon',
-          'base_path' => '/a-taxon',
-          'content_id' => 'aaaa-bbbb',
-        }
-      ]
-    }
-
-    # GovukNavigationHelpers::NavigationHelper.taxonomy_sidebar makes requests
-    # to Rummager for related content for given taxons
-    stub_any_rummager_search
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-    assert_match(/A Taxon/, taxonomy_sidebar)
-  end
-
   test "Case Studies don't have the taxonomy-navigation" do
     content_item = content_store_has_schema_example('case_study', 'case_study')
     path = 'government/test/case-study'
