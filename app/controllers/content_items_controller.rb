@@ -84,17 +84,7 @@ private
   end
 
   def set_up_navigation
-    # Setting a variant on a request is a type of Rails Dark Magic that will
-    # use a convention to automagically load an alternative partial, view or
-    # layout.  For example, if I set a variant of :taxonomy_navigation and we render
-    # a partial called _breadcrumbs.html.erb then Rails will attempt to load
-    # _breadcrumbs.html+taxonomy_navigation.erb instead. If this file doesn't exist,
-    # then it falls back to _breadcrumbs.html.erb.  See:
-    # http://edgeguides.rubyonrails.org/4_1_release_notes.html#action-pack-variants
     @navigation = NavigationType.new(@content_item.content_item)
-    if @navigation.should_present_taxonomy_navigation?
-      request.variant = :taxonomy_navigation
-    end
   end
 
   def with_locale
