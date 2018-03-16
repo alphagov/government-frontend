@@ -18,7 +18,8 @@ gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_app_config', '~> 1.3'
 gem 'govuk_frontend_toolkit', '~> 7.4'
 gem 'govuk_navigation_helpers', '~> 9.2'
-gem 'govuk_publishing_components', '~> 5.5'
+# gem 'govuk_publishing_components', github: 'alphagov/govuk_publishing_components', branch: 'contextual-sidebar'
+gem 'govuk_publishing_components', path: '../govuk_publishing_components'
 gem 'plek', '~> 2.1'
 gem 'slimmer', '~> 12.0'
 
@@ -26,7 +27,6 @@ group :development, :test do
   gem 'govuk-lint'
   gem 'govuk_schemas', '~> 3.1'
   gem 'jasmine-rails'
-  gem 'pry-byebug'
 end
 
 group :development do

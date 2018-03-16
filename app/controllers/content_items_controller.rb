@@ -84,7 +84,7 @@ private
   end
 
   def set_up_navigation
-    @navigation = NavigationType.new(@content_item.content_item)
+    @navigation = GovukPublishingComponents::AppHelpers::NavigationType.new(@content_item.content_item)
   end
 
   def with_locale
