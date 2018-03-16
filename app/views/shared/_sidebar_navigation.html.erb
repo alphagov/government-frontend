@@ -1,14 +1,1 @@
-<% if step_nav_helper.show_related_links? %>
-  <!-- Rendering the step by step -->
-  <%= render 'shared/sidebar_step_nav', no_margin: true %>
-<% else %>
-  <div class="column-third">
-  <% if @navigation.should_present_taxonomy_navigation? %>
-    <!-- Rendering the taxonomy based sidebar -->
-    <%= render partial: 'govuk_component/taxonomy_sidebar', locals: @content_item.taxonomy_sidebar %>
-  <% else %>
-    <!-- Rendering the related navigation -->
-    <%= render 'govuk_publishing_components/components/related_navigation', @content_item.content_item.parsed_content %>
-  <% end %>
-  </div>
-<% end %>
+<%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: @content_item.content_item.parsed_content %>

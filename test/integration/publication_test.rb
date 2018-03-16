@@ -78,14 +78,14 @@ class PublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "doesn't render government navigation for pages with taxonomy navigation" do
-    NavigationType.any_instance.stubs(:should_present_taxonomy_navigation?).returns(true)
+    GovukPublishingComponents::AppHelpers::NavigationType.any_instance.stubs(:should_present_taxonomy_navigation?).returns(true)
     setup_and_visit_content_item('publication')
 
     refute page.has_css?(shared_component_selector('government_navigation'))
   end
 
   test "renders government navigation for pages without taxonomy navigation" do
-    NavigationType.any_instance.stubs(:should_present_taxonomy_navigation?).returns(false)
+    GovukPublishingComponents::AppHelpers::NavigationType.any_instance.stubs(:should_present_taxonomy_navigation?).returns(false)
     setup_and_visit_content_item('publication')
 
     assert page.has_css?(shared_component_selector('government_navigation'))
