@@ -1,6 +1,12 @@
 <span class="js-webchat"
   data-availability-url="<%= @content_item.webchat_availability_url %>"
   data-open-url="<%= @content_item.webchat_open_url %>">
+  <% if @content_item.base_path == '/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries' %>
+    Advisers can only talk to you about Child Tax Credit and Working Tax Credit.
+    They won't be able to transfer you to another webchat team.
+    <br/>
+    <br/>
+  <% end %>
   <span class="js-webchat-advisers-error">
     Webchat is unavailable at the moment because of technical problems.
   </span>
