@@ -23,6 +23,8 @@ class ContentItemsController < ApplicationController
   end
 
   def service_sign_in_options
+    return head :not_found unless is_sign_in_content_item_path?
+
     if params[:option].blank?
       @error = true
       show
@@ -34,6 +36,10 @@ class ContentItemsController < ApplicationController
   end
 
 private
+
+  def is_sign_in_content_item_path?
+    content_item_path.include?("sign-in")
+  end
 
   # Allow guides to pass access token to each part to allow
   # fact checking of all content
