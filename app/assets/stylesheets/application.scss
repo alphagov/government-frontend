@@ -51,3 +51,102 @@
 @import 'views/help-page';
 @import "views/guide";
 @import "views/service_sign_in";
+
+.go-deeper {
+  @extend %contain-floats;
+
+  p {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .inline-topic-list {
+    display: inline;
+    list-style: none;
+
+    li {
+      display: inline;
+
+      &:not(:last-child):after {
+        content: ", ";
+      }
+    }
+  }
+}
+
+.can-do {
+  border-top: 1px solid $govuk-blue;
+  padding-top: $gutter;
+  margin-top: $gutter;
+
+  h2 {
+    @include bold-24;
+
+    .context {
+      @include core-16;
+      display: block;
+    }
+  }
+
+  h3 {
+    @include bold-19;
+    margin-bottom: $gutter;
+  }
+
+  .can-do-section {
+    margin-bottom: $gutter;
+    border-bottom: 1px solid $border-colour;
+    padding-bottom: $gutter;
+
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+
+  .highlight-box {
+    display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: $gutter;
+    grid-row-gap: $gutter;
+
+    margin-bottom: $gutter;
+
+    li {
+      box-sizing: border-box;
+      min-height: $gutter * 6;
+      padding: $gutter-half;
+      border: 1px solid $border-colour;
+
+      a {
+        text-decoration: none;
+
+        @include bold-19;
+      }
+
+      .document-type {
+        display: block;
+      }
+    }
+
+    &.services-list {
+      li {
+        background-color: $govuk-blue;
+        border: none;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.organisation-logos {
+  list-style-type: none;
+
+  .organisation-logo {
+    padding-bottom: $gutter-one-third;
+  }
+}
