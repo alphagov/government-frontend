@@ -52,6 +52,11 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
 
+  test "raises a 404 for a content item which isn't a service_sign_in page" do
+    path = "this/is/not/a/sign/in/page"
+    post :service_sign_in_options, params: { path: path }
+    assert_response :not_found
+  end
 
   test "service_sign_in_options with option param set" do
     content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
