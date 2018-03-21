@@ -10,31 +10,6 @@ class ContactPresenterTest
       assert_equal schema_item['title'], presented_item.title
     end
 
-    test 'only presents related item sections when section has items' do
-      schema = schema_item('contact_with_email_and_no_other_contacts')
-      presented = presented_item('contact_with_email_and_no_other_contacts')
-
-      refute schema['links']['related']
-      other_contacts_section = presented.related_items[:sections].select { |section| section[:title] == 'Other contacts' }
-      assert_empty other_contacts_section
-    end
-
-    test 'presents quick links in related items' do
-      first_quick_link = schema_item['details']['quick_links'].first
-      first_presented_quick_link = presented_item.related_items[:sections].first[:items].first
-
-      assert_equal first_quick_link['title'], first_presented_quick_link[:title]
-      assert_equal 'Elsewhere on GOV.UK', presented_item.related_items[:sections].first[:title]
-    end
-
-    test 'presents related contacts links in related items' do
-      first_related_contact_link = schema_item['links']['related'].first
-      first_presented_contact_link = presented_item.related_items[:sections].last[:items].first
-
-      assert_equal first_related_contact_link['title'], first_presented_contact_link[:title]
-      assert_equal 'Other contacts', presented_item.related_items[:sections].last[:title]
-    end
-
     test 'presents online form links' do
       assert_equal schema_item['details']['contact_form_links'].first['link'], presented_item.online_form_links.first[:url]
     end
@@ -107,47 +82,6 @@ class ContactPresenterTest
       assert_nil present_example(example).email_body
       assert_nil present_example(example).post_body
       assert_nil present_example(example).online_form_body
-    end
-
-    test 'breadcrumbs' do
-      assert_equal [
-        {
-          title: "Home",
-          url: "/"
-        },
-        {
-          title: "HM Revenue & Customs",
-          url: "/government/organisations/hm-revenue-customs"
-        },
-        {
-          title: "Contact HM Revenue & Customs",
-          url: "/government/organisations/hm-revenue-customs/contact"
-        }
-      ], presented_item.breadcrumbs
-    end
-
-    test 'no breadcrumbs render with no organisations' do
-      schema = schema_item('contact')
-      schema["links"]["organisations"] = []
-
-      assert_equal [], present_example(schema).breadcrumbs
-    end
-
-    test 'no breadcrumbs render with no organisations set' do
-      schema = schema_item('contact')
-      schema["links"].delete("organisations")
-      assert_equal [], present_example(schema).breadcrumbs
-    end
-
-    test 'no breadcrumbs render with two organisations' do
-      schema = schema_item('contact')
-      two_orgs = [
-        schema["links"]["organisations"],
-        schema["links"]["organisations"]
-      ].flatten
-
-      schema["links"]["organisations"] = two_orgs
-      assert_equal [], present_example(schema).breadcrumbs
     end
 
     test 'presents webchat' do

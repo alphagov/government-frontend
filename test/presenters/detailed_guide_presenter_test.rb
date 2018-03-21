@@ -21,19 +21,6 @@ class DetailedGuidePresenterTest < PresenterTestCase
     assert_equal '12 June 2014', presented_item.published
   end
 
-  test 'breadcrumbs show the full parent hierarchy' do
-    assert_equal "Home", presented_item.breadcrumbs[0][:title]
-    assert_equal "/", presented_item.breadcrumbs[0][:url]
-    assert_equal "Business tax", presented_item.breadcrumbs[1][:title]
-    assert_equal "/topic/business-tax", presented_item.breadcrumbs[1][:url]
-    assert_equal "PAYE", presented_item.breadcrumbs[2][:title]
-    assert_equal "/topic/business-tax/paye", presented_item.breadcrumbs[2][:url]
-  end
-
-  test 'the "home" link shows if there is no parent' do
-    assert_equal [{ title: "Home", url: "/" }], presented_item("withdrawn_detailed_guide").breadcrumbs
-  end
-
   test 'presents withdrawn notices' do
     example = schema_item("withdrawn_detailed_guide")
     presented = presented_item("withdrawn_detailed_guide")

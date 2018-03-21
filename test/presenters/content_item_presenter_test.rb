@@ -21,15 +21,6 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal "Type", ContentItemPresenter.new("document_type" => "Type").document_type
   end
 
-  test "#taxonomy_sidebar combines taxonomy links and collections links for the taxonomy sidebar component" do
-    GovukNavigationHelpers::NavigationHelper.any_instance
-      .stubs(:taxonomy_sidebar)
-      .returns(items: :some_taxonomy_data, collections: :some_collections_data)
-
-    expected = { items: :some_taxonomy_data, collections: :some_collections_data }
-    assert_equal expected, ContentItemPresenter.new("schema_name" => "Schema name").taxonomy_sidebar
-  end
-
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example('case_study', 'translated')
     locales = ContentItemPresenter.new(translated).available_translations

@@ -22,7 +22,6 @@ class ContentItemPresenter
     @locale = content_item["locale"] || "en"
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
-    @nav_helper = GovukNavigationHelpers::NavigationHelper.new(content_item)
     @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
   end
 
@@ -48,26 +47,6 @@ class ContentItemPresenter
 
   def content_id
     content_item["content_id"]
-  end
-
-  def breadcrumbs
-    @nav_helper.breadcrumbs[:breadcrumbs]
-  end
-
-  def taxon_breadcrumbs
-    @nav_helper.taxon_breadcrumbs[:breadcrumbs]
-  end
-
-  def taxonomy_sidebar
-    @nav_helper.taxonomy_sidebar
-  end
-
-  def related_items
-    @nav_helper.related_items
-  end
-
-  def tagged_to_a_taxon?
-    content_item.dig("links", "taxons").present?
   end
 
 private

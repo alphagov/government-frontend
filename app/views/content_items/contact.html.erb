@@ -3,6 +3,11 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-two-thirds">
 
     <% body = capture do %>
       <% if @content_item.online_form_links.any? %>
@@ -92,5 +97,5 @@
 
     <%= render 'govuk_component/govspeak', content: body, rich_govspeak: true %>
   </div>
-  <%= render 'shared/related_items', content_item: @content_item  %>
+  <%= render 'shared/sidebar_navigation' %>
 </div>

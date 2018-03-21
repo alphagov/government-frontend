@@ -20,22 +20,6 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 13 December 2012")
   end
 
-  test "render related side bar navigation" do
-    setup_and_visit_content_item('statistical_data_set')
-    assert_has_related_navigation(
-      [
-        {
-          section_name: "related-nav-collections",
-          section_text: "Collection",
-          links: {
-            "Transport Statistics Great Britain":
-              "/government/collections/transport-statistics-great-britain"
-          }
-        },
-      ]
-    )
-  end
-
   test "renders withdrawn notification" do
     setup_and_visit_content_item("statistical_data_set_withdrawn")
 

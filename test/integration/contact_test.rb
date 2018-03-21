@@ -66,17 +66,4 @@ class ContactTest < ActionDispatch::IntegrationTest
       assert_not_nil html.at_css(".street-address")
     end
   end
-
-  test "related links are rendered" do
-    setup_and_visit_content_item('contact')
-    within shared_component_selector("related_items") do
-      quick_links = @content_item["details"]["quick_links"]
-      assert_equal quick_links, JSON.parse(page.text).fetch("sections").first["items"]
-
-      first_related_contacts_links = @content_item["links"]["related"].first
-      first_parsed_related_contacts_links = JSON.parse(page.text).fetch("sections").last["items"].first
-      assert_equal first_related_contacts_links["title"], first_parsed_related_contacts_links["title"]
-      assert_equal first_related_contacts_links["base_path"], first_parsed_related_contacts_links["url"]
-    end
-  end
 end

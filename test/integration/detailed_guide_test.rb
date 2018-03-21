@@ -41,50 +41,6 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders related topics" do
-    setup_and_visit_content_item('detailed_guide')
-
-    assert_has_related_navigation([
-      {
-        section_name: "related-nav-topics",
-        section_text: "Explore the topic",
-        links: {
-          "PAYE": "/topic/business-tax/paye",
-          "Business tax": "/topic/business-tax",
-        }
-      }
-    ])
-  end
-
-  test "shows related detailed guides" do
-    setup_and_visit_content_item('political_detailed_guide')
-
-    assert_has_related_navigation([
-      {
-        section_name: "related-nav-related_guides",
-        section_text: "Detailed guidance",
-        links: {
-          "Offshore wind: part of the UK's energy mix":
-            "/guidance/offshore-wind-part-of-the-uks-energy-mix"
-        }
-      }
-    ])
-  end
-
-  test "shows related mainstream links" do
-    setup_and_visit_content_item('related_mainstream_detailed_guide')
-
-    assert_has_related_navigation([
-      {
-        section_name: "related-nav-related_items",
-        links: {
-          "Overseas British passport applications": "/overseas-passports",
-          "Cancel a lost or stolen passport": "/report-a-lost-or-stolen-passport",
-        }
-      }
-    ])
-  end
-
   test "historically political detailed guide" do
     setup_and_visit_content_item('political_detailed_guide')
 

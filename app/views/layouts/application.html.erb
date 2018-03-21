@@ -34,13 +34,7 @@
 
   <div id="wrapper" class="<%= wrapper_class %>">
     <%= render_phase_label @content_item, content_for(:phase_message) %>
-    <% if step_nav_helper.show_header? %>
-      <%= render 'shared/step_nav_header' %>
-    <% else %>
-      <% if !content_for(:no_breadcrumbs) %>
-        <%= render 'shared/breadcrumbs' %>
-      <% end %>
-    <% end %>
+    <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.content_item.parsed_content %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
     </main>

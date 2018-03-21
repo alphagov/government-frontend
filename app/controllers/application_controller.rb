@@ -7,11 +7,6 @@ class ApplicationController < ActionController::Base
 
 private
 
-  def step_nav_helper
-    @step_nav_helpers ||= GovukPublishingComponents::StepNavHelper.new(content_item.content_item, request.path)
-  end
-  helper_method :step_nav_helper
-
   def content_item_path
     path_and_optional_locale = params
                                  .values_at(:path, :locale)

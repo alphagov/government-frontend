@@ -26,14 +26,4 @@ class CaseStudyTest < ActionDispatch::IntegrationTest
       assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
     end
   end
-
-  test "world location link" do
-    setup_and_visit_content_item('translated')
-
-    assert_has_related_navigation(
-      section_name: "related-nav-world_locations",
-      section_text: "World locations",
-      links: { "Spain": "/world/spain/news" }
-    )
-  end
 end

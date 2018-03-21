@@ -16,13 +16,6 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     )
 
     assert_footer_has_published_dates("Published 4 November 2016", "Last updated 7 November 2016")
-    assert_has_related_navigation([
-      {
-        section_name: "related-nav-topics",
-        section_text: "Explore the topic",
-        links: { "Higher education administration": "/topic/higher-education/administration" }
-      }
-    ])
 
     within '.consultation-description' do
       assert_has_component_govspeak(@content_item["details"]["body"])

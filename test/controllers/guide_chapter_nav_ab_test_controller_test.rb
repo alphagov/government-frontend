@@ -5,18 +5,6 @@ class ContentItemsControllerTest < ActionController::TestCase
   include GovukAbTesting::MinitestHelpers
 
   %w(A B).each do |test_variant|
-    test "GuideChapterNav variant #{test_variant} does not affect guides in the education taxonomy" do
-      # this sample guide is part of the education taxon
-      content_item = content_store_has_schema_example("guide", "guide")
-      content_store_has_item(content_item['base_path'], content_item)
-
-      setup_ab_variant("GuideChapterNav", test_variant)
-
-      get :show, params: { path: path_for(content_item) }
-      assert_response 200
-      assert_response_not_modified_for_ab_test("GuideChapterNav")
-    end
-
     test "GuideChapterNav variant #{test_variant} works for guides not in the education taxon" do
       #this sample guide is not part of the education taxon
       content_item = content_store_has_schema_example("guide", "single-page-guide")
