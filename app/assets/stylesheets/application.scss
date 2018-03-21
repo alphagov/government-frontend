@@ -103,11 +103,16 @@
   }
 
   .highlight-box {
+
     display: grid;
     list-style: none;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: $gutter;
     grid-row-gap: $gutter;
+
+    @include media(tablet) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
     margin-bottom: $gutter;
 
