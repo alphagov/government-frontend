@@ -34,6 +34,75 @@
         <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
       <% end %>
     <% end %>
+
+    <div class="go-deeper">
+      <p>See more guides in:
+
+        <ul class="inline-topic-list">
+          <% @content_item.taxons.each do |taxon| %>
+          <li><a href="<%= taxon["base_path"] %>"><%= taxon["title"] %></a></li>
+          <% end %>
+        </ul>
+      </p>
+    </div>
+  </div>
+    <%# render 'shared/sidebar_navigation', local_assigns %>
+</div>
+
+<div class="can-do">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2><span class="context">More in</span> <a href="#">Student grants, bursaries and scholarships</a></h2>
+    </div>
+    <div class="column-third">
+      <ol class="organisation-logos">
+        <li class="organisation-logo">
+          <%= render 'govuk_component/organisation_logo', @content_item.organisation_logo(@content_item.organisations.first) %>
+        </li>
+      </ol>
+    </div>
+
+  </div>
+
+  <div class="can-do-services can-do-section">
+    <h3>Services</h3>
+
+    <ul class="services-list highlight-box">
+      <li>
+        <a href="#">Apply online for student finance</a>
+      </li>
+
+      <li>
+        <a href="#">Student finance calculator</a>
+      </li>
+
+      <li><a href="#">Student finance forms</a></li>
+    </ul>
+
+    <p><a href="#">See more services</a></p>
+  </div>
+
+  <div class="can-do-guidance can-do-section">
+    <h3>Guidance and regulation</h3>
+
+    <ul class="guidance-list highlight-box">
+      <li>
+        <a href="#">Student finance: how to apply</a>
+        <span class="document-type">How to guide</span>
+      </li>
+
+      <li>
+        <a href="#">Replaying your student loan</a>
+        <span class="document-type">How to guide</span>
+      </li>
+
+      <li>
+        <a href="#">Professional and Career Development Loans</a>
+        <span class="document-type">How to guide</span>
+      </li>
+    </ul>
+
+    <p><a href="#">See more guidance and regulation</a></p>
   </div>
     <%= render 'shared/sidebar_navigation' %>
 </div>
