@@ -25,7 +25,8 @@ module GuideNavAbTestable
   end
 
   def show_alternate_guide_chapters?
-    guide_test_variant.variant?('B') && is_tested_guide?
+    # guide_test_variant.variant?('B') && is_tested_guide?
+    true
   end
 
   def is_tested_guide?
