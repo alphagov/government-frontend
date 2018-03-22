@@ -8,7 +8,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publications" do
     setup_and_visit_content_item('published')
 
-    within ".app-c-publication-header" do
+    within ".gem-c-inverse-header" do
       assert page.has_text?(@content_item["details"]["format_sub_type"])
       assert page.has_text?(@content_item["title"])
 
@@ -67,7 +67,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "no contents are shown when headings are an empty list" do
     setup_and_visit_content_item("prime_ministers_office")
 
-    within ".app-c-publication-header" do
+    within ".gem-c-inverse-header" do
       refute page.has_text?("Contents")
     end
   end
