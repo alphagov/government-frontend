@@ -7,9 +7,10 @@ class NavigationType
   end
 
   def should_present_taxonomy_navigation?
-    !content_is_tagged_to_browse_pages? &&
-      content_is_tagged_to_a_live_taxon? &&
-      content_schema_is_guidance?
+    # !content_is_tagged_to_browse_pages? &&
+    #   content_is_tagged_to_a_live_taxon? &&
+    #   content_schema_is_guidance?
+    true
   end
 
 private
