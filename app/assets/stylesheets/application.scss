@@ -72,6 +72,10 @@
     li {
       display: inline;
 
+      a {
+        font-weight: bold;
+      }
+
       &:not(:last-child):after {
         content: ", ";
       }
