@@ -40,16 +40,8 @@
 <div class="can-do">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h2><span class="context">More in</span> <a href="#">Student grants, bursaries and scholarships</a></h2>
+      <h2><span class="context">More in</span> <%= link_to(@content_item.taxons.first["title"], @content_item.taxons.first["base_path"]) %></h2>
     </div>
-    <div class="column-third">
-      <ol class="organisation-logos">
-        <li class="organisation-logo">
-          <%= render 'govuk_publishing_components/components/organisation_logo', @content_item.organisation_logo(@content_item.organisations.first) %>
-        </li>
-      </ol>
-    </div>
-
   </div>
 
   <div class="can-do-services can-do-section">
