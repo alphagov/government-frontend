@@ -16,14 +16,14 @@ end
 <% if @content_item.publishing_organisation %>
   <h2 class="app-c-related-navigation__main-heading">Popular pages published by <%= @content_item.publishing_organisation["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_organisation_content_ids: @content_item.publishing_organisation["content_id"]
   ) %>
 
   <h2 class="app-c-related-navigation__main-heading">Recent pages published by <%= @content_item.publishing_organisation["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_organisation_content_ids: @content_item.publishing_organisation["content_id"],
     order: '-public_timestamp'
@@ -31,7 +31,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Similar pages published by <%= @content_item.publishing_organisation["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_organisation_content_ids: @content_item.publishing_organisation["content_id"],
     similar_to: @content_item.base_path
@@ -39,7 +39,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Popular pages with document type <%= @content_item.document_type %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_content_store_document_type: @content_item.document_type,
   ) %>
@@ -49,7 +49,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Recent pages with document type <%= @content_item.document_type %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_content_store_document_type: @content_item.document_type,
     order: '-public_timestamp'
@@ -57,7 +57,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Similar pages with document type <%= @content_item.document_type %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_content_store_document_type: @content_item.document_type,
     similar_to: @content_item.base_path
@@ -65,7 +65,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Popular pages with document type <%= @content_item.document_type %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_content_store_document_type: @content_item.document_type,
   ) %>
@@ -74,7 +74,7 @@ end
 <% if @content_item.policy %>
   <h2 class="app-c-related-navigation__main-heading">Recent pages with policy <%= @content_item.policy["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_policies: @content_item.policy["base_path"].gsub("/government/policies/", ""),
     order: '-public_timestamp'
@@ -82,7 +82,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Similar pages with policy <%= @content_item.policy["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_policies: @content_item.policy["base_path"].gsub("/government/policies/", ""),
     similar_to: @content_item.base_path
@@ -90,7 +90,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Popular pages with policy <%= @content_item.policy["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_policies: @content_item.policy["base_path"].gsub("/government/policies/", ""),
   ) %>
@@ -99,7 +99,7 @@ end
 <% if @content_item.person %>
   <h2 class="app-c-related-navigation__main-heading">Recent pages from <%= @content_item.person["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_people: @content_item.person["base_path"].gsub("/government/people/", ""),
     order: '-public_timestamp'
@@ -107,7 +107,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Similar pages from <%= @content_item.person["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_people: @content_item.person["base_path"].gsub("/government/people/", ""),
     similar_to: @content_item.base_path
@@ -115,7 +115,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Popular pages from <%= @content_item.person["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_people: @content_item.person["base_path"].gsub("/government/people/", ""),
   ) %>
@@ -124,7 +124,7 @@ end
 <% if @content_item.taxon %>
   <h2 class="app-c-related-navigation__main-heading">Recent pages with taxon <%= @content_item.taxon["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_taxons: @content_item.taxon["content_id"],
     order: '-public_timestamp'
@@ -132,7 +132,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Similar pages with taxon <%= @content_item.taxon["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_taxons: @content_item.taxon["content_id"],
     similar_to: @content_item.base_path
@@ -140,7 +140,7 @@ end
 
   <h2 class="app-c-related-navigation__main-heading">Popular pages with taxon <%= @content_item.taxon["title"] %></h2>
 
-  <%= render "components/document-list", related_stuff(
+  <%= render "govuk_publishing_components/components/document_list", related_stuff(
     reject_link: @content_item.base_path,
     filter_taxons: @content_item.taxon["content_id"],
   ) %>
