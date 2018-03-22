@@ -123,6 +123,8 @@
       min-height: $gutter * 6;
       padding: $gutter-half;
       border: 1px solid $border-colour;
+      margin: 0 10px 10px 0;
+      box-shadow: 9px 9px 0 $white, 10px 10px 0 $border-colour;
 
       a {
         text-decoration: none;
