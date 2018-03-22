@@ -1,5 +1,6 @@
 class GuidePresenter < ContentItemPresenter
   include ContentItem::Parts
+  include ContentItem::OrganisationBranding
 
   attr_accessor :draft_access_token
 
@@ -36,6 +37,23 @@ class GuidePresenter < ContentItemPresenter
 
   def related_items
     @nav_helper.related_items
+  end
+
+  def taxons
+    content_item["links"]["taxons"]
+  end
+
+  def organisations
+    orgs = content_item["links"]["organisations"] || []
+    orgs.sort_by { |o| o["title"] }
+  end
+
+  def organisation_logo(organisation)
+    super.tap do |logo|
+      if logo && organisations.count > 1
+        logo[:organisation].delete(:image)
+      end
+    end
   end
 
   # Append token parameters to part paths to allow fact-checkers to fact-check all pages
