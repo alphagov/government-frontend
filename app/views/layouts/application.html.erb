@@ -43,7 +43,6 @@
     <% end %>
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
-      <%= render 'shared/contextual_related_content' %>
     </main>
     <%= render 'govuk_publishing_components/components/feedback' %>
   </div>

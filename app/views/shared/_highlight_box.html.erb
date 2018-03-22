@@ -1,0 +1,8 @@
+<ul class="highlight-box <%= type %>-list">
+  <% items[:items].each do |item| %>
+  <li>
+    <a href="<%= item[:link][:path] %>"><%= item[:link][:text] %></a>
+    <% if type == "guidance" %><span class="document-type">How to guide</span><% end %>
+  </li>
+  <% end %>
+</ul>

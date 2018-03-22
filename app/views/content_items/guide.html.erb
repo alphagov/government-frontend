@@ -63,17 +63,13 @@
   <div class="can-do-services can-do-section">
     <h3>Services</h3>
 
-    <ul class="services-list highlight-box">
-      <li>
-        <a href="#">Apply online for student finance</a>
-      </li>
-
-      <li>
-        <a href="#">Student finance calculator</a>
-      </li>
-
-      <li><a href="#">Student finance forms</a></li>
-    </ul>
+    <%= render 'shared/highlight_box', type: "services", items: related_stuff(
+      reject_link: @content_item.base_path,
+      filter_taxons: @content_item.taxon["content_id"],
+      filter_content_purpose_subgroup: "transactions",
+      order: 'title',
+      count: 3
+    ) %>
 
     <p><a href="#">See more services</a></p>
   </div>
@@ -81,22 +77,13 @@
   <div class="can-do-guidance can-do-section">
     <h3>Guidance and regulation</h3>
 
-    <ul class="guidance-list highlight-box">
-      <li>
-        <a href="#">Student finance: how to apply</a>
-        <span class="document-type">How to guide</span>
-      </li>
-
-      <li>
-        <a href="#">Replaying your student loan</a>
-        <span class="document-type">How to guide</span>
-      </li>
-
-      <li>
-        <a href="#">Professional and Career Development Loans</a>
-        <span class="document-type">How to guide</span>
-      </li>
-    </ul>
+    <%= render 'shared/highlight_box', type: "guidance", items: related_stuff(
+      reject_link: @content_item.base_path,
+      filter_taxons: @content_item.taxon["content_id"],
+      filter_content_store_document_type: "guide",
+      order: 'title',
+      count: 3
+    ) %>
 
     <p><a href="#">See more guidance and regulation</a></p>
   </div>
