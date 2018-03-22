@@ -52,6 +52,12 @@
 @import "views/guide";
 @import "views/service_sign_in";
 
+.pub-c-title__context {
+  color: $link-colour;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .go-deeper {
   @extend %contain-floats;
 
