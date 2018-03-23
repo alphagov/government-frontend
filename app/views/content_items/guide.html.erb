@@ -60,31 +60,106 @@
 
   </div>
 
+  <% services_items = related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    filter_content_purpose_supergroup: "services",
+    order: 'popularity',
+    count: 3
+  ) %>
+
+  <% if services_items[:items].any? %>
   <div class="can-do-services can-do-section">
     <h3>Services</h3>
 
-    <%= render 'shared/highlight_box', type: "services", items: related_stuff(
-      reject_link: @content_item.base_path,
-      filter_taxons: @content_item.taxon["content_id"],
-      filter_content_purpose_subgroup: "transactions",
-      order: 'title',
-      count: 3
-    ) %>
+    <%= render 'shared/highlight_box', type: "services", items: services_items %>
 
     <p><a href="#">See more services</a></p>
   </div>
+  <% end %>
 
+  <% mainstream_guidance_items = related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    filter_content_purpose_supergroup: "guidance_and_regulation",
+    order: 'popularity',
+    count: 3
+  )
+
+  guidance_items = related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    filter_content_purpose_supergroup: "guidance_and_regulation",
+    order: 'popularity',
+    count: 5,
+    start: 3
+  )
+  %>
+
+  <% if mainstream_guidance_items[:items].any? %>
   <div class="can-do-guidance can-do-section">
     <h3>Guidance and regulation</h3>
 
-    <%= render 'shared/highlight_box', type: "guidance", items: related_stuff(
-      reject_link: @content_item.base_path,
-      filter_taxons: @content_item.taxon["content_id"],
-      filter_content_store_document_type: "guide",
-      order: 'title',
-      count: 3
-    ) %>
+    <%= render 'shared/highlight_box', type: "guidance", items: mainstream_guidance_items %>
+
+    <%= render "govuk_publishing_components/components/document_list", guidance_items %>
 
     <p><a href="#">See more guidance and regulation</a></p>
   </div>
+  <% end %>
+
+  <% business_support_items = related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    filter_content_purpose_subgroup: "business_support",
+    order: '-public_timestamp',
+    count: 5
+  ) %>
+
+  <% if business_support_items[:items].any? %>
+  <div class="can-do-business-support can-do-section">
+    <h3>Business support</h3>
+
+    <%= render "govuk_publishing_components/components/document_list", business_support_items %>
+
+    <p><a href="#">See more business support</a></p>
+  </div>
+  <% end %>
+
+  <% regulations_items = related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    filter_content_purpose_subgroup: "regulation",
+    order: '-public_timestamp',
+    count: 5
+  ) %>
+
+  <% if regulations_items[:items].any? %>
+  <div class="can-do-regulation can-do-section">
+    <h3>Regulation</h3>
+
+    <%= render "govuk_publishing_components/components/document_list", regulations_items  %>
+
+    <p><a href="#">See more regulation</a></p>
+  </div>
+  <% end %>
+
+  <% policy_items = related_stuff(
+    reject_link: @content_item.base_path,
+    filter_taxons: @content_item.taxon["content_id"],
+    filter_content_purpose_subgroup: "policy",
+    order: '-public_timestamp',
+    count: 5
+  ) %>
+
+  <% if policy_items[:items].any? %>
+  <div class="can-do-policy can-do-section">
+    <h3>Policy</h3>
+
+    <%= render "govuk_publishing_components/components/document_list", policy_items %>
+
+    <p><a href="#">See more policy</a></p>
+  </div>
+  <% end %>
+
 </div>
