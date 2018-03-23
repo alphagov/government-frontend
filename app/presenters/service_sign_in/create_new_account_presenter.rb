@@ -6,10 +6,6 @@ module ServiceSignIn
       "create_new_account"
     end
 
-    def partial_type
-      "create_new_account"
-    end
-
     def title
       create_new_account["title"]
     end
