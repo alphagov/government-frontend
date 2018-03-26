@@ -87,6 +87,19 @@ class ContentItemPresenter
     @content_item["links"]["taxons"].to_a.first
   end
 
+  def related_stuff(rummager_args)
+    results = Services.rummager.search({ count: 5, fields: %w[title public_timestamp link content_store_document_type]}.merge(rummager_args))["results"]
+
+    items = results.map do |r|
+      {
+        link: { text: r["title"], path: r["link"] },
+        metadata: { public_updated_at: Time.parse(r["public_timestamp"]), document_type: "other" }
+      }
+    end
+
+    { items: items }
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
