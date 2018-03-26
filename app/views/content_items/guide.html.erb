@@ -41,13 +41,6 @@
     <div class="column-two-thirds">
       <h2><span class="context">More in</span> <%= link_to(@content_item.taxon["title"], @content_item.taxon["base_path"]) %></h2>
     </div>
-    <div class="column-third">
-      <ol class="organisation-logos">
-        <li class="organisation-logo">
-          <%= render 'govuk_component/organisation_logo', @content_item.organisation_logo(@content_item.publishing_organisation) %>
-        </li>
-      </ol>
-    </div>
 
   </div>
 
