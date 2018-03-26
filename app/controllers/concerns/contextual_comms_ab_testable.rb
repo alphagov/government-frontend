@@ -20,7 +20,9 @@ module ContextualCommsAbTestable
       :campaign_title,
       :contextual_comms_test_variant,
       :show_blue_box_campaign?,
+      :show_contextual_comms_campaign?,
       :show_native_campaign?,
+      :whitelisted_campaign_page?,
     )
     base.after_action :set_test_response_header
   end
@@ -39,7 +41,11 @@ module ContextualCommsAbTestable
   end
 
   def set_test_response_header
-    contextual_comms_test_variant.configure_response(response)
+    contextual_comms_test_variant.configure_response(response) if whitelisted_campaign_page?
+  end
+
+  def show_contextual_comms_campaign?
+    !contextual_comms_test_variant.variant?("NoCampaign") && whitelisted_campaign_page?
   end
 
   def show_blue_box_campaign?
@@ -48,6 +54,10 @@ module ContextualCommsAbTestable
 
   def show_native_campaign?
     contextual_comms_test_variant.variant?("NativeCampaign")
+  end
+
+  def whitelisted_campaign_page?
+    campaign_name.present?
   end
 
   def campaign_name

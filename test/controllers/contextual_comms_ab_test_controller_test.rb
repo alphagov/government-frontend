@@ -73,6 +73,17 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
+  test "No campaign is shown on pages that haven't been whitelisted" do
+    content_item = set_content_item("/an-answer")
+    content_store_has_item(content_item["base_path"], content_item)
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response 200
+
+    refute_match("native-campaign", response.body)
+    refute_match("blue-box-campaign", response.body)
+  end
+
   def set_content_item(base_path)
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = base_path
