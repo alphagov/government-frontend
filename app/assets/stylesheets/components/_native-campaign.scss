@@ -1,0 +1,31 @@
+$dark-grey: #999;
+
+.app-c-native-campaign__container {
+  border-top: 1px solid $border-colour;
+  padding-top: 20px;
+}
+
+.app-c-native-campaign__header {
+  @include core-14;
+  color: $dark-grey;
+  display: inline-block;
+  padding: 4px 6px 1px;
+  border: 1px solid $border-colour;
+  border-radius: 4px;
+}
+
+.app-c-native-campaign__link {
+  margin-top: 15px;
+  display: block;
+  text-decoration: none;
+  @include bold-19;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.app-c-native-campaign__description {
+  @include core-14;
+  padding-top: 5px;
+}
