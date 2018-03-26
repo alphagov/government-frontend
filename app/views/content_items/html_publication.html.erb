@@ -12,7 +12,15 @@
   </ol>
 </div>
 
-<%= render 'components/publication-header', title: @content_item.title, context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1), last_changed: @content_item.last_changed %>
+<%= render 'govuk_publishing_components/components/inverse_header', {} do %>
+  <%= render 'govuk_component/title',
+        title: @content_item.title,
+        context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1),
+        inverse: true,
+        margin_bottom: 0
+  %>
+  <p class="publication-header__last-changed"><%= @content_item.last_changed %></p>
+<% end %>
 
 <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
 
