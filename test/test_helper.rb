@@ -96,12 +96,6 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_component_breadcrumbs(breadcrumbs)
-    within shared_component_selector("breadcrumbs") do
-      assert_equal breadcrumbs, JSON.parse(page.text).deep_symbolize_keys.fetch(:breadcrumbs)
-    end
-  end
-
   def assert_has_component_organisation_logo(logo, index = 1)
     within(shared_component_selector("organisation_logo") + ":nth-of-type(#{index})") do
       assert_equal logo, JSON.parse(page.text).deep_symbolize_keys
@@ -180,33 +174,6 @@ class ActionDispatch::IntegrationTest
 
   def assert_footer_has_published_dates(published = nil, last_updated = nil, history_link = false)
     assert_has_published_dates(published, last_updated, history_link, 1)
-  end
-
-  def assert_has_related_navigation_section_and_links(section_name, section_text, links)
-    unless section_name == "related-nav-related_items"
-      find("h3[id^='#{section_name}']", text: section_text)
-    end
-
-    within("nav[aria-labelledby^='#{section_name}']") do
-      links.each do |text, href|
-        assert page.has_link?(text, href: href),
-          "Related navigation link '#{text}' not found in '#{section_text}' links"
-      end
-    end
-  end
-
-  def assert_has_related_navigation(sections)
-    within(".gem-c-related-navigation") do
-      assert page.has_css?(".gem-c-related-navigation__main-heading", text: "Related content"),
-        "Related navigation 'Related content' section not found"
-
-      sections = [sections] unless sections.is_a?(Array)
-      sections.each do |section|
-        assert_has_related_navigation_section_and_links(
-          section[:section_name], section[:section_text], section[:links]
-        )
-      end
-    end
   end
 
   def has_component_metadata(key, value)

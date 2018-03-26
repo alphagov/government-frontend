@@ -310,19 +310,6 @@ class SpecialistDocumentPresenterTest
       assert_equal expected_order, present_example(example).important_metadata.keys
     end
 
-    test 'breadcrumbs' do
-      assert_equal [
-        {
-          title: "Home",
-          url: "/"
-        },
-        {
-          title: "Finder title",
-          url: "/finder-base-path"
-        }
-      ], present_example(example_with_finder_facets).breadcrumbs
-    end
-
     test 'sends an error notification when there is no finder' do
       example = schema_item('aaib-reports')
       example['links']['finder'] = []
@@ -333,15 +320,6 @@ class SpecialistDocumentPresenterTest
       )
 
       present_example(example).important_metadata
-    end
-
-    test 'no breadcrumbs render with no finder' do
-      example = schema_item('aaib-reports')
-      example['links']['finder'] = []
-      assert_equal [], present_example(example).breadcrumbs
-
-      example['links'].delete('finder')
-      assert_equal [], present_example(example).breadcrumbs
     end
 
     test 'omits first_published_at facet values from `other` section of component parameters to avoid duplicates' do

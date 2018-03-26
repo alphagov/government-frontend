@@ -40,19 +40,4 @@ class SpeechTest < ActionDispatch::IntegrationTest
 
     assert_footer_has_published_dates("Published 8 March 2016")
   end
-
-  test "renders related policy links" do
-    setup_and_visit_content_item('speech-transcript')
-
-    assert_has_related_navigation(
-      section_name: "related-nav-policies",
-      section_text: "Policy",
-      links: {
-        "Government transparency and accountability":
-          "/government/policies/government-transparency-and-accountability",
-        "Tax evasion and avoidance":
-          "/government/policies/tax-evasion-and-avoidance"
-      }
-    )
-  end
 end

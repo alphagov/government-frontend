@@ -8,27 +8,6 @@ class ContactPresenter < ContentItemPresenter
     end
   end
 
-  def related_items
-    sections = []
-    if quick_links.any?
-      sections << {
-        title: "Elsewhere on GOV.UK",
-        items: quick_links
-      }
-    end
-
-    if related_contacts_links.any?
-      sections << {
-        title: "Other contacts",
-        items: related_contacts_links
-      }
-    end
-
-    {
-      sections: sections
-    }
-  end
-
   def online_form_links
     contact_form_links = content_item["details"]["contact_form_links"] || []
     contact_form_links.map do |link|
@@ -110,30 +89,6 @@ class ContactPresenter < ContentItemPresenter
 
   def webchat_open_url
     "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
-  end
-
-  def breadcrumbs
-    return [] if content_item["links"]['organisations'].try(:length) != 1
-
-    org         = content_item["links"]['organisations'].first
-    title       = org['title']
-    base        = org['base_path']
-    contact_url = "#{base}/contact"
-
-    [
-      {
-        title: "Home",
-        url: "/",
-      },
-      {
-        title: title,
-        url: base,
-      },
-      {
-        title: "Contact #{title}",
-        url: contact_url,
-      }
-    ]
   end
 
 private

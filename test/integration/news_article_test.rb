@@ -25,17 +25,6 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 25 December 2016")
   end
 
-
-  test "renders policy links" do
-    setup_and_visit_content_item('news_article_government_response')
-
-    assert_has_related_navigation(
-      section_name: "related-nav-policies",
-      section_text: "Policy",
-      links: { "Marine environment": "/government/policies/marine-environment" }
-    )
-  end
-
   test "renders translation links when there is more than one translation" do
     setup_and_visit_content_item("news_article")
 

@@ -17,33 +17,6 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     ])
   end
 
-  test "breadcrumbs show whether a topical event is archived" do
-    @content_item = get_content_example("topical_event_about_page")
-    content_store_has_item(@content_item["base_path"], @content_item.to_json)
-
-    breadcrumbs = [
-                      {
-                        title: "Home",
-                        url: "/"
-                      },
-                      {
-                        title: @content_item["links"]["parent"][0]["title"],
-                        url: @content_item["links"]["parent"][0]["base_path"]
-                      },
-                  ]
-
-    travel_to(topical_event_end_date - 1) do
-      visit @content_item["base_path"]
-      assert_has_component_breadcrumbs(breadcrumbs)
-    end
-
-    travel_to(topical_event_end_date) do
-      visit @content_item["base_path"]
-      breadcrumbs[1][:title] = @content_item["links"]["parent"][0]["title"] + " (Archived)"
-      assert_has_component_breadcrumbs(breadcrumbs)
-    end
-  end
-
   test "slim topical event about pages have no contents" do
     setup_and_visit_content_item('slim')
     refute page.has_css?('.contents-list.contents-list-dashed')

@@ -32,19 +32,6 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 29 February 2016")
   end
 
-  test "renders related navigation sidebar" do
-    setup_and_visit_content_item('document_collection')
-    assert_has_related_navigation(
-      [
-        {
-          section_name: "related-nav-topics",
-          section_text: "Explore the topic",
-          links: { "PAYE": "/topic/business-tax/paye" }
-        }
-      ]
-    )
-  end
-
   test "renders body when provided" do
     setup_and_visit_content_item('document_collection_with_body')
     assert_has_component_govspeak(@content_item["details"]["body"])

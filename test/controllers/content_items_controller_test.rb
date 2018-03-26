@@ -252,64 +252,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_redirected_to 'https://www.test.gov.uk/new-406-beacons-destination/to-preserve'
   end
 
-  test "does not show taxonomy-navigation when no taxons are tagged to Detailed Guides" do
-    content_item = content_store_has_schema_example('document_collection', 'document_collection')
-    path = 'government/test/detailed-guide'
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {}
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-    assert_equal [], @request.variant
-    refute_match(/A Taxon/, taxonomy_sidebar)
-  end
-
-  test "does not show taxonomy-navigation when page is tagged to mainstream browse" do
-    content_item = content_store_has_schema_example('document_collection', 'document_collection')
-    path = 'government/test/document_collection'
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {
-      'mainstream_browse_pages' => [
-        {
-          'content_id' => 'something'
-        }
-      ],
-      'taxons' => [
-        {
-          'title' => 'A Taxon',
-          'base_path' => '/a-taxon',
-        }
-      ]
-    }
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-    assert_equal [], @request.variant
-    refute_match(/A Taxon/, taxonomy_sidebar)
-  end
-
-  test "Case Studies don't have the taxonomy-navigation" do
-    content_item = content_store_has_schema_example('case_study', 'case_study')
-    path = 'government/test/case-study'
-    content_item['base_path'] = "/#{path}"
-    content_item['links'] = {
-      'taxons' => [
-        {
-          'title' => 'A Taxon',
-          'base_path' => '/a-taxon',
-        }
-      ]
-    }
-
-    content_store_has_item(content_item['base_path'], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-    assert_equal [], @request.variant
-    refute_match(/A Taxon/, taxonomy_sidebar)
-  end
-
   test "sets the Access-Control-Allow-Origin header for atom pages" do
     content_store_has_schema_example('travel_advice', 'full-country')
     get :show, params: { path: 'foreign-travel-advice/albania', format: 'atom' }
@@ -321,17 +263,5 @@ class ContentItemsControllerTest < ActionController::TestCase
     base_path = content_item['base_path'].sub(/^\//, '')
     base_path.gsub!(/\.#{locale}$/, '') if locale
     base_path
-  end
-
-  def related_links_sidebar
-    Nokogiri::HTML.parse(response.body).at_css(
-      shared_component_selector("related_items")
-    )
-  end
-
-  def taxonomy_sidebar
-    Nokogiri::HTML.parse(response.body).at_css(
-      shared_component_selector("taxonomy_sidebar")
-    )
   end
 end

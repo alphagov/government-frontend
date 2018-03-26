@@ -21,23 +21,6 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 24 November 2015")
   end
 
-  test "renders organisation and location links" do
-    setup_and_visit_content_item('world_location_news_article')
-
-    assert_has_publisher_metadata(metadata: {
-      "From": {
-        "British High Commission Nairobi":
-          "/government/world/organisations/british-high-commission-nairobi"
-      }
-    })
-
-    assert_has_related_navigation(
-      section_name: "related-nav-world_locations",
-      section_text: "World locations",
-      links: { "Kenya": "/world/kenya/news" }
-    )
-  end
-
   test "renders translation links when there is more than one translation" do
     setup_and_visit_content_item("world_location_news_article_with_multiple_translations")
 

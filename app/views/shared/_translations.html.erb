@@ -1,11 +1,6 @@
 <% if @content_item.available_translations.length > 1 %>
-  <% if @navigation.should_present_taxonomy_navigation? %>
+  <div class="column-third">
     <%= render 'components/translation-nav',
         translations: @content_item.available_translations %>
-  <% else %>
-    <div class="column-third">
-      <%= render 'components/translation-nav',
-          translations: @content_item.available_translations %>
-    </div>
-  <% end %>
+  </div>
 <% end %>

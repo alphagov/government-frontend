@@ -1,6 +1,3 @@
-<%= content_for :no_breadcrumbs, step_nav_helper.show_header? %>
-<%= content_for :simple_header, @navigation.should_present_taxonomy_navigation? %>
-
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title',
@@ -32,5 +29,5 @@
         history: @content_item.history
       } %>
   </div>
-  <%= render 'shared/sidebar_navigation', local_assigns %>
+  <%= render 'shared/sidebar_navigation' %>
 </div>

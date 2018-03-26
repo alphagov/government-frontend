@@ -34,10 +34,6 @@ class GuidePresenter < ContentItemPresenter
     "#{base_path}/print"
   end
 
-  def related_items
-    @nav_helper.related_items
-  end
-
   # Append token parameters to part paths to allow fact-checkers to fact-check all pages
   def parts
     if draft_access_token
