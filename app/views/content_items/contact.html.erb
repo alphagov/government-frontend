@@ -8,13 +8,14 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
+    <%= render 'govuk_component/title',
+      context: { text: @content_item.taxon["title"], href: @content_item.taxon["base_path"] },
+      title: @content_item.title %>
   </div>
 </div>
 
 <div class="grid-row">
   <div class="column-two-thirds">
-
     <% body = capture do %>
       <% if @content_item.online_form_links.any? %>
         <h2 id="online-forms-title">Online</h2>
@@ -102,6 +103,18 @@
     <% end %>
 
     <%= render 'govuk_publishing_components/components/govspeak', content: body, rich_govspeak: true %>
+
+    <%= render 'shared/guidance_go_deeper' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
+</div>
+
+<div class="can-do">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2><span class="context">More in</span> <%= link_to(@content_item.taxon["title"], @content_item.taxon["base_path"]) %></h2>
+    </div>
+  </div>
+
+  <%= render 'shared/guidance_can_do_links' %>
 </div>

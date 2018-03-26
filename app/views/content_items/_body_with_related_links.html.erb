@@ -3,6 +3,7 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
+        context: { text: @content_item.taxon["title"], href: @content_item.taxon["base_path"] },
         title: @content_item.title %>
   </div>
 </div>
@@ -20,7 +21,19 @@
         last_updated: @content_item.last_updated
       } %>
     <% end %>
+
+    <%= render 'shared/guidance_go_deeper' %>
   </div>
 
   <%= render 'shared/sidebar_navigation' %>
+</div>
+
+<div class="can-do">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2><span class="context">More in</span> <%= link_to(@content_item.taxon["title"], @content_item.taxon["base_path"]) %></h2>
+    </div>
+  </div>
+
+  <%= render 'shared/guidance_can_do_links' %>
 </div>

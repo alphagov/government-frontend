@@ -35,10 +35,6 @@ class GuidePresenter < ContentItemPresenter
     @nav_helper.related_items
   end
 
-  def taxons
-    content_item["links"]["taxons"]
-  end
-
   def organisations
     orgs = content_item["links"]["organisations"] || []
     orgs.sort_by { |o| o["title"] }

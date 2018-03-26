@@ -35,16 +35,7 @@
       <% end %>
     <% end %>
 
-    <div class="go-deeper">
-      <p>See more guides in:
-
-        <ul class="inline-topic-list">
-          <% @content_item.taxons.each do |taxon| %>
-          <li><a href="<%= taxon["base_path"] %>"><%= taxon["title"] %></a></li>
-          <% end %>
-        </ul>
-      </p>
-    </div>
+    <%= render 'shared/guidance_go_deeper' %>
   </div>
     <%= render 'shared/sidebar_navigation', local_assigns %>
 </div>
