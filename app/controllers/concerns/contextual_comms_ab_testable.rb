@@ -4,6 +4,8 @@ module ContextualCommsAbTestable
   def self.included(base)
     base.helper_method(
       :contextual_comms_test_variant,
+      :show_blue_box_campaign?,
+      :show_native_campaign?,
     )
     base.after_action :set_test_response_header
   end
@@ -24,5 +26,12 @@ module ContextualCommsAbTestable
   def set_test_response_header
     contextual_comms_test_variant.configure_response(response)
   end
+
+  def show_blue_box_campaign?
+    contextual_comms_test_variant.variant?("BlueBoxCampaign")
+  end
+
+  def show_native_campaign?
+    contextual_comms_test_variant.variant?("NativeCampaign")
   end
 end

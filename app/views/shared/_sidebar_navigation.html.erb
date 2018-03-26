@@ -1,3 +1,9 @@
 <div class="column-one-third">
   <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: @content_item.content_item.parsed_content %>
+  <% if show_blue_box_campaign? %>
+    <%= render 'components/blue-box-campaign', title: "Get In Go Far", description: "Search thousands of apprenticeships from great companies, with more added every day.", href: "https://www.getingofar.gov.uk/" %>
+  <% end %>
+  <% if show_native_campaign? %>
+    <%= render 'components/native-campaign', title: "How healthy is your food?", description: "Find out more about calories, the benefits of eating well and simple ways you can make a change.", href: "https://www.nhs.uk/oneyou/eating" %>
+  <% end %>
 </div>
