@@ -84,7 +84,10 @@ module ContextualCommsAbTestable
   end
 
   def campaign_link
-    CAMPAIGN_DATA[campaign_name][:link]
+    CAMPAIGN_DATA[campaign_name][:link] +
+      "?utm_source=#{content_item_path}" +
+      "&utm_content=#{contextual_comms_test_variant.variant_name}" +
+      "&utm_campaign=ukgov-promo&utm_medium=referral"
   end
 
   def campaign_title

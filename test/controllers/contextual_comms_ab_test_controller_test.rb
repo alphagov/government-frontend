@@ -10,25 +10,25 @@ class ContentItemsControllerTest < ActionController::TestCase
       govuk_base_path: "/career-skills-and-training",
       title: "Get In Go Far",
       description: "Search thousands of apprenticeships from great companies, with more added every day.",
-      href: "<a href=\"https://www.getingofar.gov.uk/\">",
+      href: "https://www.getingofar.gov.uk/",
     },
     eating: {
       govuk_base_path: "/free-school-transport",
       title: "How healthy is your food?",
       description: "Find out more about calories, the benefits of eating well and simple ways you can make a change.",
-      href: "<a href=\"https://www.nhs.uk/oneyou/eating\">",
+      href: "https://www.nhs.uk/oneyou/eating",
     },
     check_your_pay: {
       govuk_base_path: "/pay-and-work-rights",
       title: "Check Your Pay",
       description: "Are you being underpaid? Find out if your employer is giving you less than the legal minimum.",
-      href: "<a href=\"https://checkyourpay.campaign.gov.uk\">",
+      href: "https://checkyourpay.campaign.gov.uk",
     },
     your_pension: {
       govuk_base_path: "/armed-forces-pension-calculator",
       title: "Get to know your state pension",
       description: "Get an online forecast to tell you how much you might get, and the earliest you can claim it.",
-      href: "<a href=\"https://www.yourpension.gov.uk/\">"
+      href: "https://www.yourpension.gov.uk/",
     }
   }.freeze
 
@@ -61,7 +61,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         assert_match("blue-box-campaign", response.body)
         assert_match(value[:title], response.body)
         assert_match(value[:description], response.body)
-        assert_match(value[:href], response.body)
+        assert_select("a:match('href', ?)", value[:href])
       end
     end
   end
@@ -80,7 +80,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         assert_match("native-campaign", response.body)
         assert_match(value[:title], response.body)
         assert_match(value[:description], response.body)
-        assert_match(value[:href], response.body)
+        assert_select("a:match('href', ?)", value[:href])
       end
     end
   end
