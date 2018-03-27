@@ -12,6 +12,12 @@ class ContentItemsControllerTest < ActionController::TestCase
       description: "Search thousands of apprenticeships from great companies, with more added every day.",
       href: "<a href=\"https://www.getingofar.gov.uk/\">",
     },
+    eating: {
+      govuk_base_path: "/free-school-transport",
+      title: "How healthy is your food?",
+      description: "Find out more about calories, the benefits of eating well and simple ways you can make a change.",
+      href: "<a href=\"https://www.nhs.uk/oneyou/eating\">",
+    },
   }.freeze
 
   test "ContextualComms shows no campaigns for variant 'NoCampaign'" do

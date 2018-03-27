@@ -6,6 +6,11 @@ module ContextualCommsAbTestable
       description: "Search thousands of apprenticeships from great companies, with more added every day.",
       link: "https://www.getingofar.gov.uk/",
     },
+    eating: {
+      title: "How healthy is your food?",
+      description: "Find out more about calories, the benefits of eating well and simple ways you can make a change.",
+      link: "https://www.nhs.uk/oneyou/eating",
+    }
   }.freeze
 
   def self.included(base)
@@ -49,6 +54,8 @@ module ContextualCommsAbTestable
     @campaign_name ||=
       if GET_IN_GO_FAR_PAGES.include?(content_item_path)
         :get_in_go_far
+      elsif EATING_PAGES.include?(content_item_path)
+        :eating
       end
   end
 
@@ -78,5 +85,23 @@ module ContextualCommsAbTestable
     /further-education-courses/find-a-course
     /looking-for-work-if-disabled
     /exoffenders-and-employment
+  ).freeze
+
+  EATING_PAGES = %w(
+    /free-school-transport
+    /healthy-start
+    /healthy-start/eligibility
+    /healthy-start/how-to-claim
+    /healthy-start/what-youll-get
+    /help-with-childcare-costs
+    /help-with-childcare-costs/childcare-vouchers
+    /help-with-childcare-costs/free-childcare-2-year-olds
+    /help-with-childcare-costs/free-childcare-2-year-olds-benefits
+    /help-with-childcare-costs/free-childcare-and-education-for-2-to-4-year-olds
+    /help-with-childcare-costs/support-while-you-study
+    /help-with-childcare-costs/tax-credits
+    /help-with-childcare-costs/tax-free-childcare
+    /help-with-childcare-costs/universal-credit
+    /school-uniform
   ).freeze
 end
