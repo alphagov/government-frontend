@@ -10,7 +10,12 @@ module ContextualCommsAbTestable
       title: "How healthy is your food?",
       description: "Find out more about calories, the benefits of eating well and simple ways you can make a change.",
       link: "https://www.nhs.uk/oneyou/eating",
-    }
+    },
+    check_your_pay: {
+      title: "Check Your Pay",
+      description: "Are you being underpaid? Find out if your employer is giving you less than the legal minimum.",
+      link: "https://checkyourpay.campaign.gov.uk",
+    },
   }.freeze
 
   def self.included(base)
@@ -66,6 +71,8 @@ module ContextualCommsAbTestable
         :get_in_go_far
       elsif EATING_PAGES.include?(content_item_path)
         :eating
+      elsif CHECK_YOUR_PAY_PAGES.include?(content_item_path)
+        :check_your_pay
       end
   end
 
@@ -113,5 +120,36 @@ module ContextualCommsAbTestable
     /help-with-childcare-costs/tax-free-childcare
     /help-with-childcare-costs/universal-credit
     /school-uniform
+  ).freeze
+
+  CHECK_YOUR_PAY_PAGES = %w(
+    /pay-and-work-rights
+    /payslips
+    /report-cash-in-hand-pay
+    /student-jobs-paying-tax
+    /tips-at-work
+    /tips-at-work/tips-and-tax
+    /understanding-your-pay/deductions-from-your-pay
+    /understanding-your-pay/pay-calculations-if-you-work-shifts-or-get-bonuses
+    /understanding-your-pay/working-out-your-pay
+    /employment-contracts-and-conditions
+    /employment-contracts-and-conditions/collective-agreements
+    /employment-contracts-and-conditions/contract-terms
+    /employment-contracts-and-conditions/written-statement-of-employment-particulars
+    /employment-status
+    /employment-status/employee
+    /employment-status/worker
+    /flexible-working
+    /flexible-working/types-of-flexible-working
+    /maximum-weekly-working-hours
+    /maximum-weekly-working-hours/calculating-your-working-hours
+    /maximum-weekly-working-hours/weekly-maximum-working-hours-and-opting-out
+    /night-working-hours
+    /overtime-your-rights
+    /rest-breaks-work
+    /rest-breaks-work/compensatory-rest
+    /rest-breaks-work/exceptions
+    /rest-breaks-work/taking-breaks
+    /rest-breaks-work/young-workers
   ).freeze
 end

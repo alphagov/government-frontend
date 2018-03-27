@@ -18,6 +18,12 @@ class ContentItemsControllerTest < ActionController::TestCase
       description: "Find out more about calories, the benefits of eating well and simple ways you can make a change.",
       href: "<a href=\"https://www.nhs.uk/oneyou/eating\">",
     },
+    check_your_pay: {
+      govuk_base_path: "/pay-and-work-rights",
+      title: "Check Your Pay",
+      description: "Are you being underpaid? Find out if your employer is giving you less than the legal minimum.",
+      href: "<a href=\"https://checkyourpay.campaign.gov.uk\">",
+    },
   }.freeze
 
   test "ContextualComms shows no campaigns for variant 'NoCampaign'" do
