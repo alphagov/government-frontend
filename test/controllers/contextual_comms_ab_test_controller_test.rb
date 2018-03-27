@@ -24,6 +24,12 @@ class ContentItemsControllerTest < ActionController::TestCase
       description: "Are you being underpaid? Find out if your employer is giving you less than the legal minimum.",
       href: "<a href=\"https://checkyourpay.campaign.gov.uk\">",
     },
+    your_pension: {
+      govuk_base_path: "/armed-forces-pension-calculator",
+      title: "Get to know your state pension",
+      description: "Get an online forecast to tell you how much you might get, and the earliest you can claim it.",
+      href: "<a href=\"https://www.yourpension.gov.uk/\">"
+    }
   }.freeze
 
   test "ContextualComms shows no campaigns for variant 'NoCampaign'" do

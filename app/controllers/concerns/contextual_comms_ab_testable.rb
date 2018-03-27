@@ -16,6 +16,11 @@ module ContextualCommsAbTestable
       description: "Are you being underpaid? Find out if your employer is giving you less than the legal minimum.",
       link: "https://checkyourpay.campaign.gov.uk",
     },
+    your_pension: {
+      title: "Get to know your state pension",
+      description: "Get an online forecast to tell you how much you might get, and the earliest you can claim it.",
+      link: "https://www.yourpension.gov.uk/",
+    }
   }.freeze
 
   def self.included(base)
@@ -73,6 +78,8 @@ module ContextualCommsAbTestable
         :eating
       elsif CHECK_YOUR_PAY_PAGES.include?(content_item_path)
         :check_your_pay
+      elsif YOUR_PENSION_PAGES.include?(content_item_path)
+        :your_pension
       end
   end
 
@@ -151,5 +158,18 @@ module ContextualCommsAbTestable
     /rest-breaks-work/exceptions
     /rest-breaks-work/taking-breaks
     /rest-breaks-work/young-workers
+  ).freeze
+
+  YOUR_PENSION_PAGES = %w(
+    /armed-forces-pension-calculator
+    /personal-pensions-your-rights
+    /transferring-your-pension
+    /pension-types
+    /workplace-pensions
+    /employers-workplace-pensions-rules
+    /carers-credit
+    /national-insurance-credits
+    /voluntary-national-insurance-contributions
+    /plan-retirement-income
   ).freeze
 end
