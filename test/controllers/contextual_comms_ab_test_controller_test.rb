@@ -4,49 +4,72 @@ class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
   include GovukAbTesting::MinitestHelpers
 
+  # govuk_base_path is an example page that is eligible to show a campaign.
+  CAMPAIGNS = {
+    get_in_go_far: {
+      govuk_base_path: "/career-skills-and-training",
+      title: "Get In Go Far",
+      description: "Search thousands of apprenticeships from great companies, with more added every day.",
+      href: "<a href=\"https://www.getingofar.gov.uk/\">",
+    },
+  }.freeze
+
   test "ContextualComms shows no campaigns for variant 'NoCampaign'" do
-    content_store_has_item(content_item["base_path"], content_item)
+    CAMPAIGNS.each_value do |value|
+      content_item = set_content_item(value[:govuk_base_path])
+      content_store_has_item(value[:govuk_base_path], content_item)
 
-    with_variant ContextualComms: "NoCampaign" do
-      get :show, params: { path: path_for(content_item) }
-      assert_response 200
+      with_variant ContextualComms: "NoCampaign" do
+        get :show, params: { path: path_for(content_item) }
+        assert_response 200
 
-      refute_match("native-campaign", response.body)
-      refute_match("blue-box-campaign", response.body)
+        refute_match("native-campaign", response.body)
+        refute_match("blue-box-campaign", response.body)
+      end
     end
   end
 
   test "ContextualComms shows a blue box campaign for variant 'BlueBoxCampaign'" do
-    content_store_has_item(content_item["base_path"], content_item)
+    CAMPAIGNS.each do |key, value|
+      # as the campaign_name method is memoized, we need to ensure the correct campaign name is returned for each test
+      @controller.stubs(:campaign_name).returns(key)
+      content_item = set_content_item(value[:govuk_base_path])
+      content_store_has_item(value[:govuk_base_path], content_item)
 
-    with_variant ContextualComms: "BlueBoxCampaign" do
-      get :show, params: { path: path_for(content_item) }
-      assert_response 200
+      with_variant ContextualComms: "BlueBoxCampaign" do
+        get :show, params: { path: path_for(content_item) }
+        assert_response 200
 
-      assert_match("blue-box-campaign", response.body)
-      assert_match("Get In Go Far", response.body)
-      assert_match("Search thousands of apprenticeships from great companies, with more added every day.", response.body)
-      assert_match("<a href=\"https://www.getingofar.gov.uk/\">", response.body)
+        assert_match("blue-box-campaign", response.body)
+        assert_match(value[:title], response.body)
+        assert_match(value[:description], response.body)
+        assert_match(value[:href], response.body)
+      end
     end
   end
 
   test "ContextualComms shows a native campaign for variant 'NativeCampaign'" do
-    content_store_has_item(content_item["base_path"], content_item)
+    CAMPAIGNS.each do |key, value|
+      # as the campaign_name method is memoized, we need to ensure the correct campaign name is returned for each test
+      @controller.stubs(:campaign_name).returns(key)
+      content_item = set_content_item(value[:govuk_base_path])
+      content_store_has_item(value[:govuk_base_path], content_item)
 
-    with_variant ContextualComms: "NativeCampaign" do
-      get :show, params: { path: path_for(content_item) }
-      assert_response 200
+      with_variant ContextualComms: "NativeCampaign" do
+        get :show, params: { path: path_for(content_item) }
+        assert_response 200
 
-      assert_match("native-campaign", response.body)
-      assert_match("How healthy is your food?", response.body)
-      assert_match("Find out more about calories, the benefits of eating well and simple ways you can make a change.", response.body)
-      assert_match("<a href=\"https://www.nhs.uk/oneyou/eating\">", response.body)
+        assert_match("native-campaign", response.body)
+        assert_match(value[:title], response.body)
+        assert_match(value[:description], response.body)
+        assert_match(value[:href], response.body)
+      end
     end
   end
 
-  def content_item
+  def set_content_item(base_path)
     content_item = content_store_has_schema_example("answer", "answer")
-    content_item["base_path"] = "/career-skills-and-training"
+    content_item["base_path"] = base_path
     content_item
   end
 
