@@ -1,0 +1,17 @@
+<% business_support_items = @content_item.related_stuff(
+  reject_link: @content_item.base_path,
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_purpose_supergroup: "business_support",
+  order: 'popularity',
+  count: 3
+) %>
+
+<% if business_support_items[:items].any? %>
+<div class="can-do-business_support can-do-section">
+  <h3>Services</h3>
+
+  <%= render 'shared/highlight_box', type: "business_support", items: business_support_items %>
+
+  <p><a href="#">See more business_support</a></p>
+</div>
+<% end %>

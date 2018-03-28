@@ -168,6 +168,19 @@
         history: @content_item.history
       } %>
     </div>
+
+    <%= render 'shared/go_deeper' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
+</div>
+
+<div class="can-do">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2><span class="context">More in</span> <%= link_to(@content_item.taxon["title"], @content_item.taxon["base_path"]) %></h2>
+    </div>
+  </div>
+
+  <%= render 'shared/policy_can_do_links' %>
+
 </div>

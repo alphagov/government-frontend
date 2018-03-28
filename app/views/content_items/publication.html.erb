@@ -44,5 +44,15 @@
     </div>
   </div>
 
-  <%= render 'shared/guidance_can_do_links' %>
+  <% if @content_item.content_purpose_supergroup == "services" %>
+    <%= render 'shared/service_can_do_links' %>
+  <% elsif @content_item.content_purpose_supergroup == "guidance_and_regulation" %>
+    <%= render 'shared/guidance_can_do_links' %>
+  <% elsif @content_item.content_purpose_supergroup == "policy_and_engagement" %>
+    <%= render 'shared/policy_can_do_links' %>
+  <% elsif @content_item.content_purpose_supergroup == "news_and_communications" %>
+    <%= render 'shared/news_can_do_links' %>
+  <% elsif @content_item.content_purpose_supergroup == "transparency" %>
+    <%= render 'shared/transparency_can_do_links' %>
+  <% end %>
 </div>

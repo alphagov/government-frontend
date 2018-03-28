@@ -103,6 +103,10 @@ class ContentItemPresenter
     { items: items }
   end
 
+  def content_purpose_supergroup
+    @content_item["content_purpose_supergroup"]
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")

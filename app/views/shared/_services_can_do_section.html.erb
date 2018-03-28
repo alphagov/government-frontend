@@ -1,0 +1,17 @@
+<% services_items = @content_item.related_stuff(
+  reject_link: @content_item.base_path,
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_purpose_supergroup: "services",
+  order: 'popularity',
+  count: 3
+) %>
+
+<% if services_items[:items].any? %>
+<div class="can-do-services can-do-section">
+  <h3>Services</h3>
+
+  <%= render 'shared/highlight_box', type: "services", items: services_items %>
+
+  <p><a href="#">See more services</a></p>
+</div>
+<% end %>
