@@ -2,7 +2,6 @@ require 'test_helper'
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
-  include GovukAbTesting::MinitestHelpers
 
   %w(guide answer publication).each do |schema_name|
     test "#{schema_name} shows step by step navigation where relevant" do

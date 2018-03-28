@@ -3,7 +3,6 @@ require 'test_helper'
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
   include GdsApi::TestHelpers::Rummager
-  include GovukAbTesting::MinitestHelpers
 
   test 'routing handles paths with no format or locale' do
     assert_routing(
