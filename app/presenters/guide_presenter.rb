@@ -26,10 +26,6 @@ class GuidePresenter < ContentItemPresenter
     parts.size > 1
   end
 
-  def current_part_title_with_index
-    "#{current_part_index + 1}. #{current_part_title}"
-  end
-
   def print_link
     "#{base_path}/print"
   end

@@ -8,7 +8,25 @@
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>
     <aside class="part-navigation-container" role="complementary">
-      <%= render 'shared/parts_navigation', content_item: @content_item, navigation_label: 'Travel advice pages' %>
+
+      <nav role="navigation" class="grid-row part-navigation" aria-label="Travel advice pages" data-module="track-click">
+        <%  @content_item.parts_navigation.each_with_index do |part_group, i| %>
+          <ol
+            class="column-half"
+            <% if i == 1 %>
+              start="<%=  @content_item.parts_navigation_second_list_start %>"
+            <% end %>
+          >
+            <% part_group.each do |part_nav_item| %>
+              <li>
+                <%= part_nav_item %>
+              </li>
+            <% end %>
+          </ol>
+        <% end %>
+      </nav>
+
+
       <%= render 'components/subscription-links', email_signup_link: @content_item.email_signup_link, feed_link: @content_item.feed_link %>
     </aside>
   </div>
