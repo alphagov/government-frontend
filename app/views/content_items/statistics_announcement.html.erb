@@ -42,8 +42,21 @@
       <%= render 'govuk_publishing_components/components/notice',
           title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
     <% end %>
+
+    <%= render 'shared/go_deeper' %>
   </div>
   <div class="column-one-third">
     <%= render 'govuk_publishing_components/components/related_navigation', @content_item.content_item.parsed_content %>
   </div>
+</div>
+
+<div class="can-do">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2><span class="context">More in</span> <%= link_to(@content_item.taxon["title"], @content_item.taxon["base_path"]) %></h2>
+    </div>
+
+  </div>
+
+  <%= render 'shared/transparency_can_do_links' %>
 </div>

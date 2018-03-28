@@ -1,0 +1,17 @@
+<% research_items = @content_item.related_stuff(
+  reject_link: @content_item.base_path,
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_purpose_subgroup: "research_and_data",
+  order: '-public_timestamp',
+  count: 5
+) %>
+
+<% if research_items[:items].any? %>
+<div class="can-do-research can-do-section">
+  <h3>Research and data</h3>
+
+  <%= render "govuk_publishing_components/components/document_list", research_items  %>
+
+  <p><a href="#">See more research and data</a></p>
+</div>
+<% end %>

@@ -56,7 +56,21 @@
 
     <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
+    <%= render 'shared/go_deeper' %>
+
     <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
+</div>
+
+
+<div class="can-do">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2><span class="context">More in</span> <%= link_to(@content_item.taxon["title"], @content_item.taxon["base_path"]) %></h2>
+    </div>
+
+  </div>
+
+  <%= render 'shared/guidance_can_do_links' %>
 </div>
