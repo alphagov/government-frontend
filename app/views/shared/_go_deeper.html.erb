@@ -1,0 +1,22 @@
+<%
+  if @content_item.content_purpose_supergroup == "guidance_and_regulation"
+    supergroup_type = "guidance and regulation"
+  elsif @content_item.content_purpose_supergroup == "policy_and_engagement"
+    supergroup_type = "policy and engagement"
+  elsif @content_item.content_purpose_supergroup == "news_and_communications"
+    supergroup_type = "news and communications"
+  elsif @content_item.content_purpose_supergroup == "transparency"
+    supergroup_type = "transparency"
+  end
+%>
+
+<div class="go-deeper">
+  <p>See more <%= supergroup_type %> in:
+
+    <ul class="inline-topic-list">
+      <% @content_item.taxons.each do |taxon| %>
+      <li><a href="<%= taxon["base_path"] %>"><%= taxon["title"] %></a></li>
+      <% end %>
+    </ul>
+  </p>
+</div>
