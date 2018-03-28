@@ -1,0 +1,40 @@
+<%
+news_items = @content_item.related_stuff(
+  reject_link: @content_item.base_path,
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_purpose_supergroup: "news_and_communications",
+  order: '-public_timestamp',
+  count: 3,
+  fields: %w[title public_timestamp link content_store_document_type]
+)
+
+%>
+
+<% if news_items[:items].any? %>
+<div class="can-do-news can-do-section">
+  <h3>News and communications</h3>
+
+  <ol class="news-list">
+    <% news_items[:items].each do |item| %>
+    <li class="news-list-item">
+      <a href="<%= item[:link][:path] %>">
+        <img src="https://assets.publishing.service.gov.uk/frontend/homepage/leaving-the-eu-bc9992ee672a30d8e8a3e195c9afa750e618748130a4e073a593ba36dfc29af9.jpg" alt="A placeholder image">
+      </a>
+
+      <h3><a href="<%= item[:link][:path] %>"><%= item[:link][:text] %></a></h3>
+      <ul class="metadata-list">
+        <li class="metadata-list-attribute">
+          <time datetime="<%= item[:metadata][:public_updated_at].iso8601 %>">
+            <%= l(item[:metadata][:public_updated_at], format: '%e %B %Y') %>
+          </time>
+        </li>
+        <li class="metadata-list-attribute">
+          <%= item[:metadata][:document_type] %>
+      </ul>
+    </li>
+    <% end %>
+  </ol>
+
+  <p><a href="#">See more news and communications</a></p>
+</div>
+<% end %>

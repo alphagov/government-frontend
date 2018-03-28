@@ -160,6 +160,32 @@
   }
 }
 
+.news-list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr;
+  grid-column-gap: $gutter;
+  grid-row-gap: $gutter;
+
+  @include media(tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  margin-bottom: $gutter;
+
+  .news-list-item {
+    box-sizing: border-box;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .metadata-list-attribute {
+    @include core-14;
+  }
+}
+
 .organisation-logos {
   list-style-type: none;
 
