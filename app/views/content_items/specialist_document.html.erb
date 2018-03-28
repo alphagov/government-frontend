@@ -2,7 +2,7 @@
 
 <div class="grid-row">
   <div class="column-two-thirds responsive-top-margin">
-    <%= render 'govuk_component/title', @content_item.title_and_context %>
+    <%= render 'govuk_component/title', { title: @content_item.title, context: { text: @content_item.taxon["title"], href: @content_item.taxon["base_path"] } } %>
   </div>
   <%= render 'shared/translations' %>
   <div class="column-two-thirds">
