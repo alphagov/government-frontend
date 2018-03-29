@@ -1,4 +1,6 @@
 class ContentItemsController < ApplicationController
+  include ContextualCommsAbTestable
+
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::HTTPGone, with: :error_410
