@@ -1,5 +1,6 @@
 <%
   format_numbers ||= false
+  underline_links ||= false
   contents ||= []
   aria_label ||= ''
   nested = !!contents.find { |c| c[:items] && c[:items].any? }
@@ -14,7 +15,7 @@
 <% if contents.any? %>
   <nav
     role="navigation"
-    class="app-c-contents-list"
+    class="app-c-contents-list <%= 'app-c-contents-list--no-underline' unless underline_links %>"
     data-module="track-click"
     <% if aria_label.present? %>
       aria-label="<%= aria_label %>"
