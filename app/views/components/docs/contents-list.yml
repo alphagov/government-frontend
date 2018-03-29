@@ -33,6 +33,17 @@ examples:
           text: Second thing
         - href: "#third-thing"
           text: Third thing
+  underline_links:
+    description: By default we do not underline links in this component even though this is the general approach on GOV.UK. This is because some of the examples below (particularly those with numbers) do not work well with underlined links. Instead, this option allows the links to be underlined where appropriate.
+    data:
+      underline_links: true
+      contents:
+        - href: "#first-thing"
+          text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        - href: "#second-thing"
+          text: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        - href: "#third-thing"
+          text: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
   long_text:
     data:
       contents:

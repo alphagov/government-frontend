@@ -42,9 +42,15 @@ class ContentsListComponentTest < ComponentTestCase
 
   test "renders a list of contents links" do
     render_component(contents: contents_list)
-    assert_select ".app-c-contents-list"
+    assert_select ".app-c-contents-list.app-c-contents-list--no-underline"
     assert_select ".app-c-contents-list__link[href='/one']", text: "1. One"
     assert_select ".app-c-contents-list__link[href='/two']", text: "2. Two"
+  end
+
+  test "renders with the underline option" do
+    render_component(contents: contents_list, underline_links: true)
+    assert_select ".app-c-contents-list"
+    assert_select ".app-c-contents-list.app-c-contents-list--no-underline", false
   end
 
   test "renders text only when link is active" do

@@ -10,6 +10,18 @@
   box-shadow: 0 20px 15px -10px $white;
 }
 
+.app-c-contents-list--no-underline {
+  .app-c-contents-list__link {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
 .app-c-contents-list__link {
   .app-c-contents-list__list-item--parent > & {
     font-weight: bold;
