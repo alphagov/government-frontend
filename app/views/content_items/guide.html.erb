@@ -4,7 +4,7 @@
     <%= render 'govuk_component/title', { title: @content_item.title } %>
     <% if @content_item.multi_page_guide? %>
       <aside class="part-navigation-container" role="complementary">
-        <%= render "components/contents-list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements %>
+        <%= render "components/contents-list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
       </aside>
     <% end %>
   </div>
