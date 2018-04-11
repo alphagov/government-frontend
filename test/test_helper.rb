@@ -176,10 +176,6 @@ class ActionDispatch::IntegrationTest
     assert_has_published_dates(published, last_updated, history_link, 1)
   end
 
-  def has_component_metadata(key, value)
-    assert page.has_css? "meta[#{key}=\"#{value}\"]", visible: false
-  end
-
   def setup_and_visit_content_item(name, parameter_string = '')
     @content_item = get_content_example(name).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)
