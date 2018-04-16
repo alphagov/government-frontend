@@ -72,9 +72,7 @@ module ContextualCommsAbTestable
 
   def campaign_name
     @campaign_name ||=
-      if GET_IN_GO_FAR_PAGES.include?(content_item_path)
-        :get_in_go_far
-      elsif EATING_PAGES.include?(content_item_path)
+      if EATING_PAGES.include?(content_item_path)
         :eating
       elsif CHECK_YOUR_PAY_PAGES.include?(content_item_path)
         :check_your_pay

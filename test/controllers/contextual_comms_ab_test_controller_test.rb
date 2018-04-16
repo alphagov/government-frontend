@@ -6,12 +6,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   # govuk_base_path is an example page that is eligible to show a campaign.
   CAMPAIGNS = {
-    get_in_go_far: {
-      govuk_base_path: "/career-skills-and-training",
-      title: "Get In Go Far",
-      description: "Search thousands of apprenticeships from great companies, with more added every day.",
-      href: "https://www.getingofar.gov.uk/",
-    },
+    # get_in_go_far: {
+    #   govuk_base_path: "/career-skills-and-training",
+    #   title: "Get In Go Far",
+    #   description: "Search thousands of apprenticeships from great companies, with more added every day.",
+    #   href: "https://www.getingofar.gov.uk/",
+    # },
     eating: {
       govuk_base_path: "/free-school-transport",
       title: "How healthy is your food?",
