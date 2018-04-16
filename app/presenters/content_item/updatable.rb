@@ -13,6 +13,14 @@ module ContentItem
       reverse_chronological_change_history
     end
 
+    def first_public_at
+      content_item["details"]["first_public_at"]
+    end
+
+    def public_updated_at
+      content_item["public_updated_at"]
+    end
+
   private
 
     def change_history
@@ -38,14 +46,6 @@ module ContentItem
       else
         false
       end
-    end
-
-    def first_public_at
-      content_item["details"]["first_public_at"]
-    end
-
-    def public_updated_at
-      content_item["public_updated_at"]
     end
   end
 end
