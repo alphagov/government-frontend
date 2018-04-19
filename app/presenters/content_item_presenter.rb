@@ -49,6 +49,10 @@ class ContentItemPresenter
     content_item["content_id"]
   end
 
+  def web_url
+    Plek.current.website_root + content_item["base_path"]
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")

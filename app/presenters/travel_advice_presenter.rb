@@ -90,10 +90,6 @@ class TravelAdvicePresenter < ContentItemPresenter
     DateTime.parse(content_item["public_updated_at"])
   end
 
-  def web_url
-    Plek.current.website_root + content_item["base_path"]
-  end
-
 private
 
   # Treat summary as the first part
