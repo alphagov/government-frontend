@@ -19,7 +19,7 @@ gem 'govuk_app_config', '~> 1.4'
 gem 'govuk_frontend_toolkit', '~> 7.4'
 gem 'govuk_publishing_components', '~> 6.5.0'
 gem 'plek', '~> 2.1'
-gem 'slimmer', '~> 12.0'
+gem 'slimmer', '~> 12.1'
 
 group :development, :test do
   gem 'govuk-lint'

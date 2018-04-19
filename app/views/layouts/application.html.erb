@@ -20,9 +20,28 @@
   <%= javascript_include_tag "application", integrity: true, crossorigin: 'anonymous' %>
   <%= csrf_meta_tags %>
   <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
+
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
+
+  <meta property="og:site_name" content="GOV.UK" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<%= @content_item.web_url %>" />
+  <meta property="og:title" content="<%= @content_item.page_title %>" />
+  <meta property="og:description" content="<%= strip_tags(@content_item.description) %>" />
+
+  <% if @content_item.respond_to?(:image) && @content_item.image %>
+    <meta property="og:image" content="<%= @content_item.image["url"] %>" />
+    <meta property="og:image:alt" content="<%= @content_item.image["alt_text"] %>" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="<%= @content_item.image["url"] %>" />
+    <meta name="twitter:image:alt" content="<%= @content_item.image["alt_text"] %>" />
+  <% else %>
+    <meta name="twitter:card" content="summary" />
+  <% end %>
+
   <%= contextual_comms_test_variant.analytics_meta_tag.html_safe if whitelisted_campaign_page? %>
   <%= yield :extra_head_content %>
 </head>
