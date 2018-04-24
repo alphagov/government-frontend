@@ -22,7 +22,7 @@
         <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
         <% if @content_item.continuation_link %>
           <%= render(
-              'govuk_component/button',
+              'govuk_publishing_components/components/button',
               start: true,
               href: @content_item.continuation_link,
               text: "Find out more",

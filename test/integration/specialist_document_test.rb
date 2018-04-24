@@ -159,13 +159,8 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test 'renders start button' do
     setup_and_visit_content_item('business-finance-support-scheme')
 
-    assert_component_locals(
-      'button',
-      start: true,
-      href: 'http://www.bigissueinvest.com',
-      info_text: 'on the Big Issue Invest website',
-      text: 'Find out more'
-    )
+    assert page.has_css?(".gem-c-button.gem-c-button--start[href='http://www.bigissueinvest.com']", text: "Find out more")
+    assert page.has_css?(".gem-c-button__info-text", text: "on the Big Issue Invest website")
   end
 
   test 'does not render a contents list if there are fewer than three items in the contents list' do

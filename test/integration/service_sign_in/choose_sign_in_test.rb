@@ -50,7 +50,7 @@ module ServiceSignIn
             assert page.has_css?(".gem-c-radio__label__text", text: "Create an account")
           end
         end
-        assert page.has_css?(shared_component_selector('button'), text: "Continue")
+        assert page.has_css?(".gem-c-button", text: "Continue")
       end
     end
 
@@ -120,7 +120,7 @@ module ServiceSignIn
           end
         end
 
-        assert page.has_css?(shared_component_selector('button'), text: "Bwrw ymlaen")
+        assert page.has_css?(".gem-c-button", text: "Bwrw ymlaen")
       end
     end
 
