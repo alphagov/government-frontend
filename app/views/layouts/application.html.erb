@@ -19,7 +19,7 @@
   <% end %>
   <%= javascript_include_tag "application", integrity: true, crossorigin: 'anonymous' %>
   <%= csrf_meta_tags %>
-  <%= render partial: 'govuk_component/analytics_meta_tags', locals: { content_item: @content_item.content_item } %>
+  <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
 
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
