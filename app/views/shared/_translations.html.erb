@@ -1,6 +1,6 @@
 <% if @content_item.available_translations.length > 1 %>
   <div class="column-third">
-    <%= render 'components/translation-nav',
+    <%= render 'govuk_publishing_components/components/translation-nav',
         translations: @content_item.available_translations %>
   </div>
 <% end %>
