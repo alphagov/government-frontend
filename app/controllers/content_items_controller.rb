@@ -25,16 +25,26 @@ class ContentItemsController < ApplicationController
     return head :not_found unless is_sign_in_content_item_path?
 
     if params[:option].blank?
-      @error = true
-      show
+      show_error_message
     else
       load_content_item
       selected = @content_item.selected_option(params[:option])
+
+      if selected.nil?
+        show_error_message
+        return
+      end
+
       redirect_to selected[:url]
     end
   end
 
 private
+
+  def show_error_message
+    @error = true
+    show
+  end
 
   def is_sign_in_content_item_path?
     content_item_path.include?("sign-in")
