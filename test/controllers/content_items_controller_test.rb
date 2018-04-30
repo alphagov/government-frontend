@@ -83,6 +83,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :redirect
     assert_redirected_to content_item['base_path']
   end
+
   test "returns HTML when an unspecific accepts header is requested (eg by IE8 and below)" do
     request.headers["Accept"] = "*/*"
     content_item = content_store_has_schema_example('travel_advice', 'full-country')
