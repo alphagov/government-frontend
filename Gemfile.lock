@@ -124,10 +124,10 @@ GEM
       sentry-raven (~> 2.7.1)
       statsd-ruby (~> 1.4.0)
       unicorn (~> 5.4.0)
-    govuk_frontend_toolkit (7.4.2)
+    govuk_frontend_toolkit (7.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    govuk_publishing_components (6.7.0)
+    govuk_publishing_components (7.0.0)
       govspeak (>= 5.0.3)
       govuk_app_config
       govuk_frontend_toolkit
@@ -186,7 +186,7 @@ GEM
     minitest (5.11.3)
     mocha (1.5.0)
       metaclass (~> 0.0.1)
-    money (6.11.0)
+    money (6.11.1)
       i18n (>= 0.6.4, < 1.1)
     multipart-post (2.0.0)
     netrc (0.11.0)
@@ -300,7 +300,7 @@ GEM
     selenium-webdriver (3.11.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
-    sentry-raven (2.7.2)
+    sentry-raven (2.7.3)
       faraday (>= 0.7.6, < 1.0)
     slimmer (12.1.0)
       activesupport
@@ -368,7 +368,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 1.4)
   govuk_frontend_toolkit (~> 7.4)
-  govuk_publishing_components (~> 6.7.0)
+  govuk_publishing_components (~> 7.0.0)
   govuk_schemas (~> 3.1)
   htmlentities (~> 4.3)
   jasmine-rails
