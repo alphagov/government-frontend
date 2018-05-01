@@ -43,6 +43,7 @@ module ServiceSignIn
       mapped_options.each do |option|
         return option if option[:value] == selected_value
       end
+      nil
     end
 
   private
