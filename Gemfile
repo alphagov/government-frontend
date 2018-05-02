@@ -39,5 +39,5 @@ group :test do
   gem 'faker'
   gem 'mocha'
   gem 'poltergeist', require: false
-  gem 'webmock', '~> 3.4.0', require: false
+  gem 'webmock', '~> 3.4.1', require: false
 end
