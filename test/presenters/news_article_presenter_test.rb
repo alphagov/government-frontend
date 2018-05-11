@@ -46,11 +46,6 @@ class NewsArticlePresenterTest
       assert_equal schema_item['locale'], presented_item.locale
     end
 
-    test 'has no structured data if no publishing org' do
-      expected = {}
-      assert_equal expected, presented_item.structured_data
-    end
-
     test 'has structured data' do
       item = { "links" => { "primary_publishing_organisation" => [{ "title" => "Ministry of Magic", "base_path" => "/government/organisations/magic" }] } }
 
