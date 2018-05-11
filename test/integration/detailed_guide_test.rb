@@ -69,7 +69,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    assert page.has_css?('.app-c-translation-nav')
+    assert page.has_css?('.gem-c-translation-nav')
   end
 
   test "renders a contents list" do
