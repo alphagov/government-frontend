@@ -41,6 +41,11 @@ class GuidePresenter < ContentItemPresenter
     end
   end
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
 private
 
   def draft_access_token_param

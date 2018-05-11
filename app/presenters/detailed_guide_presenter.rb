@@ -6,6 +6,11 @@ class DetailedGuidePresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::TitleAndContext
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
   def title_and_context
     super.tap do |t|
       t[:context] = I18n.t("content_item.schema_name.guidance", count: 1)

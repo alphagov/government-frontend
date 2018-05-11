@@ -6,6 +6,11 @@ class ConsultationPresenter < ContentItemPresenter
   include ContentItem::Shareable
   include ContentItem::TitleAndContext
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
   def opening_date_time
     content_item["details"]["opening_date"]
   end

@@ -10,4 +10,9 @@ class WorldLocationNewsArticlePresenter < ContentItemPresenter
   def image
     content_item["details"]["image"]
   end
+
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
 end

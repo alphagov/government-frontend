@@ -1,6 +1,11 @@
 class ContactPresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
 
+  def structured_data
+    # TODO: implement a schema for contacts
+    {}
+  end
+
   def title_and_context
     super.tap do |t|
       t.delete(:average_title_length)

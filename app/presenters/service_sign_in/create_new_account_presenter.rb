@@ -2,6 +2,11 @@ module ServiceSignIn
   class CreateNewAccountPresenter < ContentItemPresenter
     include ServiceSignIn::Paths
 
+    # Signin pages aren't indexed and won't benefit from a schema
+    def structured_data
+      {}
+    end
+
     def page_type
       "create_new_account"
     end

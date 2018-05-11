@@ -25,6 +25,11 @@ class WorkingGroupPresenter < ContentItemPresenter
     end
   end
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
 private
 
   def extra_headings

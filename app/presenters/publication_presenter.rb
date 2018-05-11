@@ -20,6 +20,11 @@ class PublicationPresenter < ContentItemPresenter
     document_type === "national_statistics"
   end
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
 private
 
   def documents_list

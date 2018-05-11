@@ -6,6 +6,11 @@ class ComingSoonPresenter < ContentItemPresenter
     @publish_time = content_item["details"]["publish_time"]
   end
 
+  # Coming soon pages aren't indexed and probably won't benefit from a schema
+  def structured_data
+    {}
+  end
+
   def iso8601_publish_time
     @publish_time # This will be iso8601 because it's a JSON datetime
   end

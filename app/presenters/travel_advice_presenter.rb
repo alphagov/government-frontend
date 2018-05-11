@@ -90,6 +90,11 @@ class TravelAdvicePresenter < ContentItemPresenter
     DateTime.parse(content_item["public_updated_at"])
   end
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
 private
 
   # Treat summary as the first part

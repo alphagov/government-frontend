@@ -2,6 +2,11 @@ module ServiceSignIn
   class ChooseSignInPresenter < ContentItemPresenter
     include ServiceSignIn::Paths
 
+    # Signin pages aren't indexed and won't benefit from a schema
+    def structured_data
+      {}
+    end
+
     def page_type
       "choose_sign_in"
     end

@@ -55,6 +55,11 @@ class HtmlPublicationPresenter < ContentItemPresenter
     request.base_url + request.path
   end
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
 private
 
   def public_timestamp

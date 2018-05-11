@@ -46,6 +46,11 @@ class SpecialistDocumentPresenter < ContentItemPresenter
       .try(:html_safe)
   end
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
 private
 
   def nested_headers

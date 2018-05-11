@@ -69,6 +69,11 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     !cancelled?
   end
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
 private
 
   def state
