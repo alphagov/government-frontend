@@ -44,6 +44,10 @@
     <meta name="twitter:card" content="summary" />
   <% end %>
 
+  <script type="application/ld+json">
+    <%= @content_item.structured_data.to_json.html_safe %>
+  </script>
+
   <%= contextual_comms_test_variant.analytics_meta_tag.html_safe if whitelisted_campaign_page? %>
   <%= yield :extra_head_content %>
 </head>
