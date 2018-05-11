@@ -21,6 +21,18 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
     assert_equal "Type", ContentItemPresenter.new("document_type" => "Type").document_type
   end
 
+  test "#canonical_url without a part" do
+    assert_equal "https://www.test.gov.uk/test", ContentItemPresenter.new("base_path" => "/test").canonical_url
+  end
+
+  test "#canonical_url with a part" do
+    example_with_parts = govuk_content_schema_example('travel_advice', 'full-country')
+    request_path = example_with_parts['base_path'] + '/safety-and-security'
+    presented_example = TravelAdvicePresenter.new(example_with_parts, request_path)
+
+    assert_equal "https://www.test.gov.uk/foreign-travel-advice/albania/safety-and-security", presented_example.canonical_url
+  end
+
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example('case_study', 'translated')
     locales = ContentItemPresenter.new(translated).available_translations
