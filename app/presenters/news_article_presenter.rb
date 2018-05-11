@@ -12,6 +12,6 @@ class NewsArticlePresenter < ContentItemPresenter
   end
 
   def structured_data
-    NewsArticleStructured.new(self).structured_data
+    SchemaOrg::NewsArticleSchema.new(self).structured_data
   end
 end
