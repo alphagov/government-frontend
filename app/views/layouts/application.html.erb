@@ -25,6 +25,8 @@
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
 
+  <link rel="canonical" href="<%= @content_item.canonical_url %>" />
+
   <meta property="og:site_name" content="GOV.UK" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="<%= @content_item.web_url %>" />
