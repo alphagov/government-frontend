@@ -44,7 +44,6 @@
     <meta name="twitter:card" content="summary" />
   <% end %>
 
-  <%= contextual_comms_test_variant.analytics_meta_tag.html_safe if whitelisted_campaign_page? %>
   <%= yield :extra_head_content %>
 </head>
 <body>
