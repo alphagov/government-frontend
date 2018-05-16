@@ -1,6 +1,7 @@
 <%= render 'govuk_publishing_components/components/heading',
   text: t("publication.documents", count: 5), # This should always be pluralised.
-  id: "documents-title" %>
+  id: "documents-title",
+  mobile_top_margin: true %>
 
 <div aria-labelledby="documents-title">
   <%= render 'govuk_component/govspeak',
@@ -8,7 +9,10 @@
              direction: page_text_direction %>
 </div>
 
-<%= render 'govuk_publishing_components/components/heading', text: t("publication.details"), id: "details-title" %>
+<%= render 'govuk_publishing_components/components/heading',
+  text: t("publication.details"),
+  id: "details-title",
+  mobile_top_margin: true %>
 
 <div aria-labelledby="details-title">
   <%= render 'govuk_component/govspeak',

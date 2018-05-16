@@ -31,7 +31,7 @@
       <%= render 'components/notice', title: 'This consultation has concluded' %>
 
       <% if @content_item.final_outcome_documents? %>
-        <%= render 'govuk_publishing_components/components/heading', text: "Download the full outcome" %>
+        <%= render 'govuk_publishing_components/components/heading', text: "Download the full outcome", mobile_top_margin: true %>
         <div class="consultation-outcome">
           <%= render 'govuk_component/govspeak',
               content: @content_item.final_outcome_documents,
@@ -39,7 +39,7 @@
         </div>
       <% end %>
 
-      <%= render 'govuk_publishing_components/components/heading', text: "Detail of outcome" %>
+      <%= render 'govuk_publishing_components/components/heading', text: "Detail of outcome", mobile_top_margin: true %>
       <div class="consultation-outcome-detail">
         <%= render 'govuk_component/govspeak',
             content: @content_item.final_outcome_detail,
@@ -48,7 +48,7 @@
     <% end %>
 
     <% if @content_item.public_feedback_documents? %>
-      <%= render 'govuk_publishing_components/components/heading', text: "Feedback received" %>
+      <%= render 'govuk_publishing_components/components/heading', text: "Feedback received", mobile_top_margin: true %>
       <div class="consultation-feedback-documents">
         <%= render 'govuk_component/govspeak',
             content: @content_item.public_feedback_documents,
@@ -57,7 +57,7 @@
     <% end %>
 
     <% if @content_item.public_feedback_detail %>
-      <%= render 'govuk_publishing_components/components/heading', text: "Detail of feedback received" %>
+      <%= render 'govuk_publishing_components/components/heading', text: "Detail of feedback received", mobile_top_margin: true %>
       <div class="consultation-feedback">
         <%= render 'govuk_component/govspeak',
             content: @content_item.public_feedback_detail,
@@ -68,7 +68,7 @@
     <% if @content_item.final_outcome? %>
       <section class="original-consultation">
         <header>
-          <%= render 'govuk_publishing_components/components/heading', text: "Original consultation", id: "original-consultation-title", heading_level: 2 %>
+          <%= render 'govuk_publishing_components/components/heading', text: "Original consultation", id: "original-consultation-title", heading_level: 2, mobile_top_margin: true %>
         </header>
     <% end %>
 
@@ -102,11 +102,11 @@
 
 
     <div class="consultation-description">
-      <%= render 'govuk_publishing_components/components/heading', text: "Consultation description" %>
+      <%= render 'govuk_publishing_components/components/heading', text: "Consultation description", mobile_top_margin: true %>
       <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
 
       <% if @content_item.documents? %>
-        <%= render 'govuk_publishing_components/components/heading', text: "Documents" %>
+        <%= render 'govuk_publishing_components/components/heading', text: "Documents", mobile_top_margin: true %>
         <div class="consultation-documents">
           <%= render 'govuk_component/govspeak',
               content: @content_item.documents,
@@ -117,7 +117,7 @@
 
     <% if @content_item.ways_to_respond? %>
       <div class="consultation-ways-to-respond">
-        <%= render 'govuk_publishing_components/components/heading', text: "Ways to respond" %>
+        <%= render 'govuk_publishing_components/components/heading', text: "Ways to respond", mobile_top_margin: true %>
           <% @ways_to_respond_body = capture do %>
             <% if @content_item.respond_online_url %>
               <div class="call-to-action">
