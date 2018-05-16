@@ -1,12 +1,3 @@
 <div class="column-one-third">
   <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: @content_item.content_item.parsed_content %>
-  <!-- Rendering the contextual communications campaign test -->
-  <% if show_contextual_comms_campaign? %>
-    <% if show_blue_box_campaign? %>
-      <%= render 'components/blue-box-campaign', title: campaign_title, description: campaign_description, href: campaign_link %>
-    <% end %>
-    <% if show_native_campaign? %>
-      <%= render 'components/native-campaign', title: campaign_title, description: campaign_description, href: campaign_link %>
-    <% end %>
-  <% end %>
 </div>
