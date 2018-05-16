@@ -15,8 +15,7 @@
       disable_youtube_expansions: true,
       rich_govspeak: true %>
 
-    <% #https://github.com/alphagov/government-frontend/pull/329#issuecomment-297681738 %>
-    <% if false && @content_item.last_updated %>
+    <% if @content_item.last_updated %>
       <p class="last-updated">
         <%= t 'common.last_updated' %>: <%= @content_item.last_updated %>
       </p>
