@@ -11,4 +11,9 @@ class TakePartPresenter < ContentItemPresenter
       t.delete(:average_title_length)
     end
   end
+
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
 end

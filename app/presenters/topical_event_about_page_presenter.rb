@@ -9,4 +9,9 @@ class TopicalEventAboutPagePresenter < ContentItemPresenter
       t.delete(:context)
     end
   end
+
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
 end

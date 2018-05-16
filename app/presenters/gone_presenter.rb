@@ -10,4 +10,9 @@ class GonePresenter < ContentItemPresenter
   def page_title
     "No longer available"
   end
+
+  # Gone pages do not need a schem because they're not useful to search engines
+  def structured_data
+    {}
+  end
 end

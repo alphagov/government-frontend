@@ -5,6 +5,11 @@ class CorporateInformationPagePresenter < ContentItemPresenter
   include ContentItem::OrganisationBranding
   include ContentItem::CorporateInformationGroups
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
   def page_title
     page_title = super
     page_title += " - #{default_organisation['title']}" if default_organisation

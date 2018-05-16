@@ -5,6 +5,11 @@ class DocumentCollectionPresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include ContentItem::ContentsList
 
+  def structured_data
+    # TODO: implement a schema, perhaps http://bib.schema.org/Collection
+    {}
+  end
+
   def contents_items
     groups.map do |group|
       title = group["title"]

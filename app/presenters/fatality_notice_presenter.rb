@@ -3,6 +3,11 @@ class FatalityNoticePresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include ContentItem::Metadata
 
+  def structured_data
+    # TODO: implement a schema
+    {}
+  end
+
   def field_of_operation
     content_item_links = content_item["links"]["field_of_operation"]
     if content_item_links
