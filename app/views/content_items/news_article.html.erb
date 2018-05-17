@@ -1,6 +1,8 @@
-<script type="application/ld+json">
-  <%= @content_item.structured_data.to_json.html_safe %>
-</script>
+<% content_for :extra_head_content do %>
+  <%= render 'govuk_publishing_components/components/machine_readable_metadata',
+    schema: :news_article,
+    content_item: @content_item.content_item %>
+<% end %>
 
 <div class="grid-row">
   <div class="column-two-thirds">

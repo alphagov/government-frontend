@@ -45,22 +45,6 @@ class NewsArticlePresenterTest
     test 'presents the locale' do
       assert_equal schema_item['locale'], presented_item.locale
     end
-
-    test 'has no structured data if no publishing org' do
-      expected = {}
-      assert_equal expected, presented_item.structured_data
-    end
-
-    test 'has structured data' do
-      item = { "links" => { "primary_publishing_organisation" => [{ "title" => "Ministry of Magic", "base_path" => "/government/organisations/magic" }] } }
-
-      structured_data = presented_item("news_article", item).structured_data
-
-      assert_equal "https://www.test.gov.uk/government/news/christmas-2016-prime-ministers-message", structured_data["mainEntityOfPage"]["@id"]
-      assert_equal "2016-12-25T00:15:02.000+00:00", structured_data["datePublished"]
-      assert_equal "Ministry of Magic", structured_data["author"]["name"]
-      assert_equal "https://www.test.gov.uk/government/organisations/magic", structured_data["author"]["url"]
-    end
   end
 
   class HistoryModePresentedNewsArticle < NewsArticlePresenterTestCase

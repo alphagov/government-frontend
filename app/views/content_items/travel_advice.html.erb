@@ -1,9 +1,17 @@
-<%
-  content_for :simple_header, true
-  content_for :extra_head_content do %>
+<% content_for :simple_header, true %>
+
+<% content_for :extra_head_content do %>
   <%= auto_discovery_link_tag :atom, @content_item.feed_link,
     title: "Recent updates for #{@content_item.country_name}" %>
+
+  <%= render 'govuk_publishing_components/components/machine_readable_metadata',
+    schema: :article,
+    content_item: @content_item.content_item,
+    canonical_url: @content_item.canonical_url,
+    title: @content_item.page_title,
+    body: @content_item.current_part_body %>
 <% end %>
+
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_component/title', @content_item.title_and_context %>

@@ -10,8 +10,4 @@ class NewsArticlePresenter < ContentItemPresenter
   def image
     content_item["details"]["image"]
   end
-
-  def structured_data
-    NewsArticleStructured.new(self).structured_data
-  end
 end
