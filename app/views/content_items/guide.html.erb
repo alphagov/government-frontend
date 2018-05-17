@@ -1,3 +1,10 @@
+<% content_for :extra_head_content do %>
+  <%= render 'govuk_publishing_components/components/machine_readable_metadata',
+    schema: :article,
+    content_item: @content_item.content_item,
+    canonical_url: @content_item.canonical_url %>
+<% end %>
+
 <% content_for :simple_header, true %>
 <div class="grid-row">
   <div class="column-two-thirds">
