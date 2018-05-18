@@ -21,7 +21,8 @@
   <%= render "govuk_publishing_components/components/fieldset", legend_text: legend_text do %>
     <div class="grid-row">
       <div class="column-two-thirds">
-        <%= render 'govuk_component/govspeak', content: @content_item.description %>
+        <div class="description"><%= render 'govuk_component/govspeak', content: @content_item.description %></div>
+        <br/>
         <% if @error %>
           <%= render "components/error-message", text: t('service_sign_in.error.option') %>
         <% end %>
