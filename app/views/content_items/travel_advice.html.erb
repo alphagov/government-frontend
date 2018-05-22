@@ -4,12 +4,12 @@
   <%= auto_discovery_link_tag :atom, @content_item.feed_link,
     title: "Recent updates for #{@content_item.country_name}" %>
 
-  <%= render 'govuk_publishing_components/components/machine_readable_metadata',
+  <%= machine_readable_metadata(
     schema: :article,
-    content_item: @content_item.content_item,
     canonical_url: @content_item.canonical_url,
     title: @content_item.page_title,
-    body: @content_item.current_part_body %>
+    body: @content_item.current_part_body
+    ) %>
 <% end %>
 
 <div class="grid-row">

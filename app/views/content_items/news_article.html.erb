@@ -1,7 +1,7 @@
 <% content_for :extra_head_content do %>
-  <%= render 'govuk_publishing_components/components/machine_readable_metadata',
+  <%= machine_readable_metadata(
     schema: :news_article,
-    content_item: @content_item.content_item %>
+  ) %>
 <% end %>
 
 <div class="grid-row">
