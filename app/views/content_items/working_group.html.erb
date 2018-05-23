@@ -1,3 +1,9 @@
+<% content_for :extra_head_content do %>
+  <%= machine_readable_metadata(
+    schema: :article
+  ) %>
+<% end %>
+
 <% @additional_body = capture do %>
   <% if @content_item.policies.any? %>
     <h2 id="policies">Policies</h2>
