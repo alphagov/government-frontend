@@ -77,7 +77,7 @@ GEM
       nokogiri (~> 1.8)
     cliver (0.3.2)
     coderay (1.1.2)
-    commander (4.4.4)
+    commander (4.4.5)
       highline (~> 1.7.2)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
@@ -91,7 +91,7 @@ GEM
     execjs (2.7.0)
     faker (1.8.7)
       i18n (>= 0.7)
-    faraday (0.15.1)
+    faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
     gds-api-adapters (52.5.1)
@@ -127,7 +127,7 @@ GEM
     govuk_frontend_toolkit (7.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    govuk_publishing_components (8.1.0)
+    govuk_publishing_components (8.2.0)
       govspeak (>= 5.0.3)
       govuk_app_config
       govuk_frontend_toolkit
@@ -368,7 +368,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 1.5)
   govuk_frontend_toolkit (~> 7.4)
-  govuk_publishing_components (~> 8.1.0)
+  govuk_publishing_components (~> 8.2.0)
   govuk_schemas (~> 3.1)
   htmlentities (~> 4.3)
   jasmine-rails
