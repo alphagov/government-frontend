@@ -25,25 +25,6 @@
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
 
-  <link rel="canonical" href="<%= @content_item.canonical_url %>" />
-
-  <meta property="og:site_name" content="GOV.UK" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="<%= @content_item.canonical_url %>" />
-  <meta property="og:title" content="<%= @content_item.page_title %>" />
-  <meta property="og:description" content="<%= strip_tags(@content_item.description) %>" />
-
-  <% if @content_item.respond_to?(:image) && @content_item.image %>
-    <meta property="og:image" content="<%= @content_item.image["url"] %>" />
-    <meta property="og:image:alt" content="<%= @content_item.image["alt_text"] %>" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="<%= @content_item.image["url"] %>" />
-    <meta name="twitter:image:alt" content="<%= @content_item.image["alt_text"] %>" />
-  <% else %>
-    <meta name="twitter:card" content="summary" />
-  <% end %>
-
   <%= yield :extra_head_content %>
 </head>
 <body>
