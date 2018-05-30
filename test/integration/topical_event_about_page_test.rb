@@ -29,7 +29,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
     visit @content_item["base_path"]
-    refute page.has_css?(".app-c-contents-list")
+    refute page.has_css?(".gem-c-contents-list")
   end
 
   test "contents list displayed when fewer than three items and first item word count is greater than 100" do
@@ -39,7 +39,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
     visit @content_item["base_path"]
-    assert page.has_css?(".app-c-contents-list")
+    assert page.has_css?(".gem-c-contents-list")
   end
 
 private

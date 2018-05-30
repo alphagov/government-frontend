@@ -74,12 +74,12 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
   test "renders a contents list" do
     setup_and_visit_content_item("detailed_guide")
-    assert page.has_css?(".app-c-contents-list")
+    assert page.has_css?(".gem-c-contents-list")
   end
 
   test "renders without contents list if it has fewer than 3 items" do
     setup_and_visit_content_item("national_applicability_alternative_url_detailed_guide")
-    refute page.has_css?(".app-c-contents-list")
+    refute page.has_css?(".gem-c-contents-list")
   end
 
   test "conditionally renders a logo" do

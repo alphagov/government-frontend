@@ -17,7 +17,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
     within ".sidebar-with-body" do
       assert page.has_text?("Contents")
-      assert page.has_css?('.app-c-contents-list')
+      assert page.has_css?('.gem-c-contents-list')
     end
 
     within ".organisation-logos" do

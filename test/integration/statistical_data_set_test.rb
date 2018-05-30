@@ -66,6 +66,6 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     content_store_has_item(item["base_path"], item.to_json)
     visit(item["base_path"])
 
-    refute page.has_css?(".app-c-contents-list")
+    refute page.has_css?(".gem-c-contents-list")
   end
 end

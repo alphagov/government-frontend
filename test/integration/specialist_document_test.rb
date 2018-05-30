@@ -110,11 +110,11 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders a nested contents list" do
     setup_and_visit_content_item('countryside-stewardship-grants')
 
-    assert page.has_css?("#contents .app-c-contents-list")
+    assert page.has_css?("#contents .gem-c-contents-list")
     assert page.has_css?(%(#contents .app-c-contents-list-with-body__link-wrapper
                           .app-c-contents-list-with-body__link-container a.app-c-back-to-top))
 
-    within ".app-c-contents-list" do
+    within ".gem-c-contents-list" do
       @content_item['details']['headers'].each do |heading|
         assert_nested_content_item(heading)
       end
@@ -124,7 +124,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders a nested contents list with level 2 and 3 headings only" do
     setup_and_visit_content_item('drug-device-alerts')
 
-    within ".app-c-contents-list" do
+    within ".gem-c-contents-list" do
       @content_item['details']['headers'].each do |heading|
         assert_nested_content_item(heading)
       end
@@ -166,6 +166,6 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test 'does not render a contents list if there are fewer than three items in the contents list' do
     setup_and_visit_content_item('aaib-reports')
 
-    refute page.has_css?('#contents .app-c-contents-list')
+    refute page.has_css?('#contents .gem-c-contents-list')
   end
 end

@@ -19,7 +19,7 @@ class GuideTest < ActionDispatch::IntegrationTest
   test "draft access tokens are appended to part links within navigation" do
     setup_and_visit_content_item('guide', '?token=some_token')
 
-    assert page.has_css?('.app-c-contents-list a[href$="?token=some_token"]')
+    assert page.has_css?('.gem-c-contents-list a[href$="?token=some_token"]')
   end
 
   test "does not show part navigation, print link or part title when only one part" do
