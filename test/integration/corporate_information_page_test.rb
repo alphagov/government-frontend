@@ -110,7 +110,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/department-of-health/about"
 
-    assert page.has_css?(".app-c-notice__title", text: "This information page was withdrawn on 9 August 2014")
-    assert page.has_css?(".app-c-notice", text: "This is out of date")
+    assert page.has_css?(".gem-c-notice__title", text: "This information page was withdrawn on 9 August 2014")
+    assert page.has_css?(".gem-c-notice", text: "This is out of date")
   end
 end

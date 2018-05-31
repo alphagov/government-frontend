@@ -99,8 +99,8 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 
-    assert page.has_css?(".app-c-notice__title", text: "This policy paper was withdrawn on 9 August 2014")
-    assert page.has_css?(".app-c-notice", text: "This is out of date")
+    assert page.has_css?(".gem-c-notice__title", text: "This policy paper was withdrawn on 9 August 2014")
+    assert page.has_css?(".gem-c-notice", text: "This is out of date")
   end
 
   test "if document has no parent document_type 'publication' is shown" do
@@ -114,6 +114,6 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 
-    assert page.has_css?(".app-c-notice__title", text: "This publication was withdrawn on 9 August 2014")
+    assert page.has_css?(".gem-c-notice__title", text: "This publication was withdrawn on 9 August 2014")
   end
 end
