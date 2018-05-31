@@ -12,7 +12,7 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item['title'])
 
     assert page.has_css?('h1', text: @content_item['details']['parts'].first['title'])
-    assert page.has_css?(shared_component_selector("previous_and_next_navigation"))
+    assert page.has_css?('.gem-c-pagination')
     assert page.has_css?('.app-c-print-link a[href$="/print"]')
   end
 

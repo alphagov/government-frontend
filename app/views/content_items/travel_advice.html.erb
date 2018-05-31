@@ -54,7 +54,7 @@
         content: @content_item.current_part_body,
         direction: page_text_direction %>
 
-    <%= render 'govuk_component/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
+    <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
     <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
   </div>
