@@ -13,7 +13,7 @@
   </div>
   <%= render 'shared/translations', content_item: @content_item %>
   <div class="column-two-thirds">
-    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
     <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/history_notice', content_item: @content_item %>
   </div>

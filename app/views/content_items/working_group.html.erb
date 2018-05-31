@@ -26,7 +26,7 @@
   </div>
   <%= render 'shared/translations' %>
   <div class="column-two-thirds">
-    <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+    <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
     <%= render 'components/contents-list-with-body', contents: @content_item.contents do %>
       <%= render 'govuk_component/govspeak',
             content: "#{@content_item.body} #{@additional_body}",
