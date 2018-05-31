@@ -19,7 +19,7 @@
 </div>
 
 <%= render 'govuk_publishing_components/components/inverse_header', {} do %>
-  <%= render 'govuk_component/title',
+  <%= render 'govuk_publishing_components/components/title',
         title: @content_item.title,
         context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1),
         inverse: true,
