@@ -14,8 +14,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "meta[name='description'][content='It is with great sadness that the Ministry of Defence must confirm that Sir George Pomeroy Colley, died in battle in Zululand on 27 February 1881.']",
       visible: false
     )
-
-    assert_component_parameter("title", "context", "Operations in Zululand")
+    assert page.has_content?("Operations in Zululand")
     assert_has_component_title("Sir George Pomeroy Colley killed in Boer War")
 
     refute page.has_css?(".app-c-notice")

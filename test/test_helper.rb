@@ -77,10 +77,9 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_component_title(title)
-    within shared_component_selector("title") do
-      assert_equal title, JSON.parse(page.text).fetch("title")
-    end
+  def assert_has_component_title(expected_h1)
+    actual_h1 = page.find('h1').text
+    assert_equal actual_h1.strip, expected_h1.strip
   end
 
   def assert_has_component_govspeak(content)
