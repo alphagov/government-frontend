@@ -13,7 +13,7 @@
 
 <%= render 'shared/publisher_metadata_with_logo', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component %>
+<%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
@@ -25,16 +25,16 @@
         <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %>
         <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
       <% end %>
-      <%= render 'components/notice', title: "This consultation isn't open yet", description_text: content_item_unopened %>
+      <%= render 'govuk_publishing_components/components/notice', title: "This consultation isn't open yet", description_text: content_item_unopened %>
 
     <% elsif @content_item.pending_final_outcome? %>
       <% content_item_final_outcome = capture do %>
         Visit this page again soon to download the outcome to this public&nbsp;feedback.
       <% end %>
-      <%= render 'components/notice', title: 'We are analysing your feedback', description_text: content_item_final_outcome, margin_bottom: 0 %>
+      <%= render 'govuk_publishing_components/components/notice', title: 'We are analysing your feedback', description_text: content_item_final_outcome, margin_bottom: 0 %>
 
     <% elsif @content_item.final_outcome? %>
-      <%= render 'components/notice', title: 'This consultation has concluded' %>
+      <%= render 'govuk_publishing_components/components/notice', title: 'This consultation has concluded' %>
 
       <% if @content_item.final_outcome_documents? %>
         <%= render 'govuk_publishing_components/components/heading', text: "Download the full outcome", mobile_top_margin: true %>
