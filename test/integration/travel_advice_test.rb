@@ -23,7 +23,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
       assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part['title'])
     end
 
-    assert page.has_css?(shared_component_selector("previous_and_next_navigation"))
+    assert page.has_css?('.gem-c-pagination')
     assert page.has_css?('.app-c-print-link a[href$="/print"]')
   end
 
