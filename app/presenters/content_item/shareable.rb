@@ -3,11 +3,18 @@ module ContentItem
     include ERB::Util
 
     def share_links
-      {
-        title: "Share this page",
-        facebook_href: facebook_share_url,
-        twitter_href: twitter_share_url
-      }
+      [
+        {
+          href: facebook_share_url,
+          text: 'Facebook',
+          icon: 'facebook'
+        },
+        {
+          href: twitter_share_url,
+          text: 'Twitter',
+          icon: 'twitter'
+        }
+      ]
     end
 
   private
