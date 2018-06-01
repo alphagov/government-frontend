@@ -8,7 +8,7 @@
 
 <div class="grid-row guide-print">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/title', { title: @content_item.title } %>
+    <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
     <% @content_item.parts.each_with_index do |part, index| %>
       <section>
         <h1 class="part-title">
