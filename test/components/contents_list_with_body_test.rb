@@ -40,8 +40,8 @@ class ContentsListWithBodyTest < ComponentTestCase
   test "renders a contents-list component" do
     render(component_path, contents: contents_list) { block }
 
-    assert_select(".app-c-contents-list-with-body .app-c-contents-list")
-    assert_select ".app-c-contents-list__link[href='/one']", text: "1. One"
+    assert_select(".app-c-contents-list-with-body .gem-c-contents-list")
+    assert_select ".gem-c-contents-list__link[href='/one']", text: "1. One"
   end
 
   test "renders a back-to-top component" do
