@@ -34,11 +34,11 @@
   </div>
   <div class="grid-row">
     <div class="column-two-thirds">
-      <%= render 'govuk_component/title', title: @content_item.title %>
+      <%= render 'govuk_publishing_components/components/title', title: @content_item.title %>
     </div>
     <%= render 'shared/translations' %>
     <div class="column-two-thirds">
-      <%= render 'govuk_component/lead_paragraph', text: @content_item.description %>
+      <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
       <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
     </div>
   </div>

@@ -9,7 +9,7 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/title', { title: @content_item.title } %>
+    <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
     <% if @content_item.multi_page_guide? %>
       <aside class="part-navigation-container" role="complementary">
         <%= render "components/contents-list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
@@ -28,7 +28,7 @@
           direction: page_text_direction,
           disable_youtube_expansions: true,
           rich_govspeak: true %>
-      <%= render 'govuk_component/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
+      <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
       <% if @content_item.multi_page_guide? %>
         <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>

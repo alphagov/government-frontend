@@ -25,9 +25,7 @@ module ServiceSignIn
       within "#content form" do
         within ".gem-c-fieldset" do
           within ".gem-c-fieldset__legend" do
-            within shared_component_selector('title') do
-              assert page.has_text?("Prove your identity to continue")
-            end
+            assert_has_component_title "Prove your identity to continue"
           end
 
           within shared_component_selector('govspeak') do
@@ -94,9 +92,7 @@ module ServiceSignIn
       within "#content form" do
         within ".gem-c-fieldset" do
           within ".gem-c-fieldset__legend" do
-            within shared_component_selector('title') do
-              assert page.has_text?("Profwch pwy ydych chi i fwrw ymlaen")
-            end
+            assert_has_component_title "Profwch pwy ydych chi i fwrw ymlaen"
           end
 
           within shared_component_selector('govspeak') do
