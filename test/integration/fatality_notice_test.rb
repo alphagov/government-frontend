@@ -33,11 +33,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "Field of operation": { "Zululand": "/government/fields-of-operation/zululand" }
     )
 
-    assert_component_parameter(
-      "lead_paragraph",
-      "text",
-      "It is with great sadness that the Ministry of Defence must confirm that Sir George Pomeroy Colley, died in battle in Zululand on 27 February 1881."
-    )
+    assert page.has_content?("It is with great sadness that the Ministry of Defence must confirm that Sir George Pomeroy Colley, died in battle")
 
     assert(
       page.has_css?("img[src*=ministry-of-defence-crest][alt='Ministry of Defence crest']"),
