@@ -48,7 +48,7 @@
   </div>
 
   <div class="column-three-quarters-desktop-only <% unless @content_item.contents.any? %>offset-quarter-desktop-only<% end %>">
-    <%= render 'govuk_component/govspeak_html_publication', @content_item.govspeak_body %>
+    <%= render 'govuk_publishing_components/components/govspeak_html_publication', @content_item.govspeak_body %>
   </div>
 
   <div data-sticky-element class="govuk-sticky-element">
