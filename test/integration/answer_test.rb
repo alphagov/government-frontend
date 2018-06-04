@@ -8,7 +8,7 @@ class AnswerTest < ActionDispatch::IntegrationTest
   test "renders title and body" do
     setup_and_visit_content_item('answer')
     assert page.has_text?(@content_item["title"])
-    assert_has_component_govspeak("Bydd angen cod cychwyn arnoch i ddechrau defnyddio’r holl wasanaethau hyn, ac eithrio TAW. Anfonir hwn atoch cyn pen saith diwrnod gwaith ar ôl i chi gofrestru. Os ydych chi’n byw dramor, gall gymryd hyd at 21 diwrnod i gyrraedd.")
+    assert page.has_text?("Bydd angen cod cychwyn arnoch i ddechrau defnyddio’r holl wasanaethau hyn, ac eithrio TAW. Anfonir hwn atoch cyn pen saith diwrnod gwaith ar ôl i chi gofrestru. Os ydych chi’n byw dramor, gall gymryd hyd at 21 diwrnod i gyrraedd.")
   end
 
   test "related links are rendered" do

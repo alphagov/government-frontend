@@ -8,8 +8,8 @@ class ContactTest < ActionDispatch::IntegrationTest
   test "online forms are rendered" do
     setup_and_visit_content_item('contact')
 
-    assert_has_component_govspeak("If HMRC needs to contact you about anything confidential they’ll reply by phone or post.")
-    assert_has_component_govspeak("Contact HMRC to report suspicious activity in relation to smuggling, customs, excise and VAT fraud.")
+    assert page.has_text?("If HMRC needs to contact you about anything confidential they’ll reply by phone or post.")
+    assert page.has_text?("Contact HMRC to report suspicious activity in relation to smuggling, customs, excise and VAT fraud.")
 
     assert page.has_css?("h2#online-forms-title")
     first_contact_form_link = @content_item["details"]["contact_form_links"].first

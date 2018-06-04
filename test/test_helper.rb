@@ -83,10 +83,6 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_component_govspeak(content)
-    assert page.has_text?(content.squish)
-  end
-
   def assert_has_component_organisation_logo(logo, index = 1)
     within(shared_component_selector("organisation_logo") + ":nth-of-type(#{index})") do
       assert_equal logo, JSON.parse(page.text).deep_symbolize_keys

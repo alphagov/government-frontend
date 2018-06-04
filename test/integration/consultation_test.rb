@@ -74,7 +74,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert page.has_text?("4pm on 20 April 2016 to 10:45pm on 13 July 2016")
 
     within '.consultation-outcome-detail' do
-      assert_has_component_govspeak(@content_item["details"]["final_outcome_detail"])
+      assert page.has_text?(@content_item["details"]["final_outcome_detail"])
     end
   end
 

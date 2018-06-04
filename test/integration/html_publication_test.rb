@@ -24,7 +24,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?(@content_item["links"]["organisations"][0]["title"])
     end
 
-    assert_has_component_govspeak_html_publication(@content_item["details"]["body"])
+    assert page.has_text?("The Environment Agency will normally put any responses it receives on the public register. This includes your name and contact details. Tell us if you don’t want your response to be public.")
   end
 
   test "html publications with meta data" do
@@ -75,10 +75,6 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publication with rtl text direction" do
     setup_and_visit_content_item("arabic_translation")
     assert page.has_css?("#wrapper.direction-rtl"), "has .direction-rtl class on #wrapper element"
-  end
-
-  def assert_has_component_govspeak_html_publication(content)
-    assert_has_component_govspeak("The Environment Agency will normally put any responses it receives on the public register. This includes your name and contact details. Tell us if you don’t want your response to be public.")
   end
 
   def assert_has_component_organisation_logo_with_brand(brand, index = 1)
