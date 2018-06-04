@@ -31,7 +31,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('full-country')
 
     assert page.has_css?("h1", text: "Summary")
-    assert_has_component_govspeak(@content_item["details"]["summary"])
+    assert_has_component_govspeak("The main opposition party has called for mass protests against the government in Tirana on 18 February 2017. The political atmosphere is likely to become changeable as the country approaches national elections on 18 June 2017.")
 
     assert_has_component_metadata_pair("Still current at", Date.today.strftime("%-d %B %Y"))
     assert_has_component_metadata_pair("Updated", Date.parse(@content_item["details"]["reviewed_at"]).strftime("%-d %B %Y"))
@@ -55,7 +55,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?("title", visible: false, text: "#{first_part['title']} - #{@content_item['title']}")
     assert page.has_css?("h1", text: first_part['title'])
-    assert_has_component_govspeak(first_part['body'])
+    assert_has_component_govspeak("Public security is generally good, particularly in Tirana, and Albanians are very hospitable to visitors.")
 
     refute page.has_css?(".map")
     refute page.has_css?(shared_component_selector("metadata"))

@@ -11,7 +11,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert_has_component_govspeak("As with the core Chevening Scheme this fellowship is an open competition. Applications from eligible countries will be assessed against each other by an independent panel and the top application for each topic received will be awarded.")
   end
 
   test "renders first published, from and part of in metadata and document footer" do

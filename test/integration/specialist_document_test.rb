@@ -32,7 +32,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert_has_component_govspeak("The gyroplane began to move forward against the brakes before sufficient rotor rpm had been achieved for takeoff.")
   end
 
   test "returns example for residential tribunal decision" do
@@ -40,7 +40,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert_has_component_govspeak("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
   end
 
   test "renders from in publisher metadata" do

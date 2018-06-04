@@ -6,7 +6,7 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
     assert_has_component_government_navigation_active("announcements")
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert page.has_text?("This year, the United Kingdom has had much to celebrate. Her Majesty The Queen celebrated her 90th birthday")
   end
 
   test "renders first published and from in metadata and document footer" do

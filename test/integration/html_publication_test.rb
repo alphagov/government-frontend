@@ -78,9 +78,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_govspeak_html_publication(content)
-    within shared_component_selector("govspeak_html_publication") do
-      assert_equal content, JSON.parse(page.text).fetch("content")
-    end
+    assert_has_component_govspeak("The Environment Agency will normally put any responses it receives on the public register. This includes your name and contact details. Tell us if you don’t want your response to be public.")
   end
 
   def assert_has_component_organisation_logo_with_brand(brand, index = 1)

@@ -9,7 +9,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('topical_event_about_page')
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert_has_component_govspeak("The risk of Ebola to the UK remains low. The virus is only transmitted by direct contact with the blood or bodily fluids of an infected person.")
     assert_has_contents_list([
       { text: "Response in the UK", id: "response-in-the-uk" },
       { text: "Response in Africa", id: "response-in-africa" },

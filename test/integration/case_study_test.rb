@@ -22,7 +22,7 @@ class CaseStudyTest < ActionDispatch::IntegrationTest
 
     within ".gem-c-notice" do
       assert page.has_text?('This case study was withdrawn'), "is withdrawn"
-      assert_has_component_govspeak(@content_item["withdrawn_notice"]["explanation"])
+      assert_has_component_govspeak("We’ve withdrawn this case study and published newer")
       assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
     end
   end

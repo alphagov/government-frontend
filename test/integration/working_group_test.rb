@@ -18,13 +18,9 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
       { text: "Meeting Minutes",    id: "meeting-minutes" },
       { text: "Contact details",    id: "contact-details" },
     ])
-    within_component_govspeak do |component_args|
-      content = component_args.fetch("content")
-      assert content.include? @content_item["details"]["body"]
 
-      html = Nokogiri::HTML.parse(content)
-      assert_not_nil html.at_css("h2#contact-details")
-    end
+    assert page.has_text?("Benefits and Credits Consultation Group meeting 28 May 2014")
+    assert page.has_css?("h2#contact-details")
   end
 
   test "with_policies" do
@@ -34,10 +30,7 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Policies")
     assert page.has_text?(policy["title"])
 
-    within_component_govspeak do |component_args|
-      html = Nokogiri::HTML.parse(component_args.fetch("content"))
-      assert_not_nil html.at_css("h2#policies")
-    end
+    assert page.has_css?("h2#policies")
   end
 
   test "with a body that has no h2s" do

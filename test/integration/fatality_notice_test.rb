@@ -40,6 +40,8 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       'should have image with ministry-of-defence source with alt text'
     )
 
+    assert_has_component_govspeak("Colley served nearly all of his military and administrative career in British South Africa, but he played a significant part in the Second Anglo-Afghan War as military secretary and then private secretary to the governor-general of India, Lord Lytton. The war began in November 1878 and ended in May 1879 with the Treaty of Gandamak.")
+
     within(".content-bottom-margin .app-c-published-dates") do
       assert page.has_content?("Published 27 February 1881")
       assert page.has_content?("Last updated 14 September 2016")
@@ -77,9 +79,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     within ".gem-c-notice" do
       assert_text("This fatality notice was withdrawn on 14 September 2016")
 
-      assert_has_component_govspeak(
-        "<div class=\"govspeak\"><p>This content is not factually correct. For current information please go to <a rel=\"external\" href=\"https://en.wikipedia.org/wiki/George_Pomeroy_Colley\">https://en.wikipedia.org/wiki/George_Pomeroy_Colley</a></p></div>"
-      )
+      assert_has_component_govspeak("This content is not factually correct. For current information please go to")
     end
   end
 end

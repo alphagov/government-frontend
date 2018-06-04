@@ -18,7 +18,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 4 November 2016", "Last updated 7 November 2016")
 
     within '.consultation-description' do
-      assert_has_component_govspeak(@content_item["details"]["body"])
+      assert page.has_text?("We are seeking external views on a postgraduate doctoral loan.")
     end
   end
 
@@ -26,7 +26,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('closed_consultation')
 
     within '.consultation-documents' do
-      assert_has_component_govspeak(@content_item["details"]["documents"].join(''))
+      assert page.has_text?("Museums Review Terms of Reference")
     end
   end
 
@@ -83,7 +83,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
     assert page.has_text?("Detail of feedback received")
     within '.consultation-feedback' do
-      assert_has_component_govspeak(@content_item["details"]["public_feedback_detail"])
+      assert page.has_text?("The majority of respondents agreed or strongly agreed with our proposals, which were:")
     end
   end
 
@@ -91,7 +91,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('consultation_outcome')
 
     within '.consultation-outcome' do
-      assert_has_component_govspeak(@content_item["details"]["final_outcome_documents"].join(''))
+      assert page.has_text?("Employee Share Schemes: NIC elections - consulation response")
     end
   end
 
@@ -100,7 +100,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
     assert page.has_text?("Feedback received")
     within '.consultation-feedback-documents' do
-      assert_has_component_govspeak(@content_item["details"]["public_feedback_documents"].join(''))
+      assert page.has_text?("Analysis of responses to our consultation on setting the grade standards of new GCSEs in England – part 2")
     end
   end
 
@@ -114,14 +114,10 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('open_consultation_with_participation')
 
     within '.consultation-ways-to-respond' do
-      within_component_govspeak do |component_args|
-        content = component_args.fetch("content")
-        html = Nokogiri::HTML.parse(content)
-        assert html.at_css(".call-to-action a[href='https://beisgovuk.citizenspace.com/ukgi/post-office-network-consultation']", text: 'Respond online')
-        assert html.at_css("a[href='mailto:po.consultation@ukgi.gov.uk']", text: 'po.consultation@ukgi.gov.uk')
-        assert html.at_css(".contact", text: '2016 Post Office Network Consultation')
-        assert html.at_css("a[href='https://www.gov.uk/government/uploads/system/uploads/consultation_response_form_data/file/533/beis-16-36rf-post-office-network-consultation-response-form.docx']", text: 'response form')
-      end
+      assert page.has_css?(".call-to-action a[href='https://beisgovuk.citizenspace.com/ukgi/post-office-network-consultation']", text: 'Respond online')
+      assert page.has_css?("a[href='mailto:po.consultation@ukgi.gov.uk']", text: 'po.consultation@ukgi.gov.uk')
+      assert page.has_css?(".contact", text: '2016 Post Office Network Consultation')
+      assert page.has_css?("a[href='https://www.gov.uk/government/uploads/system/uploads/consultation_response_form_data/file/533/beis-16-36rf-post-office-network-consultation-response-form.docx']", text: 'response form')
     end
   end
 
@@ -129,12 +125,8 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('open_consultation_with_participation')
 
     within '.consultation-ways-to-respond' do
-      within_component_govspeak do |component_args|
-        content = component_args.fetch("content")
-        html = Nokogiri::HTML.parse(content)
-        assert html.at_css(".contact .content p", text: '2016 Post Office Network Consultation')
-        assert html.at_css(".contact .content p br")
-      end
+      assert page.has_css?(".contact .content p", text: '2016 Post Office Network Consultation')
+      assert page.has_css?(".contact .content p br")
     end
   end
 

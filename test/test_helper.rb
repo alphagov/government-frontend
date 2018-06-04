@@ -84,16 +84,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_govspeak(content)
-    within_component_govspeak do
-      assert_equal content.squish, JSON.parse(page.text).fetch("content").squish
-    end
-  end
-
-  def within_component_govspeak
-    within(shared_component_selector("govspeak")) do
-      component_args = JSON.parse(page.text)
-      yield component_args
-    end
+    assert page.has_text?(content.squish)
   end
 
   def assert_has_component_organisation_logo(logo, index = 1)
