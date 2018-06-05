@@ -1,11 +1,11 @@
 <% if @content_item.body.present? %>
-  <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+  <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
 <% end %>
 
 <% @content_item.groups.each_with_index do |group, group_index| %>
   <%= @content_item.group_heading(group) %>
   <% if group["body"].present? %>
-    <%= render 'govuk_component/govspeak',
+    <%= render 'govuk_publishing_components/components/govspeak',
         content: group["body"],
         direction: page_text_direction %>
   <% end %>

@@ -6,7 +6,7 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert page.has_text?("This is not intended to be a comprehensive review of transport performance in London or Great Britain during the Games, but supplements evidence from other sources.")
   end
 
   test "renders metadata and document footer" do
@@ -25,12 +25,11 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('title', text: "[Withdrawn]", visible: false)
 
-    withdrawn_notice_explanation = @content_item["withdrawn_notice"]["explanation"]
     withdrawn_at = @content_item["withdrawn_notice"]["withdrawn_at"]
 
-    within ".app-c-notice" do
+    within ".gem-c-notice" do
       assert page.has_text?("This statistical data set was withdrawn"), "is withdrawn"
-      assert_has_component_govspeak(withdrawn_notice_explanation)
+      assert page.has_text?("Local area walking and cycling in England: 2014 to 2015")
       assert page.has_css?("time[datetime='#{withdrawn_at}']")
     end
   end

@@ -6,7 +6,7 @@ class SpeechTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert page.has_text?("These subjects are of course crucial.  But in the UK, only 1 woman to every 7 men works in science, technology, engineering and maths.  We need to get more girls interested and excited about STEM subjects.")
   end
 
   test "translated speech" do

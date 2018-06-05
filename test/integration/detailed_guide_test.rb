@@ -34,11 +34,9 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('title', text: "[Withdrawn]", visible: false)
 
-    within ".app-c-notice" do
-      assert page.has_text?('This guidance was withdrawn'), "is withdrawn"
-      assert_has_component_govspeak(@content_item["withdrawn_notice"]["explanation"])
-      assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
-    end
+    assert page.has_text?('This guidance was withdrawn'), "is withdrawn"
+    assert page.has_text?("This information has been archived as it is now out of date. For current information please go to")
+    assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
   end
 
   test "historically political detailed guide" do

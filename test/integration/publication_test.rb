@@ -12,7 +12,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
 
     within '[aria-labelledby="details-title"]' do
-      assert_has_component_govspeak(@content_item["details"]["body"])
+      assert page.has_text?("Installation name: Leeming Biogas Facility")
     end
   end
 
@@ -35,7 +35,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "renders a govspeak block for attachments" do
     setup_and_visit_content_item('publication')
     within '[aria-labelledby="documents-title"]' do
-      assert_has_component_govspeak(@content_item["details"]["documents"].join(''))
+      assert page.has_text?("Permit: Veolia ES (UK) Limited")
     end
   end
 
@@ -43,9 +43,9 @@ class PublicationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('withdrawn_publication')
     assert page.has_css?('title', text: "[Withdrawn]", visible: false)
 
-    within ".app-c-notice" do
+    within ".gem-c-notice" do
       assert page.has_text?('This publication was withdrawn'), "is withdrawn"
-      assert_has_component_govspeak(@content_item["withdrawn_notice"]["explanation"])
+      assert page.has_text?("guidance for keepers of sheep, goats and pigs")
       assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
     end
   end

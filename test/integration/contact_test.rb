@@ -7,63 +7,45 @@ class ContactTest < ActionDispatch::IntegrationTest
 
   test "online forms are rendered" do
     setup_and_visit_content_item('contact')
-    within_component_govspeak do |component_args|
-      content = component_args.fetch("content")
 
-      assert content.include? @content_item["details"]["more_info_contact_form"]
-      first_contact_form_link = @content_item["details"]["contact_form_links"].first
+    assert page.has_text?("If HMRC needs to contact you about anything confidential they’ll reply by phone or post.")
+    assert page.has_text?("Contact HMRC to report suspicious activity in relation to smuggling, customs, excise and VAT fraud.")
 
-      assert content.include? first_contact_form_link['description']
-
-      html = Nokogiri::HTML.parse(content)
-      assert_not_nil html.at_css("h2#online-forms-title")
-      assert_not_nil html.at_css("a[href='#{first_contact_form_link['link']}']")
-    end
+    assert page.has_css?("h2#online-forms-title")
+    first_contact_form_link = @content_item["details"]["contact_form_links"].first
+    assert page.has_css?("a[href='#{first_contact_form_link['link']}']")
   end
 
   test "emails are rendered" do
     setup_and_visit_content_item('contact')
-    within_component_govspeak do |component_args|
-      content = component_args.fetch("content")
 
-      html = Nokogiri::HTML.parse(content)
-      assert_not_nil html.at_css("h2#email-title")
-      assert_not_nil html.at_css(".email:first-of-type")
-    end
+    assert page.has_css?("h2#email-title")
+    assert page.has_css?(".email:first-of-type")
   end
 
   test "phones are rendered" do
     setup_and_visit_content_item('contact')
-    within_component_govspeak do |component_args|
-      first_phone = @content_item["details"]["phone_numbers"].first
-      html = Nokogiri::HTML.parse(component_args.fetch("content"))
 
-      assert_not_nil html.at_css("h2#phone-title")
-      assert_not_nil html.at("h3:contains(\"#{first_phone['title']}\")")
-      assert_not_nil html.at("p:contains(\"#{first_phone['number']}\")")
-      assert_not_nil html.at("p:contains(\"24 hours a day, 7 days a week\")")
-    end
+    first_phone = @content_item["details"]["phone_numbers"].first
+
+    assert page.has_css?("h2#phone-title")
+    assert page.has_css?("h3", text: first_phone['title'])
+    assert page.has_css?("p", text: first_phone['number'])
+    assert page.has_css?("p", text: "24 hours a day, 7 days a week")
   end
 
   test "phone number heading is not rendered when only one number" do
     setup_and_visit_content_item('contact_with_welsh')
-    within_component_govspeak do |component_args|
-      first_phone = @content_item["details"]["phone_numbers"].first
-      html = Nokogiri::HTML.parse(component_args.fetch("content"))
 
-      assert_equal 1, @content_item["details"]["phone_numbers"].size
-      refute html.at("h3:contains(\"#{first_phone['title']}\")")
-    end
+    assert_equal 1, @content_item["details"]["phone_numbers"].size
+    first_phone = @content_item["details"]["phone_numbers"].first
+    refute page.has_css?("h3", text: first_phone['title'])
   end
 
   test "posts are rendered" do
     setup_and_visit_content_item('contact')
-    within_component_govspeak do |component_args|
-      content = component_args.fetch("content")
-      html = Nokogiri::HTML.parse(content)
 
-      assert_not_nil html.at_css("h2#post-title")
-      assert_not_nil html.at_css(".street-address")
-    end
+    assert page.has_css?("h2#post-title")
+    assert page.has_css?(".street-address")
   end
 end

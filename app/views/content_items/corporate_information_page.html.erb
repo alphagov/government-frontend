@@ -39,7 +39,7 @@
     <%= render 'shared/translations' %>
     <div class="column-two-thirds">
       <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
-      <%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+      <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
     </div>
   </div>
 
@@ -47,7 +47,7 @@
     <div class="column-two-thirds">
       <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
         <div class="responsive-bottom-margin">
-          <%= render 'govuk_component/govspeak', content: "#{@content_item.body}#{@additional_body}" %>
+          <%= render 'govuk_publishing_components/components/govspeak', content: "#{@content_item.body}#{@additional_body}" %>
         </div>
       <% end %>
     </div>

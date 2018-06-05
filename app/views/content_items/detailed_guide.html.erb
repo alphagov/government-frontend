@@ -16,14 +16,14 @@
 
 <%= render 'shared/publisher_metadata_with_logo' %>
 <%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'components/notice', @content_item.withdrawal_notice_component  %>
+<%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'components/important-metadata', items: @content_item.important_metadata %>
 
     <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
-      <%= render 'govuk_component/govspeak', @content_item.govspeak_body %>
+      <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
 
       <div class="responsive-bottom-margin">
         <%= render 'components/published-dates', {

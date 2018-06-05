@@ -6,7 +6,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert page.has_text?("Ni all y Gofrestrfa Tir drafod achosion unigol ar ein sianeli cyfryngau cymdeithasol. Ni fyddwn yn gofyn i chi ddatgelu gwybodaeth bersonol na thalu trwy Twitter, Facebook, LinkedIn nac ebost. Os cewch neges o’r fath, peidiwch ag ymateb – nid yw gan y Gofrestrfa Tir a gall fod yn faleisus.")
   end
 
   test "renders with contents list" do
@@ -33,28 +33,19 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
   test "renders corporate information with body when present" do
     setup_and_visit_content_item('corporate_information_page')
 
-    within_component_govspeak do |component_args|
-      content = component_args.fetch("content")
-      assert content.gsub(/\s+/, ' ').include? @content_item["details"]["body"].gsub(/\s+/, ' ')
+    assert page.has_css?("h2#corporate-information")
+    assert page.has_css?("h3#access-our-information")
+    assert page.has_css?("h3#jobs-and-contracts")
 
-      html = Nokogiri::HTML.parse(content)
-      assert_not_nil html.at_css("h2#corporate-information")
-      assert_not_nil html.at_css("h3#access-our-information")
-      assert_not_nil html.at_css("h3#jobs-and-contracts")
-
-      assert_not_nil html.at_css("ul li a[href='/government/organisations/department-of-health/about/complaints-procedure']")
-      assert_not_nil html.at_css("ul li a[href*='/government/publications']")
-      assert_not_nil html.at_css("ul li a[href='https://www.civilservicejobs.service.gov.uk/csr']")
-    end
+    assert page.has_css?("ul li a[href='/government/organisations/department-of-health/about/complaints-procedure']")
+    assert page.has_css?("ul li a[href*='/government/publications']")
+    assert page.has_css?("ul li a[href='https://www.civilservicejobs.service.gov.uk/csr']")
   end
 
   test "renders further information with body when present" do
     setup_and_visit_content_item('corporate_information_page')
 
-    within_component_govspeak do |component_args|
-      content = component_args.fetch("content")
-      assert content.gsub(/\s+/, ' ').include? "Read about the types of information we routinely"
-    end
+    assert page.has_text?("Read about the types of information we routinely")
   end
 
   test "renders with organisation branding" do
@@ -110,7 +101,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
 
     visit "/government/organisations/department-of-health/about"
 
-    assert page.has_css?(".app-c-notice__title", text: "This information page was withdrawn on 9 August 2014")
-    assert page.has_css?(".app-c-notice", text: "This is out of date")
+    assert page.has_css?(".gem-c-notice__title", text: "This information page was withdrawn on 9 August 2014")
+    assert page.has_css?(".gem-c-notice", text: "This is out of date")
   end
 end

@@ -24,7 +24,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?(@content_item["links"]["organisations"][0]["title"])
     end
 
-    assert_has_component_govspeak_html_publication(@content_item["details"]["body"])
+    assert page.has_text?("The Environment Agency will normally put any responses it receives on the public register. This includes your name and contact details. Tell us if you don’t want your response to be public.")
   end
 
   test "html publications with meta data" do
@@ -77,12 +77,6 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     assert page.has_css?("#wrapper.direction-rtl"), "has .direction-rtl class on #wrapper element"
   end
 
-  def assert_has_component_govspeak_html_publication(content)
-    within shared_component_selector("govspeak_html_publication") do
-      assert_equal content, JSON.parse(page.text).fetch("content")
-    end
-  end
-
   def assert_has_component_organisation_logo_with_brand(brand, index = 1)
     within("li.organisation-logo:nth-of-type(#{index}) #{shared_component_selector('organisation_logo')}") do
       assert_equal brand, JSON.parse(page.text).fetch("organisation").fetch("brand")
@@ -99,8 +93,8 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 
-    assert page.has_css?(".app-c-notice__title", text: "This policy paper was withdrawn on 9 August 2014")
-    assert page.has_css?(".app-c-notice", text: "This is out of date")
+    assert page.has_css?(".gem-c-notice__title", text: "This policy paper was withdrawn on 9 August 2014")
+    assert page.has_css?(".gem-c-notice", text: "This is out of date")
   end
 
   test "if document has no parent document_type 'publication' is shown" do
@@ -114,6 +108,6 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 
-    assert page.has_css?(".app-c-notice__title", text: "This publication was withdrawn on 9 August 2014")
+    assert page.has_css?(".gem-c-notice__title", text: "This publication was withdrawn on 9 August 2014")
   end
 end

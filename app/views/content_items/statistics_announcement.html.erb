@@ -33,13 +33,13 @@
     <% end %>
 
     <% if @content_item.cancelled? %>
-      <%= render 'components/notice',
+      <%= render 'govuk_publishing_components/components/notice',
           title: 'Statistics release cancelled',
           description_text: @content_item.cancellation_reason %>
     <% end %>
 
     <% if @content_item.forthcoming_publication? %>
-      <%= render 'components/notice',
+      <%= render 'govuk_publishing_components/components/notice',
           title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
     <% end %>
   </div>

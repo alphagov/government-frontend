@@ -27,7 +27,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    within '.app-c-notice' do
+    within '.gem-c-notice' do
       assert page.has_text?('Statistics release cancelled'), "is cancelled"
       assert page.has_text?(@content_item["details"]["cancellation_reason"]), "displays cancelleation reason"
     end
@@ -57,7 +57,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
   test "statistics announcement that are not cancelled display forthcoming notice" do
     setup_and_visit_content_item('official_statistics')
 
-    within(".app-c-notice") do
+    within(".gem-c-notice") do
       assert_text "#{StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE} on #{@content_item['details']['display_date']}"
     end
   end

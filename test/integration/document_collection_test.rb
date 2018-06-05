@@ -34,7 +34,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
   test "renders body when provided" do
     setup_and_visit_content_item('document_collection_with_body')
-    assert_has_component_govspeak(@content_item["details"]["body"])
+    assert page.has_text?("Each regime page provides a current list of asset freeze targets designated by the United Nations (UN), European Union and United Kingdom, under legislation relating to current financial sanctions regimes.")
   end
 
   test "renders contents with link to each collection group" do
@@ -69,7 +69,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     end
 
     within ".app-c-contents-list-with-body" do
-      assert page.has_css?(shared_component_selector("govspeak"), count: group_count)
+      assert page.has_css?(".gem-c-govspeak", count: group_count)
       assert page.has_css?('.gem-c-document-list', count: group_count)
     end
   end
@@ -142,9 +142,9 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('document_collection_withdrawn')
     assert page.has_css?('title', text: "[Withdrawn]", visible: false)
 
-    within ".app-c-notice" do
+    within ".gem-c-notice" do
       assert page.has_text?('This collection was withdrawn'), "is withdrawn"
-      assert_has_component_govspeak(@content_item["withdrawn_notice"]["explanation"])
+      assert page.has_text?("This information is now out of date.")
       assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
     end
   end
