@@ -30,7 +30,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders title, description and body" do
     setup_and_visit_content_item('aaib-reports')
 
-    assert_has_component_title(@content_item["title"])
+    assert_has_component_title(@content_item["title"].strip)
     assert page.has_text?(@content_item["description"])
     assert page.has_text?("The gyroplane began to move forward against the brakes before sufficient rotor rpm had been achieved for takeoff.")
   end

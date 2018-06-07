@@ -78,9 +78,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_title(title)
-    within shared_component_selector("title") do
-      assert_equal title, JSON.parse(page.text).fetch("title")
-    end
+    assert page.has_css?('h1', text: title)
   end
 
   def assert_has_component_organisation_logo(logo, index = 1)

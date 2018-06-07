@@ -21,9 +21,8 @@ module ServiceSignIn
       setup_and_visit_create_new_account_page
 
       assert page.has_css?("title", text: 'Create an account - GOV.UK', visible: false)
-      within shared_component_selector('title') do
-        assert page.has_text?("Create an account")
-      end
+
+      assert_has_component_title "Create an account"
 
       assert page.has_text?("To use this service, you need to create either a Government Gateway or GOV.UK Verify account. These are used to help fight identity theft.")
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
