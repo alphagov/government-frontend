@@ -90,7 +90,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_government_navigation_active(active)
-    assert_component_parameter("government_navigation", "active", active)
+    assert page.has_css?("a", class: 'active', text: active)
   end
 
   def assert_has_contents_list(contents)
