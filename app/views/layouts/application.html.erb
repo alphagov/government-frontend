@@ -29,7 +29,7 @@
 </head>
 <body>
   <% unless content_for(:simple_header) %>
-    <%= render partial: 'govuk_component/government_navigation', locals: { active: active_proposition } %>
+    <%= render 'govuk_publishing_components/components/government_navigation', active: active_proposition %>
   <% end %>
 
   <div id="wrapper" class="<%= wrapper_class %>">
