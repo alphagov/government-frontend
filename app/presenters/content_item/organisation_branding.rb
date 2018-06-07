@@ -6,7 +6,7 @@ module ContentItem
       logo = organisation["details"]["logo"]
       logo_component_params = {
         organisation: {
-          name: logo["formatted_title"],
+          name: logo["formatted_title"].html_safe,
           url: organisation["base_path"],
           brand: organisation_brand(organisation),
           crest: logo["crest"],

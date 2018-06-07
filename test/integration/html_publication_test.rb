@@ -20,10 +20,6 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.has_css?('.gem-c-contents-list')
     end
 
-    within ".organisation-logos" do
-      assert page.has_text?(@content_item["links"]["organisations"][0]["title"])
-    end
-
     assert page.has_text?("The Environment Agency will normally put any responses it receives on the public register. This includes your name and contact details. Tell us if you don’t want your response to be public.")
   end
 
@@ -78,8 +74,8 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_organisation_logo_with_brand(brand, index = 1)
-    within("li.organisation-logo:nth-of-type(#{index}) #{shared_component_selector('organisation_logo')}") do
-      assert_equal brand, JSON.parse(page.text).fetch("organisation").fetch("brand")
+    within("li.organisation-logo:nth-of-type(#{index})") do
+      assert page.has_css?(".gem-c-organisation-logo.brand--#{brand}")
     end
   end
 

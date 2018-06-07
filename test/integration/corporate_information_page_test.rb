@@ -65,30 +65,12 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
 
   test "renders an organisation logo" do
     setup_and_visit_content_item('corporate_information_page')
-    assert_has_component_organisation_logo(
-      organisation: {
-        name: 'Department<br/>of Health',
-        url: '/government/organisations/department-of-health',
-        brand: 'department-of-health',
-        crest: 'single-identity'
-      }
-    )
+    assert_has_component_organisation_logo
   end
 
   test "renders a custom organisation logo" do
     setup_and_visit_content_item('corporate_information_page_translated_custom_logo')
-    assert_has_component_organisation_logo(
-      organisation: {
-        name: 'Land Registry',
-        url: '/government/organisations/land-registry',
-        brand: 'department-for-business-innovation-skills',
-        crest: nil,
-        image: {
-          url: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/69/LR_logo_265.png',
-          alt_text: 'Land Registry'
-        }
-      }
-    )
+    assert_has_component_organisation_logo
   end
 
   test 'renders a withdrawal notice on withdrawn page' do
