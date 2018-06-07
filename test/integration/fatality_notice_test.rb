@@ -15,7 +15,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       visible: false
     )
 
-    assert_component_parameter("title", "context", "Operations in Zululand")
+    assert page.has_content?("Operations in Zululand")
     assert_has_component_title("Sir George Pomeroy Colley killed in Boer War")
 
     refute page.has_css?(".gem-c-notice")

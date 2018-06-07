@@ -9,7 +9,7 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_component/title', { title: @content_item.title } %>
+    <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
     <% if @content_item.multi_page_guide? %>
       <aside class="part-navigation-container" role="complementary">
         <%= render "govuk_publishing_components/components/contents_list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
