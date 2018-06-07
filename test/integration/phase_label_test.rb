@@ -9,7 +9,7 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
 
     visit "/government/case-studies/get-britain-building-carlisle-park"
 
-    assert page.has_css?("[data-template='govuk_component-alpha_label']")
+    assert page.has_text?("alpha")
   end
 
   test "No phase label is displayed for a Content item without a phase field" do
@@ -19,7 +19,6 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
 
     visit "/government/case-studies/get-britain-building-carlisle-park"
 
-    assert page.has_no_css?("[data-template='govuk_component-alpha_label']")
-    assert page.has_no_css?("[data-template='govuk_component-beta_label']")
+    refute page.has_text?("alpha")
   end
 end

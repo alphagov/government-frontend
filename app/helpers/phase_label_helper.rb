@@ -3,7 +3,8 @@ module PhaseLabelHelper
     if presented_object.respond_to?(:phase) && %w(alpha beta).include?(presented_object.phase)
       locals = {}
       locals[:message] = message if message.present?
-      render partial: "govuk_component/#{presented_object.phase}_label", locals: locals
+
+      render 'govuk_publishing_components/components/phase_banner', locals.merge(phase: presented_object.phase)
     end
   end
 end
