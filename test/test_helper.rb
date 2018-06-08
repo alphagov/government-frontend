@@ -81,10 +81,8 @@ class ActionDispatch::IntegrationTest
     assert page.has_css?('h1', text: title)
   end
 
-  def assert_has_component_organisation_logo(logo, index = 1)
-    within(shared_component_selector("organisation_logo") + ":nth-of-type(#{index})") do
-      assert_equal logo, JSON.parse(page.text).deep_symbolize_keys
-    end
+  def assert_has_component_organisation_logo
+    assert page.has_css?(".gem-c-organisation-logo")
   end
 
   def assert_has_component_government_navigation_active(active)
