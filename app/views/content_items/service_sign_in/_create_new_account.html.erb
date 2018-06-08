@@ -3,6 +3,6 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', title: @content_item.title %>
-    <%= render 'govuk_publishing_components/components/govspeak', content: @content_item.body %>
+    <%= render 'govuk_publishing_components/components/govspeak', content: @content_item.body.html_safe %>
   </div>
 </div>

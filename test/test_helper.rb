@@ -178,6 +178,8 @@ class ActionDispatch::IntegrationTest
     stub_request(:get, %r{#{path}})
       .to_return(status: 200, body: content_item.to_json, headers: {})
     visit path
+
+    assert_equal 200, page.status_code
   end
 
   def get_content_example(name)

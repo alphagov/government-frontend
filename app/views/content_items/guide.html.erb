@@ -24,7 +24,7 @@
         </h1>
       <% end %>
       <%= render 'govuk_publishing_components/components/govspeak',
-          content: @content_item.current_part_body,
+          content: @content_item.current_part_body.html_safe,
           direction: page_text_direction,
           disable_youtube_expansions: true,
           rich_govspeak: true %>

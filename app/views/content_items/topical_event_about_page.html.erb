@@ -18,7 +18,7 @@
       contents: @content_item.contents,
     } do %>
       <%= render 'govuk_publishing_components/components/govspeak',
-          content: @content_item.body,
+          content: @content_item.body.html_safe,
           direction: page_text_direction %>
     <% end %>
   </div>

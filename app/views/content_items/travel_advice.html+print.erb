@@ -18,7 +18,7 @@
         <%= render 'shared/travel_advice_summary', content_item: @content_item if i == 0 %>
 
         <%= render 'govuk_publishing_components/components/govspeak',
-            content: part['body'],
+            content: part['body'].html_safe,
             direction: page_text_direction %>
       </section>
     <% end %>

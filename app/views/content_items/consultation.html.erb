@@ -40,7 +40,7 @@
         <%= render 'govuk_publishing_components/components/heading', text: "Download the full outcome", mobile_top_margin: true %>
         <div class="consultation-outcome">
           <%= render 'govuk_publishing_components/components/govspeak',
-              content: @content_item.final_outcome_documents,
+              content: @content_item.final_outcome_documents.html_safe,
               direction: page_text_direction %>
         </div>
       <% end %>
@@ -48,7 +48,7 @@
       <%= render 'govuk_publishing_components/components/heading', text: "Detail of outcome", mobile_top_margin: true %>
       <div class="consultation-outcome-detail">
         <%= render 'govuk_publishing_components/components/govspeak',
-            content: @content_item.final_outcome_detail,
+            content: @content_item.final_outcome_detail.html_safe,
             direction: page_text_direction %>
       </div>
     <% end %>
@@ -57,7 +57,7 @@
       <%= render 'govuk_publishing_components/components/heading', text: "Feedback received", mobile_top_margin: true %>
       <div class="consultation-feedback-documents">
         <%= render 'govuk_publishing_components/components/govspeak',
-            content: @content_item.public_feedback_documents,
+            content: @content_item.public_feedback_documents.html_safe,
             direction: page_text_direction %>
       </div >
     <% end %>
@@ -66,7 +66,7 @@
       <%= render 'govuk_publishing_components/components/heading', text: "Detail of feedback received", mobile_top_margin: true %>
       <div class="consultation-feedback">
         <%= render 'govuk_publishing_components/components/govspeak',
-            content: @content_item.public_feedback_detail,
+            content: @content_item.public_feedback_detail.html_safe,
             direction: page_text_direction %>
       </div>
     <% end %>
@@ -115,7 +115,7 @@
         <%= render 'govuk_publishing_components/components/heading', text: "Documents", mobile_top_margin: true %>
         <div class="consultation-documents">
           <%= render 'govuk_publishing_components/components/govspeak',
-              content: @content_item.documents,
+              content: @content_item.documents.html_safe,
               direction: page_text_direction %>
         </div>
       <% end %>
