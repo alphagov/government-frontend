@@ -6,7 +6,7 @@
   <%= @content_item.group_heading(group) %>
   <% if group["body"].present? %>
     <%= render 'govuk_publishing_components/components/govspeak',
-        content: group["body"],
+        content: raw(group["body"]),
         direction: page_text_direction %>
   <% end %>
 

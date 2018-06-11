@@ -5,7 +5,7 @@
 
 <div aria-labelledby="documents-title">
   <%= render 'govuk_publishing_components/components/govspeak',
-             content: @content_item.documents,
+             content: @content_item.documents.html_safe,
              direction: page_text_direction %>
 </div>
 
@@ -16,6 +16,6 @@
 
 <div aria-labelledby="details-title">
   <%= render 'govuk_publishing_components/components/govspeak',
-             content: @content_item.details,
+             content: @content_item.details.html_safe,
              direction: page_text_direction %>
 </div>

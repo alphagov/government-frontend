@@ -30,7 +30,7 @@
           caption: @content_item.image["caption"] if @content_item.image %>
 
       <%= render 'govuk_publishing_components/components/govspeak',
-          content: @content_item.body,
+          content: @content_item.body.html_safe,
           direction: page_text_direction %>
     </div>
 

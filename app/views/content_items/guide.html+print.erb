@@ -15,7 +15,7 @@
           <%= "#{index + 1}. #{part['title']}" %>
         </h1>
         <%= render 'govuk_publishing_components/components/govspeak',
-            content: part['body'],
+            content: part['body'].html_safe,
             direction: page_text_direction,
             disable_youtube_expansions: true,
             rich_govspeak: true %>

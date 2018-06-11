@@ -51,7 +51,7 @@
     <% end %>
 
     <%= render 'govuk_publishing_components/components/govspeak',
-        content: @content_item.current_part_body,
+        content: @content_item.current_part_body.html_safe,
         direction: page_text_direction %>
 
     <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
