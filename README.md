@@ -168,19 +168,6 @@ The yaml file contains a custom key of `:document_types` not used by wraith but 
 bundle exec rake wraith:update_document_types[:sample_size]
 ```
 
-### Adding a new format
-
-There’s a rails generator you can use to stub the basic files needed for a new format. It stubs the following:
-* Stylesheet
-* Template
-* Presenter
-* Presenter test
-* Integration test
-
-```
-bundle exec rails generate format [format_name]
-```
-
 ## Licence
 
 [MIT License](LICENCE)
