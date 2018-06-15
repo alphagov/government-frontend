@@ -6,12 +6,12 @@ module ContentItem
       [
         {
           href: facebook_share_url,
-          text: 'Facebook',
+          text: '<span class="visually-hidden">Share on </span>Facebook'.html_safe,
           icon: 'facebook'
         },
         {
           href: twitter_share_url,
-          text: 'Twitter',
+          text: '<span class="visually-hidden">Share on </span>Twitter'.html_safe,
           icon: 'twitter'
         }
       ]
