@@ -19,12 +19,7 @@ class GuidePrint < ActionDispatch::IntegrationTest
       assert page.has_css?("h1", text: "#{i + 1}. #{part['title']}")
     end
 
-    page.all(shared_component_selector("govspeak")).each_with_index do |govspeak_component, i|
-      within(govspeak_component) do
-        content_passed_to_component = JSON.parse(page.text).fetch("content").squish
-        assert_equal parts[i]['body'].squish, content_passed_to_component
-      end
-    end
+    assert page.has_content?("The ‘basic’ school curriculum includes the")
   end
 
   def setup_and_visit_guide_print(name)
