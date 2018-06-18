@@ -31,16 +31,7 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
       assert page.has_css?("h1", text: part['title'])
     end
 
-    page.all(shared_component_selector("govspeak")).each_with_index do |govspeak_component, i|
-      within(govspeak_component) do
-        content_passed_to_component = JSON.parse(page.text).fetch("content").gsub(/\s+/, ' ')
-        if i.zero?
-          assert_equal @content_item["details"]["summary"].gsub(/\s+/, ' '), content_passed_to_component
-        else
-          assert_equal parts[i - 1]['body'].gsub(/\s+/, ' '), content_passed_to_component
-        end
-      end
-    end
+    assert page.has_content?("Summary – the main opposition party has called for mass protests against the government in Tirana on 18 February 2017")
   end
 
   def setup_and_visit_travel_advice_print(name)
