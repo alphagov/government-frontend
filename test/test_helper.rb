@@ -60,7 +60,6 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_metadata_pair(label, value)
-    assert_component_parameter("metadata", label, value)
   end
 
   def assert_has_component_document_footer_pair(label, value)
@@ -75,6 +74,8 @@ class ActionDispatch::IntegrationTest
       end
       assert_equal value, component_args.fetch(label)
     end
+    assert page.has_content?(label)
+    assert page.has_content?(value)
   end
 
   def assert_has_component_title(title)

@@ -18,12 +18,8 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
     assert_has_component_metadata_pair("Still current at", Date.today.strftime("%-d %B %Y"))
     assert_has_component_metadata_pair("Updated", Date.parse(@content_item["details"]["reviewed_at"]).strftime("%-d %B %Y"))
 
-    within shared_component_selector("metadata") do
-      component_args = JSON.parse(page.text)
-      latest_update = component_args["other"].fetch("Latest update")
-
-      assert latest_update.include?('<p>')
-      assert latest_update.include?(@content_item['details']['change_description'].gsub('Latest update: ', ''))
+    within ".gem-c-metadata" do
+      assert page.has_content?(@content_item['details']['change_description'].gsub('Latest update: ', ''))
     end
 
     assert page.has_css?("h1", text: 'Summary')
