@@ -2,6 +2,8 @@ class TravelAdvicePresenter < ContentItemPresenter
   include ContentItem::Parts
   include ActionView::Helpers::TextHelper
 
+  ATOM_CACHE_CONTROL_MAX_AGE = 300
+
   def page_title
     if is_summary?
       super
@@ -88,6 +90,11 @@ class TravelAdvicePresenter < ContentItemPresenter
 
   def atom_public_updated_at
     DateTime.parse(content_item["public_updated_at"])
+  end
+
+  def cache_control_max_age(format)
+    return ATOM_CACHE_CONTROL_MAX_AGE if format == "atom"
+    content_item.cache_control.max_age
   end
 
 private

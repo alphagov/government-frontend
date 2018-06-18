@@ -61,6 +61,16 @@ class ContentItemPresenter
     end
   end
 
+  # The default behaviour to is honour the max_age
+  # from the content-store response.
+  def cache_control_max_age(_format)
+    content_item.cache_control.max_age
+  end
+
+  def cache_control_public?
+    !content_item.cache_control.private?
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
