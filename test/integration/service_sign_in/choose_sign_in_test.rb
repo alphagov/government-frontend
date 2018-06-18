@@ -17,7 +17,7 @@ module ServiceSignIn
 
       assert page.has_css?("title", text: 'Prove your identity to continue - GOV.UK', visible: false)
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
-      refute page.has_css?(shared_component_selector('government_navigation'))
+      refute page.has_css?("#proposition-menu")
 
       assert page.has_css?('.gem-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
       assert page.has_css?('form[data-module="track-radio-group"]')
