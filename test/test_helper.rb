@@ -5,7 +5,6 @@ ENV['GOVUK_ASSET_ROOT'] = 'http://static.test.gov.uk'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
-require 'slimmer/test_helpers/govuk_components'
 require 'mocha/mini_test'
 require 'faker'
 
@@ -23,11 +22,6 @@ end
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
-  include Slimmer::TestHelpers::GovukComponents
-
-  def setup
-    stub_shared_component_locales
-  end
 end
 
 # Note: This is so that slimmer is skipped, preventing network requests for
@@ -43,38 +37,10 @@ end
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
-  include Slimmer::TestHelpers::GovukComponents
-
-  def setup
-    stub_shared_component_locales
-  end
-
-  def assert_no_component(name)
-    assert page.has_no_css?(shared_component_selector(name)), "Found a component named #{name}"
-  end
-
-  def assert_component_locals(name, locals)
-    within shared_component_selector(name) do
-      assert_equal locals, JSON.parse(page.text).deep_symbolize_keys
-    end
-  end
 
   def assert_has_component_metadata_pair(label, value)
-    assert_component_parameter("metadata", label, value)
-  end
-
-  def assert_has_component_document_footer_pair(label, value)
-    assert_component_parameter("document_footer", label, value)
-  end
-
-  def assert_component_parameter(component, label, value)
-    within shared_component_selector(component) do
-      # Flatten top level / "other" args, for consistent hash access
-      component_args = JSON.parse(page.text).tap do |args|
-        args.merge!(args.delete("other")) if args.key?("other")
-      end
-      assert_equal value, component_args.fetch(label)
-    end
+    assert page.has_content?(label)
+    assert page.has_content?(value)
   end
 
   def assert_has_component_title(title)
