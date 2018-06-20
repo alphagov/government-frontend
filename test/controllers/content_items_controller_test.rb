@@ -136,6 +136,14 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "max-age=20, public", @response.headers['Cache-Control']
   end
 
+  test "sets a longer cache-control header for travel advice atom feeds" do
+    content_item = content_store_has_schema_example('travel_advice', 'full-country')
+    get :show, params: { path: path_for(content_item), format: 'atom' }
+
+    assert_response :success
+    assert_equal "max-age=300, public", @response.headers['Cache-Control']
+  end
+
   test "honours cache-control private items" do
     content_item = content_store_has_schema_example('coming_soon', 'coming_soon')
     content_store_has_item(content_item['base_path'], content_item, private: true)
