@@ -119,7 +119,7 @@ GEM
       rubocop-rspec (~> 1.19.0)
       scss_lint
     govuk_ab_testing (2.4.1)
-    govuk_app_config (1.5.0)
+    govuk_app_config (1.5.1)
       logstasher (~> 1.2.2)
       sentry-raven (~> 2.7.1)
       statsd-ruby (~> 1.4.0)
