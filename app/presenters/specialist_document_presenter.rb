@@ -46,6 +46,12 @@ class SpecialistDocumentPresenter < ContentItemPresenter
       .try(:html_safe)
   end
 
+  def finder_link
+    if finder && statutory_instrument?
+      link_to "See all #{finder['title']}", finder['base_path']
+    end
+  end
+
 private
 
   def nested_headers
@@ -205,5 +211,9 @@ private
   # https://www.gov.uk/aaib-reports/lockheed-l1011-385-1-15-g-bhbr-19-december-1989
   def bulk_published?
     !!facet_values["bulk_published"]
+  end
+
+  def statutory_instrument?
+    content_item["document_type"] == "statutory_instrument"
   end
 end

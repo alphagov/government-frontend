@@ -44,6 +44,13 @@
             history: @content_item.history
           } %>
       </div>
+
+      <% if @content_item.finder_link %>
+        <div class="responsive-bottom-margin">
+          <%= @content_item.finder_link %>
+        </div>
+      <% end %>
+
     <% end %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
