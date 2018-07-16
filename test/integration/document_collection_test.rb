@@ -79,10 +79,8 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     documents = @content_item["links"]["documents"]
 
     documents.each do |doc|
-      assert page.has_css?('.gem-c-document-list__item-title a', text: doc["title"])
+      assert page.has_css?('.gem-c-document-list__item-title a[href="' + doc["base_path"] + '"]', text: doc["title"])
     end
-
-    assert page.has_css?('.gem-c-document-list .gem-c-document-list__item', count: documents.count)
 
     document_lists = page.all('.gem-c-document-list')
 
