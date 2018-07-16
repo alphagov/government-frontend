@@ -1,4 +1,5 @@
 class ContentItemsController < ApplicationController
+  include ContentPagesNavAbTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -13,6 +14,8 @@ class ContentItemsController < ApplicationController
 
   def show
     load_content_item
+
+    load_taxonomy_navigation if page_in_scope?
 
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
@@ -58,6 +61,10 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
+  end
+
+  def load_taxonomy_navigation
+    # to be fleshed out with the content pages topic taxon navigation
   end
 
   def content_item_template

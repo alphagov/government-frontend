@@ -24,6 +24,7 @@
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
+  <%= content_pages_nav_test_variant.analytics_meta_tag.html_safe if page_in_scope? %>
 
   <%= yield :extra_head_content %>
 </head>
