@@ -1,0 +1,23 @@
+<% if taxonomy_navigation.values().flatten.any? %>
+  <div class="taxonomy-navigation">
+    <h2>More in
+      <a class="taxonomy-navigation__title-link" href="<%= tagged_taxon[:taxon_link] %>"><%= tagged_taxon[:taxon_name] %></a>
+    </h2>
+
+    <% if taxonomy_navigation[:services].any? %>
+      <div class="taxonomy-navigation__section">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: t('supergroups.services'),
+          heading_level: 3,
+          font_size: 24,
+          margin_bottom: 2
+        } %>
+
+        <%= render "govuk_publishing_components/components/highlight_boxes", {
+          inverse: true,
+          items: taxonomy_navigation[:services]
+        } %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

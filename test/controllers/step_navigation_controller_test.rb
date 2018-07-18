@@ -11,6 +11,8 @@ class ContentItemsControllerTest < ActionController::TestCase
 
       content_store_has_item(content_item['base_path'], content_item)
 
+      @controller.stubs(:page_in_scope?).returns(false)
+
       get :show, params: { path: path }
 
       assert_response 200
@@ -23,6 +25,8 @@ class ContentItemsControllerTest < ActionController::TestCase
       path = content_item['base_path'][1..-1]
 
       content_store_has_item(content_item['base_path'], content_item)
+
+      @controller.stubs(:page_in_scope?).returns(false)
 
       get :show, params: { path: path }
 
