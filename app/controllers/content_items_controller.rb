@@ -10,7 +10,7 @@ class ContentItemsController < ApplicationController
   rescue_from PresenterBuilder::RedirectRouteReturned, with: :error_redirect
   rescue_from PresenterBuilder::SpecialRouteReturned, with: :error_notfound
 
-  attr_accessor :content_item
+  attr_accessor :content_item, :taxonomy_navigation
 
   def show
     load_content_item
@@ -64,7 +64,24 @@ private
   end
 
   def load_taxonomy_navigation
-    # to be fleshed out with the content pages topic taxon navigation
+    # For now, just get the first tagged taxon.
+    # TODO: handle content tagged to multiple taxons
+    if @content_item.taxons
+      taxon = @content_item.taxons.first
+      taxon_id = taxon["content_id"]
+
+      services = Supergroups::Services.new(taxon_id)
+
+      @taxonomy_navigation = {
+        services: services.tagged_content,
+      }
+
+      @tagged_taxon = {
+        taxon_id: taxon_id,
+        taxon_name: taxon["title"],
+        taxon_link: taxon["base_path"],
+      }
+    end
   end
 
   def content_item_template
