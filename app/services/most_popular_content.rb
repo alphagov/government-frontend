@@ -16,7 +16,7 @@ class MostPopularContent
   end
 
   def fetch
-    search_response
+    search_response["results"]
   end
 
 private
@@ -35,6 +35,6 @@ private
   end
 
   def search_result(params)
-    @_search_result ||= Services.rummager.search(params)
+    Services.rummager.search(params)
   end
 end
