@@ -6,15 +6,13 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
 require 'mocha/mini_test'
+require 'capybara/minitest'
 require 'faker'
 
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
 
-class Minitest::Test
-  def teardown
-    Capybara.current_session.driver.clear_memory_cache
-  end
-end
+Capybara.default_driver = :selenium_chrome_headless
+Capybara.javascript_driver = :selenium_chrome_headless
 
 GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
@@ -37,6 +35,11 @@ end
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
+
+  def teardown
+    Capybara.reset_sessions!
+    Capybara.use_default_driver
+  end
 
   def assert_has_component_metadata_pair(label, value)
     assert page.has_content?(label)

@@ -36,8 +36,10 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'chromedriver-helper'
   gem 'faker'
   gem 'mocha'
-  gem 'poltergeist', require: false
+  gem 'puma'
+  gem 'selenium-webdriver'
   gem 'webmock', '~> 3.4.2', require: false
 end
