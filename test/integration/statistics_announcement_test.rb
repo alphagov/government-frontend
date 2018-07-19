@@ -18,7 +18,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     assert page.has_css?('img[alt="National Statistics"]')
 
     within '.app-c-important-metadata' do
-      assert page.has_text?("Release date: January 2016 (provisional)")
+      assert page.has_text?(:all, "Release date: January 2016 (provisional)")
     end
   end
 
@@ -43,7 +43,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert page.has_text?("Release date: 20 January 2016 9:30am (confirmed)")
+    assert page.has_text?(:all, "Release date: 20 January 2016 9:30am (confirmed)")
 
     within '.release-date-changed .app-c-important-metadata' do
       assert page.has_text?("The release date has been changed")

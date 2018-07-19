@@ -45,7 +45,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
       assert page.has_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
       assert page.has_text?("Any enquiries regarding this publication should be sent to us at:")
-      assert page.has_text?((@content_item['details']['print_meta_data_contact_address']).to_s)
+      assert page.has_text?(:all, @content_item['details']['print_meta_data_contact_address'].squish)
       assert page.has_text?("Print ISBN: #{@content_item['details']['isbn']}")
     end
   end
