@@ -126,7 +126,6 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
     within '.consultation-ways-to-respond' do
       assert page.has_css?(".contact .content p", text: '2016 Post Office Network Consultation')
-      assert page.has_css?(".contact .content p br")
     end
   end
 
