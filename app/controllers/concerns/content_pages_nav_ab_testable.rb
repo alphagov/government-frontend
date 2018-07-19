@@ -28,7 +28,7 @@ module ContentPagesNavAbTestable
   end
 
   def show_new_navigation?
-    !content_pages_nav_test_variant.variant?("B") && page_in_scope?
+    content_pages_nav_test_variant.variant?("B") && page_in_scope?
   end
 
   def page_in_scope?
