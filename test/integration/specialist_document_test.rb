@@ -1,6 +1,12 @@
 require 'test_helper'
 
 class SpecialistDocumentTest < ActionDispatch::IntegrationTest
+  include GdsApi::TestHelpers::Rummager
+
+  setup do
+    stub_any_rummager_search
+  end
+
   test "random but valid specialist documents do not error" do
     setup_and_visit_random_content_item(document_type: 'aaib_report')
     setup_and_visit_random_content_item(document_type: 'raib_report')
