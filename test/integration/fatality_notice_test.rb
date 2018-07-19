@@ -49,11 +49,11 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
       within(".app-c-published-dates__change-history") do
         within(".app-c-published-dates__change-item:first-child") do
-          assert page.has_content?("14 September 2016 Updated information.")
+          assert page.has_content?(:all, "14 September 2016 Updated information.")
         end
 
         within(".app-c-published-dates__change-item:last-child") do
-          assert page.has_content?("27 February 1881 First published.")
+          assert page.has_content?(:all, "27 February 1881 First published.")
         end
       end
     end

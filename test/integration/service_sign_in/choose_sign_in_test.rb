@@ -50,7 +50,7 @@ module ServiceSignIn
     test "renders errors correctly" do
       setup_and_visit_choose_sign_in_page("service_sign_in", "/choose-sign-in")
 
-      page.execute_script('document.querySelector(\'form\').submit()')
+      click_on 'Continue'
 
       assert page.has_css?(".gem-c-error-summary")
       assert page.has_css?(".gem-c-error-summary__title", text: 'You haven’t selected an option')

@@ -6,15 +6,13 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
 require 'mocha/mini_test'
+require 'capybara/minitest'
 require 'faker'
 
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
 
-class Minitest::Test
-  def teardown
-    Capybara.current_session.driver.clear_memory_cache
-  end
-end
+Capybara.default_driver = :selenium_chrome_headless
+Capybara.javascript_driver = :selenium_chrome_headless
 
 GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
@@ -37,6 +35,11 @@ end
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
+
+  def teardown
+    Capybara.reset_sessions!
+    Capybara.use_default_driver
+  end
 
   def assert_has_component_metadata_pair(label, value)
     assert page.has_content?(label)
@@ -137,13 +140,15 @@ class ActionDispatch::IntegrationTest
       payload.merge('document_type' => document_type) unless document_type.nil?
       payload
     end
+
+    content_id = content_item["content_id"]
     path = content_item["base_path"]
 
     stub_request(:get, %r{#{path}})
       .to_return(status: 200, body: content_item.to_json, headers: {})
     visit path
 
-    assert_equal 200, page.status_code
+    assert_selector %{meta[name="govuk:content-id"][content="#{content_id}"}, visible: false
   end
 
   def get_content_example(name)
@@ -157,5 +162,12 @@ class ActionDispatch::IntegrationTest
   # Override this method if your test file doesn't match the convention
   def schema_type
     self.class.to_s.gsub('Test', '').underscore
+  end
+
+  def visit_with_cachebust(visit_uri)
+    uri = Addressable::URI.parse(visit_uri)
+    uri.query_values = uri.query_values.yield_self { |values| (values || {}).merge(cachebust: rand) }
+
+    visit(uri)
   end
 end

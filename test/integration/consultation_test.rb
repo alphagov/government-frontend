@@ -40,7 +40,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item('open_consultation')
 
     assert page.has_text?("Open consultation")
-    assert page.has_text?("closes at 3pm on 16 December 2216")
+    assert page.has_text?(:all, "closes at 3pm on 16 December 2216")
   end
 
   test "unopened consultation" do
@@ -51,7 +51,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     # There’s no daylight savings after 2037
     # http://timezonesjl.readthedocs.io/en/stable/faq/#far-future-zoneddatetime-with-variabletimezone
     assert page.has_css?('.gem-c-notice', text: "This consultation opens at 1pm on 5 October 2200")
-    assert page.has_text?("It closes at 4pm on 31 October 2210")
+    assert page.has_text?(:all, "It closes at 4pm on 31 October 2210")
   end
 
   test "closed consultation pending outcome" do
@@ -126,7 +126,6 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
     within '.consultation-ways-to-respond' do
       assert page.has_css?(".contact .content p", text: '2016 Post Office Network Consultation')
-      assert page.has_css?(".contact .content p br")
     end
   end
 

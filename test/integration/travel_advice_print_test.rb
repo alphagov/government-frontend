@@ -19,7 +19,7 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
     assert_has_component_metadata_pair("Updated", Date.parse(@content_item["details"]["reviewed_at"]).strftime("%-d %B %Y"))
 
     within ".gem-c-metadata" do
-      assert page.has_content?(@content_item['details']['change_description'].gsub('Latest update: ', ''))
+      assert page.has_content?(@content_item['details']['change_description'].gsub('Latest update: ', '').strip)
     end
 
     assert page.has_css?("h1", text: 'Summary')

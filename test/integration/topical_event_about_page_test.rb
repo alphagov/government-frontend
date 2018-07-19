@@ -28,7 +28,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
 
     content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
-    visit @content_item["base_path"]
+    visit_with_cachebust @content_item["base_path"]
     refute page.has_css?(".gem-c-contents-list")
   end
 
@@ -38,7 +38,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
 
     content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
-    visit @content_item["base_path"]
+    visit_with_cachebust @content_item["base_path"]
     assert page.has_css?(".gem-c-contents-list")
   end
 

@@ -27,7 +27,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-translation-nav")
     assert page.has_css?(".gem-c-translation-nav__list-item")
 
-    assert page.has_content?("English हिंदी 日本語 中文 中文")
+    assert page.has_content?(:all, "English हिंदी 日本語 中文 中文")
 
     refute page.has_link?("English")
 
