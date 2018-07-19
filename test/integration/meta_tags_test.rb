@@ -11,7 +11,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
 
     content_store_has_item("/some-page", case_study.to_json)
 
-    visit "/some-page"
+    visit_with_cachebust "/some-page"
 
     assert page.has_css?("meta[property='og:title'][content='Zhe title']", visible: false)
   end
@@ -24,7 +24,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
 
     content_store_has_item("/some-page", case_study.to_json)
 
-    visit "/some-page"
+    visit_with_cachebust "/some-page"
 
     assert page.has_css?("meta[name='twitter:card'][content='summary']", visible: false)
   end
@@ -43,7 +43,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
 
     content_store_has_item("/some-page", case_study.to_json)
 
-    visit "/some-page"
+    visit_with_cachebust "/some-page"
 
     assert page.has_css?("meta[name='twitter:card'][content='summary_large_image']", visible: false)
     assert page.has_css?("meta[name='twitter:image'][content='https://example.org/image.jpg']", visible: false)

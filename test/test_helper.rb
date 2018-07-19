@@ -161,4 +161,11 @@ class ActionDispatch::IntegrationTest
   def schema_type
     self.class.to_s.gsub('Test', '').underscore
   end
+
+  def visit_with_cachebust(visit_uri)
+    uri = Addressable::URI.parse(visit_uri)
+    uri.query_values = uri.query_values.yield_self { |values| (values || {}).merge(cachebust: rand) }
+
+    visit(uri)
+  end
 end

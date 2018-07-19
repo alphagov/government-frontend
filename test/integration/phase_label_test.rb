@@ -7,7 +7,7 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
 
     content_store_has_item("/government/case-studies/get-britain-building-carlisle-park", case_study.to_json)
 
-    visit "/government/case-studies/get-britain-building-carlisle-park"
+    visit_with_cachebust "/government/case-studies/get-britain-building-carlisle-park"
 
     assert page.has_text?("alpha")
   end
@@ -17,7 +17,7 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
     content_item.delete("phase")
     content_store_has_item("/government/case-studies/get-britain-building-carlisle-park", content_item.to_json)
 
-    visit "/government/case-studies/get-britain-building-carlisle-park"
+    visit_with_cachebust "/government/case-studies/get-britain-building-carlisle-park"
 
     refute page.has_text?("alpha")
   end

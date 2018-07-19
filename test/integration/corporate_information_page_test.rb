@@ -25,7 +25,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
       </div>"
 
     content_store_has_item(item["base_path"], item.to_json)
-    visit(item["base_path"])
+    visit_with_cachebust(item["base_path"])
 
     refute page.has_css?(".gem-c-contents-list")
   end
@@ -81,7 +81,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
     }
     content_store_has_item("/government/organisations/department-of-health/about", content_item.to_json)
 
-    visit "/government/organisations/department-of-health/about"
+    visit_with_cachebust "/government/organisations/department-of-health/about"
 
     assert page.has_css?(".gem-c-notice__title", text: "This information page was withdrawn on 9 August 2014")
     assert page.has_css?(".gem-c-notice", text: "This is out of date")
