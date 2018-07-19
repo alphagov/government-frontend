@@ -140,13 +140,15 @@ class ActionDispatch::IntegrationTest
       payload.merge('document_type' => document_type) unless document_type.nil?
       payload
     end
+
+    content_id = content_item["content_id"]
     path = content_item["base_path"]
 
     stub_request(:get, %r{#{path}})
       .to_return(status: 200, body: content_item.to_json, headers: {})
     visit path
 
-    assert_equal 200, page.status_code
+    assert_selector %{meta[name="govuk:content-id"][content="#{content_id}"}, visible: false
   end
 
   def get_content_example(name)
