@@ -64,23 +64,23 @@ private
   end
 
   def load_taxonomy_navigation
-    # For now, just get the first tagged taxon.
-    # TODO: handle content tagged to multiple taxons
-    if @content_item.taxons
-      taxon = @content_item.taxons.first
-      taxon_id = taxon["content_id"]
+    if @content_item.taxons.present?
+      taxons = @content_item.taxons
 
-      services = Supergroups::Services.new(taxon_id)
+      taxon_ids = taxons.map { |taxon| taxon["content_id"] }
+      services = Supergroups::Services.new(taxon_ids)
 
       @taxonomy_navigation = {
         services: services.tagged_content,
       }
 
-      @tagged_taxon = {
-        taxon_id: taxon_id,
-        taxon_name: taxon["title"],
-        taxon_link: taxon["base_path"],
-      }
+      @tagged_taxons = taxons.map do |taxon|
+        {
+          taxon_id: taxon["content_id"],
+          taxon_name: taxon["title"],
+          taxon_link: taxon["base_path"],
+        }
+      end
     end
   end
 

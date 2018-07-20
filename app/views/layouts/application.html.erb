@@ -45,7 +45,7 @@
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
       <% if show_new_navigation? && @taxonomy_navigation %>
-        <%= render 'shared/taxonomy_navigation', taxonomy_navigation: @taxonomy_navigation, tagged_taxon: @tagged_taxon %>
+        <%= render 'shared/taxonomy_navigation', taxonomy_navigation: @taxonomy_navigation, tagged_taxons: @tagged_taxons %>
       <% end %>
     </main>
     <%= render 'govuk_publishing_components/components/feedback' %>

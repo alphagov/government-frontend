@@ -2,27 +2,30 @@ require 'test_helper'
 
 class MostPopularContentTest < ActiveSupport::TestCase
   include RummagerFields
+  include GdsApi::TestHelpers::Rummager
 
   def most_popular_content
     @most_popular_content ||= MostPopularContent.new(
-      content_id: taxon_content_id,
+      content_ids: taxon_content_ids,
       filter_content_purpose_supergroup: 'guidance_and_regulation'
     )
   end
 
-  def taxon_content_id
-    'c3c860fc-a271-4114-b512-1c48c0f82564'
+  def taxon_content_ids
+    ['something-id-like', 'some-other-id']
   end
 
   test 'returns the results from search' do
     search_results = {
-      'results' => [
-        { 'title' => 'Doc 1' },
-        { 'title' => 'A Doc 2' },
-      ]
+      body: {
+        'results' => [
+          { 'title' => 'Doc 1' },
+          { 'title' => 'A Doc 2' },
+        ]
+      }.to_json
     }
 
-    Services.rummager.stubs(:search).returns(search_results)
+    stub_any_rummager_search.to_return(search_results)
 
     results = most_popular_content.fetch
     assert_equal(results.count, 2)
@@ -55,7 +58,7 @@ class MostPopularContentTest < ActiveSupport::TestCase
   end
 
   test 'scopes the results to the current taxon' do
-    assert_includes_params(filter_part_of_taxonomy_tree: Array(taxon_content_id)) do
+    assert_includes_params(filter_part_of_taxonomy_tree: taxon_content_ids) do
       most_popular_content.fetch
     end
   end
@@ -81,14 +84,24 @@ class MostPopularContentTest < ActiveSupport::TestCase
     Services.
       rummager.
       stubs(:search).
-      with { |params| params.including?(expected_params) }.
+      with { |params| assert_includes_subhash(expected_params, params) }.
       returns(search_results)
 
     results = yield
 
     assert_equal(results.count, 2)
 
-    assert_equal(results.first.title, 'Doc 1')
-    assert_equal(results.last.title, 'Doc 2')
+    assert_equal(results.first['title'], 'Doc 1')
+    assert_equal(results.last['title'], 'Doc 2')
+  end
+
+  def assert_includes_subhash(expected_sub_hash, hash)
+    expected_sub_hash.each do |key, value|
+      assert_equal(
+        value,
+        hash[key],
+        "Expected #{hash} to include #{key} => #{value}"
+      )
+    end
   end
 end

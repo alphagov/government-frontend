@@ -1,7 +1,9 @@
 <% if taxonomy_navigation.values().flatten.any? %>
   <div class="taxonomy-navigation">
     <h2>More in
-      <a class="taxonomy-navigation__title-link" href="<%= tagged_taxon[:taxon_link] %>"><%= tagged_taxon[:taxon_name] %></a>
+      <% tagged_taxons.each do |tagged_taxon| %>
+        <a class="taxonomy-navigation__title-link" href="<%= tagged_taxon[:taxon_link] %>"><%= tagged_taxon[:taxon_name] %></a>
+      <% end %>
     </h2>
 
     <% if taxonomy_navigation[:services].any? %>
