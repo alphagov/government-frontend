@@ -65,7 +65,7 @@ private
 
   def load_taxonomy_navigation
     if @content_item.taxons.present?
-      taxons = @content_item.taxons
+      taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
 
       taxon_ids = taxons.map { |taxon| taxon["content_id"] }
       services = Supergroups::Services.new(taxon_ids)
