@@ -1,29 +1,27 @@
-<span class="js-webchat"
-  data-availability-url="<%= @content_item.webchat_availability_url %>"
-  data-open-url="<%= @content_item.webchat_open_url %>">
-  <% if webchat_unavailable? %>
-    <%= unavailability_message %>
-  <% else %>
-    <% if @content_item.base_path == '/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries' %>
-      Advisers can only talk to you about Child Tax Credit and Working Tax Credit.
-      They won't be able to transfer you to another webchat team.
-      <br/>
-      <br/>
+<%= @content_item.webchat_body %>
+
+<p>
+  <span class="js-webchat"
+    data-availability-url="<%= @content_item.webchat_availability_url %>"
+    data-open-url="<%= @content_item.webchat_open_url %>">
+    <% if webchat_unavailable? %>
+      <%= unavailability_message %>
+    <% else %>
+      <span class="js-webchat-advisers-error">
+        Webchat is unavailable at the moment because of technical problems.
+      </span>
+      <span class="js-webchat-advisers-unavailable hidden">
+        Webchat is closed at the moment.
+      </span>
+      <span class="js-webchat-advisers-busy hidden">
+        All webchat advisers are busy at the moment.
+      </span>
+      <span class="js-webchat-advisers-available hidden">
+        Advisers are available to chat.
+        <a href="#" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
+      </span>
     <% end %>
-    <span class="js-webchat-advisers-error">
-      Webchat is unavailable at the moment because of technical problems.
-    </span>
-    <span class="js-webchat-advisers-unavailable hidden">
-      Webchat is closed at the moment.
-    </span>
-    <span class="js-webchat-advisers-busy hidden">
-      All webchat advisers are busy at the moment.
-    </span>
-    <span class="js-webchat-advisers-available hidden">
-      Advisers are available to chat.
-      <a href="#" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
-    </span>
-  <% end %>
-</span>
+  </span>
+</p>
 <% # This is inline in the source however slimmer will optimize this. %>
 <%= javascript_include_tag "webchat", integrity: true, crossorigin: 'anonymous' %>
