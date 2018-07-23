@@ -46,7 +46,7 @@
 
       <% if @content_item.show_webchat? %>
         <h2 id="webchat-title">Webchat</h2>
-        <p><%= render 'shared/webchat' %></p>
+        <%= render 'shared/webchat' %>
       <% end %>
 
       <% if @content_item.phone.any? %>

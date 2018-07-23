@@ -8,6 +8,10 @@ class ContactPresenter < ContentItemPresenter
     end
   end
 
+  def webchat_body
+    content_item.dig("details", "more_info_webchat").try(:html_safe)
+  end
+
   def online_form_links
     contact_form_links = content_item["details"]["contact_form_links"] || []
     contact_form_links.map do |link|
