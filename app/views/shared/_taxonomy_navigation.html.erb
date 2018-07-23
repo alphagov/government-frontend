@@ -17,7 +17,11 @@
 
         <%= render "govuk_publishing_components/components/highlight_boxes", {
           inverse: true,
-          items: taxonomy_navigation[:services]
+          items: taxonomy_navigation[:services][:promoted_content]
+        } %>
+
+        <%= render "govuk_publishing_components/components/document_list", {
+          items: taxonomy_navigation[:services][:documents]
         } %>
       </div>
     <% end %>

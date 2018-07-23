@@ -71,7 +71,7 @@ private
       services = Supergroups::Services.new(taxon_ids)
 
       @taxonomy_navigation = {
-        services: services.tagged_content,
+        services: services.all_services,
       }
 
       @tagged_taxons = taxons.map do |taxon|

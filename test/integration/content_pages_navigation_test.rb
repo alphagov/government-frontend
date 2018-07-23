@@ -36,9 +36,9 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', THREE_TAXONS)
 
-    assert page.has_css?('.taxonomy-navigation h2', text: 'Becoming an apprentice')
-    assert page.has_css?('.taxonomy-navigation h2', text: 'Becoming a wizard')
-    assert page.has_css?('.taxonomy-navigation h2', text: 'Becoming the sorceror supreme')
+    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-an-apprentice"]', text: 'Becoming an apprentice')
+    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-a-wizard"]', text: 'Becoming a wizard')
+    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-the-sorceror-supreme"]', text: 'Becoming the sorceror supreme')
 
     assert page.has_css?('.gem-c-highlight-boxes__title', text: 'Apprenticeship agreement: template')
   end
@@ -51,8 +51,8 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
-    assert page.has_css?('.taxonomy-navigation h2', text: 'Becoming an apprentice')
-    refute page.has_css?('.taxonomy-navigation h2', text: 'Becoming a ghostbuster')
+    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-an-apprentice"]', text: 'Becoming an apprentice')
+    refute page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-a-ghostbuster"]', text: 'Becoming a ghostbuster')
 
     assert page.has_css?('.gem-c-highlight-boxes__title', text: 'Apprenticeship agreement: template')
   end
