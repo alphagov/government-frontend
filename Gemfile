@@ -23,7 +23,7 @@ gem 'slimmer', '~> 13.0'
 
 group :development, :test do
   gem 'govuk-lint'
-  gem 'govuk_schemas', '~> 3.1'
+  gem 'govuk_schemas', '~> 3.2'
   gem 'jasmine-rails'
   gem 'pry-byebug'
 end
