@@ -1,7 +1,25 @@
 class GuidePresenter < ContentItemPresenter
   include ContentItem::Parts
+  include ContentItem::OrganisationBranding
 
   attr_accessor :draft_access_token
+
+  def taxons
+    content_item["links"]["taxons"]
+  end
+
+  def organisations
+    orgs = content_item["links"]["organisations"] || []
+    orgs.sort_by { |o| o["title"] }
+  end
+
+  def organisation_logo(organisation)
+    super.tap do |logo|
+      if logo && organisations.count > 1
+        logo[:organisation].delete(:image)
+      end
+    end
+  end
 
   def page_title
     if @part_slug
