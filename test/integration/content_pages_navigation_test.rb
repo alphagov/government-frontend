@@ -74,6 +74,17 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
   end
 
+  test "does not show the Services section if there is no tagged content" do
+    stub_empty_rummager
+    setup_variant_b
+
+    taxons = SINGLE_TAXON
+
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    refute page.has_css?('h3', text: "Services")
+  end
+
   def setup_variant_a
     ContentItemsController.any_instance.stubs(:show_new_navigation?).returns(false)
   end

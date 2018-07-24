@@ -21,6 +21,20 @@ module ContentPagesNavTestHelper
     )
   end
 
+  def stub_empty_rummager
+    results = []
+
+    stub_any_rummager_search.to_return(
+      body: {
+        "results": results,
+        "total": 1,
+        "start": 0,
+        "aggregates": {},
+        "suggested_queries": []
+      }.to_json
+    )
+  end
+
   SINGLE_TAXON = [
     {
       "base_path" => "/education/becoming-an-apprentice",

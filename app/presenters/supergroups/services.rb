@@ -14,6 +14,10 @@ module Supergroups
       }
     end
 
+    def any_services?
+      @content.any?
+    end
+
     def tagged_content
       items = @content.drop(promoted_content_count)
       format_document_data(items)
