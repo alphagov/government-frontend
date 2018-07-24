@@ -29,6 +29,10 @@ class ContentItemPresenter
     @content_item["links"]["taxons"]
   end
 
+  def content_purpose_supergroup
+    @content_item["content_purpose_supergroup"]
+  end
+
   def related_stuff(rummager_args)
     results = Services.rummager.search({ count: 5, fields: %w[title public_timestamp link content_store_document_type]}.merge(rummager_args))["results"]
 
