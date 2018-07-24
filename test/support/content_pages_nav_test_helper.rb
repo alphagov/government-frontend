@@ -1,27 +1,24 @@
 module ContentPagesNavTestHelper
   def stub_rummager
-    stub_any_rummager_search
-          .to_return(
-            body: {
-              "results": [
-                {
-                  "content_store_document_type": "form",
-                  "description": "This agreement must be signed by the apprentice and the employer at the start of the apprenticeship.",
-                  "link": "/government/publications/apprenticeship-agreement-template",
-                  "public_timestamp": "2012-08-28T00:00:00.000+01:00",
-                  "title": "Apprenticeship agreement: template",
-                  "index": "government",
-                  "_id": "/government/publications/apprenticeship-agreement-template",
-                  "elasticsearch_type": "edition",
-                  "document_type": "edition"
-                }
-              ],
-              "total": 1,
-              "start": 0,
-              "aggregates": {},
-              "suggested_queries": []
-            }.to_json
-          )
+    results = []
+
+    4.times do
+      results.push(
+        "content_store_document_type": "form",
+        "link": "/government/publications/meals",
+        "title": "Free school meals form",
+      )
+    end
+
+    stub_any_rummager_search.to_return(
+      body: {
+        "results": results,
+        "total": 1,
+        "start": 0,
+        "aggregates": {},
+        "suggested_queries": []
+      }.to_json
+    )
   end
 
   SINGLE_TAXON = [
