@@ -6,7 +6,10 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
+    <%= render 'govuk_publishing_components/components/title',
+      title: @content_item.title,
+      context: ({ text: @content_item.taxons.first["title"], href: @content_item.taxons.first["base_path"] }  if @content_item.taxons)
+    %>
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
   </div>
 </div>

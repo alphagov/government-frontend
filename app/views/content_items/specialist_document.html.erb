@@ -8,7 +8,10 @@
 
 <div class="grid-row">
   <div class="column-two-thirds responsive-top-margin">
-    <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
+    <%= render 'govuk_publishing_components/components/title',
+      title: @content_item.title,
+      context: ({ text: @content_item.taxons.first["title"], href: @content_item.taxons.first["base_path"] }  if @content_item.taxons)
+    %>
   </div>
   <%= render 'shared/translations' %>
   <div class="column-two-thirds">

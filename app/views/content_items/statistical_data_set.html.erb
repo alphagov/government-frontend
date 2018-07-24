@@ -7,9 +7,10 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
-               context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-               title: @content_item.title,
-               average_title_length: "long" %>
+      title: @content_item.title,
+      average_title_length: "long",
+      context: ({ text: @content_item.taxons.first["title"], href: @content_item.taxons.first["base_path"] }  if @content_item.taxons)
+    %>
   </div>
   <%= render 'shared/translations', content_item: @content_item %>
   <div class="column-two-thirds">
