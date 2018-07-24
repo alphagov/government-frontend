@@ -69,9 +69,11 @@ private
 
       taxon_ids = taxons.map { |taxon| taxon["content_id"] }
       services = Supergroups::Services.new(taxon_ids)
+      news_and_communications = Supergroups::NewsAndCommunications.new(taxon_ids)
 
       @taxonomy_navigation = {
         services: (services.all_services if services.any_services?),
+        news_and_communications: news_and_communications.tagged_content,
       }
 
       @tagged_taxons = taxons.map do |taxon|
