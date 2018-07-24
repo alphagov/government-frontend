@@ -9,7 +9,7 @@
     reject_link: @content_item.base_path,
     filter_taxons: @content_item.taxons.first["content_id"],
     filter_content_purpose_supergroup: "services",
-    order: 'popularity',
+    order: '-popularity',
     count: 3
   ) %>
 
@@ -26,7 +26,7 @@
     reject_link: @content_item.base_path,
     filter_taxons: @content_item.taxons.first["content_id"],
     filter_content_purpose_supergroup: "guidance_and_regulation",
-    order: 'popularity',
+    order: '-popularity',
     count: 3
   )
 
@@ -34,7 +34,7 @@
     reject_link: @content_item.base_path,
     filter_taxons: @content_item.taxons.first["content_id"],
     filter_content_purpose_supergroup: "guidance_and_regulation",
-    order: 'popularity',
+    order: '-popularity',
     count: 5,
     start: 3
   )
