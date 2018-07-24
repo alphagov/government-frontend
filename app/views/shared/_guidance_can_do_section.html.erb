@@ -1,0 +1,32 @@
+<% mainstream_guidance_items = @content_item.related_stuff(
+  reject_link: @content_item.base_path,
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_store_document_type: ["guide", "answer", "contact", "calendar"],
+  order: '-popularity',
+  count: 3
+)
+
+mainstream_paths = mainstream_guidance_items[:items].map { |i| i[:link][:path] }
+
+guidance_items = @content_item.related_stuff(
+  reject_link: mainstream_paths.push(@content_item.base_path),
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_purpose_supergroup: "guidance_and_regulation",
+  order: '-popularity',
+  count: 5
+)
+%>
+
+<% if mainstream_guidance_items[:items].any? || guidance_items[:items].any? %>
+<div class="can-do-guidance can-do-section">
+  <h3>Guidance and regulation</h3>
+
+  <% if mainstream_guidance_items[:items].any? %>
+  <%= render 'shared/highlight_box', type: "guidance", items: mainstream_guidance_items %>
+  <% end %>
+
+  <%= render "govuk_publishing_components/components/document_list", guidance_items %>
+
+  <p><a href="#">See more guidance and regulation</a></p>
+</div>
+<% end %>

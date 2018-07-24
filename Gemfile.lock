@@ -369,6 +369,7 @@ DEPENDENCIES
   govuk_schemas (~> 3.2)
   htmlentities (~> 4.3)
   jasmine-rails
+  htmlentities (= 4.3.4)
   mocha
   plek (~> 2.1)
   pry-byebug

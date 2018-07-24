@@ -1,4 +1,5 @@
 require 'gds_api/content_store'
+require 'gds_api/rummager'
 
 module Services
   def self.content_store
@@ -9,5 +10,9 @@ module Services
       # own responses
       disable_cache: true,
     )
+  end
+
+  def self.rummager
+    @rummager ||= GdsApi::Rummager.new(Plek.current.find("rummager"))
   end
 end

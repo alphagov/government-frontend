@@ -1,0 +1,17 @@
+<% policy_items = @content_item.related_stuff(
+  reject_link: @content_item.base_path,
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_purpose_subgroup: "policy",
+  order: '-public_timestamp',
+  count: 5
+) %>
+
+<% if policy_items[:items].any? %>
+<div class="can-do-policy can-do-section">
+  <h3>Policy</h3>
+
+  <%= render "govuk_publishing_components/components/document_list", policy_items  %>
+
+  <p><a href="#">See more policy</a></p>
+</div>
+<% end %>

@@ -1,0 +1,17 @@
+<% business_support_items = @content_item.related_stuff(
+  reject_link: @content_item.base_path,
+  filter_taxons: @content_item.taxon["content_id"],
+  filter_content_purpose_subgroup: "business_support",
+  order: '-public_timestamp',
+  count: 5
+) %>
+
+<% if business_support_items[:items].any? %>
+<div class="can-do-business-support can-do-section">
+  <h3>Business support</h3>
+
+  <%= render "govuk_publishing_components/components/document_list", business_support_items %>
+
+  <p><a href="#">See more business support</a></p>
+</div>
+<% end %>

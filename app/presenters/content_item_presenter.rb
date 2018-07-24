@@ -71,6 +71,43 @@ class ContentItemPresenter
     !content_item.cache_control.private?
   end
 
+  def publishing_organisation
+    @content_item["links"]["organisations"].to_a.first
+  end
+
+  def policy
+    @content_item["links"]["related_policies"].to_a.first
+  end
+
+  def person
+    @content_item["links"]["people"].to_a.first
+  end
+
+  def taxon
+    @content_item["links"]["taxons"].to_a.first
+  end
+
+  def taxons
+    @content_item["links"]["taxons"]
+  end
+
+  def related_stuff(rummager_args)
+    results = Services.rummager.search({ count: 5, fields: %w[title public_timestamp link display_type]}.merge(rummager_args))["results"]
+
+    items = results.map do |r|
+      {
+        link: { text: r["title"], path: r["link"] },
+        metadata: { public_updated_at: Time.parse(r["public_timestamp"]), document_type: r["display_type"] }
+      }
+    end
+
+    { items: items }
+  end
+
+  def content_purpose_supergroup
+    @content_item["content_purpose_supergroup"]
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")

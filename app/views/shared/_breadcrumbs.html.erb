@@ -1,0 +1,11 @@
+<% if @navigation.should_present_taxonomy_navigation? %>
+  <% if @content_item.taxon_breadcrumbs.any? %>
+    <%= render 'govuk_component/breadcrumbs',
+      breadcrumbs: @content_item.taxon_breadcrumbs[0..1],
+      collapse_on_mobile: true %>
+  <% end %>
+<% else %>
+  <% if @content_item.breadcrumbs.any? %>
+    <%= render 'govuk_component/breadcrumbs', breadcrumbs: @content_item.breadcrumbs %>
+  <% end %>
+<% end %>

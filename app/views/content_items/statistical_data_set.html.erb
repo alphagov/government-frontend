@@ -7,9 +7,10 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
-               context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
+               context: { text: @content_item.taxon["title"], href: @content_item.taxon["base_path"] },
                title: @content_item.title,
                average_title_length: "long" %>
+
   </div>
   <%= render 'shared/translations', content_item: @content_item %>
   <div class="column-two-thirds">
@@ -38,6 +39,19 @@
       } %>
     </div>
     <% end %>
+
+    <%= render 'shared/go_deeper' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
+</div>
+
+<div class="can-do">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2><span class="context">More in</span> <%= link_to(@content_item.taxon["title"], @content_item.taxon["base_path"]) %></h2>
+    </div>
+
+  </div>
+
+  <%= render 'shared/transparency_can_do_links' %>
 </div>

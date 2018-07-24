@@ -4,6 +4,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   include ContentItem::Linkable
   include ContentItem::TitleAndContext
   include ContentItem::Metadata
+  include Navigation::SpecialistDocuments
   include TypographyHelper
   include ContentItem::ContentsList
 
