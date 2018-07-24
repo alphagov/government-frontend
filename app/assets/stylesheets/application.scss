@@ -50,6 +50,12 @@
 @import 'views/help-page';
 @import "views/guide";
 
+.gem-c-title__context {
+  color: $link-colour;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .go-deeper {
   @extend %contain-floats;
 
