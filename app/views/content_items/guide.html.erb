@@ -54,7 +54,7 @@
 
   <% if services_items[:items].any? %>
     <div class="can-do-services can-do-section">
-      <h3>Services</h3>
+      <h3 class="can-do-h3">Services</h3>
         <%= render 'shared/highlight_box', type: "services", items: services_items %>
       <p><a href="#">See more services</a></p>
     </div>
@@ -81,7 +81,7 @@
 
   <% if mainstream_guidance_items[:items].any? %>
     <div class="can-do-guidance can-do-section">
-      <h3>Guidance and regulation</h3>
+      <h3 class="can-do-h3">Guidance and regulation</h3>
 
       <%= render 'shared/highlight_box', type: "guidance", items: mainstream_guidance_items %>
       <%= render "govuk_publishing_components/components/document_list", guidance_items %>
@@ -100,7 +100,7 @@
 
   <% if business_support_items[:items].any? %>
   <div class="can-do-business-support can-do-section">
-    <h3>Business support</h3>
+    <h3 class="can-do-h3">Business support</h3>
 
     <%= render "govuk_publishing_components/components/document_list", business_support_items %>
 
@@ -118,7 +118,7 @@
 
   <% if regulations_items[:items].any? %>
   <div class="can-do-regulation can-do-section">
-    <h3>Regulation</h3>
+    <h3 class="can-do-h3">Regulation</h3>
 
     <%= render "govuk_publishing_components/components/document_list", regulations_items  %>
 
@@ -136,7 +136,7 @@
 
   <% if policy_items[:items].any? %>
   <div class="can-do-policy can-do-section">
-    <h3>Policy</h3>
+    <h3 class="can-do-h3">Policy</h3>
 
     <%= render "govuk_publishing_components/components/document_list", policy_items %>
 
