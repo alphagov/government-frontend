@@ -17,6 +17,7 @@
   </div>
 </div>
 
+
 <%= render 'shared/publisher_metadata_with_logo' %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
@@ -38,7 +39,12 @@
         last_updated: @content_item.updated,
         history: @content_item.history
       } %>
+      <%= render 'shared/guidance_go_deeper' %>
   </div>
 
   <%= render 'shared/sidebar_navigation' %>
 </div>
+
+<% if @content_item.taxons %>
+  <%= render 'shared/guidance_can_do_links' %>
+<% end %>

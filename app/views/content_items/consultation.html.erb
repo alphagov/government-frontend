@@ -181,6 +181,11 @@
         history: @content_item.history
       } %>
     </div>
+    <%= render 'shared/go_deeper' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>
+
+<% if @content_item.taxons %>
+  <%= render 'shared/guidance_can_do_links' %>
+<% end %>

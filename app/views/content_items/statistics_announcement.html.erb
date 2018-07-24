@@ -45,6 +45,7 @@
       <%= render 'govuk_publishing_components/components/notice',
           title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
     <% end %>
+    <%= render 'shared/go_deeper' %>
   </div>
   <div class="column-one-third">
     <%= render 'govuk_publishing_components/components/related_navigation', @content_item.content_item.parsed_content %>

@@ -46,7 +46,13 @@
         last_updated: @content_item.updated,
         history: @content_item.history
       } %>
+      <%= render 'shared/go_deeper' %>
   </div>
 
   <%= render 'shared/sidebar_navigation' %>
 </div>
+
+<% if @content_item.taxons %>
+  <%= render 'shared/guidance_can_do_links' %>
+<% end %>
+
