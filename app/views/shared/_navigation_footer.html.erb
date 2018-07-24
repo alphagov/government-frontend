@@ -1,0 +1,248 @@
+<div class="navigation-footer">
+  <h2>More in
+    <a class="navigation-footer__title-link" href="/education">Education, Training and Skills</a>
+  </h2>
+  <div class="navigation-footer__section">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('supergroups.services'),
+      heading_level: 3,
+      font_size: 24,
+      margin_bottom: 2
+    } %>
+
+    <%= render "govuk_publishing_components/components/highlight_boxes", {
+      inverse: true,
+      items: [
+        {
+          link: {
+            text: "Student finance login",
+            path: "/student-finance-register-login"
+          }
+        },
+        {
+          link: {
+            text: "School term and holiday dates",
+            path: "/school-term-holiday-dates"
+          }
+        },
+        {
+          link: {
+            text: "Apply online for student finance",
+            path: "/apply-online-for-student-finance"
+          }
+        }
+      ]
+    } %>
+
+    <a href="/search/advanced?group=services&topic=%2Feducation">
+      <%= t('supergroups.see_more_supergroups', supergroup: t('supergroups.services').downcase()) %>
+    </a>
+  </div>
+
+  <div class="navigation-footer__section">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('supergroups.guidance_and_regulation'),
+      heading_level: 3,
+      font_size: 24,
+      margin_bottom: 2
+    } %>
+
+    <%= render "govuk_publishing_components/components/highlight_boxes", {
+      items: [
+        {
+          link: {
+            text: "Find an apprenticeship",
+            path: "/apply-apprenticeship"
+          },
+          metadata: {
+            document_type: "Answer"
+          }
+        },
+        {
+          link: {
+            text: "Student finance",
+            path: "/student-finance"
+          },
+          metadata: {
+            document_type: "Guide"
+          }
+        },
+        {
+          link: {
+            text: "Contact Student Finance England",
+            path: "/contact-student-finance-england"
+          },
+          metadata: {
+            document_type: "Answer"
+          }
+        }
+      ]
+    } %>
+
+    <%= render "govuk_publishing_components/components/document_list", {
+      items: [
+        {
+          link: {
+            text: "Become an apprentice",
+            path: "/apprenticeships-guide"
+          },
+          metadata: {
+            document_type: "Guide"
+          }
+        }
+      ]
+    } %>
+
+    <a href="/search/advanced?group=guidance_and_regulation&topic=%2Feducation">
+      <%= t('supergroups.see_more_supergroups', supergroup: t('supergroups.guidance_and_regulation').downcase()) %>
+    </a>
+  </div>
+
+  <div class="navigation-footer__section">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('supergroups.news_and_communications'),
+      heading_level: 3,
+      font_size: 24,
+      margin_bottom: 2
+    } %>
+
+    <ol class="grid-row navigation-footer__news">
+      <li class="column-one-third">
+        <%= render "govuk_publishing_components/components/image_card", {
+          href: "/government/speeches/china-celebrates-35-years-of-chevening",
+          image_src: "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/64291/Chevening-960.jpg",
+          image_alt: "China celebrates 35 years of Chevening",
+          heading_text: "China celebrates 35 years of Chevening",
+          context: "16 July 2018 - Speech"
+        } %>
+      </li>
+      <li class="column-one-third">
+        <%= render "govuk_publishing_components/components/image_card", {
+          href: "/government/publications/financial-notice-to-improve-st-anselms-catholic-multi-academy-trust",
+          image_src: "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg",
+          heading_text: "Financial notice to improve: St Anselm’s Catholic Multi Academy Trust",
+          image_alt: "",
+          context: "13 July 2018 - Notice"
+        } %>
+      </li>
+      <li class="column-one-third">
+        <%= render "govuk_publishing_components/components/image_card", {
+          href: "/government/publications/termination-warning-notice-to-sandymoor-free-school",
+          image_src: "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg",
+          heading_text: "Termination warning notice to Sandymoor Free School",
+          image_alt: "",
+          context: "13 July 2018 - Correspondence"
+        } %>
+      </li>
+    </ol>
+
+    <a href="/search/advanced?group=news_and_communications&topic=%2Feducation">
+      <%= t('supergroups.see_more_supergroups', supergroup: t('supergroups.news_and_communications').downcase()) %>
+    </a>
+  </div>
+
+  <div class="navigation-footer__section">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('supergroups.policy_and_engagement'),
+      heading_level: 3,
+      font_size: 24,
+      margin_bottom: 2
+    } %>
+
+      <%= render "govuk_publishing_components/components/document_list", {
+        items: [
+          {
+            link: {
+              text: "Ofqual’s approach to regulating Technical Qualifications",
+              path: "/government/consultations/ofquals-approach-to-regulating-technical-qualifications",
+            },
+            metadata: {
+              published_date: "10 July 2018",
+              published_by: "Ofqual",
+              document_type: "Open consultation",
+              consultation_closing_date: "Closing date 06 August 2018"
+            }
+          },
+          {
+            link: {
+              text: "Implementing functional skills reform",
+              path: "/government/consultations/implementing-functional-skills-reform",
+            },
+            metadata: {
+              published_date: "28 June 2018",
+              published_by: "Ofqual",
+              document_type: "Consultation outcome",
+              consultation_closing_date: "Date closed 11 May 2018"
+            }
+          },
+          {
+            link: {
+              text: "Regulating Advanced Extension Awards",
+              path: "/government/consultations/regulating-advanced-extension-awards",
+            },
+            metadata: {
+              published_date: "15 June 2018",
+              published_by: "Ofqual",
+              document_type: "Consultation outcome",
+              consultation_closing_date: "Date closed 07 March 2018"
+            }
+          }
+        ]
+      } %>
+
+    <a href="/search/advanced?group=policy_and_engagement&topic=%2Feducation">
+      <%= t('supergroups.see_more_supergroups', supergroup: t('supergroups.policy_and_engagement').downcase()) %>
+    </a>
+  </div>
+
+  <div class="navigation-footer__section">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('supergroups.transparency'),
+      heading_level: 3,
+      font_size: 24,
+      margin_bottom: 2
+    } %>
+
+      <%= render "govuk_publishing_components/components/document_list", {
+        items: [
+          {
+            link: {
+              text: "Academy trusts: notices about poor performance",
+              path: "/government/publications/list-of-letters-to-academy-trusts-about-poor-performance",
+            },
+            metadata: {
+              published_date: "12 July 2018",
+              published_by: "Department for Education",
+              document_type: "Transparency",
+            }
+          },
+          {
+            link: {
+              text: "Revised GCSE and equivalent results in England: 2016 to 2017",
+              path: "/government/statistics/revised-gcse-and-equivalent-results-in-england-2016-to-2017",
+            },
+            metadata: {
+              published_date: "12 July 2018",
+              published_by: "Department for Education",
+              document_type: "National statistics",
+            }
+          },
+          {
+            link: {
+              text: "School inspections and outcomes: management information",
+              path: "/government/statistical-data-sets/monthly-management-information-ofsteds-school-inspections-outcomes",
+            },
+            metadata: {
+              published_date: "12 July 2018",
+              published_by: "Ofsted",
+              document_type: "Statistical data set",
+            }
+          }
+        ]
+      } %>
+
+    <a href="/search/advanced?group=transparency&topic=%2Feducation">
+      <%= t('supergroups.see_more_supergroups', supergroup: t('supergroups.transparency').downcase()) %>
+    </a>
+  </div>
+</div>

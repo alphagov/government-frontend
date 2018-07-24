@@ -43,6 +43,13 @@ en:
       last_updated: "Last updated %{date}"
       published: "Published %{date}"
       see_all_updates: "see all updates"
+  supergroups:
+    guidance_and_regulation: "Guidance and regulation"
+    news_and_communications: "News and communications"
+    policy_and_engagement: "Policy and engagement"
+    services: "Services"
+    transparency: "Transparency"
+    see_more_supergroups: "See more %{supergroup}"
   language_names:
     ar: Arabic
     de: German
