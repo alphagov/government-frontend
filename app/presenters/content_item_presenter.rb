@@ -25,13 +25,17 @@ class ContentItemPresenter
     @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
   end
 
+  def taxons
+    @content_item["links"]["taxons"]
+  end
+
   def related_stuff(rummager_args)
     results = Services.rummager.search({ count: 5, fields: %w[title public_timestamp link content_store_document_type]}.merge(rummager_args))["results"]
 
     items = results.map do |r|
       {
         link: { text: r["title"], path: r["link"] },
-        metadata: { public_updated_at: Time.parse(r["public_timestamp"]), document_type: "other" }
+        metadata: { public_updated_at: Time.parse(r["public_timestamp"]), document_type: r["content_store_document_type"] }
       }
     end
 

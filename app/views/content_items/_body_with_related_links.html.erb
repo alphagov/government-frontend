@@ -3,7 +3,8 @@
 <div class="grid-row">
   <div class="column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
-        title: @content_item.title %>
+        title: @content_item.title,
+        context: ({ text: @content_item.taxons.first["title"], href: @content_item.taxons.first["base_path"] }  if @content_item.taxons) %>
   </div>
 </div>
 
@@ -24,3 +25,7 @@
 
   <%= render 'shared/sidebar_navigation' %>
 </div>
+
+<% if @content_item.taxons %>
+  <%= render 'shared/guidance_can_do_links' %>
+<% end %>

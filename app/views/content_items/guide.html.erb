@@ -9,7 +9,10 @@
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', { title: @content_item.title, context: { text: @content_item.taxons.first["title"], href: @content_item.taxons.first["base_path"] } } %>
+    <%= render 'govuk_publishing_components/components/title',
+      title: @content_item.title,
+      context: ({ text: @content_item.taxons.first["title"], href: @content_item.taxons.first["base_path"] }  if @content_item.taxons)
+    %>
     <% if @content_item.multi_page_guide? %>
       <aside class="part-navigation-container" role="complementary">
         <%= render "govuk_publishing_components/components/contents_list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
@@ -38,4 +41,6 @@
     <%= render 'shared/sidebar_navigation' %>
 </div>
 
-<%= render 'shared/guidance_can_do_links' %>
+<% if @content_item.taxons %>
+  <%= render 'shared/guidance_can_do_links' %>
+<% end %>

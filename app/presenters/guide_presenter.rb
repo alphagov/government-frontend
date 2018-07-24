@@ -4,10 +4,6 @@ class GuidePresenter < ContentItemPresenter
 
   attr_accessor :draft_access_token
 
-  def taxons
-    content_item["links"]["taxons"]
-  end
-
   def organisations
     orgs = content_item["links"]["organisations"] || []
     orgs.sort_by { |o| o["title"] }
