@@ -1,0 +1,31 @@
+<div class="grid-row">
+  <div class="column-two-thirds" <%# "data-module=track-click" if track_click?(documents) %>>
+    <% docs = documents.map.with_index{|document, index|
+      {
+        link: {
+            text: document["title"],
+            path: 'www.gooogle.com',
+            data_attributes: "hi"
+        },
+        metadata: {
+            organisations: document["organisations"],
+            document_type: document["content_store_document_type"].humanize
+        }
+    } } %>
+
+
+
+    <%= render 'govuk_publishing_components/components/document_list',
+      items: docs,
+      margin_top: true,
+      margin_bottom: true
+    %>
+
+    <% if local_assigns[:see_more_link] %>
+      <%= link_to(
+        see_more_link[:text],
+        see_more_link[:url]
+      )%>
+    <% end %>
+  </div>
+</div>

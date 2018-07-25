@@ -24,3 +24,8 @@
 
   <%= render 'shared/sidebar_navigation' %>
 </div>
+
+<% if @content_item.has_guidance_and_regulation_links? %>
+  <%= render "govuk_publishing_components/components/highlight_boxes", {
+      items: @content_item.guidance_and_regulation_links_content } %>
+<% end %>
