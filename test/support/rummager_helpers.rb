@@ -7,11 +7,11 @@ module RummagerHelpers
 
   def stub_most_popular_content_for_taxon_and_supergroup(content_ids, results, filter_content_purpose_supergroup)
     fields = %w(title
-                 link
-                 description
-                 content_store_document_type
-                 public_timestamp
-                 organisations)
+                link
+                description
+                content_store_document_type
+                public_timestamp
+                organisations)
 
     params = {
         start: 0,
@@ -25,10 +25,10 @@ module RummagerHelpers
     Services.rummager.stubs(:search)
         .with(params)
         .returns(
-                    "results" => results,
-                    "start" => 0,
-                    "total" => results.size,
-                )
+          "results" => results,
+          "start" => 0,
+          "total" => results.size,
+        )
   end
 
   def generate_search_results(count, supergroup)

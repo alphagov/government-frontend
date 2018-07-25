@@ -77,7 +77,7 @@ class ContentItemPresenter
 
   def guidance_and_regulation_links_content
     guidance_and_regulation_links.map do |content_item|
-      content_item = {
+      {
           link: {
               text: content_item["title"],
               path: content_item["link"]
