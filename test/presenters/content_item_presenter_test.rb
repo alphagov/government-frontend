@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ContentItemPresenterTest < ActiveSupport::TestCase
+  include RummagerHelpers
+
   test "#title" do
     assert_equal "Title", ContentItemPresenter.new("title" => "Title").title
   end
@@ -52,5 +54,49 @@ class ContentItemPresenterTest < ActiveSupport::TestCase
 
     refute presented_example.requesting_a_part?
     assert presented_example.part_slug.nil?
+  end
+
+  test "has_guidance_and_regulation_links? is false if there are no taxons" do
+    example_without_links = govuk_content_schema_example('guide', 'no-part-guide')
+    assert_nil example_without_links["links"]["taxons"]
+    presenter = ContentItemPresenter.new(example_without_links)
+    assert_not presenter.has_guidance_and_regulation_links?
+  end
+
+  test "has_guidance_and_regulation_links? is false if there are some taxons but no results" do
+    example_with_links = govuk_content_schema_example('guide', 'guide')
+    stub_most_popular_content(example_with_links, 0, "guidance_and_regulation")
+    presenter = ContentItemPresenter.new(example_with_links)
+    assert_not presenter.has_guidance_and_regulation_links?
+  end
+
+  test "has_guidance_and_regulation_links? is true if there are some taxons" do
+    example_with_links = govuk_content_schema_example('guide', 'guide')
+    stub_most_popular_content(example_with_links, 1, "guidance_and_regulation")
+    presenter = ContentItemPresenter.new(example_with_links)
+    assert presenter.has_guidance_and_regulation_links?
+  end
+
+  test "guidance_and_regulation_links_content returns empty array if there are no contents" do
+    example_without_links = govuk_content_schema_example('guide', 'no-part-guide')
+    assert_nil example_without_links["links"]["taxons"]
+    presenter = ContentItemPresenter.new(example_without_links)
+    assert_equal [], presenter.guidance_and_regulation_links_content
+  end
+
+  test "guidance_and_regulation_links_content returne empty array if there are some taxons but no results" do
+    example_with_links = govuk_content_schema_example('guide', 'guide')
+    stub_most_popular_content(example_with_links, 0, "guidance_and_regulation")
+    presenter = ContentItemPresenter.new(example_with_links)
+    assert_equal [], presenter.guidance_and_regulation_links_content
+  end
+
+  test "guidance_and_regulation_links_content is an array with that number of entries if there are some taxons" do
+    example_with_links = govuk_content_schema_example('guide', 'guide')
+    stub_most_popular_content(example_with_links, 2, "guidance_and_regulation")
+    presenter = ContentItemPresenter.new(example_with_links)
+    assert_equal 2, presenter.guidance_and_regulation_links_content.count
+    assert_equal [{ link: { text: "Content item 0", path: "/content-item-0" }, metadata: { document_type: "guidance_and_regulation" } },
+                  { link: { text: "Content item 1", path: "/content-item-1" }, metadata: { document_type: "guidance_and_regulation" } }], presenter.guidance_and_regulation_links_content
   end
 end

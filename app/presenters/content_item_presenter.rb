@@ -71,6 +71,24 @@ class ContentItemPresenter
     !content_item.cache_control.private?
   end
 
+  def has_guidance_and_regulation_links?
+    guidance_and_regulation_links.any?
+  end
+
+  def guidance_and_regulation_links_content
+    guidance_and_regulation_links.map do |content_item|
+      {
+          link: {
+              text: content_item["title"],
+              path: content_item["link"]
+          },
+          metadata: {
+              document_type: content_item["content_store_document_type"]
+          }
+      }
+    end
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
@@ -99,5 +117,9 @@ private
 
   def native_language_name_for(locale)
     I18n.t("language_names.#{locale}", locale: locale)
+  end
+
+  def guidance_and_regulation_links
+    @guidance_and_regulation_links ||= GuidanceAndRegulation.new(content_item).content
   end
 end
