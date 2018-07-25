@@ -22,7 +22,10 @@ module GovernmentFrontend
     config.time_zone = 'London'
 
     # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += %W(
+                                #{config.root}/lib
+                                #{config.root}/app/services/supergroups
+                                )
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
