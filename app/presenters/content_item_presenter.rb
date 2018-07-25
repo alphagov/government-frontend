@@ -10,7 +10,8 @@ class ContentItemPresenter
               :locale,
               :phase,
               :part_slug,
-              :document_type
+              :document_type,
+              :taxons
 
   def initialize(content_item, requested_content_item_path = nil)
     @content_item = content_item
@@ -22,6 +23,7 @@ class ContentItemPresenter
     @locale = content_item["locale"] || "en"
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
+    @taxons = content_item["links"]["taxons"] if content_item["links"]
     @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
   end
 

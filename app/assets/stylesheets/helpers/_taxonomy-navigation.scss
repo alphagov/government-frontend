@@ -1,0 +1,19 @@
+.taxonomy-navigation {
+  border-top: 2px solid $govuk-blue;
+  padding-top: $gutter-half;
+}
+
+.taxonomy-navigation__title-link {
+  @include bold-24;
+  display: block;
+}
+
+.taxonomy-navigation__section {
+  padding: $gutter-one-third 0 $gutter-two-thirds 0;
+  margin-top: $gutter-half;
+  border-top: 1px solid $grey-2;
+}
+
+.taxonomy-navigation__section:first-of-type {
+  border-top: 0;
+}
