@@ -11,7 +11,7 @@ module Supergroups
       format_document_data(@content)
     end
 
-private
+  private
 
     def format_document_data(documents)
       documents&.map do |document|
@@ -33,8 +33,9 @@ private
 
     def format_organisations(document)
       if document["organisations"].present?
-        document["organisations"].map {|organisation| organisation["title"]}.to_sentence
+        document["organisations"].map { |organisation| organisation["title"] }.to_sentence
       end
     end
   end
 end
+

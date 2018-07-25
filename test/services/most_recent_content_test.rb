@@ -6,9 +6,9 @@ class MostRecentContentTest < ActiveSupport::TestCase
 
   def most_recent_content
     @most_recent_content ||= MostRecentContent.new(
-        content_ids: taxon_content_ids,
-        filter_content_purpose_supergroup: 'news_and_communications',
-        )
+      content_ids: taxon_content_ids,
+      filter_content_purpose_supergroup: 'news_and_communications',
+    )
   end
 
   def taxon_content_ids
@@ -19,11 +19,11 @@ class MostRecentContentTest < ActiveSupport::TestCase
     search_results = {
         body: {
             'results' => [
-                {'title' => 'First news story'},
-                {'title' => 'Second news story'},
-                {'title' => 'Third news story'},
-                {'title' => 'Fourth news story'},
-                {'title' => 'Fifth news story'}
+                { 'title' => 'First news story' },
+                { 'title' => 'Second news story' },
+                { 'title' => 'Third news story' },
+                { 'title' => 'Fourth news story' },
+                { 'title' => 'Fifth news story' }
             ]
         }.to_json
     }
@@ -75,11 +75,11 @@ class MostRecentContentTest < ActiveSupport::TestCase
   def assert_includes_params(expected_params)
     search_results = {
         'results' => [
-            {'title' => 'First news story'},
-            {'title' => 'Second news story'},
-            {'title' => 'Third news story'},
-            {'title' => 'Fourth news story'},
-            {'title' => 'Fifth news story'}
+            { 'title' => 'First news story' },
+            { 'title' => 'Second news story' },
+            { 'title' => 'Third news story' },
+            { 'title' => 'Fourth news story' },
+            { 'title' => 'Fifth news story' }
         ]
     }
 
@@ -100,9 +100,9 @@ class MostRecentContentTest < ActiveSupport::TestCase
   def assert_includes_subhash(expected_sub_hash, hash)
     expected_sub_hash.each do |key, value|
       assert_equal(
-          value,
-          hash[key],
-          "Expected #{hash} to include #{key} => #{value}"
+        value,
+        hash[key],
+        "Expected #{hash} to include #{key} => #{value}"
       )
     end
   end
