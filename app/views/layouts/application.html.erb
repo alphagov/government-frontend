@@ -24,6 +24,7 @@
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
+  <%= content_pages_nav_test_variant.analytics_meta_tag.html_safe if page_in_scope? %>
 
   <%= yield :extra_head_content %>
 </head>
@@ -43,6 +44,9 @@
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
+      <% if show_new_navigation? && @taxonomy_navigation %>
+        <%= render 'shared/taxonomy_navigation', taxonomy_navigation: @taxonomy_navigation, tagged_taxons: @tagged_taxons %>
+      <% end %>
     </main>
     <%= render 'govuk_publishing_components/components/feedback' %>
   </div>

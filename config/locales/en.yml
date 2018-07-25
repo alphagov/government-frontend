@@ -43,6 +43,10 @@ en:
       last_updated: "Last updated %{date}"
       published: "Published %{date}"
       see_all_updates: "see all updates"
+  supergroups:
+    services: "Services"
+    see_more_supergroups: "See more %{supergroup}"
+    news_and_communications: "News and Communications"
   language_names:
     ar: Arabic
     de: German

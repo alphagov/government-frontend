@@ -1,4 +1,5 @@
 class ContentItemsController < ApplicationController
+  include ContentPagesNavAbTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -9,10 +10,12 @@ class ContentItemsController < ApplicationController
   rescue_from PresenterBuilder::RedirectRouteReturned, with: :error_redirect
   rescue_from PresenterBuilder::SpecialRouteReturned, with: :error_notfound
 
-  attr_accessor :content_item
+  attr_accessor :content_item, :taxonomy_navigation
 
   def show
     load_content_item
+
+    load_taxonomy_navigation if show_new_navigation?
 
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
@@ -58,6 +61,29 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
+  end
+
+  def load_taxonomy_navigation
+    if @content_item.taxons.present?
+      taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
+
+      taxon_ids = taxons.map { |taxon| taxon["content_id"] }
+      services = Supergroups::Services.new(taxon_ids)
+      news_and_communications = Supergroups::NewsAndCommunications.new(taxon_ids)
+
+      @taxonomy_navigation = {
+        services: services.tagged_content,
+        news_and_communications: news_and_communications.tagged_content,
+      }
+
+      @tagged_taxons = taxons.map do |taxon|
+        {
+          taxon_id: taxon["content_id"],
+          taxon_name: taxon["title"],
+          taxon_link: taxon["base_path"],
+        }
+      end
+    end
   end
 
   def content_item_template

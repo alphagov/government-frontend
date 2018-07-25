@@ -78,6 +78,8 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_request(:get, %r{#{invalid_part_path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
+    @controller.stubs(:page_in_scope?).returns(false)
+
     get :show, params: { path: invalid_part_path }
 
     assert_response :redirect
