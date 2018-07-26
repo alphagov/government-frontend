@@ -1,14 +1,16 @@
 module Supergroups
   class Transparency
-    attr_reader :content
-
     def initialize(taxon_ids)
       @taxon_ids = taxon_ids
+      @content = MostRecentContent.fetch(content_ids: @taxon_ids, filter_content_purpose_supergroup: "transparency")
     end
 
     def tagged_content
-      @content = MostRecentContent.fetch(content_ids: @taxon_ids, filter_content_purpose_supergroup: "transparency")
       format_document_data(@content)
+    end
+
+    def any_content?
+      @content.any?
     end
 
   private
@@ -21,11 +23,14 @@ module Supergroups
                 path: document["link"]
             },
             metadata: {
-                public_updated_at: Date.parse(document["public_timestamp"]),
                 organisations: format_organisations(document),
                 document_type: document["content_store_document_type"].humanize
             }
         }
+
+        if document["public_timestamp"]
+          data[:metadata][:public_updated_at] = Date.parse(document["public_timestamp"])
+        end
 
         data
       end

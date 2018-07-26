@@ -74,8 +74,8 @@ private
 
       @taxonomy_navigation = {
         services: (services.all_services if services.any_services?),
-        news_and_communications: news_and_communications.tagged_content,
-        transparency: transparency.tagged_content,
+        news_and_communications: (news_and_communications.tagged_content if news_and_communications.any_content?),
+        transparency: (transparency.tagged_content if transparency.any_content?),
       }
 
       @tagged_taxons = taxons.map do |taxon|
