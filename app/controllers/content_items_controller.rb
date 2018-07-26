@@ -68,7 +68,7 @@ private
       taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
 
       taxon_ids = taxons.map { |taxon| taxon["content_id"] }
-      services = Supergroups::Services.new(taxon_ids)
+      services = Supergroups::Services.new(content_item_path, taxon_ids)
 
       @taxonomy_navigation = {
         services: (services.all_services if services.any_services?),

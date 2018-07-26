@@ -2,9 +2,13 @@ module Supergroups
   class Services
     attr_reader :content
 
-    def initialize(taxon_ids)
+    def initialize(current_path, taxon_ids)
       @taxon_ids = taxon_ids
-      @content = MostPopularContent.fetch(content_ids: @taxon_ids, filter_content_purpose_supergroup: "services")
+      @content = MostPopularContent.fetch(
+        content_ids: @taxon_ids,
+        current_path: current_path,
+        filter_content_purpose_supergroup: "services"
+      )
     end
 
     def all_services
