@@ -35,8 +35,8 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
       def content_item
         {
           'public_updated_at' => '2002-02-02',
+          'first_published_at' => '2001-01-01',
           'details' => {
-            'first_public_at' => '2001-01-01',
             'change_history' => [
               {
                 'note' => 'note',

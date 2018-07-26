@@ -14,7 +14,7 @@ module ContentItem
     end
 
     def first_public_at
-      content_item["details"]["first_public_at"]
+      content_item["details"]["first_public_at"] || content_item["first_published_at"]
     end
 
     def public_updated_at
