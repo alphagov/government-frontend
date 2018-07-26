@@ -25,5 +25,37 @@
         } %>
       </div>
     <% end %>
+
+    <% if taxonomy_navigation[:news_and_communications].any? %>
+      <div class="taxonomy-navigation__section">
+        <%= render "govuk_publishing_components/components/heading", {
+            text: t('supergroups.news_and_communications'),
+            heading_level: 3,
+            font_size: 24,
+            margin_bottom: 2
+        } %>
+
+        <%= render "govuk_publishing_components/components/highlight_boxes", {
+            inverse: true,
+            items: taxonomy_navigation[:news_and_communications]
+        } %>
+      </div>
+    <% end %>
+
+    <% if taxonomy_navigation[:transparency].any? %>
+      <div class="taxonomy-navigation__section">
+        <%= render "govuk_publishing_components/components/heading", {
+            text: t('supergroups.transparency'),
+            heading_level: 3,
+            font_size: 24,
+            margin_bottom: 2
+        } %>
+
+        <%= render "govuk_publishing_components/components/highlight_boxes", {
+            inverse: true,
+            items: taxonomy_navigation[:transparency]
+        } %>
+      </div>
+    <% end %>
   </div>
 <% end %>

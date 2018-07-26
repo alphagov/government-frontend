@@ -7,6 +7,7 @@ module ContentPagesNavTestHelper
         "content_store_document_type": "form",
         "link": "/government/publications/meals",
         "title": "Free school meals form",
+        "links": { "organisations": [{ "title": "Department of Education" }] }
       )
     end
 
