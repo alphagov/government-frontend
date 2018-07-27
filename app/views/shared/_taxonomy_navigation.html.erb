@@ -1,12 +1,12 @@
 <% if taxonomy_navigation.values().flatten.any? %>
-  <div class="taxonomy-navigation">
+  <div class="taxonomy-navigation" data-module="track-click">
     <h2>More in
       <% tagged_taxons.each do |tagged_taxon| %>
         <a class="taxonomy-navigation__title-link" href="<%= tagged_taxon[:taxon_link] %>"><%= tagged_taxon[:taxon_name] %></a>
       <% end %>
     </h2>
 
-    <% if taxonomy_navigation[:services].any? %>
+    <% if taxonomy_navigation[:services].present? %>
       <div class="taxonomy-navigation__section">
         <%= render "govuk_publishing_components/components/heading", {
           text: t('supergroups.services'),
@@ -26,7 +26,7 @@
       </div>
     <% end %>
 
-    <% if taxonomy_navigation[:guidance_and_regulation].any? %>
+    <% if taxonomy_navigation[:guidance_and_regulation].present? %>
       <div class="taxonomy-navigation__section">
         <%= render "govuk_publishing_components/components/heading", {
             text: t('supergroups.guidance_and_regulation'),
@@ -41,7 +41,7 @@
       </div>
     <% end %>
 
-    <% if taxonomy_navigation[:policy_and_engagement].any? %>
+    <% if taxonomy_navigation[:policy_and_engagement].present? %>
       <div class="taxonomy-navigation__section">
         <%= render "govuk_publishing_components/components/heading", {
             text: t('supergroups.policy_and_engagement'),

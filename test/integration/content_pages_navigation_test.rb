@@ -57,6 +57,8 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
   test "shows the Services section title and documents with tracking" do
     stub_rummager
+    stub_empty_guidance
+    stub_empty_policies
     setup_variant_b
 
     taxons = SINGLE_TAXON
@@ -83,6 +85,74 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
     refute page.has_css?('h3', text: "Services")
+  end
+
+  test "shows the Policy section title and documents with tracking" do
+    stub_rummager
+    stub_empty_services
+    stub_empty_guidance
+    setup_variant_b
+
+    taxons = SINGLE_TAXON
+
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    assert page.has_css?('h3', text: "Policy and engagement")
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="policyAndEngagementDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
+
+  test "does not show the Policy section if there is no tagged content" do
+    stub_empty_rummager
+    setup_variant_b
+
+    taxons = SINGLE_TAXON
+
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    refute page.has_css?('h3', text: "Policy and engagement")
+  end
+
+  test "shows the Guidance section title and documents with tracking" do
+    stub_rummager
+    stub_empty_services
+    stub_empty_policies
+    setup_variant_b
+
+    taxons = SINGLE_TAXON
+
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    assert page.has_css?('h3', text: "Guidance and regulation")
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="guidanceAndRegulationDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
+
+  test "does not show the Guidance section if there is no tagged content" do
+    stub_empty_rummager
+    setup_variant_b
+
+    taxons = SINGLE_TAXON
+
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    refute page.has_css?('h3', text: "Guidance and regulation")
+  end
+
+  def stub_empty_services
+    Supergroups::Services.any_instance.stubs(:all_services).returns({})
+  end
+
+  def stub_empty_guidance
+    Supergroups::GuidanceAndRegulation.any_instance.stubs(:tagged_content).returns([])
+  end
+
+  def stub_empty_policies
+    Supergroups::PolicyAndEngagement.any_instance.stubs(:tagged_content).returns([])
   end
 
   def setup_variant_a
