@@ -32,15 +32,15 @@ module ServiceSignIn
             assert page.has_text?("You can't file online until you've activated Government Gateway account using your Unique Taxpayer Reference(UTR).")
           end
 
-          assert page.has_css?(".gem-c-radio__label__text", text: "Use Government Gateway")
-          assert page.has_css?(".gem-c-radio__label__hint", text: "You’ll have a user ID if you’ve signed up to do things like file your Self Assessment tax return online.")
+          assert page.has_css?(".gem-c-radio .govuk-label", text: "Use Government Gateway")
+          assert page.has_css?(".gem-c-radio .govuk-hint", text: "You’ll have a user ID if you’ve signed up to do things like file your Self Assessment tax return online.")
 
-          assert page.has_css?(".gem-c-radio__label__text", text: "Use GOV.UK Verify")
-          assert page.has_css?(".gem-c-radio__label__hint", text: "You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.")
+          assert page.has_css?(".gem-c-radio .govuk-label", text: "Use GOV.UK Verify")
+          assert page.has_css?(".gem-c-radio .govuk-hint", text: "You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.")
 
-          assert page.has_css?(".gem-c-radio__block-text", text: "or")
+          assert page.has_css?(".govuk-radios__divider", text: "or")
 
-          assert page.has_css?(".gem-c-radio__label__text", text: "Create an account")
+          assert page.has_css?(".gem-c-radio .govuk-label", text: "Create an account")
         end
 
         assert page.has_css?(".gem-c-button", text: "Continue")
@@ -57,7 +57,7 @@ module ServiceSignIn
       assert page.has_css?(".gem-c-error-summary__link[href='#option-0']", text: 'Please select an option')
 
       # Make sure the id is the same as the link href so that they'll link together properly.
-      assert page.has_css?(".gem-c-radio__input[id='option-0'][value='use-government-gateway']", visible: false)
+      assert page.has_css?(".gem-c-radio input[id='option-0'][value='use-government-gateway']", visible: false)
 
       assert page.has_css?(".app-c-error-message", text: 'Please select an option')
     end
@@ -65,13 +65,13 @@ module ServiceSignIn
     test "page less options without an or divider" do
       setup_and_visit_choose_sign_in_page("view_driving_licence", "/choose-sign-in")
 
-      assert page.has_css?(".gem-c-radio__label__text", text: "Use your driving licence and National Insurance number")
-      assert page.has_css?(".gem-c-radio__label__hint", text: "Your driving licence must have been issued in England, Scotland or Wales.")
+      assert page.has_css?(".gem-c-radio .govuk-label", text: "Use your driving licence and National Insurance number")
+      assert page.has_css?(".gem-c-radio .govuk-hint", text: "Your driving licence must have been issued in England, Scotland or Wales.")
 
-      assert page.has_css?(".gem-c-radio__label__text", text: "Use GOV.UK Verify")
-      assert page.has_css?(".gem-c-radio__label__hint", text: "You can use an existing identity account or create a new one. It usually takes about 5 minutes to create an account.")
+      assert page.has_css?(".gem-c-radio .govuk-label", text: "Use GOV.UK Verify")
+      assert page.has_css?(".gem-c-radio .govuk-hint", text: "You can use an existing identity account or create a new one. It usually takes about 5 minutes to create an account.")
 
-      refute page.has_css?(".gem-c-radio__block-text", text: "or")
+      refute page.has_css?(".govuk-radios__divider", text: "or")
     end
 
     test "page renders welsh correctly" do
@@ -90,16 +90,16 @@ module ServiceSignIn
             assert page.has_text?("Os ydych chi’n ffeilio ar-lein am y tro cyntaf, bydd angen i chi gofrestru ar gyfer Hunanasesiad yn gyntaf.")
           end
 
-          assert page.has_css?(".gem-c-radio__label__text", text: "Defnyddio Porth y Llywodraeth")
-          assert page.has_css?(".gem-c-radio__label__hint", text: "Bydd gennych chi ID defnyddiwr os ydych chi wedi cofrestru ar gyfer Hunanasesiad neu wedi ffeilio ffurflen dreth ar-lein yn y gorffennol.")
+          assert page.has_css?(".gem-c-radio .govuk-label", text: "Defnyddio Porth y Llywodraeth")
+          assert page.has_css?(".gem-c-radio .govuk-hint", text: "Bydd gennych chi ID defnyddiwr os ydych chi wedi cofrestru ar gyfer Hunanasesiad neu wedi ffeilio ffurflen dreth ar-lein yn y gorffennol.")
 
-          assert page.has_css?(".gem-c-radio__label__text", text: "Defnyddio GOV.UK Verify")
-          assert page.has_css?(".gem-c-radio__label__hint", text: "Bydd gennych chi gyfrif os ydych chi wedi profi'n barod pwy ydych chi naill ai gyda Barclays, CitizenSafe, Digidentity, Experian, Swyddfa'r Post, y Post Brenhinol neu SecureIdentity.")
+          assert page.has_css?(".gem-c-radio .govuk-label", text: "Defnyddio GOV.UK Verify")
+          assert page.has_css?(".gem-c-radio .govuk-hint", text: "Bydd gennych chi gyfrif os ydych chi wedi profi'n barod pwy ydych chi naill ai gyda Barclays, CitizenSafe, Digidentity, Experian, Swyddfa'r Post, y Post Brenhinol neu SecureIdentity.")
 
-          assert page.has_css?(".gem-c-radio__block-text", text: "neu")
+          assert page.has_css?(".govuk-radios__divider", text: "neu")
 
           within ".gem-c-radio:last-of-type" do
-            assert page.has_css?(".gem-c-radio__label__text", text: "Cofrestru ar gyfer Hunanasesiad")
+            assert page.has_css?(".gem-c-radio .govuk-label", text: "Cofrestru ar gyfer Hunanasesiad")
           end
         end
 
