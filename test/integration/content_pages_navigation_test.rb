@@ -59,6 +59,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     stub_rummager
     stub_empty_guidance
     stub_empty_policies
+    stub_empty_transparency
     setup_variant_b
 
     taxons = SINGLE_TAXON
@@ -89,8 +90,9 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
   test "shows the Policy section title and documents with tracking" do
     stub_rummager
-    stub_empty_services
     stub_empty_guidance
+    stub_empty_services
+    stub_empty_transparency
     setup_variant_b
 
     taxons = SINGLE_TAXON
@@ -117,8 +119,9 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
   test "shows the Guidance section title and documents with tracking" do
     stub_rummager
-    stub_empty_services
     stub_empty_policies
+    stub_empty_services
+    stub_empty_transparency
     setup_variant_b
 
     taxons = SINGLE_TAXON
@@ -143,6 +146,36 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     refute page.has_css?('h3', text: "Guidance and regulation")
   end
 
+  test "shows the Transparency section title and documents with tracking" do
+    stub_rummager
+    stub_empty_guidance
+    stub_empty_policies
+    stub_empty_services
+    setup_variant_b
+
+    taxons = SINGLE_TAXON
+
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    assert page.has_css?('h3', text: "Transparency")
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="transparencyDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
+
+  test "does not show the Transparency section if there is no tagged content" do
+    stub_empty_rummager
+    setup_variant_b
+
+    taxons = SINGLE_TAXON
+
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    refute page.has_css?('h3', text: "Guidance and regulation")
+  end
+
+
   def stub_empty_services
     Supergroups::Services.any_instance.stubs(:all_services).returns({})
   end
@@ -153,6 +186,10 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
   def stub_empty_policies
     Supergroups::PolicyAndEngagement.any_instance.stubs(:tagged_content).returns([])
+  end
+
+  def stub_empty_transparency
+    Supergroups::Transparency.any_instance.stubs(:tagged_content).returns([])
   end
 
   def setup_variant_a
