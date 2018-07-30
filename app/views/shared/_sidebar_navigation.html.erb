@@ -1,3 +1,11 @@
+<%
+  content_item = @content_item.content_item.parsed_content
+
+  if show_new_navigation?
+    content_item['links'].yield_self { |links| links.except!('document_collections') }
+  end
+%>
+
 <div class="column-one-third">
-  <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: @content_item.content_item.parsed_content %>
+  <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: content_item %>
 </div>
