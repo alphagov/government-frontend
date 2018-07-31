@@ -293,7 +293,7 @@ GEM
     scss_lint (0.57.0)
       rake (>= 0.9, < 13)
       sass (~> 3.5.5)
-    selenium-webdriver (3.13.0)
+    selenium-webdriver (3.13.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     sentry-raven (2.7.4)
@@ -335,7 +335,7 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    wraith (4.2.1)
+    wraith (4.2.3)
       anemone
       chromedriver-helper (~> 1.1)
       image_size
