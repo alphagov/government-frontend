@@ -8,7 +8,7 @@ module Supergroups
           link: {
             text: document["title"],
             path: document["link"],
-            data_attributes: data_attributes(document["link"], document["title"], index)
+            data_attributes: data_attributes(document["link"], document["title"], index, data_category)
           },
           metadata: {
             document_type: document["content_store_document_type"].humanize
@@ -27,9 +27,9 @@ module Supergroups
       end
     end
 
-    def data_attributes(base_path, link_text, index)
+    def data_attributes(base_path, link_text, index, data_category)
       {
-        track_category: data_module_label + "DocumentListClicked",
+        track_category: data_module_label + (data_category || "DocumentListClicked"),
         track_action: index,
         track_label: base_path,
         track_options: {

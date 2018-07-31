@@ -19,6 +19,8 @@ module ContentPagesNavTestHelper
         "suggested_queries": []
       }.to_json
     )
+
+    content_store_has_item('/government/publications/meals')
   end
 
   def stub_empty_rummager

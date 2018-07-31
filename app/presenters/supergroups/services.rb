@@ -4,11 +4,8 @@ module Supergroups
 
     def initialize(current_path, taxon_ids)
       @taxon_ids = taxon_ids
-      @content = MostPopularContent.fetch(
-        content_ids: @taxon_ids,
-        current_path: current_path,
-        filter_content_purpose_supergroup: "services"
-      )
+      @current_path = current_path
+      @content = fetch
     end
 
     def all_services
@@ -33,6 +30,16 @@ module Supergroups
     end
 
   private
+
+    def fetch
+      return [] if @taxon_ids.empty?
+
+      MostPopularContent.fetch(
+        content_ids: @taxon_ids,
+        current_path: @current_path,
+        filter_content_purpose_supergroup: "services"
+      )
+    end
 
     def promoted_content_count
       3
