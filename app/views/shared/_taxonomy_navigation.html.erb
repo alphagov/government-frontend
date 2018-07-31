@@ -1,10 +1,36 @@
 <% if taxonomy_navigation.values().flatten.any? %>
   <div class="taxonomy-navigation" data-module="track-click">
-    <h2>More in
-      <% tagged_taxons.each do |tagged_taxon| %>
-        <a class="taxonomy-navigation__title-link" href="<%= tagged_taxon[:taxon_link] %>"><%= tagged_taxon[:taxon_name] %></a>
+    <div class="taxonomy-navigation__row">
+      <div class="taxonomy-navigation__column">
+        <%= render "govuk_publishing_components/components/heading",
+                   text: 'Topics',
+                   heading_level: 2,
+                   padding: true %>
+        <ul>
+          <% tagged_taxons.each do |tagged_taxon| %>
+            <li class="taxonomy-navigation__list-item">
+              <%= link_to tagged_taxon[:taxon_name], tagged_taxon[:taxon_link] %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <% if related_collections.any? %>
+        <div class="taxonomy-navigation__column">
+          <%= render "govuk_publishing_components/components/heading",
+                     text: 'Collections',
+                     heading_level: 2,
+                     padding: true %>
+          <ul>
+            <% related_collections.each do |base_path, title| %>
+              <li class="taxonomy-navigation__list-item">
+                <%= link_to title, base_path %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-    </h2>
+    </div>
 
     <% if taxonomy_navigation[:services].present? %>
       <div class="taxonomy-navigation__section">
