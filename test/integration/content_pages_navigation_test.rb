@@ -64,7 +64,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     setup_sidebar_variant_a
 
     setup_and_visit_content_from_publishing_app(publishing_app: 'publisher')
-    assert page.has_css?('.gem-c-related-navigation__main-heading', text: 'Related content')
+    assert page.has_css?('.gem-c-contextual-sidebar')
   end
 
   test "ContentPagesNav variant B hides sidebar" do
@@ -72,7 +72,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     setup_sidebar_variant_b
 
     setup_and_visit_content_from_publishing_app(publishing_app: 'whitehall')
-    refute page.has_css?('.gem-c-related-navigation__main-heading', text: 'Related content')
+    refute page.has_css?('.gem-c-contextual-sidebar')
   end
 
   test "shows the Services section title and documents with tracking" do
