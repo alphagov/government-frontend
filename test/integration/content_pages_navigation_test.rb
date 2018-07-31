@@ -217,6 +217,22 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     refute page.has_css?('h3', text: "News and communications")
   end
 
+  test "ContentPagesNav variant A shows explore the topic in the sidebar" do
+    setup_variant_a
+
+    setup_and_visit_content_item('guide')
+
+    assert page.has_css?('.gem-c-related-navigation__sub-heading', text: 'Explore the topic')
+  end
+
+  test "ContentPagesNav variant B does not show explore the topic in the sidebar" do
+    setup_variant_b
+
+    setup_and_visit_content_item('guide')
+
+    refute page.has_css?('.gem-c-related-navigation__sub-heading', text: 'Explore the topic')
+  end
+
   def stub_empty_services
     Supergroups::Services.any_instance.stubs(:all_services).returns({})
   end
