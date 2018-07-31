@@ -52,6 +52,31 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
+  test "should_show_sidebar? is true for variant A" do
+    content_item = content_store_has_schema_example("guide", "single-page-guide")
+    setup_ab_variant("ContentPagesNav", "A")
+    get :show, params: { path: path_for(content_item) }
+    assert @controller.should_show_sidebar?
+  end
+
+  test "should_show_sidebar? is true for variant B if the publishing app is not whitehall" do
+    content_item = content_store_has_schema_example("guide", "single-page-guide")
+    setup_ab_variant("ContentPagesNav", "B")
+    get :show, params: { path: path_for(content_item) }
+
+    assert @controller.should_show_sidebar?
+  end
+
+  test "should_show_sidebar? is false for variant B if the publishing app is whitehall" do
+    content_item = govuk_content_schema_example("guide", "single-page-guide").merge("publishing_app" => "whitehall")
+    content_store_has_item(content_item['base_path'], content_item)
+
+    setup_ab_variant("ContentPagesNav", "B")
+    get :show, params: { path: path_for(content_item) }
+
+    refute @controller.should_show_sidebar?
+  end
+
   def ensure_ab_test_is_correctly_setup(test_variant, content_item)
     content_store_has_item(content_item['base_path'], content_item)
 
