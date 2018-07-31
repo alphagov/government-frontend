@@ -41,6 +41,39 @@
       </div>
     <% end %>
 
+    <% if taxonomy_navigation[:news_and_communication].present? %>
+      <div class="taxonomy-navigation__section">
+        <%= render "govuk_publishing_components/components/heading", {
+          text: t('supergroups.news_and_communications'),
+          heading_level: 3,
+          font_size: 24,
+          margin_bottom: 2
+        } %>
+
+        <% taxonomy_navigation[:news_and_communication][:promoted_content].in_groups_of(3, false) do |promo_group| %>
+          <div class="grid-row">
+          <% promo_group.each do |promo| %>
+            <div class="column-one-third">
+              <%= render "govuk_publishing_components/components/image_card", {
+                context: promo[:image][:context],
+                href: promo[:link][:path],
+                heading_text: promo[:link][:text],
+                image_src: promo[:image][:url],
+                image_alt: promo[:image][:alt],
+                heading_level: 0,
+                href_data_attributes: promo[:link][:data_attributes]
+                } %>
+            </div>
+          <% end %>
+          </div>
+        <% end %>
+
+        <%= render "govuk_publishing_components/components/document_list", {
+          items: taxonomy_navigation[:news_and_communication][:documents]
+        } %>
+      </div>
+    <% end %>
+
     <% if taxonomy_navigation[:policy_and_engagement].present? %>
       <div class="taxonomy-navigation__section">
         <%= render "govuk_publishing_components/components/heading", {
