@@ -5,7 +5,8 @@ module ContentPagesNavAbTestable
     base.helper_method(
       :content_pages_nav_test_variant,
       :show_new_navigation?,
-      :page_in_scope?
+      :page_in_scope?,
+      :should_show_sidebar?
     )
     base.after_action :set_test_response_header
   end
@@ -47,5 +48,9 @@ module ContentPagesNavAbTestable
   def has_a_live_taxon?
     @content_item.taxons.present? &&
       @content_item.taxons.detect { |taxon| taxon["phase"] == "live" }
+  end
+
+  def should_show_sidebar?
+    content_pages_nav_test_variant.variant?("A") || @content_item.content_item.parsed_content['publishing_app'] != "whitehall"
   end
 end

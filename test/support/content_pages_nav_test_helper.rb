@@ -37,6 +37,22 @@ module ContentPagesNavTestHelper
     )
   end
 
+  def setup_and_visit_content_from_publishing_app(publishing_app: nil)
+    content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
+      payload.merge('publishing_app' => publishing_app) unless publishing_app.nil?
+      payload
+    end
+
+    content_id = content_item["content_id"]
+    path = content_item["base_path"]
+
+    stub_request(:get, %r{#{path}})
+        .to_return(status: 200, body: content_item.to_json, headers: {})
+    visit path
+
+    assert_selector %{meta[name="govuk:content-id"][content="#{content_id}"}, visible: false
+  end
+
   SINGLE_TAXON = [
     {
       "base_path" => "/education/becoming-an-apprentice",

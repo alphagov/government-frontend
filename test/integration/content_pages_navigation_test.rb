@@ -59,6 +59,22 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "ContentPagesNav variant A shows sidebar" do
+    stub_rummager
+    setup_sidebar_variant_a
+
+    setup_and_visit_content_from_publishing_app(publishing_app: 'publisher')
+    assert page.has_css?('.gem-c-related-navigation__main-heading', text: 'Related content')
+  end
+
+  test "ContentPagesNav variant B hides sidebar" do
+    stub_rummager
+    setup_sidebar_variant_b
+
+    setup_and_visit_content_from_publishing_app(publishing_app: 'whitehall')
+    refute page.has_css?('.gem-c-related-navigation__main-heading', text: 'Related content')
+  end
+
   test "shows the Services section title and documents with tracking" do
     stub_rummager
     stub_empty_guidance
@@ -259,6 +275,14 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
   def setup_variant_b
     ContentItemsController.any_instance.stubs(:show_new_navigation?).returns(true)
+  end
+
+  def setup_sidebar_variant_a
+    ContentItemsController.any_instance.stubs(:should_show_sidebar?).returns(true)
+  end
+
+  def setup_sidebar_variant_b
+    ContentItemsController.any_instance.stubs(:should_show_sidebar?).returns(false)
   end
 
   def schema_type

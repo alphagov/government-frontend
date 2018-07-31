@@ -7,6 +7,8 @@
   end
 %>
 
-<div class="column-one-third">
-  <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: content_item %>
-</div>
+<% if should_show_sidebar? %>
+  <div class="column-one-third">
+    <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: content_item %>
+  </div>
+<% end %>
