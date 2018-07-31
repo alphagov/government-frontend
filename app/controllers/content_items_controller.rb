@@ -89,6 +89,13 @@ private
           taxon_link: taxon["base_path"],
         }
       end
+
+      @related_collections = @content_item
+                               .content_item
+                               .dig('links', 'document_collections')
+                               .yield_self { |document_collections| document_collections || [] }
+                               .select { |document_collection| document_collection['document_type'] == 'document_collection' }
+                               .map { |document_collection| document_collection.values_at('base_path', 'title') }
     end
   end
 

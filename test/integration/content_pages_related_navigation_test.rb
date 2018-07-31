@@ -12,6 +12,17 @@ class ContentPagesRelatedNavigationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-related-navigation__sub-heading', text: 'Collection')
   end
 
+  test "ContentPagesNav variant B shows related collections in the taxonomy navigation" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('case_study', SINGLE_TAXON)
+
+    within '.taxonomy-navigation' do
+      assert page.has_css?('.gem-c-heading', text: 'Collections')
+    end
+  end
+
   test "ContentPagesNav variant B does not show related collections in the sidebar" do
     setup_variant_b
 

@@ -26,7 +26,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', SINGLE_TAXON)
 
-    assert page.has_css?('.taxonomy-navigation h2', text: 'Becoming an apprentice')
+    assert page.has_css?('.taxonomy-navigation li', text: 'Becoming an apprentice')
     assert page.has_css?('.gem-c-highlight-boxes__title', text: 'Free school meals form')
   end
 
@@ -36,9 +36,11 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', THREE_TAXONS)
 
-    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-an-apprentice"]', text: 'Becoming an apprentice')
-    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-a-wizard"]', text: 'Becoming a wizard')
-    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-the-sorceror-supreme"]', text: 'Becoming the sorceror supreme')
+    within '.taxonomy-navigation' do
+      assert page.has_css?('li a[href="/education/becoming-an-apprentice"]', text: 'Becoming an apprentice')
+      assert page.has_css?('li a[href="/education/becoming-a-wizard"]', text: 'Becoming a wizard')
+      assert page.has_css?('li a[href="/education/becoming-the-sorceror-supreme"]', text: 'Becoming the sorceror supreme')
+    end
 
     assert page.has_css?('.gem-c-highlight-boxes__title', text: 'Free school meals form')
   end
@@ -51,8 +53,10 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
-    assert page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-an-apprentice"]', text: 'Becoming an apprentice')
-    refute page.has_css?('.taxonomy-navigation h2 a[href="/education/becoming-a-ghostbuster"]', text: 'Becoming a ghostbuster')
+    within '.taxonomy-navigation' do
+      assert page.has_css?('li a[href="/education/becoming-an-apprentice"]', text: 'Becoming an apprentice')
+      refute page.has_css?('li a[href="/education/becoming-a-ghostbuster"]', text: 'Becoming a ghostbuster')
+    end
   end
 
   test "shows the Services section title and documents with tracking" do
