@@ -2,7 +2,8 @@
   content_item = @content_item.content_item.parsed_content
 
   if show_new_navigation?
-    content_item['links'].yield_self { |links| links.except!('document_collections') }
+    content_item['links']
+        .yield_self { |links| links.except!('document_collections', 'mainstream_browse_pages', 'topics') }
   end
 %>
 
