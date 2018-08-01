@@ -160,7 +160,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test 'renders no start button when not set' do
     setup_and_visit_content_item('aaib-reports')
 
-    refute page.has_css?('.gem-c-button')
+    refute page.has_css?('.gem-c-button', text: "Find out more")
   end
 
   test 'renders start button' do
