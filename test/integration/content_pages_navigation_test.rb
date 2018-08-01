@@ -249,6 +249,31 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     refute page.has_css?('.gem-c-related-navigation__sub-heading', text: 'Explore the topic')
   end
 
+  test "shows parent-based breadcrumbs if variant a" do
+    stub_empty_rummager
+    taxons = THREE_TAXONS
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    within('.gem-c-contextual-breadcrumbs') do
+      assert page.has_css?('a', text: "Home")
+      assert page.has_css?('a', text: "Childcare and parenting")
+      assert page.has_css?('a', text: "Schools and education")
+    end
+  end
+
+  test "shows taxon breadcrumbs if variant b" do
+    stub_empty_rummager
+    setup_variant_b
+
+    taxons = THREE_TAXONS
+    setup_and_visit_content_item_with_taxons('guide', taxons)
+
+    within('.gem-c-contextual-breadcrumbs') do
+      assert page.has_css?('a', text: "Home")
+      assert page.has_css?('a', text: "Becoming a wizard")
+    end
+  end
+
   def stub_empty_services
     Supergroups::Services.any_instance.stubs(:all_services).returns({})
   end

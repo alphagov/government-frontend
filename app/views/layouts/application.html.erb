@@ -39,7 +39,7 @@
     <% if @content_item.try(:back_link) %>
       <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
     <% else %>
-      <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.content_item.parsed_content %>
+      <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.content_item.parsed_content, prioritise_taxon_breadcrumbs: show_new_navigation? %>
     <% end %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
