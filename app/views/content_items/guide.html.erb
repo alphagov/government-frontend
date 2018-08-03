@@ -6,34 +6,55 @@
 <% end %>
 
 <% content_for :simple_header, true %>
+<%
+  step_navs = @content_item.content_item.parsed_content["links"]["part_of_step_navs"]
+  part_of_step_navs = false
+  part_of_step_navs = step_navs.length if step_navs
+  page_title = @content_item.title
+
+  if part_of_step_navs and @content_item.multi_page_guide?
+    page_title = @content_item.current_part_title
+  end
+%>
 
 <div class="grid-row">
   <div class="column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
-    <% if @content_item.multi_page_guide? %>
-      <aside class="part-navigation-container" role="complementary">
-        <%= render "govuk_publishing_components/components/contents_list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
-      </aside>
+    <%= render 'govuk_publishing_components/components/title', { title: page_title } %>
+
+    <% if not part_of_step_navs %>
+      <% if @content_item.multi_page_guide? %>
+        <aside class="part-navigation-container" role="complementary">
+          <%= render "govuk_publishing_components/components/contents_list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
+        </aside>
+      <% end %>
     <% end %>
   </div>
+
   <div class="column-two-thirds">
     <% if @content_item.has_parts? %>
-      <% if @content_item.multi_page_guide? %>
-        <h1 class="part-title">
-          <%= @content_item.current_part_title %>
-        </h1>
+      <% if not part_of_step_navs %>
+        <% if @content_item.multi_page_guide? %>
+          <h1 class="part-title">
+            <%= @content_item.current_part_title %>
+          </h1>
+        <% end %>
       <% end %>
+
       <%= render 'govuk_publishing_components/components/govspeak',
           content: @content_item.current_part_body.html_safe,
           direction: page_text_direction,
           disable_youtube_expansions: true,
           rich_govspeak: true %>
-      <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
+
+      <% if not part_of_step_navs %>
+        <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
+      <% end %>
 
       <% if @content_item.multi_page_guide? %>
         <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
       <% end %>
     <% end %>
   </div>
-    <%= render 'shared/sidebar_navigation' %>
+
+  <%= render 'shared/sidebar_navigation' %>
 </div>
