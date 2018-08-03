@@ -27,9 +27,9 @@
 }
 
 .taxonomy-navigation__column {
-  @include core-16;
   @include box-sizing(border-box);
   width: 100%;
+  font-size: 16px;
   padding: ($gutter / 6) $gutter-one-third ($gutter-half + $gutter-one-third) 0;
 
   @include media(tablet) {
