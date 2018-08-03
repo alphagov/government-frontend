@@ -6,7 +6,7 @@
 }
 
 .taxonomy-navigation__list-item {
-  margin-bottom: $gutter / 6;
+  margin: $gutter-one-third 0 ($gutter-one-third / 2) 0;
   padding-bottom: $gutter / 6;
   list-style: none;
 }
@@ -20,6 +20,7 @@
 .taxonomy-navigation__row {
   display: flex;
   flex-wrap: wrap;
+  padding-top: $gutter-one-third;
 
   @include media(tablet) {
     margin-right: -25px;
