@@ -67,7 +67,7 @@
       </div>
     <% end %>
 
-    <% if taxonomy_navigation[:news_and_communication].present? %>
+    <% if taxonomy_navigation[:news_and_communications].present? %>
       <div class="taxonomy-navigation__section">
         <%= render "govuk_publishing_components/components/heading", {
           text: t('supergroups.news_and_communications'),
@@ -76,7 +76,7 @@
           margin_bottom: 2
         } %>
 
-        <% taxonomy_navigation[:news_and_communication][:promoted_content].in_groups_of(3, false) do |promo_group| %>
+        <% taxonomy_navigation[:news_and_communications][:promoted_content].in_groups_of(3, false) do |promo_group| %>
           <div class="grid-row">
           <% promo_group.each do |promo| %>
             <div class="column-one-third">
@@ -95,7 +95,7 @@
         <% end %>
 
         <%= render "govuk_publishing_components/components/document_list", {
-          items: taxonomy_navigation[:news_and_communication][:documents]
+          items: taxonomy_navigation[:news_and_communications][:documents]
         } %>
       </div>
     <% end %>

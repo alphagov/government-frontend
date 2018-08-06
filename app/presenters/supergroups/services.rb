@@ -8,28 +8,25 @@ module Supergroups
       @content = fetch
     end
 
-    def all_services
+    def tagged_content
+      return unless @content.any?
       {
-        documents: tagged_content,
+        documents: documents,
         promoted_content: promoted_content,
       }
     end
 
-    def any_services?
-      @content.any?
-    end
+  private
 
-    def tagged_content
+    def documents
       items = @content.drop(promoted_content_count)
       format_document_data(items)
     end
 
     def promoted_content
-      items = @content.shift(promoted_content_count)
+      items = @content.take(promoted_content_count)
       format_document_data(items, "HighlightBoxClicked")
     end
-
-  private
 
     def fetch
       return [] if @taxon_ids.empty?
