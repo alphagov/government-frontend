@@ -274,6 +274,22 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "ContentPagesNav variant B shows BETA phase message and survey link" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide', SINGLE_TAXON)
+
+    within('.gem-c-phase-banner') do
+      assert page.has_css?('.phase-tag', text: 'BETA')
+
+      assert page.has_content?('This is a test version of the layout of this page.')
+
+      assert page.has_css?('a[href="https://www.smartsurvey.co.uk/s/navigationsurvey2018?c=/national-curriculum"]',
+                           text: 'Take the survey to help us improve it')
+    end
+  end
+
   def stub_empty_services
     Supergroups::Services.any_instance.stubs(:all_services).returns({})
   end
