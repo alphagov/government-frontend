@@ -101,4 +101,64 @@ module ContentPagesNavTestHelper
       "phase" => "ethereal",
     }
   ].freeze
+
+  def stub_links_out_supergroups(supergroups_to_include)
+    ContentItemPresenter.any_instance.stubs(:links_out_supergroups).returns(supergroups_to_include)
+  end
+
+  def stub_links_out_supergroups_to_include_all
+    stub_links_out_supergroups(supergroups)
+  end
+
+  def supergroups
+    %w(services guidance_and_regulation news_and_communications policy_and_engagement transparency)
+  end
+
+  def assert_has_services_section
+    assert page.has_css?('h3', text: "Services")
+    assert page.has_css?('.gem-c-highlight-boxes__title', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-highlight-boxes__title[data-track-category="ServicesHighlightBoxClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-highlight-boxes__title[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-highlight-boxes__title[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="ServicesDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
+
+  def assert_has_policy_and_engagement_section
+    assert page.has_css?('h3', text: "Policy and engagement")
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="policyAndEngagementDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
+
+  def assert_has_guidance_and_regulation_section
+    assert page.has_css?('h3', text: "Guidance and regulation")
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="guidanceAndRegulationDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
+
+  def assert_has_transparency_section
+    assert page.has_css?('h3', text: "Transparency")
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="transparencyDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
+
+  def assert_has_news_and_communications_section
+    assert page.has_css?('h3', text: "News and communications")
+    assert page.has_css?('.gem-c-image-card__title', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-image-card__title-link[data-track-category="newsAndCommunicationsImageCardClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-image-card__title-link[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-image-card__title-link[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="newsAndCommunicationsDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+  end
 end
