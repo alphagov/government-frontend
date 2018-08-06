@@ -4,6 +4,10 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
   include ContentPagesNavTestHelper
   include GdsApi::TestHelpers::Rummager
 
+  def setup
+    stub_links_out_supergroups_to_include_all
+  end
+
   test "ContentPagesNav variant A does not show taxonomy navigation for single taxon" do
     setup_variant_a
 
@@ -92,6 +96,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-category="ServicesHighlightBoxClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+    assert_has_services_section
   end
 
   test "does not show the Services section if there is no tagged content" do
@@ -117,11 +122,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
-    assert page.has_css?('h3', text: "Policy and engagement")
-
-    assert page.has_css?('.gem-c-document-list__item a[data-track-category="policyAndEngagementDocumentListClicked"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+    assert_has_policy_and_engagement_section
   end
 
   test "does not show the Policy section if there is no tagged content" do
@@ -147,11 +148,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
-    assert page.has_css?('h3', text: "Guidance and regulation")
-
-    assert page.has_css?('.gem-c-document-list__item a[data-track-category="guidanceAndRegulationDocumentListClicked"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+    assert_has_guidance_and_regulation_section
   end
 
   test "does not show the Guidance section if there is no tagged content" do
@@ -177,11 +174,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
-    assert page.has_css?('h3', text: "Transparency")
-
-    assert page.has_css?('.gem-c-document-list__item a[data-track-category="transparencyDocumentListClicked"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+    assert_has_transparency_section
   end
 
   test "does not show the Transparency section if there is no tagged content" do
@@ -207,11 +200,15 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
+<<<<<<< HEAD
     assert page.has_css?('h3', text: "News and communications")
     assert page.has_css?('.gem-c-image-card__title', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-category="newsAndCommunicationsImageCardClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+=======
+    assert_has_news_and_communications_section
+>>>>>>> Add links out to configure taxonomy navigation
   end
 
   test "does not show the News and comms section if there is no tagged content" do
@@ -266,6 +263,21 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "links out will filter out supergroups not in the configuration" do
+    stub_rummager
+    setup_variant_b
+    taxons = THREE_TAXONS
+    supergroups.each do |supergroup_to_exclude|
+      supergroups_to_include = supergroups.delete_if { |supergroup| supergroup == supergroup_to_exclude }
+      stub_links_out_supergroups(supergroups_to_include)
+      setup_and_visit_content_item_with_taxons('guide', taxons)
+      supergroups_to_include.each do |included_supergroup|
+        send("assert_has_#{included_supergroup}_section")
+      end
+      refute page.has_css?('h3', text: supergroup_to_exclude.humanize)
+    end
+  end
+
   test "ContentPagesNav variant B shows BETA phase message and survey link" do
     stub_rummager
     setup_variant_b
@@ -283,7 +295,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
   end
 
   def stub_empty_services
-    Supergroups::Services.any_instance.stubs(:all_services).returns({})
+    Supergroups::Services.any_instance.stubs(:tagged_content).returns({})
   end
 
   def stub_empty_guidance

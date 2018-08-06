@@ -65,23 +65,15 @@ private
 
   def load_taxonomy_navigation
     if @content_item.taxons.present?
-      taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
       current_base_path = @content_item.base_path
-
+      taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
       taxon_ids = taxons.map { |taxon| taxon["content_id"] }
-      services = Supergroups::Services.new(current_base_path, taxon_ids)
-      guidance_and_regulation = Supergroups::GuidanceAndRegulation.new(current_base_path, taxon_ids)
-      news = Supergroups::NewsAndCommunications.new(current_base_path, taxon_ids)
-      policy_and_engagement = Supergroups::PolicyAndEngagement.new(current_base_path, taxon_ids)
-      transparency = Supergroups::Transparency.new(current_base_path, taxon_ids)
 
-      @taxonomy_navigation = {
-        services: (services.all_services if services.any_services?),
-        guidance_and_regulation: guidance_and_regulation.tagged_content,
-        news_and_communication: (news.all_news if news.any_news?),
-        policy_and_engagement: policy_and_engagement.tagged_content,
-        transparency: transparency.tagged_content,
-      }
+      @taxonomy_navigation = {}
+      @content_item.links_out_supergroups.each do |supergroup|
+        supergroup_taxon_links = "Supergroups::#{supergroup.camelcase}".constantize.new(content_item_path, taxon_ids)
+        @taxonomy_navigation[supergroup.to_sym] = supergroup_taxon_links.tagged_content
+      end
 
       @tagged_taxons = taxons.map do |taxon|
         {
