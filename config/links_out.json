@@ -2,93 +2,123 @@
 	"content_purpose_supergroup":{
 		"news_and_communications":[
 			{
-				"policy_and_engagement":"content_purpose_supergroup"
+				"title": "policy_and_engagement",
+				"type": "content_purpose_supergroup",
+				"supergroup": "policy_and_engagement"
 			},
 			{
-				"research_and_data":"content_purpose_supergroup"
+				"title": "research_and_data",
+				"type": "content_purpose_subgroup",
+				"supergroup": "transparency"
 			},
 			{
-				"guidance":"content_purpose_subgroup"
+				"title": "guidance",
+				"type": "content_purpose_subgroup",
+				"supergroup": "guidance_and_regulation"
 			},
 			{
-				"news":"content_purpose_subgroup"
+				"title": "news",
+				"type": "content_purpose_subgroup",
+				"supergroup": "news_and_communications"
 			},
 			{
-				"incidents":"content_purpose_subgroup"
-			},
-			{
-				"department":"???"
+				"title": "incidents",
+				"type": "content_purpose_subgroup",
+				"supergroup": "transparency"
 			}
 		],
 		"guidance_and_regulation":[
 			{
-				"services":"content_purpose_supergroup"
+				"title": "services",
+				"type": "content_purpose_supergroup",
+				"supergroup": "services"
 			},
 			{
-				"guidance":"content_purpose_subgroup"
+				"title": "guidance",
+				"type": "content_purpose_subgroup",
+				"supergroup": "guidance_and_regulation"
 			},
 			{
-				"news":"content_purpose_subgroup"
+				"title": "news",
+				"type": "content_purpose_subgroup",
+				"supergroup": "news_and_communications"
 			},
 			{
-				"decisions":"content_purpose_subgroup"
+				"title": "decisions",
+				"type": "content_purpose_subgroup",
+				"supergroup": "transparency"
 			},
 			{
-				"step_by_step":"document_type"
+				"title": "step_by_step",
+				"type": "document_type",
+				"supergroup": "services"
 			}
 		],
 		"services":[
 			{
-				"services":"content_purpose_supergroup"
+				"title": "services",
+				"type": "content_purpose_supergroup",
+				"supergroup": "services"
 			},
 			{
-				"guidance":"content_purpose_subgroup"
+				"title": "guidance",
+				"type": "content_purpose_subgroup",
+				"supergroup": "guidance_and_regulation"
 			}
 		]
 	},
 	"content_purpose_subgroup":{
 		"policy":[
 			{
-				"policy_and_engagement":"content_purpose_supergroup"
+				"title": "policy_and_engagement",
+				"type": "content_purpose_supergroup",
+				"supergroup": "policy_and_engagement"
 			},
 			{
-				"policy":"content_purpose_subgroup"
+				"title": "policy",
+				"type": "content_purpose_subgroup",
+				"supergroup": "policy_and_engagement"
 			}
 		],
 		"incidents":[
 			{
-				"incidents":"content_purpose_subgroup"
+				"title": "incidents",
+				"type": "content_purpose_subgroup",
+				"supergroup": "transparency"
 			},
 			{
-				"departments":"???"
+				"title": "news",
+				"type": "content_purpose_subgroup",
+				"supergroup": "news_and_communications"
 			},
 			{
-				"news":"content_purpose_subgroup"
+				"title": "research_and_data",
+				"type": "content_purpose_supergroup",
+				"supergroup": "transparency"
 			},
 			{
-				"research_and_data":"content_purpose_supergroup"
-			},
-			{
-				"guidance":"content_purpose_subgroup"
+				"title": "guidance",
+				"type": "content_purpose_subgroup",
+				"supergroup": "guidance_and_regulation"
 			}
 		],
 		"research_and_data":[
 			{
-				"research_and_data":"content_purpose_supergroup"
-			},
-			{
-				"department":"???"
+				"title": "research_and_data",
+				"type": "content_purpose_supergroup",
+				"supergroup": "transparency"
 			}
 		],
 		"decisions":[
 			{
-				"news":"content_purpose_subgroup"
+				"title": "news",
+				"type": "content_purpose_subgroup",
+				"supergroup": "news_and_communications"
 			},
 			{
-				"guidance":"content_purpose_subgroup"
-			},
-			{
-				"department":"???"
+				"title": "guidance",
+				"type": "content_purpose_subgroup",
+				"supergroup": "guidance_and_regulation"
 			}
 		]
 	},
@@ -104,23 +134,33 @@
 		],
 		"open_consultation":[
 			{
-				"policy_and_engagement":"content_purpose_supergroup"
+				"title": "policy_and_engagement",
+				"type": "content_purpose_supergroup",
+				"supergroup": "policy_and_engagement"
 			},
 			{
-				"decisions":"content_purpose_subgroup"
+				"title": "decisions",
+				"type": "content_purpose_subgroup",
+				"supergroup": "transparency"
 			}
 		],
 		"closed_consultation":[
 			{
-				"policy_and_engagement":"content_purpose_supergroup"
+				"title": "policy_and_engagement",
+				"type": "content_purpose_supergroup",
+				"supergroup": "policy_and_engagement"
 			},
 			{
-				"decisions":"content_purpose_subgroup"
+				"title": "decisions",
+				"type": "content_purpose_subgroup",
+				"supergroup": "transparency"
 			}
 		],
 		"consultation_outcome":[
 			{
-				"decisions":"content_purpose_subgroup"
+				"title": "decisions",
+				"type": "content_purpose_subgroup",
+				"supergroup": "transparency"
 			}
 		]
 	}

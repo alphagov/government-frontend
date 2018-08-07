@@ -1,11 +1,32 @@
 module ContentItem
   module LinksOut
     def links_out_supergroups
-      supergroups = links_out.delete_if { |entry| entry.values.first != "content_purpose_supergroup" }
-      supergroups.map { |supergroup_entry| supergroup_entry.keys.first }
+      @links_out_supergroups ||= fetch_links_out_supergroups
+    end
+
+    def fetch_links_out_supergroups
+      links_out.map { |link| link["supergroup"] }.uniq
+    end
+
+    def links_out_subgroups
+      @links_out_subgroups ||= fetch_links_out_subgroups
+    end
+
+    def fetch_links_out_subgroups
+      subgroups = []
+      links_out.each do |link|
+        if link["type"] == "content_purpose_subgroup"
+          subgroups << link["title"]
+        end
+      end
+      subgroups.uniq
     end
 
     def links_out
+      @links_out ||= fetch_links_out
+    end
+
+    def fetch_links_out
       document_type_link_rule = DocumentTypeLinkRule.new(content_item)
       return document_type_link_rule.links if document_type_link_rule.any?
       subgroup_link_rule = SubgroupLinkRule.new(content_item)

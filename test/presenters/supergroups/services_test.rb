@@ -4,7 +4,7 @@ class ServicesTest < ActiveSupport::TestCase
   include RummagerHelpers
 
   test "services returns no results if taxon ids is a blank array" do
-    services = Supergroups::Services.new("/a-random-path", [])
+    services = Supergroups::Services.new("/a-random-path", [], {})
     assert_nil services.tagged_content
   end
 
@@ -12,7 +12,7 @@ class ServicesTest < ActiveSupport::TestCase
     taxon_content_ids = ['any-old-taxon', 'some-other-taxon-id']
 
     stub_most_popular_content("/a-random-path", taxon_content_ids, 0, "services")
-    services = Supergroups::Services.new("/a-random-path", taxon_content_ids)
+    services = Supergroups::Services.new("/a-random-path", taxon_content_ids, {})
     assert_nil services.tagged_content
   end
 
@@ -21,7 +21,7 @@ class ServicesTest < ActiveSupport::TestCase
 
     stub_most_popular_content("/a-random-path", taxon_content_ids, 2, "services")
 
-    services = Supergroups::Services.new("/a-random-path", taxon_content_ids)
+    services = Supergroups::Services.new("/a-random-path", taxon_content_ids, {})
 
     assert_equal 0, services.tagged_content[:documents].count
     assert_equal 2, services.tagged_content[:promoted_content].count
@@ -32,7 +32,7 @@ class ServicesTest < ActiveSupport::TestCase
 
     stub_most_popular_content("/a-random-path", taxon_content_ids, 5, "services")
 
-    services = Supergroups::Services.new("/a-random-path", taxon_content_ids)
+    services = Supergroups::Services.new("/a-random-path", taxon_content_ids, {})
 
     assert_equal 2, services.tagged_content[:documents].count
     assert_equal 3, services.tagged_content[:promoted_content].count

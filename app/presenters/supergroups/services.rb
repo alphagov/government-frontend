@@ -1,11 +1,9 @@
 module Supergroups
-  class Services
+  class Services < Supergroup
     attr_reader :content
 
-    def initialize(current_path, taxon_ids)
-      @taxon_ids = taxon_ids
-      @current_path = current_path
-      @content = fetch
+    def initialize(current_path, taxon_ids, filters)
+      super(current_path, taxon_ids, filters, MostPopularContent)
     end
 
     def tagged_content
@@ -26,16 +24,6 @@ module Supergroups
     def promoted_content
       items = @content.take(promoted_content_count)
       format_document_data(items, "HighlightBoxClicked")
-    end
-
-    def fetch
-      return [] if @taxon_ids.empty?
-
-      MostPopularContent.fetch(
-        content_ids: @taxon_ids,
-        current_path: @current_path,
-        filter_content_purpose_supergroup: "services"
-      )
     end
 
     def promoted_content_count

@@ -8,7 +8,7 @@ class MostRecentContentTest < ActiveSupport::TestCase
     @most_recent_content ||= MostRecentContent.new(
       content_ids: taxon_content_ids,
       current_path: "/some-path",
-      filter_content_purpose_supergroup: "guidance_and_regulation",
+      filters: { filter_content_purpose_supergroup: 'guidance_and_regulation', filter_content_purpose_subgroup: ['guidance'] },
       number_of_links: 6
     )
   end
@@ -31,6 +31,12 @@ class MostRecentContentTest < ActiveSupport::TestCase
 
   test "returns number of links" do
     assert_includes_params(count: 6) do
+      most_recent_content.fetch
+    end
+  end
+
+  test "filters content by the requested filter_content_purpose_subgroups" do
+    assert_includes_params(filter_content_purpose_subgroup: ["guidance"]) do
       most_recent_content.fetch
     end
   end

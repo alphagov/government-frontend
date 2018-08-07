@@ -17,17 +17,65 @@ class LinksOutTest < ActiveSupport::TestCase
 
   def rules
     {
-        "content_purpose_supergroup" => { "guidance_and_regulation" => %w(link_to_guidance_and_regulation) },
-        "content_purpose_subgroup" => { "guidance" => %w(link_to_guidance) },
-        "document_type" => { "guide" => %w(link_to_guide) }
+        "content_purpose_supergroup" => {
+            "guidance_and_regulation" => [
+                {
+                    "title" => "link_to_guidance_and_regulation",
+                    "type" => "content_purpose_supergroup",
+                    "supergroup" => "guidance_and_regulation"
+                }
+            ]
+        },
+        "content_purpose_subgroup" => {
+            "guidance" => [
+                {
+                    "title" => "link_to_guidance",
+                    "type" => "content_purpose_subgroup",
+                    "supergroup" => "guidance_and_regulation"
+                }
+            ]
+        },
+        "document_type" => {
+            "guide" => [
+                {
+                    "title" => "link_to_guide",
+                    "type" => "document_type",
+                    "supergroup" => "guidance_and_regulation"
+                }
+            ]
+        }
     }
   end
 
   def other_rules
     {
-        "content_purpose_supergroup" => { "news_and_communication" => %w(link_to_news_and_communication) },
-        "content_purpose_subgroup" => { "news" => %w(link_to_news) },
-        "document_type" => { "article" => %w(link_to_article) }
+        "content_purpose_supergroup" => {
+            "news_and_communications" => [
+                {
+                    "title" => "link_to_news_and_communications",
+                    "type" => "content_purpose_supergroup",
+                    "supergroup" => "news_and_communications"
+                }
+            ]
+        },
+        "content_purpose_subgroup" => {
+            "news" => [
+                {
+                    "title" => "link_to_news",
+                    "type" => "content_purpose_subgroup",
+                    "supergroup" => "news_and_communications"
+                }
+            ]
+        },
+        "document_type" => {
+            "article" => [
+                {
+                    "title" => "link_to_article",
+                    "type" => "document_type",
+                    "supergroup" => "news_and_communications"
+                }
+            ]
+        }
     }
   end
 
@@ -45,6 +93,26 @@ class LinksOutTest < ActiveSupport::TestCase
 
   def assert_has_document_type_rule(rule_set)
     assert rule_set["document_type"].has_key?("guide")
+  end
+
+  def assert_returns_guide
+    assert_equal [{ "title" => "link_to_guide", "type" => "document_type", "supergroup" => "guidance_and_regulation" }], @links_out.links_out
+  end
+
+  def assert_returns_guidance
+    assert_equal [{ "title" => "link_to_guidance", "type" => "content_purpose_subgroup", "supergroup" => "guidance_and_regulation" }], @links_out.links_out
+  end
+
+  def assert_returns_guidance_and_regulation
+    assert_equal [{ "title" => "link_to_guidance_and_regulation", "type" => "content_purpose_supergroup", "supergroup" => "guidance_and_regulation" }], @links_out.links_out
+  end
+
+  def news_and_communications_rule
+    { "title" => "link_to_news_and_communications", "type" => "content_purpose_supergroup", "supergroup" => "news_and_communications" }
+  end
+
+  def news_rule
+    { "title" => "link_to_news", "type" => "content_purpose_subgroup", "supergroup" => "news_and_communications" }
   end
 
   test 'returns empty array if the content_item is blank' do
@@ -73,7 +141,7 @@ class LinksOutTest < ActiveSupport::TestCase
     assert_has_supergroup_rule(rules)
     assert_has_subgroup_rule(rules)
     stub_load_rules(rules)
-    assert_equal %w(link_to_guide), @links_out.links_out
+
   end
 
   test 'returns subgroup rule if it is defined within rule set and document_type is not' do
@@ -82,7 +150,7 @@ class LinksOutTest < ActiveSupport::TestCase
     assert_has_supergroup_rule(amended_rules)
     assert_has_subgroup_rule(amended_rules)
     stub_load_rules(amended_rules)
-    assert_equal %w(link_to_guidance), @links_out.links_out
+    assert_returns_guidance
   end
 
   test 'returns supergroup rule if it is defined within rule set, document_type and supergroup are not' do
@@ -91,7 +159,7 @@ class LinksOutTest < ActiveSupport::TestCase
     amended_rules["document_type"] = nil
     assert_has_supergroup_rule(amended_rules)
     stub_load_rules(amended_rules)
-    assert_equal %w(link_to_guidance_and_regulation), @links_out.links_out
+    assert_returns_guidance_and_regulation
   end
 
   test 'returns subgroup rule if it is defined within rule set and document_type does not match' do
@@ -100,7 +168,7 @@ class LinksOutTest < ActiveSupport::TestCase
     assert_has_supergroup_rule(amended_rules)
     assert_has_subgroup_rule(amended_rules)
     stub_load_rules(amended_rules)
-    assert_equal %w(link_to_guidance), @links_out.links_out
+    assert_returns_guidance
   end
 
   test 'returns supergroup rule if it is defined within rule set, document_type and supergroup do not match' do
@@ -109,7 +177,7 @@ class LinksOutTest < ActiveSupport::TestCase
     amended_rules["document_type"] = other_rules["document_type"]
     assert_has_supergroup_rule(amended_rules)
     stub_load_rules(amended_rules)
-    assert_equal %w(link_to_guidance_and_regulation), @links_out.links_out
+    assert_returns_guidance_and_regulation
   end
 
   test 'returns nothing if the document type is an empty array' do
@@ -119,5 +187,59 @@ class LinksOutTest < ActiveSupport::TestCase
     assert_has_subgroup_rule(amended_rules)
     stub_load_rules(amended_rules)
     assert_equal [], @links_out.links_out
+  end
+
+  test 'links_out_supergroups returns correct supergroup names for content_purpose_supergroup rules' do
+    amended_rules = rules
+    amended_rules["content_purpose_supergroup"]["guidance_and_regulation"] << news_and_communications_rule
+    amended_rules["content_purpose_subgroup"] = nil
+    amended_rules["document_type"] = nil
+
+    stub_load_rules(amended_rules)
+    assert_equal %w(guidance_and_regulation news_and_communications), @links_out.links_out_supergroups
+  end
+
+  test 'links_out_supergroups returns correct supergroup names for content_purpose_subgroup rules' do
+    amended_rules = rules
+    amended_rules["content_purpose_subgroup"]["guidance"] << news_and_communications_rule
+    amended_rules["document_type"] = nil
+
+    stub_load_rules(amended_rules)
+    assert_equal %w(guidance_and_regulation news_and_communications), @links_out.links_out_supergroups
+  end
+
+  test 'links_out_supergroups returns correct supergroup names for document_type rules' do
+    amended_rules = rules
+    amended_rules["document_type"]["guide"] << news_and_communications_rule
+
+    stub_load_rules(amended_rules)
+    assert_equal %w(guidance_and_regulation news_and_communications), @links_out.links_out_supergroups
+  end
+
+  test 'links_out_subgroups returns correct subgroup names for content_purpose_supergroup rules' do
+    amended_rules = rules
+    amended_rules["content_purpose_supergroup"]["guidance_and_regulation"] << news_rule
+    amended_rules["content_purpose_subgroup"] = nil
+    amended_rules["document_type"] = nil
+
+    stub_load_rules(amended_rules)
+    assert_equal %w(link_to_news), @links_out.links_out_subgroups
+  end
+
+  test 'links_out_subgroups returns correct subgroup names for content_purpose_subgroup rules' do
+    amended_rules = rules
+    amended_rules["content_purpose_subgroup"]["guidance"] << news_rule
+    amended_rules["document_type"] = nil
+
+    stub_load_rules(amended_rules)
+    assert_equal %w(link_to_guidance link_to_news), @links_out.links_out_subgroups
+  end
+
+  test 'links_out_subgroups returns correct subgroup names for document_type rules' do
+    amended_rules = rules
+    amended_rules["document_type"]["guide"] << news_rule
+
+    stub_load_rules(amended_rules)
+    assert_equal %w(link_to_news), @links_out.links_out_subgroups
   end
 end

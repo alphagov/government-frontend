@@ -4,7 +4,7 @@ class PolicyAndEngagementTest < ActiveSupport::TestCase
   include RummagerHelpers
 
   test "tagged_content returns empty array if taxon ids is a blank array" do
-    policy_and_engagement = Supergroups::PolicyAndEngagement.new("/a-random-path", [])
+    policy_and_engagement = Supergroups::PolicyAndEngagement.new("/a-random-path", [], {})
     assert_equal [], policy_and_engagement.tagged_content
   end
 
@@ -12,7 +12,7 @@ class PolicyAndEngagementTest < ActiveSupport::TestCase
     taxon_content_ids = ['any-old-taxon', 'some-other-taxon-id']
 
     stub_most_recent_content("/a-random-path", taxon_content_ids, 0, "policy_and_engagement")
-    policy_and_engagement = Supergroups::PolicyAndEngagement.new("/a-random-path", [])
+    policy_and_engagement = Supergroups::PolicyAndEngagement.new("/a-random-path", [], {})
     assert_equal [], policy_and_engagement.tagged_content
   end
 
@@ -20,7 +20,7 @@ class PolicyAndEngagementTest < ActiveSupport::TestCase
     taxon_content_ids = ['any-old-taxon', 'some-other-taxon-id']
 
     stub_most_recent_content("/a-random-path", taxon_content_ids, 2, "policy_and_engagement")
-    policy_and_engagement = Supergroups::PolicyAndEngagement.new("/a-random-path", taxon_content_ids)
+    policy_and_engagement = Supergroups::PolicyAndEngagement.new("/a-random-path", taxon_content_ids, {})
     assert_equal 2, policy_and_engagement.tagged_content.count
   end
 end

@@ -2,10 +2,8 @@ module Supergroups
   class NewsAndCommunications < Supergroup
     attr_reader :content
 
-    def initialize(current_path, taxon_ids)
-      @taxon_ids = taxon_ids
-      @current_path = current_path
-      @content = fetch
+    def initialize(current_path, taxon_ids, filters)
+      super(current_path, taxon_ids, filters, MostRecentContent)
     end
 
     def tagged_content
@@ -37,16 +35,6 @@ module Supergroups
       end
 
       content
-    end
-
-    def fetch
-      return [] if @taxon_ids.empty?
-
-      MostRecentContent.fetch(
-        content_ids: @taxon_ids,
-        current_path: @current_path,
-        filter_content_purpose_supergroup: "news_and_communications"
-      )
     end
 
     def promoted_content_count
