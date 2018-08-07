@@ -66,13 +66,14 @@ private
   def load_taxonomy_navigation
     if @content_item.taxons.present?
       taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
+      current_base_path = @content_item.base_path
 
       taxon_ids = taxons.map { |taxon| taxon["content_id"] }
-      services = Supergroups::Services.new(content_item_path, taxon_ids)
-      guidance_and_regulation = Supergroups::GuidanceAndRegulation.new(content_item_path, taxon_ids)
-      news = Supergroups::NewsAndCommunications.new(content_item_path, taxon_ids)
-      policy_and_engagement = Supergroups::PolicyAndEngagement.new(content_item_path, taxon_ids)
-      transparency = Supergroups::Transparency.new(content_item_path, taxon_ids)
+      services = Supergroups::Services.new(current_base_path, taxon_ids)
+      guidance_and_regulation = Supergroups::GuidanceAndRegulation.new(current_base_path, taxon_ids)
+      news = Supergroups::NewsAndCommunications.new(current_base_path, taxon_ids)
+      policy_and_engagement = Supergroups::PolicyAndEngagement.new(current_base_path, taxon_ids)
+      transparency = Supergroups::Transparency.new(current_base_path, taxon_ids)
 
       @taxonomy_navigation = {
         services: (services.all_services if services.any_services?),
