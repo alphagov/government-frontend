@@ -22,7 +22,7 @@
 class WorldLocationBasePath
   EXCEPTIONAL_CASES = {
     "Democratic Republic of Congo" => "democratic-republic-of-congo",
-    "South Georgia and the South Sandwich Islands" => "south-georgia-and-south-sandwich-islands",
+    "South Georgia and the South Sandwich Islands" => "south-georgia-and-the-south-sandwich-islands",
     "St Pierre & Miquelon" => "st-pierre-miquelon"
   }.freeze
 
