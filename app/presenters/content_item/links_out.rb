@@ -4,12 +4,14 @@ module ContentItem
       @links_out_supergroups ||= fetch_links_out_supergroups
     end
 
-    def fetch_links_out_supergroups
-      links_out.map { |link| link["supergroup"] }.uniq
-    end
-
     def links_out_subgroups
       @links_out_subgroups ||= fetch_links_out_subgroups
+    end
+
+  private
+
+    def fetch_links_out_supergroups
+      links_out.map { |link| link["supergroup"] }.uniq
     end
 
     def fetch_links_out_subgroups
