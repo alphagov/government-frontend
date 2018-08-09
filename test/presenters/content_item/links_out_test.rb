@@ -141,7 +141,6 @@ class LinksOutTest < ActiveSupport::TestCase
     assert_has_supergroup_rule(rules)
     assert_has_subgroup_rule(rules)
     stub_load_rules(rules)
-
   end
 
   test 'returns subgroup rule if it is defined within rule set and document_type is not' do

@@ -12,6 +12,7 @@ module Supergroups
     end
 
   private
+
     def format_document_data(documents, data_category: nil, include_timestamp: true)
       documents.each.with_index(1).map do |document, index|
         data = {
