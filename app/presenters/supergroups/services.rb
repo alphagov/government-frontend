@@ -36,14 +36,7 @@ module Supergroups
           link: {
             text: document["title"],
             path: document["link"],
-            data_attributes: {
-              track_category: "Services" + data_category,
-              track_action: index,
-              track_label: document["link"],
-              track_options: {
-                dimension29: document["title"],
-              }
-            }
+            data_attributes: data_attributes(document["link"], document["title"], index, data_category),
           }
         }
 

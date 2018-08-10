@@ -93,7 +93,7 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('h3', text: "Services")
     assert page.has_css?('.gem-c-highlight-boxes__title', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-highlight-boxes__title[data-track-category="ServicesHighlightBoxClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-highlight-boxes__title[data-track-category="servicesHighlightBoxClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
   end
