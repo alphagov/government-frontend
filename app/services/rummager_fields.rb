@@ -1,10 +1,11 @@
 module RummagerFields
-  TAXON_SEARCH_FIELDS = %w(title
-                           link
+  TAXON_SEARCH_FIELDS = %w(content_store_document_type
                            description
-                           content_store_document_type
+                           image_url
+                           link
+                           organisations
                            public_timestamp
-                           organisations).freeze
+                           title).freeze
 
   FEED_SEARCH_FIELDS = %w(title
                           link

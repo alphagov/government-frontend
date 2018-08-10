@@ -40,9 +40,10 @@ class NewsAndCommunicationsTest < ActiveSupport::TestCase
 
   test "promoted content includes placeholder images if the content doesn't have one" do
     placeholder_image = "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg"
+
     taxon_content_ids = ['any-old-taxon']
     stub_most_recent_content("/a-random-path", taxon_content_ids, 1, "news_and_communications")
-    stub_content_store_items(1)
+    stub_rummager_document_without_image_url
 
     news_and_comms = Supergroups::NewsAndCommunications.new("/a-random-path", taxon_content_ids, {})
 
@@ -55,21 +56,10 @@ class NewsAndCommunicationsTest < ActiveSupport::TestCase
     taxon_content_ids = ['any-old-taxon']
     stub_most_recent_content("/a-random-path", taxon_content_ids, 1, "news_and_communications")
 
-    content = content_item_for_base_path("/content-item-0").merge(
-      "details": {
-        "image": {
-          "url": "an/image/path",
-          "alt_text": "some alt text"
-        }
-      }
-    )
-    content_store_has_item("/content-item-0", content)
-
     news_and_comms = Supergroups::NewsAndCommunications.new("/a-random-path", taxon_content_ids, {})
-
     news_item = news_and_comms.tagged_content[:promoted_content].first
 
-    assert_equal news_item[:image][:url], "an/image/path"
+    assert_equal news_item[:image][:url], "https://assets.testing.gov.uk/awesome-pic.jpg"
   end
 
   def stub_content_store_items(count)

@@ -2,6 +2,8 @@ module Supergroups
   class NewsAndCommunications < Supergroup
     attr_reader :content
 
+    PLACEHOLDER_IMAGE = "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg".freeze
+
     def initialize(current_path, taxon_ids, filters)
       super(current_path, taxon_ids, filters, MostRecentContent)
     end
@@ -23,38 +25,43 @@ module Supergroups
 
     def promoted_content
       items = @content.take(promoted_content_count)
-      content = format_document_data(items, data_category: "ImageCardClicked")
+      format_document_data(items, data_category: "ImageCardClicked")
+    end
 
-      content.each do |document|
-        document_image = news_item_photo(document[:link][:path])
-        document[:image] = {
-            url: document_image["url"],
-            alt: document_image["alt_text"],
-            context: document_image["context"]
+  private
+
+    def format_document_data(documents, data_category: nil)
+      documents.each.with_index(1).map do |document, index|
+        data = {
+          link: {
+            text: document["title"],
+            path: document["link"],
+            data_attributes: data_attributes(document["link"], document["title"], index, data_category)
+          },
+          metadata: {
+            document_type: document_type(document),
+            public_updated_at: updated_date(document)
+          },
+          image: {
+            url: image_url(document),
+            context: context(document)
+          }
         }
-      end
 
-      content
+        data
+      end
     end
 
     def promoted_content_count
       3
     end
 
-    def news_item_photo(base_path)
-      default_news_image = {
-        "url" => "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg",
-        "alt_text" => ""
-      }
+    def image_url(document)
+      document["image_url"] || PLACEHOLDER_IMAGE
+    end
 
-      news_item = ::Services.content_store.content_item(base_path).to_h
-
-      image = news_item["details"]["image"] || default_news_image
-      date = Date.parse(news_item["public_updated_at"]).strftime("%d %B %Y")
-      document_type = news_item["document_type"].humanize
-      image["context"] = "#{document_type} - #{date}"
-
-      image
+    def context(document)
+      "#{document_type(document)} - #{updated_date(document).strftime('%e %B %Y')}"
     end
   end
 end
