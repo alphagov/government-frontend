@@ -22,16 +22,12 @@ module Supergroups
             data_attributes: data_attributes(document["link"], document["title"], index, data_category)
           },
           metadata: {
-            document_type: document["content_store_document_type"].humanize
+            document_type: document_type(document)
           }
         }
 
         if include_timestamp && document["public_timestamp"]
-          data[:metadata][:public_updated_at] = Date.parse(document["public_timestamp"])
-        end
-
-        if data_category.present?
-          data[:link][:data_attributes][:track_category] = data_module_label + data_category
+          data[:metadata][:public_updated_at] = updated_date(document)
         end
 
         data
@@ -47,6 +43,14 @@ module Supergroups
           dimension29: link_text
         }
       }
+    end
+
+    def document_type(document)
+      document["content_store_document_type"].humanize
+    end
+
+    def updated_date(document)
+      Date.parse(document["public_timestamp"])
     end
 
     def data_module_label
