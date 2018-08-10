@@ -93,7 +93,7 @@ GEM
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
-    gds-api-adapters (52.7.0)
+    gds-api-adapters (52.8.0)
       addressable
       link_header
       lrucache (~> 0.1.1)
@@ -360,7 +360,7 @@ DEPENDENCIES
   chromedriver-helper
   dalli
   faker
-  gds-api-adapters (~> 52.7)
+  gds-api-adapters (~> 52.8)
   govuk-lint
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 1.8)
