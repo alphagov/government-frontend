@@ -19,7 +19,7 @@ module RummagerHelpers
 
     params = {
         start: 0,
-        count: 5,
+        count: 3,
         fields: fields,
         filter_part_of_taxonomy_tree: content_ids,
         order: order_by,
