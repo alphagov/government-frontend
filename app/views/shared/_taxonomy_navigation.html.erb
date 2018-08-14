@@ -3,7 +3,7 @@
     <div class="taxonomy-navigation__row">
       <div class="taxonomy-navigation__column">
         <%= render "govuk_publishing_components/components/heading",
-                   text: 'Topics',
+                   text: t('supergroups.topics'),
                    heading_level: 2,
                    font_size: 19 %>
         <ul>
@@ -18,7 +18,7 @@
       <% if related_collections.any? %>
         <div class="taxonomy-navigation__column">
           <%= render "govuk_publishing_components/components/heading",
-                     text: 'Collections',
+                     text: t('supergroups.collections'),
                      heading_level: 2,
                      font_size: 19 %>
           <ul>
