@@ -8,7 +8,7 @@ class MostPopularContentTest < ActiveSupport::TestCase
     @most_popular_content ||= MostPopularContent.new(
       content_ids: taxon_content_ids,
       current_path: "/how-to-ride-a-bike",
-      filter_content_purpose_supergroup: 'guidance_and_regulation'
+      filters: { filter_content_purpose_supergroup: 'guidance_and_regulation', filter_content_purpose_subgroup: ['guidance'] }
     )
   end
 
@@ -64,8 +64,14 @@ class MostPopularContentTest < ActiveSupport::TestCase
     end
   end
 
-  test 'filters content by the requested filter_content_purpose_supergroup only' do
+  test 'filters content by the requested filter_content_purpose_supergroup' do
     assert_includes_params(filter_content_purpose_supergroup: 'guidance_and_regulation') do
+      most_popular_content.fetch
+    end
+  end
+
+  test 'filters content by the requested filter_content_purpose_subgroups' do
+    assert_includes_params(filter_content_purpose_subgroup: ['guidance']) do
       most_popular_content.fetch
     end
   end

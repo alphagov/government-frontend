@@ -4,6 +4,10 @@ class ContentPagesRelatedNavigationTest < ActionDispatch::IntegrationTest
   include ContentPagesNavTestHelper
   include GdsApi::TestHelpers::Rummager
 
+  def setup
+    stub_links_out_supergroups_to_include_all
+  end
+
   test "ContentPagesNav variant A shows related collections in the sidebar" do
     setup_variant_a
 

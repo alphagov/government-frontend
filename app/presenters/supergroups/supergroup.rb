@@ -1,5 +1,16 @@
 module Supergroups
   class Supergroup
+    def initialize(current_path, taxon_ids, filters, content_order_class)
+      @current_path = current_path
+      @taxon_ids = taxon_ids
+      @filters = default_filters.merge(filters)
+      @content = fetch_content(content_order_class)
+    end
+
+    def tagged_content
+      format_document_data(@content)
+    end
+
   private
 
     def format_document_data(documents, data_category: nil, include_timestamp: true)
@@ -40,6 +51,15 @@ module Supergroups
 
     def data_module_label
       self.class.name.demodulize.camelize(:lower)
+    end
+
+    def default_filters
+      { filter_content_purpose_supergroup: self.class.name.demodulize.underscore }
+    end
+
+    def fetch_content(content_order_class)
+      return [] unless @taxon_ids.any?
+      content_order_class.fetch(content_ids: @taxon_ids, current_path: @current_path, filters: @filters)
     end
   end
 end

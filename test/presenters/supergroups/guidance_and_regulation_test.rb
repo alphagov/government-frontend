@@ -4,7 +4,7 @@ class GuidanceAndRegulationTest < ActiveSupport::TestCase
   include RummagerHelpers
 
   test "tagged_content returns empty array if taxon ids is a blank array" do
-    guidance_and_regulation = Supergroups::GuidanceAndRegulation.new("/no-particular-page", [])
+    guidance_and_regulation = Supergroups::GuidanceAndRegulation.new("/no-particular-page", [], {})
     assert_equal [], guidance_and_regulation.tagged_content
   end
 
@@ -12,7 +12,7 @@ class GuidanceAndRegulationTest < ActiveSupport::TestCase
     taxon_content_ids = ['any-old-taxon', 'some-other-taxon-id']
 
     stub_most_popular_content("/no-particular-page", taxon_content_ids, 0, "guidance_and_regulation")
-    guidance_and_regulation = Supergroups::GuidanceAndRegulation.new("/no-particular-page", [])
+    guidance_and_regulation = Supergroups::GuidanceAndRegulation.new("/no-particular-page", [], {})
     assert_equal [], guidance_and_regulation.tagged_content
   end
 
@@ -20,7 +20,7 @@ class GuidanceAndRegulationTest < ActiveSupport::TestCase
     taxon_content_ids = ['any-old-taxon', 'some-other-taxon-id']
 
     stub_most_popular_content("/no-particular-page", taxon_content_ids, 2, "guidance_and_regulation")
-    guidance_and_regulation = Supergroups::GuidanceAndRegulation.new("/no-particular-page", taxon_content_ids)
+    guidance_and_regulation = Supergroups::GuidanceAndRegulation.new("/no-particular-page", taxon_content_ids, {})
     assert_equal 2, guidance_and_regulation.tagged_content.count
   end
 end

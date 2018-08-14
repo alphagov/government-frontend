@@ -2,54 +2,39 @@ module Supergroups
   class NewsAndCommunications < Supergroup
     attr_reader :content
 
-    def initialize(current_path, taxon_ids)
-      @taxon_ids = taxon_ids
-      @current_path = current_path
-      @content = fetch
+    def initialize(current_path, taxon_ids, filters)
+      super(current_path, taxon_ids, filters, MostRecentContent)
     end
 
-    def all_news
+    def tagged_content
+      return unless @content.any?
       {
-        documents: tagged_content,
+        documents: documents,
         promoted_content: promoted_content,
       }
     end
 
-    def any_news?
-      @content.any?
-    end
+  private
 
-    def tagged_content
+    def documents
       items = @content.drop(promoted_content_count)
       format_document_data(items)
     end
 
     def promoted_content
-      items = @content.shift(promoted_content_count)
+      items = @content.take(promoted_content_count)
       content = format_document_data(items, data_category: "ImageCardClicked")
 
       content.each do |document|
         document_image = news_item_photo(document[:link][:path])
         document[:image] = {
-          url: document_image["url"],
-          alt: document_image["alt_text"],
-          context: document_image["context"]
+            url: document_image["url"],
+            alt: document_image["alt_text"],
+            context: document_image["context"]
         }
       end
 
       content
-    end
-
-  private
-
-    def fetch
-      return [] if @taxon_ids.empty?
-
-      MostRecentContent.fetch(
-        content_ids: @taxon_ids,
-        current_path: @current_path,
-        filter_content_purpose_supergroup: "news_and_communications"
-      )
     end
 
     def promoted_content_count
