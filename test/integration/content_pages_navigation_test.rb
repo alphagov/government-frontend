@@ -92,10 +92,6 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-category="ServicesHighlightBoxClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
-
-    assert page.has_css?('.gem-c-document-list__item a[data-track-category="ServicesDocumentListClicked"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
   end
 
   test "does not show the Services section if there is no tagged content" do
@@ -216,10 +212,6 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-image-card__title-link[data-track-category="newsAndCommunicationsImageCardClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
-
-    assert page.has_css?('.gem-c-document-list__item a[data-track-category="newsAndCommunicationsDocumentListClicked"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
   end
 
   test "does not show the News and comms section if there is no tagged content" do

@@ -38,8 +38,8 @@ class MostPopularContentTest < ActiveSupport::TestCase
     end
   end
 
-  test 'requests five results by default' do
-    assert_includes_params(count: 5) do
+  test 'requests three results by default' do
+    assert_includes_params(count: 3) do
       most_popular_content.fetch
     end
   end
