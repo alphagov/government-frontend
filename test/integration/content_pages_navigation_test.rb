@@ -96,7 +96,6 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-category="ServicesHighlightBoxClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-highlight-boxes__title[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
-    assert_has_services_section
   end
 
   test "does not show the Services section if there is no tagged content" do
@@ -122,7 +121,11 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
-    assert_has_policy_and_engagement_section
+    assert page.has_css?('h3', text: "Policy and engagement")
+
+    assert page.has_css?('.gem-c-document-list__item a[data-track-category="policyAndEngagementDocumentListClicked"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
   end
 
   test "does not show the Policy section if there is no tagged content" do
@@ -200,15 +203,12 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_content_item_with_taxons('guide', taxons)
 
-<<<<<<< HEAD
     assert page.has_css?('h3', text: "News and communications")
     assert page.has_css?('.gem-c-image-card__title', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-category="newsAndCommunicationsImageCardClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
-=======
     assert_has_news_and_communications_section
->>>>>>> Add links out to configure taxonomy navigation
   end
 
   test "does not show the News and comms section if there is no tagged content" do
