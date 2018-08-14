@@ -245,16 +245,153 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "shows taxon breadcrumbs if variant b" do
-    stub_empty_rummager
+  test "ContentPagesNav variant B when a page belongs to a single topic shows full breadcrumb" do
+    stub_rummager
     setup_variant_b
 
-    taxons = THREE_TAXONS
-    setup_and_visit_content_item_with_taxons('guide', taxons)
+    setup_and_visit_content_item_with_taxons('guide', SINGLE_TAXON)
 
     within('.gem-c-contextual-breadcrumbs') do
-      assert page.has_css?('a', text: "Home")
-      assert page.has_css?('a', text: "Becoming a wizard")
+      assert page.has_css?('a', text: 'Home')
+      assert page.has_css?('a', text: 'Becoming an apprentice')
+    end
+
+    refute page.has_css?('.taxonomy-navigation__banner')
+  end
+
+  test "ContentPagesNav variant B shows home breadcrumb when a page belongs to a two topics" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide', TWO_TAXONS)
+
+    within('.gem-c-contextual-breadcrumbs') do
+      assert page.has_css?('a', text: 'Home')
+      refute page.has_css?('a', text: 'Becoming an apprentice')
+      refute page.has_css?('a', text: 'Becoming a wizard')
+    end
+  end
+
+  test "ContentPagesNav variant B shows banner when a page belongs to two topics" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide', TWO_TAXONS)
+
+    within('.taxonomy-navigation__banner') do
+      assert page.has_content?('This page is part of Becoming an apprentice and Becoming a wizard')
+      assert page.has_css?('a', text: 'Becoming an apprentice')
+      assert page.has_css?('a', text: 'Becoming a wizard')
+    end
+  end
+
+  test "ContentPagesNav variant B shows breadcrumb when a page belongs to more than two topics" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide', THREE_TAXONS)
+
+    within('.gem-c-contextual-breadcrumbs') do
+      assert page.has_css?('a', text: 'Home')
+      refute page.has_css?('a', text: 'Becoming an apprentice')
+      refute page.has_css?('a', text: 'Becoming a wizard')
+      refute page.has_css?('a', text: 'Becoming the sorceror supreme')
+    end
+  end
+
+  test "ContentPagesNav variant B shows banner when a page belongs to more than two topics" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide', THREE_TAXONS)
+
+    within('.taxonomy-navigation__banner') do
+      assert page.has_content?('This page is part of Becoming an apprentice and 2 others + show all')
+      assert page.has_css?('a', text: 'Becoming an apprentice')
+      assert page.has_css?('a', text: 'Becoming a wizard')
+      assert page.has_css?('a', text: 'Becoming the sorceror supreme')
+    end
+  end
+
+  test "ContentPagesNav variant B shows full breadcrumb when a page belongs to a single topic and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', SINGLE_TAXON)
+
+    within('.gem-c-contextual-breadcrumbs') do
+      assert page.has_css?('a', text: 'Home')
+      assert page.has_css?('a', text: 'Becoming an apprentice')
+    end
+  end
+
+  test "ContentPagesNav variant B shows banner when a page belongs to a single topic and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', SINGLE_TAXON)
+
+    within('.taxonomy-navigation__banner') do
+      assert page.has_content?('This page is part of Learn to drive a car: step by step')
+      assert page.has_css?('a', text: 'Learn to drive a car: step by step')
+    end
+  end
+
+  test "ContentPagesNav variant B shows home breadcrumb when a page belongs to a two topics and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', TWO_TAXONS)
+
+    within('.gem-c-contextual-breadcrumbs') do
+      assert page.has_css?('a', text: 'Home')
+      refute page.has_css?('a', text: 'Becoming an apprentice')
+      refute page.has_css?('a', text: 'Becoming a wizard')
+    end
+  end
+
+  test "ContentPagesNav variant B shows banner when a page belongs to two topics and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', TWO_TAXONS)
+
+    within('.taxonomy-navigation__banner') do
+      assert page.has_content?('This page is part of Learn to drive a car: step by step and 2 others + show all')
+      assert page.has_content?('Becoming an apprentice and Becoming a wizard')
+      assert page.has_css?('a', text: 'Learn to drive a car')
+      assert page.has_css?('a', text: 'Becoming an apprentice')
+      assert page.has_css?('a', text: 'Becoming a wizard')
+    end
+  end
+
+  test "ContentPagesNav variant B shows home breadcrumb when a page belongs to more than two topics and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', THREE_TAXONS)
+
+    within('.gem-c-contextual-breadcrumbs') do
+      assert page.has_css?('a', text: 'Home')
+      refute page.has_css?('a', text: 'Becoming an apprentice')
+      refute page.has_css?('a', text: 'Becoming a wizard')
+      refute page.has_css?('a', text: 'Becoming the sorceror supreme')
+    end
+  end
+
+  test "ContentPagesNav variant B shows banner when a page belongs to more than two topics and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', THREE_TAXONS)
+
+    within('.taxonomy-navigation__banner') do
+      assert page.has_content?('This page is part of Learn to drive a car: step by step and 3 others + show all')
+      assert page.has_content?('Becoming an apprentice, Becoming a wizard, and Becoming the sorceror supreme')
+      assert page.has_css?('a', text: 'Learn to drive a car')
+      assert page.has_css?('a', text: 'Becoming an apprentice')
+      assert page.has_css?('a', text: 'Becoming a wizard')
+      assert page.has_css?('a', text: 'Becoming the sorceror supreme')
     end
   end
 

@@ -66,6 +66,25 @@ module ContentPagesNavTestHelper
     }
   ].freeze
 
+  TWO_TAXONS = [
+    {
+      "base_path" => "/education/becoming-an-apprentice",
+      "content_id" => "ff0e8e1f-4dea-42ff-b1d5-f1ae37807af2",
+      "description" => "Pay and conditions, how to apply, become a higher or degree apprentice. Apprenticeship levels, training, find an apprenticeship.",
+      "schema_name" => "taxon",
+      "title" => "Becoming an apprentice",
+      "phase" => "live",
+    },
+    {
+      "base_path" => "/education/becoming-a-wizard",
+      "content_id" => "ff0e8e1f-4dea-42ff-b1d5-f1ae37807af3",
+      "description" => "Pay and conditions, how to apply, become a higher or degree wizard. Wizard levels, training, find a wizard placement.",
+      "schema_name" => "taxon",
+      "title" => "Becoming a wizard",
+      "phase" => "live",
+    }
+  ].freeze
+
   THREE_TAXONS = [
     {
       "base_path" => "/education/becoming-an-apprentice",

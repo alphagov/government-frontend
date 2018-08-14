@@ -5,6 +5,14 @@
   border-top: 2px solid $govuk-blue;
 }
 
+.taxonomy-navigation__banner {
+  @include core-19;
+
+  padding: $gutter-half $gutter-half $gutter-one-third;
+  background: $grey-4;
+  border: 1px solid $border-colour;
+}
+
 .taxonomy-navigation__row {
   display: flex;
   flex-wrap: wrap;
