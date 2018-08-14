@@ -2,59 +2,47 @@ module Supergroups
   class NewsAndCommunications < Supergroup
     attr_reader :content
 
+    PLACEHOLDER_IMAGE = "#{Plek.current.asset_root}/government/assets/placeholder.jpg".freeze
+
     def initialize(current_path, taxon_ids, filters)
       super(current_path, taxon_ids, filters, MostRecentContent)
     end
 
     def tagged_content
-      return unless @content.any?
-      {
-        documents: documents,
-        promoted_content: promoted_content,
-      }
+      format_document_data(@content)
     end
 
   private
 
-    def documents
-      items = @content.drop(promoted_content_count)
-      format_document_data(items)
-    end
-
-    def promoted_content
-      items = @content.take(promoted_content_count)
-      content = format_document_data(items, data_category: "ImageCardClicked")
-
-      content.each do |document|
-        document_image = news_item_photo(document[:link][:path])
-        document[:image] = {
-            url: document_image["url"],
-            alt: document_image["alt_text"],
-            context: document_image["context"]
+    def format_document_data(documents)
+      # Start with_index at 1 to help align analytics
+      documents.each.with_index(1).map do |document, index|
+        data = {
+          link: {
+            text: document["title"],
+            path: document["link"],
+            data_attributes: data_attributes(document["link"], document["title"], index, "ImageCardClicked")
+          },
+          metadata: {
+            document_type: document_type(document),
+            public_updated_at: updated_date(document)
+          },
+          image: {
+            url: image_url(document),
+            context: context(document)
+          }
         }
+
+        data
       end
-
-      content
     end
 
-    def promoted_content_count
-      3
+    def image_url(document)
+      document["image_url"] || PLACEHOLDER_IMAGE
     end
 
-    def news_item_photo(base_path)
-      default_news_image = {
-        "url" => "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg",
-        "alt_text" => ""
-      }
-
-      news_item = ::Services.content_store.content_item(base_path).to_h
-
-      image = news_item["details"]["image"] || default_news_image
-      date = Date.parse(news_item["public_updated_at"]).strftime("%d %B %Y")
-      document_type = news_item["document_type"].humanize
-      image["context"] = "#{document_type} - #{date}"
-
-      image
+    def context(document)
+      "#{document_type(document)} - #{updated_date(document).strftime('%e %B %Y')}"
     end
   end
 end

@@ -5,7 +5,7 @@ class ServicesTest < ActiveSupport::TestCase
 
   test "services returns no results if taxon ids is a blank array" do
     services = Supergroups::Services.new("/a-random-path", [], {})
-    assert_nil services.tagged_content
+    assert_equal [], services.tagged_content
   end
 
   test "services returns no results if there are taxon ids but no results" do
@@ -13,7 +13,7 @@ class ServicesTest < ActiveSupport::TestCase
 
     stub_most_popular_content("/a-random-path", taxon_content_ids, 0, "services")
     services = Supergroups::Services.new("/a-random-path", taxon_content_ids, {})
-    assert_nil services.tagged_content
+    assert_equal [], services.tagged_content
   end
 
   test "tagged_content returns hash with with 2 featured items and 0 normal items with 2 results" do
@@ -23,18 +23,16 @@ class ServicesTest < ActiveSupport::TestCase
 
     services = Supergroups::Services.new("/a-random-path", taxon_content_ids, {})
 
-    assert_equal 0, services.tagged_content[:documents].count
-    assert_equal 2, services.tagged_content[:promoted_content].count
+    assert_equal 2, services.tagged_content.count
   end
 
   test "tagged_content returns hash with with 3 featured items and 2 normal items if there are enough results" do
     taxon_content_ids = ['any-old-taxon', 'some-other-taxon-id']
 
-    stub_most_popular_content("/a-random-path", taxon_content_ids, 5, "services")
+    stub_most_popular_content("/a-random-path", taxon_content_ids, 3, "services")
 
     services = Supergroups::Services.new("/a-random-path", taxon_content_ids, {})
 
-    assert_equal 2, services.tagged_content[:documents].count
-    assert_equal 3, services.tagged_content[:promoted_content].count
+    assert_equal 3, services.tagged_content.count
   end
 end

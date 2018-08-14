@@ -3,7 +3,7 @@
     <div class="taxonomy-navigation__row">
       <div class="taxonomy-navigation__column">
         <%= render "govuk_publishing_components/components/heading",
-                   text: 'Topics',
+                   text: t('supergroups.topics'),
                    heading_level: 2,
                    font_size: 19 %>
         <ul>
@@ -18,7 +18,7 @@
       <% if related_collections.any? %>
         <div class="taxonomy-navigation__column">
           <%= render "govuk_publishing_components/components/heading",
-                     text: 'Collections',
+                     text: t('supergroups.collections'),
                      heading_level: 2,
                      font_size: 19 %>
           <ul>
@@ -43,7 +43,7 @@
 
         <%= render "govuk_publishing_components/components/highlight_boxes", {
           inverse: true,
-          items: taxonomy_navigation[:services][:promoted_content]
+          items: taxonomy_navigation[:services]
         } %>
       </div>
     <% end %>
@@ -72,26 +72,20 @@
           margin_bottom: 2
         } %>
 
-        <% taxonomy_navigation[:news_and_communications][:promoted_content].in_groups_of(3, false) do |promo_group| %>
-          <div class="grid-row">
-          <% promo_group.each do |promo| %>
+        <div class="grid-row">
+          <% taxonomy_navigation[:news_and_communications].each do |promo| %>
             <div class="column-one-third">
               <%= render "govuk_publishing_components/components/image_card", {
                 context: promo[:image][:context],
                 href: promo[:link][:path],
                 heading_text: promo[:link][:text],
                 image_src: promo[:image][:url],
-                image_alt: promo[:image][:alt],
                 heading_level: 0,
                 href_data_attributes: promo[:link][:data_attributes]
                 } %>
             </div>
           <% end %>
-          </div>
-        <% end %>
-        <%= render "govuk_publishing_components/components/document_list", {
-          items: taxonomy_navigation[:news_and_communications][:documents]
-        } %>
+        </div>
       </div>
     <% end %>
 

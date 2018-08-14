@@ -20,17 +20,12 @@ private
 
   def search_response
     params = {
-        start: 0,
-        count: number_of_links,
-        fields: %w(title
-                   link
-                   description
-                   content_store_document_type
-                   public_timestamp
-                   organisations),
-        filter_part_of_taxonomy_tree: @content_ids,
-        order: '-public_timestamp',
-        reject_link: current_path,
+      start: 0,
+      count: number_of_links,
+      fields: RummagerFields::TAXON_SEARCH_FIELDS,
+      filter_part_of_taxonomy_tree: @content_ids,
+      order: '-public_timestamp',
+      reject_link: current_path,
     }
     params[:filter_content_purpose_supergroup] = @filters[:filter_content_purpose_supergroup] if @filters[:filter_content_purpose_supergroup].present?
     params[:filter_content_purpose_subgroup] = @filters[:filter_content_purpose_subgroup] if @filters[:filter_content_purpose_subgroup].present?

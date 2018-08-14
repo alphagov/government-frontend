@@ -9,13 +9,26 @@ module RummagerHelpers
     stub_for_taxon_and_supergroup(reject_link, taxon_content_ids, results, supergroup, "-popularity")
   end
 
+  def stub_rummager_document_without_image_url
+    result = rummager_document_for_supergroup_section("doc-with-no-url", "news_story", false)
+    Services.rummager.stubs(:search)
+      .returns(
+        "results" => [result],
+        "start" => 0,
+        "total" => 1
+      )
+  end
+
   def stub_for_taxon_and_supergroup(reject_link, content_ids, results, filter_content_purpose_supergroup, order_by)
-    fields = %w(title
-                link
-                description
-                content_store_document_type
-                public_timestamp
-                organisations)
+    fields = %w(
+      content_store_document_type
+      description
+      image_url
+      link
+      organisations
+      public_timestamp
+      title
+    )
 
     params = {
         start: 0,
@@ -42,15 +55,17 @@ module RummagerHelpers
     end
   end
 
-  def rummager_document_for_supergroup_section(slug, content_store_document_type)
-    {
-        'title'                       => slug.titleize.humanize.to_s,
-        'link'                        => "/#{slug}",
-        'description'                 => 'A discription about tagged content',
-        'content_store_document_type' => content_store_document_type,
-        'public_timestamp'            => 1.hour.ago.iso8601,
-        'organisations'               => [{ 'title' => "#{content_store_document_type.humanize} Organisation Title" }]
+  def rummager_document_for_supergroup_section(slug, content_store_document_type, with_image_url = true)
+    document = {
+      'title'                       => slug.titleize.humanize.to_s,
+      'link'                        => "/#{slug}",
+      'description'                 => 'A description about tagged content',
+      'content_store_document_type' => content_store_document_type,
+      'public_timestamp'            => 1.hour.ago.iso8601,
+      'organisations'               => [{ 'title' => "#{content_store_document_type.humanize} Organisation Title" }]
     }
+    document['image_url'] = 'https://assets.testing.gov.uk/awesome-pic.jpg' if with_image_url
+    document
   end
 
   def assert_includes_params(expected_params)
