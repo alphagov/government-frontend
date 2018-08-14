@@ -154,9 +154,5 @@ module ContentPagesNavTestHelper
     assert page.has_css?('.gem-c-image-card__title-link[data-track-category="newsAndCommunicationsImageCardClicked"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-action="1"]', text: 'Free school meals form')
     assert page.has_css?('.gem-c-image-card__title-link[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
-
-    assert page.has_css?('.gem-c-document-list__item a[data-track-category="newsAndCommunicationsDocumentListClicked"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-action="1"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-document-list__item a[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
   end
 end

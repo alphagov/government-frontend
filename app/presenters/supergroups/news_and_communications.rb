@@ -9,34 +9,19 @@ module Supergroups
     end
 
     def tagged_content
-      return unless @content.any?
-      {
-        documents: documents,
-        promoted_content: promoted_content,
-      }
+      format_document_data(@content)
     end
 
   private
 
-    def documents
-      items = @content.drop(promoted_content_count)
-      format_document_data(items)
-    end
-
-    def promoted_content
-      items = @content.take(promoted_content_count)
-      format_document_data(items, data_category: "ImageCardClicked")
-    end
-
-  private
-
-    def format_document_data(documents, data_category: nil)
+    def format_document_data(documents)
+      # Start with_index at 1 to help align analytics
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {
             text: document["title"],
             path: document["link"],
-            data_attributes: data_attributes(document["link"], document["title"], index, data_category)
+            data_attributes: data_attributes(document["link"], document["title"], index, "ImageCardClicked")
           },
           metadata: {
             document_type: document_type(document),
@@ -50,10 +35,6 @@ module Supergroups
 
         data
       end
-    end
-
-    def promoted_content_count
-      3
     end
 
     def image_url(document)

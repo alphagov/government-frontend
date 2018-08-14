@@ -14,6 +14,7 @@ module Supergroups
   private
 
     def format_document_data(documents, data_category: nil, include_timestamp: true)
+      # Start with_index at 1 to help align analytics
       documents.each.with_index(1).map do |document, index|
         data = {
           link: {
