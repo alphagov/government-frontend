@@ -2,7 +2,7 @@ module Supergroups
   class NewsAndCommunications < Supergroup
     attr_reader :content
 
-    PLACEHOLDER_IMAGE = "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg".freeze
+    PLACEHOLDER_IMAGE = "#{Plek.current.asset_root}/government/assets/placeholder.jpg".freeze
 
     def initialize(current_path, taxon_ids, filters)
       super(current_path, taxon_ids, filters, MostRecentContent)
