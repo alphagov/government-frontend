@@ -14,7 +14,7 @@ examples:
       published: 31 July 2017
       last_updated: 20 September 2017
       other:
-        From:
+        from:
           - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
   with_history_link:
     data:
@@ -22,7 +22,7 @@ examples:
       last_updated: 20 September 2017
       link_to_history: true
       other:
-        From:
+        from:
           - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
   no_last_updated:
     data:
@@ -37,7 +37,7 @@ examples:
       published: 31 July 2017
       last_updated: 20 September 2017
       other:
-        From:
+        from:
           - <a href='/government/organisations/department-for-education'>Department for Education</a>
           - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
   multiple_publishers_and_no_link_to_history:
@@ -45,10 +45,28 @@ examples:
       published: 31 July 2017
       last_updated: 20 September 2017
       other:
-        From:
+        from:
           - <a href='/government/organisations/department-for-education'>Department for Education</a>
           - <a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>
           - <a href='/government/organisations/department-for-work-pensions'>Department for Work and Pensions</a>
+  one_collection:
+    data:
+      other:
+        collections:
+        - <a href='/government/collections/tribunals-statistics'>Tribunals statistics</a>
+  two_collections:
+    data:
+      other:
+        collections:
+        - <a href='/government/collections/tribunals-statistics'>Tribunals statistics</a>
+        - <a href='/government/collections/civil-justice-statistics-quarterly'>Civil justice statistics quarterly</a>
+  more_than_two_collections:
+    data:
+      other:
+        collections:
+        - <a href='/government/collections/tribunals-statistics'>Tribunals statistics</a>
+        - <a href='/government/collections/civil-justice-statistics-quarterly'>Civil justice statistics quarterly</a>
+        - <a href='/government/collections/offender-management-statistics-quarterly'>Offender management statistics quarterly</a>
   nothing:
     description: |
       If an `other` object is provided with keys that have no values the component does not render.

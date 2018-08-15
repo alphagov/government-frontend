@@ -14,6 +14,8 @@ class ContentItemPresenter
               :document_type,
               :taxons
 
+  attr_accessor :include_collections_in_other_publisher_metadata
+
   def initialize(content_item, requested_content_item_path = nil)
     @content_item = content_item
     @requested_content_item_path = requested_content_item_path

@@ -26,6 +26,11 @@ en:
   common:
     last_updated: "Last updated"
   components:
+    publisher_metadata:
+      from: "From"
+      collections: "Collections"
+      show_all: "show all"
+      hide_all: "hide all"
     related_navigation:
       collections: "Collection"
       external_links: "Elsewhere on the web"
