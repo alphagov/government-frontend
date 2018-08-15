@@ -20,14 +20,18 @@ module ContentItem
     end
 
     def publisher_metadata
-      {
-        published: published,
-        last_updated: updated,
-        link_to_history: !!updated,
-        other: {
-          'From': from
+      {}.tap do |publisher_metadata|
+        publisher_metadata[:published] = published
+        publisher_metadata[:last_updated] = updated
+        publisher_metadata[:link_to_history] = !!updated
+        publisher_metadata[:other] = {
+          from: from,
         }
-      }
+
+        if include_collections_in_other_publisher_metadata
+          publisher_metadata[:other][:collections] = links('document_collections')
+        end
+      end
     end
   end
 end

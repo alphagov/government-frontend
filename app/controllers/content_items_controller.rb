@@ -61,6 +61,7 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
+    @content_item.include_collections_in_other_publisher_metadata = show_new_navigation?
   end
 
   def load_taxonomy_navigation

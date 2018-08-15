@@ -35,6 +35,29 @@ class ContentPagesRelatedNavigationTest < ActionDispatch::IntegrationTest
     refute page.has_css?('.gem-c-related-navigation__sub-heading', text: 'Collection')
   end
 
+  test "ContentPagesNav variant A does not show collections as publisher metadata" do
+    stub_rummager
+    setup_variant_a
+
+    setup_and_visit_content_item_with_taxons('case_study', SINGLE_TAXON)
+
+    within '.app-c-publisher-metadata' do
+      refute page.has_css?('.app-c-publisher-metadata__term', text: 'Collections')
+    end
+  end
+
+  test "ContentPagesNav variant B shows collections as publisher metadata" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('case_study', SINGLE_TAXON)
+
+    within '.app-c-publisher-metadata' do
+      assert page.has_css?('.app-c-publisher-metadata__term', text: 'Collections')
+      assert page.has_css?('.app-c-publisher-metadata__definition a', text: 'Work Programme real life stories')
+    end
+  end
+
   def setup_variant_a
     ContentItemsController.any_instance.stubs(:show_new_navigation?).returns(false)
   end
