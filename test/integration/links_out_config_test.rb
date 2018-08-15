@@ -32,8 +32,8 @@ class LinksOutConfigTest < ActionDispatch::IntegrationTest
     }
   end
 
-  def config
-    Rails.configuration.taxonomy_navigation_links_out
+  def taxon_config
+    Rails.configuration.taxonomy_navigation_links_out || YAML.safe_load(File.read("config/taxonomy_navigation_links_out.yml"))["default"]
   end
 
   def expected_supergroups(rule_level)
@@ -51,14 +51,16 @@ class LinksOutConfigTest < ActionDispatch::IntegrationTest
   test "links out configuration causes no errors and correct supergroups are displayed for each ruleset" do
     stub_rummager
     setup_variant_b
-    config.each_key do |taxonomy_rule_level|
-      config[taxonomy_rule_level].each_key do |rules_for_taxon|
-        setup_and_visit_content_item_with_taxonomy_grouping("guide", taxonomy_rule_level => rules_for_taxon)
-        expected_supergroups = expected_supergroups(config[taxonomy_rule_level][rules_for_taxon])
-        if expected_supergroups.any?
-          assert_has_supergroup_navigation(expected_supergroups)
-        else
-          refute page.has_css?('taxonomy-navigation')
+    using_wait_time 10 do
+      taxon_config.each_key do |taxonomy_rule_level|
+        taxon_config[taxonomy_rule_level].each_key do |rules_for_taxon|
+          setup_and_visit_content_item_with_taxonomy_grouping("guide", taxonomy_rule_level => rules_for_taxon)
+          expected_supergroups = expected_supergroups(taxon_config[taxonomy_rule_level][rules_for_taxon])
+          if expected_supergroups.any?
+            assert_has_supergroup_navigation(expected_supergroups)
+          else
+            refute page.has_css?('taxonomy-navigation')
+          end
         end
       end
     end
