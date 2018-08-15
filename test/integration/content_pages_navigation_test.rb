@@ -337,7 +337,20 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "ContentPagesNav variant B shows home breadcrumb when a page belongs to a two topics and a step by step" do
+  test "ContentPagesNav variant B has tracking on banner links for single topic and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', SINGLE_TAXON)
+
+    within('.taxonomy-navigation__banner') do
+      assert page.has_css?('a[data-track-category="relatedTaxonomyLinkClicked"]', text: 'Learn to drive a car: step by step')
+      assert page.has_css?('a[data-track-action="1.1 Step by Step"]', text: 'Learn to drive a car: step by step')
+      assert page.has_css?('a[data-track-label="/learn-to-drive-a-car"]')
+    end
+  end
+
+  test "ContentPagesNav variant B shows home breadcrumb when a page belongs to two topics and a step by step" do
     stub_rummager
     setup_variant_b
 
@@ -362,6 +375,23 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
       assert page.has_css?('a', text: 'Learn to drive a car')
       assert page.has_css?('a', text: 'Becoming an apprentice')
       assert page.has_css?('a', text: 'Becoming a wizard')
+    end
+  end
+
+  test "ContentPagesNav variant B has tracking on banner links for two topics and a step by step" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide-with-step-navs', TWO_TAXONS)
+
+    within('.taxonomy-navigation__banner') do
+      assert page.has_css?('a[data-track-category="relatedTaxonomyLinkClicked"]', text: 'Learn to drive a car: step by step')
+      assert page.has_css?('a[data-track-action="1.1 Step by Step"]', text: 'Learn to drive a car: step by step')
+      assert page.has_css?('a[data-track-label="/learn-to-drive-a-car"]')
+
+      assert page.has_css?('a[data-track-category="relatedTaxonomyLinkClicked"]', text: 'Becoming an apprentice')
+      assert page.has_css?('a[data-track-action="1.1 Taxon"]', text: 'Becoming an apprentice')
+      assert page.has_css?('a[data-track-label="/education/becoming-an-apprentice"]')
     end
   end
 

@@ -60,23 +60,24 @@
       <% end %>
 
       <% if @banner_items.present? %>
-        <% banner_links = @banner_items.map { |title, path| link_to title, path } %>
-        <div class="taxonomy-navigation__banner" data-module="gem-toggle">
+        <div class="taxonomy-navigation__banner" data-module="track-click">
           <% if @banner_items.size <= 2 %>
-            <p>This page is part of <%= banner_links.take(2).to_sentence.html_safe %></p>
+            <p>This page is part of <%= @banner_items.take(2).to_sentence.html_safe %></p>
           <% else %>
-            <% featured_banner_link, *other_banner_links = banner_links %>
-            <p>
-              This page is part of <%= featured_banner_link %>
-              and <%= pluralize(other_banner_links.size, 'other') %>
-              <a href="#"
-                 data-controls="toggle_taxonomy-navigation__banner-extra"
-                 data-expanded="false"
-                 data-toggled-text="&minus; hide all">+ show all</a>
-            </p>
-            <p id="toggle_taxonomy-navigation__banner-extra" class="js-hidden">
-              <%= other_banner_links.to_sentence.html_safe %>
-            </p>
+            <% featured_banner_link, *other_banner_links = @banner_items %>
+            <div data-module="gem-toggle">
+              <p>
+                This page is part of <%= featured_banner_link %>
+                and <%= pluralize(other_banner_links.size, 'other') %>
+                <a href="#"
+                  data-controls="toggle_taxonomy-navigation__banner-extra"
+                  data-expanded="false"
+                  data-toggled-text="&minus; hide all">+ show all</a>
+              </p>
+              <p id="toggle_taxonomy-navigation__banner-extra" class="js-hidden">
+                <%= other_banner_links.to_sentence.html_safe %>
+              </p>
+            </div>
           <% end %>
         </div>
       <% end %>
