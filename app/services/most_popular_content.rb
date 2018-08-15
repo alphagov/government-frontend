@@ -18,6 +18,9 @@ class MostPopularContent
 
   def fetch
     search_response["results"]
+  rescue GdsApi::HTTPErrorResponse => e
+    GovukStatsd.increment("govuk_content_pages.most_popular.#{e.class.name.demodulize.downcase}")
+    []
   end
 
 private

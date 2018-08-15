@@ -13,6 +13,13 @@ class MostRecentContentTest < ActiveSupport::TestCase
     )
   end
 
+  test 'catches api errors' do
+    Services.rummager.stubs(:search).raises(GdsApi::HTTPErrorResponse.new(500))
+    results = most_recent_content.fetch
+
+    assert_equal(results, [])
+  end
+
   def taxon_content_ids
     ['c3c860fc-a271-4114-b512-1c48c0f82564', 'ff0e8e1f-4dea-42ff-b1d5-f1ae37807af2']
   end

@@ -32,6 +32,13 @@ class MostPopularContentTest < ActiveSupport::TestCase
     assert_equal(results.count, 2)
   end
 
+  test 'catches api errors' do
+    Services.rummager.stubs(:search).raises(GdsApi::HTTPErrorResponse.new(500))
+    results = most_popular_content.fetch
+
+    assert_equal(results, [])
+  end
+
   test 'starts from the first page' do
     assert_includes_params(start: 0) do
       most_popular_content.fetch
