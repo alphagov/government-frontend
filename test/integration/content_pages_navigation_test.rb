@@ -426,6 +426,15 @@ class ContentPagesNavigationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "ContentPagesNav variant B language is set to en" do
+    stub_rummager
+    setup_variant_b
+
+    setup_and_visit_content_item_with_taxons('guide', SINGLE_TAXON)
+
+    assert page.has_css?('.taxonomy-navigation[lang="en"]')
+  end
+
   def stub_empty_services
     Supergroups::Services.any_instance.stubs(:tagged_content).returns({})
   end
