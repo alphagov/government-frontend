@@ -14,6 +14,9 @@ class MostRecentContent
 
   def fetch
     search_response["results"]
+  rescue GdsApi::HTTPErrorResponse => e
+    GovukStatsd.increment("govuk_content_pages.most_recent.#{e.class.name.demodulize.downcase}")
+    []
   end
 
 private
