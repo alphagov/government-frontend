@@ -3,13 +3,25 @@
     <div class="taxonomy-navigation__row">
       <div class="taxonomy-navigation__column">
         <%= render "govuk_publishing_components/components/heading",
-                   text: t('supergroups.topics'),
-                   heading_level: 2,
-                   font_size: 19 %>
+          text: t('supergroups.topics'),
+          heading_level: 2,
+          font_size: 19
+        %>
         <ul>
-          <% tagged_taxons.each do |tagged_taxon| %>
+          <% tagged_taxons.each_with_index do |tagged_taxon, index| %>
             <li class="taxonomy-navigation__list-item">
-              <%= link_to tagged_taxon[:taxon_name], tagged_taxon[:taxon_link] %>
+              <%= link_to(
+                tagged_taxon[:taxon_name],
+                tagged_taxon[:taxon_link],
+                data: {
+                  "track-category": "relatedTaxonomyLinkClicked",
+                  "track-action": "1.#{index} Topics",
+                  "track-label": tagged_taxon[:taxon_link],
+                  "track-options": {
+                    dimension29: tagged_taxon[:taxon_name]
+                  }
+                }
+              ) %>
             </li>
           <% end %>
         </ul>
@@ -22,9 +34,20 @@
                      heading_level: 2,
                      font_size: 19 %>
           <ul>
-            <% related_collections.each do |base_path, title| %>
+            <% related_collections.each_with_index do |collection, index| %>
               <li class="taxonomy-navigation__list-item">
-                <%= link_to title, base_path %>
+                <%= link_to(
+                  collection[1],
+                  collection[0],
+                  data: {
+                    "track-category": "relatedTaxonomyLinkClicked",
+                    "track-action": "2.#{index} Collections",
+                    "track-label": collection[0],
+                    "track-options": {
+                      dimension29: collection[1]
+                    }
+                  }
+                ) %>
               </li>
             <% end %>
           </ul>

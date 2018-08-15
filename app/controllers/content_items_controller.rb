@@ -91,20 +91,39 @@ private
                                .map { |document_collection| document_collection.values_at('base_path', 'title') }
 
       # Fetch link attributes of parent step by steps required to render the top navigation banner
-      @banner_items = @content_item
+      step_by_step_links = @content_item
                         .content_item
                         .dig('links', 'part_of_step_navs')
                         .yield_self { |part_of_step_navs| part_of_step_navs || [] }
                         .sort_by { |step_by_step_nav| step_by_step_nav['title'] }
                         .map { |step_by_step_nav| step_by_step_nav.values_at('title', 'base_path') }
+      @banner_items = format_banner_links(step_by_step_links, "Step by Step")
 
       # Append link attributes of parent taxons to our collections of items for the top navigation banner if the
-      # content item is tagged to more than one taxon. If their is only one taxon a breadcrumb will be used instead.
+      # content item is tagged to more than one taxon. If there is only one taxon a breadcrumb will be used instead.
       if taxons.many?
-        @banner_items += taxons
+        taxon_links = taxons
                            .sort_by { |taxon| taxon[:taxon_name] }
                            .map { |taxon| taxon.values_at('title', 'base_path') }
+        @banner_items += format_banner_links(taxon_links, "Taxon")
       end
+    end
+  end
+
+  def format_banner_links(links, type)
+    links.each.with_index(1).map do |(title, base_path), index|
+      view_context.link_to(
+        title,
+        base_path,
+        data: {
+          "track-category": "relatedTaxonomyLinkClicked",
+          "track-action": "1.#{index} #{type}",
+          "track-label": base_path,
+          "track-options": {
+            dimension29: title
+          }
+        }
+      )
     end
   end
 
