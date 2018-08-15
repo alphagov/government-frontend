@@ -38,14 +38,18 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         dataType: 'jsonp',
         timeout: 3000
       }).then(function(data){
-          GOVUK.Modules.TrackRadioGroup.trackVerifyUser(element, data);
+          reportVerifyUser(element, data);
       }, function(e){console.log("error", e)})
     }
 
     this.trackVerifyUser = function (element, data) {
-        if (data != null && data.value === true) {
-            GOVUK.analytics.trackEvent('verify-hint', 'shown', { transport: 'beacon'});
-            track(element, data.value);
+      reportVerifyUser(element, data);
+    }
+
+    function reportVerifyUser(element, data) {
+      if (data != null && data.value === true) {
+        GOVUK.analytics.trackEvent('verify-hint', 'shown', { transport: 'beacon'});
+        track(element, data.value);
       }
     }
   }
