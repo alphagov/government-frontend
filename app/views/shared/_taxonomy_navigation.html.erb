@@ -72,9 +72,9 @@
           margin_bottom: 2
         } %>
 
-        <div class="grid-row">
+        <ul class="grid-row">
           <% taxonomy_navigation[:news_and_communications].each do |promo| %>
-            <div class="column-one-third">
+            <li class="column-one-third taxonomy-navigation__list-item">
               <%= render "govuk_publishing_components/components/image_card", {
                 context: promo[:image][:context],
                 href: promo[:link][:path],
@@ -83,9 +83,9 @@
                 heading_level: 0,
                 href_data_attributes: promo[:link][:data_attributes]
                 } %>
-            </div>
+            </li>
           <% end %>
-        </div>
+        </ul>
       </div>
     <% end %>
 

@@ -169,9 +169,9 @@ module ContentPagesNavTestHelper
 
   def assert_has_news_and_communications_section
     assert page.has_css?('h3', text: "News and communications")
-    assert page.has_css?('.gem-c-image-card__title', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-image-card__title-link[data-track-category="newsAndCommunicationsImageCardClicked"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-image-card__title-link[data-track-action="1"]', text: 'Free school meals form')
-    assert page.has_css?('.gem-c-image-card__title-link[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
+    assert page.has_css?('ul li .gem-c-image-card__title', text: 'Free school meals form')
+    assert page.has_css?('ul li .gem-c-image-card__title-link[data-track-category="newsAndCommunicationsImageCardClicked"]', text: 'Free school meals form')
+    assert page.has_css?('ul li .gem-c-image-card__title-link[data-track-action="1"]', text: 'Free school meals form')
+    assert page.has_css?('ul li .gem-c-image-card__title-link[data-track-label="/government/publications/meals"]', text: 'Free school meals form')
   end
 end
