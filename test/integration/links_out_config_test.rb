@@ -33,7 +33,7 @@ class LinksOutConfigTest < ActionDispatch::IntegrationTest
   end
 
   def taxon_config
-    Rails.configuration.taxonomy_navigation_links_out || YAML.safe_load(File.read("config/taxonomy_navigation_links_out.yml"))["default"]
+    Rails.configuration.taxonomy_navigation_links_out
   end
 
   def expected_supergroups(rule_level)
@@ -59,7 +59,7 @@ class LinksOutConfigTest < ActionDispatch::IntegrationTest
           if expected_supergroups.any?
             assert_has_supergroup_navigation(expected_supergroups)
           else
-            refute page.has_css?('taxonomy-navigation')
+            refute page.has_css?('.taxonomy-navigation')
           end
         end
       end
