@@ -110,6 +110,10 @@ class ConsultationPresenter < ContentItemPresenter
     ways_to_respond["attachment_url"]
   end
 
+  def add_margin?
+    final_outcome? || public_feedback_detail || public_feedback_documents?
+  end
+
 private
 
   def display_date_and_time(date, rollback_midnight = false)
