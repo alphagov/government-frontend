@@ -51,7 +51,7 @@ class LinksOutConfigTest < ActionDispatch::IntegrationTest
   test "links out configuration causes no errors and correct supergroups are displayed for each ruleset" do
     stub_rummager
     setup_variant_b
-    using_wait_time 10 do
+    using_wait_time 30 do
       taxon_config.each_key do |taxonomy_rule_level|
         taxon_config[taxonomy_rule_level].each_key do |rules_for_taxon|
           setup_and_visit_content_item_with_taxonomy_grouping("guide", taxonomy_rule_level => rules_for_taxon)
