@@ -80,3 +80,12 @@ examples:
     data:
       other:
         Applies to: "England, Scotland, and Wales (see detailed guidance for <a href=\"http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for\" rel=\"external\">Northern Ireland</a>)"
+  right_to_left:
+    data:
+      published: 31 July 2017
+      last_updated: 20 September 2017
+      other:
+        from:
+            - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
+    context:
+      right_to_left: true
