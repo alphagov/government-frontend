@@ -12,6 +12,10 @@ ar:
       topical_events: "أحداث ذات صلة بالموضوع"
       topics: "المواضيع"
       world_locations: "العالم"
+    published_dates:
+      published: "تاريخ النشر %{date}"
+    publisher_metadata:
+      from: "من"
   content_item:
     schema_name:
       announcement:
