@@ -3,6 +3,15 @@ ar:
     direction: rtl
   language_names:
     ar: "العربية"
+  components:
+    related_navigation:
+      collections: "مجموعة"
+      external_links: "روابط خارجية"
+      policies: "سياسات"
+      related_content: "ذات الصلة"
+      topical_events: "الأحداث الموضعية"
+      topics: "استكشاف الموضوع"
+      world_locations: "العالم"
   content_item:
     schema_name:
       announcement:
