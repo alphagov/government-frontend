@@ -80,7 +80,7 @@ class LinksOutTest < ActiveSupport::TestCase
   end
 
   def stub_load_rules(rules)
-    Rails.configuration.taxonomy_navigation_links_out = rules
+    Rails.configuration.stubs(:taxonomy_navigation_links_out).returns(rules)
   end
 
   def assert_has_supergroup_rule(rule_set)
