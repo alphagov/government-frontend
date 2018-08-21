@@ -1,3 +1,5 @@
+require 'services'
+
 class MostRecentContent
   attr_reader :content_id, :current_path, :filters, :number_of_links
 

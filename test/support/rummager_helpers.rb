@@ -11,7 +11,7 @@ module RummagerHelpers
 
   def stub_rummager_document_without_image_url
     result = rummager_document_for_supergroup_section("doc-with-no-url", "news_story", false)
-    Services.rummager.stubs(:search)
+    GdsApi::Rummager.any_instance.stubs(:search)
       .returns(
         "results" => [result],
         "start" => 0,
@@ -40,7 +40,7 @@ module RummagerHelpers
         reject_link: reject_link,
     }
 
-    Services.rummager.stubs(:search)
+    GdsApi::Rummager.any_instance.stubs(:search)
         .with(params)
         .returns(
           "results" => results,
@@ -70,18 +70,18 @@ module RummagerHelpers
 
   def assert_includes_params(expected_params)
     search_results = {
-        'results' => [
-          {
-              'title' => 'Doc 1'
-          },
-          {
-              'title' => 'Doc 2'
-          }
-        ]
+      'results' => [
+        {
+            'title' => 'Doc 1'
+        },
+        {
+            'title' => 'Doc 2'
+        }
+      ]
     }
 
-    Services.
-        rummager.
+    GdsApi::Rummager.
+        any_instance.
         stubs(:search).
         with { |params| assert_includes_subhash(expected_params, params) }.
         returns(search_results)

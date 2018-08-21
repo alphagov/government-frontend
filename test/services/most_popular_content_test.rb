@@ -33,7 +33,7 @@ class MostPopularContentTest < ActiveSupport::TestCase
   end
 
   test 'catches api errors' do
-    Services.rummager.stubs(:search).raises(GdsApi::HTTPErrorResponse.new(500))
+    GdsApi::Rummager.any_instance.stubs(:search).raises(GdsApi::HTTPErrorResponse.new(500))
     results = most_popular_content.fetch
 
     assert_equal(results, [])
@@ -101,8 +101,8 @@ class MostPopularContentTest < ActiveSupport::TestCase
       ]
     }
 
-    Services.
-      rummager.
+    GdsApi::Rummager.
+      any_instance.
       stubs(:search).
       with { |params| assert_includes_subhash(expected_params, params) }.
       returns(search_results)

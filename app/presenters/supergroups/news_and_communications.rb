@@ -1,15 +1,11 @@
 module Supergroups
   class NewsAndCommunications < Supergroup
-    attr_reader :content
 
     PLACEHOLDER_IMAGE = "#{Plek.current.asset_root}/government/assets/placeholder.jpg".freeze
 
-    def initialize(current_path, taxon_ids, filters)
-      super(current_path, taxon_ids, filters, MostRecentContent)
-    end
-
     def tagged_content
-      format_document_data(@content)
+      content = fetch_content
+      format_document_data(content)
     end
 
   private
@@ -43,6 +39,11 @@ module Supergroups
 
     def context(document)
       "#{document_type(document)} - #{updated_date(document).strftime('%e %B %Y')}"
+    end
+
+    def fetch_content
+      return [] unless @taxon_ids.any?
+      MostRecentContent.fetch(content_ids: @taxon_ids, current_path: @current_path, filters: @filters)
     end
   end
 end
