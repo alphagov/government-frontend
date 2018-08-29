@@ -77,6 +77,14 @@ class ContentItemsControllerTest < ActionController::TestCase
     refute @controller.should_show_sidebar?
   end
 
+  test "should_show_sidebar? is true when tagged to a step by step even for whitehall content" do
+    content_item = content_store_has_schema_example("guide", "guide-with-step-navs").merge("publishing_app" => "whitehall")
+    setup_ab_variant("ContentPagesNav", "B")
+    get :show, params: { path: path_for(content_item) }
+
+    assert @controller.should_show_sidebar?
+  end
+
   def ensure_ab_test_is_correctly_setup(test_variant, content_item)
     content_store_has_item(content_item['base_path'], content_item)
 

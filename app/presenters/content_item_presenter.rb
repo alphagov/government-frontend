@@ -12,6 +12,7 @@ class ContentItemPresenter
               :phase,
               :part_slug,
               :document_type,
+              :step_by_steps,
               :taxons
 
   attr_accessor :include_collections_in_other_publisher_metadata
@@ -27,6 +28,7 @@ class ContentItemPresenter
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
     @taxons = content_item["links"]["taxons"] if content_item["links"]
+    @step_by_steps = content_item["links"]["part_of_step_navs"] if content_item["links"]
     @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
   end
 
