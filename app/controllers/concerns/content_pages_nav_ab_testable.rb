@@ -51,6 +51,8 @@ module ContentPagesNavAbTestable
   end
 
   def should_show_sidebar?
-    content_pages_nav_test_variant.variant?("A") || @content_item.content_item.parsed_content['publishing_app'] != "whitehall"
+    content_pages_nav_test_variant.variant?("A") ||
+      @content_item.step_by_steps.present? ||
+      @content_item.content_item.parsed_content['publishing_app'] != "whitehall"
   end
 end
