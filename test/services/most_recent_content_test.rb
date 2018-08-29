@@ -36,8 +36,8 @@ class MostRecentContentTest < ActiveSupport::TestCase
     end
   end
 
-  test "returns number of links" do
-    assert_includes_params(count: 6) do
+  test "returns number of links plus one" do
+    assert_includes_params(count: 7) do
       most_recent_content.fetch
     end
   end
@@ -48,9 +48,33 @@ class MostRecentContentTest < ActiveSupport::TestCase
     end
   end
 
-  test "excludes current page" do
-    assert_includes_params(reject_link: "/some-path") do
-      most_recent_content.fetch
-    end
+  test "rejects the originating page from the results" do
+    search_results = {
+        'results' => [
+            {
+                'title' => 'Doc 1',
+                'link' => 'documents/1'
+            },
+            {
+                'title' => 'Doc 2',
+                'link' => 'documents/2'
+            },
+            {
+                'title' => 'Some path',
+                'link' => '/some-path'
+            }
+        ]
+    }
+
+    Services.
+        rummager.
+        stubs(:search).
+        returns(search_results)
+
+    results = most_recent_content.fetch
+    links = results.map { |link| link['link'] }
+    refute links.include?('/some-path')
+    assert links.include?('documents/1')
+    assert links.include?('documents/2')
   end
 end

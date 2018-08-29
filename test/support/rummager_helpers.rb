@@ -31,22 +31,21 @@ module RummagerHelpers
     )
 
     params = {
-        start: 0,
-        count: 3,
-        fields: fields,
-        filter_part_of_taxonomy_tree: content_ids,
-        order: order_by,
-        filter_content_purpose_supergroup: filter_content_purpose_supergroup,
-        reject_link: reject_link,
+      start: 0,
+      count: 4,
+      fields: fields,
+      filter_part_of_taxonomy_tree: content_ids,
+      order: order_by,
+      filter_content_purpose_supergroup: filter_content_purpose_supergroup
     }
 
     Services.rummager.stubs(:search)
-        .with(params)
-        .returns(
-          "results" => results,
-          "start" => 0,
-          "total" => results.size
-        )
+      .with(params)
+      .returns(
+        "results" => results,
+        "start" => 0,
+        "total" => results.size
+      )
   end
 
   def generate_search_results(count, supergroup)
@@ -70,14 +69,14 @@ module RummagerHelpers
 
   def assert_includes_params(expected_params)
     search_results = {
-        'results' => [
-          {
-              'title' => 'Doc 1'
-          },
-          {
-              'title' => 'Doc 2'
-          }
-        ]
+      'results' => [
+        {
+            'title' => 'Doc 1'
+        },
+        {
+            'title' => 'Doc 2'
+        }
+      ]
     }
 
     Services.

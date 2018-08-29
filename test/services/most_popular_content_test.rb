@@ -45,8 +45,8 @@ class MostPopularContentTest < ActiveSupport::TestCase
     end
   end
 
-  test 'requests three results by default' do
-    assert_includes_params(count: 3) do
+  test 'requests one more than wanted links' do
+    assert_includes_params(count: 4) do
       most_popular_content.fetch
     end
   end
@@ -84,9 +84,33 @@ class MostPopularContentTest < ActiveSupport::TestCase
   end
 
   test 'rejects the originating page from the results' do
-    assert_includes_params(reject_link: '/how-to-ride-a-bike') do
-      most_popular_content.fetch
-    end
+    search_results = {
+        'results' => [
+            {
+                'title' => 'Doc 1',
+                'link' => 'documents/1'
+            },
+            {
+                'title' => 'Doc 2',
+                'link' => 'documents/2'
+            },
+            {
+                'title' => 'How to ride a bike',
+                'link' => '/how-to-ride-a-bike'
+            }
+        ]
+    }
+
+    Services.
+      rummager.
+      stubs(:search).
+      returns(search_results)
+
+    results = most_popular_content.fetch
+    links = results.map { |link| link['link'] }
+    refute links.include?('/how-to-ride-a-bike')
+    assert links.include?('documents/1')
+    assert links.include?('documents/2')
   end
 
   def assert_includes_params(expected_params)
