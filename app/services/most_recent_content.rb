@@ -32,6 +32,14 @@ private
     params[:filter_content_purpose_supergroup] = @filters[:filter_content_purpose_supergroup] if @filters[:filter_content_purpose_supergroup].present?
     params[:filter_content_purpose_subgroup] = @filters[:filter_content_purpose_subgroup] if @filters[:filter_content_purpose_subgroup].present?
 
-    Services.rummager.search(params)["results"].delete_if { |result| result["link"] == current_path }[0...number_of_links]
+    search_results = Services.rummager.search(params)["results"].delete_if { |result| result["link"] == current_path }[0...number_of_links]
+    if search_results.count < number_of_links
+      GovukStatsd.increment("govuk_content_pages.most_recent.second_rummager_query")
+      params[:reject_link] = current_path
+      params[:count] = number_of_links
+      Services.rummager.search(params)["results"]
+    else
+      search_results
+    end
   end
 end
