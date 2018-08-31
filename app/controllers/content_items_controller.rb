@@ -72,7 +72,7 @@ private
 
       @taxonomy_navigation = {}
       @content_item.links_out_supergroups.each do |supergroup|
-        supergroup_taxon_links = "Supergroups::#{supergroup.camelcase}".constantize.new(current_base_path, taxon_ids, filter_content_purpose_subgroup: @content_item.links_out_subgroups)
+        supergroup_taxon_links = "Supergroups::#{supergroup.camelcase}".constantize.new(current_base_path, taxon_ids, filter_content_purpose_subgroup: @content_item.links_out_subgroups(supergroup))
         @taxonomy_navigation[supergroup.to_sym] = supergroup_taxon_links.tagged_content
       end
 

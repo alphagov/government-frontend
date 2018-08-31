@@ -3,7 +3,7 @@ module Supergroups
     def initialize(current_path, taxon_ids, filters, content_order_class)
       @current_path = current_path
       @taxon_ids = taxon_ids
-      @filters = default_filters.merge(filters)
+      @filters = filters.merge(default_filters)
       @content = fetch_content(content_order_class)
     end
 

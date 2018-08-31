@@ -4,8 +4,8 @@ module ContentItem
       @links_out_supergroups ||= fetch_links_out_supergroups
     end
 
-    def links_out_subgroups
-      @links_out_subgroups ||= fetch_links_out_subgroups
+    def links_out_subgroups(supergroup)
+      fetch_links_out_subgroups(supergroup)
     end
 
   private
@@ -14,10 +14,10 @@ module ContentItem
       links_out.map { |link| link["supergroup"] }.uniq
     end
 
-    def fetch_links_out_subgroups
+    def fetch_links_out_subgroups(supergroup)
       subgroups = []
       links_out.each do |link|
-        if link["type"] == "content_purpose_subgroup"
+        if link["type"] == "content_purpose_subgroup" && link["supergroup"] == supergroup
           subgroups << link["title"]
         end
       end
