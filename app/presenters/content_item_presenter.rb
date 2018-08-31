@@ -28,8 +28,12 @@ class ContentItemPresenter
     @phase = content_item["phase"]
     @document_type = content_item["document_type"]
     @taxons = content_item["links"]["taxons"] if content_item["links"]
-    @step_by_steps = content_item["links"]["part_of_step_navs"] if content_item["links"]
+    @step_by_steps = step_by_step_nav(content_item["links"]) if content_item["links"]
     @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
+  end
+
+  def step_by_step_nav(links)
+    links["part_of_step_navs"] || links["relevant_to_step_navs"]
   end
 
   def requesting_a_part?
