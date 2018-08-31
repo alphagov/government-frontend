@@ -14,7 +14,7 @@ class MostRecentContentTest < ActiveSupport::TestCase
   end
 
   test 'catches api errors' do
-    Services.rummager.stubs(:search).raises(GdsApi::HTTPErrorResponse.new(500))
+    GdsApi::Rummager.any_instance.stubs(:search).raises(GdsApi::HTTPErrorResponse.new(500))
     results = most_recent_content.fetch
 
     assert_equal(results, [])

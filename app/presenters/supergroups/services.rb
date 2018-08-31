@@ -1,13 +1,15 @@
 module Supergroups
   class Services < Supergroup
-    attr_reader :content
-
-    def initialize(current_path, taxon_ids, filters)
-      super(current_path, taxon_ids, filters, MostPopularContent)
+    def tagged_content
+      content = fetch_content
+      format_document_data(content, data_category: "HighlightBoxClicked")
     end
 
-    def tagged_content
-      format_document_data(@content, data_category: "HighlightBoxClicked")
+  private
+
+    def fetch_content
+      return [] unless @taxon_ids.any?
+      MostPopularContent.fetch(content_ids: @taxon_ids, current_path: @current_path, filters: @filters)
     end
   end
 end

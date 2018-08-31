@@ -1,7 +1,10 @@
 module Supergroups
   class PolicyAndEngagement < Supergroup
-    def initialize(current_path, taxon_ids, filters)
-      super(current_path, taxon_ids, filters, MostRecentContent)
+  private
+
+    def fetch_content
+      return [] unless @taxon_ids.any?
+      MostRecentContent.fetch(content_ids: @taxon_ids, current_path: @current_path, filters: @filters)
     end
   end
 end

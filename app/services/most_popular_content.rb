@@ -1,4 +1,4 @@
-require 'gds_api/rummager'
+require 'services'
 
 class MostPopularContent
   include RummagerFields

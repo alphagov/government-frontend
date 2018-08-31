@@ -67,15 +67,9 @@ private
   def load_taxonomy_navigation
     if @content_item.taxons.present?
       current_base_path = @content_item.base_path
+      @taxonomy_navigation = @content_item.taxonomy_navigation(current_base_path)
+
       taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
-      taxon_ids = taxons.map { |taxon| taxon["content_id"] }
-
-      @taxonomy_navigation = {}
-      @content_item.links_out_supergroups.each do |supergroup|
-        supergroup_taxon_links = "Supergroups::#{supergroup.camelcase}".constantize.new(current_base_path, taxon_ids, filter_content_purpose_subgroup: @content_item.links_out_subgroups)
-        @taxonomy_navigation[supergroup.to_sym] = supergroup_taxon_links.tagged_content
-      end
-
       @tagged_taxons = taxons.map do |taxon|
         {
           taxon_id: taxon["content_id"],

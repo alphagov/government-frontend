@@ -1,14 +1,17 @@
+require_relative "../../services/most_popular_content"
+require_relative "../../services/most_recent_content"
+
 module Supergroups
   class Supergroup
-    def initialize(current_path, taxon_ids, filters, content_order_class)
+    def initialize(current_path, taxon_ids, filters)
       @current_path = current_path
       @taxon_ids = taxon_ids
       @filters = default_filters.merge(filters)
-      @content = fetch_content(content_order_class)
     end
 
     def tagged_content
-      format_document_data(@content)
+      content = fetch_content
+      format_document_data(content)
     end
 
   private
@@ -60,11 +63,6 @@ module Supergroups
 
     def default_filters
       { filter_content_purpose_supergroup: self.class.name.demodulize.underscore }
-    end
-
-    def fetch_content(content_order_class)
-      return [] unless @taxon_ids.any?
-      content_order_class.fetch(content_ids: @taxon_ids, current_path: @current_path, filters: @filters)
     end
   end
 end
