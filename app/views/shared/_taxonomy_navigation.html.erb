@@ -95,20 +95,9 @@
           margin_bottom: 2
         } %>
 
-        <ul class="grid-row">
-          <% taxonomy_navigation[:news_and_communications].each do |promo| %>
-            <li class="column-one-third taxonomy-navigation__list-item">
-              <%= render "govuk_publishing_components/components/image_card", {
-                context: promo[:image][:context],
-                href: promo[:link][:path],
-                heading_text: promo[:link][:text],
-                image_src: promo[:image][:url],
-                heading_level: 0,
-                href_data_attributes: promo[:link][:data_attributes]
-                } %>
-            </li>
-          <% end %>
-        </ul>
+        <%= render "govuk_publishing_components/components/document_list", {
+            items: taxonomy_navigation[:news_and_communications]
+        } %>
       </div>
     <% end %>
 
