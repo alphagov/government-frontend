@@ -3,6 +3,21 @@ ar:
     direction: rtl
   language_names:
     ar: "العربية"
+  components:
+    share_links:
+      share_this_page: "شارك هذه الصفحة"
+    related_navigation:
+      collections: "مجموعات"
+      external_links: "روابط خارجية"
+      policies: "سياسيات"
+      related_content: "محتوى ذو صلة"
+      topical_events: "أحداث ذات صلة بالموضوع"
+      topics: "المواضيع"
+      world_locations: "العالم"
+    published_dates:
+      published: "تاريخ النشر %{date}"
+    publisher_metadata:
+      from: "من"
   content_item:
     schema_name:
       announcement:
