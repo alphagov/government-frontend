@@ -48,6 +48,8 @@ Components specific to government-frontend are [within the application](https://
 
 When [running government-frontend](#running-the-application) locally the component guide is available at: http://government-frontend.dev.gov.uk/component-guide
 
+Configuration for the navigation links shown on the B variant of the ContentPagesNav A/B test is covered [separately](docs/navigation-links.md)
+
 ## Technical documentation
 
 This is a Ruby on Rails application that fetches documents from
