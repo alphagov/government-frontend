@@ -100,7 +100,7 @@ class LinksOutTest < ActiveSupport::TestCase
   end
 
   def assert_returns_guidance
-    assert_equal %w(guidance), @links_out.links_out_subgroups
+    assert_equal %w(guidance), @links_out.links_out_subgroups("guidance_and_regulation")
   end
 
   def assert_returns_guidance_and_regulation
@@ -220,7 +220,16 @@ class LinksOutTest < ActiveSupport::TestCase
     amended_rules["document_type"] = nil
 
     stub_load_rules(amended_rules)
-    assert_equal %w(link_to_news), @links_out.links_out_subgroups
+    assert_equal %w(link_to_news), @links_out.links_out_subgroups("news_and_communications")
+  end
+
+  test 'links_out_subgroups returns no subgroup names if content_purpose_subgroup is not a subgroup of the supergroup' do
+    amended_rules = rules
+    amended_rules["content_purpose_subgroup"]["guidance"] << news_rule
+    amended_rules["document_type"] = nil
+
+    stub_load_rules(amended_rules)
+    assert_equal [], @links_out.links_out_subgroups("guidance_and_regulation")
   end
 
   test 'links_out_subgroups returns correct subgroup names for content_purpose_subgroup rules' do
@@ -229,7 +238,7 @@ class LinksOutTest < ActiveSupport::TestCase
     amended_rules["document_type"] = nil
 
     stub_load_rules(amended_rules)
-    assert_equal %w(link_to_guidance link_to_news), @links_out.links_out_subgroups
+    assert_equal %w(link_to_news), @links_out.links_out_subgroups("news_and_communications")
   end
 
   test 'links_out_subgroups returns correct subgroup names for document_type rules' do
@@ -237,6 +246,6 @@ class LinksOutTest < ActiveSupport::TestCase
     amended_rules["document_type"]["guide"] << news_rule
 
     stub_load_rules(amended_rules)
-    assert_equal %w(link_to_news), @links_out.links_out_subgroups
+    assert_equal %w(link_to_news), @links_out.links_out_subgroups("news_and_communications")
   end
 end
