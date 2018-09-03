@@ -52,7 +52,7 @@ module ContentPagesNavTestHelper
         .to_return(status: 200, body: content_item.to_json, headers: {})
     visit path
 
-    assert_selector %{meta[name="govuk:content-id"][content="#{content_id}"}, visible: false
+    assert_selector %{meta[name="govuk:content-id"][content="#{content_id}"]}, visible: false
   end
 
   SINGLE_TAXON = [
