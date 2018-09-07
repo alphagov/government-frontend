@@ -39,7 +39,7 @@
     <% if @content_item.try(:back_link) %>
       <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
     <% elsif show_new_navigation? %>
-      <% navigation = GovukPublishingComponents::Presenters::ContextualNavigation.new(@content_item.content_item.parsed_content, request.path) %>
+      <% navigation = GovukPublishingComponents::Presenters::ContextualNavigation.new(@content_item.content_item.parsed_content, request) %>
 
       <% if @tagged_taxons.present? || navigation.breadcrumbs.present? %>
         <div class='gem-c-contextual-breadcrumbs'>
