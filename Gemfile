@@ -17,7 +17,7 @@ gem 'gds-api-adapters', '~> 53.0'
 gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_app_config', '~> 1.8'
 gem 'govuk_frontend_toolkit', '~> 7.6'
-gem 'govuk_publishing_components', '~> 9.22.0'
+gem 'govuk_publishing_components', '~> 9.23.0'
 gem 'plek', '~> 2.1'
 gem 'slimmer', '~> 13.0'
 
