@@ -1,5 +1,4 @@
 class ContentItemsController < ApplicationController
-  include ContentPagesNavAbTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -14,8 +13,6 @@ class ContentItemsController < ApplicationController
 
   def show
     load_content_item
-
-    load_taxonomy_navigation if show_new_navigation?
 
     set_expiry
     set_access_control_allow_origin_header if request.format.atom?
@@ -61,54 +58,6 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
     @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
-    @content_item.include_collections_in_other_publisher_metadata = show_new_navigation?
-  end
-
-  def load_taxonomy_navigation
-    if @content_item.taxons.present?
-      current_base_path = @content_item.base_path
-      taxons = @content_item.taxons.select { |taxon| taxon["phase"] == "live" }
-      taxon_ids = taxons.map { |taxon| taxon["content_id"] }
-
-      @taxonomy_navigation = {}
-      @content_item.links_out_supergroups.each do |supergroup|
-        supergroup_taxon_links = "Supergroups::#{supergroup.camelcase}".constantize.new(current_base_path, taxon_ids, filter_content_purpose_subgroup: @content_item.links_out_subgroups(supergroup))
-        @taxonomy_navigation[supergroup.to_sym] = supergroup_taxon_links.tagged_content
-      end
-
-      @tagged_taxons = taxons.map do |taxon|
-        {
-          taxon_id: taxon["content_id"],
-          taxon_name: taxon["title"],
-          taxon_link: taxon["base_path"],
-        }
-      end
-
-      @related_collections = @content_item
-                               .content_item
-                               .dig('links', 'document_collections')
-                               .yield_self { |document_collections| document_collections || [] }
-                               .select { |document_collection| document_collection['document_type'] == 'document_collection' }
-                               .map { |document_collection| document_collection.values_at('base_path', 'title') }
-
-      # Fetch link attributes of parent step by steps required to render the top navigation banner
-      step_by_step_links = @content_item
-                        .content_item
-                        .dig('links', 'part_of_step_navs')
-                        .yield_self { |part_of_step_navs| part_of_step_navs || [] }
-                        .sort_by { |step_by_step_nav| step_by_step_nav['title'] }
-                        .map { |step_by_step_nav| step_by_step_nav.values_at('title', 'base_path') }
-      @banner_items = format_banner_links(step_by_step_links, "Step by Step")
-
-      # Append link attributes of parent taxons to our collections of items for the top navigation banner if the
-      # content item is tagged to more than one taxon. If there is only one taxon a breadcrumb will be used instead.
-      if taxons.many?
-        taxon_links = taxons
-                           .sort_by { |taxon| taxon[:taxon_name] }
-                           .map { |taxon| taxon.values_at('title', 'base_path') }
-        @banner_items += format_banner_links(taxon_links, "Taxon")
-      end
-    end
   end
 
   def format_banner_links(links, type)
