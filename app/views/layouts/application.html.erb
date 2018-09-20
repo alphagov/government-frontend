@@ -24,7 +24,6 @@
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
-  <%= content_pages_nav_test_variant.analytics_meta_tag.html_safe if page_in_scope? %>
 
   <%= yield :extra_head_content %>
 </head>
@@ -38,61 +37,12 @@
 
     <% if @content_item.try(:back_link) %>
       <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
-    <% elsif show_new_navigation? %>
-      <% navigation = GovukPublishingComponents::Presenters::ContextualNavigation.new(@content_item.content_item.parsed_content, request) %>
-
-      <% if @tagged_taxons.present? || navigation.breadcrumbs.present? %>
-        <div class='gem-c-contextual-breadcrumbs'>
-          <% if @tagged_taxons.present? %>
-            <% if @tagged_taxons.one? %>
-              <%= render 'govuk_publishing_components/components/breadcrumbs',
-                         breadcrumbs: navigation.taxon_breadcrumbs[:breadcrumbs],
-                         collapse_on_mobile: true %>
-            <% else %>
-              <%= render 'govuk_publishing_components/components/breadcrumbs',
-                         breadcrumbs: [{ title: "Home", url: "/" }] %>
-            <% end %>
-          <% elsif navigation.breadcrumbs.present? %>
-            <%= render 'govuk_publishing_components/components/breadcrumbs',
-                       breadcrumbs: navigation.breadcrumbs %>
-          <% end %>
-        </div>
-      <% end %>
-
-      <% if @banner_items.present? %>
-        <div class="taxonomy-navigation__banner" data-module="track-click">
-          <% if @banner_items.size <= 2 %>
-            <p>This page is part of <%= @banner_items.take(2).to_sentence.html_safe %></p>
-          <% else %>
-            <% featured_banner_link, *other_banner_links = @banner_items %>
-            <div data-module="gem-toggle">
-              <p>
-                This page is part of <%= featured_banner_link %>
-                and <%= pluralize(other_banner_links.size, 'other') %>
-                <a href="#"
-                  data-controls="toggle_taxonomy-navigation__banner-extra"
-                  data-expanded="false"
-                  data-toggled-text="&minus; hide all">+ show all</a>
-              </p>
-              <p id="toggle_taxonomy-navigation__banner-extra" class="js-hidden">
-                <%= other_banner_links.to_sentence.html_safe %>
-              </p>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
     <% else  %>
       <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.content_item.parsed_content %>
     <% end %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield %>
-      <% if show_new_navigation? && @taxonomy_navigation %>
-        <%= render 'shared/taxonomy_navigation',
-                   taxonomy_navigation: @taxonomy_navigation,
-                   tagged_taxons: @tagged_taxons,
-                   related_collections: @related_collections %>
-      <% end %>
     </main>
     <%= render 'govuk_publishing_components/components/feedback' %>
   </div>

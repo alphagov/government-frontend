@@ -49,8 +49,5 @@ module GovernmentFrontend
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
-
-    # Load links out configuration for taxonomy navigation
-    config.taxonomy_navigation_links_out = config_for(:taxonomy_navigation_links_out)
   end
 end

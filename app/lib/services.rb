@@ -11,9 +11,4 @@ module Services
       disable_cache: true,
     )
   end
-
-  def self.rummager
-    @rummager ||= GdsApi::Rummager.new(Plek.new.find("rummager"),
-      timeout: 2)
-  end
 end
