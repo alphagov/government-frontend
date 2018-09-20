@@ -1,12 +1,10 @@
 module RummagerHelpers
   def stub_most_recent_content(reject_link, taxon_content_ids, content_link_count, supergroup)
-    results = generate_search_results(content_link_count, supergroup)
-    stub_for_taxon_and_supergroup(reject_link, taxon_content_ids, results, supergroup, "-public_timestamp")
+    stub_for_taxon_and_supergroup(reject_link, content_link_count, taxon_content_ids, supergroup, "-public_timestamp")
   end
 
   def stub_most_popular_content(reject_link, taxon_content_ids, content_link_count, supergroup)
-    results = generate_search_results(content_link_count, supergroup)
-    stub_for_taxon_and_supergroup(reject_link, taxon_content_ids, results, supergroup, "-popularity")
+    stub_for_taxon_and_supergroup(reject_link, content_link_count, taxon_content_ids, supergroup, "-popularity")
   end
 
   def stub_rummager_document_without_image_url
@@ -19,7 +17,7 @@ module RummagerHelpers
       )
   end
 
-  def stub_for_taxon_and_supergroup(reject_link, content_ids, results, filter_content_purpose_supergroup, order_by)
+  def stub_for_taxon_and_supergroup(reject_link, content_link_count, content_ids, filter_content_purpose_supergroup, order_by)
     fields = %w(
       content_store_document_type
       description
@@ -31,17 +29,29 @@ module RummagerHelpers
     )
 
     params = {
-        start: 0,
-        count: 3,
-        fields: fields,
-        filter_part_of_taxonomy_tree: content_ids,
-        order: order_by,
-        filter_content_purpose_supergroup: filter_content_purpose_supergroup,
-        reject_link: reject_link,
+      start: 0,
+      count: 4,
+      fields: fields,
+      filter_part_of_taxonomy_tree: content_ids,
+      order: order_by,
+      filter_content_purpose_supergroup: filter_content_purpose_supergroup
     }
 
+    results = generate_search_results(content_link_count, filter_content_purpose_supergroup)
+
     Services.rummager.stubs(:search)
-        .with(params)
+      .with(params)
+      .returns(
+        "results" => results,
+        "start" => 0,
+        "total" => results.size
+      )
+
+    filtered_params = params.dup
+    filtered_params[:reject_link] = reject_link
+    filtered_params[:count] = 3
+    Services.rummager.stubs(:search)
+        .with(filtered_params)
         .returns(
           "results" => results,
           "start" => 0,
@@ -70,14 +80,17 @@ module RummagerHelpers
 
   def assert_includes_params(expected_params)
     search_results = {
-        'results' => [
-          {
-              'title' => 'Doc 1'
-          },
-          {
-              'title' => 'Doc 2'
-          }
-        ]
+      'results' => [
+        {
+            'title' => 'Doc 1'
+        },
+        {
+            'title' => 'Doc 2'
+        },
+        {
+            'title' => 'Doc 3'
+        }
+      ]
     }
 
     Services.
@@ -88,9 +101,9 @@ module RummagerHelpers
 
     results = yield
 
-    assert_equal(results.count, 2)
+    assert_equal(results.count, 3)
 
     assert_equal(results.first["title"], 'Doc 1')
-    assert_equal(results.last["title"], 'Doc 2')
+    assert_equal(results.last["title"], 'Doc 3')
   end
 end
