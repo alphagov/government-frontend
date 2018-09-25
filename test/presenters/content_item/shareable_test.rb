@@ -1,18 +1,18 @@
 require 'test_helper'
 include ERB::Util
 
-class DummyContentItem
-  include ContentItem::Shareable
-  attr_accessor :content_item, :title
-
-  def initialize
-    @content_item = {}
-    @content_item["base_path"] = "/a/base/path"
-    @title = "A Title"
-  end
-end
-
 class ContentItemShareableTest < ActiveSupport::TestCase
+  class DummyContentItem
+    include ContentItem::Shareable
+    attr_accessor :content_item, :title
+
+    def initialize
+      @content_item = {}
+      @content_item["base_path"] = "/a/base/path"
+      @title = "A Title"
+    end
+  end
+
   def expected_path
     url_encode(Plek.current.website_root + "/a/base/path")
   end
