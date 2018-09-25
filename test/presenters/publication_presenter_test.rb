@@ -35,8 +35,8 @@ class PublicationPresenterTest < PresenterTestCase
     assert presented.historically_political?
   end
 
-  test '#from presents ministers' do
-    minister = schema_item["links"]["ministers"][0]
+  test '#from presents people' do
+    minister = schema_item["links"]["people"][0]
     assert presented_item.from.include?("<a href=\"#{minister['base_path']}\">#{minister['title']}</a>")
   end
 
