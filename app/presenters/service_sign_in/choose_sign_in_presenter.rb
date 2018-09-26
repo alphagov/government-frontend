@@ -14,13 +14,22 @@ module ServiceSignIn
       choose_sign_in["description"]
     end
 
+    def tracking_code
+      choose_sign_in["tracking_code"]
+    end
+
+    def tracking_name
+      choose_sign_in["tracking_name"]
+    end
+
     def options
       radio_options = mapped_options.map do |option|
         {
           text: option[:text],
           value: option[:value],
           hint_text: option[:hint_text],
-          bold: true
+          url: option[:url],
+          bold: true,
         }
       end
       # TODO: Move to decision of when or should be applied to schema
