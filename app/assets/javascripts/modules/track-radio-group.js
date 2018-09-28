@@ -15,7 +15,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     function track (element, withHint) {
         element.on('submit', function (event) {
-        
+
         var options = { transport: 'beacon' }
 
         var $submittedForm = $(event.target)
@@ -26,6 +26,9 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
         if (typeof checkedValue === 'undefined') {
           checkedValue = 'submitted-without-choosing'
+        }
+        if (typeof element.attr('data-tracking-code') !== 'undefined') {
+          addCrossDomainTracking(element, $checkedOption)
         }
         GOVUK.analytics.trackEvent('Radio button chosen', checkedValue + (withHint ? '-with-hint' : ''), options)
       })
@@ -51,6 +54,15 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         GOVUK.analytics.trackEvent('verify-hint', 'shown', { transport: 'beacon'});
         track(element, data.value);
       }
+    }
+
+    function addCrossDomainTracking(element, $checkedOption) {
+      var code = element.attr('data-tracking-code')
+      var name = element.attr('data-tracking-name')
+      var url = $checkedOption.attr('data-tracking-url')
+      var hostname = $('<a>').prop('href', url).prop('hostname')
+
+      GOVUK.analytics.addLinkedTrackerDomain(code, name, hostname)
     }
   }
 })(window, window.GOVUK);
