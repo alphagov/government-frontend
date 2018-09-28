@@ -3,7 +3,7 @@ module ContentItem
     include ActionView::Helpers::UrlHelper
 
     def from
-      organisations_ordered_by_importance + links_group(%w{worldwide_organisations ministers speaker})
+      organisations_ordered_by_importance + links_group(%w{worldwide_organisations people speaker})
     end
 
     def part_of
@@ -21,9 +21,9 @@ module ContentItem
   private
 
     def links(type)
-      expanded_links_from_content_item(type).map do |link|
-        link_for_type(type, link)
-      end
+      expanded_links_from_content_item(type)
+        .select { |link| link["base_path"] || type == "world_locations" }
+        .map { |link| link_for_type(type, link) }
     end
 
     def expanded_links_from_content_item(type)
