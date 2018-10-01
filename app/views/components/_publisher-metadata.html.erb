@@ -27,14 +27,13 @@
             <dd class="app-c-publisher-metadata__definition" data-module="gem-toggle">
               <% if title.to_sym == :collections %>
                 <% if values.size <= 2 %>
-                  <span class="app-c-publisher-metadata__definition_sentence">
+                  <span class="app-c-publisher-metadata__definition-sentence">
                     <%= values.take(2).to_sentence.html_safe %>
                   </span>
                 <% else %>
                   <% featured_value, *other_values = values %>
-                  <span class="app-c-publisher-metadata__definition_sentence">
-                    <%= featured_value.html_safe %>,
-                    <span class="app-c-publisher-metadata__definition_others">and <%= pluralize(other_values.size, 'other') %></span>
+                  <span class="app-c-publisher-metadata__definition-sentence">
+                    <%= featured_value.html_safe %>, <span class="app-c-publisher-metadata__definition-others">and <%= pluralize(other_values.size, 'other') %></span>
                   </span>
                   <a href="#"
                     class="app-c-publisher-metadata__toggle"
@@ -46,7 +45,7 @@
                   <span id="<%= toggle_id %>" class="js-hidden"><%= other_values.to_sentence.html_safe %></span>
                 <% end %>
               <% else %>
-                <span class="app-c-publisher-metadata__definition_sentence">
+                <span class="app-c-publisher-metadata__definition-sentence">
                   <%= values.to_sentence.html_safe %>
                 </span>
               <% end %>
