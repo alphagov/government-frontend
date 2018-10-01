@@ -33,12 +33,14 @@
                 <% else %>
                   <% featured_value, *other_values = values %>
                   <span class="app-c-publisher-metadata__definition_sentence">
-                    <%= featured_value.html_safe %> and <%= pluralize(other_values.size, 'other') %>
+                    <%= featured_value.html_safe %>,
+                    <span class="app-c-publisher-metadata__definition_others">and <%= pluralize(other_values.size, 'other') %></span>
                   </span>
                   <a href="#"
-                     data-controls="<%= toggle_id %>"
-                     data-expanded="false"
-                     data-toggled-text="&minus; <%= t('components.publisher_metadata.hide_all') %>">
+                    class="app-c-publisher-metadata__toggle"
+                    data-controls="<%= toggle_id %>"
+                    data-expanded="false"
+                    data-toggled-text="&minus; <%= t('components.publisher_metadata.hide_all') %>">
                     + <%= t('components.publisher_metadata.show_all') %>
                   </a>
                   <span id="<%= toggle_id %>" class="js-hidden"><%= other_values.to_sentence.html_safe %></span>

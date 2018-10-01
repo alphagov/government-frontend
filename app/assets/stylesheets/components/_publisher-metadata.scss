@@ -26,3 +26,12 @@
     display: inline-block;
   }
 }
+
+.app-c-publisher-metadata__toggle,
+.app-c-publisher-metadata__definition-others {
+  display: none;
+
+  .js-enabled & {
+    display: inline-block;
+  }
+}
