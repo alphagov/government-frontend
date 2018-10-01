@@ -45,7 +45,6 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     within(".content-bottom-margin .app-c-published-dates") do
       assert page.has_content?("Published 27 February 1881")
       assert page.has_content?("Last updated 14 September 2016")
-      assert page.has_link?("show all updates", href: "#full-history")
 
       within(".app-c-published-dates__change-history") do
         within(".app-c-published-dates__change-item:first-child") do

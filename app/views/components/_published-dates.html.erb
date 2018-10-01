@@ -17,6 +17,7 @@
       &mdash; <a href="#history"><%= t('components.published_dates.see_all_updates') %></a>
     <% elsif history.any? %>
       <a href="#full-history"
+      class="app-c-published-dates__toggle"
       data-controls="full-history"
       data-expanded="false"
       data-toggled-text="&#45;&nbsp;<%= t('components.published_dates.hide_all_updates') %>">&#43;&nbsp;<%= t('components.published_dates.show_all_updates')
