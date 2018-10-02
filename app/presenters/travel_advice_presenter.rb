@@ -89,7 +89,7 @@ class TravelAdvicePresenter < ContentItemPresenter
   end
 
   def atom_public_updated_at
-    DateTime.parse(content_item["public_updated_at"])
+    Time.parse(content_item["public_updated_at"])
   end
 
   def cache_control_max_age(format)
