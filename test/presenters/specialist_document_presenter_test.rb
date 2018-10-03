@@ -76,7 +76,7 @@ class SpecialistDocumentPresenterTest
       ]
 
       presented = present_example(example)
-      assert DateTime.parse(presented.published) == DateTime.parse("2002-02-02")
+      assert Time.parse(presented.published) == Time.parse("2002-02-02")
     end
 
     test 'has title without context' do
@@ -354,7 +354,7 @@ class SpecialistDocumentPresenterTest
       ]
 
       presented = present_example(example)
-      assert DateTime.parse(presented.published) == DateTime.parse("2010-01-01")
+      assert Time.parse(presented.published) == Time.parse("2010-01-01")
     end
   end
 end

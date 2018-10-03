@@ -67,7 +67,7 @@ class PublisherMetadataTest < ComponentTestCase
   test "renders the first collection and a toggle link when more than two collections are given" do
     render_component(other: { collections: ["<a href='/government/collections/tribunals-statistics'>Tribunals statistics</a>", "<a href='/government/collections/civil-justice-statistics-quarterly'>Civil justice statistics quarterly</a>", "<a href='/government/collections/offender-management-statistics-quarterly'>Offender management statistics quarterly</a>"] })
     assert_select ".app-c-publisher-metadata__other dt", text: 'Collections:'
-    assert_select ".app-c-publisher-metadata__other .app-c-publisher-metadata__definition_sentence", text: 'Tribunals statistics and 2 others'
+    assert_select ".app-c-publisher-metadata__other .app-c-publisher-metadata__definition-sentence", text: 'Tribunals statistics, and 2 others'
     assert_select ".app-c-publisher-metadata__other a", text: '+ show all'
     assert_select ".app-c-publisher-metadata__other a[href='/government/collections/tribunals-statistics']", text: 'Tribunals statistics'
     assert_select ".app-c-publisher-metadata__other a[href='/government/collections/civil-justice-statistics-quarterly']", text: 'Civil justice statistics quarterly'

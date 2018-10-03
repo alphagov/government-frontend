@@ -73,7 +73,7 @@ class CaseStudyPresenterTest < PresenterTestCase
 
   test '#history returns a formatted history if the content item has updates' do
     expected_history = [
-      { display_time: '21 March 2013', note: 'Something changed', timestamp: '2013-03-21T00:00:00+00:00' },
+      { display_time: '21 March 2013', note: 'Something changed', timestamp: '2013-03-21 00:00:00 +0000' },
     ]
 
     assert_equal expected_history, presented_case_study_with_updates.history
@@ -97,7 +97,7 @@ class CaseStudyPresenterTest < PresenterTestCase
   end
 
   def presented_case_study_with_updates
-    updated_date = DateTime.new(2013, 3, 21).to_s
+    updated_date = Time.new(2013, 3, 21).to_s
     with_history = schema_item
     with_history['details']['change_history'] = [{ 'note' => 'Something changed', 'public_timestamp' => updated_date }]
     with_history['public_updated_at'] = updated_date

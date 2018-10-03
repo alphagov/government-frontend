@@ -15,7 +15,7 @@ class ComingSoonPresenter < ContentItemPresenter
   end
 
   def formatted_publish_time
-    display_time(DateTime.parse(@publish_time))
+    display_time(Time.parse(@publish_time))
   end
 
   def page_title
