@@ -28,7 +28,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           checkedValue = 'submitted-without-choosing'
         }
         if (typeof element.attr('data-tracking-code') !== 'undefined') {
-          addCrossDomainTracking(element, $checkedOption)
+          addCrossDomainTracking(element, $checkedOption, options)
         }
         GOVUK.analytics.trackEvent('Radio button chosen', checkedValue + (withHint ? '-with-hint' : ''), options)
       })
@@ -56,13 +56,15 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
     }
 
-    function addCrossDomainTracking(element, $checkedOption) {
+    function addCrossDomainTracking(element, $checkedOption, options) {
       var code = element.attr('data-tracking-code')
       var name = element.attr('data-tracking-name')
       var url = $checkedOption.attr('data-tracking-url')
       var hostname = $('<a>').prop('href', url).prop('hostname')
 
-      GOVUK.analytics.addLinkedTrackerDomain(code, name, hostname)
+      GOVUK.analytics.addLinkedTrackerDomain(code, name, hostname, false)
+      options['trackerName'] = name
+      GOVUK.analytics.trackEvent('Radio button chosen', $checkedOption.val(), options)
     }
   }
 })(window, window.GOVUK);
