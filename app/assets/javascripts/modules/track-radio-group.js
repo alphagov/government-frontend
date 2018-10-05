@@ -27,10 +27,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         if (typeof checkedValue === 'undefined') {
           checkedValue = 'submitted-without-choosing'
         }
+
+        GOVUK.analytics.trackEvent('Radio button chosen', checkedValue + (withHint ? '-with-hint' : ''), options)
+
         if (typeof element.attr('data-tracking-code') !== 'undefined') {
           addCrossDomainTracking(element, $checkedOption, options)
         }
-        GOVUK.analytics.trackEvent('Radio button chosen', checkedValue + (withHint ? '-with-hint' : ''), options)
       })
     }
 
