@@ -15,13 +15,17 @@ Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
     chromeOptions: { args: %w(headless disable-gpu no-sandbox) }
   )
+  client = Selenium::WebDriver::Remote::Http::Default.new
+  client.timeout = 90 # Asset compilation can result in a timeout on the first request hence the increase.
 
   Capybara::Selenium::Driver.new(
     app,
     browser: :chrome,
-    desired_capabilities: capabilities
+    desired_capabilities: capabilities,
+    http_client: client
   )
 end
+
 Capybara.default_driver = :headless_chrome
 Capybara.javascript_driver = :headless_chrome
 
