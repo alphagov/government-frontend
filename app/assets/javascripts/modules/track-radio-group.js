@@ -14,7 +14,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
 
     function track (element, withHint) {
-        element.on('submit', function (event) {
+      element.on('submit', function (event) {
 
         var options = { transport: 'beacon' }
 
@@ -30,15 +30,15 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
         GOVUK.analytics.trackEvent('Radio button chosen', checkedValue + (withHint ? '-with-hint' : ''), options)
 
-        if (typeof element.attr('data-tracking-code') !== 'undefined') {
-          addCrossDomainTracking(element, $checkedOption, options)
+        if (typeof $submittedForm.attr('data-tracking-code') !== 'undefined') {
+          addCrossDomainTracking($submittedForm, $checkedOption, options)
         }
       })
     }
 
     function checkVerifyUser (element) {
       $.ajax({
-        url: 'https://www.signin.service.gov.uk/hint', 
+        url: 'https://www.signin.service.gov.uk/hint',
         cache: false,
         dataType: 'jsonp',
         timeout: 3000
@@ -63,10 +63,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       var name = element.attr('data-tracking-name')
       var url = $checkedOption.attr('data-tracking-url')
       var hostname = $('<a>').prop('href', url).prop('hostname')
+      var eventOptions = $.extend({ 'trackerName': name }, options)
 
-      GOVUK.analytics.addLinkedTrackerDomain(code, name, hostname, false)
-      options['trackerName'] = name
-      GOVUK.analytics.trackEvent('Radio button chosen', $checkedOption.val(), options)
+      GOVUK.analytics.addLinkedTrackerDomain(code, name, hostname)
+      GOVUK.analytics.trackEvent('Radio button chosen', $checkedOption.val(), eventOptions)
     }
   }
 })(window, window.GOVUK);

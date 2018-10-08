@@ -3,7 +3,6 @@
 var $ = window.jQuery
 
 describe('A radio group tracker', function () {
-  
 
   var GOVUK = window.GOVUK
   var tracker
@@ -11,6 +10,7 @@ describe('A radio group tracker', function () {
 
   GOVUK.analytics = GOVUK.analytics || {}
   GOVUK.analytics.trackEvent = function () {}
+  GOVUK.analytics.addLinkedTrackerDomain = function () {}
 
   beforeEach(function () {
     spyOn(GOVUK.analytics, 'trackEvent')
@@ -80,7 +80,7 @@ describe('A radio group tracker', function () {
     )
     element.find('input[value="govuk-verify"]').trigger('click')
     element.find('form').trigger('submit')
-    
+
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'Radio button chosen', 'govuk-verify', { transport: 'beacon' }
     )
@@ -149,5 +149,35 @@ describe('A radio group tracker', function () {
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'Radio button chosen', 'submitted-without-choosing', { transport: 'beacon' }
     )
+  })
+
+  describe('cross domain tracking enabled', function () {
+    var $form, $radioInput
+
+    beforeEach(function () {
+      spyOn(GOVUK.analytics, 'addLinkedTrackerDomain')
+
+      var $form = element.find('form')
+      $form.attr('data-tracking-code', 'UA-xxxxxx')
+      $form.attr('data-tracking-name', 'testTracker')
+
+      var $radioInput = element.find('input[value="government-gateway"]')
+      $radioInput.attr('data-tracking-url', 'https://test.service.gov.uk')
+
+      $radioInput.trigger('click')
+      $form.trigger('submit')
+    })
+
+    it('adds a linked tracker', function () {
+      expect(GOVUK.analytics.addLinkedTrackerDomain).toHaveBeenCalledWith(
+        'UA-xxxxxx', 'testTracker', 'test.service.gov.uk'
+      )
+    })
+
+    it('sends an event to the linked tracker', function() {
+      expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
+        'Radio button chosen', 'government-gateway', { trackerName: 'testTracker', transport: 'beacon' }
+      )
+    })
   })
 })
