@@ -22,16 +22,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
         var $checkedOption = $submittedForm.find('input:checked')
 
-        var checkedValue = $checkedOption.val();
-
-        if (typeof checkedValue === 'undefined') {
-          checkedValue = 'submitted-without-choosing'
-        }
-
-        GOVUK.analytics.trackEvent('Radio button chosen', checkedValue + (withHint ? '-with-hint' : ''), options)
+        GOVUK.analytics.trackEvent('Radio button chosen', eventTrackingValue($checkedOption, withHint), options)
 
         if (typeof $submittedForm.attr('data-tracking-code') !== 'undefined') {
-          addCrossDomainTracking($submittedForm, $checkedOption, options)
+          addCrossDomainTracking($submittedForm, $checkedOption, options, withHint)
         }
       })
     }
@@ -58,7 +52,20 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       }
     }
 
-    function addCrossDomainTracking(element, $checkedOption, options) {
+    function eventTrackingValue(element, withHint) {
+      var value = element.val()
+
+      if (typeof value === 'undefined') {
+        value = 'submitted-without-choosing'
+      }
+
+      if (withHint) {
+        value += '-with-hint'
+      }
+      return value
+    }
+
+    function addCrossDomainTracking(element, $checkedOption, options, withHint) {
       var code = element.attr('data-tracking-code')
       var name = element.attr('data-tracking-name')
       var url = $checkedOption.attr('data-tracking-url')
@@ -66,7 +73,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       var eventOptions = $.extend({ 'trackerName': name }, options)
 
       GOVUK.analytics.addLinkedTrackerDomain(code, name, hostname)
-      GOVUK.analytics.trackEvent('Radio button chosen', $checkedOption.val(), eventOptions)
+      GOVUK.analytics.trackEvent('Radio button chosen', eventTrackingValue($checkedOption, withHint), eventOptions)
     }
   }
 })(window, window.GOVUK);

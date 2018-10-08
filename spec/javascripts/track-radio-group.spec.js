@@ -155,13 +155,15 @@ describe('A radio group tracker', function () {
     var $form, $radioInput
 
     beforeEach(function () {
+      tracker.trackVerifyUser(element, { status: 'OK', value: true })
+
       spyOn(GOVUK.analytics, 'addLinkedTrackerDomain')
 
       var $form = element.find('form')
       $form.attr('data-tracking-code', 'UA-xxxxxx')
       $form.attr('data-tracking-name', 'testTracker')
 
-      var $radioInput = element.find('input[value="government-gateway"]')
+      var $radioInput = element.find('input[value="govuk-verify"]')
       $radioInput.attr('data-tracking-url', 'https://test.service.gov.uk')
 
       $radioInput.trigger('click')
@@ -176,7 +178,7 @@ describe('A radio group tracker', function () {
 
     it('sends an event to the linked tracker', function() {
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
-        'Radio button chosen', 'government-gateway', { trackerName: 'testTracker', transport: 'beacon' }
+        'Radio button chosen', 'govuk-verify-with-hint', { trackerName: 'testTracker', transport: 'beacon' }
       )
     })
   })
