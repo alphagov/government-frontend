@@ -1,8 +1,8 @@
 require 'rest-client'
 
 class DocumentTypesHelper
-  ALL_SEARCH_ENDPOINT = "https://www.gov.uk/api/search.json?facet_content_store_document_type=100,example_scope:global,examples:%{sample_size}&filter_rendering_app=government-frontend&count=0".freeze
-  SINGLE_SEARCH_ENDPOINT = "https://www.gov.uk/api/search.json?filter_content_store_document_type=%{document_type}&count=%{sample_size}".freeze
+  ALL_SEARCH_ENDPOINT = "https://www.gov.uk/api/search.json?facet_content_store_document_type=100,example_scope:global,examples:%<sample_size>s&filter_rendering_app=government-frontend&count=0".freeze
+  SINGLE_SEARCH_ENDPOINT = "https://www.gov.uk/api/search.json?filter_content_store_document_type=%<document_type>s&count=%<sample_size>s".freeze
 
   def initialize(sample_size = 10)
     @sample_size = sample_size
