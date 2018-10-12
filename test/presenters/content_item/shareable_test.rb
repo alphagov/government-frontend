@@ -1,7 +1,8 @@
 require 'test_helper'
-include ERB::Util
 
 class ContentItemShareableTest < ActiveSupport::TestCase
+  include ERB::Util
+
   class DummyContentItem
     include ContentItem::Shareable
     attr_accessor :content_item, :title
