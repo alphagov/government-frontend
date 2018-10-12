@@ -83,9 +83,7 @@ class TravelAdvicePresenterTest
 
     test "navigation items are presented as trackable links unless they are the current part" do
       example = schema_item("full-country")
-      base_path = example["base_path"]
       current_part = example["details"]["parts"].first
-      another_part = example["details"]["parts"][1]
 
       first_part_presented = presented_item("full-country", current_part["slug"])
       navigation_items = first_part_presented.parts_navigation
