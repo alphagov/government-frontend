@@ -20,7 +20,7 @@ class WraithConfigHelper
 private
 
   def load_template
-    YAML::load(File.open(TEMPLATE_PATH))
+    YAML::safe_load(File.open(TEMPLATE_PATH))
   end
 
   def build_paths
