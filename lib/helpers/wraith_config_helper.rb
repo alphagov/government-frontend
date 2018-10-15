@@ -2,7 +2,7 @@ class WraithConfigHelper
   attr_accessor :name, :paths
 
   TEMPLATE_PATH = "test/wraith/config.yaml".freeze
-  OUTPUT_PATH = 'test/wraith/wip-config-%{suffix}.yaml'.freeze
+  OUTPUT_PATH = 'test/wraith/wip-config-%<suffix>s.yaml'.freeze
 
   def initialize(name, paths)
     @name = name
@@ -20,7 +20,7 @@ class WraithConfigHelper
 private
 
   def load_template
-    YAML::load(File.open(TEMPLATE_PATH))
+    YAML::safe_load(File.open(TEMPLATE_PATH))
   end
 
   def build_paths

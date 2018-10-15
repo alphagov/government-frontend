@@ -11,6 +11,6 @@ private
                                  .compact
                                  .join('.')
 
-    '/' + URI.encode(path_and_optional_locale)
+    '/' + URI.encode(path_and_optional_locale) # rubocop:disable Lint/UriEscapeUnescape
   end
 end
