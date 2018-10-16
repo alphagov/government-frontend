@@ -55,5 +55,11 @@ class ServiceSignInPresenterTest
     test 'presents the back_link' do
       assert_equal schema_item['links']['parent'].first['base_path'], @presented_item.back_link
     end
+
+    test 'presents the tracking values' do
+      assert_equal @choose_sign_in['tracking_code'], @presented_item.tracking_code
+      assert_equal @choose_sign_in['tracking_domain'], @presented_item.tracking_domain
+      assert_equal @choose_sign_in['tracking_name'], @presented_item.tracking_name
+    end
   end
 end

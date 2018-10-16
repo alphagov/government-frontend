@@ -18,6 +18,10 @@ module ServiceSignIn
       choose_sign_in["tracking_code"]
     end
 
+    def tracking_domain
+      choose_sign_in["tracking_domain"]
+    end
+
     def tracking_name
       choose_sign_in["tracking_name"]
     end
