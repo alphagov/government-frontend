@@ -16,6 +16,7 @@
 <%
   data_attrs = { module: "track-radio-group" }
   data_attrs["tracking-code"] = @content_item.tracking_code if @content_item.tracking_code
+  data_attrs["tracking-domain"] = @content_item.tracking_domain if @content_item.tracking_domain
   data_attrs["tracking-name"] = @content_item.tracking_name if @content_item.tracking_name
 %>
 <%= form_tag({controller: 'content_items', action: 'service_sign_in_options'},
