@@ -22,6 +22,7 @@ module ServiceSignIn
       assert page.has_css?('.gem-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
       assert page.has_css?('form[data-module="track-radio-group"]')
       assert page.has_css?("form[data-tracking-code='UA-xxxxxx']")
+      assert page.has_css?("form[data-tracking-domain='tax.service.gov.uk']")
       assert page.has_css?("form[data-tracking-name='somethingClicky']")
 
       within "#content form" do
