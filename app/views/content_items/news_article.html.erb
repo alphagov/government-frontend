@@ -38,11 +38,15 @@
       %>
     </div>
 
-    <%= render 'components/published-dates', {
-        published: @content_item.published,
-        last_updated: @content_item.updated,
-        history: @content_item.history
+    <div class="responsive-bottom-margin">
+      <%= render 'components/published-dates', {
+          published: @content_item.published,
+          last_updated: @content_item.updated,
+          history: @content_item.history
       } %>
+    </div>
+
+    <%= render 'shared/footer_navigation' %>
   </div>
 
   <%= render 'shared/sidebar_navigation' %>

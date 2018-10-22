@@ -9,16 +9,22 @@
 
 <div class="grid-row responsive-bottom-margin">
   <div class="column-two-thirds">
-    <%= render 'govuk_publishing_components/components/govspeak',
-      content: raw(@content_item.body),
-      direction: page_text_direction,
-      disable_youtube_expansions: true %>
+    <div class="responsive-bottom-margin">
+      <%= render 'govuk_publishing_components/components/govspeak',
+                 content: raw(@content_item.body),
+                 direction: page_text_direction,
+                 disable_youtube_expansions: true %>
+    </div>
 
     <% if @content_item.last_updated && @content_item.schema_name == "help_page" %>
-      <%= render "components/published-dates", {
-        last_updated: @content_item.last_updated
-      } %>
+      <div class="responsive-bottom-margin">
+        <%= render "components/published-dates", {
+            last_updated: @content_item.last_updated
+        } %>
+      </div>
     <% end %>
+
+    <%= render 'shared/footer_navigation' %>
   </div>
 
   <%= render 'shared/sidebar_navigation' %>
