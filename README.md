@@ -170,6 +170,8 @@ The yaml file contains a custom key of `:document_types` not used by wraith but 
 bundle exec rake wraith:update_document_types[:sample_size]
 ```
 
+#### Test
+
 ## Licence
 
 [MIT License](LICENCE)
