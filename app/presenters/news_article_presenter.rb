@@ -8,7 +8,7 @@ class NewsArticlePresenter < ContentItemPresenter
   include ContentItem::Metadata
 
   def image
-    content_item["details"].dig("image") || default_news_image
+    content_item["details"].dig("image") || default_news_image || placeholder_image
   end
 
 private
@@ -16,5 +16,9 @@ private
   def default_news_image
     organisation = content_item["links"].dig("primary_publishing_organisation")
     organisation[0].dig("details", "default_news_image") if organisation.present?
+  end
+
+  def placeholder_image
+    "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg"
   end
 end

@@ -64,6 +64,15 @@ class NewsArticlePresenterTest
       presented_item = present_example(example)
       assert_equal default_news_image, presented_item.image
     end
+
+    test 'presents a placeholder image if document has no image or default news image' do
+      placeholder_image = "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg"
+      example = schema_item
+      example['details'].delete('image')
+
+      presented_item = present_example(example)
+      assert_equal placeholder_image, presented_item.image
+    end
   end
 
   class HistoryModePresentedNewsArticle < NewsArticlePresenterTestCase
