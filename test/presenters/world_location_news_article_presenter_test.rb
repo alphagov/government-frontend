@@ -57,6 +57,25 @@ class WorldLocationNewsArticlePresenterTest
     test 'presents world locations as part_of' do
       assert_includes presented_item.part_of[0], schema_item['links']['world_locations'][0]['title']
     end
+
+    test 'presents the document\'s image if present' do
+      assert_equal schema_item['details']['image'], presented_item.image
+    end
+
+    test 'presents the document\'s organisation\'s default_news_image if document\'s image is not present' do
+      default_news_image = { 'url' => 'http://www.test.dev.gov.uk/default_news_image.jpg' }
+      example = schema_item
+      example['details'].delete('image')
+      example['links'] = {
+        'primary_publishing_organisation' => [
+          'details' => {
+            'default_news_image' => default_news_image
+          }
+        ]
+      }
+      presented_item = present_example(example)
+      assert_equal default_news_image, presented_item.image
+    end
   end
 
   class HistoryModePresentedWorldLocationNewsArticle < WorldLocationNewsArticlePresenterTestCase
