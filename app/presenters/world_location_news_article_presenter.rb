@@ -6,8 +6,5 @@ class WorldLocationNewsArticlePresenter < ContentItemPresenter
   include ContentItem::Shareable
   include ContentItem::TitleAndContext
   include ContentItem::Metadata
-
-  def image
-    content_item["details"]["image"]
-  end
+  include ContentItem::NewsImage
 end
