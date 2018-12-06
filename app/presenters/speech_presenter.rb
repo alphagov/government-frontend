@@ -5,10 +5,7 @@ class SpeechPresenter < ContentItemPresenter
   include ContentItem::Updatable
   include ContentItem::TitleAndContext
   include ContentItem::Metadata
-
-  def image
-    content_item["details"]["image"]
-  end
+  include ContentItem::NewsImage
 
   def delivery_type
     if document_type == 'authored_article'
