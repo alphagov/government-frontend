@@ -12,7 +12,7 @@ module ContentItem
     end
 
     def placeholder_image
-      "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg"
+      { "url" => "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg" }
     end
   end
 end
