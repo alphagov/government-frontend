@@ -1,0 +1,12 @@
+<% @contextual_footer = capture do %>
+  <%= render 'govuk_publishing_components/components/contextual_footer',
+             content_item: @content_item.content_item.parsed_content %>
+<% end %>
+
+<% if @contextual_footer.present? %>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <%= @contextual_footer %>
+    </div>
+  </div>
+<% end %>

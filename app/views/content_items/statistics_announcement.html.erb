@@ -44,6 +44,6 @@
     <% end %>
   </div>
   <div class="column-one-third">
-    <%= render 'govuk_publishing_components/components/related_navigation', @content_item.content_item.parsed_content %>
+    <%= render 'govuk_publishing_components/components/related_navigation', content_item: @content_item.content_item.parsed_content, context: :sidebar %>
   </div>
 </div>
