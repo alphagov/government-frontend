@@ -1,12 +1,21 @@
 <%
   alt ||= ''
   caption ||= ''
+  credit ||= ''
 %>
 <figure class="app-c-figure">
   <img class="app-c-figure__image" src="<%= src %>" alt="<%= alt %>">
-  <% unless caption.blank? %>
     <figcaption class="app-c-figure__figcaption">
-      <%= caption %>
+      <% unless caption.blank? %>
+        <p class="app-c-figure__figcaption-text">
+          <%= caption %>
+        </p>
+      <% end %>
+
+      <% if credit.present? %>
+          <p class="app-c-figure__figcaption-credit">
+            Image credit: <%= credit %>
+          </p>
+      <% end %>
     </figcaption>
-  <% end %>
 </figure>
