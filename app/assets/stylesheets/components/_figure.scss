@@ -36,3 +36,11 @@
     margin-top: $gutter-one-third;
   }
 }
+
+.app-c-figure__figcaption-text {
+  margin-bottom: 0;
+
+  @include media(desktop, tablet) {
+    margin-bottom: $gutter-one-third;
+  }
+}
