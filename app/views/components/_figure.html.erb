@@ -14,7 +14,7 @@
 
       <% if credit.present? %>
           <p class="app-c-figure__figcaption-credit">
-            Image credit: <%= credit %>
+            <%= I18n.t("components.figure.image_credit", credit: credit) %>
           </p>
       <% end %>
     </figcaption>

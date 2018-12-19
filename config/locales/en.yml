@@ -26,6 +26,8 @@ en:
   common:
     last_updated: "Last updated"
   components:
+    figure:
+      image_credit: "Image credit: %{credit}"
     share_links:
       share_this_page: "Share this page"
     publisher_metadata:
