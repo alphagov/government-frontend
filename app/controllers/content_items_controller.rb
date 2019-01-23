@@ -56,6 +56,11 @@ private
 
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
+
+    if related_links_variant.variant?('B') && content_item["links"]["suggested_ordered_related_items"]
+      content_item["links"]["ordered_related_items"] = content_item["links"]["suggested_ordered_related_items"]
+    end
+
     @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
   end
 
