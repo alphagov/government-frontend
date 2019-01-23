@@ -16,7 +16,7 @@ Not all schemas that this app can handle are rendered by it in production.
 |---|---|---|
 | Answer | [View on GOV.UK](https://www.gov.uk/national-minimum-wage-rates) | Migrated |
 | Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |
-| Coming soon | | Rendered by Whitehall |
+| Coming soon |  | Migrated |
 | Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) | Migrated |
 | Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) | Migrated |
 | Corporate information page | [View on GOV.UK](https://www.gov.uk/government/organisations/government-digital-service/about) | Migrated |
