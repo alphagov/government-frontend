@@ -4,8 +4,8 @@ class DevelopmentControllerTest < ActionController::TestCase
   include GovukAbTesting::MinitestHelpers
 
   %w(A B).each do |test_variant|
-    test "RelatedLinksABTest works correctly for each variant (variant: #{test_variant})" do
-      with_variant RelatedLinksABTest: test_variant do
+    test "RelatedLinksABTest1 works correctly for each variant (variant: #{test_variant})" do
+      with_variant RelatedLinksABTest1: test_variant do
         get :index
 
         ab_test = @controller.send(:related_links_test)
