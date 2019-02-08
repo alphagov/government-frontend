@@ -55,9 +55,8 @@ module ServiceSignIn
 
       click_on 'Continue'
 
-      assert page.has_css?(".govuk-error-summary")
-      assert page.has_css?(".govuk-error-summary__title", text: 'You haven’t selected an option')
-      assert page.has_css?("ul li a:first-of-type[href='#option-0']", text: 'Please select an option')
+      assert page.has_text?('You haven’t selected an option')
+      assert page.has_text?('Please select an option')
 
       # Make sure the id is the same as the link href so that they'll link together properly.
       assert page.has_css?(".gem-c-radio input[id='option-0'][value='use-government-gateway']", visible: false)
