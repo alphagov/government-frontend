@@ -120,7 +120,7 @@ GEM
       rubocop-rspec (~> 1.28)
       scss_lint
     govuk_ab_testing (2.4.1)
-    govuk_app_config (1.11.2)
+    govuk_app_config (1.11.3)
       aws-xray-sdk (~> 0.10.0)
       logstasher (~> 1.2.2)
       sentry-raven (~> 2.7.1)
@@ -196,7 +196,7 @@ GEM
     nokogumbo (1.5.0)
       nokogiri
     null_logger (0.0.1)
-    oj (3.7.6)
+    oj (3.7.8)
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
