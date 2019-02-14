@@ -66,12 +66,12 @@
             </div>
           <% end %>
           <% if phone_group[:opening_times].present? %>
-            <h4 class="normal-weight">Opening times:</h4>
+            <p>Opening times:</p>
             <%= phone_group[:opening_times] %>
           <% end %>
 
           <% if phone_group[:best_time_to_call].present? %>
-            <h4 class="normal-weight">Best time to call:</h4>
+            <p>Best time to call:</p>
             <%= phone_group[:best_time_to_call] %>
           <% end %>
         <% end %>
