@@ -58,11 +58,9 @@
           <%= phone_group[:description] %>
           <% if phone_group[:numbers].any? %>
             <div class="contact">
-              <div class="content">
-                <% phone_group[:numbers].each do |number| %>
-                  <p><%= number[:label] %>:<br /><strong><%= number[:number] %></strong></p>
-                <% end%>
-              </div>
+              <% phone_group[:numbers].each do |number| %>
+                <p><%= number[:label] %>:<br /><strong><%= number[:number] %></strong></p>
+              <% end%>
             </div>
           <% end %>
           <% if phone_group[:opening_times].present? %>
