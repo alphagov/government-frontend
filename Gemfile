@@ -22,7 +22,7 @@ gem 'plek', '~> 2.1'
 gem 'slimmer', '~> 13.1'
 
 group :development, :test do
-  gem 'govuk-lint'
+  gem 'govuk-lint', '~> 3.11'
   gem 'govuk_schemas', '~> 3.2'
   gem 'jasmine-rails'
   gem 'pry-byebug'

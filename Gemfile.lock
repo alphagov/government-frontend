@@ -366,7 +366,7 @@ DEPENDENCIES
   dalli
   faker
   gds-api-adapters (~> 57.2)
-  govuk-lint
+  govuk-lint (~> 3.11)
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 1.11)
   govuk_frontend_toolkit (~> 8.1.0)
