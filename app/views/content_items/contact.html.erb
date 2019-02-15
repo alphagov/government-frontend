@@ -58,20 +58,18 @@
           <%= phone_group[:description] %>
           <% if phone_group[:numbers].any? %>
             <div class="contact">
-              <div class="content">
-                <% phone_group[:numbers].each do |number| %>
-                  <p><%= number[:label] %>:<br /><strong><%= number[:number] %></strong></p>
-                <% end%>
-              </div>
+              <% phone_group[:numbers].each do |number| %>
+                <p><%= number[:label] %>:<br /><strong><%= number[:number] %></strong></p>
+              <% end%>
             </div>
           <% end %>
           <% if phone_group[:opening_times].present? %>
-            <h4 class="normal-weight">Opening times:</h4>
+            <p>Opening times:</p>
             <%= phone_group[:opening_times] %>
           <% end %>
 
           <% if phone_group[:best_time_to_call].present? %>
-            <h4 class="normal-weight">Best time to call:</h4>
+            <p>Best time to call:</p>
             <%= phone_group[:best_time_to_call] %>
           <% end %>
         <% end %>
@@ -88,7 +86,7 @@
         <% @content_item.post.each do |post_group| %>
           <%= post_group[:description] %>
           <div class="contact vcard">
-            <p class="content">
+            <p>
               <% post_group[:v_card].each do |v_card_part| %>
                 <span class="<%= v_card_part[:v_card_class] %>">
                   <%= v_card_part[:value] %>
