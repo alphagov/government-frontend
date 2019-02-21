@@ -9,6 +9,8 @@ require 'mocha/minitest'
 require 'capybara/minitest'
 require 'faker'
 
+system('bundle exec rake assets:precompile')
+
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
 
 Capybara.register_driver :headless_chrome do |app|
