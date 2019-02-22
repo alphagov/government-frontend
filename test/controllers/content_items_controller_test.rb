@@ -130,8 +130,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['title'], assigns[:content_item].title
   end
 
-  test "gets item from the content store and keeps ordered_related_items when running RelatedLinksABTest1 control variant" do
-    with_variant RelatedLinksABTest1: 'A' do
+  test "gets item from the content store and keeps ordered_related_items when running RelatedLinksABTest2 control variant" do
+    with_variant RelatedLinksABTest2: 'A' do
       content_item = content_store_has_schema_example('case_study', 'case_study')
 
       get :show, params: { path: path_for(content_item) }
@@ -140,8 +140,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
-  test "gets item from the content store and replaces ordered_related_items when running RelatedLinksABTest1 test variant" do
-    with_variant RelatedLinksABTest1: 'B' do
+  test "gets item from the content store and replaces ordered_related_items when running RelatedLinksABTest2 test variant" do
+    with_variant RelatedLinksABTest2: 'B' do
       content_item = content_store_has_schema_example('case_study', 'case_study')
 
       get :show, params: { path: path_for(content_item) }
@@ -150,8 +150,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
-  test "gets item from the content store and replaces ordered_related_items when empty array when RelatedLinksABTest1 test variant has no suggestions" do
-    with_variant RelatedLinksABTest1: 'B' do
+  test "gets item from the content store and replaces ordered_related_items when empty array when RelatedLinksABTest2 test variant has no suggestions" do
+    with_variant RelatedLinksABTest2: 'B' do
       content_item = content_store_has_schema_example('guide', 'guide')
 
       get :show, params: { path: path_for(content_item) }
