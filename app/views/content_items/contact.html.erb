@@ -99,7 +99,9 @@
       <% end %>
     <% end %>
 
-    <%= render 'govuk_publishing_components/components/govspeak', content: body %>
+    <%= render 'govuk_publishing_components/components/govspeak' do %>
+      <%= body %>
+    <% end %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>
