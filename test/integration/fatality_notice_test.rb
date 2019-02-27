@@ -4,7 +4,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
   test "typical fatality notice" do
     setup_and_visit_content_item('fatality_notice')
 
-    assert_has_component_government_navigation_active("Announcements")
+    assert_has_component_government_navigation_active("News and communications")
 
     assert page.has_title?(
       "Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK"
