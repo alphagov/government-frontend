@@ -58,11 +58,14 @@ module CSP
 
       # Allow the script that adds `js-enabled` to the body from govuk_template
       # https://github.com/alphagov/govuk_template/blob/79340eb91ad8c4279d16da302765d0946d89b1ca/source/views/layouts/govuk_template.html.erb#L40
-      "'sha256-G29/qSW/JHHANtFhlrZVDZW1HOkCDRc78ggbqwwIJ2g='",
+      "'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='",
+
+      # The same as above but with leading whitespace as used by the component guide
+      "'sha256-+/sukrsYfvM/tHbNll4hTsl0mtvAQUFXZWdCg49lerI='",
 
       # ALlow the script that removes `js-enabled` from body if there's an error
       # https://github.com/alphagov/govuk_template/blob/79340eb91ad8c4279d16da302765d0946d89b1ca/source/views/layouts/govuk_template.html.erb#L112-L113
-      "'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='",
+      "'sha256-G29/qSW/JHHANtFhlrZVDZW1HOkCDRc78ggbqwwIJ2g='",
 
       # Allow JSONP call to Verify to check whether the user is logged in
       # https://www.staging.publishing.service.gov.uk/log-in-file-self-assessment-tax-return/sign-in/prove-identity
