@@ -3,7 +3,7 @@ require 'test_helper'
 class DevelopmentControllerTest < ActionController::TestCase
   include GovukAbTesting::MinitestHelpers
 
-  %w(A B).each do |test_variant|
+  %w(A B C).each do |test_variant|
     test "RelatedLinksABTest3 works correctly for each variant (variant: #{test_variant})" do
       with_variant RelatedLinksABTest3: test_variant do
         get :index

@@ -57,7 +57,7 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
 
-    if related_links_variant.variant?('B') && content_item.dig('links')
+    if related_links_variant.variant?('C') && content_item.dig('links')
       content_item['links']['ordered_related_items'] = content_item['links'].fetch('suggested_ordered_related_items', [])
     end
 
