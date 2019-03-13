@@ -130,7 +130,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['title'], assigns[:content_item].title
   end
 
-  test "gets item from the content store and keeps ordered_related_items when running RelatedLinksABTest3 control variant" do
+  test "gets item from the content store and keeps ordered_related_items when running RelatedLinksABTest3 misclassification variant" do
     with_variant RelatedLinksABTest3: 'A' do
       content_item = content_store_has_schema_example('case_study', 'case_study')
 
@@ -140,8 +140,18 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
-  test "gets item from the content store and replaces ordered_related_items when running RelatedLinksABTest3 test variant" do
+  test "gets item from the content store and keeps ordered_related_items when running RelatedLinksABTest3 control variant" do
     with_variant RelatedLinksABTest3: 'B' do
+      content_item = content_store_has_schema_example('case_study', 'case_study')
+
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_equal content_item['links']['ordered_related_items'], assigns[:content_item].content_item['links']['ordered_related_items']
+    end
+  end
+
+  test "gets item from the content store and replaces ordered_related_items when running RelatedLinksABTest3 test variant" do
+    with_variant RelatedLinksABTest3: 'C' do
       content_item = content_store_has_schema_example('case_study', 'case_study')
 
       get :show, params: { path: path_for(content_item) }
@@ -151,7 +161,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from the content store and replaces ordered_related_items when empty array when RelatedLinksABTest3 test variant has no suggestions" do
-    with_variant RelatedLinksABTest3: 'B' do
+    with_variant RelatedLinksABTest3: 'C' do
       content_item = content_store_has_schema_example('guide', 'guide')
 
       get :show, params: { path: path_for(content_item) }

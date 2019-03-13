@@ -18,7 +18,7 @@ private
     @related_links_test ||= GovukAbTesting::AbTest.new(
       "RelatedLinksABTest3",
       dimension: RELATED_LINKS_DIMENSION,
-      allowed_variants: %w(A B),
+      allowed_variants: %w(A B C),
       control_variant: "A"
     )
   end
