@@ -8,12 +8,12 @@
 <% if items.any? %>
   <div class="app-c-important-metadata<%= margin_bottom_class %>">
     <% if title %>
-      <h2 class="app-c-important-metadata__title"><%= sanitize(title) %></h2>
+      <h2 class="app-c-important-metadata__title"><%= sanitize title %></h2>
     <% end %>
     <dl data-module="track-click">
     <% items.each do |title, definition| %>
-      <dt class="app-c-important-metadata__term"><%= sanitize (title) %>: </dt>
-      <dd class="app-c-important-metadata__definition"><%= sanitize (definition) %></dd>
+      <dt class="app-c-important-metadata__term"><%= sanitize title.to_s %>: </dt>
+      <dd class="app-c-important-metadata__definition"><%= sanitize definition %></dd>
     <% end %>
     </dl>
   </div>
