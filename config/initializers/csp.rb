@@ -139,9 +139,10 @@ module CSP
 end
 
 # In test and development, use CSP for real to find issues. In production we only
-# report violations to Sentry (https://sentry.io/govuk/govuk-frontend-csp).
+# report violations to Sentry (https://sentry.io/govuk/govuk-frontend-csp) via an
+# AWS Lambda function that filters out junk reports.
 if Rails.env.production?
-  reporting = "report-uri https://sentry.io/api/1377947/security/?sentry_key=f7898bf4858d436aa3568ae042371b94"
+  reporting = "report-uri https://jhpno0hk6b.execute-api.eu-west-2.amazonaws.com/production"
   Rails.application.config.action_dispatch.default_headers['Content-Security-Policy-Report-Only'] = CSP.build + " " + reporting
 else
   Rails.application.config.action_dispatch.default_headers['Content-Security-Policy'] = CSP.build
