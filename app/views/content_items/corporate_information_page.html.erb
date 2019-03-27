@@ -27,24 +27,24 @@
 <% end %>
 
 <div class="<%= @content_item.organisation_brand_class %>">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render 'govuk_publishing_components/components/organisation_logo', @content_item.organisation_logo %>
     </div>
   </div>
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render 'govuk_publishing_components/components/title', title: @content_item.title %>
     </div>
     <%= render 'shared/translations' %>
-    <div class="column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
       <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
       <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
     </div>
   </div>
 
-  <div class="grid-row ">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
         <div class="responsive-bottom-margin">
           <%= render 'govuk_publishing_components/components/govspeak', content: "#{@content_item.body}#{@additional_body}".html_safe %>

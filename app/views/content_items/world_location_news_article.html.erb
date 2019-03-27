@@ -4,12 +4,12 @@
   ) %>
 <% end %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
   </div>
   <%= render 'shared/translations' %>
-  <div class="column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
   </div>
 </div>
@@ -18,8 +18,8 @@
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
-<div class="grid-row">
-  <div class="column-two-thirds content-bottom-margin">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds content-bottom-margin">
     <div class="responsive-bottom-margin">
       <%= render 'components/figure',
           src: @content_item.image["url"],

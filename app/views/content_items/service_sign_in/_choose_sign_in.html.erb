@@ -1,6 +1,6 @@
 <% if @error %>
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/error_summary", {
         title: t('service_sign_in.error.title'),
         items: [
@@ -24,8 +24,8 @@
              data: data_attrs) do %>
   <% legend_text = render 'govuk_publishing_components/components/title', title: @content_item.title %>
   <%= render "govuk_publishing_components/components/fieldset", legend_text: legend_text do %>
-    <div class="grid-row">
-      <div class="column-two-thirds">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
         <%= render 'govuk_publishing_components/components/govspeak', content: raw(@content_item.description) %>
         <% if @error %>
           <%= render "components/error-message", text: t('service_sign_in.error.option') %>

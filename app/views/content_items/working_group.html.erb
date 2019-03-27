@@ -20,12 +20,12 @@
   <% end %>
 <% end %>
 
-<div class="grid-row">
-  <div class="column-two-thirds responsive-top-margin">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds responsive-top-margin">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
   </div>
   <%= render 'shared/translations' %>
-  <div class="column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
     <%= render 'components/contents-list-with-body', contents: @content_item.contents do %>
       <%= render 'govuk_publishing_components/components/govspeak',

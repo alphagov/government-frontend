@@ -4,8 +4,8 @@
   ) %>
 <% end %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
   </div>
@@ -13,8 +13,8 @@
 
 <%= render 'shared/publisher_metadata_with_logo' %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render "components/important-metadata",
         items: @content_item.important_metadata,
         margin_bottom: true %>
@@ -43,7 +43,7 @@
           title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
     <% end %>
   </div>
-  <div class="column-one-third">
+  <div class="govuk-grid-column-one-third">
     <%= render 'govuk_publishing_components/components/related_navigation', content_item: @content_item.content_item.parsed_content, context: :sidebar %>
   </div>
 </div>
