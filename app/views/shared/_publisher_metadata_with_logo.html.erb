@@ -1,9 +1,9 @@
-<div class="grid-row">
+<div class="govuk-grid-row">
   <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
-    <div class="column-two-thirds metadata-column">
+    <div class="govuk-grid-column-two-thirds metadata-column">
       <%= render "components/publisher-metadata", @content_item.publisher_metadata %>
     </div>
-    <div class="column-one-third">
+    <div class="govuk-grid-column-one-third">
       <% if @content_item.try(:logo) %>
         <%= image_tag @content_item.logo[:path],
           alt: @content_item.logo[:alt_text],
