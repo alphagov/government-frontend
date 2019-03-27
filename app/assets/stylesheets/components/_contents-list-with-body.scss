@@ -13,10 +13,10 @@
 }
 
 .app-c-contents-list-with-body__link-wrapper {
-  padding-bottom: $gutter-one-third;
+  padding-bottom: govuk-spacing(2);
 
   .app-c-back-to-top {
-    padding-bottom: $gutter-one-third;
+    padding-bottom: govuk-spacing(2);
   }
 }
 
@@ -32,17 +32,17 @@
   z-index: 1;
 
   @include media(tablet) {
-    padding-left: $gutter-one-third;
+    padding-left: govuk-spacing(2);
   }
 
   .app-c-back-to-top {
     color: $link-colour;
     margin-bottom: 0;
-    padding: $gutter-half;
+    padding: govuk-spacing(3);
     width: percentage(2 / 3);
 
     @include media(tablet) {
-      padding: $gutter-two-thirds;
+      padding: govuk-spacing(4);
     }
   }
 

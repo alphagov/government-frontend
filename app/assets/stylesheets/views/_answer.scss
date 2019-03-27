@@ -2,6 +2,6 @@
   @include add-title-margin;
 
   .last-updated {
-    padding-bottom: $gutter-half;
+    padding-bottom: govuk-spacing(3);
   }
 }

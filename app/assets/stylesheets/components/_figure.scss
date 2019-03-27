@@ -3,7 +3,7 @@
   @include responsive-bottom-margin;
 
   border-top: 1px solid $border-colour;
-  padding-top: $gutter-half;
+  padding-top: govuk-spacing(3);
 }
 
 .app-c-figure__image {
@@ -28,12 +28,12 @@
 
     box-sizing: border-box;
     float: left;
-    padding-left: $gutter-half;
+    padding-left: govuk-spacing(3);
     width: 50%;
   }
 
   @include media(mobile) {
-    margin-top: $gutter-one-third;
+    margin-top: govuk-spacing(2);
   }
 }
 
@@ -41,6 +41,6 @@
   margin-bottom: 0;
 
   @include media(desktop, tablet) {
-    margin-bottom: $gutter-one-third;
+    margin-bottom: govuk-spacing(2);
   }
 }

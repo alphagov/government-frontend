@@ -1,5 +1,5 @@
 .content-bottom-margin {
-  margin-bottom: $gutter-two-thirds;
+  margin-bottom: govuk-spacing(4);
 
   @include media(tablet) {
     @include responsive-bottom-margin;

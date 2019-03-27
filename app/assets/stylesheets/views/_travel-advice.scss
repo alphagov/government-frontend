@@ -3,7 +3,7 @@
   @include add-title-margin;
 
   .part-navigation {
-    margin-bottom: $gutter * 1.5;
+    margin-bottom: govuk-spacing(8);
   }
 
   // TODO: Remove this when components can accept variable unidirectional spacing,
@@ -11,7 +11,7 @@
   .map {
     @include responsive-bottom-margin;
 
-    margin-top: $gutter;
+    margin-top: govuk-spacing(6);
 
     .map-image {
       max-width: 100%;

@@ -1,13 +1,13 @@
 @mixin parts {
   .part-navigation-container {
-    margin-top: $gutter;
-    margin-bottom: $gutter;
-    padding-bottom: $gutter-half;
+    margin-top: govuk-spacing(6);
+    margin-bottom: govuk-spacing(6);
+    padding-bottom: govuk-spacing(3);
 
     @include media(tablet) {
       margin-top: 0;
       margin-bottom: 0;
-      padding-bottom: $gutter-half;
+      padding-bottom: govuk-spacing(3);
     }
 
     border-bottom: 1px solid $grey-2;
@@ -33,12 +33,12 @@
 
   .part-title {
     @include bold-27;
-    margin-bottom: $gutter-half;
-    margin-top: $gutter-half;
+    margin-bottom: govuk-spacing(3);
+    margin-top: govuk-spacing(3);
 
     @include media(tablet) {
-      margin-bottom: $gutter-two-thirds;
-      margin-top: $gutter-two-thirds;
+      margin-bottom: govuk-spacing(4);
+      margin-top: govuk-spacing(4);
     }
   }
 }

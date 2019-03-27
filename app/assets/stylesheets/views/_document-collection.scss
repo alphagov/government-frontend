@@ -4,12 +4,12 @@
 
   .group-title {
     @include bold-27;
-    margin-top: $gutter;
-    margin-bottom: $gutter-half;
+    margin-top: govuk-spacing(6);
+    margin-bottom: govuk-spacing(3);
 
     @include media(desktop) {
-      margin-top: $gutter * 1.5;
-      margin-bottom: $gutter-two-thirds;
+      margin-top: govuk-spacing(8);
+      margin-bottom: govuk-spacing(4);
     }
 
     &:first-child {

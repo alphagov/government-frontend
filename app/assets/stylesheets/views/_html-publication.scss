@@ -9,16 +9,14 @@
   }
 
   .publication-external {
-    @extend %grid-row;
-    margin-bottom: $gutter-two-thirds;
+    margin-bottom: govuk-spacing(4);
     position: relative;
 
     .organisation-logos {
-      @include grid-column(1 / 4);
       list-style-type: none;
 
       .organisation-logo {
-        padding-bottom: $gutter-one-third;
+        padding-bottom: govuk-spacing(2);
       }
     }
 
@@ -30,7 +28,7 @@
 
   .publication-header__last-changed {
     @include core-19;
-    margin-top: $gutter-half;
+    margin-top: govuk-spacing(3);
   }
 
   .column-quarter-desktop-only {

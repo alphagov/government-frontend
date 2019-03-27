@@ -4,8 +4,8 @@
 .metadata-logo-wrapper {
   @extend %contain-floats;
   border-top: 1px solid $border-colour;
-  margin-left: $gutter-half;
-  margin-right: $gutter-half;
+  margin-left: govuk-spacing(3);
+  margin-right: govuk-spacing(3);
 
   .metadata-column {
     padding-left: 0;
@@ -14,8 +14,8 @@
   .metadata-logo {
     max-height: 90px;
     max-width: 100%;
-    padding-bottom: $gutter-half;
-    padding-top: $gutter-half;
+    padding-bottom: govuk-spacing(3);
+    padding-top: govuk-spacing(3);
 
     @include media(tablet) {
       float: right;

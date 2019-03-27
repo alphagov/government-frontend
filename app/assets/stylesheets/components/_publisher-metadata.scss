@@ -1,7 +1,7 @@
 .app-c-publisher-metadata {
   @include responsive-bottom-margin;
   @include core-16;
-  padding-top: $gutter-half;
+  padding-top: govuk-spacing(3);
 }
 
 .app-c-publisher-metadata__other a {
@@ -10,7 +10,7 @@
 
 .app-c-publisher-metadata__term {
   float: left;
-  padding-right: $gutter-one-third / 2;
+  padding-right: govuk-spacing(1);
 
   .direction-rtl & {
     float: none;
