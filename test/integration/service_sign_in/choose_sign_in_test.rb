@@ -27,7 +27,7 @@ module ServiceSignIn
 
       within "#content form" do
         within ".gem-c-fieldset" do
-          within ".gem-c-fieldset__legend" do
+          within ".govuk-fieldset__legend" do
             assert_has_component_title "Prove your identity to continue"
           end
 
@@ -84,7 +84,7 @@ module ServiceSignIn
 
       within "#content form" do
         within ".gem-c-fieldset" do
-          within ".gem-c-fieldset__legend" do
+          within ".govuk-fieldset__legend" do
             assert_has_component_title "Profwch pwy ydych chi i fwrw ymlaen"
           end
 
