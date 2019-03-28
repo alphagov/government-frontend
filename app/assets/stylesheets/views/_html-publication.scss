@@ -1,5 +1,3 @@
-@import "grid_layout";
-
 .html-publication {
   @include sidebar-with-body;
 
@@ -31,36 +29,34 @@
     margin-top: govuk-spacing(3);
   }
 
-  .column-quarter-desktop-only {
-    @include grid-column( 1 / 4, $full-width: desktop );
+  .main-content-container {
+    .direction-rtl & {
+      float: left;
+    }
+  }
 
+  .contents-list-container {
     .direction-rtl & {
       float: right;
     }
   }
 
-  .column-three-quarters-desktop-only {
-    @include grid-column( 3 / 4, $full-width: desktop );
+  .main-content-container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
 
-    .direction-rtl & {
+    @include media(desktop) {
+      width: 75%;
       float: right;
     }
   }
 
-  .offset-quarter-desktop-only {
-    margin-left: 25%;
+  .offset-empty-contents-list {
+    float: right;
 
     .direction-rtl & {
-      margin-left: 0;
-      margin-right: 25%;
-    }
-
-    @include media(false, $desktop-breakpoint) {
-      margin: 0;
-
-      .direction-rtl & {
-        margin: 0;
-      }
+      float: left;
     }
   }
 

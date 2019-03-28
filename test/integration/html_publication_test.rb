@@ -26,7 +26,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publications with meta data" do
     setup_and_visit_content_item("print_with_meta_data")
 
-    within ".grid-row" do
+    within ".govuk-grid-row.sidebar-with-body" do
       assert page.find(".print-meta-data", visible: false)
 
       assert page.has_no_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
@@ -40,7 +40,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "html publications with meta data - print version" do
     setup_and_visit_content_item("print_with_meta_data", "?medium=print")
 
-    within ".grid-row" do
+    within ".govuk-grid-row.sidebar-with-body" do
       assert page.find(".print-meta-data", visible: true)
 
       assert page.has_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
