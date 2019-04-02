@@ -38,6 +38,7 @@ group :test do
   gem 'capybara'
   gem 'chromedriver-helper'
   gem 'faker'
+  gem 'minitest-reporters'
   gem 'mocha'
   gem 'puma'
   gem 'selenium-webdriver'

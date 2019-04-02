@@ -8,8 +8,11 @@ require 'capybara/rails'
 require 'mocha/minitest'
 require 'capybara/minitest'
 require 'faker'
+require "minitest/reporters"
 
 Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
+
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
