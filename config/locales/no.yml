@@ -1,4 +1,6 @@
 'no':
+  language_names:
+    "no": Norsk
   content_item:
     schema_name:
       aaib_report:
@@ -268,8 +270,6 @@
   detailed_guide:
     related_guides:
     related_mainstream_content:
-  language_names:
-    'no':
   multi_page:
     next_page:
     previous_page:
