@@ -1,4 +1,6 @@
 gd:
+  language_names:
+    gd: Gaeilge
   content_item:
     schema_name:
       aaib_report:
@@ -416,8 +418,6 @@ gd:
   detailed_guide:
     related_guides:
     related_mainstream_content:
-  language_names:
-    gd:
   multi_page:
     next_page:
     previous_page:
