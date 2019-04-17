@@ -3,7 +3,7 @@ require 'test_helper'
 class GuidePrint < ActionDispatch::IntegrationTest
   test "it renders the print view" do
     setup_and_visit_guide_print('guide')
-    assert page.has_css?(".guide-print")
+    assert page.has_css?("#guide-print")
   end
 
   test "it is not indexable by search engines" do

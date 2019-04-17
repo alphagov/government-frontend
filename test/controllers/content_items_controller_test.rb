@@ -221,7 +221,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal request.variant, [:print]
-    assert_select ".travel-advice-print"
+    assert_select "#travel-advice-print"
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do
