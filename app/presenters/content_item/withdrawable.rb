@@ -31,11 +31,15 @@ module ContentItem
     end
 
     def withdrawal_notice_context
-      I18n.t("content_item.schema_name.#{schema_name}", count: 1)
+      I18n.t("content_item.schema_name.#{schema_name}", count: 1, locale: :en)
     end
 
     def withdrawal_notice_time
-      content_tag(:time, display_date(withdrawal_notice["withdrawn_at"]), datetime: withdrawal_notice["withdrawn_at"])
+      content_tag(:time, english_display_date(withdrawal_notice["withdrawn_at"]), datetime: withdrawal_notice["withdrawn_at"])
+    end
+
+    def english_display_date(timestamp, format = "%-d %B %Y")
+      I18n.l(Time.zone.parse(timestamp), format: format, locale: :en) if timestamp
     end
   end
 end
