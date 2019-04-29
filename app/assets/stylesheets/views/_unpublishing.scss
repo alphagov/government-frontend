@@ -1,10 +1,10 @@
 .unpublishing,
 .gone {
-  margin-bottom: $gutter * 2;
+  margin-bottom: govuk-spacing(9);
 
   .summary,
   .alternative {
     @include core-19;
-    margin-bottom: $gutter-half;
+    margin-bottom: govuk-spacing(3);
   }
 }

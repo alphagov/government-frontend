@@ -3,7 +3,7 @@ require 'test_helper'
 class TravelAdvicePrint < ActionDispatch::IntegrationTest
   test "it renders the print view" do
     setup_and_visit_travel_advice_print('full-country')
-    assert page.has_css?(".travel-advice-print")
+    assert page.has_css?("#travel-advice-print")
   end
 
   test "it is not indexable by search engines" do

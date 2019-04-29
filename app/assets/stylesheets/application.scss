@@ -1,8 +1,10 @@
 // The main application stylesheet
 
+// Components from govuk_publishing_components gem
+@import 'govuk_publishing_components/all_components';
+
 // govuk_frontend_toolkit imports
 @import 'colours';
-@import 'measurements';
 @import 'shims';
 @import 'typography';
 
@@ -20,9 +22,6 @@
 
 // Components from this application
 @import 'components/*';
-
-// Components from govuk_publishing_components gem
-@import 'govuk_publishing_components/all_components';
 
 // pages specific view imports
 @import 'views/case-studies';

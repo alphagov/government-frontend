@@ -1,11 +1,11 @@
 .app-c-download-link {
   display: inline-block;
   @include bold-19;
-  margin-top: $gutter-half;
-  margin-bottom: $gutter-half;
+  margin-top: govuk-spacing(3);
+  margin-bottom: govuk-spacing(3);
 
   @include media(tablet) {
-    margin-top: $gutter;
+    margin-top: govuk-spacing(6);
   }
 }
 

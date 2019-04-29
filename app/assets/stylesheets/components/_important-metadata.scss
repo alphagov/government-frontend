@@ -3,11 +3,11 @@
   @include white-links;
   background: $govuk-blue;
   color: $white;
-  padding: $gutter-half;
+  padding: govuk-spacing(3);
 
   @include media(tablet) {
     overflow: auto;
-    padding: $gutter-two-thirds $gutter;
+    padding: govuk-spacing(4) govuk-spacing(6);
   }
 }
 
@@ -25,7 +25,7 @@
 
 .app-c-important-metadata__term {
   float: left;
-  padding-right: $gutter-one-third / 2;
+  padding-right: govuk-spacing(1);
 }
 
 .app-c-important-metadata__definition {

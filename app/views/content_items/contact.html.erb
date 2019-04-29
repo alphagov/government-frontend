@@ -6,14 +6,14 @@
 
 <% content_for :simple_header, true %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
   </div>
 </div>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
     <% body = capture do %>
       <% if @content_item.online_form_links.any? %>

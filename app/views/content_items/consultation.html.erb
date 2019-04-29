@@ -4,8 +4,8 @@
   ) %>
 <% end %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
   </div>
   <%= render 'shared/translations' %>
@@ -15,8 +15,8 @@
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'components/important-metadata', items: @content_item.important_metadata %>
 
     <% if @content_item.unopened? %>

@@ -9,8 +9,8 @@
 %>
 
 <% if @content_item.organisations %>
-  <div class="publication-external">
-    <ol class="organisation-logos">
+  <div class="govuk-grid-row publication-external">
+    <ol class="govuk-grid-column-one-quarter organisation-logos">
       <% @content_item.organisations.each do |organisation| %>
       <% logo_attributes = @content_item.organisation_logo(organisation) %>
       <% next unless logo_attributes %>
@@ -35,12 +35,12 @@
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
 <div
-  class="grid-row sidebar-with-body"
+  class="govuk-grid-row sidebar-with-body"
   data-module="sticky-element-container"
   id="contents"
 >
   <% if @content_item.contents.any? %>
-    <div class="column-quarter-desktop-only">
+    <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
       <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
     </div>
   <% end %>
@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="column-three-quarters-desktop-only <% unless @content_item.contents.any? %>offset-quarter-desktop-only<% end %>">
+  <div class="main-content-container<% unless @content_item.contents.any? %> offset-empty-contents-list<% end %>">
     <%= render 'govuk_publishing_components/components/govspeak_html_publication', @content_item.govspeak_body %>
   </div>
 

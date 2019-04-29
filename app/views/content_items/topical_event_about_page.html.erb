@@ -6,14 +6,14 @@
 
 <%= render 'shared/title_and_translations', content_item: @content_item %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
   </div>
 </div>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render "components/contents-list-with-body", {
       contents: @content_item.contents,
     } do %>

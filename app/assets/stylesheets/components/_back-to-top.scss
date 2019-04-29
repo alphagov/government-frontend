@@ -1,9 +1,9 @@
 .app-c-back-to-top {
   @include core-16;
   display: inline-block;
-  margin-bottom: $gutter-half;
-  margin-left: $gutter-half;
-  margin-right: $gutter-half;
+  margin-bottom: govuk-spacing(3);
+  margin-left: govuk-spacing(3);
+  margin-right: govuk-spacing(3);
 }
 
 .app-c-back-to-top__icon {

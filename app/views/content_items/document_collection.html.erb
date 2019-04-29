@@ -4,15 +4,15 @@
   ) %>
 <% end %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
        context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
        title: @content_item.title,
        average_title_length: "long" %>
   </div>
   <%= render 'shared/translations', content_item: @content_item %>
-  <div class="column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
     <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
     <%= render 'shared/history_notice', content_item: @content_item %>
@@ -21,8 +21,8 @@
 
 <%= render 'shared/publisher_metadata_with_logo' %>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'components/important-metadata',
         items: @content_item.important_metadata %>
 
