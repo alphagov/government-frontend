@@ -161,6 +161,14 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def setup_tap_and_visit_content_item(name, parameter_string = '')
+    @content_item = get_content_example(name).tap do |item|
+      yield(item)
+      content_store_has_item(item["base_path"], item.to_json)
+      visit_with_cachebust("#{item['base_path']}#{parameter_string}")
+    end
+  end
+
   def setup_and_visit_random_content_item(document_type: nil)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
       payload.merge('document_type' => document_type) unless document_type.nil?

@@ -76,4 +76,42 @@ class PublicationTest < ActionDispatch::IntegrationTest
       }
     )
   end
+
+  test "renders list of steps and uses contextual breadcrumbs if a publication is secondary to multiple step navs" do
+    setup_tap_and_visit_content_item('best-practice-regulation') do |item|
+      # Documents cause additional requests which were troublesome to stub
+      # and are not related to this test
+      item['details']['documents'] = []
+    end
+    assert page.has_text?('Part of')
+    page.assert_selector('a', text: 'Learn to drive a car: step by step')
+    page.assert_selector('a', text: 'Get a divorce: step by step')
+    assert_equal 1, page.find_all('.govuk-breadcrumbs__list-item').count
+    within('.govuk-breadcrumbs__list-item') do
+      assert_selector('a', text: 'Home')
+    end
+  end
+
+  test "renders step nav and step nav header if a publication is secondary to one step navs" do
+    setup_tap_and_visit_content_item('best-practice-guidance') do |item|
+      # Documents cause additional requests which were troublesome to stub
+      # and are not related to this test
+      item['details']['documents'] = []
+    end
+    assert page.has_css?('.gem-c-step-nav')
+
+    within('.gem-c-step-nav') do
+      assert_selector('h2', text: "Check you're allowed to drive")
+      assert_selector('h2', text: "Get a provisional driving licence")
+      assert_selector('h2', text: "Prepare for your theory test")
+      assert_selector('h2', text: "Book and manage your theory test")
+      assert_selector('h2', text: "Book and manage your driving test")
+      assert_selector('h2', text: "When you pass")
+    end
+
+    assert page.has_css?('.gem-c-step-nav-header')
+    within('.gem-c-step-nav-header') do
+      assert_selector('.gem-c-step-nav-header__title', text: 'Learn to drive a car: step by step')
+    end
+  end
 end

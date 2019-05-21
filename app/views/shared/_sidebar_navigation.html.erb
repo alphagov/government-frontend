@@ -1,7 +1,11 @@
-<%
-  content_item = @content_item.content_item.parsed_content
-%>
-
 <div class="govuk-grid-column-one-third">
-  <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: content_item %>
+  <% if @content_item.is_secondary_to_one_step_nav? %>
+    <%= render 'govuk_publishing_components/components/step_by_step_nav', @content_item.step_by_step_nav %>
+  <% elsif @content_item.is_secondary_to_multiple_step_navs? %>
+    <%= render 'govuk_publishing_components/components/step_by_step_nav_related', {
+        links: @content_item.multiple_step_nav_links
+    } %>
+  <% else %>
+    <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: @content_item.content_item.parsed_content %>
+  <% end %>
 </div>

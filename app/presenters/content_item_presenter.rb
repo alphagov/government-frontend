@@ -77,6 +77,31 @@ class ContentItemPresenter
     !content_item.cache_control.private?
   end
 
+  def is_secondary_to_one_step_nav?
+    secondary_to_step_navs.one?
+  end
+
+  def is_secondary_to_multiple_step_navs?
+    secondary_to_step_navs.count > 1
+  end
+
+  def multiple_step_nav_links
+    secondary_to_step_navs.map do |step_by_step|
+      {
+        href: step_by_step['base_path'],
+        text: step_by_step['title']
+      }
+    end
+  end
+
+  def step_by_step_nav
+    secondary_to_step_navs.first['details']['step_by_step_nav'].deep_symbolize_keys
+  end
+
+  def single_step_by_step_header
+    { title: secondary_to_step_navs.first['details']['step_by_step_nav']['title'] }
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
@@ -105,5 +130,9 @@ private
 
   def native_language_name_for(locale)
     I18n.t("language_names.#{locale}", locale: locale)
+  end
+
+  def secondary_to_step_navs
+    @secondary_to_step_navs ||= content_item['links'].fetch('secondary_to_step_navs', []).compact
   end
 end
