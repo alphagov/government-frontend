@@ -130,46 +130,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['title'], assigns[:content_item].title
   end
 
-  test "gets item from the content store and keeps ordered_related_items when running RelatedLinksABTest4 misclassification variant" do
-    with_variant RelatedLinksABTest4: 'A' do
-      content_item = content_store_has_schema_example('case_study', 'case_study')
-
-      get :show, params: { path: path_for(content_item) }
-      assert_response :success
-      assert_equal content_item['links']['ordered_related_items'], assigns[:content_item].content_item['links']['ordered_related_items']
-    end
-  end
-
-  test "gets item from the content store and keeps ordered_related_items when running RelatedLinksABTest4 control variant" do
-    with_variant RelatedLinksABTest4: 'B' do
-      content_item = content_store_has_schema_example('case_study', 'case_study')
-
-      get :show, params: { path: path_for(content_item) }
-      assert_response :success
-      assert_equal content_item['links']['ordered_related_items'], assigns[:content_item].content_item['links']['ordered_related_items']
-    end
-  end
-
-  test "gets item from the content store and replaces ordered_related_items when running RelatedLinksABTest4 test variant" do
-    with_variant RelatedLinksABTest4: 'C' do
-      content_item = content_store_has_schema_example('case_study', 'case_study')
-
-      get :show, params: { path: path_for(content_item) }
-      assert_response :success
-      assert_equal assigns[:content_item].content_item['links']['ordered_related_items'], assigns[:content_item].content_item['links']['suggested_ordered_related_items']
-    end
-  end
-
-  test "gets item from the content store and replaces ordered_related_items when empty array when RelatedLinksABTest4 test variant has no suggestions" do
-    with_variant RelatedLinksABTest4: 'C' do
-      content_item = content_store_has_schema_example('guide', 'guide')
-
-      get :show, params: { path: path_for(content_item) }
-      assert_response :success
-      assert_equal [], assigns[:content_item].content_item['links']['ordered_related_items']
-    end
-  end
-
   test "sets the expiry as sent by content-store" do
     content_item = content_store_has_schema_example('coming_soon', 'coming_soon')
     content_store_has_item(content_item['base_path'], content_item, max_age: 20)

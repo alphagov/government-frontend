@@ -21,8 +21,6 @@
   <%= csrf_meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
 
-  <%= related_links_variant.analytics_meta_tag.html_safe %>
-
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
