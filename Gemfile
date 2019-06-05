@@ -42,5 +42,5 @@ group :test do
   gem 'mocha'
   gem 'puma'
   gem 'selenium-webdriver'
-  gem 'webmock', '~> 3.5.1', require: false
+  gem 'webmock', '~> 3.6.0', require: false
 end

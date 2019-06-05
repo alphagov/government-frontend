@@ -129,7 +129,7 @@ GEM
       sassc-rails (>= 2.0.1)
     govuk_schemas (3.2.0)
       json-schema (~> 2.8.0)
-    hashdiff (0.3.7)
+    hashdiff (0.4.0)
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -266,7 +266,7 @@ GEM
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.0)
     rubyzip (1.2.2)
-    safe_yaml (1.0.4)
+    safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -325,10 +325,10 @@ GEM
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    webmock (3.5.1)
+    webmock (3.6.0)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
-      hashdiff
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -380,7 +380,7 @@ DEPENDENCIES
   selenium-webdriver
   slimmer (~> 13.1)
   uglifier (>= 1.3.0)
-  webmock (~> 3.5.1)
+  webmock (~> 3.6.0)
   wraith (~> 4.2)
 
 RUBY VERSION
