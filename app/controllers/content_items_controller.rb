@@ -56,6 +56,11 @@ private
 
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
+
+    if Services.feature_toggler.use_recommended_related_links?(content_item['links'], request.headers)
+      content_item['links']['ordered_related_items'] = content_item['links'].fetch('suggested_ordered_related_items', [])
+    end
+
     @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
   end
 
