@@ -32,10 +32,10 @@ module GovernmentFrontend
     config.i18n.available_locales = [
       :en, :ar, :az, :be, :bg, :bn, :cs, :cy, :da, :de, :dr, :el,
       :es, 'es-419', :et, :fa, :fi, :fr, :gd, :he, :hi, :hr, :hu,
-      :hy, :id, :is, :it, :ja, :ka, :ko, :lt, :lv, :ms, :mt, :no,
-      :nl, :pl, :ps, :pt, :ro, :ru, :si, :sk, :sl, :so, :sq, :sr,
-      :sv, :sw, :ta, :th, :tk, :tr, :uk, :ur, :uz, :vi, :zh, 'zh-hk',
-      'zh-tw'
+      :hy, :id, :is, :it, :ja, :ka, :kk, :ko, :lt, :lv, :ms, :mt,
+      :no, :nl, :pl, :ps, :pt, :ro, :ru, :si, :sk, :sl, :so, :sq,
+      :sr, :sv, :sw, :ta, :th, :tk, :tr, :uk, :ur, :uz, :vi, :zh,
+      'zh-hk',  'zh-tw'
     ]
 
     # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
