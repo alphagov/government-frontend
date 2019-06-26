@@ -10,4 +10,10 @@ module Services
       disable_cache: true,
     )
   end
+
+  def self.feature_toggler
+    @feature_toggler ||= FeatureToggler.new(
+      HttpFeatureFlags.instance
+    )
+  end
 end
