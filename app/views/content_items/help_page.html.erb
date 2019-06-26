@@ -2,6 +2,9 @@
   <%= machine_readable_metadata(
     schema: :article
   ) %>
+  <% if @content_item.base_path == '/help/cookie-details' %>
+    <meta name="robots" content="noindex">
+  <% end %>
 <% end %>
 
 <%= render 'content_items/body_with_related_links' %>
