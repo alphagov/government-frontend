@@ -131,6 +131,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store and keeps existing ordered_related_items when feature flag header not specified" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
     get :show, params: { path: path_for(content_item) }
@@ -139,6 +140,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store and keep existing ordered_related_items when feature flag header is specified but links already exist" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
     request.headers[FeatureFlagNames.recommended_related_links] = 'true'
 
     content_item = content_store_has_schema_example('guide', 'guide')
@@ -150,7 +152,21 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['links']['ordered_related_items'], assigns[:content_item].content_item['links']['ordered_related_items']
   end
 
+  test "gets item from content store and keeps ordered_related_items when feature flag header is specified but recommended links turned off" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'false')
+    request.headers[FeatureFlagNames.recommended_related_links] = 'true'
+
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_empty content_item['links']['ordered_related_items'], 'Content item should have existing related links'
+    refute_empty content_item['links']['suggested_ordered_related_items'], 'Content item should have existing suggested related links'
+    assert_equal [], assigns[:content_item].content_item['links']['ordered_related_items']
+  end
+
   test "gets item from content store and replaces ordered_related_items when feature flag header is specified and there are no existing links" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
     request.headers[FeatureFlagNames.recommended_related_links] = 'true'
 
     content_item = content_store_has_schema_example('case_study', 'case_study')
@@ -160,6 +176,26 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_empty content_item['links']['ordered_related_items'], 'Content item should not have existing related links'
     refute_empty content_item['links']['suggested_ordered_related_items'], 'Content item should have existing suggested related links'
     assert_equal assigns[:content_item].content_item['links']['ordered_related_items'], content_item['links']['suggested_ordered_related_items']
+  end
+
+  test "sets the Govuk-Use-Recommended-Links header to true when using recommended links" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+
+    get :show, params: { path: path_for(content_item) }
+
+    assert_includes response.headers['Vary'], FeatureFlagNames.recommended_related_links
+    assert_equal 'true', response.headers[FeatureFlagNames.recommended_related_links]
+  end
+
+  test "sets the Govuk-Use-Recommended-Links header to false when not using recommended links" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'false')
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+
+    get :show, params: { path: path_for(content_item) }
+
+    assert_includes response.headers['Vary'], FeatureFlagNames.recommended_related_links
+    assert_equal 'false', response.headers[FeatureFlagNames.recommended_related_links]
   end
 
   test "sets the expiry as sent by content-store" do

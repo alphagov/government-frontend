@@ -46,6 +46,13 @@ class FeatureTogglerTest < ActiveSupport::TestCase
     assert_equal(true, use_recommended_links)
   end
 
+  test 'feature_flags attr_reader delegates to instance of feature_flags' do
+    feature_flags = HttpFeatureFlags.new
+    feature_toggler = FeatureToggler.new(feature_flags)
+
+    assert_equal feature_flags, feature_toggler.feature_flags
+  end
+
   def setup
     @request_headers = { 'HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS': 'true' }
   end

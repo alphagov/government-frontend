@@ -1,4 +1,6 @@
 class FeatureToggler
+  attr_reader :feature_flags
+
   def initialize(feature_flags)
     @feature_flags = feature_flags
   end

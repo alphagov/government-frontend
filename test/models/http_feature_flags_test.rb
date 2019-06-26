@@ -52,4 +52,21 @@ class HttpFeatureFlagsTest < ActiveSupport::TestCase
     feature_enabled = instance.feature_enabled?('USE_MAGIC', 'USE_MAGIC' => 'only_at_weekends')
     assert_equal(true, feature_enabled)
   end
+
+  test 'get_feature_flag returns nil when feature flag does not exist' do
+    instance = HttpFeatureFlags.new
+
+    feature_flag_value = instance.get_feature_flag('USE_MAGIC')
+
+    assert_equal nil, feature_flag_value
+  end
+
+  test 'get_feature_flag returns feature flag value when feature flag exists' do
+    instance = HttpFeatureFlags.new
+
+    instance.add_http_feature_flag('USE_MAGIC', 'only_at_weekends')
+    feature_flag_value = instance.get_feature_flag('USE_MAGIC')
+
+    assert_equal 'only_at_weekends', feature_flag_value
+  end
 end
