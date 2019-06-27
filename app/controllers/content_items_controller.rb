@@ -14,6 +14,7 @@ class ContentItemsController < ApplicationController
     load_content_item
 
     set_expiry
+    set_use_recommended_related_links_header
     set_access_control_allow_origin_header if request.format.atom?
     set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
     render_template
@@ -110,6 +111,11 @@ private
 
   def set_access_control_allow_origin_header
     response.headers["Access-Control-Allow-Origin"] = "*"
+  end
+
+  def set_use_recommended_related_links_header
+    response.headers['Vary'] = [response.headers['Vary'], FeatureFlagNames.recommended_related_links].compact.join(', ')
+    response.headers[FeatureFlagNames.recommended_related_links] = Services.feature_toggler.feature_flags.get_feature_flag(FeatureFlagNames.recommended_related_links)
   end
 
   def set_expiry
