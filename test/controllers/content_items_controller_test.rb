@@ -141,7 +141,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "gets item from content store and keep existing ordered_related_items when feature flag header is specified but links already exist" do
     HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
-    request.headers[FeatureFlagNames.recommended_related_links] = 'true'
+    request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'true'
 
     content_item = content_store_has_schema_example('guide', 'guide')
 
@@ -154,7 +154,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "gets item from content store and keeps ordered_related_items when feature flag header is specified but recommended links turned off" do
     HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'false')
-    request.headers[FeatureFlagNames.recommended_related_links] = 'true'
+    request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'true'
 
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
@@ -167,7 +167,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "gets item from content store and replaces ordered_related_items when feature flag header is specified and there are no existing links" do
     HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
-    request.headers[FeatureFlagNames.recommended_related_links] = 'true'
+    request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'true'
 
     content_item = content_store_has_schema_example('case_study', 'case_study')
 

@@ -3,19 +3,25 @@ class HttpFeatureFlags
     @feature_flags = {}
   end
 
-  def add_http_feature_flag(header_name, val)
-    @feature_flags[header_name] = val
+  def add_http_feature_flag(feature_flag_name, val)
+    @feature_flags[get_header_name(feature_flag_name)] = val
   end
 
-  def get_feature_flag(header_name)
-    @feature_flags[header_name]
+  def get_feature_flag(feature_flag_name)
+    @feature_flags[get_header_name(feature_flag_name)]
   end
 
-  def feature_enabled?(header_name, request_headers)
-    @feature_flags.has_key?(header_name) && @feature_flags[header_name] == request_headers[header_name]
+  def feature_enabled?(feature_flag_name, request_headers)
+    get_feature_flag(feature_flag_name) == request_headers[get_header_name(feature_flag_name)]
   end
 
   def self.instance
     @instance ||= HttpFeatureFlags.new
+  end
+
+private
+
+  def get_header_name(feature_flag_name)
+    "HTTP_#{feature_flag_name.upcase.tr('-', '_')}"
   end
 end

@@ -1,6 +1,6 @@
 module FeatureFlagNames
   def self.recommended_related_links
-    'HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS'
+    'Govuk-Use-Recommended-Related-Links'
   end
 end
 

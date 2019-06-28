@@ -6,7 +6,7 @@ class HttpFeatureFlagsTest < ActiveSupport::TestCase
     instance.add_http_feature_flag('TEST_HEADER', 'show')
 
     new_instance = HttpFeatureFlags.instance
-    feature_enabled = new_instance.feature_enabled?('TEST_HEADER', 'TEST_HEADER' => 'show')
+    feature_enabled = new_instance.feature_enabled?('TEST_HEADER', 'HTTP_TEST_HEADER' => 'show')
 
     assert_equal(true, feature_enabled)
   end
@@ -14,18 +14,18 @@ class HttpFeatureFlagsTest < ActiveSupport::TestCase
   test 'add_http_feature_flag should set a new feature flag' do
     instance = HttpFeatureFlags.new
 
-    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'USE_MAGIC' => 'only_at_weekends')
+    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'HTTP_USE_MAGIC' => 'only_at_weekends')
     assert_equal(false, feature_enabled)
 
     instance.add_http_feature_flag('USE_MAGIC', 'only_at_weekends')
-    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'USE_MAGIC' => 'only_at_weekends')
+    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'HTTP_USE_MAGIC' => 'only_at_weekends')
     assert_equal(true, feature_enabled)
   end
 
   test 'feature_enabled? should return false when feature flag has not been set' do
     instance = HttpFeatureFlags.new
 
-    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'USE_MAGIC' => 'only_at_weekends')
+    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'HTTP_USE_MAGIC' => 'only_at_weekends')
     assert_equal(false, feature_enabled)
   end
 
@@ -41,7 +41,7 @@ class HttpFeatureFlagsTest < ActiveSupport::TestCase
     instance = HttpFeatureFlags.new
 
     instance.add_http_feature_flag('USE_MAGIC', 'only_at_weekends')
-    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'USE_MAGIC' => 'all_the_time')
+    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'HTTP_USE_MAGIC' => 'all_the_time')
     assert_equal(false, feature_enabled)
   end
 
@@ -49,7 +49,7 @@ class HttpFeatureFlagsTest < ActiveSupport::TestCase
     instance = HttpFeatureFlags.new
 
     instance.add_http_feature_flag('USE_MAGIC', 'only_at_weekends')
-    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'USE_MAGIC' => 'only_at_weekends')
+    feature_enabled = instance.feature_enabled?('USE_MAGIC', 'HTTP_USE_MAGIC' => 'only_at_weekends')
     assert_equal(true, feature_enabled)
   end
 
