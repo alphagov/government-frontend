@@ -178,24 +178,36 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal assigns[:content_item].content_item['links']['ordered_related_items'], content_item['links']['suggested_ordered_related_items']
   end
 
-  test "sets the Govuk-Use-Recommended-Links header to true when using recommended links" do
+  test "sets the Govuk-Use-Recommended-Links response header to false when request header is not set" do
     HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
     get :show, params: { path: path_for(content_item) }
 
     assert_includes response.headers['Vary'], FeatureFlagNames.recommended_related_links
-    assert_equal 'true', response.headers[FeatureFlagNames.recommended_related_links]
+    assert_equal 'false', response.headers[FeatureFlagNames.recommended_related_links]
   end
 
-  test "sets the Govuk-Use-Recommended-Links header to false when not using recommended links" do
-    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'false')
+  test "sets the Govuk-Use-Recommended-Links response header to false when request header is set to false" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
+    request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'false'
     content_item = content_store_has_schema_example('case_study', 'case_study')
 
     get :show, params: { path: path_for(content_item) }
 
     assert_includes response.headers['Vary'], FeatureFlagNames.recommended_related_links
     assert_equal 'false', response.headers[FeatureFlagNames.recommended_related_links]
+  end
+
+  test "sets the Govuk-Use-Recommended-Links response header to true when request header is set to true" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
+    request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'true'
+    content_item = content_store_has_schema_example('case_study', 'case_study')
+
+    get :show, params: { path: path_for(content_item) }
+
+    assert_includes response.headers['Vary'], FeatureFlagNames.recommended_related_links
+    assert_equal 'true', response.headers[FeatureFlagNames.recommended_related_links]
   end
 
   test "sets the expiry as sent by content-store" do
