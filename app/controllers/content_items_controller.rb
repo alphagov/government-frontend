@@ -115,7 +115,10 @@ private
 
   def set_use_recommended_related_links_header
     response.headers['Vary'] = [response.headers['Vary'], FeatureFlagNames.recommended_related_links].compact.join(', ')
-    response.headers[FeatureFlagNames.recommended_related_links] = Services.feature_toggler.feature_flags.get_feature_flag(FeatureFlagNames.recommended_related_links)
+
+    related_links_request_header = RequestHelper.get_header(FeatureFlagNames.recommended_related_links, request.headers)
+    required_header_value = Services.feature_toggler.feature_flags.get_feature_flag(FeatureFlagNames.recommended_related_links)
+    response.headers[FeatureFlagNames.recommended_related_links] = (related_links_request_header == required_header_value).to_s
   end
 
   def set_expiry
