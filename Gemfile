@@ -36,11 +36,9 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'chromedriver-helper'
+  gem 'govuk_test'
   gem 'faker'
   gem 'minitest-reporters'
   gem 'mocha'
-  gem 'puma'
-  gem 'selenium-webdriver'
   gem 'webmock', '~> 3.6.0', require: false
 end
