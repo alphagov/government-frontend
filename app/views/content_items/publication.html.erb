@@ -4,37 +4,179 @@
   ) %>
 <% end %>
 
+<style>
+  img {
+    max-width: 100%;
+  }
+</style>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
-       context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-       title: @content_item.title,
-       average_title_length: "long" %>
-  </div>
-  <%= render 'shared/translations' %>
+       title: "Supporting early career teachers"
+    %>
 
-  <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
+    <%= render "govuk_publishing_components/components/lead_paragraph", {
+      text: "Starting in September 2020 is the Early Career Framework (ECF). The ECF is a 2-year fully funded programme to help support NQTs."
+    } %>
+
+    <div class="govuk-grid-row">
+      <div class="metadata-logo-wrapper">
+        <%= render "components/publisher-metadata", {
+          published: "Tuesday 25 June 2019",
+          other: {
+            from: [
+              sanitize("<a href='/government/organisations/department-for-education'>Department for Education</a>")
+            ]
+          }
+        } %>
+      </div>
+    </div>
+
+    <div class="gem-c-govspeak govuk-govspeak">
+      <p>As a mentor, the ECF will help you to know what:</p>
+      <ul>
+        <li>they need to learn</li>
+        <li>support they need</li>
+        <li>skills they need to develop</li>
+      </ul>
+
+      <p>Along with funding, we offer high quality, freely available ECF curricula, training materials, and training programmes.</p>
+      <p>You should not use the ECF to assess a teacher’s skills, development, or performance. You should continue to assess a teacher against the Teachers’ Standards.</p>
+      <p><a href="">Find out when the ECF will be rolled out to schools</a></p>
+    </div>
+
+    <h2 class="gem-c-heading gem-c-heading--mobile-top-margin govuk-!-margin-top-9">ECF Standards</h2>
   </div>
 </div>
 
-<%= render 'shared/publisher_metadata_with_logo' %>
-<%= render 'shared/history_notice', content_item: @content_item %>
-<%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+  <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds responsive-bottom-margin">
-    <%= render 'components/important-metadata', items: @content_item.important_metadata %>
-    <div class="responsive-bottom-margin">
-       <%= render 'publication_inline_body' %>
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img1_children.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Set high expectations</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes how teachers affect outcomes and applying rules, sanctions and awards</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
     </div>
 
-    <%= render 'components/published-dates', {
-        published: @content_item.published,
-        last_updated: @content_item.updated,
-        history: @content_item.history
-      } %>
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img2_smile.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Promote good progress</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes different types of memory and sequencing lessons</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img3_people.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Plan and teach well structured lessons</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes the benefits of metacognitive strategies and using concrete representation of abstract ideas</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img4_laptop.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Adaptive teaching</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes pupils are likely to learn at different rates and using the SEND code of practice</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img5_lab.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Manage behaviour effectively</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes why routines are important and using non-verbal signals in the classroom</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img6_whiteboard.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Fulfil wider professional responsibilities</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes how pupils are motivated by intrinsic factors and responding consistently to behaviour</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img7_rucksack.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Demonstrate good subject and curriculum knowledge</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes different types of memory and using retrieval and spaced practice</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-6">
+      <div class="govuk-grid-column-one-half">
+        <%= image_tag "dfe_images/img8_writing.jpeg" %>
+      </div>
+      <div class="govuk-grid-column-one-half">
+        <h3 class="gem-c-heading gem-c-heading--font-size-24 govuk-!-margin-bottom-4">
+          <a href="">Make accurate and productive use of assessment</a>
+        </h3>
+        <div class="gem-c-govspeak govuk-govspeak">
+          <p>Includes the importance of assessing effectively and monitoring pupil work during lessons</p>
+        </div>
+        <p>23 March 2017  Guidance</p>
+      </div>
+    </div>
+
   </div>
+</div>
+
+<div class="govuk-grid-row">
   <%= render 'shared/sidebar_navigation' %>
 </div>
 
