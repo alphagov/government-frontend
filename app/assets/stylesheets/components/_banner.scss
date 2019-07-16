@@ -2,6 +2,7 @@
   @include responsive-bottom-margin;
   @include core-19;
   @include white-links;
+  direction: ltr;
   background: $govuk-blue;
   color: $white;
   padding: govuk-spacing(3);
