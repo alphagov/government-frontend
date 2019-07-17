@@ -28,15 +28,15 @@
         <table>
           <tr>
             <td>Content store</td>
-            <td><%= link_to Plek.find('content-store'), Plek.find('content-store') %></td>
+            <td><%= link_to remove_secrets(Plek.find('content-store')), remove_secrets(Plek.find('content-store')) %></td>
           </tr>
           <tr>
             <td>Static</td>
-            <td><%= link_to Plek.find('static'), Plek.find('static') %></td>
+            <td><%= link_to remove_secrets(Plek.find('static')), remove_secrets(Plek.find('static')) %></td>
           </tr>
           <tr>
             <td>Search</td>
-            <td><%= link_to Plek.find('search'), Plek.find('search') %></td>
+            <td><%= link_to remove_secrets(Plek.find('search')), remove_secrets(Plek.find('search')) %></td>
           </tr>
         </table>
 
