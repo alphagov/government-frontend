@@ -12,4 +12,15 @@ class DevelopmentController < ApplicationController
 
     @paths = YAML.load_file("test/wraith/config.yaml")["paths"]
   end
+
+private
+
+  helper_method :remove_secrets
+
+  def remove_secrets(original_url)
+    parsed_url = URI.parse(original_url)
+    original_url = original_url.gsub(parsed_url.user, "***") if parsed_url.user
+    original_url = original_url.gsub(parsed_url.password, "***") if parsed_url.password
+    original_url
+  end
 end
