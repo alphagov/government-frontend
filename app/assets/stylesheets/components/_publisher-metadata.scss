@@ -1,6 +1,7 @@
 .app-c-publisher-metadata {
   @include responsive-bottom-margin;
   @include core-16;
+  direction: ltr;
   padding-top: govuk-spacing(3);
 }
 
@@ -11,20 +12,6 @@
 .app-c-publisher-metadata__term {
   float: left;
   padding-right: govuk-spacing(1);
-
-  .direction-rtl & {
-    float: none;
-    display: inline-block;
-    padding-right: 0;
-    padding-left: 5px;
-  }
-}
-
-.app-c-publisher-metadata__definition {
-  .direction-rtl & {
-    float: none;
-    display: inline-block;
-  }
 }
 
 .app-c-publisher-metadata__toggle,
