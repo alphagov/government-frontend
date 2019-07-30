@@ -152,6 +152,20 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item['links']['ordered_related_items'], assigns[:content_item].content_item['links']['ordered_related_items']
   end
 
+  test "gets item from content store and does not change ordered_related_items when feature flag header is specified but link overrides exist" do
+    HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
+    request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'true'
+
+    content_item = content_store_has_schema_example('guide', 'guide-with-related-link-overrides')
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_nil content_item['links']['ordered_related_items'], 'Content item should not have existing related links'
+    refute_empty content_item['links']['ordered_related_items_overrides'], 'Content item should have existing related link overrides'
+    refute_empty content_item['links']['suggested_ordered_related_items'], 'Content item should have existing suggested related links'
+    assert_nil content_item['links']['ordered_related_items']
+  end
+
   test "gets item from content store and keeps ordered_related_items when feature flag header is specified but recommended links turned off" do
     HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'false')
     request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'true'
@@ -165,7 +179,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal [], assigns[:content_item].content_item['links']['ordered_related_items']
   end
 
-  test "gets item from content store and replaces ordered_related_items when feature flag header is specified and there are no existing links" do
+  test "gets item from content store and replaces ordered_related_items when feature flag header is specified and there are no existing links or overrides" do
     HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, 'true')
     request.headers["HTTP_GOVUK_USE_RECOMMENDED_RELATED_LINKS"] = 'true'
 
