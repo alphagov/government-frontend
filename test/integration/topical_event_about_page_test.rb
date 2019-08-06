@@ -50,8 +50,8 @@ private
 
   def long_first_item_body
     "<div class='govspeak'><h2 id='response-in-the-uk'>Item 1</h2>
-    <p>#{Faker::Lorem.characters(200)}</p>
-    <p>#{Faker::Lorem.characters(216)}</p>
+    <p>#{Faker::Lorem.characters(number: 200)}</p>
+    <p>#{Faker::Lorem.characters(number: 216)}</p>
     <h2 id='response-in-africa'>Item 2</h2>
     <p>#{Faker::Lorem.sentence}</p></div>"
   end

@@ -10,7 +10,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
   test "document collection with no body and 2 collection groups where 1st group has long body" do
     content_item = get_content_example('document_collection')
-    content_item['details']['collection_groups'][0]['body'] = Faker::Lorem.characters(416)
+    content_item['details']['collection_groups'][0]['body'] = Faker::Lorem.characters(number: 416)
     content_store_has_item(content_item['base_path'], content_item.to_json)
     visit(content_item['base_path'])
 
