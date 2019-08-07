@@ -83,8 +83,8 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.characters(220)}</p>
-         <p>#{Faker::Lorem.characters(196)}</p>
+         <p>#{Faker::Lorem.characters(number: 220)}</p>
+         <p>#{Faker::Lorem.characters(number: 196)}</p>
          <h2 id='two'>Two</h2>
          <p>#{Faker::Lorem.sentence}</p>"
       end
@@ -96,13 +96,13 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.characters(40)}</p>
+         <p>#{Faker::Lorem.characters(number: 40)}</p>
          <ul>
-          <li>#{Faker::Lorem.characters(100)}</li>
-          <li>#{Faker::Lorem.characters(100)}</li>
-          <li>#{Faker::Lorem.characters(200)}</li>
+          <li>#{Faker::Lorem.characters(number: 100)}</li>
+          <li>#{Faker::Lorem.characters(number: 100)}</li>
+          <li>#{Faker::Lorem.characters(number: 200)}</li>
          </ul>
-         <p>#{Faker::Lorem.characters(40)}</p>
+         <p>#{Faker::Lorem.characters(number: 40)}</p>
          <h2 id='two'>Two</h2>
          <p>#{Faker::Lorem.sentence}</p>"
       end
@@ -129,8 +129,8 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.characters(10)}</p>
-         <p>#{Faker::Lorem.characters(10)}</p>
+         <p>#{Faker::Lorem.characters(number: 10)}</p>
+         <p>#{Faker::Lorem.characters(number: 10)}</p>
          <h2 id='two'>Two</h2>
          <p>#{Faker::Lorem.sentence}</p>"
       end
@@ -168,7 +168,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       def body
         "<h2 id='one'>One</h2>
         <div class='img'><img src='www.gov.uk/img.png'></div>
-        <p>#{Faker::Lorem.characters(225)}</p>
+        <p>#{Faker::Lorem.characters(number: 225)}</p>
         <h2 id='two'>Two</h2>
         <p>#{Faker::Lorem.sentence}</p>"
       end
@@ -193,7 +193,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
   test "#show_contents_list? returns true if body is over 415 characters and has no h2s present" do
     class << @contents_list
       def body
-        "<div><p>#{Faker::Lorem.characters(416)}</p></div>"
+        "<div><p>#{Faker::Lorem.characters(number: 416)}</p></div>"
       end
     end
     @contents_list.stubs(:contents_items).returns(["item 1", "item2"])
