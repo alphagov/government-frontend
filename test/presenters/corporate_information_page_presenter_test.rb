@@ -30,7 +30,7 @@ class CorporateInformationPagePresenterTest
 
     test 'has title without context' do
       assert presented_item.is_a?(ContentItem::TitleAndContext)
-      title_component_params = { title: "About us" }
+      title_component_params = { title: "About us", context_locale: :en }
 
       assert_equal title_component_params, presented_item.title_and_context
     end

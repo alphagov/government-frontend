@@ -1,5 +1,6 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
+  include ApplicationHelper
 
   attr_reader :content_item,
               :requested_content_item_path,
