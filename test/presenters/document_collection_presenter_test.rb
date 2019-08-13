@@ -73,6 +73,21 @@ class DocumentCollectionPresenterTest
 
       assert_equal documents, presented_item.group_document_links({ "documents" => [document_ids.first] }, 0)
     end
+
+    test 'it handles the document type lacking a translation' do
+      schema_data = schema_item
+
+      document = schema_data["links"]["documents"].first.tap do |link|
+        link["document_type"] = "non-existant"
+      end
+
+      grouped = present_example(schema_data).group_document_links(
+        { "documents" => [document["content_id"]] },
+        0,
+      )
+
+      assert_nil grouped.first[:metadata][:document_type]
+    end
   end
 
   class GroupWithMissingDocument < TestCase

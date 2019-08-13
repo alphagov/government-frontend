@@ -41,7 +41,9 @@ class DocumentCollectionPresenter < ContentItemPresenter
         },
         metadata: {
           public_updated_at: Time.zone.parse(link["public_updated_at"]),
-          document_type: I18n.t("content_item.schema_name.#{link['document_type']}", count: 1)
+          document_type: I18n.t("content_item.schema_name.#{link['document_type']}",
+                                count: 1,
+                                default: nil),
         },
       }
     end
