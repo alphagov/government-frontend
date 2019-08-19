@@ -10,5 +10,9 @@
       background-image: image-url("icon-print-2x.png");
       background-size: 16px 18px;
     }
+
+    &:focus {
+      @include govuk-focused-text;
+    }
   }
 }
