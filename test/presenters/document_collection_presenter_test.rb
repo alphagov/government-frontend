@@ -88,6 +88,21 @@ class DocumentCollectionPresenterTest
 
       assert_nil grouped.first[:metadata][:document_type]
     end
+
+    test 'it handles public_updated_at not being specified' do
+      schema_data = schema_item
+
+      document = schema_data["links"]["documents"].first.tap do |link|
+        link.delete("public_updated_at")
+      end
+
+      grouped = present_example(schema_data).group_document_links(
+        { "documents" => [document["content_id"]] },
+        0,
+      )
+
+      assert_nil grouped.first[:metadata][:public_updated_at]
+    end
   end
 
   class GroupWithMissingDocument < TestCase
