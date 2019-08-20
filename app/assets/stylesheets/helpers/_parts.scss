@@ -27,6 +27,10 @@
 
       a {
         display: block;
+
+        &:focus {
+          @include govuk-focused-text;
+        }
       }
     }
   }

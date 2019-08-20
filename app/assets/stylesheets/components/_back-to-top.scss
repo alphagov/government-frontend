@@ -1,9 +1,12 @@
 .app-c-back-to-top {
-  @include core-16;
   display: inline-block;
   margin-bottom: govuk-spacing(3);
   margin-left: govuk-spacing(3);
   margin-right: govuk-spacing(3);
+
+  &:focus {
+    @include govuk-focused-text;
+  }
 }
 
 .app-c-back-to-top__icon {
@@ -12,3 +15,4 @@
   width: .8em;
   height: .968em;
 }
+

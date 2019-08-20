@@ -1,13 +1,23 @@
 .app-c-published-dates {
-  @include core-16;
   direction: ltr;
+  line-height: 1.45em;
 }
 
 .app-c-published-dates__toggle {
   display: none;
 
+  &:focus {
+    @include govuk-focused-text;
+  }
+
   .js-enabled & {
     display: inline-block;
+  }
+}
+
+.app-c-published-dates__history-link {
+  &:focus {
+    @include govuk-focused-text;
   }
 }
 
