@@ -8,10 +8,7 @@
       <%= @content_item.page_title %> - GOV.UK
     <% end %>
   </title>
-  <!--[if gt IE 8]><!--><%= stylesheet_link_tag "application", integrity: true, crossorigin: 'anonymous' %><!--<![endif]-->
-  <!--[if IE 6]><%= stylesheet_link_tag "application-ie6" %><script>var ieVersion = 6;</script><![endif]-->
-  <!--[if IE 7]><%= stylesheet_link_tag "application-ie7" %><script>var ieVersion = 7;</script><![endif]-->
-  <!--[if IE 8]><%= stylesheet_link_tag "application-ie8" %><script>var ieVersion = 8;</script><![endif]-->
+  <%= stylesheet_link_tag "application", integrity: true, crossorigin: 'anonymous' %>
   <% if Rails.env.test? && params[:medium] == 'print' %>
     <%= stylesheet_link_tag "print.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
   <% else %>
