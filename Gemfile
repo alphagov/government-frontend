@@ -13,7 +13,7 @@ gem 'rails_translation_manager', '~> 0.1.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'gds-api-adapters', '~> 59.6'
+gem 'gds-api-adapters', '~> 60.0'
 gem 'govuk_ab_testing', '~> 2.4'
 gem 'govuk_app_config', '~> 1.20'
 gem 'govuk_frontend_toolkit', '~> 8.2.0'
