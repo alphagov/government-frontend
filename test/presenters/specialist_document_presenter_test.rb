@@ -83,7 +83,9 @@ class SpecialistDocumentPresenterTest
       assert presented_item('aaib-reports').is_a?(ContentItem::TitleAndContext)
       title_component_params = {
                                   title: schema_item('aaib-reports')['title'],
-                                  average_title_length: 'long'
+                                  context_locale: nil,
+                                  average_title_length: 'long',
+
                                }
 
       assert_equal title_component_params, presented_item('aaib-reports').title_and_context

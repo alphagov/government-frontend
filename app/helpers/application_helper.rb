@@ -3,6 +3,18 @@ module ApplicationHelper
     I18n.t("i18n.direction", locale: I18n.locale, default: "ltr")
   end
 
+  def t_locale_fallback(key, options = {})
+    options['locale'] = I18n.locale
+    options[:fallback] = nil
+    translation = I18n.t(key, options)
+
+    if translation.nil? || translation.include?("translation missing")
+      I18n.default_locale
+    else
+      return nil
+    end
+  end
+
   def wrapper_class
     "direction-#{page_text_direction}" if page_text_direction
   end
