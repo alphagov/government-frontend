@@ -39,5 +39,5 @@ group :test do
   gem 'faker'
   gem 'minitest-reporters'
   gem 'mocha'
-  gem 'webmock', '~> 3.7.0', require: false
+  gem 'webmock', '~> 3.7.1', require: false
 end
