@@ -8,6 +8,11 @@
       <%= @content_item.page_title %> - GOV.UK
     <% end %>
   </title>
+
+  <% if ENV['HEROKU_APP_NAME'].present? %>
+    <meta name="robots" content="noindex, nofollow">
+  <% end %>
+
   <%= stylesheet_link_tag "application", integrity: true, crossorigin: 'anonymous' %>
   <% if Rails.env.test? && params[:medium] == 'print' %>
     <%= stylesheet_link_tag "print.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
