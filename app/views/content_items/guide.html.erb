@@ -5,6 +5,18 @@
   ) %>
 <% end %>
 
+<% logo_url = image_url("govuk_publishing_components/govuk-logo.png") %>
+<% image_placeholder_urls = [
+  image_url("govuk_publishing_components/govuk-schema-placeholder-1x1.png"),
+  image_url("govuk_publishing_components/govuk-schema-placeholder-4x3.png"),
+  image_url("govuk_publishing_components/govuk-schema-placeholder-16x9.png"),
+] %>
+<% structured_data = FAQPagePresenter.new(@content_item, logo_url, image_placeholder_urls).structured_data %>
+
+<script type="application/ld+json">
+  <%= raw structured_data.to_json %>
+</script>
+
 <% content_for :simple_header, true %>
 
 <div class="govuk-grid-row">
