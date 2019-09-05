@@ -36,7 +36,6 @@
   }
 
   .app-c-back-to-top {
-    color: $link-colour;
     margin-bottom: 0;
     padding: govuk-spacing(3);
     width: percentage(2 / 3);
@@ -46,15 +45,4 @@
     }
   }
 
-  .app-c-back-to-top:focus {
-    outline: 0;
-  }
-
-  .app-c-back-to-top:hover {
-    color: $link-hover-colour;
-  }
-
-  .app-c-back-to-top:active {
-    color: $link-active-colour;
-   }
 }

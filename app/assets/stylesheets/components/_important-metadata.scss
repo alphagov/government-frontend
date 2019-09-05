@@ -1,5 +1,4 @@
 .app-c-important-metadata {
-  @include core-16;
   @include white-links;
   background: $govuk-blue;
   color: $white;
@@ -30,4 +29,8 @@
 
 .app-c-important-metadata__definition {
   font-weight: bold;
+
+  a:focus {
+    @include govuk-focused-text;
+  }
 }

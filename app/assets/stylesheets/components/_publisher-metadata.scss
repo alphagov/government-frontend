@@ -1,12 +1,15 @@
 .app-c-publisher-metadata {
   @include responsive-bottom-margin;
-  @include core-16;
   direction: ltr;
   padding-top: govuk-spacing(3);
 }
 
 .app-c-publisher-metadata__other a {
   font-weight: bold;
+
+  &:focus {
+    @include govuk-focused-text;
+  }
 }
 
 .app-c-publisher-metadata__term {

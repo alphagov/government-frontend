@@ -4,9 +4,14 @@
   margin-top: govuk-spacing(3);
   margin-bottom: govuk-spacing(3);
 
+  &:focus {
+    @include govuk-focused-text;
+  }
+
   @include media(tablet) {
     margin-top: govuk-spacing(6);
   }
+
 }
 
 .app-c-download-link__icon {

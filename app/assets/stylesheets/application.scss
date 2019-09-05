@@ -1,12 +1,15 @@
 // The main application stylesheet
 
+$govuk-use-legacy-palette: true;
+$govuk-typography-use-rem: false;
+
+// govuk_frontend_toolkit dependencies
+@import "typography";
+@import "colours";
+@import "grid_layout";
+
 // Components from govuk_publishing_components gem
 @import 'govuk_publishing_components/all_components';
-
-// govuk_frontend_toolkit imports
-@import 'colours';
-@import 'shims';
-@import 'typography';
 
 // government-frontend mixins
 @import 'mixins/margins';
