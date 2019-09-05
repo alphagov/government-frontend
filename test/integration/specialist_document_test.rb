@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class SpecialistDocumentTest < ActionDispatch::IntegrationTest
-  include GdsApi::TestHelpers::Rummager
-
-  setup do
-    stub_any_rummager_search
-  end
-
   test "random but valid specialist documents do not error" do
     setup_and_visit_random_content_item(document_type: 'aaib_report')
     setup_and_visit_random_content_item(document_type: 'raib_report')
@@ -177,9 +171,6 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   end
 
   test 'renders a link to statutory instruments finder' do
-    # Statutory instruments are tagged to taxonomy so stub rummager request for similar content
-    # which is triggered by the sidebar component.
-    stub_request(:get, /\/search.json/).to_return(status: 200, body: "{}", headers: {})
     setup_and_visit_content_item('eu-withdrawal-act-2018-statutory-instruments')
 
     assert page.has_css?("a[href='/eu-withdrawal-act-2018-statutory-instruments']",
