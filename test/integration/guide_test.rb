@@ -76,4 +76,14 @@ class GuideTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(title)
   end
+
+  test "guides show the faq page schema" do
+    setup_and_visit_content_item('guide')
+
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    qa_page_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
+    assert_equal qa_page_schema["headline"], @content_item['title']
+  end
 end
