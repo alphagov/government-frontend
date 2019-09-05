@@ -6,18 +6,19 @@
 .app-c-published-dates__toggle {
   display: none;
 
-  &:focus {
-    @include govuk-focused-text;
-  }
-
   .js-enabled & {
     display: inline-block;
   }
+
+  &:focus {
+    @include govuk-template-link-focus-override;
+  }
+
 }
 
 .app-c-published-dates__history-link {
   &:focus {
-    @include govuk-focused-text;
+    @include govuk-template-link-focus-override;
   }
 }
 

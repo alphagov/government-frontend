@@ -9,7 +9,7 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
 
   test 'presents from as links to organisations' do
     links = [
-      link_to('NHS England', '/government/organisations/nhs-commissioning-board')
+      link_to('NHS England', '/government/organisations/nhs-commissioning-board', class: "govuk-link")
     ]
     assert_equal links, statistics_announcement.from
   end

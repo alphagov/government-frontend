@@ -168,7 +168,7 @@ private
 
   def facet_link(label, value, key)
     finder_base_path = finder['base_path']
-    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}")
+    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}", class: "govuk-link app-link")
   end
 
   def first_published_at_facet_key
