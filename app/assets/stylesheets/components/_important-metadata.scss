@@ -1,7 +1,6 @@
 .app-c-important-metadata {
-  @include white-links;
   background: $govuk-blue;
-  color: $white;
+  color: govuk-colour("white");
   padding: govuk-spacing(3);
 
   @include media(tablet) {
@@ -30,7 +29,12 @@
 .app-c-important-metadata__definition {
   font-weight: bold;
 
-  a:focus {
-    @include govuk-focused-text;
+  .app-link {
+    color: govuk-colour("white");
+
+    &:focus {
+      @include govuk-template-link-focus-override;
+    }
   }
+
 }

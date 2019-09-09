@@ -4,9 +4,6 @@
   margin-left: govuk-spacing(3);
   margin-right: govuk-spacing(3);
 
-  &:focus {
-    @include govuk-focused-text;
-  }
 }
 
 .app-c-back-to-top__icon {

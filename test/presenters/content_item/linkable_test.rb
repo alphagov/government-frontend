@@ -24,7 +24,7 @@ class ContentItemLinkableTest < ActiveSupport::TestCase
     ]
 
     expected_from_links = [
-      %{<a href="/government/people/winston-churchill">Winston Churchill</a>}
+      %{<a class="govuk-link" href="/government/people/winston-churchill">Winston Churchill</a>}
     ]
     assert_equal expected_from_links, item.from
   end
@@ -55,7 +55,7 @@ class ContentItemLinkableTest < ActiveSupport::TestCase
     ]
 
     expected_from_links = [
-      %{<a href="/world/germany/news">Germany</a>}
+      %{<a class=\"govuk-link\" href="/world/germany/news">Germany</a>}
     ]
     assert_equal expected_from_links, item.part_of
   end

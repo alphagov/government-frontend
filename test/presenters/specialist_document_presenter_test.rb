@@ -131,6 +131,7 @@ class SpecialistDocumentPresenterTest
     def example_with_finder_facets(facets = [], values = {})
       example = schema_item('aaib-reports')
       example_finder = {
+        "class" => "govuk-link",
         "base_path" => "/finder-base-path",
         "title" => "Finder title",
         "details" => {
@@ -267,7 +268,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      expected_link = "<a href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
+      expected_link = "<a class=\"govuk-link app-link\" href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
       assert_equal expected_link, presented.important_metadata["Facet name"]
     end
 

@@ -37,17 +37,17 @@ class PublicationPresenterTest < PresenterTestCase
 
   test '#from presents people' do
     minister = schema_item["links"]["people"][0]
-    assert presented_item.from.include?("<a href=\"#{minister['base_path']}\">#{minister['title']}</a>")
+    assert presented_item.from.include?("<a class=\"govuk-link\" href=\"#{minister['base_path']}\">#{minister['title']}</a>")
   end
 
   test '#part_of presents topical events' do
     event = schema_item["links"]["topical_events"][0]
-    assert presented_item.part_of.include?("<a href=\"#{event['base_path']}\">#{event['title']}</a>")
+    assert presented_item.part_of.include?("<a class=\"govuk-link\" href=\"#{event['base_path']}\">#{event['title']}</a>")
   end
 
   test '#part_of presents related statistical data sets' do
     data_set = schema_item("statistics_publication")["links"]["related_statistical_data_sets"][0]
-    assert presented_item("statistics_publication").part_of.include?("<a href=\"#{data_set['base_path']}\">#{data_set['title']}</a>")
+    assert presented_item("statistics_publication").part_of.include?("<a class=\"govuk-link\" href=\"#{data_set['base_path']}\">#{data_set['title']}</a>")
   end
 
   test '#national_statistics? matches national statistics documents' do

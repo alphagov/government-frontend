@@ -86,7 +86,7 @@ module ContentItem
     def part_links
       parts.map.with_index(1) do |part, position|
         if part['slug'] != current_part['slug']
-          link_to part['title'], part['full_path'],
+          link_to part['title'], part['full_path'], class: "govuk-link",
             data: {
             track_category: 'contentsClicked',
             track_action: "content_item #{position}",

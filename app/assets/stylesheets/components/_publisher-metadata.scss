@@ -8,7 +8,7 @@
   font-weight: bold;
 
   &:focus {
-    @include govuk-focused-text;
+    @include govuk-template-link-focus-override;
   }
 }
 

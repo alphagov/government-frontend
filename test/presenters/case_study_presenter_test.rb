@@ -42,9 +42,9 @@ class CaseStudyPresenterTest < PresenterTestCase
     }
 
     expected_from_links = [
-      link_to('Lead org', '/orgs/lead'),
-      link_to('Supporting org', '/orgs/supporting'),
-      link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan'),
+      link_to('Lead org', '/orgs/lead', class: "govuk-link"),
+      link_to('Supporting org', '/orgs/supporting', class: "govuk-link"),
+      link_to('DFID Pakistan', '/government/world/organisations/dfid-pakistan', class: "govuk-link"),
     ]
 
     assert_equal expected_from_links, presented_item(schema_name, with_organisations).from
@@ -60,9 +60,9 @@ class CaseStudyPresenterTest < PresenterTestCase
     ]
 
     expected_part_of_links = [
-      link_to('Work Programme real life stories', '/government/collections/work-programme-real-life-stories'),
-      link_to('Cheese', '/policy/cheese'),
-      link_to('Pakistan', '/world/pakistan/news'),
+      link_to('Work Programme real life stories', '/government/collections/work-programme-real-life-stories', class: "govuk-link"),
+      link_to('Cheese', '/policy/cheese', class: "govuk-link"),
+      link_to('Pakistan', '/world/pakistan/news', class: "govuk-link"),
     ]
     assert_equal expected_part_of_links, presented_item(schema_name, with_extras).part_of
   end

@@ -93,16 +93,16 @@ class TravelAdvicePresenterTest
       another_part_nav_item = navigation_items[0][2]
 
       assert_equal summary_nav_item,
-        "<a data-track-category=\"contentsClicked\" data-track-action=\"content_item 1\" "\
-        "data-track-label=\"/foreign-travel-advice/albania\" "\
-        "data-track-options=\"{&quot;dimension29&quot;:&quot;Summary&quot;}\" "\
-        "href=\"/foreign-travel-advice/albania\">Summary</a>"
+                   "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 1\" "\
+                   "data-track-label=\"/foreign-travel-advice/albania\" "\
+                   "data-track-options=\"{&quot;dimension29&quot;:&quot;Summary&quot;}\" "\
+                   "href=\"/foreign-travel-advice/albania\">Summary</a>"
       assert_equal current_part_nav_item, current_part['title']
       assert_equal another_part_nav_item,
-        "<a data-track-category=\"contentsClicked\" data-track-action=\"content_item 3\" "\
-        "data-track-label=\"/foreign-travel-advice/albania/terrorism\" "\
-        "data-track-options=\"{&quot;dimension29&quot;:&quot;Terrorism&quot;}\" "\
-        "href=\"/foreign-travel-advice/albania/terrorism\">Terrorism</a>"
+                   "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 3\" "\
+                   "data-track-label=\"/foreign-travel-advice/albania/terrorism\" "\
+                   "data-track-options=\"{&quot;dimension29&quot;:&quot;Terrorism&quot;}\" "\
+                   "href=\"/foreign-travel-advice/albania/terrorism\">Terrorism</a>"
     end
 
     test "navigation items link to all parts" do
