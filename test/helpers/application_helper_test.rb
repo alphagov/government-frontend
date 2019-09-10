@@ -15,7 +15,7 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test "#t_locale_fallback returns nil for a string with a locale translation" do
     fallback = t_locale_fallback("content_item.schema_name.imported", count: 1, locale: :de)
-    assert_equal nil, fallback
+    assert_nil fallback
   end
 
   test "#t_locale_fallback returns default locale for a string with no locale translation" do
