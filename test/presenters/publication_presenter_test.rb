@@ -72,7 +72,7 @@ class PublicationPresenterTest < PresenterTestCase
     assert example['details'].include?('national_applicability')
     assert_equal(
       presented.applies_to,
-      'England (see publications for <a rel="external" href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm">Northern Ireland</a>, <a rel="external" href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS">Scotland</a>, and <a rel="external" href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en">Wales</a>)'
+      'England (see publications for <a rel="external" class="govuk-link app-link" href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm">Northern Ireland</a>, <a rel="external" class="govuk-link app-link" href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS">Scotland</a>, and <a rel="external" class="govuk-link app-link" href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en">Wales</a>)'
     )
   end
 end
