@@ -83,7 +83,31 @@ class GuideTest < ActionDispatch::IntegrationTest
     schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
     schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
 
+    article_schema = schemas.detect { |schema| schema["@type"] == "Article" }
+    assert_nil article_schema
+
     qa_page_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
     assert_equal qa_page_schema["headline"], @content_item['title']
+  end
+
+  test "guide chapters show the article schema" do
+    setup_and_visit_part_in_guide
+
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    faq_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
+    assert_nil faq_schema
+
+    article_schema = schemas.detect { |schema| schema["@type"] == "Article" }
+    assert_equal article_schema["headline"], @content_item['title']
+  end
+
+  def setup_and_visit_part_in_guide
+    @content_item = get_content_example("guide").tap do |item|
+      chapter_path = "#{item['base_path']}/key-stage-1-and-2"
+      content_store_has_item(chapter_path, item.to_json)
+      visit_with_cachebust(chapter_path)
+    end
   end
 end
