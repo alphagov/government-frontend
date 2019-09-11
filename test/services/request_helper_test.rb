@@ -4,7 +4,7 @@ class RequestHelperTest < ActiveSupport::TestCase
   test 'get_header returns nil when header does not exist' do
     header_val = RequestHelper.get_header('Govuk-Example-Header', {})
 
-    assert_equal nil, header_val
+    assert_nil header_val
   end
 
   test 'get_header returns header when header exists' do
