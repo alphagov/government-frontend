@@ -1,0 +1,47 @@
+<% content_for :extra_head_content do %>
+  <%= machine_readable_metadata(
+    schema: :article,
+    canonical_url: @content_item.canonical_url,
+    body: @content_item.current_part_body
+  ) %>
+<% end %>
+
+<script type="application/ld+json">
+  <%= raw MachineReadable::GuideFaqPageSchemaPresenter.new(@content_item).structured_data.to_json %>
+</script>
+
+<% content_for :simple_header, true %>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
+
+    <% if @content_item.show_guide_navigation? %>
+      <aside class="part-navigation-container" role="complementary">
+        <%= render "govuk_publishing_components/components/contents_list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
+      </aside>
+    <% end %>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <% if @content_item.has_parts? %>
+
+      <% @content_item.parts.each do |part| %>
+        <h1 id=<%= part["slug"] %> class="part-title">
+          <%= part["title"] %>
+        </h1>
+
+        <%= render 'govuk_publishing_components/components/govspeak',
+          content: part["body"].html_safe,
+          direction: page_text_direction,
+          disable_youtube_expansions: true %>
+
+      <% end %>
+      <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
+    <% end %>
+  </div>
+
+  <%= render 'shared/sidebar_navigation' %>
+</div>
+
+<%= render 'shared/footer_navigation' %>
