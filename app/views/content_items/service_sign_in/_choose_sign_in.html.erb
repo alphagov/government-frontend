@@ -21,7 +21,8 @@
 %>
 <%= form_tag({controller: 'content_items', action: 'service_sign_in_options'},
              method: "post",
-             data: data_attrs) do %>
+             data: data_attrs,
+             class: 'js-service-sign-in-form') do %>
   <% legend_text = render 'govuk_publishing_components/components/title', title: @content_item.title %>
   <%= render "govuk_publishing_components/components/fieldset", legend_text: legend_text do %>
     <div class="govuk-grid-row">

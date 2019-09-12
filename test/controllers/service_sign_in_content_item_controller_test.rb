@@ -100,6 +100,25 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_template :service_sign_in
   end
 
+  test "includes _ga as a query param when redirecting if set" do
+    content_item = govuk_content_schema_example("service_sign_in", "service_sign_in")
+    link = 'https://www.horse.service.gov.uk/account?horse=brown'
+    content_item['details']['choose_sign_in']['options'][0]['url'] = link
+    content_store_has_item(content_item['base_path'], content_item)
+
+    path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
+
+    option = content_item['details']['choose_sign_in']['options'][0]
+    value = option['text'].parameterize
+
+    stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
+
+    post :service_sign_in_options, params: { path: path, _ga: "1.1111111.1111111.111111111", option: value }
+
+    assert_response :redirect
+    assert_redirected_to "https://www.horse.service.gov.uk/account?horse=brown&_ga=1.1111111.1111111.111111111"
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item['base_path'].sub(/^\//, '')
     base_path.gsub!(/\.#{locale}$/, '') if locale
