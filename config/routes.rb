@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   get "healthcheck", to: proc { [200, {}, [""]] }
 
+  # Testing guides as a single page so we redirect parts to the default page
+  get "/voting-in-the-uk/:chapter", to: redirect("/voting-in-the-uk#%{chapter}")
+
   get "*path/:variant" => "content_items#show",
       constraints: {
         variant: /print/,
