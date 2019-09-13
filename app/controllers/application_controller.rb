@@ -3,6 +3,14 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery except: :service_sign_in_options
 
+
+  if ENV["BASIC_AUTH_USERNAME"]
+    http_basic_authenticate_with(
+      name: ENV.fetch("BASIC_AUTH_USERNAME"),
+      password: ENV.fetch("BASIC_AUTH_PASSWORD")
+    )
+  end
+
 private
 
   def content_item_path
