@@ -34,7 +34,7 @@ class ContentItemsController < ApplicationController
         return
       end
 
-      redirect_to selected[:url]
+      redirect_to service_url(selected[:url])
     end
   end
 
@@ -124,6 +124,16 @@ private
   def set_expiry
     expires_in(@content_item.cache_control_max_age(request.format),
                public: @content_item.cache_control_public?)
+  end
+
+  def service_url(original_url)
+    ga_param = params[:_ga]
+    return original_url if ga_param.nil?
+
+    url = URI.parse(original_url)
+    new_query_ar = URI.decode_www_form(url.query || '') << ["_ga", ga_param]
+    url.query = URI.encode_www_form(new_query_ar)
+    url.to_s
   end
 
   def with_locale
