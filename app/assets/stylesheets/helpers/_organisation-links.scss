@@ -1,7 +1,13 @@
 @mixin organisation-links {
   @each $organisation in $all-organisation-brand-colours {
-    .#{nth($organisation, 1)}-brand-colour a {
-      color: nth($organisation, 3);
+    .#{nth($organisation, 1)}-brand-colour {
+      a {
+        color: nth($organisation, 3);
+
+        &:focus {
+          color: $govuk-focus-text-colour;
+        }
+      }
     }
   }
 }
