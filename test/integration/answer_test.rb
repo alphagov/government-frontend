@@ -20,4 +20,11 @@ class AnswerTest < ActionDispatch::IntegrationTest
       assert page.has_css?('.gem-c-related-navigation__section-link--other[href="' + first_related_link["url"] + '"]', text: first_related_link["title"])
     end
   end
+
+  test "renders FAQ structured data" do
+    setup_and_visit_content_item('answer')
+    faq_schema = find_structured_data(page, "FAQPage")
+
+    assert_equal faq_schema["headline"], @content_item['title']
+  end
 end
