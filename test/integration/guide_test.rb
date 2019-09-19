@@ -83,24 +83,18 @@ class GuideTest < ActionDispatch::IntegrationTest
     schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
     schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
 
-    article_schema = schemas.detect { |schema| schema["@type"] == "Article" }
-    assert_nil article_schema
-
-    qa_page_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
-    assert_equal qa_page_schema["headline"], @content_item['title']
+    faq_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
+    assert_equal faq_schema["headline"], @content_item['title']
   end
 
-  test "guide chapters show the article schema" do
+  test "guide chapters show the faq schema" do
     setup_and_visit_part_in_guide
 
     schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
     schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
 
     faq_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
-    assert_nil faq_schema
-
-    article_schema = schemas.detect { |schema| schema["@type"] == "Article" }
-    assert_equal article_schema["headline"], @content_item['title']
+    assert_equal faq_schema["headline"], @content_item['title']
   end
 
   def setup_and_visit_part_in_guide

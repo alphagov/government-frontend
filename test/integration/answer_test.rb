@@ -20,4 +20,14 @@ class AnswerTest < ActionDispatch::IntegrationTest
       assert page.has_css?('.gem-c-related-navigation__section-link--other[href="' + first_related_link["url"] + '"]', text: first_related_link["title"])
     end
   end
+
+  test "renders FAQ structured data" do
+    setup_and_visit_content_item('answer')
+
+    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
+    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
+
+    faq_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
+    assert_equal faq_schema["headline"], @content_item['title']
+  end
 end
