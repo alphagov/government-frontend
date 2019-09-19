@@ -2,7 +2,7 @@
   <%= machine_readable_metadata(
     schema: :faq,
     canonical_url: @content_item.canonical_url,
-    body: @content_item.has_valid_part? ? @content_item.current_part_body : nil
+    body: @content_item.has_parts? ? @content_item.current_part_body : nil
   ) %>
 <% end %>
 
