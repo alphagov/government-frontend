@@ -79,21 +79,15 @@ class GuideTest < ActionDispatch::IntegrationTest
 
   test "guides show the faq page schema" do
     setup_and_visit_content_item('guide')
+    faq_schema = find_structured_data(page, "FAQPage")
 
-    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
-    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
-
-    faq_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
     assert_equal faq_schema["headline"], @content_item['title']
   end
 
   test "guide chapters show the faq schema" do
     setup_and_visit_part_in_guide
+    faq_schema = find_structured_data(page, "FAQPage")
 
-    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
-    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
-
-    faq_schema = schemas.detect { |schema| schema["@type"] == "FAQPage" }
     assert_equal faq_schema["headline"], @content_item['title']
   end
 
