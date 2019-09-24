@@ -35,8 +35,8 @@ module ContentItem
   private
 
     def extract_headings_with_ids
-      headings = parsed_body.css('h2').map do |heading|
-        id = heading.attribute('id')
+      headings = parsed_body.css("h2").map do |heading|
+        id = heading.attribute("id")
         { text: strip_trailing_colons(heading.text), id: id.value } if id
       end
       headings.compact
@@ -48,10 +48,10 @@ module ContentItem
 
     def first_item_content
       element = first_item
-      first_item_text = ''
+      first_item_text = ""
       allowed_elements = %w(p ul ol)
 
-      until element.name == 'h2'
+      until element.name == "h2"
         first_item_text += element.text if element.name.in?(allowed_elements)
         element = element.next_element
         break if element.nil?
@@ -70,8 +70,8 @@ module ContentItem
     def find_first_table
       element = first_item
 
-      until element.name == 'h2' do
-        return element if element.name == 'table'
+      until element.name == "h2" do
+        return element if element.name == "table"
         element = element.next_element
         break if element.nil?
       end
@@ -79,14 +79,14 @@ module ContentItem
 
     def first_item_table_rows
       @table ||= find_first_table
-      @table.present? ? @table.css('tr').count : 0
+      @table.present? ? @table.css("tr").count : 0
     end
 
     def first_item_has_image?
       element = first_item
 
-      until element.name == 'h2'
-        return true if element.name == 'div' && element['class'] == 'img'
+      until element.name == "h2"
+        return true if element.name == "div" && element["class"] == "img"
         element = element.next_element
         return false if element.nil?
       end
@@ -105,7 +105,7 @@ module ContentItem
     end
 
     def first_item
-      parsed_body.css('h2').first.try(:next_element)
+      parsed_body.css("h2").first.try(:next_element)
     end
 
     def no_first_item?

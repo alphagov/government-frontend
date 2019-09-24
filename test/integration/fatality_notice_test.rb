@@ -1,8 +1,8 @@
-require 'test_helper'
+require "test_helper"
 
 class FatalityNoticeTest < ActionDispatch::IntegrationTest
   test "typical fatality notice" do
-    setup_and_visit_content_item('fatality_notice')
+    setup_and_visit_content_item("fatality_notice")
 
     assert_has_component_government_navigation_active("News and communications")
 
@@ -37,7 +37,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
     assert(
       page.has_css?("img[src*=ministry-of-defence-crest][alt='Ministry of Defence crest']"),
-      'should have image with ministry-of-defence source with alt text'
+      "should have image with ministry-of-defence source with alt text"
     )
 
     assert page.has_text?("Colley served nearly all of his military and administrative career in British South Africa, but he played a significant part in the Second Anglo-Afghan War as military secretary and then private secretary to the governor-general of India, Lord Lytton. The war began in November 1878 and ended in May 1879 with the Treaty of Gandamak.")
@@ -59,7 +59,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
   end
 
   test "fatality notice with minister" do
-    setup_and_visit_content_item('fatality_notice_with_minister')
+    setup_and_visit_content_item("fatality_notice_with_minister")
     assert_has_publisher_metadata_other(
       "From": {
         "Ministry of Defence": "/government/organisations/ministry-of-defence",
@@ -69,7 +69,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
   end
 
   test "fatality notice with withdrawn notice" do
-    setup_and_visit_content_item('withdrawn_fatality_notice')
+    setup_and_visit_content_item("withdrawn_fatality_notice")
 
     assert page.has_title?(
       "[Withdrawn] Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK"

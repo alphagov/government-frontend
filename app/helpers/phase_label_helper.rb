@@ -4,7 +4,7 @@ module PhaseLabelHelper
       locals = {}
       locals[:message] = message if message.present?
 
-      render 'govuk_publishing_components/components/phase_banner', locals.merge(phase: presented_object.phase)
+      render "govuk_publishing_components/components/phase_banner", locals.merge(phase: presented_object.phase)
     end
   end
 end

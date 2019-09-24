@@ -1,4 +1,4 @@
-require 'component_test_helper'
+require "component_test_helper"
 
 class ImportantMetadataTest < ComponentTestCase
   def component_name
@@ -16,7 +16,7 @@ class ImportantMetadataTest < ComponentTestCase
 
   test "renders a title when a title is provided" do
     render_component(
-      title: 'The release date has been changed',
+      title: "The release date has been changed",
       items: {
       "Release Date": "14 October 2016"
       }

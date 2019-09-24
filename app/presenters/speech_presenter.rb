@@ -8,10 +8,10 @@ class SpeechPresenter < ContentItemPresenter
   include ContentItem::NewsImage
 
   def delivery_type
-    if document_type == 'authored_article'
-      'Written on'
+    if document_type == "authored_article"
+      "Written on"
     else
-      'Delivered on'
+      "Delivered on"
     end
   end
 

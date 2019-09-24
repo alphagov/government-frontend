@@ -1,4 +1,4 @@
-require 'rest-client'
+require "rest-client"
 require "#{Rails.root}/lib/helpers/wraith_config_helper.rb"
 require "#{Rails.root}/lib/helpers/document_types_helper.rb"
 

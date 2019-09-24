@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class WorkingGroupTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
@@ -6,7 +6,7 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
   end
 
   test "working groups" do
-    setup_and_visit_content_item('long')
+    setup_and_visit_content_item("long")
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert page.has_text?("Contact details")
@@ -24,7 +24,7 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
   end
 
   test "with_policies" do
-    setup_and_visit_content_item('with_policies')
+    setup_and_visit_content_item("with_policies")
 
     policy = @content_item["links"]["policies"][0]
     assert page.has_text?("Policies")

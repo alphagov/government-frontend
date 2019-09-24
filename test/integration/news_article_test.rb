@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class NewsArticleTest < ActionDispatch::IntegrationTest
   test "news article renders title, description and body" do

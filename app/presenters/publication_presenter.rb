@@ -9,7 +9,7 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def documents
-    documents_list.join('')
+    documents_list.join("")
   end
 
   def documents_count

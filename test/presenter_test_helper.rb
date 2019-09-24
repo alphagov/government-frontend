@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class PresenterTestCase < ActiveSupport::TestCase
   def schema_name

@@ -1,8 +1,8 @@
-require 'test_helper'
+require "test_helper"
 
 class SpeechTest < ActionDispatch::IntegrationTest
   test "renders title, description and body" do
-    setup_and_visit_content_item('speech')
+    setup_and_visit_content_item("speech")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
@@ -10,15 +10,15 @@ class SpeechTest < ActionDispatch::IntegrationTest
   end
 
   test "translated speech" do
-    setup_and_visit_content_item('speech-translated')
+    setup_and_visit_content_item("speech-translated")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert page.has_css?('.gem-c-translation-nav')
+    assert page.has_css?(".gem-c-translation-nav")
   end
 
   test "renders metadata and document footer, including speaker" do
-    setup_and_visit_content_item('speech')
+    setup_and_visit_content_item("speech")
 
     assert_has_publisher_metadata(
       published: "Published 8 March 2016",

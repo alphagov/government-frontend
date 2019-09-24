@@ -27,6 +27,6 @@ private
   end
 
   def related_guides_title
-    I18n.t('detailed_guide.related_guides')
+    I18n.t("detailed_guide.related_guides")
   end
 end

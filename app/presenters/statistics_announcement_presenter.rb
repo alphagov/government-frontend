@@ -37,7 +37,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   end
 
   def national_statistics?
-    content_item["details"]["format_sub_type"] == 'national'
+    content_item["details"]["format_sub_type"] == "national"
   end
 
   def cancellation_date

@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class GoneHelperTest < ActionView::TestCase
   test "it renders a link to the full url" do

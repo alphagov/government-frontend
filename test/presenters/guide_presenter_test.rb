@@ -1,4 +1,4 @@
-require 'presenter_test_helper'
+require "presenter_test_helper"
 
 class GuidePresenterTest
   class PresentedGuide < PresenterTestCase
@@ -6,18 +6,18 @@ class GuidePresenterTest
       "guide"
     end
 
-    test 'has parts' do
+    test "has parts" do
       assert presented_item.is_a?(ContentItem::Parts)
     end
 
     test "presents unique page titles for each part" do
-      assert_equal presented_item.page_title, schema_item['title']
-      schema_item['details']['parts'].each do |part|
-        assert_equal presented_item('guide', part['slug']).page_title, "#{schema_item['title']}: #{part['title']}"
+      assert_equal presented_item.page_title, schema_item["title"]
+      schema_item["details"]["parts"].each do |part|
+        assert_equal presented_item("guide", part["slug"]).page_title, "#{schema_item['title']}: #{part['title']}"
       end
     end
 
-    test 'presents withdrawn in the title for withdrawn content' do
+    test "presents withdrawn in the title for withdrawn content" do
       presented_item = presented_item(schema_name, nil, "withdrawn_notice" => { "explanation": "Withdrawn", "withdrawn_at": "2014-08-22T10:29:02+01:00" })
       assert_equal "[Withdrawn] The national curriculum", presented_item.page_title
     end
@@ -27,13 +27,13 @@ class GuidePresenterTest
     end
 
     test "presents only next navigation when first part" do
-      parts = schema_item['details']['parts']
+      parts = schema_item["details"]["parts"]
       nav = presented_item.previous_and_next_navigation
       expected_nav = {
         next_page: {
           url: "#{schema_item['base_path']}/#{parts[1]['slug']}",
           title: "Next",
-          label: parts[1]['title']
+          label: parts[1]["title"]
         }
       }
 
@@ -41,18 +41,18 @@ class GuidePresenterTest
     end
 
     test "presents previous and next navigation" do
-      parts = schema_item['details']['parts']
-      nav = presented_item('guide', parts[1]['slug']).previous_and_next_navigation
+      parts = schema_item["details"]["parts"]
+      nav = presented_item("guide", parts[1]["slug"]).previous_and_next_navigation
       expected_nav = {
         next_page: {
           url: "#{schema_item['base_path']}/#{parts[2]['slug']}",
           title: "Next",
-          label: parts[2]['title']
+          label: parts[2]["title"]
         },
         previous_page: {
-          url: schema_item['base_path'],
+          url: schema_item["base_path"],
           title: "Previous",
-          label: parts[0]['title']
+          label: parts[0]["title"]
         }
       }
 
@@ -60,13 +60,13 @@ class GuidePresenterTest
     end
 
     test "presents only previous navigation when last part" do
-      parts = schema_item['details']['parts']
-      nav = presented_item('guide', parts.last['slug']).previous_and_next_navigation
+      parts = schema_item["details"]["parts"]
+      nav = presented_item("guide", parts.last["slug"]).previous_and_next_navigation
       expected_nav = {
         previous_page: {
           url: "#{schema_item['base_path']}/#{parts[-2]['slug']}",
           title: "Previous",
-          label: parts[-2]['title']
+          label: parts[-2]["title"]
         }
       }
 
@@ -74,26 +74,26 @@ class GuidePresenterTest
     end
 
     test "presents no navigation when no other parts" do
-      nav = presented_item('single-page-guide').previous_and_next_navigation
+      nav = presented_item("single-page-guide").previous_and_next_navigation
       assert_equal nav, {}
     end
 
     test "sends an error notification for guide with no parts" do
       GovukError.expects(:notify).with(
-        'Guide with no parts',
-        extra: { error_message: 'Guide rendered without any parts at /correct-marriage-registration' }
+        "Guide with no parts",
+        extra: { error_message: "Guide rendered without any parts at /correct-marriage-registration" }
       )
 
-      presented_item('no-part-guide').has_parts?
+      presented_item("no-part-guide").has_parts?
     end
 
     test "presents access tokens in part links when provided" do
-      presented = presented_item('guide')
-      presented.draft_access_token = 'some_token'
-      expected_param = '?token=some_token'
+      presented = presented_item("guide")
+      presented.draft_access_token = "some_token"
+      expected_param = "?token=some_token"
 
       presented.parts.each do |part|
-        assert part['full_path'].ends_with?(expected_param)
+        assert part["full_path"].ends_with?(expected_param)
       end
 
       presented.parts_navigation.flatten.each_with_index do |link, i|

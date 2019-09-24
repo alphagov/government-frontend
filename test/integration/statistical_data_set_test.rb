@@ -1,8 +1,8 @@
-require 'test_helper'
+require "test_helper"
 
 class StatisticalDataSetTest < ActionDispatch::IntegrationTest
   test "renders title, description and body" do
-    setup_and_visit_content_item('statistical_data_set')
+    setup_and_visit_content_item("statistical_data_set")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
@@ -10,7 +10,7 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
   end
 
   test "renders metadata and document footer" do
-    setup_and_visit_content_item('statistical_data_set')
+    setup_and_visit_content_item("statistical_data_set")
     assert_has_publisher_metadata(
       published: "Published 13 December 2012",
       metadata: {
@@ -23,7 +23,7 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
   test "renders withdrawn notification" do
     setup_and_visit_content_item("statistical_data_set_withdrawn")
 
-    assert page.has_css?('title', text: "[Withdrawn]", visible: false)
+    assert page.has_css?("title", text: "[Withdrawn]", visible: false)
 
     withdrawn_at = @content_item["withdrawn_notice"]["withdrawn_at"]
 
@@ -35,15 +35,15 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
   end
 
   test "historically political statistical data set" do
-    setup_and_visit_content_item('statistical_data_set_political')
+    setup_and_visit_content_item("statistical_data_set_political")
 
     within ".app-c-banner" do
-      assert page.has_text?('This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
+      assert page.has_text?("This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
     end
   end
 
   test "renders with contents list" do
-    setup_and_visit_content_item('statistical_data_set')
+    setup_and_visit_content_item("statistical_data_set")
 
     assert_has_contents_list([
       { text: "Olympics", id: "olympics" },

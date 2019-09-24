@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 module ServiceSignIn
   class CreateNewAccount < ActionDispatch::IntegrationTest
@@ -20,7 +20,7 @@ module ServiceSignIn
     test "page renders correctly" do
       setup_and_visit_create_new_account_page
 
-      assert page.has_css?("title", text: 'Create an account - GOV.UK', visible: false)
+      assert page.has_css?("title", text: "Create an account - GOV.UK", visible: false)
 
       assert_has_component_title "Create an account"
 
@@ -30,7 +30,7 @@ module ServiceSignIn
 
       assert page.has_css?(
         '.gem-c-back-link[href="/log-in-file-self-assessment-tax-return/sign-in/choose-sign-in"]',
-        text: 'Back'
+        text: "Back"
       )
     end
 

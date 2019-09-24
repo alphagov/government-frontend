@@ -1,4 +1,4 @@
-require 'gds_api/content_store'
+require "gds_api/content_store"
 
 module Services
   def self.content_store

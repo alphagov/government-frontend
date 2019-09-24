@@ -6,6 +6,6 @@ module TypographyHelper
   end
 
   def strip_trailing_colons(text)
-    text.gsub(/\:$/, '')
+    text.gsub(/\:$/, "")
   end
 end

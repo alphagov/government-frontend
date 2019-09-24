@@ -1,4 +1,4 @@
-require 'presenter_test_helper'
+require "presenter_test_helper"
 
 class TravelAdvicePresenterTest
   class PresentedTravelAdvice < PresenterTestCase
@@ -6,7 +6,7 @@ class TravelAdvicePresenterTest
       "travel_advice"
     end
 
-    test 'has parts' do
+    test "has parts" do
       assert presented_item("full-country").is_a?(ContentItem::Parts)
     end
 
@@ -17,33 +17,33 @@ class TravelAdvicePresenterTest
 
     test "part slug set to last segment of requested content item path when content item has parts" do
       example = schema_item("full-country")
-      first_part = example['details']['parts'].first
-      presented = presented_item("full-country", first_part['slug'])
+      first_part = example["details"]["parts"].first
+      presented = presented_item("full-country", first_part["slug"])
 
       assert presented.requesting_a_part?
-      assert_equal presented.part_slug, first_part['slug']
+      assert_equal presented.part_slug, first_part["slug"]
       assert presented.has_valid_part?
     end
 
     test "knows when an invalid part has been requested" do
-      presented = presented_item("full-country", 'not-a-valid-part')
+      presented = presented_item("full-country", "not-a-valid-part")
 
       assert presented.requesting_a_part?
-      assert_equal presented.part_slug, 'not-a-valid-part'
+      assert_equal presented.part_slug, "not-a-valid-part"
       refute presented.has_valid_part?
     end
 
     test "presents unique titles for each part" do
       example = schema_item("full-country")
       presented = presented_item("full-country")
-      assert_equal example['title'], presented.page_title
+      assert_equal example["title"], presented.page_title
 
-      first_part = example['details']['parts'].first
-      presented_part = presented_item("full-country", first_part['slug'])
+      first_part = example["details"]["parts"].first
+      presented_part = presented_item("full-country", first_part["slug"])
       assert_equal "#{first_part['title']} - #{example['title']}", presented_part.page_title
     end
 
-    test 'presents withdrawn in the title for withdrawn content' do
+    test "presents withdrawn in the title for withdrawn content" do
       presented_item = presented_item("full-country", nil, "withdrawn_notice" => { "explanation": "Withdrawn", "withdrawn_at": "2014-08-22T10:29:02+01:00" })
       assert_equal "[Withdrawn] Albania travel advice", presented_item.page_title
     end
@@ -53,8 +53,8 @@ class TravelAdvicePresenterTest
       presented = presented_item("full-country")
 
       assert presented.is_summary?
-      assert_equal 'Summary', presented.current_part_title
-      assert_equal example['details']['summary'], presented.current_part_body
+      assert_equal "Summary", presented.current_part_title
+      assert_equal example["details"]["summary"], presented.current_part_body
     end
 
     test "presents the current part when a part slug is provided" do
@@ -64,12 +64,12 @@ class TravelAdvicePresenterTest
 
       refute presented.is_summary?
       assert presented.has_valid_part?
-      assert_equal first_part['title'], presented.current_part_title
-      assert_equal first_part['body'], presented.current_part_body
+      assert_equal first_part["title"], presented.current_part_title
+      assert_equal first_part["body"], presented.current_part_body
     end
 
     test "marks parts not in the content item as invalid" do
-      example_part_slugs = schema_item("full-country")["details"]["parts"].map { |part| part['slug'] }
+      example_part_slugs = schema_item("full-country")["details"]["parts"].map { |part| part["slug"] }
       presented = presented_item("full-country", "not-a-valid-part")
 
       refute example_part_slugs.include?("not-a-valid-part")
@@ -78,7 +78,7 @@ class TravelAdvicePresenterTest
 
     test "the summary is included as the first navigation item" do
       first_nav_item = presented_item("full-country").parts_navigation.first.first
-      assert_equal 'Summary', first_nav_item
+      assert_equal "Summary", first_nav_item
     end
 
     test "navigation items are presented as trackable links unless they are the current part" do
@@ -97,7 +97,7 @@ class TravelAdvicePresenterTest
                    "data-track-label=\"/foreign-travel-advice/albania\" "\
                    "data-track-options=\"{&quot;dimension29&quot;:&quot;Summary&quot;}\" "\
                    "href=\"/foreign-travel-advice/albania\">Summary</a>"
-      assert_equal current_part_nav_item, current_part['title']
+      assert_equal current_part_nav_item, current_part["title"]
       assert_equal another_part_nav_item,
                    "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 3\" "\
                    "data-track-label=\"/foreign-travel-advice/albania/terrorism\" "\
@@ -110,8 +110,8 @@ class TravelAdvicePresenterTest
       part_links = presented_item("full-country").parts_navigation.flatten
 
       assert_equal parts.size + 1, part_links.size
-      assert part_links[1].include?(parts[0]['title'])
-      assert part_links[1].include?(parts[0]['slug'])
+      assert part_links[1].include?(parts[0]["title"])
+      assert part_links[1].include?(parts[0]["slug"])
     end
 
     test "part navigation is in one group when 3 or fewer navigation items (2 parts + summary)" do
@@ -149,14 +149,14 @@ class TravelAdvicePresenterTest
     end
 
     test "presents only next navigation when on the summary" do
-      example = schema_item('full-country')
-      parts = example['details']['parts']
-      nav = presented_item('full-country').previous_and_next_navigation
+      example = schema_item("full-country")
+      parts = example["details"]["parts"]
+      nav = presented_item("full-country").previous_and_next_navigation
       expected_nav = {
         next_page: {
           url: "#{example['base_path']}/#{parts[0]['slug']}",
           title: "Next",
-          label: parts[0]['title']
+          label: parts[0]["title"]
         }
       }
 
@@ -164,19 +164,19 @@ class TravelAdvicePresenterTest
     end
 
     test "presents previous and next navigation" do
-      example = schema_item('full-country')
-      parts = example['details']['parts']
-      nav = presented_item('full-country', parts[0]['slug']).previous_and_next_navigation
+      example = schema_item("full-country")
+      parts = example["details"]["parts"]
+      nav = presented_item("full-country", parts[0]["slug"]).previous_and_next_navigation
       expected_nav = {
         next_page: {
           url: "#{example['base_path']}/#{parts[1]['slug']}",
           title: "Next",
-          label: parts[1]['title']
+          label: parts[1]["title"]
         },
         previous_page: {
-          url: example['base_path'],
+          url: example["base_path"],
           title: "Previous",
-          label: 'Summary'
+          label: "Summary"
         }
       }
 
@@ -184,14 +184,14 @@ class TravelAdvicePresenterTest
     end
 
     test "presents only previous navigation when last part" do
-      example = schema_item('full-country')
-      parts = example['details']['parts']
-      nav = presented_item('full-country', parts.last['slug']).previous_and_next_navigation
+      example = schema_item("full-country")
+      parts = example["details"]["parts"]
+      nav = presented_item("full-country", parts.last["slug"]).previous_and_next_navigation
       expected_nav = {
         previous_page: {
           url: "#{example['base_path']}/#{parts[-2]['slug']}",
           title: "Previous",
-          label: parts[-2]['title']
+          label: parts[-2]["title"]
         }
       }
 
@@ -201,8 +201,8 @@ class TravelAdvicePresenterTest
     test "presents alert statuses" do
       example = schema_item("full-country")
       example["details"]["alert_status"] = %w{avoid_all_but_essential_travel_to_parts avoid_all_travel_to_parts}
-      assert present_example(example).alert_status.include?('advise against all but essential travel')
-      assert present_example(example).alert_status.include?('advise against all travel to parts')
+      assert present_example(example).alert_status.include?("advise against all but essential travel")
+      assert present_example(example).alert_status.include?("advise against all travel to parts")
     end
 
     test "metadata uses today for 'Still current at'" do
@@ -256,8 +256,8 @@ class TravelAdvicePresenterTest
 
     test "handles travel advice without maps" do
       example = schema_item("full-country")
-      example['details'].delete('image')
-      example['details'].delete('document')
+      example["details"].delete("image")
+      example["details"].delete("document")
       presented = presented_item("full-country", nil, example)
 
       assert_nil presented.map
@@ -266,7 +266,7 @@ class TravelAdvicePresenterTest
 
     test "formats change description for an atom feed" do
       example = schema_item("full-country")
-      example['details']['change_description'] = 'Test<br>XML'
+      example["details"]["change_description"] = "Test<br>XML"
       assert_equal "<p>Test&lt;br&gt;XML</p>", present_example(example).atom_change_description
     end
 
@@ -276,8 +276,8 @@ class TravelAdvicePresenterTest
       summary = parts.shift
 
       parts.each_with_index do |part, i|
-        assert_equal example_parts[i]['body'], part['body']
-        assert_equal example_parts[i]['slug'], part['slug']
+        assert_equal example_parts[i]["body"], part["body"]
+        assert_equal example_parts[i]["slug"], part["slug"]
       end
       assert_equal "Summary", summary["title"]
       assert_equal schema_item("full-country")["details"]["summary"], summary["body"]

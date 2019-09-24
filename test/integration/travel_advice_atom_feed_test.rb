@@ -1,18 +1,18 @@
-require 'test_helper'
+require "test_helper"
 
-require 'nokogiri/html'
-require 'open-uri'
-require 'rss'
+require "nokogiri/html"
+require "open-uri"
+require "rss"
 
 class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
   setup do
-    setup_and_parse_travel_advice_atom_feed('full-country')
-    @base_path = @content_item['base_path']
+    setup_and_parse_travel_advice_atom_feed("full-country")
+    @base_path = @content_item["base_path"]
     @updated_at = Time.parse(@content_item["public_updated_at"])
   end
 
   test "it sets the alternative link correctly" do
-    alternate_link = @feed.links.find { |link| link.rel == 'alternate' }
+    alternate_link = @feed.links.find { |link| link.rel == "alternate" }
     assert alternate_link.href.ends_with?(@base_path)
   end
 
@@ -23,12 +23,12 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
 
   test "it sets the entry's title correctly" do
     title = @feed.items.first.title.content
-    assert_equal title, @content_item['title']
+    assert_equal title, @content_item["title"]
   end
 
   test "it sets the entry's summary correctly" do
     summary = Nokogiri::HTML::fragment(@feed.items.first.summary.content)
-    assert_equal summary.text.strip, @content_item['details']['change_description'].strip
+    assert_equal summary.text.strip, @content_item["details"]["change_description"].strip
   end
 
   test "it sets the entry's updated correctly" do
@@ -37,7 +37,7 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
   end
 
   def setup_and_parse_travel_advice_atom_feed(name)
-    @content_item = get_content_example_by_schema_and_name('travel_advice', name)
+    @content_item = get_content_example_by_schema_and_name("travel_advice", name)
 
     uri = URI::HTTP.build(
       host: Capybara.current_session.server.host,

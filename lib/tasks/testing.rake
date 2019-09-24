@@ -1,4 +1,4 @@
-require 'rake/testtask'
+require "rake/testtask"
 
 namespace :test do
   Rake::TestTask.new(presenters: "test:prepare") do |t|

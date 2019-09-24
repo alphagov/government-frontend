@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class StatisticsAnnouncementHelperTest < ActionView::TestCase
   test "returns 'on' if the date is an exact format" do

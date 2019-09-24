@@ -1,13 +1,13 @@
-require 'test_helper'
+require "test_helper"
 
 class GovukContentSchemasTest < ActionDispatch::IntegrationTest
   include GovukContentSchemaExamples
 
   all_examples_for_supported_schemas.each do |content_item|
     test "can successfully render #{content_item['base_path']} schema example" do
-      content_store_has_item(content_item['base_path'], content_item)
+      content_store_has_item(content_item["base_path"], content_item)
 
-      get content_item['base_path']
+      get content_item["base_path"]
 
       assert_response :success
     end

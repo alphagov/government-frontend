@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class AnswerTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
@@ -6,13 +6,13 @@ class AnswerTest < ActionDispatch::IntegrationTest
   end
 
   test "renders title and body" do
-    setup_and_visit_content_item('answer')
+    setup_and_visit_content_item("answer")
     assert page.has_text?(@content_item["title"])
     assert page.has_text?("Bydd angen cod cychwyn arnoch i ddechrau defnyddio’r holl wasanaethau hyn, ac eithrio TAW. Anfonir hwn atoch cyn pen saith diwrnod gwaith ar ôl i chi gofrestru. Os ydych chi’n byw dramor, gall gymryd hyd at 21 diwrnod i gyrraedd.")
   end
 
   test "related links are rendered" do
-    setup_and_visit_content_item('answer')
+    setup_and_visit_content_item("answer")
 
     first_related_link = @content_item["details"]["external_related_links"].first
 
@@ -22,10 +22,10 @@ class AnswerTest < ActionDispatch::IntegrationTest
   end
 
   test "renders FAQ structured data" do
-    setup_and_visit_content_item('answer')
+    setup_and_visit_content_item("answer")
     faq_schema = find_structured_data(page, "FAQPage")
 
-    assert_equal faq_schema["headline"], @content_item['title']
+    assert_equal faq_schema["headline"], @content_item["title"]
     assert_not_equal faq_schema["mainEntity"], []
   end
 end

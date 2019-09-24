@@ -55,7 +55,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def final_outcome_documents
-    final_outcome_documents_list.join('')
+    final_outcome_documents_list.join("")
   end
 
   def public_feedback_documents?
@@ -63,7 +63,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def public_feedback_documents
-    public_feedback_documents_list.join('')
+    public_feedback_documents_list.join("")
   end
 
   def public_feedback_detail
@@ -83,7 +83,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def documents
-    documents_list.join('')
+    documents_list.join("")
   end
 
   def ways_to_respond?
@@ -127,7 +127,7 @@ private
       # 12am on 10 January becomes 11:59pm on 9 January
       time = time - 1.second if time.strftime(time_format) == "12:00am"
     end
-    I18n.l(time, format: "#{time_format} on #{date_format}").gsub(':00', '').gsub('12pm', 'midday').gsub('12am on ', '').strip
+    I18n.l(time, format: "#{time_format} on #{date_format}").gsub(":00", "").gsub("12pm", "midday").gsub("12am on ", "").strip
   end
 
   def ways_to_respond

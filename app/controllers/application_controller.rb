@@ -17,8 +17,8 @@ private
     path_and_optional_locale = params
                                  .values_at(:path, :locale)
                                  .compact
-                                 .join('.')
+                                 .join(".")
 
-    '/' + URI.encode(path_and_optional_locale) # rubocop:disable Lint/UriEscapeUnescape
+    "/" + URI.encode(path_and_optional_locale) # rubocop:disable Lint/UriEscapeUnescape
   end
 end

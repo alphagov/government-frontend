@@ -1,35 +1,35 @@
-require 'test_helper'
+require "test_helper"
 
 class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "random but valid specialist documents do not error" do
-    setup_and_visit_random_content_item(document_type: 'aaib_report')
-    setup_and_visit_random_content_item(document_type: 'raib_report')
-    setup_and_visit_random_content_item(document_type: 'tax_tribunal_decision')
-    setup_and_visit_random_content_item(document_type: 'cma_case')
+    setup_and_visit_random_content_item(document_type: "aaib_report")
+    setup_and_visit_random_content_item(document_type: "raib_report")
+    setup_and_visit_random_content_item(document_type: "tax_tribunal_decision")
+    setup_and_visit_random_content_item(document_type: "cma_case")
   end
 
   test "specialist document subtypes do not error" do
-    setup_and_visit_content_item('aaib-reports')
-    setup_and_visit_content_item('asylum-support-decision')
-    setup_and_visit_content_item('business-finance-support-scheme')
-    setup_and_visit_content_item('cma-cases')
-    setup_and_visit_content_item('countryside-stewardship-grants')
-    setup_and_visit_content_item('drug-safety-update')
-    setup_and_visit_content_item('employment-appeal-tribunal-decision')
-    setup_and_visit_content_item('employment-tribunal-decision')
-    setup_and_visit_content_item('european-structural-investment-funds')
-    setup_and_visit_content_item('eu-withdrawal-act-2018-statutory-instruments')
-    setup_and_visit_content_item('international-development-funding')
-    setup_and_visit_content_item('maib-reports')
-    setup_and_visit_content_item('raib-reports')
-    setup_and_visit_content_item('residential-property-tribunal-decision')
-    setup_and_visit_content_item('service-standard-report')
-    setup_and_visit_content_item('tax-tribunal-decision')
-    setup_and_visit_content_item('utaac-decision')
+    setup_and_visit_content_item("aaib-reports")
+    setup_and_visit_content_item("asylum-support-decision")
+    setup_and_visit_content_item("business-finance-support-scheme")
+    setup_and_visit_content_item("cma-cases")
+    setup_and_visit_content_item("countryside-stewardship-grants")
+    setup_and_visit_content_item("drug-safety-update")
+    setup_and_visit_content_item("employment-appeal-tribunal-decision")
+    setup_and_visit_content_item("employment-tribunal-decision")
+    setup_and_visit_content_item("european-structural-investment-funds")
+    setup_and_visit_content_item("eu-withdrawal-act-2018-statutory-instruments")
+    setup_and_visit_content_item("international-development-funding")
+    setup_and_visit_content_item("maib-reports")
+    setup_and_visit_content_item("raib-reports")
+    setup_and_visit_content_item("residential-property-tribunal-decision")
+    setup_and_visit_content_item("service-standard-report")
+    setup_and_visit_content_item("tax-tribunal-decision")
+    setup_and_visit_content_item("utaac-decision")
   end
 
   test "renders title, description and body" do
-    setup_and_visit_content_item('aaib-reports')
+    setup_and_visit_content_item("aaib-reports")
 
     assert_has_component_title(@content_item["title"].strip)
     assert page.has_text?(@content_item["description"])
@@ -37,7 +37,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   end
 
   test "returns example for residential tribunal decision" do
-    setup_and_visit_content_item('residential-property-tribunal-decision')
+    setup_and_visit_content_item("residential-property-tribunal-decision")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
@@ -45,7 +45,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   end
 
   test "renders from in publisher metadata" do
-    setup_and_visit_content_item('aaib-reports')
+    setup_and_visit_content_item("aaib-reports")
 
     assert_has_publisher_metadata_other(
       "From": {
@@ -56,13 +56,13 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   end
 
   test "renders published and updated in metadata" do
-    setup_and_visit_content_item('countryside-stewardship-grants')
+    setup_and_visit_content_item("countryside-stewardship-grants")
 
     assert_has_published_dates("Published 2 April 2015", "Last updated 29 March 2016")
   end
 
   test "renders change history in reverse chronological order" do
-    setup_and_visit_content_item('countryside-stewardship-grants')
+    setup_and_visit_content_item("countryside-stewardship-grants")
 
     within(".app-c-published-dates__change-history") do
       assert_match @content_item["details"]["change_history"].last["note"],
@@ -77,7 +77,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   end
 
   test "renders text facets correctly" do
-    setup_and_visit_content_item('countryside-stewardship-grants')
+    setup_and_visit_content_item("countryside-stewardship-grants")
 
     assert_has_important_metadata(
       "Grant type": { "Option": "/countryside-stewardship-grants?grant_type%5B%5D=option" },
@@ -96,37 +96,37 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   end
 
   test "renders date facets correctly" do
-    setup_and_visit_content_item('drug-device-alerts')
+    setup_and_visit_content_item("drug-device-alerts")
 
     assert_has_important_metadata("Issued": "6 July 2015")
     assert_footer_has_published_dates("Published 6 July 2015")
   end
 
   test "renders when no facet or finder" do
-    setup_and_visit_content_item('business-finance-support-scheme')
+    setup_and_visit_content_item("business-finance-support-scheme")
 
     assert_has_published_dates("Published 9 July 2015")
   end
 
   test "renders a nested contents list" do
-    setup_and_visit_content_item('countryside-stewardship-grants')
+    setup_and_visit_content_item("countryside-stewardship-grants")
 
     assert page.has_css?("#contents .gem-c-contents-list")
     assert page.has_css?(%(#contents .app-c-contents-list-with-body__link-wrapper
                           .app-c-contents-list-with-body__link-container a.app-c-back-to-top))
 
     within ".gem-c-contents-list" do
-      @content_item['details']['headers'].each do |heading|
+      @content_item["details"]["headers"].each do |heading|
         assert_nested_content_item(heading)
       end
     end
   end
 
   test "renders a nested contents list with level 2 and 3 headings only" do
-    setup_and_visit_content_item('drug-device-alerts')
+    setup_and_visit_content_item("drug-device-alerts")
 
     within ".gem-c-contents-list" do
-      @content_item['details']['headers'].each do |heading|
+      @content_item["details"]["headers"].each do |heading|
         assert_nested_content_item(heading)
       end
     end
@@ -135,7 +135,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   def assert_nested_content_item(heading)
     heading_level = heading["level"]
     selector = "a[href=\"##{heading['id']}\"]"
-    text = heading["text"].gsub(/\:$/, '')
+    text = heading["text"].gsub(/\:$/, "")
 
     if heading_level < 4
       assert page.has_css?(selector), "Failed to find an element matching: #{selector}"
@@ -151,29 +151,29 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test 'renders no start button when not set' do
-    setup_and_visit_content_item('aaib-reports')
+  test "renders no start button when not set" do
+    setup_and_visit_content_item("aaib-reports")
 
-    refute page.has_css?('.gem-c-button', text: "Find out more")
+    refute page.has_css?(".gem-c-button", text: "Find out more")
   end
 
-  test 'renders start button' do
-    setup_and_visit_content_item('business-finance-support-scheme')
+  test "renders start button" do
+    setup_and_visit_content_item("business-finance-support-scheme")
 
     assert page.has_css?(".gem-c-button[href='http://www.bigissueinvest.com']", text: "Find out more")
     assert page.has_content?("on the Big Issue Invest website")
   end
 
-  test 'does not render a contents list if there are fewer than three items in the contents list' do
-    setup_and_visit_content_item('aaib-reports')
+  test "does not render a contents list if there are fewer than three items in the contents list" do
+    setup_and_visit_content_item("aaib-reports")
 
-    refute page.has_css?('#contents .gem-c-contents-list')
+    refute page.has_css?("#contents .gem-c-contents-list")
   end
 
-  test 'renders a link to statutory instruments finder' do
-    setup_and_visit_content_item('eu-withdrawal-act-2018-statutory-instruments')
+  test "renders a link to statutory instruments finder" do
+    setup_and_visit_content_item("eu-withdrawal-act-2018-statutory-instruments")
 
     assert page.has_css?("a[href='/eu-withdrawal-act-2018-statutory-instruments']",
-                         text: 'See all EU Withdrawal Act 2018 statutory instruments')
+                         text: "See all EU Withdrawal Act 2018 statutory instruments")
   end
 end

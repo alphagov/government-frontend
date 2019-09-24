@@ -3,8 +3,8 @@ class GonePresenter < ContentItemPresenter
 
   def initialize(content_item, requested_content_item_path = nil)
     super
-    @explanation = content_item['details']['explanation']
-    @alternative_path = content_item['details']['alternative_path']
+    @explanation = content_item["details"]["explanation"]
+    @alternative_path = content_item["details"]["alternative_path"]
   end
 
   def page_title

@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class ContentItemWithdrawableTest < ActiveSupport::TestCase
   def setup
@@ -11,12 +11,12 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
     I18n.locale = I18n.default_locale
   end
 
-  test 'content item is withdrawn' do
+  test "content item is withdrawn" do
     class << @withdrawable
       def content_item
         {
-          'withdrawn_notice' => {
-            'withdrawn_at' => '2016-07-12T09:47:15Z'
+          "withdrawn_notice" => {
+            "withdrawn_at" => "2016-07-12T09:47:15Z"
           }
         }
       end
@@ -25,7 +25,7 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
     assert @withdrawable.withdrawn?
   end
 
-  test 'page title has withdrawn appended if content withdrawn' do
+  test "page title has withdrawn appended if content withdrawn" do
     class << @withdrawable
       def title
         content_item["title"]
@@ -33,9 +33,9 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
 
       def content_item
         {
-          'title' => 'Proportion of residents who do any walking or cycling (at local authority level) (CW010)',
-          'withdrawn_notice' => {
-            'withdrawn_at' => '2016-07-12T09:47:15Z'
+          "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
+          "withdrawn_notice" => {
+            "withdrawn_at" => "2016-07-12T09:47:15Z"
           }
         }
       end
@@ -44,10 +44,10 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
     assert_equal @withdrawable.page_title, "[Withdrawn] Proportion of residents who do any walking or cycling (at local authority level) (CW010)"
   end
 
-  test 'notice title and description are generated correctly' do
+  test "notice title and description are generated correctly" do
     class << @withdrawable
       def schema_name
-        'news_article'
+        "news_article"
       end
 
       def display_date(date)
@@ -56,10 +56,10 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
 
       def content_item
         {
-          'title' => 'Proportion of residents who do any walking or cycling (at local authority level) (CW010)',
-          'withdrawn_notice' => {
-            'explanation' => '<div class=\'govspeak\'><p>It has been superseded by <a href=\'https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015\'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\n</div>',
-            'withdrawn_at' => '2016-07-12T09:47:15Z'
+          "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
+          "withdrawn_notice" => {
+            "explanation" => '<div class=\'govspeak\'><p>It has been superseded by <a href=\'https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015\'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\n</div>',
+            "withdrawn_at" => "2016-07-12T09:47:15Z"
           }
         }
       end
@@ -69,22 +69,22 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
     assert_equal @withdrawable.withdrawal_notice_component[:description_govspeak], "<div class='govspeak'><p>It has been superseded by <a href='https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\\n</div>"
   end
 
-  test 'notice title presents only in English, even if locale is set to another language' do
+  test "notice title presents only in English, even if locale is set to another language" do
   # This is to prevent the withdrawal notices on translated editions
   # displaying a combination of languages in their titles.
     class << @withdrawable
       def schema_name
-        'publication'
+        "publication"
       end
 
       def content_item
         {
-          'title' => 'Proportion of residents who do any walking or cycling (at local authority level) (CW010)',
-          'withdrawn_notice' => {
-            'explanation' => '<div class=\'govspeak\'><p>It has been superseded by <a href=\'https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015\'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\n</div>',
-            'withdrawn_at' => '2016-07-12T09:47:15Z'
+          "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
+          "withdrawn_notice" => {
+            "explanation" => '<div class=\'govspeak\'><p>It has been superseded by <a href=\'https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015\'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\n</div>',
+            "withdrawn_at" => "2016-07-12T09:47:15Z"
           },
-          'locale': 'cy'
+          'locale': "cy"
         }
       end
     end

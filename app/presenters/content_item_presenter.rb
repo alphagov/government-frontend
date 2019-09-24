@@ -29,7 +29,7 @@ class ContentItemPresenter
     @document_type = content_item["document_type"]
     @taxons = content_item["links"]["taxons"] if content_item["links"]
     @step_by_steps = content_item["links"]["part_of_step_navs"] if content_item["links"]
-    @part_slug = requesting_a_part? ? requested_content_item_path.split('/').last : nil
+    @part_slug = requesting_a_part? ? requested_content_item_path.split("/").last : nil
   end
 
   def requesting_a_part?
@@ -81,11 +81,11 @@ class ContentItemPresenter
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
-    I18n.l(Time.zone.parse(timestamp), format: format, locale: 'en') if timestamp
+    I18n.l(Time.zone.parse(timestamp), format: format, locale: "en") if timestamp
   end
 
   def sorted_locales(translations)
-    translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? '' : t["locale"] }
+    translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? "" : t["locale"] }
   end
 
   def mapped_locales(translations)

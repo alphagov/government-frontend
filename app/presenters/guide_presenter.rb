@@ -34,7 +34,7 @@ class GuidePresenter < ContentItemPresenter
   def parts
     if draft_access_token
       super.each do |part|
-        part['full_path'] = "#{part['full_path']}?#{draft_access_token_param}"
+        part["full_path"] = "#{part['full_path']}?#{draft_access_token_param}"
       end
     else
       super

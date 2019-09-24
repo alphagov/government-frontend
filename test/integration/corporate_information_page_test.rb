@@ -1,8 +1,8 @@
-require 'test_helper'
+require "test_helper"
 
 class CorporateInformationPageTest < ActionDispatch::IntegrationTest
   test "renders title, description and body" do
-    setup_and_visit_content_item('corporate_information_page_translated_custom_logo')
+    setup_and_visit_content_item("corporate_information_page_translated_custom_logo")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
@@ -10,7 +10,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
   end
 
   test "renders with contents list" do
-    setup_and_visit_content_item('corporate_information_page')
+    setup_and_visit_content_item("corporate_information_page")
     assert_has_contents_list([
       { text: "Our responsibilities", id: "our-responsibilities" },
       { text: "Corporate information", id: "corporate-information" },
@@ -31,7 +31,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
   end
 
   test "renders corporate information with body when present" do
-    setup_and_visit_content_item('corporate_information_page')
+    setup_and_visit_content_item("corporate_information_page")
 
     assert page.has_css?("h2#corporate-information")
     assert page.has_css?("h3#access-our-information")
@@ -43,41 +43,41 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
   end
 
   test "renders further information with body when present" do
-    setup_and_visit_content_item('corporate_information_page')
+    setup_and_visit_content_item("corporate_information_page")
 
     assert page.has_text?("Read about the types of information we routinely")
   end
 
   test "renders with organisation branding" do
-    setup_and_visit_content_item('corporate_information_page')
-    assert page.has_css?('.department-of-health-brand-colour')
+    setup_and_visit_content_item("corporate_information_page")
+    assert page.has_css?(".department-of-health-brand-colour")
   end
 
   test "includes organisation in title" do
-    setup_and_visit_content_item('corporate_information_page')
-    assert page.has_css?('title', text: 'About us - Department of Health - GOV.UK', visible: false)
+    setup_and_visit_content_item("corporate_information_page")
+    assert page.has_css?("title", text: "About us - Department of Health - GOV.UK", visible: false)
   end
 
   test "includes translations" do
-    setup_and_visit_content_item('corporate_information_page_translated_custom_logo')
-    assert page.has_css?('.gem-c-translation-nav')
+    setup_and_visit_content_item("corporate_information_page_translated_custom_logo")
+    assert page.has_css?(".gem-c-translation-nav")
   end
 
   test "renders an organisation logo" do
-    setup_and_visit_content_item('corporate_information_page')
+    setup_and_visit_content_item("corporate_information_page")
     assert_has_component_organisation_logo
   end
 
   test "renders a custom organisation logo" do
-    setup_and_visit_content_item('corporate_information_page_translated_custom_logo')
+    setup_and_visit_content_item("corporate_information_page_translated_custom_logo")
     assert_has_component_organisation_logo
   end
 
-  test 'renders a withdrawal notice on withdrawn page' do
-    content_item = GovukSchemas::Example.find('corporate_information_page', example_name: 'corporate_information_page')
-    content_item['withdrawn_notice'] = {
-      'explanation': 'This is out of date',
-      'withdrawn_at': '2014-08-09T11:39:05Z'
+  test "renders a withdrawal notice on withdrawn page" do
+    content_item = GovukSchemas::Example.find("corporate_information_page", example_name: "corporate_information_page")
+    content_item["withdrawn_notice"] = {
+      'explanation': "This is out of date",
+      'withdrawn_at': "2014-08-09T11:39:05Z"
     }
     content_store_has_item("/government/organisations/department-of-health/about", content_item.to_json)
 

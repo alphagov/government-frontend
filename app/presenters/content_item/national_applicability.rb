@@ -14,7 +14,7 @@ module ContentItem
         nations_with_alt_urls = inapplicable_nations.select { |n| n["alternative_url"].present? }
         if nations_with_alt_urls.any?
           alternate_links = nations_with_alt_urls
-            .map { |n| link_to(n['label'], n['alternative_url'], rel: :external, class: "govuk-link app-link") }
+            .map { |n| link_to(n["label"], n["alternative_url"], rel: :external, class: "govuk-link app-link") }
             .to_sentence
 
           applies_to += " (see #{translated_schema_name(nations_with_alt_urls.count)} for #{alternate_links})"
@@ -26,7 +26,7 @@ module ContentItem
 
     def important_metadata
       super.tap do |m|
-        m.merge!('Applies to' => applies_to)
+        m.merge!("Applies to" => applies_to)
       end
     end
 

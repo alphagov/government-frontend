@@ -8,8 +8,8 @@ class FeatureToggler
   def use_recommended_related_links?(content_item_links, request_headers)
     return false if content_item_links.nil?
 
-    content_item_links.fetch('ordered_related_items', []).empty? &&
-      content_item_links.fetch('ordered_related_items_overrides', []).empty? &&
+    content_item_links.fetch("ordered_related_items", []).empty? &&
+      content_item_links.fetch("ordered_related_items_overrides", []).empty? &&
       @feature_flags.feature_enabled?(FeatureFlagNames.recommended_related_links, request_headers)
   end
 end
