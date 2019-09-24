@@ -152,13 +152,13 @@ class ContentItemPartsTest < ActiveSupport::TestCase
     presenting_first_part_in_content_item
     assert_equal @parts.current_part_title, "first-title"
     assert_equal @parts.parts_navigation,
-      [[
-        "first-title",
-        "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 2\" "\
-        "data-track-label=\"/base-path/second-slug\" "\
-        "data-track-options=\"{&quot;dimension29&quot;:&quot;second-title&quot;}\" "\
-        "href=\"/base-path/second-slug\">second-title</a>",
-      ]]
+                 [[
+                   "first-title",
+                   "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 2\" "\
+                   "data-track-label=\"/base-path/second-slug\" "\
+                   "data-track-options=\"{&quot;dimension29&quot;:&quot;second-title&quot;}\" "\
+                   "href=\"/base-path/second-slug\">second-title</a>",
+                 ]]
   end
 
   test "links to the first part ignore the part's slug and use the base path" do

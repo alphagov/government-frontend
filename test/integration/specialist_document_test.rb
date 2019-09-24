@@ -66,13 +66,13 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
     within(".app-c-published-dates__change-history") do
       assert_match @content_item["details"]["change_history"].last["note"],
-        page.find(".app-c-published-dates__change-item:first-child").text
+                   page.find(".app-c-published-dates__change-item:first-child").text
 
       assert_match @content_item["details"]["change_history"].first["note"],
-        page.find(".app-c-published-dates__change-item:last-child").text
+                   page.find(".app-c-published-dates__change-item:last-child").text
 
       assert_equal all(".app-c-published-dates__change-item").size,
-        @content_item["details"]["change_history"].size
+                   @content_item["details"]["change_history"].size
     end
   end
 

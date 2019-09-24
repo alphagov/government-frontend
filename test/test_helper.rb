@@ -97,7 +97,7 @@ class ActionDispatch::IntegrationTest
   def assert_has_metadata(metadata, term_selector, definition_selector)
     metadata.each do |key, value|
       assert page.has_css?(term_selector, text: key),
-        "Metadata term '#{key}' not found"
+             "Metadata term '#{key}' not found"
 
       value = { value => nil } if value.is_a?(String)
 
