@@ -6,7 +6,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?(
       "meta[name='description'][content='Chevening Secretariat announces the Chevening/British Library Fellowship']",
-      visible: false
+      visible: false,
     )
 
     assert_has_component_title(@content_item["title"])

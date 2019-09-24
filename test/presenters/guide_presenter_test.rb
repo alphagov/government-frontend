@@ -81,7 +81,7 @@ class GuidePresenterTest
     test "sends an error notification for guide with no parts" do
       GovukError.expects(:notify).with(
         "Guide with no parts",
-        extra: { error_message: "Guide rendered without any parts at /correct-marriage-registration" }
+        extra: { error_message: "Guide rendered without any parts at /correct-marriage-registration" },
       )
 
       presented_item("no-part-guide").has_parts?
@@ -114,7 +114,7 @@ class GuidePresenterTest
 
       GuidePresenter.new(
         schema_example_content_item.merge(overrides),
-        "#{schema_example_content_item['base_path']}#{part_slug}"
+        "#{schema_example_content_item['base_path']}#{part_slug}",
       )
     end
   end

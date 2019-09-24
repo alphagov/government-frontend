@@ -84,7 +84,7 @@ private
     if parent_finder.nil?
       GovukError.notify(
         "Finder not found",
-        extra: { error_message: "Finder not found in #{base_path} content item" }
+        extra: { error_message: "Finder not found in #{base_path} content item" },
       )
     end
 
@@ -152,7 +152,7 @@ private
       else
         GovukError.notify(
           "Facet value not in list of allowed values",
-          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" }
+          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" },
         )
         value
       end

@@ -26,7 +26,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
           "Environment Agency": "/government/organisations/environment-agency",
           "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
         },
-      }
+      },
     )
 
     assert_footer_has_published_dates("Published 3 May 2016")
@@ -73,7 +73,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
           "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm",
         "Scotland": "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS",
         "Wales": "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en",
-      }
+      },
     )
   end
 end

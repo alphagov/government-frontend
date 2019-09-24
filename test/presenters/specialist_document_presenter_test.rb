@@ -102,14 +102,14 @@ class SpecialistDocumentPresenterTest
     test "should present continuation_link" do
       assert_equal(
         presented_item("business-finance-support-scheme").continuation_link,
-        "http://www.bigissueinvest.com"
+        "http://www.bigissueinvest.com",
       )
     end
 
     test "should present will_continue_on" do
       assert_equal(
         presented_item("business-finance-support-scheme").will_continue_on,
-        "on the Big Issue Invest website"
+        "on the Big Issue Invest website",
       )
     end
 
@@ -198,7 +198,7 @@ class SpecialistDocumentPresenterTest
 
       GovukError.expects(:notify).once.with(
         "Facet value not in list of allowed values",
-        extra: { error_message: "Facet value 'not-an-allowed-value' not an allowed value for facet 'Facet name' on /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item" }
+        extra: { error_message: "Facet value 'not-an-allowed-value' not an allowed value for facet 'Facet name' on /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item" },
       )
 
       presented = present_example(example)
@@ -319,7 +319,7 @@ class SpecialistDocumentPresenterTest
 
       GovukError.expects(:notify).with(
         "Finder not found",
-        extra: { error_message: "Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item" }
+        extra: { error_message: "Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item" },
       )
 
       present_example(example).important_metadata

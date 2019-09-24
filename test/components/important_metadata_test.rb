@@ -19,7 +19,7 @@ class ImportantMetadataTest < ComponentTestCase
       title: "The release date has been changed",
       items: {
       "Release Date": "14 October 2016",
-      }
+      },
     )
 
     assert_select ".app-c-important-metadata__title", text: "The release date has been changed"

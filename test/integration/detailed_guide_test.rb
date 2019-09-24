@@ -19,7 +19,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
         "From:": {
           "HM Revenue & Customs": "/government/organisations/hm-revenue-customs",
         },
-      }
+      },
     )
   end
 
@@ -57,7 +57,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert_has_important_metadata(
       'Applies to:':
-        "England, Scotland, and Wales (see guidance for Northern Ireland)"
+        "England, Scotland, and Wales (see guidance for Northern Ireland)",
     )
   end
 

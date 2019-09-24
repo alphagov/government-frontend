@@ -7,12 +7,12 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     assert_has_component_government_navigation_active("News and communications")
 
     assert page.has_title?(
-      "Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK"
+      "Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK",
     )
 
     assert page.has_css?(
       "meta[name='description'][content='It is with great sadness that the Ministry of Defence must confirm that Sir George Pomeroy Colley, died in battle in Zululand on 27 February 1881.']",
-      visible: false
+      visible: false,
     )
 
     assert page.has_content?("Operations in Zululand")
@@ -26,18 +26,18 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       history_link: true,
       metadata: {
         "From": { "Ministry of Defence": "/government/organisations/ministry-of-defence" },
-      }
+      },
     )
 
     assert_has_important_metadata(
-      "Field of operation": { "Zululand": "/government/fields-of-operation/zululand" }
+      "Field of operation": { "Zululand": "/government/fields-of-operation/zululand" },
     )
 
     assert page.has_content?("It is with great sadness that the Ministry of Defence must confirm that Sir George Pomeroy Colley, died in battle")
 
     assert(
       page.has_css?("img[src*=ministry-of-defence-crest][alt='Ministry of Defence crest']"),
-      "should have image with ministry-of-defence source with alt text"
+      "should have image with ministry-of-defence source with alt text",
     )
 
     assert page.has_text?("Colley served nearly all of his military and administrative career in British South Africa, but he played a significant part in the Second Anglo-Afghan War as military secretary and then private secretary to the governor-general of India, Lord Lytton. The war began in November 1878 and ended in May 1879 with the Treaty of Gandamak.")
@@ -64,7 +64,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       "From": {
         "Ministry of Defence": "/government/organisations/ministry-of-defence",
         "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
-      }
+      },
     )
   end
 
@@ -72,7 +72,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("withdrawn_fatality_notice")
 
     assert page.has_title?(
-      "[Withdrawn] Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK"
+      "[Withdrawn] Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK",
     )
 
     within ".gem-c-notice" do

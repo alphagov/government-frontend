@@ -77,7 +77,7 @@ private
           "track-options": {
             dimension29: title,
           },
-        }
+        },
       )
     end
   end

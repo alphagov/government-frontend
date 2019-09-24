@@ -8,7 +8,7 @@ module MiniTest::Assertions
       assert_equal(
         value,
         hash[key],
-        "Expected #{hash} to include #{key}=#{value}"
+        "Expected #{hash} to include #{key}=#{value}",
       )
     end
   end

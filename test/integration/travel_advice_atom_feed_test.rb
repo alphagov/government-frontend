@@ -42,7 +42,7 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
     uri = URI::HTTP.build(
       host: Capybara.current_session.server.host,
       port: Capybara.current_session.server.port,
-      path: "#{@content_item['base_path']}.atom"
+      path: "#{@content_item['base_path']}.atom",
     )
 
     content_store_has_item(@content_item["base_path"], @content_item.to_json)

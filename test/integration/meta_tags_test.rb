@@ -35,7 +35,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
         "image" => {
           "url" => "https://example.org/image.jpg",
           "alt_text" => "An accessible alt text",
-        }
+        },
       )
 
       random

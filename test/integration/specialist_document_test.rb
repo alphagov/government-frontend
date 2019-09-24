@@ -51,7 +51,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       "From": {
         "Air Accidents Investigation Branch":
           "/government/organisations/air-accidents-investigation-branch",
-      }
+      },
     )
   end
 
@@ -91,7 +91,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       },
       "Funding (per unit per year)": {
         "More than £500": "/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500",
-      }
+      },
     )
   end
 

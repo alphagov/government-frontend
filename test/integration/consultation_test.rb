@@ -12,7 +12,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
       last_updated: "Last updated 7 November 2016",
       metadata:  {
         "From": { "Department for Education": "/government/organisations/department-for-education" },
-      }
+      },
     )
 
     assert_footer_has_published_dates("Published 4 November 2016", "Last updated 7 November 2016")

@@ -301,7 +301,7 @@ class TravelAdvicePresenterTest
 
       TravelAdvicePresenter.new(
         schema_example_content_item.merge(overrides),
-        "#{schema_example_content_item['base_path']}#{part_slug}"
+        "#{schema_example_content_item['base_path']}#{part_slug}",
       )
     end
   end

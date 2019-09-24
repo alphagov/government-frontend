@@ -120,7 +120,7 @@ class DocumentCollectionPresenterTest
 
       assert_equal(
         ["/government/publications/national-standard-for-developed-driving-competence"],
-        presented_links_base_paths
+        presented_links_base_paths,
       )
     end
   end
@@ -141,7 +141,7 @@ class DocumentCollectionPresenterTest
   class GroupWithOnlyMissingDocuments < TestCase
     test "does not present the group" do
       presenter = presented_item(
-        "document_collection_with_missing_links_documents"
+        "document_collection_with_missing_links_documents",
       )
 
       group_with_missing_documents =
@@ -156,7 +156,7 @@ class DocumentCollectionPresenterTest
   class GroupWithDocumentsWhenThereIsNoLinksDocuments < TestCase
     test "does not present the group" do
       presenter = presented_item(
-        "document_collection_with_group_but_no_documents"
+        "document_collection_with_group_but_no_documents",
       )
 
       group_with_missing_documents =
@@ -171,7 +171,7 @@ class DocumentCollectionPresenterTest
   class GroupWithDocumentsWhenThereAreWithdrawnDocuments < TestCase
     test "does not present withdrawn documents" do
       presenter = presented_item(
-        "document_collection_with_withdrawn_links_documents"
+        "document_collection_with_withdrawn_links_documents",
       )
 
       presented_documents = presenter.groups.first["documents"]
@@ -180,7 +180,7 @@ class DocumentCollectionPresenterTest
 
       assert_equal(
         presented_documents.size,
-        expected_number_of_presented_documents
+        expected_number_of_presented_documents,
       )
     end
   end

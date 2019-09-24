@@ -34,7 +34,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_important_metadata(
       "Proposed release": "20 January 2016 9:30am",
-      "Cancellation date": "17 January 2016 2:19pm"
+      "Cancellation date": "17 January 2016 2:19pm",
     )
   end
 

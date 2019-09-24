@@ -30,7 +30,7 @@ module ServiceSignIn
 
       assert page.has_css?(
         '.gem-c-back-link[href="/log-in-file-self-assessment-tax-return/sign-in/choose-sign-in"]',
-        text: "Back"
+        text: "Back",
       )
     end
 

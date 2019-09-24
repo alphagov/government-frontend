@@ -27,7 +27,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
           {
             "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency",
           },
-      }
+      },
     )
     assert_footer_has_published_dates("Published 29 February 2016")
   end
@@ -107,19 +107,19 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert_equal(
       "navDocumentCollectionLinkClicked",
       first_link["data-track-category"],
-      "Expected a tracking category to be set in the data attributes"
+      "Expected a tracking category to be set in the data attributes",
     )
 
     assert_equal(
       "1.1",
       first_link["data-track-action"],
-      "Expected the link position to be set in the data attributes"
+      "Expected the link position to be set in the data attributes",
     )
 
     assert_match(
       first_link["data-track-label"],
       first_link[:href],
-      "Expected the content item base path to be set in the data attributes"
+      "Expected the content item base path to be set in the data attributes",
     )
     assert first_link["data-track-options"].present?
 
@@ -128,13 +128,13 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert_equal(
       first_section_links.count.to_s,
       data_options["dimension28"],
-      "Expected the total number of content items within the section to be present in the tracking options"
+      "Expected the total number of content items within the section to be present in the tracking options",
     )
 
     assert_equal(
       first_link.text,
       data_options["dimension29"],
-      "Expected the subtopic title to be present in the tracking options"
+      "Expected the subtopic title to be present in the tracking options",
     )
   end
 

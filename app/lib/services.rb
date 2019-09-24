@@ -13,7 +13,7 @@ module Services
 
   def self.feature_toggler
     @feature_toggler ||= FeatureToggler.new(
-      HttpFeatureFlags.instance
+      HttpFeatureFlags.instance,
     )
   end
 end

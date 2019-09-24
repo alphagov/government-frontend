@@ -20,7 +20,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         controller: "content_items",
         action: "show",
         path: "government/news/statement-the-status-of-eu-nationals-in-the-uk",
-        locale: locale.to_s
+        locale: locale.to_s,
       )
     end
   end
@@ -42,7 +42,7 @@ class ContentItemsControllerTest < ActionController::TestCase
       action: "show",
       path: "government/news/statement-the-status-of-eu-nationals-in-the-uk",
       format: "atom",
-      locale: "es"
+      locale: "es",
     )
   end
 
@@ -52,7 +52,7 @@ class ContentItemsControllerTest < ActionController::TestCase
       controller: "content_items",
       action: "show",
       path: "government/news/statement-the-status-of-eu-nationals-in-the-uk",
-      variant: "print"
+      variant: "print",
     )
   end
 

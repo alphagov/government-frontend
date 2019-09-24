@@ -13,11 +13,11 @@ class FatalityNoticePresenterTest < PresenterTestCase
   test "presents the field of operation" do
     assert_equal(
       schema_item["links"]["field_of_operation"].first["title"],
-      presented_item.field_of_operation.title
+      presented_item.field_of_operation.title,
     )
     assert_equal(
       schema_item["links"]["field_of_operation"].first["base_path"],
-      presented_item.field_of_operation.path
+      presented_item.field_of_operation.path,
     )
   end
 

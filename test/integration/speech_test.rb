@@ -28,14 +28,14 @@ class SpeechTest < ActionDispatch::IntegrationTest
           "Department of Energy": "/government/organisations/department-of-energy-climate-change",
           "The Rt Hon Andrea Leadsom MP": "/government/people/andrea-leadsom",
         },
-      }
+      },
     )
 
     assert_has_important_metadata(
       "Delivered on":
         "2 February 2016 (Original script, may differ from delivered version)",
       "Location":
-        "Women in Nuclear UK Conference, Church House Conference Centre, Dean's Yard, Westminster, London"
+        "Women in Nuclear UK Conference, Church House Conference Centre, Dean's Yard, Westminster, London",
     )
 
     assert_footer_has_published_dates("Published 8 March 2016")

@@ -53,7 +53,7 @@ class StatisticalDataSetPresenterTest
       expected_time = expected["withdrawn_notice"]["withdrawn_at"]
       expected_date_as_string = I18n.l(
         Date.parse(expected_time),
-        format: "%-d %B %Y"
+        format: "%-d %B %Y",
       )
       expected_withdrawn_time_html = "<time datetime=\"#{expected_time}\">#{expected_date_as_string}</time>"
 

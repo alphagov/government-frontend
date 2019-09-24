@@ -29,7 +29,7 @@ class PublishedDatesTest < ComponentTestCase
     render_component(
       published: "1st November 2000",
       last_updated: "15th July 2015",
-      history: [display_time: "23 August 2013", note: "Updated with new data"]
+      history: [display_time: "23 August 2013", note: "Updated with new data"],
     )
     assert_select ".app-c-published-dates__change-history#full-history"
     assert_select ".app-c-published-dates--history .app-c-published-dates__change-date", text: "23 August 2013"
@@ -42,7 +42,7 @@ class PublishedDatesTest < ComponentTestCase
     render_component(
       published: "1st November 2000",
       last_updated: "15th July 2015",
-      history: [display_time: "23 August 2013", note: "Updated with new data"]
+      history: [display_time: "23 August 2013", note: "Updated with new data"],
     )
     assert_select "#history"
   end
@@ -51,7 +51,7 @@ class PublishedDatesTest < ComponentTestCase
     render_component(
       published: "1st November 2000",
       last_updated: "15th July 2015",
-      history: [display_time: "23 August 2013", note: "Updated with new data"]
+      history: [display_time: "23 August 2013", note: "Updated with new data"],
     )
     assert_select ".app-c-published-dates__change-history.js-hidden"
   end
@@ -60,7 +60,7 @@ class PublishedDatesTest < ComponentTestCase
     render_component(
       published: "1st November 2000",
       last_updated: "15th July 2015",
-      history: [display_time: "23 August 2013", note: "Updated with new data"]
+      history: [display_time: "23 August 2013", note: "Updated with new data"],
     )
     assert_select ".app-c-published-dates a[href=\"#full-history\"]"
   end
@@ -69,7 +69,7 @@ class PublishedDatesTest < ComponentTestCase
     render_component(
       published: "1st November 2000",
       last_updated: "15th July 2015",
-      history: [display_time: "23 August 2013", note: "Updated with new data"]
+      history: [display_time: "23 August 2013", note: "Updated with new data"],
     )
     assert_select ".app-c-published-dates--history[data-module=\"toggle\"]"
     assert_select ".app-c-published-dates--history a[href=\"#full-history\"][data-controls=\"full-history\"]"

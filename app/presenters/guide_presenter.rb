@@ -15,7 +15,7 @@ class GuidePresenter < ContentItemPresenter
     unless parts.any?
       GovukError.notify(
         "Guide with no parts",
-        extra: { error_message: "Guide rendered without any parts at #{base_path}" }
+        extra: { error_message: "Guide rendered without any parts at #{base_path}" },
       )
     end
 

@@ -28,7 +28,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
       if cancelled?
         m.merge!(
           "Proposed release" => release_date,
-          "Cancellation date" => cancellation_date
+          "Cancellation date" => cancellation_date,
         )
       else
         m.merge!("Release date" => release_date_and_status)

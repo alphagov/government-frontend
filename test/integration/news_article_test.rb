@@ -19,7 +19,7 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
           "Prime Minister's Office, 10 Downing Street":
             "/government/organisations/prime-ministers-office-10-downing-street",
         },
-      }
+      },
     )
 
     assert_footer_has_published_dates("Published 25 December 2016")
