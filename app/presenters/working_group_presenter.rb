@@ -15,6 +15,7 @@ class WorkingGroupPresenter < ContentItemPresenter
     # When we upgrade to Ruby 2.3.0, this could be simplified with `dig`:
     # http://ruby-doc.org/core-2.3.0/Hash.html#method-i-dig
     return [] unless content_item["links"] && content_item["links"]["policies"]
+
     content_item["links"]["policies"]
   end
 
@@ -36,6 +37,7 @@ private
 
   def first_item
     return if body.nil?
+
     if parsed_body.css("h2").empty?
       parsed_body.css("div").first.try(:first_element_child)
     else

@@ -12,6 +12,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
 
   def release_date_and_status
     return "#{release_date} (#{state})" unless cancelled?
+
     release_date
   end
 

@@ -10,6 +10,7 @@ module ContentItem
 
     def history
       return [] unless any_updates?
+
       reverse_chronological_change_history
     end
 

@@ -4,6 +4,7 @@ module ContentItem
 
     def applies_to
       return nil if !national_applicability
+
       all_nations = national_applicability.values
       applicable_nations = all_nations.select { |n| n["applicable"] }
       inapplicable_nations = all_nations - applicable_nations

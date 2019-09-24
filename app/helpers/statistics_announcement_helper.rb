@@ -3,6 +3,7 @@ module StatisticsAnnouncementHelper
     return "on #{date}" if date_is_exact_format?(date)
     return "in #{date}" if date_is_one_month_format?(date)
     return "between #{replace_on_with_and(date)}" if date_is_two_month_format?(date)
+
     date
   end
 

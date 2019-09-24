@@ -93,6 +93,7 @@ private
 
   def facets
     return nil unless finder
+
     finder.dig("details", "facets")
   end
 
@@ -163,6 +164,7 @@ private
     friendly_value = allowed_value["label"]
 
     return friendly_value unless facet["filterable"]
+
     facet_link(friendly_value, allowed_value["value"], facet["key"])
   end
 

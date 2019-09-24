@@ -72,6 +72,7 @@ module ContentItem
 
       until element.name == "h2" do
         return element if element.name == "table"
+
         element = element.next_element
         break if element.nil?
       end
@@ -87,6 +88,7 @@ module ContentItem
 
       until element.name == "h2"
         return true if element.name == "div" && element["class"] == "img"
+
         element = element.next_element
         return false if element.nil?
       end

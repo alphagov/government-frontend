@@ -94,6 +94,7 @@ class TravelAdvicePresenter < ContentItemPresenter
 
   def cache_control_max_age(format)
     return ATOM_CACHE_CONTROL_MAX_AGE if format == "atom"
+
     content_item.cache_control.max_age
   end
 
