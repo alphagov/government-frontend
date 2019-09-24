@@ -53,10 +53,10 @@ class CaseStudyPresenterTest < PresenterTestCase
   test "#part_of returns an array of document_collections, related policies and world locations" do
     with_extras = schema_item
     with_extras["links"]["document_collections"] = [
-      { "title" => "Work Programme real life stories", "base_path" => "/government/collections/work-programme-real-life-stories" }
+      { "title" => "Work Programme real life stories", "base_path" => "/government/collections/work-programme-real-life-stories" },
     ]
     with_extras["links"]["related_policies"] = [
-      { "title" => "Cheese", "base_path" => "/policy/cheese" }
+      { "title" => "Cheese", "base_path" => "/policy/cheese" },
     ]
 
     expected_part_of_links = [

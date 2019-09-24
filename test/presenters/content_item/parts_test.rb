@@ -18,7 +18,7 @@ module ContentItemPartsStubs
             "title" => "second-title",
             "slug" => "second-slug",
             "body" => "second-body",
-          }
+          },
         ],
       },
     }
@@ -157,7 +157,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
         "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 2\" "\
         "data-track-label=\"/base-path/second-slug\" "\
         "data-track-options=\"{&quot;dimension29&quot;:&quot;second-title&quot;}\" "\
-        "href=\"/base-path/second-slug\">second-title</a>"
+        "href=\"/base-path/second-slug\">second-title</a>",
       ]]
   end
 
@@ -182,7 +182,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
             "parts" => [
               { "title" => "title", "slug" => "slug", "body" => "body" },
               { "title" => "title", "slug" => "slug", "body" => "body" },
-              { "title" => "title", "slug" => "slug", "body" => "body" }
+              { "title" => "title", "slug" => "slug", "body" => "body" },
             ],
           },
         }
@@ -203,7 +203,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
               { "title" => "first-title", "slug" => "first-slug", "body" => "first-body" },
               { "title" => "second-title", "slug" => "second-slug", "body" => "second-body" },
               { "title" => "third-title", "slug" => "third-slug", "body" => "third-body" },
-              { "title" => "fourth-title", "slug" => "fourth-slug", "body" => "fourth-body" }
+              { "title" => "fourth-title", "slug" => "fourth-slug", "body" => "fourth-body" },
             ],
           },
         }
@@ -225,8 +225,8 @@ class ContentItemPartsTest < ActiveSupport::TestCase
           "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 4\" "\
           "data-track-label=\"/base-path/fourth-slug\" "\
           "data-track-options=\"{&quot;dimension29&quot;:&quot;fourth-title&quot;}\" "\
-          "href=\"/base-path/fourth-slug\">fourth-title</a>"
-        ]
+          "href=\"/base-path/fourth-slug\">fourth-title</a>",
+        ],
       ]
   end
 end

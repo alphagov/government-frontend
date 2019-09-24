@@ -75,7 +75,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       { text: "One", id: "one" },
       { text: "Two", id: "two" },
       { text: "Three", id: "three" },
-      { text: "Four", id: "four" }
+      { text: "Four", id: "four" },
     ], @contents_list.contents_items
   end
 

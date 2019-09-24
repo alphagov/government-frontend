@@ -8,7 +8,7 @@ class ContentsListWithBodyTest < ComponentTestCase
   def contents_list
     [
       { href: "/one", text: "1. One" },
-      { href: "/two", text: "2. Two" }
+      { href: "/two", text: "2. Two" },
     ]
   end
 

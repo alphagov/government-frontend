@@ -90,7 +90,7 @@ class SpeechPresenterTest
       assert_equal [
         "<a class=\"govuk-link\" href=\"/government/organisations/prime-ministers-office-10-downing-street\">Prime Minister&#39;s Office, 10 Downing Street</a>",
         "<a class=\"govuk-link\" href=\"/government/organisations/cabinet-office\">Cabinet Office</a>",
-        "Her Majesty the Queen"
+        "Her Majesty the Queen",
         ], presented_item(example_schema_name).from
     end
   end

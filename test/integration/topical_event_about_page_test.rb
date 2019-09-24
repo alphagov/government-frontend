@@ -13,7 +13,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     assert_has_contents_list([
       { text: "Response in the UK", id: "response-in-the-uk" },
       { text: "Response in Africa", id: "response-in-africa" },
-      { text: "Advice for travellers", id: "advice-for-travellers" }
+      { text: "Advice for travellers", id: "advice-for-travellers" },
     ])
   end
 

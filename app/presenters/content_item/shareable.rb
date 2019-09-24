@@ -13,7 +13,7 @@ module ContentItem
           href: twitter_share_url,
           text: '<span class="visually-hidden">Share on </span>Twitter'.html_safe,
           icon: "twitter",
-        }
+        },
       ]
     end
 

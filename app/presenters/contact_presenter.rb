@@ -114,7 +114,7 @@ private
       {
         label: "Fax",
         number: group["fax"],
-      }
+      },
     ].select { |n| n[:number].present? }
   end
 

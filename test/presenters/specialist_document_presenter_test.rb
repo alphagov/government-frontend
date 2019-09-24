@@ -26,7 +26,7 @@ class SpecialistDocumentPresenterTest
       expected_headers = [
         { text: "Reports of diabetic acidosis", id: "reports-of-diabetic-acidosis", href: "#reports-of-diabetic-acidosis" },
         { text: "SGLT2 inhibitors – medicines in this class", id: "sglt2-inhibitors--medicines-in-this-class", href: "#sglt2-inhibitors--medicines-in-this-class" },
-        { text: "Further information", id: "further-information", href: "#further-information" }
+        { text: "Further information", id: "further-information", href: "#further-information" },
       ]
 
       assert_equal expected_headers, presented_item("drug-safety-update").contents
@@ -38,7 +38,7 @@ class SpecialistDocumentPresenterTest
         {
           "note" => "First published",
           "public_timestamp" => "2003-03-03",
-        }
+        },
       ]
 
       refute present_example(example).updated
@@ -51,7 +51,7 @@ class SpecialistDocumentPresenterTest
         {
           "note" => "Modified since first published",
           "public_timestamp" => "2013-04-05",
-        }
+        },
       ]
 
       assert present_example(example).updated
@@ -172,7 +172,7 @@ class SpecialistDocumentPresenterTest
           {
             "label" => "Document value from label",
             "value" => "document-value",
-          }
+          },
         ],
       }
 
@@ -189,7 +189,7 @@ class SpecialistDocumentPresenterTest
           {
             "label" => "Document value from label",
             "value" => "document-value",
-          }
+          },
         ],
       }
 
@@ -224,7 +224,7 @@ class SpecialistDocumentPresenterTest
                                                 "name" => "Date facet",
                                                 "key" => "date-facet",
                                                 "type" => "date",
-                                              }
+                                              },
                                             ],
                                             "facet-key" => "",
                                             "date-facet" => "")
@@ -242,7 +242,7 @@ class SpecialistDocumentPresenterTest
           {
             "label" => "Two",
             "value" => "two",
-          }
+          },
         ],
       }
 
@@ -260,7 +260,7 @@ class SpecialistDocumentPresenterTest
           {
             "label" => "Something",
             "value" => "something",
-          }
+          },
         ],
       }
 
@@ -302,7 +302,7 @@ class SpecialistDocumentPresenterTest
                                               "name" => "More text",
                                               "key" => "more-text",
                                               "type" => "text",
-                                            }
+                                            },
                                           ],
                                             "facet-key" => "Text",
                                             "first-date-facet" => "2010-01-01",
@@ -331,7 +331,7 @@ class SpecialistDocumentPresenterTest
                     "name" => "Published",
                     "key" => "first_published_at",
                     "type" => "date",
-                  }
+                  },
                 ]
       example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
 
@@ -345,7 +345,7 @@ class SpecialistDocumentPresenterTest
                     "name" => "Published",
                     "key" => "first_published_at",
                     "type" => "date",
-                  }
+                  },
                 ]
       example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
 

@@ -67,7 +67,7 @@ class DocumentCollectionPresenterTest
             public_updated_at: Time.zone.parse("2007-03-16 15:00:02 +0000"),
             document_type: "Guidance",
           },
-        }
+        },
       ]
       document_ids = schema_item["details"]["collection_groups"].first["documents"]
 

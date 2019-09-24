@@ -25,7 +25,7 @@ module ContentItem
         further_information_about("welsh_language_scheme"),
         further_information_about("personal_information_charter"),
         further_information_about("social_media_use"),
-        further_information_about("about_our_services")
+        further_information_about("about_our_services"),
       ].join(" ").html_safe
     end
 
