@@ -7,7 +7,7 @@ private
     )
 
     # Use provided schema_name rather than a randomly generated one
-    random_example['schema_name'] = params[:schema].underscore
+    random_example["schema_name"] = params[:schema].underscore
     @content_item = present(random_example)
   end
 

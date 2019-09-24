@@ -1,4 +1,4 @@
-require 'component_test_helper'
+require "component_test_helper"
 
 class BackToTopTest < ComponentTestCase
   def component_name

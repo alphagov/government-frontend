@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
@@ -6,7 +6,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "html publications" do
-    setup_and_visit_content_item('published')
+    setup_and_visit_content_item("published")
 
     within ".gem-c-inverse-header" do
       assert page.has_text?(@content_item["details"]["format_sub_type"])
@@ -17,7 +17,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
     within ".sidebar-with-body" do
       assert page.has_text?("Contents")
-      assert page.has_css?('.gem-c-contents-list')
+      assert page.has_css?(".gem-c-contents-list")
     end
 
     assert page.has_text?("The Environment Agency will normally put any responses it receives on the public register. This includes your name and contact details. Tell us if you don’t want your response to be public.")
@@ -31,7 +31,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
       assert page.has_no_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
       assert page.has_no_text?("Any enquiries regarding this publication should be sent to us at:")
-      assert page.has_no_text?((@content_item['details']['print_meta_data_contact_address']).to_s)
+      assert page.has_no_text?((@content_item["details"]["print_meta_data_contact_address"]).to_s)
       assert page.has_no_text?("Print ISBN: #{@content_item['details']['isbn']}")
       assert page.has_no_text?("Web ISBN: #{@content_item['details']['web_isbn']}")
     end
@@ -45,13 +45,13 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
       assert page.has_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
       assert page.has_text?("Any enquiries regarding this publication should be sent to us at:")
-      assert page.has_text?(:all, @content_item['details']['print_meta_data_contact_address'].squish)
+      assert page.has_text?(:all, @content_item["details"]["print_meta_data_contact_address"].squish)
       assert page.has_text?("Print ISBN: #{@content_item['details']['isbn']}")
     end
   end
 
   test "renders back to contents elements" do
-    setup_and_visit_content_item('published')
+    setup_and_visit_content_item("published")
     assert page.has_css?(".app-c-back-to-top[href='#contents']")
   end
 
@@ -80,10 +80,10 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "withdrawn html publication" do
-    content_item = GovukSchemas::Example.find('html_publication', example_name: 'prime_ministers_office')
-    content_item['withdrawn_notice'] = {
-      'explanation': 'This is out of date',
-      'withdrawn_at': '2014-08-09T11:39:05Z'
+    content_item = GovukSchemas::Example.find("html_publication", example_name: "prime_ministers_office")
+    content_item["withdrawn_notice"] = {
+      'explanation': "This is out of date",
+      'withdrawn_at': "2014-08-09T11:39:05Z",
     }
 
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
@@ -94,11 +94,11 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "if document has no parent document_type 'publication' is shown" do
-    content_item = GovukSchemas::Example.find('html_publication', example_name: 'prime_ministers_office')
-    content_item['links']['parent'][0]['document_type'] = nil
-    content_item['withdrawn_notice'] = {
-      'explanation': 'This is out of date',
-      'withdrawn_at': '2014-08-09T11:39:05Z'
+    content_item = GovukSchemas::Example.find("html_publication", example_name: "prime_ministers_office")
+    content_item["links"]["parent"][0]["document_type"] = nil
+    content_item["withdrawn_notice"] = {
+      'explanation': "This is out of date",
+      'withdrawn_at': "2014-08-09T11:39:05Z",
     }
 
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)

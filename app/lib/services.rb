@@ -1,4 +1,4 @@
-require 'gds_api/content_store'
+require "gds_api/content_store"
 
 module Services
   def self.content_store
@@ -13,7 +13,7 @@ module Services
 
   def self.feature_toggler
     @feature_toggler ||= FeatureToggler.new(
-      HttpFeatureFlags.instance
+      HttpFeatureFlags.instance,
     )
   end
 end

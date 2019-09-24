@@ -30,14 +30,14 @@ class DocumentCollectionPresenter < ContentItemPresenter
           text: link["title"],
           path: link["base_path"],
           data_attributes: {
-            track_category: 'navDocumentCollectionLinkClicked',
+            track_category: "navDocumentCollectionLinkClicked",
             track_action: "#{group_index + 1}.#{link_index + 1}",
             track_label: link["base_path"],
             track_options: {
-              dimension28: group['documents'].count.to_s,
-              dimension29: link["title"]
-            }
-          }
+              dimension28: group["documents"].count.to_s,
+              dimension29: link["title"],
+            },
+          },
         },
         metadata: {
           public_updated_at: link["public_updated_at"]&.then { |time| Time.zone.parse(time) },
@@ -62,7 +62,7 @@ private
   end
 
   def group_title_id(title)
-    title.tr(' ', '-').downcase
+    title.tr(" ", "-").downcase
   end
 
   def documents_hash
@@ -77,6 +77,6 @@ private
 
   def first_item
     @body ||= body.present? ? parsed_body : Nokogiri::HTML(groups.first["body"])
-    @body.css('div').first.first_element_child
+    @body.css("div").first.first_element_child
   end
 end

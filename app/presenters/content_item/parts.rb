@@ -5,7 +5,7 @@ module ContentItem
     def parts
       raw_parts.each_with_index.map do |part, i|
         # Link to base_path for first part
-        part['full_path'] = i.zero? ? base_path : "#{base_path}/#{part['slug']}"
+        part["full_path"] = i.zero? ? base_path : "#{base_path}/#{part['slug']}"
         part
       end
     end
@@ -42,17 +42,17 @@ module ContentItem
 
       if previous_part
         nav[:previous_page] = {
-          url: previous_part['full_path'],
-          title: I18n.t('multi_page.previous_page'),
-          label: previous_part['title']
+          url: previous_part["full_path"],
+          title: I18n.t("multi_page.previous_page"),
+          label: previous_part["title"],
         }
       end
 
       if next_part
         nav[:next_page] = {
-          url: next_part['full_path'],
-          title: I18n.t('multi_page.next_page'),
-          label: next_part['title']
+          url: next_part["full_path"],
+          title: I18n.t("multi_page.next_page"),
+          label: next_part["title"],
         }
       end
 
@@ -61,10 +61,10 @@ module ContentItem
 
     def part_link_elements
       parts.map do |part|
-        if part['slug'] != current_part['slug']
-          { href: part['full_path'], text: part['title'] }
+        if part["slug"] != current_part["slug"]
+          { href: part["full_path"], text: part["title"] }
         else
-          { href: part['full_path'], text: part['title'], active: true }
+          { href: part["full_path"], text: part["title"], active: true }
         end
       end
     end
@@ -85,18 +85,18 @@ module ContentItem
 
     def part_links
       parts.map.with_index(1) do |part, position|
-        if part['slug'] != current_part['slug']
-          link_to part['title'], part['full_path'], class: "govuk-link",
+        if part["slug"] != current_part["slug"]
+          link_to part["title"], part["full_path"], class: "govuk-link",
             data: {
-            track_category: 'contentsClicked',
+            track_category: "contentsClicked",
             track_action: "content_item #{position}",
-            track_label: part['full_path'],
+            track_label: part["full_path"],
             track_options: {
-              dimension29: part['title']
-             }
+              dimension29: part["title"],
+             },
            }
         else
-          part['title']
+          part["title"]
         end
       end
     end

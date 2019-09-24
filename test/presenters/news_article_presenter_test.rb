@@ -1,4 +1,4 @@
-require 'presenter_test_helper'
+require "presenter_test_helper"
 
 class NewsArticlePresenterTest
   class NewsArticlePresenterTestCase < PresenterTestCase
@@ -10,40 +10,40 @@ class NewsArticlePresenterTest
   end
 
   class PresentedNewsArticleTest < NewsArticlePresenterTestCase
-    test 'is linkable' do
+    test "is linkable" do
       assert presented_item.is_a?(ContentItem::Linkable)
     end
 
-    test 'is updatable' do
+    test "is updatable" do
       assert presented_item.is_a?(ContentItem::Updatable)
     end
 
-    test 'is withdrawable' do
+    test "is withdrawable" do
       assert presented_item.is_a?(ContentItem::Withdrawable)
     end
 
-    test 'is shareable' do
+    test "is shareable" do
       assert presented_item.is_a?(ContentItem::Shareable)
     end
 
-    test 'includes political' do
+    test "includes political" do
       assert presented_item.is_a?(ContentItem::Political)
     end
 
-    test 'presents a description' do
-      assert_equal schema_item['description'], presented_item.description
+    test "presents a description" do
+      assert_equal schema_item["description"], presented_item.description
     end
 
-    test 'presents a body' do
-      assert_equal schema_item['details']['body'], presented_item.body
+    test "presents a body" do
+      assert_equal schema_item["details"]["body"], presented_item.body
     end
 
-    test 'presents a readable first published date' do
-      assert_equal '25 December 2016', presented_item.published
+    test "presents a readable first published date" do
+      assert_equal "25 December 2016", presented_item.published
     end
 
-    test 'presents the locale' do
-      assert_equal schema_item['locale'], presented_item.locale
+    test "presents the locale" do
+      assert_equal schema_item["locale"], presented_item.locale
     end
   end
 
@@ -52,7 +52,7 @@ class NewsArticlePresenterTest
       "news_article_history_mode"
     end
 
-    test 'presents historically political' do
+    test "presents historically political" do
       assert presented_item(example_schema_name).historically_political?
     end
   end
@@ -62,8 +62,8 @@ class NewsArticlePresenterTest
       "news_article_news_story_translated_arabic"
     end
 
-    test 'presents the locale as the translated item locale' do
-      assert_equal 'ur', presented_item(example_schema_name).locale
+    test "presents the locale as the translated item locale" do
+      assert_equal "ur", presented_item(example_schema_name).locale
     end
   end
 end

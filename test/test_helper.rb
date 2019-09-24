@@ -1,16 +1,16 @@
-ENV['RAILS_ENV'] ||= 'test'
-ENV['GOVUK_APP_DOMAIN'] = 'test.gov.uk'
-ENV['GOVUK_ASSET_ROOT'] = 'http://static.test.gov.uk'
+ENV["RAILS_ENV"] ||= "test"
+ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
+ENV["GOVUK_ASSET_ROOT"] = "http://static.test.gov.uk"
 
-require File.expand_path('../config/environment', __dir__)
-require 'rails/test_help'
-require 'capybara/rails'
-require 'mocha/minitest'
-require 'capybara/minitest'
-require 'faker'
+require File.expand_path("../config/environment", __dir__)
+require "rails/test_help"
+require "capybara/rails"
+require "mocha/minitest"
+require "capybara/minitest"
+require "faker"
 require "minitest/reporters"
 
-Dir[Rails.root.join('test/support/*.rb')].each { |f| require f }
+Dir[Rails.root.join("test/support/*.rb")].each { |f| require f }
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
@@ -51,7 +51,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_title(title)
-    assert page.has_css?('h1', text: title)
+    assert page.has_css?("h1", text: title)
   end
 
   def assert_has_component_organisation_logo
@@ -59,7 +59,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_government_navigation_active(active)
-    assert page.has_css?("a", class: 'active', text: active)
+    assert page.has_css?("a", class: "active", text: active)
   end
 
   def assert_has_contents_list(contents)
@@ -97,7 +97,7 @@ class ActionDispatch::IntegrationTest
   def assert_has_metadata(metadata, term_selector, definition_selector)
     metadata.each do |key, value|
       assert page.has_css?(term_selector, text: key),
-        "Metadata term '#{key}' not found"
+             "Metadata term '#{key}' not found"
 
       value = { value => nil } if value.is_a?(String)
 
@@ -132,7 +132,7 @@ class ActionDispatch::IntegrationTest
     assert_has_published_dates(published, last_updated, history_link, 1)
   end
 
-  def setup_and_visit_content_item(name, parameter_string = '')
+  def setup_and_visit_content_item(name, parameter_string = "")
     @content_item = get_content_example(name).tap do |item|
       content_store_has_item(item["base_path"], item.to_json)
       visit_with_cachebust("#{item['base_path']}#{parameter_string}")
@@ -143,13 +143,13 @@ class ActionDispatch::IntegrationTest
     @content_item = get_content_example(name).tap do |item|
       item["links"]["taxons"] = taxons
       content_store_has_item(item["base_path"], item.to_json)
-      visit_with_cachebust(item['base_path'])
+      visit_with_cachebust(item["base_path"])
     end
   end
 
   def setup_and_visit_random_content_item(document_type: nil)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
-      payload.merge('document_type' => document_type) unless document_type.nil?
+      payload.merge("document_type" => document_type) unless document_type.nil?
       payload
     end
 
@@ -173,7 +173,7 @@ class ActionDispatch::IntegrationTest
 
   # Override this method if your test file doesn't match the convention
   def schema_type
-    self.class.to_s.gsub('Test', '').underscore
+    self.class.to_s.gsub("Test", "").underscore
   end
 
   def visit_with_cachebust(visit_uri)

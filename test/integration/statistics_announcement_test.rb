@@ -1,8 +1,8 @@
-require 'test_helper'
+require "test_helper"
 
 class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
   test "official statistics" do
-    setup_and_visit_content_item('official_statistics')
+    setup_and_visit_content_item("official_statistics")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
@@ -11,41 +11,41 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
   end
 
   test "national statistics" do
-    setup_and_visit_content_item('national_statistics')
+    setup_and_visit_content_item("national_statistics")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert page.has_css?('img[alt="National Statistics"]')
 
-    within '.app-c-important-metadata' do
+    within ".app-c-important-metadata" do
       assert page.has_text?(:all, "Release date: January 2016 (provisional)")
     end
   end
 
   test "cancelled statistics" do
-    setup_and_visit_content_item('cancelled_official_statistics')
+    setup_and_visit_content_item("cancelled_official_statistics")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    within '.gem-c-notice' do
-      assert page.has_text?('Statistics release cancelled'), "is cancelled"
+    within ".gem-c-notice" do
+      assert page.has_text?("Statistics release cancelled"), "is cancelled"
       assert page.has_text?(@content_item["details"]["cancellation_reason"]), "displays cancelleation reason"
     end
 
     assert_has_important_metadata(
       "Proposed release": "20 January 2016 9:30am",
-      "Cancellation date": "17 January 2016 2:19pm"
+      "Cancellation date": "17 January 2016 2:19pm",
     )
   end
 
   test "statistics with a changed release date" do
-    setup_and_visit_content_item('release_date_changed')
+    setup_and_visit_content_item("release_date_changed")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert page.has_text?(:all, "Release date: 20 January 2016 9:30am (confirmed)")
 
-    within '.release-date-changed .app-c-important-metadata' do
+    within ".release-date-changed .app-c-important-metadata" do
       assert page.has_text?("The release date has been changed")
       assert page.has_text?("Previous date")
       assert page.has_text?("19 January 2016 9:30am")
@@ -55,7 +55,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
   end
 
   test "statistics announcement that are not cancelled display forthcoming notice" do
-    setup_and_visit_content_item('official_statistics')
+    setup_and_visit_content_item("official_statistics")
 
     within(".gem-c-notice") do
       assert_text "#{StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE} on #{@content_item['details']['display_date']}"
@@ -63,7 +63,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
   end
 
   test "cancelled statistics announcements do not display the forthcoming notice" do
-    setup_and_visit_content_item('cancelled_official_statistics')
+    setup_and_visit_content_item("cancelled_official_statistics")
 
     refute page.has_text?(StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE)
   end

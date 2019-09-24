@@ -58,8 +58,8 @@ private
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
 
-    if Services.feature_toggler.use_recommended_related_links?(content_item['links'], request.headers)
-      content_item['links']['ordered_related_items'] = content_item['links'].fetch('suggested_ordered_related_items', [])
+    if Services.feature_toggler.use_recommended_related_links?(content_item["links"], request.headers)
+      content_item["links"]["ordered_related_items"] = content_item["links"].fetch("suggested_ordered_related_items", [])
     end
 
     @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
@@ -75,9 +75,9 @@ private
           "track-action": "1.#{index} #{type}",
           "track-label": base_path,
           "track-options": {
-            dimension29: title
-          }
-        }
+            dimension29: title,
+          },
+        },
       )
     end
   end
@@ -114,7 +114,7 @@ private
   end
 
   def set_use_recommended_related_links_header
-    response.headers['Vary'] = [response.headers['Vary'], FeatureFlagNames.recommended_related_links].compact.join(', ')
+    response.headers["Vary"] = [response.headers["Vary"], FeatureFlagNames.recommended_related_links].compact.join(", ")
 
     related_links_request_header = RequestHelper.get_header(FeatureFlagNames.recommended_related_links, request.headers)
     required_header_value = Services.feature_toggler.feature_flags.get_feature_flag(FeatureFlagNames.recommended_related_links)
@@ -131,7 +131,7 @@ private
     return original_url if ga_param.nil?
 
     url = URI.parse(original_url)
-    new_query_ar = URI.decode_www_form(url.query || '') << ["_ga", ga_param]
+    new_query_ar = URI.decode_www_form(url.query || "") << ["_ga", ga_param]
     url.query = URI.encode_www_form(new_query_ar)
     url.to_s
   end
@@ -145,15 +145,15 @@ private
   end
 
   def error_notfound
-    render plain: 'Not found', status: :not_found
+    render plain: "Not found", status: :not_found
   end
 
   def error_406
-    render plain: 'Not acceptable', status: 406
+    render plain: "Not acceptable", status: 406
   end
 
   def error_410
-    render plain: 'Gone', status: 410
+    render plain: "Gone", status: 410
   end
 
   def error_redirect(exception)

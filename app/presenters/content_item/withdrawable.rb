@@ -15,7 +15,7 @@ module ContentItem
         {
           title: withdrawal_notice_title,
           description_govspeak: withdrawal_notice["explanation"]&.html_safe,
-          time: withdrawal_notice_time
+          time: withdrawal_notice_time,
         }
       end
     end

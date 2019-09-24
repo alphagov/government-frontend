@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class ServiceSignInPresenterTest
   class ChooseSignIn < ActiveSupport::TestCase
@@ -19,8 +19,8 @@ class ServiceSignInPresenterTest
       @schema_item ||= govuk_content_schema_example(schema_name, schema_name)
     end
 
-    test 'presents the schema_name' do
-      assert_equal schema_item['schema_name'], @presented_item.schema_name
+    test "presents the schema_name" do
+      assert_equal schema_item["schema_name"], @presented_item.schema_name
     end
 
     test "presents the title" do
@@ -48,18 +48,18 @@ class ServiceSignInPresenterTest
       assert_equal "option", @presented_item.options_id
     end
 
-    test 'presents :or before last radio button option' do
+    test "presents :or before last radio button option" do
       assert_equal @presented_item.options[2], :or
     end
 
-    test 'presents the back_link' do
-      assert_equal schema_item['links']['parent'].first['base_path'], @presented_item.back_link
+    test "presents the back_link" do
+      assert_equal schema_item["links"]["parent"].first["base_path"], @presented_item.back_link
     end
 
-    test 'presents the tracking values' do
-      assert_equal @choose_sign_in['tracking_code'], @presented_item.tracking_code
-      assert_equal @choose_sign_in['tracking_domain'], @presented_item.tracking_domain
-      assert_equal @choose_sign_in['tracking_name'], @presented_item.tracking_name
+    test "presents the tracking values" do
+      assert_equal @choose_sign_in["tracking_code"], @presented_item.tracking_code
+      assert_equal @choose_sign_in["tracking_domain"], @presented_item.tracking_domain
+      assert_equal @choose_sign_in["tracking_name"], @presented_item.tracking_name
     end
   end
 end

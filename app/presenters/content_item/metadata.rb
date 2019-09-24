@@ -11,7 +11,7 @@ module ContentItem
         see_updates_link: true,
         part_of: part_of,
         direction: text_direction,
-        other: {}
+        other: {},
       }
     end
 
@@ -25,8 +25,8 @@ module ContentItem
         last_updated: updated,
         link_to_history: !!updated,
         other: {
-          from: from
-        }
+          from: from,
+        },
       }
     end
   end

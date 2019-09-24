@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class DetailedGuideTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
@@ -6,7 +6,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
   end
 
   test "detailed guide" do
-    setup_and_visit_content_item('detailed_guide')
+    setup_and_visit_content_item("detailed_guide")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
@@ -17,57 +17,57 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
       history_link: true,
       metadata: {
         "From:": {
-          "HM Revenue & Customs": "/government/organisations/hm-revenue-customs"
-        }
-      }
+          "HM Revenue & Customs": "/government/organisations/hm-revenue-customs",
+        },
+      },
     )
   end
 
   test "renders back to contents elements" do
-    setup_and_visit_content_item('detailed_guide')
+    setup_and_visit_content_item("detailed_guide")
 
     assert page.has_css?(".app-c-back-to-top[href='#contents']")
   end
 
   test "withdrawn detailed guide" do
-    setup_and_visit_content_item('withdrawn_detailed_guide')
+    setup_and_visit_content_item("withdrawn_detailed_guide")
 
-    assert page.has_css?('title', text: "[Withdrawn]", visible: false)
+    assert page.has_css?("title", text: "[Withdrawn]", visible: false)
 
-    assert page.has_text?('This guidance was withdrawn'), "is withdrawn"
+    assert page.has_text?("This guidance was withdrawn"), "is withdrawn"
     assert page.has_text?("This information has been archived as it is now out of date. For current information please go to")
     assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
   end
 
   test "historically political detailed guide" do
-    setup_and_visit_content_item('political_detailed_guide')
+    setup_and_visit_content_item("political_detailed_guide")
 
     within ".app-c-banner" do
-      assert page.has_text?('This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government')
+      assert page.has_text?("This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
     end
   end
 
-  test 'detailed guide that only applies to a set of nations' do
-    setup_and_visit_content_item('national_applicability_detailed_guide')
+  test "detailed guide that only applies to a set of nations" do
+    setup_and_visit_content_item("national_applicability_detailed_guide")
     assert_has_important_metadata("Applies to:": "England")
   end
 
-  test 'detailed guide that only applies to a set of nations, with alternative urls' do
-    setup_and_visit_content_item('national_applicability_alternative_url_detailed_guide')
+  test "detailed guide that only applies to a set of nations, with alternative urls" do
+    setup_and_visit_content_item("national_applicability_alternative_url_detailed_guide")
 
     assert_has_important_metadata(
       'Applies to:':
-        'England, Scotland, and Wales (see guidance for Northern Ireland)'
+        "England, Scotland, and Wales (see guidance for Northern Ireland)",
     )
   end
 
   test "translated detailed guide" do
-    setup_and_visit_content_item('translated_detailed_guide')
+    setup_and_visit_content_item("translated_detailed_guide")
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    assert page.has_css?('.gem-c-translation-nav')
+    assert page.has_css?(".gem-c-translation-nav")
   end
 
   test "renders a contents list" do

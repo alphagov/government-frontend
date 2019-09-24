@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   if ENV["BASIC_AUTH_USERNAME"]
     http_basic_authenticate_with(
       name: ENV.fetch("BASIC_AUTH_USERNAME"),
-      password: ENV.fetch("BASIC_AUTH_PASSWORD")
+      password: ENV.fetch("BASIC_AUTH_PASSWORD"),
     )
   end
 
@@ -17,8 +17,8 @@ private
     path_and_optional_locale = params
                                  .values_at(:path, :locale)
                                  .compact
-                                 .join('.')
+                                 .join(".")
 
-    '/' + URI.encode(path_and_optional_locale) # rubocop:disable Lint/UriEscapeUnescape
+    "/" + URI.encode(path_and_optional_locale) # rubocop:disable Lint/UriEscapeUnescape
   end
 end

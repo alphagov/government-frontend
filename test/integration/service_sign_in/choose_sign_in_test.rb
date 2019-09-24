@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 module ServiceSignIn
   class ChooseSignInTest < ActionDispatch::IntegrationTest
@@ -15,11 +15,11 @@ module ServiceSignIn
     test "page renders correctly" do
       setup_and_visit_choose_sign_in_page("service_sign_in", "/choose-sign-in")
 
-      assert page.has_css?("title", text: 'Prove your identity to continue - GOV.UK', visible: false)
+      assert page.has_css?("title", text: "Prove your identity to continue - GOV.UK", visible: false)
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
       refute page.has_css?("#proposition-menu")
 
-      assert page.has_css?('.gem-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: 'Back')
+      assert page.has_css?('.gem-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: "Back")
       assert page.has_css?('form[data-module="track-radio-group"]')
       assert page.has_css?("form[data-tracking-code='UA-xxxxxx']")
       assert page.has_css?("form[data-tracking-domain='tax.service.gov.uk']")
@@ -53,15 +53,15 @@ module ServiceSignIn
     test "renders errors correctly" do
       setup_and_visit_choose_sign_in_page("service_sign_in", "/choose-sign-in")
 
-      click_on 'Continue'
+      click_on "Continue"
 
-      assert page.has_text?('You haven’t selected an option')
-      assert page.has_text?('Please select an option')
+      assert page.has_text?("You haven’t selected an option")
+      assert page.has_text?("Please select an option")
 
       # Make sure the id is the same as the link href so that they'll link together properly.
       assert page.has_css?(".gem-c-radio input[id='option-0'][value='use-government-gateway']", visible: false)
 
-      assert page.has_css?(".app-c-error-message", text: 'Please select an option')
+      assert page.has_css?(".app-c-error-message", text: "Please select an option")
     end
 
     test "page less options without an or divider" do
@@ -79,8 +79,8 @@ module ServiceSignIn
     test "page renders welsh correctly" do
       setup_and_visit_choose_sign_in_page("welsh", "/dewiswch-lofnodi")
 
-      assert page.has_css?("title", text: 'Profwch pwy ydych chi i fwrw ymlaen - GOV.UK', visible: false)
-      assert page.has_css?('.gem-c-back-link', text: 'Yn ôl')
+      assert page.has_css?("title", text: "Profwch pwy ydych chi i fwrw ymlaen - GOV.UK", visible: false)
+      assert page.has_css?(".gem-c-back-link", text: "Yn ôl")
 
       within "#content form" do
         within ".gem-c-fieldset" do

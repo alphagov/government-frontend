@@ -27,7 +27,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def important_metadata
     super.tap do |m|
       facets_with_friendly_values.each do |facet|
-        m.merge!(facet['name'] => value_or_array_of_values(facet['values']))
+        m.merge!(facet["name"] => value_or_array_of_values(facet["values"]))
       end
     end
   end
@@ -48,7 +48,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def finder_link
     if finder && statutory_instrument?
-      link_to "See all #{finder['title']}", finder['base_path']
+      link_to "See all #{finder['title']}", finder["base_path"]
     end
   end
 
@@ -84,7 +84,7 @@ private
     if parent_finder.nil?
       GovukError.notify(
         "Finder not found",
-        extra: { error_message: "Finder not found in #{base_path} content item" }
+        extra: { error_message: "Finder not found in #{base_path} content item" },
       )
     end
 
@@ -93,7 +93,8 @@ private
 
   def facets
     return nil unless finder
-    finder.dig('details', 'facets')
+
+    finder.dig("details", "facets")
   end
 
   def facet_values
@@ -103,14 +104,14 @@ private
 
   def facets_with_friendly_values
     sorted_facets_with_values.map do |facet|
-      facet_key = facet['key']
+      facet_key = facet["key"]
       # Cast all values into an array
       values = [facet_values[facet_key]].flatten
 
-      facet['values'] = case facet['type']
-                        when 'date'
+      facet["values"] = case facet["type"]
+                        when "date"
                           friendly_facet_date(values)
-                        when 'text'
+                        when "text"
                           friendly_facet_text(facet, values)
                         else
                           values
@@ -124,9 +125,9 @@ private
     return [] unless facets && facet_values.any?
 
     facets
-      .select { |f| facet_values[f['key']] && facet_values[f['key']].present? }
-      .reject { |f| f['key'] == first_published_at_facet_key }
-      .sort_by { |f| f['type'] }
+      .select { |f| facet_values[f["key"]] && facet_values[f["key"]].present? }
+      .reject { |f| f["key"] == first_published_at_facet_key }
+      .sort_by { |f| f["type"] }
   end
 
   def friendly_facet_date(dates)
@@ -134,7 +135,7 @@ private
   end
 
   def friendly_facet_text(facet, values)
-    if facet['allowed_values'] && facet['allowed_values'].any?
+    if facet["allowed_values"] && facet["allowed_values"].any?
       facet_blocks(facet, values)
     else
       values
@@ -152,7 +153,7 @@ private
       else
         GovukError.notify(
           "Facet value not in list of allowed values",
-          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" }
+          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" },
         )
         value
       end
@@ -160,19 +161,20 @@ private
   end
 
   def facet_block(facet, allowed_value)
-    friendly_value = allowed_value['label']
+    friendly_value = allowed_value["label"]
 
-    return friendly_value unless facet['filterable']
-    facet_link(friendly_value, allowed_value['value'], facet['key'])
+    return friendly_value unless facet["filterable"]
+
+    facet_link(friendly_value, allowed_value["value"], facet["key"])
   end
 
   def facet_link(label, value, key)
-    finder_base_path = finder['base_path']
+    finder_base_path = finder["base_path"]
     link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}", class: "govuk-link app-link")
   end
 
   def first_published_at_facet_key
-    'first_published_at'
+    "first_published_at"
   end
 
   # first_published_at does not have reliable data

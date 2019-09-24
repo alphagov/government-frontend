@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
@@ -6,20 +6,20 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
   end
 
   test "topical event about pages" do
-    setup_and_visit_content_item('topical_event_about_page')
+    setup_and_visit_content_item("topical_event_about_page")
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
     assert page.has_text?("The risk of Ebola to the UK remains low. The virus is only transmitted by direct contact with the blood or bodily fluids of an infected person.")
     assert_has_contents_list([
       { text: "Response in the UK", id: "response-in-the-uk" },
       { text: "Response in Africa", id: "response-in-africa" },
-      { text: "Advice for travellers", id: "advice-for-travellers" }
+      { text: "Advice for travellers", id: "advice-for-travellers" },
     ])
   end
 
   test "slim topical event about pages have no contents" do
-    setup_and_visit_content_item('slim')
-    refute page.has_css?('.contents-list.contents-list-dashed')
+    setup_and_visit_content_item("slim")
+    refute page.has_css?(".contents-list.contents-list-dashed")
   end
 
   test "contents list not displayed when fewer than three items" do
@@ -45,7 +45,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
 private
 
   def topical_event_end_date
-    Date.parse(@content_item['links']['parent'][0]['details']['end_date'])
+    Date.parse(@content_item["links"]["parent"][0]["details"]["end_date"])
   end
 
   def long_first_item_body

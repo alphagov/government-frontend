@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
   include ContentItem::OrganisationBranding
@@ -10,9 +10,9 @@ class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
         "brand" => "department-of-health",
         "logo" => {
           "formatted_title" => "Department<br/>of Health",
-          "crest" => "single-identity"
-        }
-      }
+          "crest" => "single-identity",
+        },
+      },
     }
   end
 
@@ -49,7 +49,7 @@ class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
     organisation = test_organisation
     organisation["details"]["logo"]["image"] = {
       "url" => "url",
-      "alt_text" => "alt_text"
+      "alt_text" => "alt_text",
     }
 
     logo = organisation_logo(organisation)

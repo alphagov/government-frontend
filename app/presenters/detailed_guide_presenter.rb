@@ -15,6 +15,7 @@ class DetailedGuidePresenter < ContentItemPresenter
   def logo
     image = content_item.dig("details", "image")
     return unless image
+
     { path: image["url"], alt_text: "European structural investment funds" }
   end
 
@@ -27,6 +28,6 @@ private
   end
 
   def related_guides_title
-    I18n.t('detailed_guide.related_guides')
+    I18n.t("detailed_guide.related_guides")
   end
 end

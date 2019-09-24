@@ -28,6 +28,7 @@ module ContentItem
 
     def expanded_links_from_content_item(type)
       return [] unless content_item["links"][type]
+
       content_item["links"][type]
     end
 
@@ -54,6 +55,7 @@ module ContentItem
 
     def link_for_type(type, link)
       return link_for_world_location(link) if type == "world_locations"
+
       link_to(link["title"], link["base_path"], class: "govuk-link")
     end
 

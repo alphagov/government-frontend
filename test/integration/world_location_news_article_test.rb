@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
   test "world location news article renders title, description and body" do
@@ -6,7 +6,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?(
       "meta[name='description'][content='Chevening Secretariat announces the Chevening/British Library Fellowship']",
-      visible: false
+      visible: false,
     )
 
     assert_has_component_title(@content_item["title"])
@@ -15,7 +15,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
   end
 
   test "renders first published, from and part of in metadata and document footer" do
-    setup_and_visit_content_item('world_location_news_article')
+    setup_and_visit_content_item("world_location_news_article")
 
     assert_has_published_dates("Published 24 November 2015")
     assert_footer_has_published_dates("Published 24 November 2015")

@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class ContentItemLinkableTest < ActiveSupport::TestCase
   class DummyContentItem
@@ -20,11 +20,11 @@ class ContentItemLinkableTest < ActiveSupport::TestCase
       {
         "title" => "Winston Churchill",
         "base_path" => "/government/people/winston-churchill",
-      }
+      },
     ]
 
     expected_from_links = [
-      %{<a class="govuk-link" href="/government/people/winston-churchill">Winston Churchill</a>}
+      %{<a class="govuk-link" href="/government/people/winston-churchill">Winston Churchill</a>},
     ]
     assert_equal expected_from_links, item.from
   end
@@ -35,7 +35,7 @@ class ContentItemLinkableTest < ActiveSupport::TestCase
       {
         "title" => "Winston Churchill",
         "base_path" => nil,
-      }
+      },
     ]
 
     expected_from_links = []
@@ -51,11 +51,11 @@ class ContentItemLinkableTest < ActiveSupport::TestCase
       {
         "title" => "Germany",
         "base_path" => nil,
-      }
+      },
     ]
 
     expected_from_links = [
-      %{<a class=\"govuk-link\" href="/world/germany/news">Germany</a>}
+      %{<a class=\"govuk-link\" href="/world/germany/news">Germany</a>},
     ]
     assert_equal expected_from_links, item.part_of
   end

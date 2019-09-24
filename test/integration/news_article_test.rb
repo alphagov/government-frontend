@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class NewsArticleTest < ActionDispatch::IntegrationTest
   test "news article renders title, description and body" do
@@ -17,9 +17,9 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
       metadata: {
         "From": {
           "Prime Minister's Office, 10 Downing Street":
-            "/government/organisations/prime-ministers-office-10-downing-street"
-        }
-      }
+            "/government/organisations/prime-ministers-office-10-downing-street",
+        },
+      },
     )
 
     assert_footer_has_published_dates("Published 25 December 2016")

@@ -26,7 +26,7 @@ class ContentItemNewsImageTest < ActiveSupport::TestCase
     item = DummyContentItem.new
     default_news_image = { "url" => "http://www.test.dev.gov.uk/default_news_image.jpg" }
     item.content_item["links"]["primary_publishing_organisation"] = [
-      "details" => { "default_news_image" => default_news_image }
+      "details" => { "default_news_image" => default_news_image },
     ]
 
     assert_equal default_news_image, item.image

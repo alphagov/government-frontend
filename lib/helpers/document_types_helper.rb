@@ -1,4 +1,4 @@
-require 'rest-client'
+require "rest-client"
 
 class DocumentTypesHelper
   ALL_SEARCH_ENDPOINT = "https://www.gov.uk/api/search.json?facet_content_store_document_type=100,example_scope:global,examples:%<sample_size>s&filter_rendering_app=government-frontend&count=0".freeze

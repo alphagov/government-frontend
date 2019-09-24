@@ -12,6 +12,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
 
   def release_date_and_status
     return "#{release_date} (#{state})" unless cancelled?
+
     release_date
   end
 
@@ -28,7 +29,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
       if cancelled?
         m.merge!(
           "Proposed release" => release_date,
-          "Cancellation date" => cancellation_date
+          "Cancellation date" => cancellation_date,
         )
       else
         m.merge!("Release date" => release_date_and_status)
@@ -37,7 +38,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   end
 
   def national_statistics?
-    content_item["details"]["format_sub_type"] == 'national'
+    content_item["details"]["format_sub_type"] == "national"
   end
 
   def cancellation_date

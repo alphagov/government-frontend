@@ -13,8 +13,8 @@ class TravelAdvicePresenter < ContentItemPresenter
   end
 
   def metadata
-    reviewed_at = content_item['details']['reviewed_at']
-    updated_at = content_item['details']['updated_at']
+    reviewed_at = content_item["details"]["reviewed_at"]
+    updated_at = content_item["details"]["updated_at"]
 
     other = {
       "Still current at" => I18n.l(Time.zone.now, format: "%-d %B %Y"),
@@ -24,14 +24,14 @@ class TravelAdvicePresenter < ContentItemPresenter
     other["Latest update"] = simple_format(latest_update) if latest_update.present?
 
     {
-      other: other
+      other: other,
     }
   end
 
   def title_and_context
     {
-      context: 'Foreign travel advice',
-      title: country_name
+      context: "Foreign travel advice",
+      title: country_name,
     }
   end
 
@@ -81,7 +81,7 @@ class TravelAdvicePresenter < ContentItemPresenter
       end
     end
 
-    alert_statuses.join('').html_safe
+    alert_statuses.join("").html_safe
   end
 
   def atom_change_description
@@ -94,6 +94,7 @@ class TravelAdvicePresenter < ContentItemPresenter
 
   def cache_control_max_age(format)
     return ATOM_CACHE_CONTROL_MAX_AGE if format == "atom"
+
     content_item.cache_control.max_age
   end
 
@@ -108,12 +109,12 @@ private
     {
       "title" => "Summary",
       "slug" => "",
-      "body" => content_item["details"]["summary"]
+      "body" => content_item["details"]["summary"],
     }
   end
 
   def change_description
-    content_item['details']['change_description']
+    content_item["details"]["change_description"]
   end
 
   # FIXME: Update publishing app UI and remove from content
@@ -124,7 +125,7 @@ private
   # has a latest update label, so we can strip this out.
   # Avoids: "Latest update: Latest update - …"
   def latest_update
-    change_description.sub(/^Latest update:?\s-?\s?/i, '').tap do |latest|
+    change_description.sub(/^Latest update:?\s-?\s?/i, "").tap do |latest|
       latest[0] = latest[0].capitalize if latest.present?
     end
   end

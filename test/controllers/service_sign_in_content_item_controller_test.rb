@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
@@ -62,9 +62,9 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example("service_sign_in", "service_sign_in")
     path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
 
-    option = content_item['details']['choose_sign_in']['options'][0]
-    value = option['text'].parameterize
-    link = option['url']
+    option = content_item["details"]["choose_sign_in"]["options"][0]
+    value = option["text"].parameterize
+    link = option["url"]
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
@@ -102,14 +102,14 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "includes _ga as a query param when redirecting if set" do
     content_item = govuk_content_schema_example("service_sign_in", "service_sign_in")
-    link = 'https://www.horse.service.gov.uk/account?horse=brown'
-    content_item['details']['choose_sign_in']['options'][0]['url'] = link
-    content_store_has_item(content_item['base_path'], content_item)
+    link = "https://www.horse.service.gov.uk/account?horse=brown"
+    content_item["details"]["choose_sign_in"]["options"][0]["url"] = link
+    content_store_has_item(content_item["base_path"], content_item)
 
     path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
 
-    option = content_item['details']['choose_sign_in']['options'][0]
-    value = option['text'].parameterize
+    option = content_item["details"]["choose_sign_in"]["options"][0]
+    value = option["text"].parameterize
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
@@ -120,8 +120,8 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   def path_for(content_item, locale = nil)
-    base_path = content_item['base_path'].sub(/^\//, '')
-    base_path.gsub!(/\.#{locale}$/, '') if locale
+    base_path = content_item["base_path"].sub(/^\//, "")
+    base_path.gsub!(/\.#{locale}$/, "") if locale
     base_path
   end
 end

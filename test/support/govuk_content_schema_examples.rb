@@ -1,4 +1,4 @@
-require 'gds_api/test_helpers/content_store'
+require "gds_api/test_helpers/content_store"
 
 # Include this module to get access to the GOVUK Content Schema examples in the
 # tests.
@@ -21,7 +21,7 @@ module GovukContentSchemaExamples
 
   def content_store_has_schema_example(schema_name, example_name)
     document = govuk_content_schema_example(schema_name, example_name)
-    content_store_has_item(document['base_path'], document)
+    content_store_has_item(document["base_path"], document)
     document
   end
 

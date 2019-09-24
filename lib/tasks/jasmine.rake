@@ -1,1 +1,1 @@
-Rake::Task[:default].enhance ['spec:javascript']
+Rake::Task[:default].enhance ["spec:javascript"]

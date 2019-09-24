@@ -2,7 +2,7 @@ class WraithConfigHelper
   attr_accessor :name, :paths
 
   TEMPLATE_PATH = "test/wraith/config.yaml".freeze
-  OUTPUT_PATH = 'test/wraith/wip-config-%<suffix>s.yaml'.freeze
+  OUTPUT_PATH = "test/wraith/wip-config-%<suffix>s.yaml".freeze
 
   def initialize(name, paths)
     @name = name
@@ -45,7 +45,7 @@ private
 
   def write_config(config)
     file_name = OUTPUT_PATH % { suffix: @name }
-    File.open(file_name, 'w') { |f| f.write config.to_yaml }
+    File.open(file_name, "w") { |f| f.write config.to_yaml }
     file_name
   end
 end

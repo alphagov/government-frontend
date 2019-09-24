@@ -10,7 +10,7 @@ module ContentItem
       corporate_information_groups.map do |group|
         {
           heading: content_tag(:h3, group["name"], id: group_title_id(group["name"])),
-          links: normalised_group_links(group)
+          links: normalised_group_links(group),
         }
       end
     end
@@ -25,8 +25,8 @@ module ContentItem
         further_information_about("welsh_language_scheme"),
         further_information_about("personal_information_charter"),
         further_information_about("social_media_use"),
-        further_information_about("about_our_services")
-      ].join(' ').html_safe
+        further_information_about("about_our_services"),
+      ].join(" ").html_safe
     end
 
   private
@@ -42,16 +42,16 @@ module ContentItem
     end
 
     def corporate_information_heading
-      heading_text = I18n.t('corporate_information_page.corporate_information')
+      heading_text = I18n.t("corporate_information_page.corporate_information")
 
       {
         text: heading_text,
-        id: group_title_id(heading_text)
+        id: group_title_id(heading_text),
       }
     end
 
     def group_title_id(title)
-      title.tr(' ', '-').downcase
+      title.tr(" ", "-").downcase
     end
 
     def normalised_group_links(group)
@@ -70,7 +70,7 @@ module ContentItem
     end
 
     def corporate_information_page_links
-      expanded_links_from_content_item('corporate_information_pages')
+      expanded_links_from_content_item("corporate_information_pages")
     end
 
     def corporate_information_groups

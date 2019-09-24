@@ -1,4 +1,4 @@
-require 'component_test_helper'
+require "component_test_helper"
 
 class ContentsListWithBodyTest < ComponentTestCase
   def component_path
@@ -7,8 +7,8 @@ class ContentsListWithBodyTest < ComponentTestCase
 
   def contents_list
     [
-      { href: '/one', text: "1. One" },
-      { href: '/two', text: "2. Two" }
+      { href: "/one", text: "1. One" },
+      { href: "/two", text: "2. Two" },
     ]
   end
 
