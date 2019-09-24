@@ -30,7 +30,7 @@ class CaseStudyPresenterTest < PresenterTestCase
   test "#from returns links to lead organisations, supporting organisations and worldwide organisations" do
     with_organisations = {
       "details" => {
-        "emphasised_organisations" => ["b56753d2-ae3f-480e-88b0-35b1934dfc5a"],
+        "emphasised_organisations" => %w[b56753d2-ae3f-480e-88b0-35b1934dfc5a],
       },
       "links" => {
         "worldwide_organisations" => [{ "title" => "DFID Pakistan", "base_path" => "/government/world/organisations/dfid-pakistan" }],

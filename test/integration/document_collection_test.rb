@@ -50,7 +50,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       {
         "title" => "Item one",
         "body" => "<p>Content about item one</p>",
-        "documents" => ["a-content-id"],
+        "documents" => %w[a-content-id],
       },
     ]
     content_store_has_item(item["base_path"], item.to_json)

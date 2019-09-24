@@ -168,6 +168,6 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
       end
     end
 
-    assert_equal @updatable.history.map { |i| i[:timestamp] }, ["2003-03-03", "2002-02-02", "2001-01-01"]
+    assert_equal @updatable.history.map { |i| i[:timestamp] }, %w[2003-03-03 2002-02-02 2001-01-01]
   end
 end
