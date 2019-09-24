@@ -7,7 +7,7 @@ module ContentItem
     def govspeak_body
       {
         content: body.html_safe,
-        direction: text_direction
+        direction: text_direction,
       }
     end
   end

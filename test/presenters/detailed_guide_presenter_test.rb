@@ -72,7 +72,7 @@ class DetailedGuidePresenterTest < PresenterTestCase
 
     expected = {
       alt_text: "European structural investment funds",
-      path: "https://assets.publishing.service.gov.uk/media/5540ab8aed915d15d8000030/european-structural-investment-funds.png"
+      path: "https://assets.publishing.service.gov.uk/media/5540ab8aed915d15d8000030/european-structural-investment-funds.png",
     }
     assert_equal presented.logo, expected
   end

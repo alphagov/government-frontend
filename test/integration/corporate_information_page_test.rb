@@ -77,7 +77,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
     content_item = GovukSchemas::Example.find("corporate_information_page", example_name: "corporate_information_page")
     content_item["withdrawn_notice"] = {
       'explanation': "This is out of date",
-      'withdrawn_at': "2014-08-09T11:39:05Z"
+      'withdrawn_at': "2014-08-09T11:39:05Z",
     }
     content_store_has_item("/government/organisations/department-of-health/about", content_item.to_json)
 

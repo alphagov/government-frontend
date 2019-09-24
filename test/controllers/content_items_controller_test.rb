@@ -91,7 +91,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example("travel_advice", "full-country")
 
     get :show, params: {
-      path: path_for(content_item)
+      path: path_for(content_item),
     }
 
     assert_match(/text\/html/, response.headers["Content-Type"])
@@ -104,7 +104,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example("case_study", "case_study")
 
     get :show, params: {
-      path: path_for(content_item)
+      path: path_for(content_item),
     }
 
     assert_response :not_acceptable
@@ -115,7 +115,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example("case_study", "case_study")
 
     get :show, params: {
-      path: path_for(content_item)
+      path: path_for(content_item),
     }
 
     assert_response :not_acceptable

@@ -25,7 +25,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
         "From": {
           "Environment Agency": "/government/organisations/environment-agency",
           "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
-        }
+        },
       }
     )
 

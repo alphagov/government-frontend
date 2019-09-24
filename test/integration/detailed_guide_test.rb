@@ -17,8 +17,8 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
       history_link: true,
       metadata: {
         "From:": {
-          "HM Revenue & Customs": "/government/organisations/hm-revenue-customs"
-        }
+          "HM Revenue & Customs": "/government/organisations/hm-revenue-customs",
+        },
       }
     )
   end

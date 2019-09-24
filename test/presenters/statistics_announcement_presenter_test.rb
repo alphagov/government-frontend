@@ -36,7 +36,7 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
 
   test "present important metadata when confirmed" do
     metadata = {
-      "Release date" => "20 January 2016 9:30am (confirmed)"
+      "Release date" => "20 January 2016 9:30am (confirmed)",
     }
     assert_equal metadata, statistics_announcement.important_metadata
   end
@@ -44,7 +44,7 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
   test "present important metadata when cancelled" do
     metadata = {
       "Proposed release" => "20 January 2016 9:30am",
-      "Cancellation date" => "17 January 2016 2:19pm"
+      "Cancellation date" => "17 January 2016 2:19pm",
     }
     assert_equal metadata, statistics_announcement_cancelled.important_metadata
   end

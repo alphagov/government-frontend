@@ -16,8 +16,8 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
       def content_item
         {
           "withdrawn_notice" => {
-            "withdrawn_at" => "2016-07-12T09:47:15Z"
-          }
+            "withdrawn_at" => "2016-07-12T09:47:15Z",
+          },
         }
       end
     end
@@ -35,8 +35,8 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
         {
           "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
           "withdrawn_notice" => {
-            "withdrawn_at" => "2016-07-12T09:47:15Z"
-          }
+            "withdrawn_at" => "2016-07-12T09:47:15Z",
+          },
         }
       end
     end
@@ -59,8 +59,8 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
           "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
           "withdrawn_notice" => {
             "explanation" => '<div class=\'govspeak\'><p>It has been superseded by <a href=\'https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015\'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\n</div>',
-            "withdrawn_at" => "2016-07-12T09:47:15Z"
-          }
+            "withdrawn_at" => "2016-07-12T09:47:15Z",
+          },
         }
       end
     end
@@ -82,9 +82,9 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
           "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
           "withdrawn_notice" => {
             "explanation" => '<div class=\'govspeak\'><p>It has been superseded by <a href=\'https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015\'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\n</div>',
-            "withdrawn_at" => "2016-07-12T09:47:15Z"
+            "withdrawn_at" => "2016-07-12T09:47:15Z",
           },
-          'locale': "cy"
+          'locale': "cy",
         }
       end
     end

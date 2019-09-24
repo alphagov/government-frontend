@@ -75,8 +75,8 @@ private
           "track-action": "1.#{index} #{type}",
           "track-label": base_path,
           "track-options": {
-            dimension29: title
-          }
+            dimension29: title,
+          },
         }
       )
     end

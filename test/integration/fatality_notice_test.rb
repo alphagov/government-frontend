@@ -25,7 +25,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       last_updated: "Last updated 14 September 2016",
       history_link: true,
       metadata: {
-        "From": { "Ministry of Defence": "/government/organisations/ministry-of-defence" }
+        "From": { "Ministry of Defence": "/government/organisations/ministry-of-defence" },
       }
     )
 

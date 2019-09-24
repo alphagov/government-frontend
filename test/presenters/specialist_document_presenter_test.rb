@@ -37,7 +37,7 @@ class SpecialistDocumentPresenterTest
       example["details"]["change_history"] = [
         {
           "note" => "First published",
-          "public_timestamp" => "2003-03-03"
+          "public_timestamp" => "2003-03-03",
         }
       ]
 
@@ -46,11 +46,11 @@ class SpecialistDocumentPresenterTest
       example["details"]["change_history"] = [
         {
           "note" => "First published",
-          "public_timestamp" => "2003-03-03"
+          "public_timestamp" => "2003-03-03",
         },
         {
           "note" => "Modified since first published",
-          "public_timestamp" => "2013-04-05"
+          "public_timestamp" => "2013-04-05",
         }
       ]
 
@@ -63,15 +63,15 @@ class SpecialistDocumentPresenterTest
       example["details"]["change_history"] = [
         {
           "note" => "Newer",
-          "public_timestamp" => "2003-03-03"
+          "public_timestamp" => "2003-03-03",
         },
         {
           "note" => "Oldest",
-          "public_timestamp" => "2002-02-02"
+          "public_timestamp" => "2002-02-02",
         },
         {
           "note" => "More recent",
-          "public_timestamp" => "2013-03-03"
+          "public_timestamp" => "2013-03-03",
         },
       ]
 
@@ -137,7 +137,7 @@ class SpecialistDocumentPresenterTest
         "details" => {
           "document_noun" => "case",
           "filter" => {
-            "document_type" => "cma_case"
+            "document_type" => "cma_case",
           },
           "format_name" => "Competition and Markets Authority case",
           "facets" => facets,
@@ -154,7 +154,7 @@ class SpecialistDocumentPresenterTest
         "name" => "Facet name",
         "key" => "facet-key",
         "type" => "text",
-        "filterable" => false
+        "filterable" => false,
       }.merge(overrides)
     end
 
@@ -171,9 +171,9 @@ class SpecialistDocumentPresenterTest
         "allowed_values" => [
           {
             "label" => "Document value from label",
-            "value" => "document-value"
+            "value" => "document-value",
           }
-        ]
+        ],
       }
 
       values = { "facet-key" => "document-value" }
@@ -188,9 +188,9 @@ class SpecialistDocumentPresenterTest
         "allowed_values" => [
           {
             "label" => "Document value from label",
-            "value" => "document-value"
+            "value" => "document-value",
           }
-        ]
+        ],
       }
 
       values = { "facet-key" => "not-an-allowed-value" }
@@ -237,13 +237,13 @@ class SpecialistDocumentPresenterTest
         "allowed_values" => [
           {
             "label" => "One",
-            "value" => "one"
+            "value" => "one",
           },
           {
             "label" => "Two",
-            "value" => "two"
+            "value" => "two",
           }
-        ]
+        ],
       }
 
       values = { "facet-key" => %w{one two} }
@@ -259,9 +259,9 @@ class SpecialistDocumentPresenterTest
         "allowed_values" => [
           {
             "label" => "Something",
-            "value" => "something"
+            "value" => "something",
           }
-        ]
+        ],
       }
 
       values = { "facet-key" => "something" }
@@ -352,7 +352,7 @@ class SpecialistDocumentPresenterTest
       example["details"]["change_history"] = [
         {
           "note" => "A date in the change history",
-          "public_timestamp" => "2002-02-02"
+          "public_timestamp" => "2002-02-02",
         },
       ]
 

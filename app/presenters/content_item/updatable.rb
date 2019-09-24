@@ -29,7 +29,7 @@ module ContentItem
         {
           display_time: display_date(item["public_timestamp"]),
           note: item["note"],
-          timestamp: item["public_timestamp"]
+          timestamp: item["public_timestamp"],
         }
       end
     end

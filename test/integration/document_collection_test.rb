@@ -25,8 +25,8 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       {
         "From:":
           {
-            "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency"
-          }
+            "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency",
+          },
       }
     )
     assert_footer_has_published_dates("Published 29 February 2016")
@@ -50,7 +50,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       {
         "title" => "Item one",
         "body" => "<p>Content about item one</p>",
-        "documents" => ["a-content-id"]
+        "documents" => ["a-content-id"],
       },
     ]
     content_store_has_item(item["base_path"], item.to_json)

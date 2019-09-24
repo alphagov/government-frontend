@@ -35,9 +35,9 @@ class DocumentCollectionPresenter < ContentItemPresenter
             track_label: link["base_path"],
             track_options: {
               dimension28: group["documents"].count.to_s,
-              dimension29: link["title"]
-            }
-          }
+              dimension29: link["title"],
+            },
+          },
         },
         metadata: {
           public_updated_at: link["public_updated_at"]&.then { |time| Time.zone.parse(time) },

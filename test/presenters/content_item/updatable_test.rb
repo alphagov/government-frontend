@@ -40,10 +40,10 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
             "change_history" => [
               {
                 "note" => "note",
-                "public_timestamp" => "2002-02-02"
+                "public_timestamp" => "2002-02-02",
               }
-            ]
-          }
+            ],
+          },
         }
       end
     end
@@ -62,10 +62,10 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
             "change_history" => [
               {
                 "note" => "note",
-                "public_timestamp" => "2002-02-02"
+                "public_timestamp" => "2002-02-02",
               }
-            ]
-          }
+            ],
+          },
         }
       end
     end
@@ -83,10 +83,10 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
             "change_history" => [
               {
                 "note" => "note",
-                "public_timestap" => "2002-02-02"
+                "public_timestap" => "2002-02-02",
               }
-            ]
-          }
+            ],
+          },
         }
       end
     end
@@ -104,10 +104,10 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
             "change_history" => [
               {
                 "note" => "note",
-                "public_timestamp" => "2002-02-02"
+                "public_timestamp" => "2002-02-02",
               }
-            ]
-          }
+            ],
+          },
         }
       end
     end
@@ -127,8 +127,8 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
                 "note" => "notes",
                 "public_timestamp" => "2016-02-29T09:24:10.000+00:00",
               }
-            ]
-          }
+            ],
+          },
         }
       end
     end
@@ -138,7 +138,7 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
                    {
                      display_time: "2016-02-29T09:24:10.000+00:00",
                      note: "notes",
-                     timestamp: "2016-02-29T09:24:10.000+00:00"
+                     timestamp: "2016-02-29T09:24:10.000+00:00",
                    }
                  ]
   end
@@ -162,8 +162,8 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
                 "note" => "second",
                 "public_timestamp" => "2002-02-02",
               }
-            ]
-          }
+            ],
+          },
         }
       end
     end

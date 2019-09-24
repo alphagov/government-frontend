@@ -17,8 +17,8 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
       metadata: {
         "From": {
           "Prime Minister's Office, 10 Downing Street":
-            "/government/organisations/prime-ministers-office-10-downing-street"
-        }
+            "/government/organisations/prime-ministers-office-10-downing-street",
+        },
       }
     )
 

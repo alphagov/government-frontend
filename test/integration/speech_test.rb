@@ -27,7 +27,7 @@ class SpeechTest < ActionDispatch::IntegrationTest
           "Department of Energy & Climate Change and The Rt Hon Andrea Leadsom MP": nil,
           "Department of Energy": "/government/organisations/department-of-energy-climate-change",
           "The Rt Hon Andrea Leadsom MP": "/government/people/andrea-leadsom",
-        }
+        },
       }
     )
 

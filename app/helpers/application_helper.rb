@@ -37,7 +37,7 @@ private
     # eg /government/news sits under 'announcements'
     {
       "news" => "announcements",
-      "fatalities" => "announcements"
+      "fatalities" => "announcements",
     }
   end
 end

@@ -10,7 +10,7 @@ module ContentItem
       corporate_information_groups.map do |group|
         {
           heading: content_tag(:h3, group["name"], id: group_title_id(group["name"])),
-          links: normalised_group_links(group)
+          links: normalised_group_links(group),
         }
       end
     end
@@ -46,7 +46,7 @@ module ContentItem
 
       {
         text: heading_text,
-        id: group_title_id(heading_text)
+        id: group_title_id(heading_text),
       }
     end
 

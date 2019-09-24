@@ -59,7 +59,7 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     presented = presented_item("multiple_organisations")
     organisation = presented.organisations.first
     organisation["details"]["logo"]["image"] = {
-      "url" => "url"
+      "url" => "url",
     }
 
     assert presented.organisations.count > 1

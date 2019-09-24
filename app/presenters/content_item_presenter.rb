@@ -93,7 +93,7 @@ private
       {
         locale: translation["locale"],
         base_path: translation["base_path"],
-        text: native_language_name_for(translation["locale"])
+        text: native_language_name_for(translation["locale"]),
       }.tap do |h|
         h[:active] = true if h[:locale] == I18n.locale.to_s
       end

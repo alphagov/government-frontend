@@ -59,14 +59,14 @@ class DocumentCollectionPresenterTest
               track_label: "/government/publications/national-standard-for-driving-cars-and-light-vans",
               track_options: {
                 dimension28: "1",
-                dimension29: "National standard for driving cars and light vans"
-              }
-            }
+                dimension29: "National standard for driving cars and light vans",
+              },
+            },
           },
           metadata: {
             public_updated_at: Time.zone.parse("2007-03-16 15:00:02 +0000"),
-            document_type: "Guidance"
-          }
+            document_type: "Guidance",
+          },
         }
       ]
       document_ids = schema_item["details"]["collection_groups"].first["documents"]

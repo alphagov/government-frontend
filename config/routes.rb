@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get "*path/:variant" => "content_items#show",
       constraints: {
-        variant: /print/
+        variant: /print/,
       }
 
   get "*path(.:locale)(.:format)" => "content_items#show",

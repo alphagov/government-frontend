@@ -18,7 +18,7 @@ class ImportantMetadataTest < ComponentTestCase
     render_component(
       title: "The release date has been changed",
       items: {
-      "Release Date": "14 October 2016"
+      "Release Date": "14 October 2016",
       }
     )
 

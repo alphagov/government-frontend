@@ -33,8 +33,8 @@ class GuidePresenterTest
         next_page: {
           url: "#{schema_item['base_path']}/#{parts[1]['slug']}",
           title: "Next",
-          label: parts[1]["title"]
-        }
+          label: parts[1]["title"],
+        },
       }
 
       assert_equal nav, expected_nav
@@ -47,13 +47,13 @@ class GuidePresenterTest
         next_page: {
           url: "#{schema_item['base_path']}/#{parts[2]['slug']}",
           title: "Next",
-          label: parts[2]["title"]
+          label: parts[2]["title"],
         },
         previous_page: {
           url: schema_item["base_path"],
           title: "Previous",
-          label: parts[0]["title"]
-        }
+          label: parts[0]["title"],
+        },
       }
 
       assert_equal nav, expected_nav
@@ -66,8 +66,8 @@ class GuidePresenterTest
         previous_page: {
           url: "#{schema_item['base_path']}/#{parts[-2]['slug']}",
           title: "Previous",
-          label: parts[-2]["title"]
-        }
+          label: parts[-2]["title"],
+        },
       }
 
       assert_equal nav, expected_nav

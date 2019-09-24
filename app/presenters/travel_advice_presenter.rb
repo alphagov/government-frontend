@@ -24,14 +24,14 @@ class TravelAdvicePresenter < ContentItemPresenter
     other["Latest update"] = simple_format(latest_update) if latest_update.present?
 
     {
-      other: other
+      other: other,
     }
   end
 
   def title_and_context
     {
       context: "Foreign travel advice",
-      title: country_name
+      title: country_name,
     }
   end
 
@@ -108,7 +108,7 @@ private
     {
       "title" => "Summary",
       "slug" => "",
-      "body" => content_item["details"]["summary"]
+      "body" => content_item["details"]["summary"],
     }
   end
 

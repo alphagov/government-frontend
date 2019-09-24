@@ -38,7 +38,7 @@ class CaseStudyPresenterTest < PresenterTestCase
           { "title" => "Supporting org", "base_path" => "/orgs/supporting", "content_id" => "dc2beab0-4ee9-41e0-9a6f-9c586d50fa7e" },
           { "title" => "Lead org", "base_path" => "/orgs/lead", "content_id" => "b56753d2-ae3f-480e-88b0-35b1934dfc5a" },
         ],
-      }
+      },
     }
 
     expected_from_links = [

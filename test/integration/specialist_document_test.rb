@@ -50,7 +50,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     assert_has_publisher_metadata_other(
       "From": {
         "Air Accidents Investigation Branch":
-          "/government/organisations/air-accidents-investigation-branch"
+          "/government/organisations/air-accidents-investigation-branch",
       }
     )
   end
@@ -90,7 +90,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
         "Mid Tier": "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier",
       },
       "Funding (per unit per year)": {
-        "More than £500": "/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500"
+        "More than £500": "/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500",
       }
     )
   end

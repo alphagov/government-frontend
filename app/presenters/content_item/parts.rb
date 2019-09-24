@@ -44,7 +44,7 @@ module ContentItem
         nav[:previous_page] = {
           url: previous_part["full_path"],
           title: I18n.t("multi_page.previous_page"),
-          label: previous_part["title"]
+          label: previous_part["title"],
         }
       end
 
@@ -52,7 +52,7 @@ module ContentItem
         nav[:next_page] = {
           url: next_part["full_path"],
           title: I18n.t("multi_page.next_page"),
-          label: next_part["title"]
+          label: next_part["title"],
         }
       end
 
@@ -92,8 +92,8 @@ module ContentItem
             track_action: "content_item #{position}",
             track_label: part["full_path"],
             track_options: {
-              dimension29: part["title"]
-             }
+              dimension29: part["title"],
+             },
            }
         else
           part["title"]

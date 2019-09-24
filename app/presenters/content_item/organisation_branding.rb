@@ -10,7 +10,7 @@ module ContentItem
           url: organisation["base_path"],
           brand: organisation_brand(organisation),
           crest: logo["crest"],
-        }
+        },
       }
 
       if logo["image"]

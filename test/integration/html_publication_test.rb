@@ -83,7 +83,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     content_item = GovukSchemas::Example.find("html_publication", example_name: "prime_ministers_office")
     content_item["withdrawn_notice"] = {
       'explanation': "This is out of date",
-      'withdrawn_at': "2014-08-09T11:39:05Z"
+      'withdrawn_at': "2014-08-09T11:39:05Z",
     }
 
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
@@ -98,7 +98,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     content_item["links"]["parent"][0]["document_type"] = nil
     content_item["withdrawn_notice"] = {
       'explanation': "This is out of date",
-      'withdrawn_at': "2014-08-09T11:39:05Z"
+      'withdrawn_at': "2014-08-09T11:39:05Z",
     }
 
     content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)

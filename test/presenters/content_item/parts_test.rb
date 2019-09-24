@@ -19,8 +19,8 @@ module ContentItemPartsStubs
             "slug" => "second-slug",
             "body" => "second-body",
           }
-        ]
-      }
+        ],
+      },
     }
   end
 end
@@ -183,8 +183,8 @@ class ContentItemPartsTest < ActiveSupport::TestCase
               { "title" => "title", "slug" => "slug", "body" => "body" },
               { "title" => "title", "slug" => "slug", "body" => "body" },
               { "title" => "title", "slug" => "slug", "body" => "body" }
-            ]
-          }
+            ],
+          },
         }
       end
     end
@@ -204,8 +204,8 @@ class ContentItemPartsTest < ActiveSupport::TestCase
               { "title" => "second-title", "slug" => "second-slug", "body" => "second-body" },
               { "title" => "third-title", "slug" => "third-slug", "body" => "third-body" },
               { "title" => "fourth-title", "slug" => "fourth-slug", "body" => "fourth-body" }
-            ]
-          }
+            ],
+          },
         }
       end
     end
