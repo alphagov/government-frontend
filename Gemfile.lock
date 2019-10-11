@@ -113,7 +113,7 @@ GEM
     govuk_frontend_toolkit (8.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    govuk_publishing_components (21.5.0)
+    govuk_publishing_components (21.5.1)
       gds-api-adapters
       govuk_app_config
       kramdown
@@ -168,7 +168,7 @@ GEM
     method_source (0.9.2)
     mime-types (3.3)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.0904)
+    mime-types-data (3.2019.1009)
     mimemagic (0.3.3)
     mini_magick (4.9.5)
     mini_mime (1.0.2)
@@ -366,7 +366,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 2.0)
   govuk_frontend_toolkit (~> 8.2.0)
-  govuk_publishing_components (~> 21.5.0)
+  govuk_publishing_components (~> 21.5.1)
   govuk_schemas (~> 4.0)
   govuk_test
   htmlentities (~> 4.3)
