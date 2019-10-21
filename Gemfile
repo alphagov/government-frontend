@@ -17,7 +17,7 @@ gem "rails-controller-testing", "~> 1.0"
 gem "rails-i18n", ">= 4.0.4"
 gem "rails_translation_manager", "~> 0.1.0"
 gem "sass-rails", "~> 5.0"
-gem "slimmer", "~> 13.1"
+gem "slimmer", "~> 13.2"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
