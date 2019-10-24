@@ -1,9 +1,15 @@
 <% content_for :extra_head_content do %>
   <%= machine_readable_metadata(
-    schema: :faq,
+    schema: :article,
     canonical_url: @content_item.canonical_url,
     body: @content_item.has_parts? ? @content_item.current_part_body : nil
   ) %>
+<% end %>
+
+<% unless @content_item.requesting_a_part? %>
+<script type="application/ld+json">
+  <%= raw MachineReadable::GuideFaqPageSchemaPresenter.new(@content_item).structured_data.to_json %>
+</script>
 <% end %>
 
 <% content_for :simple_header, true %>
