@@ -6,9 +6,11 @@
   ) %>
 <% end %>
 
+<% if MachineReadable::YamlFaqPageSchemaPresenter.configured?(@content_item) %>
 <script type="application/ld+json">
-  <%= raw MachineReadable::GuideFaqPageSchemaPresenter.new(@content_item).structured_data.to_json %>
+  <%= raw MachineReadable::YamlFaqPageSchemaPresenter.new(@content_item).structured_data.to_json %>
 </script>
+<% end %>
 
 <% content_for :simple_header, true %>
 
