@@ -27,6 +27,7 @@
     <% if @content_item.has_parts? %>
 
       <% @content_item.parts.each_with_index do |part, index| %>
+      <section class="govuk-!-padding-bottom-9" aria-labelledby="<%= part["slug"] %>">
         <%= render "govuk_publishing_components/components/heading", {
             text: part["title"],
             id: part["slug"],
@@ -39,7 +40,7 @@
           content: part["body"].html_safe,
           direction: page_text_direction,
           disable_youtube_expansions: true %>
-
+      </section>
       <% end %>
       <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
     <% end %>
