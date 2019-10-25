@@ -26,10 +26,14 @@
   <div class="govuk-grid-column-two-thirds">
     <% if @content_item.has_parts? %>
 
-      <% @content_item.parts.each do |part| %>
-        <h1 id=<%= part["slug"] %> class="part-title">
-          <%= part["title"] %>
-        </h1>
+      <% @content_item.parts.each_with_index do |part, index| %>
+        <%= render "govuk_publishing_components/components/heading", {
+            text: part["title"],
+            id: part["slug"],
+            heading_level: 1,
+            border_top: index.zero? ? 0 : 2,
+            padding: true
+          } %>
 
         <%= render 'govuk_publishing_components/components/govspeak',
           content: part["body"].html_safe,
