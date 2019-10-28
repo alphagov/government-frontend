@@ -3,7 +3,7 @@
   color: govuk-colour("white");
   padding: govuk-spacing(3);
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     overflow: auto;
     padding: govuk-spacing(4) govuk-spacing(6);
   }

@@ -46,7 +46,7 @@
     padding: 0 15px;
     box-sizing: border-box;
 
-    @include media(desktop) {
+    @include govuk-media-query($from: desktop) {
       width: 75%;
       float: right;
     }
@@ -64,7 +64,7 @@
     display: none;
   }
 
-  @include media(false, $desktop-breakpoint) {
+  @include govuk-media-query($until: desktop) {
     .govuk-sticky-element--enabled {
       position: static;
     }

@@ -17,7 +17,7 @@
     padding-bottom: govuk-spacing(3);
     padding-top: govuk-spacing(3);
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       float: right;
     }
   }

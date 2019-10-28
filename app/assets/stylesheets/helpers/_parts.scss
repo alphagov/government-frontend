@@ -4,7 +4,7 @@
     margin-bottom: govuk-spacing(6);
     padding-bottom: govuk-spacing(3);
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       margin-top: 0;
       margin-bottom: 0;
       padding-bottom: govuk-spacing(3);
@@ -17,7 +17,7 @@
     margin-bottom: 0;
     @include core-19;
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       @include core-16;
     }
 
@@ -36,7 +36,7 @@
     margin-bottom: govuk-spacing(3);
     margin-top: govuk-spacing(3);
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       margin-bottom: govuk-spacing(4);
       margin-top: govuk-spacing(4);
     }

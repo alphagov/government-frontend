@@ -8,7 +8,7 @@
     @include govuk-focused-text;
   }
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     margin-top: govuk-spacing(6);
   }
 

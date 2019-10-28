@@ -10,7 +10,7 @@
   display: block;
   width: 100%;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     float: left;
     width: 50%;
   }
@@ -20,7 +20,7 @@
   @include core-16;
 
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     @include core-14;
 
     display: block;
@@ -32,7 +32,7 @@
     width: 50%;
   }
 
-  @include media(mobile) {
+  @include govuk-media-query($until: tablet) {
     margin-top: govuk-spacing(2);
   }
 }
@@ -40,7 +40,7 @@
 .app-c-figure__figcaption-text {
   margin-bottom: 0;
 
-  @include media(desktop, tablet) {
+  @include govuk-media-query($from: tablet) {
     margin-bottom: govuk-spacing(2);
   }
 }

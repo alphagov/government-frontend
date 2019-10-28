@@ -8,13 +8,13 @@
   padding: govuk-spacing(3);
   clear: both;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     padding: govuk-spacing(4) govuk-spacing(6);
   }
 }
 
 .app-c-banner--aside {
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     padding: govuk-spacing(6);
   }
 }
