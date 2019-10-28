@@ -10,7 +10,7 @@
       padding-bottom: govuk-spacing(3);
     }
 
-    border-bottom: 1px solid $grey-2;
+    border-bottom: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
   }
 
   .part-navigation {

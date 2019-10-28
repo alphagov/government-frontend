@@ -3,8 +3,8 @@
   @include govuk-font(19);
   @include white-links;
   direction: ltr;
-  background: $govuk-blue;
-  color: $white;
+  background: $govuk-brand-colour;
+  color: govuk-colour("white");
   padding: govuk-spacing(3);
   clear: both;
 
