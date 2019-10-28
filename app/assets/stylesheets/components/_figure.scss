@@ -1,5 +1,5 @@
 .app-c-figure {
-  @extend %contain-floats;
+  @include govuk-clearfix;
   @include responsive-bottom-margin;
 
   border-top: 1px solid $govuk-border-colour;

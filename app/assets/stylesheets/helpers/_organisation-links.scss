@@ -1,8 +1,12 @@
+@import "govuk/settings/colours-palette";
+@import "govuk/settings/colours-organisations";
+@import "govuk/helpers/colour";
+
 @mixin organisation-links {
-  @each $organisation in $all-organisation-brand-colours {
-    .#{nth($organisation, 1)}-brand-colour {
+  @each $organisation in map-keys($govuk-colours-organisations) {
+    .#{$organisation}-brand-colour {
       a {
-        color: nth($organisation, 3);
+        color: govuk-organisation-colour($organisation);
 
         &:focus {
           color: $govuk-focus-text-colour;
