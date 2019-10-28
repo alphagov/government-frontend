@@ -2,7 +2,7 @@
   @extend %contain-floats;
   @include responsive-bottom-margin;
 
-  border-top: 1px solid $border-colour;
+  border-top: 1px solid $govuk-border-colour;
   padding-top: govuk-spacing(3);
 }
 

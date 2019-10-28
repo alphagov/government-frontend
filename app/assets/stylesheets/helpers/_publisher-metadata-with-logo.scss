@@ -3,7 +3,7 @@
 // formats so they may ultimately become component styles.
 .metadata-logo-wrapper {
   @include govuk-clearfix;
-  border-top: 1px solid $border-colour;
+  border-top: 1px solid $govuk-border-colour;
   margin-left: govuk-spacing(3);
   margin-right: govuk-spacing(3);
 
