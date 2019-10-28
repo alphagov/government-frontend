@@ -25,7 +25,7 @@
   }
 
   .publication-header__last-changed {
-    @include core-19;
+    @include govuk-font(19);
     margin-top: govuk-spacing(3);
   }
 

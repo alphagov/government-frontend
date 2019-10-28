@@ -2,7 +2,7 @@
   @include sidebar-with-body;
 
   .consultation-date {
-    @include bold-19;
+    @include govuk-font(19, $weight: bold);
   }
 
   .original-consultation {

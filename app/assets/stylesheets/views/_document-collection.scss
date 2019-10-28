@@ -3,7 +3,7 @@
   @include sidebar-with-body;
 
   .group-title {
-    @include bold-27;
+    @include govuk-font(27, $weight: bold);
     margin-top: govuk-spacing(6);
     margin-bottom: govuk-spacing(3);
 

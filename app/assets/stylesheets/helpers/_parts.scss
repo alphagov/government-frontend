@@ -15,10 +15,10 @@
 
   .part-navigation {
     margin-bottom: 0;
-    @include core-19;
+    @include govuk-font(19);
 
     @include govuk-media-query($from: tablet) {
-      @include core-16;
+      @include govuk-font(16);
     }
 
     li {
@@ -32,7 +32,7 @@
   }
 
   .part-title {
-    @include bold-27;
+    @include govuk-font(27, $weight: bold);
     margin-bottom: govuk-spacing(3);
     margin-top: govuk-spacing(3);
 

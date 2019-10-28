@@ -18,7 +18,7 @@
   // https://github.com/alphagov/static/blob/f44470edc4e4159ea37481985c641034741623ac/app/assets/stylesheets/helpers/_text.scss#L38
   .govuk-govspeak {
     h2 {
-      @include bold-24;
+      @include govuk-font(24, $weight: bold);
     }
   }
 }

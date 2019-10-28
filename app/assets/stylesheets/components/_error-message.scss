@@ -2,12 +2,8 @@
 
 .app-c-error-message {
   display: block;
-
   margin-bottom: $app-spacing-scale-3;
-
   clear: both;
-
   color: $app-error-colour;
-
-  @include bold-19;
+  @include govuk-font(19, $weight: bold);
 }
