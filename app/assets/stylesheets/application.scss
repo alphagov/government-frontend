@@ -3,11 +3,6 @@
 $govuk-use-legacy-palette: true;
 $govuk-typography-use-rem: false;
 
-// govuk_frontend_toolkit dependencies
-@import "typography";
-@import "colours";
-@import "grid_layout";
-
 // Components from govuk_publishing_components gem
 @import 'govuk_publishing_components/all_components';
 
