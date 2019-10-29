@@ -10,14 +10,6 @@
     margin-bottom: govuk-spacing(4);
     position: relative;
 
-    .organisation-logos {
-      list-style-type: none;
-
-      .organisation-logo {
-        padding-bottom: govuk-spacing(2);
-      }
-    }
-
     // design calls for the logos at the top to always be left aligned
     .direction-rtl & {
       direction: ltr;
