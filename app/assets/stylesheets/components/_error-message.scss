@@ -4,6 +4,6 @@
   display: block;
   margin-bottom: $app-spacing-scale-3;
   clear: both;
-  color: $app-error-colour;
+  color: $govuk-error-colour;
   @include govuk-font(19, $weight: bold);
 }
