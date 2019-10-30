@@ -9,13 +9,15 @@
 %>
 
 <% if @content_item.organisations %>
-  <div class="govuk-grid-row publication-external">
-    <ol class="govuk-grid-column-one-quarter organisation-logos">
+  <div class="publication-external">
+    <ol class="organisation-logos">
       <% @content_item.organisations.each do |organisation| %>
       <% logo_attributes = @content_item.organisation_logo(organisation) %>
       <% next unless logo_attributes %>
-        <li class="organisation-logo">
-          <%= render 'govuk_publishing_components/components/organisation_logo', logo_attributes %>
+        <li class="organisation-logos__logo">
+          <div class="organisation-logo__inner">
+            <%= render 'govuk_publishing_components/components/organisation_logo', logo_attributes %>
+          </div>
         </li>
       <% end %>
     </ol>
