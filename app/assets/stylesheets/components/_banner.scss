@@ -1,35 +1,35 @@
 .app-c-banner {
   @include responsive-bottom-margin;
-  @include core-19;
+  @include govuk-font(19);
   @include white-links;
   direction: ltr;
-  background: $govuk-blue;
-  color: $white;
+  background: $govuk-brand-colour;
+  color: govuk-colour("white");
   padding: govuk-spacing(3);
   clear: both;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     padding: govuk-spacing(4) govuk-spacing(6);
   }
 }
 
 .app-c-banner--aside {
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     padding: govuk-spacing(6);
   }
 }
 
 .app-c-banner__text {
-  @include core-24;
+  @include govuk-font(24);
 }
 
 .app-c-banner__title {
-  @include bold-27;
+  @include govuk-font(27, $weight: bold);
   margin-bottom: govuk-spacing(2);
 }
 
 .app-c-banner__desc {
-  @include core-19;
+  @include govuk-font(19);
   // Ensure the text has a line-length of around 60 characters
   max-width: 30em;
   padding-top: govuk-spacing(2);

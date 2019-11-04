@@ -7,7 +7,7 @@
     padding: 0.5em 0.5em 0.5em 38px;
     margin-left: -10px;
 
-    @include device-pixel-ratio() {
+    @include govuk-device-pixel-ratio($ratio: 2) {
       background-image: image-url("icon-print-2x.png");
       background-size: 16px 18px;
     }

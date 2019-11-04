@@ -15,7 +15,7 @@
   .logo-image {
     max-width: 70%;
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       margin-top: 45px;
       max-width: 100%;
     }

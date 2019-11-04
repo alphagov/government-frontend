@@ -1,8 +1,8 @@
 .app-c-figure {
-  @extend %contain-floats;
+  @include govuk-clearfix;
   @include responsive-bottom-margin;
 
-  border-top: 1px solid $border-colour;
+  border-top: 1px solid $govuk-border-colour;
   padding-top: govuk-spacing(3);
 }
 
@@ -10,18 +10,18 @@
   display: block;
   width: 100%;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     float: left;
     width: 50%;
   }
 }
 
 .app-c-figure__figcaption {
-  @include core-16;
+  @include govuk-font(16);
 
 
-  @include media(tablet) {
-    @include core-14;
+  @include govuk-media-query($from: tablet) {
+    @include govuk-font(14);
 
     display: block;
     vertical-align: top;
@@ -32,7 +32,7 @@
     width: 50%;
   }
 
-  @include media(mobile) {
+  @include govuk-media-query($until: tablet) {
     margin-top: govuk-spacing(2);
   }
 }
@@ -40,7 +40,7 @@
 .app-c-figure__figcaption-text {
   margin-bottom: 0;
 
-  @include media(desktop, tablet) {
+  @include govuk-media-query($from: tablet) {
     margin-bottom: govuk-spacing(2);
   }
 }

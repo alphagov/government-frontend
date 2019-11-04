@@ -1,6 +1,6 @@
 .coming-soon {
   .summary {
-    @include core-24;
+    @include govuk-font(24);
     margin-bottom: govuk-spacing(3);
   }
 }

@@ -33,10 +33,10 @@
 
 .app-c-published-dates__change-date {
   display: block;
-  @include bold-16;
+  @include govuk-font(16, $weight: bold);
 }
 
 .app-c-published-dates--history {
   padding-top: govuk-spacing(2);
-  border-top: 1px solid $border-colour;
+  border-top: 1px solid $govuk-border-colour;
 }

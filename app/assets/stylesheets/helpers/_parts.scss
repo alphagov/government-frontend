@@ -4,21 +4,21 @@
     margin-bottom: govuk-spacing(6);
     padding-bottom: govuk-spacing(3);
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       margin-top: 0;
       margin-bottom: 0;
       padding-bottom: govuk-spacing(3);
     }
 
-    border-bottom: 1px solid $grey-2;
+    border-bottom: 1px solid govuk-colour("mid-grey", $legacy: "grey-2");
   }
 
   .part-navigation {
     margin-bottom: 0;
-    @include core-19;
+    @include govuk-font(19);
 
-    @include media(tablet) {
-      @include core-16;
+    @include govuk-media-query($from: tablet) {
+      @include govuk-font(16);
     }
 
     li {
@@ -32,11 +32,11 @@
   }
 
   .part-title {
-    @include bold-27;
+    @include govuk-font(27, $weight: bold);
     margin-bottom: govuk-spacing(3);
     margin-top: govuk-spacing(3);
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       margin-bottom: govuk-spacing(4);
       margin-top: govuk-spacing(4);
     }

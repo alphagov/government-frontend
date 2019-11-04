@@ -2,11 +2,11 @@
   a,
   a:visited,
   a:hover {
-    color: $white;
+    color: govuk-colour("white");
     text-decoration: underline;
   }
 
   a:active {
-    color: $link-active-colour;
+    color: $govuk-link-active-colour;
   }
 }

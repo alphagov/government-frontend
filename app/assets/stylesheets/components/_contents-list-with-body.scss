@@ -2,7 +2,7 @@
   margin: 0 auto;
   padding: 0;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     max-width: 1024px;
   }
 
@@ -21,7 +21,7 @@
 }
 
 .app-c-contents-list-with-body__link-wrapper.govuk-sticky-element--stuck-to-window {
-  background-color: $panel-colour;
+  background-color: govuk-colour("mid-grey", $legacy: "grey-3");
   bottom: -1px; // 'Fix' for anomalous 1px margin which sporadically appears below this element.
   left: 0;
   margin: 0;
@@ -31,7 +31,7 @@
   width: 100%;
   z-index: 1;
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     padding-left: govuk-spacing(2);
   }
 
@@ -40,7 +40,7 @@
     padding: govuk-spacing(3);
     width: percentage(2 / 3);
 
-    @include media(tablet) {
+    @include govuk-media-query($from: tablet) {
       padding: govuk-spacing(4);
     }
   }

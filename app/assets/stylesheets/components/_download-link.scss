@@ -1,6 +1,6 @@
 .app-c-download-link {
   display: inline-block;
-  @include bold-19;
+  @include govuk-font(19, $weight: bold);
   margin-top: govuk-spacing(3);
   margin-bottom: govuk-spacing(3);
 
@@ -8,7 +8,7 @@
     @include govuk-focused-text;
   }
 
-  @include media(tablet) {
+  @include govuk-media-query($from: tablet) {
     margin-top: govuk-spacing(6);
   }
 
