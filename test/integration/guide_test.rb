@@ -121,7 +121,7 @@ class GuideTest < ActionDispatch::IntegrationTest
 
     assert_equal faq_schema["@type"], "FAQPage"
     assert_equal faq_schema["headline"], "How to vote"
-    assert_equal faq_schema["description"], "<p>You need to <a href=\"/register-to-vote\">register to vote</a> before you can vote in UK elections or referendums.</p> <p>If you’re eligible, you can vote in person on the day of the election at a named polling station. You can also apply for a postal or proxy vote instead.</p>\n"
+    assert_equal faq_schema["description"], "<p>You need to <a href=\"/register-to-vote?src=schema\">register to vote</a> before you can vote in UK elections or referendums.</p> <p>If you’re eligible, you can vote in person on the day of the election at a named polling station. You can also apply for a postal or proxy vote instead.</p>\n"
 
     assert_equal 8, q_and_as.count
   end
