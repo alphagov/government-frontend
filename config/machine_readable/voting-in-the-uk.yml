@@ -1,6 +1,6 @@
 title: "How to vote"
 preamble: >
-  <p>You need to <a href="/register-to-vote">register to vote</a> before you can vote in UK elections or referendums.</p>
+  <p>You need to <a href="/register-to-vote?src=schema">register to vote</a> before you can vote in UK elections or referendums.</p>
   <p>If you’re eligible, you can vote in person on the day of the election at a named polling station. You can also apply for a postal or proxy vote instead.</p>
 
 faqs:
@@ -8,9 +8,9 @@ faqs:
     answer: >
       <p>You can vote:</p>
       <ul>
-        <li><a href="/voting-in-the-uk/voting-in-person">in person at a polling station</a></li>
-        <li><a href="/voting-in-the-uk/postal-voting">by post</a></li>
-        <li>by asking someone else to vote for you (<a href="/voting-in-the-uk/voting-by-proxy">voting by proxy</a>)</li>
+        <li><a href="/voting-in-the-uk/voting-in-person?src=schema">in person at a polling station</a></li>
+        <li><a href="/voting-in-the-uk/postal-voting?src=schema">by post</a></li>
+        <li>by asking someone else to vote for you (<a href="/voting-in-the-uk/voting-by-proxy?src=schema">voting by proxy</a>)</li>
       </ul>
       <p>You cannot vote online in any elections.</p>
 
@@ -27,7 +27,7 @@ faqs:
       <p>You vote in person at a polling station (usually in a public building, such as a school or local hall).</p>
       <h2 id="your-poll-card">Your poll card</h2>
       <p>You’ll be sent a poll card just before an election telling you when to vote and at which polling station. You can only vote at the polling station location on your card.</p>
-      <p>If you have not received a poll card but think you should, contact your local <a href="/get-on-electoral-register">Electoral Registration Office</a>.</p>
+      <p>If you have not received a poll card but think you should, contact your local <a href="/get-on-electoral-register?src=schema">Electoral Registration Office</a>.</p>
       <p>You can still vote if you’ve lost your card.</p>
 
   - question: When you can vote
@@ -37,12 +37,12 @@ faqs:
   - question: ID you need to bring
     answer: >
       <p>If you live in England, Wales or Scotland you do not need to bring any identification to vote.</p>
-      <p>You will need to show <a rel="external" href="http://www.eoni.org.uk/Electoral-Identity-Card/Electoral-Identity-Card-FAQs#q34">photo ID to vote in Northern Ireland</a> (your passport, driving licence, Electoral Identity Card or certain kinds of Translink Smartpass).</p>
+      <p>You will need to show <a rel="external" href="http://www.eoni.org.uk/Electoral-Identity-Card/Electoral-Identity-Card-FAQs?src=schema#q34">photo ID to vote in Northern Ireland</a> (your passport, driving licence, Electoral Identity Card or certain kinds of Translink Smartpass).</p>
       <p>You do not have to take your poll card with you.</p>
 
   - question: Voting by post
     answer: >
-      <p>You must <a href="/government/publications/apply-for-a-postal-vote">apply for a postal vote</a> if you want to vote by post, for example if:</p>
+      <p>You must <a href="/government/publications/apply-for-a-postal-vote?src=schema">apply for a postal vote</a> if you want to vote by post, for example if:</p>
       <ul>
         <li>you’re away from home</li>
         <li>you’re abroad and want to vote in England, Scotland or Wales</li>
@@ -59,9 +59,9 @@ faqs:
         <li>not being able to vote in person because of work or military service</li>
       </ul>
       <h2 id="how-to-apply-for-a-proxy-vote">How to apply for a proxy vote</h2>
-      <p><a href="/government/collections/proxy-voting-application-forms">Apply for a proxy vote</a> using a paper form. You need to send it to your local Electoral Registration Office.</p>
+      <p><a href="/government/collections/proxy-voting-application-forms?src=schema">Apply for a proxy vote</a> using a paper form. You need to send it to your local Electoral Registration Office.</p>
       <p>You need to apply by 5pm on 4 December to vote by proxy in the General Election in England, Scotland or Wales.</p>
-      <p>There’s a different form to <a rel="external" href="http://www.eoni.org.uk/Vote/Voting-by-post-or-proxy">apply to vote by proxy in Northern Ireland</a>. Apply by 5pm on 21 November.</p>
+      <p>There’s a different form to <a rel="external" href="http://www.eoni.org.uk/Vote/Voting-by-post-or-proxy?src=schema">apply to vote by proxy in Northern Ireland</a>. Apply by 5pm on 21 November.</p>
 
   - question: Voting from abroad
     answer: >
@@ -73,14 +73,14 @@ faqs:
       <h2 id="if-youll-be-abroad-temporarily">If you’ll be abroad temporarily</h2>
       <p>You can vote by post or proxy if you’ll be abroad temporarily on election day, for example on holiday or a work trip.</p>
       <h3 id="voting-in-england-scotland-or-wales">Voting in England, Scotland or Wales</h3>
-      <p>After you’ve <a href=\"/register-to-vote\">registered to vote</a>, you can apply:</p>
+      <p>After you’ve <a href=\"/register-to-vote?src=schema\">registered to vote</a>, you can apply:</p>
       <ul>
-        <li>to <a href="/voting-in-the-uk/postal-voting">vote by post</a></li>
-        <li>for someone else to vote for you (<a href="/voting-in-the-uk/voting-by-proxy">vote by proxy</a>)</li>
+        <li>to <a href="/voting-in-the-uk/postal-voting?src=schema">vote by post</a></li>
+        <li>for someone else to vote for you (<a href="/voting-in-the-uk/voting-by-proxy?src=schema">vote by proxy</a>)</li>
       </ul>
       <p>If you want to vote by proxy in the General Election on 12 December, apply by 5pm on 4 December.</p>
       <p>If you want to vote by post, apply by 5pm on 26 November to get your postal voting pack. Your postal vote must then arrive at your Electoral Office in the UK by 10pm on 12 December.</p>
       <h3 id="voting-in-northern-ireland">Voting in Northern Ireland</h3>
-      <p>There’s a different process to <a rel="external" href="http://www.eoni.org.uk/Vote/Voting-by-post-or-proxy">apply to vote by post or proxy if you live in Northern Ireland</a> and will be abroad temporarily on election day.</p>
+      <p>There’s a different process to <a rel="external" href="http://www.eoni.org.uk/Vote/Voting-by-post-or-proxy?src=schema">apply to vote by post or proxy if you live in Northern Ireland</a> and will be abroad temporarily on election day.</p>
       <p>If you will not have time to receive and return your postal ballot in Northern Ireland before going abroad you’ll need to vote by proxy. You cannot apply to have your postal vote sent outside the UK.</p>
       <p>The deadline for applying for a postal or proxy vote in Northern Ireland is 5pm on 21 November.</p>
