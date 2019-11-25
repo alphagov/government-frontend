@@ -9,6 +9,7 @@ class PresenterBuilder
   def presenter
     raise SpecialRouteReturned if special_route?
     raise RedirectRouteReturned, content_item if redirect_route?
+    raise GovernmentReturned if government_content_item?
 
     presenter_name.constantize.new(content_item, content_item_path)
   end
@@ -21,6 +22,10 @@ private
 
   def redirect_route?
     content_item && content_item["schema_name"] == "redirect"
+  end
+
+  def government_content_item?
+    content_item && content_item["document_type"] == "government"
   end
 
   def presenter_name
@@ -57,4 +62,5 @@ private
     end
   end
   class SpecialRouteReturned < StandardError; end
+  class GovernmentReturned < StandardError; end
 end
