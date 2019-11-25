@@ -7,6 +7,7 @@ class ContentItemsController < ApplicationController
   rescue_from ActionController::UnknownFormat, with: :error_406
   rescue_from PresenterBuilder::RedirectRouteReturned, with: :error_redirect
   rescue_from PresenterBuilder::SpecialRouteReturned, with: :error_notfound
+  rescue_from PresenterBuilder::GovernmentReturned, with: :error_notfound
 
   attr_accessor :content_item, :taxonomy_navigation
 
