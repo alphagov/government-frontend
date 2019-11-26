@@ -23,7 +23,7 @@ Not all schemas that this app can handle are rendered by it in production.
 | Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
 | Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated |
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
-| Help page | [View on GOV.UK](https://www.gov.uk/help/cookies) | Migrated |
+| Help page | [View on GOV.UK](https://www.gov.uk/help/about-govuk) | Migrated |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)| Migrated |
 | News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) | Migrated |
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) | Migrated |
@@ -36,7 +36,7 @@ Not all schemas that this app can handle are rendered by it in production.
 | Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) | Migrated |
 | Unpublishing | | Rendered by Whitehall, might not be migrated |
 | World Location News Article | [View on GOV.UK](https://www.gov.uk/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas) | Migrated |
-| Working group | [View on GOV.UK](https://www.gov.uk/government/groups/2gether-nhs-foundation-trust) | Migrated |
+| Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) | Migrated |
 
 ## Components
 
