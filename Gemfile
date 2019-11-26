@@ -21,9 +21,10 @@ gem "slimmer", "~> 13.2"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
-  gem "govuk-lint"
   gem "govuk_schemas", "~> 4.0"
   gem "jasmine-rails"
+  gem "rubocop-govuk", "~> 1"
+  gem "scss_lint-govuk", "~> 0.2"
 end
 
 group :development do
