@@ -15,7 +15,14 @@ module ContentItem
     end
 
     def historical?
-      content_item["details"].include?("government") && !content_item["details"]["government"]["current"]
+      government_current = content_item.dig(
+        "links", "government", 0, "details", "current"
+      )
+
+      # Treat no government as not historical
+      return false if government_current.nil?
+
+      !government_current
     end
   end
 end
