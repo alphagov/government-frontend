@@ -55,13 +55,13 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
   end
 
   test "knows if an item is a national statistic" do
-    refute statistics_announcement.national_statistics?
+    assert_not statistics_announcement.national_statistics?
     assert statistics_announcement_national.national_statistics?
   end
 
   test "knows if the release date has changed" do
     assert statistics_announcement_date_changed.release_date_changed?
-    refute statistics_announcement_national.release_date_changed?
+    assert_not statistics_announcement_national.release_date_changed?
   end
 
   test "an announcement is forthcoming if it is not cancelled" do
@@ -69,7 +69,7 @@ class StatisticsAnnouncementPresenterTest < PresenterTestCase
   end
 
   test "a cancelled announcement takes precedence over a forthcoming announcement" do
-    refute statistics_announcement_cancelled.forthcoming_publication?
+    assert_not statistics_announcement_cancelled.forthcoming_publication?
   end
 
   def statistics_announcement_cancelled

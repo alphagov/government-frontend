@@ -18,7 +18,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     assert page.has_content?("Operations in Zululand")
     assert_has_component_title("Sir George Pomeroy Colley killed in Boer War")
 
-    refute page.has_css?(".gem-c-notice")
+    assert_not page.has_css?(".gem-c-notice")
 
     assert_has_publisher_metadata(
       published: "Published 27 February 1881",

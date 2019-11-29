@@ -15,7 +15,7 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
     setup_and_visit_travel_advice_print("full-country")
     parts = @content_item["details"]["parts"]
 
-    assert_has_component_metadata_pair("Still current at", Date.today.strftime("%-d %B %Y"))
+    assert_has_component_metadata_pair("Still current at", Time.zone.today.strftime("%-d %B %Y"))
     assert_has_component_metadata_pair("Updated", Date.parse(@content_item["details"]["reviewed_at"]).strftime("%-d %B %Y"))
 
     within ".gem-c-metadata" do

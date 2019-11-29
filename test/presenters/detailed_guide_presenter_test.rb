@@ -39,7 +39,7 @@ class DetailedGuidePresenterTest < PresenterTestCase
     example = schema_item("political_detailed_guide")
     presented = presented_item("political_detailed_guide")
 
-    refute example["details"]["government"]["current"]
+    assert_not example["details"]["government"]["current"]
     assert example["details"]["political"]
 
     assert presented.historically_political?

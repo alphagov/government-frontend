@@ -17,7 +17,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".part-navigation ol", count: 2)
     assert page.has_css?(".part-navigation li", count: @content_item["details"]["parts"].size + 1)
     assert page.has_css?(".part-navigation li", text: "Summary")
-    refute page.has_css?(".part-navigation li a", text: "Summary")
+    assert_not page.has_css?(".part-navigation li a", text: "Summary")
 
     @content_item["details"]["parts"].each do |part|
       assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part["title"])
@@ -33,7 +33,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("h1", text: "Summary")
     assert page.has_text?("The main opposition party has called for mass protests against the government in Tirana on 18 February 2017. The political atmosphere is likely to become changeable as the country approaches national elections on 18 June 2017.")
 
-    assert_has_component_metadata_pair("Still current at", Date.today.strftime("%-d %B %Y"))
+    assert_has_component_metadata_pair("Still current at", Time.zone.today.strftime("%-d %B %Y"))
     assert_has_component_metadata_pair("Updated", Date.parse(@content_item["details"]["reviewed_at"]).strftime("%-d %B %Y"))
 
     within ".gem-c-metadata" do
@@ -53,11 +53,11 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("h1", text: first_part["title"])
     assert page.has_text?("Public security is generally good, particularly in Tirana, and Albanians are very hospitable to visitors.")
 
-    refute page.has_css?(".map")
-    refute page.has_css?(".gem-c-metadata")
+    assert_not page.has_css?(".map")
+    assert_not page.has_css?(".gem-c-metadata")
 
     assert page.has_css?(".part-navigation li", text: first_part["title"])
-    refute page.has_css?(".part-navigation li a", text: first_part["title"])
+    assert_not page.has_css?(".part-navigation li a", text: first_part["title"])
   end
 
   test "travel advice includes a discoverable atom feed link" do

@@ -135,7 +135,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
          <p>#{Faker::Lorem.sentence}</p>"
       end
     end
-    refute @contents_list.show_contents_list?
+    assert_not @contents_list.show_contents_list?
   end
 
   test "#show_contents_list? returns true if number of table rows in the first item is more than 13" do
@@ -160,7 +160,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
         </tbody>\n</table><h2 id='two'>Two</h2>"
       end
     end
-    refute @contents_list.show_contents_list?
+    assert_not @contents_list.show_contents_list?
   end
 
   test "#show_contents_list? returns true if image and over 224 characters are present in the first item" do

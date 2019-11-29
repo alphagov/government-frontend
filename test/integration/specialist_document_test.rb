@@ -141,7 +141,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       assert page.has_css?(selector), "Failed to find an element matching: #{selector}"
       assert page.has_css?(selector, text: text), "Failed to find an element matching #{selector} with text: #{text}"
     else
-      refute page.has_css?(selector), "Found a nested heading too deep, there should be no element matching: #{selector}"
+      assert_not page.has_css?(selector), "Found a nested heading too deep, there should be no element matching: #{selector}"
     end
 
     if heading["headers"].present?
@@ -154,7 +154,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders no start button when not set" do
     setup_and_visit_content_item("aaib-reports")
 
-    refute page.has_css?(".gem-c-button", text: "Find out more")
+    assert_not page.has_css?(".gem-c-button", text: "Find out more")
   end
 
   test "renders start button" do
@@ -167,7 +167,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "does not render a contents list if there are fewer than three items in the contents list" do
     setup_and_visit_content_item("aaib-reports")
 
-    refute page.has_css?("#contents .gem-c-contents-list")
+    assert_not page.has_css?("#contents .gem-c-contents-list")
   end
 
   test "renders a link to statutory instruments finder" do

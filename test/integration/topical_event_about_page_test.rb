@@ -19,7 +19,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
 
   test "slim topical event about pages have no contents" do
     setup_and_visit_content_item("slim")
-    refute page.has_css?(".contents-list.contents-list-dashed")
+    assert_not page.has_css?(".contents-list.contents-list-dashed")
   end
 
   test "contents list not displayed when fewer than three items" do
@@ -29,7 +29,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
     visit_with_cachebust @content_item["base_path"]
-    refute page.has_css?(".gem-c-contents-list")
+    assert_not page.has_css?(".gem-c-contents-list")
   end
 
   test "contents list displayed when fewer than three items and first item word count is greater than 100" do

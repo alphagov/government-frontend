@@ -67,7 +67,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
       end
     end
 
-    refute @parts.requesting_a_part?
+    assert_not @parts.requesting_a_part?
   end
 
   test "is not requesting a part when parts exist and base_path matches requested_content_item_path" do
@@ -77,7 +77,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
       end
     end
 
-    refute @parts.requesting_a_part?
+    assert_not @parts.requesting_a_part?
   end
 
   test "is requesting a part when part exists and base_path is different to requested_content_item_path" do
@@ -122,7 +122,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
     end
 
     assert @parts.requesting_a_part?
-    refute @parts.has_valid_part?
+    assert_not @parts.has_valid_part?
   end
 
   test "invalid when slug for first part is present in URL" do
@@ -137,13 +137,13 @@ class ContentItemPartsTest < ActiveSupport::TestCase
     end
 
     assert @parts.requesting_a_part?
-    refute @parts.has_valid_part?
+    assert_not @parts.has_valid_part?
   end
 
   test "defaults to first part as current part when parts exist but no part requested" do
     presenting_first_part_in_content_item
 
-    refute @parts.requesting_a_part?
+    assert_not @parts.requesting_a_part?
     assert_equal @parts.current_part_body, "first-body"
     assert_equal @parts.current_part_title, "first-title"
   end

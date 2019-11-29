@@ -29,7 +29,7 @@ class PublicationPresenterTest < PresenterTestCase
     example = schema_item("political_publication")
     presented = presented_item("political_publication")
 
-    refute example["details"]["government"]["current"]
+    assert_not example["details"]["government"]["current"]
     assert example["details"]["political"]
 
     assert presented.historically_political?
@@ -51,7 +51,7 @@ class PublicationPresenterTest < PresenterTestCase
   end
 
   test "#national_statistics? matches national statistics documents" do
-    refute presented_item.national_statistics?
+    assert_not presented_item.national_statistics?
     assert presented_item("statistics_publication").national_statistics?
   end
 

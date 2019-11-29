@@ -39,7 +39,7 @@ class ContactTest < ActionDispatch::IntegrationTest
 
     assert_equal 1, @content_item["details"]["phone_numbers"].size
     first_phone = @content_item["details"]["phone_numbers"].first
-    refute page.has_css?("h3", text: first_phone["title"])
+    assert_not page.has_css?("h3", text: first_phone["title"])
   end
 
   test "posts are rendered" do

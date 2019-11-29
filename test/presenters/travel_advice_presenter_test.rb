@@ -11,7 +11,7 @@ class TravelAdvicePresenterTest
     end
 
     test "part slug set to nil when content item has parts but base path requested" do
-      refute presented_item("full-country").requesting_a_part?
+      assert_not presented_item("full-country").requesting_a_part?
       assert presented_item("full-country").part_slug.nil?
     end
 
@@ -30,7 +30,7 @@ class TravelAdvicePresenterTest
 
       assert presented.requesting_a_part?
       assert_equal presented.part_slug, "not-a-valid-part"
-      refute presented.has_valid_part?
+      assert_not presented.has_valid_part?
     end
 
     test "presents unique titles for each part" do
@@ -62,7 +62,7 @@ class TravelAdvicePresenterTest
       first_part = example_parts.first
       presented = presented_item("full-country", first_part["slug"])
 
-      refute presented.is_summary?
+      assert_not presented.is_summary?
       assert presented.has_valid_part?
       assert_equal first_part["title"], presented.current_part_title
       assert_equal first_part["body"], presented.current_part_body
@@ -72,8 +72,8 @@ class TravelAdvicePresenterTest
       example_part_slugs = schema_item("full-country")["details"]["parts"].map { |part| part["slug"] }
       presented = presented_item("full-country", "not-a-valid-part")
 
-      refute example_part_slugs.include?("not-a-valid-part")
-      refute presented.has_valid_part?
+      assert_not example_part_slugs.include?("not-a-valid-part")
+      assert_not presented.has_valid_part?
     end
 
     test "the summary is included as the first navigation item" do

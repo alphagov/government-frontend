@@ -38,7 +38,7 @@ module ContentItem
     # The direction of change history isn’t guaranteed
     # https://github.com/alphagov/govuk-content-schemas/issues/545
     def reverse_chronological_change_history
-      change_history.sort_by { |item| Time.parse(item[:timestamp]) }.reverse
+      change_history.sort_by { |item| Time.zone.parse(item[:timestamp]) }.reverse
     end
 
     def any_updates?

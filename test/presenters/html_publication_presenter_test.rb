@@ -63,6 +63,6 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     }
 
     assert presented.organisations.count > 1
-    refute presented.organisation_logo(organisation)[:organisation][:image]
+    assert_not presented.organisation_logo(organisation)[:organisation][:image]
   end
 end

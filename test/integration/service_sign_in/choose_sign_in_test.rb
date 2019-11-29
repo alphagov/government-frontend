@@ -17,7 +17,7 @@ module ServiceSignIn
 
       assert page.has_css?("title", text: "Prove your identity to continue - GOV.UK", visible: false)
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
-      refute page.has_css?("#proposition-menu")
+      assert_not page.has_css?("#proposition-menu")
 
       assert page.has_css?('.gem-c-back-link[href="/log-in-file-self-assessment-tax-return"]', text: "Back")
       assert page.has_css?('form[data-module="track-radio-group"]')
@@ -73,7 +73,7 @@ module ServiceSignIn
       assert page.has_css?(".gem-c-radio .govuk-label", text: "Use GOV.UK Verify")
       assert page.has_css?(".gem-c-radio .govuk-hint", text: "You can use an existing identity account or create a new one. It usually takes about 5 minutes to create an account.")
 
-      refute page.has_css?(".govuk-radios__divider", text: "or")
+      assert_not page.has_css?(".govuk-radios__divider", text: "or")
     end
 
     test "page renders welsh correctly" do

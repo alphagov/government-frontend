@@ -1,7 +1,13 @@
 inherit_gem:
   rubocop-govuk:
     - "config/default.yml"
+    - "config/rails.yml"
 
 Metrics/BlockLength:
   Exclude:
     - "test/**/*_test.rb"
+
+Rails/OutputSafety:
+  Enabled: false
+Rails/HelperInstanceVariable:
+  Enabled: false

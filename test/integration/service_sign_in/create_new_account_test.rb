@@ -26,7 +26,7 @@ module ServiceSignIn
 
       assert page.has_text?("To use this service, you need to create either a Government Gateway or GOV.UK Verify account. These are used to help fight identity theft.")
       assert page.has_css?('meta[name="robots"][content="noindex, nofollow"]', visible: false)
-      refute page.has_css?("#proposition-menu")
+      assert_not page.has_css?("#proposition-menu")
 
       assert page.has_css?(
         '.gem-c-back-link[href="/log-in-file-self-assessment-tax-return/sign-in/choose-sign-in"]',

@@ -8,7 +8,7 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
   setup do
     setup_and_parse_travel_advice_atom_feed("full-country")
     @base_path = @content_item["base_path"]
-    @updated_at = Time.parse(@content_item["public_updated_at"])
+    @updated_at = Time.zone.parse(@content_item["public_updated_at"])
   end
 
   test "it sets the alternative link correctly" do

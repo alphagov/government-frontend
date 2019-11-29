@@ -146,8 +146,8 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
-    refute_empty content_item["links"]["ordered_related_items"], "Content item should have existing related links"
-    refute_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
+    assert_not_empty content_item["links"]["ordered_related_items"], "Content item should have existing related links"
+    assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
     assert_equal content_item["links"]["ordered_related_items"], assigns[:content_item].content_item["links"]["ordered_related_items"]
   end
 
@@ -160,8 +160,8 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_response :success
     assert_nil content_item["links"]["ordered_related_items"], "Content item should not have existing related links"
-    refute_empty content_item["links"]["ordered_related_items_overrides"], "Content item should have existing related link overrides"
-    refute_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
+    assert_not_empty content_item["links"]["ordered_related_items_overrides"], "Content item should have existing related link overrides"
+    assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
     assert_nil content_item["links"]["ordered_related_items"]
   end
 
@@ -174,7 +174,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_response :success
     assert_empty content_item["links"]["ordered_related_items"], "Content item should have existing related links"
-    refute_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
+    assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
     assert_equal [], assigns[:content_item].content_item["links"]["ordered_related_items"]
   end
 
@@ -187,7 +187,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item) }
     assert_response :success
     assert_empty content_item["links"]["ordered_related_items"], "Content item should not have existing related links"
-    refute_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
+    assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
     assert_equal assigns[:content_item].content_item["links"]["ordered_related_items"], content_item["links"]["suggested_ordered_related_items"]
   end
 
