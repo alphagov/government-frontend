@@ -134,6 +134,11 @@ private
       "/government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries" => 1034,
       "/government/organisations/hm-revenue-customs/contact/employer-enquiries" => 1023,
       "/government/organisations/hm-revenue-customs/contact/online-services-helpdesk" => 1003,
+      "/government/organisations/hm-revenue-customs/contact/charities-and-community-amateur-sports-clubs-cascs" => 1087,
+      "/government/organisations/hm-revenue-customs/contact/enquiries-from-employers-with-expatriate-employees" => 1089,
+      "/government/organisations/hm-revenue-customs/contact/share-schemes-for-employees" => 1088,
+      "/government/organisations/hm-revenue-customs/contact/non-uk-expatriate-employees-expats" => 1089,
+      "/government/organisations/hm-revenue-customs/contact/non-resident-landlords" => 1086,
     }
   end
 
