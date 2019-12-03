@@ -5,7 +5,9 @@ module ContentItem
     end
 
     def publishing_government
-      content_item["details"]["government"]["title"]
+      content_item.dig(
+        "links", "government", 0, "title"
+      )
     end
 
   private
