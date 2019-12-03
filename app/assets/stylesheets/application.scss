@@ -53,7 +53,9 @@ $govuk-typography-use-rem: false;
 // on all components with a global 'a:link:focus' declaration. It should
 // be removed when govuk-template is no longer used.
 
-a[class^="gem-c-"] {
+a[class^="gem-c-"],
+*[class^="gem-c-"] a
+ {
   &:focus {
     color: $govuk-focus-text-colour !important;
     text-decoration: none;
