@@ -10,7 +10,7 @@
 
     <% if @content_item.alternative_url.present? %>
       <p class="alternative">
-        Visit: <%= link_to(@content_item.alternative_url, @content_item.alternative_url) %>
+        Visit: <%= link_to(@content_item.alternative_url, @content_item.alternative_url, class: "govuk-link") %>
       </p>
     <% end %>
   </div>

@@ -5,7 +5,7 @@
   margin-bottom: govuk-spacing(3);
 
   &:focus {
-    @include govuk-focused-text;
+    @include govuk-template-link-focus-override;
   }
 
   @include govuk-media-query($from: tablet) {

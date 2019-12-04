@@ -6,6 +6,10 @@
     text-decoration: underline;
   }
 
+  a:focus {
+    @include govuk-template-link-focus-override;
+  }
+
   a:active {
     color: $govuk-link-active-colour;
   }
