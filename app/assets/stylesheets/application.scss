@@ -1,6 +1,5 @@
 // The main application stylesheet
 
-$govuk-use-legacy-palette: true;
 $govuk-typography-use-rem: false;
 
 // Components from govuk_publishing_components gem
@@ -50,8 +49,8 @@ $govuk-typography-use-rem: false;
 
 // TODO: This style overrides one coming from govuk-template
 // which turns the focused text colour blue instead of the expected black
-// on all components with a global 'a:link:focus' declaration. It should
-// be removed when govuk-template is no longer used.
+// on all components with its global 'a:link:focus' declaration. This
+// code should be removed when govuk-template is no longer used.
 
 a[class^="gem-c-"],
 *[class^="gem-c-"] a
