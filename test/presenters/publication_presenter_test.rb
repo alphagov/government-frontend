@@ -22,7 +22,7 @@ class PublicationPresenterTest < PresenterTestCase
   end
 
   test "presents the title of the publishing government" do
-    assert_equal schema_item["details"]["government"]["title"], presented_item.publishing_government
+    assert_equal schema_item["links"]["government"][0]["title"], presented_item.publishing_government
   end
 
   test "content can be historically political" do
