@@ -3,11 +3,6 @@
   margin-bottom: govuk-spacing(3);
   margin-left: govuk-spacing(3);
   margin-right: govuk-spacing(3);
-
-  &:focus {
-    @include govuk-template-link-focus-override;
-  }
-
 }
 
 .app-c-back-to-top__icon {
