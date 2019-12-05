@@ -24,10 +24,6 @@
     li {
       list-style: none;
       margin-bottom: 0.75em;
-
-      a:focus {
-        @include govuk-template-link-focus-override;
-      }
     }
   }
 
