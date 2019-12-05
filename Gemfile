@@ -22,7 +22,7 @@ gem "uglifier", ">= 1.3.0"
 group :development, :test do
   gem "govuk_schemas", "~> 4.0"
   gem "jasmine-rails"
-  gem "rubocop-govuk", "~> 1"
+  gem "rubocop-govuk", "~> 2"
   gem "scss_lint-govuk", "~> 0.2"
 end
 
