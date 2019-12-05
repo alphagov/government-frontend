@@ -7,7 +7,7 @@
   }
 
   a:focus {
-    @include govuk-template-link-focus-override;
+    @include govuk-focused-text;
   }
 
   a:active {
