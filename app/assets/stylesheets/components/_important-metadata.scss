@@ -31,10 +31,6 @@
 
   .app-link {
     color: govuk-colour("white");
-
-    &:focus {
-      @include govuk-template-link-focus-override;
-    }
   }
 
 }
