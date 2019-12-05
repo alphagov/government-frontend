@@ -1,6 +1,7 @@
 // The main application stylesheet
 $govuk-compatibility-govuktemplate: true;
 $govuk-typography-use-rem: false;
+$govuk-use-legacy-palette: false;
 
 // Components from govuk_publishing_components gem
 @import 'govuk_publishing_components/all_components';
