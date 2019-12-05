@@ -10,8 +10,6 @@ module ApplicationHelper
 
     if translation.nil? || translation.include?("translation missing")
       I18n.default_locale
-    else
-      return nil
     end
   end
 
