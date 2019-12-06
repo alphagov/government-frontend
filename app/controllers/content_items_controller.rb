@@ -144,7 +144,7 @@ private
   end
 
   def error_403(exception)
-    render plain: exception.message, status: 403
+    render plain: exception.message, status: :forbidden
   end
 
   def error_notfound
@@ -152,11 +152,11 @@ private
   end
 
   def error_406
-    render plain: "Not acceptable", status: 406
+    render plain: "Not acceptable", status: :not_acceptable
   end
 
   def error_410
-    render plain: "Gone", status: 410
+    render plain: "Gone", status: :gone
   end
 
   def error_redirect(exception)

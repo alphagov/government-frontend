@@ -41,7 +41,7 @@ class SpecialistDocumentPresenterTest
         },
       ]
 
-      refute present_example(example).updated
+      assert_not present_example(example).updated
 
       example["details"]["change_history"] = [
         {
@@ -76,7 +76,7 @@ class SpecialistDocumentPresenterTest
       ]
 
       presented = present_example(example)
-      assert Time.parse(presented.published) == Time.parse("2002-02-02")
+      assert Time.zone.parse(presented.published) == Time.zone.parse("2002-02-02")
     end
 
     test "has title without context" do
@@ -117,7 +117,7 @@ class SpecialistDocumentPresenterTest
       example = schema_item("aaib-reports")
       example["details"]["metadata"]["bulk_published"] = true
 
-      refute present_example(example).metadata[:first_published]
+      assert_not present_example(example).metadata[:first_published]
 
       example["details"]["metadata"]["bulk_published"] = false
       assert present_example(example).metadata[:first_published]
@@ -336,7 +336,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
 
       presented = present_example(example)
-      refute presented.metadata[:other]["Published"]
+      assert_not presented.metadata[:other]["Published"]
     end
 
     test "uses first published date in facets as canonical publish date if provided" do
@@ -357,7 +357,7 @@ class SpecialistDocumentPresenterTest
       ]
 
       presented = present_example(example)
-      assert Time.parse(presented.published) == Time.parse("2010-01-01")
+      assert Time.zone.parse(presented.published) == Time.zone.parse("2010-01-01")
     end
   end
 end

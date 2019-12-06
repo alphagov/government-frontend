@@ -65,6 +65,6 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
   test "cancelled statistics announcements do not display the forthcoming notice" do
     setup_and_visit_content_item("cancelled_official_statistics")
 
-    refute page.has_text?(StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE)
+    assert_not page.has_text?(StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE)
   end
 end

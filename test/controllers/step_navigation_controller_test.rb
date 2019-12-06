@@ -31,7 +31,7 @@ class ContentItemsControllerTest < ActionController::TestCase
       get :show, params: { path: path }
 
       assert_response 200
-      refute response.body.include?("Learn to drive a car: step by step")
+      assert_not response.body.include?("Learn to drive a car: step by step")
     end
   end
 end

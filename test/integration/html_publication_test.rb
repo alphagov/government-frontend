@@ -64,7 +64,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("prime_ministers_office")
 
     within ".gem-c-inverse-header" do
-      refute page.has_text?("Contents")
+      assert_not page.has_text?("Contents")
     end
   end
 

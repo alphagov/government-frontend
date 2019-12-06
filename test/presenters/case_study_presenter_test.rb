@@ -97,7 +97,7 @@ class CaseStudyPresenterTest < PresenterTestCase
   end
 
   def presented_case_study_with_updates
-    updated_date = Time.new(2013, 3, 21).to_s
+    updated_date = Time.zone.local(2013, 3, 21).to_s
     with_history = schema_item
     with_history["details"]["change_history"] = [{ "note" => "Something changed", "public_timestamp" => updated_date }]
     with_history["public_updated_at"] = updated_date

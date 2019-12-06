@@ -50,16 +50,16 @@ class ConsultationPresenterTest
 
     test "presents open and closed states" do
       assert presented_item("open_consultation").open?
-      refute presented_item("open_consultation").closed?
+      assert_not presented_item("open_consultation").closed?
 
       assert presented_item("closed_consultation").closed?
-      refute presented_item("closed_consultation").open?
+      assert_not presented_item("closed_consultation").open?
 
       assert presented_item("consultation_outcome").closed?
-      refute presented_item("consultation_outcome").open?
+      assert_not presented_item("consultation_outcome").open?
 
-      refute presented_item("unopened_consultation").closed?
-      refute presented_item("unopened_consultation").open?
+      assert_not presented_item("unopened_consultation").closed?
+      assert_not presented_item("unopened_consultation").open?
     end
 
     test "presents consultation documents" do
@@ -88,10 +88,10 @@ class ConsultationPresenterTest
 
     test "presents URL for consultations held on another website" do
       assert presented_item("open_consultation").held_on_another_website?
-      refute presented_item("closed_consultation").held_on_another_website?
+      assert_not presented_item("closed_consultation").held_on_another_website?
 
       assert_equal "https://consult.education.gov.uk/part-time-maintenance-loans/post-graduate-doctoral-loans/", presented_item("open_consultation").held_on_another_website_url
-      refute presented_item("closed_consultation").held_on_another_website_url
+      assert_not presented_item("closed_consultation").held_on_another_website_url
     end
 
     test "content can apply only to a set of nations" do
@@ -124,7 +124,7 @@ class ConsultationPresenterTest
       example_without_email["details"]["ways_to_respond"].delete("postal_address")
       presented_without_email = presented_item("open_consultation_with_participation", example_without_email)
 
-      refute presented_without_email.response_form?
+      assert_not presented_without_email.response_form?
     end
 
     test "does not show ways to respond when consultation is closed" do
@@ -132,7 +132,7 @@ class ConsultationPresenterTest
       example["details"]["ways_to_respond"] = { "email" => "email@email.com" }
       presented = presented_item("closed_consultation", example)
 
-      refute presented.ways_to_respond?
+      assert_not presented.ways_to_respond?
     end
 
     test "does not show ways to respond when only an attachment url is provided" do
@@ -142,7 +142,7 @@ class ConsultationPresenterTest
       example["details"]["ways_to_respond"].delete("link_url")
       presented = presented_item("open_consultation_with_participation", example)
 
-      refute presented.ways_to_respond?
+      assert_not presented.ways_to_respond?
     end
 
     test "presents share urls with encoded url and title" do

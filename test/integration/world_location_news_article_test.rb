@@ -29,7 +29,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
 
     assert page.has_content?(:all, "English हिंदी 日本語 中文 中文")
 
-    refute page.has_link?("English")
+    assert_not page.has_link?("English")
 
     assert page.has_link?("हिंदी", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.hi")
     assert page.has_link?("日本語", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.ja")

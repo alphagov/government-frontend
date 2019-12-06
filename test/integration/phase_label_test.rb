@@ -19,6 +19,6 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
 
     visit_with_cachebust "/government/case-studies/get-britain-building-carlisle-park"
 
-    refute page.has_text?("alpha")
+    assert_not page.has_text?("alpha")
   end
 end

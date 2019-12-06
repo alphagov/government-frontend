@@ -71,7 +71,7 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
     end
 
     assert @updatable.history.empty?
-    refute @updatable.updated
+    assert_not @updatable.updated
   end
 
   test "#history returns no updates when first_public_at is not present" do
@@ -92,7 +92,7 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
     end
 
     assert @updatable.history.empty?
-    refute @updatable.updated
+    assert_not @updatable.updated
   end
 
   test "#history returns no updates when public_updated_at not present" do
@@ -113,7 +113,7 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
     end
 
     assert @updatable.history.empty?
-    refute @updatable.updated
+    assert_not @updatable.updated
   end
 
   test "#history returns an array of hashes when there is change history" do

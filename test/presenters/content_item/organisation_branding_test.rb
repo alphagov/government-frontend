@@ -33,7 +33,7 @@ class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
     organisation = test_organisation
     organisation["details"]["logo"]["crest"] = "eo"
 
-    refute_equal organisation_brand(organisation), test_organisation["details"]["brand"]
+    assert_not_equal organisation_brand(organisation), test_organisation["details"]["brand"]
     assert_equal organisation_brand(organisation), "executive-office"
   end
 

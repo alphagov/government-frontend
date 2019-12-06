@@ -25,8 +25,8 @@ class GuideTest < ActionDispatch::IntegrationTest
   test "does not show part navigation, print link or part title when only one part" do
     setup_and_visit_content_item("single-page-guide")
 
-    refute page.has_css?("h1", text: @content_item["details"]["parts"].first["title"])
-    refute page.has_css?(".app-c-print-link")
+    assert_not page.has_css?("h1", text: @content_item["details"]["parts"].first["title"])
+    assert_not page.has_css?(".app-c-print-link")
   end
 
   test "replaces guide title with part title if in a step by step and hide_chapter_navigation is true" do
@@ -34,7 +34,7 @@ class GuideTest < ActionDispatch::IntegrationTest
     title = @content_item["title"]
     part_title = @content_item["details"]["parts"][0]["title"]
 
-    refute page.has_css?("h1", text: title)
+    assert_not page.has_css?("h1", text: title)
     assert_has_component_title(part_title)
   end
 
@@ -52,15 +52,15 @@ class GuideTest < ActionDispatch::IntegrationTest
     title = @content_item["title"]
     part_title = @content_item["details"]["parts"][0]["title"]
 
-    refute page.has_css?("h1", text: title)
+    assert_not page.has_css?("h1", text: title)
     assert_has_component_title(part_title)
   end
 
   test "does not show guide navigation and print link if in a step by step and hide_chapter_navigation is true" do
     setup_and_visit_content_item("guide-with-step-navs-and-hide-navigation")
 
-    refute page.has_css?(".gem-c-pagination")
-    refute page.has_css?(".app-c-print-link")
+    assert_not page.has_css?(".gem-c-pagination")
+    assert_not page.has_css?(".app-c-print-link")
   end
 
   test "shows guide navigation and print link if not in a step by step and hide_chapter_navigation is true" do

@@ -6,8 +6,8 @@ module WebchatAvailabilityHelper
     /government/organisations/hm-revenue-customs/contact/self-assessment
     /government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
   ).freeze
-  UNAVAILABILITY_START = Time.parse("2018-05-12 16:00 BST").freeze
-  UNAVAILABILITY_END = Time.parse("2018-05-14 09:00 BST").freeze
+  UNAVAILABILITY_START = Time.zone.parse("2018-05-12 16:00 BST").freeze
+  UNAVAILABILITY_END = Time.zone.parse("2018-05-14 09:00 BST").freeze
 
   def webchat_unavailable?(now = Time.zone.now)
     show_unavailability = now >= UNAVAILABILITY_START && now < UNAVAILABILITY_END
