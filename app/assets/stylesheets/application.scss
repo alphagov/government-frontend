@@ -1,6 +1,7 @@
 // The main application stylesheet
-
+$govuk-compatibility-govuktemplate: true;
 $govuk-typography-use-rem: false;
+$govuk-use-legacy-palette: false;
 
 // Components from govuk_publishing_components gem
 @import 'govuk_publishing_components/all_components';
@@ -47,16 +48,4 @@ $govuk-typography-use-rem: false;
 @import 'views/help-page';
 @import "views/guide";
 
-// TODO: This style overrides one coming from govuk-template
-// which turns the focused text colour blue instead of the expected black
-// on all components with its global 'a:link:focus' declaration. This
-// code should be removed when govuk-template is no longer used.
 
-a[class^="gem-c-"],
-*[class^="gem-c-"] a
- {
-  &:focus {
-    color: $govuk-focus-text-colour !important;
-    text-decoration: none;
-  }
-}

@@ -9,17 +9,6 @@
   .js-enabled & {
     display: inline-block;
   }
-
-  &:focus {
-    @include govuk-template-link-focus-override;
-  }
-
-}
-
-.app-c-published-dates__history-link {
-  &:focus {
-    @include govuk-template-link-focus-override;
-  }
 }
 
 .app-c-published-dates__change-history {
