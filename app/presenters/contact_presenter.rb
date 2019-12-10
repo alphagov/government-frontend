@@ -18,7 +18,6 @@ class ContactPresenter < ContentItemPresenter
     end
   end
 
-
   def online_form_links
     contact_form_links = content_item["details"]["contact_form_links"] || []
     contact_form_links.map do |link|
@@ -93,7 +92,7 @@ class ContactPresenter < ContentItemPresenter
   def show_webchat?
     webchat_ids.include?(content_item["base_path"])
   end
-  
+
   def webchat_availability_url
     case webchat_provider_id
     when "k2c"
@@ -113,7 +112,7 @@ class ContactPresenter < ContentItemPresenter
   end
 
   def webchat_provider
-    "#{webchat_provider_id}"
+    webchat_provider_id.to_s
   end
 
 private
@@ -160,7 +159,7 @@ private
       "/government/organisations/hm-revenue-customs/contact/share-schemes-for-employees" => 1088,
       "/government/organisations/hm-revenue-customs/contact/non-uk-expatriate-employees-expats" => 1089,
       "/government/organisations/hm-revenue-customs/contact/non-resident-landlords" => 1086,
-      "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => 72
+      "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => 72,
 
     }
   end
@@ -171,7 +170,7 @@ private
 
   def webchat_provider_ids
     {
-    '/government/organisations/hm-passport-office/contact/passport-advice-and-complaints' => "k2c"
+    "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => "k2c",
     }
   end
 
