@@ -12,6 +12,13 @@ class ContactPresenter < ContentItemPresenter
     content_item.dig("details", "more_info_webchat").try(:html_safe)
   end
 
+  def leadingpara_body
+    if webchat_provider_id == "k2c"
+      content_item.dig("details", "description").try(:html_safe)
+    end
+  end
+
+
   def online_form_links
     contact_form_links = content_item["details"]["contact_form_links"] || []
     contact_form_links.map do |link|
@@ -86,13 +93,27 @@ class ContactPresenter < ContentItemPresenter
   def show_webchat?
     webchat_ids.include?(content_item["base_path"])
   end
-
+  
   def webchat_availability_url
-    "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
+    case webchat_provider_id
+    when "k2c"
+      "https://hmpowebchat.klick2contact.com/v03/providers/serviceStatus/v3/#{webchat_id}.json"
+    else
+      "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
+    end
   end
 
   def webchat_open_url
-    "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
+    case webchat_provider_id
+    when "k2c"
+      "https://hmpowebchat.klick2contact.com/v03/providers/HMPO2/window/windowChat.html"
+    else
+      "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
+    end
+  end
+
+  def webchat_provider
+    "#{webchat_provider_id}"
   end
 
 private
@@ -139,6 +160,18 @@ private
       "/government/organisations/hm-revenue-customs/contact/share-schemes-for-employees" => 1088,
       "/government/organisations/hm-revenue-customs/contact/non-uk-expatriate-employees-expats" => 1089,
       "/government/organisations/hm-revenue-customs/contact/non-resident-landlords" => 1086,
+      "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => 72
+
+    }
+  end
+
+  def webchat_provider_id
+    webchat_provider_ids[content_item["base_path"]]
+  end
+
+  def webchat_provider_ids
+    {
+    '/government/organisations/hm-passport-office/contact/passport-advice-and-complaints' => "k2c"
     }
   end
 
