@@ -31,8 +31,8 @@ Klick2Contact.prototype.handleOpenChat = function() {
 Klick2Contact.prototype.openUrl = function()
 {
   function encodeQueryData(data) {
-     const ret = [];
-     for (let d in data)
+     var ret = [];
+     for (var d in data)
        ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
      return ret.join('&');
   }
@@ -85,7 +85,7 @@ Klick2Contact.prototype.openUrl = function()
     return result;
   }
 
-  const data = {
+  var data = {
     'p': this.k2c_provider,
     'd': this.k2c_staticDept,
     'ch': this.k2c_staticChnl,

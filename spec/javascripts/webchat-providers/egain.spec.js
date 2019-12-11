@@ -14,7 +14,7 @@ describe('Egain', function () {
       "AVAILABLE",
       "ERROR"
     ])
-  }
+  })
 
   it('should return busy if agent is busy', function () {
     var result = {
@@ -22,7 +22,7 @@ describe('Egain', function () {
     }
 
     expect(egain.apiResponseSuccess(result).status).toBe("BUSY")
-  }
+  })
 
   it('should return error if invalid state is given', function () {
     var result = {
@@ -30,9 +30,9 @@ describe('Egain', function () {
     }
 
     expect(egain.apiResponseSuccess(result).status).toBe("ERROR")
-  }
+  })
 
   it('should return error for when the API responds with an error', function () {
     expect(egain.apiResponseError({}).status).toBe("ERROR")
-  }
+  })
 }
