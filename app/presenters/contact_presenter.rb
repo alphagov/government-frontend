@@ -115,6 +115,14 @@ class ContactPresenter < ContentItemPresenter
     webchat_provider_id.to_s
   end
 
+  def webchat_provider_config
+    {
+      "chat-provider": webchat_provider,
+      "open-url": webchat_open_url,
+      "availability-url": webchat_availability_url,
+    }
+  end
+
 private
 
   def phone_numbers_in_group(group)
@@ -165,12 +173,12 @@ private
   end
 
   def webchat_provider_id
-    webchat_provider_ids[content_item["base_path"]]
+    webchat_provider_ids[content_item["base_path"]] if webchat_provider_ids[content_item["base_path"]].present?
   end
 
   def webchat_provider_ids
     {
-    "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => "k2c",
+      "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => "k2c",
     }
   end
 
