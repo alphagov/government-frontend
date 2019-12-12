@@ -175,7 +175,7 @@ private
   end
 
   def webchat_provider_id
-    webchat_provider_ids[content_item["base_path"]] if webchat_provider_ids[content_item["base_path"]].present?
+    webchat_provider_ids[content_item["base_path"]].presence
   end
 
   def webchat_provider_ids
