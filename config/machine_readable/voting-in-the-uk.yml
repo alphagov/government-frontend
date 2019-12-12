@@ -16,15 +16,13 @@ faqs:
 
   - question: Eligibility to vote
     answer: >
-      <p><a href="/elections-in-the-uk?src=schema">Different elections have different rules</a> on who can vote.</p>
-      <p>To vote in the General Election on 12 December you must:</p>
+      <p>You can vote when you're:</p>
       <ul>
-        <li>be <a href="/register-to-vote?src=schema">registered to vote</a></li>
-        <li>be 18 or over on the day of the election (‘polling day’)</li>
-        <li>be a British, Irish or <a rel="external" href="https://www.electoralcommission.org.uk/i-am-a/voter/register-vote-and-update-your-details?src=schema#commonwealth">qualifying Commonwealth</a> citizen</li>
-        <li>be resident at an address in the UK (or a British citizen living abroad who has been registered to vote in the UK in the last 15 years)</li>
-        <li>not be legally excluded from voting</li>
+        <li>18 years old in England, Wales and Northern Ireland</li>
+        <li>16 years old in Scottish Parliament and local elections (and other elections when you’re 18)</li>
       </ul>
+      <h2 id="elections-you-can-vote-in">Elections you can vote in</h2>
+      <p><a href="/elections-in-the-uk?src=schema">Different elections have different rules</a> on who can vote.</p>
 
   - question: Voting in person
     answer: >
@@ -36,7 +34,7 @@ faqs:
 
   - question: When you can vote
     answer: >
-      <p>Polling stations will be open from 7am to 10pm on 12 December (‘polling day’).</p>
+      <p>Polling stations are open from 7am to 10pm on the day of an election ('polling day').</p>
 
   - question: ID you need to bring
     answer: >
@@ -64,15 +62,8 @@ faqs:
       </ul>
       <h2 id="how-to-apply-for-a-proxy-vote">How to apply for a proxy vote</h2>
       <p><a href="/government/collections/proxy-voting-application-forms?src=schema">Apply for a proxy vote</a> using a paper form. You need to send it to your local Electoral Registration Office.</p>
-      <p>There’s a different form to <a rel="external" href="http://www.eoni.org.uk/Vote/Voting-by-post-or-proxy">apply to vote by proxy in Northern Ireland</a>.</p>
-      <p>You can no longer apply to vote by proxy in the General Election on 12 December.</p>
-      <h3 id="get-an-emergency-proxy-vote">Get an emergency proxy vote</h3>
-      <p>You may be able to <a rel="external" href="https://www.electoralcommission.org.uk/i-am-a/voter/voting-person-post-or-proxy/voting-proxy">get an emergency proxy vote</a> if you’re unable to vote in person because of either:</p>
-      <ul>
-        <li>a medical emergency</li>
-        <li>your work</li>
-      </ul>
-      <p>The deadline is 5pm on 12 December.</p>
+      <p>Usually, you need to apply for a proxy vote at least 6 working days before election day if you want to vote in England, Scotland or Wales.</p>
+      <p>There’s a different form to <a rel="external" href="http://www.eoni.org.uk/Vote/Voting-by-post-or-proxy">apply to vote by proxy in Northern Ireland</a>. Apply at least 14 working days before election day.</p>
 
   - question: Voting from abroad
     answer: >
@@ -84,13 +75,13 @@ faqs:
       <h2 id="if-youll-be-abroad-temporarily">If you’ll be abroad temporarily</h2>
       <p>You can vote by post or proxy if you’ll be abroad temporarily on election day, for example on holiday or a work trip.</p>
       <h3 id="voting-in-england-scotland-or-wales">Voting in England, Scotland or Wales</h3>
-      <p>After you’ve <a href="/register-to-vote?src=schema">registered to vote</a>, you can apply:</p>
+      <p>You can arrange:</p>
       <ul>
         <li>to <a href="/voting-in-the-uk/postal-voting?src=schema">vote by post</a></li>
         <li>for someone else to vote for you (<a href="/voting-in-the-uk/voting-by-proxy?src=schema">vote by proxy</a>)</li>
       </ul>
-      <p>It is too late to apply to vote by proxy or by post in the General Election. If you've applied to vote by post, your postal vote must arrive at your Electoral Office in the UK by 10pm on 12 December.</p>
+      <p>If you’re abroad on election day you need to make arrangements in advance. Apply to vote by proxy if the election is less than 2 weeks away and you have not made the arrangements yet.</p>
+      <p>Your postal ballot will be sent to the address you’ve chosen no earlier than 16 days before the election. You need to return your ballot before 10pm on polling day.</p>
       <h3 id="voting-in-northern-ireland">Voting in Northern Ireland</h3>
       <p>There’s a different process to <a rel="external" href="http://www.eoni.org.uk/Vote/Voting-by-post-or-proxy?src=schema">apply to vote by post or proxy if you live in Northern Ireland</a> and will be abroad temporarily on election day.</p>
       <p>If you will not have time to receive and return your postal ballot in Northern Ireland before going abroad you’ll need to vote by proxy. You cannot apply to have your postal vote sent outside the UK.</p>
-      <p>It is too late to apply to vote by proxy or by post in Northern Ireland.</p>
