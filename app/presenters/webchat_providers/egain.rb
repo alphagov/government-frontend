@@ -20,23 +20,18 @@ module WebchatProviders
       }
     end
 
-    def webchat_availability_url
+    def availability_url(webchat_id)
       "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
     end
 
-    def webchat_open_url
+    def open_url(webchat_id)
       "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
     end
 
-    def webchat_provider
-      webchat_provider_id.to_s
-    end
-
-    def webchat_provider_config
+    def config
       {
-        "chat-provider": webchat_provider,
-        "open-url": webchat_open_url,
-        "availability-url": webchat_availability_url,
+        "open-url": open_url,
+        "availability-url": availability_url,
       }
     end
   end

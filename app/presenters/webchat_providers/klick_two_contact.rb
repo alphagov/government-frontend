@@ -1,28 +1,31 @@
 module WebchatProviders
-  module KlickTwoContact
+  class KlickTwoContact
+    def initialize(base_path)
+      @base_path = base_path
+    end
+
     def webchat_ids
       {
         "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => 72,
       }
     end
 
-    def webchat_availability_url
+    def webchat_id
+      webchat_ids[@base_path].presence
+    end
+
+    def availability_url
       "https://hmpowebchat.klick2contact.com/v03/providers/serviceStatus/v3/#{webchat_id}.json"
     end
 
-    def webchat_open_url
+    def open_url
       "https://hmpowebchat.klick2contact.com/v03/providers/HMPO2/window/windowChat.html"
     end
 
-    def webchat_provider
-      webchat_provider_id.to_s
-    end
-
-    def webchat_provider_config
+    def config
       {
-        "chat-provider": webchat_provider,
-        "open-url": webchat_open_url,
-        "availability-url": webchat_availability_url,
+        "open-url": open_url,
+        "availability-url": availability_url,
       }
     end
   end
