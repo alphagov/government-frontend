@@ -1,12 +1,14 @@
 describe('Klick2Contact', function () {
 
+  var klick2contact
+
   beforeEach(function () {
-    var klick2contact = new Klick2Contact();
+    klick2contact = new Klick2Contact();
   })
 
   it('should create Klick2Contact class correctly', function () {
     expect(klick2contact.k2c_baseLoad).toBe(0)
-    expect(klick2contact.k2c_provider).toBe("HMP02")
+    expect(klick2contact.k2c_provider).toBe('HMP02')
     expect(klick2contact.k2c_url).toBe('https://hmpowebchat.klick2contact.com/v03')
   })
 
@@ -68,6 +70,6 @@ describe('Klick2Contact', function () {
   })
 
   it('should return a valid open url', function() {
-    expect(klick2contact.openUrl()).toBe(/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/)
+    expect(klick2contact.openUrl()).toEqual(/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/)
   })
-}
+});

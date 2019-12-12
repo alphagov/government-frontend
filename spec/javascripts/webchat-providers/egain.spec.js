@@ -1,14 +1,16 @@
 describe('Egain', function () {
 
+  var egain
+
   beforeEach(function () {
-    var egain = new Egain({
+    egain = new Egain({
       openUrl: "https://blahchat.gov.uk"
-    });
+    })
   })
 
   it('should create egain class correctly', function () {
     expect(egain.openUrl).toBe("https://blahchat.gov.uk")
-    expect(egain.API_STATES).toBe([
+    expect(egain.API_STATES).toEqual([
       "BUSY",
       "UNAVAILABLE",
       "AVAILABLE",
@@ -35,4 +37,4 @@ describe('Egain', function () {
   it('should return error for when the API responds with an error', function () {
     expect(egain.apiResponseError({}).status).toBe("ERROR")
   })
-}
+});
