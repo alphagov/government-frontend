@@ -4,16 +4,6 @@ module WebchatProviders
       @base_path = base_path
     end
 
-    def webchat_ids
-      {
-        "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => 72,
-      }
-    end
-
-    def webchat_id
-      webchat_ids[@base_path].presence
-    end
-
     def availability_url
       "https://hmpowebchat.klick2contact.com/v03/providers/serviceStatus/v3/#{webchat_id}.json"
     end
@@ -28,5 +18,18 @@ module WebchatProviders
         "availability-url": availability_url,
       }
     end
+
+    private
+
+    def webchat_ids
+      {
+        "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => 72,
+      }
+    end
+
+    def webchat_id
+      webchat_ids[@base_path].presence
+    end
+
   end
 end

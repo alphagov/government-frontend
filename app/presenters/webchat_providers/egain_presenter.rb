@@ -4,6 +4,23 @@ module WebchatProviders
       @base_path = base_path
     end
 
+    def availability_url
+      "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
+    end
+
+    def open_url
+      "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
+    end
+
+    def config
+      {
+        "open-url": open_url,
+        "availability-url": availability_url,
+      }
+    end
+
+    private
+
     def webchat_ids
       {
         "/government/organisations/hm-revenue-customs/contact/child-benefit" => 1027,
@@ -26,21 +43,6 @@ module WebchatProviders
 
     def webchat_id
       webchat_ids[@base_path].presence
-    end
-
-    def availability_url
-      "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
-    end
-
-    def open_url
-      "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
-    end
-
-    def config
-      {
-        "open-url": open_url,
-        "availability-url": availability_url,
-      }
     end
   end
 end
