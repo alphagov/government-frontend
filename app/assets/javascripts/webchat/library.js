@@ -36,7 +36,7 @@
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      webchatProvider.handleOpenChat()
+      webchatProvider.handleOpenChat(global)
       trackEvent('opened')
     }
 

@@ -17,6 +17,6 @@ Egain.prototype.apiResponseError = function(result) {
   return { status: "ERROR" };
 }
 
-Egain.prototype.handleOpenChat = function() {
+Egain.prototype.handleOpenChat = function(global) {
   global.open(this.openUrl, 'newwin', 'width=200,height=100')
 }

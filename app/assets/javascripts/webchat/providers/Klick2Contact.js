@@ -22,7 +22,7 @@ Klick2Contact.prototype.apiResponseError = function(result) {
   return this.apiResponse(result);
 }
 
-Klick2Contact.prototype.handleOpenChat = function() {
+Klick2Contact.prototype.handleOpenChat = function(global) {
   global.open(this.openUrl(), 'newwin', 'width=200,height=100')
 }
 
