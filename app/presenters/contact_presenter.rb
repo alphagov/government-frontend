@@ -101,6 +101,7 @@ class ContactPresenter < ContentItemPresenter
   def webchat_provider_config
     config = webchat_provider.config
     config["chat-provider"] = webchat_provider_id
+    config
   end
 
   def leadingpara_body
@@ -176,8 +177,8 @@ private
     webchat_provider = nil
     provider_id = webchat_provider_id
     if provider_id == :egain
-      webchat_provider = WebchatProviders::Egain.new
-    elsif provider_id == :k2c 
+      webchat_provider = WebchatProviders::Egain.new(content_item["base_path"])
+    elsif provider_id == :k2c
       webchat_provider = WebchatProviders::KlickTwoContact.new(content_item["base_path"])
     end
     webchat_provider
