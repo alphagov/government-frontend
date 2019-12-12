@@ -1,6 +1,5 @@
 module WebchatProviders
   module Egain
-
     def webchat_ids
       {
         "/government/organisations/hm-revenue-customs/contact/child-benefit" => 1027,
@@ -20,12 +19,13 @@ module WebchatProviders
         "/government/organisations/hm-revenue-customs/contact/non-resident-landlords" => 1086,
       }
     end
+
     def webchat_availability_url
-        "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
+      "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
     end
 
     def webchat_open_url
-        "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
+      "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
     end
 
     def webchat_provider
