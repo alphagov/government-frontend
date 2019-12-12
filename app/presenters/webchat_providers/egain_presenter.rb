@@ -19,7 +19,7 @@ module WebchatProviders
       }
     end
 
-    private
+  private
 
     def webchat_ids
       {

@@ -19,7 +19,7 @@ module WebchatProviders
       }
     end
 
-    private
+  private
 
     def webchat_ids
       {
@@ -30,6 +30,5 @@ module WebchatProviders
     def webchat_id
       webchat_ids[@base_path].presence
     end
-
   end
 end

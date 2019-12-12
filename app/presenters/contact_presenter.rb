@@ -168,6 +168,7 @@ private
   # Webchat
   def webchat_provider
     return @webchat_provider if @webchat_provider.present?
+
     @webchat_provider = nil
     if @webchat_provider_id == :egain
       @webchat_provider = WebchatProviders::EgainPresenter.new(content_item["base_path"])
@@ -177,9 +178,9 @@ private
     @webchat_provider
   end
 
-
   def webchat_provider_id
     return @webchat_provider_id if @webchat_provider_id.present?
+
     base_path = content_item["base_path"]
     @webchat_provider_id = nil
     webchat_providers.each do |key, value|
@@ -211,8 +212,8 @@ private
         "/government/organisations/hm-revenue-customs/contact/non-resident-landlords",
       ],
       "k2c": [
-        "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints"
-      ]
+        "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints",
+      ],
     }
   end
 end
