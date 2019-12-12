@@ -1,5 +1,5 @@
 module WebchatProviders
-  module Klick2Contact
+  module KlickTwoContact
     def webchat_ids
       {
         "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints" => 72,

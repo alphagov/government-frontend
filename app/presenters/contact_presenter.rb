@@ -1,7 +1,7 @@
 class ContactPresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include WebchatProviders::Egain
-  include WebchatProviders::Klick2Contact
+  include WebchatProviders::KlickTwoContact
 
   def title_and_context
     super.tap do |t|
