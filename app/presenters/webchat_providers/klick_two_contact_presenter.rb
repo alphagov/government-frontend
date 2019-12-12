@@ -1,5 +1,5 @@
 module WebchatProviders
-  class KlickTwoContact
+  class KlickTwoContactPresenter
     def initialize(base_path)
       @base_path = base_path
     end

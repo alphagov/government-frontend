@@ -1,5 +1,5 @@
 module WebchatProviders
-  class Egain
+  class EgainPresenter
     def initialize(base_path)
       @base_path = base_path
     end

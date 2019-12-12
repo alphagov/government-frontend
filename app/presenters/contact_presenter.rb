@@ -177,9 +177,9 @@ private
     webchat_provider = nil
     provider_id = webchat_provider_id
     if provider_id == :egain
-      webchat_provider = WebchatProviders::Egain.new(content_item["base_path"])
+      webchat_provider = WebchatProviders::EgainPresenter.new(content_item["base_path"])
     elsif provider_id == :k2c
-      webchat_provider = WebchatProviders::KlickTwoContact.new(content_item["base_path"])
+      webchat_provider = WebchatProviders::KlickTwoContactPresenter.new(content_item["base_path"])
     end
     webchat_provider
   end
