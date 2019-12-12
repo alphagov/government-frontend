@@ -1,0 +1,22 @@
+.verify-hint-box {
+  width: 100%;
+  border: 5px solid $govuk-border-colour;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: -30px 0 30px;
+
+  .verify-hint-logos {
+    margin-bottom: 15px;
+
+    .verify-hint-logos-idp {
+      height: 60px;
+      border-right: 1px solid $govuk-border-colour;
+      padding-right: 30px;
+    }
+
+    .verify-hint-logos-verify {
+      height: 40px;
+      padding: 10px 0 10px 30px;
+    }
+  }
+}
