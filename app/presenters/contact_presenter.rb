@@ -167,27 +167,28 @@ private
 
   # Webchat
   def webchat_provider
-    webchat_provider = nil
-    provider_id = webchat_provider_id
-    if provider_id == :egain
-      webchat_provider = WebchatProviders::EgainPresenter.new(content_item["base_path"])
-    elsif provider_id == :k2c
-      webchat_provider = WebchatProviders::KlickTwoContactPresenter.new(content_item["base_path"])
+    return @webchat_provider if @webchat_provider.present?
+    @webchat_provider = nil
+    if @webchat_provider_id == :egain
+      @webchat_provider = WebchatProviders::EgainPresenter.new(content_item["base_path"])
+    elsif @webchat_provider_id == :k2c
+      @webchat_provider = WebchatProviders::KlickTwoContactPresenter.new(content_item["base_path"])
     end
-    webchat_provider
+    @webchat_provider
   end
 
 
   def webchat_provider_id
+    return @webchat_provider_id if @webchat_provider_id.present?
     base_path = content_item["base_path"]
-    webchat_provider_id = nil
+    @webchat_provider_id = nil
     webchat_providers.each do |key, value|
       if value.include? base_path
-        webchat_provider_id = key
+        @webchat_provider_id = key
         break
       end
     end
-    webchat_provider_id
+    @webchat_provider_id
   end
 
   def webchat_providers
