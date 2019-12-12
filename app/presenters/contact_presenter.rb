@@ -89,7 +89,6 @@ class ContactPresenter < ContentItemPresenter
   #  5. Show webchat and call the frontend classes
   ###
 
-
   def webchat_body
     content_item.dig("details", "more_info_webchat").try(:html_safe)
   end
@@ -102,12 +101,6 @@ class ContactPresenter < ContentItemPresenter
     config = webchat_provider.config
     config["chat-provider"] = webchat_provider_id
     config
-  end
-
-  def leadingpara_body
-    if webchat_provider_id == "k2c"
-      content_item.dig("details", "description").try(:html_safe)
-    end
   end
 
 private
