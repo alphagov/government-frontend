@@ -120,14 +120,14 @@ Klick2Contact.prototype.apiResponse = function(result)
     return objects;
   }
 
-  if (result.status == 0) {
+  if (!result || !result.responseText || result.status == 0) {
     return { status: "ERROR" }
   } else {
     var responseStr = result.responseText.replace('k2c_doServiceStatus(\'','')
     responseStr = responseStr.slice(0,responseStr.length - 3)
 
     var responseJSON = JSON.parse(responseStr)
-    if(parseInt(getValues(responseJSON.DPT[this.k2c_staticDept], 'DPT_AGENTS')) > 0) {
+    if(responseJSON.DPT && parseInt(getValues(responseJSON.DPT[this.k2c_staticDept], 'DPT_AGENTS')) > 0) {
       if(parseInt(getValues(responseJSON.DPT[this.k2c_staticDept], 'DPT_AGENTS_WITHLIMIT')) >= parseInt(getValues(responseJSON.DPT[this.k2c_staticDept], 'DPT_AGENTS'))){
         return { status: "BUSY" }
       } else {

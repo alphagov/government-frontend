@@ -8,7 +8,7 @@ describe('Klick2Contact', function () {
 
   it('should create Klick2Contact class correctly', function () {
     expect(klick2contact.k2c_baseLoad).toBe(0)
-    expect(klick2contact.k2c_provider).toBe('HMP02')
+    expect(klick2contact.k2c_provider).toBe('HMPO2')
     expect(klick2contact.k2c_url).toBe('https://hmpowebchat.klick2contact.com/v03')
   })
 
@@ -22,7 +22,7 @@ describe('Klick2Contact', function () {
       }
     }
 
-    result = "k2c_doServiceStatus('" + JSON.stringify(result) + "');";
+    result = { responseText: "k2c_doServiceStatus('" + JSON.stringify(result) + "');" };
 
     expect(klick2contact.apiResponseSuccess(result).status).toBe("BUSY")
   })
@@ -37,7 +37,7 @@ describe('Klick2Contact', function () {
       }
     }
 
-    result = "k2c_doServiceStatus('" + JSON.stringify(result) + "');";
+    result = { responseText: "k2c_doServiceStatus('" + JSON.stringify(result) + "');" };
 
     expect(klick2contact.apiResponseSuccess(result).status).toBe("AVAILABLE")
   })
@@ -52,24 +52,26 @@ describe('Klick2Contact', function () {
       }
     }
 
-    result = "k2c_doServiceStatus('" + JSON.stringify(result) + "');";
+    result = { responseText: "k2c_doServiceStatus('" + JSON.stringify(result) + "');" };
 
     expect(klick2contact.apiResponseSuccess(result).status).toBe("UNAVAILABLE")
   })
 
   it('should return error if invalid state is given', function () {
     var result = {
-      response: "THIS_IS_INVALID"
+      responseText: {}
     }
+
+    result = { responseText: "k2c_doServiceStatus('" + JSON.stringify(result) + "');" };
 
     expect(klick2contact.apiResponseSuccess(result).status).toBe("UNAVAILABLE")
   })
 
   it('should return error for when the API responds with an error', function () {
-    expect(klick2contact.apiResponseError({}).status).toBe("UNAVAILABLE")
+    expect(klick2contact.apiResponseError({}).status).toBe("ERROR")
   })
 
   it('should return a valid open url', function() {
-    expect(klick2contact.openUrl()).toEqual(/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/)
+    expect(klick2contact.openUrl()).toMatch(/([a-z]{1,2}tps?):\/\/((?:(?!(?:\/|#|\?|&)).)+)(?:(\/(?:(?:(?:(?!(?:#|\?|&)).)+\/))?))?(?:((?:(?!(?:\.|$|\?|#)).)+))?(?:(\.(?:(?!(?:\?|$|#)).)+))?(?:(\?(?:(?!(?:$|#)).)+))?(?:(#.+))?/)
   })
 });
