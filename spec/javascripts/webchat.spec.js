@@ -68,7 +68,7 @@ describe('Webchat', function () {
       mount()
       expect(
         $.ajax
-      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
+      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', dataType: 'json', timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
     })
 
     it('should inform user whether advisors are available', function () {
