@@ -36,17 +36,31 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     }
 
     function generateHtml(data) {
-      return '\
-        <div class="verify-hint-box"> \
-          <h2 class="govuk-heading-m">Someone recently signed in with '+ data['displayName'] +' on this device</h2> \
-          <div class="verify-hint-logos"> \
-            <img class="verify-hint-logos-idp" src="https://gds-verify-frontend-assets.s3.amazonaws.com/4af94ca-c1e26b4/'+ data['simpleId'] +'.png" alt=""> \
-            <img class="verify-hint-logos-verify" src="https://gds-verify-frontend-assets.s3.amazonaws.com/4af94ca-c1e26b4/govuk-verify-small-black-text-454fe97ff5e3edfb6eebdc648930c0ff675616ae7956f1d87e67b30f479d7b8d.svg" alt=""> \
-          </div> \
-          <a class="gem-c-button govuk-button" role="button" href="https://www.signin.service.gov.uk/initiate-journey/hmrc-personal-tax-account?journey_hint=idp_' + data['simpleId'] + '">Continue with '+ data['displayName'] +'</a> \
-        </div> \
-        <p class="govuk-body">If this wasn\'t you, choose one option:</p> \
-      '
+      return  '<div class="verify-hint-box">' +
+                '<h2 class="govuk-heading-m">' +
+                  'Someone recently signed in with '+ data['displayName'] +' on this device' +
+                '</h2>' +
+                '<div class="verify-hint-logos">' +
+                  '<img ' +
+                    'class="verify-hint-logos-idp"' +
+                    'src="https://gds-verify-frontend-assets.s3.amazonaws.com/4af94ca-c1e26b4/'+ data['simpleId'] +'.png"' +
+                    'alt=""'+
+                  '>' +
+                  '<img '+
+                    'class="verify-hint-logos-verify"' +
+                    'src="https://gds-verify-frontend-assets.s3.amazonaws.com/4af94ca-c1e26b4/govuk-verify-small-black-text-454fe97ff5e3edfb6eebdc648930c0ff675616ae7956f1d87e67b30f479d7b8d.svg"' +
+                    'alt=""' +
+                  '>' +
+                '</div>' +
+                '<a '+
+                  'class="gem-c-button govuk-button"' +
+                  'role="button"' +
+                  'href="https://www.signin.service.gov.uk/initiate-journey/hmrc-personal-tax-account?journey_hint=idp_' + data['simpleId'] + '"' +
+                  'onClick="GOVUK.analytics.trackEvent(\'verify-hint\', \'proceed\', { transport: \'beacon\'})"' +
+                '>' +
+                  'Continue with '+ data['displayName'] +'</a>' +
+              '</div>' +
+              '<p class="govuk-body">If this wasn\'t you, choose one option:</p>'
     }
   }
 })(window, window.GOVUK);
