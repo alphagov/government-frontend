@@ -1,4 +1,5 @@
 /* eslint-disable */
+//= require_tree ./webchat/providers
 //= require ./webchat/library.js
 /*eslint-enable */
 
