@@ -1,22 +1,22 @@
 .verify-hint-box {
   width: 100%;
   border: 5px solid $govuk-border-colour;
-  padding: 15px;
+  padding: govuk-spacing(3);
   box-sizing: border-box;
-  margin: -30px 0 30px;
+  margin: - govuk-spacing(6) 0 govuk-spacing(6);
 
   .verify-hint-logos {
-    margin-bottom: 15px;
+    margin-bottom: govuk-spacing(3);
 
     .verify-hint-logos-idp {
       height: 60px;
       border-right: 1px solid $govuk-border-colour;
-      padding-right: 30px;
+      padding-right: govuk-spacing(3);
     }
 
     .verify-hint-logos-verify {
       height: 40px;
-      padding: 10px 0 10px 30px;
+      padding: govuk-spacing(2) 0 govuk-spacing(2) govuk-spacing(3);
     }
   }
 }
