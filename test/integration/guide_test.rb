@@ -112,20 +112,6 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert_nil faq_schema
   end
 
-  # The schema config is in /config/machine_readable/voting-in-the-uk.yml
-  test "voting in the UK guide shows hard coded FAQ schema" do
-    setup_and_visit_voting_guide
-
-    faq_schema = find_structured_data(page, "FAQPage")
-    q_and_as = faq_schema["mainEntity"]
-
-    assert_equal faq_schema["@type"], "FAQPage"
-    assert_equal faq_schema["headline"], "How to vote"
-    assert_equal faq_schema["description"], "<p>You need to <a href=\"/register-to-vote?src=schema\">register to vote</a> before you can vote in UK elections or referendums.</p> <p>If you’re eligible, you can vote in person on the day of the election at a named polling station. You can also apply for a postal or proxy vote instead.</p>\n"
-
-    assert_equal 8, q_and_as.count
-  end
-
   test "voting in the UK guide shows all chapters on a single page" do
     content_item = setup_and_visit_voting_guide
     part_titles = content_item["details"]["parts"].map { |part| part["title"] }
