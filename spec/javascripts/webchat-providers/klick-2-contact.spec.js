@@ -30,7 +30,7 @@ describe('Klick2Contact', function () {
   it('should return available if agent is available', function () {
     var result = {
       "DPT": {
-        "712": {
+        "717": {
           "DPT_AGENTS": 1,
           "DPT_AGENTS_WITHLIMIT": 0
         }
@@ -45,7 +45,7 @@ describe('Klick2Contact', function () {
   it('should return unavailable if agent is unavailable', function () {
     var result = {
       "DPT": {
-        "712": {
+        "717": {
           "DPT_AGENTS": 0,
           "DPT_AGENTS_WITHLIMIT": 0
         }
