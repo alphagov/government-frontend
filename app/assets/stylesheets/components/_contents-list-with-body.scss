@@ -21,7 +21,7 @@
 }
 
 .app-c-contents-list-with-body__link-wrapper.govuk-sticky-element--stuck-to-window {
-  background-color: govuk-colour("mid-grey", $legacy: "grey-3");
+  background-color: govuk-colour("light-grey", $legacy: "grey-3");
   bottom: -1px; // 'Fix' for anomalous 1px margin which sporadically appears below this element.
   left: 0;
   margin: 0;
