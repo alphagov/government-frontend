@@ -10,7 +10,7 @@ describe('A GOV.UK Verify hint box', function () {
 
   beforeEach(function () {
 
-    element = $('<div id="verify-hint" style="display:none"></div>')
+    element = $('<div style="display:none"></div>')
 
     hint = new GOVUK.Modules.ShowGovUkVerifyHint()
     hint.start(element)

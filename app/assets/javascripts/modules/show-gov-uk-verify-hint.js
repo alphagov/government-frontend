@@ -5,10 +5,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   'use strict'
 
   var $ = global.jQuery
+  var VISIBLE_ON_URL = "/personal-tax-account/sign-in/prove-identity"
 
   GOVUK.Modules.ShowGovUkVerifyHint = function () {
     this.start = function (element) {
-      if (window.location.href.indexOf("/personal-tax-account/sign-in/prove-identity") > -1) {
+      if (window.location.href.indexOf(VISIBLE_ON_URL) > -1) {
         checkLastSuccessfulIdp(element)
       }
     }
@@ -44,12 +45,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
                   '<img ' +
                     'class="verify-hint-logos-idp"' +
                     'src="https://gds-verify-frontend-assets.s3.amazonaws.com/4af94ca-c1e26b4/'+ data['simpleId'] +'.png"' +
-                    'alt=""'+
+                    'alt="' + data['displayName'] + '"'+
                   '>' +
                   '<img '+
                     'class="verify-hint-logos-verify"' +
                     'src="https://gds-verify-frontend-assets.s3.amazonaws.com/4af94ca-c1e26b4/govuk-verify-small-black-text-454fe97ff5e3edfb6eebdc648930c0ff675616ae7956f1d87e67b30f479d7b8d.svg"' +
-                    'alt=""' +
+                    'alt="GOV.UK Verify logo"' +
                   '>' +
                 '</div>' +
                 '<a '+
