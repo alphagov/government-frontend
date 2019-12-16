@@ -11,3 +11,8 @@ Rails/OutputSafety:
   Enabled: false
 Rails/HelperInstanceVariable:
   Enabled: false
+
+# Temporary - should be reverted as soon as the Verify tests finishes
+AllCops:
+  Exclude:
+    - "config/initializers/csp.rb"
