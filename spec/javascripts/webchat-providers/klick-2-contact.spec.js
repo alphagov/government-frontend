@@ -15,7 +15,7 @@ describe('Klick2Contact', function () {
   it('should return busy if agent is busy', function () {
     var result = {
       "DPT": {
-        "712": {
+        "717": {
           "DPT_AGENTS": 1,
           "DPT_AGENTS_WITHLIMIT": 10
         }

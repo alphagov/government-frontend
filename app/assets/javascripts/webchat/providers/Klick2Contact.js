@@ -3,7 +3,7 @@ function Klick2Contact(options) {
   this.k2c_provider             = 'HMPO2'; // Provider Name HMPO2 or HMPO
   this.k2c_url                  = 'https://hmpowebchat.klick2contact.com/v03'; // Url to console.
   this.k2c_launchServe          = 'https://hmpowebchat.klick2contact.com/v03'; // '', 'd' 's'
-  this.k2c_staticDept           = "712" // 712 or 717
+  this.k2c_staticDept           = "717" // 712 or 717
   this.k2c_staticChnl           = "CH"
   this.k2c_skin                 = "chat_a1"
   this.k2c_staticIID            = "UK"
