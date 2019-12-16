@@ -80,11 +80,6 @@ class ContentItemPresenter
     !content_item.cache_control.private?
   end
 
-  def render_guide_as_single_page?
-    # /voting-in-the-uk
-    content_id == "9315bc67-33e7-42e9-8dea-e022f56dabfa"
-  end
-
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
