@@ -61,9 +61,7 @@ module ContentItem
 
     def part_link_elements
       parts.map do |part|
-        if render_guide_as_single_page?
-          { href: "##{part['slug']}", text: part["title"] }
-        elsif part["slug"] != current_part["slug"]
+        if part["slug"] != current_part["slug"]
           { href: part["full_path"], text: part["title"] }
         else
           { href: part["full_path"], text: part["title"], active: true }
