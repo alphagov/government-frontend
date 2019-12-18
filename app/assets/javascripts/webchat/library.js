@@ -9,23 +9,19 @@
   function Webchat (options) {
     var POLL_INTERVAL = 5 * 1000
     var AJAX_TIMEOUT  = 5 * 1000
+    var API_STATES = [
+      "BUSY",
+      "UNAVAILABLE",
+      "AVAILABLE",
+      "ERROR"
+    ]
     var $el                 = $(options.$el)
-    var chatProvider        = $el.attr('data-chat-provider')
     var openUrl             = $el.attr('data-open-url')
     var availabilityUrl     = $el.attr('data-availability-url')
     var $openButton         = $el.find('.js-webchat-open-button')
     var webchatStateClass   = 'js-webchat-advisers-'
     var intervalID          = null
     var lastRecordedState   = null
-    var webchatProvider = null;
-
-    if (chatProvider === "k2c") {
-      webchatProvider = new Klick2Contact();
-    } else {
-      webchatProvider = new Egain({
-        openUrl: openUrl
-      });
-    }
 
     function init () {
       if (!availabilityUrl || !openUrl) throw 'urls for webchat not defined'
@@ -36,7 +32,7 @@
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      webchatProvider.handleOpenChat(global)
+      global.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
@@ -44,7 +40,6 @@
       var ajaxConfig = {
         url: availabilityUrl,
         type: 'GET',
-        dataType: 'json',
         timeout: AJAX_TIMEOUT,
         success: apiSuccess,
         error: apiError
@@ -53,14 +48,14 @@
     }
 
     function apiSuccess (result) {
-      var state = webchatProvider.apiResponseSuccess(result)
-      advisorStateChange(state.status)
+      var validState  = API_STATES.indexOf(result.response) != -1
+      var state       = validState ? result.response : "ERROR"
+      advisorStateChange(state)
     }
 
-    function apiError (result) {
+    function apiError () {
       clearInterval(intervalID)
-      var state = webchatProvider.apiResponseError(result)
-      advisorStateChange(state.status)
+      advisorStateChange('ERROR')
     }
 
     function advisorStateChange (state) {
