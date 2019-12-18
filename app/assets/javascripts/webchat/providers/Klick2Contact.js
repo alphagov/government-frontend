@@ -23,7 +23,7 @@ Klick2Contact.prototype.apiResponseError = function(result) {
 }
 
 Klick2Contact.prototype.handleOpenChat = function(global) {
-  global.open(this.openUrl(), 'newwin', 'width=200,height=100')
+  global.open(this.openUrl(), 'newwin', 'width=469,height=526')
 }
 
 // k2c specific
