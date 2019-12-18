@@ -93,14 +93,16 @@ class ContactPresenter < ContentItemPresenter
     content_item.dig("details", "more_info_webchat").try(:html_safe)
   end
 
+  def webchat
+    Webchat::Queue.find_by_base_path(base_path)
+  end
+
   def show_webchat?
-    webchat_provider_id.present?
+    webchat.present?
   end
 
   def webchat_provider_config
-    config = webchat_provider.config
-    config["chat-provider"] = webchat_provider_id
-    config
+    webchat.config
   end
 
 private
@@ -163,57 +165,5 @@ private
         url:  link["url"],
       }
     end
-  end
-
-  # Webchat
-  def webchat_provider
-    return @webchat_provider if @webchat_provider.present?
-
-    @webchat_provider = nil
-    if @webchat_provider_id == :egain
-      @webchat_provider = WebchatProviders::EgainPresenter.new(content_item["base_path"])
-    elsif @webchat_provider_id == :k2c
-      @webchat_provider = WebchatProviders::KlickTwoContactPresenter.new(content_item["base_path"])
-    end
-    @webchat_provider
-  end
-
-  def webchat_provider_id
-    return @webchat_provider_id if @webchat_provider_id.present?
-
-    base_path = content_item["base_path"]
-    @webchat_provider_id = nil
-    webchat_providers.each do |key, value|
-      if value.include? base_path
-        @webchat_provider_id = key
-        break
-      end
-    end
-    @webchat_provider_id
-  end
-
-  def webchat_providers
-    {
-      "egain": [
-        "/government/organisations/hm-revenue-customs/contact/child-benefit",
-        "/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees",
-        "/government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk",
-        "/government/organisations/hm-revenue-customs/contact/national-insurance-numbers",
-        "/government/organisations/hm-revenue-customs/contact/self-assessment",
-        "/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries",
-        "/government/organisations/hm-revenue-customs/contact/vat-enquiries",
-        "/government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries",
-        "/government/organisations/hm-revenue-customs/contact/employer-enquiries",
-        "/government/organisations/hm-revenue-customs/contact/online-services-helpdesk",
-        "/government/organisations/hm-revenue-customs/contact/charities-and-community-amateur-sports-clubs-cascs",
-        "/government/organisations/hm-revenue-customs/contact/enquiries-from-employers-with-expatriate-employees",
-        "/government/organisations/hm-revenue-customs/contact/share-schemes-for-employees",
-        "/government/organisations/hm-revenue-customs/contact/non-uk-expatriate-employees-expats",
-        "/government/organisations/hm-revenue-customs/contact/non-resident-landlords",
-      ],
-      "k2c": [
-        "/government/organisations/hm-passport-office/contact/passport-advice-and-complaints",
-      ],
-    }
   end
 end
