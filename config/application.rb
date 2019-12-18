@@ -101,7 +101,7 @@ module GovernmentFrontend
     config.action_dispatch.rack_cache = nil
 
     # Path within public/ where assets are compiled to
-    config.assets.prefix = "/government-frontend"
+    config.assets.prefix = "/assets/government-frontend"
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
