@@ -81,10 +81,6 @@ class ContactPresenter < ContentItemPresenter
 
   # Webchat
 
-  def webchat_body
-    content_item.dig("details", "more_info_webchat").try(:html_safe)
-  end
-
   def webchat
     Webchat::Queue.find_by_base_path(base_path)
   end
@@ -93,8 +89,12 @@ class ContactPresenter < ContentItemPresenter
     webchat.present?
   end
 
-  def webchat_provider_config
+  def webchat_config
     webchat.config
+  end
+
+  def webchat_body
+    content_item.dig("details", "more_info_webchat").try(:html_safe)
   end
 
 private

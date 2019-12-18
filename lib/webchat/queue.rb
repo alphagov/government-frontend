@@ -16,7 +16,6 @@ class Webchat::Queue
     {
       "open-url": open_url,
       "availability-url": availability_url,
-      "chat-provider": provider
     }
   end
 
