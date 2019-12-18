@@ -88,8 +88,8 @@ class ContactPresenterTest
       schema = schema_item("contact_with_webchat")
       presented = present_example(schema)
       assert_equal true, presented.show_webchat?
-      assert_equal presented.webchat_availability_url, "https://www.tax.service.gov.uk/csp-partials/availability/1030"
-      assert_equal presented.webchat_open_url, "https://www.tax.service.gov.uk/csp-partials/open/1030"
+      assert_equal presented.webchat.availability_url, "https://www.tax.service.gov.uk/csp-partials/availability/1030"
+      assert_equal presented.webchat.open_url, "https://www.tax.service.gov.uk/csp-partials/open/1030"
     end
   end
 end
