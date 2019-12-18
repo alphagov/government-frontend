@@ -32,7 +32,7 @@
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      global.open(openUrl, 'newwin', 'width=200,height=100')
+      global.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
