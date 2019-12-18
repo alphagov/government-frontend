@@ -81,14 +81,6 @@ class ContactPresenter < ContentItemPresenter
 
   # Webchat
 
-  # Logic
-  #  1. Calls show_webchat?
-  #  2. Find out which webchat provider to use
-  #  3. Find webchat id
-  #  4. Get and send config
-  #  5. Show webchat and call the frontend classes
-  ###
-
   def webchat_body
     content_item.dig("details", "more_info_webchat").try(:html_safe)
   end
