@@ -46,3 +46,67 @@
 - base_path: /government/organisations/hm-passport-office/contact/passport-advice-and-complaints
   open_url: https://hmpowebchat.klick2contact.com/v03/launcherV3.php?p=HMPO2&d=712&ch=CH&psk=chat_a1&iid=UK&l=en&r=K2C&fcl=0&srbp=0&s=https%3A%2F%2Fhmpowebchat.klick2contact.com%2Fv03
   availability_url: https://hmpowebchat.klick2contact.com/v03/providers/serviceStatus/v3/72.json
+
+
+
+
+- base_path: /government/organisations/hm-revenue-customs/contact/child-benefit
+  open_url: /contact/child-benefit
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BAC-TC&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-PAYE"&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-VAT&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/national-insurance-numbers
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-NI&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/self-assessment
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-SA&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BAC-TC&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/vat-enquiries
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-VAT&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-EXC&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/employer-enquiries
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BPTO-EHL&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/online-services-helpdesk
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-OSH&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/charities-and-community-amateur-sports-clubs-cascs
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=1087&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/enquiries-from-employers-with-expatriate-employees
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=1089&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/share-schemes-for-employees
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=1088&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/non-uk-expatriate-employees-expats
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=1089&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
+- base_path: /government/organisations/hm-revenue-customs/contact/non-resident-landlords
+  open_url: /contact/passport-advice-and-complaints
+  availability_url:  https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=1086&businessUnitID=19001214&siteID=10006719"
+  redirect_url: http://www.qa.tax.service.gov.uk/ask-hmrc/webchat
