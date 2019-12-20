@@ -70,7 +70,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
     within ".app-c-contents-list-with-body" do
       assert page.has_css?(".gem-c-govspeak", count: group_count)
-      assert page.has_css?(".gem-c-document-list__item-title", count: group_count)
+      assert page.has_css?(".gem-c-document-list__item-metadata", count: group_count)
     end
   end
 
