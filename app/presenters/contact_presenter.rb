@@ -8,10 +8,6 @@ class ContactPresenter < ContentItemPresenter
     end
   end
 
-  def webchat_body
-    content_item.dig("details", "more_info_webchat").try(:html_safe)
-  end
-
   def online_form_links
     contact_form_links = content_item["details"]["contact_form_links"] || []
     contact_form_links.map do |link|
@@ -83,16 +79,18 @@ class ContactPresenter < ContentItemPresenter
     content_item.dig("details", "more_info_email_address").try(:html_safe)
   end
 
+  # Webchat
+
+  def webchat
+    Webchat.find(content_item["base_path"])
+  end
+
   def show_webchat?
-    webchat_ids.include?(content_item["base_path"])
+    webchat.present?
   end
 
-  def webchat_availability_url
-    "https://www.tax.service.gov.uk/csp-partials/availability/#{webchat_id}"
-  end
-
-  def webchat_open_url
-    "https://www.tax.service.gov.uk/csp-partials/open/#{webchat_id}"
+  def webchat_body
+    content_item.dig("details", "more_info_webchat").try(:html_safe)
   end
 
 private
@@ -116,30 +114,6 @@ private
         number: group["fax"],
       },
     ].select { |n| n[:number].present? }
-  end
-
-  def webchat_id
-    webchat_ids[content_item["base_path"]]
-  end
-
-  def webchat_ids
-    {
-      "/government/organisations/hm-revenue-customs/contact/child-benefit" => 1027,
-      "/government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees" => 1030,
-      "/government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk" => 1026,
-      "/government/organisations/hm-revenue-customs/contact/national-insurance-numbers" => 1021,
-      "/government/organisations/hm-revenue-customs/contact/self-assessment" => 1004,
-      "/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries" => 1016,
-      "/government/organisations/hm-revenue-customs/contact/vat-enquiries" => 1028,
-      "/government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries" => 1034,
-      "/government/organisations/hm-revenue-customs/contact/employer-enquiries" => 1023,
-      "/government/organisations/hm-revenue-customs/contact/online-services-helpdesk" => 1003,
-      "/government/organisations/hm-revenue-customs/contact/charities-and-community-amateur-sports-clubs-cascs" => 1087,
-      "/government/organisations/hm-revenue-customs/contact/enquiries-from-employers-with-expatriate-employees" => 1089,
-      "/government/organisations/hm-revenue-customs/contact/share-schemes-for-employees" => 1088,
-      "/government/organisations/hm-revenue-customs/contact/non-uk-expatriate-employees-expats" => 1089,
-      "/government/organisations/hm-revenue-customs/contact/non-resident-landlords" => 1086,
-    }
   end
 
   def v_card_part(v_card_class, value)

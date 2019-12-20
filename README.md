@@ -170,6 +170,40 @@ The yaml file contains a custom key of `:document_types` not used by wraith but 
 bundle exec rake wraith:update_document_types[:sample_size]
 ```
 
+## Webchat
+
+### How to add a new webchat provider
+1. Open to `lib/webchat.yaml`
+2. Append new entry:
+```yaml
+- base_path: /government/contact/my-amazing-service
+  open_url: https://www.my-amazing-webchat.com/007/open-chat
+  availability_url: https://www.my-amazing-webchat.com/007/check-availability
+```
+3. Deploy changes
+4. Go to https://www.gov.uk/government/contact/my-amazing-service
+5. Finished
+
+### Required configuration
+
+#### Base path
+This is the base path of a contact page, for example, `/government/organisations/hm-revenue-customs/contact/child-benefit`.
+This path should always be a contact page, any other content page type will result in the webchat component not being loaded.
+
+#### Availability URL
+This URL is used to check the availability of agents at regular intervals.
+
+|  Function  |  Required | 
+|-----------|-----------|
+| Request Method  | GET  |
+| Response Format | JSON |
+| Request Example | {"status":"success","response":"BUSY"}  |
+| Valid statuses | ["BUSY", "UNAVAILABLE", "AVAILABLE", "ERROR"] |
+
+#### Open URL
+This url is used to start a webchat session.
+This url should not include session ids or require anything specific parameters to be generated.
+
 ## Licence
 
 [MIT License](LICENCE)

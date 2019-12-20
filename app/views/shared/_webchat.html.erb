@@ -2,8 +2,9 @@
 
 <p>
   <span class="js-webchat"
-    data-availability-url="<%= @content_item.webchat_availability_url %>"
-    data-open-url="<%= @content_item.webchat_open_url %>">
+    data-availability-url="<%= @content_item.webchat.availability_url %>"
+    data-open-url="<%= @content_item.webchat.open_url %>"
+  >
     <% if webchat_unavailable? %>
       <%= unavailability_message %>
     <% else %>
