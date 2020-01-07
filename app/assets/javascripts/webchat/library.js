@@ -13,7 +13,9 @@
       "BUSY",
       "UNAVAILABLE",
       "AVAILABLE",
-      "ERROR"
+      "ERROR",
+      "OFFLINE",
+      "ONLINE"
     ]
     var $el                 = $(options.$el)
     var openUrl             = $el.attr('data-open-url')
@@ -48,8 +50,33 @@
     }
 
     function apiSuccess (result) {
-      var validState  = API_STATES.indexOf(result.response) != -1
-      var state       = validState ? result.response : "ERROR"
+      //var validState  = API_STATES.indexOf(result.response) != -1
+
+
+      if(result.hasOwnProperty('inHOP')){
+        var validState  = API_STATES.indexOf(result.status.toUpperCase()) != -1
+        var state       = validState ? result.status : "ERROR"
+        if (result.inHOP){
+              if(result.availability == "true"){
+                      if(result.status == "online"){
+                        state="AVAILABLE"
+                      }
+                      if (result.status == "busy"){
+                          state="BUSY"
+                      }
+                      if (result.status == "offline"){
+                          state="UNAVAILABLE"
+                      }
+                }else{
+                  state="UNAVAILABLE"
+                }
+            }else{
+              state = "UNAVAILABLE"
+            }
+          }else{
+            var validState  = API_STATES.indexOf(result.response) != -1
+            var state       = validState ? result.response : "ERROR"
+          }
       advisorStateChange(state)
     }
 
