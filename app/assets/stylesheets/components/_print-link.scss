@@ -3,12 +3,12 @@
   margin-bottom: 2em;
 
   .app-c-print-link__link {
-    background: image-url("icon-print.png") no-repeat 10px 50%;
+    background: image-url("govuk_publishing_components/icon-print.png") no-repeat 10px 50%;
     padding: 0.5em 0.5em 0.5em 38px;
     margin-left: -10px;
 
     @include govuk-device-pixel-ratio($ratio: 2) {
-      background-image: image-url("icon-print-2x.png");
+      background-image: image-url("govuk_publishing_components/icon-print-2x.png");
       background-size: 16px 18px;
     }
 
