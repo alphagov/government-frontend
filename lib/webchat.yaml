@@ -1,34 +1,43 @@
 - base_path: /government/organisations/hm-revenue-customs/contact/child-benefit
-  open_url: https://www.tax.service.gov.uk/csp-partials/open/1027
-  availability_url: https://www.tax.service.gov.uk/csp-partials/availability/1027
+  open_url: https://tax.service.gov.uk/ask-hmrc/webchat/child-benefit
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BAC-ChB&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/income-tax-enquiries-for-individuals-pensioners-and-employees
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-PAYE
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-PAYE&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/vat-online-services-helpdesk
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-VAT
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-VAT&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/national-insurance-numbers
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/national-insurance-numbers
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-NI
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-NI&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/self-assessment
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/self-assessment
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-SA
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-SA&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/tax-credits-enquiries
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-TC
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-TC&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/vat-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/vat-enquiries
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-VAT
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-VAT&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/customs-international-trade-and-excise-enquiries
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-EXC
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-EXC&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/employer-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/employer-enquiries
-  open_url_redirect: true
   availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-EHL&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/online-services-helpdesk
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/online-services-helpdesk
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-OSH
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-OSH&siteID=10006719&businessUnitID=19001214
+  open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/charities-and-community-amateur-sports-clubs-cascs
   open_url: https://www.tax.service.gov.uk/csp-partials/open/1087
   availability_url: https://www.tax.service.gov.uk/csp-partials/availability/1087
