@@ -34,7 +34,7 @@
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      global.open(openUrl, 'newwin', 'width=366,height=516')
+      this.dataset.redirect =="true" ? window.location.href = openUrl : global.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
