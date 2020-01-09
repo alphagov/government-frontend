@@ -24,6 +24,7 @@
   availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=BTAC-EXC
 - base_path: /government/organisations/hm-revenue-customs/contact/employer-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/employer-enquiries
+  open_url_redirect: true
   availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=PTO-EHL&siteID=10006719&businessUnitID=19001214
 - base_path: /government/organisations/hm-revenue-customs/contact/online-services-helpdesk
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/online-services-helpdesk
