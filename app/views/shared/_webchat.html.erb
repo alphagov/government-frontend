@@ -19,7 +19,7 @@
       </span>
       <span class="js-webchat-advisers-available hidden">
         Advisers are available to chat.
-        <a href="#" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
+        <a href="#" data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true' : 'false' %>" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
       </span>
     <% end %>
   </span>
