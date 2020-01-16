@@ -42,6 +42,7 @@
       var ajaxConfig = {
         url: availabilityUrl,
         type: 'GET',
+        dataType: "jsonp",
         timeout: AJAX_TIMEOUT,
         success: apiSuccess,
         error: apiError
