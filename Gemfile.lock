@@ -91,7 +91,7 @@ GEM
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.1)
-    gds-api-adapters (63.2.0)
+    gds-api-adapters (63.3.0)
       addressable
       link_header
       null_logger
@@ -359,7 +359,7 @@ DEPENDENCIES
   capybara
   dalli
   faker
-  gds-api-adapters (~> 63.2)
+  gds-api-adapters (~> 63.3)
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 2.0)
   govuk_publishing_components (~> 21.20.0)
