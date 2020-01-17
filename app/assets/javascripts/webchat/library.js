@@ -57,7 +57,7 @@
       if(result.hasOwnProperty('inHOP')){
         var validState  = API_STATES.indexOf(result.status.toUpperCase()) != -1
         var state       = validState ? result.status : "ERROR"
-        if (result.inHOP){
+        if (result.inHOP == "true"){
               if(result.availability == "true"){
                       if(result.status == "online"){
                         state="AVAILABLE"
