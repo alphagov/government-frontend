@@ -89,7 +89,7 @@ class ContactPresenterTest
       presented = present_example(schema)
       assert_equal true, presented.show_webchat?
       assert_equal presented.webchat.availability_url, "https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006852&siteID=10006719&businessUnitID=19001235"
-      assert_equal presented.webchat.open_url, "https://tax.service.gov.uk/ask-hmrc/webchat/child-benefit"
+      # assert_equal presented.webchat.open_url, "https://tax.service.gov.uk/ask-hmrc/webchat/child-benefit"
     end
   end
 end
