@@ -52,33 +52,31 @@
     }
 
     function apiSuccess (result) {
-      //var validState  = API_STATES.indexOf(result.response) != -1
-
 
       if(result.hasOwnProperty('inHOP')){
         var validState  = API_STATES.indexOf(result.status.toUpperCase()) != -1
         var state       = validState ? result.status : "ERROR"
         if (result.inHOP == "true"){
-              if(result.availability == "true"){
-                      if(result.status == "online"){
-                        state="AVAILABLE"
-                      }
-                      if (result.status == "busy"){
-                          state="BUSY"
-                      }
-                      if (result.status == "offline"){
-                          state="UNAVAILABLE"
-                      }
-                }else{
-                  state="UNAVAILABLE"
-                }
+          if(result.availability == "true"){
+                  if(result.status == "online"){
+                    state="AVAILABLE"
+                  }
+                  if (result.status == "busy"){
+                      state="BUSY"
+                  }
+                  if (result.status == "offline"){
+                      state="UNAVAILABLE"
+                  }
             }else{
-              state = "UNAVAILABLE"
+              state="UNAVAILABLE"
             }
           }else{
-            var validState  = API_STATES.indexOf(result.response) != -1
-            var state       = validState ? result.response : "ERROR"
+            state = "UNAVAILABLE"
           }
+        }else{
+          var validState  = API_STATES.indexOf(result.response) != -1
+          var state       = validState ? result.response : "ERROR"
+        }
       advisorStateChange(state)
     }
 
