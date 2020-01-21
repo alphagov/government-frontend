@@ -13,7 +13,9 @@
       "BUSY",
       "UNAVAILABLE",
       "AVAILABLE",
-      "ERROR"
+      "ERROR",
+      "OFFLINE",
+      "ONLINE"
     ]
     var $el                 = $(options.$el)
     var openUrl             = $el.attr('data-open-url')
@@ -22,6 +24,7 @@
     var webchatStateClass   = 'js-webchat-advisers-'
     var intervalID          = null
     var lastRecordedState   = null
+    var response_datatype    = $el.attr('data-redirect')
 
     function init () {
       if (!availabilityUrl || !openUrl) throw 'urls for webchat not defined'
@@ -32,7 +35,7 @@
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      global.open(openUrl, 'newwin', 'width=366,height=516')
+      this.dataset.redirect =="true" ? window.location.href = openUrl : global.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
@@ -40,6 +43,7 @@
       var ajaxConfig = {
         url: availabilityUrl,
         type: 'GET',
+        dataType: response_datatype,
         timeout: AJAX_TIMEOUT,
         success: apiSuccess,
         error: apiError
@@ -48,8 +52,31 @@
     }
 
     function apiSuccess (result) {
-      var validState  = API_STATES.indexOf(result.response) != -1
-      var state       = validState ? result.response : "ERROR"
+
+      if(result.hasOwnProperty('inHOP')){
+        var validState  = API_STATES.indexOf(result.status.toUpperCase()) != -1
+        var state       = validState ? result.status : "ERROR"
+        if (result.inHOP == "true"){
+          if(result.availability == "true"){
+                  if(result.status == "online"){
+                    state="AVAILABLE"
+                  }
+                  if (result.status == "busy"){
+                      state="BUSY"
+                  }
+                  if (result.status == "offline"){
+                      state="UNAVAILABLE"
+                  }
+            }else{
+              state="UNAVAILABLE"
+            }
+          }else{
+            state = "UNAVAILABLE"
+          }
+        }else{
+          var validState  = API_STATES.indexOf(result.response) != -1
+          var state       = validState ? result.response : "ERROR"
+        }
       advisorStateChange(state)
     }
 

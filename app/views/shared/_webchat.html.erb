@@ -4,6 +4,7 @@
   <span class="js-webchat"
     data-availability-url="<%= @content_item.webchat.availability_url %>"
     data-open-url="<%= @content_item.webchat.open_url %>"
+    data-redirect="<%=  @content_item.webchat.availability_payload_format.present? ? @content_item.webchat.availability_payload_format : 'jsonp' %>"
   >
     <% if webchat_unavailable? %>
       <%= unavailability_message %>
@@ -19,7 +20,7 @@
       </span>
       <span class="js-webchat-advisers-available hidden">
         Advisers are available to chat.
-        <a href="#" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
+        <a href="#" data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true' : 'false' %>" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
       </span>
     <% end %>
   </span>
