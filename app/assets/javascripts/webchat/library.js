@@ -53,10 +53,9 @@
 
     function apiSuccess (result) {
 
-      result = {"inHOP":"true","status":"busy","availability":"false"}
-
       if(result.hasOwnProperty('inHOP')){
         var validState  = API_STATES.indexOf(result.status.toUpperCase()) != -1
+        console.log(validState)
         var state       = validState ? result.status : "ERROR"
         if (result.inHOP == "true"){
           if(result.availability == "true"){
