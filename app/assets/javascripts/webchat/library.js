@@ -53,6 +53,8 @@
 
     function apiSuccess (result) {
 
+      result = {"inHOP":"true","status":"busy","availability":"false"}
+
       if(result.hasOwnProperty('inHOP')){
         var validState  = API_STATES.indexOf(result.status.toUpperCase()) != -1
         var state       = validState ? result.status : "ERROR"
@@ -62,13 +64,17 @@
                     state="AVAILABLE"
                   }
                   if (result.status == "busy"){
-                      state="BUSY"
+                      state="AVAILABLE"
                   }
                   if (result.status == "offline"){
                       state="UNAVAILABLE"
                   }
             }else{
-              state="UNAVAILABLE"
+              if (result.status == "busy"){
+                  state="BUSY"
+              }else{
+                state="UNAVAILABLE"
+              }
             }
           }else{
             state = "UNAVAILABLE"
