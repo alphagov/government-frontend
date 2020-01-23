@@ -1,40 +1,40 @@
 - base_path: /government/organisations/hm-revenue-customs/contact/child-benefit
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/child-benefit
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006859&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006859&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/income-tax-enquiries-for-individuals-pensioners-and-employees
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/income-tax-enquiries-for-individuals-pensioners-and-employees
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006852&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006852&siteID=10006719&businessUnitID=19001235&q-thresh=1
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/vat-online-services-helpdesk
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/vat-online-services-helpdesk
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006860&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006860&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/national-insurance-numbers
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/national-insurance-numbers
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006855&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006855&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/self-assessment
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/self-assessment
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006851&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006851&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/tax-credits-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/tax-credits-enquiries
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006858&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006858&siteID=10006719&businessUnitID=19001235&q-thresh=1
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/vat-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/vat-enquiries
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006860&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006860&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/customs-international-trade-and-excise-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/customs-international-trade-and-excise-enquiries
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006861&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006861&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/employer-enquiries
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/employer-enquiries
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006854&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006854&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
 - base_path: /government/organisations/hm-revenue-customs/contact/online-services-helpdesk
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/online-services-helpdesk
-  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006856&siteID=10006719&businessUnitID=19001235
+  availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006856&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true

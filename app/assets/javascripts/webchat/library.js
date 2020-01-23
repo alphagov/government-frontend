@@ -62,13 +62,17 @@
                     state="AVAILABLE"
                   }
                   if (result.status == "busy"){
-                      state="BUSY"
+                      state="AVAILABLE"
                   }
                   if (result.status == "offline"){
                       state="UNAVAILABLE"
                   }
             }else{
-              state="UNAVAILABLE"
+              if (result.status == "busy"){
+                  state="BUSY"
+              }else{
+                state="UNAVAILABLE"
+              }
             }
           }else{
             state = "UNAVAILABLE"
