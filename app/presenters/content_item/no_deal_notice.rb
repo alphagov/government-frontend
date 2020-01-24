@@ -26,15 +26,15 @@ module ContentItem
     end
 
     def no_deal_notice_title
-      "The UK will the leave the EU with a deal"
+      "The UK has left the EU"
     end
 
     def no_deal_notice_description
-      "You do not need to follow this guidance now. It will only apply if the UK and EU do not reach an agreement"
+      "This page tells you what you will need to do from January 2021. Follow the current information for living, working, travelling, and doing business in the UK and EU until then."
     end
 
     def no_deal_notice_link_intro
-      "Follow this guidance instead: "
+      "For current information, read: "
     end
 
     def no_deal_links
