@@ -335,7 +335,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "returns 410 for content items that are gone" do
-    content_store_has_gone_item("/gone-item")
+    stub_content_store_has_gone_item("/gone-item")
     get :show, params: { path: "gone-item" }
     assert_response :gone
   end
