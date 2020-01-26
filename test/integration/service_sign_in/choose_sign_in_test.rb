@@ -112,7 +112,7 @@ module ServiceSignIn
     def setup_and_visit_choose_sign_in_page(example_name, example_path)
       content_item = get_content_example(example_name)
       content_path = content_item["base_path"] + example_path
-      content_store_has_item(content_path, content_item.to_json)
+      stub_content_store_has_item(content_path, content_item.to_json)
       visit(content_path)
     end
 

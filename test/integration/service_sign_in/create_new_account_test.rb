@@ -37,7 +37,7 @@ module ServiceSignIn
     def setup_and_visit_create_new_account_page
       content_item = get_content_example("service_sign_in")
       path = content_item["base_path"] + "/create-new-account"
-      content_store_has_item(path, content_item.to_json)
+      stub_content_store_has_item(path, content_item.to_json)
       visit(path)
     end
 

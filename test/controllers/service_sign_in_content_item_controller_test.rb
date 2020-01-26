@@ -104,7 +104,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = govuk_content_schema_example("service_sign_in", "service_sign_in")
     link = "https://www.horse.service.gov.uk/account?horse=brown"
     content_item["details"]["choose_sign_in"]["options"][0]["url"] = link
-    content_store_has_item(content_item["base_path"], content_item)
+    stub_content_store_has_item(content_item["base_path"], content_item)
 
     path = "#{path_for(content_item)}/#{content_item['details']['choose_sign_in']['slug']}"
 

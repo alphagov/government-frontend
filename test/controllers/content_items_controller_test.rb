@@ -225,7 +225,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "sets the expiry as sent by content-store" do
     content_item = content_store_has_schema_example("coming_soon", "coming_soon")
-    content_store_has_item(content_item["base_path"], content_item, max_age: 20)
+    stub_content_store_has_item(content_item["base_path"], content_item, max_age: 20)
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -242,7 +242,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "honours cache-control private items" do
     content_item = content_store_has_schema_example("coming_soon", "coming_soon")
-    content_store_has_item(content_item["base_path"], content_item, private: true)
+    stub_content_store_has_item(content_item["base_path"], content_item, private: true)
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -282,7 +282,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     utf8_path    = "government/case-studies/caf\u00e9-culture"
     content_item["base_path"] = "/#{utf8_path}"
 
-    content_store_has_item(content_item["base_path"], content_item)
+    stub_content_store_has_item(content_item["base_path"], content_item)
 
     get :show, params: { path: utf8_path }
     assert_response :success
@@ -312,7 +312,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example("special_route", "special_route")
     content_item["base_path"] = "/government"
 
-    content_store_has_item("/#{path}", content_item)
+    stub_content_store_has_item("/#{path}", content_item)
 
     get :show, params: { path: path }
     assert_response :not_found
@@ -342,7 +342,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns a redirect when content item is a redirect" do
     content_item = content_store_has_schema_example("redirect", "redirect")
-    content_store_has_item("/406beacon", content_item)
+    stub_content_store_has_item("/406beacon", content_item)
 
     get :show, params: { path: "406beacon" }
     assert_redirected_to "https://www.test.gov.uk/maritime-safety-weather-and-navigation/register-406-mhz-beacons?query=answer#fragment"
@@ -350,7 +350,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns a prefixed redirect when content item is a prefix redirect" do
     content_item = content_store_has_schema_example("redirect", "redirect")
-    content_store_has_item("/406beacon/prefix/to-preserve", content_item)
+    stub_content_store_has_item("/406beacon/prefix/to-preserve", content_item)
 
     get :show, params: { path: "406beacon/prefix/to-preserve" }
     assert_redirected_to "https://www.test.gov.uk/new-406-beacons-destination/to-preserve"

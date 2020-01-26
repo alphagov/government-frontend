@@ -12,7 +12,7 @@ class HelpPageTest < ActionDispatch::IntegrationTest
   test "sets noindex meta tag for '/help/cookie-details'" do
     @content_item = get_content_example("help_page").tap do |item|
       item["base_path"] = "/help/cookie-details"
-      content_store_has_item(item["base_path"], item.to_json)
+      stub_content_store_has_item(item["base_path"], item.to_json)
       visit_with_cachebust(item["base_path"])
     end
 

@@ -36,7 +36,7 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
   test "with a body that has no h2s" do
     item = get_content_example("short")
     item["details"]["body"] = "<div class='govspeak'><p>Some content<p></div>"
-    content_store_has_item(item["base_path"], item.to_json)
+    stub_content_store_has_item(item["base_path"], item.to_json)
     visit(item["base_path"])
 
     assert page.has_text?("Some content")
@@ -49,7 +49,7 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
       <h2>Item two</h2><p>Content about item two</p>
       </div>"
 
-    content_store_has_item(item["base_path"], item.to_json)
+    stub_content_store_has_item(item["base_path"], item.to_json)
     visit_with_cachebust(item["base_path"])
 
     assert_not page.has_css?(".gem-c-contents-list")

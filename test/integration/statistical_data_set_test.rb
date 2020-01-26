@@ -62,7 +62,7 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
       <h2>Item two</h2><p>Content about item two</p>
       </div>"
 
-    content_store_has_item(item["base_path"], item.to_json)
+    stub_content_store_has_item(item["base_path"], item.to_json)
     visit_with_cachebust(item["base_path"])
 
     assert_not page.has_css?(".gem-c-contents-list")

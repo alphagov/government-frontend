@@ -67,7 +67,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
 
   def setup_and_visit_travel_advice_part(name, part)
     @content_item = get_content_example(name).tap do |item|
-      content_store_has_item("#{item['base_path']}/#{part}", item.to_json)
+      stub_content_store_has_item("#{item['base_path']}/#{part}", item.to_json)
       visit "#{item['base_path']}/#{part}"
     end
   end

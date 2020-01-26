@@ -24,7 +24,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
       <h2>Item two</h2><p>Content about item two</p>
       </div>"
 
-    content_store_has_item(item["base_path"], item.to_json)
+    stub_content_store_has_item(item["base_path"], item.to_json)
     visit_with_cachebust(item["base_path"])
 
     assert_not page.has_css?(".gem-c-contents-list")
@@ -79,7 +79,7 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
       'explanation': "This is out of date",
       'withdrawn_at': "2014-08-09T11:39:05Z",
     }
-    content_store_has_item("/government/organisations/department-of-health/about", content_item.to_json)
+    stub_content_store_has_item("/government/organisations/department-of-health/about", content_item.to_json)
 
     visit_with_cachebust "/government/organisations/department-of-health/about"
 
