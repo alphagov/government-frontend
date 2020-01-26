@@ -17,7 +17,7 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def national_statistics?
-    document_type === "national_statistics"
+    document_type == "national_statistics"
   end
 
 private
