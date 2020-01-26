@@ -183,6 +183,10 @@ class ActionDispatch::IntegrationTest
     visit(uri)
   end
 
+  def assert_has_structured_data(page, schema_name)
+    assert find_structured_data(page, schema_name).present?
+  end
+
   def find_structured_data(page, schema_name)
     schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
     schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }

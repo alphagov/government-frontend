@@ -20,6 +20,10 @@ class PublicationPresenter < ContentItemPresenter
     document_type == "national_statistics"
   end
 
+  def dataset?
+    %(national_statistics official_statistics transparency).include? document_type
+  end
+
 private
 
   def documents_list
