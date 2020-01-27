@@ -26,11 +26,11 @@ module ContentItem
     end
 
     def no_deal_notice_title
-      "The UK has left the EU"
+      "The UK is leaving the EU"
     end
 
     def no_deal_notice_description
-      "This page tells you what you will need to do from January 2021. Follow the current information for living, working, travelling, and doing business in the UK and EU until then."
+      "This page tells you what you will need to do from January 2021. <a class='govuk-link' href='/email-signup?topic=%2Ftransition'>Sign up for email alerts</a> to find out when it is updated.".html_safe
     end
 
     def no_deal_notice_link_intro
