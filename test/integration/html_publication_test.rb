@@ -86,7 +86,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       'withdrawn_at': "2014-08-09T11:39:05Z",
     }
 
-    content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
+    stub_content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit_with_cachebust "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 
     assert page.has_css?(".gem-c-notice__title", text: "This policy paper was withdrawn on 9 August 2014")
@@ -101,7 +101,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       'withdrawn_at': "2014-08-09T11:39:05Z",
     }
 
-    content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
+    stub_content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit_with_cachebust "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 
     assert page.has_css?(".gem-c-notice__title", text: "This publication was withdrawn on 9 August 2014")

@@ -45,7 +45,7 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
       path: "#{@content_item['base_path']}.atom",
     )
 
-    content_store_has_item(@content_item["base_path"], @content_item.to_json)
+    stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
     @feed = RSS::Parser.parse(uri.read)
   end

@@ -9,7 +9,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
       )
     end
 
-    content_store_has_item("/some-page", case_study.to_json)
+    stub_content_store_has_item("/some-page", case_study.to_json)
 
     visit_with_cachebust "/some-page"
 
@@ -22,7 +22,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
       random
     end
 
-    content_store_has_item("/some-page", case_study.to_json)
+    stub_content_store_has_item("/some-page", case_study.to_json)
 
     visit_with_cachebust "/some-page"
 
@@ -41,7 +41,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
       random
     end
 
-    content_store_has_item("/some-page", case_study.to_json)
+    stub_content_store_has_item("/some-page", case_study.to_json)
 
     visit_with_cachebust "/some-page"
 

@@ -115,7 +115,7 @@ class GuideTest < ActionDispatch::IntegrationTest
   def setup_and_visit_part_in_guide
     @content_item = get_content_example("guide").tap do |item|
       chapter_path = "#{item['base_path']}/key-stage-1-and-2"
-      content_store_has_item(chapter_path, item.to_json)
+      stub_content_store_has_item(chapter_path, item.to_json)
       visit_with_cachebust(chapter_path)
     end
   end

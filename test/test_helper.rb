@@ -134,7 +134,7 @@ class ActionDispatch::IntegrationTest
 
   def setup_and_visit_content_item(name, parameter_string = "")
     @content_item = get_content_example(name).tap do |item|
-      content_store_has_item(item["base_path"], item.to_json)
+      stub_content_store_has_item(item["base_path"], item.to_json)
       visit_with_cachebust("#{item['base_path']}#{parameter_string}")
     end
   end
@@ -142,7 +142,7 @@ class ActionDispatch::IntegrationTest
   def setup_and_visit_content_item_with_taxons(name, taxons)
     @content_item = get_content_example(name).tap do |item|
       item["links"]["taxons"] = taxons
-      content_store_has_item(item["base_path"], item.to_json)
+      stub_content_store_has_item(item["base_path"], item.to_json)
       visit_with_cachebust(item["base_path"])
     end
   end
@@ -181,6 +181,10 @@ class ActionDispatch::IntegrationTest
     uri.query_values = uri.query_values.yield_self { |values| (values || {}).merge(cachebust: rand) }
 
     visit(uri)
+  end
+
+  def assert_has_structured_data(page, schema_name)
+    assert find_structured_data(page, schema_name).present?
   end
 
   def find_structured_data(page, schema_name)

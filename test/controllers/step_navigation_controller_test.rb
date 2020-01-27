@@ -9,7 +9,7 @@ class ContentItemsControllerTest < ActionController::TestCase
       content_item["base_path"] = "/pass-plus"
       path = content_item["base_path"][1..-1]
 
-      content_store_has_item(content_item["base_path"], content_item)
+      stub_content_store_has_item(content_item["base_path"], content_item)
 
       @controller.stubs(:page_in_scope?).returns(false)
 
@@ -24,7 +24,7 @@ class ContentItemsControllerTest < ActionController::TestCase
       content_item["base_path"] = "/not-part-of-a-step-by-step"
       path = content_item["base_path"][1..-1]
 
-      content_store_has_item(content_item["base_path"], content_item)
+      stub_content_store_has_item(content_item["base_path"], content_item)
 
       @controller.stubs(:page_in_scope?).returns(false)
 

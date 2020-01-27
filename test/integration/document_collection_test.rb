@@ -11,7 +11,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
   test "document collection with no body and 2 collection groups where 1st group has long body" do
     content_item = get_content_example("document_collection")
     content_item["details"]["collection_groups"][0]["body"] = Faker::Lorem.characters(number: 416)
-    content_store_has_item(content_item["base_path"], content_item.to_json)
+    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
     visit(content_item["base_path"])
 
     assert page.has_css?(".gem-c-contents-list")
@@ -53,7 +53,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
         "documents" => %w[a-content-id],
       },
     ]
-    content_store_has_item(item["base_path"], item.to_json)
+    stub_content_store_has_item(item["base_path"], item.to_json)
     visit_with_cachebust(item["base_path"])
 
     assert_not page.has_css?(".gem-c-contents-list")

@@ -29,6 +29,8 @@ class PublicationTest < ActionDispatch::IntegrationTest
       },
     )
 
+    assert_has_structured_data(page, "Article")
+
     assert_footer_has_published_dates("Published 3 May 2016")
   end
 
@@ -61,6 +63,11 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "national statistics publication shows a logo" do
     setup_and_visit_content_item("statistics_publication")
     assert page.has_css?('img[alt="National Statistics"]')
+  end
+
+  test "national statistics publication has correct structured data" do
+    setup_and_visit_content_item("statistics_publication")
+    assert_has_structured_data(page, "Dataset")
   end
 
   test "renders 'Applies to' block in important metadata when there are excluded nations" do

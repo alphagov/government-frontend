@@ -33,7 +33,7 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
   def setup_and_visit_travel_advice_print(name)
     example = get_content_example_by_schema_and_name("travel_advice", name)
     @content_item = example.tap do |item|
-      content_store_has_item(item["base_path"], item.to_json)
+      stub_content_store_has_item(item["base_path"], item.to_json)
       visit "#{item['base_path']}/print"
     end
   end

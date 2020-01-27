@@ -21,7 +21,7 @@ module GovukContentSchemaExamples
 
   def content_store_has_schema_example(schema_name, example_name)
     document = govuk_content_schema_example(schema_name, example_name)
-    content_store_has_item(document["base_path"], document)
+    stub_content_store_has_item(document["base_path"], document)
     document
   end
 

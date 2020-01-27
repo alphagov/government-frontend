@@ -26,7 +26,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     @content_item = get_content_example("topical_event_about_page")
     @content_item["details"]["body"] = body_with_two_contents_list_items
 
-    content_store_has_item(@content_item["base_path"], @content_item.to_json)
+    stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
     visit_with_cachebust @content_item["base_path"]
     assert_not page.has_css?(".gem-c-contents-list")
@@ -36,7 +36,7 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     @content_item = get_content_example("topical_event_about_page")
     @content_item["details"]["body"] = long_first_item_body
 
-    content_store_has_item(@content_item["base_path"], @content_item.to_json)
+    stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
 
     visit_with_cachebust @content_item["base_path"]
     assert page.has_css?(".gem-c-contents-list")

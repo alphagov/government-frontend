@@ -17,7 +17,11 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def national_statistics?
-    document_type === "national_statistics"
+    document_type == "national_statistics"
+  end
+
+  def dataset?
+    %(national_statistics official_statistics transparency).include? document_type
   end
 
 private
