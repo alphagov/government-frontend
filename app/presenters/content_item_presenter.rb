@@ -1,5 +1,6 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
+  include ContentItem::NoDealNotice
   include ApplicationHelper
 
   attr_reader :content_item,

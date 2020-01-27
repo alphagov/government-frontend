@@ -17,6 +17,7 @@
 <%= render 'shared/publisher_metadata_with_logo' %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
+<%= render 'components/header-notice', @content_item.no_deal_notice_component unless @content_item.withdrawal_notice_component %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">

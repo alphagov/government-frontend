@@ -1,0 +1,30 @@
+<%
+  title ||= false
+  description ||= false
+  link_intro ||= false
+  links ||= []
+%>
+<% if title && description %>
+  <section class="app-c-header-notice" aria-label="notice" role="region">
+    <div class="app-c-header-notice__header">
+      <h2 class="app-c-header-notice__title"><%= title %></h2>
+    </div>
+
+    <div class="app-c-header-notice__content">
+      <p class="govuk-body"><%= description %></p>
+      <% if links.count == 1 %>
+        <p class="govuk-body">
+          <% if link_intro %><%= link_intro %><% end %>
+          <%= link_to(links[0][:title], links[0][:href], data: links[0][:data_attributes], class: "app-c-header-notice__link") %>
+        </p>
+      <% else %>
+        <% if link_intro %><p class="govuk-body app-c-header-notice__link-intro"><%= link_intro %></p><% end %>
+        <ul class="app-c-header-notice__list govuk-list">
+          <% links.each do |link| %>
+            <li><%= link_to(link[:title], link[:href], data: link[:data_attributes], class: "app-c-header-notice__link") %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </section>
+<% end %>
