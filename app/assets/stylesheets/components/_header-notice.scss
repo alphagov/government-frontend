@@ -1,0 +1,32 @@
+.app-c-header-notice {
+  margin-bottom: govuk-spacing(8);
+}
+
+.app-c-header-notice__header {
+  background-color: govuk-colour("black");
+  padding: govuk-spacing(4);
+}
+
+.app-c-header-notice__title {
+  @extend %govuk-heading-m;
+  color: govuk-colour("white");
+  margin: 0;
+}
+
+.app-c-header-notice__content {
+  border: $govuk-border-width solid govuk-colour("black");
+  padding: govuk-spacing(4);
+}
+
+.app-c-header-notice__list {
+  margin-bottom: 0;
+}
+
+.app-c-header-notice__link-intro {
+  margin-bottom: govuk-spacing(1);
+}
+
+.app-c-header-notice__link {
+  @extend %govuk-link;
+  font-weight: bold;
+}
