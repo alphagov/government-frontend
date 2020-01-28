@@ -10,7 +10,7 @@ describe('Webchat', function () {
   GOVUK.analytics.trackEvent = function () {}
   var CHILD_BENEFIT_API_URL = 'https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006859&siteID=10006719&businessUnitID=19001235'
 
-  var INSERTION_HOOK = '<div class="js-webchat" data-availability-url="' + CHILD_BENEFIT_API_URL + '" data-open-url="' + CHILD_BENEFIT_API_URL + '" data-redirect="jsonp">' +
+  var INSERTION_HOOK = '<div class="js-webchat" data-availability-url="' + CHILD_BENEFIT_API_URL + '" data-open-url="' + CHILD_BENEFIT_API_URL + '" data-redirect="true">' +
     '<div class="js-webchat-advisers-error">Error</div>' +
     '<div class="js-webchat-advisers-unavailable hidden">Unavailable</div>' +
     '<div class="js-webchat-advisers-busy hidden">Busy</div>' +
@@ -68,7 +68,7 @@ describe('Webchat', function () {
       mount()
       expect(
         $.ajax
-      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', dataType: "jsonp" ,timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
+      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET' ,timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
     })
 
     it('should inform user whether advisors are available', function () {

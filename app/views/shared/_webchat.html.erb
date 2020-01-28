@@ -4,7 +4,7 @@
   <span class="js-webchat"
     data-availability-url="<%= @content_item.webchat.availability_url %>"
     data-open-url="<%= @content_item.webchat.open_url %>"
-    data-redirect="<%=  @content_item.webchat.availability_payload_format.present? ? @content_item.webchat.availability_payload_format : 'jsonp' %>"
+    data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true': 'false' %>"
   >
     <% if webchat_unavailable? %>
       <%= unavailability_message %>

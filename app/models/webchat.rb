@@ -5,14 +5,13 @@ class Webchat
 
   validates_presence_of :base_path, :open_url, :availability_url
 
-  attr_reader :base_path, :open_url, :availability_url, :open_url_redirect, :availability_payload_format
+  attr_reader :base_path, :open_url, :availability_url, :open_url_redirect
 
   def initialize(attrs)
     @base_path = attrs["base_path"] if attrs["base_path"].present?
     @open_url = attrs["open_url"] if attrs["open_url"].present?
     @availability_url = attrs["availability_url"] if attrs["availability_url"].present?
     @open_url_redirect = attrs.fetch("open_url_redirect", nil)
-    @availability_payload_format = attrs.fetch("availability_payload_format", nil)
     validate!
   end
 
