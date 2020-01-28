@@ -5,7 +5,7 @@ module ContentItem
     include ActionView::Context
 
     def has_no_deal_notice?
-      no_deal_notice.present?
+      content_item.dig("details").has_key?("brexit_no_deal_notice")
     end
 
     def no_deal_notice_component
@@ -21,7 +21,7 @@ module ContentItem
 
   private
 
-    def no_deal_notice
+    def no_deal_notice_links
       content_item.dig("details", "brexit_no_deal_notice")
     end
 
@@ -38,7 +38,7 @@ module ContentItem
     end
 
     def no_deal_links
-      no_deal_notice.map do |link|
+      no_deal_notice_links.map do |link|
         {
           title: link["title"],
           href: link["href"],
