@@ -21,4 +21,11 @@ examples:
           href: "/this-is-a-link"
         - title: "This is a second link"
           href: "/this-is-a-link"
+  without_links:
+    description: The link intro does not render if there are no links, even if it has been provided
+    data:
+      title: "This is an important notice"
+      description: "Here is a message about this notice"
+      link_intro: "Look at these links: "
+
 
