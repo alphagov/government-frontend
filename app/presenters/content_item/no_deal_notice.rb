@@ -27,7 +27,7 @@ module ContentItem
     end
 
     def no_deal_notice_title
-      "The UK is leaving the EU"
+      "The UK has left the EU"
     end
 
     def no_deal_notice_description
