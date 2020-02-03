@@ -13,13 +13,13 @@
     <meta name="robots" content="noindex, nofollow">
   <% end %>
 
-  <%= stylesheet_link_tag "application", integrity: true, crossorigin: 'anonymous' %>
+  <%= stylesheet_link_tag "application", integrity: false %>
   <% if Rails.env.test? && params[:medium] == 'print' %>
-    <%= stylesheet_link_tag "print.css", :media => "screen", integrity: true, crossorigin: 'anonymous' %>
+    <%= stylesheet_link_tag "print.css", :media => "screen", integrity: false %>
   <% else %>
-    <%= stylesheet_link_tag "print.css", :media => "print", integrity: true, crossorigin: 'anonymous' %>
+    <%= stylesheet_link_tag "print.css", :media => "print", integrity: false %>
   <% end %>
-  <%= javascript_include_tag "application", integrity: true, crossorigin: 'anonymous' %>
+  <%= javascript_include_tag "application", integrity: false %>
   <%= csrf_meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
 
