@@ -39,5 +39,5 @@ group :test do
   gem "govuk_test"
   gem "minitest-reporters"
   gem "mocha"
-  gem "webmock", "~> 3.8.0", require: false
+  gem "webmock", "~> 3.8.1", require: false
 end
