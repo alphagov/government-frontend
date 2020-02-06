@@ -29,6 +29,14 @@ class HeaderNoticeTest < ComponentTestCase
     assert_select "section[aria-label=notice]"
   end
 
+  test "renders a header notice with no link" do
+    render_component(title: "This is an important notice", description: "This is a description", link_intro: "This should not be shown", links: [])
+
+    assert_select ".app-c-header-notice__title", text: "This is an important notice"
+    assert_select ".app-c-header-notice__content p", text: "This is a description"
+    assert_select ".app-c-header-notice__link-intro", false, "A link intro shouldn't be shown when no links are provided"
+  end
+
   test "renders a header notice with one link" do
     render_component(title: "This is an important notice", description: "This is a description", links: [{ title: "test", href: "/test" }])
 

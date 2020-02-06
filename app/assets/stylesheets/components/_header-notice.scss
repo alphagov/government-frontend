@@ -18,12 +18,21 @@
   padding: govuk-spacing(4);
 }
 
+.app-c-header-notice__text {
+  margin-bottom: govuk-spacing(2);
+}
+
+.app-c-header-notice__links {
+  margin-bottom: govuk-spacing(2);
+}
+
 .app-c-header-notice__list {
+  margin-top: -5px;
   margin-bottom: 0;
 }
 
 .app-c-header-notice__link-intro {
-  margin-bottom: govuk-spacing(1);
+  margin-bottom: govuk-spacing(2);
 }
 
 .app-c-header-notice__link {

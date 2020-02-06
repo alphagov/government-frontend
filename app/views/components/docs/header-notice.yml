@@ -7,6 +7,7 @@ examples:
     data:
       title: "This is an important notice"
       description: "Here is a message about this notice"
+      featured_link: "You can also read about <a class='govuk-link' href='/transition'>the transition period</a>"
       link_intro: "Look at these links: "
       links:
         - title: "This is a link"
@@ -15,10 +16,19 @@ examples:
     data:
       title: "This is an important notice"
       description: "Here is a message about this notice"
+      featured_link: "You can also read about <a class='govuk-link' href='/transition'>the transition period</a>"
       link_intro: "Look at these links: "
       links:
         - title: "This is a link"
           href: "/this-is-a-link"
         - title: "This is a second link"
           href: "/this-is-a-link"
+  without_links:
+    description: The link intro does not render if there are no links, even if it has been provided
+    data:
+      title: "This is an important notice"
+      description: "Here is a message about this notice"
+      link_intro: "Look at these links: "
+      featured_link: "You can also read about <a class='govuk-link' href='/transition'>the transition period</a>"
+
 
