@@ -91,7 +91,7 @@ GEM
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
-    gds-api-adapters (63.3.0)
+    gds-api-adapters (63.4.0)
       addressable
       link_header
       null_logger
@@ -191,7 +191,7 @@ GEM
     public_suffix (4.0.3)
     puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.1.2)
+    rack (2.2.1)
     rack-cache (1.11.0)
       rack (>= 0.4)
     rack-test (1.1.0)
@@ -359,7 +359,7 @@ DEPENDENCIES
   capybara
   dalli
   faker
-  gds-api-adapters (~> 63.3)
+  gds-api-adapters (~> 63.4)
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 2.0)
   govuk_publishing_components (~> 21.22.1)
