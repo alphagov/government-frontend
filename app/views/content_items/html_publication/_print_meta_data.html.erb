@@ -13,21 +13,9 @@
 <p>
   This publication is available at <%= @content_item.full_path(request) %>
 </p>
-<% unless @content_item.print_meta_data_contact_address.blank? %>
-    <p>
-      Any enquiries regarding this publication should be sent to us at:<br/>
-    </p>
-    <%= simple_format(@content_item.print_meta_data_contact_address) %>
-<% end %>
 
 <% unless @content_item.isbn.blank? %>
     <p>
       Print ISBN: <%= @content_item.isbn %>
-    </p>
-<% end %>
-
-<% unless @content_item.web_isbn.blank? %>
-    <p>
-      Web ISBN: <%= @content_item.web_isbn %>
     </p>
 <% end %>
