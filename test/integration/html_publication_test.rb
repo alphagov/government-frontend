@@ -30,7 +30,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.find(".print-meta-data", visible: false)
 
       assert page.has_no_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
-      assert page.has_no_text?("Print ISBN: #{@content_item['details']['isbn']}")
+      assert page.has_no_text?("ISBN: #{@content_item['details']['isbn']}")
     end
   end
 
@@ -41,7 +41,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       assert page.find(".print-meta-data", visible: true)
 
       assert page.has_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
-      assert page.has_text?("Print ISBN: #{@content_item['details']['isbn']}")
+      assert page.has_text?("ISBN: #{@content_item['details']['isbn']}")
     end
   end
 
