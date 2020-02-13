@@ -4,7 +4,7 @@ ruby File.read(".ruby-version").strip
 
 gem "asset_bom_removal-rails", "~> 1.0"
 gem "dalli"
-gem "gds-api-adapters", "~> 63.3"
+gem "gds-api-adapters", "~> 63.4"
 gem "govuk_ab_testing", "~> 2.4"
 gem "govuk_app_config", "~> 2.0"
 gem "govuk_publishing_components", "~> 21.22.1"
