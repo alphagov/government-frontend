@@ -3,6 +3,7 @@ class PublicationPresenter < ContentItemPresenter
   include ContentItem::NationalApplicability
   include ContentItem::NationalStatisticsLogo
   include ContentItem::Political
+  include ContentItem::FeaturedAttachmentsMigration
 
   def details
     content_item["details"]["body"]
@@ -27,6 +28,9 @@ class PublicationPresenter < ContentItemPresenter
 private
 
   def documents_list
-    content_item["details"]["documents"]
+    @documents_list ||= choose_field(
+      new_field_name: "featured_attachments",
+      old_field_name: "documents",
+    )
   end
 end
