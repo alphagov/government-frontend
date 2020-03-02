@@ -12,7 +12,8 @@ module ContentItem
     end
 
     def placeholder_image
-      { "url" => "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg" }
+      # this image has been uploaded to asset-manager
+      { "url" => "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg" }
     end
   end
 end
