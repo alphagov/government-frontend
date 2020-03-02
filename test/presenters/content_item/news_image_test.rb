@@ -34,7 +34,7 @@ class ContentItemNewsImageTest < ActiveSupport::TestCase
 
   test "presents a placeholder image if document has no image or default news image" do
     item = DummyContentItem.new
-    placeholder_image = { "url" => "https://assets.publishing.service.gov.uk/government/assets/placeholder.jpg" }
+    placeholder_image = { "url" => "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg" }
 
     assert_equal placeholder_image, item.image
   end
