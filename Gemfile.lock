@@ -140,7 +140,7 @@ GEM
       phantomjs (>= 1.9)
       railties (>= 3.2.0)
       sprockets-rails
-    json (2.2.0)
+    json (2.3.0)
     json-schema (2.8.1)
       addressable (>= 2.4)
     kgio (2.11.3)
@@ -294,7 +294,7 @@ GEM
       rubyzip (>= 1.2.2)
     sentry-raven (2.13.0)
       faraday (>= 0.7.6, < 1.0)
-    slimmer (13.2.0)
+    slimmer (13.2.2)
       activesupport
       json
       nokogiri (~> 1.7)
