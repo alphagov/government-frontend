@@ -1,3 +1,20 @@
+GIT
+  remote: https://github.com/alphagov/govuk_publishing_components.git
+  revision: 69d2b0442c2f40c3c2099b193588e15a6c7495c6
+  branch: feedback-component
+  specs:
+    govuk_publishing_components (21.27.1)
+      gds-api-adapters
+      govuk_app_config
+      kramdown
+      plek
+      rails (>= 5.0.0.1)
+      rake
+      rouge
+      sass (= 3.7.4)
+      sassc-rails (>= 2.0.1)
+      sprockets (< 4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -106,16 +123,6 @@ GEM
       sentry-raven (>= 2.7.1, < 2.14.0)
       statsd-ruby (~> 1.4.0)
       unicorn (>= 5.4, < 5.6)
-    govuk_publishing_components (21.27.1)
-      gds-api-adapters
-      govuk_app_config
-      kramdown
-      plek
-      rails (>= 5.0.0.1)
-      rake
-      rouge
-      sassc-rails (>= 2.0.1)
-      sprockets (< 4)
     govuk_schemas (4.0.0)
       json-schema (~> 2.8.0)
     govuk_test (1.0.3)
@@ -362,7 +369,7 @@ DEPENDENCIES
   gds-api-adapters (~> 63.5)
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 2.0)
-  govuk_publishing_components (~> 21.27.1)
+  govuk_publishing_components!
   govuk_schemas (~> 4.0)
   govuk_test
   htmlentities (~> 4.3)
