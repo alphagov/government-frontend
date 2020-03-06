@@ -5,7 +5,6 @@ class ConsultationPresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::Shareable
   include ContentItem::TitleAndContext
-  include ContentItem::FeaturedAttachmentsMigration
 
   def opening_date_time
     content_item["details"]["opening_date"]
@@ -136,23 +135,14 @@ private
   end
 
   def final_outcome_documents_list
-    @final_outcome_documents_list ||= choose_field(
-      new_field_name: "final_outcome_attachments",
-      old_field_name: "final_outcome_documents",
-    )
+    content_item["details"]["final_outcome_documents"] || []
   end
 
   def public_feedback_documents_list
-    @public_feedback_documents_list ||= choose_field(
-      new_field_name: "public_feedback_attachments",
-      old_field_name: "public_feedback_documents",
-    )
+    content_item["details"]["public_feedback_documents"] || []
   end
 
   def documents_list
-    @documents_list ||= choose_field(
-      new_field_name: "featured_attachments",
-      old_field_name: "documents",
-    )
+    content_item["details"]["documents"] || []
   end
 end
