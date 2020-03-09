@@ -8,15 +8,22 @@ class AssetManagerRedirectControllerTest < ActionController::TestCase
 
   test "redirects asset requests made via public host to the public asset host" do
     request.host = "some-host.com"
-    get :show, params: { path: "asset", format: "txt" }
+    get :show, params: { path: "asset.txt" }
 
     assert_redirected_to "http://asset-host.com/government/uploads/asset.txt"
   end
 
   test "redirects asset requests made via draft host to the draft asset host" do
     request.host = "draft-some-host.com"
-    get :show, params: { path: "asset", format: "txt" }
+    get :show, params: { path: "asset.txt" }
 
     assert_redirected_to "http://draft-asset-host.com/government/uploads/asset.txt"
+  end
+
+  test "redirects asset preview requests made via public host to the public asset host" do
+    request.host = "some-host.com"
+    get :show, params: { path: "asset.csv/preview" }
+
+    assert_redirected_to "http://asset-host.com/government/uploads/asset.csv/preview"
   end
 end
