@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get "healthcheck", to: proc { [200, {}, [""]] }
 
-  get "/government/uploads/*path" => "asset_manager_redirect#show", format: true
+  get "/government/uploads/*path" => "asset_manager_redirect#show", format: false
 
   get "*path/:variant" => "content_items#show",
       constraints: {
