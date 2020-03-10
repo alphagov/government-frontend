@@ -38,3 +38,7 @@
   open_url: https://tax.service.gov.uk/ask-hmrc/webchat/online-services-helpdesk
   availability_url: https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006856&siteID=10006719&businessUnitID=19001235&q-thresh=1.2
   open_url_redirect: true
+- base_path: /government/organisations/hm-passport-office/contact/passport-advice-and-complaints
+  open_url: https://hmpowebchat.klick2contact.com/v03/launcherV3.php?p=HMPO&d=717&ch=CH&psk=chat_a1&iid=STC&srbp=0&fcl=0&r=Chat&s=https://hmpowebchat.klick2contact.com/v03&u=&wo=&uh=&pid=2&iif=0
+  availability_url: https://hmpowebchat.klick2contact.com/v03/providers/HMPO2/api/availability.php
+  open_url_redirect: false
