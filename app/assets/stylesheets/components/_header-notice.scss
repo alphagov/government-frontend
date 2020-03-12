@@ -14,7 +14,9 @@
 }
 
 .app-c-header-notice__content {
-  border: $govuk-border-width solid govuk-colour("black");
+  border-left: $govuk-border-width solid govuk-colour("black");
+  border-right: $govuk-border-width solid govuk-colour("black");
+  border-bottom: $govuk-border-width solid govuk-colour("black");
   padding: govuk-spacing(4);
 }
 
@@ -38,4 +40,8 @@
 .app-c-header-notice__link {
   @extend %govuk-link;
   font-weight: bold;
+}
+
+.app-c-header-notice__content .app-c-header-notice__text:last-child {
+  margin-bottom: 0;
 }
