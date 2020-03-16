@@ -48,14 +48,15 @@ $govuk-use-legacy-palette: false;
 @import 'views/help-page';
 @import "views/guide";
 
- .travel-advice__header {
+.travel-advice__header {
+  .gem-c-warning-text {
+    border: 1px solid $govuk-border-colour;
+    background-color: govuk-colour("light-grey");
+    padding: govuk-spacing(3);
+  }
 
-   .gem-c-warning-text {
-      border: 1px solid $govuk-border-colour;
-      background-color: govuk-colour("light-grey");
-   }
-   .govuk-warning-text__icon {
-      margin-left: govuk-spacing(1);
-   }
- }
-
+  .govuk-warning-text__icon {
+    margin-left: govuk-spacing(2);
+    margin-top: 0;
+  }
+}
