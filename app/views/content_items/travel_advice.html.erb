@@ -13,8 +13,13 @@
 <% end %>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds travel-advice__header">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
+
+    <%= render "govuk_publishing_components/components/warning_text", {
+  text: "FCO is advising against all foreign travel due to coronavirus (COVID-19). <a href=\"#\"class=\"govuk-link\">Find out more about travel restrictions</a>".html_safe
+} %>
+
     <aside class="part-navigation-container" role="complementary">
 
       <nav role="navigation" class="govuk-grid-row part-navigation" aria-label="Travel advice pages" data-module="track-click">
