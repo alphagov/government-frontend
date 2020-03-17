@@ -27,7 +27,7 @@ private
     config_paths = {}
 
     if @paths.is_a? Hash
-      @paths.keys.each do |key|
+      @paths.each_key do |key|
         @paths.fetch(key).each_with_index do |path, index|
           config_paths[path_index(key, index + 1)] = path
         end
