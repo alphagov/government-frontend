@@ -4,4 +4,13 @@
   ) %>
 <% end %>
 
+<% if params[:path] && params[:path] == 'coronavirus-extremely-vulnerable' %>
+  <div id="answer-b-content" class="hidden">
+      <%= render "govuk_publishing_components/components/error_alert", {
+  message: "The register for support service is working but only allowing a certain number of people to register at once. Please wait 5 minutes and refresh this page to try again."
+} %>
+  </div>
+<% end %>
+
+
 <%= render 'content_items/body_with_related_links' %>
