@@ -30,7 +30,7 @@ $(function(){
 
     new GOVUK.MultivariateTest({
       el: '.answer',
-      name: 'multivariatetest_cohort_coronavirus_extremely_vulnerable_rate_limit_202003'
+      name: 'multivariatetest_cohort_coronavirus_extremely_vulnerable_rate_limit_202003',
       customDimensionIndex: 14,
       cohorts: {
         a: { callback: function() {}, variantId: 0, weight: 100 - pcThreshold },
