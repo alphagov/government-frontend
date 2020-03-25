@@ -9,11 +9,7 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def documents
-    documents_list.join("")
-  end
-
-  def documents_count
-    documents_list.size
+    content_item["details"]["documents"].to_a.join("")
   end
 
   def national_statistics?
@@ -22,11 +18,5 @@ class PublicationPresenter < ContentItemPresenter
 
   def dataset?
     %(national_statistics official_statistics transparency).include? document_type
-  end
-
-private
-
-  def documents_list
-    content_item["details"]["documents"]
   end
 end

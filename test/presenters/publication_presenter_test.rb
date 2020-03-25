@@ -17,10 +17,6 @@ class PublicationPresenterTest < PresenterTestCase
     assert_equal "3 May 2016", presented_item.published
   end
 
-  test "counts documents attached to publication" do
-    assert_equal 2, presented_item.documents_count
-  end
-
   test "presents the title of the publishing government" do
     assert_equal schema_item["links"]["government"][0]["title"], presented_item.publishing_government
   end

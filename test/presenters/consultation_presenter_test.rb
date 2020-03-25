@@ -66,7 +66,6 @@ class ConsultationPresenterTest
       presented = presented_item("closed_consultation")
       schema = schema_item("closed_consultation")
 
-      assert presented.documents?
       assert_equal schema["details"]["documents"].join(""), presented.documents
     end
 
@@ -74,7 +73,6 @@ class ConsultationPresenterTest
       presented = presented_item("consultation_outcome")
       schema = schema_item("consultation_outcome")
 
-      assert presented.final_outcome_documents?
       assert_equal schema["details"]["final_outcome_documents"].join(""), presented.final_outcome_documents
     end
 
@@ -82,7 +80,6 @@ class ConsultationPresenterTest
       presented = presented_item("consultation_outcome_with_feedback")
       schema = schema_item("consultation_outcome_with_feedback")
 
-      assert presented.public_feedback_documents?
       assert_equal schema["details"]["public_feedback_documents"].join(""), presented.public_feedback_documents
     end
 

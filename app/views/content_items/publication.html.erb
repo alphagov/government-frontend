@@ -29,16 +29,9 @@
   <div class="govuk-grid-column-two-thirds responsive-bottom-margin">
     <%= render 'components/important-metadata', items: @content_item.important_metadata %>
     <div class="responsive-bottom-margin">
-      <%= render 'govuk_publishing_components/components/heading',
-        text: t("publication.documents", count: 5), # This should always be pluralised.
-        id: "documents-title",
-        mobile_top_margin: true %>
-
-      <div aria-labelledby="documents-title">
-        <%= render 'govuk_publishing_components/components/govspeak',
-                   content: @content_item.documents.html_safe,
-                   direction: page_text_direction %>
-      </div>
+      <%= render "attachments",
+          title: t("publication.documents", count: 5), # This should always be pluralised.
+          legacy_pre_rendered_documents: @content_item.documents %>
 
       <%= render 'govuk_publishing_components/components/heading',
         text: t("publication.details"),

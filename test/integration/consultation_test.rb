@@ -25,7 +25,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "consultation documents render" do
     setup_and_visit_content_item("closed_consultation")
 
-    within ".consultation-documents" do
+    within '[aria-labelledby="documents-title"]' do
       assert page.has_text?("Museums Review Terms of Reference")
     end
   end
@@ -90,7 +90,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "consultation outcome documents render" do
     setup_and_visit_content_item("consultation_outcome")
 
-    within ".consultation-outcome" do
+    within '[aria-labelledby="download-the-full-outcome-title"]' do
       assert page.has_text?("Employee Share Schemes: NIC elections - consulation response")
     end
   end
@@ -99,7 +99,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("consultation_outcome_with_feedback")
 
     assert page.has_text?("Feedback received")
-    within ".consultation-feedback-documents" do
+    within '[aria-labelledby="feedback-received-title"]' do
       assert page.has_text?("Analysis of responses to our consultation on setting the grade standards of new GCSEs in England – part 2")
     end
   end
