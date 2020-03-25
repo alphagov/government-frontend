@@ -3,6 +3,7 @@ class PublicationPresenter < ContentItemPresenter
   include ContentItem::NationalApplicability
   include ContentItem::NationalStatisticsLogo
   include ContentItem::Political
+  include ContentItem::Attachments
 
   def details
     content_item["details"]["body"]
@@ -10,6 +11,10 @@ class PublicationPresenter < ContentItemPresenter
 
   def documents
     content_item["details"]["documents"].to_a.join("")
+  end
+
+  def featured_attachments
+    content_item["details"]["featured_attachments"].to_a
   end
 
   def national_statistics?

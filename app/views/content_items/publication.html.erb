@@ -31,7 +31,8 @@
     <div class="responsive-bottom-margin">
       <%= render "attachments",
           title: t("publication.documents", count: 5), # This should always be pluralised.
-          legacy_pre_rendered_documents: @content_item.documents %>
+          legacy_pre_rendered_documents: @content_item.documents,
+          attachments: @content_item.featured_attachments %>
 
       <%= render 'govuk_publishing_components/components/heading',
         text: t("publication.details"),

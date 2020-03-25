@@ -1,14 +1,23 @@
 <% attachment_title_id = "#{title.parameterize}-title" %>
 
-<% if legacy_pre_rendered_documents.present? %>
+<% if legacy_pre_rendered_documents.present? || attachments.any? %>
   <%= render 'govuk_publishing_components/components/heading',
       id: attachment_title_id,
       text: title,
       mobile_top_margin: true %>
 
   <div aria-labelledby="<%= attachment_title_id %>">
-    <%= render 'govuk_publishing_components/components/govspeak',
-               content: legacy_pre_rendered_documents.html_safe,
-               direction: page_text_direction %>
+    <% if legacy_pre_rendered_documents.present? %>
+      <%= render 'govuk_publishing_components/components/govspeak',
+                 content: legacy_pre_rendered_documents.html_safe,
+                 direction: page_text_direction %>
+    <% else %>
+      <% attachments.each do |attachment_id| %>
+        <div class="attachment">
+          <%= render 'govuk_publishing_components/components/attachment',
+              attachment: @content_item.attachment_details(attachment_id) %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 <% end %>

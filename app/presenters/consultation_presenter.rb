@@ -5,6 +5,7 @@ class ConsultationPresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::Shareable
   include ContentItem::TitleAndContext
+  include ContentItem::Attachments
 
   def opening_date_time
     content_item["details"]["opening_date"]
@@ -54,8 +55,16 @@ class ConsultationPresenter < ContentItemPresenter
     content_item["details"]["final_outcome_documents"].to_a.join("")
   end
 
+  def final_outcome_attachments
+    content_item["details"]["final_outcome_attachments"].to_a
+  end
+
   def public_feedback_documents
     content_item["details"]["public_feedback_documents"].to_a.join("")
+  end
+
+  def public_feedback_attachments
+    content_item["details"]["public_feedback_attachments"].to_a
   end
 
   def public_feedback_detail
@@ -72,6 +81,10 @@ class ConsultationPresenter < ContentItemPresenter
 
   def documents
     content_item["details"]["documents"].to_a.join("")
+  end
+
+  def featured_attachments
+    content_item["details"]["featured_attachments"].to_a
   end
 
   def ways_to_respond?
@@ -100,7 +113,7 @@ class ConsultationPresenter < ContentItemPresenter
 
   def add_margin?
     final_outcome? || public_feedback_detail ||
-      public_feedback_documents.present?
+      public_feedback_documents.present? || public_feedback_attachments.any?
   end
 
 private

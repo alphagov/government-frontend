@@ -22,11 +22,19 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "consultation documents render" do
+  test "renders document attachments (as-is and directly)" do
     setup_and_visit_content_item("closed_consultation")
 
+    assert page.has_text?("Documents")
     within '[aria-labelledby="documents-title"]' do
       assert page.has_text?("Museums Review Terms of Reference")
+    end
+
+    setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
+
+    assert page.has_text?("Documents")
+    within '[aria-labelledby="documents-title"]' do
+      assert page.has_text?("Setting the grade standards of new GCSEs in England – part 2")
     end
   end
 
@@ -87,16 +95,31 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "consultation outcome documents render" do
+  test "renders consultation outcome attachments (as-is and directly)" do
     setup_and_visit_content_item("consultation_outcome")
 
+    assert page.has_text?("Download the full outcome")
     within '[aria-labelledby="download-the-full-outcome-title"]' do
       assert page.has_text?("Employee Share Schemes: NIC elections - consulation response")
     end
+
+    setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
+
+    assert page.has_text?("Download the full outcome")
+    within '[aria-labelledby="download-the-full-outcome-title"]' do
+      assert page.has_text?("Equalities impact assessment: setting the grade standards of new GCSEs in England – part 2")
+    end
   end
 
-  test "public feedback documents render" do
+  test "renders public feedback attachments (as-is and directly)" do
     setup_and_visit_content_item("consultation_outcome_with_feedback")
+
+    assert page.has_text?("Feedback received")
+    within '[aria-labelledby="feedback-received-title"]' do
+      assert page.has_text?("Analysis of responses to our consultation on setting the grade standards of new GCSEs in England – part 2")
+    end
+
+    setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
 
     assert page.has_text?("Feedback received")
     within '[aria-labelledby="feedback-received-title"]' do

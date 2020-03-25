@@ -34,10 +34,16 @@ class PublicationTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 3 May 2016")
   end
 
-  test "renders a govspeak block for attachments" do
+  test "renders document attachments (as-is and directly)" do
     setup_and_visit_content_item("publication")
     within '[aria-labelledby="documents-title"]' do
       assert page.has_text?("Permit: Veolia ES (UK) Limited")
+    end
+
+    setup_and_visit_content_item("publication-with-featured-attachments")
+    within '[aria-labelledby="documents-title"]' do
+      assert page.has_text?("Number of ex-regular service personnel now part of FR20")
+      assert page.has_css?(".gem-c-attachment")
     end
   end
 
