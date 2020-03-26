@@ -1,12 +1,9 @@
-<% attachment_title_id = "#{title.parameterize}-title" %>
-
 <% if legacy_pre_rendered_documents.present? || attachments.any? %>
-  <%= render 'govuk_publishing_components/components/heading',
-      id: attachment_title_id,
-      text: title,
-      mobile_top_margin: true %>
+  <section id="<%= title.parameterize %>">
+    <%= render 'govuk_publishing_components/components/heading',
+        text: title,
+        mobile_top_margin: true %>
 
-  <div aria-labelledby="<%= attachment_title_id %>">
     <% if legacy_pre_rendered_documents.present? %>
       <%= render 'govuk_publishing_components/components/govspeak',
                  content: legacy_pre_rendered_documents.html_safe,
@@ -19,5 +16,5 @@
         </div>
       <% end %>
     <% end %>
-  </div>
+  </section>
 <% end %>

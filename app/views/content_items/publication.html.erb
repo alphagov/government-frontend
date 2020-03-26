@@ -34,16 +34,16 @@
           legacy_pre_rendered_documents: @content_item.documents,
           attachments: @content_item.featured_attachments %>
 
-      <%= render 'govuk_publishing_components/components/heading',
-        text: t("publication.details"),
-        id: "details-title",
-        mobile_top_margin: true %>
 
-      <div aria-labelledby="details-title">
+      <section id="details">
+        <%= render 'govuk_publishing_components/components/heading',
+          text: t("publication.details"),
+          mobile_top_margin: true %>
+
         <%= render 'govuk_publishing_components/components/govspeak',
                    content: @content_item.details.html_safe,
                    direction: page_text_direction %>
-      </div>
+      </section>
     </div>
 
     <%= render 'components/published-dates', {

@@ -26,14 +26,14 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("closed_consultation")
 
     assert page.has_text?("Documents")
-    within '[aria-labelledby="documents-title"]' do
+    within "#documents" do
       assert page.has_text?("Museums Review Terms of Reference")
     end
 
     setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
 
     assert page.has_text?("Documents")
-    within '[aria-labelledby="documents-title"]' do
+    within "#documents" do
       assert page.has_text?("Setting the grade standards of new GCSEs in England – part 2")
     end
   end
@@ -99,14 +99,14 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("consultation_outcome")
 
     assert page.has_text?("Download the full outcome")
-    within '[aria-labelledby="download-the-full-outcome-title"]' do
+    within "#download-the-full-outcome" do
       assert page.has_text?("Employee Share Schemes: NIC elections - consulation response")
     end
 
     setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
 
     assert page.has_text?("Download the full outcome")
-    within '[aria-labelledby="download-the-full-outcome-title"]' do
+    within "#download-the-full-outcome" do
       assert page.has_text?("Equalities impact assessment: setting the grade standards of new GCSEs in England – part 2")
     end
   end
@@ -115,14 +115,14 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("consultation_outcome_with_feedback")
 
     assert page.has_text?("Feedback received")
-    within '[aria-labelledby="feedback-received-title"]' do
+    within "#feedback-received" do
       assert page.has_text?("Analysis of responses to our consultation on setting the grade standards of new GCSEs in England – part 2")
     end
 
     setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
 
     assert page.has_text?("Feedback received")
-    within '[aria-labelledby="feedback-received-title"]' do
+    within "#feedback-received" do
       assert page.has_text?("Analysis of responses to our consultation on setting the grade standards of new GCSEs in England – part 2")
     end
   end
