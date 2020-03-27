@@ -11,7 +11,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    within '[aria-labelledby="details-title"]' do
+    within "#details" do
       assert page.has_text?("Installation name: Leeming Biogas Facility")
     end
   end
@@ -34,10 +34,16 @@ class PublicationTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 3 May 2016")
   end
 
-  test "renders a govspeak block for attachments" do
+  test "renders document attachments (as-is and directly)" do
     setup_and_visit_content_item("publication")
-    within '[aria-labelledby="documents-title"]' do
+    within "#documents" do
       assert page.has_text?("Permit: Veolia ES (UK) Limited")
+    end
+
+    setup_and_visit_content_item("publication-with-featured-attachments")
+    within "#documents" do
+      assert page.has_text?("Number of ex-regular service personnel now part of FR20")
+      assert page.has_css?(".gem-c-attachment")
     end
   end
 

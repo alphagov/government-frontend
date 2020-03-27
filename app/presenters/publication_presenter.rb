@@ -3,17 +3,18 @@ class PublicationPresenter < ContentItemPresenter
   include ContentItem::NationalApplicability
   include ContentItem::NationalStatisticsLogo
   include ContentItem::Political
+  include ContentItem::Attachments
 
   def details
     content_item["details"]["body"]
   end
 
   def documents
-    documents_list.join("")
+    content_item["details"]["documents"].to_a.join("")
   end
 
-  def documents_count
-    documents_list.size
+  def featured_attachments
+    content_item["details"]["featured_attachments"].to_a
   end
 
   def national_statistics?
@@ -22,11 +23,5 @@ class PublicationPresenter < ContentItemPresenter
 
   def dataset?
     %(national_statistics official_statistics transparency).include? document_type
-  end
-
-private
-
-  def documents_list
-    content_item["details"]["documents"]
   end
 end

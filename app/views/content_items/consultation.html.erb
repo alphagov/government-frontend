@@ -40,14 +40,10 @@
     <% elsif @content_item.final_outcome? %>
       <%= render 'govuk_publishing_components/components/notice', title: 'This consultation has concluded' %>
 
-      <% if @content_item.final_outcome_documents? %>
-        <%= render 'govuk_publishing_components/components/heading', text: "Download the full outcome", mobile_top_margin: true %>
-        <div class="consultation-outcome">
-          <%= render 'govuk_publishing_components/components/govspeak',
-              content: @content_item.final_outcome_documents.html_safe,
-              direction: page_text_direction %>
-        </div>
-      <% end %>
+      <%= render "attachments",
+          title: "Download the full outcome",
+          legacy_pre_rendered_documents: @content_item.final_outcome_documents,
+          attachments: @content_item.final_outcome_attachments %>
 
       <%= render 'govuk_publishing_components/components/heading', text: "Detail of outcome", mobile_top_margin: true %>
       <div class="consultation-outcome-detail">
@@ -57,14 +53,10 @@
       </div>
     <% end %>
 
-    <% if @content_item.public_feedback_documents? %>
-      <%= render 'govuk_publishing_components/components/heading', text: "Feedback received", mobile_top_margin: true %>
-      <div class="consultation-feedback-documents">
-        <%= render 'govuk_publishing_components/components/govspeak',
-            content: @content_item.public_feedback_documents.html_safe,
-            direction: page_text_direction %>
-      </div >
-    <% end %>
+    <%= render "attachments",
+        title: "Feedback received",
+        legacy_pre_rendered_documents: @content_item.public_feedback_documents,
+        attachments: @content_item.public_feedback_attachments %>
 
     <% if @content_item.public_feedback_detail %>
       <%= render 'govuk_publishing_components/components/heading', text: "Detail of feedback received", mobile_top_margin: true %>
@@ -115,14 +107,10 @@
       <%= render 'govuk_publishing_components/components/heading', text: "Consultation description", mobile_top_margin: true %>
       <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
 
-      <% if @content_item.documents? %>
-        <%= render 'govuk_publishing_components/components/heading', text: "Documents", mobile_top_margin: true %>
-        <div class="consultation-documents">
-          <%= render 'govuk_publishing_components/components/govspeak',
-              content: @content_item.documents.html_safe,
-              direction: page_text_direction %>
-        </div>
-      <% end %>
+      <%= render "attachments",
+          title: "Documents",
+          legacy_pre_rendered_documents: @content_item.documents,
+          attachments: @content_item.featured_attachments %>
     </div>
 
     <% if @content_item.ways_to_respond? %>

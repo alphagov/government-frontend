@@ -5,6 +5,7 @@ class ConsultationPresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::Shareable
   include ContentItem::TitleAndContext
+  include ContentItem::Attachments
 
   def opening_date_time
     content_item["details"]["opening_date"]
@@ -50,20 +51,20 @@ class ConsultationPresenter < ContentItemPresenter
     content_item["details"]["final_outcome_detail"]
   end
 
-  def final_outcome_documents?
-    final_outcome_documents_list.any?
-  end
-
   def final_outcome_documents
-    final_outcome_documents_list.join("")
+    content_item["details"]["final_outcome_documents"].to_a.join("")
   end
 
-  def public_feedback_documents?
-    public_feedback_documents_list.any?
+  def final_outcome_attachments
+    content_item["details"]["final_outcome_attachments"].to_a
   end
 
   def public_feedback_documents
-    public_feedback_documents_list.join("")
+    content_item["details"]["public_feedback_documents"].to_a.join("")
+  end
+
+  def public_feedback_attachments
+    content_item["details"]["public_feedback_attachments"].to_a
   end
 
   def public_feedback_detail
@@ -78,12 +79,12 @@ class ConsultationPresenter < ContentItemPresenter
     content_item["details"]["held_on_another_website_url"]
   end
 
-  def documents?
-    documents_list.any?
+  def documents
+    content_item["details"]["documents"].to_a.join("")
   end
 
-  def documents
-    documents_list.join("")
+  def featured_attachments
+    content_item["details"]["featured_attachments"].to_a
   end
 
   def ways_to_respond?
@@ -111,7 +112,8 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def add_margin?
-    final_outcome? || public_feedback_detail || public_feedback_documents?
+    final_outcome? || public_feedback_detail ||
+      public_feedback_documents.present? || public_feedback_attachments.any?
   end
 
 private
@@ -132,17 +134,5 @@ private
 
   def ways_to_respond
     content_item["details"]["ways_to_respond"]
-  end
-
-  def final_outcome_documents_list
-    content_item["details"]["final_outcome_documents"] || []
-  end
-
-  def public_feedback_documents_list
-    content_item["details"]["public_feedback_documents"] || []
-  end
-
-  def documents_list
-    content_item["details"]["documents"] || []
   end
 end
