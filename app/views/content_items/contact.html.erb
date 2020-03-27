@@ -16,6 +16,11 @@
   <div class="govuk-grid-column-two-thirds">
 
     <% body = capture do %>
+      <% if @content_item.show_webchat? %>
+        <h2 id="webchat-title">Webchat</h2>
+        <%= render 'shared/webchat' %>
+      <% end %>
+
       <% if @content_item.online_form_links.any? %>
         <h2 id="online-forms-title">Online</h2>
         <% @content_item.online_form_links.each do |link| %>
@@ -42,11 +47,6 @@
           <%= email_group[:description] %>
         <% end %>
         <%= @content_item.email_body %>
-      <% end %>
-
-      <% if @content_item.show_webchat? %>
-        <h2 id="webchat-title">Webchat</h2>
-        <%= render 'shared/webchat' %>
       <% end %>
 
       <% if @content_item.phone.any? %>
