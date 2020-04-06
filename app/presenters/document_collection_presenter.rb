@@ -66,7 +66,7 @@ private
   end
 
   def documents_hash
-    @documents_hash ||= Array(content_item["links"]["documents"]).map { |d| [d["content_id"], d] }.to_h
+    @documents_hash ||= Array(content_item["links"]["documents"]).index_by { |d| d["content_id"] }
   end
 
   def reject_withdrawn_documents(group)
