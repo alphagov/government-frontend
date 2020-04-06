@@ -25,7 +25,7 @@ class AnswerTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("answer")
     faq_schema = find_structured_data(page, "FAQPage")
 
-    assert_equal faq_schema["headline"], @content_item["title"]
+    assert_equal faq_schema["name"], @content_item["title"]
     assert_not_equal faq_schema["mainEntity"], []
   end
 end
