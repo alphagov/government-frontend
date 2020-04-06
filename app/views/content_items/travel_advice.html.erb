@@ -16,13 +16,19 @@
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
 
     <div class="travel-advice-notice">
-      <span class="govuk-warning-text__icon travel-advice-notice__icon" aria-hidden="true">!</span>
-      <h2 class="govuk-heading-m" aria-label="Important - COVID-19 Exceptional Travel Advisory Notice">
-        COVID-19 Exceptional Travel Advisory Notice
-      </h2>
-      <p class="govuk-body">
-        As countries respond to the COVID-19 pandemic, including travel and border restrictions, <strong>the FCO advises British nationals against all but essential international travel</strong>. Any country or area may restrict travel without notice. If you live in the UK and are currently travelling abroad, <strong>you are strongly advised to return now</strong>, where and while there are still commercial routes available. Many airlines are suspending flights and many airports are closing, preventing flights from leaving.
-      </p>
+      <div class="travel-advice-notice__header">
+        <%= render "govuk_publishing_components/components/warning_text", {
+          text: "COVID-19 Exceptional Travel Advisory Notice",
+          text_assistive: "Important",
+          large_font: true,
+          heading_level: 2
+        } %>
+      </div>
+      <div class="travel-advice-notice__content">
+        <p class="govuk-body">
+          As countries respond to the COVID-19 pandemic, including travel and border restrictions, <strong>the FCO advises British nationals against all but essential international travel</strong>. Any country or area may restrict travel without notice. If you live in the UK and are currently travelling abroad, <strong>you are strongly advised to return now</strong>, where and while there are still commercial routes available. Many airlines are suspending flights and many airports are closing, preventing flights from leaving.
+        </p>
+      </div>
     </div>
 
     <aside class="part-navigation-container" role="complementary">
