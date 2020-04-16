@@ -18,5 +18,7 @@ unless Rails.env.production?
   end
 
   task default: %i[spec rubocop scss_lint]
+
+  desc "Lint Ruby and SCSS files"
   task lint: %i[rubocop scss_lint]
 end
