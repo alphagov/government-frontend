@@ -13,7 +13,11 @@ module ContentItem
 
     def placeholder_image
       # this image has been uploaded to asset-manager
-      { "url" => "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg" }
+      if content_item.dig("document_type") == "world_news_story"
+        { "url" => "https://assets.publishing.service.gov.uk/media/5e985599d3bf7f3fc943bbd8/UK_government_logo.jpg" }
+      else
+        { "url" => "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg" }
+      end
     end
   end
 end
