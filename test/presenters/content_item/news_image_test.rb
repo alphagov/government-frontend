@@ -38,4 +38,12 @@ class ContentItemNewsImageTest < ActiveSupport::TestCase
 
     assert_equal placeholder_image, item.image
   end
+
+  test "presents a placeholder image if world location news has no image or default news image" do
+    item = DummyContentItem.new
+    item.content_item["document_type"] = "world_news_story"
+    placeholder_image = { "url" => "https://assets.publishing.service.gov.uk/media/5e985599d3bf7f3fc943bbd8/UK_government_logo.jpg" }
+
+    assert_equal placeholder_image, item.image
+  end
 end
