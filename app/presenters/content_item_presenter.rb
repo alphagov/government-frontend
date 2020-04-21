@@ -81,6 +81,10 @@ class ContentItemPresenter
     !content_item.cache_control.private?
   end
 
+  def show_phase_banner?
+    phase.in?(%w[alpha beta])
+  end
+
 private
 
   def display_date(timestamp, format = "%-d %B %Y")
