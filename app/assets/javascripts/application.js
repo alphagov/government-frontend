@@ -8,4 +8,12 @@ jQuery(function ($) {
   if ($form.length) {
     new GOVUK.SetGaClientIdOnForm({ $form: $form })
   }
+
+  if ($(location).attr('pathname') === '/ask') {
+    var $link = $('[href="https://www.smartsurvey.co.uk/ss/govuk-coronavirus-ask/"]')
+    if ($link) {
+      var href = $link.attr('href')
+      $link.attr('href', GOVUK.userSurveys.addParamsToURL(href))
+    }
+  }
 })
