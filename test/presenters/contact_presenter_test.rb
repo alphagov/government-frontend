@@ -85,11 +85,19 @@ class ContactPresenterTest
     end
 
     test "presents webchat" do
+      chats = Webchat.load_all
+      return if chats.empty?
+
+      base_path = chats.first.base_path
+      availability_url = chats.first.availability_url
+      open_url = chats.first.open_url
+
       schema = schema_item("contact_with_webchat")
+      schema["base_path"] = base_path
       presented = present_example(schema)
       assert_equal true, presented.show_webchat?
-      assert_equal presented.webchat.availability_url, "https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006852&siteID=10006719&businessUnitID=19001235&q-thresh=1"
-      assert_equal presented.webchat.open_url, "https://tax.service.gov.uk/ask-hmrc/webchat/income-tax-enquiries-for-individuals-pensioners-and-employees"
+      assert_equal presented.webchat.availability_url, availability_url
+      assert_equal presented.webchat.open_url, open_url
     end
   end
 end
