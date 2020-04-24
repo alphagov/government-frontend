@@ -14,8 +14,8 @@
 
     window.ga(function (tracker) {
       var clientId = tracker.get('clientId')
-      var href = linkedElement.attr(attribute)
-      linkedElement.attr(attribute, href + "?_ga=" + clientId)
+      var attributeUrl = linkedElement.attr(attribute)
+      linkedElement.attr(attribute, attributeUrl + "?_ga=" + clientId)
     })
   }
 
