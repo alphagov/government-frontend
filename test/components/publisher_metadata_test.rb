@@ -21,7 +21,6 @@ class PublisherMetadataTest < ComponentTestCase
     assert_select ".app-c-publisher-metadata__other dd", text: "Ministry of Defence"
   end
 
-
   test "renders two from links when two publishers are given" do
     render_component(other: { from: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>", "<a href='/government/organisations/education-funding-agency'>Education Funding Agency</a>"] })
     assert_select ".app-c-publisher-metadata__other a[href='/government/organisations/ministry-of-defence']", text: "Ministry of Defence"
