@@ -51,7 +51,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_template :service_sign_in
   end
 
-
   test "raises a 404 for a content item which isn't a service_sign_in page" do
     path = "this/is/not/a/sign/in/page"
     post :service_sign_in_options, params: { path: path }

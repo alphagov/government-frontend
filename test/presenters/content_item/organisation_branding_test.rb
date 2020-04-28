@@ -44,7 +44,6 @@ class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
     assert_nil executive_order_crest?(organisation)
   end
 
-
   test "includes an image organisations with a custom logo" do
     organisation = test_organisation
     organisation["details"]["logo"]["image"] = {
