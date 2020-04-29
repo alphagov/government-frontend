@@ -36,7 +36,9 @@
 
   <div id="wrapper" class="<%= wrapper_class %>">
     <% if @content_item.show_phase_banner? %>
-      <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
+      <%= render 'govuk_publishing_components/components/phase_banner',
+        phase: @content_item.phase,
+        message: sanitize(@content_item.phase_message) %>
     <% end %>
 
     <% if @content_item.try(:back_link) %>

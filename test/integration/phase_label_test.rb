@@ -21,4 +21,16 @@ class PhaseLabelTest < ActionDispatch::IntegrationTest
 
     assert_not page.has_text?("alpha")
   end
+
+  test "Phase message is displayed for a content item that has one" do
+    content_item = GovukSchemas::Example.find("case_study", example_name: "case_study")
+    content_item["phase"] = "alpha"
+    content_item["details"]["phase_message"] = { "content" => "phase message" }
+
+    stub_content_store_has_item("/government/case-studies/get-britain-building-carlisle-park", content_item.to_json)
+
+    visit_with_cachebust "/government/case-studies/get-britain-building-carlisle-park"
+
+    assert page.has_text?("phase message")
+  end
 end

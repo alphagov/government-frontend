@@ -12,6 +12,7 @@ class ContentItemPresenter
               :schema_name,
               :locale,
               :phase,
+              :phase_message,
               :part_slug,
               :document_type,
               :step_by_steps,
@@ -29,6 +30,7 @@ class ContentItemPresenter
     @schema_name = content_item["schema_name"]
     @locale = content_item["locale"] || "en"
     @phase = content_item["phase"]
+    @phase_message = content_item.dig("details", "phase_message", "content")
     @document_type = content_item["document_type"]
     @taxons = content_item["links"]["taxons"] if content_item["links"]
     @step_by_steps = content_item["links"]["part_of_step_navs"] if content_item["links"]
