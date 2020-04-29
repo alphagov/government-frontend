@@ -30,7 +30,7 @@ module PresentingFirstPartInContentItem
     nil
   end
 
-  def requested_content_item_path
+  def requested_path
     base_path
   end
 end
@@ -40,7 +40,7 @@ module PresentingSecondPartInContentItem
     "second-slug"
   end
 
-  def requested_content_item_path
+  def requested_path
     base_path
   end
 end
@@ -70,9 +70,9 @@ class ContentItemPartsTest < ActiveSupport::TestCase
     assert_not @parts.requesting_a_part?
   end
 
-  test "is not requesting a part when parts exist and base_path matches requested_content_item_path" do
+  test "is not requesting a part when parts exist and base_path matches requested_path" do
     class << @parts
-      def requested_content_item_path
+      def requested_path
         base_path
       end
     end
@@ -80,13 +80,13 @@ class ContentItemPartsTest < ActiveSupport::TestCase
     assert_not @parts.requesting_a_part?
   end
 
-  test "is requesting a part when part exists and base_path is different to requested_content_item_path" do
+  test "is requesting a part when part exists and base_path is different to requested_path" do
     class << @parts
       def part_slug
         "second-slug"
       end
 
-      def requested_content_item_path
+      def requested_path
         base_path + "/second-slug"
       end
     end
@@ -100,7 +100,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
         "second-slug"
       end
 
-      def requested_content_item_path
+      def requested_path
         base_path + "/" + part_slug
       end
     end
@@ -116,7 +116,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
         "not-a-valid-slug"
       end
 
-      def requested_content_item_path
+      def requested_path
         base_path + "/" + part_slug
       end
     end
@@ -131,7 +131,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
         "first-slug"
       end
 
-      def requested_content_item_path
+      def requested_path
         base_path + "/" + part_slug
       end
     end

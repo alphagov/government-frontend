@@ -14,7 +14,7 @@ module ContentItem
     # with a base path that's different to the one requested. That content
     # item contains all the parts for that document.
     def requesting_a_part?
-      parts.any? && requested_content_item_path && requested_content_item_path != base_path
+      parts.any? && requested_path && requested_path != base_path
     end
 
     def has_valid_part?

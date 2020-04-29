@@ -5,7 +5,7 @@ module ServiceSignIn
     end
 
     def has_valid_path?
-      path == @requested_content_item_path
+      path == requested_path
     end
 
     def requesting_a_service_sign_in_page?

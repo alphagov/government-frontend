@@ -4,7 +4,7 @@ class ContentItemPresenter
   include ApplicationHelper
 
   attr_reader :content_item,
-              :requested_content_item_path,
+              :requested_path,
               :base_path,
               :slug,
               :title,
@@ -19,11 +19,11 @@ class ContentItemPresenter
 
   attr_accessor :include_collections_in_other_publisher_metadata
 
-  def initialize(content_item, requested_content_item_path = nil)
+  def initialize(content_item, requested_path)
     @content_item = content_item
-    @requested_content_item_path = requested_content_item_path
+    @requested_path = requested_path
     @base_path = content_item["base_path"]
-    @slug = @base_path.delete_prefix("/") if @base_path
+    @slug = base_path.delete_prefix("/") if base_path
     @title = content_item["title"]
     @description = content_item["description"]
     @schema_name = content_item["schema_name"]
@@ -32,7 +32,7 @@ class ContentItemPresenter
     @document_type = content_item["document_type"]
     @taxons = content_item["links"]["taxons"] if content_item["links"]
     @step_by_steps = content_item["links"]["part_of_step_navs"] if content_item["links"]
-    @part_slug = requesting_a_part? ? requested_content_item_path.split("/").last : nil
+    @part_slug = requesting_a_part? ? requested_path.split("/").last : nil
   end
 
   def requesting_a_part?
@@ -44,7 +44,7 @@ class ContentItemPresenter
   end
 
   def available_translations
-    translations = @content_item["links"]["available_translations"] || []
+    translations = content_item["links"]["available_translations"] || []
 
     mapped_locales(sorted_locales(translations))
   end
