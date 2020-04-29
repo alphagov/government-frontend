@@ -1,11 +1,15 @@
 require "test_helper"
 
 class PresenterTestCase < ActiveSupport::TestCase
+  def create_presenter(presenter_class,
+                       content_item: schema_item("case_study"),
+                       requested_path: "/test-content-item")
+    presenter_class.new(content_item, requested_path)
+  end
+
   def schema_name
     raise NotImplementedError, "Override this method in your test class"
   end
-
-private
 
   def presented_item(type = schema_name, overrides = {})
     example = schema_item(type)
@@ -13,7 +17,8 @@ private
   end
 
   def present_example(example)
-    "#{schema_name.classify}Presenter".safe_constantize.new(example)
+    create_presenter("#{schema_name.classify}Presenter".safe_constantize,
+                     content_item: example)
   end
 
   def schema_item(type = schema_name)

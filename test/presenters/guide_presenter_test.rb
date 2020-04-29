@@ -112,9 +112,10 @@ class GuidePresenterTest
       schema_example_content_item = schema_item(type)
       part_slug = "/#{part_slug}" if part_slug
 
-      GuidePresenter.new(
-        schema_example_content_item.merge(overrides),
-        "#{schema_example_content_item['base_path']}#{part_slug}",
+      create_presenter(
+        GuidePresenter,
+        content_item: schema_example_content_item.merge(overrides),
+        requested_path: "#{schema_example_content_item['base_path']}#{part_slug}",
       )
     end
   end

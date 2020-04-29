@@ -82,7 +82,7 @@ class CaseStudyPresenterTest < PresenterTestCase
   test "#history returns an empty array if the content item is not published" do
     never_published = schema_item
     never_published["details"].delete("first_public_at")
-    presented = CaseStudyPresenter.new(never_published)
+    presented = create_presenter(CaseStudyPresenter, content_item: never_published)
     assert_equal [], presented.history
   end
 
