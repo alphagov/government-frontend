@@ -140,7 +140,7 @@ private
     related.map do |link|
       {
         title: link["title"],
-        url:  link["base_path"],
+        url: link["base_path"],
       }
     end
   end
@@ -150,7 +150,7 @@ private
     quick.map do |link|
       {
         title: link["title"],
-        url:  link["url"],
+        url: link["url"],
       }
     end
   end

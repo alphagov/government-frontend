@@ -10,7 +10,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert_has_publisher_metadata(
       published: "Published 4 November 2016",
       last_updated: "Last updated 7 November 2016",
-      metadata:  {
+      metadata: {
         "From": { "Department for Education": "/government/organisations/department-for-education" },
       },
     )

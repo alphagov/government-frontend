@@ -49,7 +49,7 @@ module ContentItem
     def first_item_content
       element = first_item
       first_item_text = ""
-      allowed_elements = %w(p ul ol)
+      allowed_elements = %w[p ul ol]
 
       until element.name == "h2"
         first_item_text += element.text if element.name.in?(allowed_elements)
@@ -70,7 +70,7 @@ module ContentItem
     def find_first_table
       element = first_item
 
-      until element.name == "h2" do
+      until element.name == "h2"
         return element if element.name == "table"
 
         element = element.next_element

@@ -27,7 +27,7 @@ class TravelAdviceAtomFeed < ActionDispatch::IntegrationTest
   end
 
   test "it sets the entry's summary correctly" do
-    summary = Nokogiri::HTML::fragment(@feed.items.first.summary.content)
+    summary = Nokogiri::HTML.fragment(@feed.items.first.summary.content)
     assert_equal summary.text.strip, @content_item["details"]["change_description"].strip
   end
 

@@ -22,7 +22,7 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
     render(partial: "content_items/attachments",
            locals: { title: "Documents",
                      legacy_pre_rendered_documents: "",
-                     attachments: %w(attachment_id) })
+                     attachments: %w[attachment_id] })
 
     assert_includes rendered, "gem-c-attachment"
     assert_includes rendered, "Some title"
@@ -32,7 +32,7 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
     render(partial: "content_items/attachments",
            locals: { title: "Documents",
                      legacy_pre_rendered_documents: "some html",
-                     attachments: %w(attachment_id) })
+                     attachments: %w[attachment_id] })
 
     assert_includes rendered, "gem-c-govspeak"
     assert_includes rendered, "some html"

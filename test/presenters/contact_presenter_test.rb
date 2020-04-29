@@ -38,7 +38,7 @@ class ContactPresenterTest
       presented_post_address = presented_item.post[0]
       assert_equal post_address["description"].strip, presented_post_address[:description]
       rendered_presented_address = presented_post_address[:v_card].reduce("") { |acc, hash| acc << hash[:value].strip }
-      rendered_input_address = %w(title street_address locality region postal_code world_location).reduce("") do |acc, key|
+      rendered_input_address = %w[title street_address locality region postal_code world_location].reduce("") do |acc, key|
         acc << post_address[key].strip
       end
       assert_equal rendered_input_address, rendered_presented_address

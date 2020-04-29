@@ -3,7 +3,7 @@ require "test_helper"
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
 
-  %w(guide answer publication).each do |schema_name|
+  %w[guide answer publication].each do |schema_name|
     test "#{schema_name} shows step by step navigation where relevant" do
       content_item = content_store_has_schema_example(schema_name, "#{schema_name}-with-step-navs")
       content_item["base_path"] = "/pass-plus"

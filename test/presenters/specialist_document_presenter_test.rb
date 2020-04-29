@@ -246,11 +246,11 @@ class SpecialistDocumentPresenterTest
         ],
       }
 
-      values = { "facet-key" => %w{one two} }
+      values = { "facet-key" => %w[one two] }
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      assert_equal %w{One Two}, presented.important_metadata["Facet name"]
+      assert_equal %w[One Two], presented.important_metadata["Facet name"]
     end
 
     test "creates links for filterable friendly values" do

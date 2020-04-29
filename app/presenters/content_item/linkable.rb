@@ -3,11 +3,11 @@ module ContentItem
     include ActionView::Helpers::UrlHelper
 
     def from
-      organisations_ordered_by_importance + links_group(%w{worldwide_organisations people speaker})
+      organisations_ordered_by_importance + links_group(%w[worldwide_organisations people speaker])
     end
 
     def part_of
-      links_group(%w{
+      links_group(%w[
         document_collections
         related_policies
         policies
@@ -15,7 +15,7 @@ module ContentItem
         topics
         topical_events
         related_statistical_data_sets
-      })
+      ])
     end
 
   private
