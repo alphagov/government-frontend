@@ -12,13 +12,13 @@ class FatalityNoticePresenter < ContentItemPresenter
   end
 
   def image
-    { "url" => ActionController::Base.helpers.asset_url("ministry-of-defence-crest.png"), "alt_text" => "Ministry of Defence crest" }
+    { "url" => view_context.image_url("ministry-of-defence-crest.png"), "alt_text" => "Ministry of Defence crest" }
   end
 
   def important_metadata
     super.tap do |m|
       if field_of_operation
-        m.merge!("Field of operation" => link_to(field_of_operation.title, field_of_operation.path, class: "govuk-link app-link"))
+        m.merge!("Field of operation" => view_context.link_to(field_of_operation.title, field_of_operation.path, class: "govuk-link app-link"))
       end
     end
   end

@@ -1,9 +1,10 @@
 class PresenterBuilder
-  attr_reader :content_item, :content_item_path
+  attr_reader :content_item, :content_item_path, :view_context
 
-  def initialize(content_item, content_item_path)
+  def initialize(content_item, content_item_path, view_context)
     @content_item = content_item
     @content_item_path = content_item_path
+    @view_context = view_context
   end
 
   def presenter
@@ -11,7 +12,9 @@ class PresenterBuilder
     raise RedirectRouteReturned, content_item if redirect_route?
     raise GovernmentReturned if government_content_item?
 
-    presenter_name.constantize.new(content_item, content_item_path)
+    presenter_name.constantize.new(content_item,
+                                   content_item_path,
+                                   view_context)
   end
 
 private

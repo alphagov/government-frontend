@@ -48,7 +48,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def finder_link
     if finder && statutory_instrument?
-      link_to "See all #{finder['title']}", finder["base_path"]
+      view_context.link_to("See all #{finder['title']}", finder["base_path"])
     end
   end
 
@@ -170,7 +170,9 @@ private
 
   def facet_link(label, value, key)
     finder_base_path = finder["base_path"]
-    link_to(label, "#{finder_base_path}?#{key}%5B%5D=#{value}", class: "govuk-link app-link")
+    view_context.link_to(label,
+                         "#{finder_base_path}?#{key}%5B%5D=#{value}",
+                         class: "govuk-link app-link")
   end
 
   def first_published_at_facet_key

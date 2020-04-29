@@ -9,14 +9,18 @@ module ContentItem
     def corporate_information
       corporate_information_groups.map do |group|
         {
-          heading: content_tag(:h3, group["name"], id: group_title_id(group["name"])),
+          heading: view_context.content_tag(:h3,
+                                            group["name"],
+                                            id: group_title_id(group["name"])),
           links: normalised_group_links(group),
         }
       end
     end
 
     def corporate_information_heading_tag
-      content_tag(:h2, corporate_information_heading[:text], id: corporate_information_heading[:id])
+      view_context.content_tag(:h2,
+                               corporate_information_heading[:text],
+                               id: corporate_information_heading[:id])
     end
 
     def further_information
@@ -33,7 +37,7 @@ module ContentItem
 
     def further_information_link(type)
       link = corporate_information_page_links.find { |l| l["document_type"] == type }
-      link_to(link["title"], link["base_path"]) if link
+      view_context.link_to(link["title"], link["base_path"]) if link
     end
 
     def further_information_about(type)
@@ -63,9 +67,9 @@ module ContentItem
     def normalised_group_item_link(group_item)
       if group_item.is_a?(String)
         group_item_link = corporate_information_page_links.find { |l| l["content_id"] == group_item }
-        link_to(group_item_link["title"], group_item_link["base_path"])
+        view_context.link_to(group_item_link["title"], group_item_link["base_path"])
       else
-        link_to(group_item["title"], group_item["path"] || group_item["url"])
+        view_context.link_to(group_item["title"], group_item["path"] || group_item["url"])
       end
     end
 

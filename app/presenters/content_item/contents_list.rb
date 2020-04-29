@@ -1,8 +1,5 @@
 module ContentItem
   module ContentsList
-    include ActionView::Helpers::UrlHelper
-    include TypographyHelper
-
     CHARACTER_LIMIT = 415
     CHARACTER_LIMIT_WITH_IMAGE = 224
     TABLE_ROW_LIMIT = 13
@@ -37,7 +34,7 @@ module ContentItem
     def extract_headings_with_ids
       headings = parsed_body.css("h2").map do |heading|
         id = heading.attribute("id")
-        { text: strip_trailing_colons(heading.text), id: id.value } if id
+        { text: view_context.strip_trailing_colons(heading.text), id: id.value } if id
       end
       headings.compact
     end

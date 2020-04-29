@@ -1,10 +1,10 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
   include ContentItem::NoDealNotice
-  include ApplicationHelper
 
   attr_reader :content_item,
               :requested_path,
+              :view_context,
               :base_path,
               :slug,
               :title,
@@ -19,9 +19,10 @@ class ContentItemPresenter
 
   attr_accessor :include_collections_in_other_publisher_metadata
 
-  def initialize(content_item, requested_path)
+  def initialize(content_item, requested_path, view_context)
     @content_item = content_item
     @requested_path = requested_path
+    @view_context = view_context
     @base_path = content_item["base_path"]
     @slug = base_path.delete_prefix("/") if base_path
     @title = content_item["title"]

@@ -16,6 +16,7 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
                                            "title" => "Some title",
                                            "url" => "some/url" }] } },
       "/publication",
+      ApplicationController.new.view_context,
     )
 
     render(partial: "content_items/attachments",

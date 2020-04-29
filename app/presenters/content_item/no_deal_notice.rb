@@ -1,9 +1,5 @@
 module ContentItem
   module NoDealNotice
-    include ActionView::Helpers::TagHelper
-    include ActionView::Helpers::UrlHelper
-    include ActionView::Context
-
     def has_no_deal_notice?
       content_item.dig("details").has_key?("brexit_no_deal_notice")
     end
@@ -46,7 +42,7 @@ module ContentItem
         "track-label": "the transition period",
       }
 
-      featured_link = link_to("the transition period", "/transition", data: data_attributes, class: "govuk-link")
+      featured_link = view_context.link_to("the transition period", "/transition", data: data_attributes, class: "govuk-link")
       featured_link_intro = no_deal_notice_links.any? ? "You can also read about" : "You can read about"
 
       (featured_link_intro + " " + featured_link + ".").html_safe

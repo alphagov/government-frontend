@@ -1,9 +1,10 @@
 module MachineReadable
   class GuideFaqPageSchemaPresenter
-    attr_reader :guide
+    attr_reader :guide, :view_context
 
-    def initialize(guide)
+    def initialize(guide, view_context)
       @guide = guide
+      @view_context = view_context
     end
 
     def structured_data
@@ -64,11 +65,7 @@ module MachineReadable
     end
 
     def logo_url
-      image_url("govuk_publishing_components/govuk-logo.png")
-    end
-
-    def image_url(image_file)
-      ActionController::Base.helpers.asset_url(image_file, type: :image)
+      view_context.image_url("govuk_publishing_components/govuk-logo.png")
     end
   end
 end

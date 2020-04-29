@@ -23,6 +23,10 @@ module ContentItemPartsStubs
       },
     }
   end
+
+  def view_context
+    ApplicationController.new.view_context
+  end
 end
 
 module PresentingFirstPartInContentItem
