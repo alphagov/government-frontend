@@ -1,7 +1,5 @@
 module ContentItem
   module Parts
-    include ActionView::Helpers::UrlHelper
-
     def parts
       raw_parts.each_with_index.map do |part, i|
         # Link to base_path for first part
@@ -14,7 +12,7 @@ module ContentItem
     # with a base path that's different to the one requested. That content
     # item contains all the parts for that document.
     def requesting_a_part?
-      parts.any? && requested_content_item_path && requested_content_item_path != base_path
+      parts.any? && requested_path && requested_path != base_path
     end
 
     def has_valid_part?
@@ -86,15 +84,17 @@ module ContentItem
     def part_links
       parts.map.with_index(1) do |part, position|
         if part["slug"] != current_part["slug"]
-          link_to part["title"], part["full_path"], class: "govuk-link",
-                                                    data: {
-            track_category: "contentsClicked",
-            track_action: "content_item #{position}",
-            track_label: part["full_path"],
-            track_options: {
-              dimension29: part["title"],
-             },
-           }
+          view_context.link_to(
+            part["title"],
+            part["full_path"],
+            class: "govuk-link",
+            data: {
+              track_category: "contentsClicked",
+              track_action: "content_item #{position}",
+              track_label: part["full_path"],
+              track_options: { dimension29: part["title"] },
+            },
+          )
         else
           part["title"]
         end

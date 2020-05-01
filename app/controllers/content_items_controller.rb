@@ -63,7 +63,9 @@ private
       content_item["links"]["ordered_related_items"] = content_item["links"].fetch("suggested_ordered_related_items", [])
     end
 
-    @content_item = PresenterBuilder.new(content_item, content_item_path).presenter
+    @content_item = PresenterBuilder.new(content_item,
+                                         content_item_path,
+                                         view_context).presenter
   end
 
   def format_banner_links(links, type)

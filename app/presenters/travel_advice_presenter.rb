@@ -1,6 +1,5 @@
 class TravelAdvicePresenter < ContentItemPresenter
   include ContentItem::Parts
-  include ActionView::Helpers::TextHelper
 
   ATOM_CACHE_CONTROL_MAX_AGE = 300
 
@@ -21,7 +20,7 @@ class TravelAdvicePresenter < ContentItemPresenter
       "Updated" => display_date(reviewed_at || updated_at),
     }
 
-    other["Latest update"] = simple_format(latest_update) if latest_update.present?
+    other["Latest update"] = view_context.simple_format(latest_update) if latest_update.present?
 
     {
       other: other,
@@ -77,7 +76,8 @@ class TravelAdvicePresenter < ContentItemPresenter
     alert_statuses = content_item["details"]["alert_status"] || []
     alert_statuses = alert_statuses.map do |alert|
       if allowed_statuses.include?(alert)
-        content_tag(:p, I18n.t("travel_advice.alert_status.#{alert}").html_safe)
+        copy = I18n.t("travel_advice.alert_status.#{alert}").html_safe
+        view_context.content_tag(:p, copy)
       end
     end
 
@@ -85,7 +85,7 @@ class TravelAdvicePresenter < ContentItemPresenter
   end
 
   def atom_change_description
-    simple_format(HTMLEntities.new.encode(change_description, :basic, :decimal))
+    view_context.simple_format(HTMLEntities.new.encode(change_description, :basic, :decimal))
   end
 
   def atom_public_updated_at

@@ -3,6 +3,8 @@ require "test_helper"
 class ContentItemWithdrawableTest < ActiveSupport::TestCase
   def setup
     @withdrawable = Object.new
+    @withdrawable.stubs(:view_context)
+                 .returns(ApplicationController.new.view_context)
     @withdrawable.extend(ContentItem::Withdrawable)
     I18n.locale = :cy
   end

@@ -52,7 +52,10 @@ class DocumentCollectionPresenter < ContentItemPresenter
   def group_heading(group)
     title = group["title"]
     heading_level = show_contents_list? ? :h3 : :h2
-    content_tag heading_level, title, class: "group-title", id: group_title_id(title)
+    view_context.content_tag(heading_level,
+                             title,
+                             class: "group-title",
+                             id: group_title_id(title))
   end
 
 private

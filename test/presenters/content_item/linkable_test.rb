@@ -3,7 +3,7 @@ require "test_helper"
 class ContentItemLinkableTest < ActiveSupport::TestCase
   class DummyContentItem
     include ContentItem::Linkable
-    attr_accessor :content_item, :title
+    attr_accessor :content_item, :title, :view_context
 
     def initialize
       @content_item = {
@@ -11,6 +11,7 @@ class ContentItemLinkableTest < ActiveSupport::TestCase
         "links" => {},
       }
       @title = "A Title"
+      @view_context = ApplicationController.new.view_context
     end
   end
 

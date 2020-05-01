@@ -3,6 +3,8 @@ require "test_helper"
 class ContentItemContentsListTest < ActiveSupport::TestCase
   def setup
     @contents_list = Object.new
+    @contents_list.stubs(:view_context)
+                  .returns(ApplicationController.new.view_context)
     @contents_list.extend(ContentItem::ContentsList)
   end
 

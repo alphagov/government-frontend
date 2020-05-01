@@ -1,22 +1,15 @@
-require "test_helper"
+require "presenter_test_helper"
 
 class ServiceSignInPresenterTest
-  class CreateNewAccount < ActiveSupport::TestCase
+  class CreateNewAccount < PresenterTestCase
     def schema_name
       "service_sign_in"
     end
 
     def setup
-      @presented_item = present_example(schema_item)
+      @presented_item = create_presenter(ServiceSignIn::CreateNewAccountPresenter,
+                                         content_item: schema_item)
       @create_new_account = schema_item["details"]["create_new_account"]
-    end
-
-    def present_example(example)
-      ServiceSignIn::CreateNewAccountPresenter.new(example)
-    end
-
-    def schema_item
-      @schema_item ||= govuk_content_schema_example(schema_name, schema_name)
     end
 
     def parent_slug

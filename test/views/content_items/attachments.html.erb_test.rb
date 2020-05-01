@@ -12,11 +12,11 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
 
   test "can render attachments using their metadata" do
     @content_item = PublicationPresenter.new(
-      "details" => {
-        "attachments" => [{ "id" => "attachment_id",
-                            "title" => "Some title",
-                            "url" => "some/url" }],
-      },
+      { "details" => { "attachments" => [{ "id" => "attachment_id",
+                                           "title" => "Some title",
+                                           "url" => "some/url" }] } },
+      "/publication",
+      ApplicationController.new.view_context,
     )
 
     render(partial: "content_items/attachments",
