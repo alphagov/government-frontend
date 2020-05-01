@@ -257,7 +257,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: path_for(content_item, locale), locale: locale }
 
     assert_response :success
-    assert_select "title", %r(#{translated_schema_name})
+    assert_select "title", %r{#{translated_schema_name}}
   end
 
   test "renders atom feeds" do

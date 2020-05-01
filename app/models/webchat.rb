@@ -3,7 +3,7 @@ class Webchat
 
   CONFIG_PATH = Rails.root.join("lib/webchat.yaml")
 
-  validates_presence_of :base_path, :open_url, :availability_url
+  validates :base_path, :open_url, :availability_url, presence: true
 
   attr_reader :base_path, :open_url, :availability_url, :open_url_redirect
 

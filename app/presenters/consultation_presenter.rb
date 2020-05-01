@@ -32,7 +32,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def closed?
-    %w(closed_consultation consultation_outcome).include? document_type
+    %w[closed_consultation consultation_outcome].include? document_type
   end
 
   def unopened?
@@ -127,7 +127,7 @@ private
       # 12am, 12:00am and "midnight on" can all be misinterpreted
       # Use 11:59pm on the day before to remove ambiguity
       # 12am on 10 January becomes 11:59pm on 9 January
-      time = time - 1.second if time.strftime(time_format) == "12:00am"
+      time -= 1.second if time.strftime(time_format) == "12:00am"
     end
     I18n.l(time, format: "#{time_format} on #{date_format}").gsub(":00", "").gsub("12pm", "midday").gsub("12am on ", "").strip
   end

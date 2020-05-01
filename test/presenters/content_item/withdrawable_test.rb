@@ -70,8 +70,8 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
   end
 
   test "notice title presents only in English, even if locale is set to another language" do
-  # This is to prevent the withdrawal notices on translated editions
-  # displaying a combination of languages in their titles.
+    # This is to prevent the withdrawal notices on translated editions
+    # displaying a combination of languages in their titles.
     class << @withdrawable
       def schema_name
         "publication"

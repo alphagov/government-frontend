@@ -35,7 +35,7 @@ module GovukContentSchemaExamples
     end
 
     def supported_schemas
-      %w{
+      %w[
         case_study
         coming_soon
         html_publication
@@ -45,7 +45,7 @@ module GovukContentSchemaExamples
         topical_event_about_page
         unpublishing
         working_group
-      }
+      ]
     end
   end
 end

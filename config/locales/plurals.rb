@@ -1,26 +1,26 @@
 {
-  #Dari - this isn't an iso code. Probably should be 'prs' as per ISO 639-3.
+  # Dari - this isn't an iso code. Probably should be 'prs' as per ISO 639-3.
   dr: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Armenian
+  # Armenian
   hy: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Pushto
+  # Pushto
   ps: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Portugese
+  # Portugese
   pt: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Sinhalese
+  # Sinhalese
   si: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Somali
+  # Somali
   so: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Albanian
+  # Albanian
   sq: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Tamil
+  # Tamil
   ta: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Turkmen
+  # Turkmen
   tk: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Uzbek
+  # Uzbek
   uz: { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Chinese Hong Kong
+  # Chinese Hong Kong
   "zh-hk" => { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
-  #Chinese Taiwan
+  # Chinese Taiwan
   "zh-tw" => { i18n: { plural: { keys: %i[one other], rule: lambda { |n| n == 1 ? :one : :other } } } },
 }
