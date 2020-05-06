@@ -82,11 +82,11 @@ class SpecialistDocumentPresenterTest
     test "has title without context" do
       assert presented_item("aaib-reports").is_a?(ContentItem::TitleAndContext)
       title_component_params = {
-                                  title: schema_item("aaib-reports")["title"],
-                                  context_locale: nil,
-                                  average_title_length: "long",
+        title: schema_item("aaib-reports")["title"],
+        context_locale: nil,
+        average_title_length: "long",
 
-                               }
+      }
 
       assert_equal title_component_params, presented_item("aaib-reports").title_and_context
     end
@@ -215,17 +215,17 @@ class SpecialistDocumentPresenterTest
 
     test "ignores facets if valid key but set to an empty string" do
       example = example_with_finder_facets([
-                                              {
-                                                "name" => "Facet name",
-                                                "key" => "facet-key",
-                                                "type" => "text",
-                                              },
-                                              {
-                                                "name" => "Date facet",
-                                                "key" => "date-facet",
-                                                "type" => "date",
-                                              },
-                                            ],
+        {
+          "name" => "Facet name",
+          "key" => "facet-key",
+          "type" => "text",
+        },
+        {
+          "name" => "Date facet",
+          "key" => "date-facet",
+          "type" => "date",
+        },
+      ],
                                            "facet-key" => "",
                                            "date-facet" => "")
 
@@ -283,27 +283,27 @@ class SpecialistDocumentPresenterTest
 
     test "puts date facets together and before text facets" do
       example = example_with_finder_facets([
-                                            {
-                                              "name" => "Facet name",
-                                              "key" => "facet-key",
-                                              "type" => "text",
-                                            },
-                                            {
-                                              "name" => "First date facet",
-                                              "key" => "first-date-facet",
-                                              "type" => "date",
-                                            },
-                                            {
-                                              "name" => "Second date facet",
-                                              "key" => "second-date-facet",
-                                              "type" => "date",
-                                            },
-                                            {
-                                              "name" => "More text",
-                                              "key" => "more-text",
-                                              "type" => "text",
-                                            },
-                                          ],
+        {
+          "name" => "Facet name",
+          "key" => "facet-key",
+          "type" => "text",
+        },
+        {
+          "name" => "First date facet",
+          "key" => "first-date-facet",
+          "type" => "date",
+        },
+        {
+          "name" => "Second date facet",
+          "key" => "second-date-facet",
+          "type" => "date",
+        },
+        {
+          "name" => "More text",
+          "key" => "more-text",
+          "type" => "text",
+        },
+      ],
                                            "facet-key" => "Text",
                                            "first-date-facet" => "2010-01-01",
                                            "second-date-facet" => "2010-02-03",
@@ -327,12 +327,12 @@ class SpecialistDocumentPresenterTest
 
     test "omits first_published_at facet values from `other` section of component parameters to avoid duplicates" do
       facets = [
-                  {
-                    "name" => "Published",
-                    "key" => "first_published_at",
-                    "type" => "date",
-                  },
-                ]
+        {
+          "name" => "Published",
+          "key" => "first_published_at",
+          "type" => "date",
+        },
+      ]
       example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
 
       presented = present_example(example)
@@ -341,12 +341,12 @@ class SpecialistDocumentPresenterTest
 
     test "uses first published date in facets as canonical publish date if provided" do
       facets = [
-                  {
-                    "name" => "Published",
-                    "key" => "first_published_at",
-                    "type" => "date",
-                  },
-                ]
+        {
+          "name" => "Published",
+          "key" => "first_published_at",
+          "type" => "date",
+        },
+      ]
       example = example_with_finder_facets(facets, "first_published_at" => "2010-01-01")
 
       example["details"]["change_history"] = [

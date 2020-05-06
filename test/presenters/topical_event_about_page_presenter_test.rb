@@ -14,13 +14,13 @@ class TopicalEventAboutPagePresenterTest < PresenterTestCase
 
   test "presents a list of contents extracted from headings in the body" do
     assert_equal [
-        { text: "Response in the UK", id: "response-in-the-uk", href: "#response-in-the-uk" },
-        { text: "Response in Africa", id: "response-in-africa", href: "#response-in-africa" },
-        { text: "Advice for travellers", id: "advice-for-travellers", href: "#advice-for-travellers" },
-        { text: "Advice for medics", id: "advice-for-medics", href: "#advice-for-medics" },
-        { text: "Advice for aid workers", id: "advice-for-aid-workers", href: "#advice-for-aid-workers" },
-        { text: "How you can help", id: "how-you-can-help", href: "#how-you-can-help" },
-      ], presented_item.contents
+      { text: "Response in the UK", id: "response-in-the-uk", href: "#response-in-the-uk" },
+      { text: "Response in Africa", id: "response-in-africa", href: "#response-in-africa" },
+      { text: "Advice for travellers", id: "advice-for-travellers", href: "#advice-for-travellers" },
+      { text: "Advice for medics", id: "advice-for-medics", href: "#advice-for-medics" },
+      { text: "Advice for aid workers", id: "advice-for-aid-workers", href: "#advice-for-aid-workers" },
+      { text: "How you can help", id: "how-you-can-help", href: "#how-you-can-help" },
+    ], presented_item.contents
   end
 
   test "presents no contents when no headings in the body" do
