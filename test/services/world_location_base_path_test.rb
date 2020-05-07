@@ -21,9 +21,9 @@ end
 
 class WorldLocationBasePathForExceptionalCase < ActiveSupport::TestCase
   {
-   "Democratic Republic of Congo" => "democratic-republic-of-congo",
-   "South Georgia and the South Sandwich Islands" => "south-georgia-and-the-south-sandwich-islands",
-   "St Pierre & Miquelon" => "st-pierre-miquelon",
+    "Democratic Republic of Congo" => "democratic-republic-of-congo",
+    "South Georgia and the South Sandwich Islands" => "south-georgia-and-the-south-sandwich-islands",
+    "St Pierre & Miquelon" => "st-pierre-miquelon",
   }.each do |title, expected_slug|
     test "returns /world/#{expected_slug}/news" do
       link = {
