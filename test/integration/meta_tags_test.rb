@@ -14,6 +14,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
     visit_with_cachebust "/some-page"
 
     assert page.has_css?("meta[property='og:title'][content='Zhe title']", visible: false)
+    assert page.has_no_css?("meta[name='robots'][content='noindex']", visible: false)
   end
 
   test "correct meta tags are displayed for pages without images" do
@@ -48,5 +49,13 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
     assert page.has_css?("meta[name='twitter:card'][content='summary_large_image']", visible: false)
     assert page.has_css?("meta[name='twitter:image'][content='https://example.org/image.jpg']", visible: false)
     assert page.has_css?("meta[property='og:image'][content='https://example.org/image.jpg']", visible: false)
+  end
+
+  test "correct meta tags are displayed for withdrawn pages" do
+    withdrawn_case_study = GovukSchemas::Example.find("case_study", example_name: "archived")
+    stub_content_store_has_item("/withdrawn", withdrawn_case_study.to_json)
+    visit_with_cachebust "/withdrawn"
+
+    assert page.has_css?("meta[name='robots'][content='noindex']", visible: false)
   end
 end

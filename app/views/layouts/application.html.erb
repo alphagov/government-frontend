@@ -9,6 +9,10 @@
     <% end %>
   </title>
 
+  <% if @content_item.withdrawn? %>
+    <meta name="robots" content="noindex">
+  <% end %>
+
   <% if ENV['HEROKU_APP_NAME'].present? %>
     <meta name="robots" content="noindex, nofollow">
   <% end %>
