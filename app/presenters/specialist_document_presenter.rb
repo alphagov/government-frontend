@@ -214,7 +214,7 @@ private
   # Example:
   # https://www.gov.uk/aaib-reports/lockheed-l1011-385-1-15-g-bhbr-19-december-1989
   def bulk_published?
-    !!facet_values["bulk_published"]
+    facet_values["bulk_published"].present?
   end
 
   def statutory_instrument?
