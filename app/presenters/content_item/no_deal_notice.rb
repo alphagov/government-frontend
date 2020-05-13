@@ -1,7 +1,7 @@
 module ContentItem
   module NoDealNotice
     def has_no_deal_notice?
-      content_item.dig("details").has_key?("brexit_no_deal_notice")
+      content_item.dig("details").key?("brexit_no_deal_notice")
     end
 
     def no_deal_notice_component

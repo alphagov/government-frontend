@@ -13,14 +13,14 @@ class DocumentCollectionPresenter < ContentItemPresenter
   end
 
   def groups
-    groups = content_item["details"]["collection_groups"].reject { |group|
+    groups = content_item["details"]["collection_groups"].reject do |group|
       group_documents(group).empty?
-    }
+    end
 
-    groups.map { |group|
+    groups.map do |group|
       group["documents"] = reject_withdrawn_documents(group)
       group
-    }
+    end
   end
 
   def group_document_links(group, group_index)

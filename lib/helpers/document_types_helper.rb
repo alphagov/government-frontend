@@ -9,13 +9,13 @@ class DocumentTypesHelper
   end
 
   def all_type_paths
-    response = RestClient.get(ALL_SEARCH_ENDPOINT % { sample_size: @sample_size })
+    response = RestClient.get(format(ALL_SEARCH_ENDPOINT, sample_size: @sample_size))
     results = extract_results(JSON.parse(response.body))
     results.map { |result| extract_type(result) }.reduce({}, :merge)
   end
 
   def type_paths(type)
-    response = RestClient.get(SINGLE_SEARCH_ENDPOINT % { document_type: type, sample_size: @sample_size })
+    response = RestClient.get(format(SINGLE_SEARCH_ENDPOINT, document_type: type, sample_size: @sample_size))
     JSON.parse(response.body)["results"].map { |result| result["link"] }
   end
 

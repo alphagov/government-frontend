@@ -23,7 +23,7 @@ module ContentItem
       {
         published: published,
         last_updated: updated,
-        link_to_history: !!updated,
+        link_to_history: updated.present?,
         other: {
           from: from,
         },

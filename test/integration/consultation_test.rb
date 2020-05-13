@@ -56,7 +56,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
     assert page.has_text?("Consultation")
 
-    # There’s no daylight savings after 2037
+    # There's no daylight savings after 2037
     # http://timezonesjl.readthedocs.io/en/stable/faq/#far-future-zoneddatetime-with-variabletimezone
     assert page.has_css?(".gem-c-notice", text: "This consultation opens at 1pm on 5 October 2200")
     assert page.has_text?(:all, "It closes at 4pm on 31 October 2210")
