@@ -20,7 +20,8 @@ class TopicalEventAboutPagePresenterTest < PresenterTestCase
       { text: "Advice for medics", id: "advice-for-medics", href: "#advice-for-medics" },
       { text: "Advice for aid workers", id: "advice-for-aid-workers", href: "#advice-for-aid-workers" },
       { text: "How you can help", id: "how-you-can-help", href: "#how-you-can-help" },
-    ], presented_item.contents
+    ],
+                 presented_item.contents
   end
 
   test "presents no contents when no headings in the body" do

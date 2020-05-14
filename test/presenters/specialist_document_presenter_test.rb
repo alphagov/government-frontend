@@ -214,20 +214,22 @@ class SpecialistDocumentPresenterTest
     end
 
     test "ignores facets if valid key but set to an empty string" do
-      example = example_with_finder_facets([
-        {
-          "name" => "Facet name",
-          "key" => "facet-key",
-          "type" => "text",
-        },
-        {
-          "name" => "Date facet",
-          "key" => "date-facet",
-          "type" => "date",
-        },
-      ],
-                                           "facet-key" => "",
-                                           "date-facet" => "")
+      example = example_with_finder_facets(
+        [
+          {
+            "name" => "Facet name",
+            "key" => "facet-key",
+            "type" => "text",
+          },
+          {
+            "name" => "Date facet",
+            "key" => "date-facet",
+            "type" => "date",
+          },
+        ],
+        "facet-key" => "",
+        "date-facet" => "",
+      )
 
       assert_empty present_example(example).metadata[:other]
     end
@@ -282,32 +284,34 @@ class SpecialistDocumentPresenterTest
     end
 
     test "puts date facets together and before text facets" do
-      example = example_with_finder_facets([
-        {
-          "name" => "Facet name",
-          "key" => "facet-key",
-          "type" => "text",
-        },
-        {
-          "name" => "First date facet",
-          "key" => "first-date-facet",
-          "type" => "date",
-        },
-        {
-          "name" => "Second date facet",
-          "key" => "second-date-facet",
-          "type" => "date",
-        },
-        {
-          "name" => "More text",
-          "key" => "more-text",
-          "type" => "text",
-        },
-      ],
-                                           "facet-key" => "Text",
-                                           "first-date-facet" => "2010-01-01",
-                                           "second-date-facet" => "2010-02-03",
-                                           "more-text" => "More text")
+      example = example_with_finder_facets(
+        [
+          {
+            "name" => "Facet name",
+            "key" => "facet-key",
+            "type" => "text",
+          },
+          {
+            "name" => "First date facet",
+            "key" => "first-date-facet",
+            "type" => "date",
+          },
+          {
+            "name" => "Second date facet",
+            "key" => "second-date-facet",
+            "type" => "date",
+          },
+          {
+            "name" => "More text",
+            "key" => "more-text",
+            "type" => "text",
+          },
+        ],
+        "facet-key" => "Text",
+        "first-date-facet" => "2010-01-01",
+        "second-date-facet" => "2010-02-03",
+        "more-text" => "More text",
+      )
 
       expected_order = ["First date facet", "Second date facet", "Facet name", "More text"]
       assert_equal expected_order, present_example(example).important_metadata.keys

@@ -44,7 +44,7 @@ private
   end
 
   def write_config(config)
-    file_name = format(OUTPUT_PATH, suffix: @name)
+    file_name = sprintf(OUTPUT_PATH, suffix: @name)
     File.open(file_name, "w") { |f| f.write config.to_yaml }
     file_name
   end

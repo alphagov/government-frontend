@@ -63,9 +63,11 @@ private
       content_item["links"]["ordered_related_items"] = content_item["links"].fetch("suggested_ordered_related_items", [])
     end
 
-    @content_item = PresenterBuilder.new(content_item,
-                                         content_item_path,
-                                         view_context).presenter
+    @content_item = PresenterBuilder.new(
+      content_item,
+      content_item_path,
+      view_context,
+    ).presenter
   end
 
   def format_banner_links(links, type)
@@ -125,8 +127,10 @@ private
   end
 
   def set_expiry
-    expires_in(@content_item.cache_control_max_age(request.format),
-               public: @content_item.cache_control_public?)
+    expires_in(
+      @content_item.cache_control_max_age(request.format),
+      public: @content_item.cache_control_public?,
+    )
   end
 
   def service_url(original_url)

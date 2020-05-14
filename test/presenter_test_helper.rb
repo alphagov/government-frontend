@@ -18,8 +18,10 @@ class PresenterTestCase < ActiveSupport::TestCase
   end
 
   def present_example(example)
-    create_presenter("#{schema_name.classify}Presenter".safe_constantize,
-                     content_item: example)
+    create_presenter(
+      "#{schema_name.classify}Presenter".safe_constantize,
+      content_item: example,
+    )
   end
 
   def schema_item(type = schema_name)

@@ -3,7 +3,7 @@ module ContentItem
     include Metadata
 
     def applies_to
-      return nil if !national_applicability
+      return nil unless national_applicability
 
       all_nations = national_applicability.values
       applicable_nations = all_nations.select { |n| n["applicable"] }

@@ -33,9 +33,11 @@ module ContentItem
     end
 
     def withdrawal_notice_time
-      view_context.content_tag(:time,
-                               english_display_date(withdrawal_notice["withdrawn_at"]),
-                               datetime: withdrawal_notice["withdrawn_at"])
+      view_context.content_tag(
+        :time,
+        english_display_date(withdrawal_notice["withdrawn_at"]),
+        datetime: withdrawal_notice["withdrawn_at"],
+      )
     end
 
     def english_display_date(timestamp, format = "%-d %B %Y")
