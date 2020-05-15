@@ -12,9 +12,11 @@ class PresenterBuilder
     raise RedirectRouteReturned, content_item if redirect_route?
     raise GovernmentReturned if government_content_item?
 
-    presenter_name.constantize.new(content_item,
-                                   content_item_path,
-                                   view_context)
+    presenter_name.constantize.new(
+      content_item,
+      content_item_path,
+      view_context,
+    )
   end
 
 private

@@ -41,9 +41,11 @@ class DocumentCollectionPresenter < ContentItemPresenter
         },
         metadata: {
           public_updated_at: link["public_updated_at"]&.then { |time| Time.zone.parse(time) },
-          document_type: I18n.t("content_item.schema_name.#{link['document_type']}",
-                                count: 1,
-                                default: nil),
+          document_type: I18n.t(
+            "content_item.schema_name.#{link['document_type']}",
+            count: 1,
+            default: nil,
+          ),
         },
       }
     end
@@ -52,10 +54,12 @@ class DocumentCollectionPresenter < ContentItemPresenter
   def group_heading(group)
     title = group["title"]
     heading_level = show_contents_list? ? :h3 : :h2
-    view_context.content_tag(heading_level,
-                             title,
-                             class: "group-title",
-                             id: group_title_id(title))
+    view_context.content_tag(
+      heading_level,
+      title,
+      class: "group-title",
+      id: group_title_id(title),
+    )
   end
 
 private

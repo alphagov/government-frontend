@@ -7,8 +7,10 @@ class ServiceSignInPresenterTest
     end
 
     def setup
-      @presented_item = create_presenter(ServiceSignIn::CreateNewAccountPresenter,
-                                         content_item: schema_item)
+      @presented_item = create_presenter(
+        ServiceSignIn::CreateNewAccountPresenter,
+        content_item: schema_item,
+      )
       @create_new_account = schema_item["details"]["create_new_account"]
     end
 

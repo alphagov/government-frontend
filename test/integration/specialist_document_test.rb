@@ -173,7 +173,9 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders a link to statutory instruments finder" do
     setup_and_visit_content_item("eu-withdrawal-act-2018-statutory-instruments")
 
-    assert page.has_css?("a[href='/eu-withdrawal-act-2018-statutory-instruments']",
-                         text: "See all EU Withdrawal Act 2018 statutory instruments")
+    assert page.has_css?(
+      "a[href='/eu-withdrawal-act-2018-statutory-instruments']",
+      text: "See all EU Withdrawal Act 2018 statutory instruments",
+    )
   end
 end

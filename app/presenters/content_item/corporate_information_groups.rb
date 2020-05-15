@@ -9,18 +9,22 @@ module ContentItem
     def corporate_information
       corporate_information_groups.map do |group|
         {
-          heading: view_context.content_tag(:h3,
-                                            group["name"],
-                                            id: group_title_id(group["name"])),
+          heading: view_context.content_tag(
+            :h3,
+            group["name"],
+            id: group_title_id(group["name"]),
+          ),
           links: normalised_group_links(group),
         }
       end
     end
 
     def corporate_information_heading_tag
-      view_context.content_tag(:h2,
-                               corporate_information_heading[:text],
-                               id: corporate_information_heading[:id])
+      view_context.content_tag(
+        :h2,
+        corporate_information_heading[:text],
+        id: corporate_information_heading[:id],
+      )
     end
 
     def further_information

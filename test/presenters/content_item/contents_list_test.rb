@@ -78,7 +78,8 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       { text: "Two", id: "two" },
       { text: "Three", id: "three" },
       { text: "Four", id: "four" },
-    ], @contents_list.contents_items
+    ],
+                 @contents_list.contents_items
   end
 
   test "#show_contents_list? returns true if number of contents items is less than 3 and the first item's character count is above 415" do

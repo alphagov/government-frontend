@@ -33,8 +33,10 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     multiple_organisations_html_publication = schema_item("multiple_organisations")
     organisation_titles = multiple_organisations_html_publication["links"]["organisations"].map { |o| o["title"] }
 
-    presented_unordered_html_publication = create_presenter(HtmlPublicationPresenter,
-                                                            content_item: multiple_organisations_html_publication)
+    presented_unordered_html_publication = create_presenter(
+      HtmlPublicationPresenter,
+      content_item: multiple_organisations_html_publication,
+    )
     presented_organisations = presented_unordered_html_publication.organisations.map { |o| o["title"] }
 
     assert_equal organisation_titles, presented_organisations
