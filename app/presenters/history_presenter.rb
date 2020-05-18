@@ -1,0 +1,2 @@
+class HistoryPresenter < ContentItemPresenter
+end
