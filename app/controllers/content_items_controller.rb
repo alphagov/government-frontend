@@ -52,7 +52,10 @@ private
 
   def show_history_page
     page_id = content_item_path.split("/").last.underscore
-    valid_page_ids = %w[10_downing_street]
+    valid_page_ids = %w[
+      10_downing_street
+      11_downing_street
+    ]
 
     if valid_page_ids.include?(page_id)
       @do_not_show_breadcrumbs = true

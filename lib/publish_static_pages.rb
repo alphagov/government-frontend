@@ -7,6 +7,13 @@ module PublishStaticPages
       template: "histories/10_downing_street",
       base_path: "/government/history/10-downing-street",
     },
+    {
+      content_id: "9bdb6017-48c9-4590-b795-3c19d5e59320",
+      title: "History of 11 Downing Street",
+      description: "The history of 11 Downing Street.",
+      template: "histories/11_downing_street",
+      base_path: "/government/history/11-downing-street",
+    },
   ].freeze
 
   def self.publish_all
