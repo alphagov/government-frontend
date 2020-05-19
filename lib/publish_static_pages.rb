@@ -21,6 +21,13 @@ module PublishStaticPages
       template: "histories/1_horse_guards_road",
       base_path: "/government/history/1-horse-guards-road",
     },
+    {
+      content_id: "bd216990-c550-4d28-ac05-649329298601",
+      title: "History of King Charles Street (FCO)",
+      description: "The history of King Charles Street.",
+      template: "histories/king_charles_street",
+      base_path: "/government/history/king-charles-street",
+    },
   ].freeze
 
   def self.publish_all
