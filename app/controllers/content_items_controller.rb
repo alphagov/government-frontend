@@ -15,10 +15,15 @@ class ContentItemsController < ApplicationController
     load_content_item
 
     set_expiry
-    set_use_recommended_related_links_header
-    set_access_control_allow_origin_header if request.format.atom?
-    set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
-    render_template
+
+    if is_history_page?
+      show_history_page
+    else
+      set_use_recommended_related_links_header
+      set_access_control_allow_origin_header if request.format.atom?
+      set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
+      render_template
+    end
   end
 
   def service_sign_in_options
@@ -40,6 +45,29 @@ class ContentItemsController < ApplicationController
   end
 
 private
+
+  def is_history_page?
+    @content_item.document_type == "history"
+  end
+
+  def show_history_page
+    page_id = content_item_path.split("/").last.underscore
+    valid_page_ids = %w[
+      10_downing_street
+      11_downing_street
+      1_horse_guards_road
+      king_charles_street
+      lancaster_house
+    ]
+
+    if valid_page_ids.include?(page_id)
+      @do_not_show_breadcrumbs = true
+
+      render template: "histories/#{page_id}"
+    else
+      render plain: "Not found", status: :not_found
+    end
+  end
 
   def show_error_message
     @error = true

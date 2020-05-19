@@ -39,10 +39,12 @@
       <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
     <% end %>
 
-    <% if @content_item.try(:back_link) %>
-      <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
-    <% else  %>
-      <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.content_item.parsed_content %>
+    <% unless @do_not_show_breadcrumbs %>
+      <% if @content_item.try(:back_link) %>
+        <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
+      <% else %>
+        <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.content_item.parsed_content %>
+      <% end %>
     <% end %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
