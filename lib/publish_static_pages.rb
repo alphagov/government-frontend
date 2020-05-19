@@ -28,6 +28,13 @@ module PublishStaticPages
       template: "histories/king_charles_street",
       base_path: "/government/history/king-charles-street",
     },
+    {
+      content_id: "60808448-769d-4915-981c-f34eb5f1b7bc",
+      title: "History of Lancaster House (FCO)",
+      description: "The history of Lancaster House.",
+      template: "histories/lancaster_house",
+      base_path: "/government/history/lancaster-house",
+    },
   ].freeze
 
   def self.publish_all
