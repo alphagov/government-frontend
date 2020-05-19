@@ -55,6 +55,7 @@ private
     valid_page_ids = %w[
       10_downing_street
       11_downing_street
+      1_horse_guards_road
     ]
 
     if valid_page_ids.include?(page_id)
