@@ -1,4 +1,5 @@
 require "gds_api/content_store"
+require "gds_api/publishing_api"
 
 module Services
   def self.content_store
@@ -14,6 +15,13 @@ module Services
   def self.feature_toggler
     @feature_toggler ||= FeatureToggler.new(
       HttpFeatureFlags.instance,
+    )
+  end
+
+  def self.publishing_api
+    @publishing_api ||= GdsApi::PublishingApi.new(
+      Plek.find("publishing-api"),
+      bearer_token: ENV.fetch("PUBLISHING_API_BEARER_TOKEN", "example"),
     )
   end
 end
