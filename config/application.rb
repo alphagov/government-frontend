@@ -101,7 +101,11 @@ module GovernmentFrontend
     config.action_dispatch.rack_cache = nil
 
     # Path within public/ where assets are compiled to
-    config.assets.prefix = "/government-frontend"
+    config.assets.prefix = "/assets/government-frontend"
+
+    # allow overriding the asset host with an enironment variable, useful for
+    # when router is proxying to this app but asset proxying isn't set up.
+    config.asset_host = ENV["ASSET_HOST"]
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
