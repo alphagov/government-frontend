@@ -1,6 +1,6 @@
 module MachineReadableMetadataHelper
   def machine_readable_metadata(args)
-    locals = { content_item: @content_item.content_item }.merge(args)
+    locals = { content_item: @content_item.content_item }.merge(args) # rubocop:disable Rails/HelperInstanceVariable
     render("govuk_publishing_components/components/machine_readable_metadata", locals)
   end
 end
