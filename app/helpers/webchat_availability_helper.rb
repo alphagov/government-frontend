@@ -11,7 +11,7 @@ module WebchatAvailabilityHelper
 
   def webchat_unavailable?(now = Time.zone.now)
     show_unavailability = now >= UNAVAILABILITY_START && now < UNAVAILABILITY_END
-    show_unavailability && HMRC_WEBCHAT_CONTACT_PATHS.include?(@content_item.base_path)
+    show_unavailability && HMRC_WEBCHAT_CONTACT_PATHS.include?(@content_item.base_path) # rubocop:disable Rails/HelperInstanceVariable
   end
 
   def unavailability_message

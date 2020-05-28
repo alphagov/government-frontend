@@ -6,12 +6,3 @@ inherit_gem:
 inherit_mode:
   merge:
     - Exclude
-
-Metrics/BlockLength:
-  Exclude:
-    - "test/**/*_test.rb"
-
-Rails/OutputSafety:
-  Enabled: false
-Rails/HelperInstanceVariable:
-  Enabled: false
