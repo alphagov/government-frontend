@@ -6,7 +6,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "html publications" do
-    setup_and_visit_content_item("published")
+    setup_and_visit_html_publication("published")
 
     within ".gem-c-inverse-header" do
       assert page.has_text?(@content_item["details"]["format_sub_type"])
@@ -24,7 +24,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "html publications with meta data" do
-    setup_and_visit_content_item("print_with_meta_data")
+    setup_and_visit_html_publication("print_with_meta_data")
 
     within ".govuk-grid-row.sidebar-with-body" do
       assert page.find(".print-meta-data", visible: false)
@@ -35,7 +35,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "html publications with meta data - print version" do
-    setup_and_visit_content_item("print_with_meta_data", "?medium=print")
+    setup_and_visit_html_publication("print_with_meta_data", "?medium=print")
 
     within ".govuk-grid-row.sidebar-with-body" do
       assert page.find(".print-meta-data", visible: true)
@@ -46,17 +46,17 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "renders back to contents elements" do
-    setup_and_visit_content_item("published")
+    setup_and_visit_html_publication("published")
     assert page.has_css?(".app-c-back-to-top[href='#contents']")
   end
 
   test "prime minister office organisation html publication" do
-    setup_and_visit_content_item("prime_ministers_office")
+    setup_and_visit_html_publication("prime_ministers_office")
     assert_has_component_organisation_logo_with_brand("executive-office", 4)
   end
 
   test "no contents are shown when headings are an empty list" do
-    setup_and_visit_content_item("prime_ministers_office")
+    setup_and_visit_html_publication("prime_ministers_office")
 
     within ".gem-c-inverse-header" do
       assert_not page.has_text?("Contents")
@@ -64,7 +64,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "html publication with rtl text direction" do
-    setup_and_visit_content_item("arabic_translation")
+    setup_and_visit_html_publication("arabic_translation")
     assert page.has_css?("#wrapper.direction-rtl"), "has .direction-rtl class on #wrapper element"
   end
 
@@ -81,6 +81,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       'withdrawn_at': "2014-08-09T11:39:05Z",
     }
 
+    stub_content_store_has_item(content_item["links"]["parent"][0]["base_path"])
     stub_content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit_with_cachebust "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 
@@ -90,12 +91,13 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
   test "if document has no parent document_type 'publication' is shown" do
     content_item = GovukSchemas::Example.find("html_publication", example_name: "prime_ministers_office")
-    content_item["links"]["parent"][0]["document_type"] = nil
+    parent = content_item["links"]["parent"][0]
+    parent["document_type"] = nil
     content_item["withdrawn_notice"] = {
       'explanation': "This is out of date",
       'withdrawn_at': "2014-08-09T11:39:05Z",
     }
-
+    stub_content_store_has_item(parent["base_path"])
     stub_content_store_has_item("/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration", content_item.to_json)
     visit_with_cachebust "/government/publications/canada-united-kingdom-joint-declaration/canada-united-kingdom-joint-declaration"
 

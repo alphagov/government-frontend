@@ -139,6 +139,15 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def setup_and_visit_html_publication(name, parameter_string = "")
+    @content_item = get_content_example(name).tap do |item|
+      parent = item["links"]["parent"][0]
+      stub_content_store_has_item(item["base_path"], item.to_json)
+      stub_content_store_has_item(parent["base_path"], parent.to_json)
+      visit_with_cachebust("#{item['base_path']}#{parameter_string}")
+    end
+  end
+
   def setup_and_visit_content_item_with_taxons(name, taxons)
     @content_item = get_content_example(name).tap do |item|
       item["links"]["taxons"] = taxons
@@ -156,8 +165,18 @@ class ActionDispatch::IntegrationTest
     content_id = content_item["content_id"]
     path = content_item["base_path"]
 
+    if schema_type == "html_publication"
+      parent = content_item.dig("links", "parent")&.first
+      if parent
+        parent_path = parent["base_path"]
+        stub_request(:get, %r{#{parent_path}})
+          .to_return(status: 200, body: content_item.to_json, headers: {})
+      end
+    end
+
     stub_request(:get, %r{#{path}})
       .to_return(status: 200, body: content_item.to_json, headers: {})
+
     visit path
 
     assert_selector %(meta[name="govuk:content-id"][content="#{content_id}"]), visible: false
