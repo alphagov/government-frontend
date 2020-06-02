@@ -16,6 +16,9 @@ class PublishStaticPagesTest < ActiveSupport::TestCase
 
   def expect_publishing(pages)
     pages.each do |page|
+      Services.publishing_api.expects(:put_path)
+        .with(page[:base_path], publishing_app: "government-frontend", override_existing: true)
+
       Services.publishing_api.expects(:put_content)
         .with(
           page[:content_id],
