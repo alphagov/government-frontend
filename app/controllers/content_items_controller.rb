@@ -58,6 +58,7 @@ private
       1_horse_guards_road
       king_charles_street
       lancaster_house
+      history
     ]
 
     if valid_page_ids.include?(page_id)

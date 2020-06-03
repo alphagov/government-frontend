@@ -35,11 +35,20 @@ module PublishStaticPages
       template: "histories/lancaster_house",
       base_path: "/government/history/lancaster-house",
     },
+    {
+      content_id: "db95a864-874f-4f50-a483-352a5bc7ba18",
+      title: "History of the UK government",
+      description: "In this section you can read short biographies of notable people and explore the history of government buildings. You can also search our online records and read articles and blog posts by historians.",
+      template: "histories/history",
+      base_path: "/government/history",
+    },
   ].freeze
 
   def self.publish_all
     PAGES.each do |page|
       payload = present_for_publishing_api(page)
+
+      Services.publishing_api.put_path(page[:base_path], publishing_app: "government-frontend", override_existing: true)
       Services.publishing_api.put_content(payload[:content_id], payload[:content])
       Services.publishing_api.publish(payload[:content_id], nil, locale: "en")
     end
