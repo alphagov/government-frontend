@@ -1,5 +1,5 @@
 require "test_helper"
-require "active_model"
+require "active_model/validations"
 
 class WebchatTest < ActiveSupport::TestCase
   webchat_config = {
