@@ -180,9 +180,13 @@ bundle exec rake wraith:update_document_types[:sample_size]
   open_url: https://www.my-amazing-webchat.com/007/open-chat
   availability_url: https://www.my-amazing-webchat.com/007/check-availability
 ```
+
 3. Deploy changes
 4. Go to https://www.gov.uk/government/contact/my-amazing-service
 5. Finished
+
+### CORS considerations
+To avoid CORS and CSP issues a new provider would need to be added to the Content Security Policy
 
 ### Required configuration
 
@@ -196,13 +200,27 @@ This URL is used to check the availability of agents at regular intervals.
 |  Function  |  Required |
 |-----------|-----------|
 | Request Method  | GET  |
-| Response Format | JSON |
+| Response Format | JSON/JSONP (Default to JSONP) |
 | Request Example | {"status":"success","response":"BUSY"}  |
-| Valid statuses | ["BUSY", "UNAVAILABLE", "AVAILABLE", "ERROR"] |
+| Valid statuses | ["BUSY", "UNAVAILABLE", "AVAILABLE","ONLINE", "OFFLINE", "ERROR"] |
 
 #### Open URL
 This url is used to start a webchat session.
 This url should not include session ids or require anything specific parameters to be generated.
+
+### Optional Configuration options
+
+#### Browser window behaviour
+By default the chat session would open in an a separate browser window. An additional value can be added to the yaml entry that will allow the web chat to remain in the current browser window.
+```yaml
+  open_url_redirect: true
+```
+#### Payload format
+
+The default response from the api as used by HMRC webchat provider is JSONP. To add a provider that responds using JSON the following entry needs to be added.
+```yaml
+  availability_payload_format: json
+```
 
 ## Licence
 
