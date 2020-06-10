@@ -9,8 +9,7 @@ module ContentItem
     def corporate_information
       corporate_information_groups.map do |group|
         {
-          heading: view_context.content_tag(
-            :h3,
+          heading: view_context.tag.h3(
             group["name"],
             id: group_title_id(group["name"]),
           ),
@@ -20,8 +19,7 @@ module ContentItem
     end
 
     def corporate_information_heading_tag
-      view_context.content_tag(
-        :h2,
+      view_context.tag.h2(
         corporate_information_heading[:text],
         id: corporate_information_heading[:id],
       )

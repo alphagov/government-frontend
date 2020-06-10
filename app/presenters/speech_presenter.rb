@@ -39,7 +39,7 @@ private
 
   def delivered_on
     delivered_on_date = content_item["details"]["delivered_on"]
-    view_context.content_tag(:time, display_date(delivered_on_date), datetime: delivered_on_date)
+    view_context.tag.time(display_date(delivered_on_date), datetime: delivered_on_date)
   end
 
   def speech_type_explanation
