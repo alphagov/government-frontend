@@ -1,6 +1,6 @@
 class AssetManagerRedirectController < ApplicationController
   def show
-    asset_url = Plek.new.public_asset_host
+    asset_url = Plek.new.asset_root
     if request.host.start_with?("draft-")
       asset_url = Plek.new.external_url_for("draft-assets")
     end

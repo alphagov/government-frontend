@@ -2,7 +2,7 @@ require "test_helper"
 
 class AssetManagerRedirectControllerTest < ActionController::TestCase
   setup do
-    Plek.any_instance.stubs(:public_asset_host).returns("http://asset-host.com")
+    Plek.any_instance.stubs(:asset_root).returns("http://asset-host.com")
     Plek.any_instance.stubs(:external_url_for).returns("http://draft-asset-host.com")
   end
 
