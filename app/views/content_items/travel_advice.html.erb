@@ -65,7 +65,7 @@
 
     <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
-    <%= render 'components/print-link', href: @content_item.print_link, link_text: t("multi_page.print_entire_guide") %>
+    <%= render 'govuk_publishing_components/components/print_link', href: @content_item.print_link, text: t("multi_page.print_entire_guide") %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>
