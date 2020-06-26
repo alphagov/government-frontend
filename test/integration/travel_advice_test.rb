@@ -24,7 +24,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     end
 
     assert page.has_css?(".gem-c-pagination")
-    assert page.has_css?('.app-c-print-link a[href$="/print"]')
+    assert page.has_css?('.gem-c-print-link a[href$="/print"]')
   end
 
   test "travel advice summary has latest updates and map" do
