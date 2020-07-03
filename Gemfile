@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby File.read(".ruby-version").strip
 
+gem "rails", "6.0.3.2"
+
 gem "asset_bom_removal-rails"
 gem "dalli"
 gem "gds-api-adapters"
@@ -11,7 +13,6 @@ gem "govuk_publishing_components"
 gem "htmlentities"
 gem "plek"
 gem "rack_strip_client_ip"
-gem "rails", "~> 5.2.4"
 gem "rails-controller-testing"
 gem "rails-i18n"
 gem "rails_translation_manager"
