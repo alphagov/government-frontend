@@ -23,7 +23,7 @@ group :development, :test do
   gem "govuk_schemas"
   gem "jasmine-rails"
   gem "rubocop-govuk"
-  gem "scss_lint-govuk"
+  gem "scss_lint-govuk", require: false
 end
 
 group :development do

@@ -17,7 +17,7 @@ unless Rails.env.production?
     t.files = Dir.glob(["app/assets/stylesheets"])
   end
 
-  task default: %i[spec rubocop scss_lint]
+  task default: %i[scss_lint spec rubocop]
 
   desc "Lint Ruby and SCSS files"
   task lint: %i[rubocop scss_lint]
