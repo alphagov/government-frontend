@@ -8,7 +8,7 @@
 
 <% unless @content_item.requesting_a_part? %>
 <script type="application/ld+json">
-  <%= raw MachineReadable::GuideFaqPageSchemaPresenter.new(@content_item, self).structured_data.to_json %>
+  <%= raw JSON.pretty_generate(MachineReadable::GuideFaqPageSchemaPresenter.new(@content_item, self).structured_data) %>
 </script>
 <% end %>
 
