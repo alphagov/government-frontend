@@ -22,7 +22,8 @@ gem "uglifier"
 
 group :development, :test do
   gem "govuk_schemas"
-  gem "jasmine-rails"
+  gem "jasmine"
+  gem "jasmine_selenium_runner", require: false
   gem "rubocop-govuk"
   gem "scss_lint-govuk", require: false
 end
@@ -40,5 +41,6 @@ group :test do
   gem "govuk_test"
   gem "minitest-reporters"
   gem "mocha"
+  gem "webdrivers"
   gem "webmock", require: false
 end

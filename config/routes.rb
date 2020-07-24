@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   unless Rails.env.production?
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
     get "random/:schema" => "randomly_generated_content_item#show"
   end
 
