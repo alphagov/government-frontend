@@ -64,9 +64,6 @@ GEM
     ansi (1.5.0)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
-    asset_bom_removal-rails (1.0.2)
-      rails (>= 4.2)
-      sass (> 3.4)
     ast (2.4.1)
     better_errors (2.7.1)
       coderay (>= 1.0.0)
@@ -371,7 +368,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  asset_bom_removal-rails
   better_errors
   binding_of_caller
   capybara

@@ -4,7 +4,6 @@ ruby File.read(".ruby-version").strip
 
 gem "rails", "6.0.3.2"
 
-gem "asset_bom_removal-rails"
 gem "dalli"
 gem "gds-api-adapters"
 gem "govuk_ab_testing"
