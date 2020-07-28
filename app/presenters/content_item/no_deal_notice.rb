@@ -23,11 +23,11 @@ module ContentItem
     end
 
     def no_deal_notice_title
-      "The UK has left the EU"
+      "The UK has left the EU and the transition period after Brexit comes to an end this year."
     end
 
     def no_deal_notice_description
-      "This page tells you what you'll need to do from 1 January 2021. It'll be updated if anything changes. "
+      "This page tells you what you'll need to do from 1 January 2021. It will be updated if anything changes."
     end
 
     def no_deal_notice_link_intro
@@ -43,7 +43,7 @@ module ContentItem
       }
 
       featured_link = view_context.link_to("the transition period", "/transition", data: data_attributes, class: "govuk-link")
-      featured_link_intro = no_deal_notice_links.any? ? "You can also read about" : "You can read about"
+      featured_link_intro = no_deal_notice_links.any? ? "You can also read about" : "Check what else you need to do during"
 
       (featured_link_intro + " " + featured_link + ".").html_safe
     end
