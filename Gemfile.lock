@@ -112,7 +112,7 @@ GEM
       rails (>= 5.0.0.1)
       rouge
       sprockets (< 4)
-    govuk_schemas (4.0.0)
+    govuk_schemas (4.1.0)
       json-schema (~> 2.8.0)
     govuk_test (1.0.3)
       brakeman (~> 4.6)
@@ -358,7 +358,7 @@ DEPENDENCIES
   govuk_ab_testing (~> 2.4)
   govuk_app_config (~> 2.2)
   govuk_publishing_components (~> 21.60.0)
-  govuk_schemas (~> 4.0)
+  govuk_schemas (~> 4.1)
   govuk_test
   htmlentities (~> 4.3)
   jasmine-rails
