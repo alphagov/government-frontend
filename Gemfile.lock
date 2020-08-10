@@ -71,7 +71,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    brakeman (4.8.2)
+    brakeman (4.9.1)
     builder (3.2.4)
     capybara (3.33.0)
       addressable
@@ -137,7 +137,7 @@ GEM
       domain_name (~> 0.5)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
-    image_size (2.0.2)
+    image_size (2.1.0)
     io-like (0.3.1)
     jasmine (3.6.0)
       jasmine-core (~> 3.6.0)
@@ -197,8 +197,8 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    public_suffix (4.0.5)
-    puma (4.3.5)
+    public_suffix (4.0.6)
+    puma (4.3.6)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -266,8 +266,8 @@ GEM
       rubocop-ast (>= 0.1.0, < 1.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.2.0)
-      parser (>= 2.7.0.1)
+    rubocop-ast (0.3.0)
+      parser (>= 2.7.1.4)
     rubocop-govuk (3.17.0)
       rubocop (= 0.87.1)
       rubocop-rails (= 2.6.0)
@@ -399,9 +399,6 @@ DEPENDENCIES
   webdrivers
   webmock
   wraith
-
-RUBY VERSION
-   ruby 2.6.6
 
 BUNDLED WITH
    1.17.3
