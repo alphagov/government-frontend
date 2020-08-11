@@ -12,7 +12,13 @@
     </div>
 
     <div class="app-c-header-notice__content">
-      <p class="app-c-header-notice__text govuk-body"><%= description %></p>
+      <% if description.is_a? Array %>
+        <% description.map do |line| %>
+          <p class="app-c-header-notice__text govuk-body"><%= line %></p>
+        <% end %>
+      <% else %>
+        <p class="app-c-header-notice__text govuk-body"><%= description %></p>
+      <% end %>
       <% if links.any? %>
         <div class="app-c-header-notice__links">
           <% if links.count == 1 %>
