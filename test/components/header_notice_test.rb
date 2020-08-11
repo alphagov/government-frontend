@@ -24,6 +24,14 @@ class HeaderNoticeTest < ComponentTestCase
     assert_select ".app-c-header-notice__content p", text: "This is some important information about the content."
   end
 
+  test "renders a header notice with text correctly with a multi-line description" do
+    render_component(title: "This is an important notice", description: ["This is some important information about the content.", "It runs on to two lines."])
+
+    assert_select ".app-c-header-notice__title", text: "This is an important notice"
+    assert_select ".app-c-header-notice__content p", text: "This is some important information about the content."
+    assert_select ".app-c-header-notice__content p", text: "It runs on to two lines."
+  end
+
   test "renders a header notice with an aria label" do
     render_component(title: "This is an important notice", description: "This is some important information about the content.")
     assert_select "section[aria-label=notice]"

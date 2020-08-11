@@ -23,11 +23,12 @@ module ContentItem
     end
 
     def no_deal_notice_title
-      "The UK has left the EU and the transition period after Brexit comes to an end this year."
+      "New rules for January 2021"
     end
 
     def no_deal_notice_description
-      "This page tells you what you'll need to do from 1 January 2021. It will be updated if anything changes."
+      ["The UK has left the EU, and the transition period after Brexit comes to an end this year.",
+       "This page tells you what you'll need to do from 1 January 2021. It will be updated if anything changes."]
     end
 
     def no_deal_notice_link_intro
