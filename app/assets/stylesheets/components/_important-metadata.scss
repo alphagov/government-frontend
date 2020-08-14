@@ -31,6 +31,9 @@
 
   .app-link {
     color: govuk-colour("white");
-  }
 
+    &:focus {
+      color: $govuk-text-colour;
+    }
+  }
 }
