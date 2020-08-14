@@ -85,4 +85,12 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?(".metadata-logo[alt='European structural investment funds']")
   end
+
+  test "renders FAQ structured data" do
+    setup_and_visit_content_item("detailed_guide")
+    faq_schema = find_structured_data(page, "FAQPage")
+
+    assert_equal faq_schema["name"], @content_item["title"]
+    assert_not_equal faq_schema["mainEntity"], []
+  end
 end
