@@ -22,6 +22,8 @@ GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
 end
 
+WebMock.disable_net_connect!(allow_localhost: true)
+
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
 end
