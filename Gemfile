@@ -38,6 +38,7 @@ group :test do
   gem "faker"
   gem "minitest-reporters"
   gem "mocha"
+  gem "simplecov"
   gem "webdrivers"
   gem "webmock", require: false
 end
