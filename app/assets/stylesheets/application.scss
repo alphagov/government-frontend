@@ -42,6 +42,7 @@ $govuk-use-legacy-palette: false;
 @import 'govuk_publishing_components/components/title';
 @import 'govuk_publishing_components/components/translation-nav';
 @import 'govuk_publishing_components/components/warning-text';
+@import 'govuk_publishing_components/components/skip-link';
 
 // government-frontend mixins
 @import 'mixins/margins';

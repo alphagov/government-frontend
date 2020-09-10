@@ -19,13 +19,17 @@
     <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
 
     <% if @content_item.show_guide_navigation? %>
+      <%= render "govuk_publishing_components/components/skip_link", {
+        text: "Skip to contents of guide",
+        href: "#guide-contents"
+      } %>
       <aside class="part-navigation-container" role="complementary">
         <%= render "govuk_publishing_components/components/contents_list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
       </aside>
     <% end %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds" id="guide-contents">
     <% if @content_item.has_parts? %>
       <% if @content_item.show_guide_navigation? %>
         <h1 class="part-title">
