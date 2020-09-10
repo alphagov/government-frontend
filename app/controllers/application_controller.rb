@@ -18,6 +18,6 @@ private
                                  .compact
                                  .join(".")
 
-    "/" + URI.encode(path_and_optional_locale) # rubocop:disable Lint/UriEscapeUnescape
+    "/" + URI.encode_www_form_component(path_and_optional_locale).gsub("%2F", "/")
   end
 end
