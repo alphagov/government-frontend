@@ -14,6 +14,7 @@ module ContentItem
           title: withdrawal_notice_title,
           description_govspeak: withdrawal_notice["explanation"]&.html_safe,
           time: withdrawal_notice_time,
+          lang: I18n.locale.to_s == "en" ? false : "en",
         }
       end
     end
