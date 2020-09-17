@@ -69,7 +69,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   def assert_has_component_organisation_logo_with_brand(brand, index = 1)
-    within("li.organisation-logos__logo:nth-of-type(#{index})") do
+    within(".organisation-logos__logo:nth-of-type(#{index})") do
       assert page.has_css?(".gem-c-organisation-logo.brand--#{brand}")
     end
   end
