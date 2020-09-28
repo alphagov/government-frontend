@@ -127,6 +127,7 @@ private
     facets
       .select { |f| facet_values[f["key"]] && facet_values[f["key"]].present? }
       .reject { |f| f["key"] == first_published_at_facet_key }
+      .reject { |f| f["key"] == internal_notes_facet_key }
       .sort_by { |f| f["type"] }
   end
 
@@ -179,6 +180,10 @@ private
 
   def first_published_at_facet_key
     "first_published_at"
+  end
+
+  def internal_notes_facet_key
+    "internal_notes"
   end
 
   # first_published_at does not have reliable data
