@@ -112,6 +112,35 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert_nil faq_schema
   end
 
+  test "a specific guide has tweaked Brexit navigation" do
+    visit_europe_guide_id = "7a616597-c921-47ba-bd50-7e73449e140b"
+    setup_and_visit_a_guide_with_the_brexit_taxon(visit_europe_guide_id)
+
+    assert page.has_css?(".gem-c-step-nav-header__title", text: "The UK and EU transition: new rules for 2021")
+  end
+
+  test "a normal Brexit guide has normal Brexit navigation" do
+    setup_and_visit_a_guide_with_the_brexit_taxon
+
+    assert page.has_css?(".gem-c-step-nav-header__title", text: "Brexit things")
+  end
+
+  def setup_and_visit_a_guide_with_the_brexit_taxon(content_id = nil)
+    @content_item = get_content_example("guide").tap do |item|
+      item["content_id"] = content_id if content_id.present?
+      item["links"]["taxons"] = [brexit_taxon]
+      stub_content_store_has_item(item["base_path"], item.to_json)
+      visit_with_cachebust(item["base_path"])
+    end
+  end
+
+  def brexit_taxon
+    @brexit_taxon ||= GovukSchemas::Example.find("taxon", example_name: "taxon").tap do |taxon|
+      taxon["title"] = "Brexit things"
+      taxon["content_id"] = "d6c2de5d-ef90-45d1-82d4-5f2438369eea" # the real Brexit taxon ID
+    end
+  end
+
   def setup_and_visit_part_in_guide
     @content_item = get_content_example("guide").tap do |item|
       chapter_path = "#{item['base_path']}/key-stage-1-and-2"
