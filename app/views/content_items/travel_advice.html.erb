@@ -36,15 +36,7 @@
 
     <aside class="part-navigation-container" role="complementary">
       <nav role="navigation" class="govuk-grid-row part-navigation" aria-label="Travel advice pages" data-module="track-click">
-        <%  @content_item.parts_navigation.each_with_index do |part_group, i| %>
-          <ol class="govuk-grid-column-one-half" <% if i == 1 %> start="<%=  @content_item.parts_navigation_second_list_start %>" <% end %>>
-            <% part_group.each do |part_nav_item| %>
-              <li>
-                <%= part_nav_item %>
-              </li>
-            <% end %>
-          </ol>
-        <% end %>
+        <%= render "govuk_publishing_components/components/contents_list", contents: @content_item.part_link_elements, underline_links: true %>
       </nav>
 
       <%= render 'govuk_publishing_components/components/subscription-links', email_signup_link: @content_item.email_signup_link, feed_link: @content_item.feed_link %>

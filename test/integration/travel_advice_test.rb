@@ -14,7 +14,6 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
     assert page.has_css?("a[href=\"#{@content_item['base_path']}.atom\"]", text: "Subscribe to feed")
 
-    assert page.has_css?(".part-navigation ol", count: 2)
     assert page.has_css?(".part-navigation li", count: @content_item["details"]["parts"].size + 1)
     assert page.has_css?(".part-navigation li", text: "Summary")
     assert_not page.has_css?(".part-navigation li a", text: "Summary")
