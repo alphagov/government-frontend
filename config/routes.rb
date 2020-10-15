@@ -8,7 +8,10 @@ Rails.application.routes.draw do
 
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
-  get "healthcheck", to: proc { [200, {}, [""]] }
+  get "/healthcheck",
+      to: GovukHealthcheck.rack_response(
+        GovukHealthcheck::RailsCache,
+      )
 
   get "/government/uploads/*path" => "asset_manager_redirect#show", format: false
 
