@@ -24,6 +24,15 @@
         items: @content_item.important_metadata %>
 
     <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
+
+      <% if @content_item.protected_food_drink_name? %>
+        <img
+          class="app-c-figure__image protected-food-drink-name-logo"
+          src="<%= @content_item.images.dig(@content_item.protection_type, "url") %>"
+          alt="<%= @content_item.images.dig(@content_item.protection_type, "alt_text") %>"
+        >
+      <% end %>
+
       <div class="responsive-bottom-margin">
         <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
         <% if @content_item.continuation_link %>

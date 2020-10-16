@@ -52,6 +52,31 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     end
   end
 
+  def protected_food_drink_name?
+    content_item["document_type"] == "protected_food_drink_name"
+  end
+
+  def protection_type
+    content_item.dig("details", "metadata", "protection_type")
+  end
+
+  def images
+    {
+      "protected-designation-of-origin-pdo" => {
+        "url" => view_context.image_url("protected-food-drink-names/protected-designation-of-origin-pdo.png"),
+        "alt_text" => "The scheme logo is a black stamp with the words Designated Origin UK Protected",
+      },
+      "protected-geographical-indication-pgi" => {
+        "url" => view_context.image_url("protected-food-drink-names/protected-geographical-indication-pgi.png"),
+        "alt_text" => "The scheme logo is a black stamp with the words Geographic Origin UK Protected",
+      },
+      "traditional-speciality-guaranteed-tsg" => {
+        "url" => view_context.image_url("protected-food-drink-names/traditional-speciality-guaranteed-tsg.png"),
+        "alt_text" => "The scheme logo is a black stamp with the words Traditional Speciality UK Protected",
+      },
+    }
+  end
+
 private
 
   def nested_headers

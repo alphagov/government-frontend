@@ -18,6 +18,18 @@ class SpecialistDocumentPresenterTest
       assert_equal expected_body, presented_item("aaib-reports").body
     end
 
+    test "presents the protection_type when specialist document's schema is 'protected-food-drink-names'" do
+      protection_type = "protected-designation-of-origin-pdo"
+
+      assert_equal protection_type, presented_item("protected-food-drink-names").protection_type
+      assert_equal protection_type, schema_item("protected-food-drink-names")["details"]["metadata"]["protection_type"]
+    end
+
+    test "does not present the protection_type when specialist document's schema is not 'protected-food-drink-names'" do
+      assert_nil schema_item("aaib-reports")["details"]["metadata"]["protection_type"]
+      assert_nil presented_item("aaib-reports").protection_type
+    end
+
     test "has metadata" do
       assert presented_item("aaib-reports").is_a?(ContentItem::Metadata)
     end
