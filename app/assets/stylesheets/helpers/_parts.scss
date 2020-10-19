@@ -14,16 +14,10 @@
   }
 
   .part-navigation {
-    margin-bottom: 0;
-    @include govuk-font(19);
+    margin-left: 0;
 
-    @include govuk-media-query($from: tablet) {
-      @include govuk-font(16);
-    }
-
-    li {
-      list-style: none;
-      margin-bottom: 0.75em;
+    @include govuk-media-query($until: tablet) {
+      margin-left: govuk-spacing(1);
     }
   }
 
