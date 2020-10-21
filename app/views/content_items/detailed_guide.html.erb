@@ -28,7 +28,10 @@
         margin_top: 0,
         margin_bottom: 6,
       } %>
-      <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
+
+      <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+        <%= sanitize(@content_item.govspeak_body[:content]) %>
+      <% end %>
 
       <div class="responsive-bottom-margin">
         <%= render 'components/published-dates', {
