@@ -25,7 +25,10 @@
         <% if @content_item.opening_date_midnight? %>on<% else %>at<% end %>
         <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
       <% end %>
-      <%= render 'govuk_publishing_components/components/notice', title: "This consultation isn't open yet", description_text: content_item_unopened %>
+      <%= render 'govuk_publishing_components/components/notice', {
+        title: "This consultation isn't open yet",
+        description_text: content_item_unopened,
+      } %>
 
     <% elsif @content_item.pending_final_outcome? %>
       <% content_item_final_outcome = capture do %>
@@ -47,9 +50,11 @@
 
       <%= render 'govuk_publishing_components/components/heading', text: "Detail of outcome", mobile_top_margin: true %>
       <div class="consultation-outcome-detail">
-        <%= render 'govuk_publishing_components/components/govspeak',
-            content: @content_item.final_outcome_detail.html_safe,
-            direction: page_text_direction %>
+        <%= render 'govuk_publishing_components/components/govspeak', {
+          direction: page_text_direction,
+        } do %>
+          <%= sanitize(@content_item.final_outcome_detail) %>
+        <% end %>
       </div>
     <% end %>
 
@@ -59,18 +64,28 @@
         attachments: @content_item.public_feedback_attachments %>
 
     <% if @content_item.public_feedback_detail %>
-      <%= render 'govuk_publishing_components/components/heading', text: "Detail of feedback received", mobile_top_margin: true %>
+      <%= render 'govuk_publishing_components/components/heading', {
+        mobile_top_margin: true,
+        text: "Detail of feedback received",
+      } %>
       <div class="consultation-feedback">
-        <%= render 'govuk_publishing_components/components/govspeak',
-            content: @content_item.public_feedback_detail.html_safe,
-            direction: page_text_direction %>
+        <%= render 'govuk_publishing_components/components/govspeak', {
+          direction: page_text_direction,
+        } do %>
+          <%= sanitize(@content_item.public_feedback_detail) %>
+        <% end %>
       </div>
     <% end %>
 
     <% if @content_item.final_outcome? %>
       <section class="original-consultation">
         <header>
-          <%= render 'govuk_publishing_components/components/heading', text: "Original consultation", id: "original-consultation-title", heading_level: 2, mobile_top_margin: true %>
+          <%= render 'govuk_publishing_components/components/heading', {
+            heading_level: 2,
+            id: "original-consultation-title",
+            mobile_top_margin: true,
+            text: "Original consultation",
+          } %>
         </header>
     <% end %>
 
@@ -92,11 +107,18 @@
     <% consultation_desc = capture do %>
       <%= @content_item.description %>
       <% if @content_item.held_on_another_website? %>
-        <br/><br/>
-        <strong>This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.</strong>
+        <p class="govuk-!-margin-top-2">
+          <strong>
+            This consultation <% if @content_item.closed? %>was<% else %>is being<% end %> held on <a href="<%= @content_item.held_on_another_website_url %>">another website</a>.
+          </strong>
+        </p>
       <% end %>
     <% end %>
-    <%= render 'components/banner', text: consultation_desc, title: 'Summary', aside: consultation_date %>
+    <%= render 'components/banner', {
+      aside: consultation_date,
+      text: consultation_desc,
+      title: 'Summary',
+    } %>
 
     <% if @content_item.final_outcome? %>
       </section>
@@ -104,8 +126,14 @@
 
 
     <div class="consultation-description">
-      <%= render 'govuk_publishing_components/components/heading', text: "Consultation description", mobile_top_margin: true %>
-      <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
+      <%= render 'govuk_publishing_components/components/heading', {
+        mobile_top_margin: true,
+        text: "Consultation description",
+      } %>
+
+      <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+        <%= sanitize(@content_item.govspeak_body[:content]) %>
+      <% end %>
 
       <%= render "attachments",
           title: "Documents",
@@ -149,9 +177,11 @@
             <% end %>
           <% end %>
 
-        <%= render 'govuk_publishing_components/components/govspeak',
-          content: @ways_to_respond_body,
-          direction: page_text_direction %>
+        <%= render 'govuk_publishing_components/components/govspeak', {
+          direction: page_text_direction,
+        } do %>
+          <%= sanitize(@ways_to_respond_body) %>
+        <% end %>
       </div>
     <% end %>
 
