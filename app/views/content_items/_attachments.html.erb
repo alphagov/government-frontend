@@ -5,9 +5,14 @@
         mobile_top_margin: true %>
 
     <% if legacy_pre_rendered_documents.present? %>
-      <%= render 'govuk_publishing_components/components/govspeak',
-                 content: legacy_pre_rendered_documents.html_safe,
-                 direction: page_text_direction %>
+      <%= render 'govuk_publishing_components/components/govspeak', {
+        direction: page_text_direction,
+      } do %>
+        <%= sanitize(legacy_pre_rendered_documents, {
+          attributes: %w(alt class data-module href id src),
+          tags: %w(a details div h2 img p section span summary),
+        }) %>
+      <% end %>
     <% else %>
       <% attachments.each do |attachment_id| %>
         <div class="attachment">
@@ -16,5 +21,6 @@
         </div>
       <% end %>
     <% end %>
+
   </section>
 <% end %>
