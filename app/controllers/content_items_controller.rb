@@ -92,30 +92,11 @@ private
       content_item["links"]["ordered_related_items"] = content_item["links"].fetch("suggested_ordered_related_items", [])
     end
 
-    if update_brexit_navigation?(content_item)
-      content_item["links"]["taxons"] = taxons_updated_for_brexit_test(content_item)
-    end
-
     @content_item = PresenterBuilder.new(
       content_item,
       content_item_path,
       view_context,
     ).presenter
-  end
-
-  def update_brexit_navigation?(content_item)
-    content_item["content_id"] == "7a616597-c921-47ba-bd50-7e73449e140b" # /visit-europe-1-january-2021
-  end
-
-  def taxons_updated_for_brexit_test(content_item)
-    content_item["links"]["taxons"].map do |taxon|
-      taxon["title"] = "The UK and EU transition: new rules for 2021" if brexit_taxon?(taxon)
-      taxon
-    end
-  end
-
-  def brexit_taxon?(taxon)
-    taxon["content_id"] == "d6c2de5d-ef90-45d1-82d4-5f2438369eea"
   end
 
   def format_banner_links(links, type)
