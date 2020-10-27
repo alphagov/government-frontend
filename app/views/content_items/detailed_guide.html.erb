@@ -24,6 +24,10 @@
     <%= render 'components/important-metadata', items: @content_item.important_metadata %>
 
     <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
+      <%= render "govuk_publishing_components/components/print_link", {
+        margin_top: 0,
+        margin_bottom: 6,
+      } %>
       <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
 
       <div class="responsive-bottom-margin">
@@ -34,6 +38,10 @@
           } %>
       </div>
     <% end %>
+    <%= render "govuk_publishing_components/components/print_link", {
+        margin_top: 0,
+        margin_bottom: 6,
+      } %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>
