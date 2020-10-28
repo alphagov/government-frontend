@@ -54,9 +54,11 @@
       <%= render 'shared/travel_advice_summary', content_item: @content_item %>
     <% end %>
 
-    <%= render 'govuk_publishing_components/components/govspeak',
-      content: @content_item.current_part_body.html_safe,
-      direction: page_text_direction %>
+    <%= render 'govuk_publishing_components/components/govspeak', {
+      direction: page_text_direction,
+    } do %>
+      <%= sanitize(@content_item.current_part_body) %>
+    <% end %>
 
     <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
