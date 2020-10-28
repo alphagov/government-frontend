@@ -57,7 +57,9 @@
   </div>
 
   <div class="main-content-container<% unless @content_item.contents.any? %> offset-empty-contents-list<% end %>">
-    <%= render 'govuk_publishing_components/components/govspeak_html_publication', @content_item.govspeak_body %>
+    <%= render "govuk_publishing_components/components/govspeak_html_publication", {} do %>
+      <%= sanitize(@content_item.govspeak_body[:content]) %>
+    <% end %>
   </div>
 
   <div data-sticky-element class="govuk-sticky-element">
