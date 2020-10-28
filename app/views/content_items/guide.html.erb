@@ -37,10 +37,12 @@
         </h1>
       <% end %>
 
-      <%= render 'govuk_publishing_components/components/govspeak',
-          content: @content_item.current_part_body.html_safe,
-          direction: page_text_direction,
-          disable_youtube_expansions: true %>
+      <%= render "govuk_publishing_components/components/govspeak", {
+        direction: page_text_direction,
+        disable_youtube_expansions: true
+      } do %>
+        <%= sanitize(@content_item.current_part_body) %>
+      <% end %>
 
       <% if @content_item.show_guide_navigation? %>
         <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
