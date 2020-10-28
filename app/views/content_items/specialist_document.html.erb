@@ -34,15 +34,17 @@
       <% end %>
 
       <div class="responsive-bottom-margin">
-        <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
+        <%= render "govuk_publishing_components/components/govspeak", {} do %>
+          <%= sanitize(@content_item.govspeak_body[:content]) %>
+        <% end %>
+
         <% if @content_item.continuation_link %>
-          <%= render(
-              'govuk_publishing_components/components/button',
-              start: true,
-              href: @content_item.continuation_link,
-              text: "Find out more",
-              info_text: @content_item.will_continue_on
-          ) %>
+          <%= render "govuk_publishing_components/components/button", {
+            href: @content_item.continuation_link,
+            info_text: @content_item.will_continue_on,
+            start: true,
+            text: "Find out more",
+          } %>
         <% end %>
       </div>
 
