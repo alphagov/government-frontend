@@ -43,6 +43,10 @@
   <% if @content_item.contents.any? %>
     <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
       <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
+      <%= render "govuk_publishing_components/components/print_link", {
+        margin_top: 0,
+        margin_bottom: 6,
+      } %>
     </div>
   <% end %>
 
@@ -58,5 +62,11 @@
 
   <div data-sticky-element class="govuk-sticky-element">
     <%= render 'components/back-to-top', href: "#contents" %>
+    <div class="govuk-sticky-element__print-link">
+      <%= render "govuk_publishing_components/components/print_link", {
+          margin_top: 0,
+          margin_bottom: 6,
+        } %>
+    </div>
   </div>
 </div>

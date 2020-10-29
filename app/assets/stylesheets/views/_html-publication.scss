@@ -56,6 +56,12 @@
     display: none;
   }
 
+  .govuk-sticky-element {
+    .govuk-sticky-element__print-link {
+      margin-left: govuk-spacing(3);
+    }
+  }
+
   @include govuk-media-query($until: desktop) {
     .govuk-sticky-element--enabled {
       position: static;
