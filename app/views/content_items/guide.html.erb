@@ -41,7 +41,7 @@
         direction: page_text_direction,
         disable_youtube_expansions: true
       } do %>
-        <%= sanitize(@content_item.current_part_body) %>
+        <%= raw(@content_item.current_part_body) %>
       <% end %>
 
       <% if @content_item.show_guide_navigation? %>

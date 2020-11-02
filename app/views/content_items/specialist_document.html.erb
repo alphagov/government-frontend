@@ -35,7 +35,7 @@
 
       <div class="responsive-bottom-margin">
         <%= render "govuk_publishing_components/components/govspeak", {} do %>
-          <%= sanitize(@content_item.govspeak_body[:content]) %>
+          <%= raw(@content_item.govspeak_body[:content]) %>
         <% end %>
 
         <% if @content_item.continuation_link %>

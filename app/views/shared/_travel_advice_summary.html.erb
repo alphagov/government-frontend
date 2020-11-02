@@ -3,7 +3,7 @@
     direction: page_text_direction,
   } do %>
     <div class="help-notice">
-      <%= sanitize(content_item.alert_status) %>
+      <%= raw(content_item.alert_status) %>
     </div>
   <% end %>
 <% end %>
