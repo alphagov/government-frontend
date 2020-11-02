@@ -33,7 +33,7 @@
       <%= render "govuk_publishing_components/components/govspeak", {
           direction: page_text_direction,
         } do %>
-          <%= sanitize(@content_item.body) %>
+          <%= raw(@content_item.body) %>
         <% end %>
     </div>
 

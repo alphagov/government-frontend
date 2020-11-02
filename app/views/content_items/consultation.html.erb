@@ -53,7 +53,7 @@
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>
-          <%= sanitize(@content_item.final_outcome_detail) %>
+          <%= raw(@content_item.final_outcome_detail) %>
         <% end %>
       </div>
     <% end %>
@@ -72,7 +72,7 @@
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>
-          <%= sanitize(@content_item.public_feedback_detail) %>
+          <%= raw(@content_item.public_feedback_detail) %>
         <% end %>
       </div>
     <% end %>
@@ -132,7 +132,7 @@
       } %>
 
       <%= render 'govuk_publishing_components/components/govspeak', {} do %>
-        <%= sanitize(@content_item.govspeak_body[:content]) %>
+        <%= raw(@content_item.govspeak_body[:content]) %>
       <% end %>
 
       <%= render "attachments",
@@ -180,7 +180,7 @@
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>
-          <%= sanitize(@ways_to_respond_body) %>
+          <%= raw(@ways_to_respond_body) %>
         <% end %>
       </div>
     <% end %>

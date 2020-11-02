@@ -31,12 +31,8 @@
       <%= render 'govuk_publishing_components/components/govspeak', {
         direction: page_text_direction,
       } do %>
-        <%= sanitize(@content_item.body, {
-          attributes: %w(id class href),
-        }) %>
-        <%= sanitize(@additional_body, {
-          attributes: %w(id class href),
-        }) %>
+        <%= raw(@content_item.body) %>
+        <%= raw(@additional_body) %>
       <% end %>
     <% end %>
   </div>

@@ -9,7 +9,7 @@
     <%= render 'govuk_publishing_components/components/govspeak', {
         direction: page_text_direction,
       } do %>
-      <%= sanitize(group["body"]) %>
+      <%= raw(group["body"]) %>
     <% end %>
   <% end %>
 
