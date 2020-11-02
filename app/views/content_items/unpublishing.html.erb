@@ -6,7 +6,9 @@
       The information on this page has been removed because it was published in error.
     </p>
 
-    <%= render 'govuk_publishing_components/components/govspeak', content: raw(@content_item.explanation) %>
+    <%= render "govuk_publishing_components/components/govspeak", {} do %>
+      <%= sanitize(@content_item.explanation) %>
+    <% end %>
 
     <% if @content_item.alternative_url.present? %>
       <p class="alternative">

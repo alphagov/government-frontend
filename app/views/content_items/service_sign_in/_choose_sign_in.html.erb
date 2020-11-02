@@ -27,7 +27,9 @@
   <%= render "govuk_publishing_components/components/fieldset", legend_text: legend_text do %>
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <%= render 'govuk_publishing_components/components/govspeak', content: raw(@content_item.description) %>
+        <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+          <%= sanitize(@content_item.description) %>
+        <% end %>
         <% if @error %>
           <%= render "components/error-message", text: t('service_sign_in.error.option') %>
         <% end %>

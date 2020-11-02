@@ -1,6 +1,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', title: @content_item.title %>
-    <%= render 'govuk_publishing_components/components/govspeak', content: @content_item.body.html_safe %>
+    <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+      <% sanitize(@content_item.body) %>
+    <% end %>
   </div>
 </div>

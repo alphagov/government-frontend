@@ -47,7 +47,11 @@
     <div class="govuk-grid-column-two-thirds">
       <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
         <div class="responsive-bottom-margin">
-          <%= render 'govuk_publishing_components/components/govspeak', content: "#{@content_item.body}#{@additional_body}".html_safe %>
+          <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+            <%= sanitize("#{@content_item.body}#{@additional_body}", {
+              attributes: %w(id href),
+            }) %>
+          <% end %>
         </div>
       <% end %>
     </div>

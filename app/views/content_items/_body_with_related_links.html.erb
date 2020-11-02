@@ -9,9 +9,11 @@
 
 <div class="govuk-grid-row responsive-bottom-margin">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/govspeak',
-               { direction: page_text_direction, disable_youtube_expansions: true } do %>
-      <%= raw @content_item.body %>
+    <%= render 'govuk_publishing_components/components/govspeak', {
+      direction: page_text_direction,
+      disable_youtube_expansions: true,
+    } do %>
+      <%= sanitize(@content_item.body) %>
     <% end %>
 
     <% if @content_item.last_updated && @content_item.schema_name == "help_page" %>

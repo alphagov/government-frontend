@@ -4,10 +4,13 @@
 
 <% @content_item.groups.each_with_index do |group, group_index| %>
   <%= @content_item.group_heading(group) %>
+
   <% if group["body"].present? %>
-    <%= render 'govuk_publishing_components/components/govspeak',
-        content: raw(group["body"]),
-        direction: page_text_direction %>
+    <%= render 'govuk_publishing_components/components/govspeak', {
+        direction: page_text_direction,
+      } do %>
+      <%= sanitize(group["body"]) %>
+    <% end %>
   <% end %>
 
   <div data-module="track-click">

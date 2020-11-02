@@ -17,9 +17,11 @@
     <%= render "components/contents-list-with-body", {
       contents: @content_item.contents,
     } do %>
-      <%= render 'govuk_publishing_components/components/govspeak',
-          content: @content_item.body.html_safe,
-          direction: page_text_direction %>
+      <%= render "govuk_publishing_components/components/govspeak", {
+        direction: page_text_direction,
+      } do %>
+        <%= sanitize(@content_item.body) %>
+      <% end %>
     <% end %>
   </div>
   <%= render 'shared/sidebar_navigation' %>

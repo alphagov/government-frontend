@@ -30,9 +30,11 @@
           credit: @content_item.image["credit"],
           caption: @content_item.image["caption"] if @content_item.image %>
 
-      <%= render 'govuk_publishing_components/components/govspeak',
-          content: @content_item.body.html_safe,
-          direction: page_text_direction %>
+      <%= render "govuk_publishing_components/components/govspeak", {
+          direction: page_text_direction,
+        } do %>
+          <%= sanitize(@content_item.body) %>
+        <% end %>
     </div>
 
     <%= render 'components/published-dates', {

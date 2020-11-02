@@ -36,13 +36,16 @@
 
 
       <section id="details">
-        <%= render 'govuk_publishing_components/components/heading',
+        <%= render "govuk_publishing_components/components/heading", {
           text: t("publication.details"),
-          mobile_top_margin: true %>
+          mobile_top_margin: true,
+        } %>
 
-        <%= render 'govuk_publishing_components/components/govspeak',
-                   content: @content_item.details.html_safe,
-                   direction: page_text_direction %>
+        <%= render "govuk_publishing_components/components/govspeak", {
+          direction: page_text_direction,
+        } do %>
+          <%= sanitize(@content_item.details) %>
+        <% end %>
       </section>
     </div>
 
