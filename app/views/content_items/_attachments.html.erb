@@ -9,7 +9,7 @@
         direction: page_text_direction,
       } do %>
         <%= sanitize(legacy_pre_rendered_documents, {
-          attributes: %w(alt class data-module href id src),
+          attributes: %w(alt class href id src data-module data-track-category data-track-action data-track-label data-track-options data-details-track-click),
           tags: %w(a details div h2 img p section span summary),
         }) %>
       <% end %>
