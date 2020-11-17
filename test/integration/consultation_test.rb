@@ -154,7 +154,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
   test "share urls" do
     setup_and_visit_content_item("open_consultation")
-    assert page.has_css?("a", text: "Share on Facebook")
-    assert page.has_css?("a", text: "Share on Twitter")
+    assert page.has_css?("a", text: "Facebook")
+    assert page.has_css?("a", text: "Twitter")
   end
 end
