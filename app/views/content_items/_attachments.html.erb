@@ -10,7 +10,7 @@
       } do %>
         <%= sanitize(legacy_pre_rendered_documents, {
           attributes: %w(alt class href id src data-module data-track-category data-track-action data-track-label data-track-options data-details-track-click),
-          tags: %w(a details div h3 img p section span summary),
+          tags: %w(a details div h2 h3 img p section span summary),
         }) %>
       <% end %>
     <% else %>
