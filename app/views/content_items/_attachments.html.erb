@@ -16,8 +16,10 @@
     <% else %>
       <% attachments.each do |attachment_id| %>
         <div class="attachment">
-          <%= render 'govuk_publishing_components/components/attachment',
-              attachment: @content_item.attachment_details(attachment_id) %>
+          <%= render 'govuk_publishing_components/components/attachment', {
+            heading_level: 3,
+            attachment: @content_item.attachment_details(attachment_id)
+          } %>
         </div>
       <% end %>
     <% end %>
