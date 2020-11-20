@@ -61,15 +61,14 @@ module ContentItem
     end
 
     def normalised_group_links(group)
-      group["contents"].map do |group_item|
-        normalised_group_item_link(group_item)
-      end
+      group["contents"].map { |group_item| normalised_group_item_link(group_item) }.compact
     end
 
     def normalised_group_item_link(group_item)
       if group_item.is_a?(String)
         group_item_link = corporate_information_page_links.find { |l| l["content_id"] == group_item }
-        view_context.link_to(group_item_link["title"], group_item_link["base_path"])
+        # it's possible for corporation_information_groups in details and links hashes to be out of sync.
+        view_context.link_to(group_item_link["title"], group_item_link["base_path"]) if group_item_link
       else
         view_context.link_to(group_item["title"], group_item["path"] || group_item["url"])
       end
