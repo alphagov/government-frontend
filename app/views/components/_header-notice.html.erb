@@ -6,12 +6,14 @@
   featured_link ||= false
 %>
 <% if title && description %>
-  <section class="app-c-header-notice" aria-label="notice" role="region" lang="en">
+  <section class="app-c-header-notice" aria-labelledby="notification-banner-title" role="region" lang="en">
     <div class="app-c-header-notice__header">
-      <h2 class="app-c-header-notice__title"><%= title %></h2>
+      <h2 class="app-c-header-notice__title" id="notification-banner-title"><%= t('components.header_notice.title', locale: :en) %></h2>
     </div>
 
     <div class="app-c-header-notice__content">
+      <p class="app-c-header-notice__heading"><%= title %></p>
+
       <% if description.is_a? Array %>
         <% description.map do |line| %>
           <p class="app-c-header-notice__text govuk-body"><%= line %></p>
@@ -19,6 +21,11 @@
       <% else %>
         <p class="app-c-header-notice__text govuk-body"><%= description %></p>
       <% end %>
+
+      <% if featured_link %>
+        <p class="app-c-header-notice__text govuk-body"><%= featured_link %></p>
+      <% end %>
+
       <% if links.any? %>
         <div class="app-c-header-notice__links">
           <% if links.count == 1 %>
@@ -28,17 +35,13 @@
             </p>
           <% else %>
             <% if link_intro %><p class="govuk-body app-c-header-notice__link-intro"><%= link_intro %></p><% end %>
-            <ul class="app-c-header-notice__list govuk-list">
+            <ul class="app-c-header-notice__list govuk-list govuk-list--bullet">
               <% links.each do |link| %>
                 <li><%= link_to(link[:title], link[:href], data: link[:data_attributes], class: "app-c-header-notice__link") %></li>
               <% end %>
             </ul>
           <% end %>
         </div>
-      <% end %>
-
-      <% if featured_link %>
-        <p class="app-c-header-notice__text govuk-body"><%= featured_link %></p>
       <% end %>
     </div>
   </section>

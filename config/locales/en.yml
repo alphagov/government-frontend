@@ -36,6 +36,8 @@ en:
   common:
     last_updated: "Last updated"
   components:
+    header_notice:
+      title: Important
     figure:
       image_credit: "Image credit: %{credit}"
     share_links:

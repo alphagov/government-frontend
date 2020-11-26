@@ -1,23 +1,54 @@
 .app-c-header-notice {
-  margin-bottom: govuk-spacing(8);
+  @include govuk-font($size: 19);
+  @include govuk-responsive-margin(8, "bottom");
+
+  border: $govuk-border-width solid govuk-colour("black");
+  background-color: govuk-colour("white");
+
+  &:focus {
+    outline: $govuk-focus-width solid $govuk-focus-colour;
+  }
 }
 
 .app-c-header-notice__header {
+  padding: 2px govuk-spacing(3) govuk-spacing(1);
   background-color: govuk-colour("black");
-  padding: govuk-spacing(4);
+
+  // Ensures the notification header appears separate to the notification body text in high contrast mode
+  border-bottom: 1px solid transparent;
+
+  @include govuk-media-query($from: tablet) {
+    padding: 2px govuk-spacing(4) govuk-spacing(1);
+  }
 }
 
 .app-c-header-notice__title {
-  @extend %govuk-heading-m;
-  color: govuk-colour("white");
+  @include govuk-font($size: 19, $weight: bold);
+
   margin: 0;
-}
+  padding: 0;
+  color: govuk-colour("white");
+ }
 
 .app-c-header-notice__content {
-  border-left: $govuk-border-width solid govuk-colour("black");
-  border-right: $govuk-border-width solid govuk-colour("black");
-  border-bottom: $govuk-border-width solid govuk-colour("black");
-  padding: govuk-spacing(4);
+  @include govuk-text-colour;
+  padding: govuk-spacing(3);
+  background-color: $govuk-body-background-colour;
+  max-width: 590px;
+
+  @include govuk-media-query($from: tablet) {
+    padding: govuk-spacing(4);
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.app-c-header-notice__heading {
+  @include govuk-font($size: 24, $weight: bold);
+  margin: 0 0 govuk-spacing(3);
+  padding: 0;
 }
 
 .app-c-header-notice__text {
@@ -38,10 +69,6 @@
 }
 
 .app-c-header-notice__link {
-  @extend %govuk-link;
-  font-weight: bold;
-}
-
-.app-c-header-notice__content .app-c-header-notice__text:last-child {
-  margin-bottom: 0;
+  @include govuk-link-common;
+  @include govuk-link-style-no-visited-state;
 }
