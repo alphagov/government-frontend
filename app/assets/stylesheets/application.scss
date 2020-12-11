@@ -49,6 +49,7 @@ $govuk-new-link-styles: true;
 // government-frontend mixins
 @import 'mixins/margins';
 @import 'mixins/white-links';
+@import 'mixins/typography';
 
 // helpers for common page elements
 @import 'helpers/sidebar-with-body';
@@ -88,4 +89,27 @@ $govuk-new-link-styles: true;
 @import 'views/specialist-document';
 @import 'views/answer';
 @import 'views/help-page';
-@import "views/guide";
+@import 'views/guide';
+@import 'views/get-involved';
+@import 'views/headings';
+@import 'helpers/featured_news';
+
+.travel-advice-notice {
+  background-color: govuk-colour("light-grey");
+  border: 1px solid $govuk-border-colour;
+  margin-bottom: govuk-spacing(7);
+  position: relative;
+}
+
+.travel-advice-notice__header {
+  padding: govuk-spacing(4) govuk-spacing(4) 0 govuk-spacing(3);
+}
+
+.travel-advice-notice__content {
+  margin-top: - govuk-spacing(3);
+  padding: 0 govuk-spacing(4) 0 govuk-spacing(9);
+}
+
+.travel-advice-notice__icon {
+  margin-left: govuk-spacing(3);
+}
