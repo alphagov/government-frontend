@@ -1,7 +1,6 @@
 class GetInvolvedController < ApplicationController
-
   attr_accessor :content_item
-  
+
   def show
     load_content_item
     load_get_involved_data
@@ -24,12 +23,12 @@ class GetInvolvedController < ApplicationController
   end
 
   def load_get_involved_data
-    @open_consultation_count = retrieve_given_document_type("open_consultation")['total']
+    @open_consultation_count = retrieve_given_document_type("open_consultation")["total"]
     @closed_consultation_count = retrieve_date_filtered_closed_consultations(12)
-    @next_closing_consultations = [retrieve_next_closing] 
+    @next_closing_consultations = [retrieve_next_closing]
     @recently_opened_consultations = retrieve_new_consultations
     @recent_consultation_outcomes = retrieve_consultation_outcomes
-    @take_part_pages = sort_take_part(retrieve_given_document_type("take_part")['results'])
+    @take_part_pages = sort_take_part(retrieve_given_document_type("take_part")["results"])
   end
 
   def retrieve_given_document_type(document_type)
@@ -46,49 +45,50 @@ class GetInvolvedController < ApplicationController
   def retrieve_date_filtered_closed_consultations(months)
     closed_count = 0
 
-    cl_docs = retrieve_special({document_type: 'closed_consultation', per_page: 500, fields: ['details']})['results']
-    cl_docs.sort_by! { |k| -k['details']['closing_date'] }.reverse!
+    # Has to be a better way of doing this, will fail to count more than 500 results
+    cl_docs = retrieve_special({ document_type: "closed_consultation", per_page: 500, fields: %w[details] })["results"]
+    cl_docs.sort_by! { |k| -k["details"]["closing_date"] }.reverse!
 
     cl_docs.each do |doc|
-      if DateTime.parse(doc['details']['closing_date']) > DateTime.now.prev_month(months)
+      if Time.zone.parse(doc["details"]["closing_date"]) > Time.zone.now.prev_month(months)
         closed_count += 1
       else
         break
       end
     end
 
-    return closed_count # hard return for clarity
+    closed_count # hard return for clarity
   end
 
   def retrieve_next_closing
-    open_consults = retrieve_given_document_type("open_consultation")['results']
-    open_consults.sort_by! { |k| k['details']['closing_date'] }[0]
+    open_consults = retrieve_given_document_type("open_consultation")["results"]
+    open_consults.sort_by! { |k| k["details"]["closing_date"] }[0]
   end
 
   def retrieve_new_consultations
-    open_consults = retrieve_given_document_type("open_consultation")['results']
-    sorted_desc = open_consults.sort_by! { |k| k['details']['opening_date'] }.reverse!.values_at(0..2)
+    open_consults = retrieve_given_document_type("open_consultation")["results"]
+    sorted_desc = open_consults.sort_by! { |k| k["details"]["opening_date"] }.reverse!.values_at(0..2)
     parse_organisation_acronyms(sorted_desc)
   end
 
   def retrieve_consultation_outcomes
-    closed_consults = retrieve_given_document_type("consultation_outcome")['results']
-    sorted_desc = closed_consults.sort_by! { |k| k['details']['closing_date'] }.reverse!.values_at(0..2)
+    closed_consults = retrieve_given_document_type("consultation_outcome")["results"]
+    sorted_desc = closed_consults.sort_by! { |k| k["details"]["closing_date"] }.reverse!.values_at(0..2)
     parse_organisation_acronyms(sorted_desc)
   end
 
   def parse_organisation_acronyms(consultations)
     consultations.each do |consultation|
       org_acronyms = []
-      organisations = consultation['links']['organisations']
+      organisations = consultation["links"]["organisations"]
       organisations.each do |org_id|
-        org_acronyms << Services.publishing_api.get_live_content(org_id).parsed_content['details']['acronym']
+        org_acronyms << Services.publishing_api.get_live_content(org_id).parsed_content["details"]["acronym"]
       end
-      consultation['links']['organisation_acronyms'] = org_acronyms
+      consultation["links"]["organisation_acronyms"] = org_acronyms
     end
   end
 
   def sort_take_part(take_part_pages)
-    take_part_pages.sort_by{ |page| page["details"]["ordering"] }
+    take_part_pages.sort_by { |page| page["details"]["ordering"] }
   end
 end

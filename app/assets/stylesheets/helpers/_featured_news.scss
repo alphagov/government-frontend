@@ -1,6 +1,8 @@
+// stylelint-disable max-nesting-depth
 .featured-news {
   article {
     clear: both;
+
     .govuk-link {
       line-height: 1.16;
     }
@@ -17,24 +19,25 @@
 
       .image-holder {
         float: left;
-        @include govuk-media-query($from: tablet){
+
+        @include govuk-media-query($from: tablet) {
           float: none;
         }
 
         .img {
           display: block;
           padding: govuk-spacing(1) govuk-spacing(3) 0 0;
+          width: 100%;
+
           @include govuk-media-query($from: tablet) {
             padding: 0;
           }
-
-          img {
-            width: 100%;
-          }
         }
       }
+
       .text {
         float: left;
+
         @include govuk-media-query($from: tablet) {
           float: none;
         }
@@ -44,18 +47,22 @@
           color: $govuk-secondary-text-colour;
           padding-bottom: 0;
         }
+
         h2 {
           @include ig-core-19;
           padding-top: 0;
+
           a {
             font-weight: bold;
           }
         }
+
         h3 {
           @include govuk-font(19);
           font-weight: bold;
-          padding: govuk-spacing(1) 0 govuk-spacing(2) ;
+          padding: govuk-spacing(1) 0 govuk-spacing(2);
         }
+
         .summary {
           @include ig-core-14;
         }

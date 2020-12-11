@@ -1,6 +1,5 @@
 //  GOV.UK typography palettes
 
-
 //  ANATOMY OF A TYPE STYLE
 //  -----------------------
 //  These are a collection of graphic styles. They are deliberately
@@ -31,7 +30,6 @@
 //        on the 10px baseline grid.
 //  }
 
-
 // CORE FONTS - NEW TRANSPORT
 
 // Suitable for page headings
@@ -39,6 +37,7 @@
   @include govuk-font(48);
   padding-top: 12px;
   padding-bottom: 8px;
+
   @media (max-width: 640px) {
     padding-top: 8px;
     padding-bottom: 7px;
@@ -50,6 +49,7 @@
   @include govuk-font(36);
   padding-top: 6px;
   padding-bottom: 9px;
+
   @media (max-width: 640px) {
     padding-top: 8px;
     padding-bottom: 7px;
@@ -61,6 +61,7 @@
   @include govuk-font(27);
   padding-top: 2px;
   padding-bottom: 3px;
+
   @media (max-width: 640px) {
     padding-top: 7px;
     padding-bottom: 3px;
@@ -72,6 +73,7 @@
   @include govuk-font(24);
   padding-top: 3px;
   padding-bottom: 2px;
+
   @media (max-width: 640px) {
     padding-top: 7px;
     padding-bottom: 7px;
@@ -83,6 +85,7 @@
   @include govuk-font(19);
   padding-top: 7px;
   padding-bottom: 3px;
+
   @media (max-width: 640px) {
     padding-top: 6px;
     padding-bottom: 4px;
@@ -94,6 +97,7 @@
   @include govuk-font(16);
   padding-top: 5px;
   padding-bottom: 5px;
+
   @media (max-width: 640px) {
     padding-top: 6px;
     padding-bottom: 4px;
@@ -103,9 +107,9 @@
 // Suitable for captions, buttons etc
 @mixin ig-core-14 {
   @include govuk-font(14);
-
   padding-top: 6px;
   padding-bottom: 4px;
+
   @media (max-width: 640px) {
     padding-top: 4px;
     padding-bottom: 1px;
@@ -116,9 +120,10 @@
   a,
   a:visited,
   a:hover {
-    color: white;
+    color: govuk-colour("white");
     text-decoration: underline;
   }
+
   a:active {
     color: $govuk-link-active-colour;
   }

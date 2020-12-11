@@ -6,14 +6,15 @@
   .heading {
     padding: govuk-spacing(3) 0;
 
-    @include govuk-media-query($from: tablet){
-      padding: govuk-spacing(6)*1.5 0;
+    @include govuk-media-query($from: tablet) {
+      padding: govuk-spacing(6) * 1.5 0;
     }
 
     h1 {
       @include govuk-font(36);
       font-weight: bold;
     }
+
     .type,
     .type a {
       @include govuk-font(27);
@@ -24,14 +25,14 @@
   }
 
   .heading-big {
-    @extend .heading;
+    @extend .heading; // stylelint-disable-line scss/at-extend-no-missing-placeholder
 
     h1 {
       @include govuk-font(48);
       font-weight: bold;
     }
 
-    .inner-heading{
+    .inner-heading {
       padding: 0 15px;
     }
   }
