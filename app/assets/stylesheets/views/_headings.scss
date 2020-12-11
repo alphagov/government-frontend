@@ -1,0 +1,49 @@
+.headings-block {
+
+  @include govuk-clearfix;
+  margin-top: 0;
+
+  .heading {
+    padding: govuk-spacing(3) 0;
+
+    @include govuk-media-query($from: tablet){
+      padding: govuk-spacing(6)*1.5 0;
+    }
+
+    h1 {
+      @include govuk-font(36);
+      font-weight: bold;
+    }
+    .type,
+    .type a {
+      @include govuk-font(27);
+      color: $govuk-secondary-text-colour;
+      margin-bottom: govuk-spacing(1);
+      text-decoration: none;
+    }
+  }
+
+  .heading-big {
+    @extend .heading;
+
+    h1 {
+      @include govuk-font(48);
+      font-weight: bold;
+    }
+
+    .inner-heading{
+      padding: 0 15px;
+    }
+  }
+
+  .intro-paragraph {
+    padding: 0 govuk-spacing(3);
+    margin-bottom: govuk-spacing(6);
+    @include govuk-font(27);
+    max-width: 27em;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
