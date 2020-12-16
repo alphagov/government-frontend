@@ -75,6 +75,7 @@ module GovernmentFrontend
       no
       nl
       pa
+      pa-ur
       pl
       ps
       pt
