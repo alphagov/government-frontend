@@ -128,7 +128,7 @@ private
   end
 
   def facets_with_friendly_values
-    sorted_facets_with_values.map do |facet|
+    facets_with_values.map do |facet|
       facet_key = facet["key"]
       # Cast all values into an array
       values = [facet_values[facet_key]].flatten
@@ -146,14 +146,13 @@ private
     end
   end
 
-  def sorted_facets_with_values
+  def facets_with_values
     return [] unless facets && facet_values.any?
 
     facets
       .select { |f| facet_values[f["key"]] && facet_values[f["key"]].present? }
       .reject { |f| f["key"] == first_published_at_facet_key }
       .reject { |f| f["key"] == internal_notes_facet_key }
-      .sort_by { |f| f["type"] }
   end
 
   def friendly_facet_date(dates)
