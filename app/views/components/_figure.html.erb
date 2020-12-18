@@ -4,20 +4,19 @@
   credit ||= ''
 %>
 <figure class="app-c-figure" lang="en">
-    <% unless src.blank? %>
-      <img class="app-c-figure__image" src="<%= src %>" alt="<%= alt %>">
+  <% if src.present? %>
+    <img class="app-c-figure__image" src="<%= src %>" alt="<%= alt %>">
+  <% end %>
+  <figcaption class="app-c-figure__figcaption">
+    <% if caption.present? %>
+      <p class="app-c-figure__figcaption-text">
+        <%= caption %>
+      </p>
     <% end %>
-    <figcaption class="app-c-figure__figcaption">
-      <% unless caption.blank? %>
-        <p class="app-c-figure__figcaption-text">
-          <%= caption %>
+    <% if credit.present? %>
+        <p class="app-c-figure__figcaption-credit">
+          <%= I18n.t("components.figure.image_credit", credit: credit) %>
         </p>
-      <% end %>
-
-      <% if credit.present? %>
-          <p class="app-c-figure__figcaption-credit">
-            <%= I18n.t("components.figure.image_credit", credit: credit) %>
-          </p>
-      <% end %>
-    </figcaption>
+    <% end %>
+  </figcaption>
 </figure>
