@@ -11,6 +11,11 @@ class FigureTest < ComponentTestCase
     end
   end
 
+  test "fails to render an image when no source is given" do
+    render_component(src: "", alt: "")
+    assert_select "img", false, "Should not have drawn img tag with no src"
+  end
+
   test "renders a figure correctly" do
     render_component(src: "/image", alt: "image alt text")
     assert_select ".app-c-figure__image[src=\"/image\"]"
