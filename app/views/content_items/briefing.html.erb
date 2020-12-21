@@ -1,0 +1,28 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <%= render 'govuk_publishing_components/components/title', title: @content_item.title %>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds content-bottom-margin">
+    <div class="responsive-bottom-margin">
+      <%= render "govuk_publishing_components/components/govspeak", {
+        direction: page_text_direction,
+      } do %>
+        <%= raw(@content_item.body) %>
+      <% end %>
+    </div>
+
+    <div class="dont-print responsive-bottom-margin">
+      <%= render 'govuk_publishing_components/components/share_links',
+        links: @content_item.share_links,
+        track_as_sharing: true,
+        title: t('components.share_links.share_this_page')
+      %>
+    </div>
+  </div>
+</div>
