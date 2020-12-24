@@ -23,12 +23,12 @@ module ContentItem
     end
 
     def no_deal_notice_title
-      "New rules for January 2021"
+      "Brexit transition: new rules for 2021"
     end
 
     def no_deal_notice_description
-      ["The UK has left the EU, and the transition period after Brexit comes to an end this year.",
-       "This page tells you what you'll need to do from 1 January 2021. It will be updated if anything changes."]
+      ["The UK has left the EU. This page tells you the new rules from 1 January 2021.",
+       "It will be updated if there’s new information about the UK’s deal with the EU that affects what you need to do."]
     end
 
     def no_deal_notice_link_intro
@@ -40,13 +40,13 @@ module ContentItem
         "module": "track-click",
         "track-category": "no_deal_notice",
         "track-action": "/transition",
-        "track-label": "the transition period",
+        "track-label": "Get your personalised list of actions",
       }
 
-      featured_link = view_context.link_to("the transition period", "/transition", data: data_attributes, class: "govuk-link")
-      featured_link_intro = no_deal_notice_links.any? ? "You can also read about" : "Check what else you need to do during"
+      featured_link = view_context.link_to("Get your personalised list of actions", "/transition", data: data_attributes, class: "govuk-link")
+      featured_link_text = " and subscribe to email updates to find out when things change."
 
-      (featured_link_intro + " " + featured_link + ".").html_safe
+      (featured_link + featured_link_text).html_safe
     end
 
     def no_deal_links
