@@ -19,6 +19,9 @@
       <% else %>
         <p class="app-c-header-notice__text govuk-body"><%= description %></p>
       <% end %>
+      <% if featured_link %>
+        <p class="app-c-header-notice__text govuk-body"><%= featured_link %></p>
+      <% end %>
       <% if links.any? %>
         <div class="app-c-header-notice__links">
           <% if links.count == 1 %>
@@ -37,9 +40,7 @@
         </div>
       <% end %>
 
-      <% if featured_link %>
-        <p class="app-c-header-notice__text govuk-body"><%= featured_link %></p>
-      <% end %>
+
     </div>
   </section>
 <% end %>
