@@ -27,8 +27,7 @@ module ContentItem
     end
 
     def no_deal_notice_description
-      ["The UK has left the EU. This page tells you the new rules from 1 January 2021.",
-       "It will be updated if there’s new information about the UK’s deal with the EU that affects what you need to do."]
+      "The UK has agreed a deal with the EU. This page tells you the new rules from 1 January 2021."
     end
 
     def no_deal_notice_link_intro
@@ -43,10 +42,12 @@ module ContentItem
         "track-label": "Get your personalised list of actions",
       }
 
-      featured_link = view_context.link_to("Get your personalised list of actions", "/transition", data: data_attributes, class: "govuk-link")
-      featured_link_text = " and subscribe to email updates to find out when things change."
+      featured_link = view_context.link_to("get a personalised list of actions",
+                                           "/transition",
+                                           data: data_attributes,
+                                           class: "govuk-link")
 
-      (featured_link + featured_link_text).html_safe
+      ("Use the Brexit checker to " + featured_link + " and sign up for email updates.").html_safe
     end
 
     def no_deal_links
