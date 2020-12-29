@@ -1,6 +1,6 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
-  include ContentItem::NoDealNotice
+  include ContentItem::BrexitNotice
 
   attr_reader :content_item,
               :requested_path,
