@@ -1,40 +1,40 @@
 module ContentItem
-  module NoDealNotice
-    def has_no_deal_notice?
+  module BrexitNotice
+    def has_brexit_notice?
       content_item.dig("details").key?("brexit_no_deal_notice")
     end
 
-    def no_deal_notice_component
-      if has_no_deal_notice?
+    def brexit_notice_component
+      if has_brexit_notice?
         {
-          title: no_deal_notice_title,
-          description: no_deal_notice_description,
-          link_intro: no_deal_notice_link_intro,
-          links: no_deal_links,
-          featured_link: no_deal_landing_page_cta,
+          title: brexit_notice_title,
+          description: brexit_notice_description,
+          link_intro: brexit_notice_link_intro,
+          links: brexit_links,
+          featured_link: brexit_landing_page_cta,
         }
       end
     end
 
   private
 
-    def no_deal_notice_links
+    def brexit_notice_links
       content_item.dig("details", "brexit_no_deal_notice")
     end
 
-    def no_deal_notice_title
+    def brexit_notice_title
       "Brexit transition: new rules for 2021"
     end
 
-    def no_deal_notice_description
+    def brexit_notice_description
       "The UK has agreed a deal with the EU. This page tells you the new rules from 1 January 2021."
     end
 
-    def no_deal_notice_link_intro
+    def brexit_notice_link_intro
       "For current information, read: "
     end
 
-    def no_deal_landing_page_cta
+    def brexit_landing_page_cta
       data_attributes = {
         "module": "track-click",
         "track-category": "no_deal_notice",
@@ -50,8 +50,8 @@ module ContentItem
       ("Use the Brexit checker to " + featured_link + " and sign up for email updates.").html_safe
     end
 
-    def no_deal_links
-      no_deal_notice_links.map do |link|
+    def brexit_links
+      brexit_notice_links.map do |link|
         {
           title: link["title"],
           href: link["href"],

@@ -1,47 +1,47 @@
-.app-c-header-notice {
+.app-c-brexit-notice {
   margin-bottom: govuk-spacing(8);
 }
 
-.app-c-header-notice__header {
+.app-c-brexit-notice__header {
   background-color: govuk-colour("black");
   padding: govuk-spacing(4);
 }
 
-.app-c-header-notice__title {
+.app-c-brexit-notice__title {
   @extend %govuk-heading-m;
   color: govuk-colour("white");
   margin: 0;
 }
 
-.app-c-header-notice__content {
+.app-c-brexit-notice__content {
   border-left: $govuk-border-width solid govuk-colour("black");
   border-right: $govuk-border-width solid govuk-colour("black");
   border-bottom: $govuk-border-width solid govuk-colour("black");
   padding: govuk-spacing(4);
 }
 
-.app-c-header-notice__text {
+.app-c-brexit-notice__text {
   margin-bottom: govuk-spacing(2);
 }
 
-.app-c-header-notice__links {
+.app-c-brexit-notice__links {
   margin-bottom: govuk-spacing(2);
 }
 
-.app-c-header-notice__list {
+.app-c-brexit-notice__list {
   margin-top: -5px;
   margin-bottom: 0;
 }
 
-.app-c-header-notice__link-intro {
+.app-c-brexit-notice__link-intro {
   margin-bottom: govuk-spacing(2);
 }
 
-.app-c-header-notice__link {
+.app-c-brexit-notice__link {
   @extend %govuk-link;
   font-weight: bold;
 }
 
-.app-c-header-notice__content .app-c-header-notice__text:last-child {
+.app-c-brexit-notice__content .app-c-brexit-notice__text:last-child {
   margin-bottom: 0;
 }
