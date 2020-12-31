@@ -19,9 +19,6 @@
       <% else %>
         <p class="app-c-brexit-notice__text govuk-body"><%= description %></p>
       <% end %>
-      <% if featured_link %>
-        <p class="app-c-brexit-notice__text govuk-body"><%= featured_link %></p>
-      <% end %>
       <% if links.any? %>
         <div class="app-c-brexit-notice__links">
           <% if links.count == 1 %>
@@ -39,8 +36,9 @@
           <% end %>
         </div>
       <% end %>
-
-
+      <% if featured_link %>
+        <p class="app-c-brexit-notice__text govuk-body"><%= featured_link %></p>
+      <% end %>
     </div>
   </section>
 <% end %>

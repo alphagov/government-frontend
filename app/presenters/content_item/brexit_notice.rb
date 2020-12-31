@@ -23,15 +23,15 @@ module ContentItem
     end
 
     def brexit_notice_title
-      "Brexit transition: new rules for 2021"
+      "This guidance has been withdrawn"
     end
 
     def brexit_notice_description
-      "The UK has agreed a deal with the EU. This page tells you the new rules from 1 January 2021."
+      "The Brexit transition period has ended and new rules now apply. This page has been withdrawn because it’s out of date. "
     end
 
     def brexit_notice_link_intro
-      "For current information, read: "
+      "For current information about what you need to do, read: "
     end
 
     def brexit_landing_page_cta
@@ -42,12 +42,12 @@ module ContentItem
         "track-label": "Get your personalised list of actions",
       }
 
-      featured_link = view_context.link_to("get a personalised list of actions",
+      featured_link = view_context.link_to("other actions you need to take",
                                            "/transition",
                                            data: data_attributes,
                                            class: "govuk-link")
 
-      ("Use the Brexit checker to " + featured_link + " and sign up for email updates.").html_safe
+      ("You can also get a personalised list of the " + featured_link + ".").html_safe
     end
 
     def brexit_links
