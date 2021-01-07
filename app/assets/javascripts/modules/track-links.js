@@ -4,10 +4,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   function TrackLinks () { }
 
-  TrackLinks.prototype.start = function ($module) {
-    $module = $module[0]
-    var category = $module.getAttribute('data-track-links-category')
-    var links = $module.querySelectorAll('a')
+  TrackLinks.prototype.start = function ($element) {
+    $element = $element[0]
+    var category = $element.getAttribute('data-track-links-category')
+    var links = $element.querySelectorAll('a')
 
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', function (event) {
