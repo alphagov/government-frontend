@@ -19,7 +19,6 @@
 .app-c-figure__figcaption {
   @include govuk-font(16);
 
-
   @include govuk-media-query($from: tablet) {
     @include govuk-font(14);
 

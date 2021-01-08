@@ -21,12 +21,6 @@
     margin-top: govuk-spacing(3);
   }
 
-  .main-content-container {
-    .direction-rtl & {
-      float: left;
-    }
-  }
-
   .contents-list-container {
     .direction-rtl & {
       float: right;
@@ -41,6 +35,10 @@
     @include govuk-media-query($from: desktop) {
       width: 75%;
       float: right;
+    }
+
+    .direction-rtl & {
+      float: left;
     }
   }
 

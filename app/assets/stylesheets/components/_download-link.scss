@@ -7,11 +7,10 @@
   @include govuk-media-query($from: tablet) {
     margin-top: govuk-spacing(6);
   }
-
 }
 
 .app-c-download-link__icon {
-  margin-right: 0.5em;
+  margin-right: .5em;
   height: 1.31578947368em; // 25 / 19
   width: 1.31578947368em;
   vertical-align: middle;
