@@ -5,25 +5,24 @@
   if (typeof global.GOVUK === 'undefined') { global.GOVUK = {} }
   var GOVUK = global.GOVUK
 
-
   function Webchat (options) {
     var POLL_INTERVAL = 5 * 1000
-    var AJAX_TIMEOUT  = 5 * 1000
+    var AJAX_TIMEOUT = 5 * 1000
     var API_STATES = [
-      "BUSY",
-      "UNAVAILABLE",
-      "AVAILABLE",
-      "ERROR",
-      "OFFLINE",
-      "ONLINE"
+      'BUSY',
+      'UNAVAILABLE',
+      'AVAILABLE',
+      'ERROR',
+      'OFFLINE',
+      'ONLINE'
     ]
-    var $el                 = $(options.$el)
-    var openUrl             = $el.attr('data-open-url')
-    var availabilityUrl     = $el.attr('data-availability-url')
-    var $openButton         = $el.find('.js-webchat-open-button')
-    var webchatStateClass   = 'js-webchat-advisers-'
-    var intervalID          = null
-    var lastRecordedState   = null
+    var $el = $(options.$el)
+    var openUrl = $el.attr('data-open-url')
+    var availabilityUrl = $el.attr('data-availability-url')
+    var $openButton = $el.find('.js-webchat-open-button')
+    var webchatStateClass = 'js-webchat-advisers-'
+    var intervalID = null
+    var lastRecordedState = null
 
     function init () {
       if (!availabilityUrl || !openUrl) throw 'urls for webchat not defined'
@@ -34,7 +33,7 @@
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      this.dataset.redirect == "true" ? window.location.href = openUrl : global.open(openUrl, 'newwin', 'width=366,height=516')
+      this.dataset.redirect == 'true' ? window.location.href = openUrl : global.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
@@ -50,35 +49,34 @@
     }
 
     function apiSuccess (result) {
-
-      if(result.hasOwnProperty('inHOP')){
-        var validState  = API_STATES.indexOf(result.status.toUpperCase()) != -1
-        var state       = validState ? result.status : "ERROR"
-        if (result.inHOP == "true"){
-          if(result.availability == "true"){
-                  if(result.status == "online"){
-                    state="AVAILABLE"
-                  }
-                  if (result.status == "busy"){
-                      state="AVAILABLE"
-                  }
-                  if (result.status == "offline"){
-                      state="UNAVAILABLE"
-                  }
-            }else{
-              if (result.status == "busy"){
-                  state="BUSY"
-              }else{
-                state="UNAVAILABLE"
-              }
+      if (result.hasOwnProperty('inHOP')) {
+        var validState = API_STATES.indexOf(result.status.toUpperCase()) != -1
+        var state = validState ? result.status : 'ERROR'
+        if (result.inHOP == 'true') {
+          if (result.availability == 'true') {
+            if (result.status == 'online') {
+              state = 'AVAILABLE'
             }
-          }else{
-            state = "UNAVAILABLE"
+            if (result.status == 'busy') {
+              state = 'AVAILABLE'
+            }
+            if (result.status == 'offline') {
+              state = 'UNAVAILABLE'
+            }
+          } else {
+            if (result.status == 'busy') {
+              state = 'BUSY'
+            } else {
+              state = 'UNAVAILABLE'
+            }
           }
-        }else{
-          var validState  = API_STATES.indexOf(result.response) != -1
-          var state       = validState ? result.response : "ERROR"
+        } else {
+          state = 'UNAVAILABLE'
         }
+      } else {
+        var validState = API_STATES.indexOf(result.response) != -1
+        var state = validState ? result.response : 'ERROR'
+      }
       advisorStateChange(state)
     }
 
@@ -89,7 +87,7 @@
 
     function advisorStateChange (state) {
       state = state.toLowerCase()
-      var currentState = $el.find("." + webchatStateClass + state)
+      var currentState = $el.find('.' + webchatStateClass + state)
       $el.find('[class^="' + webchatStateClass + '"]').addClass('hidden')
       currentState.removeClass('hidden')
       trackEvent(state)

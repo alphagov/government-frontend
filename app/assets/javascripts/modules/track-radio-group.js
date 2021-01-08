@@ -19,7 +19,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     function track (element, withHint) {
       element.on('submit', function (event) {
-
         var options = { transport: 'beacon' }
 
         var $submittedForm = $(event.target)
@@ -42,23 +41,23 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         cache: false,
         dataType: 'jsonp',
         timeout: 3000
-      }).then(function(data){
-          reportVerifyUser(element, data);
-      }, function(e){console.log("error", e)})
+      }).then(function (data) {
+        reportVerifyUser(element, data)
+      }, function (e) { console.log('error', e) })
     }
 
     this.trackVerifyUser = function (element, data) {
-      reportVerifyUser(element, data);
+      reportVerifyUser(element, data)
     }
 
-    function reportVerifyUser(element, data) {
+    function reportVerifyUser (element, data) {
       if (data != null && data.value === true) {
-        GOVUK.analytics.trackEvent('verify-hint', 'shown', { transport: 'beacon'});
-        track(element, data.value);
+        GOVUK.analytics.trackEvent('verify-hint', 'shown', { transport: 'beacon' })
+        track(element, data.value)
       }
     }
 
-    function eventTrackingValue(element, withHint) {
+    function eventTrackingValue (element, withHint) {
       var value = element.val()
 
       if (typeof value === 'undefined') {
@@ -71,26 +70,26 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
       return value
     }
 
-    function addCrossDomainTracking(element) {
-      var code =   element.attr('data-tracking-code')
+    function addCrossDomainTracking (element) {
+      var code = element.attr('data-tracking-code')
       var domain = element.attr('data-tracking-domain')
-      var name =   element.attr('data-tracking-name')
+      var name = element.attr('data-tracking-name')
 
       GOVUK.analytics.addLinkedTrackerDomain(code, name, domain)
     }
 
-    function trackCrossDomainEvent(element, eventValue, options) {
+    function trackCrossDomainEvent (element, eventValue, options) {
       var name = element.attr('data-tracking-name')
-      var eventOptions = $.extend({ 'trackerName': name }, options)
+      var eventOptions = $.extend({ trackerName: name }, options)
       GOVUK.analytics.trackEvent('Radio button chosen', eventValue, eventOptions)
     }
 
-    function crossDomainTrackingEnabled(element) {
+    function crossDomainTrackingEnabled (element) {
       return (
-        typeof element.attr('data-tracking-code')   !== 'undefined' &&
+        typeof element.attr('data-tracking-code') !== 'undefined' &&
         typeof element.attr('data-tracking-domain') !== 'undefined' &&
-        typeof element.attr('data-tracking-name')   !== 'undefined'
+        typeof element.attr('data-tracking-name') !== 'undefined'
       )
     }
   }
-})(window, window.GOVUK);
+})(window, window.GOVUK)

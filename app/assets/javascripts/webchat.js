@@ -1,6 +1,6 @@
 /* eslint-disable */
 //= require ./webchat/library.js
-/*eslint-enable */
+/* eslint-enable */
 
 var $ = window.$
 
@@ -9,7 +9,7 @@ $(document).ready(function () {
   if (GOVUK.Webchat) {
     $('.js-webchat').map(function () {
       return new GOVUK.Webchat({
-        $el: $(this),
+        $el: $(this)
       })
     })
   }

@@ -3,11 +3,10 @@
 var $ = window.jQuery
 
 describe('SetGaClientIdOnForm', function () {
-
   var GOVUK = window.GOVUK
   var tracker = { clientId: 'clientId' }
-  tracker.get = function(arg) { return this[arg] }
-  window.ga = function(callback) { callback(tracker) }
+  tracker.get = function (arg) { return this[arg] }
+  window.ga = function (callback) { callback(tracker) }
   var form
 
   beforeEach(function () {
