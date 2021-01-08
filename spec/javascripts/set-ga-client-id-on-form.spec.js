@@ -1,5 +1,3 @@
-/* global describe beforeEach it expect */
-
 var $ = window.jQuery
 
 describe('SetGaClientIdOnForm', function () {
@@ -13,7 +11,7 @@ describe('SetGaClientIdOnForm', function () {
     form = $(
       '<form class="js-service-sign-in-form" action="/endpoint"></form>'
     )
-    setter = new GOVUK.SetGaClientIdOnForm({ $form: form })
+    new GOVUK.SetGaClientIdOnForm({ $form: form }) // eslint-disable-line no-new
   })
 
   it('sets the _ga client id as a query param on the form action', function () {

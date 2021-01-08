@@ -1,6 +1,4 @@
-/* eslint-disable */
 //= require ./webchat/library.js
-/* eslint-enable */
 
 var $ = window.$
 

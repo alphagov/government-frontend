@@ -1,4 +1,4 @@
-/* global describe beforeEach setFixtures it spyOn expect jasmine */
+/* globals lolex, setFixtures */
 
 var $ = window.jQuery
 var POLL_INTERVAL = '6' // Offset by one
@@ -35,11 +35,6 @@ describe('Webchat', function () {
   var jsonNormalisedUnavailable = jsonNormalised('success', 'UNAVAILABLE')
   var jsonNormalisedBusy = jsonNormalised('success', 'BUSY')
   var jsonNormalisedError = '404 not found'
-
-  var jsonMangledAvailable = jsonNormalised('success', 'FOOAVAILABLE')
-  var jsonMangledUnavailable = jsonNormalised('success', 'FOOUNAVAILABLE')
-  var jsonMangledBusy = jsonNormalised('success', 'FOOBUSY')
-  var jsonMangledError = 'FOO404 not found'
 
   beforeEach(function () {
     setFixtures(INSERTION_HOOK)
@@ -127,8 +122,8 @@ describe('Webchat', function () {
       ]
       var analyticsExpects = ['available', 'error']
       var analyticsReceived = []
-      returnsNumber = 0
-      analyticsCalled = 0
+      var returnsNumber = 0
+      var analyticsCalled = 0
       var clock = lolex.install()
       spyOn($, 'ajax').and.callFake(function (options) {
         options.success(returns[returnsNumber])

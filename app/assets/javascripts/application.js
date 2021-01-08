@@ -15,6 +15,6 @@ jQuery(function ($) {
   var $form = $('.js-service-sign-in-form')
 
   if ($form.length) {
-    new GOVUK.SetGaClientIdOnForm({ $form: $form })
+    new GOVUK.SetGaClientIdOnForm({ $form: $form }) // eslint-disable-line no-new
   }
 })

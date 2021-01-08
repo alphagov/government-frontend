@@ -1,5 +1,3 @@
-/* global describe beforeEach it spyOn expect */
-
 var $ = window.jQuery
 
 describe('A radio group tracker', function () {
@@ -150,7 +148,7 @@ describe('A radio group tracker', function () {
   })
 
   describe('cross domain tracking enabled', function () {
-    var $form, $radioInput
+    var $form
 
     beforeEach(function () {
       tracker.trackVerifyUser(element, { status: 'OK', value: true })
