@@ -38,6 +38,10 @@ class TravelAdvicePresenter < ContentItemPresenter
     content_item["details"]["country"]["name"]
   end
 
+  def ireland?
+    country_name == "Ireland"
+  end
+
   def is_summary?
     @part_slug.nil?
   end
