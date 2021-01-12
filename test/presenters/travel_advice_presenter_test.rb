@@ -148,6 +148,17 @@ class TravelAdvicePresenterTest
       assert_equal "#{schema_item('full-country')['base_path']}/print", presented_item("full-country").print_link
     end
 
+    test "presents country name" do
+      assert_equal schema_item("full-country")["details"]["country"]["name"], presented_item("full-country").country_name
+    end
+
+    test "#ireland?" do
+      example = schema_item("full-country")
+      example["details"]["country"]["name"] = "Ireland"
+
+      assert_equal true, presented_item("full-country", nil, example).ireland?
+    end
+
     test "presents only next navigation when on the summary" do
       example = schema_item("full-country")
       parts = example["details"]["parts"]
