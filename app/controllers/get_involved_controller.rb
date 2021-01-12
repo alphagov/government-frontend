@@ -1,8 +1,6 @@
 class GetInvolvedController < ContentItemsController
   attr_accessor :content_item
 
-  attr_accessor :content_item
-  
   def show
     load_content_item
     load_get_involved_data
@@ -12,10 +10,6 @@ class GetInvolvedController < ContentItemsController
 
   def load_content_item
     content_item = Services.content_store.content_item("/government/get-involved")
-
-    if Services.feature_toggler.use_recommended_related_links?(content_item["links"], request.headers)
-      content_item["links"]["ordered_related_items"] = content_item["links"].fetch("suggested_ordered_related_items", [])
-    end
 
     @content_item = PresenterBuilder.new(
       content_item,
@@ -30,7 +24,7 @@ class GetInvolvedController < ContentItemsController
     @next_closing_consultations = [retrieve_next_closing] 
     @recently_opened_consultations = retrieve_new_consultations
     @recent_consultation_outcomes = retrieve_consultation_outcomes
-    @take_part_pages = sort_take_part(retrieve_given_document_type("take_part")['results'])
+    @take_part_pages = sort_take_part(retrieve_given_document_type("take_part")["results'"])
   end
 
   def retrieve_given_document_type(document_type)
@@ -84,6 +78,6 @@ class GetInvolvedController < ContentItemsController
   end
 
   def sort_take_part(take_part_pages)
-    take_part_pages.sort_by{ |page| page["details"]["ordering"] }
+    take_part_pages.sort_by { |page| page["details"]["ordering"] }
   end
 end

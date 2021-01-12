@@ -3,6 +3,34 @@ require "gds_api/test_helpers/search"
 
 class GetInvolvedControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::Search
+  include GdsApi::TestHelpers::ContentStore
+
+  def setup
+    content_item_body = {
+      "links" => {
+        "take_part_pages" => [
+          {
+            "title": "Page 1",
+            "details" => {
+              "body" => "",
+              "image" => { },
+              "ordering" => 1
+            },
+          },
+          {
+            "title": "Page 2",
+            "details" => {
+              "body" => "",
+              "image" => { },
+              "ordering" => 2
+            },
+          },
+        ]
+      },
+    }
+    
+    stub_content_store_has_item("/government/get-involved", content_item_body)
+  end
 
   test "retrieves correct number of open consultations from search_api" do
     body = {
@@ -49,34 +77,6 @@ class GetInvolvedControllerTest < ActionController::TestCase
     stub_search(body)
 
     assert_equal @controller.retrieve_next_closing, ["first result", {}]
-  end
-
-  test "sorts take part pages based on order" do
-    pages = [
-      {
-        "title" => "third",
-        "details" => {
-          "ordering" => "3",
-        },
-      },
-      {
-        "title" => "first",
-        "details" => {
-          "ordering" => "1",
-        },
-      },
-      {
-        "title" => "second",
-        "details" => {
-          "ordering" => "2",
-        },
-      },
-    ]
-
-    sorted = @controller.sort_take_part(pages)
-
-    assert_equal sorted.first["title"], "first"
-    assert_equal sorted.last["title"], "third"
   end
 
 private
