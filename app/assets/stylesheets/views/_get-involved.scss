@@ -1,22 +1,42 @@
 .get-involved {
 
-  h2 {
-    @include heading-36;
-    border-bottom: $gutter-one-sixth solid $black;
-    margin-bottom: $gutter-half;
-    @include media(tablet) {
-      margin-bottom: $gutter;
-    }
+  .govuk-grid-column-one-third-from-desktop{
+    padding: 0;
+  }
 
+  .govuk-grid-column-two-thirds-from-desktop{
+    padding: 0;
+  }
+
+  .govuk-grid-column-one-half-from-desktop{
+      padding: 0;
+  }
+
+  .index-list{
+          li {
+            list-style: none;
+            border-bottom: 1px solid $govuk-border-colour;
+            @include govuk-font(19);
+            padding-top: 7px;
+            padding-bottom: 3px;
+          }
+        }
+
+  h2 {
+    @extend %govuk-heading-l;
+    border-bottom: govuk-spacing(1) solid govuk-colour("black");
+    margin-bottom: govuk-spacing(3);
+    @include govuk-media-query($from: tablet) {
+      margin-bottom: govuk-spacing(6);
+    }
     &#take-part {
       margin-bottom: 0;
-      @include media(tablet) {
-        margin-bottom: $gutter-half;
+      @include govuk-media-query($from: tablet) {
+        margin-bottom: govuk-spacing(3);
       }
     }
-
     &#elsewhere-on-the-web {
-      margin-top: $gutter * 1.5;
+      margin-top: govuk-spacing(6)*1.5;
     }
   }
 
@@ -25,8 +45,9 @@
   }
 
   .content {
-    padding: 0 $gutter-half;
+    padding: 0 govuk-spacing(3);
   }
+
 
   .block {
     clear: both;
@@ -34,98 +55,95 @@
 
   .floated-children {
     h2 {
-      margin-left: $gutter-half;
-      margin-right: $gutter-half;
+      margin-left: govuk-spacing(3);
+      margin-right: govuk-spacing(3);
     }
 
     .head-section {
-      @include media(tablet) {
+      @include govuk-media-query($from: tablet) {
         float: left;
-        width: $one-third;
       }
-
       h3 {
-        @include heading-27;
+        @include govuk-font(27, $weight: bold);
         font-weight: bold;
-        padding: 0 $gutter-half 7px;
+        padding: 0 govuk-spacing(3) 7px;
       }
     }
 
     .count {
 
       @include govuk-media-query($from: desktop) {
-        width: $half;
+        width: 50%;
       }
 
       display: block;
-      margin: $gutter-half;
-      @include heading-80;
+      margin: govuk-spacing(3);
+      @include govuk-font(80, $weight: bold);
       font-weight: bold;
       text-decoration: none;
 
       .context {
         display: block;
-        @include core-16;
-        margin-top: 0;
+        @include govuk-font(16);
+        margin-top:0;
         color: govuk-colour("black");
       }
-    }
+
+  }
 
     section {
-      @include core-19;
-      @extend %contain-floats;
+      @include govuk-font(19);
+      @include govuk-clearfix;
       clear: both;
-      margin-bottom: $gutter;
+      margin-bottom: govuk-spacing(6);
 
-      h3,
-      h4 {
+      h3, h4 {
         font-weight: bold;
       }
 
       .column {
-        @include media(tablet) {
+        @include govuk-media-query($from: tablet) {
           float: left;
-          width: $two-thirds;
         }
       }
 
       .consultation-lists {
-        @include media(tablet) {
-          float: left;
-          width: $two-thirds;
-        }
+        list-style: none;
 
+        @include govuk-media-query($from: tablet) {
+          float: left; 
+        }
+        
         .consultation-closing-soon {
           color: govuk-colour("white");
-          background-color: $inside-gov-brand;
-          margin: $gutter $gutter-half;
-          padding: $gutter-half $gutter-half 0;
-
+          background-color: #2e3191;
+          margin: govuk-spacing(6) govuk-spacing(3);
+          padding: govuk-spacing(3) govuk-spacing(3) 0;
           h3 {
-            @include heading-27;
+            @include govuk-font(27, $weight: bold);
             font-weight: bold;
-            padding: 0 0 $gutter-one-sixth;
-            @include media(tablet) {
-              padding: 0 0 $gutter-one-sixth;
+            padding-bottom: govuk-spacing(1);
+            @include govuk-media-query($from: tablet) {
+              padding-bottom: govuk-spacing(1);
             }
           }
-
           .document-list {
-            margin-top: -$gutter-one-third;
-
-            h3 {
-              @include core-19;
-              border-bottom: 1px solid govuk-colour("white");
-              padding-bottom: $gutter-one-third;
-              font-weight: normal;
+            margin-top: -govuk-spacing(2);
+            .document-row {
+              float: none;
             }
 
+            h3 {
+              @include govuk-font(19);
+              border-bottom: 1px solid govuk-colour("white");
+              padding-bottom: govuk-spacing(2);
+              font-weight: normal;
+            }
             .attributes {
-              @extend %contain-floats;
-              margin-top: $gutter-one-third;
+              @include govuk-clearfix;
+              margin-top: govuk-spacing(2);
 
               li {
-                @include core-19;
 
                 a {
                   color: govuk-colour("white");
@@ -137,40 +155,39 @@
               }
             }
           }
-          @include media(tablet) {
-            margin: $gutter-half $gutter-half $gutter;
+          @include govuk-media-query($from: tablet) {
+            margin: govuk-spacing(3) govuk-spacing(3) govuk-spacing(6);
           }
         }
-
         .column {
-          @include media(tablet) {
+          @include govuk-media-query($from: tablet) {
             float: left;
-            width: $half;
-            @include ie(7) {
+            @include govuk-if-ie8 {
               width: 49.99%;
             }
           }
         }
-
         .document-row {
           border: 0;
+          padding: 5px 0 10px;
         }
       }
 
       .document-list {
         .document-row {
           border: 0;
+          padding: 5px 0 10px;
+          float: left;
 
           h3 {
             font-weight: normal;
           }
-
           .attributes {
-            margin-top: $gutter-one-sixth;
-
+            padding-top: govuk-spacing(1);
+            @include govuk-font(14);
             li {
-              padding-right: $gutter-one-third;
-
+              padding-right: govuk-spacing(2);
+              float: left;
               a {
                 font-weight: bold;
               }
@@ -179,24 +196,21 @@
         }
       }
 
-      &.start-a-petition,
-      &.comment-follow {
+      &.start-a-petition, &.comment-follow {
         p {
-          padding-top: $gutter-one-third;
+          padding-top: govuk-spacing(2);
         }
       }
 
       &.more-ways {
         .index-list {
-          margin-top: $gutter-half;
+          margin-top: govuk-spacing(3);
         }
-
         h3 {
           padding-top: 0;
         }
-
         .column {
-          margin-top: $gutter-one-sixth;
+          margin-top: govuk-spacing(1);
         }
       }
 
@@ -204,26 +218,24 @@
       &.start-a-petition,
       &.more-ways {
         margin-bottom: 0;
-        @include media(tablet) {
-          margin-bottom: $gutter;
+        @include govuk-media-query($from: tablet) {
+          margin-bottom: govuk-spacing(6);
         }
       }
 
       &.respond-to-consultations {
         margin-bottom: 0;
-
         h3 {
           padding-top: 0;
         }
-
         .column {
-          margin-top: $gutter-one-sixth;
+          margin-top: govuk-spacing(1);
         }
       }
 
       .see-all {
         font-weight: bold;
-        margin: $gutter-one-third 0 $gutter;
+        margin: govuk-spacing(2) 0 govuk-spacing(6);
       }
     }
 
@@ -239,8 +251,10 @@
       clear: both;
       border: solid $govuk-border-colour;
       border-width: 0 0 1px;
-      margin: 0 $gutter-half $gutter;
-      padding-top: $gutter;
+      margin: 0 govuk-spacing(3) govuk-spacing(6);
+      padding-top: govuk-spacing(6);
     }
+
   }
+
 }
