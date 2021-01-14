@@ -6,6 +6,13 @@ class AssetManagerRedirectControllerTest < ActionController::TestCase
     Plek.any_instance.stubs(:external_url_for).returns("http://draft-asset-host.com")
   end
 
+  test "sets the cache-control max-age to 1 day" do
+    request.host = "some-host.com"
+    get :show, params: { path: "asset.txt" }
+
+    assert_equal @response.headers["Cache-Control"], "max-age=86400, public"
+  end
+
   test "redirects asset requests made via public host to the public asset host" do
     request.host = "some-host.com"
     get :show, params: { path: "asset.txt" }
