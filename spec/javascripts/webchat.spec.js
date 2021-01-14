@@ -1,4 +1,4 @@
-/* global describe beforeEach setFixtures it spyOn expect jasmine */
+/* globals lolex, setFixtures */
 
 var $ = window.jQuery
 var POLL_INTERVAL = '6' // Offset by one
@@ -31,16 +31,10 @@ describe('Webchat', function () {
     }
   }
 
-
-  var jsonNormalisedAvailable = jsonNormalised("success","AVAILABLE")
-  var jsonNormalisedUnavailable = jsonNormalised("success","UNAVAILABLE")
-  var jsonNormalisedBusy = jsonNormalised("success","BUSY")
+  var jsonNormalisedAvailable = jsonNormalised('success', 'AVAILABLE')
+  var jsonNormalisedUnavailable = jsonNormalised('success', 'UNAVAILABLE')
+  var jsonNormalisedBusy = jsonNormalised('success', 'BUSY')
   var jsonNormalisedError = '404 not found'
-
-  var jsonMangledAvailable = jsonNormalised("success","FOOAVAILABLE")
-  var jsonMangledUnavailable = jsonNormalised("success","FOOUNAVAILABLE")
-  var jsonMangledBusy = jsonNormalised("success","FOOBUSY")
-  var jsonMangledError = 'FOO404 not found'
 
   beforeEach(function () {
     setFixtures(INSERTION_HOOK)
@@ -50,7 +44,6 @@ describe('Webchat', function () {
     $advisersAvailable = $webchat.find('.js-webchat-advisers-available')
     $advisersError = $webchat.find('.js-webchat-advisers-error')
   })
-
 
   describe('on valid application locations', function () {
     function mount () {
@@ -68,7 +61,7 @@ describe('Webchat', function () {
       mount()
       expect(
         $.ajax
-      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET' ,timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
+      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
     })
 
     it('should inform user whether advisors are available', function () {
@@ -127,11 +120,11 @@ describe('Webchat', function () {
         jsonNormalisedError,
         jsonNormalisedError
       ]
-      var analyticsExpects = ['available','error']
+      var analyticsExpects = ['available', 'error']
       var analyticsReceived = []
-      returnsNumber = 0
-      analyticsCalled = 0
-      var clock = lolex.install();
+      var returnsNumber = 0
+      var analyticsCalled = 0
+      var clock = lolex.install()
       spyOn($, 'ajax').and.callFake(function (options) {
         options.success(returns[returnsNumber])
         returnsNumber++
@@ -157,10 +150,10 @@ describe('Webchat', function () {
       expect($advisersUnavailable.hasClass('hidden')).toBe(true)
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
-      clock.tick(POLL_INTERVAL);
+      clock.tick(POLL_INTERVAL)
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
-      clock.uninstall();
+      clock.uninstall()
     })
   })
 })

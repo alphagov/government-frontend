@@ -9,12 +9,12 @@
 
     var form = options.$form
 
-    window.ga(function(tracker) {
+    window.ga(function (tracker) {
       var clientId = tracker.get('clientId')
       var action = form.attr('action')
-      form.attr('action', action + "?_ga=" + clientId)
-    });
+      form.attr('action', action + '?_ga=' + clientId)
+    })
   }
 
   GOVUK.SetGaClientIdOnForm = SetGaClientIdOnForm
-})(window, window.GOVUK);
+})(window, window.GOVUK)

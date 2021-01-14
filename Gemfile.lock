@@ -247,9 +247,6 @@ GEM
     rainbow (3.0.0)
     raindrops (0.19.1)
     rake (13.0.3)
-    rb-fsevent (0.10.4)
-    rb-inotify (0.10.1)
-      ffi (~> 1.0)
     regexp_parser (1.8.2)
     request_store (1.5.0)
       rack (>= 1.4)
@@ -290,13 +287,6 @@ GEM
     ruby2_keywords (0.0.2)
     rubyzip (2.3.0)
     safe_yaml (1.0.5)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -305,10 +295,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    scss_lint (0.59.0)
-      sass (~> 3.5, >= 3.5.5)
-    scss_lint-govuk (0.2.0)
-      scss_lint
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -402,8 +388,7 @@ DEPENDENCIES
   rails-i18n
   rails_translation_manager
   rubocop-govuk
-  sass-rails
-  scss_lint-govuk
+  sassc-rails
   simplecov
   slimmer
   uglifier

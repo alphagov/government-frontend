@@ -15,7 +15,11 @@
 /log/*.log
 /tmp
 
-/public/government-frontend
+/public/assets
 /test/wraith/wip*
 shots/*
 /coverage
+
+# Yarn
+/node_modules
+/yarn-error.log

@@ -1,4 +1,3 @@
-/* eslint-env jasmine, jquery */
 var GOVUK = window.GOVUK
 
 describe('Track Links', function () {
