@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery except: :service_sign_in_options
 
-  include CookielessTestable
-
   if ENV["BASIC_AUTH_USERNAME"]
     http_basic_authenticate_with(
       name: ENV.fetch("BASIC_AUTH_USERNAME"),
