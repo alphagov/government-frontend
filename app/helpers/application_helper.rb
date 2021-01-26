@@ -28,6 +28,12 @@ module ApplicationHelper
     request.original_fullpath.split("?", 2).first
   end
 
+  def render_govspeak(content)
+    render "govuk_publishing_components/components/govspeak" do
+      raw(Govspeak::Document.new(content, sanitize: false).to_html)
+    end
+  end
+
 private
 
   def active_proposition_mapping

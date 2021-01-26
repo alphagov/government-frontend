@@ -4,6 +4,7 @@ gem "rails", "6.0.3.4"
 
 gem "dalli"
 gem "gds-api-adapters"
+gem "govspeak"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_publishing_components"
