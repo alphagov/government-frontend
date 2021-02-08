@@ -1,12 +1,19 @@
 bn:
-  language_names:
-    bn: "বাংলা"
   content_item:
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one:
         other:
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
+        one:
+        other:
+      business_finance_support_scheme:
         one:
         other:
       case_study:
@@ -15,10 +22,19 @@ bn:
       closed_consultation:
         one:
         other:
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one:
         other:
       consultation_outcome:
+        one:
+        other:
+      corporate_information_page:
         one:
         other:
       corporate_report:
@@ -27,16 +43,34 @@ bn:
       correspondence:
         one:
         other:
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one:
         other:
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one:
         other:
       draft_text:
+        one:
+        other:
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
         one:
         other:
       fatality_notice:
@@ -63,13 +97,28 @@ bn:
       independent_report:
         one:
         other:
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one:
         other:
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
+        one:
+        other:
+      national_statistics_announcement:
         one:
         other:
       news_article:
@@ -79,6 +128,15 @@ bn:
         one:
         other:
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one:
+        other:
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -102,10 +160,22 @@ bn:
       publication:
         one:
         other:
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
+        one:
+        other:
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
         one:
         other:
       speaking_notes:
@@ -120,10 +190,16 @@ bn:
       statistical_data_set:
         one:
         other:
-      official_statistics:
+      statistics_announcement:
         one:
         other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -132,27 +208,83 @@ bn:
       transparency:
         one:
         other:
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
+        one:
+        other:
+      world_news_story:
         one:
         other:
       written_statement:
         one:
         other:
+    contents:
     metadata:
       published:
       updated:
-    contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one:
       other:
+    details:
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    related_navigation:
+      collections:
+      external_links:
+      policies:
+      publishers:
+      related_content:
+      related_guides:
+      statistical_data_sets:
+      topical_events:
+      topics:
+      world_locations:
+    share_links:
+      share_this_page:
   corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
     about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
+  detailed_guide:
+    related_guides:
+    related_mainstream_content:
+  language_names:
+    bn: বাংলা
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  time:
+    formats:
+      short_ordinal:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:
