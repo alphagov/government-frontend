@@ -26,11 +26,6 @@
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
-  
-  <%= cookieless_variant.analytics_meta_tag.html_safe %>
-  <% unless cookieless_variant.variant?('Z') %>
-    <meta name="Cookieless-Variant" content="<%= cookieless_variant.variant_name %>" data-module="track-variant">
-  <% end %>
 
   <%= yield :extra_head_content %>
 </head>
