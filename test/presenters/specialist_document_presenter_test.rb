@@ -295,18 +295,6 @@ class SpecialistDocumentPresenterTest
       assert_equal "1 January 2010", presented_metadata["Facet name"]
     end
 
-    test "sends an error notification when there is no finder" do
-      example = schema_item("aaib-reports")
-      example["links"]["finder"] = []
-
-      GovukError.expects(:notify).with(
-        "Finder not found",
-        extra: { error_message: "Finder not found in /aaib-reports/aaib-investigation-to-rotorsport-uk-calidus-g-pcpc content item" },
-      )
-
-      present_example(example).important_metadata
-    end
-
     test "omits first_published_at facet values from `other` section of component parameters to avoid duplicates" do
       facets = [
         {
