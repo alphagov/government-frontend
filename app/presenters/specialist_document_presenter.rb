@@ -103,17 +103,8 @@ private
     values.length == 1 ? values.first : values
   end
 
-  # Finder is a required link that must have 1 item
   def finder
-    parent_finder = content_item.dig("links", "finder", 0)
-    if parent_finder.nil?
-      GovukError.notify(
-        "Finder not found",
-        extra: { error_message: "Finder not found in #{base_path} content item" },
-      )
-    end
-
-    parent_finder
+    content_item.dig("links", "finder", 0)
   end
 
   def facets
