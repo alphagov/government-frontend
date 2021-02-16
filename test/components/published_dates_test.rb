@@ -82,7 +82,7 @@ class PublishedDatesTest < ComponentTestCase
       last_updated: "15th July 2015",
       history: [display_time: "23 August 2013", note: "Updated with new data"],
     )
-    assert_select ".app-c-published-dates--history[data-module=\"toggle\"]"
+    assert_select ".app-c-published-dates--history[data-module=\"gem-toggle\"]"
     assert_select ".app-c-published-dates--history a[href=\"#full-history\"][data-controls=\"full-history\"]"
     assert_select ".app-c-published-dates--history a[href=\"#full-history\"][data-expanded=\"false\"]"
   end
