@@ -53,7 +53,7 @@ class PublisherMetadataTest < ComponentTestCase
 
   test "link tracking is enabled" do
     render_component(other: { from: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>"] })
-    assert_select ".app-c-publisher-metadata__other dl[data-module='track-click']"
+    assert_select ".app-c-publisher-metadata__other dl[data-module='gem-track-click']"
   end
 
   test "renders two collection links when two collections are given" do

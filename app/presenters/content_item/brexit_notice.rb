@@ -36,7 +36,7 @@ module ContentItem
 
     def brexit_landing_page_cta
       data_attributes = {
-        "module": "track-click",
+        "module": "gem-track-click",
         "track-category": "no_deal_notice",
         "track-action": "/transition",
         "track-label": "Get your personalised list of actions",
@@ -56,7 +56,7 @@ module ContentItem
           title: link["title"],
           href: link["href"],
           data_attributes: {
-            "module": "track-click",
+            "module": "gem-track-click",
             "track-category": "no_deal_notice",
             "track-action": link["href"],
             "track-label": link["title"],
