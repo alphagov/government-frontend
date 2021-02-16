@@ -46,7 +46,7 @@
         setInterval(checkScroll, _interval)
         checkResize()
         checkScroll()
-        $element.addClass('govuk-sticky-element--enabled')
+        $element.addClass('sticky-element--enabled')
       }
 
       function onResize () {
@@ -98,19 +98,19 @@
       }
 
       function stickToWindow () {
-        $element.addClass('govuk-sticky-element--stuck-to-window')
+        $element.addClass('sticky-element--stuck-to-window')
       }
 
       function stickToParent () {
-        $element.removeClass('govuk-sticky-element--stuck-to-window')
+        $element.removeClass('sticky-element--stuck-to-window')
       }
 
       function show () {
-        $element.removeClass('govuk-sticky-element--hidden')
+        $element.removeClass('sticky-element--hidden')
       }
 
       function hide () {
-        $element.addClass('govuk-sticky-element--hidden')
+        $element.addClass('sticky-element--hidden')
       }
     }
   }
