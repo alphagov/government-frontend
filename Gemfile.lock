@@ -119,7 +119,7 @@ GEM
       sentry-raven (~> 3.1.1)
       statsd-ruby (~> 1.5.0)
       unicorn (>= 5.4, < 5.9)
-    govuk_publishing_components (24.1.0)
+    govuk_publishing_components (24.1.1)
       govuk_app_config
       kramdown
       plek
@@ -139,7 +139,7 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (1.8.8)
+    i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     image_size (2.1.0)
     io-like (0.3.1)
