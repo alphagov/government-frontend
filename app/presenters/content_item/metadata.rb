@@ -21,12 +21,10 @@ module ContentItem
 
     def publisher_metadata
       {
-        published: published,
+        from: from,
+        first_published: published,
         last_updated: updated,
-        link_to_history: updated.present?,
-        other: {
-          from: from,
-        },
+        see_updates_link: true,
       }
     end
   end

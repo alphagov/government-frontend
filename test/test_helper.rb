@@ -93,9 +93,9 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_publisher_metadata_other(metadata)
-    within(".app-c-publisher-metadata__other") do
+    within(".gem-c-metadata") do
       assert_has_metadata(
-        metadata, ".app-c-publisher-metadata__term", ".app-c-publisher-metadata__definition"
+        metadata, ".gem-c-metadata__term", ".gem-c-metadata__definition"
       )
     end
   end
@@ -120,7 +120,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_publisher_metadata(options)
-    within(".app-c-publisher-metadata") do
+    within(".gem-c-metadata") do
       assert_has_published_dates(options[:published], options[:last_updated], options[:history_link])
       assert_has_publisher_metadata_other(options[:metadata])
     end
