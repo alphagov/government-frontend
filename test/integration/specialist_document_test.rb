@@ -47,10 +47,10 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders from in publisher metadata" do
     setup_and_visit_content_item("aaib-reports")
 
-    assert_has_publisher_metadata_other(
-      "From": {
+    assert_has_metadata(
+      from: {
         "Air Accidents Investigation Branch":
-          "/government/organisations/air-accidents-investigation-branch",
+        "/government/organisations/air-accidents-investigation-branch",
       },
     )
   end

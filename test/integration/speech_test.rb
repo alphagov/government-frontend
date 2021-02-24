@@ -20,14 +20,12 @@ class SpeechTest < ActionDispatch::IntegrationTest
   test "renders metadata and document footer, including speaker" do
     setup_and_visit_content_item("speech")
 
-    assert_has_publisher_metadata(
-      published: "Published 8 March 2016",
-      metadata: {
-        "From": {
-          "Department of Energy & Climate Change and The Rt Hon Andrea Leadsom MP": nil,
-          "Department of Energy": "/government/organisations/department-of-energy-climate-change",
-          "The Rt Hon Andrea Leadsom MP": "/government/people/andrea-leadsom",
-        },
+    assert_has_metadata(
+      published: "8 March 2016",
+      from: {
+        "Department of Energy & Climate Change and The Rt Hon Andrea Leadsom MP": nil,
+        "Department of Energy": "/government/organisations/department-of-energy-climate-change",
+        "The Rt Hon Andrea Leadsom MP": "/government/people/andrea-leadsom",
       },
     )
 

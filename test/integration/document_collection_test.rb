@@ -19,14 +19,10 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
 
   test "renders metadata and document footer" do
     setup_and_visit_content_item("document_collection")
-    assert_has_publisher_metadata(
-      published: "Published 29 February 2016",
-      metadata:
-      {
-        "From:":
-          {
-            "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency",
-          },
+    assert_has_metadata(
+      published: "29 February 2016",
+      from: {
+        "Driver and Vehicle Standards Agency": "/government/organisations/driver-and-vehicle-standards-agency",
       },
     )
     assert_footer_has_published_dates("Published 29 February 2016")

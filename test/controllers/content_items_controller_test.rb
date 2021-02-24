@@ -381,7 +381,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_select ".metadata-logo-wrapper", false
     assert_select ".app-c-figure", false
     assert_select ".gem-c-contextual-sidebar", false
-    assert_select ".app-c-published-dates", false
+    assert_select ".gem-c-metadata__definition", false
     assert_select ".gem-c-contextual-footer", false
   end
 

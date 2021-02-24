@@ -80,11 +80,11 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_published_dates(published = nil, last_updated = nil, history_link = false, element_index = 0)
+  def assert_has_published_dates(first_published = nil, last_updated = nil, history_link = false)
     text = []
-    text << published if published
+    text << first_published if first_published
     text << last_updated if last_updated
-    within(all(".app-c-published-dates")[element_index]) do
+    within ".app-c-published-dates:last-of-type" do
       assert page.has_text?(text.join("\n")), "Published dates #{text.join("\n")} not found"
       if history_link
         assert page.has_link?("see all updates", href: "#history"), "Updates link not found"
@@ -92,21 +92,30 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_publisher_metadata_other(metadata)
-    within(".gem-c-metadata") do
-      assert_has_metadata(
-        metadata, ".gem-c-metadata__term", ".gem-c-metadata__definition"
-      )
+  def assert_has_publisher_metadata_other(any_args)
+    assert_has_metadata(any_args)
+  end
+
+  def assert_has_metadata(any_args)
+    within ".gem-c-metadata" do
+      any_args.each do |_key, value|
+        value = { value => nil } if value.is_a?(String)
+        value.each do |text, href|
+          if href
+            assert page.has_link?(text, href: href), "Metadata text '#{text} with link of #{href}' not found"
+          else
+            assert page.has_text?(text), "Metadata value '#{text}' not found"
+          end
+        end
+      end
     end
   end
 
-  def assert_has_metadata(metadata, term_selector, definition_selector)
+  def assert_has_metadata_local(metadata, term_selector, definition_selector)
     metadata.each do |key, value|
       assert page.has_css?(term_selector, text: key),
              "Metadata term '#{key}' not found"
-
       value = { value => nil } if value.is_a?(String)
-
       value.each do |text, href|
         within(definition_selector, text: text) do
           if href
@@ -120,22 +129,22 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_publisher_metadata(options)
-    within(".gem-c-metadata") do
-      assert_has_published_dates(options[:published], options[:last_updated], options[:history_link])
+    within(".app-c-publisher-metadata") do
+      assert_has_published_dates(options[:first_published], options[:last_updated], options[:history_link])
       assert_has_publisher_metadata_other(options[:metadata])
     end
   end
 
   def assert_has_important_metadata(metadata)
     within(".app-c-important-metadata") do
-      assert_has_metadata(
+      assert_has_metadata_local(
         metadata, ".app-c-important-metadata__term", ".app-c-important-metadata__definition"
       )
     end
   end
 
-  def assert_footer_has_published_dates(published = nil, last_updated = nil, history_link = false)
-    assert_has_published_dates(published, last_updated, history_link, 1)
+  def assert_footer_has_published_dates(first_published = nil, last_updated = nil, history_link = false)
+    assert_has_published_dates(first_published, last_updated, history_link)
   end
 
   def setup_and_visit_content_item(name, parameter_string = "")

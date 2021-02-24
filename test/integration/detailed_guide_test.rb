@@ -11,14 +11,11 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    assert_has_publisher_metadata(
-      published: "Published 12 June 2014",
-      last_updated: "Last updated 18 February 2016",
-      history_link: true,
-      metadata: {
-        "From:": {
-          "HM Revenue & Customs": "/government/organisations/hm-revenue-customs",
-        },
+    assert_has_metadata(
+      published: "12 June 2014",
+      last_updated: "18 February 2016",
+      from: {
+        "HM Revenue & Customs": "/government/organisations/hm-revenue-customs",
       },
     )
   end

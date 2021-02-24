@@ -7,12 +7,10 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
 
-    assert_has_publisher_metadata(
-      published: "Published 4 November 2016",
-      last_updated: "Last updated 7 November 2016",
-      metadata: {
-        "From": { "Department for Education": "/government/organisations/department-for-education" },
-      },
+    assert_has_metadata(
+      published: "4 November 2016",
+      last_updated: "7 November 2016",
+      from: { "Department for Education": "/government/organisations/department-for-education" },
     )
 
     assert_footer_has_published_dates("Published 4 November 2016", "Last updated 7 November 2016")

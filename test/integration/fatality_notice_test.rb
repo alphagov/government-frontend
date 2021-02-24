@@ -20,12 +20,11 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
     assert_not page.has_css?(".gem-c-notice")
 
-    assert_has_publisher_metadata(
-      published: "Published 27 February 1881",
-      last_updated: "Last updated 14 September 2016",
-      history_link: true,
-      metadata: {
-        "From": { "Ministry of Defence": "/government/organisations/ministry-of-defence" },
+    assert_has_metadata(
+      published: "27 February 1881",
+      last_updated: "14 September 2016",
+      from: {
+        "Ministry of Defence": "/government/organisations/ministry-of-defence",
       },
     )
 
@@ -60,8 +59,8 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
   test "fatality notice with minister" do
     setup_and_visit_content_item("fatality_notice_with_minister")
-    assert_has_publisher_metadata_other(
-      "From": {
+    assert_has_metadata(
+      from: {
         "Ministry of Defence": "/government/organisations/ministry-of-defence",
         "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
       },
