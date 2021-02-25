@@ -56,6 +56,6 @@ class ImportantMetadataTest < ComponentTestCase
 
   test "link tracking is enabled" do
     render_component(items: { "Case type": ["<a href='https://www.gov.uk/cma-cases?case_type%5B%5D=mergers'>Mergers</a>"] })
-    assert_select ".app-c-important-metadata dl[data-module='track-click']"
+    assert_select ".app-c-important-metadata dl[data-module='gem-track-click']"
   end
 end

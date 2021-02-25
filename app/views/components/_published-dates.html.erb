@@ -7,7 +7,7 @@
   history_class = "app-c-published-dates--history" if history.any?
 %>
 <% if published || last_updated %>
-<div class="app-c-published-dates <%= history_class %>" <% if history.any? %>id="history" data-module="toggle"<% end %> lang="en">
+<div class="app-c-published-dates <%= history_class %>" <% if history.any? %>id="history" data-module="gem-toggle"<% end %> lang="en">
   <% if published %>
     Published <%= published %>
   <% end %>

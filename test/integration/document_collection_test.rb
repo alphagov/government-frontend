@@ -99,7 +99,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
   test "includes tracking data on all collection documents" do
     setup_and_visit_content_item("document_collection")
     groups = page.all(".gem-c-document-list")
-    assert page.has_css?('[data-module="track-click"]'), count: groups.length
+    assert page.has_css?('[data-module="gem-track-click"]'), count: groups.length
 
     first_section_links = groups.first.all(".gem-c-document-list__item-title")
     first_link = first_section_links.first
