@@ -1,7 +1,7 @@
 <div class="govuk-grid-row">
   <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
     <div class="govuk-grid-column-two-thirds metadata-column">
-      <%= render "components/publisher-metadata", @content_item.publisher_metadata %>
+      <%= render 'govuk_publishing_components/components/metadata', @content_item.publisher_metadata %>
     </div>
     <div class="govuk-grid-column-one-third">
       <% if @content_item.try(:logo) %>

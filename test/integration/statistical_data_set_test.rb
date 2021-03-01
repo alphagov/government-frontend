@@ -11,11 +11,9 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
 
   test "renders metadata and document footer" do
     setup_and_visit_content_item("statistical_data_set")
-    assert_has_publisher_metadata(
-      published: "Published 13 December 2012",
-      metadata: {
-        "From:": { "Department for Transport": "/government/organisations/department-for-transport" },
-      },
+    assert_has_metadata(
+      published: "13 December 2012",
+      from: { "Department for Transport": "/government/organisations/department-for-transport" },
     )
     assert_footer_has_published_dates("Published 13 December 2012")
   end

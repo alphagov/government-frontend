@@ -19,13 +19,11 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "renders metadata and document footer" do
     setup_and_visit_content_item("publication")
 
-    assert_has_publisher_metadata(
-      published: "Published 3 May 2016",
-      metadata: {
-        "From": {
-          "Environment Agency": "/government/organisations/environment-agency",
-          "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
-        },
+    assert_has_metadata(
+      published: "3 May 2016",
+      from: {
+        "Environment Agency": "/government/organisations/environment-agency",
+        "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
       },
     )
 
