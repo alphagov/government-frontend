@@ -8,10 +8,7 @@
       <%= render 'govuk_publishing_components/components/govspeak', {
         direction: page_text_direction,
       } do %>
-        <%= sanitize(legacy_pre_rendered_documents, {
-          attributes: %w(alt class href id src data-module data-track-category data-track-action data-track-label data-track-options data-details-track-click aria-hidden),
-          tags: %w(a details div h2 h3 img p section span summary),
-        }) %>
+        <%= raw(legacy_pre_rendered_documents) %>
       <% end %>
     <% else %>
       <% attachments.each do |attachment_id| %>
