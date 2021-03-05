@@ -137,7 +137,7 @@ class GuideTest < ActionDispatch::IntegrationTest
 
   def setup_and_visit_voting_guide
     @content_item = get_content_example("guide").tap do |item|
-      item["base_path"] = "/voting-in-the-uk"
+      item["base_path"] = "/how-to-vote"
       item["content_id"] = "9315bc67-33e7-42e9-8dea-e022f56dabfa"
       content_store_has_item(item["base_path"], item.to_json)
       visit_with_cachebust(item["base_path"])

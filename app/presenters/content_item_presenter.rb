@@ -87,7 +87,7 @@ class ContentItemPresenter
   end
 
   def render_guide_as_single_page?
-    # /voting-in-the-uk
+    # /how-to-vote
     content_id == "9315bc67-33e7-42e9-8dea-e022f56dabfa"
   end
 
