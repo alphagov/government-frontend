@@ -118,6 +118,7 @@ private
 
   def content_item_template
     return "briefing" if is_briefing?
+    return "guide_single" if @content_item.render_guide_as_single_page?
 
     @content_item.schema_name
   end
