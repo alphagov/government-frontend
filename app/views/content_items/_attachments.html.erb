@@ -1,4 +1,6 @@
-<% if legacy_pre_rendered_documents.present? || attachments.any? %>
+<% attachments ||= [] %>
+<% attachment_details = attachments.filter_map { |id| @content_item&.attachment_details(id) } %>
+<% if legacy_pre_rendered_documents.present? || attachment_details.any? %>
   <section id="<%= title.parameterize %>">
     <%= render 'govuk_publishing_components/components/heading',
         text: title,
@@ -11,15 +13,14 @@
         <%= raw(legacy_pre_rendered_documents) %>
       <% end %>
     <% else %>
-      <% attachments.each do |attachment_id| %>
+      <% attachment_details.each do |details| %>
         <div class="attachment">
           <%= render 'govuk_publishing_components/components/attachment', {
             heading_level: 3,
-            attachment: @content_item.attachment_details(attachment_id)
+            attachment: details
           } %>
         </div>
       <% end %>
     <% end %>
-
   </section>
 <% end %>
