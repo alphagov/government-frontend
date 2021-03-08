@@ -173,7 +173,7 @@ class ActionDispatch::IntegrationTest
 
   def setup_and_visit_random_content_item(document_type: nil)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
-      payload.merge("document_type" => document_type) unless document_type.nil?
+      payload.merge!("document_type" => document_type) unless document_type.nil?
       payload
     end
 
