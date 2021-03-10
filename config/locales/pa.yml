@@ -1,3 +1,4 @@
+---
 pa:
   content_item:
     schema_name:
@@ -5,23 +6,23 @@ pa:
         one:
         other:
       announcement:
-        one:
-        other:
+        one: ਘੋਸ਼ਣਾ
+        other: ਘੋਸ਼ਣਾਵਾਂ
       asylum_support_decision:
         one:
         other:
       authored_article:
-        one:
-        other:
+        one: ਲੇਖਕ ਦਾ ਲੇਖ
+        other: ਲੇਖਕ ਦੇ ਲੇਖ
       business_finance_support_scheme:
         one:
         other:
       case_study:
-        one:
-        other:
+        one: ਕੇਸ ਅਧਿਐਨ
+        other: ਕੇਸ ਅਧਿਐਨ
       closed_consultation:
-        one:
-        other:
+        one: ਬੰਦ ਸਲਾਹ-ਮਸ਼ਵਰਾ
+        other: ਬੰਦ ਸਲਾਹ-ਮਸ਼ਵਰੇ
       cma_case:
         one:
         other:
@@ -29,38 +30,38 @@ pa:
         one:
         other:
       consultation:
-        one:
-        other:
+        one: ਸਲਾਹ-ਮਸ਼ਵਰਾ
+        other: ਸਲਾਹ-ਮਸ਼ਵਰੇ
       consultation_outcome:
-        one:
-        other:
+        one: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦਾ ਨਤੀਜਾ
+        other: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦੇ ਨਤੀਜੇ
       corporate_information_page:
         one:
         other:
       corporate_report:
-        one:
-        other:
+        one: ਕਾਰਪੋਰੇਟ ਰਿਪੋਰਟ
+        other: ਕਾਰਪੋਰੇਟ ਰਿਪੋਰਟਾਂ
       correspondence:
-        one:
-        other:
+        one: ਪੱਤਰ-ਵਿਹਾਰ
+        other: ਪੱਤਰ-ਵਿਹਾਰ
       countryside_stewardship_grant:
         one:
         other:
       decision:
-        one:
-        other:
+        one: ਫੈਸਲਾ
+        other: ਫੈਸਲੇ
       detailed_guide:
-        one:
-        other:
+        one: ਸੇਧ
+        other: ਸੇਧ
       dfid_research_output:
         one:
         other:
       document_collection:
-        one:
-        other:
+        one: ਸੰਗ੍ਰਹਿ
+        other: ਸੰਗ੍ਰਹਿ
       draft_text:
-        one:
-        other:
+        one: ਡ੍ਰਾਫਟ ਟੈਕਸਟ
+        other: ਡ੍ਰਾਫਟ ਟੈਕਸਟ
       drug_safety_update:
         one:
         other:
@@ -77,38 +78,38 @@ pa:
         one:
         other:
       foi_release:
-        one:
-        other:
+        one: FOI ਰਿਲੀਜ਼
+        other: FOI ਰਿਲੀਜ਼
       form:
-        one:
-        other:
+        one: ਫਾਰਮ
+        other: ਫਾਰਮ
       government_response:
-        one:
-        other:
+        one: ਸਰਕਾਰ ਦਾ ਜਵਾਬ
+        other: ਸਰਕਾਰ ਦੇ ਜਵਾਬ
       guidance:
-        one:
-        other:
+        one: ਸੇਧ
+        other: ਸੇਧ
       impact_assessment:
-        one:
-        other:
+        one: ਪ੍ਰਭਾਵ ਦਾ ਮੁਲਾਂਕਣ
+        other: ਪ੍ਰਭਾਵ ਦੇ ਮੁਲਾਂਕਣ
       imported:
-        one:
-        other:
+        one: ਆਯਾਤ ਕੀਤਾ - ਕਿਸਮ ਦੀ ਉਡੀਕ ਹੋ ਰਹੀ
+        other: ਆਯਾਤ ਕੀਤਾ - ਕਿਸਮ ਦੀ ਉਡੀਕ ਹੋ ਰਹੀ
       independent_report:
-        one:
-        other:
+        one: ਸੁਤੰਤਰ ਰਿਪੋਰਟ
+        other: ਸੁਤੰਤਰ ਰਿਪੋਰਟਾਂ
       international_development_fund:
         one:
         other:
       international_treaty:
-        one:
-        other:
+        one: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀ
+        other: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀਆਂ
       maib_report:
         one:
         other:
       map:
-        one:
-        other:
+        one: ਨਕਸ਼ਾ
+        other: ਨਕਸ਼ੇ
       medical_safety_alert:
         one:
         other:
@@ -116,59 +117,59 @@ pa:
         one:
         other:
       national_statistics:
-        one:
-        other:
+        one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
+        other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
       national_statistics_announcement:
         one:
         other:
       news_article:
-        one:
-        other:
+        one: ਖ਼ਬਰਾਂ ਦਾ ਲੇਖ
+        other: ਖ਼ਬਰਾਂ ਦੇ ਲੇਖ
       news_story:
-        one:
-        other:
+        one: ਖ਼ਬਰਾਂ ਦੀ ਕਹਾਣੀ
+        other: ਖ਼ਬਰਾਂ ਦੀਆਂ ਕਹਾਣੀਆਂ
       notice:
-        one:
-        other:
+        one: ਨੋਟਿਸ
+        other: ਨੋਟਿਸ
       official:
         one:
         other:
       official_statistics:
-        one:
-        other:
+        one: ਅਧਿਕਾਰਤ ਅੰਕੜੇ
+        other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ
       official_statistics_announcement:
         one:
         other:
       open_consultation:
-        one:
-        other:
+        one: ਖੁੱਲ੍ਹਾ ਸਲਾਹ-ਮਸ਼ਵਰਾ
+        other: ਖੁੱਲ੍ਹੇ ਸਲਾਹ-ਮਸ਼ਵਰੇ
       oral_statement:
-        one:
-        other:
+        one: ਸੰਸਦ ਨੂੰ ਮੌਖਿਕ ਬਿਆਨ
+        other: ਸੰਸਦ ਨੂੰ ਮੌਖਿਕ ਬਿਆਨ
       policy:
         one:
         other:
       policy_paper:
-        one:
-        other:
+        one: ਨੀਤੀ ਪੱਤਰ
+        other: ਨੀਤੀ ਪੱਤਰ
       press_release:
-        one:
-        other:
+        one: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
+        other: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
       promotional:
-        one:
-        other:
+        one: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
+        other: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
       publication:
-        one:
-        other:
+        one: ਪ੍ਰਕਾਸ਼ਨ
+        other: ਪ੍ਰਕਾਸ਼ਨ
       raib_report:
         one:
         other:
       regulation:
-        one:
-        other:
+        one: ਨਿਯਮ
+        other: ਨਿਯਮ
       research:
-        one:
-        other:
+        one: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
+        other: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
       residential_property_tribunal_decision:
         one:
         other:
@@ -179,23 +180,23 @@ pa:
         one:
         other:
       speaking_notes:
-        one:
-        other:
+        one: ਬੋਲਣ ਲਈ ਨੋਟ
+        other: ਬੋਲਣ ਲਈ ਨੋਟ
       speech:
-        one:
-        other:
+        one: ਬੋਲਣਾ
+        other: ਭਾਸ਼ਣ
       statement_to_parliament:
-        one:
-        other:
+        one: ਸੰਸਦ ਨੂੰ ਬਿਆਨ
+        other: ਸੰਸਦ ਨੂੰ ਬਿਆਨ
       statistical_data_set:
-        one:
-        other:
+        one: ਅੰਕੜਾ ਡੇਟਾ ਸਮੂਹ
+        other: ਅੰਕੜਾ ਡੇਟਾ ਸਮੂਹ
       statistics_announcement:
         one:
         other:
       statutory_guidance:
-        one:
-        other:
+        one: ਵਿਧਾਨਿਕ ਸੇਧ
+        other: ਵਿਧਾਨਿਕ ਸੇਧ
       take_part:
         one:
         other:
@@ -203,11 +204,11 @@ pa:
         one:
         other:
       transcript:
-        one:
-        other:
+        one: ਪ੍ਰਤਿਲਿਪੀ
+        other: ਪ੍ਰਤਿਲਿਪੀਆਂ
       transparency:
-        one:
-        other:
+        one: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
+        other: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
       utaac_decision:
         one:
         other:
@@ -218,8 +219,8 @@ pa:
         one:
         other:
       written_statement:
-        one:
-        other:
+        one: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ
+        other: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ
     contents:
     metadata:
       published:
