@@ -18,16 +18,4 @@ class DetailedGuidePresenter < ContentItemPresenter
 
     { path: image["url"], alt_text: "European structural investment funds" }
   end
-
-private
-
-  def related_links(key)
-    raw_links = content_item["links"]
-    guides = raw_links.fetch(key, [])
-    guides.map { |g| { text: g["title"], path: g["base_path"] } }
-  end
-
-  def related_guides_title
-    I18n.t("detailed_guide.related_guides")
-  end
 end
