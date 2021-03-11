@@ -1,143 +1,144 @@
+---
 bn:
   language_names:
-    bn: "বাংলা"
+    bn: বাংলা
   content_item:
     schema_name:
       announcement:
-        one:
-        other:
+        one: ঘোষণা
+        other: ঘোষণাসমূহ
       authored_article:
-        one:
-        other:
+        one: রচনা নিবন্ধ
+        other: রচনা নিবন্ধসমূহ
       case_study:
-        one:
-        other:
+        one: কেস স্টাডি
+        other: কেস স্টাডিসমূহ
       closed_consultation:
-        one:
-        other:
+        one: সমাপ্ত শলাপরামর্শ
+        other: সমাপ্ত শলাপরামর্শসমূহ
       consultation:
-        one:
-        other:
+        one: শলাপরামর্শ
+        other: শলাপরামর্শসমূহ
       consultation_outcome:
-        one:
-        other:
+        one: শলাপরামর্শের ফলাফল
+        other: শলাপরামর্শের ফলাফলসমূহ
       corporate_report:
-        one:
-        other:
+        one: কর্পোরেট রিপোর্ট
+        other: কর্পোরেট রিপোর্টসমূহ
       correspondence:
-        one:
-        other:
+        one: চিঠিপত্র
+        other: চিঠিপত্রসমূহ
       decision:
-        one:
-        other:
+        one: সিদ্ধান্ত
+        other: সিদ্ধান্তসমূহ
       detailed_guide:
-        one:
-        other:
+        one: নির্দেশনা
+        other: নির্দেশনা
       document_collection:
-        one:
-        other:
+        one: সংগ্রহ
+        other: সংগ্রহসমূহ
       draft_text:
-        one:
-        other:
+        one: খসড়া পাঠ্য
+        other: খসড়া পাঠ্যসমূহ
       fatality_notice:
         one:
         other:
       foi_release:
-        one:
-        other:
+        one: এফওআই বিজ্ঞপ্তি
+        other: এফওআই বিজ্ঞপ্তিসমূহ
       form:
-        one:
-        other:
+        one: ফরম
+        other: ফরমসমূহ
       government_response:
-        one:
-        other:
+        one: সরকারী প্রতিক্রিয়া
+        other: সরকারী প্রতিক্রিয়াসমূহ
       guidance:
-        one:
-        other:
+        one: নির্দেশনা
+        other: নির্দেশনা
       impact_assessment:
-        one:
-        other:
+        one: প্রভাব মূল্যায়ন
+        other: প্রভাব মূল্যায়নসমূহ
       imported:
-        one:
-        other:
+        one: আমদানিকৃত- প্রত্যাশিত প্রকার
+        other: আমদানিকৃত- প্রত্যাশিত প্রকার
       independent_report:
-        one:
-        other:
+        one: স্বতন্ত্র রিপোর্ট
+        other: স্বতন্ত্র রিপোর্টসমূহ
       international_treaty:
-        one:
-        other:
+        one: আন্তর্জাতিক চুক্তি
+        other: আন্তর্জাতিক চুক্তিসমূহ
       map:
-        one:
-        other:
+        one: মানচিত্র
+        other: মানচিত্রসমূহ
       national_statistics:
-        one:
-        other:
+        one: জাতীয় পরিসংখ্যান
+        other: জাতীয় পরিসংখ্যান
       news_article:
-        one:
-        other:
+        one: সংবাদ প্রবন্ধ
+        other: সংবাদ প্রবন্ধসমূহ
       news_story:
-        one:
-        other:
+        one: সংবাদের কাহিনী
+        other: সংবাদের কাহিনীসমূহ
       notice:
-        one:
-        other:
+        one: প্রজ্ঞাপন
+        other: প্রজ্ঞাপনসমূহ
       open_consultation:
-        one:
-        other:
+        one: উন্মুক্ত শলাপরামর্শ
+        other: উন্মুক্ত শলাপরামর্শসমূহ
       oral_statement:
-        one:
-        other:
+        one: সংসদে মৌখিক বিবৃতি
+        other: সংসদে মৌখিক বিবৃতিসমূহ
       policy:
         one:
         other:
       policy_paper:
-        one:
-        other:
+        one: নীতিমালা সংক্রান্ত পত্র
+        other: নীতিমালা সংক্রান্ত পত্রসমূহ
       press_release:
-        one:
-        other:
+        one: সংবাদ বিজ্ঞপ্তি
+        other: সংবাদ বিজ্ঞপ্তিসমূহ
       promotional:
-        one:
-        other:
+        one: প্রচারমূলক উপাদান
+        other: প্রচারমূলক উপাদান
       publication:
-        one:
-        other:
+        one: প্রকাশনা
+        other: প্রকাশনাসমূহ
       regulation:
-        one:
-        other:
+        one: নিয়ম
+        other: নিয়মাবলী
       research:
-        one:
-        other:
+        one: গবেষণা ও বিশ্লেষণ
+        other: গবেষণা ও বিশ্লেষণ
       speaking_notes:
-        one:
-        other:
+        one: কথ্য নোটসমূহ
+        other: কথ্য নোটসমূহ
       speech:
-        one:
-        other:
+        one: ভাষণ
+        other: ভাষণসমূহ
       statement_to_parliament:
-        one:
-        other:
+        one: সংসদে বিবৃতি
+        other: সংসদে বিবৃতিসমূহ
       statistical_data_set:
-        one:
-        other:
+        one: পরিসংখ্যানমূলক ডেটা সেট
+        other: পরিসংখ্যানমূলক ডেটা সেটসমূহ
       official_statistics:
-        one:
-        other:
+        one: দাপ্তরিক পরিসংখ্যান
+        other: দাপ্তরিক পরিসংখ্যান
       statutory_guidance:
-        one:
-        other:
+        one: সংবিধিবদ্ধ নির্দেশনা
+        other: সংবিধিবদ্ধ নির্দেশনা
       transcript:
-        one:
-        other:
+        one: প্রতিলিপি
+        other: প্রতিলিপিসমূহ
       transparency:
-        one:
-        other:
+        one: স্বচ্ছতামূলক ডেটা
+        other: স্বচ্ছতামূলক ডেটা
       world_location_news_article:
         one:
         other:
       written_statement:
-        one:
-        other:
+        one: সংসদে লিখিত বিবৃতি
+        other: সংসদে লিখিত বিবৃতিসমূহ
     metadata:
       published:
       updated:
