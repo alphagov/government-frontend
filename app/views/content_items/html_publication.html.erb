@@ -43,10 +43,13 @@
   <% if @content_item.contents.any? %>
     <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
       <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
-      <%= render "govuk_publishing_components/components/print_link", {
-        margin_top: 0,
-        margin_bottom: 6,
-      } %>
+
+      <% if @content_item.contents.size < 10 %>
+        <%= render "govuk_publishing_components/components/print_link", {
+          margin_top: 0,
+          margin_bottom: 6,
+        } %>
+      <% end %>
     </div>
   <% end %>
 
