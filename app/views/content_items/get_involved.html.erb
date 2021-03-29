@@ -36,17 +36,13 @@
       </div>
       <div class="consultation-lists govuk-grid-column-two-thirds-from-desktop">
         <div class="consultation-closing-soon">
-          <% @next_closing_consultations.each do |consultation| %>
-            <h3><%= time_until_closure(consultation) %></h3>
-          <% end %>
+          <h3><%= time_until_closure(@next_closing_consultation) %></h3>
           <ol class="document-list">
-            <% @next_closing_consultations.each do |consultation| %>
-              <%= content_tag(:li, "consultation", class: 'document-row') do %>
-                <h3><%= consultation['title'] %></h3>
-                <ul class="attributes">
-                  <li><%= link_to "Read and respond", consultation['base_path'], class: "govuk-link" %></li>
-                </ul>
-              <% end %>
+            <%= content_tag(:li, "consultation", class: 'document-row') do %>
+              <h3><%= @next_closing_consultation['title'] %></h3>
+              <ul class="attributes">
+                <li><%= link_to "Read and respond", @next_closing_consultation['link'], class: "govuk-link" %></li>
+              </ul>
             <% end %>
           </ol>
         </div>
@@ -57,11 +53,11 @@
               <ol class="document-list">
                 <% @recently_opened_consultations.each do |consultation| %>
                   <li class="document-row">
-                    <h3><%= link_to consultation['title'], consultation['base_path'], class: "govuk-link" %></h3>
+                    <h3><%= link_to consultation['title'], consultation['link'], class: "govuk-link" %></h3>
                     <ul class="attributes">
-                      <li><%= consultation['links']['organisation_acronyms'].to_sentence %></li>
-                      <li>Closes <%= date_microformat(consultation['details']['closing_date']) %></li>
-                      <li><%= link_to "Read and respond", consultation['base_path'], class: "govuk-link", aria: {hidden: true} %></li>
+                      <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
+                      <li>Closes <%= date_microformat(consultation['end_date']) %></li>
+                      <li><%= link_to "Read and respond", consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
                     </ul>
                   </li>
                 <% end %>
@@ -75,11 +71,11 @@
               <ol class="document-list">
                 <% @recent_consultation_outcomes.each do |consultation| %>
                   <li class="document-row">
-                    <h3><%= link_to consultation['title'], consultation['base_path'], class: "govuk-link" %></h3>
+                    <h3><%= link_to consultation['title'], consultation['link'], class: "govuk-link" %></h3>
                     <ul class="attributes">
-                      <li><%= consultation['links']['organisation_acronyms'].to_sentence %></li>
-                      <li>Closed <%= date_microformat(consultation['details']['closing_date']) %></li>
-                      <li><%= link_to "See the outcome", consultation['base_path'], class: "govuk-link", aria: {hidden: true}  %></li>
+                      <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
+                      <li>Closed <%= date_microformat(consultation['end_date']) %></li>
+                      <li><%= link_to "See the outcome", consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
                     </ul>
                   </li>
                 <% end %>

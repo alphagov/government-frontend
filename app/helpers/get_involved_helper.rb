@@ -11,7 +11,7 @@ module GetInvolvedHelper
 private
 
   def time_until_closure(consultation)
-    days_left = (consultation["details"]["closing_date"].to_date - Time.zone.now.to_date).to_i
+    days_left = (consultation["end_date"].to_date - Time.zone.now.to_date).to_i
     case days_left
     when :negative?.to_proc
       "Closed"
