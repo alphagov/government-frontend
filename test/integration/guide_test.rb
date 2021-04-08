@@ -123,7 +123,7 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert_equal faq_schema["headline"], "How to vote"
     assert_equal faq_schema["description"], "<p>You need to be <a href=\"/register-to-vote?src=schema\">registered to vote</a> before you can vote in UK elections or referendums.</p> <p>If you’re eligible, you can vote in person on the day of the election at a named polling station. You can also apply for a postal or proxy vote instead.</p> <p>There are elections and referendums in England, Scotland and Wales on 6 May 2021.</p>\n"
 
-    assert_equal 9, q_and_as.count
+    assert_equal 10, q_and_as.count
   end
 
   test "voting in the UK guide shows all chapters on a single page" do
