@@ -2,6 +2,7 @@
   <%= machine_readable_metadata(
     schema: :faq
   ) %>
+  <%= weighted_links_variant.analytics_meta_tag.html_safe if weighted_links_testable? %>
 <% end %>
 
 <div class="govuk-grid-row">

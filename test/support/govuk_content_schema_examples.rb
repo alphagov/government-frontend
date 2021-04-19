@@ -25,6 +25,16 @@ module GovukContentSchemaExamples
     document
   end
 
+  def content_store_has_example_item(base_path, schema:, example: nil)
+    content_item = GovukSchemas::Example.find(schema, example_name: example || schema)
+
+    content_item["links"] ||= {}
+    content_item["base_path"] = base_path
+
+    stub_content_store_has_item(base_path, content_item)
+    content_item
+  end
+
   def govuk_content_schema_example(schema_name, example_name)
     GovukSchemas::Example.find(schema_name, example_name: example_name)
   end

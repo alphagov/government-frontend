@@ -9,6 +9,12 @@ class ContentItemsController < ApplicationController
   rescue_from PresenterBuilder::SpecialRouteReturned, with: :error_notfound
   rescue_from PresenterBuilder::GovernmentReturned, with: :error_notfound
 
+  include WeightedLinksAbTestable
+
+  before_action :set_weighted_links_response
+
+  helper_method :weighted_links_variant, :weighted_links_testable?
+
   attr_accessor :content_item, :taxonomy_navigation
 
   def show
@@ -91,7 +97,11 @@ private
     if show_suggested_links?(content_item_data)
       suggested_links_builder ||= SuggestedLinksBuilder.new(content_item_data)
 
-      content_item_data["links"]["ordered_related_items"] = suggested_links_builder.suggested_related_links
+      content_item_data["links"]["ordered_related_items"] = if weighted_links_variant.variant?("B")
+                                                              suggested_links_builder.weighted_related_links
+                                                            else
+                                                              suggested_links_builder.suggested_related_links
+                                                            end
     end
 
     @content_item = PresenterBuilder.new(

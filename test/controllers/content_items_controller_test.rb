@@ -385,6 +385,55 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_select ".gem-c-contextual-footer", false
   end
 
+  test "shows the B variant suggested related link" do
+    content_item = content_store_has_example_item("/government/case-studies/using-rewards-encouraging-good-behaviour", schema: "case_study")
+    content_item["links"]["suggested_ordered_related_items"] =
+      [
+        {
+          "content_id": "774cee22-d896-44c1-a611-e3109cce8eae",
+          "title": "Coronavirus (COVID-19): guidance and support",
+          "locale": "en",
+          "api_path": "/api/content/coronavirus",
+          "base_path": "/coronavirus",
+          "document_type": "coronavirus_landing_page",
+          "public_updated_at": "2020-12-23T15:27:18Z",
+          "schema_name": "coronavirus_landing_page",
+          "withdrawn": false,
+          "description": "Find information on coronavirus, including guidance, support, announcements and statistics.",
+          "links": {},
+          "api_url": "https://www.gov.uk/api/content/coronavirus",
+          "web_url": "https://www.gov.uk/coronavirus",
+        },
+        {
+          "content_id": "b32fd0f5-b2fa-45c5-8fe8-8715a0f6574b",
+          "title": "Making a support bubble with another household",
+          "locale": "en",
+          "api_path": "/api/content/guidance/making-a-support-bubble-with-another-household",
+          "base_path": "/guidance/making-a-support-bubble-with-another-household",
+          "document_type": "detailed_guide",
+          "public_updated_at": "2021-01-15T16:40:21Z",
+          "schema_name": "detailed_guide",
+          "withdrawn": false,
+          "links": {},
+          "api_url": "https://www.gov.uk/api/content/guidance/making-a-support-bubble-with-another-household",
+          "web_url": "https://www.gov.uk/guidance/making-a-support-bubble-with-another-household",
+        },
+      ]
+
+    with_variant WeightedLinksAbTestable: "B" do
+      get :show, params: { path: path_for(content_item) }
+
+      assert_response :success
+      assert_select "h2.gem-c-related-navigation__main-heading"
+    end
+  end
+
+  test "headers are not modified when pages are not in AB test" do
+    content_item = content_store_has_schema_example("case_study", "case_study")
+    get :show, params: { path: path_for(content_item) }
+    assert_response_not_modified_for_ab_test(WeightedLinksAbTestable)
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale
