@@ -13,6 +13,11 @@ Rails.application.routes.draw do
         GovukHealthcheck::RailsCache,
       )
 
+  get "/healthcheck/live", to: proc { [200, {}, %w[OK]] }
+  get "/healthcheck/ready", to: GovukHealthcheck.rack_response(
+    GovukHealthcheck::RailsCache,
+  )
+
   get "/government/uploads/*path" => "asset_manager_redirect#show", format: false
 
   # Testing guides as a single page so we redirect parts to the default page
