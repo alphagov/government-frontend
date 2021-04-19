@@ -86,14 +86,16 @@ private
   end
 
   def load_content_item
-    content_item = Services.content_store.content_item(content_item_path)
+    content_item_data = Services.content_store.content_item(content_item_path)
 
-    if Services.feature_toggler.use_recommended_related_links?(content_item["links"], request.headers)
-      content_item["links"]["ordered_related_items"] = content_item["links"].fetch("suggested_ordered_related_items", [])
+    if show_suggested_links?(content_item_data)
+      suggested_links_builder ||= SuggestedLinksBuilder.new(content_item_data)
+
+      content_item_data["links"]["ordered_related_items"] = suggested_links_builder.suggested_related_links
     end
 
     @content_item = PresenterBuilder.new(
-      content_item,
+      content_item_data,
       content_item_path,
       view_context,
     ).presenter
@@ -156,9 +158,9 @@ private
 
   def set_use_recommended_related_links_header
     response.headers["Vary"] = [response.headers["Vary"], FeatureFlagNames.recommended_related_links].compact.join(", ")
-
     related_links_request_header = RequestHelper.get_header(FeatureFlagNames.recommended_related_links, request.headers)
     required_header_value = Services.feature_toggler.feature_flags.get_feature_flag(FeatureFlagNames.recommended_related_links)
+
     response.headers[FeatureFlagNames.recommended_related_links] = (related_links_request_header == required_header_value).to_s
   end
 
@@ -204,5 +206,9 @@ private
       exception.content_item, request.path, request.query_string
     )
     redirect_to destination, status: status_code
+  end
+
+  def show_suggested_links?(content_item)
+    Services.feature_toggler.use_recommended_related_links?(content_item["links"], request.headers)
   end
 end
