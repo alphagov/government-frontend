@@ -152,6 +152,7 @@ GEM
       domain_name (~> 0.5)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    i18n-coverage (0.2.0)
     image_size (2.1.0)
     io-like (0.3.1)
     jasmine (3.6.0)
@@ -432,6 +433,7 @@ DEPENDENCIES
   govuk_schemas
   govuk_test
   htmlentities
+  i18n-coverage
   jasmine
   jasmine_selenium_runner
   minitest-reporters

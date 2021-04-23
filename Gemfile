@@ -35,6 +35,7 @@ end
 group :test do
   gem "capybara"
   gem "faker"
+  gem "i18n-coverage"
   gem "minitest-reporters"
   gem "mocha"
   gem "simplecov"
