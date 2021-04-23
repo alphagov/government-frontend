@@ -33,8 +33,6 @@ en:
   time:
     formats:
       short_ordinal: '%e %B %Y'
-  common:
-    last_updated: "Last updated"
   components:
     figure:
       image_credit: "Image credit: %{credit}"
