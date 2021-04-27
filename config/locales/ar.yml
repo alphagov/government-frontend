@@ -6,18 +6,8 @@ ar:
   components:
     share_links:
       share_this_page: "شارك هذه الصفحة"
-    related_navigation:
-      collections: "مجموعات"
-      external_links: "روابط خارجية"
-      policies: "سياسيات"
-      related_content: "محتوى ذو صلة"
-      topical_events: "أحداث ذات صلة بالموضوع"
-      topics: "المواضيع"
-      world_locations: "العالم"
     published_dates:
       published: "تاريخ النشر %{date}"
-    publisher_metadata:
-      from: "من"
   content_item:
     schema_name:
       announcement:
@@ -345,9 +335,6 @@ ar:
       published: "نشر"
       updated: "تحديث"
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       zero:

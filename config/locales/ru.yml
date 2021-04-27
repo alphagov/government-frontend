@@ -1,15 +1,6 @@
 ru:
   language_names:
     ru: "Русский"
-  components:
-    related_navigation:
-      collections: "Коллекции"
-      external_links: "Внешние ссылки"
-      policies: "Политика"
-      related_content: "На эту тему"
-      topical_events: "Актуальные события"
-      topics: "Темы"
-      world_locations: "Страны, регионы, организации"
   content_item:
     schema_name:
       announcement:
@@ -244,9 +235,6 @@ ru:
       published: "Опубликовано"
       updated: "обновлено"
     contents:
-  detailed_guide:
-    related_mainstream_content:
-    related_guides:
   publication:
     documents:
       one: "Документ"
