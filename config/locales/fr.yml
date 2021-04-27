@@ -1,7 +1,10 @@
+---
 fr:
-  language_names:
-    fr: Français
   content_item:
+    contents:
+    metadata:
+      published: publié
+      updated: mise à jour
     schema_name:
       announcement:
         one: Annonce
@@ -81,6 +84,9 @@ fr:
       notice:
         one:
         other:
+      official_statistics:
+        one: Statistiques
+        other: Statistiques
       open_consultation:
         one: Consultation ouverte
         other: Consultations ouvertes
@@ -123,9 +129,6 @@ fr:
       statistical_data_set:
         one: Ensemble de données statistiques
         other: Ensembles de données statistiques
-      official_statistics:
-        one: Statistiques
-        other: Statistiques
       statutory_guidance:
         one:
         other:
@@ -141,21 +144,16 @@ fr:
       written_statement:
         one: Communiqué
         other: Communiqués
-    metadata:
-      published: publié
-      updated: mise à jour
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Informations générales
+    personal_information_charter_html: Notre %{link} explique comment nous traitons vos renseignements personnels.
+    publication_scheme_html: En savoir plus sur les types d'informations régulièrement publiés dans notre %{link}.
+    social_media_use_html: Lire notre politique d' %{link}.
+    welsh_language_scheme_html: En savoir plus sur notre engagement à l'édition en %{link}.
+  language_names:
+    fr: Français
   publication:
     documents:
       one: Document
       other: Documents
-  corporate_information_page:
-    corporate_information: Informations générales
-    publication_scheme_html: En savoir plus sur les types d'informations régulièrement
-      publiés dans notre %{link}.
-    personal_information_charter_html: Notre %{link} explique comment nous traitons
-      vos renseignements personnels.
-    welsh_language_scheme_html: En savoir plus sur notre engagement à l'édition en
-      %{link}.
-    social_media_use_html: Lire notre politique d' %{link}.
-    about_our_services_html:

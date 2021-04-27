@@ -1,7 +1,10 @@
+---
 sw:
-  language_names:
-    sw: Kiswahili
   content_item:
+    contents:
+    metadata:
+      published:
+      updated:
     schema_name:
       announcement:
         one:
@@ -81,6 +84,9 @@ sw:
       notice:
         one:
         other:
+      official_statistics:
+        one:
+        other:
       open_consultation:
         one:
         other:
@@ -123,9 +129,6 @@ sw:
       statistical_data_set:
         one:
         other:
-      official_statistics:
-        one:
-        other:
       statutory_guidance:
         one:
         other:
@@ -141,18 +144,16 @@ sw:
       written_statement:
         one:
         other:
-    metadata:
-      published:
-      updated:
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
+  language_names:
+    sw: Kiswahili
   publication:
     documents:
       one:
       other:
-  corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
-    about_our_services_html:

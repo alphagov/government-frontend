@@ -1,7 +1,10 @@
+---
 es:
-  language_names:
-    es: Español
   content_item:
+    contents:
+    metadata:
+      published: Publicado
+      updated: Actualizado
     schema_name:
       announcement:
         one: Anuncio
@@ -81,6 +84,9 @@ es:
       notice:
         one:
         other:
+      official_statistics:
+        one: Estadísticas
+        other: Estadísticas
       open_consultation:
         one: Consulta abierta
         other: Consultas abiertas
@@ -120,9 +126,6 @@ es:
       statistical_data_set:
         one: Conjunto de datos estadísticos
         other: Conjuntos de datos estadísticos
-      official_statistics:
-        one: Estadísticas
-        other: Estadísticas
       statutory_guidance:
         one:
         other:
@@ -138,21 +141,16 @@ es:
       written_statement:
         one: Declaración escrita
         other: Declaraciones escritas
-    metadata:
-      published: Publicado
-      updated: Actualizado
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Información corporativa
+    personal_information_charter_html: El siguiente enlace %{link} explica cómo tratamos tu información personal
+    publication_scheme_html: Lea acerca del tipo de información que publicamos en el siguiente enlace %{link}
+    social_media_use_html: Lea nuestra política en %{link}
+    welsh_language_scheme_html: 'Encuentre más sobre nuestro compromiso de publicar en %{link} '
+  language_names:
+    es: Español
   publication:
     documents:
       one: Documento
       other: Documentos
-  corporate_information_page:
-    corporate_information: Información corporativa
-    publication_scheme_html: Lea acerca del tipo de información que publicamos en
-      el siguiente enlace %{link}
-    personal_information_charter_html: El siguiente enlace %{link} explica cómo tratamos
-      tu información personal
-    welsh_language_scheme_html: 'Encuentre más sobre nuestro compromiso de publicar
-      en %{link} '
-    social_media_use_html: Lea nuestra política en %{link}
-    about_our_services_html:

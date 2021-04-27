@@ -1,163 +1,161 @@
+---
 ps:
-  i18n:
-    direction: rtl
-  language_names:
-    ps: "پښتو"
   content_item:
+    contents:
+    metadata:
+      published: خپور شوی
+      updated: تازه شوي
     schema_name:
       announcement:
-        one: "خبرتیا"
-        other: "خبرتیاوې"
+        one: خبرتیا
+        other: خبرتیاوې
       authored_article:
-        one: "تالیف شوی مضمون"
-        other: "تالیف شوي مضامین"
+        one: تالیف شوی مضمون
+        other: تالیف شوي مضامین
       case_study:
-        one: "موردی څیړنه"
-        other: "مودری څیړنی"
+        one: موردی څیړنه
+        other: مودری څیړنی
       closed_consultation:
-        one: "محرمه مشوره"
-        other: "محرمه مشوری"
+        one: محرمه مشوره
+        other: محرمه مشوری
       consultation:
-        one: "مشوره"
-        other: "مشوری"
+        one: مشوره
+        other: مشوری
       consultation_outcome:
-        one: "د مشوری پایله"
-        other: "د مشورو پایله"
+        one: د مشوری پایله
+        other: د مشورو پایله
       corporate_report:
-        one: "متحد راپور"
-        other: "متحد راپورونه"
+        one: متحد راپور
+        other: متحد راپورونه
       correspondence:
-        one: "ارتباط ساتنه"
-        other: "ارتباطات ساتنه"
+        one: ارتباط ساتنه
+        other: ارتباطات ساتنه
       decision:
         one:
         other:
       detailed_guide:
-        one: "مفصله لارښوونه"
-        other: "مفصلی لارښوونی"
+        one: مفصله لارښوونه
+        other: مفصلی لارښوونی
       document_collection:
-        one: "سلسله"
+        one: سلسله
         other:
       draft_text:
-        one: "مسوده"
-        other: "مسودی"
+        one: مسوده
+        other: مسودی
       fatality_notice:
-        one: "دمړینی خبرتیا"
-        other: "دمړینی خبرتیاوی"
+        one: دمړینی خبرتیا
+        other: دمړینی خبرتیاوی
       foi_release:
-        one: "د بیان د آزادی خپرونه"
-        other: "د بیان د آزادی خپرونی"
+        one: د بیان د آزادی خپرونه
+        other: د بیان د آزادی خپرونی
       form:
-        one: "فارم"
-        other: "فارمونه"
+        one: فارم
+        other: فارمونه
       government_response:
-        one: "د دولت ځواب"
-        other: "د دولت ځوابونه"
+        one: د دولت ځواب
+        other: د دولت ځوابونه
       guidance:
-        one: "رهنمایی"
-        other: "رهنمایی"
+        one: رهنمایی
+        other: رهنمایی
       impact_assessment:
-        one: "د تاثیراتو څیړنه"
-        other: "د تاثیراتو څیړنی"
+        one: د تاثیراتو څیړنه
+        other: د تاثیراتو څیړنی
       imported:
-        one: "وارد شوی - د انتظار نمونه"
-        other: "وارد شوی - د انتظار نمونه"
+        one: وارد شوی - د انتظار نمونه
+        other: وارد شوی - د انتظار نمونه
       independent_report:
-        one: "آزاد راپور"
-        other: "آزاد راپورونه"
+        one: آزاد راپور
+        other: آزاد راپورونه
       international_treaty:
         one:
         other:
       map:
-        one: "نقشه"
-        other: "نقشی"
+        one: نقشه
+        other: نقشی
       national_statistics:
-        one: "شمیرنه - ملی شمیرنې"
-        other: "شمیرنه - ملی شمیرنې"
+        one: شمیرنه - ملی شمیرنې
+        other: شمیرنه - ملی شمیرنې
       news_article:
-        one: "خبری مقاله"
-        other: "خبری مقالی"
+        one: خبری مقاله
+        other: خبری مقالی
       news_story:
-        one: "خبری راپور"
-        other: "خبری راپورونه"
+        one: خبری راپور
+        other: خبری راپورونه
       notice:
         one:
         other:
+      official_statistics:
+        one: شمیرنه
+        other: شمیرنه
       open_consultation:
-        one: "آزاده مشوره"
-        other: "آزادې مشورې"
+        one: آزاده مشوره
+        other: آزادې مشورې
       oral_statement:
-        one: "پارلمان ته شفاهی اعلامیه"
-        other: "پارلمان ته شفاهی اعلامیی"
+        one: پارلمان ته شفاهی اعلامیه
+        other: پارلمان ته شفاهی اعلامیی
       policy:
-        one: "پالیسی"
-        other: "پالیسی ګانی"
+        one: پالیسی
+        other: پالیسی ګانی
       policy_paper:
-        one: "د پالیسۍ سند"
-        other: "د پالیسې سندونه"
+        one: د پالیسۍ سند
+        other: د پالیسې سندونه
       press_release:
-        one: "مطبوعاتی خبرپاڼه"
-        other: "مطبوعاتی خبرپاڼې"
+        one: مطبوعاتی خبرپاڼه
+        other: مطبوعاتی خبرپاڼې
       promotional:
-        one: "روزونکې مواد"
-        other: "روزونکی مواد"
+        one: روزونکې مواد
+        other: روزونکی مواد
       publication:
-        one: "خپرونه"
-        other: "خپرونې"
+        one: خپرونه
+        other: خپرونې
       regulation:
         one:
         other:
       research:
-        one: "څیړنه او تجزیه"
-        other: "ځیړنه او تجزیه"
+        one: څیړنه او تجزیه
+        other: ځیړنه او تجزیه
       speaking_notes:
-        one: "د وینا یادښت"
-        other: "د وینا یادښتونه"
+        one: د وینا یادښت
+        other: د وینا یادښتونه
       speech:
-        one: "وینا"
-        other: "ویناوې"
+        one: وینا
+        other: ویناوې
       standard:
         one:
         other:
       statement_to_parliament:
-        one: "پارلمان ته اعلامیه"
-        other: "پارلمان ته اعلامیې"
+        one: پارلمان ته اعلامیه
+        other: پارلمان ته اعلامیې
       statistical_data_set:
-        one: "د شمیرنې اطلاعات"
-        other: "د شمیرنې اطلاعات"
-      official_statistics:
-        one: "شمیرنه"
-        other: "شمیرنه"
+        one: د شمیرنې اطلاعات
+        other: د شمیرنې اطلاعات
       statutory_guidance:
         one:
         other:
       transcript:
-        one: "لیکنه"
-        other: "لیکنې"
+        one: لیکنه
+        other: لیکنې
       transparency:
-        one: "د روڼوالې اطلاعات"
-        other: "د روڼوالي اطلاعات"
+        one: د روڼوالې اطلاعات
+        other: د روڼوالي اطلاعات
       world_location_news_article:
-        one: "خبری مقاله"
-        other: "خبری مقالی"
+        one: خبری مقاله
+        other: خبری مقالی
       written_statement:
-        one: "پارلمان ته لیکلې اعلامیه"
-        other: "پارلمان ته لیکلې اعلامیې"
-    metadata:
-      published: "خپور شوی"
-      updated: "تازه شوي"
-    contents:
+        one: پارلمان ته لیکلې اعلامیه
+        other: پارلمان ته لیکلې اعلامیې
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: متحد معلومات
+    personal_information_charter_html: " زموږ تشریح کوی چې موږ د شخصی معلوماتو سره څرنګه چلند کوو"
+    publication_scheme_html: زموږ د هغو معلوماتو په اړه ولولۍ چې هره ورڅ یې موږ خپروو %{link}.
+    social_media_use_html: زموږه پالسی ولولی %{link}.
+    welsh_language_scheme_html: د نشریاتو په اړه  زموږ د ژمنو  معلومات ترلاسه کړۍ %{link}.
+  i18n:
+    direction: rtl
+  language_names:
+    ps: پښتو
   publication:
     documents:
-      one: "سند"
-      other: "سندونه"
-  corporate_information_page:
-    corporate_information: متحد معلومات
-    publication_scheme_html: زموږ د هغو معلوماتو په اړه ولولۍ چې هره ورڅ یې موږ خپروو
-      %{link}.
-    personal_information_charter_html: " زموږ تشریح کوی چې موږ د شخصی معلوماتو سره
-      څرنګه چلند کوو"
-    welsh_language_scheme_html: د نشریاتو په اړه  زموږ د ژمنو  معلومات ترلاسه کړۍ
-      %{link}.
-    social_media_use_html: زموږه پالسی ولولی %{link}.
-    about_our_services_html:
+      one: سند
+      other: سندونه

@@ -1,7 +1,10 @@
+---
 tr:
-  language_names:
-    tr: Türkçe
   content_item:
+    contents:
+    metadata:
+      published: Yayında
+      updated: Güncellendi
     schema_name:
       announcement:
         one: Duyuru
@@ -10,8 +13,8 @@ tr:
         one: Yazılan makale
         other: Yazılan makaleler
       case_study:
-        one: "Örnek Olay"
-        other: "Örnek Olaylar"
+        one: Örnek Olay
+        other: Örnek Olaylar
       closed_consultation:
         one: Sona eren çalışmalar
         other: Sona eren çalışmalar
@@ -40,8 +43,8 @@ tr:
         one: Taslak metin
         other: Taslak metinler
       fatality_notice:
-        one: "Ölüm ilanı"
-        other: "Ölüm ilanları"
+        one: Ölüm ilanı
+        other: Ölüm ilanları
       foi_release:
         one: Bilgi edinme hakkı raporu
         other: Bilgi edinme hakkı raporları
@@ -70,8 +73,8 @@ tr:
         one: Harita
         other: Haritalar
       national_statistics:
-        one: "İstatistikler - ulusal istatistikler"
-        other: "İstatistikler - ulusal istatistikler"
+        one: İstatistikler - ulusal istatistikler
+        other: İstatistikler - ulusal istatistikler
       news_article:
         one: Makale
         other: Makaleler
@@ -81,6 +84,9 @@ tr:
       notice:
         one:
         other:
+      official_statistics:
+        one: İstatistikler
+        other: İstatistikler
       open_consultation:
         one: Devam eden çalışma
         other: Devam eden çalışmalar
@@ -121,11 +127,8 @@ tr:
         one: Parlamento'ya yapılan açıklama
         other: Parlamento'ya yapılan açıklamalar
       statistical_data_set:
-        one: "İstatiksel veri setleri"
-        other: "İstatiksel veri setleri"
-      official_statistics:
-        one: "İstatistikler"
-        other: "İstatistikler"
+        one: İstatiksel veri setleri
+        other: İstatiksel veri setleri
       statutory_guidance:
         one:
         other:
@@ -141,22 +144,16 @@ tr:
       written_statement:
         one: Parlamento'ya yapılan yazılı açıklama
         other: Parlamento'ya yapılan yazılı açıklamalar
-    metadata:
-      published: Yayında
-      updated: Güncellendi
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Kurumsal bilgi
+    personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız açıklamaktadır
+    publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link} 'e bakınız
+    social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi için %{link}
+    welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten ulaşabilirsiniz.
+  language_names:
+    tr: Türkçe
   publication:
     documents:
       one: Belge
       other: Belgeler
-  corporate_information_page:
-    corporate_information: Kurumsal bilgi
-    publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link}
-      'e bakınız
-    personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız
-      açıklamaktadır
-    welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten
-      ulaşabilirsiniz.
-    social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi için
-      %{link}
-    about_our_services_html:

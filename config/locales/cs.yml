@@ -1,207 +1,206 @@
+---
 cs:
-  language_names:
-    cs: "Česky"
   content_item:
+    contents:
+    metadata:
+      published: Publikováno
+      updated: Aktualizováno
     schema_name:
       announcement:
-        one: Oznámení
         few:
+        one: Oznámení
         other: Oznámení
       authored_article:
-        one: Autorský článek
         few:
+        one: Autorský článek
         other: Autorské články
       case_study:
-        one: Případová studie
         few:
+        one: Případová studie
         other: Případové studie
       closed_consultation:
-        one: Uzavřená konzultace
         few:
+        one: Uzavřená konzultace
         other: Uzavřené konzultace
       consultation:
-        one: Konzultace
         few:
+        one: Konzultace
         other: Konzultace
       consultation_outcome:
-        one: Výsledek konzultací
         few:
+        one: Výsledek konzultací
         other: Výsledky konzultací
       corporate_report:
-        one: Korporátní zpráva
         few:
+        one: Korporátní zpráva
         other: Korporátní zprávy
       correspondence:
-        one: Korespondence
         few:
+        one: Korespondence
         other: Korespondence
       decision:
-        one:
         few:
+        one:
         other:
       detailed_guide:
-        one: Podrobný návod
         few:
+        one: Podrobný návod
         other: Podrobný návod
       document_collection:
-        one: Edice
         few:
+        one: Edice
         other:
       draft_text:
-        one: Koncept
         few:
+        one: Koncept
         other: Koncepty
       fatality_notice:
-        one: Hlášení závad
         few:
+        one: Hlášení závad
         other: Hlášení závad
       foi_release:
-        one: Zpráva vydaná na základě Zákona o svobodném přístupu k informacím
         few:
+        one: Zpráva vydaná na základě Zákona o svobodném přístupu k informacím
         other: Zprávy vydané za základě Zákona o svobodném přístupu k informacím
       form:
-        one: Formulář
         few:
+        one: Formulář
         other: Formuláře
       government_response:
-        one: Odpověď vlády
         few:
+        one: Odpověď vlády
         other: Odpovědi vlády
       guidance:
-        one: Návod
         few:
+        one: Návod
         other: Návody
       impact_assessment:
-        one: Vyhodnocení dopadu
         few:
+        one: Vyhodnocení dopadu
         other: Vyhodnocení dopadů
       imported:
-        one: importováno - očekává vyřízení
         few:
+        one: importováno - očekává vyřízení
         other: importováno - očekává vyřízení
       independent_report:
-        one: Nezávislá zpráva
         few:
+        one: Nezávislá zpráva
         other: Nezávislé zprávy
       international_treaty:
-        one:
         few:
+        one:
         other:
       map:
-        one: Mapa
         few:
+        one: Mapa
         other: Mapy
       national_statistics:
-        one: Statistiky - národní statistiky
         few:
+        one: Statistiky - národní statistiky
         other: Statistiky - národní statistiky
       news_article:
-        one: Nový článek
         few:
+        one: Nový článek
         other: Nové články
       news_story:
-        one: Zpráva
         few:
+        one: Zpráva
         other: Zprávy
       notice:
+        few:
         one:
-        few:
         other:
-      open_consultation:
-        one: Otevřená konzultace
+      official_statistics:
         few:
+        one: Statistika
+        other: Statistiky
+      open_consultation:
+        few:
+        one: Otevřená konzultace
         other: Otevřené konzultace
       oral_statement:
-        one: Vystoupení v  parlamentu
         few:
+        one: Vystoupení v  parlamentu
         other: Vystoupení v parlamentu
       policy:
-        one: Politika
         few:
+        one: Politika
         other: Politiky
       policy_paper:
-        one: Dokument
         few:
+        one: Dokument
         other: Dokumenty
       press_release:
-        one: Tisková zpráva
         few:
+        one: Tisková zpráva
         other: Tiskové zprávy
       promotional:
-        one: Propagační materiál
         few:
+        one: Propagační materiál
         other: Propagační materiály
       publication:
-        one: Publikace
         few:
+        one: Publikace
         other: Publikace
       regulation:
-        one:
         few:
+        one:
         other:
       research:
-        one: Výzkum a analýza
         few:
+        one: Výzkum a analýza
         other: Výzkumy a analýzy
       speaking_notes:
-        one: Poznámky
         few:
+        one: Poznámky
         other: Poznámky
       speech:
-        one: Proslov
         few:
+        one: Proslov
         other: Proslovy
       standard:
         few:
         one:
         other:
       statement_to_parliament:
-        one: Prohlášení v parlamentu
         few:
+        one: Prohlášení v parlamentu
         other: Prohlášení v parlamentu
       statistical_data_set:
+        few:
         one: Statistická data
-        few:
         other: Statistická data
-      official_statistics:
-        one: Statistika
-        few:
-        other: Statistiky
       statutory_guidance:
-        one:
         few:
+        one:
         other:
       transcript:
-        one: Přepis
         few:
+        one: Přepis
         other: Přepisy
       transparency:
-        one: Transparenost
         few:
+        one: Transparenost
         other: Transparentnost
       world_location_news_article:
-        one: Nový článek
         few:
+        one: Nový článek
         other: Nové články
       written_statement:
-        one: Písemná prohlášení do parlamentu
         few:
+        one: Písemná prohlášení do parlamentu
         other: Písemná prohlášení do parlamentu
-    metadata:
-      published: Publikováno
-      updated: Aktualizováno
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Korporátní informace
+    personal_information_charter_html: Jak nakládáme s vašimi osobními informacemi %{link}
+    publication_scheme_html: Více o typech informací, které pravidelně zveřejňujeme na %{link}.
+    social_media_use_html: Více o naší strategii o %{link}.
+    welsh_language_scheme_html: Více o našem závazku zvěřejňovat informace na %{link}.
+  language_names:
+    cs: Česky
   publication:
     documents:
-      one: Dokument
       few:
+      one: Dokument
       other: Dokumenty
-  corporate_information_page:
-    corporate_information: Korporátní informace
-    publication_scheme_html: Více o typech informací, které pravidelně zveřejňujeme
-      na %{link}.
-    personal_information_charter_html: Jak nakládáme s vašimi osobními informacemi
-      %{link}
-    welsh_language_scheme_html: Více o našem závazku zvěřejňovat informace na %{link}.
-    social_media_use_html: Více o naší strategii o %{link}.
-    about_our_services_html:

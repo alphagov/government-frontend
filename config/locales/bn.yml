@@ -1,8 +1,10 @@
 ---
 bn:
-  language_names:
-    bn: বাংলা
   content_item:
+    contents:
+    metadata:
+      published:
+      updated:
     schema_name:
       announcement:
         one: ঘোষণা
@@ -82,6 +84,9 @@ bn:
       notice:
         one: প্রজ্ঞাপন
         other: প্রজ্ঞাপনসমূহ
+      official_statistics:
+        one: দাপ্তরিক পরিসংখ্যান
+        other: দাপ্তরিক পরিসংখ্যান
       open_consultation:
         one: উন্মুক্ত শলাপরামর্শ
         other: উন্মুক্ত শলাপরামর্শসমূহ
@@ -124,9 +129,6 @@ bn:
       statistical_data_set:
         one: পরিসংখ্যানমূলক ডেটা সেট
         other: পরিসংখ্যানমূলক ডেটা সেটসমূহ
-      official_statistics:
-        one: দাপ্তরিক পরিসংখ্যান
-        other: দাপ্তরিক পরিসংখ্যান
       statutory_guidance:
         one: সংবিধিবদ্ধ নির্দেশনা
         other: সংবিধিবদ্ধ নির্দেশনা
@@ -142,18 +144,16 @@ bn:
       written_statement:
         one: সংসদে লিখিত বিবৃতি
         other: সংসদে লিখিত বিবৃতিসমূহ
-    metadata:
-      published:
-      updated:
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
+  language_names:
+    bn: বাংলা
   publication:
     documents:
       one:
       other:
-  corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
-    about_our_services_html:

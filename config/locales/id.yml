@@ -1,7 +1,10 @@
+---
 id:
-  language_names:
-    id: Bahasa Indonesia
   content_item:
+    contents:
+    metadata:
+      published: Diterbitkan
+      updated: Terkini
     schema_name:
       announcement:
         other: Pengumuman-pengumuman
@@ -55,6 +58,8 @@ id:
         other: Berita-berita
       notice:
         other:
+      official_statistics:
+        other: Statistik-statistik
       open_consultation:
         other: Konsultasi-konsultasi terbuka
       oral_statement:
@@ -84,8 +89,6 @@ id:
         other: Pernyataan-pernyaatan kepada Parlemen
       statistical_data_set:
         other: Set data statistik
-      official_statistics:
-        other: Statistik-statistik
       statutory_guidance:
         other:
       transcript:
@@ -96,20 +99,15 @@ id:
         other: Artikel-artikel berita
       written_statement:
         other: Pernyataan-pernyatan tertulis kepada parlemen
-    metadata:
-      published: Diterbitkan
-      updated: Terkini
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Informasi korporat
+    personal_information_charter_html: "%{link} menjelaskan tentang bagaimana kami memperlakukan informasi pribadi Anda"
+    publication_scheme_html: Baca jenis-jenis informasi yang secara rutin kami muat di %{link}
+    social_media_use_html: Baca kebijakan kami di %{link}
+    welsh_language_scheme_html: Informasi lebih lanjut mengenai komitmen kami dalam memuat informasi di %{link}
+  language_names:
+    id: Bahasa Indonesia
   publication:
     documents:
       other: Dokumen-dokumen
-  corporate_information_page:
-    corporate_information: Informasi korporat
-    publication_scheme_html: Baca jenis-jenis informasi yang secara rutin kami muat
-      di %{link}
-    personal_information_charter_html: "%{link} menjelaskan tentang bagaimana kami
-      memperlakukan informasi pribadi Anda"
-    welsh_language_scheme_html: Informasi lebih lanjut mengenai komitmen kami dalam
-      memuat informasi di %{link}
-    social_media_use_html: Baca kebijakan kami di %{link}
-    about_our_services_html:

@@ -1,116 +1,115 @@
+---
 fa:
-  i18n:
-    direction: rtl
-  language_names:
-    fa: "فارسی"
   content_item:
+    contents:
+    metadata:
+      published: منتشر شده
+      updated: به روز رسانی شده
     schema_name:
       announcement:
-        other: "اعلامیه ها"
+        other: اعلامیه ها
       authored_article:
-        other: "مقالات"
+        other: مقالات
       case_study:
-        other: "مطالعه های موردی"
+        other: مطالعه های موردی
       closed_consultation:
-        other: "رایزنی های بسته"
+        other: رایزنی های بسته
       consultation:
-        other: "رایزنی ها"
+        other: رایزنی ها
       consultation_outcome:
-        other: "نتایج رایزنی"
+        other: نتایج رایزنی
       corporate_report:
-        other: "گزارش های سازمانی"
+        other: گزارش های سازمانی
       correspondence:
-        other: "مکاتبات"
+        other: مکاتبات
       decision:
         other:
       detailed_guide:
-        other: "راهنمای تفصیلی"
+        other: راهنمای تفصیلی
       document_collection:
         other:
       draft_text:
-        other: "متون پیش نویس"
+        other: متون پیش نویس
       fatality_notice:
-        other: "اطلاعیه تلفات"
+        other: اطلاعیه تلفات
       foi_release:
-        other: "انتشار آزاد اطلاعات"
+        other: انتشار آزاد اطلاعات
       form:
-        other: "فرم ها"
+        other: فرم ها
       government_response:
-        other: "جوابیه های دولت"
+        other: جوابیه های دولت
       guidance:
-        other: "راهنمایی"
+        other: راهنمایی
       impact_assessment:
-        other: "ارزیابی های تاثیرات"
+        other: ارزیابی های تاثیرات
       imported:
-        other: "منتقل شده - در انتظار دسته بندی"
+        other: منتقل شده - در انتظار دسته بندی
       independent_report:
-        other: "گزارش های مستقل"
+        other: گزارش های مستقل
       international_treaty:
         other:
       map:
-        other: "نقشه ها"
+        other: نقشه ها
       national_statistics:
-        other: "آمار - آمار ملی"
+        other: آمار - آمار ملی
       news_article:
-        other: "مقالات خبری"
+        other: مقالات خبری
       news_story:
-        other: "اخبار"
+        other: اخبار
       notice:
         other:
+      official_statistics:
+        other: آمار
       open_consultation:
-        other: "رایزنی های باز"
+        other: رایزنی های باز
       oral_statement:
-        other: "گزارش های شفاهی به پارلمان"
+        other: گزارش های شفاهی به پارلمان
       policy:
-        other: "سیاست ها"
+        other: سیاست ها
       policy_paper:
-        other: "مقاله های سیاسی"
+        other: مقاله های سیاسی
       press_release:
-        other: "بیانیه ها"
+        other: بیانیه ها
       promotional:
-        other: "مطالب تبلیغاتی"
+        other: مطالب تبلیغاتی
       publication:
-        other: "نشریات"
+        other: نشریات
       regulation:
         other:
       research:
-        other: "پژوهش و تحلیل"
+        other: پژوهش و تحلیل
       speaking_notes:
-        other: "موضوعات سخنرانی"
+        other: موضوعات سخنرانی
       speech:
-        other: "سخنرانی ها"
+        other: سخنرانی ها
       standard:
         one:
         other:
       statement_to_parliament:
-        other: "گزارش ها به پارلمان"
+        other: گزارش ها به پارلمان
       statistical_data_set:
-        other: "بسته های داده های آماری"
-      official_statistics:
-        other: "آمار"
+        other: بسته های داده های آماری
       statutory_guidance:
         other:
       transcript:
-        other: "رونوشت ها"
+        other: رونوشت ها
       transparency:
-        other: "داده های شفاف سازی"
+        other: داده های شفاف سازی
       world_location_news_article:
-        other: "مقالات خبری"
+        other: مقالات خبری
       written_statement:
-        other: "گزارش های کتبی به پارلمان"
-    metadata:
-      published: "منتشر شده"
-      updated: "به روز رسانی شده"
-    contents:
+        other: گزارش های کتبی به پارلمان
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: اطلاعات سازمانی
+    personal_information_charter_html: "%{link} چگونگی نگهداری از اطلاعات شخصی شما را توضیح می دهد"
+    publication_scheme_html: 'درباره نوع اطلاعاتی که ما به طور روال در %{link} منتشر می کنیم بخوانید '
+    social_media_use_html: سیاست ما را درباره  %{link} بخوانید
+    welsh_language_scheme_html: درباره تعهد ما به انتشار مطالب به %{link} بخوانید
+  i18n:
+    direction: rtl
+  language_names:
+    fa: فارسی
   publication:
     documents:
-      other: "مدارک"
-  corporate_information_page:
-    corporate_information: اطلاعات سازمانی
-    publication_scheme_html: 'درباره نوع اطلاعاتی که ما به طور روال در %{link} منتشر
-      می کنیم بخوانید '
-    personal_information_charter_html: "%{link} چگونگی نگهداری از اطلاعات شخصی شما
-      را توضیح می دهد"
-    welsh_language_scheme_html: درباره تعهد ما به انتشار مطالب به %{link} بخوانید
-    social_media_use_html: سیاست ما را درباره  %{link} بخوانید
-    about_our_services_html:
+      other: مدارک

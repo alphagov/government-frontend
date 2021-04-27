@@ -1,7 +1,10 @@
+---
 es-419:
-  language_names:
-    es-419: Español
   content_item:
+    contents:
+    metadata:
+      published: publicado
+      updated: actualizado
     schema_name:
       announcement:
         one: Novedades
@@ -81,6 +84,9 @@ es-419:
       notice:
         one:
         other:
+      official_statistics:
+        one: Estadísticas
+        other: Estadísticas
       open_consultation:
         one: Consulta abierta
         other: Consultas abiertas
@@ -123,9 +129,6 @@ es-419:
       statistical_data_set:
         one: Conjunto de datos estadísticos
         other: Conjuntos de datos estadísticos
-      official_statistics:
-        one: Estadísticas
-        other: Estadísticas
       statutory_guidance:
         one:
         other:
@@ -141,21 +144,16 @@ es-419:
       written_statement:
         one: Declaración escrita al Parlamento
         other: Declaraciones escritas al Parlamento
-    metadata:
-      published: publicado
-      updated: actualizado
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Información institucional
+    personal_information_charter_html: Nuestro %{link} explica cómo manejamos su información personal
+    publication_scheme_html: Lea sobre los tipos de información que usualmente publicamos en nuestro %{link}
+    social_media_use_html: Lea nuestra política en %{link}
+    welsh_language_scheme_html: Descubra sobre nuestro compromiso de publicar en el %{link}
+  language_names:
+    es-419: Español
   publication:
     documents:
       one: Documento
       other: Documentos
-  corporate_information_page:
-    corporate_information: Información institucional
-    publication_scheme_html: Lea sobre los tipos de información que usualmente publicamos
-      en nuestro %{link}
-    personal_information_charter_html: Nuestro %{link} explica cómo manejamos su información
-      personal
-    welsh_language_scheme_html: Descubra sobre nuestro compromiso de publicar en el
-      %{link}
-    social_media_use_html: Lea nuestra política en %{link}
-    about_our_services_html:

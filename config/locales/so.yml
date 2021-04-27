@@ -1,7 +1,10 @@
+---
 so:
-  language_names:
-    so: Soomaaliga
   content_item:
+    contents:
+    metadata:
+      published: La-daabacay/nashriyey
+      updated: Wax lagu kordhiyey
     schema_name:
       announcement:
         one: Ogeysiis
@@ -81,6 +84,9 @@ so:
       notice:
         one:
         other:
+      official_statistics:
+        one: Istaatistik
+        other: Istaatistik
       open_consultation:
         one: Wada-tashi furan
         other: Wada-tashiyo furan
@@ -123,9 +129,6 @@ so:
       statistical_data_set:
         one: Xirmo xog istaatistik ah
         other: Xirmooyin xog istaatistik ah
-      official_statistics:
-        one: Istaatistik
-        other: Istaatistik
       statutory_guidance:
         one:
         other:
@@ -141,21 +144,16 @@ so:
       written_statement:
         one: Hadal qoran oo loo gudbiyo baarlamaanka
         other: Hadallo qoran oo loo gudbiyo baarlamaanka
-    metadata:
-      published: La-daabacay/nashriyey
-      updated: Wax lagu kordhiyey
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Macluumaad ku saabsan hay'ad
+    personal_information_charter_html: "%{link} ayaa sharxaya sida aan ula tacaamulno macluumaadkaaga shakhsiga ah"
+    publication_scheme_html: Akhri noocyada macluumaadka aan caadi ahaan ku daabacno/nashrinno %{link} aan soo saarno.
+    social_media_use_html: Akhri siyaasaddeenna ku saabsan %{link}.
+    welsh_language_scheme_html: Wax ka ogow sida aan ugu dadaalno ku daabacadda/nashrinta %{link}.
+  language_names:
+    so: Soomaaliga
   publication:
     documents:
       one: Dokumenti
       other: Dokumentiyo
-  corporate_information_page:
-    corporate_information: Macluumaad ku saabsan hay'ad
-    publication_scheme_html: Akhri noocyada macluumaadka aan caadi ahaan ku daabacno/nashrinno
-      %{link} aan soo saarno.
-    personal_information_charter_html: "%{link} ayaa sharxaya sida aan ula tacaamulno
-      macluumaadkaaga shakhsiga ah"
-    welsh_language_scheme_html: Wax ka ogow sida aan ugu dadaalno ku daabacadda/nashrinta
-      %{link}.
-    social_media_use_html: Akhri siyaasaddeenna ku saabsan %{link}.
-    about_our_services_html:

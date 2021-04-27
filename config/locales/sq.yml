@@ -1,7 +1,10 @@
+---
 sq:
-  language_names:
-    sq: Shqip
   content_item:
+    contents:
+    metadata:
+      published: publikuar
+      updated: rifreskuar
     schema_name:
       announcement:
         one: Lajmerim
@@ -81,6 +84,9 @@ sq:
       notice:
         one:
         other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
       open_consultation:
         one: Konsultim i hapur
         other: Konsultime te hapur
@@ -123,9 +129,6 @@ sq:
       statistical_data_set:
         one: Grup te dhenash statistikore
         other: Grupe te dhenash stasistikore
-      official_statistics:
-        one: Statistika
-        other: Statistika
       statutory_guidance:
         one:
         other:
@@ -141,20 +144,16 @@ sq:
       written_statement:
         one: Deklarate me shkrim per Parlamentin
         other: Deklarata me shkrim per Parlamentin
-    metadata:
-      published: publikuar
-      updated: rifreskuar
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Informacion korporate
+    personal_information_charter_html: "%{link} shpjegon si trajtohet informacioni juaj personal"
+    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht ne %{link}.
+    social_media_use_html: Lexo politikat tona ne %{link}
+    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
+  language_names:
+    sq: Shqip
   publication:
     documents:
       one: Dokument
       other: Dokumente
-  corporate_information_page:
-    corporate_information: Informacion korporate
-    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht
-      ne %{link}.
-    personal_information_charter_html: "%{link} shpjegon si trajtohet informacioni
-      juaj personal"
-    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
-    social_media_use_html: Lexo politikat tona ne %{link}
-    about_our_services_html:

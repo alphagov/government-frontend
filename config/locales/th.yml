@@ -1,113 +1,113 @@
+---
 th:
-  language_names:
-    th: "ไทย"
   content_item:
+    contents:
+    metadata:
+      published: ตีพิมพ์
+      updated: ปรับปรุง
     schema_name:
       announcement:
-        other: "ข่าวสาร"
+        other: ข่าวสาร
       authored_article:
-        other: "บทความที่เขียน"
+        other: บทความที่เขียน
       case_study:
-        other: "กรณีศึกษา"
+        other: กรณีศึกษา
       closed_consultation:
-        other: "การศึกษาแบบปิด"
+        other: การศึกษาแบบปิด
       consultation:
-        other: "การปรึกษา"
+        other: การปรึกษา
       consultation_outcome:
-        other: "ผลการปรึกษา"
+        other: ผลการปรึกษา
       corporate_report:
-        other: "รายงานบริษัท"
+        other: รายงานบริษัท
       correspondence:
-        other: "จดหมาย"
+        other: จดหมาย
       decision:
         other:
       detailed_guide:
-        other: "คู่มือโดยละเอียด"
+        other: คู่มือโดยละเอียด
       document_collection:
         other:
       draft_text:
-        other: "ร่างข้อความ"
+        other: ร่างข้อความ
       fatality_notice:
-        other: "การแจ้งมรณะกรรม"
+        other: การแจ้งมรณะกรรม
       foi_release:
-        other: "ข้อมูลที่เปิดเผยได้"
+        other: ข้อมูลที่เปิดเผยได้
       form:
-        other: "แบบฟอร์ม"
+        other: แบบฟอร์ม
       government_response:
-        other: "การตอบสนองของรัฐบาล"
+        other: การตอบสนองของรัฐบาล
       guidance:
-        other: "คู่มือ"
+        other: คู่มือ
       impact_assessment:
-        other: "การประเมินผลกระทบ"
+        other: การประเมินผลกระทบ
       imported:
-        other: "ประเภทรอนำเข้า"
+        other: ประเภทรอนำเข้า
       independent_report:
-        other: "รายงานอิสระ"
+        other: รายงานอิสระ
       international_treaty:
         other:
       map:
-        other: "แผนที่"
+        other: แผนที่
       national_statistics:
-        other: "สถิติ-สถิติแห่งชาติ"
+        other: สถิติ-สถิติแห่งชาติ
       news_article:
-        other: "บทความข่าว"
+        other: บทความข่าว
       news_story:
-        other: "ข่าว"
+        other: ข่าว
       notice:
         other:
+      official_statistics:
+        other: สถิติ
       open_consultation:
-        other: "การให้คำปรึกษาเปิด"
+        other: การให้คำปรึกษาเปิด
       oral_statement:
-        other: "แถลงการณ์ด้วยวาจาต่อรัฐสภา"
+        other: แถลงการณ์ด้วยวาจาต่อรัฐสภา
       policy:
-        other: "นโยบาย"
+        other: นโยบาย
       policy_paper:
-        other: "เอกสารนโยบาย"
+        other: เอกสารนโยบาย
       press_release:
-        other: "ข่าวประชาสัมพันธ์"
+        other: ข่าวประชาสัมพันธ์
       promotional:
-        other: "เอกสารเพือการประชาสัมพันธ์"
+        other: เอกสารเพือการประชาสัมพันธ์
       publication:
-        other: "สิ่งพิมพ์"
+        other: สิ่งพิมพ์
       regulation:
         other:
       research:
-        other: "บทวิจัยและบทวิเคราะห์"
+        other: บทวิจัยและบทวิเคราะห์
       speaking_notes:
-        other: "ประเด็นการพูด"
+        other: ประเด็นการพูด
       speech:
-        other: "สุนทรพจน์"
+        other: สุนทรพจน์
       standard:
         one:
         other:
       statement_to_parliament:
-        other: "แถลงการณ์ต่อรัฐสภา"
+        other: แถลงการณ์ต่อรัฐสภา
       statistical_data_set:
-        other: "ชุดข้อมูลสถิติ"
-      official_statistics:
-        other: "สถิติ"
+        other: ชุดข้อมูลสถิติ
       statutory_guidance:
         other:
       transcript:
-        other: "สำเนา"
+        other: สำเนา
       transparency:
-        other: "ข้อมูลโปร่งใส"
+        other: ข้อมูลโปร่งใส
       world_location_news_article:
-        other: "บทความข่าว"
+        other: บทความข่าว
       written_statement:
-        other: "แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา "
-    metadata:
-      published: "ตีพิมพ์"
-      updated: "ปรับปรุง"
-    contents:
+        other: 'แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา '
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: ข้อมูลบริษัท
+    personal_information_charter_html: ลิงค์นี้อธิบายถึงวิธีการที่เราปฏิบัติต่อข้อมูลส่วนบุคคลของคุณ
+    publication_scheme_html: อ่านประเภทข้อมูลซึ่งเราเผยแพร่เป็นประจำได้ที่ %{link}
+    social_media_use_html: อ่านนโยบายของเราได้ที่ %{link}
+    welsh_language_scheme_html: ค้นหาข้อมูลเกี่ยวกับพันธสัญญาในการตีพิมพ์ของเราได้ที่ %{link}.
+  language_names:
+    th: ไทย
   publication:
     documents:
-      other: "เอกสารต่างๆ"
-  corporate_information_page:
-    corporate_information: ข้อมูลบริษัท
-    publication_scheme_html: อ่านประเภทข้อมูลซึ่งเราเผยแพร่เป็นประจำได้ที่ %{link}
-    personal_information_charter_html: ลิงค์นี้อธิบายถึงวิธีการที่เราปฏิบัติต่อข้อมูลส่วนบุคคลของคุณ
-    welsh_language_scheme_html: ค้นหาข้อมูลเกี่ยวกับพันธสัญญาในการตีพิมพ์ของเราได้ที่
-      %{link}.
-    social_media_use_html: อ่านนโยบายของเราได้ที่ %{link}
-    about_our_services_html:
+      other: เอกสารต่างๆ

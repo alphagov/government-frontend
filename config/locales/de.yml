@@ -1,7 +1,10 @@
+---
 de:
-  language_names:
-    de: Deutsch
   content_item:
+    contents:
+    metadata:
+      published: Veröffentlicht
+      updated: Aktualisiert
     schema_name:
       announcement:
         one: Meldung
@@ -81,6 +84,9 @@ de:
       notice:
         one:
         other:
+      official_statistics:
+        one: Statistik
+        other: Statistiken
       open_consultation:
         one: Laufende Konsultation
         other: Laufende Konsultationen
@@ -123,9 +129,6 @@ de:
       statistical_data_set:
         one: Statistischer Datensatz
         other: Statistische Datensätze
-      official_statistics:
-        one: Statistik
-        other: Statistiken
       statutory_guidance:
         one:
         other:
@@ -141,21 +144,16 @@ de:
       written_statement:
         one: Schriftliche Erklärung vor dem Parlament
         other: Schriftliche Erklärungen vor dem Parlament
-    metadata:
-      published: Veröffentlicht
-      updated: Aktualisiert
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Administrative Informationen
+    personal_information_charter_html: Unser %{link} erklärt, wie wir Ihre personenbezogenen Daten schützen.
+    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig publizieren
+    social_media_use_html: Unsere Politik zu %{link}
+    welsh_language_scheme_html: Mehr zu unserer Verpflichtung zur Veröffentlichung in %{link}
+  language_names:
+    de: Deutsch
   publication:
     documents:
       one: Dokument
       other: Dokumente
-  corporate_information_page:
-    corporate_information: Administrative Informationen
-    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig
-      publizieren
-    personal_information_charter_html: Unser %{link} erklärt, wie wir Ihre personenbezogenen
-      Daten schützen.
-    welsh_language_scheme_html: Mehr zu unserer Verpflichtung zur Veröffentlichung
-      in %{link}
-    social_media_use_html: Unsere Politik zu %{link}
-    about_our_services_html:

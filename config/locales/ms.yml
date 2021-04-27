@@ -1,7 +1,10 @@
+---
 ms:
-  language_names:
-    ms: Bahasa Melayu
   content_item:
+    contents:
+    metadata:
+      published:
+      updated:
     schema_name:
       announcement:
         other:
@@ -55,6 +58,8 @@ ms:
         other:
       notice:
         other:
+      official_statistics:
+        other:
       open_consultation:
         other:
       oral_statement:
@@ -84,8 +89,6 @@ ms:
         other:
       statistical_data_set:
         other:
-      official_statistics:
-        other:
       statutory_guidance:
         other:
       transcript:
@@ -96,17 +99,15 @@ ms:
         other:
       written_statement:
         other:
-    metadata:
-      published:
-      updated:
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
+  language_names:
+    ms: Bahasa Melayu
   publication:
     documents:
       other:
-  corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
-    about_our_services_html:

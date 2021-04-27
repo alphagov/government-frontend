@@ -1,7 +1,10 @@
+---
 hu:
-  language_names:
-    hu: Magyar
   content_item:
+    contents:
+    metadata:
+      published: közzététel dátuma
+      updated: 'Utolsó frissítés:'
     schema_name:
       announcement:
         one: Bejelentés
@@ -46,14 +49,14 @@ hu:
         one: Információhoz való joggal kapcsolatos közlemény
         other: Információhoz való joggal kapcsolatos közlemények
       form:
-        one: "Űrlap"
-        other: "Űrlapok"
+        one: Űrlap
+        other: Űrlapok
       government_response:
         one: Kormányválasz
         other: Kormányválaszok
       guidance:
-        one: "Útmutató"
-        other: "Útmutató"
+        one: Útmutató
+        other: Útmutató
       impact_assessment:
         one: Hatásvizsgálat
         other: Hatásvizsgálatok
@@ -81,6 +84,9 @@ hu:
       notice:
         one:
         other:
+      official_statistics:
+        one: Statisztika
+        other: Statisztikák
       open_consultation:
         one: Nyílt konzultáció
         other: Nyílt konzultációk
@@ -123,39 +129,31 @@ hu:
       statistical_data_set:
         one: Statisztikai adatcsoport
         other: Statisztikai adatcsoportok
-      official_statistics:
-        one: Statisztika
-        other: Statisztikák
       statutory_guidance:
         one:
         other:
       transcript:
-        one: "Átirat"
-        other: "Átiratok"
+        one: Átirat
+        other: Átiratok
       transparency:
-        one: "Átláthatósági adatok"
-        other: "Átláthatósági adatok"
+        one: Átláthatósági adatok
+        other: Átláthatósági adatok
       world_location_news_article:
         one: Cikk
         other: Cikkek
       written_statement:
-        one: "Írásbeli parlamenti nyilatkozat"
-        other: "Írásbeli parlamenti nyilatkozatok"
-    metadata:
-      published: közzététel dátuma
-      updated: 'Utolsó frissítés:'
-    contents:
+        one: Írásbeli parlamenti nyilatkozat
+        other: Írásbeli parlamenti nyilatkozatok
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Szervezeti információk
+    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan kezeljük a személyes adatokat: %{link}'
+    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk közzé: %{link}'
+    social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
+    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos elkötelezettségünkről: %{link}'
+  language_names:
+    hu: Magyar
   publication:
     documents:
       one: Dokumentum
       other: Dokumentumok
-  corporate_information_page:
-    corporate_information: Szervezeti információk
-    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk
-      közzé: %{link}'
-    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan
-      kezeljük a személyes adatokat: %{link}'
-    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos
-      elkötelezettségünkről: %{link}'
-    social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
-    about_our_services_html:

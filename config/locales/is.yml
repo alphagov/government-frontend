@@ -1,7 +1,26 @@
+---
 is:
-  language_names:
-    is: Íslensk
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published:
+      updated:
     schema_name:
       aaib_report:
         one:
@@ -225,31 +244,6 @@ is:
       written_statement:
         one:
         other:
-    contents:
-    metadata:
-      published:
-      updated:
-  publication:
-    documents:
-      one:
-      other:
-    details:
-  common:
-    last_updated:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
   corporate_information_page:
     about_our_services_html:
     corporate_information:
@@ -257,10 +251,17 @@ is:
     publication_scheme_html:
     social_media_use_html:
     welsh_language_scheme_html:
+  language_names:
+    is: Íslensk
   multi_page:
     next_page:
     previous_page:
     print_entire_guide:
+  publication:
+    details:
+    documents:
+      one:
+      other:
   service_sign_in:
     continue:
     error:

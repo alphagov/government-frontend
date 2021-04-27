@@ -1,14 +1,17 @@
+---
 az:
-  language_names:
-    az: Azərbaycanca
   content_item:
+    contents:
+    metadata:
+      published: dərc olunub
+      updated: yenilənib
     schema_name:
       announcement:
         other: Elanlar
       authored_article:
         other:
       case_study:
-        other: "Öyrənilib"
+        other: Öyrənilib
       closed_consultation:
         other: Bağlı məslətləşmələr
       consultation:
@@ -22,7 +25,7 @@ az:
       decision:
         other:
       detailed_guide:
-        other: "ətraflı məlumat"
+        other: ətraflı məlumat
       document_collection:
         other:
       draft_text:
@@ -36,7 +39,7 @@ az:
       government_response:
         other:
       guidance:
-        other: "İnstruksiya"
+        other: İnstruksiya
       impact_assessment:
         other: Dəyərləndirmə
       imported:
@@ -55,6 +58,8 @@ az:
         other: Xəbərlər
       notice:
         other:
+      official_statistics:
+        other: statistika
       open_consultation:
         other: açıq məsləhətləşmələr
       oral_statement:
@@ -74,9 +79,9 @@ az:
       research:
         other: Tətqiqat və analiz
       speaking_notes:
-        other: "Çıxış üçün  qeydləri"
+        other: Çıxış üçün  qeydləri
       speech:
-        other: "Çıxışlar"
+        other: Çıxışlar
       standard:
         one:
         other:
@@ -84,29 +89,25 @@ az:
         other: Parlamentə bəyanatlar
       statistical_data_set:
         other: statistik məlumatlar bazaları
-      official_statistics:
-        other: statistika
       statutory_guidance:
         other:
       transcript:
         other: Transkripsiyalar
       transparency:
-        other: "Şəffaf məlumat"
+        other: Şəffaf məlumat
       world_location_news_article:
         other: məqalələr
       written_statement:
         other: Parlamentə yazılı müraciət
-    metadata:
-      published: dərc olunub
-      updated: yenilənib
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
+  language_names:
+    az: Azərbaycanca
   publication:
     documents:
       other:
-  corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
-    about_our_services_html:

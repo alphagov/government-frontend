@@ -1,7 +1,10 @@
+---
 vi:
-  language_names:
-    vi: Tiếng Việt
   content_item:
+    contents:
+    metadata:
+      published: Đã xuất bản
+      updated: Cập nhật
     schema_name:
       announcement:
         other: Các thông báo
@@ -38,7 +41,7 @@ vi:
       guidance:
         other: hướng dẫn
       impact_assessment:
-        other: "Đánh giá tác động"
+        other: Đánh giá tác động
       imported:
         other: Loại tài liệu đính kèm
       independent_report:
@@ -55,6 +58,8 @@ vi:
         other: Câu chuyện tin tức
       notice:
         other:
+      official_statistics:
+        other: Thống kê
       open_consultation:
         other: Tham vấn mở rộng
       oral_statement:
@@ -84,8 +89,6 @@ vi:
         other: Tuyên bố tới Quốc hội
       statistical_data_set:
         other: Bộ dữ liệu thống kê
-      official_statistics:
-        other: Thống kê
       statutory_guidance:
         other:
       transcript:
@@ -96,20 +99,15 @@ vi:
         other: Tin tức
       written_statement:
         other: Các Tuyên bố bằng văn bản tới quốc hội
-    metadata:
-      published: "Đã xuất bản"
-      updated: Cập nhật
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Thông tin về phòng tổng hợp
+    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng tôi xử lý thông tin cá nhân của bạn"
+    publication_scheme_html: Xem các loại thông tin mà chúng tôi cập nhật thường xuyên tại %{link}
+    social_media_use_html: Đọc chính sách của chúng tôi tại %{link}
+    welsh_language_scheme_html: Tìm hiểu các cam kết của chúng tôi trong việc công bố thông tin tại %{link}
+  language_names:
+    vi: Tiếng Việt
   publication:
     documents:
       other: Tài liệu
-  corporate_information_page:
-    corporate_information: Thông tin về phòng tổng hợp
-    publication_scheme_html: Xem các loại thông tin mà chúng tôi cập nhật thường xuyên
-      tại %{link}
-    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng
-      tôi xử lý thông tin cá nhân của bạn"
-    welsh_language_scheme_html: Tìm hiểu các cam kết của chúng tôi trong việc công
-      bố thông tin tại %{link}
-    social_media_use_html: Đọc chính sách của chúng tôi tại %{link}
-    about_our_services_html:

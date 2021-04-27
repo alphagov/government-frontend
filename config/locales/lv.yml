@@ -1,7 +1,10 @@
+---
 lv:
-  language_names:
-    lv: Latviešu
   content_item:
+    contents:
+    metadata:
+      published: publicēts
+      updated: atjaunināts
     schema_name:
       announcement:
         one: Paziņojums
@@ -81,6 +84,9 @@ lv:
       notice:
         one:
         other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
       open_consultation:
         one: Atklāta konsultācija
         other: Atklātas konsultācijas
@@ -123,9 +129,6 @@ lv:
       statistical_data_set:
         one: Statistiskas datu kopums
         other: Statistikas datu kopumi
-      official_statistics:
-        one: Statistika
-        other: Statistika
       statutory_guidance:
         one:
         other:
@@ -141,21 +144,16 @@ lv:
       written_statement:
         one: Rakstisks ziņojums parlamentam
         other: Rakstiski ziņojumi parlamentam
-    metadata:
-      published: publicēts
-      updated: atjaunināts
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Korporatīva informācija
+    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta Jūsu sniegtā personīgā informācija
+    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta mūsu %{link}
+    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
+    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas pieejamību %{link}
+  language_names:
+    lv: Latviešu
   publication:
     documents:
       one: Dokuments
       other: Dokumenti
-  corporate_information_page:
-    corporate_information: Korporatīva informācija
-    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta
-      mūsu %{link}
-    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta
-      Jūsu sniegtā personīgā informācija
-    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas
-      pieejamību %{link}
-    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
-    about_our_services_html:

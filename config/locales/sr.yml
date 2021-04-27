@@ -1,254 +1,253 @@
+---
 sr:
-  language_names:
-    sr: Srpski
   content_item:
-    schema_name:
-      announcement:
-        one: Najava
-        few:
-        many:
-        other: Najave
-      authored_article:
-        one: Autorski članak
-        few:
-        many:
-        other: Autorski članci
-      case_study:
-        one: Studija slučaja
-        few:
-        many:
-        other: Studije slučajeva
-      closed_consultation:
-        one: Zatvorene konsultacije
-        few:
-        many:
-        other: Zatvorene konsultacije
-      consultation:
-        one: Konsultacije
-        few:
-        many:
-        other: Konsultacije
-      consultation_outcome:
-        one: Ishod konsultacija
-        few:
-        many:
-        other: Ishodi konsultacija
-      corporate_report:
-        one: organizacioni izveštaj
-        few:
-        many:
-        other: organizacioni izveštaji
-      correspondence:
-        one: prepiska
-        few:
-        many:
-        other: prepiske
-      decision:
-        one:
-        few:
-        many:
-        other:
-      detailed_guide:
-        one: detaljno uputstvo
-        few:
-        many:
-        other: detaljno uputstvo
-      document_collection:
-        one: serija
-        few:
-        many:
-        other:
-      draft_text:
-        one: Nacrt teksta
-        few:
-        many:
-        other: Nacrti tekstova
-      fatality_notice:
-        one: Obaveštenje o smrtnim slučajevima
-        few:
-        many:
-        other: Obaveštenja o smrtnim slučajevima
-      foi_release:
-        one: Odgovor na zahtev za pristup informaciji od javnog značaja
-        few:
-        many:
-        other: Odgovori na zahteve za pristup informacijama od javnog značaja
-      form:
-        one: formular
-        few:
-        many:
-        other: formulari
-      government_response:
-        one: odgovor Vlade
-        few:
-        many:
-        other: odgovori Vlade
-      guidance:
-        one: uputstvo
-        few:
-        many:
-        other: uputstvo
-      impact_assessment:
-        one: procena efekata
-        few:
-        many:
-        other: procene efekata
-      imported:
-        one: uvezeno - utvrđivanje tipa
-        few:
-        many:
-        other: uvezeno - utvrđivanje tipa
-      independent_report:
-        one: nezavisni izveštaj
-        few:
-        many:
-        other: nezavisni izveštaj
-      international_treaty:
-        one:
-        few:
-        many:
-        other:
-      map:
-        one: mapa
-        few:
-        many:
-        other: mape
-      national_statistics:
-        one: statistika - nacionalna statistika
-        few:
-        many:
-        other: statistika - nacionalna statistika
-      news_article:
-        one: Vest
-        few:
-        many:
-        other: Vesti
-      news_story:
-        one: Vesti
-        few:
-        many:
-        other: Vesti
-      notice:
-        one:
-        few:
-        many:
-        other:
-      open_consultation:
-        one: Otvorene konsultacije
-        few:
-        many:
-        other: Otvorene konsultacije
-      oral_statement:
-        one: usmeno obraćanje Parlamentu
-        few:
-        many:
-        other: usmena obraćanja Parlamentu
-      policy:
-        one: politika
-        few:
-        many:
-        other: politike
-      policy_paper:
-        one: predlog politike
-        few:
-        many:
-        other: predlozi politika
-      press_release:
-        one: saopštenje za medije
-        few:
-        many:
-        other: saopštenja za medije
-      promotional:
-        one: promotivni materijal
-        few:
-        many:
-        other: promotivni materijal
-      publication:
-        one: publikacija
-        few:
-        many:
-        other: publikacije
-      regulation:
-        one:
-        few:
-        many:
-        other:
-      research:
-        one: istraživanje i analiza
-        few:
-        many:
-        other: istraživanje i analiza
-      speaking_notes:
-        one: teze za govor
-        few:
-        many:
-        other: teze za govor
-      speech:
-        one: Govor
-        few:
-        many:
-        other: Govori
-      standard:
-        one:
-        few:
-        many:
-        other:
-      statement_to_parliament:
-        one: obraćanje Parlamentu
-        few:
-        many:
-        other: obraćanje Parlamentu
-      statistical_data_set:
-        one: set statističkih podataka
-        few:
-        many:
-        other: set statističkih podataka
-      official_statistics:
-        one: statistika
-        few:
-        many:
-        other: statistika
-      statutory_guidance:
-        one:
-        few:
-        many:
-        other:
-      transcript:
-        one: transkript
-        few:
-        many:
-        other: transkripti
-      transparency:
-        one: podaci o transparentnosti
-        few:
-        many:
-        other: podaci o transparentnosti
-      world_location_news_article:
-        one: Vest
-        few:
-        many:
-        other: Vesti
-      written_statement:
-        one: Pisana predstavka Parlamentu
-        few:
-        many:
-        other: Pisane predstavke Parlamentu
+    contents:
     metadata:
       published: objavljeno
       updated: ažurirano
-    contents:
+    schema_name:
+      announcement:
+        few:
+        many:
+        one: Najava
+        other: Najave
+      authored_article:
+        few:
+        many:
+        one: Autorski članak
+        other: Autorski članci
+      case_study:
+        few:
+        many:
+        one: Studija slučaja
+        other: Studije slučajeva
+      closed_consultation:
+        few:
+        many:
+        one: Zatvorene konsultacije
+        other: Zatvorene konsultacije
+      consultation:
+        few:
+        many:
+        one: Konsultacije
+        other: Konsultacije
+      consultation_outcome:
+        few:
+        many:
+        one: Ishod konsultacija
+        other: Ishodi konsultacija
+      corporate_report:
+        few:
+        many:
+        one: organizacioni izveštaj
+        other: organizacioni izveštaji
+      correspondence:
+        few:
+        many:
+        one: prepiska
+        other: prepiske
+      decision:
+        few:
+        many:
+        one:
+        other:
+      detailed_guide:
+        few:
+        many:
+        one: detaljno uputstvo
+        other: detaljno uputstvo
+      document_collection:
+        few:
+        many:
+        one: serija
+        other:
+      draft_text:
+        few:
+        many:
+        one: Nacrt teksta
+        other: Nacrti tekstova
+      fatality_notice:
+        few:
+        many:
+        one: Obaveštenje o smrtnim slučajevima
+        other: Obaveštenja o smrtnim slučajevima
+      foi_release:
+        few:
+        many:
+        one: Odgovor na zahtev za pristup informaciji od javnog značaja
+        other: Odgovori na zahteve za pristup informacijama od javnog značaja
+      form:
+        few:
+        many:
+        one: formular
+        other: formulari
+      government_response:
+        few:
+        many:
+        one: odgovor Vlade
+        other: odgovori Vlade
+      guidance:
+        few:
+        many:
+        one: uputstvo
+        other: uputstvo
+      impact_assessment:
+        few:
+        many:
+        one: procena efekata
+        other: procene efekata
+      imported:
+        few:
+        many:
+        one: uvezeno - utvrđivanje tipa
+        other: uvezeno - utvrđivanje tipa
+      independent_report:
+        few:
+        many:
+        one: nezavisni izveštaj
+        other: nezavisni izveštaj
+      international_treaty:
+        few:
+        many:
+        one:
+        other:
+      map:
+        few:
+        many:
+        one: mapa
+        other: mape
+      national_statistics:
+        few:
+        many:
+        one: statistika - nacionalna statistika
+        other: statistika - nacionalna statistika
+      news_article:
+        few:
+        many:
+        one: Vest
+        other: Vesti
+      news_story:
+        few:
+        many:
+        one: Vesti
+        other: Vesti
+      notice:
+        few:
+        many:
+        one:
+        other:
+      official_statistics:
+        few:
+        many:
+        one: statistika
+        other: statistika
+      open_consultation:
+        few:
+        many:
+        one: Otvorene konsultacije
+        other: Otvorene konsultacije
+      oral_statement:
+        few:
+        many:
+        one: usmeno obraćanje Parlamentu
+        other: usmena obraćanja Parlamentu
+      policy:
+        few:
+        many:
+        one: politika
+        other: politike
+      policy_paper:
+        few:
+        many:
+        one: predlog politike
+        other: predlozi politika
+      press_release:
+        few:
+        many:
+        one: saopštenje za medije
+        other: saopštenja za medije
+      promotional:
+        few:
+        many:
+        one: promotivni materijal
+        other: promotivni materijal
+      publication:
+        few:
+        many:
+        one: publikacija
+        other: publikacije
+      regulation:
+        few:
+        many:
+        one:
+        other:
+      research:
+        few:
+        many:
+        one: istraživanje i analiza
+        other: istraživanje i analiza
+      speaking_notes:
+        few:
+        many:
+        one: teze za govor
+        other: teze za govor
+      speech:
+        few:
+        many:
+        one: Govor
+        other: Govori
+      standard:
+        few:
+        many:
+        one:
+        other:
+      statement_to_parliament:
+        few:
+        many:
+        one: obraćanje Parlamentu
+        other: obraćanje Parlamentu
+      statistical_data_set:
+        few:
+        many:
+        one: set statističkih podataka
+        other: set statističkih podataka
+      statutory_guidance:
+        few:
+        many:
+        one:
+        other:
+      transcript:
+        few:
+        many:
+        one: transkript
+        other: transkripti
+      transparency:
+        few:
+        many:
+        one: podaci o transparentnosti
+        other: podaci o transparentnosti
+      world_location_news_article:
+        few:
+        many:
+        one: Vest
+        other: Vesti
+      written_statement:
+        few:
+        many:
+        one: Pisana predstavka Parlamentu
+        other: Pisane predstavke Parlamentu
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Informacije o organizaciji
+    personal_information_charter_html: "%{link} daje informacije o tome kako obrađujemo vaše lične podatke. "
+    publication_scheme_html: Čitajte o tipovima informacija koje redovno objavljujemo u  %{link}.
+    social_media_use_html: Pročitajte o našoj politici prema  %{link}.
+    welsh_language_scheme_html: Saznajte naš stav o objavljivanju u %{link}.
+  language_names:
+    sr: Srpski
   publication:
     documents:
-      one: Dokument
       few:
       many:
+      one: Dokument
       other: Dokumenti
-  corporate_information_page:
-    corporate_information: Informacije o organizaciji
-    publication_scheme_html: Čitajte o tipovima informacija koje redovno objavljujemo
-      u  %{link}.
-    personal_information_charter_html: "%{link} daje informacije o tome kako obrađujemo
-      vaše lične podatke. "
-    welsh_language_scheme_html: Saznajte naš stav o objavljivanju u %{link}.
-    social_media_use_html: Pročitajte o našoj politici prema  %{link}.
-    about_our_services_html:

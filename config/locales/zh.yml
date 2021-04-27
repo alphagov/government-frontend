@@ -1,114 +1,115 @@
+---
 zh:
-  i18n:
-    direction: ltr
-  language_names:
-    zh: "中文"
   content_item:
+    contents:
+    metadata:
+      published: 已发布
+      updated: 已更新
     schema_name:
       announcement:
-        other: "公告"
+        other: 公告
       authored_article:
-        other: "撰写的文章"
+        other: 撰写的文章
       case_study:
-        other: "实例研究"
+        other: 实例研究
       closed_consultation:
-        other: "已办结的咨询"
+        other: 已办结的咨询
       consultation:
-        other: "咨询"
+        other: 咨询
       consultation_outcome:
-        other: "咨询结果"
+        other: 咨询结果
       corporate_report:
-        other: "政府报告"
+        other: 政府报告
       correspondence:
-        other: "交流"
+        other: 交流
       decision:
         other:
       detailed_guide:
-        other: "详细指导"
+        other: 详细指导
       document_collection:
         other:
       draft_text:
-        other: "草拟稿件"
+        other: 草拟稿件
       fatality_notice:
-        other: "死亡通告"
+        other: 死亡通告
       foi_release:
-        other: "资讯自由(FOI)信息发布"
+        other: 资讯自由(FOI)信息发布
       form:
-        other: "表格"
+        other: 表格
       government_response:
-        other: "政府反应"
+        other: 政府反应
       guidance:
-        other: "指导"
+        other: 指导
       impact_assessment:
-        other: "影响评估"
+        other: 影响评估
       imported:
-        other: "导入 - 正在等待的类型"
+        other: 导入 - 正在等待的类型
       independent_report:
-        other: "独立报告"
+        other: 独立报告
       international_treaty:
         other:
       map:
-        other: "地图"
+        other: 地图
       national_statistics:
-        other: "统计数据 - 国家数据"
+        other: 统计数据 - 国家数据
       news_article:
-        other: "新闻文章"
+        other: 新闻文章
       news_story:
-        other: "新闻报道"
+        other: 新闻报道
       notice:
         other:
+      official_statistics:
+        other: 统计数据
       open_consultation:
-        other: "公开咨询"
+        other: 公开咨询
       oral_statement:
-        other: "对议会的口头声明"
+        other: 对议会的口头声明
       policy:
-        other: "政策"
+        other: 政策
       policy_paper:
-        other: "政策文件"
+        other: 政策文件
       press_release:
-        other: "新闻稿"
+        other: 新闻稿
       promotional:
-        other: "宣传材料"
+        other: 宣传材料
       publication:
-        other: "发布的报告"
+        other: 发布的报告
       regulation:
         other:
       research:
-        other: "研究及分析"
+        other: 研究及分析
       speaking_notes:
-        other: "演讲稿"
+        other: 演讲稿
       speech:
-        other: "演讲"
+        other: 演讲
       standard:
         one:
         other:
       statement_to_parliament:
-        other: "对议会的声明"
+        other: 对议会的声明
       statistical_data_set:
-        other: "统计数据集"
-      official_statistics:
-        other: "统计数据"
+        other: 统计数据集
       statutory_guidance:
         other:
       transcript:
-        other: "副本"
+        other: 副本
       transparency:
-        other: "透明化数据"
+        other: 透明化数据
       world_location_news_article:
-        other: "新闻文章"
+        other: 新闻文章
       written_statement:
-        other: "对议会的书面声明"
-    metadata:
-      published: "已发布"
-      updated: "已更新"
-    contents:
+        other: 对议会的书面声明
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: 政府信息
+    personal_information_charter_html: 我们的%{link}解释了我们如何对待您的个人信息。
+    publication_scheme_html: 阅读我们在%{link}定期发布的信息。
+    social_media_use_html: 阅读我们在%{link}的政策
+    welsh_language_scheme_html: 查阅我们在%{link}发布的信息。
+  i18n:
+    direction: ltr
+  language_names:
+    zh: 中文
   publication:
     documents:
-      other: "文件"
-  corporate_information_page:
-    corporate_information: 政府信息
-    publication_scheme_html: 阅读我们在%{link}定期发布的信息。
-    personal_information_charter_html: 我们的%{link}解释了我们如何对待您的个人信息。
-    welsh_language_scheme_html: 查阅我们在%{link}发布的信息。
-    social_media_use_html: 阅读我们在%{link}的政策
-    about_our_services_html:
+      other: 文件
