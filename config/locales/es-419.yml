@@ -1,47 +1,101 @@
 ---
 es-419:
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
     contents:
     metadata:
       published: publicado
       updated: actualizado
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: Novedades
         other: Novedades
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: Artículo con autor
         other: Artículos con autor
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: Caso de estudio
         other: Casos de estudio
       closed_consultation:
         one: Consulta cerrada
         other: Consultas cerradas
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: Consulta
         other: Consultas
       consultation_outcome:
         one: Resultado de la consulta
         other: Resultados de la consulta
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Reporte institucional
         other: Reportes institucionales
       correspondence:
         one: Correspondencia
         other: Correspondencias
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: Orientación detallada
         other: Orientación detallada
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: Series
         other:
       draft_text:
         one: Borrador
         other: Borradores
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: Aviso de defunción
         other: Avisos de defunción
@@ -66,15 +120,30 @@ es-419:
       independent_report:
         one: Reporte independiente
         other: Reportes independientes
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: Mapa
         other: Mapas
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: Estadísticas - cifras nacionales
         other: Estadísticas - cifras nacionales
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artículo
         other: Artículos
@@ -84,9 +153,15 @@ es-419:
       notice:
         one:
         other:
+      official:
+        one:
+        other:
       official_statistics:
         one: Estadísticas
         other: Estadísticas
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
         one: Consulta abierta
         other: Consultas abiertas
@@ -108,12 +183,24 @@ es-419:
       publication:
         one: Publicación
         other: Publicaciones
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: Investigación y análisis
         other: Investigación y análisis
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: Anotaciones
         other: Anotaciones
@@ -129,7 +216,16 @@ es-419:
       statistical_data_set:
         one: Conjunto de datos estadísticos
         other: Conjuntos de datos estadísticos
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -138,9 +234,15 @@ es-419:
       transparency:
         one: Datos sobre transparencia
         other: Datos sobre transparencia
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: Artículo
         other: Artículos
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Declaración escrita al Parlamento
         other: Declaraciones escritas al Parlamento
@@ -151,9 +253,90 @@ es-419:
     publication_scheme_html: Lea sobre los tipos de información que usualmente publicamos en nuestro %{link}
     social_media_use_html: Lea nuestra política en %{link}
     welsh_language_scheme_html: Descubra sobre nuestro compromiso de publicar en el %{link}
+  i18n:
+    direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
     es-419: Español
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Documento
       other: Documentos
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

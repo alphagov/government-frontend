@@ -1,5 +1,7 @@
 ---
 en:
+  common:
+    last_updated:
   components:
     figure:
       image_credit: 'Image credit: %{credit}'
@@ -10,6 +12,8 @@ en:
       see_all_updates: see all updates
       show_all_updates: show all updates
     publisher_metadata:
+      collections:
+      from:
       hide_all: hide all
       show_all: show all
     share_links:
@@ -249,6 +253,8 @@ en:
     publication_scheme_html: Read about the types of information we routinely publish in our %{link}.
     social_media_use_html: Read our policy on %{link}.
     welsh_language_scheme_html: Find out about our commitment to %{link}.
+  i18n:
+    direction:
   language_names:
     ar: Arabic
     az: Azeri

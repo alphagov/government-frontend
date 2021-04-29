@@ -1,35 +1,89 @@
 ---
 ko:
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
     contents:
     metadata:
       published: 발행
       updated: 업데이트
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         other: 공지
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         other: 기사
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         other: 케이스 스터디
       closed_consultation:
         other: 비공개 협의
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         other: 협의
       consultation_outcome:
         other: 협의 결과
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         other: 기업 레포트
       correspondence:
         other: 서신
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         other:
       detailed_guide:
         other: 상세 안내
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         other:
       draft_text:
         other: 드래프트 택스트
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         other: 사상자 공지
       foi_release:
@@ -46,20 +100,41 @@ ko:
         other: 수입 - 대기
       independent_report:
         other: 독립 레포트
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        other:
+      maib_report:
+        one:
         other:
       map:
         other: 지도
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         other: 통계 - 국가 통계
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         other: 뉴스
       news_story:
         other: 뉴스 스토리
       notice:
         other:
+      official:
+        one:
+        other:
       official_statistics:
         other: 통계
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
         other: 오픈 컨설테이션
       oral_statement:
@@ -74,10 +149,22 @@ ko:
         other: 홍보물
       publication:
         other: 간행물
+      raib_report:
+        one:
+        other:
       regulation:
         other:
       research:
         other: 리써치 및 분석
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         other: 요점사항
       speech:
@@ -89,14 +176,29 @@ ko:
         other: 의회로 성명
       statistical_data_set:
         other: 통계 데이터 세트
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
+        one:
         other:
       transcript:
         other: 트랜스크립트
       transparency:
         other: 투명성 데이타
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         other: 뉴스
+      world_news_story:
+        one:
+        other:
       written_statement:
         other: 의회로 서면 성명
   corporate_information_page:
@@ -106,8 +208,89 @@ ko:
     publication_scheme_html: 정기적으로 공개되는 %{link} 정보에 대한 안내
     social_media_use_html: "%{link} 에서 정책 정보 확인"
     welsh_language_scheme_html: "%{link} 에서 정보 공개에 대한 내용"
+  i18n:
+    direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
     ko: 한국어
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       other: 문서
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

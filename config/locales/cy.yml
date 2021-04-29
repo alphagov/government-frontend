@@ -2,12 +2,31 @@
 cy:
   common:
     last_updated: Diweddarwyd diwethaf
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
     contents: Cynnwys
     metadata:
       published: Cyhoeddwyd
       updated: Diweddarwyd
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         few:
         many:
@@ -15,6 +34,9 @@ cy:
         other: Cyhoeddiadau
         two:
         zero:
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         few:
         many:
@@ -22,6 +44,9 @@ cy:
         other:
         two:
         zero:
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         few:
         many:
@@ -36,6 +61,12 @@ cy:
         other: Ymgynghoriadau ar gau
         two:
         zero:
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         few:
         many:
@@ -50,6 +81,9 @@ cy:
         other: Canlyniadau ymgynghoriadau
         two:
         zero:
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         few:
         many:
@@ -64,6 +98,9 @@ cy:
         other: Gohebiaeth
         two:
         zero:
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         few:
         many:
@@ -78,6 +115,9 @@ cy:
         other: Cyfarwyddyd manwl
         two:
         zero:
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         few:
         many:
@@ -92,6 +132,18 @@ cy:
         other: Testun drafft
         two:
         zero:
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         few:
         many:
@@ -148,6 +200,9 @@ cy:
         other: Adroddiadau annibynnol
         two:
         zero:
+      international_development_fund:
+        one:
+        other:
       international_treaty:
         few:
         many:
@@ -155,6 +210,9 @@ cy:
         other:
         two:
         zero:
+      maib_report:
+        one:
+        other:
       map:
         few:
         many:
@@ -162,6 +220,12 @@ cy:
         other: Mapiau
         two:
         zero:
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         few:
         many:
@@ -169,6 +233,9 @@ cy:
         other: Ystadegau - ystadegau gwladol
         two:
         zero:
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         few:
         many:
@@ -190,6 +257,9 @@ cy:
         other:
         two:
         zero:
+      official:
+        one:
+        other:
       official_statistics:
         few:
         many:
@@ -197,6 +267,9 @@ cy:
         other: Ystadegau
         two:
         zero:
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
         few:
         many:
@@ -246,6 +319,9 @@ cy:
         other: Cyhoeddiadau
         two:
         zero:
+      raib_report:
+        one:
+        other:
       regulation:
         few:
         many:
@@ -260,9 +336,15 @@ cy:
         other: Ymchwil a dadansoddiad
         two:
         zero:
+      residential_property_tribunal_decision:
+        one:
+        other:
       service_sign_in:
         one: Gwasanaeth Mewngofnodi
         other: Gwasanaeth Mewngofnodi
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         few:
         many:
@@ -298,6 +380,9 @@ cy:
         other: Setiau data ystadegol
         two:
         zero:
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         few:
         many:
@@ -305,6 +390,12 @@ cy:
         other:
         two:
         zero:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
+        one:
+        other:
       transcript:
         few:
         many:
@@ -319,6 +410,9 @@ cy:
         other: Data tryloywder
         two:
         zero:
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         few:
         many:
@@ -326,6 +420,9 @@ cy:
         other: Erthyglau newyddion
         two:
         zero:
+      world_news_story:
+        one:
+        other:
       written_statement:
         few:
         many:
@@ -340,8 +437,73 @@ cy:
     publication_scheme_html: Darllenwch am y mathau o wybodaeth rydym yn eu cyhoeddi'n rheolaidd yn ein %{link}.
     social_media_use_html: Darllenwch ein polisi ar %{link}
     welsh_language_scheme_html: Dysgwch am ein hymrwymiad i %{link}.
+  i18n:
+    direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
     cy: Cymraeg
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Llywio i’r rhan nesaf
     previous_page: Llywio i’r rhan flaenorol
@@ -360,3 +522,9 @@ cy:
     error:
       option: Dewiswch
       title: Dydych chi ddim wedi dewis
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

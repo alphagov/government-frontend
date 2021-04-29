@@ -1,47 +1,101 @@
 ---
 el:
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
     contents:
     metadata:
       published: Δημοσιευμένο
       updated: 'ανανεωμένο '
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: Ανακοίνωση
         other: Ανακοινώσεις
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: Κείμενο συντάκτη
         other: Κείμενα συντακτών
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: Παράδειγμα
         other: Παραδείγματα
       closed_consultation:
         one: Κλειστή διαβούλευση
         other: Κλειστές διαβουλεύσεις
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: Διαβούλευση
         other: Διαβουλεύσεις
       consultation_outcome:
         one: Αποτέλεσμα διαβούλευσης
         other: Αποτελέσματα διαβούλευσης
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Έκθεση Οργανισμού
         other: Εκθέσεις Οργανισμού
       correspondence:
         one: Αλληλογραφία
         other: Αλληλογραφία
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: Οδηγίες
         other: Οδηγίες
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: Σειρά
         other:
       draft_text:
         one: Προσχέδιο
         other: Προσχέδια
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: Ανακοίνωση θανάτου
         other: Ανακοινώσεις θανάτων
@@ -66,15 +120,30 @@ el:
       independent_report:
         one: Έκθεση ανεξάρτητης αρχής
         other: Εκθέσεις ανεξάρτητων αρχών
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: Χάρτης
         other: Χάρτες
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
         other: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Είδηση
         other: Ειδήσεις
@@ -84,9 +153,15 @@ el:
       notice:
         one:
         other:
+      official:
+        one:
+        other:
       official_statistics:
         one: Στατιστικά στοιχεία
         other: Στατιστικά στοιχεία
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
         one: Ανοιχτή διαβούλευση
         other: Ανοιχτές διαβουλεύσεις
@@ -108,12 +183,24 @@ el:
       publication:
         one: Έκδοση
         other: Εκδόσεις
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: Έρευνα και ανάλυση
         other: Έρευνα και ανάλυση
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: Βασικά σημεία ομιλίας
         other: Βασικά σημεία ομιλίας
@@ -129,7 +216,16 @@ el:
       statistical_data_set:
         one: Στατιστικά στοιχεία
         other: Στατιστικά στοιχεία
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -138,9 +234,15 @@ el:
       transparency:
         one: Στοιχεία διαφάνειας
         other: Στοιχεία διαφάνειας
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: Είδηση
         other: Ειδήσεις
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Γραπτή  δήλωση στη Βουλή
         other: Γραπτές δηλώσεις στη Βουλή
@@ -151,9 +253,90 @@ el:
     publication_scheme_html: Μάθετε περισσότερα για τις πληροφορίας που δημοσιεύουμε συνήθως στο %{link}
     social_media_use_html: Μάθετε περισσότερα για την πολιτική μας στο %{link}.
     welsh_language_scheme_html: Μάθετε περισσότερα για την δέσμευση μας στη δημοσίευση στο %{link}.
+  i18n:
+    direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
     el: 'Ελληνικά '
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Έγγραφο
       other: Έγγραφα
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

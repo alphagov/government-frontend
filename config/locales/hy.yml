@@ -1,47 +1,101 @@
 ---
 hy:
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
     contents:
     metadata:
       published: հրապարակված
       updated: Թարմացված
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: Հայտարարություն
         other: Հայտարարություններ
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: Հեղինակային հոդված
         other: Հեղինակային հոդվածներ
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: Թեմատիկ ուսումնասիրություն
         other: Թեմատիկ ուսումնասիրություններ
       closed_consultation:
         one: Փակ խորհրդատվություն
         other: Փակ խորհրդատվություններ
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: Խորհրդատվություն
         other: Խորհրդատվություններ
       consultation_outcome:
         one: Խորհրդատվության արդյունք
         other: Խորհրդատվության արդյունքներ
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Կորպորատիվ հաշվետվություն
         other: Կորպորատիվ հաշվետվություններ
       correspondence:
         one: Նամակագրություն
         other: Նամակագրություններ
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: Մանրամասն ուղեցույց
         other: Մանրամասն ուղեցույցեր
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: Մի շարք
         other:
       draft_text:
         one: Սևագիր տեքստ
         other: Սևագիր տեքստեր
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: Մահվան ծանուցում
         other: Մահվան ծանուցումներ
@@ -66,15 +120,30 @@ hy:
       independent_report:
         one: Անկախ հաշվետվություն
         other: Անկախ հաշվետվություններ
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: Քարտեզ
         other: Քարտեզներ
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: Վիճակագրություն-ազգային վիճակագրություն
         other: Վիճակագրություն-ազգային վիճակագրություններ
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Տեղեկատվական հոդված
         other: Տեղեկատվական հոդվածներ
@@ -84,9 +153,15 @@ hy:
       notice:
         one:
         other:
+      official:
+        one:
+        other:
       official_statistics:
         one: Վիճակագրություն
         other: Վիճակագրություն
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
         one: Բաց խորհրդատվություն
         other: Բաց խորհրդատվություններ
@@ -108,12 +183,24 @@ hy:
       publication:
         one: Հրապարակում
         other: Հրապարակումներ
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: Հետազոտություն և վերլուծություն
         other: Հետազոտություններ և վերլուծություններ
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: Խոսքի գրառում
         other: Խոսքի գրառումներ
@@ -129,7 +216,16 @@ hy:
       statistical_data_set:
         one: Վիճակագրական տվյալ
         other: Վիճակագրական տվյալներ
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -138,9 +234,15 @@ hy:
       transparency:
         one: Բաց տեղեկատվություն
         other: Բաց տեղեկատվություններ
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: Տեղեկատվական հոդված
         other: Տեղեկատվական հոդվածներ
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Գրավոր դիմում խորհրդարան
         other: Գրավոր դիմումներ խորհրդարան
@@ -151,9 +253,90 @@ hy:
     publication_scheme_html: Կարդացեք այն ամնենի մասին ինչ մենք հրապարակում ենք մեր %{link} ում
     social_media_use_html: Կարդացեք մեր քաղաքականության մասին
     welsh_language_scheme_html: Գտեք այստեղ %{link} ում հրապարակելու մեր պարտավորության մասին
+  i18n:
+    direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
     hy: Հայերեն
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Փաստաթուղթ
       other: Փաստաթղթեր
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

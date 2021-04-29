@@ -1,47 +1,101 @@
 ---
 ta:
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
     contents:
     metadata:
       published: பிரசுரிக்கப்பட்டது
       updated: இற்றைப்படுத்தப்பட்டது
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: அறிவிப்பு
         other: அறிவிப்புகள்
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: " எழுதப்பட்ட   கட்டுரை"
         other: எழுதப்பட்ட கட்டுரைகள்
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: சம்பவ ஆய்வுக் கற்கை
         other: சம்பவ ஆய்வுக் கற்கைகள்
       closed_consultation:
         one: வரையறுக்கப்பட்ட நிலையிலான கலந்தாலோசனை
         other: வரையறுக்கப்பட்ட நிலையிலான  கலந்தாலோசனைகள்
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: கலந்தாலோசனை
         other: கலந்தாலோசனைகள்
       consultation_outcome:
         one: கலந்தாலோசனையின் முடிவு
         other: கலந்தாலோசனைப்முடிவுகள்
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: கூட்டாண்மை அறிக்கை
         other: கூட்டாண்மை அறிக்கைகள்
       correspondence:
         one: தொடர்பு
         other: தொடர்புகள்
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: விளக்கமான வழிகாட்டல்
         other: விளக்கமான வழிகாட்டல்
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: தொடர்
         other:
       draft_text:
         one: வரைபு உரை
         other: வரைபு உரைகள்
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: இடர் அறிவித்தல்
         other: இடர் அறிவித்தல்கள்
@@ -66,15 +120,30 @@ ta:
       independent_report:
         one: சுயாதீன அறிக்கை
         other: சுயாதீன அறிக்கைகள்
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: வரைபடம்
         other: வரைபடங்கள்
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
         other: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: செய்திக் கட்டுரை
         other: செய்திக் கட்டுரைகள்
@@ -84,9 +153,15 @@ ta:
       notice:
         one:
         other:
+      official:
+        one:
+        other:
       official_statistics:
         one: புள்ளிவிபரம்
         other: புள்ளிவிபரம்
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
         one: திறந்த கலந்தாலோசனை
         other: திறந்த கலந்தாலோசனைகள்
@@ -108,12 +183,24 @@ ta:
       publication:
         one: பிரசுரம்
         other: பிரசுரங்கள்
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
         other: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: உரைக் குறிப்புகள்
         other: உரைக் குறிப்புகள்
@@ -129,7 +216,16 @@ ta:
       statistical_data_set:
         one: புள்ளிவிபர தரவுத் தொகுதி
         other: புள்ளிவிபர தரவுத் தொகுதிகள்
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -138,21 +234,109 @@ ta:
       transparency:
         one: வெளிப்படையான தரவு
         other: வெளிப்படையான தரவு
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: செய்திக் கட்டுரை
         other: செய்திக் கட்டுரைகள்
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கை
         other: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கைகள்
   corporate_information_page:
+    about_our_services_html:
     corporate_information: கூட்டாண்மைத் தகவல்
     personal_information_charter_html: உங்களது தனிப்பட்ட தகவல்களை எப்படி நாங்கள் கையாள்கிறோம் என்பதை எங்களது %{link} விளக்கும்
     publication_scheme_html: எங்களது %{link} நாங்கள் வழமையாக வெளியிடும் தகவல்களின்  வகைகள் பற்றி வாசிக்கவும்
     social_media_use_html: எங்களது  கொள்கையை %{link} இல் வாசிக்கவும்
     welsh_language_scheme_html: "%{link} இல் பிரசுரிப்பதற்கான எங்களது பற்றுறுதி பற்றி கண்டறியவும்"
+  i18n:
+    direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
     ta: தமிழ்
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: " ஆவணம்"
       other: ஆவணங்கள்
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:
