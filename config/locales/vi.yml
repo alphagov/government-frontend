@@ -25,64 +25,52 @@ vi:
       updated: Cập nhật
     schema_name:
       aaib_report:
-        one:
         other:
       announcement:
         other: Các thông báo
       asylum_support_decision:
-        one:
         other:
       authored_article:
         other: Các bài viết do tác giả
       business_finance_support_scheme:
-        one:
         other:
       case_study:
         other: Các Trường hợp cụ thể
       closed_consultation:
         other: Kết thúc các cuộc tham vấn
       cma_case:
-        one:
         other:
       coming_soon:
-        one:
         other:
       consultation:
         other: Các cuộc tham vấn
       consultation_outcome:
         other: Các Kết quả tham vấn
       corporate_information_page:
-        one:
         other:
       corporate_report:
         other: Các báo cáo tổng hợp
       correspondence:
         other: Liên hệ
       countryside_stewardship_grant:
-        one:
         other:
       decision:
         other:
       detailed_guide:
         other: Hướng dẫn chi tiết
       dfid_research_output:
-        one:
         other:
       document_collection:
         other:
       draft_text:
         other: Các nội dung dự thảo
       drug_safety_update:
-        one:
         other:
       employment_appeal_tribunal_decision:
-        one:
         other:
       employment_tribunal_decision:
-        one:
         other:
       esi_fund:
-        one:
         other:
       fatality_notice:
         other: Tin buồn
@@ -101,25 +89,20 @@ vi:
       independent_report:
         other: Các báo cáo độc lập
       international_development_fund:
-        one:
         other:
       international_treaty:
         other:
       maib_report:
-        one:
         other:
       map:
         other: Các bản đồ
       medical_safety_alert:
-        one:
         other:
       national:
-        one:
         other:
       national_statistics:
         other: Thống kê - Thống kê quốc gia
       national_statistics_announcement:
-        one:
         other:
       news_article:
         other: Tin tức
@@ -128,12 +111,10 @@ vi:
       notice:
         other:
       official:
-        one:
         other:
       official_statistics:
         other: Thống kê
       official_statistics_announcement:
-        one:
         other:
       open_consultation:
         other: Tham vấn mở rộng
@@ -150,54 +131,44 @@ vi:
       publication:
         other: Tài liệu truyền thông
       raib_report:
-        one:
         other:
       regulation:
         other:
       research:
         other: Nghiên cứu và phân tích
       residential_property_tribunal_decision:
-        one:
         other:
       service_sign_in:
-        one:
         other:
       service_standard_report:
-        one:
         other:
       speaking_notes:
         other: Bài phát biểu
       speech:
         other: Các bài phát biểu
       standard:
-        one:
         other:
       statement_to_parliament:
         other: Tuyên bố tới Quốc hội
       statistical_data_set:
         other: Bộ dữ liệu thống kê
       statistics_announcement:
-        one:
         other:
       statutory_guidance:
         other:
       take_part:
-        one:
         other:
       tax_tribunal_decision:
-        one:
         other:
       transcript:
         other: Kịch bản
       transparency:
         other: Dữ liệu kịch bản
       utaac_decision:
-        one:
         other:
       world_location_news_article:
         other: Tin tức
       world_news_story:
-        one:
         other:
       written_statement:
         other: Các Tuyên bố bằng văn bản tới quốc hội

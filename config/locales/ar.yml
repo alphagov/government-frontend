@@ -25,8 +25,12 @@ ar:
       updated: تحديث
     schema_name:
       aaib_report:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       announcement:
         few:
         many:
@@ -35,8 +39,12 @@ ar:
         two:
         zero:
       asylum_support_decision:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       authored_article:
         few:
         many:
@@ -45,8 +53,12 @@ ar:
         two:
         zero:
       business_finance_support_scheme:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       case_study:
         few:
         many:
@@ -62,11 +74,19 @@ ar:
         two:
         zero:
       cma_case:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       coming_soon:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       consultation:
         few:
         many:
@@ -82,8 +102,12 @@ ar:
         two:
         zero:
       corporate_information_page:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       corporate_report:
         few:
         many:
@@ -99,8 +123,12 @@ ar:
         two:
         zero:
       countryside_stewardship_grant:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       decision:
         few:
         many:
@@ -116,8 +144,12 @@ ar:
         two:
         zero:
       dfid_research_output:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       document_collection:
         few:
         many:
@@ -133,17 +165,33 @@ ar:
         two:
         zero:
       drug_safety_update:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       employment_appeal_tribunal_decision:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       employment_tribunal_decision:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       esi_fund:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       fatality_notice:
         few:
         many:
@@ -201,8 +249,12 @@ ar:
         two:
         zero:
       international_development_fund:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       international_treaty:
         few:
         many:
@@ -211,8 +263,12 @@ ar:
         two:
         zero:
       maib_report:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       map:
         few:
         many:
@@ -221,11 +277,19 @@ ar:
         two:
         zero:
       medical_safety_alert:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       national:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       national_statistics:
         few:
         many:
@@ -234,8 +298,12 @@ ar:
         two:
         zero:
       national_statistics_announcement:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       news_article:
         few:
         many:
@@ -258,8 +326,12 @@ ar:
         two:
         zero:
       official:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       official_statistics:
         few:
         many:
@@ -268,8 +340,12 @@ ar:
         two:
         zero:
       official_statistics_announcement:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       open_consultation:
         few:
         many:
@@ -320,8 +396,12 @@ ar:
         two:
         zero:
       raib_report:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       regulation:
         few:
         many:
@@ -337,14 +417,26 @@ ar:
         two:
         zero:
       residential_property_tribunal_decision:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       service_sign_in:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       service_standard_report:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       speaking_notes:
         few:
         many:
@@ -365,6 +457,7 @@ ar:
         one:
         other:
         two:
+        zero:
       statement_to_parliament:
         few:
         many:
@@ -380,8 +473,12 @@ ar:
         two:
         zero:
       statistics_announcement:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       statutory_guidance:
         few:
         many:
@@ -390,11 +487,19 @@ ar:
         two:
         zero:
       take_part:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       tax_tribunal_decision:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       transcript:
         few:
         many:
@@ -410,8 +515,12 @@ ar:
         two:
         zero:
       utaac_decision:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       world_location_news_article:
         few:
         many:
@@ -420,8 +529,12 @@ ar:
         two:
         zero:
       world_news_story:
+        few:
+        many:
         one:
         other:
+        two:
+        zero:
       written_statement:
         few:
         many:
