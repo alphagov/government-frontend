@@ -88,10 +88,15 @@ class ContentItemPresenter
 
   def render_guide_as_single_page?
     # /how-to-vote
-    content_id == "9315bc67-33e7-42e9-8dea-e022f56dabfa"
+    content_id == "9315bc67-33e7-42e9-8dea-e022f56dabfa" && voting_is_open?
   end
 
 private
+
+  def voting_is_open?
+    polls_closing_time = Time.zone.parse("2021-05-06 22:00:00")
+    Time.zone.now < polls_closing_time
+  end
 
   def display_date(timestamp, format = "%-d %B %Y")
     I18n.l(Time.zone.parse(timestamp), format: format, locale: "en") if timestamp

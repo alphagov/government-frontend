@@ -326,6 +326,7 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    timecop (0.9.4)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
@@ -395,6 +396,7 @@ DEPENDENCIES
   sassc-rails
   simplecov
   slimmer
+  timecop
   uglifier
   webdrivers
   webmock
