@@ -8,11 +8,6 @@ Rails.application.routes.draw do
 
   mount GovukPublishingComponents::Engine, at: "/component-guide"
 
-  get "/healthcheck",
-      to: GovukHealthcheck.rack_response(
-        GovukHealthcheck::RailsCache,
-      )
-
   get "/healthcheck/live", to: proc { [200, {}, %w[OK]] }
   get "/healthcheck/ready", to: GovukHealthcheck.rack_response(
     GovukHealthcheck::RailsCache,
