@@ -39,6 +39,7 @@ group :test do
   gem "minitest-reporters"
   gem "mocha"
   gem "simplecov"
+  gem "timecop"
   gem "webdrivers"
   gem "webmock", require: false
 end
