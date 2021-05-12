@@ -366,25 +366,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
-  test "renders briefing view correctly" do
-    content_item = content_store_has_schema_example("news_article", "news_article")
-    content_item["content_id"] = "3d66e959-72d2-417d-89c1-00cd72eea30f"
-    stub_content_store_has_item(content_item["base_path"], content_item)
-
-    get :show, params: { path: path_for(content_item) }
-    assert_response :success
-    assert_select ".gem-c-title", content_item["title"]
-    assert_select ".gem-c-lead-paragraph", content_item["description"]
-    assert_select ".gem-c-govspeak"
-    assert_select ".gem-c-share-links"
-    assert_select ".gem-c-title .gem-c-title__context", false
-    assert_select ".metadata-logo-wrapper", false
-    assert_select ".app-c-figure", false
-    assert_select ".gem-c-contextual-sidebar", false
-    assert_select ".gem-c-metadata__definition", false
-    assert_select ".gem-c-contextual-footer", false
-  end
-
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale

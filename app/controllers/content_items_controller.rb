@@ -117,14 +117,9 @@ private
   end
 
   def content_item_template
-    return "briefing" if is_briefing?
     return "guide_single" if @content_item.render_guide_as_single_page?
 
     @content_item.schema_name
-  end
-
-  def is_briefing?
-    @content_item.content_id == "3d66e959-72d2-417d-89c1-00cd72eea30f"
   end
 
   def render_template
