@@ -1,31 +1,76 @@
+---
 ka:
-  language_names:
-    ka: "ქართული"
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published:
+      updated:
     schema_name:
+      aaib_report:
+        other:
       announcement:
         other:
+      asylum_support_decision:
+        other:
       authored_article:
+        other:
+      business_finance_support_scheme:
         other:
       case_study:
         other:
       closed_consultation:
         other:
+      cma_case:
+        other:
+      coming_soon:
+        other:
       consultation:
         other:
       consultation_outcome:
+        other:
+      corporate_information_page:
         other:
       corporate_report:
         other:
       correspondence:
         other:
+      countryside_stewardship_grant:
+        other:
       decision:
         other:
       detailed_guide:
         other:
+      dfid_research_output:
+        other:
       document_collection:
         other:
       draft_text:
+        other:
+      drug_safety_update:
+        other:
+      employment_appeal_tribunal_decision:
+        other:
+      employment_tribunal_decision:
+        other:
+      esi_fund:
         other:
       fatality_notice:
         other:
@@ -43,17 +88,33 @@ ka:
         other:
       independent_report:
         other:
+      international_development_fund:
+        other:
       international_treaty:
+        other:
+      maib_report:
         other:
       map:
         other:
+      medical_safety_alert:
+        other:
+      national:
+        other:
       national_statistics:
+        other:
+      national_statistics_announcement:
         other:
       news_article:
         other:
       news_story:
         other:
       notice:
+        other:
+      official:
+        other:
+      official_statistics:
+        other:
+      official_statistics_announcement:
         other:
       open_consultation:
         other:
@@ -69,44 +130,138 @@ ka:
         other:
       publication:
         other:
+      raib_report:
+        other:
       regulation:
         other:
       research:
+        other:
+      residential_property_tribunal_decision:
+        other:
+      service_sign_in:
+        other:
+      service_standard_report:
         other:
       speaking_notes:
         other:
       speech:
         other:
       standard:
-        one:
         other:
       statement_to_parliament:
         other:
       statistical_data_set:
         other:
-      official_statistics:
+      statistics_announcement:
         other:
       statutory_guidance:
+        other:
+      take_part:
+        other:
+      tax_tribunal_decision:
         other:
       transcript:
         other:
       transparency:
         other:
+      utaac_decision:
+        other:
       world_location_news_article:
+        other:
+      world_news_story:
         other:
       written_statement:
         other:
-    metadata:
-      published:
-      updated:
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information:
+    personal_information_charter_html:
+    publication_scheme_html:
+    social_media_use_html:
+    welsh_language_scheme_html:
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka: ქართული
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       other:
-  corporate_information_page:
-    corporate_information:
-    publication_scheme_html:
-    personal_information_charter_html:
-    welsh_language_scheme_html:
-    social_media_use_html:
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

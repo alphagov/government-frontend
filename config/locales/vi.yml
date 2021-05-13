@@ -1,32 +1,77 @@
+---
 vi:
-  language_names:
-    vi: Tiếng Việt
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: Đã xuất bản
+      updated: Cập nhật
     schema_name:
+      aaib_report:
+        other:
       announcement:
         other: Các thông báo
+      asylum_support_decision:
+        other:
       authored_article:
         other: Các bài viết do tác giả
+      business_finance_support_scheme:
+        other:
       case_study:
         other: Các Trường hợp cụ thể
       closed_consultation:
         other: Kết thúc các cuộc tham vấn
+      cma_case:
+        other:
+      coming_soon:
+        other:
       consultation:
         other: Các cuộc tham vấn
       consultation_outcome:
         other: Các Kết quả tham vấn
+      corporate_information_page:
+        other:
       corporate_report:
         other: Các báo cáo tổng hợp
       correspondence:
         other: Liên hệ
+      countryside_stewardship_grant:
+        other:
       decision:
         other:
       detailed_guide:
         other: Hướng dẫn chi tiết
+      dfid_research_output:
+        other:
       document_collection:
         other:
       draft_text:
         other: Các nội dung dự thảo
+      drug_safety_update:
+        other:
+      employment_appeal_tribunal_decision:
+        other:
+      employment_tribunal_decision:
+        other:
+      esi_fund:
+        other:
       fatality_notice:
         other: Tin buồn
       foi_release:
@@ -38,22 +83,38 @@ vi:
       guidance:
         other: hướng dẫn
       impact_assessment:
-        other: "Đánh giá tác động"
+        other: Đánh giá tác động
       imported:
         other: Loại tài liệu đính kèm
       independent_report:
         other: Các báo cáo độc lập
+      international_development_fund:
+        other:
       international_treaty:
+        other:
+      maib_report:
         other:
       map:
         other: Các bản đồ
+      medical_safety_alert:
+        other:
+      national:
+        other:
       national_statistics:
         other: Thống kê - Thống kê quốc gia
+      national_statistics_announcement:
+        other:
       news_article:
         other: Tin tức
       news_story:
         other: Câu chuyện tin tức
       notice:
+        other:
+      official:
+        other:
+      official_statistics:
+        other: Thống kê
+      official_statistics_announcement:
         other:
       open_consultation:
         other: Tham vấn mở rộng
@@ -69,47 +130,138 @@ vi:
         other: Tài liệu truyền thông
       publication:
         other: Tài liệu truyền thông
+      raib_report:
+        other:
       regulation:
         other:
       research:
         other: Nghiên cứu và phân tích
+      residential_property_tribunal_decision:
+        other:
+      service_sign_in:
+        other:
+      service_standard_report:
+        other:
       speaking_notes:
         other: Bài phát biểu
       speech:
         other: Các bài phát biểu
       standard:
-        one:
         other:
       statement_to_parliament:
         other: Tuyên bố tới Quốc hội
       statistical_data_set:
         other: Bộ dữ liệu thống kê
-      official_statistics:
-        other: Thống kê
+      statistics_announcement:
+        other:
       statutory_guidance:
+        other:
+      take_part:
+        other:
+      tax_tribunal_decision:
         other:
       transcript:
         other: Kịch bản
       transparency:
         other: Dữ liệu kịch bản
+      utaac_decision:
+        other:
       world_location_news_article:
         other: Tin tức
+      world_news_story:
+        other:
       written_statement:
         other: Các Tuyên bố bằng văn bản tới quốc hội
-    metadata:
-      published: "Đã xuất bản"
-      updated: Cập nhật
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Thông tin về phòng tổng hợp
+    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng tôi xử lý thông tin cá nhân của bạn"
+    publication_scheme_html: Xem các loại thông tin mà chúng tôi cập nhật thường xuyên tại %{link}
+    social_media_use_html: Đọc chính sách của chúng tôi tại %{link}
+    welsh_language_scheme_html: Tìm hiểu các cam kết của chúng tôi trong việc công bố thông tin tại %{link}
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi: Tiếng Việt
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       other: Tài liệu
-  corporate_information_page:
-    corporate_information: Thông tin về phòng tổng hợp
-    publication_scheme_html: Xem các loại thông tin mà chúng tôi cập nhật thường xuyên
-      tại %{link}
-    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng
-      tôi xử lý thông tin cá nhân của bạn"
-    welsh_language_scheme_html: Tìm hiểu các cam kết của chúng tôi trong việc công
-      bố thông tin tại %{link}
-    social_media_use_html: Đọc chính sách của chúng tôi tại %{link}
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

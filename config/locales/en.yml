@@ -1,49 +1,260 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
+---
 en:
+  common:
+    last_updated:
   components:
     figure:
-      image_credit: "Image credit: %{credit}"
-    share_links:
-      share_this_page: "Share this page"
-    publisher_metadata:
-      show_all: "show all"
-      hide_all: "hide all"
+      image_credit: 'Image credit: %{credit}'
     published_dates:
-      show_all_updates: "show all updates"
-      hide_all_updates: "hide all updates"
-      last_updated: "Last updated %{date}"
-      published: "Published %{date}"
-      see_all_updates: "see all updates"
+      hide_all_updates: hide all updates
+      last_updated: Last updated %{date}
+      published: Published %{date}
+      see_all_updates: see all updates
+      show_all_updates: show all updates
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: hide all
+      show_all: show all
+    share_links:
+      share_this_page: Share this page
+  content_item:
+    contents: Contents
+    metadata:
+      published: Published
+      updated: Updated
+    schema_name:
+      aaib_report:
+        one: Air Accidents Investigation Branch report
+        other: Air Accidents Investigation Branch reports
+      announcement:
+        one: Announcement
+        other: Announcements
+      asylum_support_decision:
+        one: Asylum support tribunal decision
+        other: Asylum support tribunal decisions
+      authored_article:
+        one: Authored article
+        other: Authored articles
+      business_finance_support_scheme:
+        one: Business finance support scheme
+        other: Business finance support schemes
+      case_study:
+        one: Case study
+        other: Case studies
+      closed_consultation:
+        one: Closed consultation
+        other: Closed consultations
+      cma_case:
+        one: Competition and Markets Authority case
+        other: Competition and Markets Authority cases
+      coming_soon:
+        one: Coming Soon
+        other: Coming Soon
+      consultation:
+        one: Consultation
+        other: Consultations
+      consultation_outcome:
+        one: Consultation outcome
+        other: Consultation outcomes
+      corporate_information_page:
+        one: Information page
+        other: Information pages
+      corporate_report:
+        one: Corporate report
+        other: Corporate reports
+      correspondence:
+        one: Correspondence
+        other: Correspondences
+      countryside_stewardship_grant:
+        one: Countryside Stewardship grant
+        other: Countryside Stewardship grants
+      decision:
+        one: Decision
+        other: Decisions
+      detailed_guide:
+        one: Guidance
+        other: Guidance
+      dfid_research_output:
+        one: Research for Development Output
+        other: Research for Development Outputs
+      document_collection:
+        one: Collection
+        other: Collections
+      draft_text:
+        one: Draft text
+        other: Draft texts
+      drug_safety_update:
+        one: Drug Safety Update
+        other: Drug Safety Updates
+      employment_appeal_tribunal_decision:
+        one: Employment appeal tribunal decision
+        other: Employment appeal tribunal decisions
+      employment_tribunal_decision:
+        one: Employment tribunal decision
+        other: Employment tribunal decisions
+      esi_fund:
+        one: European Structural and Investment Fund (ESIF)
+        other: European Structural and Investment Funds (ESIF)
+      fatality_notice:
+        one: Fatality notice
+        other: Fatality notices
+      foi_release:
+        one: FOI release
+        other: FOI releases
+      form:
+        one: Form
+        other: Forms
+      government_response:
+        one: Government response
+        other: Government responses
+      guidance:
+        one: Guidance
+        other: Guidance
+      impact_assessment:
+        one: Impact assessment
+        other: Impact assessments
+      imported:
+        one: imported - awaiting type
+        other: imported - awaiting type
+      independent_report:
+        one: Independent report
+        other: Independent reports
+      international_development_fund:
+        one: International development funding
+        other: International development funding
+      international_treaty:
+        one: International treaty
+        other: International treaties
+      maib_report:
+        one: Marine Accident Investigation Branch report
+        other: Marine Accident Investigation Branch reports
+      map:
+        one: Map
+        other: Maps
+      medical_safety_alert:
+        one: Alerts and recalls for drugs and medical devices
+        other: Alerts and recalls for drugs and medical devices
+      national:
+        one: National statistics announcement
+        other: National statistics announcements
+      national_statistics:
+        one: National Statistics
+        other: National Statistics
+      national_statistics_announcement:
+        one: National statistics announcement
+        other: National statistics announcements
+      news_article:
+        one: News article
+        other: News articles
+      news_story:
+        one: News story
+        other: News stories
+      notice:
+        one: Notice
+        other: Notices
+      official:
+        one: Official statistics announcement
+        other: Official statistics announcements
+      official_statistics:
+        one: Official Statistics
+        other: Official Statistics
+      official_statistics_announcement:
+        one: Official statistics announcement
+        other: Official statistics announcements
+      open_consultation:
+        one: Open consultation
+        other: Open consultations
+      oral_statement:
+        one: Oral statement to Parliament
+        other: Oral statements to Parliament
+      policy:
+        one: Policy
+        other: Policies
+      policy_paper:
+        one: Policy paper
+        other: Policy papers
+      press_release:
+        one: Press release
+        other: Press releases
+      promotional:
+        one: Promotional material
+        other: Promotional material
+      publication:
+        one: Publication
+        other: Publications
+      raib_report:
+        one: Rail Accident Investigation Branch report
+        other: Rail Accident Investigation Branch reports
+      regulation:
+        one: Regulation
+        other: Regulations
+      research:
+        one: Research and analysis
+        other: Research and analysis
+      residential_property_tribunal_decision:
+        one: Residential property tribunal decision
+        other: Residential property tribunal decisions
+      service_sign_in:
+        one: Service sign in
+        other: Service sign in
+      service_standard_report:
+        one: Service Standard Report
+        other: Service Standard Reports
+      speaking_notes:
+        one: Speaking notes
+        other: Speaking notes
+      speech:
+        one: Speech
+        other: Speeches
+      standard:
+        one: Standard
+        other: Standards
+      statement_to_parliament:
+        one: Statement to Parliament
+        other: Statements to Parliament
+      statistical_data_set:
+        one: Statistical data set
+        other: Statistical data sets
+      statistics_announcement:
+        one: Statistics release announcement
+        other: Statistics release announcements
+      statutory_guidance:
+        one: Statutory guidance
+        other: Statutory guidance
+      take_part:
+        one: Take part
+        other: Take part
+      tax_tribunal_decision:
+        one: Tax and Chancery tribunal decision
+        other: Tax and Chancery tribunal decisions
+      transcript:
+        one: Transcript
+        other: Transcripts
+      transparency:
+        one: Transparency data
+        other: Transparency data
+      utaac_decision:
+        one: Administrative appeals tribunal decision
+        other: Administrative appeals tribunal decisions
+      world_location_news_article:
+        one: News article
+        other: News articles
+      world_news_story:
+        one: World news story
+        other: World news stories
+      written_statement:
+        one: Written statement to Parliament
+        other: Written statements to Parliament
+  corporate_information_page:
+    about_our_services_html: Find out %{link}.
+    corporate_information: Corporate information
+    personal_information_charter_html: Our %{link} explains how we treat your personal information.
+    publication_scheme_html: Read about the types of information we routinely publish in our %{link}.
+    social_media_use_html: Read our policy on %{link}.
+    welsh_language_scheme_html: Find out about our commitment to %{link}.
+  i18n:
+    direction:
   language_names:
     ar: Arabic
     az: Azeri
@@ -82,7 +293,7 @@ en:
     ms: Malay
     mt: Maltese
     nl: Dutch
-    "no": Norwegian
+    'no': Norwegian
     pa: Punjabi Gurmukhi
     pa-pk: Punjabi Shahmukhi
     pl: Polish
@@ -109,264 +320,23 @@ en:
     zh: Chinese
     zh-hk: Cantonese
     zh-tw: Traditional Chinese
-  content_item:
-    schema_name:
-      # `national` & `official` are old document types for
-      # `national_statistics_announcement` and `official_statistics_announcement`.
-      # They can be removed once https://github.com/alphagov/whitehall/pull/2783 is
-      # deployed and all statistics announcements have been republished.
-      national:
-        one: National statistics announcement
-        other: National statistics announcements
-      official:
-        one: Official statistics announcement
-        other: Official statistics announcements
-      aaib_report:
-        one: Air Accidents Investigation Branch report
-        other: Air Accidents Investigation Branch reports
-      announcement:
-        one: Announcement
-        other: Announcements
-      asylum_support_decision:
-        one: Asylum support tribunal decision
-        other: Asylum support tribunal decisions
-      business_finance_support_scheme:
-        one: Business finance support scheme
-        other: Business finance support schemes
-      case_study:
-        one: Case study
-        other: Case studies
-      closed_consultation:
-        one: Closed consultation
-        other: Closed consultations
-      cma_case:
-        one: Competition and Markets Authority case
-        other: Competition and Markets Authority cases
-      coming_soon:
-        one: Coming Soon
-        other: Coming Soon
-      consultation:
-        one: Consultation
-        other: Consultations
-      consultation_outcome:
-        one: Consultation outcome
-        other: Consultation outcomes
-      corporate_information_page:
-        one: Information page
-        other: Information pages
-      corporate_report:
-        one: Corporate report
-        other: Corporate reports
-      correspondence:
-        one: Correspondence
-        other: Correspondences
-      countryside_stewardship_grant:
-        one: Countryside Stewardship grant
-        other: Countryside Stewardship grants
-      detailed_guide:
-        one: Guidance
-        other: Guidance
-      dfid_research_output:
-        one: Research for Development Output
-        other: Research for Development Outputs
-      document_collection:
-        one: Collection
-        other: Collections
-      draft_text:
-        one: Draft text
-        other: Draft texts
-      drug_safety_update:
-        one: Drug Safety Update
-        other: Drug Safety Updates
-      employment_appeal_tribunal_decision:
-        one: Employment appeal tribunal decision
-        other: Employment appeal tribunal decisions
-      employment_tribunal_decision:
-        one: Employment tribunal decision
-        other: Employment tribunal decisions
-      esi_fund:
-        one: European Structural and Investment Fund (ESIF)
-        other: European Structural and Investment Funds (ESIF)
-      fatality_notice:
-        one: Fatality notice
-        other: Fatality notices
-      foi_release:
-        one: FOI release
-        other: FOI releases
-      form:
-        one: Form
-        other: Forms
-      guidance:
-        one: Guidance
-        other: Guidance
-      statutory_guidance:
-        one: Statutory guidance
-        other: Statutory guidance
-      impact_assessment:
-        one: Impact assessment
-        other: Impact assessments
-      imported:
-        one: imported - awaiting type
-        other: imported - awaiting type
-      independent_report:
-        one: Independent report
-        other: Independent reports
-      international_development_fund:
-        one: International development funding
-        other: International development funding
-      international_treaty:
-        one: International treaty
-        other: International treaties
-      map:
-        one: Map
-        other: Maps
-      maib_report:
-        one: Marine Accident Investigation Branch report
-        other: Marine Accident Investigation Branch reports
-      medical_safety_alert:
-        one: Alerts and recalls for drugs and medical devices
-        other: Alerts and recalls for drugs and medical devices
-      notice:
-        one: Notice
-        other: Notices
-      decision:
-        one: Decision
-        other: Decisions
-      national_statistics:
-        one: National Statistics
-        other: National Statistics
-      national_statistics_announcement:
-        one: National statistics announcement
-        other: National statistics announcements
-      news_article:
-        one: News article
-        other: News articles
-      news_story:
-        one: News story
-        other: News stories
-      open_consultation:
-        one: Open consultation
-        other: Open consultations
-      oral_statement:
-        one: Oral statement to Parliament
-        other: Oral statements to Parliament
-      policy:
-        one: Policy
-        other: Policies
-      policy_paper:
-        one: Policy paper
-        other: Policy papers
-      press_release:
-        one: Press release
-        other: Press releases
-      promotional:
-        one: Promotional material
-        other: Promotional material
-      publication:
-        one: Publication
-        other: Publications
-      government_response:
-        one: Government response
-        other: Government responses
-      raib_report:
-        one: Rail Accident Investigation Branch report
-        other: Rail Accident Investigation Branch reports
-      regulation:
-        one: Regulation
-        other: Regulations
-      research:
-        one: Research and analysis
-        other: Research and analysis
-      residential_property_tribunal_decision:
-        one: Residential property tribunal decision
-        other: Residential property tribunal decisions
-      service_sign_in:
-        one: Service sign in
-        other: Service sign in
-      service_standard_report:
-        one: Service Standard Report
-        other: Service Standard Reports
-      speaking_notes:
-        one: Speaking notes
-        other: Speaking notes
-      speech:
-        one: Speech
-        other: Speeches
-      standard:
-        one: Standard
-        other: Standards
-      statement_to_parliament:
-        one: Statement to Parliament
-        other: Statements to Parliament
-      statistical_data_set:
-        one: Statistical data set
-        other: Statistical data sets
-      statistics_announcement:
-        one: Statistics release announcement
-        other: Statistics release announcements
-      official_statistics:
-        one: Official Statistics
-        other: Official Statistics
-      official_statistics_announcement:
-        one: Official statistics announcement
-        other: Official statistics announcements
-      take_part:
-        one: Take part
-        other: Take part
-      tax_tribunal_decision:
-        one: Tax and Chancery tribunal decision
-        other: Tax and Chancery tribunal decisions
-      transcript:
-        one: Transcript
-        other: Transcripts
-      transparency:
-        one: Transparency data
-        other: Transparency data
-      utaac_decision:
-        one: Administrative appeals tribunal decision
-        other: Administrative appeals tribunal decisions
-      world_location_news_article:
-        one: News article
-        other: News articles
-      world_news_story:
-        one: World news story
-        other: World news stories
-      written_statement:
-        one: Written statement to Parliament
-        other: Written statements to Parliament
-      authored_article:
-        one: Authored article
-        other: Authored articles
-    metadata:
-      published: Published
-      updated: Updated
-    contents: Contents
+  multi_page:
+    next_page: Next
+    previous_page: Previous
+    print_entire_guide: Print entire guide
   publication:
+    details: Details
     documents:
       one: Document
       other: Documents
-    details: Details
-  corporate_information_page:
-    corporate_information: Corporate information
-    publication_scheme_html: Read about the types of information we routinely publish
-      in our %{link}.
-    personal_information_charter_html: Our %{link} explains how we treat your personal
-      information.
-    welsh_language_scheme_html: Find out about our commitment to %{link}.
-    social_media_use_html: Read our policy on %{link}.
-    about_our_services_html: Find out %{link}.
+  service_sign_in:
+    continue: Continue
+    error:
+      option: Please select an option
+      title: You haven’t selected an option
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all but essential travel to parts of the country.
-      avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all travel to parts of the country.
       avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all but essential travel to the whole country.
+      avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all travel to parts of the country.
       avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all travel to the whole country.
-  multi_page:
-    print_entire_guide: "Print entire guide"
-    previous_page: "Previous"
-    next_page: "Next"
-  service_sign_in:
-    error:
-      title: You haven’t selected an option
-      option: "Please select an option"
-    continue: "Continue"

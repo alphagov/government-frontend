@@ -1,116 +1,267 @@
+---
 fa:
-  i18n:
-    direction: rtl
-  language_names:
-    fa: "فارسی"
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: منتشر شده
+      updated: به روز رسانی شده
     schema_name:
+      aaib_report:
+        other:
       announcement:
-        other: "اعلامیه ها"
+        other: اعلامیه ها
+      asylum_support_decision:
+        other:
       authored_article:
-        other: "مقالات"
+        other: مقالات
+      business_finance_support_scheme:
+        other:
       case_study:
-        other: "مطالعه های موردی"
+        other: مطالعه های موردی
       closed_consultation:
-        other: "رایزنی های بسته"
+        other: رایزنی های بسته
+      cma_case:
+        other:
+      coming_soon:
+        other:
       consultation:
-        other: "رایزنی ها"
+        other: رایزنی ها
       consultation_outcome:
-        other: "نتایج رایزنی"
+        other: نتایج رایزنی
+      corporate_information_page:
+        other:
       corporate_report:
-        other: "گزارش های سازمانی"
+        other: گزارش های سازمانی
       correspondence:
-        other: "مکاتبات"
+        other: مکاتبات
+      countryside_stewardship_grant:
+        other:
       decision:
         other:
       detailed_guide:
-        other: "راهنمای تفصیلی"
+        other: راهنمای تفصیلی
+      dfid_research_output:
+        other:
       document_collection:
         other:
       draft_text:
-        other: "متون پیش نویس"
+        other: متون پیش نویس
+      drug_safety_update:
+        other:
+      employment_appeal_tribunal_decision:
+        other:
+      employment_tribunal_decision:
+        other:
+      esi_fund:
+        other:
       fatality_notice:
-        other: "اطلاعیه تلفات"
+        other: اطلاعیه تلفات
       foi_release:
-        other: "انتشار آزاد اطلاعات"
+        other: انتشار آزاد اطلاعات
       form:
-        other: "فرم ها"
+        other: فرم ها
       government_response:
-        other: "جوابیه های دولت"
+        other: جوابیه های دولت
       guidance:
-        other: "راهنمایی"
+        other: راهنمایی
       impact_assessment:
-        other: "ارزیابی های تاثیرات"
+        other: ارزیابی های تاثیرات
       imported:
-        other: "منتقل شده - در انتظار دسته بندی"
+        other: منتقل شده - در انتظار دسته بندی
       independent_report:
-        other: "گزارش های مستقل"
+        other: گزارش های مستقل
+      international_development_fund:
+        other:
       international_treaty:
         other:
+      maib_report:
+        other:
       map:
-        other: "نقشه ها"
+        other: نقشه ها
+      medical_safety_alert:
+        other:
+      national:
+        other:
       national_statistics:
-        other: "آمار - آمار ملی"
+        other: آمار - آمار ملی
+      national_statistics_announcement:
+        other:
       news_article:
-        other: "مقالات خبری"
+        other: مقالات خبری
       news_story:
-        other: "اخبار"
+        other: اخبار
       notice:
         other:
+      official:
+        other:
+      official_statistics:
+        other: آمار
+      official_statistics_announcement:
+        other:
       open_consultation:
-        other: "رایزنی های باز"
+        other: رایزنی های باز
       oral_statement:
-        other: "گزارش های شفاهی به پارلمان"
+        other: گزارش های شفاهی به پارلمان
       policy:
-        other: "سیاست ها"
+        other: سیاست ها
       policy_paper:
-        other: "مقاله های سیاسی"
+        other: مقاله های سیاسی
       press_release:
-        other: "بیانیه ها"
+        other: بیانیه ها
       promotional:
-        other: "مطالب تبلیغاتی"
+        other: مطالب تبلیغاتی
       publication:
-        other: "نشریات"
+        other: نشریات
+      raib_report:
+        other:
       regulation:
         other:
       research:
-        other: "پژوهش و تحلیل"
+        other: پژوهش و تحلیل
+      residential_property_tribunal_decision:
+        other:
+      service_sign_in:
+        other:
+      service_standard_report:
+        other:
       speaking_notes:
-        other: "موضوعات سخنرانی"
+        other: موضوعات سخنرانی
       speech:
-        other: "سخنرانی ها"
+        other: سخنرانی ها
       standard:
-        one:
         other:
       statement_to_parliament:
-        other: "گزارش ها به پارلمان"
+        other: گزارش ها به پارلمان
       statistical_data_set:
-        other: "بسته های داده های آماری"
-      official_statistics:
-        other: "آمار"
+        other: بسته های داده های آماری
+      statistics_announcement:
+        other:
       statutory_guidance:
         other:
+      take_part:
+        other:
+      tax_tribunal_decision:
+        other:
       transcript:
-        other: "رونوشت ها"
+        other: رونوشت ها
       transparency:
-        other: "داده های شفاف سازی"
+        other: داده های شفاف سازی
+      utaac_decision:
+        other:
       world_location_news_article:
-        other: "مقالات خبری"
+        other: مقالات خبری
+      world_news_story:
+        other:
       written_statement:
-        other: "گزارش های کتبی به پارلمان"
-    metadata:
-      published: "منتشر شده"
-      updated: "به روز رسانی شده"
-    contents:
-  publication:
-    documents:
-      other: "مدارک"
+        other: گزارش های کتبی به پارلمان
   corporate_information_page:
-    corporate_information: اطلاعات سازمانی
-    publication_scheme_html: 'درباره نوع اطلاعاتی که ما به طور روال در %{link} منتشر
-      می کنیم بخوانید '
-    personal_information_charter_html: "%{link} چگونگی نگهداری از اطلاعات شخصی شما
-      را توضیح می دهد"
-    welsh_language_scheme_html: درباره تعهد ما به انتشار مطالب به %{link} بخوانید
-    social_media_use_html: سیاست ما را درباره  %{link} بخوانید
     about_our_services_html:
+    corporate_information: اطلاعات سازمانی
+    personal_information_charter_html: "%{link} چگونگی نگهداری از اطلاعات شخصی شما را توضیح می دهد"
+    publication_scheme_html: 'درباره نوع اطلاعاتی که ما به طور روال در %{link} منتشر می کنیم بخوانید '
+    social_media_use_html: سیاست ما را درباره  %{link} بخوانید
+    welsh_language_scheme_html: درباره تعهد ما به انتشار مطالب به %{link} بخوانید
+  i18n:
+    direction: rtl
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa: فارسی
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      other: مدارک
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

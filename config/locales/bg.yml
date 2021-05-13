@@ -1,161 +1,342 @@
+---
 bg:
-  language_names:
-    bg: "български"
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: Публикувано
+      updated: обновено
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
-        one: "Съобщение"
-        other: "Съобщения"
+        one: Съобщение
+        other: Съобщения
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
-        one: "Авторска статия"
-        other: "Авторски статии"
+        one: Авторска статия
+        other: Авторски статии
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
-        one: "Казус"
-        other: "Казуси"
+        one: Казус
+        other: Казуси
       closed_consultation:
-        one: "Затворена консултация"
-        other: "Затворени консултации"
+        one: Затворена консултация
+        other: Затворени консултации
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
-        one: "Консултация"
-        other: "Консултации"
+        one: Консултация
+        other: Консултации
       consultation_outcome:
-        one: "Резултат от консултацията"
-        other: "Резултат от консултациите"
+        one: Резултат от консултацията
+        other: Резултат от консултациите
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
-        one: "Корпоративен доклад"
-        other: "Корпоративни доклади"
+        one: Корпоративен доклад
+        other: Корпоративни доклади
       correspondence:
-        one: "Кореспонденция"
-        other: "Кореспонденции"
+        one: Кореспонденция
+        other: Кореспонденции
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
-        one: "Подробна насока"
-        other: "Подробни насоки"
+        one: Подробна насока
+        other: Подробни насоки
+      dfid_research_output:
+        one:
+        other:
       document_collection:
-        one: "Серии"
+        one: Серии
         other:
       draft_text:
-        one: "Чернова"
-        other: "Чернови"
+        one: Чернова
+        other: Чернови
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
-        one: "Уведомление за кончина"
-        other: "Уведомления за кончина"
+        one: Уведомление за кончина
+        other: Уведомления за кончина
       foi_release:
-        one: "Съобщение във връзка със свободен достъп до информация"
-        other: "Съобщения във връзка със свободен достъп до информация"
+        one: Съобщение във връзка със свободен достъп до информация
+        other: Съобщения във връзка със свободен достъп до информация
       form:
-        one: "Формуляр"
-        other: "Формуляри"
+        one: Формуляр
+        other: Формуляри
       government_response:
-        one: "Отговор на правителството"
-        other: "Отговори на правителството"
+        one: Отговор на правителството
+        other: Отговори на правителството
       guidance:
-        one: "Насоки"
-        other: "Насоки"
+        one: Насоки
+        other: Насоки
       impact_assessment:
-        one: "Оценка на влиянието"
-        other: "Оценки на влиянието"
+        one: Оценка на влиянието
+        other: Оценки на влиянието
       imported:
-        one: "импортирано-очаква тип "
-        other: "импортирано-очаква тип"
+        one: 'импортирано-очаква тип '
+        other: импортирано-очаква тип
       independent_report:
-        one: "Независим доклад"
-        other: "Независими доклади"
+        one: Независим доклад
+        other: Независими доклади
+      international_development_fund:
+        one:
+        other:
       international_treaty:
         one:
         other:
+      maib_report:
+        one:
+        other:
       map:
-        one: "Карта"
-        other: "Карти"
+        one: Карта
+        other: Карти
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
-        one: "Статистика- национална статистика"
-        other: "Статистики- национални статистики"
+        one: Статистика- национална статистика
+        other: Статистики- национални статистики
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "Новинарска статия"
-        other: "Новинарски статии"
+        one: Новинарска статия
+        other: Новинарски статии
       news_story:
-        one: "Новина"
-        other: "Новини"
+        one: Новина
+        other: Новини
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Статистики
+        other: Статистики
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "Отворена консултация"
-        other: "Отворени консултации"
+        one: Отворена консултация
+        other: Отворени консултации
       oral_statement:
-        one: "Устно изказване в Парламента"
-        other: "Устни изказвания в Парламента"
+        one: Устно изказване в Парламента
+        other: Устни изказвания в Парламента
       policy:
-        one: "Политика"
-        other: "Политики"
+        one: Политика
+        other: Политики
       policy_paper:
-        one: "Документ, залагащ политика"
-        other: "Документи, залагащи политика"
+        one: Документ, залагащ политика
+        other: Документи, залагащи политика
       press_release:
-        one: "Съобщение до медиите"
-        other: "Съобщения до медиите"
+        one: Съобщение до медиите
+        other: Съобщения до медиите
       promotional:
-        one: "Промоционален материал"
-        other: "Промоционален материал"
+        one: Промоционален материал
+        other: Промоционален материал
       publication:
-        one: "Публикация"
-        other: "Публикации"
+        one: Публикация
+        other: Публикации
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
-        one: "Проучване и анализ"
-        other: "Проучване и анализи"
+        one: Проучване и анализ
+        other: Проучване и анализи
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
-        one: "Устна нота"
-        other: "Устни ноти"
+        one: Устна нота
+        other: Устни ноти
       speech:
-        one: "Реч"
-        other: "Речи"
+        one: Реч
+        other: Речи
       standard:
         one:
         other:
       statement_to_parliament:
-        one: "Изявление в парламента"
-        other: "Изявления в парламента"
+        one: Изявление в парламента
+        other: Изявления в парламента
       statistical_data_set:
-        one: "Набор от статистически данни"
-        other: "Набори от статистически данни"
-      official_statistics:
-        one: "Статистики"
-        other: "Статистики"
+        one: Набор от статистически данни
+        other: Набори от статистически данни
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
+        one:
+        other:
       transcript:
-        one: "Препис"
-        other: "Преписи"
+        one: Препис
+        other: Преписи
       transparency:
-        one: "Информация за прозрачността"
-        other: "Информация за прозрачността"
+        one: Информация за прозрачността
+        other: Информация за прозрачността
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
-        one: "Новинарска статия"
-        other: "Новинарски статии"
+        one: Новинарска статия
+        other: Новинарски статии
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "Писмено изявление до парламента"
-        other: "Писмени изявления до парламента"
-    metadata:
-      published: "Публикувано"
-      updated: "обновено"
-    contents:
-  publication:
-    documents:
-      one: "Документ"
-      other: "Документи"
+        one: Писмено изявление до парламента
+        other: Писмени изявления до парламента
   corporate_information_page:
-    corporate_information: Корпоративна информация
-    publication_scheme_html: Прочетете какви видове информация публикуваме в нашия
-      %{link}.
-    personal_information_charter_html: Нашият %{link} дава информация за начина на
-      ползване на личните Ви данни
-    welsh_language_scheme_html: Разберете повече за нашето задължение да публикуваме
-      в %{link}.
-    social_media_use_html: Вижте политиката ни по %{link}.
     about_our_services_html:
+    corporate_information: Корпоративна информация
+    personal_information_charter_html: Нашият %{link} дава информация за начина на ползване на личните Ви данни
+    publication_scheme_html: Прочетете какви видове информация публикуваме в нашия %{link}.
+    social_media_use_html: Вижте политиката ни по %{link}.
+    welsh_language_scheme_html: Разберете повече за нашето задължение да публикуваме в %{link}.
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg: български
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      one: Документ
+      other: Документи
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

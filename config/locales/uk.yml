@@ -1,253 +1,492 @@
+---
 uk:
-  language_names:
-    uk: "Українська"
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: опубліковано
+      updated: оновлено
     schema_name:
-      announcement:
-        one: "Оголошення"
+      aaib_report:
         few:
         many:
-        other: "Оголошення"
-      authored_article:
-        one: "Стаття"
-        few:
-        many:
-        other: "Статті"
-      case_study:
-        one: "Тематичне дослідження"
-        few:
-        many:
-        other: "Тематичні дослідження"
-      closed_consultation:
-        one: "Закрите обговорення"
-        few:
-        many:
-        other: "Закриті обговорення"
-      consultation:
-        one: "Обговорення"
-        few:
-        many:
-        other: "Обговорення"
-      consultation_outcome:
-        one: "Результат обговорення"
-        few:
-        many:
-        other: "Результати обговорення"
-      corporate_report:
-        one: "Корпоративний звіт"
-        few:
-        many:
-        other: "Корпоративні звіти"
-      correspondence:
-        one: "Кореспонденція"
-        few:
-        many:
-        other: "Кореспонденція"
-      decision:
         one:
+        other:
+      announcement:
         few:
         many:
+        one: Оголошення
+        other: Оголошення
+      asylum_support_decision:
+        few:
+        many:
+        one:
+        other:
+      authored_article:
+        few:
+        many:
+        one: Стаття
+        other: Статті
+      business_finance_support_scheme:
+        few:
+        many:
+        one:
+        other:
+      case_study:
+        few:
+        many:
+        one: Тематичне дослідження
+        other: Тематичні дослідження
+      closed_consultation:
+        few:
+        many:
+        one: Закрите обговорення
+        other: Закриті обговорення
+      cma_case:
+        few:
+        many:
+        one:
+        other:
+      coming_soon:
+        few:
+        many:
+        one:
+        other:
+      consultation:
+        few:
+        many:
+        one: Обговорення
+        other: Обговорення
+      consultation_outcome:
+        few:
+        many:
+        one: Результат обговорення
+        other: Результати обговорення
+      corporate_information_page:
+        few:
+        many:
+        one:
+        other:
+      corporate_report:
+        few:
+        many:
+        one: Корпоративний звіт
+        other: Корпоративні звіти
+      correspondence:
+        few:
+        many:
+        one: Кореспонденція
+        other: Кореспонденція
+      countryside_stewardship_grant:
+        few:
+        many:
+        one:
+        other:
+      decision:
+        few:
+        many:
+        one:
         other:
       detailed_guide:
-        one: "Детальні інструкції"
         few:
         many:
-        other: "Детальні інструкції"
+        one: Детальні інструкції
+        other: Детальні інструкції
+      dfid_research_output:
+        few:
+        many:
+        one:
+        other:
       document_collection:
-        one: "Серія"
         few:
         many:
+        one: Серія
         other:
       draft_text:
-        one: "Проект документу"
         few:
         many:
-        other: "Проекти документів"
-      fatality_notice:
-        one: "Повідомлення про смерть"
+        one: Проект документу
+        other: Проекти документів
+      drug_safety_update:
         few:
         many:
-        other: "Повідомлення про смерть"
-      foi_release:
-        one: "Відповідь на інформаційний запит"
-        few:
-        many:
-        other: "Відповіді на інформаційні запити "
-      form:
-        one: "Форма"
-        few:
-        many:
-        other: "Форми"
-      government_response:
-        one: "Реакція уряду"
-        few:
-        many:
-        other: "Реакція уряду"
-      guidance:
-        one: "Інструкції"
-        few:
-        many:
-        other: "Інструкції"
-      impact_assessment:
-        one: "Оцінка впливу"
-        few:
-        many:
-        other: "Оцінки впливу"
-      imported:
-        one: "імпортовано - в очікуванні"
-        few:
-        many:
-        other: "імпортовано - в очікуванні"
-      independent_report:
-        one: "Незалежний звіт"
-        few:
-        many:
-        other: "Незалежні звіти"
-      international_treaty:
         one:
+        other:
+      employment_appeal_tribunal_decision:
         few:
         many:
+        one:
+        other:
+      employment_tribunal_decision:
+        few:
+        many:
+        one:
+        other:
+      esi_fund:
+        few:
+        many:
+        one:
+        other:
+      fatality_notice:
+        few:
+        many:
+        one: Повідомлення про смерть
+        other: Повідомлення про смерть
+      foi_release:
+        few:
+        many:
+        one: Відповідь на інформаційний запит
+        other: 'Відповіді на інформаційні запити '
+      form:
+        few:
+        many:
+        one: Форма
+        other: Форми
+      government_response:
+        few:
+        many:
+        one: Реакція уряду
+        other: Реакція уряду
+      guidance:
+        few:
+        many:
+        one: Інструкції
+        other: Інструкції
+      impact_assessment:
+        few:
+        many:
+        one: Оцінка впливу
+        other: Оцінки впливу
+      imported:
+        few:
+        many:
+        one: імпортовано - в очікуванні
+        other: імпортовано - в очікуванні
+      independent_report:
+        few:
+        many:
+        one: Незалежний звіт
+        other: Незалежні звіти
+      international_development_fund:
+        few:
+        many:
+        one:
+        other:
+      international_treaty:
+        few:
+        many:
+        one:
+        other:
+      maib_report:
+        few:
+        many:
+        one:
         other:
       map:
-        one: "Мапа"
         few:
         many:
-        other: "Мапи"
-      national_statistics:
-        one: "Статистика - національна статистика"
+        one: Мапа
+        other: Мапи
+      medical_safety_alert:
         few:
         many:
-        other: "Статистика - національна статистика"
-      news_article:
-        one: "Стаття"
-        few:
-        many:
-        other: "Статті"
-      news_story:
-        one: "Новина"
-        few:
-        many:
-        other: "Новини"
-      notice:
         one:
+        other:
+      national:
         few:
         many:
+        one:
+        other:
+      national_statistics:
+        few:
+        many:
+        one: Статистика - національна статистика
+        other: Статистика - національна статистика
+      national_statistics_announcement:
+        few:
+        many:
+        one:
+        other:
+      news_article:
+        few:
+        many:
+        one: Стаття
+        other: Статті
+      news_story:
+        few:
+        many:
+        one: Новина
+        other: Новини
+      notice:
+        few:
+        many:
+        one:
+        other:
+      official:
+        few:
+        many:
+        one:
+        other:
+      official_statistics:
+        few:
+        many:
+        one: Статистика
+        other: Статистика
+      official_statistics_announcement:
+        few:
+        many:
+        one:
         other:
       open_consultation:
-        one: "Відкрите обговорення"
         few:
         many:
-        other: "Відкриті обговорення"
+        one: Відкрите обговорення
+        other: Відкриті обговорення
       oral_statement:
-        one: "Усна заява у парламенті"
         few:
         many:
-        other: "Усні заяви у парламенті"
+        one: Усна заява у парламенті
+        other: Усні заяви у парламенті
       policy:
-        one: "Політика"
         few:
         many:
-        other: "Політики"
+        one: Політика
+        other: Політики
       policy_paper:
-        one: "Програмний документ"
         few:
         many:
-        other: "Програмні документи"
+        one: Програмний документ
+        other: Програмні документи
       press_release:
-        one: "Прес-реліз"
         few:
         many:
-        other: "Прес-релізи"
+        one: Прес-реліз
+        other: Прес-релізи
       promotional:
-        one: "Інформаційний матеріал"
         few:
         many:
-        other: "Інформаційний матеріал"
+        one: Інформаційний матеріал
+        other: Інформаційний матеріал
       publication:
-        one: "Публікація"
         few:
         many:
-        other: "Публікації"
-      regulation:
+        one: Публікація
+        other: Публікації
+      raib_report:
+        few:
+        many:
         one:
+        other:
+      regulation:
         few:
         many:
+        one:
         other:
       research:
-        one: "Дослідження та аналіз"
         few:
         many:
-        other: "Дослідження та аналіз"
+        one: Дослідження та аналіз
+        other: Дослідження та аналіз
+      residential_property_tribunal_decision:
+        few:
+        many:
+        one:
+        other:
+      service_sign_in:
+        few:
+        many:
+        one:
+        other:
+      service_standard_report:
+        few:
+        many:
+        one:
+        other:
       speaking_notes:
-        one: "Тези для промови"
         few:
         many:
-        other: "Тези для промови"
+        one: Тези для промови
+        other: Тези для промови
       speech:
-        one: "Промова"
         few:
         many:
-        other: "Промови"
+        one: Промова
+        other: Промови
       standard:
+        few:
+        many:
         one:
         other:
       statement_to_parliament:
-        one: "Заява у парламенті"
         few:
         many:
-        other: "Заяви у парламенті"
+        one: Заява у парламенті
+        other: Заяви у парламенті
       statistical_data_set:
-        one: "Набір статистичних даних"
         few:
         many:
-        other: "Набори статистичних даних"
-      official_statistics:
-        one: "Статистика"
+        one: Набір статистичних даних
+        other: Набори статистичних даних
+      statistics_announcement:
         few:
         many:
-        other: "Статистика"
-      statutory_guidance:
         one:
+        other:
+      statutory_guidance:
         few:
         many:
+        one:
+        other:
+      take_part:
+        few:
+        many:
+        one:
+        other:
+      tax_tribunal_decision:
+        few:
+        many:
+        one:
         other:
       transcript:
-        one: "Транскрипт"
         few:
         many:
-        other: "Транскрипти"
+        one: Транскрипт
+        other: Транскрипти
       transparency:
-        one: "Прозорість інформації"
         few:
         many:
-        other: "Прозорість інформації"
+        one: Прозорість інформації
+        other: Прозорість інформації
+      utaac_decision:
+        few:
+        many:
+        one:
+        other:
       world_location_news_article:
-        one: "Стаття"
         few:
         many:
-        other: "Статті"
+        one: Стаття
+        other: Статті
+      world_news_story:
+        few:
+        many:
+        one:
+        other:
       written_statement:
-        one: "Письмова заява у парламенті"
         few:
         many:
-        other: "Письмові заяви у парламенті"
-    metadata:
-      published: "опубліковано"
-      updated: "оновлено"
-    contents:
+        one: Письмова заява у парламенті
+        other: Письмові заяви у парламенті
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Корпоративна інформація
+    personal_information_charter_html: 'Це %{link} пояснює наші принципи роботи з персональними даними. '
+    publication_scheme_html: Прочитайти, яку інформацію ми регулярно публікуємо у %{link}.
+    social_media_use_html: Прочитайне про наші принципи роботи щодо %{link}.
+    welsh_language_scheme_html: 'Дізнайтеся про наші зобов''язання щодо публікації інформації у %{link}. '
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk: Українська
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
-      one: "Документ"
       few:
       many:
-      other: "Документи"
-  corporate_information_page:
-    corporate_information: Корпоративна інформація
-    publication_scheme_html: Прочитайти, яку інформацію ми регулярно публікуємо у
-      %{link}.
-    personal_information_charter_html: 'Це %{link} пояснює наші принципи роботи з
-      персональними даними. '
-    welsh_language_scheme_html: 'Дізнайтеся про наші зобов''язання щодо публікації
-      інформації у %{link}. '
-    social_media_use_html: Прочитайне про наші принципи роботи щодо %{link}.
-    about_our_services_html:
+      one: Документ
+      other: Документи
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

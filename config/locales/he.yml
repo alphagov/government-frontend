@@ -1,161 +1,342 @@
+---
 he:
-  i18n:
-    direction: rtl
-  language_names:
-    he: "עברית"
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: פורסם
+      updated: מעודכן
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
-        one: "הודעה"
-        other: "הודעות"
+        one: הודעה
+        other: הודעות
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
-        one: "מאמר מאושר"
-        other: "מאמרים מאושרים"
+        one: מאמר מאושר
+        other: מאמרים מאושרים
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
-        one: "מקרה בוחן"
-        other: "מקרי בוחן"
+        one: מקרה בוחן
+        other: מקרי בוחן
       closed_consultation:
-        one: "דיון סגור"
-        other: "דיונים סגורים"
+        one: דיון סגור
+        other: דיונים סגורים
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
-        one: "דיון"
-        other: "דיונים"
+        one: דיון
+        other: דיונים
       consultation_outcome:
-        one: "תוצאות דיון"
-        other: "תוצאות דיונים"
+        one: תוצאות דיון
+        other: תוצאות דיונים
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: דו"ח משותף
         other: דו"חות משותפים
       correspondence:
-        one: "תכתובת"
-        other: "תכתובות"
+        one: תכתובת
+        other: תכתובות
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
-        one: "מדריך מפורט"
-        other: "מדריך מפורט"
+        one: מדריך מפורט
+        other: מדריך מפורט
+      dfid_research_output:
+        one:
+        other:
       document_collection:
-        one: "סדרות"
+        one: סדרות
         other:
       draft_text:
-        one: "טיוטה"
-        other: "טיוטות"
+        one: טיוטה
+        other: טיוטות
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
-        one: "הודעת פטירה"
-        other: "הודעות פטירה"
+        one: הודעת פטירה
+        other: הודעות פטירה
       foi_release:
-        one: "פרסום חופש מידע"
-        other: "פרסומי חופש מידע"
+        one: פרסום חופש מידע
+        other: פרסומי חופש מידע
       form:
-        one: "טופס"
-        other: "טפסים"
+        one: טופס
+        other: טפסים
       government_response:
-        one: "תגובה ממשלתית"
-        other: "תגובות ממשלתיות"
+        one: תגובה ממשלתית
+        other: תגובות ממשלתיות
       guidance:
-        one: "הדרכה"
-        other: "הדרכה"
+        one: הדרכה
+        other: הדרכה
       impact_assessment:
-        one: "הערכת השפעה"
-        other: "הערכת השפעות"
+        one: הערכת השפעה
+        other: הערכת השפעות
       imported:
-        one: "יבוא- המתנה לסוג"
-        other: "יבוא- המתנה לסוג"
+        one: יבוא- המתנה לסוג
+        other: יבוא- המתנה לסוג
       independent_report:
         one: דו"ח עצמאי
         other: דו"ות עצמאיים
+      international_development_fund:
+        one:
+        other:
       international_treaty:
         one:
         other:
+      maib_report:
+        one:
+        other:
       map:
-        one: "מפה"
-        other: "מפות"
+        one: מפה
+        other: מפות
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
-        one: "סטטיסטיקות- סטטיסטיקה לאומית"
-        other: "סטטיסטיקות- סטטסטיקה לאומית"
+        one: סטטיסטיקות- סטטיסטיקה לאומית
+        other: סטטיסטיקות- סטטסטיקה לאומית
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
-        one: "מאמר חדשות"
-        other: "מאמרי חדשות"
+        one: מאמר חדשות
+        other: מאמרי חדשות
       news_story:
-        one: "חדשות"
-        other: "חדשות"
+        one: חדשות
+        other: חדשות
       notice:
         one:
         other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: נתונים
+        other: נתונים
+      official_statistics_announcement:
+        one:
+        other:
       open_consultation:
-        one: "דיון פתוח"
-        other: "דיון פתוח"
+        one: דיון פתוח
+        other: דיון פתוח
       oral_statement:
-        one: "הצהרה בעל פה לפרלמנט"
-        other: "הצהרות בעל פה לפרלמנט"
+        one: הצהרה בעל פה לפרלמנט
+        other: הצהרות בעל פה לפרלמנט
       policy:
-        one: "מדיניות"
-        other: "מדיניות"
+        one: מדיניות
+        other: מדיניות
       policy_paper:
-        one: "נייר מדיניות"
-        other: "ניירות מדיניות"
+        one: נייר מדיניות
+        other: ניירות מדיניות
       press_release:
-        one: "הודעה לעיתונות"
-        other: "הודעות לעיתונות"
+        one: הודעה לעיתונות
+        other: הודעות לעיתונות
       promotional:
-        one: "חומר פרסומי"
-        other: "חומר פרסומי"
+        one: חומר פרסומי
+        other: חומר פרסומי
       publication:
-        one: "פרסום"
-        other: "פרסומים"
+        one: פרסום
+        other: פרסומים
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
-        one: "מחקר וניתוח"
-        other: "מחקר וניתוח"
+        one: מחקר וניתוח
+        other: מחקר וניתוח
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
-        one: "נאומים"
-        other: "נאומים"
+        one: נאומים
+        other: נאומים
       speech:
-        one: "נאום"
-        other: "נאומים"
+        one: נאום
+        other: נאומים
       standard:
         one:
         other:
       statement_to_parliament:
-        one: "הצהרה לפרלמנט"
-        other: "הצהרות לפרלמנט"
+        one: הצהרה לפרלמנט
+        other: הצהרות לפרלמנט
       statistical_data_set:
-        one: "מידע סטטיסטי"
-        other: "מידע סטטיסטי"
-      official_statistics:
-        one: "נתונים"
-        other: "נתונים"
+        one: מידע סטטיסטי
+        other: מידע סטטיסטי
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
         one:
         other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
+        one:
+        other:
       transcript:
-        one: "תמלול"
-        other: "תמלולים"
+        one: תמלול
+        other: תמלולים
       transparency:
-        one: "שקיפות מידע"
-        other: "שקיפות מידע"
+        one: שקיפות מידע
+        other: שקיפות מידע
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
-        one: "מאמר חדשות"
-        other: "מאמרי חדשות"
+        one: מאמר חדשות
+        other: מאמרי חדשות
+      world_news_story:
+        one:
+        other:
       written_statement:
-        one: "הצהרה בכתב לפרלמנט"
-        other: "הצהרות בכתב לפרלמנט"
-    metadata:
-      published: "פורסם"
-      updated: "מעודכן"
-    contents:
-  publication:
-    documents:
-      one: "מסמך"
-      other: "מסמכים"
+        one: הצהרה בכתב לפרלמנט
+        other: הצהרות בכתב לפרלמנט
   corporate_information_page:
-    corporate_information: מידע מסחרי
-    publication_scheme_html: קרא/י אודות סוגי מידע שאנחנו מפרסמים %{link}
-    personal_information_charter_html: ה%{link} מסביר אודות המדיניות שלנו כלפי מידע
-      פרטי
-    welsh_language_scheme_html: מידע נוסף על המחויבות שלנו לפרסום %{link}
-    social_media_use_html: קרא/י אודות המדיניות שלנו %{link}
     about_our_services_html:
+    corporate_information: מידע מסחרי
+    personal_information_charter_html: ה%{link} מסביר אודות המדיניות שלנו כלפי מידע פרטי
+    publication_scheme_html: קרא/י אודות סוגי מידע שאנחנו מפרסמים %{link}
+    social_media_use_html: קרא/י אודות המדיניות שלנו %{link}
+    welsh_language_scheme_html: מידע נוסף על המחויבות שלנו לפרסום %{link}
+  i18n:
+    direction: rtl
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he: עברית
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      one: מסמך
+      other: מסמכים
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

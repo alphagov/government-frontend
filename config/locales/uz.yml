@@ -1,44 +1,101 @@
+---
 uz:
-  language_names:
-    uz: O'zbekcha
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: nashr qilindi
+      updated: yangilandi
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: E'lon
         other: E'lonlar
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: Muallif maqolasi
         other: Muallif maqolalari
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: Holat o'rganilishi
         other: Holat o'rganilishlari
       closed_consultation:
         one: Yopiq fikr almashish
         other: Yopiq fikr almashishlar
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: Fikr almashish
         other: Fikr almashishlar
       consultation_outcome:
         one: Fikr almashish natijasi
         other: Fikr almashish natijalari
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Korporativ hisobot
         other: Korporativ hisobotlar
       correspondence:
         one: Muvofiqlik
         other: Muvofiqliklar
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: Batafsil ko'mak
         other: Batafsil ko'mak
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: Bir talay
         other:
       draft_text:
         one: Matn loyihasi
         other: Matn loyihalari
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: Falokat haqida e'lon
         other: Falokat haqida e'lonlar
@@ -63,15 +120,30 @@ uz:
       independent_report:
         one: Mustaqil hisobot
         other: Mustaqil hisobotlar
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: Xarita
         other: Xaritalar
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - milliy statistika
         other: Statistika - milliy statistika
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Yangi maqola
         other: Yangi maqolalar
@@ -79,6 +151,15 @@ uz:
         one: Yangilik
         other: Yangiliklar
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -102,12 +183,24 @@ uz:
       publication:
         one: Nashr
         other: Nashrlar
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: Tadqiqot va tahlilllar
         other: Tadqiqot va tahlilllar
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: Nutq qaydlari
         other: Nutq qaydlari
@@ -123,10 +216,16 @@ uz:
       statistical_data_set:
         one: Statistika ma'lumot to'plami
         other: Statistika ma'lumot to'plamlari
-      official_statistics:
-        one: Statistika
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -135,27 +234,109 @@ uz:
       transparency:
         one: Ochiqlikka oid ma'lumotlar
         other: Ochiqlikka oid ma'lumotlar
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: Yangi maqola
         other: Yangi maqolalar
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Parlament uchun yozma hisobot
         other: Parlament uchun yozma hisobotlar
-    metadata:
-      published: nashr qilindi
-      updated: yangilandi
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Korporativ ma'lumot
+    personal_information_charter_html: Bizning %{link} qanday qilib shaxsiy ma'lumot bilan ishlashimiz haqida sizga ma'lumot beradi 
+    publication_scheme_html: "%{link} Biz doimiy tarzda nashr etayotgan ma'lumot haqida o'qing"
+    social_media_use_html: "%{link} Bizning dasturimiz haqida batafsil ma'lumot"
+    welsh_language_scheme_html: "%{link} Nashr etish uchun biz olib borayotgan faoliyatimiz haqida o'qing"
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz: O'zbekcha
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Hujjat
       other: Hujjatlar
-  corporate_information_page:
-    corporate_information: Korporativ ma'lumot
-    publication_scheme_html: "%{link} Biz doimiy tarzda nashr etayotgan ma'lumot haqida
-      o'qing"
-    personal_information_charter_html: Bizning %{link} qanday qilib shaxsiy ma'lumot
-      bilan ishlashimiz haqida sizga ma'lumot beradi 
-    welsh_language_scheme_html: "%{link} Nashr etish uchun biz olib borayotgan faoliyatimiz
-      haqida o'qing"
-    social_media_use_html: "%{link} Bizning dasturimiz haqida batafsil ma'lumot"
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

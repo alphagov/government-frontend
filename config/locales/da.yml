@@ -1,7 +1,28 @@
+---
 da:
-  language_names:
-    da: Dansk
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published:
+      updated:
     schema_name:
       aaib_report:
         one:
@@ -225,31 +246,6 @@ da:
       written_statement:
         one:
         other:
-    contents:
-    metadata:
-      published:
-      updated:
-  publication:
-    documents:
-      one:
-      other:
-    details:
-  common:
-    last_updated:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
   corporate_information_page:
     about_our_services_html:
     corporate_information:
@@ -257,10 +253,82 @@ da:
     publication_scheme_html:
     social_media_use_html:
     welsh_language_scheme_html:
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da: Dansk
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page:
     previous_page:
     print_entire_guide:
+  publication:
+    details:
+    documents:
+      one:
+      other:
   service_sign_in:
     continue:
     error:

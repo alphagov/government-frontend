@@ -1,44 +1,101 @@
+---
 sq:
-  language_names:
-    sq: Shqip
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: publikuar
+      updated: rifreskuar
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: Lajmerim
         other: Lajmerime
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: Artikull autori
         other: Artikuj autoresh
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: Rast studimi
         other: Raste studimi
       closed_consultation:
         one: Konsultim i mbyllur
         other: Konsultime te mbyllur
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: Konsultim
         other: Konsultime
       consultation_outcome:
         one: Rezultati i konsultimit
         other: Rezultatet e konsultimit
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Raport i organizates
         other: Raporte te organizates
       correspondence:
         one: Korrespondence
         other: Korrespondencat
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: Udhezim i detajuar
         other: Udhezim i detajuar
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: Seri
         other:
       draft_text:
         one: Draft tekst
         other: draft tekste
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: njoftim fataliteti
         other: njoftime fataliteti
@@ -63,15 +120,30 @@ sq:
       independent_report:
         one: Raport i pavarur
         other: Raporte te pavarur
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: Harte
         other: Harta
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - statistika kombetare
         other: Statistika - statistika kombetare
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikull lajm
         other: Artikuj lajme
@@ -79,6 +151,15 @@ sq:
         one: Ngjarje
         other: Ngjarje
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -102,12 +183,24 @@ sq:
       publication:
         one: Publikim
         other: Publikime
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: kerkime dhe analiza
         other: kerkime dhe analiza
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: Pika fjalimi
         other: Pika fjalimi
@@ -123,10 +216,16 @@ sq:
       statistical_data_set:
         one: Grup te dhenash statistikore
         other: Grupe te dhenash stasistikore
-      official_statistics:
-        one: Statistika
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -135,26 +234,109 @@ sq:
       transparency:
         one: Te dhena per transparencen
         other: Te dhena per transparencen
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: Artikull lajm
         other: Artikuj lajme
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Deklarate me shkrim per Parlamentin
         other: Deklarata me shkrim per Parlamentin
-    metadata:
-      published: publikuar
-      updated: rifreskuar
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Informacion korporate
+    personal_information_charter_html: "%{link} shpjegon si trajtohet informacioni juaj personal"
+    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht ne %{link}.
+    social_media_use_html: Lexo politikat tona ne %{link}
+    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq: Shqip
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Dokument
       other: Dokumente
-  corporate_information_page:
-    corporate_information: Informacion korporate
-    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht
-      ne %{link}.
-    personal_information_charter_html: "%{link} shpjegon si trajtohet informacioni
-      juaj personal"
-    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
-    social_media_use_html: Lexo politikat tona ne %{link}
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

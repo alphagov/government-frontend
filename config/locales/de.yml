@@ -1,44 +1,101 @@
+---
 de:
-  language_names:
-    de: Deutsch
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: Veröffentlicht
+      updated: Aktualisiert
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: Meldung
         other: Meldungen
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: Namensartikel
         other: Namensartikel
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: Fallstudie
         other: Fallstudien
       closed_consultation:
         one: Abgeschlossene Konsultation
         other: Abgeschlossene Konsultationen
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: Konsultation
         other: Konsultationen
       consultation_outcome:
         one: Konsultationsergebnis
         other: Konsultationsergebnisse
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Geschäftsbericht
         other: Geschäftsberichte
       correspondence:
         one: Korrespondenz
         other: Korrespondenz
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: Detaillierte Hinweise
         other: Detaillierte Hinweise
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: Reihe
         other:
       draft_text:
         one: Entwurf
         other: Entwürfe
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: Bekanntgabe eines Todesfalls
         other: Bekanntgabe von Todesfällen
@@ -63,15 +120,30 @@ de:
       independent_report:
         one: Unabhängiger Bericht
         other: Unabhängige Berichte
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: Karte
         other: Karten
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistik - Nationale Statistik
         other: Statistik - Nationale Statistik
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Artikel
         other: Artikel
@@ -79,6 +151,15 @@ de:
         one: Meldung
         other: Meldungen
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistik
+        other: Statistiken
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -102,12 +183,24 @@ de:
       publication:
         one: Veröffentlichung
         other: Veröffentlichungen
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: Forschung und Analyse
         other: Forschung und Analyse
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: Redenotizen
         other: Redenotizen
@@ -123,10 +216,16 @@ de:
       statistical_data_set:
         one: Statistischer Datensatz
         other: Statistische Datensätze
-      official_statistics:
-        one: Statistik
-        other: Statistiken
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -135,27 +234,109 @@ de:
       transparency:
         one: Transparenz-Daten
         other: Transparenz-Daten
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: Artikel
         other: Artikel
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Schriftliche Erklärung vor dem Parlament
         other: Schriftliche Erklärungen vor dem Parlament
-    metadata:
-      published: Veröffentlicht
-      updated: Aktualisiert
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Administrative Informationen
+    personal_information_charter_html: Unser %{link} erklärt, wie wir Ihre personenbezogenen Daten schützen.
+    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig publizieren
+    social_media_use_html: Unsere Politik zu %{link}
+    welsh_language_scheme_html: Mehr zu unserer Verpflichtung zur Veröffentlichung in %{link}
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de: Deutsch
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Dokument
       other: Dokumente
-  corporate_information_page:
-    corporate_information: Administrative Informationen
-    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig
-      publizieren
-    personal_information_charter_html: Unser %{link} erklärt, wie wir Ihre personenbezogenen
-      Daten schützen.
-    welsh_language_scheme_html: Mehr zu unserer Verpflichtung zur Veröffentlichung
-      in %{link}
-    social_media_use_html: Unsere Politik zu %{link}
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

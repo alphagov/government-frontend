@@ -1,44 +1,101 @@
+---
 lv:
-  language_names:
-    lv: Latviešu
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: publicēts
+      updated: atjaunināts
     schema_name:
+      aaib_report:
+        one:
+        other:
       announcement:
         one: Paziņojums
         other: Paziņojumi
+      asylum_support_decision:
+        one:
+        other:
       authored_article:
         one: Autora raksts
         other: Autora raksti
+      business_finance_support_scheme:
+        one:
+        other:
       case_study:
         one: Piemērs
         other: Piemēri
       closed_consultation:
         one: Slēgta tipa konsultācija
         other: Slēgta tipa konsultācijas
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
       consultation:
         one: Konsultēšana
         other: Konsultācijas
       consultation_outcome:
         one: Konsultāciju rezultāts
         other: Konsultāciju rezultāti
+      corporate_information_page:
+        one:
+        other:
       corporate_report:
         one: Korporatīvais ziņojums
         other: Korporatīvie ziņojumi
       correspondence:
         one: Sarakste
         other: Sarakstes
+      countryside_stewardship_grant:
+        one:
+        other:
       decision:
         one:
         other:
       detailed_guide:
         one: Detalizētas norādes
         other: Detalizētas norādes
+      dfid_research_output:
+        one:
+        other:
       document_collection:
         one: Sērija
         other:
       draft_text:
         one: Teksta uzmetums
         other: Teksta uzmetumi
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
       fatality_notice:
         one: Nāves paziņojums
         other: Nāves paziņojumi
@@ -63,15 +120,30 @@ lv:
       independent_report:
         one: Neatkarīgs ziņojums
         other: Neatkarīgi ziņojumi
+      international_development_fund:
+        one:
+        other:
       international_treaty:
+        one:
+        other:
+      maib_report:
         one:
         other:
       map:
         one: Karte
         other: Kartes
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
       national_statistics:
         one: Statistika - valsts dati
         other: Statistika - valsts dati
+      national_statistics_announcement:
+        one:
+        other:
       news_article:
         one: Raksts
         other: Raksti
@@ -79,6 +151,15 @@ lv:
         one: Ziņa
         other: Ziņas
       notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: Statistika
+        other: Statistika
+      official_statistics_announcement:
         one:
         other:
       open_consultation:
@@ -102,12 +183,24 @@ lv:
       publication:
         one: Publikācija
         other: Publikācijas
+      raib_report:
+        one:
+        other:
       regulation:
         one:
         other:
       research:
         one: Izpēte un analīze
         other: Izpēte un analīze
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
       speaking_notes:
         one: Runas piezīmes
         other: Runas piezīmes
@@ -123,10 +216,16 @@ lv:
       statistical_data_set:
         one: Statistiskas datu kopums
         other: Statistikas datu kopumi
-      official_statistics:
-        one: Statistika
-        other: Statistika
+      statistics_announcement:
+        one:
+        other:
       statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
         one:
         other:
       transcript:
@@ -135,27 +234,109 @@ lv:
       transparency:
         one: Atklātības dati
         other: Atklātības dati
+      utaac_decision:
+        one:
+        other:
       world_location_news_article:
         one: Raksts
         other: Raksti
+      world_news_story:
+        one:
+        other:
       written_statement:
         one: Rakstisks ziņojums parlamentam
         other: Rakstiski ziņojumi parlamentam
-    metadata:
-      published: publicēts
-      updated: atjaunināts
-    contents:
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Korporatīva informācija
+    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta Jūsu sniegtā personīgā informācija
+    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta mūsu %{link}
+    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
+    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas pieejamību %{link}
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv: Latviešu
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
       one: Dokuments
       other: Dokumenti
-  corporate_information_page:
-    corporate_information: Korporatīva informācija
-    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta
-      mūsu %{link}
-    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta
-      Jūsu sniegtā personīgā informācija
-    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas
-      pieejamību %{link}
-    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

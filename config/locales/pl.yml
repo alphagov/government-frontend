@@ -1,255 +1,492 @@
+---
 pl:
-  language_names:
-    pl: Polski
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
-    schema_name:
-      announcement:
-        one: Ogłoszenie
-        few:
-        many:
-        other: Ogłoszenia
-      authored_article:
-        one: Dokument utworzony przez
-        few:
-        many:
-        other: Dokumenty utworzone przez
-      case_study:
-        one: Studium przypadku
-        few:
-        many:
-        other: Studia przypadku
-      closed_consultation:
-        one: Konsultacja zamknięta
-        few:
-        many:
-        other: Konsultacje zamknięte
-      consultation:
-        one: Konsultacja
-        few:
-        many:
-        other: Konsultacje
-      consultation_outcome:
-        one: Wynik konsultacji
-        few:
-        many:
-        other: Wyniki konsultacji
-      corporate_report:
-        one: Raport korporacyjny
-        few:
-        many:
-        other: Raporty korporacyjne
-      correspondence:
-        one: Korespondencja
-        few:
-        many:
-        other: Korespondencje
-      decision:
-        one:
-        few:
-        many:
-        other:
-      detailed_guide:
-        one: Szczegółowe wskazówki
-        few:
-        many:
-        other: Szczegółowe wskazówki
-      document_collection:
-        one: Seria
-        few:
-        many:
-        other:
-      draft_text:
-        one: Tekst roboczy
-        few:
-        many:
-        other: Teksty robocze
-      fatality_notice:
-        one: Informacja o śmierci
-        few:
-        many:
-        other: Informacje o śmierci
-      foi_release:
-        one: Informacja zgodnie z ustawą o wolnosci informacji
-        few:
-        many:
-        other: Informacje zgodnie z ustawą o wolności informacji
-      form:
-        one: Formularz
-        few:
-        many:
-        other: Formularze
-      government_response:
-        one: Odpowiedź rządu
-        few:
-        many:
-        other: Odpowiedzi rządu
-      guidance:
-        one: Wskazówki
-        few:
-        many:
-        other: Wskazówki
-      impact_assessment:
-        one: Ocena oddziaływania
-        few:
-        many:
-        other: Oceny oddziaływania
-      imported:
-        one: Zaimportowany - oczekuje typu
-        few:
-        many:
-        other: Zaimportowany - oczekuje typu
-      independent_report:
-        one: Niezależny raport
-        few:
-        many:
-        other: Niezależne raporty
-      international_treaty:
-        one:
-        few:
-        many:
-        other:
-      map:
-        one: Mapa
-        few:
-        many:
-        other: Mapy
-      national_statistics:
-        one: Statystyki - statystyki narodowe
-        few:
-        many:
-        other: Statystyki - statystyki narodowe
-      news_article:
-        one: Artykuł prasowy
-        few:
-        many:
-        other: Artykuły prasowe
-      news_story:
-        one: Aktualności
-        few:
-        many:
-        other: Aktualności
-      notice:
-        one:
-        few:
-        many:
-        other:
-      open_consultation:
-        one: Konsultacje otwarte
-        few:
-        many:
-        other: Konsultacje otwarte
-      oral_statement:
-        one: Ustne oświadczenie przed parlamentem
-        few:
-        many:
-        other: Ustne oświadczenia przed parlamentem
-      policy:
-        one: Polityka
-        few:
-        many:
-        other: Polityki
-      policy_paper:
-        one: Dokument programowy
-        few:
-        many:
-        other: Dokumenty programowe
-      press_release:
-        one: Informacja prasowa
-        few:
-        many:
-        other: Informacje prasowe
-      promotional:
-        one: Materiał promocyjny
-        few:
-        many:
-        other: Materiał promocyjny
-      publication:
-        one: Publikacja
-        few:
-        many:
-        other: Publikacje
-      regulation:
-        one:
-        few:
-        many:
-        other:
-      research:
-        one: Badania i analiza
-        few:
-        many:
-        other: Badania i analiza
-      speaking_notes:
-        one: Notatki do prelekcji
-        few:
-        many:
-        other: Notatki do prelekcji
-      speech:
-        one: Przemówienie
-        few:
-        many:
-        other: Przemówienia
-      standard:
-        one:
-        few:
-        many:
-        other:
-      statement_to_parliament:
-        one: Wystapienie przed parlamentem
-        few:
-        many:
-        other: Wystapienia przed parlamentem
-      statistical_data_set:
-        one: Zestaw danych statystycznych
-        few:
-        many:
-        other: Zestawy danych statystycznych
-      official_statistics:
-        one: Statystyki
-        few:
-        many:
-        other: Statystyki
-      statutory_guidance:
-        one:
-        few:
-        many:
-        other:
-      transcript:
-        one: Transkrypcja
-        few:
-        many:
-        other: Transkrypcje
-      transparency:
-        one: Dane o transparentności
-        few:
-        many:
-        other: Dane o transparentności
-      world_location_news_article:
-        one: Artykuł prasowy
-        few:
-        many:
-        other: Artykuły prasowe
-      written_statement:
-        one: Pisemne oświadczenie przed parlamentem
-        few:
-        many:
-        other: Pisemne oświadczenia przed parlamentem
+    contents:
     metadata:
       published: opublikowano
       updated: Zaktualizowany
-    contents:
+    schema_name:
+      aaib_report:
+        few:
+        many:
+        one:
+        other:
+      announcement:
+        few:
+        many:
+        one: Ogłoszenie
+        other: Ogłoszenia
+      asylum_support_decision:
+        few:
+        many:
+        one:
+        other:
+      authored_article:
+        few:
+        many:
+        one: Dokument utworzony przez
+        other: Dokumenty utworzone przez
+      business_finance_support_scheme:
+        few:
+        many:
+        one:
+        other:
+      case_study:
+        few:
+        many:
+        one: Studium przypadku
+        other: Studia przypadku
+      closed_consultation:
+        few:
+        many:
+        one: Konsultacja zamknięta
+        other: Konsultacje zamknięte
+      cma_case:
+        few:
+        many:
+        one:
+        other:
+      coming_soon:
+        few:
+        many:
+        one:
+        other:
+      consultation:
+        few:
+        many:
+        one: Konsultacja
+        other: Konsultacje
+      consultation_outcome:
+        few:
+        many:
+        one: Wynik konsultacji
+        other: Wyniki konsultacji
+      corporate_information_page:
+        few:
+        many:
+        one:
+        other:
+      corporate_report:
+        few:
+        many:
+        one: Raport korporacyjny
+        other: Raporty korporacyjne
+      correspondence:
+        few:
+        many:
+        one: Korespondencja
+        other: Korespondencje
+      countryside_stewardship_grant:
+        few:
+        many:
+        one:
+        other:
+      decision:
+        few:
+        many:
+        one:
+        other:
+      detailed_guide:
+        few:
+        many:
+        one: Szczegółowe wskazówki
+        other: Szczegółowe wskazówki
+      dfid_research_output:
+        few:
+        many:
+        one:
+        other:
+      document_collection:
+        few:
+        many:
+        one: Seria
+        other:
+      draft_text:
+        few:
+        many:
+        one: Tekst roboczy
+        other: Teksty robocze
+      drug_safety_update:
+        few:
+        many:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        few:
+        many:
+        one:
+        other:
+      employment_tribunal_decision:
+        few:
+        many:
+        one:
+        other:
+      esi_fund:
+        few:
+        many:
+        one:
+        other:
+      fatality_notice:
+        few:
+        many:
+        one: Informacja o śmierci
+        other: Informacje o śmierci
+      foi_release:
+        few:
+        many:
+        one: Informacja zgodnie z ustawą o wolnosci informacji
+        other: Informacje zgodnie z ustawą o wolności informacji
+      form:
+        few:
+        many:
+        one: Formularz
+        other: Formularze
+      government_response:
+        few:
+        many:
+        one: Odpowiedź rządu
+        other: Odpowiedzi rządu
+      guidance:
+        few:
+        many:
+        one: Wskazówki
+        other: Wskazówki
+      impact_assessment:
+        few:
+        many:
+        one: Ocena oddziaływania
+        other: Oceny oddziaływania
+      imported:
+        few:
+        many:
+        one: Zaimportowany - oczekuje typu
+        other: Zaimportowany - oczekuje typu
+      independent_report:
+        few:
+        many:
+        one: Niezależny raport
+        other: Niezależne raporty
+      international_development_fund:
+        few:
+        many:
+        one:
+        other:
+      international_treaty:
+        few:
+        many:
+        one:
+        other:
+      maib_report:
+        few:
+        many:
+        one:
+        other:
+      map:
+        few:
+        many:
+        one: Mapa
+        other: Mapy
+      medical_safety_alert:
+        few:
+        many:
+        one:
+        other:
+      national:
+        few:
+        many:
+        one:
+        other:
+      national_statistics:
+        few:
+        many:
+        one: Statystyki - statystyki narodowe
+        other: Statystyki - statystyki narodowe
+      national_statistics_announcement:
+        few:
+        many:
+        one:
+        other:
+      news_article:
+        few:
+        many:
+        one: Artykuł prasowy
+        other: Artykuły prasowe
+      news_story:
+        few:
+        many:
+        one: Aktualności
+        other: Aktualności
+      notice:
+        few:
+        many:
+        one:
+        other:
+      official:
+        few:
+        many:
+        one:
+        other:
+      official_statistics:
+        few:
+        many:
+        one: Statystyki
+        other: Statystyki
+      official_statistics_announcement:
+        few:
+        many:
+        one:
+        other:
+      open_consultation:
+        few:
+        many:
+        one: Konsultacje otwarte
+        other: Konsultacje otwarte
+      oral_statement:
+        few:
+        many:
+        one: Ustne oświadczenie przed parlamentem
+        other: Ustne oświadczenia przed parlamentem
+      policy:
+        few:
+        many:
+        one: Polityka
+        other: Polityki
+      policy_paper:
+        few:
+        many:
+        one: Dokument programowy
+        other: Dokumenty programowe
+      press_release:
+        few:
+        many:
+        one: Informacja prasowa
+        other: Informacje prasowe
+      promotional:
+        few:
+        many:
+        one: Materiał promocyjny
+        other: Materiał promocyjny
+      publication:
+        few:
+        many:
+        one: Publikacja
+        other: Publikacje
+      raib_report:
+        few:
+        many:
+        one:
+        other:
+      regulation:
+        few:
+        many:
+        one:
+        other:
+      research:
+        few:
+        many:
+        one: Badania i analiza
+        other: Badania i analiza
+      residential_property_tribunal_decision:
+        few:
+        many:
+        one:
+        other:
+      service_sign_in:
+        few:
+        many:
+        one:
+        other:
+      service_standard_report:
+        few:
+        many:
+        one:
+        other:
+      speaking_notes:
+        few:
+        many:
+        one: Notatki do prelekcji
+        other: Notatki do prelekcji
+      speech:
+        few:
+        many:
+        one: Przemówienie
+        other: Przemówienia
+      standard:
+        few:
+        many:
+        one:
+        other:
+      statement_to_parliament:
+        few:
+        many:
+        one: Wystapienie przed parlamentem
+        other: Wystapienia przed parlamentem
+      statistical_data_set:
+        few:
+        many:
+        one: Zestaw danych statystycznych
+        other: Zestawy danych statystycznych
+      statistics_announcement:
+        few:
+        many:
+        one:
+        other:
+      statutory_guidance:
+        few:
+        many:
+        one:
+        other:
+      take_part:
+        few:
+        many:
+        one:
+        other:
+      tax_tribunal_decision:
+        few:
+        many:
+        one:
+        other:
+      transcript:
+        few:
+        many:
+        one: Transkrypcja
+        other: Transkrypcje
+      transparency:
+        few:
+        many:
+        one: Dane o transparentności
+        other: Dane o transparentności
+      utaac_decision:
+        few:
+        many:
+        one:
+        other:
+      world_location_news_article:
+        few:
+        many:
+        one: Artykuł prasowy
+        other: Artykuły prasowe
+      world_news_story:
+        few:
+        many:
+        one:
+        other:
+      written_statement:
+        few:
+        many:
+        one: Pisemne oświadczenie przed parlamentem
+        other: Pisemne oświadczenia przed parlamentem
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: Informacje korporacyjne
+    personal_information_charter_html: Nasz %{link} pokazuje, w jaki sposób traktujemy Państwa informacje osobiste
+    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle w naszym %{link}
+    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}
+    welsh_language_scheme_html: Poznaj nasze zobowiązania związane z publikowaniem w %{link}
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl: Polski
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
   publication:
+    details:
     documents:
-      one: Dokument
       few:
       many:
+      one: Dokument
       other: Dokumenty
-  corporate_information_page:
-    corporate_information: Informacje korporacyjne
-    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle
-      w naszym %{link}
-    personal_information_charter_html: Nasz %{link} pokazuje, w jaki sposób traktujemy
-      Państwa informacje osobiste
-    welsh_language_scheme_html: Poznaj nasze zobowiązania związane z publikowaniem
-      w %{link}
-    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}
-    about_our_services_html:
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

@@ -1,113 +1,267 @@
+---
 th:
-  language_names:
-    th: "ไทย"
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: ตีพิมพ์
+      updated: ปรับปรุง
     schema_name:
+      aaib_report:
+        other:
       announcement:
-        other: "ข่าวสาร"
+        other: ข่าวสาร
+      asylum_support_decision:
+        other:
       authored_article:
-        other: "บทความที่เขียน"
+        other: บทความที่เขียน
+      business_finance_support_scheme:
+        other:
       case_study:
-        other: "กรณีศึกษา"
+        other: กรณีศึกษา
       closed_consultation:
-        other: "การศึกษาแบบปิด"
+        other: การศึกษาแบบปิด
+      cma_case:
+        other:
+      coming_soon:
+        other:
       consultation:
-        other: "การปรึกษา"
+        other: การปรึกษา
       consultation_outcome:
-        other: "ผลการปรึกษา"
+        other: ผลการปรึกษา
+      corporate_information_page:
+        other:
       corporate_report:
-        other: "รายงานบริษัท"
+        other: รายงานบริษัท
       correspondence:
-        other: "จดหมาย"
+        other: จดหมาย
+      countryside_stewardship_grant:
+        other:
       decision:
         other:
       detailed_guide:
-        other: "คู่มือโดยละเอียด"
+        other: คู่มือโดยละเอียด
+      dfid_research_output:
+        other:
       document_collection:
         other:
       draft_text:
-        other: "ร่างข้อความ"
+        other: ร่างข้อความ
+      drug_safety_update:
+        other:
+      employment_appeal_tribunal_decision:
+        other:
+      employment_tribunal_decision:
+        other:
+      esi_fund:
+        other:
       fatality_notice:
-        other: "การแจ้งมรณะกรรม"
+        other: การแจ้งมรณะกรรม
       foi_release:
-        other: "ข้อมูลที่เปิดเผยได้"
+        other: ข้อมูลที่เปิดเผยได้
       form:
-        other: "แบบฟอร์ม"
+        other: แบบฟอร์ม
       government_response:
-        other: "การตอบสนองของรัฐบาล"
+        other: การตอบสนองของรัฐบาล
       guidance:
-        other: "คู่มือ"
+        other: คู่มือ
       impact_assessment:
-        other: "การประเมินผลกระทบ"
+        other: การประเมินผลกระทบ
       imported:
-        other: "ประเภทรอนำเข้า"
+        other: ประเภทรอนำเข้า
       independent_report:
-        other: "รายงานอิสระ"
+        other: รายงานอิสระ
+      international_development_fund:
+        other:
       international_treaty:
         other:
+      maib_report:
+        other:
       map:
-        other: "แผนที่"
+        other: แผนที่
+      medical_safety_alert:
+        other:
+      national:
+        other:
       national_statistics:
-        other: "สถิติ-สถิติแห่งชาติ"
+        other: สถิติ-สถิติแห่งชาติ
+      national_statistics_announcement:
+        other:
       news_article:
-        other: "บทความข่าว"
+        other: บทความข่าว
       news_story:
-        other: "ข่าว"
+        other: ข่าว
       notice:
         other:
+      official:
+        other:
+      official_statistics:
+        other: สถิติ
+      official_statistics_announcement:
+        other:
       open_consultation:
-        other: "การให้คำปรึกษาเปิด"
+        other: การให้คำปรึกษาเปิด
       oral_statement:
-        other: "แถลงการณ์ด้วยวาจาต่อรัฐสภา"
+        other: แถลงการณ์ด้วยวาจาต่อรัฐสภา
       policy:
-        other: "นโยบาย"
+        other: นโยบาย
       policy_paper:
-        other: "เอกสารนโยบาย"
+        other: เอกสารนโยบาย
       press_release:
-        other: "ข่าวประชาสัมพันธ์"
+        other: ข่าวประชาสัมพันธ์
       promotional:
-        other: "เอกสารเพือการประชาสัมพันธ์"
+        other: เอกสารเพือการประชาสัมพันธ์
       publication:
-        other: "สิ่งพิมพ์"
+        other: สิ่งพิมพ์
+      raib_report:
+        other:
       regulation:
         other:
       research:
-        other: "บทวิจัยและบทวิเคราะห์"
+        other: บทวิจัยและบทวิเคราะห์
+      residential_property_tribunal_decision:
+        other:
+      service_sign_in:
+        other:
+      service_standard_report:
+        other:
       speaking_notes:
-        other: "ประเด็นการพูด"
+        other: ประเด็นการพูด
       speech:
-        other: "สุนทรพจน์"
+        other: สุนทรพจน์
       standard:
-        one:
         other:
       statement_to_parliament:
-        other: "แถลงการณ์ต่อรัฐสภา"
+        other: แถลงการณ์ต่อรัฐสภา
       statistical_data_set:
-        other: "ชุดข้อมูลสถิติ"
-      official_statistics:
-        other: "สถิติ"
+        other: ชุดข้อมูลสถิติ
+      statistics_announcement:
+        other:
       statutory_guidance:
         other:
+      take_part:
+        other:
+      tax_tribunal_decision:
+        other:
       transcript:
-        other: "สำเนา"
+        other: สำเนา
       transparency:
-        other: "ข้อมูลโปร่งใส"
+        other: ข้อมูลโปร่งใส
+      utaac_decision:
+        other:
       world_location_news_article:
-        other: "บทความข่าว"
+        other: บทความข่าว
+      world_news_story:
+        other:
       written_statement:
-        other: "แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา "
-    metadata:
-      published: "ตีพิมพ์"
-      updated: "ปรับปรุง"
-    contents:
-  publication:
-    documents:
-      other: "เอกสารต่างๆ"
+        other: 'แถลงการเป็นลายลักษณ์อักษรต่อรัฐสภา '
   corporate_information_page:
-    corporate_information: ข้อมูลบริษัท
-    publication_scheme_html: อ่านประเภทข้อมูลซึ่งเราเผยแพร่เป็นประจำได้ที่ %{link}
-    personal_information_charter_html: ลิงค์นี้อธิบายถึงวิธีการที่เราปฏิบัติต่อข้อมูลส่วนบุคคลของคุณ
-    welsh_language_scheme_html: ค้นหาข้อมูลเกี่ยวกับพันธสัญญาในการตีพิมพ์ของเราได้ที่
-      %{link}.
-    social_media_use_html: อ่านนโยบายของเราได้ที่ %{link}
     about_our_services_html:
+    corporate_information: ข้อมูลบริษัท
+    personal_information_charter_html: ลิงค์นี้อธิบายถึงวิธีการที่เราปฏิบัติต่อข้อมูลส่วนบุคคลของคุณ
+    publication_scheme_html: อ่านประเภทข้อมูลซึ่งเราเผยแพร่เป็นประจำได้ที่ %{link}
+    social_media_use_html: อ่านนโยบายของเราได้ที่ %{link}
+    welsh_language_scheme_html: ค้นหาข้อมูลเกี่ยวกับพันธสัญญาในการตีพิมพ์ของเราได้ที่ %{link}.
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th: ไทย
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      other: เอกสารต่างๆ
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:

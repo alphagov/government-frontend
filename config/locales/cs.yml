@@ -1,207 +1,417 @@
+---
 cs:
-  language_names:
-    cs: "Česky"
+  common:
+    last_updated:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
   content_item:
+    contents:
+    metadata:
+      published: Publikováno
+      updated: Aktualizováno
     schema_name:
+      aaib_report:
+        few:
+        one:
+        other:
       announcement:
+        few:
         one: Oznámení
-        few:
         other: Oznámení
+      asylum_support_decision:
+        few:
+        one:
+        other:
       authored_article:
+        few:
         one: Autorský článek
-        few:
         other: Autorské články
-      case_study:
-        one: Případová studie
+      business_finance_support_scheme:
         few:
+        one:
+        other:
+      case_study:
+        few:
+        one: Případová studie
         other: Případové studie
       closed_consultation:
+        few:
         one: Uzavřená konzultace
-        few:
         other: Uzavřené konzultace
-      consultation:
-        one: Konzultace
+      cma_case:
         few:
+        one:
+        other:
+      coming_soon:
+        few:
+        one:
+        other:
+      consultation:
+        few:
+        one: Konzultace
         other: Konzultace
       consultation_outcome:
+        few:
         one: Výsledek konzultací
-        few:
         other: Výsledky konzultací
-      corporate_report:
-        one: Korporátní zpráva
+      corporate_information_page:
         few:
+        one:
+        other:
+      corporate_report:
+        few:
+        one: Korporátní zpráva
         other: Korporátní zprávy
       correspondence:
+        few:
         one: Korespondence
-        few:
         other: Korespondence
-      decision:
-        one:
+      countryside_stewardship_grant:
         few:
+        one:
+        other:
+      decision:
+        few:
+        one:
         other:
       detailed_guide:
+        few:
         one: Podrobný návod
-        few:
         other: Podrobný návod
-      document_collection:
-        one: Edice
+      dfid_research_output:
         few:
+        one:
+        other:
+      document_collection:
+        few:
+        one: Edice
         other:
       draft_text:
+        few:
         one: Koncept
-        few:
         other: Koncepty
-      fatality_notice:
-        one: Hlášení závad
+      drug_safety_update:
         few:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        few:
+        one:
+        other:
+      employment_tribunal_decision:
+        few:
+        one:
+        other:
+      esi_fund:
+        few:
+        one:
+        other:
+      fatality_notice:
+        few:
+        one: Hlášení závad
         other: Hlášení závad
       foi_release:
-        one: Zpráva vydaná na základě Zákona o svobodném přístupu k informacím
         few:
+        one: Zpráva vydaná na základě Zákona o svobodném přístupu k informacím
         other: Zprávy vydané za základě Zákona o svobodném přístupu k informacím
       form:
-        one: Formulář
         few:
+        one: Formulář
         other: Formuláře
       government_response:
-        one: Odpověď vlády
         few:
+        one: Odpověď vlády
         other: Odpovědi vlády
       guidance:
-        one: Návod
         few:
+        one: Návod
         other: Návody
       impact_assessment:
-        one: Vyhodnocení dopadu
         few:
+        one: Vyhodnocení dopadu
         other: Vyhodnocení dopadů
       imported:
-        one: importováno - očekává vyřízení
         few:
+        one: importováno - očekává vyřízení
         other: importováno - očekává vyřízení
       independent_report:
+        few:
         one: Nezávislá zpráva
-        few:
         other: Nezávislé zprávy
-      international_treaty:
-        one:
+      international_development_fund:
         few:
+        one:
+        other:
+      international_treaty:
+        few:
+        one:
+        other:
+      maib_report:
+        few:
+        one:
         other:
       map:
+        few:
         one: Mapa
-        few:
         other: Mapy
+      medical_safety_alert:
+        few:
+        one:
+        other:
+      national:
+        few:
+        one:
+        other:
       national_statistics:
+        few:
         one: Statistiky - národní statistiky
-        few:
         other: Statistiky - národní statistiky
-      news_article:
-        one: Nový článek
+      national_statistics_announcement:
         few:
+        one:
+        other:
+      news_article:
+        few:
+        one: Nový článek
         other: Nové články
       news_story:
-        one: Zpráva
         few:
+        one: Zpráva
         other: Zprávy
       notice:
-        one:
         few:
+        one:
+        other:
+      official:
+        few:
+        one:
+        other:
+      official_statistics:
+        few:
+        one: Statistika
+        other: Statistiky
+      official_statistics_announcement:
+        few:
+        one:
         other:
       open_consultation:
-        one: Otevřená konzultace
         few:
+        one: Otevřená konzultace
         other: Otevřené konzultace
       oral_statement:
-        one: Vystoupení v  parlamentu
         few:
+        one: Vystoupení v  parlamentu
         other: Vystoupení v parlamentu
       policy:
-        one: Politika
         few:
+        one: Politika
         other: Politiky
       policy_paper:
-        one: Dokument
         few:
+        one: Dokument
         other: Dokumenty
       press_release:
-        one: Tisková zpráva
         few:
+        one: Tisková zpráva
         other: Tiskové zprávy
       promotional:
-        one: Propagační materiál
         few:
+        one: Propagační materiál
         other: Propagační materiály
       publication:
+        few:
         one: Publikace
-        few:
         other: Publikace
-      regulation:
-        one:
+      raib_report:
         few:
+        one:
+        other:
+      regulation:
+        few:
+        one:
         other:
       research:
+        few:
         one: Výzkum a analýza
-        few:
         other: Výzkumy a analýzy
-      speaking_notes:
-        one: Poznámky
+      residential_property_tribunal_decision:
         few:
+        one:
+        other:
+      service_sign_in:
+        few:
+        one:
+        other:
+      service_standard_report:
+        few:
+        one:
+        other:
+      speaking_notes:
+        few:
+        one: Poznámky
         other: Poznámky
       speech:
-        one: Proslov
         few:
+        one: Proslov
         other: Proslovy
       standard:
         few:
         one:
         other:
       statement_to_parliament:
-        one: Prohlášení v parlamentu
         few:
+        one: Prohlášení v parlamentu
         other: Prohlášení v parlamentu
       statistical_data_set:
+        few:
         one: Statistická data
-        few:
         other: Statistická data
-      official_statistics:
-        one: Statistika
+      statistics_announcement:
         few:
-        other: Statistiky
-      statutory_guidance:
         one:
+        other:
+      statutory_guidance:
         few:
+        one:
+        other:
+      take_part:
+        few:
+        one:
+        other:
+      tax_tribunal_decision:
+        few:
+        one:
         other:
       transcript:
-        one: Přepis
         few:
+        one: Přepis
         other: Přepisy
       transparency:
+        few:
         one: Transparenost
-        few:
         other: Transparentnost
+      utaac_decision:
+        few:
+        one:
+        other:
       world_location_news_article:
+        few:
         one: Nový článek
-        few:
         other: Nové články
-      written_statement:
-        one: Písemná prohlášení do parlamentu
+      world_news_story:
         few:
+        one:
+        other:
+      written_statement:
+        few:
+        one: Písemná prohlášení do parlamentu
         other: Písemná prohlášení do parlamentu
-    metadata:
-      published: Publikováno
-      updated: Aktualizováno
-    contents:
-  publication:
-    documents:
-      one: Dokument
-      few:
-      other: Dokumenty
   corporate_information_page:
-    corporate_information: Korporátní informace
-    publication_scheme_html: Více o typech informací, které pravidelně zveřejňujeme
-      na %{link}.
-    personal_information_charter_html: Jak nakládáme s vašimi osobními informacemi
-      %{link}
-    welsh_language_scheme_html: Více o našem závazku zvěřejňovat informace na %{link}.
-    social_media_use_html: Více o naší strategii o %{link}.
     about_our_services_html:
+    corporate_information: Korporátní informace
+    personal_information_charter_html: Jak nakládáme s vašimi osobními informacemi %{link}
+    publication_scheme_html: Více o typech informací, které pravidelně zveřejňujeme na %{link}.
+    social_media_use_html: Více o naší strategii o %{link}.
+    welsh_language_scheme_html: Více o našem závazku zvěřejňovat informace na %{link}.
+  i18n:
+    direction:
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs: Česky
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      few:
+      one: Dokument
+      other: Dokumenty
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:
