@@ -1,8 +1,6 @@
 # Government Frontend
 
-Government Frontend is a public-facing app to display the majority of documents
-on the /government part of GOV.UK. It is a replacement for the public-facing
-parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
+Government Frontend is a public-facing app to display the majority of documents on the /government part of GOV.UK, which are fetched from the [Content Store](https://github.com/alphagov/content-store). It is a replacement for the public-facing parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
 ## Schemas
 
@@ -36,48 +34,19 @@ Not all schemas that this app can handle are rendered by it in production.
 
 ## Technical documentation
 
-This is a Ruby on Rails application that fetches documents from
-[content-store](https://github.com/alphagov/content-store) and displays them.
+This is a Ruby on Rails app, and should follow [our Rails app conventions](https://docs.publishing.service.gov.uk/manual/conventions-for-rails-applications.html).
 
-### Running the application
+You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-docker) or the local `startup.sh` script to run the app. Read the [guidance on local frontend development](https://docs.publishing.service.gov.uk/manual/local-frontend-development.html) to find out more about each approach, before you get started.
 
-```
-./startup.sh
-```
-
-The app should start on http://localhost:3090 or
-http://government-frontend.dev.gov.uk on GOV.UK development machines.
-
-```
-./startup.sh --live
-```
-
-This will run the app and point it at the production GOV.UK `content-store` and `static` instances.
-
-```
-./startup.sh --dummy
-```
-
-This will run the app and point it at the [dummy content store](https://govuk-content-store-examples.herokuapp.com/), which serves the content schema examples and random content.
+If you are using GOV.UK Docker, remember to combine it with the commands that follow. See the [GOV.UK Docker usage instructions](https://github.com/alphagov/govuk-docker#usage) for examples.
 
 ### Running the test suite
 
-The test suite relies on the presence of the
-[govuk-content-schemas](http://github.com/alphagov/govuk-content-schemas)
-repository. If it is present at the same directory level as
-the government-frontend repository then run the tests with:
+```
+bundle exec rake
+```
 
-`bundle exec rake`
-
-Or to specify the location explicitly:
-
-`GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
-
-#### Debugging Integration tests
-
-If you want to see the page that is being tested in our integration tests, you can use
-`save_and_open_page` to see what's rendered. This is helpful when a page is mostly comprised of
-GOV.UK Publishing Components
+If you want to see the page that is being tested in our integration tests, you can call `save_and_open_page` to see what's rendered.
 
 ### Components
 
