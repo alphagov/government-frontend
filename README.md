@@ -51,13 +51,6 @@ Configuration for the navigation links shown on the B variant of the ContentPage
 This is a Ruby on Rails application that fetches documents from
 [content-store](https://github.com/alphagov/content-store) and displays them.
 
-### Dependencies
-
-- [content-store](https://github.com/alphagov/content-store) - provides documents
-- [static](https://github.com/alphagov/static) - provides shared GOV.UK assets and templates.
-- [phantomjs](http://phantomjs.org/) Used by poltergeist for integration testing
-- [ImageMagick](http://brewformulas.org/Imagemagick) Used by Wraith for visual regression testing
-
 ### Running the application
 
 ```
