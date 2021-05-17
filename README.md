@@ -34,18 +34,6 @@ Not all schemas that this app can handle are rendered by it in production.
 | World Location News Article | [View on GOV.UK](https://www.gov.uk/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas) | Migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) | Migrated |
 
-## Components
-
-Pages are rendered using components. Components can be specific to government-frontend or shared between applications.
-
-Shared components are provided by govuk_publishing_components and are documented in the [component guide](https://components.publishing.service.gov.uk/component-guide).
-
-Components specific to government-frontend are [within the application](https://github.com/alphagov/government-frontend/tree/master/app/views/components) and follow rules set out by the [govuk_publishing_components](https://github.com/alphagov/govuk_publishing_components) gem. They are documented in the [government-frontend component guide](https://government-frontend.herokuapp.com/component-guide).
-
-When [running government-frontend](#running-the-application) locally the component guide is available at: http://government-frontend.dev.gov.uk/component-guide
-
-Configuration for the navigation links shown on the B variant of the ContentPagesNav A/B test is covered [separately](docs/navigation-links.md)
-
 ## Technical documentation
 
 This is a Ruby on Rails application that fetches documents from
@@ -86,9 +74,19 @@ Or to specify the location explicitly:
 `GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
 
 #### Debugging Integration tests
+
 If you want to see the page that is being tested in our integration tests, you can use
 `save_and_open_page` to see what's rendered. This is helpful when a page is mostly comprised of
 GOV.UK Publishing Components
+
+### Components
+
+Pages are rendered using components. Components can be specific to government-frontend or shared between applications.
+
+Components specific to government-frontend are [within the application](https://github.com/alphagov/government-frontend/tree/master/app/views/components) and follow rules set out by the [govuk_publishing_components](https://github.com/alphagov/govuk_publishing_components) gem. They are documented in the [government-frontend component guide](https://government-frontend.herokuapp.com/component-guide).
+
+Configuration for the navigation links shown on the B variant of the ContentPagesNav A/B test is covered [separately](docs/navigation-links.md)
+
 
 ### Further documentation
 
