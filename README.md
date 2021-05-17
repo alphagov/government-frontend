@@ -4,10 +4,6 @@ Government Frontend is a public-facing app to display the majority of documents
 on the /government part of GOV.UK. It is a replacement for the public-facing
 parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
-## Screenshots
-
-![A Case Study](https://raw.githubusercontent.com/alphagov/government-frontend/master/docs/assets/case-study-screenshot.png)
-
 ## Schemas
 
 Not all schemas that this app can handle are rendered by it in production.
