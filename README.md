@@ -1,12 +1,6 @@
 # Government Frontend
 
-Government Frontend is a public-facing app to display the majority of documents
-on the /government part of GOV.UK. It is a replacement for the public-facing
-parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
-
-## Screenshots
-
-![A Case Study](https://raw.githubusercontent.com/alphagov/government-frontend/master/docs/assets/case-study-screenshot.png)
+Government Frontend is a public-facing app to display the majority of documents on the /government part of GOV.UK, which are fetched from the [Content Store](https://github.com/alphagov/content-store). It is a replacement for the public-facing parts of the [Whitehall](https://github.com/alphagov/whitehall) application.
 
 ## Schemas
 
@@ -38,189 +32,30 @@ Not all schemas that this app can handle are rendered by it in production.
 | World Location News Article | [View on GOV.UK](https://www.gov.uk/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas) | Migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) | Migrated |
 
-## Components
-
-Pages are rendered using components. Components can be specific to government-frontend or shared between applications.
-
-Shared components are provided by govuk_publishing_components and are documented in the [component guide](https://components.publishing.service.gov.uk/component-guide).
-
-Components specific to government-frontend are [within the application](https://github.com/alphagov/government-frontend/tree/master/app/views/components) and follow rules set out by the [govuk_publishing_components](https://github.com/alphagov/govuk_publishing_components) gem. They are documented in the [government-frontend component guide](https://government-frontend.herokuapp.com/component-guide).
-
-When [running government-frontend](#running-the-application) locally the component guide is available at: http://government-frontend.dev.gov.uk/component-guide
-
-Configuration for the navigation links shown on the B variant of the ContentPagesNav A/B test is covered [separately](docs/navigation-links.md)
-
 ## Technical documentation
 
-This is a Ruby on Rails application that fetches documents from
-[content-store](https://github.com/alphagov/content-store) and displays them.
+This is a Ruby on Rails app, and should follow [our Rails app conventions](https://docs.publishing.service.gov.uk/manual/conventions-for-rails-applications.html).
 
-### Dependencies
+You can use the [GOV.UK Docker environment](https://github.com/alphagov/govuk-docker) or the local `startup.sh` script to run the app. Read the [guidance on local frontend development](https://docs.publishing.service.gov.uk/manual/local-frontend-development.html) to find out more about each approach, before you get started.
 
-- [content-store](https://github.com/alphagov/content-store) - provides documents
-- [static](https://github.com/alphagov/static) - provides shared GOV.UK assets and templates.
-- [phantomjs](http://phantomjs.org/) Used by poltergeist for integration testing
-- [ImageMagick](http://brewformulas.org/Imagemagick) Used by Wraith for visual regression testing
-
-### Running the application
-
-```
-./startup.sh
-```
-
-The app should start on http://localhost:3090 or
-http://government-frontend.dev.gov.uk on GOV.UK development machines.
-
-```
-./startup.sh --live
-```
-
-This will run the app and point it at the production GOV.UK `content-store` and `static` instances.
-
-```
-./startup.sh --dummy
-```
-
-This will run the app and point it at the [dummy content store](https://govuk-content-store-examples.herokuapp.com/), which serves the content schema examples and random content.
+If you are using GOV.UK Docker, remember to combine it with the commands that follow. See the [GOV.UK Docker usage instructions](https://github.com/alphagov/govuk-docker#usage) for examples.
 
 ### Running the test suite
 
-The test suite relies on the presence of the
-[govuk-content-schemas](http://github.com/alphagov/govuk-content-schemas)
-repository. If it is present at the same directory level as
-the government-frontend repository then run the tests with:
-
-`bundle exec rake`
-
-Or to specify the location explicitly:
-
-`GOVUK_CONTENT_SCHEMAS_PATH=/some/dir/govuk-content-schemas bundle exec rake`
-
-#### Debugging Integration tests
-If you want to see the page that is being tested in our integration tests, you can use
-`save_and_open_page` to see what's rendered. This is helpful when a page is mostly comprised of
-GOV.UK Publishing Components
-
-### Visual regression tests
-
-Use [Wraith](http://bbc-news.github.io/wraith/) ("A responsive screenshot
-comparison tool") to generate a visual diff to compare rendering changes in this
-application.
-
-#### Compare with production
-
-Compare development with production:
 ```
-bundle exec wraith capture test/wraith/config.yaml
+bundle exec rake
 ```
 
-Compare staging with production:
-```
-bundle exec wraith capture test/wraith/config-staging-vs-production.yaml
-```
+### Components
 
-This will generate image diffs comparing the two runs, including a browsable
-gallery of the output, located at `shots/gallery.html`.
+Pages are rendered using components. Components can be specific to government-frontend or shared between applications.
 
+Components specific to government-frontend are [within the application](https://github.com/alphagov/government-frontend/tree/master/app/views/components) and follow rules set out by the [govuk_publishing_components](https://github.com/alphagov/govuk_publishing_components) gem. They are documented in the [government-frontend component guide](https://government-frontend.herokuapp.com/component-guide).
 
-#### Compare examples on master with examples on branch
+### Further documentation
 
-Examples are referencing https://github.com/alphagov/govuk-content-schemas
-
-With government-frontend running master on the development VM and while [pointing at the dummy content store](https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md), create a set of historical screenshots using:
-```
-cd test/wraith
-bundle exec wraith history test/wraith/config-examples.yaml
-```
-
-Then switch to your branch and create a set of screenshots to compare against using:
-```
-bundle exec wraith latest test/wraith/config-examples.yaml
-```
-
-#### Compare a document_type
-
-A rake task has been made to make this easy, given a `document_type` of `about`
-
-```
-bundle exec rake wraith:document_type[about]
-```
-
-this will run against the 10 most popular pages as defined by the search api
-
-#### Compare all document_types
-
-```
-bundle exec rake wraith:all_document_types[:sample_size]
-```
-
-This will run against the 10 (can be overidden with `:sample_size`) most popular pages as defined by the search api,
-for each known `document_type` in the app (see: [Generate a config for known document_types and example pages](#generate-a-config-for-known-document_types-and-example-pages)).
-
-*Note:* If you wish to have your own local wip configs, wip* is in the .gitignore, so as an example
-`wip-kittens.yaml` will be ignored
-
-#### Generate a config for known document_types and example pages
-
-Running the rake task below will retrieve the `document_types` where `rendering_app = government-frontend` from the search api. It will then generate `test/wraith/wip-config-all-document-types.yaml`, this is a wraith config file containing the top 10 (can be overidden with `:sample_size`) example pages for each type.
-
-The yaml file contains a custom key of `:document_types` not used by wraith but can be used to quickly scan and see which types the search api believes `government-frontend` is responsible for.
-
-```
-bundle exec rake wraith:update_document_types[:sample_size]
-```
-
-## Webchat
-
-### How to add a new webchat provider
-1. Open to `lib/webchat.yaml`
-2. Append new entry:
-```yaml
-- base_path: /government/contact/my-amazing-service
-  open_url: https://www.my-amazing-webchat.com/007/open-chat
-  availability_url: https://www.my-amazing-webchat.com/007/check-availability
-```
-
-3. Deploy changes
-4. Go to https://www.gov.uk/government/contact/my-amazing-service
-5. Finished
-
-### CORS considerations
-To avoid CORS and CSP issues a new provider would need to be added to the Content Security Policy
-
-### Required configuration
-
-#### Base path
-This is the base path of a contact page, for example, `/government/organisations/hm-revenue-customs/contact/child-benefit`.
-This path should always be a contact page, any other content page type will result in the webchat component not being loaded.
-
-#### Availability URL
-This URL is used to check the availability of agents at regular intervals.
-
-|  Function  |  Required |
-|-----------|-----------|
-| Request Method  | GET  |
-| Response Format | JSON/JSONP (Default to JSONP) |
-| Request Example | {"status":"success","response":"BUSY"}  |
-| Valid statuses | ["BUSY", "UNAVAILABLE", "AVAILABLE","ONLINE", "OFFLINE", "ERROR"] |
-
-#### Open URL
-This url is used to start a webchat session.
-This url should not include session ids or require anything specific parameters to be generated.
-
-### Optional Configuration options
-
-#### Browser window behaviour
-By default the chat session would open in an a separate browser window. An additional value can be added to the yaml entry that will allow the web chat to remain in the current browser window.
-```yaml
-  open_url_redirect: true
-```
-#### Payload format
-
-The default response from the api as used by HMRC webchat provider is JSONP. To add a provider that responds using JSON the following entry needs to be added.
-```yaml
-  availability_payload_format: json
-```
+- [Visual regression tests](docs/visual-regression-tests.md)
+- [Webchat](docs/webchat.md)
 
 ## Licence
 
