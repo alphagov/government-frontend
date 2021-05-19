@@ -6,6 +6,7 @@ ENV["GOVUK_ASSET_ROOT"] = "http://static.test.gov.uk"
 require "simplecov"
 SimpleCov.start
 
+require "i18n/coverage"
 require "i18n/coverage/printers/file_printer"
 I18n::Coverage.config.printer = I18n::Coverage::Printers::FilePrinter
 I18n::Coverage.start
