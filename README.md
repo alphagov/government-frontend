@@ -46,8 +46,6 @@ If you are using GOV.UK Docker, remember to combine it with the commands that fo
 bundle exec rake
 ```
 
-If you want to see the page that is being tested in our integration tests, you can call `save_and_open_page` to see what's rendered.
-
 ### Components
 
 Pages are rendered using components. Components can be specific to government-frontend or shared between applications.
