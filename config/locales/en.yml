@@ -21,7 +21,7 @@ en:
       share_this_page: Share this page
   consultation:
     and: and
-    another_website_html: 'This consultation %{closed} held on <a href="%{url}">another website</a>'
+    another_website_html: This consultation %{closed} held on <a href="%{url}">another website</a>
     at: at
     closes: It closes at
     closes_at: This consultation closes at
@@ -36,6 +36,7 @@ en:
     feedback_received: Feedback received
     is_being: is being
     not_open_yet: This consultation isn't open yet
+    'on':
     opens: This consultation opens
     original_consultation: Original consultation
     ran_from: This consultation ran from
