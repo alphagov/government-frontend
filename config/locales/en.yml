@@ -381,6 +381,8 @@ en:
     error:
       option: Please select an option
       title: You haven’t selected an option
+  shared:
+    historically_political: This was published under the %{government}
   statistics_announcement:
     cancelled: Statistics release cancelled
     changed_date: The release date has been changed
