@@ -403,10 +403,14 @@ en:
     location: Location
     written_on: Written on
   statistics_announcement:
+    cancellation_date: Cancellation date
     cancelled: Statistics release cancelled
     changed_date: The release date has been changed
+    forthcoming: These statistics will be released
     previous_date: Previous date
+    proposed_date: Proposed release
     reason_for_change: Reason for change
+    release_date: Release date
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all but essential travel to parts of the country.

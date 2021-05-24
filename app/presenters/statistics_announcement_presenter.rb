@@ -4,7 +4,7 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include StatisticsAnnouncementHelper
 
-  FORTHCOMING_NOTICE = "These statistics will be released".freeze
+  FORTHCOMING_NOTICE = I18n.t("statistics_announcement.forthcoming").freeze
 
   def release_date
     content_item["details"]["display_date"]
@@ -28,11 +28,11 @@ class StatisticsAnnouncementPresenter < ContentItemPresenter
     super.tap do |m|
       if cancelled?
         m.merge!(
-          "Proposed release" => release_date,
-          "Cancellation date" => cancellation_date,
+          I18n.t("statistics_announcement.proposed_date") => release_date,
+          I18n.t("statistics_announcement.cancellation_date") => cancellation_date,
         )
       else
-        m.merge!("Release date" => release_date_and_status)
+        m.merge!(I18n.t("statistics_announcement.release_date") => release_date_and_status)
       end
     end
   end
