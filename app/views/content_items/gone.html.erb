@@ -14,7 +14,7 @@
 
     <% if @content_item.alternative_path.present? %>
       <p class="alternative">
-        <%= t("gone.visit") %> <%= alternative_path_link(request, @content_item.alternative_path)%>
+        <%= t("common.visit") %> <%= alternative_path_link(request, @content_item.alternative_path)%>
       </p>
     <% end %>
   </div>

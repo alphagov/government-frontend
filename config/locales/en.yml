@@ -2,6 +2,7 @@
 en:
   common:
     last_updated:
+    visit: 'Visit:'
   components:
     figure:
       image_credit: 'Image credit: %{credit}'
@@ -289,7 +290,6 @@ en:
   gone:
     published_in_error: The information on this page has been removed because it was published in error.
     title: The page you're looking for is no longer available
-    visit: 'Visit:'
   guide:
     pages_in_guide: Pages in this guide
     skip_to_contents: Skip to contents of guide
@@ -401,3 +401,6 @@ en:
         </p>
       text_assistive: Important
       title: Coronavirus (COVID-19) travel
+  unpublishing:
+    summary: The information on this page has been removed because it was published in error.
+    title: The page you're looking for is no longer available

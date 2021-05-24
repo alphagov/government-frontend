@@ -1,9 +1,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', title: 'The page you\'re looking for is no longer available' %>
+    <%= render 'govuk_publishing_components/components/title', title: t("unpublishing.title") %>
 
     <p class="summary">
-      The information on this page has been removed because it was published in error.
+      <%= t("unpublishing.summary") %>
     </p>
 
     <%= render "govuk_publishing_components/components/govspeak", {} do %>
@@ -12,7 +12,7 @@
 
     <% if @content_item.alternative_url.present? %>
       <p class="alternative">
-        Visit: <%= link_to(@content_item.alternative_url, @content_item.alternative_url, class: "govuk-link") %>
+        <%= t("common.visit") %> <%= link_to(@content_item.alternative_url, @content_item.alternative_url, class: "govuk-link") %>
       </p>
     <% end %>
   </div>
