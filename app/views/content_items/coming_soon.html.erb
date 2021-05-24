@@ -3,7 +3,7 @@
     <%= render 'govuk_publishing_components/components/title', title: 'Coming soon' %>
 
     <p class="summary">
-      This document will be published on<br />
+      <%= t("content_item.coming_soon") %><br />
       <%= content_tag(:time, class: 'publish_time', datetime: @content_item.iso8601_publish_time) do %>
         <%= @content_item.formatted_publish_date + " at " + @content_item.formatted_publish_time %>
       <% end %>
