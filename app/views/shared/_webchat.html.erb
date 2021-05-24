@@ -10,17 +10,17 @@
       <%= unavailability_message %>
     <% else %>
       <span class="js-webchat-advisers-error">
-        Webchat is unavailable at the moment because of technical problems.
+        <%= t("shared.webchat.technical_problem") %>
       </span>
       <span class="js-webchat-advisers-unavailable hidden">
-        Webchat is closed at the moment.
+        <%= t("shared.webchat.closed") %>
       </span>
       <span class="js-webchat-advisers-busy hidden">
-        All webchat advisers are busy at the moment.
+        <%= t("shared.webchat.busy") %>
       </span>
       <span class="js-webchat-advisers-available hidden">
-        Advisers are available to chat.
-        <a href="#" data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true' : 'false' %>" rel="external" class="js-webchat-open-button">Speak to an adviser now</a>.
+        <%= t("shared.webchat.available") %>
+        <a href="#" data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true' : 'false' %>" rel="external" class="js-webchat-open-button"><%= t("shared.webchat.speak_to_adviser") %></a>.
       </span>
     <% end %>
   </span>

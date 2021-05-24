@@ -383,6 +383,12 @@ en:
       title: You haven’t selected an option
   shared:
     historically_political: This was published under the %{government}
+    webchat:
+      available: Advisers are available to chat.
+      busy: All webchat advisers are busy at the moment.
+      closed: Webchat is closed at the moment.
+      speak_to_adviser: Speak to an adviser now
+      technical_problem: Webchat is unavailable at the moment because of technical problems.
   statistics_announcement:
     cancelled: Statistics release cancelled
     changed_date: The release date has been changed
