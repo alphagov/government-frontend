@@ -374,6 +374,11 @@ en:
     error:
       option: Please select an option
       title: You haven’t selected an option
+  statistics_announcement:
+    cancelled: Statistics release cancelled
+    changed_date: The release date has been changed
+    previous_date: Previous date
+    reason_for_change: Reason for change
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all but essential travel to parts of the country.

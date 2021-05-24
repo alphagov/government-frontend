@@ -22,10 +22,10 @@
     <% if @content_item.release_date_changed? %>
       <div class="release-date-changed">
         <%= render "components/important-metadata",
-        title: "The release date has been changed",
+        title: t("statistics_announcement.changed_date"),
         items: {
-          "Previous date" => @content_item.previous_release_date,
-          "Reason for change" => @content_item.release_date_change_reason,
+          t("statistics_announcement.previous_date") => @content_item.previous_release_date,
+          t("statistics_announcement.reason_for_change") => @content_item.release_date_change_reason,
         },
         margin_bottom: true
         %>
@@ -34,7 +34,7 @@
 
     <% if @content_item.cancelled? %>
       <%= render 'govuk_publishing_components/components/notice',
-          title: 'Statistics release cancelled',
+          title: t("statistics_announcement.cancelled"),
           description_text: @content_item.cancellation_reason %>
     <% end %>
 
