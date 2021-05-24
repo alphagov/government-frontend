@@ -9,9 +9,9 @@ class SpeechPresenter < ContentItemPresenter
 
   def delivery_type
     if document_type == "authored_article"
-      "Written on"
+      I18n.t("speech.written_on")
     else
-      "Delivered on"
+      I18n.t("speech.delivered_on")
     end
   end
 
@@ -27,7 +27,7 @@ class SpeechPresenter < ContentItemPresenter
 
   def important_metadata
     super.tap do |m|
-      m.merge!("Location" => location, delivery_type => delivered_on_metadata)
+      m.merge!(I18n.t("speech.location") => location, delivery_type => delivered_on_metadata)
     end
   end
 
