@@ -417,6 +417,7 @@ en:
       avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all but essential travel to the whole country.
       avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all travel to parts of the country.
       avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all travel to the whole country.
+    context: Foreign travel advice
     coronavirus_warning:
       content_html: |
         <p class="govuk-body">
@@ -433,6 +434,9 @@ en:
         </p>
       text_assistive: Important
       title: Coronavirus (COVID-19) travel
+    still_current_at: Still current at
+    summary: Summary
+    updated: Updated
   unpublishing:
     summary: The information on this page has been removed because it was published in error.
     title: The page you're looking for is no longer available
