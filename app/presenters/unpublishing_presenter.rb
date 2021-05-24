@@ -8,6 +8,6 @@ class UnpublishingPresenter < ContentItemPresenter
   end
 
   def page_title
-    "No longer available"
+    I18n.t("unpublishing.page_title")
   end
 end
