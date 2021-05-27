@@ -90,4 +90,26 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_equal faq_schema["name"], @content_item["title"]
     assert_not_equal faq_schema["mainEntity"], []
   end
+
+  test "renders brexit child taxon pages in special ways" do
+    setup_and_visit_brexit_child_taxon("business")
+
+    # hides the print links
+    assert_not page.has_css?(".gem-c-print-link")
+    assert_not page.has_content?("Print this page")
+
+    # hides published by metadata
+    assert_not page.has_css?(".gem-c-metadata")
+
+    # renders description field as a custom link
+    assert_not page.has_text?(@content_item["description"])
+    link_text = "Brexit guidance for individuals and families"
+    assert page.has_link?(link_text, href: ContentItem::BrexitHubPage::BREXIT_CITIZEN_PAGE_PATH)
+
+    setup_and_visit_brexit_child_taxon("citizen")
+
+    assert_not page.has_text?(@content_item["description"])
+    link_text = "Brexit guidance for businesses"
+    assert page.has_link?(link_text, href: ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_PATH)
+  end
 end
