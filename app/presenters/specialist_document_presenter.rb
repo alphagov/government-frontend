@@ -64,15 +64,15 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     {
       "protected-designation-of-origin-pdo" => {
         "url" => view_context.image_url("protected-food-drink-names/protected-designation-of-origin-pdo.png"),
-        "alt_text" => "The scheme logo is a black stamp with the words Designated Origin UK Protected",
+        "alt_text" => I18n.t("specialist_document.pdo_alt_text"),
       },
       "protected-geographical-indication-pgi" => {
         "url" => view_context.image_url("protected-food-drink-names/protected-geographical-indication-pgi.png"),
-        "alt_text" => "The scheme logo is a black stamp with the words Geographic Origin UK Protected",
+        "alt_text" => I18n.t("specialist_document.pgi_alt_text"),
       },
       "traditional-speciality-guaranteed-tsg" => {
         "url" => view_context.image_url("protected-food-drink-names/traditional-speciality-guaranteed-tsg.png"),
-        "alt_text" => "The scheme logo is a black stamp with the words Traditional Speciality UK Protected",
+        "alt_text" => I18n.t("specialist_document.tsg_alt_text"),
       },
     }
   end

@@ -20,11 +20,11 @@
 
     <% if @content_item.show_guide_navigation? %>
       <%= render "govuk_publishing_components/components/skip_link", {
-        text: "Skip to contents of guide",
+        text: t("guide.skip_to_contents"),
         href: "#guide-contents"
       } %>
       <aside class="part-navigation-container" role="complementary">
-        <%= render "govuk_publishing_components/components/contents_list", aria_label: 'Pages in this guide', contents: @content_item.part_link_elements, underline_links: true %>
+        <%= render "govuk_publishing_components/components/contents_list", aria_label: t("guide.pages_in_guide"), contents: @content_item.part_link_elements, underline_links: true %>
       </aside>
     <% end %>
   </div>

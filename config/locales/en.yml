@@ -2,6 +2,7 @@
 en:
   common:
     last_updated:
+    visit: 'Visit:'
   components:
     figure:
       image_credit: 'Image credit: %{credit}'
@@ -18,7 +19,41 @@ en:
       show_all: show all
     share_links:
       share_this_page: Share this page
+  consultation:
+    and: and
+    another_website_html: This consultation %{closed} held on <a href="%{url}">another website</a>
+    at: at
+    closes: It closes at
+    closes_at: This consultation closes at
+    complete_a: Complete a
+    description: Consultation description
+    detail_of_feedback_received: Detail of feedback received
+    detail_of_outcome: Detail of outcome
+    documents: Documents
+    download_outcome: Download the full outcome
+    either: either
+    email_to: 'Email to:'
+    feedback_received: Feedback received
+    is_being: is being
+    not_open_yet: This consultation isn't open yet
+    'on':
+    opens: This consultation opens
+    original_consultation: Original consultation
+    ran_from: This consultation ran from
+    respond_online: Respond online
+    'true': true
+    visit_soon: Visit this page again soon to download the outcome to this public&nbsp;feedback.
+    was: was
+    ways_to_respond: Ways to respond
+    write_to: 'Write to:'
+  contact:
+    email: Email
+    find_call_charges: Find out about call charges
+    online: Online
+    phone: Phone
+    webchat: Webchat
   content_item:
+    coming_soon: This document will be published on
     contents: Contents
     metadata:
       published: Published
@@ -253,6 +288,24 @@ en:
     publication_scheme_html: Read about the types of information we routinely publish in our %{link}.
     social_media_use_html: Read our policy on %{link}.
     welsh_language_scheme_html: Find out about our commitment to %{link}.
+  fatality_notice:
+    alt_text: Ministry of Defence crest
+    field_of_operation: Field of operation
+    operations_in: Operations in %{location}
+  gone:
+    page_title: No longer available
+    published_in_error: The information on this page has been removed because it was published in error.
+    title: The page you're looking for is no longer available
+  guide:
+    pages_in_guide: Pages in this guide
+    skip_to_contents: Skip to contents of guide
+  html_publication:
+    print_meta_data:
+      available_at: This publication is available at %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
   i18n:
     direction:
   language_names:
@@ -334,9 +387,61 @@ en:
     error:
       option: Please select an option
       title: You haven’t selected an option
+  shared:
+    historically_political: This was published under the %{government}
+    webchat:
+      available: Advisers are available to chat.
+      busy: All webchat advisers are busy at the moment.
+      closed: Webchat is closed at the moment.
+      speak_to_adviser: Speak to an adviser now
+      technical_problem: Webchat is unavailable at the moment because of technical problems.
+  specialist_document:
+    pdo_alt_text: The scheme logo is a black stamp with the words Designated Origin UK Protected
+    pgi_alt_text: The scheme logo is a black stamp with the words Geographic Origin UK Protected
+    tsg_alt_text: The scheme logo is a black stamp with the words Traditional Speciality UK Protected
+  speech:
+    delivered_on: Delivered on
+    location: Location
+    written_on: Written on
+  statistics_announcement:
+    cancellation_date: Cancellation date
+    cancelled: Statistics release cancelled
+    changed_date: The release date has been changed
+    forthcoming: These statistics will be released
+    previous_date: Previous date
+    proposed_date: Proposed release
+    reason_for_change: Reason for change
+    release_date: Release date
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all but essential travel to parts of the country.
       avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all but essential travel to the whole country.
       avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all travel to parts of the country.
       avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> advise against all travel to the whole country.
+    context: Foreign travel advice
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Follow current COVID-19 rules where you live: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/covid-19-alert-levels">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
+        </p>
+        <p class="govuk-body">
+          To prevent new COVID variants from entering the UK, you should not travel to <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber or red list countries</a>.
+        </p>
+        <p class="govuk-body">
+          To understand the risks in a country follow <a href="/guidance/travel-advice-novel-coronavirus">FCDO Travel Advice</a>.
+        </p>
+        <p class="govuk-body">
+          When you return, follow the rules to <a href="/uk-border-control">enter the UK from abroad</a> (except from Ireland).
+        </p>
+      text_assistive: Important
+      title: Coronavirus (COVID-19) travel
+    still_current_at: Still current at
+    summary: Summary
+    updated: Updated
+  unpublishing:
+    page_title: No longer available
+    summary: The information on this page has been removed because it was published in error.
+    title: The page you're looking for is no longer available
+  working_group:
+    contact_details: Contact details
+    policies: Policies

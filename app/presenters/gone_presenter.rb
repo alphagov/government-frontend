@@ -8,6 +8,6 @@ class GonePresenter < ContentItemPresenter
   end
 
   def page_title
-    "No longer available"
+    I18n.t("gone.page_title")
   end
 end

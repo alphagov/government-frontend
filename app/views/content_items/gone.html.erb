@@ -1,11 +1,11 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
-      title: "The page you're looking for is no longer available",
+      title: t("gone.title"),
     } %>
 
     <p class="summary">
-      The information on this page has been removed because it was published in error.
+      <%= t("gone.published_in_error") %>
     </p>
 
     <%= render "govuk_publishing_components/components/govspeak", {} do %>
@@ -14,7 +14,7 @@
 
     <% if @content_item.alternative_path.present? %>
       <p class="alternative">
-        Visit: <%= alternative_path_link(request, @content_item.alternative_path)%>
+        <%= t("common.visit") %> <%= alternative_path_link(request, @content_item.alternative_path)%>
       </p>
     <% end %>
   </div>

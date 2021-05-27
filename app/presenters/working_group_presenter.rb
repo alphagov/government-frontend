@@ -30,8 +30,8 @@ private
 
   def extra_headings
     extra_headings = []
-    extra_headings << { id: "policies", text: "Policies" } if policies.any?
-    extra_headings << { id: "contact-details", text: "Contact details" } if email.present?
+    extra_headings << { id: "policies", text: I18n.t("working_group.policies") } if policies.any?
+    extra_headings << { id: "contact-details", text: I18n.t("working_group.contact_details") } if email.present?
     extra_headings
   end
 

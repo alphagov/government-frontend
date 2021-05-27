@@ -12,13 +12,13 @@ class FatalityNoticePresenter < ContentItemPresenter
   end
 
   def image
-    { "url" => view_context.image_url("ministry-of-defence-crest.png"), "alt_text" => "Ministry of Defence crest" }
+    { "url" => view_context.image_url("ministry-of-defence-crest.png"), "alt_text" => I18n.t("fatality_notice.alt_text") }
   end
 
   def important_metadata
     super.tap do |m|
       if field_of_operation
-        m.merge!("Field of operation" => view_context.link_to(field_of_operation.title, field_of_operation.path, class: "govuk-link app-link"))
+        m.merge!(I18n.t("fatality_notice.field_of_operation") => view_context.link_to(field_of_operation.title, field_of_operation.path, class: "govuk-link app-link"))
       end
     end
   end
@@ -26,7 +26,7 @@ class FatalityNoticePresenter < ContentItemPresenter
   def title_and_context
     super.tap do |t|
       if field_of_operation
-        t[:context] = "Operations in #{field_of_operation.try(:title)}"
+        t[:context] = I18n.t("fatality_notice.operations_in", location: field_of_operation.try(:title))
       end
     end
   end

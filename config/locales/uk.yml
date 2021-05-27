@@ -2,6 +2,7 @@
 uk:
   common:
     last_updated:
+    visit:
   components:
     figure:
       image_credit:
@@ -18,7 +19,41 @@ uk:
       show_all:
     share_links:
       share_this_page:
+  consultation:
+    and:
+    another_website_html:
+    at:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_feedback_received:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    feedback_received:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    original_consultation:
+    ran_from:
+    respond_online:
+    'true':
+    visit_soon:
+    was:
+    ways_to_respond:
+    write_to:
+  contact:
+    email:
+    find_call_charges:
+    online:
+    phone:
+    webchat:
   content_item:
+    coming_soon:
     contents:
     metadata:
       published: опубліковано
@@ -401,6 +436,24 @@ uk:
     publication_scheme_html: Прочитайти, яку інформацію ми регулярно публікуємо у %{link}.
     social_media_use_html: Прочитайне про наші принципи роботи щодо %{link}.
     welsh_language_scheme_html: 'Дізнайтеся про наші зобов''язання щодо публікації інформації у %{link}. '
+  fatality_notice:
+    alt_text:
+    field_of_operation:
+    operations_in:
+  gone:
+    page_title:
+    published_in_error:
+    title:
+  guide:
+    pages_in_guide:
+    skip_to_contents:
+  html_publication:
+    print_meta_data:
+      available_at:
+      copyright:
+      isbn:
+      licence_html:
+      third_party:
   i18n:
     direction:
   language_names:
@@ -484,9 +537,49 @@ uk:
     error:
       option:
       title:
+  shared:
+    historically_political:
+    webchat:
+      available:
+      busy:
+      closed:
+      speak_to_adviser:
+      technical_problem:
+  specialist_document:
+    pdo_alt_text:
+    pgi_alt_text:
+    tsg_alt_text:
+  speech:
+    delivered_on:
+    location:
+    written_on:
+  statistics_announcement:
+    cancellation_date:
+    cancelled:
+    changed_date:
+    forthcoming:
+    previous_date:
+    proposed_date:
+    reason_for_change:
+    release_date:
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts:
       avoid_all_but_essential_travel_to_whole_country:
       avoid_all_travel_to_parts:
       avoid_all_travel_to_whole_country:
+    context:
+    coronavirus_warning:
+      content_html:
+      text_assistive:
+      title:
+    still_current_at:
+    summary:
+    updated:
+  unpublishing:
+    page_title:
+    summary:
+    title:
+  working_group:
+    contact_details:
+    policies:
