@@ -15,7 +15,17 @@
     <% if brexit_link %>
       <div class="govuk-body-l govuk-!-margin-bottom-7">
         <p class="govuk-body">
-          <%= I18n.t("brexit.heading_prefix") %> <%= link_to brexit_link[:text], brexit_link[:path] %>.
+          <%= I18n.t("brexit.heading_prefix") %>
+          <%= link_to(
+              brexit_link[:text],
+              brexit_link[:path],
+              class: "govuk-link",
+              data: {
+                track_action: brexit_link[:path],
+                track_category: brexit_link[:track_category],
+                track_label: brexit_link[:text],
+                module: 'gem-track-click',
+              }) %>.
         </p>
       </div>
     <% else %>
