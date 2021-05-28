@@ -6,17 +6,15 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <% title_and_context = @content_item.brexit_hub_page? ? { title: @content_item.title } : @content_item.title_and_context %>
+    <% title_and_context = @content_item.brexit_link ? { title: @content_item.title } : @content_item.title_and_context %>
     <%= render 'govuk_publishing_components/components/title', title_and_context %>
   </div>
   <%= render 'shared/translations' %>
   <div class="govuk-grid-column-two-thirds">
-    <% if @content_item.brexit_hub_page? %>
+    <% if @content_item.brexit_link %>
       <div class="govuk-body-l govuk-!-margin-bottom-7">
-        <% link_text = @content_item.brexit_citizen_page? ? "Brexit guidance for businesses" : "Brexit guidance for individuals and families" %>
-        <% link_path = @content_item.brexit_citizen_page? ? @content_item.brexit_business_page : @content_item.brexit_citizen_page %>
         <p class="govuk-body">
-          There's different <%= link_to link_text, link_path %>.
+          <%= I18n.t("brexit.heading_prefix") %> <%= link_to @content_item.brexit_link[:text], @content_item.brexit_link[:path] %>.
         </p>
       </div>
     <% else %>
@@ -25,7 +23,7 @@
   </div>
 </div>
 
-<%= render 'shared/publisher_metadata_with_logo' unless @content_item.brexit_hub_page? %>
+<%= render 'shared/publisher_metadata_with_logo' unless @content_item.brexit_link %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
@@ -37,7 +35,7 @@
       <%= render "govuk_publishing_components/components/print_link", {
         margin_top: 0,
         margin_bottom: 6,
-      } unless @content_item.brexit_hub_page? %>
+      } unless @content_item.brexit_link %>
 
       <%= render 'govuk_publishing_components/components/govspeak', {} do %>
         <%= raw(@content_item.govspeak_body[:content]) %>
@@ -48,13 +46,13 @@
             published: @content_item.published,
             last_updated: @content_item.updated,
             history: @content_item.history
-          } unless @content_item.brexit_hub_page? %>
+          } unless @content_item.brexit_link %>
       </div>
     <% end %>
     <%= render "govuk_publishing_components/components/print_link", {
         margin_top: 0,
         margin_bottom: 6,
-      } unless @content_item.brexit_hub_page? %>
+      } unless @content_item.brexit_link %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>

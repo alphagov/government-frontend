@@ -6,24 +6,21 @@ module ContentItem
     BREXIT_BUSINESS_PAGE_PATH = "/guidance/brexit-guidance-for-businesses".freeze
     BREXIT_CITIZEN_PAGE_PATH = "/guidance/brexit-guidance-for-individuals-and-families".freeze
 
-    def brexit_hub_page?
-      BREXIT_HUB_PAGE_CONTENT_IDS.include?(content_item.dig("content_id"))
+    def brexit_links
+      {
+        ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_CONTENT_ID => {
+          text: I18n.t("brexit.citizen_link"),
+          path: BREXIT_CITIZEN_PAGE_PATH,
+        },
+        ContentItem::BrexitHubPage::BREXIT_CITIZEN_PAGE_CONTENT_ID => {
+          text: I18n.t("brexit.business_link"),
+          path: BREXIT_BUSINESS_PAGE_PATH,
+        },
+      }
     end
 
-    def brexit_business_page?
-      BREXIT_BUSINESS_PAGE_CONTENT_ID == content_item.dig("content_id")
-    end
-
-    def brexit_citizen_page?
-      BREXIT_CITIZEN_PAGE_CONTENT_ID == content_item.dig("content_id")
-    end
-
-    def brexit_citizen_page
-      BREXIT_CITIZEN_PAGE_PATH
-    end
-
-    def brexit_business_page
-      BREXIT_BUSINESS_PAGE_PATH
+    def brexit_link
+      brexit_links[content_item.dig("content_id")]
     end
   end
 end
