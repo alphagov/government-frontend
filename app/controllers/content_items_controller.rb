@@ -1,4 +1,5 @@
 class ContentItemsController < ApplicationController
+  include GovukPersonalisation::AccountConcern
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::HTTPGone, with: :error_410
@@ -199,4 +200,23 @@ private
     )
     redirect_to destination, status: status_code
   end
+
+  def save_this_page_enabled?
+    ENV["FEATURE_FLAG_SAVE_A_PAGE"] == "enabled"
+  end
+  helper_method :save_this_page_enabled?
+
+  helper_method :logged_in?
+
+  def user_has_saved_page?
+    GdsApi.account_api.get_saved_page(
+      page_path: request.path,
+      govuk_account_session: @account_session_header,
+    ).to_hash["saved_page"].present?
+  rescue GdsApi::HTTPNotFound
+    false
+  rescue GdsApi::HTTPUnauthorized
+    logout!
+  end
+  helper_method :user_has_saved_page?
 end

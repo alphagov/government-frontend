@@ -1,0 +1,7 @@
+<%= content_tag(:div, class: "responsive-bottom-margin") do %>
+  <%= render 'components/save_this_page', {
+    page_path: request.path,
+    signed_in: logged_in?,
+    page_is_saved: user_has_saved_page?,
+  } %>
+<% end if save_this_page_enabled? %>

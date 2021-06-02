@@ -14,94 +14,97 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <% body = capture do %>
+    <div class="content-bottom-margin">
+      <% body = capture do %>
       <% if @content_item.online_form_links.any? %>
-        <h2 id="online-forms-title"><%= t("contact.online") %></h2>
-        <% @content_item.online_form_links.each do |link| %>
-          <p>
-            <%= link_to(link[:title], link[:url]) %>
-          </p>
-          <%= link[:description] %>
-        <% end %>
-        <%= @content_item.online_form_body %>
+      <h2 id="online-forms-title"><%= t("contact.online") %></h2>
+      <% @content_item.online_form_links.each do |link| %>
+      <p>
+        <%= link_to(link[:title], link[:url]) %>
+      </p>
+      <%= link[:description] %>
+      <% end %>
+      <%= @content_item.online_form_body %>
       <% end %>
 
       <% if @content_item.show_webchat? %>
-        <h2 id="webchat-title"><%= t("contact.webchat") %></h2>
-        <%= render 'shared/webchat' %>
+      <h2 id="webchat-title"><%= t("contact.webchat") %></h2>
+      <%= render 'shared/webchat' %>
       <% end %>
 
       <% if @content_item.email.any? %>
-        <h2 id="email-title"><%= t("contact.email") %></h2>
-        <% @content_item.email.each do |email_group| %>
-          <p class="vcard">
-            <% email_group[:v_card].each do |v_card_part| %>
-              <span class="<%= v_card_part[:v_card_class] %>">
-                <%= v_card_part[:value] %>
-              </span><br />
-            <% end %>
-            <%= mail_to email_group[:email], email_group[:email], class: 'email' %>
-          </p>
-
-          <%= email_group[:description] %>
+      <h2 id="email-title"><%= t("contact.email") %></h2>
+      <% @content_item.email.each do |email_group| %>
+      <p class="vcard">
+        <% email_group[:v_card].each do |v_card_part| %>
+        <span class="<%= v_card_part[:v_card_class] %>">
+          <%= v_card_part[:value] %>
+        </span><br />
         <% end %>
-        <%= @content_item.email_body %>
+        <%= mail_to email_group[:email], email_group[:email], class: 'email' %>
+      </p>
+
+      <%= email_group[:description] %>
+      <% end %>
+      <%= @content_item.email_body %>
       <% end %>
 
       <% if @content_item.phone.any? %>
-        <h2 id="phone-title"><%= t("contact.phone") %></h2>
-        <% @content_item.phone.each do |phone_group| %>
-          <% if @content_item.phone.size > 1 %>
-            <h3><%= phone_group[:title] %></h3>
-          <% end %>
-          <%= phone_group[:description] %>
-          <% if phone_group[:numbers].any? %>
-            <div class="contact">
-              <% phone_group[:numbers].each do |number| %>
-                <p><%= number[:label] %>:<br /><strong><%= number[:number] %></strong></p>
-              <% end%>
-            </div>
-          <% end %>
-          <% if phone_group[:opening_times].present? %>
-            <p>Opening times:</p>
-            <%= phone_group[:opening_times] %>
-          <% end %>
+      <h2 id="phone-title"><%= t("contact.phone") %></h2>
+      <% @content_item.phone.each do |phone_group| %>
+      <% if @content_item.phone.size > 1 %>
+      <h3><%= phone_group[:title] %></h3>
+      <% end %>
+      <%= phone_group[:description] %>
+      <% if phone_group[:numbers].any? %>
+      <div class="contact">
+        <% phone_group[:numbers].each do |number| %>
+        <p><%= number[:label] %>:<br /><strong><%= number[:number] %></strong></p>
+        <% end%>
+      </div>
+      <% end %>
+      <% if phone_group[:opening_times].present? %>
+      <p>Opening times:</p>
+      <%= phone_group[:opening_times] %>
+      <% end %>
 
-          <% if phone_group[:best_time_to_call].present? %>
-            <p>Best time to call:</p>
-            <%= phone_group[:best_time_to_call] %>
-          <% end %>
-        <% end %>
+      <% if phone_group[:best_time_to_call].present? %>
+      <p>Best time to call:</p>
+      <%= phone_group[:best_time_to_call] %>
+      <% end %>
+      <% end %>
 
-        <%= @content_item.phone_body %>
+      <%= @content_item.phone_body %>
 
-        <p class="call-charges">
-          <%= link_to t("contact.find_call_charges"), "/call-charges" %>
-        </p>
+      <p class="call-charges">
+        <%= link_to t("contact.find_call_charges"), "/call-charges" %>
+      </p>
       <% end %>
 
       <% if @content_item.post.any? %>
-        <h2 id="post-title">Post</h2>
-        <% @content_item.post.each do |post_group| %>
-          <%= post_group[:description] %>
-          <div class="contact vcard">
-            <p>
-              <% post_group[:v_card].each do |v_card_part| %>
-                <span class="<%= v_card_part[:v_card_class] %>">
-                  <%= v_card_part[:value] %>
-                </span><br />
-              <% end %>
-            </p>
-          </div>
-        <% end %>
-        <%= @content_item.post_body %>
+      <h2 id="post-title">Post</h2>
+      <% @content_item.post.each do |post_group| %>
+      <%= post_group[:description] %>
+      <div class="contact vcard">
+        <p>
+          <% post_group[:v_card].each do |v_card_part| %>
+          <span class="<%= v_card_part[:v_card_class] %>">
+            <%= v_card_part[:value] %>
+          </span><br />
+          <% end %>
+        </p>
+      </div>
       <% end %>
-    <% end %>
+      <%= @content_item.post_body %>
+      <% end %>
+      <% end %>
 
-    <%= render 'govuk_publishing_components/components/govspeak' do %>
+      <%= render 'govuk_publishing_components/components/govspeak' do %>
       <%= body %>
-    <% end %>
+      <% end %>
+    </div>
+
+    <%= render 'content_items/save_page' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>

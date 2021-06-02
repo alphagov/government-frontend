@@ -2,8 +2,8 @@ module SaveThisPageHelper
   attr_reader :page_is_saved, :signed_in, :page_path
 
   PAGE_IS_SAVED_LINK_HREF = {
-    true => "/account/saved-pages/remove?page_path=",
-    false => "/account/saved-pages/add?page_path=",
+    true => "#{Plek.new.website_root}/account/saved-pages/remove?page_path=",
+    false => "#{Plek.new.website_root}/account/saved-pages/add?page_path=",
   }.freeze
 
   SEE_SAVED_PAGES_LOGGED_IN = {
@@ -27,6 +27,6 @@ module SaveThisPageHelper
 
   def additional_text(options)
     signed_in = options[:signed_in] || false
-    I18n.t(SEE_SAVED_PAGES_LOGGED_IN[signed_in], link: "/account/saved-pages")
+    I18n.t(SEE_SAVED_PAGES_LOGGED_IN[signed_in], link: "#{Plek.new.website_root}/account/saved-pages", additional_class: options[:additional_class])
   end
 end
