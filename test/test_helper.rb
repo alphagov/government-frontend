@@ -176,6 +176,22 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def setup_and_visit_brexit_child_taxon(type = nil)
+    @content_item = get_content_example("detailed_guide").tap do |item|
+      item["content_id"] = type == "business" ? brexit_business_id : brexit_citizen_id
+      stub_content_store_has_item(item["base_path"], item.to_json)
+      visit_with_cachebust((item["base_path"]).to_s)
+    end
+  end
+
+  def brexit_citizen_id
+    ContentItem::BrexitHubPage::BREXIT_CITIZEN_PAGE_CONTENT_ID
+  end
+
+  def brexit_business_id
+    ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_CONTENT_ID
+  end
+
   def setup_and_visit_random_content_item(document_type: nil)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
       payload.merge!("document_type" => document_type) unless document_type.nil?
