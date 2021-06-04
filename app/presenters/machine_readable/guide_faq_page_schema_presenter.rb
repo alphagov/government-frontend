@@ -56,7 +56,7 @@ module MachineReadable
       if index.zero?
         guide_url
       else
-        guide_url + "/" + part["slug"]
+        "#{guide_url}/#{part['slug']}"
       end
     end
 

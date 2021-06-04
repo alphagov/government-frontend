@@ -17,7 +17,7 @@ class AnswerTest < ActionDispatch::IntegrationTest
     first_related_link = @content_item["details"]["external_related_links"].first
 
     within(".gem-c-related-navigation") do
-      assert page.has_css?('.gem-c-related-navigation__section-link--other[href="' + first_related_link["url"] + '"]', text: first_related_link["title"])
+      assert page.has_css?(".gem-c-related-navigation__section-link--other[href=\"#{first_related_link['url']}\"]", text: first_related_link["title"])
     end
   end
 

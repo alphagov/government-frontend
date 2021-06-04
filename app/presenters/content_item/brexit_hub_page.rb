@@ -20,7 +20,7 @@ module ContentItem
     end
 
     def brexit_link
-      brexit_links[content_item.dig("content_id")]
+      brexit_links[content_item["content_id"]]
     end
   end
 end

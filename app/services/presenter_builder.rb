@@ -38,7 +38,7 @@ private
       return service_sign_in_presenter_name
     end
 
-    content_item["schema_name"].classify + "Presenter"
+    "#{content_item['schema_name'].classify}Presenter"
   end
 
   def service_sign_in_format?
@@ -66,6 +66,8 @@ private
       @content_item = content_item
     end
   end
+
   class SpecialRouteReturned < StandardError; end
+
   class GovernmentReturned < StandardError; end
 end

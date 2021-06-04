@@ -135,7 +135,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   def assert_nested_content_item(heading)
     heading_level = heading["level"]
     selector = "a[href=\"##{heading['id']}\"]"
-    text = heading["text"].gsub(/\:$/, "")
+    text = heading["text"].gsub(/:$/, "")
 
     if heading_level < 4
       assert page.has_css?(selector), "Failed to find an element matching: #{selector}"

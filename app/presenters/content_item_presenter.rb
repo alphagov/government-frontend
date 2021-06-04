@@ -66,7 +66,7 @@ class ContentItemPresenter
 
   def canonical_url
     if requesting_a_part?
-      web_url + "/" + part_slug
+      "#{web_url}/#{part_slug}"
     else
       web_url
     end

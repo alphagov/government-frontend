@@ -46,8 +46,8 @@ class GuidePresenter < ContentItemPresenter
   end
 
   def content_title
-    if parts.any?
-      return current_part_title if hide_chapter_navigation?
+    if parts.any? && hide_chapter_navigation?
+      return current_part_title
     end
 
     title

@@ -3,10 +3,10 @@ module TypographyHelper
     return text if text.nil?
 
     escaped_text = html_escape_once(text.strip)
-    escaped_text.sub(/\s([\w\.\?\!\:]+)$/, '&nbsp;\1').html_safe
+    escaped_text.sub(/\s([\w.?!:]+)$/, '&nbsp;\1').html_safe
   end
 
   def strip_trailing_colons(text)
-    text.gsub(/\:$/, "")
+    text.gsub(/:$/, "")
   end
 end
