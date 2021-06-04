@@ -7,7 +7,7 @@ module MachineReadable
     end
 
     def self.config_path(content_item)
-      CONFIG_PATH.join(content_item.slug + ".yml").to_s
+      CONFIG_PATH.join("#{content_item.slug}.yml").to_s
     end
 
     def initialize(content_item)

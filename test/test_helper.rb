@@ -37,7 +37,7 @@ class ActiveSupport::TestCase
   include GovukContentSchemaExamples
 end
 
-# Note: This is so that slimmer is skipped, preventing network requests for
+# NOTE: This is so that slimmer is skipped, preventing network requests for
 # content from static (i.e. core_layout.html.erb).
 class ActionController::Base
   before_action :set_skip_slimmer_header
@@ -85,7 +85,7 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_published_dates(first_published = nil, last_updated = nil, history_link = false)
+  def assert_has_published_dates(first_published = nil, last_updated = nil, history_link: false)
     text = []
     text << first_published if first_published
     text << last_updated if last_updated
@@ -135,7 +135,7 @@ class ActionDispatch::IntegrationTest
 
   def assert_has_publisher_metadata(options)
     within(".app-c-publisher-metadata") do
-      assert_has_published_dates(options[:first_published], options[:last_updated], options[:history_link])
+      assert_has_published_dates(options[:first_published], options[:last_updated], history_link: options[:history_link])
       assert_has_publisher_metadata_other(options[:metadata])
     end
   end
@@ -148,8 +148,8 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_footer_has_published_dates(first_published = nil, last_updated = nil, history_link = false)
-    assert_has_published_dates(first_published, last_updated, history_link)
+  def assert_footer_has_published_dates(first_published = nil, last_updated = nil, history_link: false)
+    assert_has_published_dates(first_published, last_updated, history_link: history_link)
   end
 
   def setup_and_visit_content_item(name, parameter_string = "")

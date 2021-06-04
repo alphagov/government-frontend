@@ -1,7 +1,7 @@
 module ServiceSignIn
   module Paths
     def path
-      content_item["base_path"] + "/" + content_item["details"][page_type]["slug"]
+      "#{content_item['base_path']}/#{content_item['details'][page_type]['slug']}"
     end
 
     def has_valid_path?

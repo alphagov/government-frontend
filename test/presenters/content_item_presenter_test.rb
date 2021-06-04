@@ -33,7 +33,7 @@ class ContentItemPresenterTest < PresenterTestCase
 
   test "#canonical_url with a part" do
     example_with_parts = govuk_content_schema_example("travel_advice", "full-country")
-    request_path = example_with_parts["base_path"] + "/safety-and-security"
+    request_path = "#{example_with_parts['base_path']}/safety-and-security"
     presenter = create_presenter(
       TravelAdvicePresenter,
       content_item: example_with_parts,

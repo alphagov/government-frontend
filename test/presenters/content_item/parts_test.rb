@@ -91,7 +91,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
       end
 
       def requested_path
-        base_path + "/second-slug"
+        "#{base_path}/second-slug"
       end
     end
 
@@ -105,7 +105,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
       end
 
       def requested_path
-        base_path + "/" + part_slug
+        "#{base_path}/#{part_slug}"
       end
     end
 
@@ -121,7 +121,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
       end
 
       def requested_path
-        base_path + "/" + part_slug
+        "#{base_path}/#{part_slug}"
       end
     end
 
@@ -136,7 +136,7 @@ class ContentItemPartsTest < ActiveSupport::TestCase
       end
 
       def requested_path
-        base_path + "/" + part_slug
+        "#{base_path}/#{part_slug}"
       end
     end
 

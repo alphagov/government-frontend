@@ -18,6 +18,6 @@ private
                                  .compact
                                  .join(".")
 
-    "/" + URI.encode_www_form_component(path_and_optional_locale).gsub("%2F", "/")
+    "/#{URI.encode_www_form_component(path_and_optional_locale).gsub('%2F', '/')}"
   end
 end

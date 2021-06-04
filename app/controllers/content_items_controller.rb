@@ -173,8 +173,8 @@ private
     url.to_s
   end
 
-  def with_locale
-    I18n.with_locale(@content_item.locale || I18n.default_locale) { yield }
+  def with_locale(&block)
+    I18n.with_locale(@content_item.locale || I18n.default_locale, &block)
   end
 
   def error_403(exception)
