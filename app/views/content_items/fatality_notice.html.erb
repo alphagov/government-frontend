@@ -22,12 +22,12 @@
     <div class="content-bottom-margin">
       <div class="responsive-bottom-margin">
         <%= render 'components/important-metadata',
-        items: @content_item.important_metadata %>
+          items: @content_item.important_metadata %>
         <%= render 'components/figure',
-        src: @content_item.image["url"],
-        alt: @content_item.image["alt_text"],
-        credit: @content_item.image["credit"],
-        caption: @content_item.image["caption"] if @content_item.image %>
+          src: @content_item.image["url"],
+          alt: @content_item.image["alt_text"],
+          credit: @content_item.image["credit"],
+          caption: @content_item.image["caption"] if @content_item.image %>
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>
