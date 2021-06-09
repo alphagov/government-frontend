@@ -11,10 +11,12 @@ module ContentItem
         ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_CONTENT_ID => {
           text: I18n.t("brexit.citizen_link"),
           path: BREXIT_CITIZEN_PAGE_PATH,
+          track_category: "brexit-business-page",
         },
         ContentItem::BrexitHubPage::BREXIT_CITIZEN_PAGE_CONTENT_ID => {
           text: I18n.t("brexit.business_link"),
           path: BREXIT_BUSINESS_PAGE_PATH,
+          track_category: "brexit-citizen-page",
         },
       }
     end

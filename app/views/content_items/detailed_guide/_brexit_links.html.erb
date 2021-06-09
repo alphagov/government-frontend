@@ -11,7 +11,12 @@
     <% if section[:links].present? %>
       <% track_category = brexit_link[:track_category] %>
         <% links = section[:links].map do |link|
-            link_to(link[:text], link[:path], class: "govuk-link")
+            link_to(link[:text], link[:path], class: "govuk-link", data: {
+              track_action: link[:path],
+              track_category: track_category,
+              track_label: section[:title] || "",
+              module: 'gem-track-click',
+            })
           end
         %>
       <%= render "govuk_publishing_components/components/list", {

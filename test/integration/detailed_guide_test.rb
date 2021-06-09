@@ -111,5 +111,14 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_not page.has_text?(@content_item["description"])
     link_text = "Brexit guidance for businesses"
     assert page.has_link?(link_text, href: ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_PATH)
+
+    # adds GA tracking to the links
+    track_action = find_link("Foreign travel advice")["data-track-action"]
+    track_category = find_link("Foreign travel advice")["data-track-category"]
+    track_label = find_link("Foreign travel advice")["data-track-label"]
+
+    assert_equal "/foreign-travel-advice", track_action
+    assert_equal "brexit-citizen-page", track_category
+    assert_equal "Travel to the EU", track_label
   end
 end
