@@ -72,6 +72,7 @@ module GovernmentFrontend
       lv
       ms
       mt
+      ne
       no
       nl
       pa
