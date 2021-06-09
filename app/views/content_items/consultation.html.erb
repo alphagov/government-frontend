@@ -21,7 +21,7 @@
 
     <% if @content_item.unopened? %>
       <% content_item_unopened = capture do %>
-        <%= t("consultation.opens") %>
+        <%= raw(t("consultation.opens")) %>
         <%= @content_item.opening_date_midnight? ? t("consultation.on") : t("consultation.at") %>
         <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
       <% end %>
@@ -32,7 +32,7 @@
 
     <% elsif @content_item.pending_final_outcome? %>
       <% content_item_final_outcome = capture do %>
-        <%= t("consultation.visit_soon") %>
+        <%= raw(t("consultation.visit_soon")) %>
       <% end %>
       <%= render 'govuk_publishing_components/components/notice',
         title: 'We are analysing your feedback',
