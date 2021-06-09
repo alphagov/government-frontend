@@ -38,8 +38,12 @@
         margin_bottom: 6,
       } unless brexit_link %>
 
-      <%= render 'govuk_publishing_components/components/govspeak', {} do %>
-        <%= raw(@content_item.govspeak_body[:content]) %>
+      <% if brexit_link %>
+        <%= render partial: 'content_items/detailed_guide/brexit_links', locals: { brexit_link: brexit_link } %>
+      <% else %>
+        <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+          <%= raw(@content_item.govspeak_body[:content]) %>
+        <% end %>
       <% end %>
 
       <div class="responsive-bottom-margin">

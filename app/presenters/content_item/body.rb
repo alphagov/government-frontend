@@ -10,5 +10,9 @@ module ContentItem
         direction: text_direction,
       }
     end
+
+    def title_and_link_sections
+      BodyParser.new(body.html_safe).title_and_link_sections
+    end
   end
 end
