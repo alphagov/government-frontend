@@ -179,6 +179,8 @@ class ActionDispatch::IntegrationTest
   def setup_and_visit_brexit_child_taxon(type = nil)
     @content_item = get_content_example("detailed_guide").tap do |item|
       item["content_id"] = type == "business" ? brexit_business_id : brexit_citizen_id
+      item["details"]["body"] = brexit_body_content
+
       stub_content_store_has_item(item["base_path"], item.to_json)
       visit_with_cachebust((item["base_path"]).to_s)
     end
@@ -190,6 +192,25 @@ class ActionDispatch::IntegrationTest
 
   def brexit_business_id
     ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_CONTENT_ID
+  end
+
+  def brexit_body_content
+    '<div class="govspeak">'\
+    '<h2 id="travel-to-the-eu">Travel to the EU</h2>\n \n'\
+    '<ul>\n'\
+    '<li><a rel="external" href="https://www.gov.uk/foreign-travel-advice" '\
+    'class="govuk-link">Foreign travel advice</a></li>\n'\
+    '<li><a rel="external" href="https://www.gov.uk/visit-eu"'\
+    'class="govuk-link">Travelling to the EU'\
+    '</a></li>\n</ul>\n'\
+    '<h2 id="travel-to-the-uk">Travel to the UK</h2>\n \n'\
+    '<ul>\n'\
+    '<li><a rel="external" href="https://www.gov.uk/local-travel-advice" '\
+    'class="govuk-link">Local travel advice</a></li>\n'\
+    '<li><a rel="external" href="https://www.gov.uk/visit-uk"'\
+    'class="govuk-link">Travelling to the UK'\
+    '</a></li>\n</ul>\n'\
+    "</div>"
   end
 
   def setup_and_visit_random_content_item(document_type: nil)
