@@ -128,6 +128,6 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     assert_equal ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_PATH, track_action
     assert_equal "brexit-citizen-page", track_category
-    assert_equal "Brexit guidance for businesses", track_label
+    assert_equal "Guidance nav link", track_label
   end
 end
