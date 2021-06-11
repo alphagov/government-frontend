@@ -1,10 +1,11 @@
 <% @content_item.title_and_link_sections.each do |section| %>
-  <% if section[:title].present? %>
+  <% if section[:title][:text].present? %>
     <%= render "govuk_publishing_components/components/heading", {
-      text: section[:title],
+      text: section[:title][:text],
       heading_level: 2,
       font_size: "m",
       margin_bottom: 6,
+      id: section[:title][:id],
     } %>
   <% end %>
   <% if section[:links].present? %>
@@ -13,7 +14,7 @@
           link_to(link[:text], link[:path], class: "govuk-link", data: {
             track_action: link[:path],
             track_category: track_category,
-            track_label: section[:title] || "",
+            track_label: section[:title][:text] || "",
             module: 'gem-track-click',
           })
         end

@@ -58,8 +58,15 @@ private
   end
 
   def parsed_title(section)
-    raw_title = section.present? ? section.at_css("h2") : ""
-    raw_title.present? ? raw_title.content : ""
+    parsed = { text: "", id: "" }
+
+    raw_header = section.at_css("h2") if section.present?
+    if raw_header.present?
+      id = raw_header.attribute("id")
+      parsed[:text] = raw_header.content
+      parsed[:id] = id.value if id.present?
+    end
+    parsed
   end
 
   def format_path(raw_url)

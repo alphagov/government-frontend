@@ -44,7 +44,10 @@ class BodyParserTest < ActiveSupport::TestCase
   test "#title_and_link_sections" do
     expected = [
       {
-        title: "Travel to the EU",
+        title: {
+          text: "Travel to the EU",
+          id: "travel-to-the-eu",
+        },
         links: [
           {
             path: "/foreign-travel-advice",
@@ -57,7 +60,10 @@ class BodyParserTest < ActiveSupport::TestCase
         ],
       },
       {
-        title: "Travel to the UK",
+        title: {
+          text: "Travel to the UK",
+          id: "travel-to-the-uk",
+        },
         links: [
           {
             path: "/local-travel-advice",
@@ -78,7 +84,10 @@ class BodyParserTest < ActiveSupport::TestCase
     subject = BodyParser.new(html_missing_section_headings)
     expected = [
       {
-        title: "",
+        title: {
+          text: "",
+          id: "",
+        },
         links: [
           {
             path: "/foreign-travel-advice",
