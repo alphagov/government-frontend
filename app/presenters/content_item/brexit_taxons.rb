@@ -6,7 +6,7 @@ module ContentItem
     BREXIT_CITIZEN_PAGE_CONTENT_ID = "6555e0bf-c270-4cf9-a0c5-d20b95fab7f1".freeze
     BREXIT_CITIZEN_PAGE_PATH = "/guidance/brexit-guidance-for-individuals-and-families".freeze
 
-    def brexit_links
+    def brexit_child_taxons
       {
         ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_CONTENT_ID => {
           nav_link: {
@@ -28,8 +28,8 @@ module ContentItem
       }
     end
 
-    def brexit_link
-      brexit_links[content_item["content_id"]]
+    def brexit_child_taxon
+      brexit_child_taxons[content_item["content_id"]]
     end
   end
 end
