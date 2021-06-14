@@ -49,7 +49,7 @@
       } unless brexit_link %>
 
       <% if brexit_link %>
-        <%= render partial: 'content_items/detailed_guide/brexit_links', locals: { brexit_link: brexit_link } %>
+        <%= render partial: 'content_items/detailed_guide/brexit_sections', locals: { brexit_link: brexit_link } %>
       <% else %>
         <%= render 'govuk_publishing_components/components/govspeak', {} do %>
           <%= raw(@content_item.govspeak_body[:content]) %>
