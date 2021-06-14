@@ -104,13 +104,13 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     # renders description field as a custom link
     assert_not page.has_text?(@content_item["description"])
     link_text = "Brexit guidance for individuals and families"
-    assert page.has_link?(link_text, href: ContentItem::BrexitHubPage::BREXIT_CITIZEN_PAGE_PATH)
+    assert page.has_link?(link_text, href: ContentItem::BrexitTaxons::BREXIT_CITIZEN_PAGE_PATH)
 
     setup_and_visit_brexit_child_taxon("citizen")
 
     assert_not page.has_text?(@content_item["description"])
     link_text = "Brexit guidance for businesses"
-    assert page.has_link?(link_text, href: ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_PATH)
+    assert page.has_link?(link_text, href: ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_PATH)
 
     # adds GA tracking to the li links
     track_action = find_link("Foreign travel advice")["data-track-action"]
@@ -126,7 +126,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     track_category = find_link("Brexit guidance for businesses")["data-track-category"]
     track_label = find_link("Brexit guidance for businesses")["data-track-label"]
 
-    assert_equal ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_PATH, track_action
+    assert_equal ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_PATH, track_action
     assert_equal "brexit-citizen-page", track_category
     assert_equal "Guidance nav link", track_label
   end

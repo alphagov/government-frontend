@@ -1,5 +1,5 @@
 module ContentItem
-  module BrexitHubPage
+  module BrexitTaxons
     BREXIT_BUSINESS_PAGE_CONTENT_ID = "91cd6143-69d5-4f27-99ff-a52fb0d51c78".freeze
     BREXIT_BUSINESS_PAGE_PATH = "/guidance/brexit-guidance-for-businesses".freeze
 
@@ -8,7 +8,7 @@ module ContentItem
 
     def brexit_links
       {
-        ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_CONTENT_ID => {
+        ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_CONTENT_ID => {
           nav_link: {
             text: I18n.t("brexit.citizen_link"),
             path: BREXIT_CITIZEN_PAGE_PATH,
@@ -16,7 +16,7 @@ module ContentItem
           },
           track_category: "brexit-business-page",
         },
-        ContentItem::BrexitHubPage::BREXIT_CITIZEN_PAGE_CONTENT_ID => {
+        ContentItem::BrexitTaxons::BREXIT_CITIZEN_PAGE_CONTENT_ID => {
           nav_link: {
             text: I18n.t("brexit.business_link"),
             path: BREXIT_BUSINESS_PAGE_PATH,

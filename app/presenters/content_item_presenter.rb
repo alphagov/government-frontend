@@ -1,6 +1,6 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
-  include ContentItem::BrexitHubPage
+  include ContentItem::BrexitTaxons
 
   attr_reader :content_item,
               :requested_path,

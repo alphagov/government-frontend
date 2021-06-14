@@ -187,11 +187,11 @@ class ActionDispatch::IntegrationTest
   end
 
   def brexit_citizen_id
-    ContentItem::BrexitHubPage::BREXIT_CITIZEN_PAGE_CONTENT_ID
+    ContentItem::BrexitTaxons::BREXIT_CITIZEN_PAGE_CONTENT_ID
   end
 
   def brexit_business_id
-    ContentItem::BrexitHubPage::BREXIT_BUSINESS_PAGE_CONTENT_ID
+    ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_CONTENT_ID
   end
 
   def brexit_body_content
