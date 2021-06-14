@@ -17,13 +17,13 @@
         <p class="govuk-body">
           <%= I18n.t("brexit.heading_prefix") %>
           <%= link_to(
-              brexit_link[:text],
-              brexit_link[:path],
+              brexit_link[:nav_link][:text],
+              brexit_link[:nav_link][:path],
               class: "govuk-link",
               data: {
-                track_action: brexit_link[:path],
+                track_action: brexit_link[:nav_link][:path],
                 track_category: brexit_link[:track_category],
-                track_label: "Guidance nav link",
+                track_label: brexit_link[:nav_link][:track_label],
                 module: 'gem-track-click',
               }) %>.
         </p>
