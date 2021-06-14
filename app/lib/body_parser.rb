@@ -42,22 +42,31 @@ private
   end
 
   def parsed_links(section)
-    raw_links = section.present? ? section.css("a") : []
+    raw_links = section.css("a") if section.present?
     if raw_links.any?
-      raw_links.map do |link|
-        {
-          path: format_path(link["href"]),
-          text: link.content,
-        }
-      end
+      raw_links.map { |link| parse_link(link) }
     else
       []
     end
   end
 
+  def parse_link(raw_link)
+    {
+      path: format_path(raw_link["href"]),
+      text: raw_link.content,
+    }
+  end
+
   def parsed_title(section)
-    raw_title = section.present? ? section.at_css("h2") : ""
-    raw_title.present? ? raw_title.content : ""
+    parsed = { text: "", id: "" }
+
+    raw_header = section.at_css("h2") if section.present?
+    if raw_header.present?
+      id = raw_header.attribute("id")
+      parsed[:text] = raw_header.content
+      parsed[:id] = id.value if id.present?
+    end
+    parsed
   end
 
   def format_path(raw_url)
