@@ -8,7 +8,7 @@ module ContentItem
 
     def brexit_child_taxons
       {
-        ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_CONTENT_ID => {
+        BREXIT_BUSINESS_PAGE_CONTENT_ID => {
           nav_link: {
             text: I18n.t("brexit.citizen_link"),
             path: BREXIT_CITIZEN_PAGE_PATH,
@@ -16,7 +16,7 @@ module ContentItem
           },
           track_category: "brexit-business-page",
         },
-        ContentItem::BrexitTaxons::BREXIT_CITIZEN_PAGE_CONTENT_ID => {
+        BREXIT_CITIZEN_PAGE_CONTENT_ID => {
           nav_link: {
             text: I18n.t("brexit.business_link"),
             path: BREXIT_BUSINESS_PAGE_PATH,
