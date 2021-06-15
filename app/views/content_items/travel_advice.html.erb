@@ -60,7 +60,11 @@
 
     <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
-    <%= render 'govuk_publishing_components/components/print_link', href: @content_item.print_link, text: t("multi_page.print_entire_guide") %>
+    <div class="responsive-bottom-margin">
+      <%= render 'govuk_publishing_components/components/print_link', href: @content_item.print_link, text: t("multi_page.print_entire_guide") %>
+    </div>
+
+    <%= render 'content_items/save_page' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>

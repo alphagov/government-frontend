@@ -56,3 +56,10 @@
     </div>
   </div>
 </div>
+<% if save_this_page_enabled? %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render 'content_items/save_page' %>
+    </div>
+  </div>
+<% end %>

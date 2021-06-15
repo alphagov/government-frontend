@@ -25,34 +25,37 @@
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds responsive-bottom-margin">
-    <%= render 'components/important-metadata', items: @content_item.important_metadata %>
+  <div class="govuk-grid-column-two-thirds">
     <div class="responsive-bottom-margin">
-      <%= render "attachments",
+      <%= render 'components/important-metadata', items: @content_item.important_metadata %>
+      <div class="responsive-bottom-margin">
+        <%= render "attachments",
           title: t("publication.documents", count: 5), # This should always be pluralised.
           legacy_pre_rendered_documents: @content_item.documents,
-          attachments: @content_item.featured_attachments %>
+          attachments: @content_item.featured_attachments
+        %>
 
+        <section id="details">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: t("publication.details"),
+            mobile_top_margin: true,
+          } %>
 
-      <section id="details">
-        <%= render "govuk_publishing_components/components/heading", {
-          text: t("publication.details"),
-          mobile_top_margin: true,
-        } %>
+          <%= render "govuk_publishing_components/components/govspeak", {
+            direction: page_text_direction,
+          } do %>
+            <%= raw(@content_item.details) %>
+          <% end %>
+        </section>
+      </div>
 
-        <%= render "govuk_publishing_components/components/govspeak", {
-          direction: page_text_direction,
-        } do %>
-          <%= raw(@content_item.details) %>
-        <% end %>
-      </section>
-    </div>
-
-    <%= render 'components/published-dates', {
+      <%= render 'components/published-dates', {
         published: @content_item.published,
         last_updated: @content_item.updated,
         history: @content_item.history
       } %>
+    </div>
+    <%= render 'content_items/save_page' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>

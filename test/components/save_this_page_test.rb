@@ -15,7 +15,7 @@ class SaveThisPageTest < ComponentTestCase
 
   test "renders signed out state by default" do
     render_component(page_path: "/test")
-    assert_select ".app-c-save-this-page a.govuk-button", text: "Add to your saved pages", href: "/account/saved-pages/add?page_path=/test"
+    assert_select ".app-c-save-this-page a.govuk-button", text: "Add to your saved pages", href: "#{Plek.new.website_root}/account/saved-pages/add?page_path=/test"
     assert_select ".app-c-save-this-page .govuk-link", text: "Sign in"
   end
 
@@ -24,7 +24,7 @@ class SaveThisPageTest < ComponentTestCase
       page_path: "/test",
       signed_in: false,
     )
-    assert_select ".app-c-save-this-page a.govuk-button", text: "Add to your saved pages", href: "/account/saved-pages/add?page_path=/test"
+    assert_select ".app-c-save-this-page a.govuk-button", text: "Add to your saved pages", href: "#{Plek.new.website_root}/account/saved-pages/add?page_path=/test"
     assert_select ".app-c-save-this-page .govuk-link", text: "Sign in"
   end
 
@@ -33,7 +33,7 @@ class SaveThisPageTest < ComponentTestCase
       page_path: "/test",
       signed_in: true,
     )
-    assert_select ".app-c-save-this-page a.govuk-button", text: "Add to your saved pages", href: "/account/saved-pages/add?page_path=/test"
+    assert_select ".app-c-save-this-page a.govuk-button", text: "Add to your saved pages", href: "#{Plek.new.website_root}/account/saved-pages/add?page_path=/test"
     assert_select ".app-c-save-this-page .govuk-link", text: "See your saved pages"
   end
 

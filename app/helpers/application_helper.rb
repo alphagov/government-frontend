@@ -28,6 +28,18 @@ module ApplicationHelper
     request.original_fullpath.split("?", 2).first
   end
 
+  def has_saved_page_confirmation?
+    return false unless save_this_page_enabled?
+
+    personalisation_param.present?
+  end
+
+  def personalisation_param
+    return unless %w[page_saved page_removed].include?(params["personalisation"])
+
+    params["personalisation"]
+  end
+
 private
 
   def active_proposition_mapping

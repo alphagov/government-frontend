@@ -31,12 +31,12 @@ class SaveThisPageHelperTest < ActionView::TestCase
 
   def has_save_this_page_button(params)
     assert_equal I18n.t("components.save_this_page.add_page_button"), link_text(params)
-    assert_equal "/account/saved-pages/add?page_path=/test", link_href(params)
+    assert_equal "#{Plek.new.website_root}/account/saved-pages/add?page_path=/test", link_href(params)
   end
 
   def has_remove_this_page_button(params)
     assert_equal I18n.t("components.save_this_page.remove_page_button"), link_text(params)
-    assert_equal "/account/saved-pages/remove?page_path=/test", link_href(params)
+    assert_equal "#{Plek.new.website_root}/account/saved-pages/remove?page_path=/test", link_href(params)
   end
 
   def has_page_not_saved_heading(params)
@@ -48,10 +48,10 @@ class SaveThisPageHelperTest < ActionView::TestCase
   end
 
   def has_signed_in_additional_text(params)
-    assert_equal I18n.t("components.save_this_page.see_saved_pages_signed_in", link: "/account/saved-pages"), additional_text(params)
+    assert_equal I18n.t("components.save_this_page.see_saved_pages_signed_in", link: "#{Plek.new.website_root}/account/saved-pages", additional_class: ""), additional_text(params)
   end
 
   def has_signed_out_additional_text(params)
-    assert_equal I18n.t("components.save_this_page.see_saved_pages_signed_out", link: "/account/saved-pages"), additional_text(params)
+    assert_equal I18n.t("components.save_this_page.see_saved_pages_signed_out", link: "#{Plek.new.website_root}/account/saved-pages", additional_class: ""), additional_text(params)
   end
 end

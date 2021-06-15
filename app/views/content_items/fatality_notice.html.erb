@@ -18,27 +18,29 @@
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds content-bottom-margin">
-    <div class="responsive-bottom-margin">
-      <%= render 'components/important-metadata',
+  <div class="govuk-grid-column-two-thirds">
+    <div class="content-bottom-margin">
+      <div class="responsive-bottom-margin">
+        <%= render 'components/important-metadata',
           items: @content_item.important_metadata %>
-      <%= render 'components/figure',
+        <%= render 'components/figure',
           src: @content_item.image["url"],
           alt: @content_item.image["alt_text"],
           credit: @content_item.image["credit"],
           caption: @content_item.image["caption"] if @content_item.image %>
-      <%= render 'govuk_publishing_components/components/govspeak', {
-        direction: page_text_direction,
-      } do %>
-        <%= raw(@content_item.body) %>
-      <% end %>
-    </div>
-
-    <%= render 'components/published-dates', {
+        <%= render 'govuk_publishing_components/components/govspeak', {
+          direction: page_text_direction,
+        } do %>
+          <%= raw(@content_item.body) %>
+        <% end %>
+      </div>
+      <%= render 'components/published-dates', {
         published: @content_item.published,
         last_updated: @content_item.updated,
         history: @content_item.history
       } %>
+    </div>
+    <%= render 'content_items/save_page' %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>

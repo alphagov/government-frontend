@@ -2,7 +2,7 @@
 <html>
 <head>
   <title lang="<%= I18n.locale %>">
-    <%if content_for?(:title) %>
+    <% if content_for?(:title) %>
       <%= yield :title %> - GOV.UK
     <% else %>
       <%= @content_item.page_title %> - GOV.UK
@@ -38,6 +38,8 @@
     <% if @content_item.show_phase_banner? %>
       <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
     <% end %>
+
+    <%= render 'shared/save_page_confirmation' %>
 
     <% unless @do_not_show_breadcrumbs %>
       <% if @content_item.try(:back_link) %>
