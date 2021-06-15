@@ -6,24 +6,24 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <% brexit_link = @content_item.brexit_link %>
-    <% title_and_context = brexit_link ? { title: @content_item.title } : @content_item.title_and_context %>
+    <% brexit_child_taxon = @content_item.brexit_child_taxon %>
+    <% title_and_context = brexit_child_taxon ? { title: @content_item.title } : @content_item.title_and_context %>
     <%= render 'govuk_publishing_components/components/title', title_and_context %>
   </div>
   <%= render 'shared/translations' %>
   <div class="govuk-grid-column-two-thirds">
-    <% if brexit_link %>
+    <% if brexit_child_taxon %>
       <div class="govuk-body-l govuk-!-margin-bottom-7">
         <p class="govuk-body">
           <%= I18n.t("brexit.heading_prefix") %>
           <%= link_to(
-              brexit_link[:text],
-              brexit_link[:path],
+              brexit_child_taxon[:nav_link][:text],
+              brexit_child_taxon[:nav_link][:path],
               class: "govuk-link",
               data: {
-                track_action: brexit_link[:path],
-                track_category: brexit_link[:track_category],
-                track_label: "Guidance nav link",
+                track_action: brexit_child_taxon[:nav_link][:path],
+                track_category: brexit_child_taxon[:track_category],
+                track_label: brexit_child_taxon[:nav_link][:track_label],
                 module: 'gem-track-click',
               }) %>.
         </p>
@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<%= render 'shared/publisher_metadata_with_logo' unless brexit_link %>
+<%= render 'shared/publisher_metadata_with_logo' unless brexit_child_taxon %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
@@ -46,10 +46,10 @@
       <%= render "govuk_publishing_components/components/print_link", {
         margin_top: 0,
         margin_bottom: 6,
-      } unless brexit_link %>
+      } unless brexit_child_taxon %>
 
-      <% if brexit_link %>
-        <%= render partial: 'content_items/detailed_guide/brexit_links', locals: { brexit_link: brexit_link } %>
+      <% if brexit_child_taxon %>
+        <%= render partial: 'content_items/detailed_guide/brexit_sections', locals: { brexit_child_taxon: brexit_child_taxon } %>
       <% else %>
         <%= render 'govuk_publishing_components/components/govspeak', {} do %>
           <%= raw(@content_item.govspeak_body[:content]) %>
@@ -61,13 +61,13 @@
             published: @content_item.published,
             last_updated: @content_item.updated,
             history: @content_item.history
-          } unless brexit_link %>
+          } unless brexit_child_taxon %>
       </div>
     <% end %>
     <%= render "govuk_publishing_components/components/print_link", {
         margin_top: 0,
         margin_bottom: 6,
-      } unless brexit_link %>
+      } unless brexit_child_taxon %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>
