@@ -1,5 +1,8 @@
 class ContentItemsController < ApplicationController
   include GovukPersonalisation::AccountConcern
+  include Slimmer::Headers
+  include Slimmer::Template
+
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::HTTPGone, with: :error_410
@@ -11,6 +14,8 @@ class ContentItemsController < ApplicationController
   rescue_from PresenterBuilder::GovernmentReturned, with: :error_notfound
 
   attr_accessor :content_item, :taxonomy_navigation
+
+  slimmer_template "core_layout_explore_header"
 
   def show
     load_content_item
