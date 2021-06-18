@@ -1,5 +1,9 @@
 ---
 en:
+  brexit:
+    business_link: Brexit guidance for businesses
+    citizen_link: Brexit guidance for individuals and families
+    heading_prefix: There’s different
   common:
     last_updated:
     visit: 'Visit:'
@@ -18,17 +22,17 @@ en:
       hide_all: hide all
       show_all: show all
     save_this_page:
+      add_page_button: Add to your saved pages
+      confirmations:
+        page_removed:
+          message: You’ve removed this from your saved pages
+        page_saved:
+          message: You’ve added this to your saved pages
       page_not_saved_heading: Save this page so you can come back to it later
       page_was_saved_heading: You’ve saved this page
-      add_page_button: Add to your saved pages
       remove_page_button: Remove from your saved pages
       see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">See your saved pages</a>
       see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Sign in</a> to see your saved pages.
-      confirmations:
-        page_saved:
-          message: "You’ve added this to your saved pages"
-        page_removed:
-          message: "You’ve removed this from your saved pages"
     share_links:
       share_this_page: Share this page
   consultation:
@@ -293,10 +297,6 @@ en:
       written_statement:
         one: Written statement to Parliament
         other: Written statements to Parliament
-  brexit:
-    heading_prefix: There’s different
-    business_link: Brexit guidance for businesses
-    citizen_link: Brexit guidance for individuals and families
   corporate_information_page:
     about_our_services_html: Find out %{link}.
     corporate_information: Corporate information
