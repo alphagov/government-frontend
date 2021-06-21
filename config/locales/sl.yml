@@ -1,5 +1,9 @@
 ---
 sl:
+  brexit:
+    business_link:
+    citizen_link:
+    heading_prefix:
   common:
     last_updated:
     visit:
@@ -17,6 +21,18 @@ sl:
       from:
       hide_all:
       show_all:
+    save_this_page:
+      add_page_button:
+      confirmations:
+        page_removed:
+          message:
+        page_saved:
+          message:
+      page_not_saved_heading:
+      page_was_saved_heading:
+      remove_page_button:
+      see_saved_pages_signed_in:
+      see_saved_pages_signed_out:
     share_links:
       share_this_page:
   consultation:
@@ -493,6 +509,7 @@ sl:
     lv:
     ms:
     mt:
+    ne:
     nl:
     'no':
     pa:
