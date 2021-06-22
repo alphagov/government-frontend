@@ -30,7 +30,7 @@
   <%= yield :extra_head_content %>
 </head>
 <body>
-  <% unless content_for(:simple_header) %>
+  <% unless content_for(:simple_header) && explore_menu_testable? %>
     <%= render 'govuk_publishing_components/components/government_navigation', active: active_proposition %>
   <% end %>
 

@@ -2,6 +2,7 @@ class ContentItemsController < ApplicationController
   include GovukPersonalisation::AccountConcern
   include Slimmer::Headers
   include Slimmer::Template
+  include ExploreMenuAbTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -12,6 +13,11 @@ class ContentItemsController < ApplicationController
   rescue_from PresenterBuilder::RedirectRouteReturned, with: :error_redirect
   rescue_from PresenterBuilder::SpecialRouteReturned, with: :error_notfound
   rescue_from PresenterBuilder::GovernmentReturned, with: :error_notfound
+
+  before_action :set_explore_menu_response
+  before_action :set_slimmer_template
+
+  helper_method :explore_menu_variant, :explore_menu_testable?
 
   attr_accessor :content_item, :taxonomy_navigation
 
@@ -51,6 +57,14 @@ class ContentItemsController < ApplicationController
   end
 
 private
+
+  def set_slimmer_template
+    if explore_menu_testable?
+      slimmer_template "core_layout_explore_header"
+    else
+      slimmer_template "core_layout"
+    end
+  end
 
   def is_history_page?
     @content_item.document_type == "history"
