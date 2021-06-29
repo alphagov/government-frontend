@@ -5,7 +5,7 @@
 @mixin organisation-links {
   @each $organisation in map-keys($govuk-colours-organisations) {
     .#{$organisation}-brand-colour {
-      a:not(.gem-c-organisation-logo__link) {
+      a:not(.gem-c-organisation-logo__link, .gem-c-button) {
         color: govuk-organisation-colour($organisation);
 
         &:focus {
