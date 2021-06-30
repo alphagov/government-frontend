@@ -122,9 +122,9 @@
 
 
 <div class="block">
-  <div class="inner-block floated-children featured-news">
-    <h2 id="take-part">Take part</h2>
+  <div class="inner-block floated-children">
     <section class="take-part-pages">
+      <h2 id="take-part">Take part</h2>
       <% @take_part_pages.each_with_index do |take_part_page, index| %>
         <article <% if index % 3 == 0 %> class="article-clear govuk-grid-column-one-third-from-desktop"<%else%> class="govuk-grid-column-one-third-from-desktop" <% end %>>
           <div class="content">

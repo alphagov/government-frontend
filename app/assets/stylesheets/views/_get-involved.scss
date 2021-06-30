@@ -1,5 +1,22 @@
 // stylelint-disable max-nesting-depth
+
+// Due to complexity there are inline comments. Most of this mess comes from porting from Whitehall.
 .get-involved {
+  // Some of this is specifically to reduce the wasted whitespace in Mobile views by reducing padding/margin
+  .headings-block {
+    @include govuk-media-query($until: desktop) {
+      .heading-big {
+        .inner-heading {
+          padding: 0;
+        }
+      }
+
+      .intro-paragraph {
+        padding: 0;
+      }
+    }
+  }
+
   .govuk-grid-column-one-third-from-desktop {
     padding: 0;
   }
@@ -12,6 +29,7 @@
     padding: 0;
   }
 
+  // Primarily for the Consultations
   .index-list {
     li {
       list-style: none;
@@ -25,253 +43,304 @@
   h2 {
     @extend %govuk-heading-l;
     border-bottom: govuk-spacing(1) solid govuk-colour("black");
-    margin-bottom: govuk-spacing(3);
+    margin-top: govuk-spacing(6) * 1.5;
 
-    @include govuk-media-query($from: tablet) {
+    @include govuk-media-query($from: desktop) {
       margin-bottom: govuk-spacing(6);
+      margin-left: govuk-spacing(3);
+      margin-right: govuk-spacing(3);
     }
-
-    .take-part {
-      margin-bottom: 0;
-
-      @include govuk-media-query($from: tablet) {
-        margin-bottom: govuk-spacing(3);
-      }
-    }
-
-    .elsewhere-on-the-web {
-      margin-top: govuk-spacing(6) * 1.5;
-    }
-  }
-
-  .featured-news article .content .text h3 {
-    padding-bottom: 3px;
   }
 
   .content {
-    padding: 0 govuk-spacing(3);
+    @include govuk-media-query($from: desktop) {
+      padding: 0 govuk-spacing(3);
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+  }
+
+  .text h3 {
+    padding-bottom: 3px;
   }
 
   .block {
     clear: both;
   }
 
-  .floated-children {
-    h2 {
-      margin-left: govuk-spacing(3);
-      margin-right: govuk-spacing(3);
+  .head-section {
+    @include govuk-media-query($from: mobile) {
+      float: left;
     }
 
-    .head-section {
-      @include govuk-media-query($from: tablet) {
-        float: left;
-      }
+    h3 {
+      @include govuk-font(27, $weight: bold);
 
-      h3 {
-        @include govuk-font(27, $weight: bold);
+      padding: 0 0 7px;
 
-        font-weight: bold;
+      @include govuk-media-query($from: desktop) {
         padding: 0 govuk-spacing(3) 7px;
       }
     }
+  }
 
-    .count {
+  // The amount of consultations open/closed has some special framing
+  .count {
+    @include govuk-media-query($until: desktop) {
+      width: 100%;
+      margin: govuk-spacing(3) 0;
+    }
 
-      @include govuk-media-query($from: desktop) {
-        width: 50%;
-      }
+    @include govuk-font(80, $weight: bold);
+    display: block;
+    margin: govuk-spacing(3);
+    font-weight: bold;
+    width: 50%;
 
-      @include govuk-font(80, $weight: bold);
-
+    .context {
+      @include govuk-font(16);
       display: block;
-      margin: govuk-spacing(3);
+      margin-top: 0;
+      color: govuk-colour("black");
+    }
+  }
+
+  // I tried to break this apart more but removing it from a "section" ID broke it outright
+  section {
+    @include govuk-font(19);
+    @include govuk-clearfix;
+    clear: both;
+
+    h3 h4 {
       font-weight: bold;
-      text-decoration: none;
+    }
 
-      .context {
-        @include govuk-font(16);
-
-        display: block;
-        margin-top: 0;
-        color: govuk-colour("black");
+    .column {
+      @include govuk-media-query($from: mobile) {
+        float: left;
       }
     }
 
-    section {
-      @include govuk-font(19);
-      @include govuk-clearfix;
-      clear: both;
-      margin-bottom: govuk-spacing(6);
+    .consultation-lists {
+      list-style: none;
 
-      h3,
-      h4 {
-        font-weight: bold;
+      @include govuk-media-query($from: mobile) {
+        float: left;
       }
 
-      .column {
-        @include govuk-media-query($from: tablet) {
-          float: left;
+      // Special handling for the big blue next-closing box
+      .consultation-closing-soon {
+        color: govuk-colour("white");
+        background-color: govuk-colour("dark-blue");
+        margin: govuk-spacing(6) govuk-spacing(3);
+        padding: govuk-spacing(3) govuk-spacing(3) 0;
+
+        @include govuk-media-query($until: desktop) {
+          margin: govuk-spacing(3) 0;
         }
-      }
 
-      .consultation-lists {
-        list-style: none;
-        @include govuk-media-query($from: tablet) {
-          float: left;
-        }
+        h3 {
+          @include govuk-font(27, $weight: bold);
 
-        .consultation-closing-soon {
-          color: govuk-colour("white");
-          background-color: govuk-colour("dark-blue");
-          margin: govuk-spacing(6) govuk-spacing(3);
-          padding: govuk-spacing(3) govuk-spacing(3) 0;
+          padding-bottom: govuk-spacing(1);
 
-          h3 {
-            @include govuk-font(27, $weight: bold);
-            font-weight: bold;
+          @include govuk-media-query($from: mobile) {
             padding-bottom: govuk-spacing(1);
-            @include govuk-media-query($from: tablet) {
-              padding-bottom: govuk-spacing(1);
-            }
-          }
-
-          .document-list {
-            margin-top: -govuk-spacing(2);
-
-            .document-row {
-              float: none;
-            }
-
-            h3 {
-              @include govuk-font(19);
-              border-bottom: 1px solid govuk-colour("white");
-              padding-bottom: govuk-spacing(2);
-              font-weight: normal;
-            }
-
-            .attributes {
-              @include govuk-clearfix;
-              margin-top: govuk-spacing(2);
-
-              li {
-                a {
-                  color: govuk-colour("white");
-
-                  &:link:focus {
-                    color: $govuk-focus-text-colour;
-                  }
-                }
-              }
-            }
-          }
-          @include govuk-media-query($from: tablet) {
-            margin: govuk-spacing(3) govuk-spacing(3) govuk-spacing(6);
           }
         }
 
-        .column {
-          @include govuk-media-query($from: tablet) {
-            float: left;
-            @include govuk-if-ie8 {
-              width: 49.99%;
-            }
+        .document-list {
+          margin-top: -govuk-spacing(2);
+
+          .document-row {
+            float: none;
           }
-        }
-
-        .document-row {
-          border: 0;
-          padding: 5px 0 10px;
-        }
-      }
-
-      .document-list {
-        .document-row {
-          border: 0;
-          padding: 5px 0 10px;
-          float: left;
 
           h3 {
+            @include govuk-font(19);
+
+            border-bottom: 1px solid govuk-colour("white");
+            padding-bottom: govuk-spacing(2);
             font-weight: normal;
           }
 
           .attributes {
-            @include govuk-font(14);
-            padding-top: govuk-spacing(1);
+            @include govuk-clearfix;
 
-            li {
-              padding-right: govuk-spacing(2);
-              float: left;
+            margin-top: govuk-spacing(2);
 
-              a {
-                font-weight: bold;
+            a {
+              color: govuk-colour("white");
+
+              &:link:focus {
+                color: $govuk-focus-text-colour;
               }
             }
           }
         }
       }
 
-      .start-a-petition,
-      .comment-follow {
-        p {
-          padding-top: govuk-spacing(2);
+      .column {
+        @include govuk-media-query($from: mobile) {
+          float: left;
+          @include govuk-if-ie8 {
+            width: 49.99%;
+          }
         }
       }
 
-      .more-ways {
-        .index-list {
-          margin-top: govuk-spacing(3);
-        }
-
-        h3 {
-          padding-top: 0;
-        }
-
-        .column {
-          margin-top: govuk-spacing(1);
-        }
-      }
-
-      .take-part-pages,
-      .start-a-petition,
-      .more-ways {
-        margin-bottom: 0;
-        @include govuk-media-query($from: tablet) {
-          margin-bottom: govuk-spacing(6);
-        }
-      }
-
-      .respond-to-consultations {
-        margin-bottom: 0;
-
-        h3 {
-          padding-top: 0;
-        }
-
-        .column {
-          margin-top: govuk-spacing(1);
-        }
+      .document-row {
+        border: 0;
+        padding: 5px 0 10px;
       }
 
       .see-all {
-        font-weight: bold;
-        margin: govuk-spacing(2) 0 govuk-spacing(6);
+        float: left;
+        width: 100%;
       }
     }
 
-    .article-clear {
-      clear: both;
+    .document-list {
+      .document-row {
+        border: 0;
+        padding: 5px 0 10px;
+        float: left;
+
+        h3 {
+          font-weight: normal;
+        }
+
+        .attributes {
+          @include govuk-font(14);
+          padding-top: govuk-spacing(1);
+
+          li {
+            padding-right: govuk-spacing(2);
+            float: left;
+
+            a {
+              font-weight: bold;
+            }
+          }
+        }
+      }
     }
 
-    .consultations + .keyline {
-      padding-top: 0;
+    .start-a-petition,
+    .comment-follow {
+      p {
+        padding-top: govuk-spacing(2);
+      }
     }
 
-    .keyline {
-      clear: both;
-      border: solid $govuk-border-colour;
-      border-width: 0 0 1px;
-      margin: 0 govuk-spacing(3) govuk-spacing(6);
-      padding-top: govuk-spacing(6);
+    .more-ways {
+      .index-list {
+        margin-top: govuk-spacing(3);
+      }
+
+      .column {
+        margin-top: govuk-spacing(1);
+      }
+    }
+
+    .take-part-pages,
+    .start-a-petition,
+    .more-ways {
+      margin-bottom: 0;
+      @include govuk-media-query($until: desktop) {
+        margin-bottom: govuk-spacing(6);
+      }
+    }
+
+    .respond-to-consultations {
+      margin-bottom: 0;
+
+      .column {
+        margin-top: govuk-spacing(1);
+      }
+    }
+
+    .see-all {
+      font-weight: bold;
+      margin: govuk-spacing(2) 0 govuk-spacing(6);
+    }
+  }
+
+  .article-clear {
+    clear: both;
+  }
+
+  .consultations + .keyline {
+    padding-top: 0;
+  }
+
+  .keyline {
+    clear: both;
+    border: solid $govuk-border-colour;
+    border-width: 0 0 1px;
+    margin: 0 govuk-spacing(3) govuk-spacing(6);
+    padding-top: govuk-spacing(6);
+  }
+
+  // The Take Part page grid is surprisingly complicated and needs handling in both
+  // Desktop and Mobile views, primarily to make sure that sizes are correct. This has a lot of
+  // fixes in place to make up for old Whitehall functions we no longer support.
+  .take-part-pages {
+    @include govuk-media-query($until: desktop) {
+      .govuk-grid-column-one-third-from-desktop {
+        width: 100%;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      .text {
+        max-width: 60%;
+      }
+    }
+
+    .content {
+      padding: govuk-spacing(3) govuk-spacing(3) govuk-spacing(2);
+      float: left;
+
+      .summary {
+        font-size: 14px;
+      }
+
+      h3 {
+        padding: govuk-spacing(1) 0 govuk-spacing(1);
+        font-weight: bold;
+      }
+
+      @include govuk-media-query($until: desktop) {
+        width: 100%;
+
+        padding: govuk-spacing(3) 0 govuk-spacing(2);
+
+        .summary {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .text {
+      float: left;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    float: left;
+  }
+
+  .image-holder {
+    @include govuk-media-query($until: desktop) {
+      padding: govuk-spacing(1) govuk-spacing(3) 0 0;
+      max-width: 33.333333%;
+      float: left;
     }
   }
 }
