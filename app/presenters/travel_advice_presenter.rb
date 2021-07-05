@@ -67,7 +67,7 @@ class TravelAdvicePresenter < ContentItemPresenter
   end
 
   # Deprecated feature
-  # Exists in travel advice publisher but isn't used by FCO
+  # Exists in travel advice publisher but isn't used by FCDO
   # Feature included as it _could_ still be used
   # Remove when alert status boxes no longer in travel advice publisher
   def alert_status
