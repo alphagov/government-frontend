@@ -1,8 +1,12 @@
 ---
 en:
   brexit:
-    business_link: Brexit guidance for businesses
-    citizen_link: Brexit guidance for individuals and families
+    business_link:
+      text: Brexit guidance for businesses
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit guidance for individuals and families
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: There’s different
   common:
     last_updated:
