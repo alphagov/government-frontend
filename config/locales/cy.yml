@@ -2,8 +2,12 @@
 cy:
   brexit:
     business_link:
+      text: canllawiau Brexit gwahanol ar gyfer busnesau
+      path: "/guidance/brexit-guidance-for-businesses.cy"
     citizen_link:
-    heading_prefix:
+      text: canllawiau Brexit gwahanol ar gyfer unigolion a theuluoedd
+      path: "/guidance/brexit-guidance-for-individuals-and-families.cy"
+    heading_prefix: Ceir
   common:
     last_updated: Diweddarwyd diwethaf
     visit:
