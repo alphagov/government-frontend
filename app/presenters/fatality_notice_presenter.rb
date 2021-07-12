@@ -18,7 +18,7 @@ class FatalityNoticePresenter < ContentItemPresenter
   def important_metadata
     super.tap do |m|
       if field_of_operation
-        m.merge!(I18n.t("fatality_notice.field_of_operation") => view_context.link_to(field_of_operation.title, field_of_operation.path, class: "govuk-link app-link"))
+        m.merge!(I18n.t("fatality_notice.field_of_operation") => view_context.link_to(field_of_operation.title, field_of_operation.path, class: "govuk-link govuk-link--inverse"))
       end
     end
   end

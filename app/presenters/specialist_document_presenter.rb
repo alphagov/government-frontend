@@ -189,7 +189,7 @@ private
     view_context.link_to(
       label,
       "#{finder_base_path}?#{key}%5B%5D=#{value}",
-      class: "govuk-link app-link",
+      class: "govuk-link govuk-link--inverse",
     )
   end
 
