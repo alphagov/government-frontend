@@ -2,6 +2,7 @@ class ContentItemsController < ApplicationController
   include GovukPersonalisation::AccountConcern
   include Slimmer::Template
   include AbTests::ExploreMenuAbTestable
+  include AbTests::SabPagesTestable
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
