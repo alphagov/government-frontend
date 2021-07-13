@@ -12,7 +12,7 @@
     <% links = section[:links].map do |link|
         link_to(link[:text], link[:path], class: "govuk-link", data: {
           track_action: link[:path],
-          track_category: brexit_child_taxon[:track_category],
+          track_category: "Child taxon section links",
           track_label: section[:title][:text] || "",
           module: 'gem-track-click',
         })

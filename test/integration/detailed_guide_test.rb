@@ -118,7 +118,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     track_label = find_link("Foreign travel advice")["data-track-label"]
 
     assert_equal "/foreign-travel-advice", track_action
-    assert_equal "brexit-citizen-page", track_category
+    assert_equal "Child taxon section links", track_category
     assert_equal "Travel to the EU", track_label
 
     # adds GA tracking to the description field links
