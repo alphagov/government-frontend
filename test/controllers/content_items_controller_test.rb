@@ -3,6 +3,7 @@ require "test_helper"
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
   include GovukAbTesting::MinitestHelpers
+  include AbTests::ExploreMenuAbTestable
 
   test "routing handles paths with no format or locale" do
     assert_routing(
@@ -364,6 +365,12 @@ class ContentItemsControllerTest < ActionController::TestCase
     get :show, params: { path: "foreign-travel-advice/albania", format: "atom" }
 
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
+  end
+
+  test "request for Explore navigational super menu from slimmer" do
+    content_item = content_store_has_schema_example("case_study", "case_study")
+    get :show, params: { path: path_for(content_item) }
+    assert_response_not_modified_for_ab_test(AbTests::ExploreMenuAbTestable)
   end
 
   def path_for(content_item, locale = nil)

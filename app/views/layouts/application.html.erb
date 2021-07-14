@@ -27,10 +27,12 @@
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
 
+  <%= explore_menu_variant.analytics_meta_tag.html_safe if explore_menu_testable? %>
+
   <%= yield :extra_head_content %>
 </head>
 <body>
-  <% unless content_for(:simple_header) %>
+  <% unless content_for(:simple_header) || explore_menu_testable? %>
     <%= render 'govuk_publishing_components/components/government_navigation', active: active_proposition %>
   <% end %>
 
