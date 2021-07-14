@@ -1,0 +1,2 @@
+class GetInvolvedPresenter < ContentItemPresenter
+end

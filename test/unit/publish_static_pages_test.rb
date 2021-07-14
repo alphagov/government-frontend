@@ -19,17 +19,31 @@ class PublishStaticPagesTest < ActiveSupport::TestCase
       Services.publishing_api.expects(:put_path)
         .with(page[:base_path], publishing_app: "government-frontend", override_existing: true)
 
-      Services.publishing_api.expects(:put_content)
+      if page[:document_type] == "get_involved"
+        Services.publishing_api.expects(:put_content)
         .with(
           page[:content_id],
           has_entries(
-            document_type: "history",
-            schema_name: "history",
+            document_type: "get_involved",
+            schema_name: "get_involved",
             base_path: page[:base_path],
             title: page[:title],
             update_type: "minor",
           ),
         )
+      else
+        Services.publishing_api.expects(:put_content)
+          .with(
+            page[:content_id],
+            has_entries(
+              document_type: "history",
+              schema_name: "history",
+              base_path: page[:base_path],
+              title: page[:title],
+              update_type: "minor",
+            ),
+          )
+      end
 
       Services.publishing_api.expects(:publish)
         .with(page[:content_id], nil, locale: "en")

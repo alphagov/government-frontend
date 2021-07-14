@@ -48,6 +48,7 @@ $govuk-use-legacy-palette: false;
 // government-frontend mixins
 @import 'mixins/margins';
 @import 'mixins/white-links';
+@import 'mixins/typography';
 
 // helpers for common page elements
 @import 'helpers/sidebar-with-body';
@@ -87,7 +88,10 @@ $govuk-use-legacy-palette: false;
 @import 'views/specialist-document';
 @import 'views/answer';
 @import 'views/help-page';
-@import "views/guide";
+@import 'views/guide';
+@import 'views/get-involved';
+@import 'views/headings';
+@import 'helpers/featured_news';
 
 .travel-advice-notice {
   background-color: govuk-colour("light-grey");
