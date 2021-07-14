@@ -28,12 +28,4 @@
 
 .app-c-important-metadata__definition {
   font-weight: bold;
-
-  .app-link {
-    color: govuk-colour("white");
-
-    &:focus {
-      color: $govuk-text-colour;
-    }
-  }
 }

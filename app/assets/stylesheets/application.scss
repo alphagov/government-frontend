@@ -2,6 +2,7 @@
 $govuk-compatibility-govuktemplate: true;
 $govuk-typography-use-rem: false;
 $govuk-use-legacy-palette: false;
+$govuk-new-link-styles: true;
 
 // Components from govuk_publishing_components gem
 @import 'govuk_publishing_components/govuk_frontend_support';

@@ -282,7 +282,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      expected_link = "<a class=\"govuk-link app-link\" href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
+      expected_link = "<a class=\"govuk-link govuk-link--inverse\" href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
       assert_equal expected_link, presented.important_metadata["Facet name"]
     end
 

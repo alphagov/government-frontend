@@ -19,6 +19,7 @@ Not all schemas that this app can handle are rendered by it in production.
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
 | Help page | [View on GOV.UK](https://www.gov.uk/help/about-govuk) | Migrated |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)| Migrated |
+| Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)| Migrated |
 | News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) | Migrated |
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) | Migrated |
 | Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/access-to-finance-advice-north-west-england) | Migrated
