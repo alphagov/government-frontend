@@ -17,6 +17,13 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "logged out - shows the add_page_button when the feature flag is on" do
     stub_feature_flag_on
+    set_up_and_visit_content_item("detailed_guide", "detailed_guide")
+
+    assert has_save_page_button("/guidance/salary-sacrifice-and-the-effects-on-paye")
+  end
+
+  test "invalid session - shows the add_page_button when the feature flag is on" do
+    stub_feature_flag_on
     stub_account_api_unauthorized_get_saved_page(page_path: "/guidance/salary-sacrifice-and-the-effects-on-paye")
     set_up_and_visit_content_item("detailed_guide", "detailed_guide")
 

@@ -225,6 +225,8 @@ private
   helper_method :logged_in?
 
   def user_has_saved_page?
+    return false unless @account_session_header
+
     GdsApi.account_api.get_saved_page(
       page_path: request.path,
       govuk_account_session: @account_session_header,
