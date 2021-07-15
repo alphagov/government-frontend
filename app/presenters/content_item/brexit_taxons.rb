@@ -13,17 +13,22 @@ module ContentItem
             text: I18n.t("brexit.citizen_link.text"),
             path: I18n.t("brexit.citizen_link.path"),
             track_label: "Guidance nav link",
+            track_category: "brexit-business-page",
           },
-          track_category: "brexit-business-page",
+          sections: {
+            track_category: "Child taxon section links - business",
+          },
         },
         BREXIT_CITIZEN_PAGE_CONTENT_ID => {
           nav_link: {
             text: I18n.t("brexit.business_link.text"),
             path: I18n.t("brexit.business_link.path"),
             track_label: "Guidance nav link",
-
+            track_category: "brexit-citizen-page",
           },
-          track_category: "brexit-citizen-page",
+          sections: {
+            track_category: "Child taxon section links - citizen",
+          },
         },
       }
     end
