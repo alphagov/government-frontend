@@ -133,7 +133,7 @@ GEM
       unicorn (>= 5.4, < 5.9)
     govuk_personalisation (0.5.0)
       rails (~> 6)
-    govuk_publishing_components (24.20.0)
+    govuk_publishing_components (24.21.1)
       govuk_app_config
       kramdown
       plek
@@ -309,7 +309,7 @@ GEM
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.0)
     safe_yaml (1.0.5)
     sassc (2.4.0)
