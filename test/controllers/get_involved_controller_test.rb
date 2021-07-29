@@ -13,22 +13,22 @@ class GetInvolvedControllerTest < ActionController::TestCase
             "title": "Page 1",
             "details" => {
               "body" => "",
-              "image" => { },
-              "ordering" => 1
+              "image" => {},
+              "ordering" => 1,
             },
           },
           {
             "title": "Page 2",
             "details" => {
               "body" => "",
-              "image" => { },
-              "ordering" => 2
+              "image" => {},
+              "ordering" => 2,
             },
           },
-        ]
+        ],
       },
     }
-    
+
     stub_content_store_has_item("/government/get-involved", content_item_body)
   end
 
@@ -39,15 +39,6 @@ class GetInvolvedControllerTest < ActionController::TestCase
       "start" => 0,
     }
     stub_search(body)
-
-    # Overrides for calls to publishing API made during load_get_involved_data
-    # These are tested in Smokey as failure prevents a load of some objects
-    def @controller.retrieve_given_document_type(_document_type)
-      "empty_type"
-    end
-
-    def @controller.sort_take_part(take_part_pages) end
-    # End override
 
     @controller.load_get_involved_data
     assert_equal @controller.instance_variable_get(:@open_consultation_count), 83

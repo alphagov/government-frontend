@@ -9,7 +9,7 @@ class GetInvolvedController < ContentItemsController
   end
 
   def load_content_item
-    content_item = Services.content_store.content_item("/government/get-involved")
+    content_item = get_involved_item
 
     @content_item = PresenterBuilder.new(
       content_item,
@@ -19,65 +19,73 @@ class GetInvolvedController < ContentItemsController
   end
 
   def load_get_involved_data
-    @open_consultation_count = retrieve_given_document_type("open_consultation")['total']
+    @open_consultation_count = retrieve_open_consultation_count
     @closed_consultation_count = retrieve_date_filtered_closed_consultations(12)
-    @next_closing_consultations = [retrieve_next_closing] 
+    @next_closing_consultation = retrieve_next_closing
     @recently_opened_consultations = retrieve_new_consultations
     @recent_consultation_outcomes = retrieve_consultation_outcomes
-    @take_part_pages = sort_take_part(retrieve_given_document_type("take_part")["results'"])
+    @take_part_pages = get_involved_item["links"]["take_part_pages"]
   end
 
-  def retrieve_given_document_type(document_type)
-    Services.publishing_api.get_content_items(document_type: document_type).to_hash
+  def get_involved_item
+    @get_involved_item ||= Services.content_store.content_item("/government/get-involved")
+  end
+
+  def retrieve_open_consultation_count
+    Services.search_api.search({ filter_content_store_document_type: "open_consultation", count: 0 })["total"]
   end
 
   # Aims to find a count of consultations closed in the last n months.
   def retrieve_date_filtered_closed_consultations(months)
-    closed_count = 0
+    cutoff_date = Time.zone.now.prev_month(months)
 
-    cl_docs = retrieve_special({document_type: 'closed_consultation', per_page: 500, fields: ['details']})['results']
-    cl_docs.sort_by! { |k| -k['details']['closing_date'] }.reverse!
+    query = {
+      filter_content_store_document_type: "closed_consultation",
+      filter_end_date: "from: #{cutoff_date}",
+      count: 0,
+    }
 
-    cl_docs.each do |doc|
-      if DateTime.parse(doc['details']['closing_date']) > DateTime.now.prev_month(months)
-        closed_count += 1
-      else
-        break
-      end
-    end
-
-    return closed_count # hard return for clarity
+    Services.search_api.search(query)["total"]
   end
 
   def retrieve_next_closing
-    open_consults = retrieve_given_document_type("open_consultation")['results']
-    open_consults.sort_by! { |k| k['details']['closing_date'] }[0]
+    # Ensure that on query we're not looking in the past
+    cutoff_date = Time.zone.now.to_date
+
+    query = {
+      filter_content_store_document_type: "open_consultation",
+      filter_end_date: "from: #{cutoff_date}",
+      fields: "end_date,title,link",
+      order: "end_date",
+      count: 1,
+    }
+
+    Services.search_api.search(query)["results"].first
   end
 
   def retrieve_new_consultations
-    open_consults = retrieve_given_document_type("open_consultation")['results']
-    sorted_desc = open_consults.sort_by! { |k| k['details']['opening_date'] }.reverse!.values_at(0..2)
-    parse_organisation_acronyms(sorted_desc)
+    query = {
+      filter_content_store_document_type: "open_consultation",
+      fields: "end_date,title,link,organisations",
+      order: "-start_date",
+      count: 3,
+    }
+
+    Services.search_api.search(query)["results"]
   end
 
   def retrieve_consultation_outcomes
-    closed_consults = retrieve_given_document_type("consultation_outcome")['results']
-    sorted_desc = closed_consults.sort_by! { |k| k['details']['closing_date'] }.reverse!.values_at(0..2)
-    parse_organisation_acronyms(sorted_desc)
-  end
+    # Ensure that on query we're not looking into the future
+    cutoff_date = Time.zone.now.to_date
 
-  def parse_organisation_acronyms(consultations)
-    consultations.each do |consultation|
-      org_acronyms = []
-      organisations = consultation['links']['organisations']
-      organisations.each do |org_id|
-        org_acronyms << Services.publishing_api.get_live_content(org_id).parsed_content['details']['acronym']
-      end
-      consultation['links']['organisation_acronyms'] = org_acronyms
-    end
-  end
+    query = {
+      filter_content_store_document_type: "consultation_outcome",
+      filter_end_date: "to: #{cutoff_date}",
+      fields: "end_date,title,link,organisations",
+      order: "-end_date",
+      count: 3,
+    }
 
-  def sort_take_part(take_part_pages)
-    take_part_pages.sort_by { |page| page["details"]["ordering"] }
+    Services.search_api.search(query)["results"]
   end
 end

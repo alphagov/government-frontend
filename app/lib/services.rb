@@ -24,4 +24,10 @@ module Services
       bearer_token: ENV.fetch("PUBLISHING_API_BEARER_TOKEN", "example"),
     )
   end
+
+  def self.search_api
+    @search_api = GdsApi::Search.new(
+      Plek.find("search"),
+    )
+  end
 end
