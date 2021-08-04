@@ -103,7 +103,7 @@ GEM
     execjs (2.7.0)
     faker (2.13.0)
       i18n (>= 1.6, < 2)
-    faraday (1.5.1)
+    faraday (1.6.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -111,6 +111,7 @@ GEM
       faraday-net_http (~> 1.0)
       faraday-net_http_persistent (~> 1.1)
       faraday-patron (~> 1.0)
+      faraday-rack (~> 1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords (>= 0.0.4)
     faraday-em_http (1.0.0)
@@ -120,6 +121,7 @@ GEM
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
+    faraday-rack (1.0.0)
     ffi (1.13.1)
     gds-api-adapters (71.9.0)
       addressable
@@ -127,7 +129,7 @@ GEM
       null_logger
       plek (>= 1.9.0)
       rest-client (~> 2.0)
-    globalid (0.5.1)
+    globalid (0.5.2)
       activesupport (>= 5.0)
     govuk_ab_testing (2.4.2)
     govuk_app_config (3.3.0)
@@ -137,7 +139,7 @@ GEM
       unicorn (>= 5.4, < 5.9)
     govuk_personalisation (0.5.0)
       rails (~> 6)
-    govuk_publishing_components (25.0.0)
+    govuk_publishing_components (25.1.0)
       govuk_app_config
       kramdown
       plek
@@ -193,7 +195,7 @@ GEM
     logstasher (2.1.5)
       activesupport (>= 5.2)
       request_store
-    loofah (2.10.0)
+    loofah (2.11.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -205,7 +207,7 @@ GEM
     mime-types-data (3.2021.0704)
     mini_magick (4.10.1)
     mini_mime (1.1.0)
-    mini_portile2 (2.5.3)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     minitest-reporters (1.4.2)
       ansi
@@ -215,9 +217,9 @@ GEM
     mocha (1.11.2)
     multipart-post (2.1.1)
     netrc (0.11.0)
-    nio4r (2.5.7)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nio4r (2.5.8)
+    nokogiri (1.12.1)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     null_logger (0.0.1)
     parallel (1.20.1)
