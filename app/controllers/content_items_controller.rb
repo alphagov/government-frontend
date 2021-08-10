@@ -1,5 +1,5 @@
 class ContentItemsController < ApplicationController
-  include GovukPersonalisation::AccountConcern
+  include GovukPersonalisation::ControllerConcern
   include Slimmer::Template
   include AbTests::ExploreMenuAbTestable
   include AbTests::SabPagesTestable
