@@ -17,7 +17,7 @@ class ContentItemsController < ApplicationController
   before_action :set_explore_menu_response
   after_action :set_slimmer_template
 
-  helper_method :explore_menu_variant, :explore_menu_testable?
+  helper_method :explore_menu_variant, :explore_menu_variant_b?
 
   attr_accessor :content_item, :taxonomy_navigation
 
@@ -57,7 +57,7 @@ class ContentItemsController < ApplicationController
 private
 
   def set_slimmer_template
-    if explore_menu_testable?
+    if explore_menu_variant_b?
       slimmer_template "core_layout_explore_header"
     else
       slimmer_template "core_layout"
