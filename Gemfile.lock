@@ -103,7 +103,7 @@ GEM
     execjs (2.7.0)
     faker (2.13.0)
       i18n (>= 1.6, < 2)
-    faraday (1.6.0)
+    faraday (1.7.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -139,7 +139,7 @@ GEM
       unicorn (>= 5.4, < 5.9)
     govuk_personalisation (0.5.0)
       rails (~> 6)
-    govuk_publishing_components (25.1.0)
+    govuk_publishing_components (25.2.3)
       govuk_app_config
       kramdown
       plek
@@ -218,7 +218,7 @@ GEM
     multipart-post (2.1.1)
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.12.1)
+    nokogiri (1.12.2)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     null_logger (0.0.1)
