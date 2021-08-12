@@ -15,7 +15,7 @@
   <div class="govuk-grid-column-two-thirds travel-advice__header">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
 
-    <div class="travel-advice-notice">
+    <div class="travel-advice-notice" data-module="gem-track-click" data-track-category="globalTravelAdviceWarning" data-track-action="callOutBoxClicked" data-track-links-only>
       <div class="travel-advice-notice__header">
         <%= render "govuk_publishing_components/components/warning_text", {
           text: t("travel_advice.coronavirus_warning.title"),
