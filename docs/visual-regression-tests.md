@@ -1,6 +1,6 @@
 # Visual regression tests
 
-Use [Wraith](http://bbc-news.github.io/wraith/) ("A responsive screenshot comparison tool") to generate a visual diff to compare rendering changes in this application. [ImageMagick](http://brewformulas.org/Imagemagick) is needed to run the visual regression tests locally.
+Use [Wraith](http://bbc.github.io/wraith/) ("A responsive screenshot comparison tool") to generate a visual diff to compare rendering changes in this application. [ImageMagick](http://brewformulas.org/Imagemagick) is needed to run the visual regression tests locally.
 
 ## Compare with production
 
