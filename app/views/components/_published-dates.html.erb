@@ -22,7 +22,7 @@
       data-expanded="false"
       data-toggled-text="&#45;&nbsp;<%= t('components.published_dates.hide_all_updates', locale: :en) %>">&#43;&nbsp;<%= t('components.published_dates.show_all_updates', locale: :en) %></a>
       <div class="app-c-published-dates__change-history js-hidden" id="full-history">
-        <ol>
+        <ol class="app-c-published-dates__list">
           <% history.each do |change| %>
             <li class="app-c-published-dates__change-item">
               <time class="app-c-published-dates__change-date timestamp" datetime="<%= change[:timestamp] %>"><%= change[:display_time] %></time>
