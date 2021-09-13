@@ -37,3 +37,8 @@
   padding-top: govuk-spacing(2);
   border-top: 1px solid $govuk-border-colour;
 }
+
+.js-enabled .app-c-published-dates .js-hidden {
+  display: none;
+  visibility: hidden;
+}
