@@ -50,15 +50,22 @@ class DetailedGuidePresenterTest < PresenterTestCase
     presented = presented_item("national_applicability_detailed_guide")
 
     assert example["details"].include?("national_applicability")
-    assert_equal presented.applies_to, "England"
+    assert_equal(presented.national_applicability[:england][:applicable], true)
+    assert_equal(presented.national_applicability[:northern_ireland][:applicable], false)
+    assert_equal(presented.national_applicability[:scotland][:applicable], false)
+    assert_equal(presented.national_applicability[:wales][:applicable], false)
   end
 
-  test "content can apply only to a set of nations with alternative urls" do
+  test "content can apply only to a set of nations (with alternative URLs where applicable)" do
     example = schema_item("national_applicability_alternative_url_detailed_guide")
     presented = presented_item("national_applicability_alternative_url_detailed_guide")
 
     assert example["details"].include?("national_applicability")
-    assert_equal presented.applies_to, 'England, Scotland, and Wales (see guidance for <a rel="external" class="govuk-link govuk-link--inverse" href="http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for">Northern Ireland</a>)'
+    assert_equal(presented.national_applicability[:england][:applicable], true)
+    assert_equal(presented.national_applicability[:northern_ireland][:applicable], false)
+    assert_equal(presented.national_applicability[:northern_ireland][:alternative_url], "http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for")
+    assert_equal(presented.national_applicability[:scotland][:applicable], true)
+    assert_equal(presented.national_applicability[:wales][:applicable], true)
   end
 
   test "context in title is overridden to display as guidance" do

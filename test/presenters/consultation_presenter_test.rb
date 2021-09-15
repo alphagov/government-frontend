@@ -96,7 +96,10 @@ class ConsultationPresenterTest
       presented = presented_item("consultation_outcome_with_feedback")
 
       assert example["details"].include?("national_applicability")
-      assert_equal presented.applies_to, "England"
+      assert_equal(presented.national_applicability[:england][:applicable], true)
+      assert_equal(presented.national_applicability[:northern_ireland][:applicable], false)
+      assert_equal(presented.national_applicability[:scotland][:applicable], false)
+      assert_equal(presented.national_applicability[:wales][:applicable], false)
     end
 
     test "presents ways to respond" do

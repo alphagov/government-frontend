@@ -148,6 +148,15 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def assert_has_devolved_nations_component(text, nations = nil)
+    within(".gem-c-devolved-nations") do
+      assert page.has_text?(text)
+      nations&.each do |nation|
+        assert page.has_link?("Guidance for #{nation[:text]}", href: nation[:alternative_url])
+      end
+    end
+  end
+
   def assert_footer_has_published_dates(first_published = nil, last_updated = nil, history_link: false)
     assert_has_published_dates(first_published, last_updated, history_link: history_link)
   end

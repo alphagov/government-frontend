@@ -61,14 +61,17 @@ class PublicationPresenterTest < PresenterTestCase
     assert_equal '<time datetime="2015-01-13T13:05:30Z">13 January 2015</time>', presented.withdrawal_notice_component[:time]
   end
 
-  test "content can apply only to a set of nations (with alternative urls when provided)" do
+  test "content can apply only to a set of nations (with alternative URLs where applicable)" do
     example = schema_item("statistics_publication")
     presented = presented_item("statistics_publication")
 
     assert example["details"].include?("national_applicability")
-    assert_equal(
-      presented.applies_to,
-      'England (see publications for <a rel="external" class="govuk-link govuk-link--inverse" href="http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm">Northern Ireland</a>, <a rel="external" class="govuk-link govuk-link--inverse" href="http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS">Scotland</a>, and <a rel="external" class="govuk-link govuk-link--inverse" href="http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en">Wales</a>)',
-    )
+    assert_equal(presented.national_applicability[:england][:applicable], true)
+    assert_equal(presented.national_applicability[:northern_ireland][:applicable], false)
+    assert_equal(presented.national_applicability[:northern_ireland][:alternative_url], "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm")
+    assert_equal(presented.national_applicability[:scotland][:applicable], false)
+    assert_equal(presented.national_applicability[:scotland][:alternative_url], "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS")
+    assert_equal(presented.national_applicability[:wales][:applicable], false)
+    assert_equal(presented.national_applicability[:wales][:alternative_url], "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en")
   end
 end
