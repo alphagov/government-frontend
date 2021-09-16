@@ -27,7 +27,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="responsive-bottom-margin">
-      <%= render 'components/important-metadata', items: @content_item.important_metadata %>
+      <%= render "govuk_publishing_components/components/devolved_nations", national_applicability: @content_item.national_applicability || {} %>
+
       <div class="responsive-bottom-margin">
         <%= render "attachments",
           title: t("publication.documents", count: 5), # This should always be pluralised.

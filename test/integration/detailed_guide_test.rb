@@ -46,16 +46,17 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
   test "detailed guide that only applies to a set of nations" do
     setup_and_visit_content_item("national_applicability_detailed_guide")
-    assert_has_important_metadata("Applies to:": "England")
+    assert_has_devolved_nations_component("Applies to England")
   end
 
   test "detailed guide that only applies to a set of nations, with alternative urls" do
     setup_and_visit_content_item("national_applicability_alternative_url_detailed_guide")
-
-    assert_has_important_metadata(
-      'Applies to:':
-        "England, Scotland, and Wales (see guidance for Northern Ireland)",
-    )
+    assert_has_devolved_nations_component("Applies to England, Scotland and Wales", [
+      {
+        text: "Northern Ireland",
+        alternative_url: "http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for",
+      },
+    ])
   end
 
   test "translated detailed guide" do

@@ -127,8 +127,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
   test "consultation that only applies to a set of nations" do
     setup_and_visit_content_item("consultation_outcome_with_feedback")
-
-    assert_has_important_metadata("Applies to": "England")
+    assert_has_devolved_nations_component("Applies to England")
   end
 
   test "ways to respond renders" do

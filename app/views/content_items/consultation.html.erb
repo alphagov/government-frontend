@@ -17,7 +17,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'components/important-metadata', items: @content_item.important_metadata %>
+    <%= render "govuk_publishing_components/components/devolved_nations", national_applicability: @content_item.national_applicability || {} %>
 
     <% if @content_item.unopened? %>
       <% content_item_unopened = capture do %>
