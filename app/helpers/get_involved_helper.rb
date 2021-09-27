@@ -9,7 +9,7 @@ module GetInvolvedHelper
   end
 
   def page_title
-    "Get Involved"
+    t("get_involved.page_title")
   end
 
   def page_class(css_class)
@@ -22,13 +22,13 @@ private
     days_left = (consultation["end_date"].to_date - Time.zone.now.to_date).to_i
     case days_left
     when :negative?.to_proc
-      "Closed"
+      t("get_involved.closed")
     when :zero?.to_proc
-      "Closing today"
+      t("get_involved.closing_today")
     when 1
-      "Closes tomorrow"
+      t("get_involved.closing_tomorrow")
     else
-      "#{days_left} days left"
+      t("get_involved.days_left", number_of_days: days_left)
     end
   end
 end

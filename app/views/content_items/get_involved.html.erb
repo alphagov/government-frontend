@@ -5,33 +5,36 @@
   <div class="inner-block floated-children">
     <%= render partial: 'components/heading',
               locals: { big: true,
-                        heading: "Get involved" } %>
-    <p class="intro-paragraph">Find out how you can <a class="govuk-link" href="#engage-with-government">engage with government</a> directly, and <a class="govuk-link" href="#take-part">take&nbsp;part</a> locally, nationally or internationally.</p>
+                        heading: t('get_involved.page_heading') } %>
+    <p class="intro-paragraph"> 
+    <%= t('get_involved.intro_paragraph.body_html',
+      engage_with_government: link_to(t('get_involved.intro_paragraph.engage_with_government'), "#engage-with-government"),
+      take_part: link_to(t('get_involved.intro_paragraph.take_part'), "#take-part")) %>
   </div>
 </header>
 
 <div class="block">
   <div class="inner-block floated-children">
-    <h2 id="engage-with-government">Engage with government</h2>
+    <h2 id="engage-with-government"><%= t('get_involved.engage_with_gov') %></h2>
     <section class="respond-to-consultations">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3>Respond to consultations</h3>
+        <h3><%= t('get_involved.respond_to_consultations') %></h3>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
-          <p>You can give your views on new or changing government policies by responding to consultations. Government departments take these responses into consideration before making decisions.</p>
+          <p><%= t('get_involved.your_views') %></p>
         </div>
       </div>
     </section>
     <section class="consultations">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <a href="<%= get_consultations_link('open-consultations') %>" class="govuk-link count">
+        <a href="<%= get_consultations_link('open-consultations') %>" class="govuk-link govuk-link--no-visited-state count">
           <%= @open_consultation_count %>
-          <span class="context">Open consultations</span>
+          <span class="context"><%= t('get_involved.open_consultations') %></span>
         </a>
-        <a href="<%= get_consultations_link('closed-consultations') %>" class="govuk-link count">
+        <a href="<%= get_consultations_link('closed-consultations') %>" class="govuk-link govuk-link--no-visited-state count">
           <%= @closed_consultation_count %>
-          <span class="context">Closed consultations in the past 12 months</span>
+          <span class="context"><%= t('get_involved.closed_consultations') %></span>
         </a>
       </div>
       <div class="consultation-lists govuk-grid-column-two-thirds-from-desktop">
@@ -41,7 +44,7 @@
             <%= content_tag(:li, "consultation", class: 'document-row') do %>
               <h3><%= @next_closing_consultation['title'] %></h3>
               <ul class="attributes">
-                <li><%= link_to "Read and respond", @next_closing_consultation['link'], class: "govuk-link" %></li>
+                <li><%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link" %></li>
               </ul>
             <% end %>
           </ol>
@@ -49,33 +52,33 @@
         <div>
           <div class="column govuk-grid-column-one-half-from-desktop recently-opened">
             <div class="content">
-              <h3>Recently opened</h3>
+              <h3><%= t('get_involved.recently_opened') %></h3>
               <ol class="document-list">
                 <% @recently_opened_consultations.each do |consultation| %>
                   <li class="document-row">
                     <h3><%= link_to consultation['title'], consultation['link'], class: "govuk-link" %></h3>
                     <ul class="attributes">
                       <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
-                      <li>Closes <%= date_microformat(consultation['end_date']) %></li>
-                      <li><%= link_to "Read and respond", consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
+                      <li><%= t('get_involved.closes', closing_date: date_microformat(consultation['end_date']) ) %></li>
+                      <li><%= link_to t('get_involved.read_respond'), consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
                     </ul>
                   </li>
                 <% end %>
               </ol>
-              <p class="see-all"><%= link_to("Search all consultations", get_consultations_link, class: "govuk-link" ) %></p>
+              <p class="see-all"><%= link_to(t('get_involved.search_all'), get_consultations_link, class: "govuk-link" ) %></p>
             </div>
           </div>
           <div class="column govuk-grid-column-one-half-from-desktop recent-outcomes">
             <div class="content">
-              <h3>Recent outcomes</h3>
+              <h3><%= t('get_involved.recent_outcomes') %></h3>
               <ol class="document-list">
                 <% @recent_consultation_outcomes.each do |consultation| %>
                   <li class="document-row">
                     <h3><%= link_to consultation['title'], consultation['link'], class: "govuk-link" %></h3>
                     <ul class="attributes">
                       <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
-                      <li>Closed <%= date_microformat(consultation['end_date']) %></li>
-                      <li><%= link_to "See the outcome", consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
+                      <li><%= t('get_involved.closed_with_date', closing_date: date_microformat(consultation['end_date'])) %></li>
+                      <li><%= link_to t('get_involved.see_the_outcome'), consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
                     </ul>
                   </li>
                 <% end %>
@@ -88,31 +91,31 @@
     <hr class="keyline">
     <section class="start-a-petition">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3>Start a petition</h3>
+        <h3><%= t('get_involved.start_a_petition') %></h3>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
-          <p>You can <a class="govuk-link" href="https://petition.parliament.uk/" rel="external">create a petition</a> to influence government and Parliament. If the petition gets at least 100,000 online signatures, it will be considered for debate in the House of Commons.</p>
+          <p><%= t('get_involved.petition_paragraph.body_html',
+            create_a_petition: link_to(t('get_involved.petition_paragraph.create_a_petition'), "https://petition.parliament.uk/")) %>
         </div>
       </div>
     </section>
     <hr class="keyline">
     <section class="comment-follow">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3>Follow a blog or social media channel</h3>
+        <h3><%= t('get_involved.follow') %></h3>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
-          <p>For an instant way to interact with government departments, try their social media streams. These are listed under 'Follow us' on the department's home page. As well as access to blogs, audio, video and more, you can comment, debate and rate.</p>
-          <p class="see-all"><a href="/government/organisations/" class="govuk-link">See all government departments</a></p>
-          <p>Some active government blogs include:</p>
+          <p><%= t('get_involved.follow_paragraph') %></p>
+          <p class="see-all"><a href="/government/organisations/" class="govuk-link"> <%= t('get_involved.see_all_dept') %></a></p>
+          <p><%= t('get_involved.active_blogs') %></p>
           <ul class="index-list">
-            <li><a href="https://history.blog.gov.uk" class="govuk-link" rel="external">History of Government</a></li>
-            <li><a href="https://quarterly.blog.gov.uk" class="govuk-link" rel="external">Civil Service Quarterly</a></li>
-            <li><a href="http://blogs.fco.gov.uk" class="govuk-link" rel="external">FCO bloggers</a></li>
-            <li><a href="https://gds.blog.gov.uk/" class="govuk-link" rel="external">Government Digital Service</a></li>
-            <li><a href="https://civilservice.blog.gov.uk/author/sir-jeremy-heywood/" class="govuk-link"
-             rel="external">Head of the Civil Service</a></li>
+            <li><a href="https://history.blog.gov.uk" class="govuk-link" rel="external"><%= t('get_involved.gov_past') %></a></li>
+            <li><a href="https://quarterly.blog.gov.uk" class="govuk-link" rel="external"><%= t('get_involved.civil_service_quarterly') %></a></li>
+            <li><a href="http://blogs.fco.gov.uk" class="govuk-link" rel="external"><%= t('get_involved.fco_bloggers') %></a></li>
+            <li><a href="https://gds.blog.gov.uk/" class="govuk-link" rel="external"><%= t('get_involved.gds_blog') %></a></li>
+            <li><a href="https://civilservice.blog.gov.uk/" class="govuk-link" rel="external"><%= t('get_involved.civil_service') %></a></li>
           </ul>
         </div>
       </div>
@@ -124,7 +127,7 @@
 <div class="block">
   <div class="inner-block floated-children">
     <section class="take-part-pages">
-      <h2 id="take-part">Take part</h2>
+      <h2 id="take-part"><%= t('get_involved.take_part') %></h2>
       <% @take_part_pages.each_with_index do |take_part_page, index| %>
         <article <% if index % 3 == 0 %> class="article-clear govuk-grid-column-one-third-from-desktop"<%else%> class="govuk-grid-column-one-third-from-desktop" <% end %>>
           <div class="content">
@@ -142,16 +145,16 @@
     <hr class="keyline">
     <section class="more-ways">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3>More ways to take part</h3>
+        <h3><%= t('get_involved.more_ways') %></h3>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
-          <p>Many people are already volunteering, donating and contributing, both in the UK and abroad. If you&rsquo;d like to join them, but don&rsquo;t know where to start, here&rsquo;s a list of suggestions:</p>
+          <p><%= t('get_involved.take_part_suggestions') %></p>
           <ul class="index-list">
-            <li><a href="http://www.volunteerics.org/" class="govuk-link" rel="external">Join the International Citizen Service (18- to 25-year-olds)</a></li>
-            <li><a href="http://www.ourwatch.org.uk/knowledge-base-category/how-to-get-involved/" class="govuk-link" rel="external">Take part in your local Neighbourhood Watch</a></li>
-            <li><a href="/donating-to-charity" class="govuk-link">Make a donation to charity</a></li>
-            <li><a href="https://schoolsonline.britishcouncil.org/about-schools-online/about-programmes/connecting-classrooms" class="govuk-link" rel="external">Link up with a school overseas</a></li>
+            <li><a href="http://www.volunteerics.org/" class="govuk-link" rel="external"><%= t('get_involved.join_ics') %></a></li>
+            <li><a href="http://www.ourwatch.org.uk/knowledge-base-category/how-to-get-involved/" class="govuk-link" rel="external"><%= t('get_involved.neighbourhood_watch') %></a></li>
+            <li><a href="/donating-to-charity" class="govuk-link"><%= t('get_involved.make_donation') %></a></li>
+            <li><a href="https://schoolsonline.britishcouncil.org/about-schools-online/about-programmes/connecting-classrooms" class="govuk-link" rel="external"><%= t('get_involved.school_overseas') %></a></li>
           </ul>
         </div>
       </div>
