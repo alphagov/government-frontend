@@ -1,9 +1,0 @@
-.app-c-save-this-page {
-  border: 1px solid govuk-colour('mid-grey');
-  border-top: 2px solid govuk-colour('blue');
-  padding: govuk-spacing(4) govuk-spacing(4) 0;
-
-  @include govuk-media-query($from: desktop) {
-    display: inline-block;
-  }
-}
