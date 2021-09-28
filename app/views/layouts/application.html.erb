@@ -33,10 +33,6 @@
   <%= yield :extra_head_content %>
 </head>
 <body>
-  <% unless content_for(:simple_header) || explore_menu_variant_b? %>
-    <%= render 'govuk_publishing_components/components/government_navigation', active: active_proposition %>
-  <% end %>
-
   <div id="wrapper" class="<%= wrapper_class %>">
     <% if @content_item.show_phase_banner? %>
       <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
