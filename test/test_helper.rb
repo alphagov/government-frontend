@@ -69,10 +69,6 @@ class ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-organisation-logo")
   end
 
-  def assert_has_component_government_navigation_active(active)
-    assert page.has_css?("a", class: "active", text: active)
-  end
-
   def assert_has_contents_list(contents)
     assert page.has_css?(".gem-c-contents-list"), "Failed to find an element with a class of contents-list"
     within ".gem-c-contents-list" do
