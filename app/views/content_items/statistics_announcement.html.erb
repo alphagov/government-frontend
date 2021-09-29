@@ -42,8 +42,6 @@
       <%= render 'govuk_publishing_components/components/notice',
           title: nbsp_between_last_two_words(@content_item.forthcoming_notice_title) %>
     <% end %>
-
-    <%= render 'content_items/save_page' %>
   </div>
   <div class="govuk-grid-column-one-third">
     <%= render 'govuk_publishing_components/components/related_navigation', content_item: @content_item.content_item.parsed_content, context: :sidebar %>

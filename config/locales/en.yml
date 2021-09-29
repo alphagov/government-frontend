@@ -25,18 +25,6 @@ en:
       from:
       hide_all: hide all
       show_all: show all
-    save_this_page:
-      add_page_button: Add to your saved pages
-      confirmations:
-        page_removed:
-          message: You’ve removed this from your saved pages
-        page_saved:
-          message: You’ve added this to your saved pages
-      page_not_saved_heading: Save this page so you can come back to it later
-      page_was_saved_heading: You’ve saved this page
-      remove_page_button: Remove from your saved pages
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">See your saved pages</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Sign in</a> to see your saved pages.
     share_links:
       share_this_page: Share this page
   consultation:
