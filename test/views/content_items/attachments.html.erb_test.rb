@@ -43,4 +43,22 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
     assert_includes rendered, "gem-c-govspeak"
     assert_includes rendered, "some html"
   end
+
+  test "renders overview title when attachment title matches parent" do
+    @content_item = PublicationPresenter.new(
+      { "document_type" => "correspondence",
+        "title" => "Matching",
+        "details" => { "attachments" => [{ "id" => "attachment_id",
+                                           "title" => "Matching",
+                                           "url" => "some/url" }],
+                       "featured_attachments" => %w[attachment_id] } },
+      "/publication",
+      ApplicationController.new.view_context,
+    )
+    render(
+      partial: "content_items/context_and_title",
+    )
+
+    assert_includes rendered, "Correspondence overview:"
+  end
 end
