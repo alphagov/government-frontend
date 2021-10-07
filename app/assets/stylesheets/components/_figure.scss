@@ -4,6 +4,7 @@
 
   border-top: 1px solid $govuk-border-colour;
   padding-top: govuk-spacing(3);
+  margin: 0;
 }
 
 .app-c-figure__image {
@@ -37,7 +38,7 @@
 }
 
 .app-c-figure__figcaption-text {
-  margin-bottom: 0;
+  margin: 0;
 
   @include govuk-media-query($from: tablet) {
     margin-bottom: govuk-spacing(2);
