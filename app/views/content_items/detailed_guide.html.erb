@@ -40,7 +40,10 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/devolved_nations", national_applicability: @content_item.national_applicability || {} %>
+    <%= render "govuk_publishing_components/components/devolved_nations", {
+      national_applicability: @content_item.national_applicability || {},
+      type: @content_item.schema_name
+    } %>
 
     <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
       <%= render "govuk_publishing_components/components/print_link", {
