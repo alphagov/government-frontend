@@ -78,15 +78,15 @@ class PublicationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("statistics_publication")
     assert_has_devolved_nations_component("Applies to England", [
       {
-        text: "Northern Ireland",
+        text: "Publication for Northern Ireland",
         alternative_url: "http://www.dsdni.gov.uk/index/stats_and_research/stats-publications/stats-housing-publications/housing_stats.htm",
       },
       {
-        text: "Scotland",
+        text: "Publication for Scotland",
         alternative_url: "http://www.scotland.gov.uk/Topics/Statistics/Browse/Housing-Regeneration/HSfS",
       },
       {
-        text: "Wales",
+        text: "Publication for Wales",
         alternative_url: "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en",
       },
     ])

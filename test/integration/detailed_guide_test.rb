@@ -53,7 +53,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("national_applicability_alternative_url_detailed_guide")
     assert_has_devolved_nations_component("Applies to England, Scotland and Wales", [
       {
-        text: "Northern Ireland",
+        text: "Guidance for Northern Ireland",
         alternative_url: "http://www.dardni.gov.uk/news-dard-pa022-a-13-new-procedure-for",
       },
     ])
