@@ -148,7 +148,7 @@ class ActionDispatch::IntegrationTest
     within(".gem-c-devolved-nations") do
       assert page.has_text?(text)
       nations&.each do |nation|
-        assert page.has_link?("Guidance for #{nation[:text]}", href: nation[:alternative_url])
+        assert page.has_link?(nation[:text], href: nation[:alternative_url])
       end
     end
   end
