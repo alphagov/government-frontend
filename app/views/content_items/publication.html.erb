@@ -7,10 +7,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
-       context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-       context_locale: t_locale_fallback("content_item.schema_name.#{@content_item.document_type}", count: 1),
-       title: @content_item.title,
-       average_title_length: "long" %>
+      context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
+      context_locale: t_locale_fallback("content_item.schema_name.#{@content_item.document_type}", count: 1),
+      title: @content_item.title,
+      average_title_length: "long" %>
   </div>
   <%= render 'shared/translations' %>
 
@@ -27,7 +27,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="responsive-bottom-margin">
-      <%= render "govuk_publishing_components/components/devolved_nations", national_applicability: @content_item.national_applicability || {} %>
+      <%= render "govuk_publishing_components/components/devolved_nations", {
+        national_applicability: @content_item.national_applicability || {},
+        type: @content_item.schema_name
+      } %>
 
       <div class="responsive-bottom-margin">
         <%= render "attachments",
