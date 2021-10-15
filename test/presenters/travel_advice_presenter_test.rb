@@ -240,10 +240,11 @@ class TravelAdvicePresenterTest
 
     test "metadata avoids duplication of 'Latest update' from change description" do
       [
-        { original: "Latest update: Changes", presented: "<p>Changes</p>" },
-        { original: "Latest update - changes", presented: "<p>Changes</p>" },
-        { original: "Latest update changes", presented: "<p>Changes</p>" },
-        { original: "Latest Update: Summary of changes. Next sentence", presented: "<p>Summary of changes. Next sentence</p>" },
+        { original: "Latest update: Changes", presented: "<span class=\"metadata__update\">Changes</span>" },
+        { original: "Latest update - changes", presented: "<span class=\"metadata__update\">Changes</span>" },
+        { original: "Latest update changes", presented: "<span class=\"metadata__update\">Changes</span>" },
+        { original: "Latest Update: Summary of changes. Next sentence", presented: "<span class=\"metadata__update\">Summary of changes. Next sentence</span>" },
+        { original: "Latest update: Changes\n\nMore changes", presented: "<span class=\"metadata__update\">Changes</span>\n\n<span class=\"metadata__update\">More changes</span>" },
       ].each do |i|
         assert_equal i[:presented], present_latest(i[:original])
       end
