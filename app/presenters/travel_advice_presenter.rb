@@ -20,7 +20,7 @@ class TravelAdvicePresenter < ContentItemPresenter
       I18n.t("travel_advice.updated") => display_date(reviewed_at || updated_at),
     }
 
-    other["Latest update"] = view_context.simple_format(latest_update) if latest_update.present?
+    other["Latest update"] = view_context.simple_format(latest_update, { class: "metadata__update" }, wrapper_tag: "span") if latest_update.present?
 
     {
       other: other,
