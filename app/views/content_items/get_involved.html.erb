@@ -3,86 +3,82 @@
 
 <header class="block headings-block">
   <div class="inner-block floated-children">
-    <%= render partial: 'components/heading',
-              locals: { big: true,
-                        heading: t('get_involved.page_heading') } %>
-    <p class="intro-paragraph"> 
-    <%= t('get_involved.intro_paragraph.body_html',
+    <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.page_heading'), font_size: "xl", padding: true } %>
+    <%= render "govuk_publishing_components/components/lead_paragraph", { text: t('get_involved.intro_paragraph.body_html',
       engage_with_government: link_to(t('get_involved.intro_paragraph.engage_with_government'), "#engage-with-government"),
-      take_part: link_to(t('get_involved.intro_paragraph.take_part'), "#take-part")) %>
+      take_part: link_to(t('get_involved.intro_paragraph.take_part'), "#take-part")) } %>
   </div>
 </header>
 
 <div class="block">
   <div class="inner-block floated-children">
-    <h2 id="engage-with-government"><%= t('get_involved.engage_with_gov') %></h2>
+    <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.engage_with_gov'), font_size: "l", id: "engage-with-government" } %>
     <section class="respond-to-consultations">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3><%= t('get_involved.respond_to_consultations') %></h3>
+        <div class="column govuk-grid-column-two-thirds-from-desktop">
+          <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.respond_to_consultations'), heading_level: 3, padding: true, id: "respond-heading" } %>
+        </div>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
-        <div class="content">
-          <p><%= t('get_involved.your_views') %></p>
-        </div>
+        <p class="govuk-body"><%= t('get_involved.your_views') %></p>
       </div>
     </section>
     <section class="consultations">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <a href="<%= get_consultations_link('open-consultations') %>" class="govuk-link govuk-link--no-visited-state count">
-          <%= @open_consultation_count %>
-          <span class="context"><%= t('get_involved.open_consultations') %></span>
-        </a>
-        <a href="<%= get_consultations_link('closed-consultations') %>" class="govuk-link govuk-link--no-visited-state count">
-          <%= @closed_consultation_count %>
-          <span class="context"><%= t('get_involved.closed_consultations') %></span>
-        </a>
+        <div class="column govuk-grid-column-two-thirds-from-desktop big-numbers">
+          <%= render "govuk_publishing_components/components/big_number", {
+            number: @open_consultation_count,
+            label: t('get_involved.open_consultations'),
+            href: get_consultations_link('open-consultations'),
+          } %>
+          <%= render "govuk_publishing_components/components/big_number", {
+            number: @closed_consultation_count,
+            label: t('get_involved.closed_consultations'),
+            href: get_consultations_link('close-consultations'),
+          } %>
+        </div>
       </div>
-      <div class="consultation-lists govuk-grid-column-two-thirds-from-desktop">
+      <div class="govuk-grid-column-two-thirds-from-desktop consultation-lists">
         <div class="consultation-closing-soon">
-          <h3><%= time_until_closure(@next_closing_consultation) %></h3>
-          <ol class="document-list">
+          <%= render "govuk_publishing_components/components/heading", { text: time_until_closure(@next_closing_consultation), inverse: true, margin_bottom: 2, heading_level: 3 } %>
+          <li class="document-list">
             <%= content_tag(:li, "consultation", class: 'document-row') do %>
-              <h3><%= @next_closing_consultation['title'] %></h3>
-              <ul class="attributes">
-                <li><%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link" %></li>
-              </ul>
+              <%= render "govuk_publishing_components/components/heading", { text: @next_closing_consultation['title'], inverse: true, id: "closing-soon-title", margin_bottom: 2, heading_level: 3, font_size: "s" } %>
+              <%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link govuk-link--inverse", id: "closing-soon-link" %> 
+            </li>
             <% end %>
-          </ol>
+          </li>
         </div>
         <div>
           <div class="column govuk-grid-column-one-half-from-desktop recently-opened">
             <div class="content">
-              <h3><%= t('get_involved.recently_opened') %></h3>
-              <ol class="document-list">
-                <% @recently_opened_consultations.each do |consultation| %>
-                  <li class="document-row">
-                    <h3><%= link_to consultation['title'], consultation['link'], class: "govuk-link" %></h3>
-                    <ul class="attributes">
-                      <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
-                      <li><%= t('get_involved.closes', closing_date: date_microformat(consultation['end_date']) ) %></li>
-                      <li><%= link_to t('get_involved.read_respond'), consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
-                    </ul>
-                  </li>
-                <% end %>
-              </ol>
-              <p class="see-all"><%= link_to(t('get_involved.search_all'), get_consultations_link, class: "govuk-link" ) %></p>
+              <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.recently_opened'), heading_level: 3, font_size: "s", padding: true } %>
+              <% @recently_opened_consultations.each do |consultation| %>
+                <div class="document-row consultation-list-row">
+                  <%= link_to consultation['title'], consultation['link'], class: "govuk-link", id: "consultation-title" %>
+                  <div class="consultation-attributes" >
+                    <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
+                    <li><%= t('get_involved.closes', closing_date: date_microformat(consultation['end_date']) ) %></li>
+                    <li class="consultation-view-link"><%= link_to t('get_involved.read_respond'), consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
+                  </div>
+                </div>
+              <% end %>
             </div>
+            <%= link_to(t('get_involved.search_all'), get_consultations_link, class: "govuk-link", id: "see-all-link" ) %>
           </div>
           <div class="column govuk-grid-column-one-half-from-desktop recent-outcomes">
             <div class="content">
-              <h3><%= t('get_involved.recent_outcomes') %></h3>
-              <ol class="document-list">
-                <% @recent_consultation_outcomes.each do |consultation| %>
-                  <li class="document-row">
-                    <h3><%= link_to consultation['title'], consultation['link'], class: "govuk-link" %></h3>
-                    <ul class="attributes">
-                      <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
-                      <li><%= t('get_involved.closed_with_date', closing_date: date_microformat(consultation['end_date'])) %></li>
-                      <li><%= link_to t('get_involved.see_the_outcome'), consultation['link'], class: "govuk-link", aria: {hidden: true} %></li>
-                    </ul>
-                  </li>
-                <% end %>
-              </ol>
+              <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.recent_outcomes'), heading_level: 3, font_size: "s", padding: true } %>
+              <% @recent_consultation_outcomes.each do |consultation| %>
+                <div class="document-row consultation-list-row">
+                  <%= link_to consultation['title'], consultation['link'], class: "govuk-link", id: "consultation-title" %>
+                  <div class="consultation-attributes" >
+                    <li><% consultation['organisations'].each do |org| %> <%= org["acronym"] %> <% end %></li>
+                    <li><%= t('get_involved.closed_with_date', closing_date: date_microformat(consultation['end_date']) ) %></li>
+                    <li class="consultation-view-link"><%= link_to t('get_involved.read_respond'), consultation['link'], class: "govuk-link", aria: {hidden: true}, weight: "bold" %></li>
+                  </div>
+              </div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -91,32 +87,30 @@
     <hr class="keyline">
     <section class="start-a-petition">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3><%= t('get_involved.start_a_petition') %></h3>
+      <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.start_a_petition') } %>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
-          <p><%= t('get_involved.petition_paragraph.body_html',
-            create_a_petition: link_to(t('get_involved.petition_paragraph.create_a_petition'), "https://petition.parliament.uk/")) %>
+          <p class="govuk-body"><%= t('get_involved.petition_paragraph.body_html',
+            create_a_petition: link_to(t('get_involved.petition_paragraph.create_a_petition', class: "govuk-link", rel: "external"), "https://petition.parliament.uk/")) %>
         </div>
       </div>
     </section>
     <hr class="keyline">
     <section class="comment-follow">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3><%= t('get_involved.follow') %></h3>
+        <%= render "govuk_publishing_components/components/heading", {text: t('get_involved.follow') } %>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
-          <p><%= t('get_involved.follow_paragraph') %></p>
-          <p class="see-all"><a href="/government/organisations/" class="govuk-link"> <%= t('get_involved.see_all_dept') %></a></p>
-          <p><%= t('get_involved.active_blogs') %></p>
-          <ul class="index-list">
-            <li><a href="https://history.blog.gov.uk" class="govuk-link" rel="external"><%= t('get_involved.gov_past') %></a></li>
-            <li><a href="https://quarterly.blog.gov.uk" class="govuk-link" rel="external"><%= t('get_involved.civil_service_quarterly') %></a></li>
-            <li><a href="http://blogs.fco.gov.uk" class="govuk-link" rel="external"><%= t('get_involved.fco_bloggers') %></a></li>
-            <li><a href="https://gds.blog.gov.uk/" class="govuk-link" rel="external"><%= t('get_involved.gds_blog') %></a></li>
-            <li><a href="https://civilservice.blog.gov.uk/" class="govuk-link" rel="external"><%= t('get_involved.civil_service') %></a></li>
-          </ul>
+          <p class="govuk-body"><%= t('get_involved.follow_paragraph') %></p>
+          <p class="govuk-body"><a href="/government/organisations/" class="govuk-link" id="see-all-link"> <%= t('get_involved.see_all_dept') %></a></p>
+          <p class="govuk-body"><%= t('get_involved.active_blogs') %></p>
+            <li><a href="https://history.blog.gov.uk" class="govuk-link govuk-body" rel="external"><%= t('get_involved.gov_past') %></a></li>
+            <li><a href="https://quarterly.blog.gov.uk" class="govuk-link govuk-body" rel="external"><%= t('get_involved.civil_service_quarterly') %></a></li>
+            <li><a href="http://blogs.fco.gov.uk" class="govuk-link govuk-body" rel="external"><%= t('get_involved.fco_bloggers') %></a></li>
+            <li><a href="https://gds.blog.gov.uk/" class="govuk-link govuk-body" rel="external"><%= t('get_involved.gds_blog') %></a></li>
+            <li><a href="https://civilservice.blog.gov.uk/" class="govuk-link govuk-body" rel="external"><%= t('get_involved.civil_service') %></a></li>
         </div>
       </div>
     </section>
@@ -127,35 +121,34 @@
 <div class="block">
   <div class="inner-block floated-children">
     <section class="take-part-pages">
-      <h2 id="take-part"><%= t('get_involved.take_part') %></h2>
+      <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.take_part'), font_size: "l", id: "engage-with-government" } %>
       <% @take_part_pages.each_with_index do |take_part_page, index| %>
-        <article <% if index % 3 == 0 %> class="article-clear govuk-grid-column-one-third-from-desktop"<%else%> class="govuk-grid-column-one-third-from-desktop" <% end %>>
-          <div class="content">
-            <span class="image-holder">
-              <%= link_to image_tag(take_part_page['details']['image']['url'], alt: take_part_page['details']['image']['alt_text']), take_part_page, title: take_part_page['title'], class: 'img', tabindex: -1, aria: {hidden: true} %>
-            </span>
-            <div class="text">
-              <h3><%= link_to take_part_page['title'], take_part_page, class: "govuk-link" %></h3>
-              <p class="summary"><%= take_part_page['description'] %></p>
-            </div>
-          </div>
+        <% if index % 3 == 0 && index != 0 %> </div> <% end %>
+        <% if index % 3 == 0 %> <div class="govuk-grid-row"> <% end %>
+        <article class="govuk-grid-column-one-third-from-desktop">
+        <%= render "govuk_publishing_components/components/image_card", { 
+          href: take_part_page['base_path'],
+          image_src: take_part_page['details']['image']['url'],
+          image_alt: take_part_page['details']['image']['alt_text'],
+          heading_text: take_part_page['title'],
+          description: take_part_page['description'],
+        } %>
         </article>
+        <% if index == @take_part_pages.size-1 %> </div> <% end %>
       <% end %>
     </section>
     <hr class="keyline">
     <section class="more-ways">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
-        <h3><%= t('get_involved.more_ways') %></h3>
+        <%= render "govuk_publishing_components/components/heading", {text:t('get_involved.more_ways') } %>
       </div>
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
-          <p><%= t('get_involved.take_part_suggestions') %></p>
-          <ul class="index-list">
-            <li><a href="http://www.volunteerics.org/" class="govuk-link" rel="external"><%= t('get_involved.join_ics') %></a></li>
-            <li><a href="http://www.ourwatch.org.uk/knowledge-base-category/how-to-get-involved/" class="govuk-link" rel="external"><%= t('get_involved.neighbourhood_watch') %></a></li>
-            <li><a href="/donating-to-charity" class="govuk-link"><%= t('get_involved.make_donation') %></a></li>
-            <li><a href="https://schoolsonline.britishcouncil.org/about-schools-online/about-programmes/connecting-classrooms" class="govuk-link" rel="external"><%= t('get_involved.school_overseas') %></a></li>
-          </ul>
+          <p class="govuk-body"><%= t('get_involved.take_part_suggestions') %></p>
+          <li><a href="http://www.volunteerics.org/" class="govuk-link govuk-body" rel="external"><%= t('get_involved.join_ics') %></a></li>
+          <li><a href="http://www.ourwatch.org.uk/knowledge-base-category/how-to-get-involved/" class="govuk-link govuk-body" rel="external"><%= t('get_involved.neighbourhood_watch') %></a></li>
+          <li><a href="/donating-to-charity" class="govuk-link govuk-body"><%= t('get_involved.make_donation') %></a></li>
+          <li><a href="https://schoolsonline.britishcouncil.org/about-schools-online/about-programmes/connecting-classrooms" class="govuk-link govuk-body" rel="external"><%= t('get_involved.school_overseas') %></a></li>
         </div>
       </div>
     </section>

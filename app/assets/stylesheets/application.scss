@@ -8,8 +8,10 @@ $govuk-new-link-styles: true;
 @import 'govuk_publishing_components/govuk_frontend_support';
 @import 'govuk_publishing_components/components/attachment';
 @import 'govuk_publishing_components/components/back-link';
+@import 'govuk_publishing_components/components/big-number';
 @import 'govuk_publishing_components/components/breadcrumbs';
 @import 'govuk_publishing_components/components/button';
+@import 'govuk_publishing_components/component_support';
 @import 'govuk_publishing_components/components/contents-list';
 @import 'govuk_publishing_components/components/contextual-sidebar';
 @import 'govuk_publishing_components/components/details';
@@ -23,6 +25,7 @@ $govuk-new-link-styles: true;
 @import 'govuk_publishing_components/components/govspeak-html-publication';
 @import 'govuk_publishing_components/components/heading';
 @import 'govuk_publishing_components/components/hint';
+@import 'govuk_publishing_components/components/image-card';
 @import 'govuk_publishing_components/components/input';
 @import 'govuk_publishing_components/components/intervention';
 @import 'govuk_publishing_components/components/inverse-header';
@@ -91,8 +94,6 @@ $govuk-new-link-styles: true;
 @import 'views/help-page';
 @import 'views/guide';
 @import 'views/get-involved';
-@import 'views/headings';
-@import 'helpers/featured_news';
 
 .travel-advice-notice {
   background-color: govuk-colour("light-grey");
