@@ -12,9 +12,9 @@ describe('Webchat', function () {
 
   var INSERTION_HOOK = '<div class="js-webchat" data-availability-url="' + CHILD_BENEFIT_API_URL + '" data-open-url="' + CHILD_BENEFIT_API_URL + '" data-redirect="true">' +
     '<div class="js-webchat-advisers-error">Error</div>' +
-    '<div class="js-webchat-advisers-unavailable hidden">Unavailable</div>' +
-    '<div class="js-webchat-advisers-busy hidden">Busy</div>' +
-    '<div class="js-webchat-advisers-available hidden">' +
+    '<div class="js-webchat-advisers-unavailable govuk-!-display-none">Unavailable</div>' +
+    '<div class="js-webchat-advisers-busy govuk-!-display-none">Busy</div>' +
+    '<div class="js-webchat-advisers-available govuk-!-display-none">' +
       'Available, <div class="js-webchat-open-button">chat now</div>' +
     '</div>' +
   '</div>'
@@ -69,11 +69,11 @@ describe('Webchat', function () {
         options.success(jsonNormalisedAvailable)
       })
       mount()
-      expect($advisersAvailable.hasClass('hidden')).toBe(false)
+      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
 
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersError.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersError.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
     })
 
     it('should inform user whether advisors are unavailable', function () {
@@ -81,11 +81,11 @@ describe('Webchat', function () {
         options.success(jsonNormalisedUnavailable)
       })
       mount()
-      expect($advisersUnavailable.hasClass('hidden')).toBe(false)
+      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(false)
 
-      expect($advisersAvailable.hasClass('hidden')).toBe(true)
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersError.hasClass('hidden')).toBe(true)
+      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersError.hasClass('govuk-!-display-none')).toBe(true)
     })
 
     it('should inform user whether advisors are busy', function () {
@@ -93,11 +93,11 @@ describe('Webchat', function () {
         options.success(jsonNormalisedBusy)
       })
       mount()
-      expect($advisersBusy.hasClass('hidden')).toBe(false)
+      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(false)
 
-      expect($advisersAvailable.hasClass('hidden')).toBe(true)
-      expect($advisersError.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersError.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
     })
 
     it('should inform user whether there was an error', function () {
@@ -105,11 +105,11 @@ describe('Webchat', function () {
         options.success(jsonNormalisedError)
       })
       mount()
-      expect($advisersError.hasClass('hidden')).toBe(false)
+      expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
 
-      expect($advisersAvailable.hasClass('hidden')).toBe(true)
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
     })
 
     it('should only track once per state change', function () {
@@ -136,18 +136,18 @@ describe('Webchat', function () {
       })
 
       mount()
-      expect($advisersAvailable.hasClass('hidden')).toBe(false)
+      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
 
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersError.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersError.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
 
       clock.tick(POLL_INTERVAL)
 
-      expect($advisersError.hasClass('hidden')).toBe(false)
-      expect($advisersAvailable.hasClass('hidden')).toBe(true)
-      expect($advisersBusy.hasClass('hidden')).toBe(true)
-      expect($advisersUnavailable.hasClass('hidden')).toBe(true)
+      expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
+      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
+      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
       expect(analyticsCalled).toBe(2)
       expect(analyticsReceived).toEqual(analyticsExpects)
       clock.tick(POLL_INTERVAL)

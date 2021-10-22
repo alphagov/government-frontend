@@ -12,13 +12,13 @@
       <span class="js-webchat-advisers-error">
         <%= t("shared.webchat.technical_problem") %>
       </span>
-      <span class="js-webchat-advisers-unavailable hidden">
+      <span class="js-webchat-advisers-unavailable govuk-!-display-none">
         <%= t("shared.webchat.closed") %>
       </span>
-      <span class="js-webchat-advisers-busy hidden">
+      <span class="js-webchat-advisers-busy govuk-!-display-none">
         <%= t("shared.webchat.busy") %>
       </span>
-      <span class="js-webchat-advisers-available hidden">
+      <span class="js-webchat-advisers-available govuk-!-display-none">
         <%= t("shared.webchat.available") %>
         <a href="#" data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true' : 'false' %>" rel="external" class="js-webchat-open-button"><%= t("shared.webchat.speak_to_adviser") %></a>.
       </span>
