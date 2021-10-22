@@ -91,8 +91,8 @@
     function advisorStateChange (state) {
       state = state.toLowerCase()
       var currentState = $el.find('.' + webchatStateClass + state)
-      $el.find('[class^="' + webchatStateClass + '"]').addClass('hidden')
-      currentState.removeClass('hidden')
+      $el.find('[class^="' + webchatStateClass + '"]').addClass('govuk-!-display-none')
+      currentState.removeClass('govuk-!-display-none')
       trackEvent(state)
     }
 
