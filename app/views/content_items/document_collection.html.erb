@@ -26,7 +26,7 @@
     <%= render 'components/important-metadata',
         items: @content_item.important_metadata %>
 
-    <%= render 'govuk_publishing_components/components/intervention' if should_show_sab_intervention? %>
+    <%= render 'govuk_publishing_components/components/intervention', { suggestion_text: "OK" } if should_show_sab_intervention? %>
 
     <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
       <div class="responsive-bottom-margin">

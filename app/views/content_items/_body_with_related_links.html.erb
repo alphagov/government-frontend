@@ -9,7 +9,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="responsive-bottom-margin">
-      <%= render 'govuk_publishing_components/components/intervention' if should_show_sab_intervention? %>
+      <%= render 'govuk_publishing_components/components/intervention', { suggestion_text: "OK" } if should_show_sab_intervention? %>
 
       <%= render 'govuk_publishing_components/components/govspeak', {
         direction: page_text_direction,
