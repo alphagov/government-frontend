@@ -13,65 +13,65 @@
   Modules.StickyElementContainer = function () {
     var self = this
 
-    self._getWindowDimensions = function _getWindowDimensions () {
+    self.getWindowDimensions = function () {
       return {
         height: root.innerHeight,
         width: root.innerWidth
       }
     }
 
-    self._getWindowPositions = function _getWindowPositions () {
+    self.getWindowPositions = function () {
       return {
         scrollTop: root.scrollY
       }
     }
 
-    self.start = function start ($el) {
-      $el = $el[0]
-      var $element = $el.querySelector('[data-sticky-element]')
+    self.start = function ($el) {
+      var el = $el[0]
+      var element = el.querySelector('[data-sticky-element]')
 
-      var _hasResized = true
-      var _hasScrolled = true
-      var _interval = 50
-      var _windowVerticalPosition = 1
-      var _startPosition, _stopPosition
+      var hasResized = true
+      var hasScrolled = true
+      var interval = 50
+      var windowVerticalPosition = 1
+      var startPosition, stopPosition
 
       initialise()
 
       function initialise () {
         root.onresize = onResize
         root.onscroll = onScroll
-        setInterval(checkResize, _interval)
-        setInterval(checkScroll, _interval)
+        setInterval(checkResize, interval)
+        setInterval(checkScroll, interval)
         checkResize()
         checkScroll()
-        $element.classList.add('sticky-element--enabled')
+        element.classList.add('sticky-element--enabled')
       }
 
       function onResize () {
-        _hasResized = true
+        hasResized = true
       }
 
       function onScroll () {
-        _hasScrolled = true
+        hasScrolled = true
       }
 
       function checkResize () {
-        if (_hasResized) {
-          _hasResized = false
-          _hasScrolled = true
+        if (hasResized) {
+          hasResized = false
+          hasScrolled = true
 
-          var windowDimensions = self._getWindowDimensions()
-          _startPosition = $el.offsetTop
-          _stopPosition = $el.offsetTop + $el.offsetHeight - windowDimensions.height
+          var windowDimensions = self.getWindowDimensions()
+          startPosition = el.offsetTop
+          stopPosition = el.offsetTop + el.offsetHeight - windowDimensions.height
         }
       }
 
       function checkScroll () {
-        if (_hasScrolled) {
-          _hasScrolled = false
+        if (hasScrolled) {
+          hasScrolled = false
 
-          _windowVerticalPosition = self._getWindowPositions().scrollTop
+          windowVerticalPosition = self.getWindowPositions().scrollTop
 
           updateVisibility()
           updatePosition()
@@ -79,7 +79,7 @@
       }
 
       function updateVisibility () {
-        var isPastStart = _startPosition < _windowVerticalPosition
+        var isPastStart = startPosition < windowVerticalPosition
         if (isPastStart) {
           show()
         } else {
@@ -88,7 +88,7 @@
       }
 
       function updatePosition () {
-        var isPastEnd = _stopPosition < _windowVerticalPosition
+        var isPastEnd = stopPosition < windowVerticalPosition
         if (isPastEnd) {
           stickToParent()
         } else {
@@ -97,19 +97,19 @@
       }
 
       function stickToWindow () {
-        $element.classList.add('sticky-element--stuck-to-window')
+        element.classList.add('sticky-element--stuck-to-window')
       }
 
       function stickToParent () {
-        $element.classList.remove('sticky-element--stuck-to-window')
+        element.classList.remove('sticky-element--stuck-to-window')
       }
 
       function show () {
-        $element.classList.remove('sticky-element--hidden')
+        element.classList.remove('sticky-element--hidden')
       }
 
       function hide () {
-        $element.classList.add('sticky-element--hidden')
+        element.classList.add('sticky-element--hidden')
       }
     }
   }
