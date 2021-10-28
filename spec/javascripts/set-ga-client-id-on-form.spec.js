@@ -2,9 +2,9 @@ var $ = window.jQuery
 
 describe('SetGaClientIdOnForm', function () {
   var GOVUK = window.GOVUK
-  var tracker = { clientId: 'clientId' }
-  tracker.get = function (arg) { return this[arg] }
-  window.ga = function (callback) { callback(tracker) }
+  var mockTracker = { clientId: 'clientId' }
+  mockTracker.get = function (arg) { return this[arg] }
+  window.ga = function (callback) { callback(mockTracker) }
   var form
 
   beforeEach(function () {
