@@ -300,6 +300,50 @@ en:
     alt_text: Ministry of Defence crest
     field_of_operation: Field of operation
     operations_in: Operations in %{location}
+  get_involved:
+    active_blogs: "Some active government blogs include:"
+    civil_service_quarterly: Civil Service Quarterly
+    civil_service: Civil Service
+    closed: Closed
+    closed_consultations: Closed consultations in the past 12 months
+    closed_with_date: Closed %{closing_date}
+    closes: Closes %{closing_date}
+    closing_today: Closing today
+    closing_tomorrow: Closing tomorrow
+    cs_head: Head of the Civil Service
+    days_left: "%{number_of_days} days left"
+    engage_with_gov: Engage with government
+    fco_bloggers: FCO bloggers
+    follow: Follow a blog or social media channel
+    follow_paragraph: For an instant way to interact with government departments, try their social media streams. These are listed under 'Follow us' on the department's home page. As well as access to blogs, audio, video and more, you can comment, debate and rate.
+    gds_blog: Government Digital Service
+    gov_past: History of Government
+    intro_paragraph:
+      body_html: Find out how you can %{engage_with_government} directly, and %{take_part} locally, nationally or internationally.
+      engage_with_government: engage with government
+      take_part: take part
+    join_ics: Join the International Citizen Service (18- to 25-year-olds)
+    make_donation: Make a donation to charity
+    more_ways: More ways to take part
+    neighbourhood_watch: Take part in your local Neighbourhood Watch
+    open_consultations: Open consultations
+    page_heading: Get Involved
+    page_title: Get Involved
+    petition_paragraph:
+      body_html: You can %{create_a_petition} to influence government and Parliament. If the petition gets at least 100,000 online signatures, it will be considered for debate in the House of Commons.
+      create_a_petition: create a petition
+    read_respond: Read and respond
+    recent_outcomes: Recent outcomes
+    recently_opened: Recently opened
+    respond_to_consultations: Respond to consultations
+    school_overseas: Link up with a school overseas
+    search_all: Search all consultations
+    see_all_dept: See all government departments
+    see_the_outcome: See the outcome
+    start_a_petition: Start a petition
+    take_part: Take part
+    take_part_suggestions: Many people are already volunteering, donating and contributing, both in the UK and abroad. If you'd like to join them, but dont know where to start, here's a list of suggestions
+    your_views: You can give your views on new or changing government policies by responding to consultations. Government departments take these responses into consideration before making decisions.
   gone:
     page_title: No longer available
     published_in_error: The information on this page has been removed because it was published in error.

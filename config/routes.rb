@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get "/government/uploads/*path" => "asset_manager_redirect#show", format: false
 
+  get "/government/get-involved" => "get_involved#show"
+
   get "*path/:variant" => "content_items#show",
       constraints: {
         variant: /print/,

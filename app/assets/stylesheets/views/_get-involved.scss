@@ -1,0 +1,124 @@
+.get-involved {
+  // Disabled due to many govuk_publishing_components requiring IDs over classes.
+  // stylelint-disable selector-max-id
+
+  list-style: none;
+
+  .govuk-link {
+    line-height: 1.16;
+  }
+
+  #engage-with-government {
+    border-bottom-style: solid;
+    padding-bottom: 5px;
+    border-bottom-width: 5px;
+    font-weight: normal;
+  }
+
+  .respond-to-consultations {
+    .govuk-grid-column-two-thirds-from-desktop {
+      padding: 20px 0 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  #respond-heading {
+    padding: 0;
+  }
+
+  .big-numbers {
+    padding: 0;
+  }
+
+  .recently-opened {
+    padding: 0;
+  }
+
+  .govuk-grid-column-two-thirds-from-desktop {
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .govuk-grid-column-one-third-from-desktop {
+    padding: 0;
+  }
+
+  .consultation-lists {
+    padding: 0;
+  }
+
+  .gem-c-big-number {
+    margin-top: 10px;
+  }
+
+  .consultation-closing-soon {
+    background-color: govuk-colour("dark-blue");
+    padding: govuk-spacing(3) govuk-spacing(3);
+  }
+
+  #closing-soon-title {
+    border-bottom-style: solid;
+    padding-bottom: 5px;
+    border-bottom-width: 1px;
+    font-weight: normal;
+  }
+
+  #closing-soon-link {
+    @include govuk-font(19);
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  #consultation-title {
+    @include govuk-font(19);
+  }
+
+  .consultation-list-row {
+    float: left;
+    padding: 0 0 10px;
+  }
+
+  .consultation-attributes {
+    @include govuk-font(14);
+    padding-top: 5px;
+
+    li {
+      float: left;
+      padding-right: 10px;
+    }
+
+    .consultation-view-link {
+      font-weight: bold;
+      margin-right: 30px; //force onto new line
+    }
+  }
+
+  #see-all-link {
+    @include govuk-font(19);
+    font-weight: bold;
+  }
+
+  .keyline {
+    margin: 30px 15px;
+  }
+
+  .comment-follow {
+    li {
+      border-bottom: 1px solid $govuk-border-colour;
+      padding: 1px 0 7px;
+    }
+  }
+
+  .more-ways {
+    li {
+      border-bottom: 1px solid $govuk-border-colour;
+      padding: 1px 0 7px;
+    }
+  }
+
+  .take-part-pages {
+    .govuk-grid-column-one-third-from-desktop {
+      padding: 15px 15px 0;
+    }
+  }
+}

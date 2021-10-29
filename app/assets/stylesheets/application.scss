@@ -8,8 +8,10 @@ $govuk-new-link-styles: true;
 @import 'govuk_publishing_components/govuk_frontend_support';
 @import 'govuk_publishing_components/components/attachment';
 @import 'govuk_publishing_components/components/back-link';
+@import 'govuk_publishing_components/components/big-number';
 @import 'govuk_publishing_components/components/breadcrumbs';
 @import 'govuk_publishing_components/components/button';
+@import 'govuk_publishing_components/component_support';
 @import 'govuk_publishing_components/components/contents-list';
 @import 'govuk_publishing_components/components/contextual-sidebar';
 @import 'govuk_publishing_components/components/details';
@@ -23,6 +25,7 @@ $govuk-new-link-styles: true;
 @import 'govuk_publishing_components/components/govspeak-html-publication';
 @import 'govuk_publishing_components/components/heading';
 @import 'govuk_publishing_components/components/hint';
+@import 'govuk_publishing_components/components/image-card';
 @import 'govuk_publishing_components/components/input';
 @import 'govuk_publishing_components/components/intervention';
 @import 'govuk_publishing_components/components/inverse-header';
@@ -49,6 +52,7 @@ $govuk-new-link-styles: true;
 // government-frontend mixins
 @import 'mixins/margins';
 @import 'mixins/white-links';
+@import 'mixins/typography';
 
 // helpers for common page elements
 @import 'helpers/sidebar-with-body';
@@ -88,4 +92,25 @@ $govuk-new-link-styles: true;
 @import 'views/specialist-document';
 @import 'views/answer';
 @import 'views/help-page';
-@import "views/guide";
+@import 'views/guide';
+@import 'views/get-involved';
+
+.travel-advice-notice {
+  background-color: govuk-colour("light-grey");
+  border: 1px solid $govuk-border-colour;
+  margin-bottom: govuk-spacing(7);
+  position: relative;
+}
+
+.travel-advice-notice__header {
+  padding: govuk-spacing(4) govuk-spacing(4) 0 govuk-spacing(3);
+}
+
+.travel-advice-notice__content {
+  margin-top: - govuk-spacing(3);
+  padding: 0 govuk-spacing(4) 0 govuk-spacing(9);
+}
+
+.travel-advice-notice__icon {
+  margin-left: govuk-spacing(3);
+}
