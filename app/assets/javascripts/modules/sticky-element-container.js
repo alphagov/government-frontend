@@ -62,8 +62,9 @@
           hasScrolled = true
 
           var windowDimensions = self.getWindowDimensions()
+          var elementHeight = el.offsetHeight || parseFloat(el.style.height.replace('px', ''))
           startPosition = el.offsetTop
-          stopPosition = el.offsetTop + el.offsetHeight - windowDimensions.height
+          stopPosition = el.offsetTop + elementHeight - windowDimensions.height
         }
       }
 
