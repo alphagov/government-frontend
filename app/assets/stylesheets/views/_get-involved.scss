@@ -8,7 +8,13 @@
     line-height: 1.16;
   }
 
-  #engage-with-government {
+  .govuk-section-break {
+    clear: both;
+  }
+
+  #engage-with-government,
+  #take-part {
+    clear: both;
     border-bottom-style: solid;
     padding-bottom: 5px;
     border-bottom-width: 5px;
@@ -96,10 +102,6 @@
   #see-all-link {
     @include govuk-font(19);
     font-weight: bold;
-  }
-
-  .keyline {
-    margin: 30px 15px;
   }
 
   .comment-follow {

@@ -1,14 +1,10 @@
 <% page_title %>
 <% page_class "get-involved" %>
 
-<header class="block headings-block">
-  <div class="inner-block floated-children">
-    <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.page_heading'), font_size: "xl", padding: true } %>
-    <%= render "govuk_publishing_components/components/lead_paragraph", { text: t('get_involved.intro_paragraph.body_html',
-      engage_with_government: link_to(t('get_involved.intro_paragraph.engage_with_government'), "#engage-with-government"),
-      take_part: link_to(t('get_involved.intro_paragraph.take_part'), "#take-part")) } %>
-  </div>
-</header>
+<%= render "govuk_publishing_components/components/title", { title: t('get_involved.page_heading') } %>
+<%= render "govuk_publishing_components/components/lead_paragraph", { text: t('get_involved.intro_paragraph.body_html',
+  engage_with_government: link_to(t('get_involved.intro_paragraph.engage_with_government'), "#engage-with-government", class: "govuk-link"),
+  take_part: link_to(t('get_involved.intro_paragraph.take_part'), "#take-part", class: "govuk-link")) } %>
 
 <div class="block">
   <div class="inner-block floated-children">
@@ -44,8 +40,7 @@
           <li class="document-list">
             <%= content_tag(:li, "consultation", class: 'document-row') do %>
               <%= render "govuk_publishing_components/components/heading", { text: @next_closing_consultation['title'], inverse: true, id: "closing-soon-title", margin_bottom: 2, heading_level: 3, font_size: "s" } %>
-              <%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link govuk-link--inverse", id: "closing-soon-link" %> 
-            </li>
+              <%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link govuk-link--inverse", id: "closing-soon-link" %>
             <% end %>
           </li>
         </div>
@@ -84,7 +79,9 @@
         </div>
       </div>
     </section>
-    <hr class="keyline">
+
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l">
+
     <section class="start-a-petition">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
       <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.start_a_petition') } %>
@@ -92,11 +89,13 @@
       <div class="column govuk-grid-column-two-thirds-from-desktop">
         <div class="content">
           <p class="govuk-body"><%= t('get_involved.petition_paragraph.body_html',
-            create_a_petition: link_to(t('get_involved.petition_paragraph.create_a_petition', class: "govuk-link", rel: "external"), "https://petition.parliament.uk/")) %>
+            create_a_petition: link_to(t('get_involved.petition_paragraph.create_a_petition'), "https://petition.parliament.uk/", class: "govuk-link", rel: "external")) %>
         </div>
       </div>
     </section>
-    <hr class="keyline">
+
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l">
+
     <section class="comment-follow">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
         <%= render "govuk_publishing_components/components/heading", {text: t('get_involved.follow') } %>
@@ -121,12 +120,12 @@
 <div class="block">
   <div class="inner-block floated-children">
     <section class="take-part-pages">
-      <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.take_part'), font_size: "l", id: "engage-with-government" } %>
+      <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.take_part'), font_size: "l", id: "take-part" } %>
       <% @take_part_pages.each_with_index do |take_part_page, index| %>
         <% if index % 3 == 0 && index != 0 %> </div> <% end %>
         <% if index % 3 == 0 %> <div class="govuk-grid-row"> <% end %>
         <article class="govuk-grid-column-one-third-from-desktop">
-        <%= render "govuk_publishing_components/components/image_card", { 
+        <%= render "govuk_publishing_components/components/image_card", {
           href: take_part_page['base_path'],
           image_src: take_part_page['details']['image']['url'],
           image_alt: take_part_page['details']['image']['alt_text'],
@@ -137,7 +136,7 @@
         <% if index == @take_part_pages.size-1 %> </div> <% end %>
       <% end %>
     </section>
-    <hr class="keyline">
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--l">
     <section class="more-ways">
       <div class="head-section govuk-grid-column-one-third-from-desktop">
         <%= render "govuk_publishing_components/components/heading", {text:t('get_involved.more_ways') } %>
