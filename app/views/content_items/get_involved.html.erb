@@ -45,7 +45,6 @@
             <%= content_tag(:li, "consultation", class: 'document-row') do %>
               <%= render "govuk_publishing_components/components/heading", { text: @next_closing_consultation['title'], inverse: true, id: "closing-soon-title", margin_bottom: 2, heading_level: 3, font_size: "s" } %>
               <%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link govuk-link--inverse", id: "closing-soon-link" %>
-            </li>
             <% end %>
           </li>
         </div>
