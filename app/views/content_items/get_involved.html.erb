@@ -1,14 +1,10 @@
 <% page_title %>
 <% page_class "get-involved" %>
 
-<header class="block headings-block">
-  <div class="inner-block floated-children">
-    <%= render "govuk_publishing_components/components/heading", { text: t('get_involved.page_heading'), font_size: "xl", padding: true } %>
-    <%= render "govuk_publishing_components/components/lead_paragraph", { text: t('get_involved.intro_paragraph.body_html',
-      engage_with_government: link_to(t('get_involved.intro_paragraph.engage_with_government'), "#engage-with-government", class: "govuk-link"),
-      take_part: link_to(t('get_involved.intro_paragraph.take_part'), "#take-part", class: "govuk-link")) } %>
-  </div>
-</header>
+<%= render "govuk_publishing_components/components/title", { title: t('get_involved.page_heading') } %>
+<%= render "govuk_publishing_components/components/lead_paragraph", { text: t('get_involved.intro_paragraph.body_html',
+  engage_with_government: link_to(t('get_involved.intro_paragraph.engage_with_government'), "#engage-with-government", class: "govuk-link"),
+  take_part: link_to(t('get_involved.intro_paragraph.take_part'), "#take-part", class: "govuk-link")) } %>
 
 <div class="block">
   <div class="inner-block floated-children">
