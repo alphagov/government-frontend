@@ -7,7 +7,7 @@
   Use 'data-module="sticky-element-container"' to instantiate, and add
   `[data-sticky-element]` to the child you want to position.
 */
-(function (Modules, root) {
+(function (Modules) {
   'use strict'
 
   Modules.StickyElementContainer = function () {
@@ -15,20 +15,20 @@
 
     self.getWindowDimensions = function () {
       return {
-        height: root.innerHeight,
-        width: root.innerWidth
+        height: window.innerHeight,
+        width: window.innerWidth
       }
     }
 
     self.getWindowPositions = function () {
       return {
-        scrollTop: root.scrollY
+        scrollTop: window.scrollY
       }
     }
 
     self.start = function ($el) {
-      var el = $el[0]
-      var element = el.querySelector('[data-sticky-element]')
+      var wrapper = $el[0]
+      var stickyElement = wrapper.querySelector('[data-sticky-element]')
 
       var hasResized = true
       var hasScrolled = true
@@ -39,13 +39,13 @@
       initialise()
 
       function initialise () {
-        root.onresize = onResize
-        root.onscroll = onScroll
+        window.onresize = onResize
+        window.onscroll = onScroll
         setInterval(checkResize, interval)
         setInterval(checkScroll, interval)
         checkResize()
         checkScroll()
-        element.classList.add('sticky-element--enabled')
+        stickyElement.classList.add('sticky-element--enabled')
       }
 
       function onResize () {
@@ -62,9 +62,9 @@
           hasScrolled = true
 
           var windowDimensions = self.getWindowDimensions()
-          var elementHeight = el.offsetHeight || parseFloat(el.style.height.replace('px', ''))
-          startPosition = el.offsetTop
-          stopPosition = el.offsetTop + elementHeight - windowDimensions.height
+          var elementHeight = wrapper.offsetHeight || parseFloat(wrapper.style.height.replace('px', ''))
+          startPosition = wrapper.offsetTop
+          stopPosition = wrapper.offsetTop + elementHeight - windowDimensions.height
         }
       }
 
@@ -98,20 +98,20 @@
       }
 
       function stickToWindow () {
-        element.classList.add('sticky-element--stuck-to-window')
+        stickyElement.classList.add('sticky-element--stuck-to-window')
       }
 
       function stickToParent () {
-        element.classList.remove('sticky-element--stuck-to-window')
+        stickyElement.classList.remove('sticky-element--stuck-to-window')
       }
 
       function show () {
-        element.classList.remove('sticky-element--hidden')
+        stickyElement.classList.remove('sticky-element--hidden')
       }
 
       function hide () {
-        element.classList.add('sticky-element--hidden')
+        stickyElement.classList.add('sticky-element--hidden')
       }
     }
   }
-})(window.GOVUK.Modules, window)
+})(window.GOVUK.Modules)
