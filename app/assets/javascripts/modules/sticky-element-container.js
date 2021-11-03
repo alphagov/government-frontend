@@ -7,72 +7,72 @@
   Use 'data-module="sticky-element-container"' to instantiate, and add
   `[data-sticky-element]` to the child you want to position.
 */
-(function (Modules, root) {
+(function (Modules) {
   'use strict'
-
-  var $ = root.$
-  var $window = $(root)
 
   Modules.StickyElementContainer = function () {
     var self = this
 
-    self._getWindowDimensions = function _getWindowDimensions () {
+    self.getWindowDimensions = function () {
       return {
-        height: $window.height(),
-        width: $window.width()
+        height: window.innerHeight,
+        width: window.innerWidth
       }
     }
 
-    self._getWindowPositions = function _getWindowPositions () {
+    self.getWindowPositions = function () {
       return {
-        scrollTop: $window.scrollTop()
+        scrollTop: window.scrollY
       }
     }
 
-    self.start = function start ($el) {
-      var $element = $el.find('[data-sticky-element]')
-      var _hasResized = true
-      var _hasScrolled = true
-      var _interval = 50
-      var _windowVerticalPosition = 1
-      var _startPosition, _stopPosition
+    self.start = function ($el) {
+      var wrapper = $el[0]
+      var stickyElement = wrapper.querySelector('[data-sticky-element]')
+
+      var hasResized = true
+      var hasScrolled = true
+      var interval = 50
+      var windowVerticalPosition = 1
+      var startPosition, stopPosition
 
       initialise()
 
       function initialise () {
-        $window.resize(onResize)
-        $window.scroll(onScroll)
-        setInterval(checkResize, _interval)
-        setInterval(checkScroll, _interval)
+        window.onresize = onResize
+        window.onscroll = onScroll
+        setInterval(checkResize, interval)
+        setInterval(checkScroll, interval)
         checkResize()
         checkScroll()
-        $element.addClass('sticky-element--enabled')
+        stickyElement.classList.add('sticky-element--enabled')
       }
 
       function onResize () {
-        _hasResized = true
+        hasResized = true
       }
 
       function onScroll () {
-        _hasScrolled = true
+        hasScrolled = true
       }
 
       function checkResize () {
-        if (_hasResized) {
-          _hasResized = false
-          _hasScrolled = true
+        if (hasResized) {
+          hasResized = false
+          hasScrolled = true
 
-          var windowDimensions = self._getWindowDimensions()
-          _startPosition = $el.offset().top
-          _stopPosition = $el.offset().top + $el.height() - windowDimensions.height
+          var windowDimensions = self.getWindowDimensions()
+          var elementHeight = wrapper.offsetHeight || parseFloat(wrapper.style.height.replace('px', ''))
+          startPosition = wrapper.offsetTop
+          stopPosition = wrapper.offsetTop + elementHeight - windowDimensions.height
         }
       }
 
       function checkScroll () {
-        if (_hasScrolled) {
-          _hasScrolled = false
+        if (hasScrolled) {
+          hasScrolled = false
 
-          _windowVerticalPosition = self._getWindowPositions().scrollTop
+          windowVerticalPosition = self.getWindowPositions().scrollTop
 
           updateVisibility()
           updatePosition()
@@ -80,7 +80,7 @@
       }
 
       function updateVisibility () {
-        var isPastStart = _startPosition < _windowVerticalPosition
+        var isPastStart = startPosition < windowVerticalPosition
         if (isPastStart) {
           show()
         } else {
@@ -89,7 +89,7 @@
       }
 
       function updatePosition () {
-        var isPastEnd = _stopPosition < _windowVerticalPosition
+        var isPastEnd = stopPosition < windowVerticalPosition
         if (isPastEnd) {
           stickToParent()
         } else {
@@ -98,20 +98,20 @@
       }
 
       function stickToWindow () {
-        $element.addClass('sticky-element--stuck-to-window')
+        stickyElement.classList.add('sticky-element--stuck-to-window')
       }
 
       function stickToParent () {
-        $element.removeClass('sticky-element--stuck-to-window')
+        stickyElement.classList.remove('sticky-element--stuck-to-window')
       }
 
       function show () {
-        $element.removeClass('sticky-element--hidden')
+        stickyElement.classList.remove('sticky-element--hidden')
       }
 
       function hide () {
-        $element.addClass('sticky-element--hidden')
+        stickyElement.classList.add('sticky-element--hidden')
       }
     }
   }
-})(window.GOVUK.Modules, window)
+})(window.GOVUK.Modules)

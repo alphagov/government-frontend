@@ -21,7 +21,7 @@ describe('A sticky-element-container module', function () {
 
     describe('on desktop', function () {
       beforeEach(function () {
-        instance._getWindowDimensions = function () {
+        instance.getWindowDimensions = function () {
           return {
             height: 768,
             width: 1024
@@ -36,7 +36,7 @@ describe('A sticky-element-container module', function () {
       })
 
       it('shows the element, stuck to the window, when scrolled in the middle', function () {
-        instance._getWindowPositions = function () {
+        instance.getWindowPositions = function () {
           return {
             scrollTop: 5000
           }
@@ -48,7 +48,7 @@ describe('A sticky-element-container module', function () {
       })
 
       it('shows the element, stuck to the parent, when scrolled at the bottom', function () {
-        instance._getWindowPositions = function () {
+        instance.getWindowPositions = function () {
           return {
             scrollTop: 9800
           }
