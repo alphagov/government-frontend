@@ -28,7 +28,6 @@ end
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "i18n-tasks"
   gem "pry"
   gem "wraith"
 end
