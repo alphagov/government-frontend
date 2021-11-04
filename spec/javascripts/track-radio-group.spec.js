@@ -23,13 +23,19 @@ describe('A radio group tracker', function () {
       '</div>'
     )
 
-    tracker = new GOVUK.Modules.TrackRadioGroup()
-    tracker.start(element)
+    $(document.body).append(element)
+
+    tracker = new GOVUK.Modules.TrackRadioGroup(element[0])
+    tracker.init()
+  })
+
+  afterEach(function () {
+    element.remove()
   })
 
   it('tracks government-gateway checked radio when clicking submit', function () {
     element.find('input[value="government-gateway"]').trigger('click')
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'Radio button chosen', 'government-gateway', { transport: 'beacon' }
@@ -38,7 +44,7 @@ describe('A radio group tracker', function () {
 
   it('tracks govuk-verify checked radio when clicking submit', function () {
     element.find('input[value="govuk-verify"]').trigger('click')
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'Radio button chosen', 'govuk-verify', { transport: 'beacon' }
@@ -52,7 +58,7 @@ describe('A radio group tracker', function () {
     }
     tracker.trackVerifyUser(element, data)
     element.find('input[value="govuk-verify"]').trigger('click')
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'verify-hint', 'shown', { transport: 'beacon' }
@@ -75,7 +81,7 @@ describe('A radio group tracker', function () {
       'verify-hint', 'shown', { transport: 'beacon' }
     )
     element.find('input[value="govuk-verify"]').trigger('click')
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'Radio button chosen', 'govuk-verify', { transport: 'beacon' }
@@ -92,7 +98,7 @@ describe('A radio group tracker', function () {
     }
     tracker.trackVerifyUser(element, data)
     element.find('input[value="govuk-verify"]').trigger('click')
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).not.toHaveBeenCalledWith(
       'verify-hint', 'shown', { transport: 'beacon' }
@@ -109,7 +115,7 @@ describe('A radio group tracker', function () {
     var data = null
     tracker.trackVerifyUser(element, data)
     element.find('input[value="govuk-verify"]').trigger('click')
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).not.toHaveBeenCalledWith(
       'verify-hint', 'shown', { transport: 'beacon' }
@@ -126,7 +132,7 @@ describe('A radio group tracker', function () {
     var data = 'string'
     tracker.trackVerifyUser(element, data)
     element.find('input[value="govuk-verify"]').trigger('click')
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).not.toHaveBeenCalledWith(
       'verify-hint', 'shown', { transport: 'beacon' }
@@ -140,7 +146,7 @@ describe('A radio group tracker', function () {
   })
 
   it('tracks no choice when clicking submit and checked nothing', function () {
-    element.find('form').trigger('submit')
+    element.find('button').trigger('click')
 
     expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
       'Radio button chosen', 'submitted-without-choosing', { transport: 'beacon' }
@@ -160,8 +166,8 @@ describe('A radio group tracker', function () {
       $form.attr('data-tracking-domain', 'test.service.gov.uk')
       $form.attr('data-tracking-name', 'testTracker')
 
-      tracker = new GOVUK.Modules.TrackRadioGroup()
-      tracker.start($form)
+      tracker = new GOVUK.Modules.TrackRadioGroup($form[0])
+      tracker.init()
     })
 
     it('adds a linked tracker as the module is started', function () {
@@ -172,7 +178,7 @@ describe('A radio group tracker', function () {
 
     it('sends an event to the linked tracker when the form is submitted', function () {
       $form.find('input[value="govuk-verify"]').trigger('click')
-      $form.trigger('submit')
+      $form.find('button').trigger('click')
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
         'Radio button chosen', 'govuk-verify-with-hint', { trackerName: 'testTracker', transport: 'beacon' }
