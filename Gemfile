@@ -12,7 +12,6 @@ gem "plek"
 gem "rack_strip_client_ip"
 gem "rails-controller-testing"
 gem "rails-i18n"
-gem "rails_translation_manager"
 gem "sassc-rails"
 gem "slimmer"
 gem "uglifier"
@@ -22,13 +21,13 @@ group :development, :test do
   gem "govuk_test"
   gem "jasmine"
   gem "jasmine_selenium_runner"
+  gem "rails_translation_manager"
   gem "rubocop-govuk"
 end
 
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "i18n-tasks"
   gem "pry"
   gem "wraith"
 end
