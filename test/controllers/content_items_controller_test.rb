@@ -366,6 +366,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
+  test "sets GOVUK-Account-Session-Flash in the Vary header" do
+    content_item = content_store_has_schema_example("case_study", "case_study")
+    get :show, params: { path: path_for(content_item) }
+
+    assert response.headers["Vary"].include?("GOVUK-Account-Session-Flash")
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale

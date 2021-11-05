@@ -1,4 +1,6 @@
 class ContentItemsController < ApplicationController
+  include GovukPersonalisation::ControllerConcern
+  
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
   rescue_from GdsApi::HTTPGone, with: :error_410
@@ -198,5 +200,11 @@ private
       exception.content_item, request.path, request.query_string
     )
     redirect_to destination, status: status_code
+  end
+
+  def set_account_vary_header
+    # Override the default from GovukPersonalisation::ControllerConcern so pages are cached on each flash message
+    # variation, rather than caching pages per user
+    response.headers["Vary"] = [response.headers["Vary"], "GOVUK-Account-Session-Flash"].compact.join(", ")
   end
 end
