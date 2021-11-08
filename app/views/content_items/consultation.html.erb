@@ -6,7 +6,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
+    <%= render 'context_and_title' %>
   </div>
   <%= render 'shared/translations' %>
 </div>
@@ -21,7 +21,6 @@
       national_applicability: @content_item.national_applicability || {},
       type: @content_item.schema_name
     } %>
-
     <% if @content_item.unopened? %>
       <% content_item_unopened = capture do %>
         <%= raw(t("consultation.opens")) %>

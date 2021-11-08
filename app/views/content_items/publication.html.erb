@@ -6,11 +6,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title',
-      context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-      context_locale: t_locale_fallback("content_item.schema_name.#{@content_item.document_type}", count: 1),
-      title: @content_item.title,
-      average_title_length: "long" %>
+    <%= render 'context_and_title' %>
   </div>
   <%= render 'shared/translations' %>
 
@@ -31,7 +27,6 @@
         national_applicability: @content_item.national_applicability || {},
         type: @content_item.schema_name
       } %>
-
       <div class="responsive-bottom-margin">
         <%= render "attachments",
           title: t("publication.documents", count: 5), # This should always be pluralised.

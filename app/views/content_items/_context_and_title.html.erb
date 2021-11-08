@@ -1,0 +1,23 @@
+<% context_string =  t("content_item.schema_name.#{@content_item.document_type}", count: 1) %>
+
+<% @content_item&.featured_attachments.each do |fa| %>
+  <% return if !@content_item.attachment_details(fa).present? %>
+  <% if @content_item.attachment_details(fa)['title'] == @content_item.title %>
+      <% content_for :title do %>
+        <%= t("content_item.schema_name.#{@content_item.document_type}.overview", count: 1) %>: <%= @content_item.title %>
+      <% end %>
+      <%
+         context_string =  t("content_item.schema_name.#{@content_item.document_type}.overview", count: 1) << ":"
+         context_inside = true
+      %>
+      <% break %>
+    <% end %>
+<% end %>
+
+<%= render 'govuk_publishing_components/components/title',
+   context: context_string,
+   context_locale: t_locale_fallback("content_item.schema_name.#{@content_item.document_type}", count: 1),
+   context_inside: context_inside ||= false,
+   title: @content_item.title,
+   average_title_length: "long"
+ %>
