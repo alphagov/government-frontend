@@ -1,484 +1,417 @@
----
 fi:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Lento -onnettomuuksien tutkintaosaston raportti
+        other: Lento -onnettomuuksien tutkintayksikön raportit
+      announcement:
+        one: Ilmoitus
+        other: Ilmoitukset
+      asylum_support_decision:
+        one: Turvapaikkatuomioistuimen päätös
+        other: Turvapaikkatuomioistuimen päätöksiä
+      authored_article:
+        one: Kirjoitettu artikkeli
+        other: Kirjoitettuja artikkeleita
+      business_finance_support_scheme:
+        one: Yritysrahoituksen tukijärjestelmä
+        other: Yritysrahoituksen tukijärjestelmät
+      case_study:
+        one: Tapaustutkimus
+        other: Tapaustutkimuksia
+      closed_consultation:
+        one: Suljettu kuuleminen
+        other: Suljetut neuvottelut
+      cma_case:
+        one: Kilpailu- ja markkinaviranomaisen tapaus
+        other: Kilpailu- ja markkinaviranomaisen tapaukset
+      coming_soon:
+        one: Tulossa pian
+        other: Tulossa pian
+      consultation:
+        one: Konsultaatio
+        other: Konsultaatiot
+      consultation_outcome:
+        one: Konsultoinnin tulos
+        other: Konsultoinnin tulokset
+      corporate_information_page:
+        one: Tietosivu
+        other: Tietosivut
+      corporate_report:
+        one: Yrityksen raportti
+        other: Yritysraportit
+      correspondence:
+        one: Kirjeenvaihto
+        other: Kirjeenvaihto
+      countryside_stewardship_grant:
+        one: Maaseudun apuraha
+        other: Maaseudun apurahat
+      decision:
+        one: Päätös
+        other: Päätökset
+      detailed_guide:
+        one: Ohjaus
+        other: Ohjaus
+      dfid_research_output:
+        one: Tutkimus kehitystä varten Tuotos
+        other: Tutkimus kehitysyhteistyötä varten Tuotokset
+      document_collection:
+        one: Kokoelma
+        other: Kokoelmat
+      draft_text:
+        one: Luonnos
+        other: Luonnos tekstejä
+      drug_safety_update:
+        one: Lääketurvallisuuden päivitys
+        other: Lääketurvallisuuden päivitykset
+      employment_appeal_tribunal_decision:
+        one: Työllisyysasioiden muutoksenhakutuomioistuimen päätös
+        other: Työllisyysasioiden muutoksenhakutuomioistuimen päätökset
+      employment_tribunal_decision:
+        one: Työtuomioistuimen päätös
+        other: Työtuomioistuimen päätökset
+      esi_fund:
+        one: Euroopan rakenne- ja investointirahasto (ESIF)
+        other: Euroopan rakenne- ja investointirahastot (ESIF)
+      fatality_notice:
+        one: Kuolemantapauksia koskeva ilmoitus
+        other: Kuolemantapauksia koskevat ilmoitukset
+      foi_release:
+        one: Tiedonvälityksen vapaus julkaisu
+        other: Tiedonvälityksen vapaus julkaisut
+      form:
+        one: Lomake
+        other: Lomakkeet
+      government_response:
+        one: Hallituksen vastaus
+        other: Hallituksen vastaukset
+      guidance:
+        one: Ohjaus
+        other: Ohjaus
+      impact_assessment:
+        one: Vaikutuksen arviointi
+        other: Vaikutustenarvioinnit
+      imported:
+        one: tuotu - odottava tyyppi
+        other: tuotu - odottava tyyppi
+      independent_report:
+        one: Riippumaton raportti
+        other: Riippumattomat raportit
+      international_development_fund:
+        one: Kansainvälinen kehitysrahoitus
+        other: Kansainvälinen kehitysrahoitus
+      international_treaty:
+        one: Kansainvälinen sopimus
+        other: Kansainväliset sopimukset
+      maib_report:
+        one: Merionnettomuuksien tutkintaosaston raportti
+        other: Merionnettomuuksien tutkintaosaston raportit
+      map:
+        one: Kartta
+        other: Kartat
+      medical_safety_alert:
+        one: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
+        other: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
+      national:
+        one: Kansallinen tilastoilmoitus
+        other: Kansalliset tilastoilmoitukset
+      national_statistics:
+        one: Kansalliset tilastot
+        other: Kansalliset tilastot
+      national_statistics_announcement:
+        one: Kansallinen tilastoilmoitus
+        other: Kansalliset tilastoilmoitukset
+      news_article:
+        one: Uutisartikkeli
+        other: Uutisartikkelit
+      news_story:
+        one: Uutistarina
+        other: Uutisia
+      notice:
+        one: Ilmoitus
+        other: Ilmoitukset
+      official:
+        one: Virallinen tilastoilmoitus
+        other: Viralliset tilastotiedot
+      official_statistics:
+        one: Viralliset tilastot
+        other: Viralliset tilastot
+      official_statistics_announcement:
+        one: Virallinen tilastoilmoitus
+        other: Viralliset tilastotiedot
+      open_consultation:
+        one: Avoin kuuleminen
+        other: Avoimet kuulemiset
+      oral_statement:
+        one: Suullinen lausuma parlamentille
+        other: Suulliset lausumat parlamentille
+      policy:
+        one: Käytäntö
+        other: Käytännöt
+      policy_paper:
+        one: Toimintapoliittinen asiakirja
+        other: Toimintapoliittiset asiakirjat
+      press_release:
+        one: Lehdistötiedote
+        other: Lehdistötiedotteet
+      promotional:
+        one: Myynninedistämismateriaali
+        other: Myynninedistämismateriaali
+      publication:
+        one: Julkaisu
+        other: Julkaisut
+      raib_report:
+        one: Rautatie onnettomuus tutkintaosaston raportti
+        other: Rautatie onnettomuus tutkintaosaston raportit
+      regulation:
+        one: Asetus
+        other: Asetukset
+      research:
+        one: Tutkimus ja analyysi
+        other: Tutkimus ja analyysi
+      residential_property_tribunal_decision:
+        one: Asunto -omaisuuden tuomioistuimen päätös
+        other: Asunto -omaisuuden tuomioistuimen päätökset
+      service_sign_in:
+        one: Palveluun kirjautuminen
+        other: Palveluun kirjautuminen
+      service_standard_report:
+        one: Palvelustandardiraportti
+        other: Palvelustandardiraportit
+      speaking_notes:
+        one: Puhuvat muistiinpanot
+        other: Puhuvat muistiinpanot
+      speech:
+        one: Puhe
+        other: Puheet
+      standard:
+        one: Standardi
+        other: Standardit
+      statement_to_parliament:
+        one: Lausuma parlamentille
+        other: Lausumat parlamentille
+      statistical_data_set:
+        one: Tilastollinen tietojoukko
+        other: Tilastolliset tietojoukot
+      statistics_announcement:
+        one: Tilastojen julkaisuilmoitus
+        other: Tilastojen julkaisuilmoitukset
+      statutory_guidance:
+        one: Lakisääteiset ohjeet
+        other: Lakisääteiset ohjeet
+      take_part:
+        one: Osallistu
+        other: Osallistu
+      tax_tribunal_decision:
+        one: Vero- ja oikeuskanslerinoikeuden päätös
+        other: Vero- ja oikeuskanslerinoikeuden päätökset
+      transcript:
+        one: Transkriptio
+        other: Transkriptiot
+      transparency:
+        one: Avoimuustiedot
+        other: Avoimuustiedot
+      utaac_decision:
+        one: Hallinnollisen muutoksenhakutuomioistuimen päätös
+        other: Hallinnollisen muutoksenhakutuomioistuimen päätökset
+      world_location_news_article:
+        one: Uutisartikkeli
+        other: Uutisartikkelit
+      world_news_story:
+        one: Maailman uutinen
+        other: Maailman uutisia
+      written_statement:
+        one: Kirjallinen lausuma parlamentille
+        other: Kirjallinen lausumat parlamentille
+    coming_soon: Tämä asiakirja julkaistaan
+    contents: Sisällys
+    metadata:
+      published: Julkaistu
+      updated: Päivitetty
+  publication:
+    documents:
+      one: Asiakirja
+      other: Asiakirjat
+    details: Yksityiskohdat
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Brexit -opas yrityksille
+    citizen_link: Brexit -opastus yksilöille ja perheille
+    heading_prefix: On erilaisia
   common:
     last_updated:
-    visit:
+    visit: 'Vierailla:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Kuvaluotto: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: piilota kaikki päivitykset
+      last_updated: Viimeksi päivitetty %{date}
+      published: Julkaistu %{date}
+      see_all_updates: katso kaikki palvelut
+      show_all_updates: näytä kaikki päivitykset
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: Piilota kaikki
+      show_all: näytä kaikki
+    save_this_page:
+      add_page_button: Lisää tallennettuihin sivuihisi
+      confirmations:
+        page_removed:
+          message: Olet poistanut tämän tallennetuilta sivuiltasi
+        page_saved:
+          message: Olet lisännyt tämän tallennetuille sivuillesi
+      page_not_saved_heading: Tallenna tämä sivu, jotta voit palata siihen myöhemmin
+      page_was_saved_heading: Olet tallentanut tämän sivun
+      remove_page_button: Poista tallennetuilta sivuilta
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Näytä
+        tallennetut sivut</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kirjaudu
+        sisään</a> nähdäksesi tallennetut sivusi.
     share_links:
-      share_this_page:
+      share_this_page: Jaa tämä sivu
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: ja
+    another_website_html: Tämä kuuleminen %{closed} järjestettiin toisella <a href="%{url}">averkkosivustolla</a>
+    at: klo
+    closes: Se sulkeutuu klo
+    closes_at: Tämä kuuleminen päättyy klo
+    complete_a: Täytä
+    description: Konsultaation kuvaus
+    detail_of_feedback_received: Yksityiskohta saadusta palautteesta
+    detail_of_outcome: Yksityiskohta lopputuloksesta
+    documents: Asiakirjat
+    download_outcome: Lataa koko tulos
+    either: jompikumpi
+    email_to: 'lähetä sähköpostia osoitteeseen:'
+    feedback_received: Palaute Vastaanotettu
+    is_being: osoitteessa
+    not_open_yet: Tämä kuuleminen ei ole vielä auki
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Tämä kuuleminen avautuu
+    original_consultation: Alkuperäinen kuuleminen
+    ran_from: Tämä kuuleminen kesti
+    respond_online: Vastaa verkossa
+    'true': totta
+    visit_soon: Käy pian uudelleen tällä sivulla ja lataa tämän julkisen palautteen&nbsp;tulokset.
+    was: oli
+    ways_to_respond: Tapoja vastata
+    write_to: 'Kirjoittaa:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: Sähköposti
+    find_call_charges: Ota selvää puheluhinnoista
+    online: Verkossa
+    phone: Puhelin
+    webchat: Webchat
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Ota selvää %{link}.
+    corporate_information: Yritystiedot
+    personal_information_charter_html: "%{link} selittää, miten käsittelemme henkilötietojasi."
+    publication_scheme_html: Lue, millaisia tietoja julkaisemme rutiininomaisesti
+      %{link}.
+    social_media_use_html: Lue käytäntömme osoitteesta %{link}.
+    welsh_language_scheme_html: Tutustu sitoumukseemme %{link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Puolustusministeriön vaakuna
+    field_of_operation: Toiminta -alue
+    operations_in: Toiminnot paikassa %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Ei ole enää käytettävissä
+    published_in_error: Tämän sivun tiedot on poistettu, koska ne on julkaistu virheellisesti.
+    title: Etsimäsi sivu ei ole enää saatavana.
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Tämän oppaan sivut
+    skip_to_contents: Siirry oppaan sisältöön
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Tämä julkaisu on saatavilla osoitteessa %{url}
+      copyright: "© kruunun tekijänoikeus %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Tämä julkaisu on lisensoitu Open Government Licence v3.0 lisenssin
+        ehdoilla, ellei toisin mainita. Voit tutustua tähän lisenssiin osoitteessa
+        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        tai kirjallisesti osoitteeseen Information Policy Team, Kansallisarkisto,
+        Kew, Lontoo TW9 4DU, tai sähköpostitse: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Jos olemme tunnistaneet kolmannen osapuolen tekijänoikeustietoja,
+        sinun on hankittava lupa tekijänoikeuksien haltijoilta huolestunut.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi: Suomi
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    fi: Viimeiste
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Seuraava
+    previous_page: Edellinen
+    print_entire_guide: Tulosta koko opas
   service_sign_in:
-    continue:
+    continue: Jatkaa
     error:
-      option:
-      title:
+      option: Ole hyvä ja valitse vaihtoehto
+      title: Et ole valinnut vaihtoehtoa
   shared:
-    historically_political:
+    historically_political: Tämä julkaistiin osoitteessa %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Neuvonantajat ovat chatissa.
+      busy: Kaikki webchat-neuvojat ovat tällä hetkellä varattuja.
+      closed: Webchat on suljettu tällä hetkellä.
+      speak_to_adviser: Puhu nyt neuvonantajan kanssa
+      technical_problem: Webchat ei ole tällä hetkellä käytettävissä teknisten ongelmien
+        vuoksi.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Nimetty
+      alkuperä Yhdistynyt kuningaskunta Suojattu
+    pgi_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Maantieteellinen
+      alkuperä Yhdistynyt kuningaskunta Suojattu
+    tsg_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Perinteinen
+      erikoisuus Yhdistynyt kuningaskunta Suojattu
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Toimitettu
+    location: Sijainti
+    written_on: Kirjoitettu
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Peruutuspäivä
+    cancelled: Tilastotiedote peruttu
+    changed_date: Julkaisupäivää on muutettu
+    forthcoming: Nämä tilastot julkaistaan
+    previous_date: Edellinen päivämäärä
+    proposed_date: Ehdotettu julkaisu
+    reason_for_change: Muutoksen syy
+    release_date: Julkaisupäivä
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja
+        osissa maata.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja
+        koko maahan.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        kehottaa välttämään kaikkia matkoja osissa maata.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        kehottaa välttämään kaikkia matkoja koko maahan.
+    context: Ulkomaan matkustusneuvonta
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Noudata asuinpaikkasi nykyisiä COVID-19-sääntöjä: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Englanti</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotlanti</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Pohjois-Irlanti</a>.
+        </p>
+        <p class="govuk-body">
+          Jotta uudet COVID-muunnokset eivät pääsisi Yhdistyneeseen kuningaskuntaan, sinun ei pitäisi matkustaa seuraaviin paikkoihin <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">meripihka tai punaisen listan maat</a>.
+        </p>
+        <p class="govuk-body">
+          Jos haluat ymmärtää jonkin maan riskejä, seuraa <a href="/guidance/travel-advice-novel-coronavirus">Ulkoasiain-, kansainyhteisö- ja kehitysyhteistyöviraston matkustusneuvoja</a>.
+        </p>
+        <p class="govuk-body">
+          Kun palaat, noudata seuraavia sääntöjä <a href="/uk-border-control">saapua Yhdistyneeseen kuningaskuntaan ulkomailta</a> (lukuun ottamatta Irlantia).
+        </p>
+      text_assistive: Tärkeä
+      title: Koronavirus (COVID-19) -matkailu
+    still_current_at: Vielä ajankohtainen klo
+    summary: Yhteenveto
+    updated: Päivitetty
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Ei ole enää käytettävissä
+    summary: Tämän sivun tiedot on poistettu, koska ne on julkaistu virheellisesti.
+    title: Etsimäsi sivu ei ole enää saatavana.
   working_group:
-    contact_details:
-    policies:
+    contact_details: Yhteystiedot
+    policies: Käytännöt

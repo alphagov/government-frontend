@@ -1,634 +1,570 @@
----
 mt:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Rapport tal-Fergħa dwar l-Investigazzjoni tal-Aċċidenti tal-Arju
+        few:
+        many:
+        other: Rapporti tal-Fergħa dwar l-investigazzjoni tal-Aċċidenti tal-Arju
+      announcement:
+        one: Avviż
+        few:
+        many:
+        other: Avviżi
+      asylum_support_decision:
+        one: Deċiżjoni tat-tribunal għall-għajnuna għall-ażil
+        few:
+        many:
+        other: Deċiżjonijiet tat-tribunal għall-għajnuna għall-ażil
+      authored_article:
+        one: Artiklu miktub
+        few:
+        many:
+        other: Artikli miktuba
+      business_finance_support_scheme:
+        one: Skema ta' għajnuna għall-finanzjament tan-negozju
+        few:
+        many:
+        other: Skemi ta' għajnuna għall-finanzjament tan-negozju
+      case_study:
+        one: Studju ta' Każ
+        few:
+        many:
+        other: Studju ta' Każijiet
+      closed_consultation:
+        one: Konsultazzjoni magħluqa
+        few:
+        many:
+        other: Konsultazzjonijiet magħluqa
+      cma_case:
+        one: Każ tal-Awtorità għall-Kompetizzjoni u s-Swieq
+        few:
+        many:
+        other: Każijiet tal-Awtorità għall-Kompetizzjoni u s-Swieq
+      coming_soon:
+        one: Ġejjin dalwaqt
+        few:
+        many:
+        other: Ġejjin dalwaqt
+      consultation:
+        one: Konsultazzjoni
+        few:
+        many:
+        other: Konsultazzjonijiet
+      consultation_outcome:
+        one: Riżultat tal-konsultazzjoni
+        few:
+        many:
+        other: Riżultati tal-konsultazzjoni
+      corporate_information_page:
+        one: Paġna ta' informazzjoni
+        few:
+        many:
+        other: Paġni ta' informazzjoni
+      corporate_report:
+        one: Rapport korporattiv
+        few:
+        many:
+        other: Rapporti korporattivi
+      correspondence:
+        one: Korrispondenza
+        few:
+        many:
+        other: Korrispondenzi
+      countryside_stewardship_grant:
+        one: Għotja ta' flus għall-Amministrazzjoni tal-Kampanja
+        few:
+        many:
+        other: Għotjiet ta' flus għall-Amministrazzjoni tal-Kampanja
+      decision:
+        one: Deċiżjoni
+        few:
+        many:
+        other: Deċiżjonijiet
+      detailed_guide:
+        one: Gwida
+        few:
+        many:
+        other: Gwida
+      dfid_research_output:
+        one: Output għar-Riċerka tal-Iżvilupp
+        few:
+        many:
+        other: Outputs għar-Riċerka tal-Iżvilupp
+      document_collection:
+        one: Kollezzjoni
+        few:
+        many:
+        other: Kollezzjonijiet
+      draft_text:
+        one: Abbozz ta' test
+        few:
+        many:
+        other: Abbozz ta' testijiet
+      drug_safety_update:
+        one: Aġġornament dwar is-Sigurtà tal-Mediċini
+        few:
+        many:
+        other: Aġġornamenti dwar is-Sigurtà tal-Mediċini
+      employment_appeal_tribunal_decision:
+        one: Deċiżjoni ta' appell tat-tribunal għall-impjiegi
+        few:
+        many:
+        other: Deċiżjonijiet ta' appell tat-tribunal għall-impjiegi
+      employment_tribunal_decision:
+        one: Deċiżjoni tat-tribunal għall-impjiegi
+        few:
+        many:
+        other: Deċiżjonijiet tat-tribunal għall-impjiegi
+      esi_fund:
+        one: Fond Ewropew Strutturali u għall-Investiment (ESIF)
+        few:
+        many:
+        other: Fondi Ewropew Strutturali u għall-Investiment (ESIF)
+      fatality_notice:
+        one: Avviż dwar fatalità
+        few:
+        many:
+        other: Avviżi dwar fatalitajiet
+      foi_release:
+        one: Stqarrija tal-Libertà għall-Informazzjoni
+        few:
+        many:
+        other: Stqarrijiet tal-Libertà għall-Informazzjoni
+      form:
+        one: Formola
+        few:
+        many:
+        other: Formoli
+      government_response:
+        one: Risposta tal-Gvern
+        few:
+        many:
+        other: Risposti tal-Gvern
+      guidance:
+        one: Gwida
+        few:
+        many:
+        other: Gwida
+      impact_assessment:
+        one: Assessjar tal-impatt
+        few:
+        many:
+        other: Assessjar tal-impatt
+      imported:
+        one: importat - tip mistenni
+        few:
+        many:
+        other: importat - tip mistenni
+      independent_report:
+        one: Rapport indipendenti
+        few:
+        many:
+        other: Rapporti indipendenti
+      international_development_fund:
+        one: Fondi għall-Iżvilupp internazzjonali
+        few:
+        many:
+        other: Fondi għall-Iżvilupp internazzjonali
+      international_treaty:
+        one: Trattat internazzjonali
+        few:
+        many:
+        other: Trattati internazzjonali
+      maib_report:
+        one: Rapport tal-Fergħa dwar l-Investigazzjoni tal-Aċċidenti marittimi
+        few:
+        many:
+        other: Rapporti tal-Fergħa dwar l-Investigazzjoni tal-Aċċidenti tal-Arju
+      map:
+        one: Mappa
+        few:
+        many:
+        other: Mapep
+      medical_safety_alert:
+        one: Twissijiet u sejħiet lura għal mediċina u tagħmir ta' mediku
+        few:
+        many:
+        other: Twissijiet u sejħiet lura għal mediċina u tagħmir ta' mediku
+      national:
+        one: Avviż dwar statistiċi nazzjonali
+        few:
+        many:
+        other: Avviżi dwar statistiċi nazzjonali
+      national_statistics:
+        one: Statistiċi nazzjonali
+        few:
+        many:
+        other: Statistiċi nazzjonali
+      national_statistics_announcement:
+        one: Avviż tal-istatistiċi nazzjonali
+        few:
+        many:
+        other: Avviżi tal-istatistiċi nazzjonali
+      news_article:
+        one: Artiklu bl-aħbarijiet
+        few:
+        many:
+        other: Artikli bl-aħbarijiet
+      news_story:
+        one: Storja aħbar
+        few:
+        many:
+        other: Stejjer aħbar
+      notice:
+        one: Avviż
+        few:
+        many:
+        other: Avviżi
+      official:
+        one: Avviż dwar statistiċi uffiċjali
+        few:
+        many:
+        other: Avviżi dwar statistiċi uffiċjali
+      official_statistics:
+        one: Statistiċi uffiċjali
+        few:
+        many:
+        other: Statistiċi uffiċjali
+      official_statistics_announcement:
+        one: Avviż dwar l-istatistiċi uffiċjali
+        few:
+        many:
+        other: Avviżi dwar l-istatistiċi uffiċjali
+      open_consultation:
+        one: Konsultazzjoni miftuħa
+        few:
+        many:
+        other: Konsultazzjonijiet miftuħa
+      oral_statement:
+        one: Dikjarazzjoni verbali lill-Parlament
+        few:
+        many:
+        other: Dikjarazzjonijiet verbali lill-Parlament
+      policy:
+        one: Politika
+        few:
+        many:
+        other: Politiċi
+      policy_paper:
+        one: Dokument tal-Politika
+        few:
+        many:
+        other: Dokumenti tal-Politika
+      press_release:
+        one: Stqarrija għall-istampa
+        few:
+        many:
+        other: Stqarrijiet għall-istampa
+      promotional:
+        one: Materjal promozzjonali
+        few:
+        many:
+        other: Materjal promozzjonali
+      publication:
+        one: Pubblikazzjoni
+        few:
+        many:
+        other: Pubblikazzjonijiet
+      raib_report:
+        one: Rapport tal-fergħa dwar investigazzjoni ta' aċċident bil-ferrovija
+        few:
+        many:
+        other: Rapporti tal-fergħa dwar investigazzjoni ta' aċċident bil-ferrovija
+      regulation:
+        one: Regolament
+        few:
+        many:
+        other: Regolamenti
+      research:
+        one: Riċerka u analiżi
+        few:
+        many:
+        other: Riċerka u analiżi
+      residential_property_tribunal_decision:
+        one: Deċiżjoni tat-tribunal dwar propjetà residenzjali
+        few:
+        many:
+        other: Deċiżjonijiet tat-tribunal dwar propjetà residenzjali
+      service_sign_in:
+        one: Sign in tas-servizz
+        few:
+        many:
+        other: Sign in tas-servizz
+      service_standard_report:
+        one: Rapport standard tas-servizz
+        few:
+        many:
+        other: Rapporti standard tas-servizz
+      speaking_notes:
+        one: Noti għad-diskors
+        few:
+        many:
+        other: Noti għad-diskors
+      speech:
+        one: Diskors
+        few:
+        many:
+        other: Diskorsi
+      standard:
+        one: Standard
+        few:
+        many:
+        other: Standards
+      statement_to_parliament:
+        one: Dikjarazzjoni lill-Parlament
+        few:
+        many:
+        other: Dikjarazzjonijiet lill-Parlament
+      statistical_data_set:
+        one: Sett tad-dejta bl-istatistika
+        few:
+        many:
+        other: Settijiet tad-dejta bl-istatistika
+      statistics_announcement:
+        one: Avviż dwar ir-rilaxx ta' statistika
+        few:
+        many:
+        other: Avviżi dwar ir-rilaxx ta' statistika
+      statutory_guidance:
+        one: Gwida statutorja
+        few:
+        many:
+        other: Gwida statutorja
+      take_part:
+        one: Ħu sehem
+        few:
+        many:
+        other: Ħu sehem
+      tax_tribunal_decision:
+        one: Deċiżjoni tat-Tribunal dwar taxxa u kanċellerija
+        few:
+        many:
+        other: Deċiżjonijiet tat-tribunal dwar taxxa u kanċellerija
+      transcript:
+        one: Transkript
+        few:
+        many:
+        other: Transkripts
+      transparency:
+        one: Dejta dwar it-trasparenza
+        few:
+        many:
+        other: Dejta dwar it-trasparenza
+      utaac_decision:
+        one: Deċiżjoni tal-qorti dwar appelli amministrattivi
+        few:
+        many:
+        other: Deċiżjonijiet tal-qorti dwar appelli amministrattivi
+      world_location_news_article:
+        one: Artiklu bl-aħbarijiet
+        few:
+        many:
+        other: Artikli bl-aħbarijiet
+      world_news_story:
+        one: Storja b'aħbarijiet mid-dinja
+        few:
+        many:
+        other: Stejjer b'aħbarijiet mid-dinja
+      written_statement:
+        one: Dikjarazzjoni bil-miktub lill-Parlament
+        few:
+        many:
+        other: Dikjarazzjonijiet bil-miktub lill-Parlament
+    coming_soon: Dan id-dokument ser jiġi pubblikat nhar
+    contents: Werrej
+    metadata:
+      published: Ippubblikat
+      updated: Aġġornat
+  publication:
+    documents:
+      one: Dokument
+      few:
+      many:
+      other: Dokumenti tal-Politika
+    details: Dettalji
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Gwida għan-negozji dwar Brexit
+    citizen_link: Gwida għal individwi u familji dwar Brexit
+    heading_prefix: Hawn differenti
   common:
     last_updated:
-    visit:
+    visit: 'Żur:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Kreditu għall-immaġni:  %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: aħbi l-aġġornamenti kollha
+      last_updated: L-aħħar aġġornament %{date}
+      published: Ippubblikat %{date}
+      see_all_updates: ara l-aġġornamenti kollha
+      show_all_updates: uri l-aġġornamenti kollha
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: aħbi kollox
+      show_all: uri kollox
+    save_this_page:
+      add_page_button: Żid mal-paġni maħżuna
+      confirmations:
+        page_removed:
+          message: Inti neħħejt dan mill-paġni maħżuna tiegħek
+        page_saved:
+          message: Inti żidt dan mill-paġni maħżuna tiegħek
+      page_not_saved_heading: Aħżen din il-paġna ħalli tkun tista' tiġi għaliha iktar
+        tard
+      page_was_saved_heading: Inti ħżint din il-paġna
+      remove_page_button: Neħħi minn mill-paġni maħżuna
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Ara
+        l-paġni maħżuna</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Iffirma</a>
+        biex tara l-paġni maħżuna tiegħek.
     share_links:
-      share_this_page:
+      share_this_page: Aqsam din il-paġna ma'
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: u
+    another_website_html: Din il-konsultazzjoni %{closed} tinsab fuq  <a href="%{url}">websajt
+      oħra</a>
+    at: fi
+    closes: Din tagħlaq fil
+    closes_at: Din il-konsultazzjoni tagħlaq nhar
+    complete_a: Lesti
+    description: Deskrizzjoni tal-konsultazzjoni
+    detail_of_feedback_received: Dettall tal-feedback li rċevejna
+    detail_of_outcome: Detall dwar ir-riżultat
+    documents: Dokumenti
+    download_outcome: Niżżel ir-riżultat kollu
+    either: jew
+    email_to: 'Ibgħat imejl lil:'
+    feedback_received: Feedback li wasal
+    is_being: qed jiġi
+    not_open_yet: Din il-konsultazzjoni għada m'hijiex miftuħa
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Din il-konsultazzjoni tiftaħ
+    original_consultation: Konsultazzjoni oriġinali
+    ran_from: Din il-konsultazzjoni bdiet minn
+    respond_online: Irrispondi onlajn
+    'true': vera
+    visit_soon: Żur din il-paġna darb'oħra biex tniżżel ir-riżultat għall-feedback&nbsp;pubbliku.
+    was: kien
+    ways_to_respond: Metodi kif twieġeb
+    write_to: 'Ikteb lil:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        few:
-        many:
-        one:
-        other:
-      announcement:
-        few:
-        many:
-        one:
-        other:
-      asylum_support_decision:
-        few:
-        many:
-        one:
-        other:
-      authored_article:
-        few:
-        many:
-        one:
-        other:
-      business_finance_support_scheme:
-        few:
-        many:
-        one:
-        other:
-      case_study:
-        few:
-        many:
-        one:
-        other:
-      closed_consultation:
-        few:
-        many:
-        one:
-        other:
-      cma_case:
-        few:
-        many:
-        one:
-        other:
-      coming_soon:
-        few:
-        many:
-        one:
-        other:
-      consultation:
-        few:
-        many:
-        one:
-        other:
-      consultation_outcome:
-        few:
-        many:
-        one:
-        other:
-      corporate_information_page:
-        few:
-        many:
-        one:
-        other:
-      corporate_report:
-        few:
-        many:
-        one:
-        other:
-      correspondence:
-        few:
-        many:
-        one:
-        other:
-      countryside_stewardship_grant:
-        few:
-        many:
-        one:
-        other:
-      decision:
-        few:
-        many:
-        one:
-        other:
-      detailed_guide:
-        few:
-        many:
-        one:
-        other:
-      dfid_research_output:
-        few:
-        many:
-        one:
-        other:
-      document_collection:
-        few:
-        many:
-        one:
-        other:
-      draft_text:
-        few:
-        many:
-        one:
-        other:
-      drug_safety_update:
-        few:
-        many:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        few:
-        many:
-        one:
-        other:
-      employment_tribunal_decision:
-        few:
-        many:
-        one:
-        other:
-      esi_fund:
-        few:
-        many:
-        one:
-        other:
-      fatality_notice:
-        few:
-        many:
-        one:
-        other:
-      foi_release:
-        few:
-        many:
-        one:
-        other:
-      form:
-        few:
-        many:
-        one:
-        other:
-      government_response:
-        few:
-        many:
-        one:
-        other:
-      guidance:
-        few:
-        many:
-        one:
-        other:
-      impact_assessment:
-        few:
-        many:
-        one:
-        other:
-      imported:
-        few:
-        many:
-        one:
-        other:
-      independent_report:
-        few:
-        many:
-        one:
-        other:
-      international_development_fund:
-        few:
-        many:
-        one:
-        other:
-      international_treaty:
-        few:
-        many:
-        one:
-        other:
-      maib_report:
-        few:
-        many:
-        one:
-        other:
-      map:
-        few:
-        many:
-        one:
-        other:
-      medical_safety_alert:
-        few:
-        many:
-        one:
-        other:
-      national:
-        few:
-        many:
-        one:
-        other:
-      national_statistics:
-        few:
-        many:
-        one:
-        other:
-      national_statistics_announcement:
-        few:
-        many:
-        one:
-        other:
-      news_article:
-        few:
-        many:
-        one:
-        other:
-      news_story:
-        few:
-        many:
-        one:
-        other:
-      notice:
-        few:
-        many:
-        one:
-        other:
-      official:
-        few:
-        many:
-        one:
-        other:
-      official_statistics:
-        few:
-        many:
-        one:
-        other:
-      official_statistics_announcement:
-        few:
-        many:
-        one:
-        other:
-      open_consultation:
-        few:
-        many:
-        one:
-        other:
-      oral_statement:
-        few:
-        many:
-        one:
-        other:
-      policy:
-        few:
-        many:
-        one:
-        other:
-      policy_paper:
-        few:
-        many:
-        one:
-        other:
-      press_release:
-        few:
-        many:
-        one:
-        other:
-      promotional:
-        few:
-        many:
-        one:
-        other:
-      publication:
-        few:
-        many:
-        one:
-        other:
-      raib_report:
-        few:
-        many:
-        one:
-        other:
-      regulation:
-        few:
-        many:
-        one:
-        other:
-      research:
-        few:
-        many:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        few:
-        many:
-        one:
-        other:
-      service_sign_in:
-        few:
-        many:
-        one:
-        other:
-      service_standard_report:
-        few:
-        many:
-        one:
-        other:
-      speaking_notes:
-        few:
-        many:
-        one:
-        other:
-      speech:
-        few:
-        many:
-        one:
-        other:
-      standard:
-        few:
-        many:
-        one:
-        other:
-      statement_to_parliament:
-        few:
-        many:
-        one:
-        other:
-      statistical_data_set:
-        few:
-        many:
-        one:
-        other:
-      statistics_announcement:
-        few:
-        many:
-        one:
-        other:
-      statutory_guidance:
-        few:
-        many:
-        one:
-        other:
-      take_part:
-        few:
-        many:
-        one:
-        other:
-      tax_tribunal_decision:
-        few:
-        many:
-        one:
-        other:
-      transcript:
-        few:
-        many:
-        one:
-        other:
-      transparency:
-        few:
-        many:
-        one:
-        other:
-      utaac_decision:
-        few:
-        many:
-        one:
-        other:
-      world_location_news_article:
-        few:
-        many:
-        one:
-        other:
-      world_news_story:
-        few:
-        many:
-        one:
-        other:
-      written_statement:
-        few:
-        many:
-        one:
-        other:
+    email: Imejl
+    find_call_charges: Kun af dwar tariffi tat-telefonata
+    online: Onlajn
+    phone: Telefown
+    webchat: Webchat
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Kun af %{link}.
+    corporate_information: Informazzjoni korporattiva
+    personal_information_charter_html: Il-%{link} jispjega kif aħna nittrattaw l-informazzjoni
+      personali tiegħek.
+    publication_scheme_html: Aqra dwar it-tipi ta' informazzjoni li aħna nippubblikaw
+      regolarment fuq %{link}.
+    social_media_use_html: Aqra l-politika tagħna fuq %{link}.
+    welsh_language_scheme_html: Kun af dwar l-impenn tagħna lejn %{link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Il-Ministeru tad-Difiża
+    field_of_operation: Qasam tal-operazzjoni
+    operations_in: Operazzjonijiet fil- %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Mhuwiex iktar disponibbli
+    published_in_error: L-informazzjoni fuq din il-paġna tneħħiet għax ġiet ippubblikata
+      bi żball.
+    title: Il-paġna li qed tfittex mhijiex disponibbli iktar
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Paġni f'dan il-gwida
+    skip_to_contents: Aqbeż għall-kontenut tal-gwida
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Din il-pubblikazzjoni hija disponibbli fuq %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Din il-publikazzjoni hija liċenzjata taħt it-termini tal-Liċenzja
+        ta'' Gvern Miftuħ v3.0 sakemm ma jkunx hemm xi ħaġa oħra miktuba. Biex tara
+        din il-liċenzja, żur <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        jew ikteb lit-tim tal-politika dwar l-informazzjoni, l-Arkivji Nazzjoni, Kew,
+        Londra TW9 4DU, jew ibgħat imejl: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Fejn inkunu identifikajna informazzjoni tal-copyright minn parti
+        terza, aħna ser ninfurmawk biex iġġib permess mid-detenturi tal-copyright
+        ikkonċernati.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
     mt: Malti
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      few:
-      many:
-      one:
-      other:
+    next_page: Li jmiss
+    previous_page: Ta' qabel
+    print_entire_guide: Stampa l-gwida kollu
   service_sign_in:
-    continue:
+    continue: Kompli
     error:
-      option:
-      title:
+      option: Jekk jogħġbok agħmel għażla
+      title: M'agħmiltx għażla
   shared:
-    historically_political:
+    historically_political: Din ma ġietx ippubblikata taħt il- %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Konsulenti huma disponibbli biex jiċċettjaw.
+      busy: Il-konsulenti tal-webchat kollha huma okkupati bħalissa.
+      closed: Il-webchat huwa magħluq bħalissa.
+      speak_to_adviser: Kellem lil konsulent issa
+      technical_problem: Il-webchat mhuwiex disponibbli bħalissa minħabba problemi
+        tekniċi.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem Oriġini Magħżula
+      Protetta mir-RU
+    pgi_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem  Oriġini Ġeografika
+      Protetta mir-RU
+    tsg_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem Speċjalità Tradizzjonali
+      Protetta mir-RU
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Kunsinnat f'
+    location: Post
+    written_on: Miktub nhar
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Data tal-kanċellament
+    cancelled: Rilaxx tal-istatistiċi ġie kkanċellat
+    changed_date: Id-data tar-rilaxx ġiet mibdula
+    forthcoming: Dawn l-istatistiċi ser jiġu rilaxxati
+    previous_date: Data ta' qabel
+    proposed_date: Rilaxx propost
+    reason_for_change: Raġuni għall-bidla
+    release_date: Data tar-rilaxx
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: Il- <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi ħlief dawk essenzjali.
+      avoid_all_but_essential_travel_to_whole_country: Il- <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi ħlief
+        dawk essenzjali fil-pajjiż kollu.
+      avoid_all_travel_to_parts: Il- <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        jirrakkomanda li ma jsiru l-ebda vjaġġi lejn xi partijiet tal-pajjiż.
+      avoid_all_travel_to_whole_country: Il- <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi fil-pajjiż kollu.
+    context: Rakkomandazzjonijiet dwar ivvjaġġar barra mill-pajjiż
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">Segwi r-regoli attwali tal-COVID-19 fejn qed tgħix: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Ingilterra</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skozja</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> u <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Irlanda ta' Fuq/a>.
+        </p>
+        <p class="govuk-body">
+          Biex nipprevjenu li jkun hemm varjanti differenti tal-COVID li jiddaħħlu fir-RU, m'għandekx tivvjaġġa lejn <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">pajjiżi fil-lista kannella jew ħamra</a>.
+        </p>
+        <p class="govuk-body">
+        Biex tifhem ir-riskji f'pajjiż segwi <a href="/guidance/travel-advice-novel-coronavirus">Rakkomandazzjonijiet tal-FCDO għall-Ivvjaġġar</a>.
+        </p>
+        <p class="govuk-body">
+         Meta tiġi lura, segwi r-regoli biex <a href="/uk-border-control">tidħol fir-RU minn barra</a> (bl-eċċezzjoni tal-Irlanda).
+        </p>
+      text_assistive: Importanti
+      title: Ivvjaġġar fil-Coronavirus (COVID-19)
+    still_current_at: Għadu jeżisti fuq
+    summary: Sommarju
+    updated: Aġġornat
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Mhux iktar disponibbli
+    summary: L-informazzjoni fuq din il-paġna tneħħiet għax ġiet ippubblikata bi żball.
+    title: Il-paġna li qed tfittex mhijiex disponibbli iktar
   working_group:
-    contact_details:
-    policies:
+    contact_details: Dettalji tal-kuntatt
+    policies: Politiki

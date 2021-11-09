@@ -1,87 +1,21 @@
----
 lv:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: publicēts
-      updated: atjaunināts
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Aviosatiksmes negadījumu izmeklēšanas nodaļas ziņojums
+        other: Aviosatiksmes negadījumu izmeklēšanas nodaļas ziņojumi
       announcement:
         one: Paziņojums
         other: Paziņojumi
       asylum_support_decision:
-        one:
-        other:
+        one: Patvēruma atbalsta tiesas lēmums
+        other: Patvēruma atbalsta tiesas lēmumi
       authored_article:
         one: Autora raksts
         other: Autora raksti
       business_finance_support_scheme:
-        one:
-        other:
+        one: Biznesa finanšu atbalsta shēma
+        other: Biznesa finanšu atbalsta shēmas
       case_study:
         one: Piemērs
         other: Piemēri
@@ -89,11 +23,11 @@ lv:
         one: Slēgta tipa konsultācija
         other: Slēgta tipa konsultācijas
       cma_case:
-        one:
-        other:
+        one: Konkurences un tirgus iestādes lieta
+        other: Konkurences un tirgus iestādes lietas
       coming_soon:
-        one:
-        other:
+        one: Drīzumā
+        other: Drīzumā
       consultation:
         one: Konsultēšana
         other: Konsultācijas
@@ -101,8 +35,8 @@ lv:
         one: Konsultāciju rezultāts
         other: Konsultāciju rezultāti
       corporate_information_page:
-        one:
-        other:
+        one: Informācijas lapa
+        other: Informācijas lapas
       corporate_report:
         one: Korporatīvais ziņojums
         other: Korporatīvie ziņojumi
@@ -110,35 +44,35 @@ lv:
         one: Sarakste
         other: Sarakstes
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Lauku vides pārvaldības grants
+        other: Lauku vides pārvaldības granti
       decision:
-        one:
-        other:
+        one: Lēmums
+        other: Lēmumi
       detailed_guide:
         one: Detalizētas norādes
         other: Detalizētas norādes
       dfid_research_output:
-        one:
-        other:
+        one: Pētniecības attīstībai projekts
+        other: Pētniecības attīstībai projekti
       document_collection:
         one: Sērija
-        other:
+        other: Sērijas
       draft_text:
         one: Teksta uzmetums
         other: Teksta uzmetumi
       drug_safety_update:
-        one:
-        other:
+        one: Zāļu drošības atjauninājums
+        other: Zāļu drošības atjauninājumi
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Darba lietu apelācijas tiesas lēmums
+        other: Darba lietu apelācijas tiesas lēmumi
       employment_tribunal_decision:
-        one:
-        other:
+        one: Darba lietu tiesas lēmums
+        other: Darba lietu tiesas lēmumi
       esi_fund:
-        one:
-        other:
+        one: Eiropas strukturālais un investīciju fonds (ESIF)
+        other: Eiropas strukturālie un investīciju fondi (ESIF)
       fatality_notice:
         one: Nāves paziņojums
         other: Nāves paziņojumi
@@ -164,29 +98,29 @@ lv:
         one: Neatkarīgs ziņojums
         other: Neatkarīgi ziņojumi
       international_development_fund:
-        one:
-        other:
+        one: Starptautiskās attīstības finansējums
+        other: Starptautiskās attīstības finansējums
       international_treaty:
-        one:
-        other:
+        one: Starptautiskais līgums
+        other: Starptautiskie līgumi
       maib_report:
-        one:
-        other:
+        one: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojums
+        other: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojumi
       map:
         one: Karte
         other: Kartes
       medical_safety_alert:
-        one:
-        other:
+        one: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
+        other: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
       national:
-        one:
-        other:
+        one: Paziņojums par valsts statistiku
+        other: Paziņojumi par valsts statistiku
       national_statistics:
         one: Statistika - valsts dati
         other: Statistika - valsts dati
       national_statistics_announcement:
-        one:
-        other:
+        one: Paziņojums par valsts statistiku
+        other: Paziņojumi par valsts statistiku
       news_article:
         one: Raksts
         other: Raksti
@@ -194,17 +128,17 @@ lv:
         one: Ziņa
         other: Ziņas
       notice:
-        one:
-        other:
+        one: Paziņojums
+        other: Paziņojumi
       official:
-        one:
-        other:
+        one: Paziņojums par oficiālo statistiku
+        other: Paziņojumi par oficiālo statistiku
       official_statistics:
         one: Statistika
         other: Statistika
       official_statistics_announcement:
-        one:
-        other:
+        one: Paziņojums par oficiālo statistiku
+        other: Paziņojumi par oficiālo statistiku
       open_consultation:
         one: Atklāta konsultācija
         other: Atklātas konsultācijas
@@ -227,23 +161,23 @@ lv:
         one: Publikācija
         other: Publikācijas
       raib_report:
-        one:
-        other:
+        one: Dzelzceļa negadījumu izmeklēšanas nodaļas ziņojums
+        other: Dzelzceļa negadījumu izmeklēšanas nodaļas ziņojumi
       regulation:
-        one:
-        other:
+        one: Regula
+        other: Regulas
       research:
         one: Izpēte un analīze
         other: Izpēte un analīze
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Mājokļu īpašuma lietu tiesas lēmums
+        other: Mājokļu īpašuma lietu tiesas lēmumi
       service_sign_in:
-        one:
-        other:
+        one: Pierakstīšanās pakalpojumā
+        other: Pierakstīšanās pakalpojumā
       service_standard_report:
-        one:
-        other:
+        one: Pakalpojuma standarta ziņojums
+        other: Pakalpojuma standarta ziņojumi
       speaking_notes:
         one: Runas piezīmes
         other: Runas piezīmes
@@ -251,8 +185,8 @@ lv:
         one: Runa
         other: Runas
       standard:
-        one:
-        other:
+        one: Standarts
+        other: Standarti
       statement_to_parliament:
         one: Ziņojums parlamentam
         other: Ziņojumi parlamentam
@@ -260,17 +194,17 @@ lv:
         one: Statistiskas datu kopums
         other: Statistikas datu kopumi
       statistics_announcement:
-        one:
-        other:
+        one: Statistikas publiskošanas paziņojums
+        other: Statistikas publiskošanas paziņojumi
       statutory_guidance:
-        one:
-        other:
+        one: Saistošās vadlīnijas
+        other: Saistošās vadlīnijas
       take_part:
-        one:
-        other:
+        one: Piedalīties
+        other: Piedalīties
       tax_tribunal_decision:
-        one:
-        other:
+        one: Nodokļu un Kanclera tiesas lēmums
+        other: Nodokļu un Kanclera tiesas lēmumi
       transcript:
         one: Noraksts
         other: Noraksti
@@ -278,207 +212,211 @@ lv:
         one: Atklātības dati
         other: Atklātības dati
       utaac_decision:
-        one:
-        other:
+        one: Administratīvo lietu apelācijas tiesas lēmums
+        other: Administratīvo lietu apelācijas tiesas lēmumi
       world_location_news_article:
         one: Raksts
         other: Raksti
       world_news_story:
-        one:
-        other:
+        one: Pasaules ziņa
+        other: Pasaules ziņas
       written_statement:
         one: Rakstisks ziņojums parlamentam
         other: Rakstiski ziņojumi parlamentam
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information: Korporatīva informācija
-    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta Jūsu sniegtā personīgā informācija
-    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta mūsu %{link}
-    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
-    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas pieejamību %{link}
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv: Latviešu
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    coming_soon: Šis dokuments tiks publicēts
+    contents: Saturs
+    metadata:
+      published: publicēts
+      updated: atjaunināts
   publication:
-    details:
     documents:
       one: Dokuments
       other: Dokumenti
+    details: Detalizēta informācija
+  brexit:
+    business_link: Brexit vadlīnijas uzņēmumiem
+    citizen_link: Brexit vadlīnijas privātpersonām un ģimenēm
+    heading_prefix: Pastāv atšķirības
+  common:
+    last_updated:
+    visit: 'Apmeklējiet:'
+  components:
+    figure:
+      image_credit: 'Attēla autortiesības: %{credit}'
+    published_dates:
+      hide_all_updates: paslēpt visus atjauninājumus
+      last_updated: Pēdējoreiz atjaunināts %{date}
+      published: Publicēts %{date}
+      see_all_updates: skatīt visus atjauninājumus
+      show_all_updates: rādīt visus atjauninājumus
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: paslēpt visu
+      show_all: rādīt visu
+    save_this_page:
+      add_page_button: Pievienot saglabātajām lapām
+      confirmations:
+        page_removed:
+          message: Jūs noņēmāt šo no saglabāto lapu saraksta
+        page_saved:
+          message: Jūs pievienojāt šo saglabāto lapu sarakstam
+      page_not_saved_heading: Saglabājiet šo lapu, lai vēlāk varētu tajā atgriezties
+      page_was_saved_heading: Jūs saglabājāt šo lapu
+      remove_page_button: Noņemt no saglabāto lapu saraksta
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Skatīt
+        saglabātās lapas</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Pierakstieties</a>,
+        lai skatītu saglabātās lapas.
+    share_links:
+      share_this_page: Kopīgot šo lapu
+  consultation:
+    and: un
+    another_website_html: Šī konsultācija %{closed} notika <a href="%{url}">citā tīmekļa
+      vietnē</a>
+    at: 'šajā laikā:'
+    closes: Slēgšanas laiks ir
+    closes_at: Šīs konsultācijas slēgšanas laiks ir
+    complete_a: Pabeigt
+    description: Konsultācijas apraksts
+    detail_of_feedback_received: Atsauksmes informācija saņemta
+    detail_of_outcome: Rezultāta informācija
+    documents: Dokumenti
+    download_outcome: Lejupielādēt pilnu rezultātu
+    either: vai
+    email_to: 'E-pasta ziņojums uz:'
+    feedback_received: Atsauksme saņemta
+    is_being: tiek
+    not_open_yet: Šī konsultācija vēl nav atvērta
+    'on':
+    opens: Šī konsultācija tiek atvērta
+    original_consultation: Oriģinālā konsultācija
+    ran_from: Šī konsultācija
+    respond_online: Atbildēt tiešsaistē
+    'true': patiess
+    visit_soon: Drīzumā apmeklējiet šo lapu atkal, lai lejupielādētu šīs publiskās&nbsp;atsauksmes
+      rezultātu.
+    was: bija
+    ways_to_respond: Veidi, kā atbildēt
+    write_to: 'Rakstīt uz:'
+  contact:
+    email: E-pasts
+    find_call_charges: Informācija par maksu par zvaniem
+    online: Tiešsaiste
+    phone: Tālrunis
+    webchat: Tīmekļa tērzēšana
+  corporate_information_page:
+    about_our_services_html: Uzziniet vairāk %{link}.
+    corporate_information: Korporatīva informācija
+    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta
+      Jūsu sniegtā personīgā informācija.
+    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta
+      mūsu %{link}.
+    social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
+    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas
+      pieejamību %{link}.
+  fatality_notice:
+    alt_text: Aizsardzības ministrijas ģerbonis
+    field_of_operation: Darbības joma
+    operations_in: 'Darbības šeit: %{location}'
+  gone:
+    page_title: Vairs nav pieejams
+    published_in_error: Informācija šajā lapā ir noņemta, jo tā tika publicēta kļūdas
+      dēļ.
+    title: Lapa, kuru meklējat, vairs nav pieejama
+  guide:
+    pages_in_guide: Lapas šajā ceļvedī
+    skip_to_contents: Izlaist un pāriet uz ceļveža saturu
+  html_publication:
+    print_meta_data:
+      available_at: Šī publikācija ir pieejama vietnē %{url}
+      copyright: "© Britu sadraudzības autortiesības %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Šī publikācija ir licencēta saskaņā ar valsts izsniegtās atklātās
+        licences v3.0 nosacījumiem, izņemot, ja norādīts citādi. Lai skatītu šo licenci,
+        apmeklējiet <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        vai rakstiet uz adresi Information Policy Team, The National Archives, Kew,
+        London TW9 4DU vai e-pasta adresi: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Gadījumos, kur esam identificējuši trešo personu autortiesību informāciju,
+        jums ir nepieciešams saņemt atļauju no attiecīgajiem autortiesību īpašniekiem.
+  i18n:
+    direction:
+  language_names:
+    lv: Latviešu
+  multi_page:
+    next_page: Tālāk
+    previous_page: Atpakaļ
+    print_entire_guide: Drukāt visu ceļvedi
   service_sign_in:
-    continue:
+    continue: Turpināt
     error:
-      option:
-      title:
+      option: Lūdzu, izvēlieties opciju
+      title: Nav izvēlēta neviena opcija
   shared:
-    historically_political:
+    historically_political: Šis tika publicēts saskaņā ar %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Konsultanti ir pieejami tērzēšanai.
+      busy: Visi konsultanti pašlaik ir aizņemti.
+      closed: Tīmekļa tērzēšana pašlaik ir slēgta.
+      speak_to_adviser: Runāt ar konsultantu tūlīt
+      technical_problem: Tīmekļa tērzēšana pašlaik nav pieejama tehnisku problēmu
+        dēļ.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Designated Origin UK
+      Protected
+    pgi_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Geographic Origin UK
+      Protected
+    tsg_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Traditional Speciality
+      UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Piegādāts
+    location: Atrašanās vieta
+    written_on: Uzrakstīts uz
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Atcelšanas datums
+    cancelled: Statistikas publiskošana atcelta
+    changed_date: Publiskošanas datums ir mainīts
+    forthcoming: Statistika tiks publiskota
+    previous_date: Iepriekšējais datums
+    proposed_date: Paredzētā publiskošana
+    reason_for_change: Izmaiņu iemesls
+    release_date: Publiskošanas datums
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas, izņemot neatliekamus
+        braucienus uz noteiktām valsts daļām.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas, izņemot neatliekamus
+        braucienus pa valsti.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        iesaka izvairīties no jebkādas ceļošanas uz noteiktām valsts daļām.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        iesaka izvairīties no jebkādas ceļošanas pa valsti.
+    context: Ieteikums ārzemju ceļojumiem
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Ievērojiet spēkā esošos COVID-19 noteikumus jūsu dzīvesvietā: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglijā</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotijā</a>, <a href="https://gov.wales/coronavirus-travel">Velsā</a> un <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Ziemeļīrijā</a>.
+        </p>
+        <p class="govuk-body">
+          Lai nepieļautu jaunu COVID variāciju iekļūšanu Apvienotajā Karalistē, ieteicams izvairīties no ceļošanas uz <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">oranžā vai sarkanā saraksta valstīm</a>.
+        </p>
+        <p class="govuk-body">
+          Lai izprastu riskus konkrētā valstī, ievērojiet <a href="/guidance/travel-advice-novel-coronavirus">Ārlietu, Sadraudzības lietu un attīstības ministrijas ieteikumus ceļojumiem</a>.
+        </p>
+        <p class="govuk-body">
+          Atgriežoties ievērojiet noteikumus par <a href="/uk-border-control">ierašanos Apvienotajā Karalistē no ārzemēm</a> (izņemot Īriju).
+        </p>
+      text_assistive: Svarīgi
+      title: Ceļošana koronavīrusa (COVID-19) laikā
+    still_current_at: Joprojām aktuāli
+    summary: Kopsavilkums
+    updated: Atjaunināts
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Vairs nav pieejams
+    summary: Informācija šajā lapā ir noņemta, jo tā tika publicēta kļūdas dēļ.
+    title: Lapa, kuru meklējat, vairs nav pieejama
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktinformācija
+    policies: Politikas

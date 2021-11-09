@@ -1,150 +1,84 @@
----
 bg:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: Публикувано
-      updated: обновено
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Доклад на Отдела за разследване на авиационни произшествия
+        other: Доклади на Отдела за разследване на авиационни произшествия
       announcement:
         one: Съобщение
         other: Съобщения
       asylum_support_decision:
-        one:
-        other:
+        one: Решение на съда за подкрепа в областта на убежището
+        other: Решения на съда за подкрепа в областта на убежището
       authored_article:
         one: Авторска статия
-        other: Авторски статии
+        other: Авторска статии
       business_finance_support_scheme:
-        one:
-        other:
+        one: Схема за подпомагане на бизнес финансирането
+        other: Схеми за подпомагане на бизнес финансирането
       case_study:
         one: Казус
         other: Казуси
       closed_consultation:
-        one: Затворена консултация
-        other: Затворени консултации
+        one: Закрита консултация
+        other: Закрити консултации
       cma_case:
-        one:
-        other:
+        one: Дело на Органа за защита на конкуренцията и пазарите
+        other: Дела на Органа за защита на конкуренцията и пазарите
       coming_soon:
-        one:
-        other:
+        one: Очаквайте скоро
+        other: Очаквайте скоро
       consultation:
         one: Консултация
         other: Консултации
       consultation_outcome:
         one: Резултат от консултацията
-        other: Резултат от консултациите
+        other: Резултати от консултацията
       corporate_information_page:
-        one:
-        other:
+        one: Информационна страница
+        other: Информационни страници
       corporate_report:
-        one: Корпоративен доклад
-        other: Корпоративни доклади
+        one: Фирмен доклад
+        other: Фирмени доклади
       correspondence:
         one: Кореспонденция
         other: Кореспонденции
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Безвъзмездна финансова помощ за управление на селските райони
+        other: Безвъзмездни финансови помощи за управление на селските райони
       decision:
-        one:
-        other:
+        one: Решение
+        other: Решения
       detailed_guide:
-        one: Подробна насока
-        other: Подробни насоки
+        one: Насока
+        other: Насока
       dfid_research_output:
-        one:
-        other:
+        one: Научни изследвания за развитие
+        other: Научни изследвания за развития
       document_collection:
-        one: Серии
-        other:
+        one: Събиране
+        other: Събирания
       draft_text:
-        one: Чернова
-        other: Чернови
+        one: Проектотекст
+        other: Проектотекстове
       drug_safety_update:
-        one:
-        other:
+        one: Актуализация на безопасността на лекарствата
+        other: Актуализации на безопасността на лекарствата
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Решение на апелативния съд по трудови спорове
+        other: Решения на апелативния съд по трудови спорове
       employment_tribunal_decision:
-        one:
-        other:
+        one: Решение на съда по трудови спорове
+        other: Решения на съда по трудови спорове
       esi_fund:
-        one:
-        other:
+        one: Европейски структурен и инвестиционен фонд (ESIF)
+        other: Европейски структурни и инвестиционни фондове (ESIF)
       fatality_notice:
-        one: Уведомление за кончина
-        other: Уведомления за кончина
+        one: Известие за смъртен случай
+        other: Известия за смъртни случаи
       foi_release:
-        one: Съобщение във връзка със свободен достъп до информация
-        other: Съобщения във връзка със свободен достъп до информация
+        one: Свобода на информацията издание
+        other: Свобода на информацията издания
       form:
         one: Формуляр
         other: Формуляри
@@ -152,333 +86,337 @@ bg:
         one: Отговор на правителството
         other: Отговори на правителството
       guidance:
-        one: Насоки
-        other: Насоки
+        one: Насока
+        other: Насока
       impact_assessment:
-        one: Оценка на влиянието
-        other: Оценки на влиянието
+        one: Оценка на въздействието
+        other: Оценки на въздействието
       imported:
-        one: 'импортирано-очаква тип '
-        other: импортирано-очаква тип
+        one: импортиран - очакващ тип
+        other: импортиран - очакващ тип
       independent_report:
         one: Независим доклад
         other: Независими доклади
       international_development_fund:
-        one:
-        other:
+        one: Финансиране за международно развитие
+        other: Финансиране за международно развитие
       international_treaty:
-        one:
-        other:
+        one: Международен договор
+        other: Международни договори
       maib_report:
-        one:
-        other:
+        one: Доклад на Отдела за разследване на морски произшествия
+        other: Доклади на Отдела за разследване на морски произшествия
       map:
         one: Карта
         other: Карти
       medical_safety_alert:
-        one:
-        other:
+        one: Предупреждения и изтегляния на лекарства и медицински изделия
+        other: Предупреждения и изтегляния на лекарства и медицински изделия
       national:
-        one:
-        other:
+        one: Съобщение от националната статистика
+        other: Съобщения от националните статистики
       national_statistics:
-        one: Статистика- национална статистика
-        other: Статистики- национални статистики
+        one: Национална статистика
+        other: Национална статистика
       national_statistics_announcement:
-        one:
-        other:
+        one: Съобщение от националната статистика
+        other: Съобщения от националните статистики
       news_article:
-        one: Новинарска статия
-        other: Новинарски статии
+        one: Информационна статия
+        other: Информационни статии
       news_story:
-        one: Новина
-        other: Новини
+        one: Репортаж
+        other: Репортажи
       notice:
-        one:
-        other:
+        one: Известие
+        other: Известия
       official:
-        one:
-        other:
+        one: Съобщение от официалната статистика
+        other: Съобщения от официалните статистики
       official_statistics:
-        one: Статистики
-        other: Статистики
+        one: Официална статистика
+        other: Официална статистика
       official_statistics_announcement:
-        one:
-        other:
+        one: Съобщение от официалната статистика
+        other: Съобщения от официалните статистики
       open_consultation:
-        one: Отворена консултация
-        other: Отворени консултации
+        one: Открита консултация
+        other: Открити консултации
       oral_statement:
-        one: Устно изказване в Парламента
-        other: Устни изказвания в Парламента
+        one: Устно изявление в Парламента
+        other: Устни изявления в Парламента
       policy:
         one: Политика
         other: Политики
       policy_paper:
-        one: Документ, залагащ политика
-        other: Документи, залагащи политика
+        one: Политически документ
+        other: Политически документи
       press_release:
-        one: Съобщение до медиите
-        other: Съобщения до медиите
+        one: Съобщение за пресата
+        other: Съобщения за пресата
       promotional:
-        one: Промоционален материал
-        other: Промоционален материал
+        one: Рекламен материал
+        other: Рекламен материал
       publication:
         one: Публикация
         other: Публикации
       raib_report:
-        one:
-        other:
+        one: Доклад на Отдела за разследване на железопътни произшествия
+        other: Доклади на Отдела за разследване на железопътни произшествия
       regulation:
-        one:
-        other:
+        one: Наредба
+        other: Наредби
       research:
         one: Проучване и анализ
-        other: Проучване и анализи
+        other: Проучване и анализ
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Съдебно решение за жилищни имоти
+        other: Съдебни решения за жилищни имоти
       service_sign_in:
-        one:
-        other:
+        one: Влизане в услугата
+        other: Влизане в услугата
       service_standard_report:
-        one:
-        other:
+        one: Стандартен доклад за услугите
+        other: Стандартни доклади за услугите
       speaking_notes:
-        one: Устна нота
-        other: Устни ноти
+        one: Бележки за изказвания
+        other: Бележки за изказвания
       speech:
         one: Реч
         other: Речи
       standard:
-        one:
-        other:
+        one: Стандарт
+        other: Стандарти
       statement_to_parliament:
-        one: Изявление в парламента
-        other: Изявления в парламента
+        one: Изявление пред Парламента
+        other: Изявления пред Парламента
       statistical_data_set:
         one: Набор от статистически данни
         other: Набори от статистически данни
       statistics_announcement:
-        one:
-        other:
+        one: Съобщение за издадена статистика
+        other: Съобщения за издадена статистика
       statutory_guidance:
-        one:
-        other:
+        one: Законови указания
+        other: Законови указания
       take_part:
-        one:
-        other:
+        one: Вземете участие
+        other: Вземете участие
       tax_tribunal_decision:
-        one:
-        other:
+        one: Решение на данъчния и канцеларския съд
+        other: Решения на данъчния и канцеларския съд
       transcript:
-        one: Препис
-        other: Преписи
+        one: Текст
+        other: Текстове
       transparency:
-        one: Информация за прозрачността
-        other: Информация за прозрачността
+        one: Данни за прозрачност
+        other: Данни за прозрачност
       utaac_decision:
-        one:
-        other:
+        one: Решение на административния апелативен съд
+        other: Решения на апелативния съд по трудови спорове
       world_location_news_article:
-        one: Новинарска статия
-        other: Новинарски статии
+        one: Информационна статия
+        other: Информационни статии
       world_news_story:
-        one:
-        other:
+        one: Световна новина
+        other: Световни новини
       written_statement:
-        one: Писмено изявление до парламента
-        other: Писмени изявления до парламента
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information: Корпоративна информация
-    personal_information_charter_html: Нашият %{link} дава информация за начина на ползване на личните Ви данни
-    publication_scheme_html: Прочетете какви видове информация публикуваме в нашия %{link}.
-    social_media_use_html: Вижте политиката ни по %{link}.
-    welsh_language_scheme_html: Разберете повече за нашето задължение да публикуваме в %{link}.
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg: български
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+        one: Писмено изявление в Парламента
+        other: Писмени изявления в Парламента
+    coming_soon: Този документ ще бъде публикуван на
+    contents: Съдържание
+    metadata:
+      published: Публикуван
+      updated: Актуализиран
   publication:
-    details:
     documents:
       one: Документ
       other: Документи
+    details: Подробности
+  brexit:
+    business_link: Брекзит насока за предприятията
+    citizen_link: Брекзит насока за лица и семейства
+    heading_prefix: Има различен
+  common:
+    last_updated:
+    visit: 'Посетете:'
+  components:
+    figure:
+      image_credit: 'Изображението е от: %{credit}'
+    published_dates:
+      hide_all_updates: скриване на всички актуализации
+      last_updated: Последна актуализация %{date}
+      published: Публикувано на %{date}
+      see_all_updates: вижте всички актуализации
+      show_all_updates: показване на всички актуализации
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: скриване на всички
+      show_all: показване на всички
+    save_this_page:
+      add_page_button: Добавете към запазените си страници
+      confirmations:
+        page_removed:
+          message: Премахнали сте това от запазените си страници
+        page_saved:
+          message: Добавили сте това към запазените си страници
+      page_not_saved_heading: Запазете тази страница, за да можете да се върнете към
+        нея по-късно
+      page_was_saved_heading: Запазихте тази страница
+      remove_page_button: Премахване от запазените страници
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Вижте
+        запазените си страници</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Влезте,</a>
+        за да видите всичките си запазени страници.
+    share_links:
+      share_this_page: Споделяне на тази страница
+  consultation:
+    and: и
+    another_website_html: Тази консултация %{closed} се намира на <a href="%{url}">друг
+      уебсайт</a>
+    at: на
+    closes: Закрива се в
+    closes_at: Тази консултация се закрива в
+    complete_a: Попълнете
+    description: Решение за консултация
+    detail_of_feedback_received: Подробности за получената обратна връзка
+    detail_of_outcome: Подробности за резултата
+    documents: Документи
+    download_outcome: Изтеглете пълния резултат
+    either: или
+    email_to: 'Изпратете имейл до:'
+    feedback_received: Получената обратна връзка
+    is_being: е
+    not_open_yet: Тази консултация все още не е открита
+    'on':
+    opens: Тази консултация се отваря
+    original_consultation: Първоначална консултация
+    ran_from: Тази консултация се управлява от
+    respond_online: Отговор онлайн
+    'true': вярна
+    visit_soon: В скоро време посетете отново тази страница, за да изтеглите резултатите
+      от тази обществена&nbsp;обратна връзка.
+    was: бе
+    ways_to_respond: Начини за отговор
+    write_to: 'Пишете до:'
+  contact:
+    email: Имейл
+    find_call_charges: Научете повече за телефонните такси
+    online: Онлайн
+    phone: Телефон
+    webchat: Уебчат
+  corporate_information_page:
+    about_our_services_html: Научете повече за %{link}.
+    corporate_information: Фирмена информация
+    personal_information_charter_html: В нашия %{link} е обяснено как работим с личната
+      информация.
+    publication_scheme_html: Прочетете за видовете информация, които обичайно публикуваме
+      на нашата %{link}.
+    social_media_use_html: Прочетете нашите правила на %{link}.
+    welsh_language_scheme_html: Научете повече за нашия ангажимент към %{link}.
+  fatality_notice:
+    alt_text: Герб на Министерството на отбраната
+    field_of_operation: Област на действие
+    operations_in: Операции в %{location}
+  gone:
+    page_title: Вече не е налична
+    published_in_error: Информацията е премахната от тази страница, тъй като е била
+      погрешно публикувана.
+    title: Страницата, която търсите, вече не е налична
+  guide:
+    pages_in_guide: Страници в това ръководство
+    skip_to_contents: Преминаване към съдържанието на ръководството
+  html_publication:
+    print_meta_data:
+      available_at: Тази публикация е налична на адрес %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Тази публикация е лицензирана съгласно условията на Open Government
+        Licence v3.0, освен ако не е посочено друго. За да разгледате този лиценз,
+        посетете <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        или пишете до екипа за информационна политика, The National Archives, Kew,
+        Лондон TW9 4DU, или изпратете имейл до: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Когато идентифицираме информация за авторски права на трети страни,
+        ще трябва да получите разрешение от съответните носители на авторските права.
+  i18n:
+    direction:
+  language_names:
+    bg: Bulgarian
+  multi_page:
+    next_page: Следваща
+    previous_page: Предишна
+    print_entire_guide: Отпечатване на цялото ръководство
   service_sign_in:
-    continue:
+    continue: Продължи
     error:
-      option:
-      title:
+      option: Моля, изберете опция
+      title: Не сте избрали опция
   shared:
-    historically_political:
+    historically_political: Това е публикувано под %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Консултантите са на разположение за разговори.
+      busy: В момента всички консултанти от уебчата са заети.
+      closed: В момента уебчатът е затворен.
+      speak_to_adviser: Можете да говорите с консултанта
+      technical_problem: В момента уебчатът не е достъпен поради технически проблеми.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Логото на схемата представлява черен печат с надпис Designated Origin
+      UK Protected
+    pgi_alt_text: Логото на схемата представлява черен печат с надпис Geographic Origin
+      UK Protected
+    tsg_alt_text: Логото на схемата представлява черен печат с надпис Traditional
+      Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Доставено на
+    location: Местоположение
+    written_on: Написано на
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Дата на анулиране
+    cancelled: Съобщенията за статистика са анулирани
+    changed_date: Датата на изданието е променена
+    forthcoming: Статистиката ще бъде издадена
+    previous_date: Предишна дата
+    proposed_date: Предложено издание
+    reason_for_change: Причина за промяната
+    release_date: Дата на издаване
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> препоръчва да не се пътува до някои части на страната,
+        освен ако това не е необходимо.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> препоръчва да не се пътува из цялата страна, освен ако
+        не е необходимо.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        препоръчва да не се пътува до някои части на страната.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        препоръчва да не се пътува из цялата страна.
+    context: Съвети при пътуване в чужбина
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Спазвайте действащите правила относно COVID-19 в мястото, където живеете: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Шотландия</a>, <a href="https://gov.wales/coronavirus-travel">Уелс</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Северна Ирландия</a>.
+        </p>
+        <p class="govuk-body">
+          За да се предотврати навлизането на новите варианти на COVID в Обединеното кралство, не трябва да пътувате до <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">страни в жълти или червени зони</a>.
+        </p>
+        <p class="govuk-body">
+          За да разберете какви са рисковете в дадена страна, следвайте <a href="/guidance/travel-advice-novel-coronavirus">съветите за пътуване на Службата за външните работи, Британската общност и развитието</a>.
+        </p>
+        <p class="govuk-body">
+          При завръщането си, спазвайте правилата <a href="/uk-border-control">за влизане в Обединеното кралство от чужбина</a> (не важи за Ирландия).
+        </p>
+      text_assistive: Важно
+      title: Коронавирус (COVID-19) пътуване
+    still_current_at: Все още актуален в
+    summary: Обобщение
+    updated: Актуализиран
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Вече не е налична
+    summary: Информацията е премахната от тази страница, тъй като е била погрешно
+      публикувана.
+    title: Страницата, която търсите, вече не е налична
   working_group:
-    contact_details:
-    policies:
+    contact_details: Данни за контакти
+    policies: Политики

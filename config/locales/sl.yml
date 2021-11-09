@@ -1,634 +1,174 @@
----
 sl:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
   components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
+    attachment:
+      page:
+        one: 1 stran
+        two:
+        few:
+        other: "%{count} strani"
+      opendocument_html: Dokument je formata <a href='https://www.gov.uk/guidance/using-open-document-formats-odf-in-your-organisation'
+        target=%{target} class='govuk-link'>Odpri dokument</a>
+      order_a_copy: Naročite izvod
+      reference: 'Referenca: % (reference}'
+      request_format_cta: Zahtevajte dostopen format.
+      request_format_details_html: |-
+        Če uporabljate podporno tehnologijo (na primer bralnik zaslona) in potrebujete
+        različico tega dokumenta v bolj dostopni obliki, pošljite e -pošto na <a href='mailto:%{alternative_format_contact_email}' target='_blank' class='govuk-link'>%{alternative_format_contact_email}</a>. Prosimo, povejte nam, kateri format potrebujete. V pomoč nam bo, če nam poveste, katero podporno tehnologijo uporabljate.
+      request_format_text: Ta datoteka morda ni primerna za uporabnike podporne tehnologije.
+    accordion:
+      hide: Skrij
+      hide_all: Skrij vse razdelke
+      show: Prikaži
+      show_all: Prikaži vse razdelke
+      this_section_visually_hidden: " ta razdelek"
+    article_schema:
+      scoped_search_description: Išči znotraj %{title}
+    back_link:
+      back: Nazaj
+    character_count:
+      body: Vpišete lahko do %{number} %{type}
+      type:
+        characters: znaki
+        words: besede
+    checkboxes:
+      or: ali
+    contents_list:
+      contents: Vsebina
+    contextual_sidebar:
+      pretitle: Tudi del
+    cookie_banner:
+      buttons:
+        accept_cookies: Sprejmi dodatne piškotke
+        reject_cookies: Zavrni dodatne piškotke
+      confirmation_message: Kadar koli lahko %{link}.
+      confirmation_message_link: spremenite nastavitve piškotkov
+      hide: Skrijte to sporočilo
+      text:
+      - Za delovanje spletne strani uporabljamo nekaj bistvenih piškotkov.
+      - Radi bi namestili dodatne piškotke
+      - da bi razumeli kako uporabljate stran GOV.UK
+      - si zapomnili nastavitve in izboljšali vladne storitve.
+      - Uporabljamo tudi piškotke
+      - ki so jih nastavila druga spletna mesta
+      - kar nam pomagajo pri zagotavljanju vsebine iz njihovih storitev.
+      title: Piškotki na GOV.UK
+    feedback:
+      close: Zapri
+      dont_include_personal_info: Ne vključujte osebnih ali finančnih podatkov, na
+        primer številke zavarovanja ali podatkov o kreditni kartici.
+      email_address: E-poštni naslov
+      help_us_improve_govuk: Pomagajte nam izboljšati GOV.UK
+      is_not_useful: ta stran ni uporabna
+      is_this_page_useful: Je ta stran uporabna?
+      is_useful: Ta stran je uporabna
+      maybe: Morda
+      more_about_visit: Radi bi izboljšali GOV.UK, zato bi radi izvedeli več o vašem
+        današnjem obisku. Poslali vam bomo povezavo do obrazca za povratne informacije.
+        Za izpolnitev potrebujete le 2 minuti. Ne skrbite, ne bomo vam pošiljali neželene
+        pošte, niti vašega e-poštnega naslova delili z nikomer.
+      'no': Ne
+      send: Pošlji
+      send_me_survey: Pošlji mi raziskavo
+      something_wrong: Prijavite težavo s to stranjo
+      thank_you_for_feedback: Hvala za povratne informacije
+      what_doing: Kaj ste počeli?
+      what_wrong: Kaj je šlo narobe?
+      'yes': Da
+    government_navigation:
+      consultations: Posvetovanja
+      departments: Oddelki
+      get-involved: Sodelujte
+      how-government-works: Kako deluje vlada
+      news_and_communications: Novice in sporočila
+      statistics: Statistika
+      worldwide: Po svetu
+    layout_footer:
+      copyright_html: <a class="govnu-footer__link govuk-footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">©
+        Avtorske pravice krone</a>
+      licence_html: Vsa vsebina je na voljo na <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+        rel="license">Odprto vladno dovoljenje v3.0</a>, razen kjer je zapisano drugače
+      support_links: Podporne povezave
+    layout_header:
+      hide_button: Skrij iskanje
+      menu: Meni
+      search_button: Išči po GOV.UK
+      show_button: Pokaži iskanje
+      top_level: Najvišja raven
     metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        few:
-        one:
-        other:
-        two:
-      announcement:
-        few:
-        one:
-        other:
-        two:
-      asylum_support_decision:
-        few:
-        one:
-        other:
-        two:
-      authored_article:
-        few:
-        one:
-        other:
-        two:
-      business_finance_support_scheme:
-        few:
-        one:
-        other:
-        two:
-      case_study:
-        few:
-        one:
-        other:
-        two:
-      closed_consultation:
-        few:
-        one:
-        other:
-        two:
-      cma_case:
-        few:
-        one:
-        other:
-        two:
-      coming_soon:
-        few:
-        one:
-        other:
-        two:
-      consultation:
-        few:
-        one:
-        other:
-        two:
-      consultation_outcome:
-        few:
-        one:
-        other:
-        two:
-      corporate_information_page:
-        few:
-        one:
-        other:
-        two:
-      corporate_report:
-        few:
-        one:
-        other:
-        two:
-      correspondence:
-        few:
-        one:
-        other:
-        two:
-      countryside_stewardship_grant:
-        few:
-        one:
-        other:
-        two:
-      decision:
-        few:
-        one:
-        other:
-        two:
-      detailed_guide:
-        few:
-        one:
-        other:
-        two:
-      dfid_research_output:
-        few:
-        one:
-        other:
-        two:
-      document_collection:
-        few:
-        one:
-        other:
-        two:
-      draft_text:
-        few:
-        one:
-        other:
-        two:
-      drug_safety_update:
-        few:
-        one:
-        other:
-        two:
-      employment_appeal_tribunal_decision:
-        few:
-        one:
-        other:
-        two:
-      employment_tribunal_decision:
-        few:
-        one:
-        other:
-        two:
-      esi_fund:
-        few:
-        one:
-        other:
-        two:
-      fatality_notice:
-        few:
-        one:
-        other:
-        two:
-      foi_release:
-        few:
-        one:
-        other:
-        two:
-      form:
-        few:
-        one:
-        other:
-        two:
-      government_response:
-        few:
-        one:
-        other:
-        two:
-      guidance:
-        few:
-        one:
-        other:
-        two:
-      impact_assessment:
-        few:
-        one:
-        other:
-        two:
-      imported:
-        few:
-        one:
-        other:
-        two:
-      independent_report:
-        few:
-        one:
-        other:
-        two:
-      international_development_fund:
-        few:
-        one:
-        other:
-        two:
-      international_treaty:
-        few:
-        one:
-        other:
-        two:
-      maib_report:
-        few:
-        one:
-        other:
-        two:
-      map:
-        few:
-        one:
-        other:
-        two:
-      medical_safety_alert:
-        few:
-        one:
-        other:
-        two:
-      national:
-        few:
-        one:
-        other:
-        two:
-      national_statistics:
-        few:
-        one:
-        other:
-        two:
-      national_statistics_announcement:
-        few:
-        one:
-        other:
-        two:
-      news_article:
-        few:
-        one:
-        other:
-        two:
-      news_story:
-        few:
-        one:
-        other:
-        two:
-      notice:
-        few:
-        one:
-        other:
-        two:
-      official:
-        few:
-        one:
-        other:
-        two:
-      official_statistics:
-        few:
-        one:
-        other:
-        two:
-      official_statistics_announcement:
-        few:
-        one:
-        other:
-        two:
-      open_consultation:
-        few:
-        one:
-        other:
-        two:
-      oral_statement:
-        few:
-        one:
-        other:
-        two:
-      policy:
-        few:
-        one:
-        other:
-        two:
-      policy_paper:
-        few:
-        one:
-        other:
-        two:
-      press_release:
-        few:
-        one:
-        other:
-        two:
-      promotional:
-        few:
-        one:
-        other:
-        two:
-      publication:
-        few:
-        one:
-        other:
-        two:
-      raib_report:
-        few:
-        one:
-        other:
-        two:
-      regulation:
-        few:
-        one:
-        other:
-        two:
-      research:
-        few:
-        one:
-        other:
-        two:
-      residential_property_tribunal_decision:
-        few:
-        one:
-        other:
-        two:
-      service_sign_in:
-        few:
-        one:
-        other:
-        two:
-      service_standard_report:
-        few:
-        one:
-        other:
-        two:
-      speaking_notes:
-        few:
-        one:
-        other:
-        two:
-      speech:
-        few:
-        one:
-        other:
-        two:
-      standard:
-        few:
-        one:
-        other:
-        two:
-      statement_to_parliament:
-        few:
-        one:
-        other:
-        two:
-      statistical_data_set:
-        few:
-        one:
-        other:
-        two:
-      statistics_announcement:
-        few:
-        one:
-        other:
-        two:
-      statutory_guidance:
-        few:
-        one:
-        other:
-        two:
-      take_part:
-        few:
-        one:
-        other:
-        two:
-      tax_tribunal_decision:
-        few:
-        one:
-        other:
-        two:
-      transcript:
-        few:
-        one:
-        other:
-        two:
-      transparency:
-        few:
-        one:
-        other:
-        two:
-      utaac_decision:
-        few:
-        one:
-        other:
-        two:
-      world_location_news_article:
-        few:
-        one:
-        other:
-        two:
-      world_news_story:
-        few:
-        one:
-        other:
-        two:
-      written_statement:
-        few:
-        one:
-        other:
-        two:
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl: Slovenščina
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      few:
-      one:
-      other:
-      two:
-  service_sign_in:
-    continue:
-    error:
-      option:
-      title:
-  shared:
-    historically_political:
-    webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
-  specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
-  speech:
-    delivered_on:
-    location:
-    written_on:
-  statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
-  unpublishing:
-    page_title:
-    summary:
-    title:
-  working_group:
-    contact_details:
-    policies:
+      from: Od
+      history: Zgodovina
+      last_updated: Nazadnje posodobljeno
+      part_of: Del
+      published: Objavljeno
+      see_all_updates: Poglej vse posodobitve
+      toggle_less: Pokaži manj
+      toggle_more: "+ %{number} več"
+    modal_dialogue:
+      close_modal: Zapri modalno okno
+    organisation_schema:
+      all_content_search_description: Oglejte si vse gradivo %{organisation}
+    previous_and_next_navigation:
+      pagination: Oštevilčenje
+    print_link:
+      text: Natisni to stran
+    radio:
+      or: ali
+    related_footer_navigation:
+      collections: Zbirke
+      policies: Politike
+      statistical_data_sets: Statistični podatkovni nizi
+      topical_events: Aktualni dogodki
+    related_navigation:
+      collections: Zbirka
+      external_links: Kolekcija
+      policies: Politika
+      publishers: Objavil
+      related_contacts: Drugi kontakti
+      related_content: Sorodna vsebina
+      related_external_links: Drugje na internetu
+      related_guides: Podrobne smernice
+      statistical_data_sets: Statistični podatkovni niz
+      topical_events: Aktualen dogodek
+      topics: Razišči to temo
+      transition:
+        hub_page_link_path: "/transition-check/questions"
+        hub_page_link_text: Prejmite prilagojen seznam dejanj
+        hub_page_title: Prejmite prilagojen seznam dejanja
+        link_path: "/brexit"
+        link_text: Preverite, kaj morate storiti
+        title: Brexit
+      world_locations: Lokacije po svetu
+    search_box:
+      input_title: Iskanje
+      label: Iskanje po GOV.UK
+      search_button: Iskanje
+    show_password:
+      announce_hide: Vaše geslo je skrito
+      announce_show: Vaše geslo je prikazano
+      hide: Skrij
+      hide_password: Skrij geslo
+      show: Prikaži
+      show_password: Prikaži geslo
+    skip_link:
+      text: Preskoči glavno vsebino
+    step_by_step_nav:
+      hide: Skrij
+      hide_all: Skrij vse korake
+      show: Prikaži
+      show_all: Prikaži vse korake
+    step_by_step_nav_related:
+      part_of: Del
+    subscription_links:
+      email_signup_link_text: Prejemajte e-sporočila
+      feed_link_label: Kopirajte in prilepite ta URL v bralnik virov
+      feed_link_text: Naročite se na novice
+      subscriptions: Naročnine
+    success_alert:
+      success: Uspeh
+    summary_list:
+      delete: Izbriši
+      edit: Spremeni
+    tabs:
+      contents: Vsebina
+  common:
+    translations: Prevodi

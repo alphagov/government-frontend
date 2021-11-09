@@ -1,99 +1,33 @@
----
 sq:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: publikuar
-      updated: rifreskuar
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Raporti i Degës së Hetimit të Aksidenteve Ajrore
+        other: Raportet e Degës së Hetimit të Aksidenteve Ajrore
       announcement:
-        one: Lajmerim
-        other: Lajmerime
+        one: Lajmërim
+        other: Lajmërime
       asylum_support_decision:
-        one:
-        other:
+        one: Vendimi i gjykatës për mbështetjen e azilit
+        other: Vendimet e gjykatës për mbështetjen e azilit
       authored_article:
-        one: Artikull autori
-        other: Artikuj autoresh
+        one: Artikull me autor
+        other: Artikuj me autor
       business_finance_support_scheme:
-        one:
-        other:
+        one: Skema e mbështetjes së financimit të biznesit
+        other: Skemat e mbështetjes së financimit të biznesit
       case_study:
         one: Rast studimi
         other: Raste studimi
       closed_consultation:
         one: Konsultim i mbyllur
-        other: Konsultime te mbyllur
+        other: Konsultime të mbyllura
       cma_case:
-        one:
-        other:
+        one: Rasti i Autoritetit të Konkurrencës dhe Tregjeve
+        other: Raste të Autoritetit të Konkurrencës dhe Tregjeve
       coming_soon:
-        one:
-        other:
+        one: Vjen së shpejti
+        other: Vjen së shpejti
       consultation:
         one: Konsultim
         other: Konsultime
@@ -101,124 +35,124 @@ sq:
         one: Rezultati i konsultimit
         other: Rezultatet e konsultimit
       corporate_information_page:
-        one:
-        other:
+        one: Faqja e informacionit
+        other: Faqet e informacionit
       corporate_report:
-        one: Raport i organizates
-        other: Raporte te organizates
+        one: Raport i organizatës
+        other: Raporte te organizatës
       correspondence:
-        one: Korrespondence
+        one: Korrespondencë
         other: Korrespondencat
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Granti i administrimit të fshatit
+        other: Grantet e administrimit të fshatit
       decision:
-        one:
-        other:
+        one: Vendimi
+        other: Vendimet
       detailed_guide:
-        one: Udhezim i detajuar
-        other: Udhezim i detajuar
+        one: Udhëzim
+        other: Udhëzim
       dfid_research_output:
-        one:
-        other:
+        one: Kërkimi për Rezultatin e Zhvillimit
+        other: Kërkimi për Rezultatet e Zhvillimit
       document_collection:
-        one: Seri
-        other:
+        one: Koleksion
+        other: Koleksionet
       draft_text:
         one: Draft tekst
-        other: draft tekste
+        other: Draft tekste
       drug_safety_update:
-        one:
-        other:
+        one: Përditësimi i Sigurisë së Barnave
+        other: Përditësime të Sigurisë së Barnave
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Vendimi i gjykatës së apelit të punës
+        other: Vendimet e gjykatës së apelit të punës
       employment_tribunal_decision:
-        one:
-        other:
+        one: Vendimi i gjykatës së punësimit
+        other: Vendimet e gjykatës së punësimit
       esi_fund:
-        one:
-        other:
+        one: Fondi Evropian për Strukturimin dhe Investimet (ESIF)
+        other: Fondet Evropiane Strukturore dhe Investuese (ESIF)
       fatality_notice:
-        one: njoftim fataliteti
-        other: njoftime fataliteti
+        one: Njoftim fataliteti
+        other: Njoftime fataliteti
       foi_release:
-        one: Njoftim mbi Lirine e Informacionit
-        other: Njoftime mbi Lirine e Informacionit
+        one: Njoftim mbi Lirinë e Informacionit
+        other: Njoftime mbi Lirinë e Informacionit
       form:
-        one: Forme
-        other: Forma
+        one: Formular
+        other: Formularë
       government_response:
         one: Reagim qeveritar
         other: Reagime qeveritare
       guidance:
-        one: Udhezime
-        other: Udhezime
+        one: Udhëzime
+        other: Udhëzime
       impact_assessment:
-        one: Vleresim i ndikimit
-        other: Vleresime te ndikimit
+        one: Vlerësim i ndikimit
+        other: Vlerësime te ndikimit
       imported:
-        one: Importuar - tipi pritje
-        other: Importuar - tipi pritje
+        one: importuar - tipi pritje
+        other: importuar - tipi pritje
       independent_report:
         one: Raport i pavarur
-        other: Raporte te pavarur
+        other: Raporte të pavarur
       international_development_fund:
-        one:
-        other:
+        one: Financimi i zhvillimit ndërkombëtar
+        other: Financime të zhvillimit ndërkombëtar
       international_treaty:
-        one:
-        other:
+        one: Traktat ndërkombëtar
+        other: Traktate ndërkombëtare
       maib_report:
-        one:
-        other:
+        one: Raporti i Degës së Hetimit të Aksidenteve Detare
+        other: Raportet e Degës së Hetimit të Aksidenteve Detare
       map:
-        one: Harte
+        one: Hartë
         other: Harta
       medical_safety_alert:
-        one:
-        other:
+        one: Njoftime dhe kujtesa për ilaçe dhe pajisje mjekësore
+        other: Njoftime dhe kujtesa për ilaçe dhe pajisje mjekësore
       national:
-        one:
-        other:
+        one: Njoftimi i statistikave kombëtare
+        other: Njoftimet e statistikave kombëtare
       national_statistics:
-        one: Statistika - statistika kombetare
-        other: Statistika - statistika kombetare
+        one: Statistikat Kombëtare
+        other: Statistikat Kombëtare
       national_statistics_announcement:
-        one:
-        other:
+        one: Njoftimi i statistikave kombëtare
+        other: Njoftime të statistikave kombëtare
       news_article:
-        one: Artikull lajm
-        other: Artikuj lajme
+        one: Artikull lajmesh
+        other: Artikuj lajmesh
       news_story:
         one: Ngjarje
         other: Ngjarje
       notice:
-        one:
-        other:
+        one: Njoftim
+        other: Njoftime
       official:
-        one:
-        other:
+        one: Njoftimi i statistikave zyrtare
+        other: Njoftimet e statistikave zyrtare
       official_statistics:
-        one: Statistika
-        other: Statistika
+        one: Statistikat Zyrtare
+        other: Statistikat Zyrtare
       official_statistics_announcement:
-        one:
-        other:
+        one: Njoftimi i statistikave zyrtare
+        other: Njoftime të statistikave zyrtare
       open_consultation:
         one: Konsultim i hapur
-        other: Konsultime te hapur
+        other: Konsultime te hapura
       oral_statement:
-        one: Deklarate per Parliamentin
-        other: Deklarata per Parlamentin
+        one: Deklarata gojore në Parlament
+        other: Deklarata gojore në Parlament
       policy:
-        one: Politike
+        one: Politikë
         other: Politika
       policy_paper:
-        one: dokument politikash
-        other: dokumente politikash
+        one: Dokument politikash
+        other: Dokumente politikash
       press_release:
-        one: Njoftim shtyp
+        one: Njoftimi shtypi
         other: Njoftime shtypi
       promotional:
         one: Material promovues
@@ -227,23 +161,23 @@ sq:
         one: Publikim
         other: Publikime
       raib_report:
-        one:
-        other:
+        one: Raporti i Degës së Hetimit të Aksidenteve Hekurudhor
+        other: Raportet e Degës së Hetimit të Aksidenteve Hekurudhor
       regulation:
-        one:
-        other:
+        one: Rregullore
+        other: Rregulloret
       research:
-        one: kerkime dhe analiza
-        other: kerkime dhe analiza
+        one: Kërkime dhe analiza
+        other: Kërkime dhe analiza
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Vendimi i gjykatës së pronës së banimit
+        other: Vendimet e gjykatës së pronës së banimit
       service_sign_in:
-        one:
-        other:
+        one: Hyrje në shërbim
+        other: Hyrje në shërbim
       service_standard_report:
-        one:
-        other:
+        one: Raporti Standard i Shërbimit
+        other: Raportet Standarde të Shërbimit
       speaking_notes:
         one: Pika fjalimi
         other: Pika fjalimi
@@ -251,234 +185,239 @@ sq:
         one: Fjalim
         other: Fjalime
       standard:
-        one:
-        other:
+        one: Standardi
+        other: Standarde
       statement_to_parliament:
-        one: Deklarate per Parliamentin
-        other: Deklarata per Parlamentin
+        one: Deklaratë në Parlament
+        other: Deklarata në Parlament
       statistical_data_set:
-        one: Grup te dhenash statistikore
-        other: Grupe te dhenash stasistikore
+        one: Grupi i të dhënave statistikore
+        other: Grupe të të dhënave statistikore
       statistics_announcement:
-        one:
-        other:
+        one: Njoftimi për publikimin e statistikave
+        other: Njoftime për publikimin e statistikave
       statutory_guidance:
-        one:
-        other:
+        one: Udhëzim ligjor
+        other: Udhëzim ligjor
       take_part:
-        one:
-        other:
+        one: Merr pjesë
+        other: Merr pjesë
       tax_tribunal_decision:
-        one:
-        other:
+        one: Vendimi i gjykatës së taksave dhe kancelarive
+        other: Vendime të gjykatës së taksave dhe kancelarive
       transcript:
         one: Transkript
         other: Transkripte
       transparency:
-        one: Te dhena per transparencen
-        other: Te dhena per transparencen
+        one: Të dhëna për transparencën
+        other: Të dhëna për transparencën
       utaac_decision:
-        one:
-        other:
+        one: Vendimi i gjykatës së apelit administrativ
+        other: Vendime të gjykatës së apelit administrativ
       world_location_news_article:
-        one: Artikull lajm
-        other: Artikuj lajme
+        one: Artikull lajmesh
+        other: Artikuj lajmesh
       world_news_story:
-        one:
-        other:
+        one: Historia e lajmeve botërore
+        other: Histori të lajmeve botërore
       written_statement:
-        one: Deklarate me shkrim per Parlamentin
-        other: Deklarata me shkrim per Parlamentin
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information: Informacion korporate
-    personal_information_charter_html: "%{link} shpjegon si trajtohet informacioni juaj personal"
-    publication_scheme_html: Lexo mbi llojet e informacionit qe ne publikojme rregullisht ne %{link}.
-    social_media_use_html: Lexo politikat tona ne %{link}
-    welsh_language_scheme_html: Meso mbi angazhimin tone ndaj publikimit ne %{link}
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq: Shqip
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+        one: Deklaratë me shkrim në Parlament
+        other: Deklarata me shkrim në Parlament
+    coming_soon: Ky dokument do të publikohet në
+    contents: Përmbajtja
+    metadata:
+      published: Publikuar
+      updated: Përditësuar
   publication:
-    details:
     documents:
       one: Dokument
       other: Dokumente
+    details: Detajet
+  brexit:
+    business_link: Udhëzime për Brexit për bizneset
+    citizen_link: Udhëzime për Brexit për individët dhe familjet
+    heading_prefix: Ka të ndryshme
+  common:
+    last_updated:
+    visit: 'Vizitoni:'
+  components:
+    figure:
+      image_credit: 'Kreditet e imazhit: %{credit}'
+    published_dates:
+      hide_all_updates: fshih të gjitha përditësimet
+      last_updated: Përditësuar së fundi %{date}
+      published: Publikuar %{date}
+      see_all_updates: shih të gjitha përditësimet
+      show_all_updates: shfaq të gjitha përditësimet
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: fshih të gjitha
+      show_all: shfaq të gjitha
+    save_this_page:
+      add_page_button: Shtoni në faqet tuaja të ruajtura
+      confirmations:
+        page_removed:
+          message: Ju e keni hequr këtë nga faqet tuaja të ruajtura
+        page_saved:
+          message: Ju e keni shtuar këtë në faqet tuaja të ruajtura
+      page_not_saved_heading: Ruajeni këtë faqe në mënyrë që të ktheheni tek ajo më
+        vonë
+      page_was_saved_heading: Ju e keni ruajtur këtë faqe
+      remove_page_button: Hiqe nga faqet e tua të ruajtura
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Shih
+        faqet tuaja të ruajtura</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Hyr</a>
+        për të parë faqet tua të ruajtura.
+    share_links:
+      share_this_page: Shpërdaj këtë faqe
+  consultation:
+    and: dhe
+    another_website_html: Ky konsultim %{closed} u mbajt <a href="%{url}">uebfaqe
+      tjetër</a>
+    at: në
+    closes: Mbyllet në
+    closes_at: Ky konsultim mbyllet në
+    complete_a: Kompleto një
+    description: Përshkrimi i konsultimit
+    detail_of_feedback_received: Detajet e reagimit të marrë
+    detail_of_outcome: Detajet e rezultatit
+    documents: Dokumentet
+    download_outcome: Shkarkoni rezultatin e plotë
+    either: ose
+    email_to: 'Dërgo email në:'
+    feedback_received: Reagimi i marrë
+    is_being: është duke u
+    not_open_yet: Ky konsultim nuk është hapur ende
+    'on':
+    opens: Ky konsultim hapet
+    original_consultation: Konsultimi origjinal
+    ran_from: Ky konsultim filloi nga
+    respond_online: Përgjigju online
+    'true': e vërtetë
+    visit_soon: Vizitoni përsëri këtë faqe së shpejti për të shkarkuar rezultatin
+      në këtë & nbsp; reagimi.
+    was: ishte
+    ways_to_respond: Mënyrat për tu përgjigjur
+    write_to: 'Shkruaj tek:'
+  contact:
+    email: Email
+    find_call_charges: Mësoni për tarifat e thirrjeve
+    online: Online
+    phone: Telefon
+    webchat: Uebchat
+  corporate_information_page:
+    about_our_services_html: Mësoni %{link}.
+    corporate_information: Informacioni i korporatës
+    personal_information_charter_html: "%{link} ynë shpjegon se si i trajtojmë informacionet
+      tuaja personale."
+    publication_scheme_html: Lexoni për llojet e informacionit që botojmë në mënyrë
+      rutinore në %{link} tonë.
+    social_media_use_html: Lexoni politikën tonë në %{link}.
+    welsh_language_scheme_html: Mësoni rreth angazhimit tonë ndaj %{link}.
+  fatality_notice:
+    alt_text: Stema e Ministrisë së Mbrojtjes
+    field_of_operation: Fusha e operimit
+    operations_in: Operacione në %{location}
+  gone:
+    page_title: Nuk është më e disponueshme
+    published_in_error: Informacioni në këtë faqe është hequr sepse është publikuar
+      gabimisht.
+    title: Faqja që po kërkoni nuk është më e disponueshme
+  guide:
+    pages_in_guide: Faqet në këtë udhëzim
+    skip_to_contents: Kaloni te përmbajtja e udhëzuesit
+  html_publication:
+    print_meta_data:
+      available_at: Ky publikim është i disponueshëm në %{url}
+      copyright: "© Crown e drejta e autorit %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Ky publikim është i licencuar sipas kushteve të Licencës së Qeverisë
+        së Hapur v3.0, përveç rasteve kur përcaktohet ndryshe. Për të parë këtë licencë,
+        vizitoni <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        ose i shkruani Ekipit të Politikave të Informacionit, Arkivave Kombëtare,
+        Kew, London TW9 4DU, ose email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Aty ku kemi identifikuar ndonjë informacion të palës së tretë për
+        të drejtën e autorit, do t'ju duhet të merrni leje nga mbajtësit e të drejtave
+        të autorit në fjalë.
+  i18n:
+    direction:
+  language_names:
+    sq: Shqip
+  multi_page:
+    next_page: Tjetër
+    previous_page: I mëparshëm
+    print_entire_guide: Printo komplet udhëzimin
   service_sign_in:
-    continue:
+    continue: Vazhdo
     error:
-      option:
-      title:
+      option: Ju lutemi zgjidhni një opsion
+      title: You nuk keni zgjedhur një opsion
   shared:
-    historically_political:
+    historically_political: Kjo u botua nën %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Këshilltarët janë në dispozicion për të biseduar.
+      busy: Të gjithë këshilltarët e webchat janë të zënë për momentin.
+      closed: Webchat është e mbyllur për momentin.
+      speak_to_adviser: Flisni me një këshilltar tani
+      technical_problem: Webchat nuk është i disponueshëm për momentin për shkak të
+        problemeve teknike.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Logoja e skemës është një pullë e zezë me fjalët Designed Origin
+      UK Protected
+    pgi_alt_text: Logoja e skemës është një pullë e zezë me fjalët Geographic Origin
+      UK Protected
+    tsg_alt_text: Logoja e skemës është një pullë e zezë me fjalët Traditional Specialty
+      UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Dorëzuar më
+    location: Vendndodhja
+    written_on: Shkruar në
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Data e anulimit
+    cancelled: Publikimi i statistikave u anulua
+    changed_date: Data e publikimit është ndryshuar
+    forthcoming: Këto statistika do të publikohen
+    previous_date: Data e mëparshme
+    proposed_date: Publikimi i propozuar
+    reason_for_change: Arsye për të ndryshuar
+    release_date: Data e publikimit
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> këshillon kundër të gjitha udhëtimeve përveçse thelbësore
+        në pjesë të vendit.
+      avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> këshillon kundër të gjitha udhëtimeve përveçse
+        thelbësore në të gjithë vendin.
+      avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        këshilloni kundër të gjitha udhëtimeve në pjesë të vendit.
+      avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> këshilloni kundër çdo udhëtimi në të gjithë vendin.
+    context: Këshilla për udhëtime të huaja
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Ndiqni rregullat aktuale të COVID-19 ku jetoni: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Angli</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skoci</a>, <a href="https://gov.wales/coronavirus-travel">Wells</a> dhe <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Irlandë e Veriut</a>.
+        </p>
+        <p class="govuk-body">
+          Për të parandaluar që variantet e reja të COVID të hyjnë në MB, nuk duhet të udhëtoni në <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">vendet e listës portokalli ose të kuqe</a>.
+        </p>
+        <p class="govuk-body">
+          Për të kuptuar rreziqet në një vend ndiqni <a href="/guidance/travel-advice-novel-coronavirus">Këshillat e Ushëtimit FCDO</a>.
+        </p>
+        <p class="govuk-body">
+          Kur të ktheheni, ndiqni rregullat për <a href="/uk-border-control">hyni në MB nga jashtë </a> (përveç Irlandës).
+        </p>
+      text_assistive: E rëndësishme
+      title: Udhëtimi gjatë Coronavirus (COVID-19)
+    still_current_at: Ende aktuale në
+    summary: Përmbajtja
+    updated: Përditësuar
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Nuk është më e disponueshme
+    summary: Informacioni në këtë faqe është hequr sepse është publikuar gabimisht.
+    title: Faqja që po kërkoni nuk është më e disponueshme
   working_group:
-    contact_details:
-    policies:
+    contact_details: Detajet e kontaktit
+    policies: Politikat

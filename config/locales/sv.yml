@@ -1,484 +1,420 @@
----
 sv:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Rapport från Avdelningen för utredning av flygolyckor
+        other: Rapporter från Avdelningen för utredning av flygolyckor
+      announcement:
+        one: Meddelande
+        other: Meddelanden
+      asylum_support_decision:
+        one: Beslut från Asylprövningsdomstolen
+        other: Beslut från Asylprövningsdomstolen
+      authored_article:
+        one: Författad artikel
+        other: Författade artiklar
+      business_finance_support_scheme:
+        one: Stödsystem för företagsfinansiering
+        other: Stödsystem för företagsfinansiering
+      case_study:
+        one: Fallstudie
+        other: Fallstudier
+      closed_consultation:
+        one: Slutet samråd
+        other: Slutna samråd
+      cma_case:
+        one: Konkurrens- och marknadsmyndighetens ärende
+        other: Konkurrens- och marknadsmyndighetens ärenden
+      coming_soon:
+        one: Kommer snart
+        other: Kommer snart
+      consultation:
+        one: Samråd
+        other: Samråd
+      consultation_outcome:
+        one: Resultat av samrådet
+        other: Resultat av samråden
+      corporate_information_page:
+        one: Informationssida
+        other: Informationssidor
+      corporate_report:
+        one: Företagsrapport
+        other: Företagsrapporter
+      correspondence:
+        one: Korrespondens
+        other: Korrespondens
+      countryside_stewardship_grant:
+        one: Bidrag till Förvaltning av landsbygden
+        other: Bidrag till Förvaltning av landsbygden
+      decision:
+        one: Beslut
+        other: Beslut
+      detailed_guide:
+        one: Vägledning
+        other: Vägledning
+      dfid_research_output:
+        one: Forskning för utvecklingsresultat
+        other: Forskning för utvecklingsresultat
+      document_collection:
+        one: Samling
+        other: Samlingar
+      draft_text:
+        one: Utkast till text
+        other: Utkast till texter
+      drug_safety_update:
+        one: Uppdatering om läkemedelssäkerhet
+        other: Uppdateringar om läkemedelssäkerhet
+      employment_appeal_tribunal_decision:
+        one: Beslut av arbetsdomstolen om överklagande av anställningsärenden
+        other: Beslut från arbetsdomstolen i fråga om överklagande av anställningsärenden
+      employment_tribunal_decision:
+        one: Beslut från arbetsdomstolen
+        other: Beslut från arbetsdomstolen
+      esi_fund:
+        one: Europeiska struktur- och investeringsfonden (ESIF)
+        other: Europeiska struktur- och investeringsfonderna (ESIF)
+      fatality_notice:
+        one: Meddelande om dödsfall
+        other: Meddelanden om dödsfall
+      foi_release:
+        one: FOI-utlämnande
+        other: FOI-meddelanden
+      form:
+        one: Formulär
+        other: Formulär
+      government_response:
+        one: Regeringens svar
+        other: Regeringens svar
+      guidance:
+        one: Vägledning
+        other: Vägledning
+      impact_assessment:
+        one: Konsekvensbedömning
+        other: Konsekvensbedömningar
+      imported:
+        one: importerad - väntar på typ
+        other: importerad - väntar på typ
+      independent_report:
+        one: Oberoende rapport
+        other: Oberoende rapporter
+      international_development_fund:
+        one: Finansiering av internationell utveckling
+        other: Finansiering av internationell utveckling
+      international_treaty:
+        one: Internationellt fördrag
+        other: Internationella fördrag
+      maib_report:
+        one: Rapport från Utredningsavdelningen för sjöolyckor
+        other: Rapporter från Utredningsavdelningen för sjöolyckor
+      map:
+        one: Karta
+        other: Kartor
+      medical_safety_alert:
+        one: Varningar och återkallelser av läkemedel och medicintekniska produkter
+        other: Varningar och återkallelser av läkemedel och medicintekniska produkter
+      national:
+        one: Meddelande om nationell statistik
+        other: Meddelanden om nationell statistik
+      national_statistics:
+        one: Nationell statistik
+        other: Nationell statistik
+      national_statistics_announcement:
+        one: Meddelande om nationell statistik
+        other: Meddelanden om nationell statistik
+      news_article:
+        one: Nyhetsartikel
+        other: Nyhetsartiklar
+      news_story:
+        one: Nyhet
+        other: Nyheter
+      notice:
+        one: Meddelande
+        other: Meddelanden
+      official:
+        one: Meddelande om officiell statistik
+        other: Meddelanden om officiell statistik
+      official_statistics:
+        one: Officiell statistik
+        other: Officiell statistik
+      official_statistics_announcement:
+        one: Meddelande om officiell statistik
+        other: Meddelanden om officiell statistik
+      open_consultation:
+        one: Öppet samråd
+        other: Öppet samråd
+      oral_statement:
+        one: Muntligt uttalande till parlamentet
+        other: Muntliga uttalanden till parlamentet
+      policy:
+        one: Policy
+        other: Policys
+      policy_paper:
+        one: Policydokument
+        other: Policydokument
+      press_release:
+        one: Pressmeddelande
+        other: Pressmeddelanden
+      promotional:
+        one: Material för marknadsföring
+        other: Material för marknadsföring
+      publication:
+        one: Publikation
+        other: Publikationer
+      raib_report:
+        one: Rapport från Utredningsavdelningen för järnvägsolyckor
+        other: Rapporter från Utredningsavdelningen för järnvägsolyckor
+      regulation:
+        one: Förordning
+        other: Förordningar
+      research:
+        one: Forskning och analys
+        other: Forskning och analys
+      residential_property_tribunal_decision:
+        one: Beslut av domstol för bostadsfastigheter
+        other: Beslut från domstolarna för bostadsfastigheter
+      service_sign_in:
+        one: Logga in på tjänsten
+        other: Anmälan av tjänsten
+      service_standard_report:
+        one: Standardrapport för tjänsten
+        other: Standardrapporter för tjänster
+      speaking_notes:
+        one: Anteckningar
+        other: Anteckningar
+      speech:
+        one: Tal
+        other: Tal
+      standard:
+        one: Standard
+        other: Standarder
+      statement_to_parliament:
+        one: Uttalande till parlamentet
+        other: Uttalanden till parlamentet
+      statistical_data_set:
+        one: Statistiska uppgifter
+        other: Statistiska datamängder
+      statistics_announcement:
+        one: Meddelande om offentliggörande av statistik
+        other: Meddelanden om offentliggöranden av statistik
+      statutory_guidance:
+        one: Lagstadgad vägledning
+        other: Lagstadgad vägledning
+      take_part:
+        one: Delta
+        other: Delta
+      tax_tribunal_decision:
+        one: Beslut från skattedomstolen och kanslidomstolen
+        other: Beslut från skattedomstolen och kanslidomstolen
+      transcript:
+        one: Utskrift
+        other: Utskrifter
+      transparency:
+        one: Öppenhetsuppgifter
+        other: Öppenhetsuppgifter
+      utaac_decision:
+        one: Administrativa överklagandenämndens beslut
+        other: Administrativa överklagandenämndens beslut
+      world_location_news_article:
+        one: Nyhetsartikel
+        other: Nyhetsartiklar
+      world_news_story:
+        one: Världsnyheter
+        other: Världsnyheter
+      written_statement:
+        one: Skriftligt uttalande till parlamentet
+        other: Skriftliga uttalanden till parlamentet
+    coming_soon: Detta dokument kommer att publiceras den
+    contents: Innehåll
+    metadata:
+      published: Publicerad
+      updated: Uppdaterad
+  publication:
+    documents:
+      one: Dokument
+      other: Dokument
+    details: Detaljer
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Brexitvägledning för företag
+    citizen_link: Brexitvägledning för privatpersoner och familjer
+    heading_prefix: Det finns olika
   common:
     last_updated:
-    visit:
+    visit: 'Besök:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Bild: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: dölj alla uppdateringar
+      last_updated: Senast uppdaterad %{date}
+      published: Publicerad %{date}
+      see_all_updates: se alla uppdateringar
+      show_all_updates: Visa alla uppdateringar
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: dölja alla
+      show_all: visa alla
+    save_this_page:
+      add_page_button: Lägg till dina sparade sidor
+      confirmations:
+        page_removed:
+          message: Du har tagit bort detta från dina sparade sidor
+        page_saved:
+          message: Du har lagt till detta på dina sparade sidor
+      page_not_saved_heading: Spara den här sidan så att du kan komma tillbaka till
+        den senare.
+      page_was_saved_heading: Du har sparat den här sidan
+      remove_page_button: Ta bort från dina sparade sidor
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se
+        dina sparade sidor</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Lägg
+        in</a> för att se dina sparade sidor.
     share_links:
-      share_this_page:
+      share_this_page: Dela den här sidan
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: och
+    another_website_html: Detta samråd %{closed} hölls på <a href="%{url}">en annan
+      webbplats</a>
+    at: kl
+    closes: Det avslutas kl
+    closes_at: Detta samråd avslutas på
+    complete_a: Fyll i ett
+    description: Beskrivning av samrådet
+    detail_of_feedback_received: Detaljerad information om den mottagna feedbacken
+    detail_of_outcome: Detaljerad information om resultatet
+    documents: Dokument
+    download_outcome: Ladda ner det fullständiga resultatet
+    either: antingen
+    email_to: 'E-post till:'
+    feedback_received: Återkoppling som mottagits
+    is_being: är på väg att
+    not_open_yet: Detta samråd är inte öppet ännu
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Detta samråd öppnas
+    original_consultation: Ursprungligt samråd
+    ran_from: Detta samråd pågick från och med
+    respond_online: Svara online
+    'true': sant
+    visit_soon: Besök den här sidan snart igen för att ladda ner resultatet av denna
+      offentliga&nbsp;återkoppling.
+    was: var
+    ways_to_respond: Sätt att svara
+    write_to: 'Skriv till:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: E-post
+    find_call_charges: Ta reda på hur man tar ut samtalsavgifter
+    online: Online
+    phone: Telefon
+    webchat: Webbchatt
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Ta reda på %{link}.
+    corporate_information: Företagsinformation
+    personal_information_charter_html: Vår %{link} förklarar hur vi behandlar din
+      personliga information.
+    publication_scheme_html: Läs om vilka typer av information vi rutinmässigt publicerar
+      i vår %{link}.
+    social_media_use_html: Läs vår policy för %{link}.
+    welsh_language_scheme_html: Ta reda på vårt åtagande om %{link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Försvarsministeriets vapensköld
+    field_of_operation: Verksamhetsområde
+    operations_in: Verksamhet på %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Inte längre tillgänglig
+    published_in_error: Informationen på den här sidan har tagits bort eftersom den
+      publicerades felaktigt.
+    title: Sidan du letar efter är inte längre tillgänglig.
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Sidor i den här guiden
+    skip_to_contents: Hoppa till innehållet i guiden
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Den här publikationen finns på %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Denna publikation är licensierad enligt villkoren i Open Government
+        Licence v3.0, om inget annat anges. För att se licensen, besök <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        eller skriv till Information Policy Team, The National Archives, The National
+        Archives, Kew, London TW9 4DU, eller skicka e-post: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Om vi har identifierat upphovsrättslig information från tredje
+        part måste du få tillstånd från de berörda upphovsrättsinnehavarna.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv: Svensk
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    sv: Svenska
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Nästa
+    previous_page: Föregående
+    print_entire_guide: Skriv ut hela guiden
   service_sign_in:
-    continue:
+    continue: Fortsätt
     error:
-      option:
-      title:
+      option: Välj ett alternativ
+      title: Du har inte valt något alternativ
   shared:
-    historically_political:
+    historically_political: Det här publicerades under %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Rådgivare är tillgängliga för att chatta.
+      busy: Alla rådgivare för webbchatt är upptagna för tillfället.
+      closed: Webbchatten är stängd för tillfället.
+      speak_to_adviser: Prata med en rådgivare nu
+      technical_problem: Webbchatten är inte tillgänglig för tillfället på grund av
+        tekniska problem.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Systemets logotyp är en svart stämpel med orden Designated Origin
+      UK Protected.
+    pgi_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin
+      UK Protected.
+    tsg_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin
+      UK Protected.
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Levererad den
+    location: Plats
+    written_on: Skrivet på
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Datum för avbeställning
+    cancelled: Statistiskt meddelande avbrutits
+    changed_date: Utgivningsdatumet har ändrats
+    forthcoming: Denna statistik kommer att offentliggöras
+    previous_date: Föregående datum
+    proposed_date: Föreslagna offentliggöranden
+    reason_for_change: Skäl till ändringen
+    release_date: Datum för offentliggörandet
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> avråder från alla utom nödvändiga resor till delar av landet.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> avråder från alla utom nödvändiga resor till hela landet.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        avråder från alla resor till delar av landet.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        avråder från alla resor till hela landet.
+    context: Råd för resor utomlands
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Följ de gällande COVID-19-reglerna där du bor: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skottland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> och <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Nordirland</a>.
+        </p>
+        <p class="govuk-body">
+          För att förhindra att nya COVID-varianter kommer in i Storbritannien bör du inte resa till <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">länder som är upptagna på den röda listan</a>.
+        </p>
+        <p class="govuk-body">
+          För att förstå riskerna i ett land följer du <a href="/guidance/travel-advice-novel-coronavirus">FCDOs reserådgivning</a>.
+        </p>
+        <p class="govuk-body">
+          När du återvänder följer du reglerna för <a href="/uk-border-control">inresa till Storbritannien från utlandet</a> (utom från Irland).
+        </p>
+      text_assistive: Viktigt
+      title: Resa under pandemin (COVID-19)
+    still_current_at: Fortfarande aktuell på
+    summary: Sammanfattning
+    updated: Uppdaterad
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Inte längre tillgänglig
+    summary: Informationen på den här sidan har tagits bort eftersom den publicerades
+      felaktigt.
+    title: Sidan du letar efter är inte längre tillgänglig
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktuppgifter
+    policies: Policys

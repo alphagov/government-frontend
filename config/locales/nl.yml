@@ -1,484 +1,419 @@
----
 nl:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Rapporten Van De Afdeling Onderzoek Van Luchtvaartongevallen
+        other: Rapporten Van De Afdeling Onderzoek Van Ongevallen In De Luchtvaart
+      announcement:
+        one: Aankondiging
+        other: Aankondigingen
+      asylum_support_decision:
+        one: Uitspraak van het asiel-ondersteuningstribunaal
+        other: Uitspraken van het asiel-ondersteuningstribunaal
+      authored_article:
+        one: Geschreven artikel
+        other: Geschreven artikelen
+      business_finance_support_scheme:
+        one: Zakelijke financiering steunregeling
+        other: Ondersteuningsregelingen voor bedrijfsfinanciering
+      case_study:
+        one: Casestudy
+        other: Casestudies
+      closed_consultation:
+        one: Gesloten overleg
+        other: Gesloten raadplegingen
+      cma_case:
+        one: Mededingings- en marktautoriteit zaak
+        other: Mededinging en Markten Autoriteit zaken
+      coming_soon:
+        one: Binnenkort
+        other: Binnenkort
+      consultation:
+        one: Raadpleging
+        other: Raadplegingen
+      consultation_outcome:
+        one: Uitkomsten raadpleging
+        other: Overleg uitkomsten
+      corporate_information_page:
+        one: Informatie pagina
+        other: Informatie pagina's
+      corporate_report:
+        one: Ondernemingsverslag
+        other: Bedrijfsverslagen
+      correspondence:
+        one: Correspondentie
+        other: Correspondentie
+      countryside_stewardship_grant:
+        one: Subsidie voor Countryside Stewardship
+        other: Subsidies in het kader van het Countryside Stewardship
+      decision:
+        one: Besluit
+        other: Besluiten
+      detailed_guide:
+        one: Richtsnoer
+        other: Begeleiding
+      dfid_research_output:
+        one: Onderzoek voor ontwikkeling output
+        other: Onderzoek voor ontwikkelingsdoeleinden
+      document_collection:
+        one: Verzameling
+        other: Verzamelingen
+      draft_text:
+        one: Ontwerpteksten
+        other: Ontwerpteksten
+      drug_safety_update:
+        one: Veiligheid van Geneesmiddelen
+        other: Veiligheid van Geneesmiddelen
+      employment_appeal_tribunal_decision:
+        one: Beslissing van de rechtbank in hoger beroep
+        other: Beslissingen van de rechtbank in hoger beroep
+      employment_tribunal_decision:
+        one: Beslissing van het arbeidstribunaal
+        other: Beslissingen van het arbeidstribunaal
+      esi_fund:
+        one: Europees Structuur- en Investeringsfonds (ESIF)
+        other: Europese structuur- en investeringsfondsen (ESIF)
+      fatality_notice:
+        one: Kennisgeving van overlijden
+        other: Kennisgevingen van overlijden
+      foi_release:
+        one: Vrijheid van informatie-vrijgave
+        other: Vrijheid van informatie-vrijgaven
+      form:
+        one: Formulier
+        other: Formulieren
+      government_response:
+        one: Overheidsantwoord
+        other: Overheidsantwoorden
+      guidance:
+        one: Richtlijn
+        other: Richtlijn
+      impact_assessment:
+        one: Effectbeoordeling
+        other: Effectbeoordelingen
+      imported:
+        one: ingevoerd - in afwachting van type
+        other: ingevoerd - in afwachting van type
+      independent_report:
+        one: Onafhankelijk rapport
+        other: Onafhankelijke rapporten
+      international_development_fund:
+        one: Internationale ontwikkelingsfinanciering
+        other: Internationale ontwikkelingsfinanciering
+      international_treaty:
+        one: Internationaal verdrag
+        other: Internationale verdragen
+      maib_report:
+        one: Marine ongevallen onderzoek branch rapport
+        other: Marine ongevallen onderzoek branch rapporten
+      map:
+        one: Kaart
+        other: Kaarten
+      medical_safety_alert:
+        one: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
+        other: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
+      national:
+        one: Aankondiging nationale statistieken
+        other: Aankondigingen nationale statistieken
+      national_statistics:
+        one: Nationale statistieken
+        other: Nationale statistieken
+      national_statistics_announcement:
+        one: Aankondigingen nationale statistieken
+        other: Aankondigingen nationale statistieken
+      news_article:
+        one: Nieuwsartikel
+        other: Nieuwsartikel
+      news_story:
+        one: Nieuwsbericht
+        other: Nieuwsberichten
+      notice:
+        one: Mededeling
+        other: Mededelingen
+      official:
+        one: Officiële statistieken aankondiging
+        other: Officiële statistieken aankondigingen
+      official_statistics:
+        one: Officiële statistieken
+        other: Officiële statistieken
+      official_statistics_announcement:
+        one: Aankondiging van officiële statistieken
+        other: Aankondigingen van officiële statistieken
+      open_consultation:
+        one: Open raadpleging
+        other: Open raadplegingen
+      oral_statement:
+        one: Mondelinge verklaring voor het Parlement
+        other: Mondelinge verklaringen aan het Parlement
+      policy:
+        one: Beleid
+        other: Beleid
+      policy_paper:
+        one: Beleidsnota
+        other: Beleidsnota's
+      press_release:
+        one: Persbericht
+        other: Persberichten
+      promotional:
+        one: Promotiemateriaal
+        other: Promotiemateriaal
+      publication:
+        one: Publicatie
+        other: Publicaties
+      raib_report:
+        one: Verslag Van De Spoorwegongevallenonderzoeksdienst
+        other: Verslagen Van De Spoorwegongevallenonderzoeksdienst
+      regulation:
+        one: Regelgeving
+        other: Regelgeving
+      research:
+        one: Onderzoek en analyse
+        other: Onderzoek en analyse
+      residential_property_tribunal_decision:
+        one: Beslissing van de rechtbank voor woningen
+        other: Beslissingen van de rechtbank voor woningen
+      service_sign_in:
+        one: Dienst aanmelden
+        other: Dienst aanmelden
+      service_standard_report:
+        one: Service Standaardrapport
+        other: Service Standaardrapporten
+      speaking_notes:
+        one: Sprekende notities
+        other: Sprekende notities
+      speech:
+        one: Toespraak
+        other: Toespraken
+      standard:
+        one: Standaard
+        other: Standaarden
+      statement_to_parliament:
+        one: Verklaring voor het Parlement
+        other: Verklaringen voor het Parlement
+      statistical_data_set:
+        one: Statistische gegevensverzameling
+        other: Statistische gegevensverzamelingen
+      statistics_announcement:
+        one: Aankondiging van vrijgegeven statistieken
+        other: Aankondigingen van vrijgegeven statistieken
+      statutory_guidance:
+        one: Statutaire richtsnoeren
+        other: Statutaire richtsnoeren
+      take_part:
+        one: Neem deel
+        other: Deelnemen
+      tax_tribunal_decision:
+        one: Beslissing van het tribunaal voor belastingen en kanselarij
+        other: Beslissingen van het tribunaal voor belastingen en kanselarij
+      transcript:
+        one: Transcriptie
+        other: Transcripties
+      transparency:
+        one: Transparantiegegevens
+        other: Transparantiegegevens
+      utaac_decision:
+        one: Beslissing van de rechtbank voor administratief beroep
+        other: Beslissingen van de rechtbank voor administratief beroep
+      world_location_news_article:
+        one: Nieuwsartikel
+        other: Nieuwsartikelen
+      world_news_story:
+        one: Wereldnieuwsbericht
+        other: Wereldnieuwsberichten
+      written_statement:
+        one: Schriftelijke verklaring aan het Parlement
+        other: Schriftelijke verklaringen aan het Parlement
+    coming_soon: Dit document zal worden gepubliceerd op
+    contents: Inhoud
+    metadata:
+      published: Gepubliceerd
+      updated: Bijgewerkt
+  publication:
+    documents:
+      one: Document
+      other: Documenten
+    details: Details
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Brexit-leidraad voor bedrijven
+    citizen_link: Brexit-leidraad voor particulieren en gezinnen
+    heading_prefix: Er zijn verschillende
   common:
     last_updated:
-    visit:
+    visit: 'Bezoek:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Image credit: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: verberg alle updates
+      last_updated: Laatst bijgewerkt %{date}
+      published: Gepubliceerd %{date}
+      see_all_updates: zie alle updates
+      show_all_updates: toon alle updates
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: alles verbergen
+      show_all: alles tonen
+    save_this_page:
+      add_page_button: Toevoegen aan uw bewaarde pagina's
+      confirmations:
+        page_removed:
+          message: U heeft dit verwijderd uit uw bewaarde pagina's
+        page_saved:
+          message: U heeft dit toegevoegd aan uw bewaarde pagina's
+      page_not_saved_heading: Bewaar deze pagina zodat u er later op terug kunt komen
+      page_was_saved_heading: U heeft deze pagina opgeslagen
+      remove_page_button: Verwijderen uit uw opgeslagen pagina's
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Bekijk
+        uw opgeslagen pagina's</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Teken
+        in</a> om uw opgeslagen pagina's te zien.
     share_links:
-      share_this_page:
+      share_this_page: Deel deze pagina
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: en
+    another_website_html: Dit overleg %{closed} werd gehouden op <a href="%{url}">een
+      andere website</a>
+    at: om
+    closes: Het is afgelopen om
+    closes_at: Deze raadpleging sluit op
+    complete_a: Vul een
+    description: Beschrijving van de raadpleging
+    detail_of_feedback_received: Detail van ontvangen feedback
+    detail_of_outcome: Detail van het resultaat
+    documents: Documenten
+    download_outcome: Download het volledige resultaat
+    either: of
+    email_to: 'E-mail naar:'
+    feedback_received: Ontvangen feedback
+    is_being: wordt
+    not_open_yet: Deze raadpleging is nog niet geopend
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Deze raadpleging wordt geopend
+    original_consultation: Oorspronkelijke raadpleging
+    ran_from: Deze raadpleging liep van
+    respond_online: Reageer online
+    'true': waar
+    visit_soon: Bezoek deze pagina binnenkort opnieuw om het resultaat van deze publieke&nbsp;feedback
+      te downloaden.
+    was: was
+    ways_to_respond: Manieren om te reageren
+    write_to: 'Schrijf naar:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: E-mail
+    find_call_charges: Informatie over gesprekskosten
+    online: Online
+    phone: Telefoon
+    webchat: Webchat
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Ontdek %{link}.
+    corporate_information: Bedrijfsinformatie
+    personal_information_charter_html: In onze %{link} leggen wij uit hoe wij met
+      uw persoonlijke informatie omgaan.
+    publication_scheme_html: Lees over de soorten informatie die wij routinematig
+      publiceren in onze %{link}.
+    social_media_use_html: Lees ons beleid inzake %{link}.
+    welsh_language_scheme_html: Lees meer over onze inzet voor %{link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Wapen van het ministerie van Defensie
+    field_of_operation: Gebied van operatie
+    operations_in: Operaties in %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Niet langer beschikbaar
+    published_in_error: De informatie op deze pagina is verwijderd omdat deze abusievelijk
+      is gepubliceerd.
+    title: De pagina die u zoekt is niet langer beschikbaar
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Pagina's in deze gids
+    skip_to_contents: Naar de inhoud van de gids gaan
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Deze publicatie is beschikbaar op %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Voor deze publicatie is een licentie verleend onder de voorwaarden
+        van de Open Overheidslicentie v3.0, tenzij anders vermeld. Om deze licentie
+        te bekijken, ga naar <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        of schrijf naar het Informatiebeleidsteam, The National Archives, Kew, Londen
+        TW9 4DU, of stuur een e-mail: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Als we auteursrechtinformatie van derden hebben geïdentificeerd,
+        moet u toestemming vragen aan de betrokken auteursrechthebbenden.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
     nl: Nederlands
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Volgende
+    previous_page: Vorige
+    print_entire_guide: Volledige gids afdrukken
   service_sign_in:
-    continue:
+    continue: Doorgaan
     error:
-      option:
-      title:
+      option: Selecteer een optie
+      title: U heeft geen optie geselecteerd
   shared:
-    historically_political:
+    historically_political: Dit werd gepubliceerd onder de %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Er zijn adviseurs beschikbaar om te chatten.
+      busy: Alle webchat-adviseurs zijn momenteel bezet.
+      closed: Webchat is op dit moment gesloten.
+      speak_to_adviser: Spreek nu met een adviseur
+      technical_problem: Webchat is momenteel niet beschikbaar wegens technische problemen.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Het logo van de regeling is een zwarte stempel met de woorden Designated
+      Origin UK Protected
+    pgi_alt_text: Het logo van de regeling is een zwarte stempel met de woorden Geographic
+      Origin UK Protected
+    tsg_alt_text: Het logo van de regeling is een zwart stempel met de woorden Traditional
+      Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Geleverd op
+    location: Plaats
+    written_on: Geschreven op
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Datum van annulering
+    cancelled: Statistieken vrijgave geannuleerd
+    changed_date: De releasedatum is gewijzigd
+    forthcoming: Deze statistieken zullen worden vrijgegeven
+    previous_date: Vorige datum
+    proposed_date: Voorgestelde vrijgave
+    reason_for_change: Reden voor wijziging
+    release_date: Publicatiedatum
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: Het <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> raadt alle, behalve essentiële, reizen naar delen van het
+        land af.
+      avoid_all_but_essential_travel_to_whole_country: Het <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> raadt alle, behalve essentiële, reizen naar
+        het hele land af.
+      avoid_all_travel_to_parts: Het <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        raadt alle reizen naar delen van het land af.
+      avoid_all_travel_to_whole_country: Het <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> raadt alle reizen naar het hele land af.
+    context: Buitenlands reisadvies
+    coronavirus_warning:
+      content_html: "<p class=\"govuk-body\">\r\n  Volg de huidige COVID-19-regels
+        waar u woont: <a href=\"/richtlijn/covid-19-coronavirus-beperkingen-wat-je-kunt-en-niet-kunt-doen\">England</a>,
+        <a href=\"https://www.gov.scot/coronavirus-covid-19/\">Scotland</a>, <a href=\"https://gov.wales/coronavirus-travel\">Wales</a>
+        en <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">Noord-Ierland</a>.\r\n</p>\r\n<p
+        class=\"govuk-body\">\r\n  Om te voorkomen dat nieuwe COVID-varianten het
+        Verenigd Koninkrijk binnenkomen, moet u niet reizen naar <a href=\"/richtlijn/rode-amber-en-groene-lijst-regels-voor-toegang-tot-england\">amber-
+        of rode-lijst-landen</a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n  Om de risico's
+        in een land te begrijpen volg <a href=\"/gids/reis-advies-novel-coronavirus\">FCDO
+        Reisadvies</a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n  Wanneer u terugkeert,
+        volgt u de regels om <a href=\"/uk-border-control\">het Verenigd Koninkrijk
+        binnen te komen vanuit het buitenland</a> (behalve vanuit Ierland).\r\n</p>\r\n"
+      text_assistive: Belangrijk
+      title: Coronavirus (COVID-19) reizen
+    still_current_at: Nog steeds actueel op
+    summary: Samenvatting
+    updated: Bijgewerkt op
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Niet langer beschikbaar
+    summary: De informatie op deze pagina is verwijderd omdat deze per vergissing
+      is gepubliceerd.
+    title: De pagina die u zoekt is niet langer beschikbaar
   working_group:
-    contact_details:
-    policies:
+    contact_details: Contact gegevens
+    policies: Beleid

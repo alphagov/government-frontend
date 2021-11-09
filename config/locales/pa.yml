@@ -1,117 +1,51 @@
----
 pa:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: ਹਵਾਈ ਹਾਦਸੇ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
+        other: ਹਵਾਈ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀਆਂ ਰਿਪੋਰਟਾਂ
       announcement:
-        one: ਘੋਸ਼ਣਾ
-        other: ਘੋਸ਼ਣਾਵਾਂ
+        one: ਘੋਸ਼ਣਾ
+        other: ਘੋਸ਼ਣਾਵਾਂ
       asylum_support_decision:
-        one:
-        other:
+        one: ਸ਼ਰਣ ਸਹਾਇਤਾ ਟ੍ਰਿਬਿਨਲ ਦਾ ਫੈਸਲਾ
+        other: ਸ਼ਰਣ ਸਹਾਇਤਾ ਟ੍ਰਿਬਿਨਲ ਦੇ ਫੈਸਲੇ
       authored_article:
-        one: ਲੇਖਕ ਦਾ ਲੇਖ
-        other: ਲੇਖਕ ਦੇ ਲੇਖ
+        one: ਲੇਖਕ ਲੇਖ
+        other: ਲੇਖਕ ਲੇਖ
       business_finance_support_scheme:
-        one:
-        other:
+        one: ਵਪਾਰ ਵਿੱਤ ਸਹਾਇਤਾ ਯੋਜਨਾ
+        other: ਵਪਾਰ ਵਿੱਤ ਸਹਾਇਤਾ ਯੋਜਨਾਵਾਂ
       case_study:
         one: ਕੇਸ ਅਧਿਐਨ
         other: ਕੇਸ ਅਧਿਐਨ
       closed_consultation:
-        one: ਬੰਦ ਸਲਾਹ-ਮਸ਼ਵਰਾ
-        other: ਬੰਦ ਸਲਾਹ-ਮਸ਼ਵਰੇ
+        one: ਬੰਦ ਸਲਾਹ -ਮਸ਼ਵਰਾ
+        other: ਬੰਦ ਸਲਾਹ ਮਸ਼ਵਰੇ
       cma_case:
-        one:
-        other:
+        one: ਮੁਕਾਬਲਾ ਅਤੇ ਮਾਰਕੇਟ ਅਥਾਰਟੀ ਕੇਸ
+        other: ਮੁਕਾਬਲਾ ਅਤੇ ਮਾਰਕੇਟ ਅਥਾਰਟੀ ਕੇਸ
       coming_soon:
-        one:
-        other:
+        one: ਜਲਦ ਆ ਰਿਹਾ ਹੈ
+        other: ਜਲਦ ਆ ਰਿਹਾ ਹੈ
       consultation:
-        one: ਸਲਾਹ-ਮਸ਼ਵਰਾ
-        other: ਸਲਾਹ-ਮਸ਼ਵਰੇ
+        one: ਸਲਾਹ ਮਸ਼ਵਰਾ
+        other: ਸਲਾਹ ਮਸ਼ਵਰੇ
       consultation_outcome:
-        one: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦਾ ਨਤੀਜਾ
-        other: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦੇ ਨਤੀਜੇ
+        one: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦਾ ਨਤੀਜਾ
+        other: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦੇ ਨਤੀਜੇ
       corporate_information_page:
-        one:
-        other:
+        one: ਜਾਣਕਾਰੀ ਪੰਨਾ
+        other: ਜਾਣਕਾਰੀ ਪੰਨੇ
       corporate_report:
         one: ਕਾਰਪੋਰੇਟ ਰਿਪੋਰਟ
         other: ਕਾਰਪੋਰੇਟ ਰਿਪੋਰਟਾਂ
       correspondence:
-        one: ਪੱਤਰ-ਵਿਹਾਰ
-        other: ਪੱਤਰ-ਵਿਹਾਰ
+        one: ਪੱਤਰ -ਵਿਹਾਰ
+        other: ਪੱਤਰ -ਵਿਹਾਰ
       countryside_stewardship_grant:
-        one:
-        other:
+        one: ਦੇਸੀ ਇਲਾਕਿਆਂ ਦੀ ਨਿਗਰਾਨੀ ਗ੍ਰਾਂਟ
+        other: ਦੇਸੀ ਇਲਾਕਿਆਂ ਦੀ ਨਿਗਰਾਨੀ ਗ੍ਰਾਂਟਾਂ
       decision:
         one: ਫੈਸਲਾ
         other: ਫੈਸਲੇ
@@ -119,32 +53,32 @@ pa:
         one: ਸੇਧ
         other: ਸੇਧ
       dfid_research_output:
-        one:
-        other:
+        one: ਵਿਕਾਸ ਆਉਟਪੁੱਟ ਲਈ ਖੋਜ
+        other: ਵਿਕਾਸ ਆਉਟਪੁੱਟਾਂ ਲਈ ਖੋਜ
       document_collection:
         one: ਸੰਗ੍ਰਹਿ
         other: ਸੰਗ੍ਰਹਿ
       draft_text:
-        one: ਡ੍ਰਾਫਟ ਟੈਕਸਟ
-        other: ਡ੍ਰਾਫਟ ਟੈਕਸਟ
+        one: ਡਰਾਫਟ ਟੈਕਸਟ
+        other: ਡਰਾਫਟ ਟੈਕਸਟ
       drug_safety_update:
-        one:
-        other:
+        one: ਡਰੱਗ ਸੇਫਟੀ ਅਪਡੇਟ
+        other: ਡਰੱਗ ਸੇਫਟੀ ਅਪਡੇਟਸ
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: ਰੁਜ਼ਗਾਰ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
+        other: ਰੁਜ਼ਗਾਰ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
       employment_tribunal_decision:
-        one:
-        other:
+        one: ਰੁਜ਼ਗਾਰ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
+        other: ਰੁਜ਼ਗਾਰ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
       esi_fund:
-        one:
-        other:
+        one: ਯੂਰਪੀਅਨ ਢਾਂਚਾਗਤ ਅਤੇ ਨਿਵੇਸ਼ ਫੰਡ (ESIF)
+        other: ਯੂਰਪੀਅਨ ਢਾਂਚਾਗਤ ਅਤੇ ਨਿਵੇਸ਼ ਫੰਡ (ESIF)
       fatality_notice:
-        one:
-        other:
+        one: ਘਾਤਕ ਸੂਚਨਾ
+        other: ਘਾਤਕ ਸੂਚਨਾ
       foi_release:
-        one: FOI ਰਿਲੀਜ਼
-        other: FOI ਰਿਲੀਜ਼
+        one: FOI ਰਿਲੀਜ਼
+        other: FOI ਰਿਲੀਜ਼
       form:
         one: ਫਾਰਮ
         other: ਫਾਰਮ
@@ -155,330 +89,333 @@ pa:
         one: ਸੇਧ
         other: ਸੇਧ
       impact_assessment:
-        one: ਪ੍ਰਭਾਵ ਦਾ ਮੁਲਾਂਕਣ
-        other: ਪ੍ਰਭਾਵ ਦੇ ਮੁਲਾਂਕਣ
+        one: ਪ੍ਰਭਾਵ ਮੁਲਾਂਕਣ
+        other: ਪ੍ਰਭਾਵ ਮੁਲਾਂਕਣ
       imported:
-        one: ਆਯਾਤ ਕੀਤਾ - ਕਿਸਮ ਦੀ ਉਡੀਕ ਹੋ ਰਹੀ
-        other: ਆਯਾਤ ਕੀਤਾ - ਕਿਸਮ ਦੀ ਉਡੀਕ ਹੋ ਰਹੀ
+        one: ਆਯਾਤ - ਉਡੀਕ ਕੀਤੀ ਕਿਸਮ
+        other: ਆਯਾਤ - ਉਡੀਕ ਕੀਤੀ ਕਿਸਮ
       independent_report:
         one: ਸੁਤੰਤਰ ਰਿਪੋਰਟ
         other: ਸੁਤੰਤਰ ਰਿਪੋਰਟਾਂ
       international_development_fund:
-        one:
-        other:
+        one: ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਿਕਾਸ ਫੰਡਿੰਗ
+        other: ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਿਕਾਸ ਫੰਡਿੰਗ
       international_treaty:
-        one: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀ
-        other: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀਆਂ
+        one: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀ
+        other: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀਆਂ
       maib_report:
-        one:
-        other:
+        one: ਸਮੁੰਦਰੀ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
+        other: ਸਮੁੰਦਰੀ ਦੁਰਘਟਨਾ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀਆਂ ਰਿਪੋਰਟਾਂ
       map:
-        one: ਨਕਸ਼ਾ
-        other: ਨਕਸ਼ੇ
+        one: ਨਕਸ਼ਾ
+        other: ਨਕਸ਼ੇ
       medical_safety_alert:
-        one:
-        other:
+        one: ਦਵਾਈਆਂ ਅਤੇ ਮੈਡੀਕਲ ਉਪਕਰਣਾਂ ਲਈ ਚੇਤਾਵਨੀ ਅਤੇ ਰੀਕਾਲ
+        other: ਦਵਾਈਆਂ ਅਤੇ ਮੈਡੀਕਲ ਉਪਕਰਣਾਂ ਲਈ ਚੇਤਾਵਨੀ ਅਤੇ ਰੀਕਾਲ
       national:
-        one:
-        other:
+        one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾ
+        other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
       national_statistics:
-        one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
-        other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
+        one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
+        other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
       national_statistics_announcement:
-        one:
-        other:
+        one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾ
+        other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
       news_article:
-        one: ਖ਼ਬਰਾਂ ਦਾ ਲੇਖ
-        other: ਖ਼ਬਰਾਂ ਦੇ ਲੇਖ
+        one: ਖਬਰ ਲੇਖ
+        other: ਖਬਰ ਲੇਖ
       news_story:
-        one: ਖ਼ਬਰਾਂ ਦੀ ਕਹਾਣੀ
-        other: ਖ਼ਬਰਾਂ ਦੀਆਂ ਕਹਾਣੀਆਂ
+        one: ਖ਼ਬਰਾਂ ਦੀ ਕਹਾਣੀ
+        other: ਖ਼ਬਰਾਂ ਦੀਆਂ ਕਹਾਣੀਆਂ
       notice:
         one: ਨੋਟਿਸ
         other: ਨੋਟਿਸ
       official:
-        one:
-        other:
+        one: ਅਧਿਕਾਰਤ ਅੰਕੜਿਆਂ ਦਾ ਐਲਾਨ
+        other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
       official_statistics:
         one: ਅਧਿਕਾਰਤ ਅੰਕੜੇ
         other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ
       official_statistics_announcement:
-        one:
-        other:
+        one: ਅਧਿਕਾਰਤ ਅੰਕੜਿਆਂ ਦਾ ਐਲਾਨ
+        other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
       open_consultation:
-        one: ਖੁੱਲ੍ਹਾ ਸਲਾਹ-ਮਸ਼ਵਰਾ
-        other: ਖੁੱਲ੍ਹੇ ਸਲਾਹ-ਮਸ਼ਵਰੇ
+        one: ਖੁੱਲ੍ਹਾ ਸਲਾਹ-ਮਸ਼ਵਰਾ
+        other: ਖੁੱਲ੍ਹੇ ਸਲਾਹ-ਮਸ਼ਵਰੇ
       oral_statement:
-        one: ਸੰਸਦ ਨੂੰ ਮੌਖਿਕ ਬਿਆਨ
-        other: ਸੰਸਦ ਨੂੰ ਮੌਖਿਕ ਬਿਆਨ
+        one: ਸੰਸਦ ਨੂੰ ਜ਼ਬਾਨੀ ਬਿਆਨ
+        other: ਸੰਸਦ ਨੂੰ ਜ਼ਬਾਨੀ ਬਿਆਨ
       policy:
-        one:
-        other:
+        one: ਨੀਤੀ ਨੂੰ
+        other: ਨੀਤੀਆਂ
       policy_paper:
-        one: ਨੀਤੀ ਪੱਤਰ
-        other: ਨੀਤੀ ਪੱਤਰ
+        one: ਨੀਤੀ ਪੇਪਰ
+        other: ਨੀਤੀ ਦੇ ਕਾਗਜ਼
       press_release:
-        one: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
-        other: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
+        one: ਪੱਤਰਕਾਰਾਂ ਨੂੰ ਦਿੱਤੀ ਗਈ ਅਧਕਾਰਿਤ ਰਿਪੋਰਟ
+        other: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
       promotional:
         one: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
         other: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
       publication:
-        one: ਪ੍ਰਕਾਸ਼ਨ
-        other: ਪ੍ਰਕਾਸ਼ਨ
+        one: ਪ੍ਰਕਾਸ਼ਨ
+        other: ਪ੍ਰਕਾਸ਼ਨ
       raib_report:
-        one:
-        other:
+        one: ਰੇਲ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
+        other: ਰੇਲ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀਆਂ ਰਿਪੋਰਟਾਂ
       regulation:
         one: ਨਿਯਮ
         other: ਨਿਯਮ
       research:
-        one: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
-        other: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
+        one: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
+        other: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
+        other: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
       service_sign_in:
-        one:
-        other:
+        one: ਸੇਵਾ ਸਾਈਨ ਇਨ
+        other: ਸੇਵਾ ਸਾਈਨ ਇਨ
       service_standard_report:
-        one:
-        other:
+        one: ਸੇਵਾ ਮਿਆਰੀ ਰਿਪੋਰਟ
+        other: ਸੇਵਾ ਮਿਆਰੀ ਰਿਪੋਰਟਾਂ
       speaking_notes:
-        one: ਬੋਲਣ ਲਈ ਨੋਟ
-        other: ਬੋਲਣ ਲਈ ਨੋਟ
+        one: ਭਾਸ਼ਣ ਨੋਟ
+        other: ਭਾਸ਼ਣ ਨੋਟ
       speech:
-        one: ਬੋਲਣਾ
-        other: ਭਾਸ਼ਣ
+        one: ਭਾਸ਼ਣ
+        other: ਭਾਸ਼ਣ
       standard:
-        one:
-        other:
+        one: ਮਿਆਰੀ
+        other: ਮਿਆਰ
       statement_to_parliament:
         one: ਸੰਸਦ ਨੂੰ ਬਿਆਨ
         other: ਸੰਸਦ ਨੂੰ ਬਿਆਨ
       statistical_data_set:
-        one: ਅੰਕੜਾ ਡੇਟਾ ਸਮੂਹ
-        other: ਅੰਕੜਾ ਡੇਟਾ ਸਮੂਹ
+        one: ਅੰਕੜਾ ਡਾਟਾ ਸੈੱਟ
+        other: ਅੰਕੜਾ ਡਾਟਾ ਸੈੱਟ
       statistics_announcement:
-        one:
-        other:
+        one: ਅੰਕੜੇ ਜਾਰੀ ਘੋਸ਼ਣਾ
+        other: ਅੰਕੜੇ ਜਾਰੀ ਘੋਸ਼ਣਾਵਾਂ
       statutory_guidance:
-        one: ਵਿਧਾਨਿਕ ਸੇਧ
-        other: ਵਿਧਾਨਿਕ ਸੇਧ
+        one: ਕਨੂੰਨੀ ਸੇਧ
+        other: ਕਨੂੰਨੀ ਸੇਧ
       take_part:
-        one:
-        other:
+        one: ਹਿੱਸਾ ਲੈਣਾ
+        other: ਹਿੱਸਾ ਲੈਣਾ
       tax_tribunal_decision:
-        one:
-        other:
+        one: ਟੈਕਸ ਅਤੇ ਚਾਂਸਰੀ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
+        other: ਟੈਕਸ ਅਤੇ ਚਾਂਸਰੀ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
       transcript:
-        one: ਪ੍ਰਤਿਲਿਪੀ
-        other: ਪ੍ਰਤਿਲਿਪੀਆਂ
+        one: ਪ੍ਰਤੀਲਿਪੀ
+        other: ਪ੍ਰਤੀਲਿਪੀ
       transparency:
-        one: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
-        other: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
+        one: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
+        other: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
       utaac_decision:
-        one:
-        other:
+        one: ਪ੍ਰਬੰਧਕੀ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
+        other: ਪ੍ਰਬੰਧਕੀ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
       world_location_news_article:
-        one:
-        other:
+        one: ਖਬਰ ਲੇਖ
+        other: ਖਬਰ ਲੇਖ
       world_news_story:
-        one:
-        other:
+        one: ਵਿਸ਼ਵ ਖ਼ਬਰਾਂ ਦੀ ਕਹਾਣੀ
+        other: ਵਿਸ਼ਵ ਖ਼ਬਰਾਂ
       written_statement:
         one: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ
-        other: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ
+        other: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ ਦਿੱਤੇ
+    coming_soon: ਇਸ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤਾ ਜਾਵੇਗਾ
+    contents: ਸਮਗਰੀ
+    metadata:
+      published: ਪ੍ਰਕਾਸ਼ਿਤ
+      updated: ਅੱਪਡੇਟ ਕੀਤਾ
+  publication:
+    documents:
+      one: ਦਸਤਾਵੇਜ਼
+      other: ਦਸਤਾਵੇਜ਼
+    details: ਵੇਰਵੇ
+  brexit:
+    business_link: ਕਾਰੋਬਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
+    citizen_link: ਵਿਅਕਤੀਆਂ ਅਤੇ ਪਰਿਵਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
+    heading_prefix: ਵੱਖਰਾ ਹੈ
+  common:
+    last_updated:
+    visit: 'ਮੁਲਾਕਾਤ:'
+  components:
+    figure:
+      image_credit: 'ਚਿੱਤਰ ਕ੍ਰੈਡਿਟ: %{credit}'
+    published_dates:
+      hide_all_updates: ਸਾਰੇ ਅਪਡੇਟਾਂ ਨੂੰ ਲੁਕਾਓ
+      last_updated: ਪਿਛਲੀ ਵਾਰ ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ %{date}
+      published: ਪ੍ਰਕਾਸ਼ਿਤ %{date}
+      see_all_updates: ਸਾਰੇ ਅਪਡੇਟਸ ਵੇਖੋ
+      show_all_updates: ਸਾਰੇ ਅਪਡੇਟ ਦਿਖਾਉ
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: ਸਭ ਨੂੰ ਲੁਕਾਓ
+      show_all: ਸਾਰੇ ਦਿਖਾਓ
+    save_this_page:
+      add_page_button: ਆਪਣੇ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ
+      confirmations:
+        page_removed:
+          message: ਤੁਸੀਂ ਇਸਨੂੰ ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਹੈ
+        page_saved:
+          message: ਤੁਸੀਂ ਇਸਨੂੰ ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ ਹੈ
+      page_not_saved_heading: ਇਸ ਪੰਨੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ ਤਾਂ ਜੋ ਤੁਸੀਂ ਬਾਅਦ ਵਿੱਚ ਇਸ ਤੇ
+        ਵਾਪਸ ਆ ਸਕੋ
+      page_was_saved_heading: ਤੁਸੀਂ ਇਸ ਪੰਨੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਹੈ
+      remove_page_button: ਆਪਣੇ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਤੋਂ ਹਟਾਓ
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">
+        ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨੇ ਵੇਖੋ </a>
+      see_saved_pages_signed_out: ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਨੂੰ ਦੇਖਣ ਲਈ <a href="%{link}"
+        class="govuk-link %{additional_class}"> ਸਾਈਨ ਇਨ ਕਰੋ </a>
+    share_links:
+      share_this_page: ਇਸ ਪੇਜ ਨੂੰ ਸ਼ੇਅਰ ਕਰੋ
+  consultation:
+    and: ਅਤੇ
+    another_website_html: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ %{close} <a href="%{url}"> ਹੋਰ ਵੈਬਸਾਈਟ </a>
+      'ਤੇ ਆਯੋਜਿਤ ਕੀਤਾ ਗਿਆ
+    at: "'ਤੇ"
+    closes: "'ਤੇ ਬੰਦ ਹੁੰਦਾ ਹੈ"
+    closes_at: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇੱਥੇ ਬੰਦ ਹੁੰਦਾ ਹੈ
+    complete_a: ਪੂਰਾ ਕਰੋ
+    description: ਸਲਾਹ ਮਸ਼ਵਰਾ
+    detail_of_feedback_received: ਪ੍ਰਾਪਤ ਫੀਡਬੈਕ ਦਾ ਵੇਰਵਾ
+    detail_of_outcome: ਨਤੀਜਿਆਂ ਦਾ ਵੇਰਵਾ
+    documents: ਦਸਤਾਵੇਜ਼
+    download_outcome: ਪੂਰਾ ਨਤੀਜਾ ਡਾਉਨਲੋਡ ਕਰੋ
+    either: ਜਾਂ ਤਾਂ
+    email_to: 'ਨੂੰ ਈਮੇਲ ਕਰੋ:'
+    feedback_received: ਫੀਡਬੈਕ ਪ੍ਰਾਪਤ ਹੋਇਆ
+    is_being: ਹੋ ਰਿਹਾ ਹੈ
+    not_open_yet: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਅਜੇ ਖੁੱਲ੍ਹਾ ਨਹੀਂ ਹੈ
+    'on':
+    opens: ਇਹ ਸਲਾਹ ਮਸ਼ਵਰਾ ਖੁੱਲਦਾ ਹੈ
+    original_consultation: ਮੂਲ ਸਲਾਹ
+    ran_from: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇਸ ਤੋਂ ਚੱਲਿਆ
+    respond_online: ਆਨਲਾਈਨ ਜਵਾਬ ਦਿਓ
+    'true': ਸੱਚ
+    visit_soon: ਇਸ ਜਨਤਕ &nbsp;ਫੀਡਬੈਕ ਦੇ ਨਤੀਜਿਆਂ ਨੂੰ ਡਾਉਨਲੋਡ ਕਰਨ ਲਈ ਜਲਦੀ ਹੀ ਇਸ ਪੰਨੇ
+      ਤੇ ਦੁਬਾਰਾ ਜਾਓ।
+    was: ਸੀ
+    ways_to_respond: ਜਵਾਬ ਦੇਣ ਦੇ ਤਰੀਕੇ
+    write_to: 'ਨੂੰ ਲਿਖੋ:'
+  contact:
+    email: ਈ - ਮੇਲ
+    find_call_charges: ਕਾਲ ਖਰਚਿਆਂ ਬਾਰੇ ਜਾਣੋ
+    online: ਆਨਲਾਈਨ
+    phone: ਫ਼ੋਨ
+    webchat: ਵੈਬਚੈਟ
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: "%{link} ਪਤਾ ਕਰੋ।"
+    corporate_information: ਕਾਰਪੋਰੇਟ ਜਾਣਕਾਰੀ
+    personal_information_charter_html: ਸਾਡਾ %{link} ਦੱਸਦਾ ਹੈ ਕਿ ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ
+      ਜਾਣਕਾਰੀ ਨਾਲ ਕਿਵੇਂ ਵਿਵਹਾਰ ਕਰਦੇ ਹਾਂ.
+    publication_scheme_html: ਉਹਨਾਂ ਜਾਣਕਾਰੀ ਦੀਆਂ ਕਿਸਮਾਂ ਬਾਰੇ ਪੜ੍ਹੋ ਜੋ ਅਸੀਂ ਨਿਯਮਿਤ ਤੌਰ
+      ਤੇ ਸਾਡੇ %{link} ਵਿੱਚ ਪ੍ਰਕਾਸ਼ਤ ਕਰਦੇ ਹਾਂ।
+    social_media_use_html: "%{link} 'ਤੇ ਸਾਡੀ ਨੀਤੀ ਪੜ੍ਹੋ।"
+    welsh_language_scheme_html: "%{link} ਪ੍ਰਤੀ ਸਾਡੀ ਵਚਨਬੱਧਤਾ ਬਾਰੇ ਜਾਣੋ।"
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: ਰੱਖਿਆ ਮੰਤਰਾਲਾ ਸਿਖਰ
+    field_of_operation: ਕਾਰਜ ਖੇਤਰ
+    operations_in: "%{location} ਵਿੱਚ ਕਾਰਜ"
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
+    published_in_error: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ
+      ਪ੍ਰਕਾਸ਼ਤ ਕੀਤਾ ਗਿਆ ਸੀ।
+    title: ਜਿਸ ਪੰਨੇ ਨੂੰ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: ਇਸ ਗਾਈਡ ਦੇ ਪੰਨੇ
+    skip_to_contents: ਗਾਈਡ ਦੀ ਸਮਗਰੀ ਤੇ ਜਾਓ
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: ਇਹ ਪ੍ਰਕਾਸ਼ਨ %{url} ਤੇ ਉਪਲਬਧ ਹੈ
+      copyright: "©ਕ੍ਰਾਊਨ ਕਾਪੀਰਾਈਟ %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'ਇਹ ਪ੍ਰਕਾਸ਼ਨ ਓਪਨ ਗਵਰਨਮੈਂਟ ਲਾਇਸੈਂਸ v3.0 ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੇ ਅਧੀਨ ਲਾਇਸੈਂਸਸ਼ੁਦਾ
+        ਹੈ, ਸਿਵਾਏ ਜਿੱਥੇ ਹੋਰ ਨਹੀਂ ਕਿਹਾ ਗਿਆ ਹੈ। ਇਸ ਲਾਇਸੈਂਸ ਨੂੰ ਦੇਖਣ ਲਈ, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">
+        nationalarchives.gov.uk/doc/open-government-licence/version/3 </a> ਜਾਂ ਸੂਚਨਾ
+        ਨੀਤੀ ਟੀਮ, ਦਿ ਨੈਸ਼ਨਲ ਆਰਕਾਈਵਜ਼, ਕੇਵ, ਲੰਡਨ TW9 4DU, ਜਾਂ ਈਮੇਲ ਨੂੰ ਲਿਖੋ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
+      third_party: ਜਿੱਥੇ ਅਸੀਂ ਕਿਸੇ ਤੀਜੀ ਧਿਰ ਦੀ ਕਾਪੀਰਾਈਟ ਜਾਣਕਾਰੀ ਦੀ ਪਛਾਣ ਕੀਤੀ ਹੈ ਤੁਹਾਨੂੰ
+        ਸਬੰਧਤ ਕਾਪੀਰਾਈਟ ਧਾਰਕਾਂ ਤੋਂ ਇਜਾਜ਼ਤ ਲੈਣ ਦੀ ਜ਼ਰੂਰਤ ਹੋਏਗੀ।
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa: ਪੰਜਾਬੀ
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    pa: ਪੰਜਾਬੀ ਗੁਰਮੁਖੀ
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: ਅਗਲਾ
+    previous_page: ਪਿਛਲਾ
+    print_entire_guide: ਸਾਰੀ ਗਾਈਡ ਛਾਪੋ
   service_sign_in:
-    continue:
+    continue: ਜਾਰੀ ਰੱਖੋ
     error:
-      option:
-      title:
+      option: ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵਿਕਲਪ ਚੁਣੋ
+      title: ਤੁਸੀਂ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਚੁਣਿਆ
   shared:
-    historically_political:
+    historically_political: ਇਹ %{government} ਦੇ ਅਧੀਨ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤਾ ਗਿਆ ਸੀ
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: ਸਲਾਹਕਾਰ ਗੱਲਬਾਤ ਕਰਨ ਲਈ ਉਪਲਬਧ ਹਨ।
+      busy: ਸਾਰੇ ਵੈਬਚੈਟ ਸਲਾਹਕਾਰ ਇਸ ਸਮੇਂ ਰੁੱਝੇ ਹੋਏ ਹਨ।
+      closed: ਵੈਬਚੈਟ ਇਸ ਸਮੇਂ ਬੰਦ ਹੈ।
+      speak_to_adviser: ਹੁਣ ਕਿਸੇ ਸਲਾਹਕਾਰ ਨਾਲ ਗੱਲ ਕਰੋ
+      technical_problem: ਵੈਬਚੈਟ ਇਸ ਸਮੇਂ ਤਕਨੀਕੀ ਸਮੱਸਿਆਵਾਂ ਦੇ ਕਾਰਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਇੱਕ ਕਾਲਾ ਮੋਹਰ ਹੈ ਜਿਸਦੇ ਨਾਲ ਡਿਜ਼ਾਈਨਡ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ
+      ਸ਼ਬਦ ਹਨ
+    pgi_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਜੀਓਗ੍ਰਾਫਿਕ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ ਕਾਲੀ
+      ਮੋਹਰ ਹੈ
+    tsg_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਟ੍ਰੈਡੀਸ਼ਨਲ ਸਪੈਸ਼ਲਿਟੀ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ
+      ਕਾਲਾ ਮੋਹਰ ਹੈ
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: "'ਤੇ ਦਿੱਤਾ ਗਿਆ"
+    location: ਟਿਕਾਣਾ
+    written_on: "'ਤੇ ਲਿਖਿਆ ਗਿਆ"
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: ਰੱਦ ਕਰਨ ਦੀ ਤਾਰੀਖ
+    cancelled: ਅੰਕੜੇ ਜਾਰੀ ਰੱਦ
+    changed_date: ਰਿਲੀਜ਼ ਦੀ ਤਾਰੀਖ ਬਦਲ ਦਿੱਤੀ ਗਈ ਹੈ
+    forthcoming: ਇਹ ਅੰਕੜੇ ਜਾਰੀ ਕੀਤੇ ਜਾਣਗੇ
+    previous_date: ਪਿਛਲੀ ਤਾਰੀਖ
+    proposed_date: ਪ੍ਰਸਤਾਵਿਤ ਰਿਹਾਈ
+    reason_for_change: ਤਬਦੀਲੀ ਦਾ ਕਾਰਨ
+    release_date: ਰਿਹਾਈ ਤਾਰੀਖ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> ਦੇਸ਼ ਦੇ ਕੁਝ ਹਿੱਸਿਆਂ ਦੀ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਦੇ
+        ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> ਸਾਰੇ ਦੇਸ਼ ਨੂੰ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਛੱਡ ਕੇ ਯਾਤਰਾ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ
+        ਹੈ।
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        ਦੇਸ਼ ਦੇ ਹਿੱਸਿਆਂ ਦੀ ਹਰ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        ਸਾਰੇ ਦੇਸ਼ ਦੀ ਸਾਰੀ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
+    context: ਵਿਦੇਸ਼ੀ ਯਾਤਰਾ ਸਲਾਹ
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          ਮੌਜੂਦਾ COVID-19 ਨਿਯਮਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ ਜਿੱਥੇ ਤੁਸੀਂ ਰਹਿੰਦੇ ਹੋ: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">ਉੱਤਰੀ ਆਇਰਲੈਂਡ</a>.
+        </p>
+        <p class="govuk-body">
+          ਨਵੇਂ COVID ਰੂਪਾਂ ਨੂੰ ਯੂਕੇ ਵਿੱਚ ਦਾਖਲ ਹੋਣ ਤੋਂ ਰੋਕਣ ਲਈ, ਤੁਹਾਨੂੰ <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">ਐਂਬਰ ਜਾਂ ਲਾਲ ਸੂਚੀ ਵਾਲੇ ਦੇਸ਼ਾਂ</a> ਦੀ ਯਾਤਰਾ ਨਹੀਂ ਕਰਨੀ ਚਾਹੀਦੀ।
+        </p>
+        <p class="govuk-body">
+          ਕਿਸੇ ਦੇਸ਼ ਵਿੱਚ ਜੋਖਮਾਂ ਨੂੰ ਸਮਝਣ ਲਈ <a href="/guidance/travel-advice-novel-coronavirus">FCDO ਯਾਤਰਾ ਸਲਾਹ</a> ਦਾ ਪਾਲਣ ਕਰੋ।
+        </p>
+        <p class="govuk-body">
+          ਜਦੋਂ ਤੁਸੀਂ ਵਾਪਸ ਆਉਂਦੇ ਹੋ, <a href="/uk-border-control">ਵਿਦੇਸ਼ਾਂ ਤੋਂ ਯੂਕੇ ਵਿੱਚ ਦਾਖਲ ਹੋਣ</a> ਲਈ ਨਿਯਮਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ (ਆਇਰਲੈਂਡ ਤੋਂ ਇਲਾਵਾ)।
+        </p>
+      text_assistive: ਮਹੱਤਵਪੂਰਨ
+      title: ਕੋਰੋਨਾਵਾਇਰਸ (COVID-19) ਯਾਤਰਾ
+    still_current_at: "'ਤੇ ਅਜੇ ਵੀ ਮੌਜੂਦਾ"
+    summary: ਸੰਖੇਪ
+    updated: ਅੱਪਡੇਟ ਕੀਤਾ
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
+    summary: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ ਪ੍ਰਕਾਸ਼ਤ
+      ਕੀਤਾ ਗਿਆ ਸੀ।
+    title: ਜਿਸ ਪੰਨੇ ਨੂੰ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
   working_group:
-    contact_details:
-    policies:
+    contact_details: ਸੰਪਰਕ ਵੇਰਵੇ
+    policies: ਨੀਤੀਆਂ

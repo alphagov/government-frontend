@@ -1,216 +1,226 @@
----
 tr:
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: İşletmeler için Brexit rehberi
+    citizen_link: Kişiler ve aileler için Brexit rehberi
+    heading_prefix: Farklılık var
   common:
     last_updated:
-    visit:
+    visit: 'Ziyaret et:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Resim sahibi: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: tüm güncellemeleri gizle
+      last_updated: Son güncelleme %{date}
+      published: Yayınlama %{date}
+      see_all_updates: tüm güncellemeleri görün
+      show_all_updates: tüm güncellemeleri göster
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: hepsini gizle
+      show_all: hepsini göster
+    save_this_page:
+      add_page_button: Kayıtlı sayfalarına ekle
+      confirmations:
+        page_removed:
+          message: Bunu kayıtlı sayfalarınızdan çıkardınız
+        page_saved:
+          message: Bunu kayıtlı sayfalarınıza eklediniz
+      page_not_saved_heading: Daha sonra gelebilmek için bu sayfayı kaydedin
+      page_was_saved_heading: Bu sayfayı kaydettiniz
+      remove_page_button: Kayıtlı sayfalarından çıkar
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı
+        sayfalarını gör</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı
+        sayfalarını görmek için</a> oturum aç.
     share_links:
-      share_this_page:
+      share_this_page: Bu sayfayı paylaş
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: ve
+    another_website_html: Bu danışma %{closed} başka bir websitesinde<a href="%{url}">gerçekleşti</a>
+    at: şurada
+    closes: şurada kapanıyor
+    closes_at: Bu danışma şurada kapanıyor
+    complete_a: Bir danışma
+    description: Açıklaması tamamlayın
+    detail_of_feedback_received: Alınan geri bildirimin ayrıntısı
+    detail_of_outcome: Sonuç ayrıntısı
+    documents: Belgeler
+    download_outcome: Tam sonucu indir
+    either: ya da
+    email_to: 'Şu adrese e-posta gönder:'
+    feedback_received: Geri bildirim alındı
+    is_being: alınıyor
+    not_open_yet: Bu danışma henüz açık değil
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Bu danışma açılıyor
+    original_consultation: Orijinal danışma
+    ran_from: Bu danışma şuradan başladı
+    respond_online: Çevrimiçi yanıtla
+    'true': doğru
+    visit_soon: Sonucu bu açık&nbsp;geri bildirime yüklemek için sayfayı kısa süre
+      sonra tekrar ziyaret edin.
+    was: idi
+    ways_to_respond: Yanıtlama şekilleri
+    write_to: 'Şuraya yaz:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: E-posta
+    find_call_charges: Tüm arama ücretlerini öğren
+    online: Çevrimiçi
+    phone: Telefon
+    webchat: Webchat
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Bu belgenin yayınlanacağı yer
+    contents: İçerikler
     metadata:
-      published: Yayında
-      updated: Güncellendi
+      published: Yayınlanan
+      updated: Güncelleme
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Hava Kazaları Soruşturma Şube raporu
+        other: Hava Kazaları Soruşturma Şube raporları
       announcement:
         one: Duyuru
         other: Duyurular
       asylum_support_decision:
-        one:
-        other:
+        one: Sığınma desteği mahkeme kararı
+        other: Sığınma desteği mahkeme kararları
       authored_article:
-        one: Yazılan makale
-        other: Yazılan makaleler
+        one: Yazılı makale
+        other: Yazılı makaleler
       business_finance_support_scheme:
-        one:
-        other:
+        one: İşletme finans desteği planı
+        other: İşletme finans desteği planları
       case_study:
-        one: Örnek Olay
-        other: Örnek Olaylar
+        one: Vaka incelemesi
+        other: Vaka incelemeleri
       closed_consultation:
-        one: Sona eren çalışmalar
-        other: Sona eren çalışmalar
+        one: Kapalı danışma
+        other: Kapalı danışmalar
       cma_case:
-        one:
-        other:
+        one: Rekabet ve Piyasalar Kurumu dosyası
+        other: Rekabet ve Piyasalar Kurumu dosyaları
       coming_soon:
-        one:
-        other:
+        one: Çok Yakında
+        other: Çok Yakında
       consultation:
         one: Danışma
-        other: Yapılan Danışmalar
+        other: Danışmalar
       consultation_outcome:
         one: Danışma sonucu
         other: Danışma sonuçları
       corporate_information_page:
-        one:
-        other:
+        one: Bilgi sayfası
+        other: Bilgi sayfaları
       corporate_report:
-        one: Kurumsal Rapor
-        other: Kurumsal Raporlar
+        one: Kurumsal rapor
+        other: Kurumsal raporlar
       correspondence:
         one: Yazışma
         other: Yazışmalar
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Kırsal Koruma harcırahı
+        other: Kırsal Koruma harcırahları
       decision:
-        one:
-        other:
+        one: Karar
+        other: Kararlar
       detailed_guide:
-        one: Ayrıntılı Kılavuz
-        other: Ayrıntılı Kılavuzlar
+        one: Rehberlik
+        other: Rehberlik
       dfid_research_output:
-        one:
-        other:
+        one: Kalkınma Çıktıları Araştırması
+        other: Kalkınma Çıktıları Araştırmaları
       document_collection:
-        one: Seriler
-        other:
+        one: Toplama
+        other: Toplamalar
       draft_text:
         one: Taslak metin
         other: Taslak metinler
       drug_safety_update:
-        one:
-        other:
+        one: Uyuşturucu Güvenliği Bilgilendirmesi
+        other: Uyuşturucu Güvenliği Bilgilendirmeleri
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: İstihdam temyiz mahkeme kararı
+        other: İstihdam temyiz mahkeme kararları
       employment_tribunal_decision:
-        one:
-        other:
+        one: İstihdam mahkemesi kararı
+        other: İstihdam mahkemesi kararları
       esi_fund:
-        one:
-        other:
+        one: Avrupa Yapısal ve Kalkınma Fonu (ESIF)
+        other: Avrupa Yapısal ve Kalkınma Fonları (ESIF)
       fatality_notice:
-        one: Ölüm ilanı
-        other: Ölüm ilanları
+        one: Hata bildirimi
+        other: Hata bildirimleri
       foi_release:
-        one: Bilgi edinme hakkı raporu
-        other: Bilgi edinme hakkı raporları
+        one: Bilgi Özgürlüğü duyurusu
+        other: Bilgi Özgürlüğü duyuruları
       form:
         one: Form
         other: Formlar
       government_response:
-        one: Hükümet cevabı
-        other: Hükümet cevapları
+        one: Devletin yanıtı
+        other: Devletin yanıtları
       guidance:
-        one: Kılavuz
-        other: Kılavuzlar
+        one: Rehberlik
+        other: Rehberlik
       impact_assessment:
         one: Etki değerlendirmesi
         other: Etki değerlendirmeleri
       imported:
-        one: Alındı - Kategorize edilecek
-        other: Alındı - Kategorize edilecek
+        one: İçe aktarıldı - tür bekleniyor
+        other: İçe aktarıldı - tür bekleniyor
       independent_report:
         one: Bağımsız rapor
         other: Bağımsız raporlar
       international_development_fund:
-        one:
-        other:
+        one: Uluslararası kalkınma fonu
+        other: Uluslararası kalkınma fonu
       international_treaty:
-        one:
-        other:
+        one: Uluslararası anlaşma
+        other: Uluslararası anlaşmalar
       maib_report:
-        one:
-        other:
+        one: Deniz Kazası Soruşturma Şube raporu
+        other: Deniz Kazası Soruşturma Şube raporları
       map:
         one: Harita
         other: Haritalar
       medical_safety_alert:
-        one:
-        other:
+        one: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
+        other: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
       national:
-        one:
-        other:
+        one: Ulusal İstatistik duyurusu
+        other: Ulusal İstatistik duyuruları
       national_statistics:
-        one: İstatistikler - ulusal istatistikler
-        other: İstatistikler - ulusal istatistikler
+        one: Ulusal İstatistikler
+        other: Ulusal İstatistikler
       national_statistics_announcement:
-        one:
-        other:
+        one: Ulusal İstatistik duyurusu
+        other: Ulusal İstatistik duyuruları
       news_article:
-        one: Makale
-        other: Makaleler
+        one: Haber makalesi
+        other: Haber makaleleri
       news_story:
-        one: Haber
-        other: Haberler
+        one: Haber makalesi
+        other: Haber hikayeleri
       notice:
-        one:
-        other:
+        one: Bildirim
+        other: Bildirimler
       official:
-        one:
-        other:
+        one: Ulusal İstatistik duyurusu
+        other: Ulusal İstatistik duyuruları
       official_statistics:
-        one: İstatistikler
-        other: İstatistikler
+        one: Resmi İstatistikler
+        other: Resmi İstatistikler
       official_statistics_announcement:
-        one:
-        other:
+        one: Ulusal İstatistik duyurusu
+        other: Ulusal İstatistik duyuruları
       open_consultation:
-        one: Devam eden çalışma
-        other: Devam eden çalışmalar
+        one: Açık danışma
+        other: Açık danışmalar
       oral_statement:
-        one: Parlamento'ya sözlü açıklama
-        other: Parlamento'ya sözlü açıklamalar
+        one: Parlamentoya sözlü açıklama
+        other: Parlamentoya sözlü açıklamalar
       policy:
         one: Politika
         other: Politikalar
@@ -218,267 +228,190 @@ tr:
         one: Politika belgesi
         other: Politika belgeleri
       press_release:
-        one: Basın Bülteni
-        other: Basın Bültenleri
+        one: Basın duyurusu
+        other: Basın duyuruları
       promotional:
-        one: Tanıtım Malzemesi
-        other: Tanıtım Malzemeleri
+        one: Promosyon malzemesi
+        other: Promosyon malzemesi
       publication:
         one: Yayın
         other: Yayınlar
       raib_report:
-        one:
-        other:
+        one: Demiryolu Kazası Soruşturma Şube raporu
+        other: Demiryolu Kazası Soruşturma Şube raporları
       regulation:
-        one:
-        other:
+        one: Düzenleme
+        other: Düzenlemeler
       research:
-        one: Araştırma ve analiz
-        other: Araştırma ve analizler
+        one: Arama ve analiz
+        other: Arama ve analiz
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Meskun mahaldeki emlak mahkeme kararı
+        other: Meskun mahaldeki emlak mahkeme kararları
       service_sign_in:
-        one:
-        other:
+        one: Hizmet oturum aç
+        other: Hizmet oturum aç
       service_standard_report:
-        one:
-        other:
+        one: Hizmet Standardı Raporu
+        other: Hizmet Standardı Raporları
       speaking_notes:
-        one: Konuşma notu
+        one: Konuşma notları
         other: Konuşma notları
       speech:
         one: Konuşma
         other: Konuşmalar
       standard:
-        one:
-        other:
+        one: Standart
+        other: Standartlar
       statement_to_parliament:
-        one: Parlamento'ya yapılan açıklama
-        other: Parlamento'ya yapılan açıklamalar
+        one: Parlamentoya Açıklama
+        other: Parlamentoya Açıklamalar
       statistical_data_set:
-        one: İstatiksel veri setleri
-        other: İstatiksel veri setleri
+        one: İstatistiki veri kümesi
+        other: İstatistiki veri kümeleri
       statistics_announcement:
-        one:
-        other:
+        one: İstatistik açıklama duyurusu
+        other: İstatistik açıklama duyuruları
       statutory_guidance:
-        one:
-        other:
+        one: Mevzuat rehberi
+        other: Mevzuat rehberi
       take_part:
-        one:
-        other:
+        one: Katıl
+        other: Katıl
       tax_tribunal_decision:
-        one:
-        other:
+        one: Vergi ve Temyiz mahkemesi kararı
+        other: Vergi ve Temyiz mahkemesi kararları
       transcript:
-        one: Transkriptler
+        one: Transkript
         other: Transkriptler
       transparency:
-        one: Veri saydamlığı
-        other: Veri saydamlığı
+        one: Şeffaflık verileri
+        other: Şeffaflık verileri
       utaac_decision:
-        one:
-        other:
+        one: İdari temyiz mahkemesi kararı
+        other: İdari temyiz mahkemesi kararları
       world_location_news_article:
-        one: Makale
-        other: Makaleler
+        one: Haber makalesi
+        other: Haber makaleleri
       world_news_story:
-        one:
-        other:
+        one: Dünya geneli haber makalesi
+        other: Dünya geneli haber makaleleri
       written_statement:
-        one: Parlamento'ya yapılan yazılı açıklama
-        other: Parlamento'ya yapılan yazılı açıklamalar
+        one: Parlamentoya yazılı açıklama
+        other: Parlamentoya yazılı açıklamalar
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: Kurumsal bilgi
-    personal_information_charter_html: Bu %{link} bilgilerinizi nasıl sakladığımız açıklamaktadır
-    publication_scheme_html: Rutin olarak yayınladığımız bilgiler için bu %{link} 'e bakınız
-    social_media_use_html: Konuyla ilgili politikamız hakkında daha fazla bilgi için %{link}
-    welsh_language_scheme_html: Yayın hedefimiz ile ilgili bilgilere bu  %{link}ten ulaşabilirsiniz.
+    about_our_services_html: "%{link} bağlantısını keşfedin."
+    corporate_information: Kurumsal bilgiler
+    personal_information_charter_html: "%{link} bağlantımız özel bilgilerinizi nasıl
+      işlediğimizi açıklamaktadır."
+    publication_scheme_html: "%{link} bağlantımızda düzenli olarak yayınladığımız
+      bilgi türlerini okuyun."
+    social_media_use_html: "%{link} bağlantısındaki politikamızı okuyun."
+    welsh_language_scheme_html: "%{link} bağlantısına taahhüdümüzü okuyun."
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Savunma Bakanlığı arması
+    field_of_operation: Faaliyet alanı
+    operations_in: "%{location} konumundaki faaliyetler"
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Artık mevcut değil
+    published_in_error: Bu sayfadaki bilgiler hatalı yayınlandığından kaldırıldı.
+    title: Aradığınız sayfa artık mevcut değil
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Bu kılavuzdaki sayfalar
+    skip_to_contents: Kılavuz içeriklerine atla
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Bu yayına %{url} üzerinden ulaşılabilir
+      copyright: "© Crown telif hakkı %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Aksi ifade edilmedikçe, bu yayın Açık Hükümet Lisansı v3.0 hükümleri
+        kapsamında lisanslıdır. Bu lisansı görüntülemek için, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        adresini ziyaret edin veya The National Archives, Kew, London TW9 4DU adresindeki
+        Bilgi Politikası Ekibine yazın ya da şuraya e-posta gönderin: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Üçüncü taraf telif hakkı bilgilerini tespit etmemiz halinde, ilgili
+        telif hakkı sahiplerinden izin almanız gerekir.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
     tr: Türkçe
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Sonraki
+    previous_page: Önceki
+    print_entire_guide: Tüm kılavuzu yazdır
   publication:
-    details:
+    details: Ayrıntılar
     documents:
       one: Belge
       other: Belgeler
   service_sign_in:
-    continue:
+    continue: Devam
     error:
-      option:
-      title:
+      option: Lütfen bir seçenek seçin
+      title: Bir seçenek seçmediniz
   shared:
-    historically_political:
+    historically_political: "%{government} kapsamında yayınlandı"
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Danışmanlar sohbet için müsait.
+      busy: Tüm webchat danışmanları şu anda meşgul.
+      closed: Webchat şu anda kapalı.
+      speak_to_adviser: Bir danışmanla konuşun
+      technical_problem: Teknik sorunlar nedeniyle şu an Webchat’e ulaşılamıyor.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Şema logosu Designated Origin UK Protected sözcüklerini içeren siyah
+      bir damgadır
+    pgi_alt_text: Şema logosu Geographic Origin UK Protected sözcüklerini içeren siyah
+      bir damgadır
+    tsg_alt_text: Şema logosu Traditional Specialty UK Protected sözcüklerini içeren
+      siyah bir damgadır
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: 'Teslim tarihi:'
+    location: Konum
+    written_on: 'Yazılma tarihi:'
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: İptal tarihi
+    cancelled: İstatistik açıklaması iptal edildi
+    changed_date: Açıklama tarihi değiştirildi
+    forthcoming: İstatistikler açıklanacak
+    previous_date: Önceki tarih
+    proposed_date: Önerilen açıklama
+    reason_for_change: Değişiklik gerekçesi
+    release_date: Açıklama tarihi
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> ülkenin bazı bölgelerine zorunlu seyahatler haricinde seyahat
+        edilmemesini tavsiye etmektedir.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> zorunlu seyahatler haricinde ülke geneline seyahat edilmemesini
+        tavsiye etmektedir.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        ülkeye bazı kısımlarına hiçbir seyahat yapılmamasını tavsiye etmektedir.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        ülke geneline hiçbir seyahat yapılmamasını tavsiye etmektedir.
+    context: Yurtdışı seyahat tavsiyesi
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+        Yaşadığınız yerdeki mevcut COVID-19 kurallarını takip edin: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">İngiltere</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">İskoçya</a>, <a href="https://gov.wales/coronavirus-travel">Galler</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Kuzey İrlanda</a>.
+        </p>
+        <p class="govuk-body">
+          Yeni COVID varyantlarının İngiltere’ye girmesini engellemek için, <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">kehribar rengi veya kırmızı listedeki ülkelere</a> seyahat etmemelisiniz.
+        </p>
+        <p class="govuk-body">
+          Bir ülkedeki riskleri öğrenmek için <a href="/guidance/travel-advice-novel-coronavirus">Dışişleri Bakanlığı Seyahat Tavsiyesine uyun</a>.
+        </p>
+        <p class="govuk-body">
+          Geri döndüğünüzde,  (İrlanda hariç) <a href="/uk-border-control">yurtdışından İngiltere’ye giriş</a> kurallarına uyun.
+        </p>
+      text_assistive: Önemli
+      title: Koronavirüs (COVID-19) seyahat
+    still_current_at: Halen şurada
+    summary: Özet
+    updated: Güncelleme
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Artık mevcut değil
+    summary: Bu sayfadaki bilgiler hatalı yayınlandığından kaldırıldı.
+    title: Aradığınız sayfa artık mevcut değil
   working_group:
-    contact_details:
-    policies:
+    contact_details: İrtibat ayrıntıları
+    policies: Politikalar

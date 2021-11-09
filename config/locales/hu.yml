@@ -1,87 +1,21 @@
----
 hu:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: közzététel dátuma
-      updated: 'Utolsó frissítés:'
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: A Légi Balesetek Kivizsgálásáért Felelős Részleg jelentése
+        other: A Légi Balesetek Kivizsgálásáért Felelős Részleg jelentései
       announcement:
         one: Bejelentés
         other: Bejelentések
       asylum_support_decision:
-        one:
-        other:
+        one: Menekültügyi bírósági ítélet
+        other: Menekültügyi bírósági ítéletek
       authored_article:
         one: Publicisztika
         other: Publicisztikák
       business_finance_support_scheme:
-        one:
-        other:
+        one: Vállalkozás pénzügyi támogatására szolgáló terv
+        other: Vállalkozás pénzügyi támogatására szolgáló tervek
       case_study:
         one: Esettanulmány
         other: Esettanulmányok
@@ -89,11 +23,11 @@ hu:
         one: Lezárt konzultáció
         other: Lezárt konzultációk
       cma_case:
-        one:
-        other:
+        one: Verseny- és Piachatósági eset
+        other: Verseny- és Piachatósági esetek
       coming_soon:
-        one:
-        other:
+        one: Hamarosan
+        other: Hamarosan
       consultation:
         one: Konzultáció
         other: Konzultációk
@@ -101,8 +35,8 @@ hu:
         one: Konzultációs eredmény
         other: Konzultációs eredmények
       corporate_information_page:
-        one:
-        other:
+        one: Információs oldal
+        other: Információs oldalak
       corporate_report:
         one: Testületi beszámoló
         other: Testületi beszámolók
@@ -110,35 +44,35 @@ hu:
         one: Levelezés
         other: Levelezések
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Tájvédelmi segély
+        other: Tájvédelmi segélyek
       decision:
-        one:
-        other:
+        one: Döntés
+        other: Döntések
       detailed_guide:
-        one: Részletes útmutató
-        other: Részletes útmutató
+        one: Útmutató
+        other: Útmutató
       dfid_research_output:
-        one:
-        other:
+        one: A fejlesztési teljesítmény kutatása
+        other: A fejlesztési teljesítmények kutatása
       document_collection:
-        one: Sorozatok
-        other:
+        one: Gyűjtemény
+        other: Gyűjtemények
       draft_text:
         one: Szövegtervezet
         other: Szövegtervezetek
       drug_safety_update:
-        one:
-        other:
+        one: Gyógyszerbiztonsági frissítés
+        other: Gyógyszerbiztonsági frissítések
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Munkaügyi fellebbezés bírósági ítélettel szemben
+        other: Munkaügyi fellebbezés bírósági ítéletekkel szemben
       employment_tribunal_decision:
-        one:
-        other:
+        one: Munkaügyi bírósági ítélet
+        other: Munkaügyi bírósági ítéletek
       esi_fund:
-        one:
-        other:
+        one: Európai strukturális és beruházási alap (ESIF)
+        other: Európai strukturális és beruházási alapokok (ESIF)
       fatality_notice:
         one: Halálesettel kapcsolatos értesítés
         other: Halálesettel kapcsolatos értesítések
@@ -164,29 +98,31 @@ hu:
         one: Független beszámoló
         other: Független beszámolók
       international_development_fund:
-        one:
-        other:
+        one: Nemzetközi fejlesztésfinanszírozás
+        other: Nemzetközi fejlesztésfinanszírozás
       international_treaty:
-        one:
-        other:
+        one: Nemzetközi egyezmény
+        other: Nemzetközi egyezmények
       maib_report:
-        one:
-        other:
+        one: A Tengeri Balesetek Kivizsgálásáért Felelős Részleg jelentése
+        other: A Tengeri Balesetek Kivizsgálásáért Felelős Részleg jelentései
       map:
         one: Térkép
         other: Térképek
       medical_safety_alert:
-        one:
-        other:
+        one: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
+          és visszahívások
+        other: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
+          és visszahívások
       national:
-        one:
-        other:
+        one: Nemzeti statisztikai bejelentés
+        other: Nemzeti statisztikai bejelentések
       national_statistics:
-        one: Statisztikák - nemzeti adatok
-        other: Statisztikák - nemzeti adatok
+        one: Nemzeti statisztikák
+        other: Nemzeti statisztikák
       national_statistics_announcement:
-        one:
-        other:
+        one: Nemzeti statisztikai bejelentés
+        other: Nemzeti statisztikai bejelentések
       news_article:
         one: Cikk
         other: Cikkek
@@ -194,17 +130,17 @@ hu:
         one: Hír
         other: Hírek
       notice:
-        one:
-        other:
+        one: Értesítés
+        other: Értesítések
       official:
-        one:
-        other:
+        one: Hivatalos statisztikai bejelentés
+        other: Hivatalos statisztikai bejelentések
       official_statistics:
-        one: Statisztika
-        other: Statisztikák
+        one: Hivatalos statisztika
+        other: Hivatalos statisztikák
       official_statistics_announcement:
-        one:
-        other:
+        one: Hivatalos statisztikai bejelentés
+        other: Hivatalos statisztikai bejelentések
       open_consultation:
         one: Nyílt konzultáció
         other: Nyílt konzultációk
@@ -212,11 +148,11 @@ hu:
         one: Parlamenti felszólalás
         other: Parlamenti felszólalások
       policy:
-        one: Szakpolitika
-        other: Szakpolitikák
+        one: Irányelv
+        other: Irányelvek
       policy_paper:
-        one: Szakpolitikai dokumentum
-        other: Szakpolitikai dokumentumok
+        one: Irányelvi dokumentum
+        other: Irányelvi dokumentumok
       press_release:
         one: Sajtóközlemény
         other: Sajtóközlemények
@@ -227,23 +163,23 @@ hu:
         one: Kiadvány
         other: Kiadványok
       raib_report:
-        one:
-        other:
+        one: A Vasúti Balesetek Kivizsgálásáért Felelős Részleg jelentése
+        other: A Vasúti Balesetek Kivizsgálásáért Felelős Részleg jelentései
       regulation:
-        one:
-        other:
+        one: Szabályozás
+        other: Szabályozások
       research:
         one: Kutatás és elemzés
         other: Kutatás és elemzés
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Lakóingatlannal kapcsolatos bírósági döntés
+        other: Lakóingatlannal kapcsolatos bírósági döntések
       service_sign_in:
-        one:
-        other:
+        one: Bejelentkezés a szolgálatásba
+        other: Bejelentkezés a szolgálatásba
       service_standard_report:
-        one:
-        other:
+        one: Szolgálatás Szabványos Jelentése
+        other: Szolgálatás Szabványos Jelentései
       speaking_notes:
         one: Feljegyzések
         other: Feljegyzések
@@ -251,234 +187,240 @@ hu:
         one: Beszéd
         other: Beszédek
       standard:
-        one:
-        other:
+        one: Szabvány
+        other: Szabványok
       statement_to_parliament:
         one: Parlamenti nyilatkozat
         other: Parlamenti nyilatkozatok
       statistical_data_set:
-        one: Statisztikai adatcsoport
-        other: Statisztikai adatcsoportok
+        one: Statisztikai adatkészlet
+        other: Statisztikai adatkészletek
       statistics_announcement:
-        one:
-        other:
+        one: Statisztika közzétételének bejelentése
+        other: Statisztika közzétételének bejelentései
       statutory_guidance:
-        one:
-        other:
+        one: Törvényi előírás
+        other: Törvényi előírás
       take_part:
-        one:
-        other:
+        one: Részvétel
+        other: Részvétel
       tax_tribunal_decision:
-        one:
-        other:
+        one: Adóval és kancelláriával kapcsolatos bírósági ítélet
+        other: Adóval és kancelláriával kapcsolatos bírósági ítéletek
       transcript:
-        one: Átirat
-        other: Átiratok
+        one: Leirat
+        other: Leiratok
       transparency:
         one: Átláthatósági adatok
         other: Átláthatósági adatok
       utaac_decision:
-        one:
-        other:
+        one: Adminisztratív fellebbezéssel kapcsolatos bírósági ítélet
+        other: Adminisztratív fellebbezéssel kapcsolatos bírósági ítéletek
       world_location_news_article:
         one: Cikk
         other: Cikkek
       world_news_story:
-        one:
-        other:
+        one: Nemzetközi hír
+        other: Nemzetközi hírek
       written_statement:
         one: Írásbeli parlamenti nyilatkozat
         other: Írásbeli parlamenti nyilatkozatok
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information: Szervezeti információk
-    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan kezeljük a személyes adatokat: %{link}'
-    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk közzé: %{link}'
-    social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
-    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos elkötelezettségünkről: %{link}'
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu: Magyar
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    coming_soon: 'A dokumentum közzé lesz téve ekkor:'
+    contents: Tartalomjegyzék
+    metadata:
+      published: közzététel dátuma
+      updated: Frissítve
   publication:
-    details:
     documents:
       one: Dokumentum
       other: Dokumentumok
+    details: Részletek
+  brexit:
+    business_link: Brexit-útmutató vállalkozások részére
+    citizen_link: Brexit-útmutató egyének és családok részére
+    heading_prefix: Van különbség
+  common:
+    last_updated:
+    visit: 'Látogassa meg:'
+  components:
+    figure:
+      image_credit: 'Képaláírás: %{credit}'
+    published_dates:
+      hide_all_updates: minden frissítés elrejtése
+      last_updated: 'Utolsó frissítés: %{date}'
+      published: 'közzététel dátuma: %{date}'
+      see_all_updates: minden frissítés megtekintése
+      show_all_updates: minden frissítés megjelenítése
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: összes elrejtése
+      show_all: összes megjelenítése
+    save_this_page:
+      add_page_button: Hozzáadás a mentett oldalakhoz
+      confirmations:
+        page_removed:
+          message: Eltávolította ezt az oldalt a mentett oldalai közül
+        page_saved:
+          message: Hozzáadta ezt az oldalt a mentett oldalaihoz
+      page_not_saved_heading: Mentse el ezt az oldalt, hogy később vissza újra meg
+        tudja nyitni
+      page_was_saved_heading: Elmentette ezt az oldalt
+      remove_page_button: Eltávolítás a mentett oldalak közül
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Mentett
+        oldalak megtekintése</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Jelentkezzen
+        be</a> a mentett oldalainak megtekintéséhez.
+    share_links:
+      share_this_page: Oldal megosztása
+  consultation:
+    and: és
+    another_website_html: A konzultáció %{closed} egy <a href="%{url}">másik weboldalon
+      kerül megrendezésre</a>
+    at: 'itt:'
+    closes: 'Lezárul ekkor:'
+    closes_at: 'A konzultáció lezárul ekkor:'
+    complete_a: 'A következő befejezése:'
+    description: Konzultáció leírása
+    detail_of_feedback_received: A kapott visszajelzés részletei
+    detail_of_outcome: Kimenetel részletei
+    documents: Dokumentumok
+    download_outcome: Teljes kimenetel letöltése
+    either: vagy
+    email_to: 'E-mail küldése ide:'
+    feedback_received: Visszajelzés kézbesítve
+    is_being: folyamatban
+    not_open_yet: A konzultáció még nem nyitott
+    'on':
+    opens: A konzultáció megnyílik
+    original_consultation: Eredeti konzultáció
+    ran_from: 'A konzultáció kezdőidőpontja:'
+    respond_online: Válasz online
+    'true': igaz
+    visit_soon: Látogassa meg újra az oldalt a közeljövőben a jelen nyilvános&nbsp;visszajelzés
+      kimenetelének megtekintése érdekében.
+    was: volt
+    ways_to_respond: Válaszadási lehetőségek
+    write_to: 'Levélírás a következőnek:'
+  contact:
+    email: E-mail
+    find_call_charges: Tudjon meg többet a hívás költségeiről
+    online: Online
+    phone: Telefon
+    webchat: Webchat
+  corporate_information_page:
+    about_our_services_html: 'Tudja meg: %{link}.'
+    corporate_information: Vállalati adatok
+    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan
+      kezeljük a személyes adatokat: %{link}.'
+    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk
+      közzé: %{link}'
+    social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
+    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos
+      elkötelezettségünkről: %{link}'
+  fatality_notice:
+    alt_text: A Védelmi Minisztérium címere
+    field_of_operation: Működési terület
+    operations_in: 'Tevékenységek itt: %{location}'
+  gone:
+    page_title: Már nem elérhető
+    published_in_error: Az ezen az oldalon található információ eltávolításra került,
+      mivel közzététele hiba volt.
+    title: Az Ön által keresett oldal már nem elérhető
+  guide:
+    pages_in_guide: A jelen útmutató oldalai
+    skip_to_contents: Kihagyás és továbblépés az útmutató tartalomjegyzékéhez
+  html_publication:
+    print_meta_data:
+      available_at: 'A kiadvány elérhető a következő helyen: %{url}'
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'A jelen kiadvány licenceit a Nyílt Közigazgatási Engedélyek 3.0
+        biztosítja, kivéve, ha másként van jelölve. A licenc megtekintéséhez látogassa
+        meg a(z)  <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        vagy írjon az Információkezeléssel foglalkozó Csapatnak, The National Archives,
+        Kew, London TW9 4DU, vagy e-mailt a következő címre: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Enegdélyt kell kérnie az érintett szerzői jogok tulajdonosaitól
+        abban az esetben, ha harmadik fél szerzői jogi információkat közöltünk.
+  i18n:
+    direction:
+  language_names:
+    hu: Magyar
+  multi_page:
+    next_page: Következő
+    previous_page: Előző
+    print_entire_guide: Teljes útmutató nyomtatása
   service_sign_in:
-    continue:
+    continue: Folytatás
     error:
-      option:
-      title:
+      option: Kérjük, válasszon ki egy lehetőséget
+      title: Nem választott ki lehetőséget
   shared:
-    historically_political:
+    historically_political: A jelen kiadvány a(z) %{government} alatt került kiadásra
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Vannak elérhető tanácsadók a chatszobában.
+      busy: Jelenleg minden webchat-tanácsadó elfoglalt.
+      closed: A webchat jelenleg zárva van.
+      speak_to_adviser: Beszéljen egy tanácsadóval most.
+      technical_problem: A webchat technikai problémák miatt jelenleg nem elérhető.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Designated
+      Origin UK Protected'
+    pgi_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Geographic
+      Origin UK Protected'
+    tsg_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Traditional
+      Speciality UK Protected'
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: 'Kézbesítve ekkor:'
+    location: Helyszín
+    written_on: 'Írás időpontja:'
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Lemondás időpontja
+    cancelled: A statisztikák közzététele törölve
+    changed_date: A kiadás időpontja megváltozott.
+    forthcoming: Ezek a statisztikák kiadásra kerülnek a jövőben
+    previous_date: Korábbi időpont
+    proposed_date: Javasolt kiadás
+    reason_for_change: Változás oka
+    release_date: Kiadás időpontja
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: A <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> azt javasolja, hogy az ország bizonyos részeire csak feltétlenül
+        szükséges esetben utazzanak.
+      avoid_all_but_essential_travel_to_whole_country: A <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> azt javasolja, hogy az országba csak feltétlenül
+        szükséges esetben utazzanak.
+      avoid_all_travel_to_parts: A <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        azt javasolja, hogy az ország bizonyos részeire semmilyen körülmények között
+        ne utazzanak.
+      avoid_all_travel_to_whole_country: A <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        azt javasolja, hogy az országba semmilyen körülmények között ne utazzanak.
+    context: Külföldi utazásra vonatkozó tanácsok
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+         Tartsa be az érvényes, lakóhelye szerinti COVID-19-szabályokat: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglia</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skócia</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> és <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Észak-Írország</a>.
+        </p>
+        <p class="govuk-body">
+          Annak érdekében, hogy megakadályozzuk az új COVID-változatok az Egyesült Királyságba történő bejutását, kérjük, <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">a sárga vagy piros listán szereplő országokba</a>.
+        </p>
+        <p class="govuk-body">
+          Ha szeretné megérteni a bizonyos országokra vonatrkozó kockázatokat, akkor kövesse a <a href="/guidance/travel-advice-novel-coronavirus">Külügyi, Nemzetbiztonsági és Fejlesztési Iroda utazási tanácsait.</a>.
+        </p>
+        <p class="govuk-body">
+          Visszatérésekor tartsa be az <a href="/uk-border-control">Egyesült Királyságba külföldről történő belépés szabályait</a> (kivéve, ha Írországból érkezik).
+        </p>
+      text_assistive: Fontos
+      title: Koronavírus (COVID-19) utazás
+    still_current_at: 'Még érvényben itt:'
+    summary: Összefoglalás
+    updated: Frissítve
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Már nem elérhető
+    summary: Az ezen az oldalon található információ eltávolításra került, mivel közzététele
+      hiba volt.
+    title: Az Ön által keresett oldal már nem elérhető
   working_group:
-    contact_details:
-    policies:
+    contact_details: Elérhetőségek
+    policies: Irányelvek

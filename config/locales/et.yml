@@ -1,87 +1,21 @@
----
 et:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents: Sisukord
-    metadata:
-      published: avaldatud
-      updated: Täiendatud
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Lennuõnnetuste uurimise haru aruanne
+        other: Lennuõnnetuste uurimise haru aruanded
       announcement:
         one: Teadaanne
         other: Teadaanded
       asylum_support_decision:
-        one:
-        other:
+        one: Varjupaigatoetuse kohtuotsus
+        other: Varjupaigatoetuse kohtuotsused
       authored_article:
-        one: Avaldatud artikkel
-        other: 'Avaldatud artiklid '
+        one: Kirjutatud artikkel
+        other: Kirjutatud artiklid
       business_finance_support_scheme:
-        one:
-        other:
+        one: Ettevõtte rahastamise toetusskeem
+        other: Ettevõtte rahastamise toetusskeemid
       case_study:
         one: Juhtumiuuring
         other: Juhtumiuuringud
@@ -89,62 +23,62 @@ et:
         one: Suletud konsultatsioon
         other: Suletud konsultatsioonid
       cma_case:
-        one:
-        other:
+        one: Konkurentsi- ja turuameti juhtum
+        other: Konkurentsi- ja turuameti juhtumid
       coming_soon:
-        one:
-        other:
+        one: Tulekul
+        other: Tulekul
       consultation:
         one: Konsultatsioon
         other: Konsultatsioonid
       consultation_outcome:
         one: Konsultatsiooni tulemus
-        other: Konsultatsioonide tulemused
+        other: Konsultatsiooni tulemused
       corporate_information_page:
-        one:
-        other:
+        one: Teabeleht
+        other: Teabelehed
       corporate_report:
-        one: Korporatiivne raport
-        other: Korporatiivsed raportid
+        one: Ettevõtte aruanne
+        other: Ettevõtte aruanded
       correspondence:
-        one: Kirjavahetus
-        other: Kirjavahetused
+        one: Korrespondents
+        other: Korrespondentsid
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Paikkondade alalhoidmise toetus
+        other: Paikkondade alalhoidmise toetused
       decision:
         one: Otsus
         other: Otsused
       detailed_guide:
-        one: Juhend
-        other: Juhendid
+        one: Juhised
+        other: Juhised
       dfid_research_output:
-        one:
-        other:
+        one: Arenguväljundi uurimine
+        other: Arenguväljundite uurimine
       document_collection:
-        one: 'Kogu '
+        one: Kogu
         other: Kogud
       draft_text:
-        one: Eelnõu
-        other: Eelnõud
+        one: Teksti mustand
+        other: Teksti mustandid
       drug_safety_update:
-        one:
-        other:
+        one: Uimastiohutuse ajakohatamine
+        other: Uimastiohutuse ajakohastamised
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Töökaebuse kohtuotsus
+        other: Töökaebuse kohtuotsused
       employment_tribunal_decision:
-        one:
-        other:
+        one: Töökohtu otsus
+        other: Töökohtu otsused
       esi_fund:
-        one:
-        other:
+        one: Euroopa struktuuri- ja investeerimisfond (ESIF)
+        other: Euroopa struktuuri- ja investeerimisfondid (ESIF)
       fatality_notice:
         one: Surmateade
         other: Surmateated
       foi_release:
-        one: FOI teavitus
-        other: FOI teavitused
+        one: FOI väljaanne
+        other: FOI väljaanded
       form:
         one: Vorm
         other: Vormid
@@ -152,333 +86,330 @@ et:
         one: Valitsuse vastus
         other: Valitsuse vastused
       guidance:
-        one: Juhend
-        other: Juhend
+        one: Juhised
+        other: Juhised
       impact_assessment:
-        one: Mõjuhinnang
-        other: Mõjuhinnangud
+        one: Mõju hindamine
+        other: Mõju hindamised
       imported:
-        one: sisse - liik täpsustamisel
-        other: sisse - liik täpsustamisel
+        one: imporditud - ootel tüüp
+        other: imporditud - ootel tüüp
       independent_report:
-        one: Sõltumatu raport
-        other: Sõltumatud raportid
+        one: Sõltumatu aruanne
+        other: Sõltumatud aruanded
       international_development_fund:
-        one:
-        other:
+        one: Rahvusvaheline arengu rahastamine
+        other: Rahvusvaheline arengu rahastamine
       international_treaty:
         one: Rahvusvaheline leping
         other: Rahvusvahelised lepingud
       maib_report:
-        one:
-        other:
+        one: Mereõnnetuste uurimise haru aruanne
+        other: Mereõnnetuste uurimise haru aruanded
       map:
         one: Kaart
         other: Kaardid
       medical_safety_alert:
-        one:
-        other:
+        one: Uimastite ja meditsiiniseadmete hoiatused ja tagasikutsumised
+        other: Uimastite ja meditsiiniseadmete hoiatused ja tagasikutsumised
       national:
-        one:
-        other:
+        one: Riiklik statistikateade
+        other: Riiklikud statistikateated
       national_statistics:
-        one: Statistika - rahvuslikud statistikaandmed
-        other: Statistika - rahvuslikud statistikaandmed
+        one: Riiklik statistika
+        other: Riiklik statistika
       national_statistics_announcement:
-        one:
-        other:
+        one: Riiklik statistikateade
+        other: Riiklikud statistikateated
       news_article:
-        one: Artikkel
-        other: Artiklid
+        one: Uudiste artikkel
+        other: Uudiste artiklid
       news_story:
-        one: Uudis
-        other: Uudised
+        one: Uudislugu
+        other: Uudislood
       notice:
-        one: Teade
-        other: Teated
+        one: Märkus
+        other: Märkused
       official:
-        one:
-        other:
+        one: Ametlik statistikateade
+        other: Ametlikud statistikateated
       official_statistics:
-        one: 'Statistika '
-        other: Statistika
+        one: Ametlik statistika
+        other: Ametlik statistika
       official_statistics_announcement:
-        one:
-        other:
+        one: Ametlik statistikateade
+        other: Ametlikud statistikateated
       open_consultation:
         one: Avatud konsultatsioon
         other: Avatud konsultatsioonid
       oral_statement:
-        one: Suuline avaldus parlamedis
-        other: Suulised avaldused parlamendis
+        one: Suuline avaldus parlamendile
+        other: Suulised avaldused parlamendile
       policy:
-        one: Poliitika
-        other: Poliitikad
+        one: Eeskirjad
+        other: Eeskirjad
       policy_paper:
-        one: Poliitikadokument
-        other: Poliitikadokumendid
+        one: Eeskirjade dokument
+        other: Eeskirjade dokumendid
       press_release:
         one: Pressiteade
         other: Pressiteated
       promotional:
-        one: Turundusmaterjal
-        other: Turundusmaterjal
+        one: Reklaammaterjal
+        other: Reklaammaterjal
       publication:
         one: Publikatsioon
         other: Publikatsioonid
       raib_report:
-        one:
-        other:
+        one: Raudteeõnnetuste uurimise haru aruanne
+        other: Raudteeõnnetuste uurimise haru aruanded
       regulation:
-        one: Seadusandlus
-        other: Seadusandlus
+        one: Määrus
+        other: Määrused
       research:
-        one: Uuringud ja analüüs
-        other: Uuringud ja analüüs
+        one: Uurimine ja analüüs
+        other: Uurimine ja analüüs
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Elamukinnisvara kohtuotsus
+        other: Elamukinnisvara kohtuotsused
       service_sign_in:
-        one:
-        other:
+        one: Teenusesse sisselogimine
+        other: Teenusesse sisselogimine
       service_standard_report:
-        one:
-        other:
+        one: Teenuse standardaruanne
+        other: Teenuse standardaruanded
       speaking_notes:
-        one: 'Kõne tekst '
-        other: 'Kõne tekst '
+        one: Kõnemärkmed
+        other: Kõnemärkmed
       speech:
-        one: 'Kõne  '
+        one: Kõne
         other: Kõned
       standard:
-        one:
-        other:
+        one: Standard
+        other: Standardid
       statement_to_parliament:
-        one: Avaldus parlamendis
-        other: Avaldused parlamendis
+        one: Avaldus parlamendile
+        other: Avaldused parlamendile
       statistical_data_set:
-        one: Statistiline andmekogu
-        other: Statistilised andmekogud
+        one: Statistiline andmekogum
+        other: Statistilised andmekogumid
       statistics_announcement:
-        one:
-        other:
+        one: Teade statistika avaldamisest
+        other: Teated statistika avaldamisest
       statutory_guidance:
-        one: Seadusejärgne juhis
-        other: Seadusejärgne juhis
+        one: Seadusjärgsed juhised
+        other: Seadusjärgsed juhised
       take_part:
-        one:
-        other:
+        one: Osa võtma
+        other: Osa võtma
       tax_tribunal_decision:
-        one:
-        other:
+        one: Maksu- ja õigluskohtu otsus
+        other: Maksu- ja õigluskohtu otsused
       transcript:
-        one: Protokoll
-        other: Protokollid
+        one: Transkriptsioon
+        other: Transkriptsioonid
       transparency:
-        one: Läbipaistvusteave
-        other: Läbipaistvusteave
+        one: Läbipaistvuse andmed
+        other: Läbipaistvuse andmed
       utaac_decision:
-        one:
-        other:
+        one: Halduskaebuste kohtuotsus
+        other: Halduskaebuste kohtuotsus
       world_location_news_article:
-        one: Artikkel
-        other: Artiklid
+        one: Uudiste artikkel
+        other: Uudiste artiklid
       world_news_story:
-        one:
-        other:
+        one: Maailma uudislugu
+        other: Maailma uudislood
       written_statement:
         one: Kirjalik avaldus parlamendile
         other: Kirjalikud avaldused parlamendile
-  corporate_information_page:
-    about_our_services_html: 'Uuri lisaks: %{link}'
-    corporate_information: Korporatiivne info
-    personal_information_charter_html: 'Meie %{link} selgitab kuidas me kohtleme Teie eraelulist teavet. '
-    publication_scheme_html: 'Lugege lisaks infoliikide kohta, mida me regulaarselt avalikustame: %{link}'
-    social_media_use_html: 'Lugege meie poliitika kohta: %{link}'
-    welsh_language_scheme_html: 'Lugege lisaks meie pühandumusest avaldamise osas: %{link}'
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et: Eesti
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    coming_soon: See dokument avaldatakse
+    contents: Sisu
+    metadata:
+      published: Avaldatud
+      updated: Uuendatud
   publication:
-    details:
     documents:
       one: Dokument
       other: Dokumendid
+    details: Üksikasjad
+  brexit:
+    business_link: Brexiti juhised ettevõtetele
+    citizen_link: Brexiti juhised üksikisikutele ja peredele
+    heading_prefix: On erinev
+  common:
+    last_updated:
+    visit: 'Külastus:'
+  components:
+    figure:
+      image_credit: 'Pildi autoriõigus: %{credit}'
+    published_dates:
+      hide_all_updates: peida kõik värskendused
+      last_updated: Viimati värskendatud %{date}
+      published: Avaldatud %{date}
+      see_all_updates: vt kõiki värskendusi
+      show_all_updates: kuva kõik värskendused
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: peida kõik
+      show_all: kuva kõik
+    save_this_page:
+      add_page_button: Lisa oma salvestatud lehtedele
+      confirmations:
+        page_removed:
+          message: Eemaldasite selle oma salvestatud lehtede hulgast
+        page_saved:
+          message: Lisasite selle oma salvestatud lehtede hulka
+      page_not_saved_heading: Salvestage see leht, et saaksite selle juurde hiljem
+        tagasi tulla
+      page_was_saved_heading: Salvestasite selle lehe
+      remove_page_button: Eemaldage salvestatud lehtede hulgast
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Vt
+        oma salvestatud lehti</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logige
+        sisse,</a> et vaadata oma salvestatud lehti.
+    share_links:
+      share_this_page: Jaga seda lehte
+  consultation:
+    and: ja
+    another_website_html: See konsultatsioon %{closed} toimus <a href="%{url}">teisel
+      veebisaidil</a>
+    at: kl
+    closes: See lõpeb kl
+    closes_at: See konsultatsioon lõpeb kell
+    complete_a: Täitke
+    description: Konsultatsiooni kirjeldus
+    detail_of_feedback_received: Tagasiside üksikasjad saadud
+    detail_of_outcome: Tulemuse üksikasjad
+    documents: Dokumendid
+    download_outcome: Laadi alla täielik tulemus
+    either: kas
+    email_to: 'E-posti adressaat:'
+    feedback_received: Tagasiside saadud
+    is_being: 'on'
+    not_open_yet: See konsultatsioon pole veel alanud
+    'on':
+    opens: See konsultatsioon algab
+    original_consultation: Algne konsultatsioon
+    ran_from: See konsultatsioon kestis
+    respond_online: Vastake võrgus
+    'true': tõene
+    visit_soon: Külastage seda lehte peagi uuesti, et selle avalik tagasiside alla
+      laadida.
+    was: oli
+    ways_to_respond: Vastamise viisid
+    write_to: 'Kirja adressaat:'
+  contact:
+    email: E-post
+    find_call_charges: Uuri kõnetasude kohta
+    online: Võrgus
+    phone: Telefon
+    webchat: Veebivestlus
+  corporate_information_page:
+    about_our_services_html: Uuri välja %{link}.
+    corporate_information: Ettevõtte teave
+    personal_information_charter_html: Meie %{link} selgitab, kuidas me teie isikuandmeid
+      käsitleme.
+    publication_scheme_html: Lisateavet selle kohta, millist teavet me regulaarselt
+      avaldame oma saidil %{link}.
+    social_media_use_html: Lugege meie eeskirju saidil %{link}.
+    welsh_language_scheme_html: Lisateave meie pühendumuse kohta %{link}.
+  fatality_notice:
+    alt_text: Kaitseministeeriumi teadus- ja tehnikauuringute komitee
+    field_of_operation: Tegevusvaldkond
+    operations_in: Toimingud asukohas %{location}
+  gone:
+    page_title: Ei ole enam saadaval
+    published_in_error: Sellel lehel olev teave on eemaldatud, kuna see avaldati ekslikult.
+    title: Otsitav leht pole enam saadaval
+  guide:
+    pages_in_guide: Selle juhendi leheküljed
+    skip_to_contents: Mine juhendi sisu juurde
+  html_publication:
+    print_meta_data:
+      available_at: See publikatsioon on saadaval aadressil %{url}
+      copyright: "© Crowni autoriõigus %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'See publikatsioon on litsentsitud valitsuse avatud litsentsi
+        v3.0 kohaselt, kui pole märgitud teisiti. Selle litsentsi vaatamiseks külastage
+        saiti <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        või kirjutage aadressil Information Policy Team, The National Archives, Kew,
+        London TW9 4DU või saatke e-kiri: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Kui oleme tuvastanud kolmanda osapoole autoriõiguse teabe, peate
+        hankima loa vastavalt autoriõiguse hoidjalt.
+  i18n:
+    direction:
+  language_names:
+    et: Eesti
+  multi_page:
+    next_page: Edasi
+    previous_page: Eelmine
+    print_entire_guide: Printige kogu juhend
   service_sign_in:
-    continue:
+    continue: Jätka
     error:
-      option:
-      title:
+      option: Palun tehke valik
+      title: Te pole valikut teinud
   shared:
-    historically_political:
+    historically_political: See avaldati %{government} all
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Nõustajad on vestlemiseks saadaval.
+      busy: Kõik veebivestluse nõustajad on praegu hõivatud.
+      closed: Veebivestlus on praegu suletud.
+      speak_to_adviser: Rääkige nüüd nõustajaga
+      technical_problem: Veebivestlus pole praegu tehniliste probleemide tõttu saadaval.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Skeemi logo on must tempel kirjaga Designated Origin UK Protected
+    pgi_alt_text: Skeemi logo on must tempel kirjaga Geographic Origin UK Protected
+    tsg_alt_text: Skeemi logo on must tempel kirjaga Traditional Specialty UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Edastati
+    location: Asukoht
+    written_on: Kirjutatud
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Tühistamise kuupäev
+    cancelled: Statistika avaldamine tühistati
+    changed_date: Väljaandmiskuupäeva on muudetud
+    forthcoming: See statistika avaldatakse
+    previous_date: Eelmine kuupäev
+    proposed_date: Kavandatud avaldamine
+    reason_for_change: Põhjus muutumiseks
+    release_date: Väljaande kuupäev
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> soovitab mitte reisida riigi osadesse muidu kui hädavajadusel.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> soovitab mitte reisida kogu riigis muidu kui hädavajadusel.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        soovitab mitte reisida riigi osades.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        soovitab mitte reisida kogu riigis.
+    context: Välisreiside nõuanded
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Järgige oma elukohas kehtivaid COVID-19 reegleid: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Inglismaa</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Šotimaa</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> ja <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Põhja-Iirimaa</a>.
+        </p>
+        <p class="govuk-body">
+          Vältimaks uute COVID-i tüvede sisenemist Ühendkuningriiki, vältige reisimist riikidesse <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">kollase või punase nimekirja riikidesse</a>.
+        </p>
+        <p class="govuk-body">
+          Riskide mõistmiseks riigis järgige <a href="/guidance/travel-advice-novel-coronavirus">FCDO reisinõuandeid</a>.
+        </p>
+        <p class="govuk-body">
+          Tagasi tulles järgige reegleid <a href="/uk-border-control"></a> (välja arvatud Iirimaalt).
+        </p>
+      text_assistive: Oluline
+      title: Reisimine koroonaviiruse (COVID-19) ajal
+    still_current_at: Ikka praegune
+    summary: Kokkuvõte
+    updated: Uuendatud
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Ei ole enam saadaval
+    summary: Sellel lehel olev teave on eemaldatud, kuna see avaldati ekslikult.
+    title: Otsitav leht pole enam saadaval
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktandmed
+    policies: Eeskirjad

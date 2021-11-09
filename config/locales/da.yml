@@ -1,484 +1,433 @@
----
 da:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Rapport fra afdelingen for undersøgelse af flyulykker
+        other: Rapporter fra afdelingen for undersøgelse af flyulykker
+      announcement:
+        one: Meddelelse
+        other: Meddelelser
+      asylum_support_decision:
+        one: Afgørelse fra asylstøttedomstolen
+        other: Afgørelser fra asylstøttedomstolen
+      authored_article:
+        one: Forfattet artikel
+        other: Forfatterartikler
+      business_finance_support_scheme:
+        one: Forretningsfinansieringsstøtteordning
+        other: Forretningsfinansieringsstøtteordninger
+      case_study:
+        one: Casestudie
+        other: Casestudie
+      closed_consultation:
+        one: Lukket konsultation
+        other: Lukkede konsultationer
+      cma_case:
+        one: Konkurrence- og markedsmyndighedens sag
+        other: Konkurrence- og markedsmyndighedens sager
+      coming_soon:
+        one: Kommer snart
+        other: Kommer snart
+      consultation:
+        one: Konsultation
+        other: Konsultationer
+      consultation_outcome:
+        one: Resultatet af høringen
+        other: Resultater af høringen
+      corporate_information_page:
+        one: Informationsside
+        other: Informationssider
+      corporate_report:
+        one: Virksomhedsrapport
+        other: Virksomhedsrapporter
+      correspondence:
+        one: Korrespondance
+        other: Korrespondancer
+      countryside_stewardship_grant:
+        one: Countryside Stewardship tilskud
+        other: Countryside Stewardship -tilskud
+      decision:
+        one: Beslutning
+        other: Beslutninger
+      detailed_guide:
+        one: Vejledning
+        other: Vejledning
+      dfid_research_output:
+        one: Forskning til udvikling af output
+        other: Forskning til udvikling af outputs
+      document_collection:
+        one: Indsamling
+        other: Indsamlinger
+      draft_text:
+        one: Udkast til tekst
+        other: Udkast til tekster
+      drug_safety_update:
+        one: Opdatering om lægemiddelsikkerhed
+        other: Opdateringer om lægemiddelsikkerhed
+      employment_appeal_tribunal_decision:
+        one: |-
+          Afgørelse om forvaltningsappelsager
+          Nyhedsartikel
+        other: |-
+          Afgørelser om administrative klager
+          Nyhedsartikel
+      employment_tribunal_decision:
+        one: |-
+          Afgørelse om forvaltningsappelsag
+          Nyhedsartikel
+        other: |-
+          Afgørelse om forvaltningsappelsager
+          Nyhedsartikel
+      esi_fund:
+        one: Den Europæiske Struktur- og Investeringsfond (ESIF)
+        other: De europæiske struktur- og investeringsfonde (ESIF)
+      fatality_notice:
+        one: Meddelelse om dødsfald
+        other: Meddelelser om dødsfald
+      foi_release:
+        one: FOI frigivelse
+        other: FOI frigivelser
+      form:
+        one: Formular
+        other: Formularer
+      government_response:
+        one: Regeringens reaktion
+        other: Regeringens reaktioner
+      guidance:
+        one: Vejledning
+        other: Vejledning
+      impact_assessment:
+        one: Konsekvensanalyse
+        other: Konsekvensanalyser
+      imported:
+        one: importeret - afventer type
+        other: importeret - afventer type
+      independent_report:
+        one: Uafhængig rapport
+        other: Uafhængige rapporter
+      international_development_fund:
+        one: International udviklingsfinansiering
+        other: International udviklingsfinansiering
+      international_treaty:
+        one: International traktat
+        other: Internationale traktater
+      maib_report:
+        one: Rapport fra afdelingen for undersøgelse af flyulykker
+        other: Rapporter fra afdelingen for undersøgelse af flyulykker
+      map:
+        one: Kort
+        other: Kort
+      medical_safety_alert:
+        one: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
+        other: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
+      national:
+        one: Nationale statistikmeddelelse
+        other: Nationale statistikmeddelelser
+      national_statistics:
+        one: Nationale statistikker
+        other: Nationale statistikker
+      national_statistics_announcement:
+        one: Nationale statistikmeddelelse
+        other: Nationale statistikmeddelelser
+      news_article:
+        one: Nyhedsartikel
+        other: Nyhedsartikler
+      news_story:
+        one: Nyhedshistorie
+        other: Nyhedshistorier
+      notice:
+        one: Meddelelse
+        other: Meddelelser
+      official:
+        one: Officielle statistikmeddelelse
+        other: Officielle statistikmeddelelser
+      official_statistics:
+        one: Officielle statistikker
+        other: Officielle statistikker
+      official_statistics_announcement:
+        one: Officielle statistikmeddelelse
+        other: Officielle statistikmeddelelser
+      open_consultation:
+        one: Åben konsultation
+        other: Åbne konsultationer
+      oral_statement:
+        one: Mundtlig erklæring til Parlamentet
+        other: Mundtlige erklæring til Parlamentet
+      policy:
+        one: Politik
+        other: Politikker
+      policy_paper:
+        one: Politikdokument
+        other: Politikdokumenter
+      press_release:
+        one: Pressemeddelelse
+        other: Pressemeddelelser
+      promotional:
+        one: Reklamemateriale
+        other: Reklamemateriale
+      publication:
+        one: Publikation
+        other: Publikationer
+      raib_report:
+        one: rapport fra undersøgelsesafdelingen for jernbaneulykker
+        other: rapporter fra undersøgelsesafdelingen for jernbaneulykker
+      regulation:
+        one: Forordning
+        other: Forordninger
+      research:
+        one: Forskning og analyse
+        other: Forskning og analyse
+      residential_property_tribunal_decision:
+        one: Afgørelse fra domstolene om boligejendomme
+        other: Afgørelser fra domstolene om boligejendomme
+      service_sign_in:
+        one: Tjeneste logge ind
+        other: Tjeneste logge ind
+      service_standard_report:
+        one: Servicestandardrapport
+        other: Servicestandardrapport
+      speaking_notes:
+        one: Talende noter
+        other: Talende noter
+      speech:
+        one: tale
+        other: taler
+      standard:
+        one: Standard
+        other: Standarder
+      statement_to_parliament:
+        one: Erklæring til Parlamentet
+        other: Erklæringer til Parlamentet
+      statistical_data_set:
+        one: Statistisk datasæt
+        other: Statistiske datasæt
+      statistics_announcement:
+        one: Meddelelse om frigivelse af statistik
+        other: Meddelelser om frigivelse af statistik
+      statutory_guidance:
+        one: Lovpligtig vejledning
+        other: Lovpligtig vejledning
+      take_part:
+        one: Deltage
+        other: Deltage
+      tax_tribunal_decision:
+        one: Afgørelse fra skatte- og kancellidomstolen
+        other: Afgørelser fra skatte- og kancellidomstolen
+      transcript:
+        one: Udskrift
+        other: Udskrifter
+      transparency:
+        one: Data om gennemsigtighed
+        other: Data om gennemsigtighed
+      utaac_decision:
+        one: |-
+          Afgørelse om forvaltningsappelsager
+          Nyhedsartikel
+        other: |-
+          Afgørelser om forvaltningsappelsager
+          Nyhedsartikel
+      world_location_news_article:
+        one: Nyhedsartikel
+        other: Nyhedsartikler
+      world_news_story:
+        one: Verdensomspændende nyhedshistorie
+        other: Verdensomspændende nyhedshistorier
+      written_statement:
+        one: Mundtlig erklæring til Parlamentet
+        other: Mundtlige erklæring til Parlamentet
+    coming_soon: Dette dokument vil blive offentliggjort den
+    contents: Indhold
+    metadata:
+      published: offentliggjort
+      updated: Opdateret
+  publication:
+    documents:
+      one: Dokument
+      other: Dokumenter
+    details: Detaljer
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Brexit-vejledning for virksomheder
+    citizen_link: Brexit-vejledning for enkeltpersoner og familier
+    heading_prefix: Der er forskellige
   common:
     last_updated:
-    visit:
+    visit: 'Besøge:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Billede kredit: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: skjule alle opdateringer
+      last_updated: Senest opdateret %{date}
+      published: Udgivet %{date}
+      see_all_updates: se alle opdateringer
+      show_all_updates: vis alle opdateringer
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: skjule alle
+      show_all: se alle
+    save_this_page:
+      add_page_button: Føje til dine gemte sider
+      confirmations:
+        page_removed:
+          message: Du har fjernet dette fra dine gemte sider
+        page_saved:
+          message: Du har føjet dette til dine gemte sider
+      page_not_saved_heading: Gem denne side, så du kan vende tilbage til den senere
+      page_was_saved_heading: Du har gemt denne side
+      remove_page_button: Fjerne fra dine gemte sider
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se
+        de gemte sider</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Sign
+        in</a> for at se de gemte sider.
     share_links:
-      share_this_page:
+      share_this_page: Del denne side
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: og
+    another_website_html: Denne konsultation %{closed} blev afholdt på <a href="%{url}">en
+      anden hjemmeside</a>
+    at: på
+    closes: Den lukker kl.
+    closes_at: Denne konsultation lukker kl.
+    complete_a: Fuldfør en
+    description: Konsultationsbeskrivelse
+    detail_of_feedback_received: Nærmere oplysninger om modtaget feedback
+    detail_of_outcome: Nærmere oplysninger om resultatet
+    documents: Dokumenter
+    download_outcome: Download det fulde resultat
+    either: enten
+    email_to: 'E-mail til:'
+    feedback_received: Feedback modtaget
+    is_being: er ved at blive
+    not_open_yet: Denne høring er ikke åben endnu
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Denne konsultation åbner
+    original_consultation: original konsultation
+    ran_from: Denne konsultation løb fra
+    respond_online: Svar online
+    'true': sand
+    visit_soon: Besøg denne side igen snart for at downloade resultatet til denne
+      offentlige &nbsp;feedback.
+    was: var
+    ways_to_respond: Måder at reagere på
+    write_to: 'Skriv til:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: E-mail
+    find_call_charges: Få mere at vide om opkaldsgebyrer
+    online: Online
+    phone: Telefon
+    webchat: Webchat
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Find ud af %{link}.
+    corporate_information: Virksomhedsoplysninger
+    personal_information_charter_html: Vores %{link} forklarer, hvordan vi behandler
+      dine personlige oplysninger.
+    publication_scheme_html: Læs om de typer af oplysninger, som vi rutinemæssigt
+      offentliggør i vores %{link}.
+    social_media_use_html: Læs vores politik om %{link}.
+    welsh_language_scheme_html: Learn more about our commitment to% {link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Forsvarsministeriets kam
+    field_of_operation: Operationsområde
+    operations_in: Handlinger i %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Ikke længere tilgængelig
+    published_in_error: Oplysningerne på denne side er blevet fjernet, fordi de er
+      udgivet ved en fejl.
+    title: Den side, du leder efter, er ikke længere tilgængelig
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Sider i denne vejledning
+    skip_to_contents: Spring til vejledningens indhold
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Denne publikation er tilgængelig på %{url}
+      copyright: "© Krown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'This publication is licensed under the terms of the open government
+        license v3.0, unless otherwise stated. Hvis du vil se denne licens, kan du
+        besøge <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        eller skrive til Information Policy Team, The National Archives, Kew, London
+        TW9 4DU eller e-mail: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Hvis vi har identificeret ophavsretlige oplysninger fra tredjepart,
+        skal du indhente tilladelse fra de pågældende ophavsretsindehavere.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
     da: Dansk
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Næste
+    previous_page: Forrige
+    print_entire_guide: Udskriv hele hjælpelinjen
   service_sign_in:
-    continue:
+    continue: Fortsætte
     error:
-      option:
-      title:
+      option: Vælg en indstilling
+      title: Du har ikke valgt en indstilling
   shared:
-    historically_political:
+    historically_political: Dette blev udgivet under %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Rådgivere er tilgængelige for at chatte.
+      busy: Alle webchat-rådgivere har travlt i øjeblikket.
+      closed: Webchat er lukket i øjeblikket.
+      speak_to_adviser: Tal med en rådgiver nu
+      technical_problem: Webchat er ikke tilgængelig i øjeblikket på grund af tekniske
+        problemer.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Ordningen logo er et sort stempel med ordene benævnt oprindelse
+      UK Ppotected
+    pgi_alt_text: Ordningen logo er et sort stempel med ordene geografisk oprindelse
+      UK beskyttet
+    tsg_alt_text: Ordningen logo er et sort stempel med ordene traditionelle specialitet
+      UK beskyttet
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Leveret den
+    location: Placering
+    written_on: Skrevet på
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Afbestillingsdato
+    cancelled: Meddelelser om frigivelse af statistik
+    changed_date: Udgivelsesdatoen er blevet ændret
+    forthcoming: Disse statistikker vil blive frigivet
+    previous_date: Forrige dato
+    proposed_date: Foreslået udgivelse
+    reason_for_change: Årsag til ændring
+    release_date: Udgivelsesdato
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: Den <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> fraråde alle, men væsentlige rejser til dele af landet.
+      avoid_all_but_essential_travel_to_whole_country: Den <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> fraråde alle, men væsentlige rejser til hele
+        landet.
+      avoid_all_travel_to_parts: Den <abbr titel = "Foreign and Commonwealth Office">FCO</abbr>
+        fraråde alle, men væsentlige rejser til dele af landet.
+      avoid_all_travel_to_whole_country: Den <abbr titel = "Udenrigs-og Commonwealth
+        Office">FCO</abbr> fraråde alle, men væsentlige rejser til dele af landet.
+    context: Udenlandsk rejserådgivning
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Følg de aktuelle COVID-19-regler, hvor du bor: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> og <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
+        </p>
+        <p class="govuk-body">
+          For at forhindre nye COVID-varianter i at komme ind i Storbritannien, bør du ikke rejse til <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber eller red list countries</a>.
+        </p>
+        <p class="govuk-body">
+          For at forstå risiciene i et land skal du følge <a href="/guidance/travel-advice-novel-coronavirus">Udenrigs-, Commonwealth- og udviklingskontoret Rejsevejledning</a>.
+        </p>
+        <p class="govuk-body">
+          Når du vender tilbage, skal du følge reglerne for at <a href="/uk-border-control"> komme ind i Storbritannien fra udlandet</a> (undtagen Irland).
+        </p>
+      text_assistive: Vigtig
+      title: Coronavirus (COVID-19) rejser
+    still_current_at: Stadig aktuel på
+    summary: Resumé
+    updated: Opdateret
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Ikke længere tilgængelig
+    summary: Oplysningerne på denne side er blevet fjernet, fordi de er udgivet ved
+      en fejl.
+    title: Den side, du leder efter, er ikke længere tilgængelig
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktoplysninger
+    policies: Politikker

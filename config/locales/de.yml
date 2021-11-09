@@ -1,150 +1,84 @@
----
 de:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: Veröffentlicht
-      updated: Aktualisiert
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Untersuchungsbericht der Abteilung für Flugunfälle
+        other: Untersuchungsberichte der Abteilung für Flugunfälle
       announcement:
-        one: Meldung
-        other: Meldungen
+        one: Ankündigung
+        other: Ankündigungen
       asylum_support_decision:
-        one:
-        other:
+        one: Gerichtsentscheidung über die Unterstützung von Asylbewerbern
+        other: Gerichtsentscheidungen über die Unterstützung von Asylbewerbern
       authored_article:
         one: Namensartikel
         other: Namensartikel
       business_finance_support_scheme:
-        one:
-        other:
+        one: Förderprogramm zur Unternehmensfinanzierung
+        other: Förderprogramme zur Unternehmensfinanzierung
       case_study:
         one: Fallstudie
         other: Fallstudien
       closed_consultation:
-        one: Abgeschlossene Konsultation
-        other: Abgeschlossene Konsultationen
+        one: Abgeschlossene Beratung
+        other: Abgeschlossene Beratungen
       cma_case:
-        one:
-        other:
+        one: Rechtsfall der Behörde für Wettbewerb und Märkte
+        other: Rechtsfälle der Behörde für Wettbewerb und Märkte
       coming_soon:
-        one:
-        other:
+        one: Demnächst verfügbar
+        other: Demnächst verfügbar
       consultation:
-        one: Konsultation
-        other: Konsultationen
+        one: Beratung
+        other: Beratungen
       consultation_outcome:
-        one: Konsultationsergebnis
-        other: Konsultationsergebnisse
+        one: Beratungsergebnis
+        other: Beratungsergebnisse
       corporate_information_page:
-        one:
-        other:
+        one: Informationsseite
+        other: Informationsseiten
       corporate_report:
-        one: Geschäftsbericht
-        other: Geschäftsberichte
+        one: Unternehmensbericht
+        other: Unternehmensberichte
       correspondence:
         one: Korrespondenz
-        other: Korrespondenz
+        other: Korrespondenzen
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Zuschuss zur Landschaftspflege
+        other: Zuschüsse zur Landschaftspflege
       decision:
-        one:
-        other:
+        one: Entscheidung
+        other: Entscheidungen
       detailed_guide:
         one: Detaillierte Hinweise
         other: Detaillierte Hinweise
       dfid_research_output:
-        one:
-        other:
+        one: Ergebnis der Entwicklungsforschung
+        other: Ergebnisse der Entwicklungsforschung
       document_collection:
         one: Reihe
-        other:
+        other: Reihen
       draft_text:
         one: Entwurf
         other: Entwürfe
       drug_safety_update:
-        one:
-        other:
+        one: Aktualisierung zur Arzneimittelsicherheit
+        other: Aktualisierungen zur Arzneimittelsicherheit
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Berufungsentscheidung des Arbeitsgerichtes
+        other: Berufungsentscheidungen des Arbeitsgerichtes
       employment_tribunal_decision:
-        one:
-        other:
+        one: Entscheidung des Arbeitsgerichtes
+        other: Entscheidungen des Arbeitsgerichtes
       esi_fund:
-        one:
-        other:
+        one: Europäischer Struktur- und Investitionsfonds (ESIF)
+        other: Europäische Struktur- und Investitionsfonds (ESIF)
       fatality_notice:
-        one: Bekanntgabe eines Todesfalls
-        other: Bekanntgabe von Todesfällen
+        one: Todesanzeige
+        other: Todesanzeigen
       foi_release:
-        one: Freigabe gemäß Freedom of Information Act
-        other: Freigabe gemäß Freedom of Information Act
+        one: Freigabe gemäß Informationsfreiheitsgesetz
+        other: Freigaben gemäß Informationsfreiheitsgesetz
       form:
         one: Formular
         other: Formulare
@@ -152,8 +86,8 @@ de:
         one: Antwort der Regierung
         other: Antworten der Regierung
       guidance:
-        one: Hinweise
-        other: Hinweise
+        one: Detaillierte Hinweise
+        other: Detaillierte Hinweise
       impact_assessment:
         one: Folgenabschätzung
         other: Folgenabschätzungen
@@ -164,56 +98,57 @@ de:
         one: Unabhängiger Bericht
         other: Unabhängige Berichte
       international_development_fund:
-        one:
-        other:
+        one: Internationale Entwicklungsfinanzierung
+        other: Internationale Entwicklungsfinanzierung
       international_treaty:
-        one:
-        other:
+        one: Internationaler Vertrag
+        other: Internationale Verträge
       maib_report:
-        one:
-        other:
+        one: Untersuchungsbericht der Abteilung für Seeunfälle
+        other: Untersuchungsberichte der Abteilung für Seeunfälle
       map:
         one: Karte
         other: Karten
       medical_safety_alert:
-        one:
-        other:
+        one: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
+        other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische
+          Geräte
       national:
-        one:
-        other:
+        one: Veröffentlichung der Nationalen Statistik
+        other: Veröffentlichungen der Nationalen Statistik
       national_statistics:
-        one: Statistik - Nationale Statistik
-        other: Statistik - Nationale Statistik
+        one: Nationale Statistik
+        other: Nationale Statistik
       national_statistics_announcement:
-        one:
-        other:
+        one: Veröffentlichung der Nationalen Statistik
+        other: Veröffentlichungen der Nationalen Statistik
       news_article:
-        one: Artikel
-        other: Artikel
+        one: Nachrichtenartikel
+        other: Nachrichtenartikel
       news_story:
         one: Meldung
         other: Meldungen
       notice:
-        one:
-        other:
+        one: Hinweis
+        other: Hinweise
       official:
-        one:
-        other:
+        one: Veröffentlichungen der Statistik
+        other: Veröffentlichungen der Statistik
       official_statistics:
-        one: Statistik
+        one: Statistiken
         other: Statistiken
       official_statistics_announcement:
-        one:
-        other:
+        one: Veröffentlichungen der Statistik
+        other: Veröffentlichungen der Statistik
       open_consultation:
-        one: Laufende Konsultation
-        other: Laufende Konsultationen
+        one: Laufende Beratung
+        other: Laufende Beratungen
       oral_statement:
         one: Mündliche Erklärung vor dem Parlament
         other: Mündliche Erklärungen vor dem Parlament
       policy:
-        one: Politik
-        other: Politik
+        one: Richtlinie
+        other: Richtlinien
       policy_paper:
         one: Grundsatzpapier
         other: Grundsatzpapiere
@@ -227,23 +162,23 @@ de:
         one: Veröffentlichung
         other: Veröffentlichungen
       raib_report:
-        one:
-        other:
+        one: Unfalluntersuchungsbericht der Abteilung für Eisenbahnunfälle
+        other: Unfalluntersuchungsberichte der Abteilung für Eisenbahnunfälle
       regulation:
-        one:
-        other:
+        one: Regulierung
+        other: Regulierungen
       research:
         one: Forschung und Analyse
         other: Forschung und Analyse
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Gerichtsentscheidung über Wohneigentum
+        other: Gerichtsentscheidungen über Wohneigentum
       service_sign_in:
-        one:
-        other:
+        one: Dienstanmeldungen
+        other: Dienstanmeldungen
       service_standard_report:
-        one:
-        other:
+        one: Dienststandardbericht
+        other: Dienststandardberichte
       speaking_notes:
         one: Redenotizen
         other: Redenotizen
@@ -251,8 +186,8 @@ de:
         one: Rede
         other: Reden
       standard:
-        one:
-        other:
+        one: Standard
+        other: Standards
       statement_to_parliament:
         one: Erklärung vor dem Parlament
         other: Erklärungen vor dem Parlament
@@ -260,225 +195,231 @@ de:
         one: Statistischer Datensatz
         other: Statistische Datensätze
       statistics_announcement:
-        one:
-        other:
+        one: Veröffentlichung von Statistikinformationen
+        other: Veröffentlichungen von Statistikinformationen
       statutory_guidance:
-        one:
-        other:
+        one: Gesetzlicher Leitfaden
+        other: Gesetzlicher Leitfaden
       take_part:
-        one:
-        other:
+        one: Teilnehmen
+        other: Teilnehmen
       tax_tribunal_decision:
-        one:
-        other:
+        one: Gerichtsentscheidung des Steuer- und Kanzleigerichtes
+        other: Gerichtsentscheidungen des Steuer- und Kanzleigerichtes
       transcript:
-        one: Mitschrift
-        other: Mitschriften
+        one: Transkript
+        other: Transkripte
       transparency:
-        one: Transparenz-Daten
-        other: Transparenz-Daten
+        one: Transparenzdaten
+        other: Transparenzdaten
       utaac_decision:
-        one:
-        other:
+        one: Entscheidung des Verwaltungsberufungsgerichts
+        other: Entscheidungen des Verwaltungsberufungsgerichts
       world_location_news_article:
-        one: Artikel
-        other: Artikel
+        one: Nachrichtenartikel
+        other: Nachrichtenartikel
       world_news_story:
-        one:
-        other:
+        one: Weltnachrichten Geschichte
+        other: Weltnachrichten Geschichten
       written_statement:
         one: Schriftliche Erklärung vor dem Parlament
         other: Schriftliche Erklärungen vor dem Parlament
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information: Administrative Informationen
-    personal_information_charter_html: Unser %{link} erklärt, wie wir Ihre personenbezogenen Daten schützen.
-    publication_scheme_html: Lesen Sie hier %{link}, welche Informationen wir routinemäßig publizieren
-    social_media_use_html: Unsere Politik zu %{link}
-    welsh_language_scheme_html: Mehr zu unserer Verpflichtung zur Veröffentlichung in %{link}
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de: Deutsch
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    coming_soon: Dieses Dokument wird veröffentlicht auf
+    contents: Inhalte
+    metadata:
+      published: Veröffentlicht
+      updated: Aktualisiert
   publication:
-    details:
     documents:
       one: Dokument
       other: Dokumente
+    details: Einzelheiten
+  brexit:
+    business_link: Brexit-Leitfaden für Unternehmen
+    citizen_link: Brexit-Leitfaden für Einzelpersonen und Familien
+    heading_prefix: Es gibt verschiedene
+  common:
+    last_updated:
+    visit: 'Besuchen Sie:'
+  components:
+    figure:
+      image_credit: 'Abbildung: %{credit}'
+    published_dates:
+      hide_all_updates: alle Aktualisierungen ausblenden
+      last_updated: Letzte Aktualisierung am %{date}
+      published: Veröffentlicht am %{date}
+      see_all_updates: alle Aktualisierungen ansehen
+      show_all_updates: alle Aktualisierungen anzeigen
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: alle ausblenden
+      show_all: alle anzeigen
+    save_this_page:
+      add_page_button: Zu Ihren gespeicherten Seiten hinzufügen
+      confirmations:
+        page_removed:
+          message: Sie haben diese Seite aus Ihren gespeicherten Seiten entfernt
+        page_saved:
+          message: Sie haben diese Seite zu Ihren gespeicherten Seiten hinzugefügt
+      page_not_saved_heading: Speichern Sie diese Seite, damit Sie später wieder zu
+        ihr zurückkehren können
+      page_was_saved_heading: Sie haben diese Seite gespeichert
+      remove_page_button: Aus Ihren gespeicherten Seiten entfernen
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Gespeicherte
+        Seiten anzeigen</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Melden
+        Sie sich an</a>, um Ihre gespeicherten Seiten zu sehen.
+    share_links:
+      share_this_page: Diese Seite teilen
+  consultation:
+    and: und
+    another_website_html: Diese Anhörung %{closed} fand auf einer <a href="%{url}">anderen
+      Website</a> statt
+    at: um
+    closes: Sie schließt um
+    closes_at: Diese Anhörung endet um
+    complete_a: Vervollständigen einer
+    description: Beschreibung der Anhörung
+    detail_of_feedback_received: Einzelheiten zur erhaltenen Rückmeldung
+    detail_of_outcome: Einzelheiten zum Ergebnis
+    documents: Dokumente
+    download_outcome: Download der vollständigen Ergebnisse
+    either: entweder
+    email_to: 'Email an:'
+    feedback_received: Erhaltene Rückmeldungen
+    is_being: wird
+    not_open_yet: Diese Anhörung ist noch nicht eröffnet
+    'on':
+    opens: Diese Anhörung wird eröffnet
+    original_consultation: Originale Anhörung
+    ran_from: Diese Anhörung lief ab
+    respond_online: Online antworten
+    'true': wahr
+    visit_soon: Besuchen Sie diese Seite bald wieder, um das Ergebnis dieser öffentlichen&nbsp;Rückmeldung
+      herunterzuladen.
+    was: war
+    ways_to_respond: Möglichkeiten, um zu antworten
+    write_to: 'Schreiben Sie an:'
+  contact:
+    email: Email
+    find_call_charges: Erkundigen Sie sich über Telefongebühren
+    online: Online
+    phone: Telefon
+    webchat: Internetchat
+  corporate_information_page:
+    about_our_services_html: Finden Sie es heraus %{link}.
+    corporate_information: Unternehmensinformationen
+    personal_information_charter_html: Unsere %{link} erläutert, wie wir mit Ihren
+      persönlichen Daten umgehen.
+    publication_scheme_html: Lesen Sie in unserem %{link}, welche Arten von Informationen
+      wir regelmäßig veröffentlichen.
+    social_media_use_html: Lesen Sie unsere Richtlinie zu %{link}.
+    welsh_language_scheme_html: Informieren Sie sich über unser Engagement für %{link}.
+  fatality_notice:
+    alt_text: Wappen des Verteidigungsministeriums
+    field_of_operation: Tätigkeitsbereich
+    operations_in: Tätigkeiten in %{location}
+  gone:
+    page_title: Nicht mehr verfügbar
+    published_in_error: Die Informationen auf dieser Seite wurden entfernt, da sie
+      fälschlich veröffentlicht wurden.
+    title: Die von Ihnen gesuchte Seite ist nicht mehr verfügbar
+  guide:
+    pages_in_guide: Seiten in diesem Leitfaden
+    skip_to_contents: Zum Inhalt des Leitfadens springen
+  html_publication:
+    print_meta_data:
+      available_at: Diese Veröffentlichung ist verfügbar unter %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Diese Veröffentlichung unterliegt, sofern nicht anders angegeben,
+        den Bedingungen der Open Government Licence v3.0. Um diese Lizenz einzusehen,
+        gehen Sie auf <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        oder schreiben Sie an das Information Policy Team, The National Archives,
+        Kew, London TW9 4DU, oder senden Sie eine Email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Wenn wir urheberrechtlich geschützte Informationen von Dritten
+        identifiziert haben, müssen Sie die Erlaubnis der betreffenden Urheberrechtsinhaber
+        einholen.
+  i18n:
+    direction:
+  language_names:
+    de: Deutsch
+  multi_page:
+    next_page: Weiter
+    previous_page: Zurück
+    print_entire_guide: Kompletten Leitfaden ausdrucken
   service_sign_in:
-    continue:
+    continue: Fortfahren
     error:
-      option:
-      title:
+      option: Bitte wählen Sie eine Option
+      title: Sie haben keine Option ausgewählt
   shared:
-    historically_political:
+    historically_political: Veröffentlicht wurde dies unter der %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Unsere Berater stehen für einen Chat zur Verfügung.
+      busy: Alle Chat-Berater sind im Moment beschäftigt.
+      closed: Der Webchat ist im Moment geschlossen.
+      speak_to_adviser: Sprechen Sie jetzt mit einem Berater
+      technical_problem: Der Webchat ist zur Zeit aufgrund technischer Probleme nicht
+        verfügbar.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Designated
+      Origin UK Protected"
+    pgi_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Geographic
+      Origin UK Protected"
+    tsg_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Traditional
+      Speciality UK Protected"
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Geliefert am
+    location: Standort
+    written_on: Geschrieben am
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Annullierungsdatum
+    cancelled: Veröffentlichung von Statistiken annulliert
+    changed_date: Das Veröffentlichungsdatum wurde geändert
+    forthcoming: Diese Statistiken werden veröffentlicht
+    previous_date: Vorheriges Datum
+    proposed_date: Geplante Veröffentlichung
+    reason_for_change: Grund für die Änderung
+    release_date: Veröffentlichungsdatum
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: Das <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> rät von allen Reisen in Teile des Landes ab, die nicht
+        unbedingt erforderlich sind.
+      avoid_all_but_essential_travel_to_whole_country: Das <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> rät von allen Reisen in das ganze Land ab,
+        die nicht unbedingt notwendig sind.
+      avoid_all_travel_to_parts: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        rät von allen Reisen in Teile des Landes ab.
+      avoid_all_travel_to_whole_country: Das <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> rät von allen Reisen in das ganze Land ab.
+    context: Hinweise für Auslandsreisen
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Halten Sie sich an die geltenden COVID-19-Vorschriften an Ihrem Wohnort: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Schottland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Nordirland</a>.
+        </p>
+        <p class="govuk-body">
+          Um zu verhindern, dass neue COVID-Varianten in das Vereinigte Königreich gelangen, sollten Sie nicht in Länder der <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">gelben oder roten Liste reisen</a>.
+        </p>
+        <p class="govuk-body">
+          Um sich über die Risiken in einem Land zu informieren, folgen Sie den <a href="/guidance/travel-advice-novel-coronavirus">Reisehinweisen vom Amt des Auswärtigen, des Commonwealth und der Entwicklung</a>.
+        </p>
+        <p class="govuk-body">
+          Bei Ihrer Rückkehr befolgen Sie die Vorschriften für die <a href="/uk-border-control">Einreise in das Vereinigte Königreich aus dem Ausland</a> (außer aus Irland).
+        </p>
+      text_assistive: Wichtig
+      title: Coronavirus (COVID-19) Reisen
+    still_current_at: Aktuell noch bei
+    summary: Zusammenfassung
+    updated: Aktualisiert
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Nicht mehr verfügbar
+    summary: Die Informationen auf dieser Seite wurden entfernt, da sie fälschlich
+      veröffentlicht wurden.
+    title: Die von Ihnen gesuchte Seite ist nicht mehr verfügbar
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktdaten
+    policies: Richtlinien

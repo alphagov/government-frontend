@@ -1,484 +1,420 @@
----
 kk:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Әуе апаттарын тергеу бөлімінің есебі
+        other: Әуе апаттарын тергеу бөлімінің есептері
+      announcement:
+        one: Хабарландыру
+        other: Хабарландырулар
+      asylum_support_decision:
+        one: Баспана бойынша қолдау трибуналының шешімі
+        other: Баспана бойынша қолдау трибуналының шешімдері
+      authored_article:
+        one: Мақала авторы
+        other: Мақала авторлары
+      business_finance_support_scheme:
+        one: Кәсіпкерлікті қаржыландыру схемасы
+        other: Кәсіпкерлікті қаржыландыру схемалары
+      case_study:
+        one: Тақырыптық зерттеу
+        other: Тақырыптық зерттеулер
+      closed_consultation:
+        one: Жабық кеңес
+        other: Жабық кеңестер
+      cma_case:
+        one: Бәсекелестік және нарықтар бойынша басқарма ісі
+        other: Бәсекелестік және нарықтар бойынша басқарма істері
+      coming_soon:
+        one: Жақын арада
+        other: Жақын арада
+      consultation:
+        one: Кеңес
+        other: Кеңестер
+      consultation_outcome:
+        one: Кеңес нәтижесі
+        other: Кеңес нәтижелері
+      corporate_information_page:
+        one: Ақпараттық бет
+        other: Ақпараттық беттер
+      corporate_report:
+        one: Корпоративтік есеп
+        other: Корпоративтік есептер
+      correspondence:
+        one: Хат алмасу
+        other: Хат алмасулар
+      countryside_stewardship_grant:
+        one: Countryside Stewardship гранты
+        other: Countryside Stewardship гранттары
+      decision:
+        one: Шешім
+        other: Шешімдер
+      detailed_guide:
+        one: Нұсқаулық
+        other: Нұсқаулық
+      dfid_research_output:
+        one: Өнімділік бойынша зерттеулер
+        other: Өнімділік бойынша зерттеулер
+      document_collection:
+        one: Топтама
+        other: Топтамалар
+      draft_text:
+        one: Жоба мәтіні
+        other: Жоба мәтіндері
+      drug_safety_update:
+        one: Дәрілік заттардың қауіпсіздігін жаңарту
+        other: Дәрілік заттардың қауіпсіздігін жаңартулар
+      employment_appeal_tribunal_decision:
+        one: Жұмыспен қамту жөніндегі апелляциялық сот шешімі
+        other: Жұмыспен қамту жөніндегі апелляциялық сот шешімдері
+      employment_tribunal_decision:
+        one: Жұмыспен қамту жөніндегі сот шешімі
+        other: Жұмыспен қамту жөніндегі сот шешімдері
+      esi_fund:
+        one: Еуропалық құрылымдық және инвестициялық қор (ESIF)
+        other: Еуропалық құрылымдық және инвестициялық қорлар (ESIF)
+      fatality_notice:
+        one: Өлім туралы хабарлама
+        other: Өлім туралы хабарламалар
+      foi_release:
+        one: FOI шығарылымы
+        other: FOI шығарылымдары
+      form:
+        one: Форма
+        other: Формалар
+      government_response:
+        one: Мемлекет жауабы
+        other: Мемлекет жауаптары
+      guidance:
+        one: Нұсқаулық
+        other: Нұсқаулық
+      impact_assessment:
+        one: Ықпалын бағалау
+        other: Ықпалын бағалаулар
+      imported:
+        one: импортталған - күтілетін түрі
+        other: импортталған - күтілетін түрі
+      independent_report:
+        one: Тәуелсіз есеп
+        other: Тәуелсіз есептер
+      international_development_fund:
+        one: Халықаралық даму қоры
+        other: Халықаралық даму қоры
+      international_treaty:
+        one: Халықаралық келісім
+        other: Халықаралық келісімдер
+      maib_report:
+        one: Теңіз апаттарын тергеу бөлімінің есебі
+        other: Теңіз апаттарын тергеу бөлімінің есептері
+      map:
+        one: Карта
+        other: Карталар
+      medical_safety_alert:
+        one: Дәрі-дәрмектер мен медициналық құрылғылар бойынша пікірлер мен ескертулер
+        other: Дәрі-дәрмектер мен медициналық құрылғылар бойынша пікірлер мен ескертулер
+      national:
+        one: Ұлттық статистика хабарландыруы
+        other: Ұлттық статистика хабарландырулары
+      national_statistics:
+        one: Ұлттық статистика
+        other: Ұлттық статистика
+      national_statistics_announcement:
+        one: Ұлттық статистика хабарландыруы
+        other: Ұлттық статистика хабарландырулары
+      news_article:
+        one: Жаңалықтар мақаласы
+        other: Жаңалықтар мақалалары
+      news_story:
+        one: Жаңалықтар оқиғасы
+        other: Жаңалықтар оқиғалары
+      notice:
+        one: Ескертпе
+        other: Ескертпелер
+      official:
+        one: Ресми статистика хабарландыруы
+        other: Ресми статистика хабарландырулары
+      official_statistics:
+        one: Ресми статистика
+        other: Ресми статистика
+      official_statistics_announcement:
+        one: Ресми статистика хабарландыруы
+        other: Ресми статистика хабарландырулары
+      open_consultation:
+        one: Ашық кеңес
+        other: Ашық кеңестер
+      oral_statement:
+        one: Парламентке ауызша мәлімдеме
+        other: Парламентке ауызша мәлімдемелер
+      policy:
+        one: Саясат
+        other: Саясаттар
+      policy_paper:
+        one: Саяси құжат
+        other: Саяси құжаттар
+      press_release:
+        one: Пресс-релиз
+        other: Пресс-релиздер
+      promotional:
+        one: Жарнамалық материал
+        other: Жарнамалық материал
+      publication:
+        one: Жарияланым
+        other: Жарияланымдар
+      raib_report:
+        one: Теміржол апаттарын тергеу бөлімінің есебі
+        other: Теміржол апаттарын тергеу бөлімінің есептері
+      regulation:
+        one: Ереже
+        other: Ережелер
+      research:
+        one: Зерттеу және талдау
+        other: Зерттеу және талдау
+      residential_property_tribunal_decision:
+        one: Тұрғын үйге қатысты сот шешімі
+        other: Тұрғын үйге қатысты сот шешімдері
+      service_sign_in:
+        one: Қызметке кіру
+        other: Қызметке кіру
+      service_standard_report:
+        one: Қызметтің стандартты есебі
+        other: Қызметтің стандартты есептері
+      speaking_notes:
+        one: Сөйлеу жазбалары
+        other: Сөйлеу жазбалары
+      speech:
+        one: Сөйлеу
+        other: Сөйлеулер
+      standard:
+        one: Стандарт
+        other: Стандарттар
+      statement_to_parliament:
+        one: Парламент мәлімдемесі
+        other: Парламент мәлімдемелері
+      statistical_data_set:
+        one: Статистикалық деректер жиыны
+        other: Статистикалық деректер жиындары
+      statistics_announcement:
+        one: Статистикалық шығарылым хабарландыруы
+        other: Статистикалық шығарылым хабарландырулары
+      statutory_guidance:
+        one: Заң нұсқаулығы
+        other: Заң нұсқаулығы
+      take_part:
+        one: Қатысу
+        other: Қатысу
+      tax_tribunal_decision:
+        one: Салық және сот кеңесінің сот шешімі
+        other: Салық және сот кеңесінің сот шешімдері
+      transcript:
+        one: Стенограмма
+        other: Стенограммалар
+      transparency:
+        one: Ашықтық деректері
+        other: Ашықтық деректері
+      utaac_decision:
+        one: Әкімшілік аппеляциялық сот шешімі
+        other: Әкімшілік аппеляциялық сот шешімдері
+      world_location_news_article:
+        one: Жаңалықтар мақаласы
+        other: Жаңалықтар мақалалары
+      world_news_story:
+        one: Әлемдегі жаңалықтар оқиғасы
+        other: Әлемдегі жаңалықтар оқиғалары
+      written_statement:
+        one: Парламентке жазбаша мәлімдеме
+        other: Парламентке жазбаша мәлімдемелер
+    coming_soon: Бұл құжат мына күні жарияланады
+    contents: Мазмұны
+    metadata:
+      published: Жарияланды
+      updated: Жаңартылды
+  publication:
+    documents:
+      one: Құжат
+      other: Құжаттар
+    details: Толық мәліметтер
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Компанияларға арналған Brexit нұсқаулығы
+    citizen_link: Жеке тұлғалар мен отбасыларға арналған Brexit нұсқаулығы
+    heading_prefix: Әртүрлісі бар
   common:
     last_updated:
-    visit:
+    visit: 'Мұнда өтіңіз:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Суретті түсірген: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: барлық жаңартуларды жасыру
+      last_updated: Соңғы рет %{date} жаңартылды
+      published: "%{date} күні жарияланды"
+      see_all_updates: барлық жаңартуларды қарау
+      show_all_updates: барлық жаңартуларды көрсету
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: барлығын жасыру
+      show_all: барлығын көрсету
+    save_this_page:
+      add_page_button: Сақталған беттерге қосыңыз
+      confirmations:
+        page_removed:
+          message: Мұны сақталған беттерден жойдыңыз
+        page_saved:
+          message: Мұны сақталған беттерге қостыңыз
+      page_not_saved_heading: Бұл бетті оған кейінірек орала алатындай сақтаңыз
+      page_was_saved_heading: Сіз бұл бетті сақтадыңыз
+      remove_page_button: Сақталған беттерден алып тастау
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Сақталған
+        беттерді қараңыз</a>
+      see_saved_pages_signed_out: Сақталған беттерді қарау үшін <a href="%{link}"
+        class="govuk-link %{additional_class}">Кіріңіз</a>.
     share_links:
-      share_this_page:
+      share_this_page: Осы бетпен бөлісу
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: және
+    another_website_html: Бұл кеңес %{closed} <a href="%{url}">басқа веб-сайтта өтті</a>
+    at: мына уақытта
+    closes: Ол мына уақытта жабылды
+    closes_at: Бұл кеңес мына уақытта жабылады
+    complete_a: Аяқтау
+    description: Кеңес сипаттамасы
+    detail_of_feedback_received: Алынған пікір мәліметі
+    detail_of_outcome: Нәтиже мәліметі
+    documents: Құжаттар
+    download_outcome: Толық нәтижені жүктеп алу
+    either: немесе
+    email_to: 'Электрондых хат жіберу:'
+    feedback_received: Алынған пікір
+    is_being: жіберілуде
+    not_open_yet: Бұл кеңес әлі ашылмаған
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Бұл кеңес ашылды
+    original_consultation: Бастапқы кеңес
+    ran_from: Бұл кеңес мына жерден басталады
+    respond_online: Онлайн жауап беру
+    'true': шын
+    visit_soon: Нәтижені осы қоғамдық&nbsp;пікірге жүктеу үшін жақында осы бетке қайта
+      кіріңіз.
+    was: болды
+    ways_to_respond: Жауап беру жолдары
+    write_to: 'Мынаған жазу:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: Электрондық пошта
+    find_call_charges: Барлық алынатын ақылар туралы мәлімет алу
+    online: Онлайн
+    phone: Телефон
+    webchat: Вебчат
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: "%{link} туралы мәлімет алу."
+    corporate_information: Корпоративтік ақпарат
+    personal_information_charter_html: Біздің %{link} жеке басқа қатысты ақпаратты
+      қалай пайдалану керектігін түсіндіреді.
+    publication_scheme_html: Біз үнемі %{link} бөлімінде жариялайтын ақпарат түрлері
+      туралы оқыңыз.
+    social_media_use_html: "%{link} мекенжайындағы саясатымызды оқыңыз."
+    welsh_language_scheme_html: "%{link} қосқан үлесіміз туралы оқыңыз."
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Қорғаныс министрлігінің елтаңбасы
+    field_of_operation: Жұмыс аймағы
+    operations_in: "%{location} орнындағы жұмыстар"
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Енді қолжетімді емес
+    published_in_error: Осы беттегі ақпарат қате жарияланғандықтан алынып тасталды.
+    title: Сіз іздеген бет енді қол жетімді емес
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Бұл нұсқаулықтағы беттер
+    skip_to_contents: Нұсқаулық мазмұнына өту
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Бұл жарияланым %{url} сайтында қолжетімді
+      copyright: "© Crown авторлық құқығы %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Бұл жарияланым басқаша көрсетілмеген жағдайларды қоспағанда,
+        v3.0 Ашық Үкімет лицензиясының шарттары бойынша лицензияланған. Осы лицензияны
+        көру үшін, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        веб-сайтына өтіңіз немесе немесе Ақпараттық саясат тобына, Ұлттық мұрағаттарға,
+        Kew, London TW9 4DU жазыңыз немесе төмендегі мекенжайға электрондық хат жазыңыз:
+        <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Егер біз авторлық құқық туралы кез келген үшінші тарап ақпаратын
+        анықтаған болсақ, сізге тиісті авторлық құқық иелерінен рұқсат алу қажет болады.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk: Qazaq
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    kk: Қазақ
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Келесі
+    previous_page: Алдыңғы
+    print_entire_guide: Нұсқаулықты толығымен басып шығару
   service_sign_in:
-    continue:
+    continue: Жалғастыру
     error:
-      option:
-      title:
+      option: Опцияны таңдаңыз
+      title: Сіз опцияны таңдамадыңыз
   shared:
-    historically_political:
+    historically_political: Бұл %{government} кезінде жарияланды
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Кеңесшілер сөйлесуге дайын.
+      busy: Барлық вебчат кеңесшілері қазір бос емес.
+      closed: Дәл қазір вебчат жабық.
+      speak_to_adviser: Қазір кеңесшімен сөйлесіңіз
+      technical_problem: Қазіргі уақытта техникалық ақауларға байланысты вебчат қолжетімді
+        емес.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Схема логотипі - Ұлыбританияда тағайындалған шығу тегі жазылған
+      қара мөр
+    pgi_alt_text: Схема логотипі - Ұлыбританияда географиялық шығу тегі жазылған қара
+      мөр
+    tsg_alt_text: Схема логотипі - Ұлыбританияда дәстүрлі ерекшелігі жазылған қара
+      мөр
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Жеткізілген күні
+    location: Орны
+    written_on: Жазылған күні
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Бас тартылған күні
+    cancelled: Статистикалық шығарылым тоқтатылды
+    changed_date: Шығарылым күні өзгертілді
+    forthcoming: Бұл статистика шығарылады
+    previous_date: Алдыңғы күн
+    proposed_date: Ұсынылған шығарылым
+    reason_for_change: Өзгеріс себебі
+    release_date: Шығарылым күні
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> маңыздысынан басқа елдің барлық аймақтарына барудан бас
+        тартуға кеңес береді.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> қажеттісінен басқа бүкіл елге барудан бас тартуға кеңес
+        береді.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        елдің барлық аймақтарына барудан бас тартуға кеңес береді.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        бүкіл елге баруға тыйым салады.
+    context: Шетелге саяхат туралы кеңес
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Тұрып жатқан жеріңізде ағымдағы COVID-19 ережелерін сақтаңыз: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Англия</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Шотландия</a>, <a href="https://gov.wales/coronavirus-travel">Уэльс</a> және <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Солтүстік Ирландия</a>.
+        </p>
+        <p class="govuk-body">
+          Ұлыбританияға жаңа COVID түрлері кірмес үшін, сіз <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">сарғылт немесе қызыл тізімдегі елдер</a> саяхаттамауыңыз керек.
+        </p>
+        <p class="govuk-body">
+          Елдегі қауіптерді түсіну үшін <a href="/guidance/travel-advice-novel-coronavirus">FCDO саяхаттау кеңесін</a> сақтаңыз.
+        </p>
+        <p class="govuk-body">
+          Оралған кезде <a href="/uk-border-control">шетелден Ұлыбританияға кіру үшін</a> (Ирландияны қоспағанда) ережелерді сақтаңыз.
+        </p>
+      text_assistive: Маңызды
+      title: Коронавирус (COVID-19) саяхаттау
+    still_current_at: Әлі де ағымдағы
+    summary: Қысқаша мазмұны
+    updated: Жаңартылды
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Енді қолжетімді емес
+    summary: Осы беттегі ақпарат қате жарияланғандықтан алынып тасталды.
+    title: Сіз іздеген бет енді қол жетімді емес
   working_group:
-    contact_details:
-    policies:
+    contact_details: Байланысу мәліметтері
+    policies: Саясаттар

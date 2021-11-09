@@ -1,150 +1,84 @@
----
 hy:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: հրապարակված
-      updated: Թարմացված
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Ավիավթարների հետաքննության բաժանմունքի զեկույց
+        other: Ավիավթարների հետաքննության բաժանմունքի զեկույցներ
       announcement:
         one: Հայտարարություն
         other: Հայտարարություններ
       asylum_support_decision:
-        one:
-        other:
+        one: Ապաստարանի աջակցության համար տրիբունալի որոշում
+        other: Ապաստարանի աջակցության համար տրիբունալի որոշումներ
       authored_article:
         one: Հեղինակային հոդված
         other: Հեղինակային հոդվածներ
       business_finance_support_scheme:
-        one:
-        other:
+        one: Բիզնեսի ֆինանսավորման աջակցության պլան
+        other: Բիզնեսի ֆինանսավորման աջակցության պլաններ
       case_study:
-        one: Թեմատիկ ուսումնասիրություն
-        other: Թեմատիկ ուսումնասիրություններ
+        one: Մասնավոր դեպքի ուսումնասիրություն
+        other: Մասնավոր դեպքի ուսումնասիրություններ
       closed_consultation:
-        one: Փակ խորհրդատվություն
-        other: Փակ խորհրդատվություններ
+        one: Փակ խորհրդակցություն
+        other: Փակ խորհրդակցություններ
       cma_case:
-        one:
-        other:
+        one: Մրցակցության և շուկայի կառավարման բաժնի դեպք
+        other: Մրցակցության և շուկայի կառավարման բաժնի դեպքեր
       coming_soon:
-        one:
-        other:
+        one: Շուտով
+        other: Շուտով
       consultation:
-        one: Խորհրդատվություն
-        other: Խորհրդատվություններ
+        one: Խորհրդակցություն
+        other: Խորհրդակցություններ
       consultation_outcome:
-        one: Խորհրդատվության արդյունք
-        other: Խորհրդատվության արդյունքներ
+        one: Խորհրդակցության արդյունք
+        other: Խորհրդակցության արդյունքներ
       corporate_information_page:
-        one:
-        other:
+        one: Տեղեկատվական էջ
+        other: Տեղեկատվական էջեր
       corporate_report:
-        one: Կորպորատիվ հաշվետվություն
-        other: Կորպորատիվ հաշվետվություններ
+        one: Կորպորատիվ զեկույց
+        other: Կորպորատիվ զեկույցներ
       correspondence:
         one: Նամակագրություն
         other: Նամակագրություններ
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Գյուղատնտեսության կառավարման դրամաշնորհ
+        other: Գյուղատնտեսության կառավարման դրամաշնորհներ
       decision:
-        one:
-        other:
+        one: Որոշում
+        other: Որոշումներ
       detailed_guide:
-        one: Մանրամասն ուղեցույց
-        other: Մանրամասն ուղեցույցեր
+        one: Ուղեցույց
+        other: Ուղեցույց
       dfid_research_output:
-        one:
-        other:
+        one: Զարգացման արդյունքի հետազոտություն
+        other: Զարգացման արդյունքների հետազոտություն
       document_collection:
-        one: Մի շարք
-        other:
+        one: Հավաքագրում
+        other: Հավաքագրումներ
       draft_text:
-        one: Սևագիր տեքստ
-        other: Սևագիր տեքստեր
+        one: Նախնական տեքստ
+        other: Նախնական տեքստեր
       drug_safety_update:
-        one:
-        other:
+        one: Դեղերի անվտանգության թարմացում
+        other: Դեղերի անվտանգության թարմացումներ
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Աշխատանքի բողոքարկման համար տրիբունալի որոշում
+        other: Աշխատանքի բողոքարկման համար տրիբունալի որոշումներ
       employment_tribunal_decision:
-        one:
-        other:
+        one: Աշխատանքի համար տրիբունալի որոշում
+        other: Աշխատանքի համար տրիբունալի որոշումներ
       esi_fund:
-        one:
-        other:
+        one: Եվրոպական կառուցվածքային և ներդրումային հիմնադրամ (ESIF)
+        other: Եվրոպական կառուցվածքային և ներդրումային հիմնադրամներ (ESIF)
       fatality_notice:
-        one: Մահվան ծանուցում
-        other: Մահվան ծանուցումներ
+        one: Դժբախտ պատահարի ծանուցում
+        other: Դժբախտ պատահարի ծանուցումներ
       foi_release:
-        one: Ազատ տեղեկատվության հաղորդագրություն
-        other: Ազատ տեղեկատվության հաղորդագրություններ
+        one: Տեղեկատվության ազատության հրապարակում
+        other: Տեղեկատվության ազատության հրապարակումներ
       form:
         one: Ձևաթուղթ
         other: Ձևաթղթեր
@@ -153,332 +87,335 @@ hy:
         other: Կառավարության արձագանքներ
       guidance:
         one: Ուղեցույց
-        other: Ուղեցույցեր
+        other: Ուղեցույց
       impact_assessment:
         one: Ազդեցության գնահատում
         other: Ազդեցության գնահատումներ
       imported:
-        one: Ներկրված - սպասման տեսակ
-        other: Ներկրված - սպասման տեսակներ
+        one: ներմուծված - սպասման տեսակ
+        other: ներմուծված - սպասման տեսակ
       independent_report:
-        one: Անկախ հաշվետվություն
-        other: Անկախ հաշվետվություններ
+        one: Անկախ զեկույց
+        other: Անկախ զեկույցներ
       international_development_fund:
-        one:
-        other:
+        one: Միջազգային զարգացման ֆինանսավորում
+        other: Միջազգային զարգացման ֆինանսավորում
       international_treaty:
-        one:
-        other:
+        one: Միջազգային պայմանագիր
+        other: Միջազգային պայմանագրեր
       maib_report:
-        one:
-        other:
+        one: Ծովային վթարների հետաքննության բաժանմունքի զեկույց
+        other: Ծովային վթարների հետաքննության բաժանմունքի զեկույցներ
       map:
         one: Քարտեզ
         other: Քարտեզներ
       medical_safety_alert:
-        one:
-        other:
+        one: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների համար
+        other: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների համար
       national:
-        one:
-        other:
+        one: Ազգային վիճակագրական հայտարարություն
+        other: Ազգային վիճակագրական հայտարարություններ
       national_statistics:
-        one: Վիճակագրություն-ազգային վիճակագրություն
-        other: Վիճակագրություն-ազգային վիճակագրություններ
+        one: Ազգային վիճակագրություն
+        other: Ազգային վիճակագրություն
       national_statistics_announcement:
-        one:
-        other:
+        one: Ազգային վիճակագրական հայտարարություն
+        other: Ազգային վիճակագրական հայտարարություններ
       news_article:
         one: Տեղեկատվական հոդված
         other: Տեղեկատվական հոդվածներ
       news_story:
-        one: Լուր
-        other: Լուրեր
+        one: Տեղեկատվական նյութ
+        other: Տեղեկատվական նյութեր
       notice:
-        one:
-        other:
+        one: Ծանուցում
+        other: Ծանուցումներ
       official:
-        one:
-        other:
+        one: Պաշտոնական վիճակագրական հայտարարություն
+        other: Պաշտոնական վիճակագրական հայտարարություններ
       official_statistics:
-        one: Վիճակագրություն
-        other: Վիճակագրություն
+        one: Պաշտոնական վիճակագրություն
+        other: Պաշտոնական վիճակագրություն
       official_statistics_announcement:
-        one:
-        other:
+        one: Պաշտոնական վիճակագրական հայտարարություն
+        other: Պաշտոնական վիճակագրական հայտարարություններ
       open_consultation:
-        one: Բաց խորհրդատվություն
-        other: Բաց խորհրդատվություններ
+        one: Բաց խորհրդակցություն
+        other: Բաց խորհրդակցություններ
       oral_statement:
-        one: Բանավոր դիմում խորհրդարան
-        other: Բանավոր դիմումներ խորհրդարան
+        one: Խորհրդարանին ուղղված բանավոր հայտարարություն
+        other: Խորհրդարանին ուղղված բանավոր հայտարարություններ
       policy:
         one: Քաղաքականություն
         other: Քաղաքականություններ
       policy_paper:
-        one: Ծրագրային փաստաթուղթ
-        other: Ծրագրային փաստաթղթեր
+        one: Քաղաքականության փաստաթուղթ
+        other: Քաղաքականության փաստաթղթեր
       press_release:
-        one: Մամլո հաղորդագրություն
-        other: Մամլո հաղորդագրություններ
+        one: Կոմյունիկե
+        other: Կոմյունիկեներ
       promotional:
-        one: Քարոզչական նյութ
-        other: Քարոզչական նյութներ
+        one: Գովազդային նյութ
+        other: Գովազդային նյութ
       publication:
         one: Հրապարակում
         other: Հրապարակումներ
       raib_report:
-        one:
-        other:
+        one: Երկաթուղային վթարների հետաքննության բաժանմունքի զեկույց
+        other: Երկաթուղային վթարների հետաքննության բաժանմունքի զեկույցներ
       regulation:
-        one:
-        other:
+        one: Կանոնադրություն
+        other: Կանոնադրություններ
       research:
         one: Հետազոտություն և վերլուծություն
-        other: Հետազոտություններ և վերլուծություններ
+        other: Հետազոտություն և վերլուծություն
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Անշարժ գույքի վերաբերյալ տրիբունալի որոշում
+        other: Անշարժ գույքի վերաբերյալ տրիբունալի որոշումներ
       service_sign_in:
-        one:
-        other:
+        one: Ծառայության մուտք
+        other: Ծառայության մուտք
       service_standard_report:
-        one:
-        other:
+        one: Ծառայության ստանդարտ զեկույց
+        other: Ծառայության ստանդարտ զեկույցներ
       speaking_notes:
-        one: Խոսքի գրառում
-        other: Խոսքի գրառումներ
+        one: Հրապարակային խոսքի ամփոփ տեղեկություն
+        other: Հրապարակային խոսքի ամփոփ տեղեկություն
       speech:
-        one: Ելույթ
-        other: Ելույթներ
+        one: Հրապարակային խոսք
+        other: Հրապարակային խոսքեր
       standard:
-        one:
-        other:
+        one: Ստանդարտ
+        other: Ստանդարտներ
       statement_to_parliament:
-        one: Դիմում խորհրդարան
-        other: Դիմումներ խորհրդարան
+        one: Հայտարարություն ուղղված խորհրդարանին
+        other: Հայտարարություններ ուղղված խորհրդարանին
       statistical_data_set:
-        one: Վիճակագրական տվյալ
-        other: Վիճակագրական տվյալներ
+        one: Վիճակագրական տվյալների ամբողջություն
+        other: Վիճակագրական տվյալների ամբողջություններ
       statistics_announcement:
-        one:
-        other:
+        one: Վիճակագրության հրապարակման հայտարարություն
+        other: Վիճակագրության հրապարակման հայտարարություններ
       statutory_guidance:
-        one:
-        other:
+        one: Կանոնադրական ուղեցույց
+        other: Կանոնադրական ուղեցույց
       take_part:
-        one:
-        other:
+        one: Մասնակցություն
+        other: Մասնակցություն
       tax_tribunal_decision:
-        one:
-        other:
+        one: Հարկային և լորդ կանցլերի տրիբունալի որոշում
+        other: Հարկային և լորդ կանցլերի տրիբունալի որոշումներ
       transcript:
-        one: Վերծանում
-        other: Վերծանումներ
+        one: Արձանագրություն
+        other: Արձանագրություններ
       transparency:
-        one: Բաց տեղեկատվություն
-        other: Բաց տեղեկատվություններ
+        one: Թափանցիկության տվյալներ
+        other: Թափանցիկության տվյալներ
       utaac_decision:
-        one:
-        other:
+        one: Վարչական բողոքների համար տրիբունալի որոշում
+        other: Վարչական բողոքների համար տրիբունալի որոշումներ
       world_location_news_article:
         one: Տեղեկատվական հոդված
         other: Տեղեկատվական հոդվածներ
       world_news_story:
-        one:
-        other:
+        one: Համաշխարհային տեղեկատվական նյութ
+        other: Համաշխարհային տեղեկատվական նյութեր
       written_statement:
-        one: Գրավոր դիմում խորհրդարան
-        other: Գրավոր դիմումներ խորհրդարան
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information: Կորպորատիվ տեղեկատվություն
-    personal_information_charter_html: 'Մեր %{link} ը կպարզաբանի մեր մոտեցումները անձնական տեղեկատվությանը '
-    publication_scheme_html: Կարդացեք այն ամնենի մասին ինչ մենք հրապարակում ենք մեր %{link} ում
-    social_media_use_html: Կարդացեք մեր քաղաքականության մասին
-    welsh_language_scheme_html: Գտեք այստեղ %{link} ում հրապարակելու մեր պարտավորության մասին
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy: Հայերեն
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+        one: Խորհրդարանին ուղղված գրավոր հայտարարություն
+        other: Խորհրդարանին ուղղված գրավոր հայտարարություններ
+    coming_soon: Այս փաստաթուղթը կհրապարակվի
+    contents: Բովանդակություն
+    metadata:
+      published: Հրապարակված
+      updated: Թարմացված
   publication:
-    details:
     documents:
       one: Փաստաթուղթ
       other: Փաստաթղթեր
+    details: Մանրամասներ
+  brexit:
+    business_link: Brexit-ի ուղեցույց բիզնեսների համար
+    citizen_link: Brexit-ի ուղեցույց անհատների և ընտանիքների համար
+    heading_prefix: Կա տարբեր
+  common:
+    last_updated:
+    visit: Այցելել՝
+  components:
+    figure:
+      image_credit: Նկարը՝ %{credit}
+    published_dates:
+      hide_all_updates: թաքցնել բոլոր թարմացումները
+      last_updated: Վերջին թարմացումը՝ %{date}
+      published: Հրապարակվել է՝ %{date}
+      see_all_updates: դիտել բոլոր թարմացումները
+      show_all_updates: ցույց տալ բոլոր թարմացումները
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: թաքցնել բոլորը
+      show_all: ցույց տալ բոլորը
+    save_this_page:
+      add_page_button: Ավելացնել ձեր պահպանված էջերի ցանկին
+      confirmations:
+        page_removed:
+          message: Դուք հեռացրել եք սա ձեր պահպանված էջերի ցանկից
+        page_saved:
+          message: Դուք ավելացրել եք սա ձեր պահպանված էջերի ցանկին
+      page_not_saved_heading: Պահպանել այս էջը՝ հետագայում կրկին դիտելու համար
+      page_was_saved_heading: Դուք պահպանել եք այս էջը
+      remove_page_button: Հեռացնել ձեր պահպանված էջերի ցանկից
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">See
+        your saved pages</a>
+      see_saved_pages_signed_out: '<a href="%{link}" class="govuk-link %{additional_class}">Մուտք
+        գործել</a> ձեր պահպանված էջերը տեսնելու համար:'
+    share_links:
+      share_this_page: Կիսվել այս էջով
+  consultation:
+    and: և
+    another_website_html: Այս խորհրդակցությունը %{closed} անցկացվել է <a href="%{url}">մեկ
+      այլ</a>
+    at: վեբ կայքում՝
+    closes: Այն ավարտվում է
+    closes_at: Այս խորհրդակցությունն ավարտվում է
+    complete_a: Իրականացնել
+    description: Խորհրդակցության նկարագրություն
+    detail_of_feedback_received: Ստացված արձագանքի մանրամասներ
+    detail_of_outcome: Արդյունքի վերաբերյալ մանրամասներ
+    documents: Փաստաթղթեր
+    download_outcome: Ներբեռնել ամբողջական արդյունքը
+    either: կամ
+    email_to: Ուղարկել էլ․ փոստին՝
+    feedback_received: Ստացված արձագանքը
+    is_being: ենթարկվում է
+    not_open_yet: Այս խորհրդակցությունը դեռևս չի սկսվել
+    'on':
+    opens: Այս խորհրդակցությունը կսկսվի
+    original_consultation: Սկզբնական խորհրդակցություն
+    ran_from: Այս խորհրդակցությունն իրականացվել է
+    respond_online: Պատասխանել առցանց
+    'true': ճիշտ
+    visit_soon: 'Կրկին այցելել այս էջը՝ այս հասարակական& nbsp;արձանքի արդյունքը ներբեռնելու
+      համար:'
+    was: էր
+    ways_to_respond: Պատասխանելու եղանակներ
+    write_to: Գրել՝
+  contact:
+    email: Էլ․ փոստ
+    find_call_charges: Տեղեկանալ զանգերի վճարների մասին
+    online: Առցանց
+    phone: Հեռախոսազանգ
+    webchat: Webchat
+  corporate_information_page:
+    about_our_services_html: Տեղեկանալ %{link}։
+    corporate_information: Կորպորատիվ տեղեկություն
+    personal_information_charter_html: Մեր %{link}-ում ներկայացված է, թե ինչպես ենք
+      մշակում ձեր անձնական տվյալները
+    publication_scheme_html: Կարդալ մեր %{link}-ում պարբերաբար հրապարակվող տեղեկությունների
+      տեսակների մասին։
+    social_media_use_html: 'Կարդալ մեր քաղաքականությունը %{link} հղումով:'
+    welsh_language_scheme_html: 'Տեղեկանալ մեր աշխատանքի մասին %{link} հղումով:'
+  fatality_notice:
+    alt_text: Պաշտպանության նախարարության զինանշան
+    field_of_operation: Գործունեության ոլորտ
+    operations_in: Գործունեություն % {location}-ում
+  gone:
+    page_title: Այլևս հասանելի չէ
+    published_in_error: 'Այս էջի տեղեկությունը հեռացվել է, քանի որ սխալմամբ էր հրապարակվել:'
+    title: Ձեր փնտրած էջն այլևս հասանելի չէ
+  guide:
+    pages_in_guide: Այս ուղեցույցում առկա էջերը
+    skip_to_contents: Անցնել ուղեցույցի բովանդակությանը
+  html_publication:
+    print_meta_data:
+      available_at: Այս հրապարակումը հասանելի էt %{url} հասցեով
+      copyright: "© Crown copyright %{year}"
+      isbn: ISBN՝
+      licence_html: 'Այս հրապարակումը լիցենզավորված է Open Government Licence v3.0
+        հրապարակման սերվերի դրույթների ներքո, բացառությամբ այլ դեպքերի: Այս լիցենզիան
+        դիտելու համար այցելեք <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        կամ գրեք Տեղեկատվական քաղաքականության թիմին, Ազգային արխիվին, Kew, London
+        TW9 4DU կամ ուղարկեք էլ. Նամակ հետևյալ հասցեին՝ <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>։'
+      third_party: Եթե բացահայտենք երրորդ կողմի հեղինակային իրավունքի որևէ տեղեկություն,
+        ձեզնից կպահանջվի ստանալ թույլտվություն հեղինակային իրավունքի համապատասխան
+        սեփականատերերից։
+  i18n:
+    direction:
+  language_names:
+    hy: Հայերեն
+  multi_page:
+    next_page: Հաջորդ
+    previous_page: Նախորդ
+    print_entire_guide: Տպել ամբողջ ուղեցույցը
   service_sign_in:
-    continue:
+    continue: Շարունակել
     error:
-      option:
-      title:
+      option: Խնդրում ենք ընտրել որևէ տարբերակ
+      title: Դուք չեք ընտրել որևէ տարբերակ
   shared:
-    historically_political:
+    historically_political: Սույնը հրապարակվել է %{government} բաժնում
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: 'Խորհրդատուները հասանելի են զրույցի համար:'
+      busy: 'Webchat-ի բոլոր խորհրդատուներն այս պահին զբաղված են:'
+      closed: 'Webchat-ն այս պահին հասանելի չէ:'
+      speak_to_adviser: Զրուցել խորհրդատուի հետ հիմա
+      technical_problem: 'Տեխնիկական խնդիրների պատճառով այս պահին webchat-ը հասանելի
+        չէ:'
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Designated
+      Origin UK Protected
+    pgi_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Geographic
+      Origin UK Protected
+    tsg_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Traditional
+      Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Ուղարկվել է
+    location: Տեղանք
+    written_on: Գրվել է
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Չեղարկման ամսաթիվ
+    cancelled: Վիճակագրության հրապարակումը չեղարկվել է
+    changed_date: Հրապարակման ամսաթիվը փոխվել է
+    forthcoming: Այս վիճակագրությունը կհրապարակվի
+    previous_date: Նախորդ ամսաթիվ
+    proposed_date: Առաջարկվող հրապարակում
+    reason_for_change: Փոփոխության պատճառը
+    release_date: Հրապարակման ամսաթիվ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի ամբողջ տարածք, բացառությամբ
+        էական նշանակություն ունեցող հատվածների։
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր, բացառությամբ էական
+        նշանակություն ունեցող դեպքերի։
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը
+        խորհուրդ է տալիս չմեկնել տվյալ երկրի որոշ հատվածներ։
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը
+        խորհուրդ է տալիս չմեկնել տվյալ երկիր։
+    context: Օտար երկիր ճամփորդելու վերաբերյալ օգտակար խորհուրդներ
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Հետևեք ձեր բնակության վայրում գործող COVID-19 կանոններին՝ <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>։
+        </p>
+        <p class="govuk-body">
+          COVID-ի նոր տարբերակների մուտքը ՄԹ կանխելու համար անհրաժեշտ է չմեկնել <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber or red list countries</a>։
+        </p>
+        <p class="govuk-body">
+          Տվյալ երկրում առկա ռիսկերի մասին տեղեկանալու համար հետևեք՝ <a href="/guidance/travel-advice-novel-coronavirus">FCDO Travel Advice</a>։
+        </p>
+        <p class="govuk-body">
+          Տվյալ երկրից վերադառնալուց անմիջապես հետո հետևեք <a href="/uk-border-control">արտերկրից Միացյալ Թագավորություն մուտք գործելու կանոնների</a> (բացառությամբ Իռլանդիայի դեպքում)։
+        </p>
+      text_assistive: Կարևոր
+      title: 'Ճամփորդություն Կորոնավիրուսի (COVID-19) ընթացքում '
+    still_current_at: Դեռևս ընթացիկ
+    summary: Ամփոփ
+    updated: Թարմացված
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Այլևս հասանելի չէ
+    summary: 'Այս էջի տեղեկությունը հեռացվել է, քանի որ սխալմամբ էր հրապարակվել:'
+    title: Ձեր փնտրած էջն այլևս հասանելի չէ
   working_group:
-    contact_details:
-    policies:
+    contact_details: Կոնտակտային տվյալներ
+    policies: Քաղաքականություններ

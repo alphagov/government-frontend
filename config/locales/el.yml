@@ -1,99 +1,33 @@
----
 el:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: Δημοσιευμένο
-      updated: 'ανανεωμένο '
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Έκθεση του Τμήματος Έρευνας Αεροπορικών Ατυχημάτων
+        other: Εκθέσεις του Τμήματος Έρευνας Αεροπορικών Ατυχημάτων
       announcement:
         one: Ανακοίνωση
         other: Ανακοινώσεις
       asylum_support_decision:
-        one:
-        other:
+        one: Δικαστική απόφαση υποστήριξης ασύλου
+        other: Δικαστικές αποφάσεις υποστήριξης ασύλου
       authored_article:
-        one: Κείμενο συντάκτη
-        other: Κείμενα συντακτών
+        one: Σύνταξη άρθρου
+        other: Σύνταξη άρθρων
       business_finance_support_scheme:
-        one:
-        other:
+        one: Πρόγραμμα στήριξης χρηματοδότησης επιχειρήσεων
+        other: Προγράμματα στήριξης χρηματοδότησης επιχειρήσεων
       case_study:
-        one: Παράδειγμα
-        other: Παραδείγματα
+        one: Μελέτη περίπτωσης
+        other: Μελέτες περιπτώσεων
       closed_consultation:
         one: Κλειστή διαβούλευση
         other: Κλειστές διαβουλεύσεις
       cma_case:
-        one:
-        other:
+        one: Υπόθεση Αρχής Ανταγωνισμού και Αγορών
+        other: Υποθέσεις Αρχής Ανταγωνισμού και Αγορών
       coming_soon:
-        one:
-        other:
+        one: Έρχεται σύντομα
+        other: Έρχεται σύντομα
       consultation:
         one: Διαβούλευση
         other: Διαβουλεύσεις
@@ -101,384 +35,392 @@ el:
         one: Αποτέλεσμα διαβούλευσης
         other: Αποτελέσματα διαβούλευσης
       corporate_information_page:
-        one:
-        other:
+        one: Σελίδα πληροφοριών
+        other: Σελίδες πληροφοριών
       corporate_report:
-        one: Έκθεση Οργανισμού
-        other: Εκθέσεις Οργανισμού
+        one: Εταιρική έκθεση
+        other: Εταιρικές εκθέσεις
       correspondence:
         one: Αλληλογραφία
-        other: Αλληλογραφία
+        other: Αλληλογραφίες
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Οικονομικό κίνητρο Countryside Stewardship grant
+        other: Οικονομικά κίνητρα Countryside Stewardship grants
       decision:
-        one:
-        other:
+        one: Απόφαση
+        other: Αποφάσεις
       detailed_guide:
-        one: Οδηγίες
-        other: Οδηγίες
+        one: Οδηγία
+        other: Οδηγία
       dfid_research_output:
-        one:
-        other:
+        one: Έρευνα για αναπτυξιακό αποτέλεσμα
+        other: Έρευνα για αναπτυξιακά αποτελέσματα
       document_collection:
-        one: Σειρά
-        other:
+        one: Συλλογή
+        other: Συλλογές
       draft_text:
-        one: Προσχέδιο
-        other: Προσχέδια
+        one: Σχέδιο κειμένου
+        other: Σχέδια κειμένων
       drug_safety_update:
-        one:
-        other:
+        one: Ενημέρωση για την ασφάλεια των φαρμάκων
+        other: Ενημερώσεις για την ασφάλεια των φαρμάκων
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Δικαστική απόφαση προσφυγής για την απασχόληση
+        other: Δικαστικές αποφάσεις προσφυγής για την απασχόληση
       employment_tribunal_decision:
-        one:
-        other:
+        one: Απόφαση δικαστηρίου για την απασχόληση
+        other: Αποφάσεις δικαστηρίου για την απασχόληση
       esi_fund:
-        one:
-        other:
+        one: Ευρωπαϊκό Διαρθρωτικό και Επενδυτικό Ταμείο (ESIF)
+        other: Ευρωπαϊκά Διαρθρωτικά και Επενδυτικά Ταμεία (ESIF)
       fatality_notice:
         one: Ανακοίνωση θανάτου
-        other: Ανακοινώσεις θανάτων
+        other: Ανακοινώσεις θανάτου
       foi_release:
-        one: Δημοσιοποίηση
-        other: Δημοσιοποίηση
+        one: Κυκλοφορία ελευθερία της πληροφόρησης
+        other: Κυκλοφορίες ελευθερία της πληροφόρησης
       form:
-        one: Έντυπο
-        other: Έντυπα
+        one: Φόρμα
+        other: Φόρμες
       government_response:
-        one: Η θέση της Κυβέρνησης
-        other: Οι θέσεις της Κυβέρνησης
+        one: Κυβερνητική απάντηση
+        other: Κυβερνητικές απαντήσεις
       guidance:
-        one: Οδηγίες
-        other: Οδηγίες
+        one: Οδηγία
+        other: Οδηγία
       impact_assessment:
-        one: Αξιολόγηση αποτελέσματος
-        other: Αξιολογήσεις αποτελέσματος
+        one: Εκτίμηση επίπτωσης
+        other: Εκτιμήσεις επιπτώσεων
       imported:
-        one: " εισηγμένο  - σε αναμονή"
-        other: εισηγμένα - σε αναμονή
+        one: εισήχθη - σε αναμονή για τύπο
+        other: εισήχθη - σε αναμονή για τύπο
       independent_report:
-        one: Έκθεση ανεξάρτητης αρχής
-        other: Εκθέσεις ανεξάρτητων αρχών
+        one: Ανεξάρτητη έκθεση
+        other: Ανεξάρτητες εκθέσεις
       international_development_fund:
-        one:
-        other:
+        one: Διεθνής χρηματοδότηση ανάπτυξης
+        other: Διεθνής χρηματοδότηση ανάπτυξης
       international_treaty:
-        one:
-        other:
+        one: Διεθνής συνθήκη
+        other: Διεθνείς συνθήκες
       maib_report:
-        one:
-        other:
+        one: Έκθεση του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
+        other: Εκθέσεις του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
       map:
         one: Χάρτης
         other: Χάρτες
       medical_safety_alert:
-        one:
-        other:
+        one: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
+        other: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
       national:
-        one:
-        other:
+        one: Ανακοίνωση εθνικής στατιστικής υπηρεσίας
+        other: Ανακοινώσεις εθνικής στατιστικής υπηρεσίας
       national_statistics:
-        one: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
-        other: Στατιστικά στοιχεία- εθνικά στατιστικά στοιχεία
+        one: Εθνική Στατιστική Υπηρεσία
+        other: Εθνική Στατιστική Υπηρεσία
       national_statistics_announcement:
-        one:
-        other:
+        one: Ανακοίνωση εθνικής στατιστικής υπηρεσίας
+        other: Ανακοινώσεις εθνικής στατιστικής υπηρεσίας
       news_article:
-        one: Είδηση
-        other: Ειδήσεις
+        one: Άρθρο ειδήσεων
+        other: Άρθρα ειδήσεων
       news_story:
-        one: Νέα
-        other: Νέα
+        one: Ιστορία ειδήσεων
+        other: Ιστορίες ειδήσεων
       notice:
-        one:
-        other:
+        one: Σημείωση
+        other: Σημειώσεις
       official:
-        one:
-        other:
+        one: Επίσημη ανακοίνωση στατιστικών
+        other: Επίσημες ανακοινώσεις στατιστικών
       official_statistics:
-        one: Στατιστικά στοιχεία
-        other: Στατιστικά στοιχεία
+        one: Επίσημη Στατιστικά Στοιχεία
+        other: Επίσημη Στατιστικά Στοιχεία
       official_statistics_announcement:
-        one:
-        other:
+        one: Επίσημη ανακοίνωση στατιστικών
+        other: Επίσημες ανακοινώσεις στατιστικών
       open_consultation:
         one: Ανοιχτή διαβούλευση
         other: Ανοιχτές διαβουλεύσεις
       oral_statement:
-        one: Δήλωση στη Βουλή
-        other: 'Δηλώσεις στη Βουλή '
+        one: Προφορική δήλωση στη Βουλή
+        other: Προφορικές δηλώσεις στη Βουλή
       policy:
         one: Πολιτική
         other: Πολιτικές
       policy_paper:
-        one: Κείμενο πολιτικής
-        other: Κείμενα πολιτικής
+        one: Έγγραφο πολιτικής
+        other: Έγγραφα πολιτικής
       press_release:
-        one: Δελτίο Τύπου
+        one: Δελτίο τύπου
         other: Δελτία Τύπου
       promotional:
         one: Προωθητικό υλικό
         other: Προωθητικό υλικό
       publication:
-        one: Έκδοση
-        other: Εκδόσεις
+        one: Δημοσίευση
+        other: Δημοσιεύσεις
       raib_report:
-        one:
-        other:
+        one: Έκθεση Τμήματος Διερεύνησης Σιδηροδρομικών Ατυχημάτων
+        other: Εκθέσεις Τμήματος Διερεύνησης Σιδηροδρομικών Ατυχημάτων
       regulation:
-        one:
-        other:
+        one: Κανονισμός λειτουργίας
+        other: Κανονισμοί λειτουργίας
       research:
         one: Έρευνα και ανάλυση
         other: Έρευνα και ανάλυση
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Απόφαση δικαστηρίου διαφορών ιδιοκτησίας
+        other: Αποφάσεις δικαστηρίου διαφορών ιδιοκτησίας
       service_sign_in:
-        one:
-        other:
+        one: Σύνδεση υπηρεσίας
+        other: Σύνδεση υπηρεσίας
       service_standard_report:
-        one:
-        other:
+        one: Τυπική έκθεση υπηρεσίας
+        other: Τυπικές εκθέσεις υπηρεσίας
       speaking_notes:
-        one: Βασικά σημεία ομιλίας
-        other: Βασικά σημεία ομιλίας
+        one: Σημειώσεις ομιλίας
+        other: Σημειώσεις ομιλίας
       speech:
         one: Ομιλία
         other: Ομιλίες
       standard:
-        one:
-        other:
+        one: Πρότυπο
+        other: Πρότυπα
       statement_to_parliament:
         one: Δήλωση στη Βουλή
-        other: 'Δηλώσεις στη Βουλή '
+        other: Δηλώσεις στη Βουλή
       statistical_data_set:
-        one: Στατιστικά στοιχεία
-        other: Στατιστικά στοιχεία
+        one: Σύνολο στατιστικών δεδομένων
+        other: Σύνολα στατιστικών δεδομένων
       statistics_announcement:
-        one:
-        other:
+        one: Ανακοίνωση έκδοσης στατιστικών
+        other: Ανακοινώσεις έκδοσης στατιστικών
       statutory_guidance:
-        one:
-        other:
+        one: Νομικές οδηγίες
+        other: Νομικές οδηγίες
       take_part:
-        one:
-        other:
+        one: Συμμετοχή
+        other: Συμμετοχή
       tax_tribunal_decision:
-        one:
-        other:
+        one: Απόφαση του δικαστηρίου επιμελητηρίου Tax and Chancery
+        other: Αποφάσεις του δικαστηρίου επιμελητηρίου Tax and Chancery
       transcript:
-        one: Απομαγνητοφώνηση
-        other: Απομαγνητοφωνήσεις
+        one: Αντίγραφο
+        other: Αντίγραφα
       transparency:
-        one: Στοιχεία διαφάνειας
-        other: Στοιχεία διαφάνειας
+        one: Δεδομένα διαφάνειας
+        other: Δεδομένα διαφάνειας
       utaac_decision:
-        one:
-        other:
+        one: Απόφαση του δικαστηρίου διοικητικών προσφυγών
+        other: Αποφάσεις του δικαστηρίου διοικητικών προσφυγών
       world_location_news_article:
-        one: Είδηση
-        other: Ειδήσεις
+        one: Άρθρο ειδήσεων
+        other: Άρθρα ειδήσεων
       world_news_story:
-        one:
-        other:
+        one: Ιστορία παγκόσμιων ειδήσεων
+        other: Ιστορίες παγκόσμιων ειδήσεων
       written_statement:
-        one: Γραπτή  δήλωση στη Βουλή
+        one: Γραπτή δήλωση στη Βουλή
         other: Γραπτές δηλώσεις στη Βουλή
-  corporate_information_page:
-    about_our_services_html:
-    corporate_information: Πληροφορίες για τον Οργανισμό
-    personal_information_charter_html: Το %{link} εξηγεί πώς χειριζόμαστε τα προσωπικά σας δεδομένα
-    publication_scheme_html: Μάθετε περισσότερα για τις πληροφορίας που δημοσιεύουμε συνήθως στο %{link}
-    social_media_use_html: Μάθετε περισσότερα για την πολιτική μας στο %{link}.
-    welsh_language_scheme_html: Μάθετε περισσότερα για την δέσμευση μας στη δημοσίευση στο %{link}.
-  fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
-  gone:
-    page_title:
-    published_in_error:
-    title:
-  guide:
-    pages_in_guide:
-    skip_to_contents:
-  html_publication:
-    print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
-  i18n:
-    direction:
-  language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el: 'Ελληνικά '
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
-  multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    coming_soon: Αυτό το έγγραφο θα δημοσιευτεί στις
+    contents: Περιεχόμενα
+    metadata:
+      published: Δημοσιεύθηκε
+      updated: Ενημερωμένο
   publication:
-    details:
     documents:
       one: Έγγραφο
       other: Έγγραφα
+    details: Λεπτομέρειες
+  brexit:
+    business_link: Οδηγίες Brexit για τις επιχειρήσεις
+    citizen_link: Οδηγίες Brexit για άτομα και οικογένειες
+    heading_prefix: Υπάρχουν διαφορετικά
+  common:
+    last_updated:
+    visit: 'Επίσκεψη:'
+  components:
+    figure:
+      image_credit: 'Εικόνα από: %{credit}'
+    published_dates:
+      hide_all_updates: απόκρυψη όλων των ενημερώσεων
+      last_updated: Τελευταία ενημέρωση %{date}
+      published: Δημοσιεύτηκε %{date}
+      see_all_updates: δείτε όλες τις ενημερώσεις
+      show_all_updates: εμφάνιση όλων των ενημερώσεων
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: απόκρυψη όλων
+      show_all: εμφάνιση όλων
+    save_this_page:
+      add_page_button: Προσθήκη στις αποθηκευμένες σελίδες σας
+      confirmations:
+        page_removed:
+          message: Το καταργήσατε από τις αποθηκευμένες σελίδες σας
+        page_saved:
+          message: Το έχετε προσθέσει στις αποθηκευμένες σελίδες σας
+      page_not_saved_heading: Αποθηκεύστε αυτήν τη σελίδα για να μπορέσετε να επιστρέψετε
+        σε αυτήν αργότερα
+      page_was_saved_heading: Έχετε αποθηκεύσει αυτήν τη σελίδα
+      remove_page_button: Κατάργηση από τις αποθηκευμένες σελίδες σας
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Δείτε
+        τις αποθηκευμένες σελίδες σας</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Συνδεθείτε
+        για</a> να δείτε τις αποθηκευμένες σελίδες σας.
+    share_links:
+      share_this_page: Κοινοποιήστε αυτή τη σελίδα
+  consultation:
+    and: και
+    another_website_html: Αυτή η διαβούλευση %{closed} πραγματοποιήθηκε σε <a href="%{url}">άλλο
+      ιστότοπο</a>
+    at: στο
+    closes: Κλείνει στο
+    closes_at: Αυτή η διαβούλευση κλείνει στις
+    complete_a: Συμπληρώστε ένα
+    description: Περιγραφή διαβούλευσης
+    detail_of_feedback_received: Λεπτομέρειες για τα σχόλια που ελήφθησαν
+    detail_of_outcome: Λεπτομέρεια του αποτελέσματος
+    documents: Έγγραφα
+    download_outcome: Κατεβάστε το πλήρες αποτέλεσμα
+    either: είτε
+    email_to: 'Στείλε email στην διεύθυνση:'
+    feedback_received: Λήφθηκαν σχόλια
+    is_being: είναι
+    not_open_yet: Αυτή η διαβούλευση δεν είναι ακόμη ανοιχτή
+    'on':
+    opens: Αυτή η διαβούλευση ανοίγει
+    original_consultation: Αρχική διαβούλευση
+    ran_from: Αυτή η διαβούλευση ξεκίνησε από
+    respond_online: Απαντήστε online
+    'true': σωστό
+    visit_soon: Επισκεφτείτε ξανά αυτήν τη σελίδα σύντομα για να κάνετε λήψη του αποτελέσματος
+      σε αυτό το δημόσιο σχόλιο.
+    was: ήταν
+    ways_to_respond: Τρόποι απάντησης
+    write_to: 'Γράψτε στην διεύθυνση:'
+  contact:
+    email: Email
+    find_call_charges: Ενημερωθείτε για τις χρεώσεις κλήσεων
+    online: Online
+    phone: Τηλέφωνο
+    webchat: Διαδικτυακή συνομιλία
+  corporate_information_page:
+    about_our_services_html: Μάθετε %{link}.
+    corporate_information: Εταιρικές πληροφορίες
+    personal_information_charter_html: Το %{link} εξηγεί πώς αντιμετωπίζουμε τα προσωπικά
+      σας στοιχεία.
+    publication_scheme_html: Διαβάστε σχετικά με τους τύπους πληροφοριών που δημοσιεύουμε
+      συνήθως στο %{link}.
+    social_media_use_html: Διαβάστε την πολιτική μας στο %{link}.
+    welsh_language_scheme_html: Μάθετε για τη δέσμευσή μας στο %{link}.
+  fatality_notice:
+    alt_text: Οικόσημο Υπουργείου Άμυνας
+    field_of_operation: Πεδίο λειτουργίας
+    operations_in: Λειτουργίες στην τοποθεσία %{location}
+  gone:
+    page_title: Δεν είναι πλέον διαθέσιμο
+    published_in_error: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή
+      δημοσιεύθηκαν κατά λάθος.
+    title: Η σελίδα που αναζητάτε δεν είναι πλέον διαθέσιμη
+  guide:
+    pages_in_guide: Σελίδες σε αυτόν τον οδηγό
+    skip_to_contents: Μετάβαση στα περιεχόμενα του οδηγού
+  html_publication:
+    print_meta_data:
+      available_at: Αυτή η δημοσίευση είναι διαθέσιμη στο %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Αυτή η δημοσίευση έχει άδεια σύμφωνα με τους όρους της Άδειας
+        Ανοικτής Κυβέρνησης v3.0, εκτός εάν αναφέρεται διαφορετικά. Για να δείτε αυτήν
+        την άδεια, επισκεφτείτε την διεύθυνση <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        ή γράψτε στην Information Policy Team, The National Archives, Kew, London
+        TW9 4DU, ή στείλτε email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Όπου έχουμε εντοπίσει οποιαδήποτε στοιχεία πνευματικών δικαιωμάτων
+        τρίτου μέρους, θα χρειαστεί να λάβετε άδεια από τους ενδιαφερόμενους κατόχους
+        πνευματικών δικαιωμάτων.
+  i18n:
+    direction:
+  language_names:
+    el: Ελληνικά
+  multi_page:
+    next_page: Επόμενο
+    previous_page: Προηγούμενο
+    print_entire_guide: Εκτύπωση ολόκληρου του οδηγού
   service_sign_in:
-    continue:
+    continue: Συνέχεια
     error:
-      option:
-      title:
+      option: Διαλέξτε μια επιλογή
+      title: Δεν έχετε επιλέξει κάποια επιλογή
   shared:
-    historically_political:
+    historically_political: Αυτό δημοσιεύτηκε στο %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Οι σύμβουλοι είναι διαθέσιμοι για συνομιλία.
+      busy: Όλοι οι σύμβουλοι διαδικτυακής συνομιλίας είναι απασχολημένοι αυτήν τη
+        στιγμή.
+      closed: Η διαδικτυακή συνομιλία είναι κλειστή αυτήν τη στιγμή.
+      speak_to_adviser: Μιλήστε τώρα με έναν σύμβουλο
+      technical_problem: Η διαδικτυακή συνομιλία δεν είναι διαθέσιμη αυτήν τη στιγμή
+        λόγω τεχνικών προβλημάτων.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Designated
+      Origin UK Protected
+    pgi_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Geographic
+      Origin UK Protected
+    tsg_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Traditional
+      Specialty UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Παραδόθηκε στις
+    location: Τοποθεσία
+    written_on: Γράφτηκε στις
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Ημερομηνία ακύρωσης
+    cancelled: Η στατιστική έκδοση ακυρώθηκε
+    changed_date: Η ημερομηνία κυκλοφορίας άλλαξε
+    forthcoming: Αυτά τα στατιστικά στοιχεία θα δημοσιοποιηθούν
+    previous_date: Προηγούμενη ημερομηνία
+    proposed_date: Προτεινόμενη κυκλοφορία
+    reason_for_change: Λόγος για την αλλαγή
+    release_date: Ημερομηνία κυκλοφορίας
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: Το <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην των απαραίτητων,
+        σε μέρη της χώρας.
+      avoid_all_but_essential_travel_to_whole_country: Το <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην
+        των απαραίτητων, σε ολόκληρη την χώρα.
+      avoid_all_travel_to_parts: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        σας συμβουλεύει να αποφύγετε τα ταξίδια σε μέρη της χώρας.
+      avoid_all_travel_to_whole_country: Το <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια σε ολόκληρη την
+        χώρα.
+    context: Συμβουλές για ταξίδια στο εξωτερικό
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Ακολουθήστε τους ισχύοντες κανόνες για τον COVID-19 στο μέρος που ζείτε: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Αγγλία</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Σκωτία</a>, <a href="https://gov.wales/coronavirus-travel">Ουαλία</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Βόρεια Ιρλανδία</a>.
+        </p>
+        <p class="govuk-body">
+          Για να αποτρέψετε την είσοδο νέων παραλλαγών COVID στο Ηνωμένο Βασίλειο, δεν πρέπει να ταξιδεύετε σε <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">χώρες στην πορτοκαλί ή στην κόκκινη λίστα</a> .
+        </p>
+        <p class="govuk-body">
+          Για να κατανοήσετε τους κινδύνους σε μια χώρα, ακολουθήστε <a href="/guidance/travel-advice-novel-coronavirus">τις ταξιδιωτικές οδηγίες του FCDO</a> .
+        </p>
+        <p class="govuk-body">
+          Όταν επιστρέψετε, ακολουθήστε τους κανόνες για να <a href="/uk-border-control">εισέλθετε στο Ηνωμένο Βασίλειο από το εξωτερικό</a> (εκτός από την Ιρλανδία).
+        </p>
+      text_assistive: Σημαντικό
+      title: Ταξίδια με τον Κορωνοϊό (COVID-19)
+    still_current_at: Ακόμα επίκαιρο στο
+    summary: Περίληψη
+    updated: Ενημερωμένο
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Δεν είναι πλέον διαθέσιμο
+    summary: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή δημοσιεύθηκαν
+      κατά λάθος.
+    title: Η σελίδα που αναζητάτε δεν είναι πλέον διαθέσιμη
   working_group:
-    contact_details:
-    policies:
+    contact_details: Στοιχεία επικοινωνίας
+    policies: Πολιτικές

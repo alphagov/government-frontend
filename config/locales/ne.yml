@@ -1,484 +1,425 @@
----
 ne:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: हवाई दुर्घटना अनुसन्धान शाखा प्रतिवेदन
+        other: हवाई दुर्घटना अनुसन्धान शाखा प्रतिवेदनहरू
+      announcement:
+        one: घोषणा
+        other: घोषणाहरु
+      asylum_support_decision:
+        one: शरण सहयोग न्यायाधिकरणको निर्णय
+        other: शरण सहयोग न्यायाधिकरणको निर्णयहरू
+      authored_article:
+        one: लेखिएको लेख
+        other: लेखिएको लेखहरू
+      business_finance_support_scheme:
+        one: व्यापार वित्त समर्थन योजना
+        other: व्यापार वित्त समर्थन योजनाहरु
+      case_study:
+        one: मामिला अध्ययन
+        other: मामिला अध्ययनहरू
+      closed_consultation:
+        one: बन्द परामर्श
+        other: बन्द परामर्शहरू
+      cma_case:
+        one: प्रतिस्पर्धा र बजार प्राधिकरण मामिला
+        other: प्रतिस्पर्धा र बजार प्राधिकरण मामिलाहरु
+      coming_soon:
+        one: चाडै आउदैछ
+        other: चाडै आउदैछ
+      consultation:
+        one: परामर्श
+        other: परामर्शहरू
+      consultation_outcome:
+        one: परामर्श परिणाम
+        other: परामर्श परिणामहरू
+      corporate_information_page:
+        one: जानकारी पृष्ठ
+        other: जानकारी पृष्ठहरू
+      corporate_report:
+        one: निगम प्रतिवेदन
+        other: निगम प्रतिवेदनहरू
+      correspondence:
+        one: पत्राचार
+        other: पत्राचारहरू
+      countryside_stewardship_grant:
+        one: ग्रामीण क्षेत्र संचालन अनुदान
+        other: ग्रामीण क्षेत्र संचालन अनुदानहरू
+      decision:
+        one: निर्णय
+        other: निर्णयहरु
+      detailed_guide:
+        one: मार्गदर्शन
+        other: मार्गदर्शन
+      dfid_research_output:
+        one: विकास उत्पादनको लागी अनुसन्धान
+        other: विकास उत्पादनहरुको लागी अनुसन्धान
+      document_collection:
+        one: स्ग्रह
+        other: स्ग्रहहरु
+      draft_text:
+        one: मस्यौदा पाठ
+        other: मस्यौदा पाठहरू
+      drug_safety_update:
+        one: औषधि सुरक्षा अद्यावधिक
+        other: औषधि सुरक्षा अद्यावधिकहरू
+      employment_appeal_tribunal_decision:
+        one: रोजगार अपील न्यायाधिकरण निर्णय
+        other: रोजगार अपील न्यायाधिकरण निर्णयहरू
+      employment_tribunal_decision:
+        one: रोजगार न्यायाधिकरण निर्णय
+        other: रोजगार न्यायाधिकरण निर्णयहरू
+      esi_fund:
+        one: यूरोपीयन संरचनात्मक र लगानी कोष (ESIF)
+        other: यूरोपीयन संरचनात्मक र लगानी कोषहरू (ESIF)
+      fatality_notice:
+        one: मृत्युको सूचना
+        other: मृत्युका सूचनाहरू
+      foi_release:
+        one: जानकारीको स्वतन्त्रता विज्ञप्ति
+        other: जानकारीको स्वतन्त्रता विज्ञप्तिहरू
+      form:
+        one: फारम
+        other: फारमहरु
+      government_response:
+        one: सरकारको प्रतिक्रिया
+        other: सरकारको प्रतिक्रियाहरू
+      guidance:
+        one: मार्गदर्शन
+        other: मार्गदर्शन
+      impact_assessment:
+        one: प्रभाव मूल्यांकन
+        other: प्रभाव मूल्यांकनहरू
+      imported:
+        one: आयातित - प्रतीक्षा प्रकार
+        other: आयातित - प्रतीक्षा प्रकार
+      independent_report:
+        one: स्वतन्त्र प्रतिवेदन
+        other: स्वतन्त्र प्रतिवेदनहरू
+      international_development_fund:
+        one: अन्तर्राष्ट्रिय विकास कोष
+        other: अन्तर्राष्ट्रिय विकास कोष
+      international_treaty:
+        one: अन्तर्राष्ट्रिय सन्धि
+        other: अन्तर्राष्ट्रिय सन्धिहरु
+      maib_report:
+        one: समुद्री दुर्घटना अनुसन्धान शाखा प्रतिवेदन
+        other: समुद्री दुर्घटना अनुसन्धान शाखा प्रतिवेदनहरू
+      map:
+        one: नक्शा
+        other: नक्साहरू
+      medical_safety_alert:
+        one: औषधि र चिकित्सा उपकरणहरुको लागी चेतावनी र फिर्तीहरू
+        other: औषधि र चिकित्सा उपकरणहरुको लागी चेतावनी र फिर्तीहरू
+      national:
+        one: राष्ट्रिय तथ्याङ्क घोषणा
+        other: राष्ट्रिय तथ्याङ्क घोषणाहरू
+      national_statistics:
+        one: राष्ट्रिय तथ्याङ्क
+        other: राष्ट्रिय तथ्याङ्क
+      national_statistics_announcement:
+        one: राष्ट्रिय तथ्याङ्क घोषणा
+        other: राष्ट्रिय तथ्याङ्क घोषणाहरू
+      news_article:
+        one: समाचार लेख
+        other: समाचार लेखहरू
+      news_story:
+        one: समाचार कथा
+        other: समाचार कथाहरु
+      notice:
+        one: सूचना
+        other: सूचनाहरु
+      official:
+        one: आधिकारिक तथ्याङ्क घोषणा
+        other: आधिकारिक तथ्याङ्क घोषणाहरु
+      official_statistics:
+        one: आधिकारिक तथ्याङ्क
+        other: आधिकारिक तथ्याङ्क
+      official_statistics_announcement:
+        one: आधिकारिक तथ्याङ्क घोषणा
+        other: आधिकारिक तथ्याङ्क घोषणाहरु
+      open_consultation:
+        one: खुला परामर्श
+        other: खुला परामर्शहरू
+      oral_statement:
+        one: संसदमा मौखिक वक्तव्य
+        other: 'संसदमा मौखिक वक्तव्यहरू '
+      policy:
+        one: नीति
+        other: नीतिहरु
+      policy_paper:
+        one: नीति पत्र
+        other: नीति पत्रहरू
+      press_release:
+        one: प्रेस विज्ञप्ति
+        other: प्रेस विज्ञप्तिहरू
+      promotional:
+        one: प्रचार सामग्री
+        other: प्रचार सामग्री
+      publication:
+        one: प्रकाशन
+        other: प्रकाशनहरु
+      raib_report:
+        one: रेल दुर्घटना अनुसन्धान शाखा प्रतिवेदन
+        other: रेल दुर्घटना अनुसन्धान शाखा प्रतिवेदनहरू
+      regulation:
+        one: नियम
+        other: नियमहरु
+      research:
+        one: अनुसन्धान र विश्लेषण
+        other: अनुसन्धान र विश्लेषण
+      residential_property_tribunal_decision:
+        one: आवासीय सम्पत्ति न्यायाधिकरण निर्णय
+        other: आवासीय सम्पत्ति न्यायाधिकरण निर्णयहरू
+      service_sign_in:
+        one: सेवा साइन इन
+        other: सेवा साइन इन
+      service_standard_report:
+        one: सेवा मानक प्रतिवेदन
+        other: सेवा मानक प्रतिवेदनहरू
+      speaking_notes:
+        one: बोल्ने टिप्पणीहरू
+        other: बोल्ने टिप्पणीहरू
+      speech:
+        one: भाषण
+        other: भाषणहरु
+      standard:
+        one: मानक
+        other: मानकहरू
+      statement_to_parliament:
+        one: संसदको वक्तव्य
+        other: संसदमा वक्तव्यहरू
+      statistical_data_set:
+        one: तथ्याङ्क जानकारी समुह
+        other: तथ्याङ्क जानकारी समुहहरू
+      statistics_announcement:
+        one: तथ्याङ्क बिज्ञप्ति घोषणा
+        other: तथ्याङ्क बिज्ञप्ति घोषणाहरू
+      statutory_guidance:
+        one: वैधानिक मार्गदर्शन
+        other: वैधानिक मार्गदर्शन
+      take_part:
+        one: सहभागी हुनु
+        other: सहभागी हुनु
+      tax_tribunal_decision:
+        one: कर र चान्सरी न्यायाधिकरण निर्णय
+        other: कर र चान्सरी न्यायाधिकरण निर्णयहरू
+      transcript:
+        one: प्रतिलिपि
+        other: प्रतिलिपिहरू
+      transparency:
+        one: पारदर्शिता जानकारी
+        other: पारदर्शिता जानकारी
+      utaac_decision:
+        one: प्रशासनिक अपील न्यायाधिकरण निर्णय
+        other: प्रशासनिक अपील न्यायाधिकरण निर्णयहरू
+      world_location_news_article:
+        one: समाचार लेख
+        other: समाचार लेखहरू
+      world_news_story:
+        one: विश्व समाचार कथा
+        other: विश्व समाचार कथाहरु
+      written_statement:
+        one: संसदमा लिखित वक्तव्य
+        other: संसदमा लिखित वक्तव्यहरू
+    coming_soon: मा यो कागजात प्रकाशित गरिनेछ
+    contents: विषयवस्तु
+    metadata:
+      published: प्रकाशित
+      updated: अद्यावधिक गरियो
+  publication:
+    documents:
+      one: कागजात
+      other: कागजातहरु
+    details: विवरण
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: व्यवसायको लागी ब्रेक्सिट मार्गदर्शन
+    citizen_link: व्यक्ति र परिवारहरूका लागी ब्रेक्सिट मार्गदर्शन
+    heading_prefix: त्यहाँ फरक छ
   common:
     last_updated:
-    visit:
+    visit: 'भ्रमण:'
   components:
     figure:
-      image_credit:
+      image_credit: 'छवि श्रेय: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: सबै अद्यावधिक लुकाउनुहोस्
+      last_updated: पछिल्लो अद्यावधिक %{date}
+      published: प्रकाशित %{date}
+      see_all_updates: सबै अद्यावधिक हेर्नुहोस्
+      show_all_updates: सबै अद्यावधिक देखाउनुहोस्
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: सबै लुकाउनुहोस्
+      show_all: सबै देखाउनुहोस्
+    save_this_page:
+      add_page_button: तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुहोस्
+      confirmations:
+        page_removed:
+          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुभएको छ
+        page_saved:
+          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुभएको छ
+      page_not_saved_heading: यो पृष्ठ सुरक्षित गर्नुहोस् ताकि तपाईं यसलाई पछि फिर्ता
+        आउन सक्नुहुन्छ
+      page_was_saved_heading: तपाईंले यो पृष्ठ सुरक्षित गर्नुभयो
+      remove_page_button: तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुहोस्
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">तपाईंको
+        सुरक्षित पृष्ठहरू हेर्नुहोस्</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">साइन
+        इन् गरेर</a> तपाईंको सुरक्षित पृष्ठहरू हेर्नुहोस्।
     share_links:
-      share_this_page:
+      share_this_page: यो पृष्ठ साझा गर्नुहोस्
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents: कागजातहरू
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: र
+    another_website_html: यो परामर्श %{बन्द} <a href="%{url}">अर्को वेबसाइट</a> मा
+      आयोजित
+    at: मा
+    closes: मा बन्द हुन्छ
+    closes_at: यो परामर्श मा बन्द हुन्छ
+    complete_a: एउटा पूरा गर्नु
+    description: परामर्श विवरण
+    detail_of_feedback_received: प्रतिक्रियाको विवरण प्राप्त भयो
+    detail_of_outcome: परिणामको विवरण
+    documents: कागजातहरु
+    download_outcome: पूर्ण नतिजा डाउनलोड गर्नुहोस्
+    either: या त
+    email_to: 'ईमेल:'
+    feedback_received: प्रतिक्रिया प्राप्त भयो
+    is_being: हुँदैछ
+    not_open_yet: यो परामर्श अझै खुलेको छैन
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: यो परामर्श खुल्छ
+    original_consultation: मूल परामर्श
+    ran_from: यो परामर्श बाट चलेको हो
+    respond_online: अनलाइन प्रतिक्रिया
+    'true': साँचो
+    visit_soon: यो सार्वजनिक प्रतिक्रियाको नतिजा डाउनलोड गर्नको लागी चाँडै यस पृष्ठमा
+      फेरी जानुहोस्&nbsp;।
+    was: थियो
+    ways_to_respond: प्रतिक्रिया दिने तरिका
+    write_to: 'मा लेख्नुहोस्:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one: मार्गदर्शन
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: इमेल
+    find_call_charges: कल शुल्कको बारेमा जानकारी पाउनुहोस्
+    online: अनलाइन
+    phone: फोन
+    webchat: वेबच्याट
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: पत्ता लगाउनुहोस् %{link}।
+    corporate_information: निगम जानकारी
+    personal_information_charter_html: हाम्रो %{link} ले हामी तपाईंको व्यक्तिगत जानकारीलाई
+      कसरी व्यवहार गर्छौं भनेर व्याख्या गर्छ।
+    publication_scheme_html: हामी नियमित रूपमा हाम्रो %{link} मा प्रकाशित जानकारीको
+      प्रकारको बारेमा पढ्नुहोस्।
+    social_media_use_html: "%{link} मा हाम्रो नीति पढ्नुहोस्।"
+    welsh_language_scheme_html: "%{link} को हाम्रो प्रतिबद्धताको बारेमा जानकारी पाउनुहोस्।"
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: रक्षा मन्त्रालय क्रेस्ट
+    field_of_operation: सञ्चालन क्षेत्र
+    operations_in: "%{location} मा सञ्चालन"
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: अब उपलब्ध छैन
+    published_in_error: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण
+      तरिकाले प्रकाशित भएको थियो।
+    title: तपाईंले खोज्नु भएको पृष्ठ अब उपलब्ध छैन
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: यस गाइडका पृष्ठहरू
+    skip_to_contents: गाइडको बिषयबस्तुमा सिधै जानुहोस्
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: यो प्रकाशन %{url} मा उपलब्ध छ
+      copyright: "© क्राउन प्रतिलिपि अधिकार %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'यो प्रकाशन कुनै ठाउँमा तोकिएको बाहेक खुला सरकार इजाजतपत्र v3.0
+        को शर्तहरु अन्तर्गत इजाजतपत्र प्राप्त छ। यो इजाजतपत्र हेर्नको लागी <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        मा जानुहोस् वा सूचना नीति टोलि, राष्ट्रिय अभिलेखालय, किउ, लन्डन TW9 4DU मा
+        पत्र लेख्नुहोस् वा ईमेल पठाउनुहोस्: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: यदि हामीले कुनै तेस्रो पक्ष प्रतिलिपि अधिकार जानकारीको पहिचान गरेका
+        छौं भने तपाईंले सम्बन्धित प्रतिलिपि अधिकार धारकहरु बाट अनुमति प्राप्त गर्न
+        आवश्यक छ।
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
     ne: नेपाली
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other: कागजातहरू
+    next_page: अर्को
+    previous_page: अघिल्लो
+    print_entire_guide: सम्पूर्ण गाइड छाप्नुहोस्
   service_sign_in:
-    continue:
+    continue: जारी राख्नुहोस्
     error:
-      option:
-      title:
+      option: कृपया एउटा विकल्प छनौट गर्नुहोस्
+      title: तपाईंले एक विकल्प छनौट गर्नुभएको छैन
   shared:
-    historically_political:
+    historically_political: यो %{government} अन्तर्गत प्रकाशित भएको थियो
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: सल्लाहकारहरु च्याट गर्नको लागी उपलब्ध छन्।
+      busy: सबै वैबच्याट सल्लाहकारहरु अहिले व्यस्त छन्।
+      closed: वैबच्याट अहिले बन्द छ।
+      speak_to_adviser: अब एक सल्लाहकार सँग कुरा गर्नुहोस्
+      technical_problem: प्राविधिक समस्याको कारण अहिले वैबच्याट उपलब्ध छैन।
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, निर्दिष्ट मूल संयक्त
+      अधिराज्य संरक्षित
+    pgi_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, ग्राफिक मूल संयक्त
+      अधिराज्य संरक्षित
+    tsg_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, पारम्परिक विशेषता
+      संयक्त अधिराज्य संरक्षित
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: मा वितरण गरियो
+    location: स्थान
+    written_on: मा लेखिएको छ
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: रद्द मिति
+    cancelled: तथ्याङ्क बिज्ञप्ति रद्द
+    changed_date: बिज्ञप्ति मिति परिवर्तन गरिएको छ
+    forthcoming: तथ्याङ्क जारी गरिनेछ
+    previous_date: अघिल्लो मिति
+    proposed_date: प्रस्तावित बिज्ञप्ति
+    reason_for_change: परिवर्तनको कारण
+    release_date: बिज्ञप्ति मिति
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक देशको
+        केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक पुरै
+        देशमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">विदेश,
+        राष्ट्रमंडल र विकास कार्यालय</abbr> ले देशको केहि भागमा सबै यात्रा बिरूद्ध
+        सल्लाह दिएको छ।
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">विदेश,
+        राष्ट्रमंडल र विकास कार्यालय</abbr> ले पुरै देशमा सबै यात्रा बिरूद्ध सल्लाह
+        दिएको छ।
+    context: विदेश यात्रा सल्लाह
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          तपाईं बस्नु भएको ठाउँमा हालको कोभिड -19 नियमहरु पालना गर्नुहोस्: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">इंग्ल्यान्ड</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">स्कटल्याण्ड</a>, <a href="https://gov.wales/coronavirus-travel">वेल्स</a> र <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">उत्तरी आयरल्याण्ड</a>।
+        </p>
+        <p class="govuk-body">
+          संयुक्त अधिराज्यमा नयाँ कोभिड प्रकारहरूको प्रवेश रोक्नलाई तपाईंले <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">एम्बर वा रातो सूचीका देशहरुमा भ्रमण गर्नु हुँदैन </a>।
+
+        </p><p class="govuk-body">
+          कुनै देशमा जोखिमको बारेमा जानकारी प्राप्त गर्नको लागि <a href="/guidance/travel-advice-novel-coronavirus">विदेश, राष्ट्रमंडल र विकास कार्यालयको भ्रमण सल्लाह पालन गर्नुहोस्</a>।
+
+
+        </p><p class="govuk-body">
+          तपाईं विदेश बाट फर्कने बेला <a href="/uk-border-control">संयुक्त अधिराज्यमा प्रवेश गर्नको लागि नियमहरू पालना गर्नुहोस्</a> (आयरल्याण्ड बाहेक)।
+        </p>
+      text_assistive: महत्त्वपूर्ण
+      title: कोरोनाभाइरस (कोभिड-19) यात्रा
+    still_current_at: अहिले सम्म वर्तमानमा
+    summary: सारांश
+    updated: अद्यावधिक गरियो
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: अब उपलब्ध छैन
+    summary: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित
+      भएको थियो।
+    title: तपाईंले खोज्नु भएको पृष्ठ अब उपलब्ध छैन
   working_group:
-    contact_details:
-    policies:
+    contact_details: सम्पर्क विवरण
+    policies: नीतिहरु

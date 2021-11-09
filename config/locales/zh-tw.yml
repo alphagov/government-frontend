@@ -1,484 +1,405 @@
----
 zh-tw:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: 發行
-      updated: 更新
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: 航空事故調查局報告
+        other: 航空事故調查局報告
       announcement:
         one: 公告
-        other: 其他公告
+        other: 公告
       asylum_support_decision:
-        one:
-        other:
+        one: 庇護支援法庭裁決
+        other: 庇護支援法庭裁決
       authored_article:
-        one: 撰寫文章
-        other: 撰寫其他文章
+        one: 授權文章
+        other: 授權文章
       business_finance_support_scheme:
-        one:
-        other:
+        one: 企業融資支援計劃
+        other: 企業融資支援計劃
       case_study:
-        one: 案例研究
-        other: 其他案例研究
+        one: 案例分析
+        other: 案例分析
       closed_consultation:
-        one: 專屬諮詢
-        other: 其他專屬諮詢
+        one: 非公開協商
+        other: 非公開協商
       cma_case:
-        one:
-        other:
+        one: 競爭及市場管理局案例
+        other: 競爭及市場管理局案例
       coming_soon:
-        one:
-        other:
+        one: 即將推出
+        other: 即將推出
       consultation:
         one: 諮詢
-        other: 其他諮詢
+        other: 諮詢
       consultation_outcome:
-        one: 諮詢結果
-        other: 其他諮詢結果
+        one: 協商結果
+        other: 協商結果
       corporate_information_page:
-        one:
-        other:
+        one: 資訊頁
+        other: 資訊頁
       corporate_report:
-        one: 公司報告
-        other: 其他公司報告
+        one: 企業報告
+        other: 企業報告
       correspondence:
-        one: 對應
-        other: 對應
+        one: 信函
+        other: 信函
       countryside_stewardship_grant:
-        one:
-        other:
+        one: 地方管理補助
+        other: 地方管理補助
       decision:
-        one:
-        other:
+        one: 決定
+        other: 決定
       detailed_guide:
-        one: 詳細指引
-        other: 詳細指引
+        one: 指導
+        other: 指導
       dfid_research_output:
-        one:
-        other:
+        one: 發展成果研究
+        other: 發展成果研究
       document_collection:
-        one: 系列
-        other:
+        one: 收集
+        other: 收集
       draft_text:
-        one: 內容
-        other: 其他內容
+        one: 草稿文本
+        other: 草稿文本
       drug_safety_update:
-        one:
-        other:
+        one: 藥物安全更新
+        other: 藥物安全更新
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: 勞資上訴審裁處裁決
+        other: 勞資上訴審裁處裁決
       employment_tribunal_decision:
-        one:
-        other:
+        one: 勞資審裁處裁決
+        other: 勞資審裁處裁決
       esi_fund:
-        one:
-        other:
+        one: 歐洲結構與投資基金（ESIF）
+        other: 歐洲結構與投資基金（ESIF）
       fatality_notice:
-        one: 安全事故通知
-        other: 安全事故通知
+        one: 死亡通知
+        other: 死亡通知
       foi_release:
-        one: 政府公開訊息
-        other: 其他政府公開訊息
+        one: 資訊自由發布
+        other: 資訊自由發布
       form:
-        one: 表格
-        other: 其他表格
+        one: 形式
+        other: 形式
       government_response:
         one: 政府回應
-        other: 政府其他回應
+        other: 政府回應
       guidance:
-        one: 指引
-        other: 指引
+        one: 指導
+        other: 指導
       impact_assessment:
         one: 影響評估
-        other: 其他影響評估
+        other: 影響評估
       imported:
-        one: 輸入 - 等待中
-        other: 輸入 - 等待中
+        one: 進口－等待類型
+        other: 進口－等待類型
       independent_report:
         one: 獨立報告
-        other: 其他獨立報告
+        other: 獨立報告
       international_development_fund:
-        one:
-        other:
+        one: 國際發展基金
+        other: 國際發展基金
       international_treaty:
-        one:
-        other:
+        one: 國際條約
+        other: 國際條約
       maib_report:
-        one:
-        other:
+        one: 海事事故調查局報告
+        other: 海事事故調查局報告
       map:
         one: 地圖
-        other: 其他地圖
+        other: 地圖
       medical_safety_alert:
-        one:
-        other:
+        one: 藥品和醫療器材的警示召回
+        other: 藥品和醫療器材的警示召回
       national:
-        one:
-        other:
+        one: 國家統計公告
+        other: 國家統計公告
       national_statistics:
-        one: 國家統計數據
-        other: 國家統計數據
+        one: 國家統計
+        other: 國家統計
       national_statistics_announcement:
-        one:
-        other:
+        one: 國家統計公告
+        other: 國家統計公告
       news_article:
-        one: 新聞
-        other: 其他新聞
+        one: 新聞文章
+        other: 新聞文章
       news_story:
-        one: 新聞
-        other: 其他新聞
+        one: 新聞報導
+        other: 新聞報導
       notice:
-        one:
-        other:
+        one: 通知
+        other: 通知
       official:
-        one:
-        other:
+        one: 官方統計公告
+        other: 官方統計公告
       official_statistics:
-        one: 統計
-        other: 統計
+        one: 官方統計
+        other: 官方統計
       official_statistics_announcement:
-        one:
-        other:
+        one: 官方統計公告
+        other: 官方統計公告
       open_consultation:
         one: 公開諮詢
-        other: 其他公開諮詢
+        other: 公開諮詢
       oral_statement:
-        one: 議會口頭聲明
-        other: 其他議會口頭聲明
+        one: 對議會的口頭聲明
+        other: 對議會的口頭聲明
       policy:
         one: 政策
-        other: 其他政策
+        other: 政策
       policy_paper:
-        one: 政策報告
-        other: 其他政策報告
+        one: 政策文件
+        other: 政策文件
       press_release:
         one: 新聞稿
-        other: 其他新聞稿
+        other: 新聞稿
       promotional:
         one: 宣傳資料
         other: 宣傳資料
       publication:
-        one: 發行物
-        other: 其他發行物
+        one: 出版
+        other: 出版
       raib_report:
-        one:
-        other:
+        one: 鐵路事故調查局報告
+        other: 海事事故調查局報告
       regulation:
-        one:
-        other:
+        one: 法規
+        other: 法規
       research:
         one: 研究與分析
         other: 研究與分析
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: 住宅房產法庭裁決
+        other: 住宅房產法庭裁決
       service_sign_in:
-        one:
-        other:
+        one: 服務登入
+        other: 服務登入
       service_standard_report:
-        one:
-        other:
+        one: 服務標準報告
+        other: 服務標準報告
       speaking_notes:
-        one: 演講稿
-        other: 演講稿
+        one: 發言筆記
+        other: 發言筆記
       speech:
-        one: 演講
-        other: 其他演講
+        one: 演說
+        other: 演說
       standard:
-        one:
-        other:
+        one: 標準
+        other: 標準
       statement_to_parliament:
-        one: 議會聲明
-        other: 議會聲明
+        one: 向議會發表聲明
+        other: 向議會發表聲明
       statistical_data_set:
-        one: 統計數據資料
-        other: 其他統計數據料
+        one: 統計數據組
+        other: 統計數據組
       statistics_announcement:
-        one:
-        other:
+        one: 統計發佈公告
+        other: 統計發佈公告
       statutory_guidance:
-        one:
-        other:
+        one: 法令指導
+        other: 法令指導
       take_part:
-        one:
-        other:
+        one: 參與
+        other: 參與
       tax_tribunal_decision:
-        one:
-        other:
+        one: 稅務和衡平法院裁決
+        other: 稅務和衡平法院裁決
       transcript:
-        one: 談話副本
-        other: 其他談話副本
+        one: 副本
+        other: 副本
       transparency:
-        one: 透明化數據
-        other: 透明化數據
+        one: 透明數據
+        other: 透明數據
       utaac_decision:
-        one:
-        other:
+        one: 行政上訴審裁處裁決
+        other: 勞資上訴審裁處裁決
       world_location_news_article:
-        one: 新聞
-        other: 其他新聞
+        one: 新聞文章
+        other: 新聞文章
       world_news_story:
-        one:
-        other:
+        one: 世界新聞報導
+        other: 世界新聞報導
       written_statement:
-        one: 提交國會的書面聲明
-        other: 提交國會的其他書面聲明
+        one: 對議會的書面聲明
+        other: 對議會的書面聲明
+    coming_soon: 此文檔發布於
+    contents: 內容
+    metadata:
+      published: 發布
+      updated: 更新
+  publication:
+    documents:
+      one: 文檔
+      other: 文檔
+    details: 細節
+  brexit:
+    business_link: 針對生意往來的英國脫歐指南
+    citizen_link: 針對個人和家庭的英國脫歐指南
+    heading_prefix: 不同之處
+  common:
+    last_updated:
+    visit: 探訪：
+  components:
+    figure:
+      image_credit: 圖片來源： %{credit}
+    published_dates:
+      hide_all_updates: 隱藏所有更新
+      last_updated: 最後更新於 %{date}
+      published: 發布於 %{date}
+      see_all_updates: 查看所有更新
+      show_all_updates: 展開所有更新
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: 隱藏全部
+      show_all: 展開全部
+    save_this_page:
+      add_page_button: 添加至你儲存頁面
+      confirmations:
+        page_removed:
+          message: 已從儲存頁面中移除
+        page_saved:
+          message: 已儲存至儲存頁面
+      page_not_saved_heading: 已儲存至閱讀列表已供未來瀏覽
+      page_was_saved_heading: 已儲存此頁面
+      remove_page_button: 從儲存頁面中移除
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">查看儲存頁面</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登入</a>
+        以查看儲存頁面。
+    share_links:
+      share_this_page: 分享此頁面
+  consultation:
+    and: 以及
+    another_website_html: 此諮詢 %{closed} 在 <a href="%{url}">另一個網站進</a>
+    at: 在
+    closes: 截止於
+    closes_at: 此諮詢截止於
+    complete_a: 完成
+    description: 諮詢說明
+    detail_of_feedback_received: 收到的反饋詳情
+    detail_of_outcome: 結果詳情
+    documents: 文檔
+    download_outcome: 下載完整結果
+    either: 其一
+    email_to: 發送電子郵件至：
+    feedback_received: 收到的反饋
+    is_being: 正
+    not_open_yet: 諮詢尚未開始
+    'on':
+    opens: 諮詢開始
+    original_consultation: 最初諮詢
+    ran_from: 此諮詢從
+    respond_online: 線上回覆
+    'true': 正確
+    visit_soon: 稍後再次到訪此頁面，將下載結果到此公共機構&nbsp；反饋。
+    was: 曾
+    ways_to_respond: 回覆方式
+    write_to: 發送至：
+  contact:
+    email: 電子郵件
+    find_call_charges: 了解通話費用
+    online: 線上
+    phone: 電話
+    webchat: 線上聊天
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: 政府資訊
-    personal_information_charter_html: 我們的%{link}解釋我們如何處理你的個人資料。
-    publication_scheme_html: 查閱我們在%{link}定期發布的資訊。
-    social_media_use_html: 查閱我們在%{link}的政策。
-    welsh_language_scheme_html: 查閱我們在%{link}的發佈承諾。
+    about_our_services_html: 了解 %{link}。
+    corporate_information: 公司資訊
+    personal_information_charter_html: 我們的 %{link} 說明了我們是如何處理你的個資。
+    publication_scheme_html: 閱讀我們在 %{link} 中定期發布的資訊類型。
+    social_media_use_html: 在 %{link} 上閱讀我們政策。
+    welsh_language_scheme_html: 了解我們對 %{link} 的承諾。
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: 國防部紋章
+    field_of_operation: 經營領域
+    operations_in: 在 %{location} 的領域
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: 不再適用
+    published_in_error: 此頁面上的資訊已被刪除，因為發佈有誤。
+    title: 正在尋找的頁面不再適用
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: 本指南中的頁面
+    skip_to_contents: 跳至指南內容
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: 該出版物可在 %{url} 取得
+      copyright: "© Crown copyright %{year}"
+      isbn: ISBN：
+      licence_html: 除非另有說明，否則本出版物獲得政府資料開放授權條款 v3.0 許可。查看此許可，請探訪<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/
+        version/3</a>或寫信至倫敦，基尤，英國國家檔案館的資訊政策團隊，國家檔案館， TW9 4DU，或發送電子郵件：<a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
+      third_party: 此處用以我們確定任何第三方版權資訊，你會需要獲得相關版權所有者的許可。
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw: 中文
+    zh-tw: 繁體中文
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one: 文件
-      other: 其他文件
+    next_page: 接續
+    previous_page: 先前
+    print_entire_guide: 列印全指南
   service_sign_in:
-    continue:
+    continue: 繼續
     error:
-      option:
-      title:
+      option: 請挑一個選項
+      title: 尚未挑出選項
   shared:
-    historically_political:
+    historically_political: 此由 %{government} 發佈
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: 諮詢師目前可聊。
+      busy: 目前線上諮詢師皆忙碌中。
+      closed: 目前線上聊天關閉中。
+      speak_to_adviser: 現在就與諮詢師交談
+      technical_problem: 因技術問題，線上聊天目前不適用。
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: 項目標識為黑色印章，上面寫著「指定的原產地受英國保護」
+    pgi_alt_text: 項目標識為黑色印章，上面寫著「地理上原產地受英國保護」
+    tsg_alt_text: 項目標識為黑色印章，上面寫著「傳統特產受英國保護」
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: 運送
+    location: 地點
+    written_on: 寫在
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: 取消日期
+    cancelled: 統計發佈取消
+    changed_date: 發佈日期已變更
+    forthcoming: 統計數據將發佈
+    previous_date: 先前日期
+    proposed_date: 建議發佈
+    reason_for_change: 變更理由
+    release_date: 發佈日期
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">外交和英聯邦事務部</abbr> 建議非必要的旅行，不要前往該國部分地區。
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">外交和英聯邦事務部</abbr> 建議非必要的旅行，不要前往該國。
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr>
+        建議不要前往該國部分地區。
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr>
+        建議不要前往該國。
+    context: 國外旅行建議
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+        遵循居住地的當前 COVID-19 規範：<a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">英國</a>、<a href="https://www.gov.scot/coronavirus-covid-19/">蘇格蘭</a>、 <a href="https://gov.wales/coronavirus-travel">威爾斯</a> 和 <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">北愛爾蘭</a>。
+        </p>
+        <p class="govuk-body">
+        為防止新的新冠病毒變種株進入英國，你不應前往 <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber 或 red 名單上的國家</a>。
+        </p>
+        <p class="govuk-body">
+        要了解國家 / 地區的風險，請遵循 <a href="/guidance/travel-advice-novel-coronavirus">外交、聯邦及發展事務部的旅行建議</a>。
+        </p>
+        <p class="govuk-body">
+         當你返國，請遵守<a href="/uk-border-control">從海外入境英國</a> （愛爾蘭除外）的規定。
+        </p>
+      text_assistive: 重要
+      title: 新冠病毒（COVID-19）旅行
+    still_current_at: 目前仍
+    summary: 概括
+    updated: 更新
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: 不再適用
+    summary: 此頁面上的資訊已被刪除，因為發佈有誤。
+    title: 正在尋找的頁面不再適用
   working_group:
-    contact_details:
-    policies:
+    contact_details: 聯繫細節
+    policies: 政策

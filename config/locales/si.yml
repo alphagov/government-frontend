@@ -1,484 +1,422 @@
----
 si:
-  brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
-  common:
-    last_updated:
-    visit:
-  components:
-    figure:
-      image_credit:
-    published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
-    publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
-    share_links:
-      share_this_page:
-  consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
-    'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
-  contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
   content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published: පල කරන ලදී
-      updated: යාවත්කාලීන කල
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: ගුවන් අනතුරු විමර්ශන ශාඛා වාර්තාව
+        other: ගුවන් අනතුරු විමර්ශන ශාඛා වාර්තා
       announcement:
         one: නිවේදනය
         other: නිවේදන
       asylum_support_decision:
-        one:
-        other:
+        one: රැකවරණ සහාය විනිශ්චය මණ්ඩල තීරණය
+        other: රැකවරණ සහාය විනිශ්චය මණ්ඩල තීරණ
       authored_article:
-        one: රචිත ලිපිය  
-        other: රචිත ලිපි
+        one: රචනා කළ ලිපිය
+        other: රචනා කළ ලිපි
       business_finance_support_scheme:
-        one:
-        other:
+        one: ව්යාපාර මූල්ය සහාය යෝජනා ක්රමය
+        other: ව්යාපාර මූල්ය සහාය යෝජනා ක්රම
       case_study:
-        one: සිද්ධි අධ්යනයනය
-        other: සිද්ධීන්  අධ්යයයනය
+        one: සිද්ධි අධ්යයනය
+        other: සිද්ධි අධ්යයන
       closed_consultation:
-        one: සංවෘත මත විමසුම
-        other: සංවෘත
+        one: සංවෘත උපදේශනය
+        other: සංවෘත උපදේශන
       cma_case:
-        one:
-        other:
+        one: තරඟ සහ වෙළඳපළ අධිකාරිය නඩුව
+        other: තරඟ සහ වෙළඳපළ අධිකාරිය නඩු
       coming_soon:
-        one:
-        other:
+        one: ළඟදීම පැමිණේ
+        other: ළඟදීම පැමිණේ
       consultation:
-        one: " මත විමසුම"
-        other: මත විමසුම්
+        one: උපදේශනය
+        other: උපදේශන
       consultation_outcome:
-        one: මත විමසුමේ ප්‍රතිපල
-        other: මත විමසුමේ ප්‍රතිපලයන්
+        one: උපදේශන ප්රතිඵලය
+        other: උපදේශන ප්රතිඵල
       corporate_information_page:
-        one:
-        other:
+        one: තොරතුරු පිටුව
+        other: තොරතුරු පිටු
       corporate_report:
-        one: සංවිධාන වාර්තාව
-        other: සංවිධාන වාර්තා
+        one: ආයතනික වාර්තාව
+        other: ආයතනික වාර්තා
       correspondence:
-        one: ලිපි ගනුදෙනුව  
-        other: ලිපි ගනුදෙනු
+        one: ලිපි හුවමාරුව
+        other: ලිපි හුවමාරු
       countryside_stewardship_grant:
-        one:
-        other:
+        one: ගම්බද භාරකාරත්ව ප්රදානය
+        other: ගම්බද භාරකාරත්ව ප්රදාන
       decision:
-        one:
-        other:
+        one: තීරණය
+        other: තීරණ
       detailed_guide:
-        one: විස්තරාත්මක උපදෙස්
-        other: විස්තරාත්මක උපදෙස්
+        one: මාර්ගෝපදේශය
+        other: මාර්ගෝපදේශය
       dfid_research_output:
-        one:
-        other:
+        one: සංවර්ධන ප්‍රතිඵල සඳහා වූ පර්යේෂණය
+        other: සංවර්ධන ප්‍රතිඵල සඳහා වූ පර්යේෂණ
       document_collection:
-        one: කාණ්ඩය
-        other:
+        one: එකතුව
+        other: එකතු
       draft_text:
-        one: අශෝදිත වැකිය
-        other: අශෝදිත වැකි
+        one: කෙටුම්පත් පෙළ
+        other: කෙටුම්පත් පෙළ
       drug_safety_update:
-        one:
-        other:
+        one: ඖෂධ ආරක්ෂන යාවත්කාලීනය
+        other: ඖෂධ ආරක්ෂන යාවත්කාලීන
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: රැකියා අභියාචනා විනිශ්චය මණ්ඩල තීරණය
+        other: රැකියා අභියාචනා විනිශ්චය මණ්ඩල තීරණ
       employment_tribunal_decision:
-        one:
-        other:
+        one: රැකියා විනිශ්චය මණ්ඩල තීරණය
+        other: රැකියා විනිශ්චය මණ්ඩල තීරණ
       esi_fund:
-        one:
-        other:
+        one: යුරෝපීය ව්යුහාත්මක සහ ආයෝජන අරමුදල (ESIF)
+        other: යුරෝපීය ව්යුහාත්මක සහ ආයෝජන අරමුදල් (ESIF)
       fatality_notice:
-        one: තීරණාත්මක  දැන්වීම
-        other: තීරණාත්මක  දැන්වීම්
+        one: මරණ දැන්වීම
+        other: මරණ දැන්වීම්
       foi_release:
-        one: එෆ්. ඉ. ඕ. දැන්වීම
-        other: එෆ්. ඉ. ඕ. දැන්වීම්
+        one: FOI නිකුත් කිරීම
+        other: FOI නිකුත් කිරීම්
       form:
-        one: පෝරමය
-        other: පෝරම
+        one: ආකෘති පත්‍රය
+        other: ආකෘති පත්‍ර
       government_response:
-        one: ආණ්ඩුවේ ප්‍රතිචාරය
-        other: ආණ්ඩුවේ ප්‍රතිචාර
+        one: රජයේ ප්රතිචාරය
+        other: රජයේ ප්රතිචාර
       guidance:
-        one: උපදෙස්
-        other: උපදෙස්
+        one: මාර්ගෝපදේශය
+        other: මාර්ගෝපදේශය
       impact_assessment:
-        one: ප්‍රතිපල ඇගයීම
-        other: ප්‍රතිපල ඇගයීම්
+        one: බලපෑම තක්සේරුව
+        other: බලපෑම තක්සේරු
       imported:
-        one: ගෙන්වන ලද - ටයිප් කිරීමට මදක් ඉන්න
-        other: ගෙන්වන ලද - ටයිප් කිරීමට මදක් ඉන්න
+        one: ආනයනය කරන ලද - අපේක්ෂිත වර්ගය
+        other: ආනයනය කරන ලද - අපේක්ෂිත වර්ගය
       independent_report:
         one: ස්වාධීන වාර්තාව
         other: ස්වාධීන වාර්තා
       international_development_fund:
-        one:
-        other:
+        one: ජාත්යන්තර සංවර්ධන මුදල් සැපයීම
+        other: ජාත්යන්තර සංවර්ධන මුදල් සැපයීම
       international_treaty:
-        one:
-        other:
+        one: ජාත්යන්තර ගිවිසුම
+        other: ජාත්යන්තර ගිවිසුම්
       maib_report:
-        one:
-        other:
+        one: නාවික අනතුරු විමර්ශන ශාඛා වාර්තාව
+        other: නාවික අනතුරු විමර්ශන ශාඛා වාර්තා
       map:
         one: සිතියම
         other: සිතියම්
       medical_safety_alert:
-        one:
-        other:
+        one: ඖෂධ සහ වෛද්ය උපකරණ සඳහා ඇඟවීම් සහ සිහිපත් කිරීම්
+        other: ඖෂධ සහ වෛද්ය උපකරණ සඳහා ඇඟවීම් සහ සිහිපත් කිරීම්
       national:
-        one:
-        other:
+        one: ජාතික සංඛ්යාලේඛන නිවේදනය
+        other: ජාතික සංඛ්යාලේඛන නිවේදන
       national_statistics:
-        one: සංඛ්යාන - ජාතික සංඛ්යාන
-        other: සංඛ්යාන - ජාතික සංඛ්යාන
+        one: ජාතික සංඛ්යාලේඛන
+        other: ජාතික සංඛ්යාලේඛන
       national_statistics_announcement:
-        one:
-        other:
+        one: ජාතික සංඛ්යාලේඛන නිවේදනය
+        other: ජාතික සංඛ්යාලේඛන නිවේදන
       news_article:
         one: පුවත් ලිපිය
         other: පුවත් ලිපි
       news_story:
-        one: පුවත් වාර්තාව
-        other: පුවත් වාර්තා
+        one: පුවත් කතාව
+        other: පුවත් කතා
       notice:
-        one:
-        other:
+        one: දැන්වීම
+        other: දැන්වීම්
       official:
-        one:
-        other:
+        one: නිල සංඛ්යාලේඛන නිවේදනය
+        other: නිල සංඛ්යාලේඛන නිවේදන
       official_statistics:
-        one: සංඛ්යාන
-        other: සංඛ්යාන
+        one: නිල සංඛ්යාලේඛන
+        other: නිල සංඛ්යාලේඛන
       official_statistics_announcement:
-        one:
-        other:
+        one: නිල සංඛ්යාලේඛන නිවේදනය
+        other: නිල සංඛ්යාලේඛන නිවේදන
       open_consultation:
-        one: විවෘත මත විමසුම
-        other: විවෘත මත විමසුම්
+        one: විවෘත උපදේශනය
+        other: විවෘත උපදේශන
       oral_statement:
-        one: " පාර්ලිමේන්තුවේ වාචික ප්රුකාශය"
-        other: පාර්ලිමේන්තුවේ වාචික ප්රේකාශ
+        one: පාර්ලිමේන්තුව වෙත වාචික ප්රකාශයක්
+        other: පාර්ලිමේන්තුව වෙත වාචික ප්රකාශ
       policy:
-        one: ප්රතතිපත්තිය
-        other: ප්‍රතිපත්තීන්
+        one: ප්රතිපත්තිය
+        other: ප්රතිපත්ති
       policy_paper:
-        one: ප්‍රතිපත්ති  ලිපිය
-        other: ප්‍රතිපත්ති  ලිපි
+        one: ප්රතිපත්ති පත්‍රිකාව
+        other: ප්රතිපත්ති පත්‍රිකා
       press_release:
-        one: මාධ්යි නිවේදනය
-        other: මාධ්යි නිවේදන
+        one: මාධ්ය නිවේදනය
+        other: මාධ්ය නිවේදන
       promotional:
-        one: ප්ර්චාරණ ද්රිච්ය
-        other: ප්ර්චාරණ ද්රිච්ය
+        one: ප්රවර්ධන ද්රව්ය
+        other: ප්රවර්ධන ද්රව්ය
       publication:
-        one: ප්ර්කාශනය
-        other: ප්ර්කාශන
+        one: ප්රකාශනය
+        other: ප්රකාශන
       raib_report:
-        one:
-        other:
+        one: දුම්රිය අනතුරු විමර්ශන ශාඛා වාර්තාව
+        other: දුම්රිය අනතුරු විමර්ශන ශාඛා වාර්තා
       regulation:
-        one:
-        other:
+        one: නියාමනය
+        other: නියාමන
       research:
-        one: පර්යේෂණ සහ විශ්ලේෂණ
-        other: පර්යේෂණ සහ විශ්ලේෂණ
+        one: පර්යේෂණය සහ විශ්ලේෂණය
+        other: පර්යේෂණය සහ විශ්ලේෂණය
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණය
+        other: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණ
       service_sign_in:
-        one:
-        other:
+        one: සේවා පිවිසුම
+        other: සේවා පිවිසුම
       service_standard_report:
-        one:
-        other:
+        one: සේවා සම්මත වාර්තාව
+        other: සේවා සම්මත වාර්තා
       speaking_notes:
-        one: දේශනයට අදාළ සටහන්
-        other: දේශනයට අදාළ සටහන්
+        one: කතා සටහන්
+        other: කතා සටහන්
       speech:
         one: කථාව
         other: කථා
       standard:
-        one:
-        other:
+        one: ප්‍රමිතිය
+        other: ප්‍රමිති
       statement_to_parliament:
-        one: පාර්ලිමේන්තුවට කල ප්‍රකාශය
-        other: පාර්ලිමේන්තුවට කල ප්‍රකාශ
+        one: පාර්ලිමේන්තුව වෙත ප්රකාශය
+        other: පාර්ලිමේන්තුව වෙත ප්රකාශ
       statistical_data_set:
-        one: සංඛ්යාන දත්ත සමූහය  
-        other: සංඛ්යාන දත්ත සමූහ
+        one: සංඛ්යාලේඛන දත්ත කට්ටලය
+        other: සංඛ්යාලේඛන දත්ත කට්ටල
       statistics_announcement:
-        one:
-        other:
+        one: සංඛ්යාලේඛන නිකුත් කිරීමේ නිවේදනය
+        other: සංඛ්යාලේඛන නිකුත් කිරීමේ නිවේදන
       statutory_guidance:
-        one:
-        other:
+        one: ව්යවස්ථාපිත මඟ පෙන්වීම
+        other: ව්යවස්ථාපිත මඟ පෙන්වීම
       take_part:
-        one:
-        other:
+        one: සහභාගී වන්න
+        other: සහභාගී වන්න
       tax_tribunal_decision:
-        one:
-        other:
+        one: බදු සහ චාන්සරි විනිශ්චය මණ්ඩල තීරණය
+        other: බදු සහ චාන්සරි විනිශ්චය මණ්ඩල තීරණ
       transcript:
-        one: අනුපත
-        other: " අනුපත්"
+        one: ප්‍රතිලේඛනය
+        other: ප්‍රතිලේඛන
       transparency:
-        one: විනිවිධභාවයේ දත්ත
-        other: විනිවිධභාවයේ දත්ත
+        one: විනිවිදභාව දත්ත
+        other: විනිවිදභාව දත්ත
       utaac_decision:
-        one:
-        other:
+        one: පරිපාලන අභියාචනා විනිශ්චය මණ්ඩල තීරණය
+        other: පරිපාලන අභියාචනා විනිශ්චය මණ්ඩල තීරණ
       world_location_news_article:
         one: පුවත් ලිපිය
         other: පුවත් ලිපි
       world_news_story:
-        one:
-        other:
+        one: ලෝක පුවත් කතාව
+        other: ලෝක පුවත් කතා
       written_statement:
-        one: පාර්ලිමේන්තුවට කල ලිඛිත ප්‍රකාශය
-        other: පාර්ලිමේන්තුවට කල ලිඛිත ප්‍රකාශ
+        one: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශය
+        other: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශ
+    coming_soon: මෙම ලේඛනය ප්රකාශයට පත් කෙරෙන දිනය
+    contents: අන්තර්ගත
+    metadata:
+      published: පළ කළේ
+      updated: යාවත්කාලීන කෙරිණි
+  publication:
+    documents:
+      one: ලේඛණය
+      other: ලේඛන
+    details: විස්තර
+  brexit:
+    business_link: ව්යාපාර සඳහා බ්රෙක්සිට් මඟ පෙන්වීම
+    citizen_link: පුද්ගලයින් සහ පවුල් සඳහා බ්රෙක්සිට් මඟ පෙන්වීම
+    heading_prefix: වෙනසක් තිබේ
+  common:
+    last_updated:
+    visit: 'පිවිසෙන්න:'
+  components:
+    figure:
+      image_credit: 'රූප සඳහා ස්තූතියි: %{credit}'
+    published_dates:
+      hide_all_updates: සියලු යාවත්කාලීන සඟවන්න
+      last_updated: අවසන් වරට යාවත්කාලීන කළේ %{date}
+      published: පළ කළේ %{date}
+      see_all_updates: සියලුම යාවත්කාලීනයන් බලන්න
+      show_all_updates: සියලු යාවත්කාලීනයන් පෙන්වන්න
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: සියල්ල සැඟවන්න
+      show_all: සියල්ල පෙන්වන්න
+    save_this_page:
+      add_page_button: ඔබගේ සුරකින ලද පිටු වලට එක් කරන්න
+      confirmations:
+        page_removed:
+          message: ඔබගේ සුරකින ලද පිටු වලින් ඔබ මෙය ඉවත් කර ඇත
+        page_saved:
+          message: ඔබගේ සුරකින ලද පිටු වලට ඔබ මෙය එක් කර ඇත
+      page_not_saved_heading: මෙම පිටුව සුරකින්න, එවිට ඔබට පසුව එය වෙත පැමිණිය හැකිය
+      page_was_saved_heading: ඔබ මෙම පිටුව සුරැකී ඇත
+      remove_page_button: ඔබගේ සුරකින ලද පිටු වලින් ඉවත් කරන්න
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">සුරකින
+        ලද පිටු බලන්න</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">සයින්
+        ඉන් වන්න</a> සුරකින ලද පිටු බැලීමට.
+    share_links:
+      share_this_page: මෙම පිටුව බෙදාගන්න
+  consultation:
+    and: සහ
+    another_website_html: මෙම උපදේශනය %{closed} <a href="%{url}">වෙනත් වෙබ් අඩවියක</a>
+      පවත් වනු ලැබේ
+    at: දී
+    closes: එය වසන වේලාව
+    closes_at: මෙම උපදේශනය වසන වේලාව
+    complete_a: එකක් සම්පූර්ණ කරන්න
+    description: උපදේශන විස්තරය
+    detail_of_feedback_received: ලැබුණු ප්‍රතිපෝෂණ පිළිබඳ විස්තර
+    detail_of_outcome: ප්රතිඵලය පිළිබඳ විස්තර
+    documents: ලේඛන
+    download_outcome: සම්පූර්ණ ප්රතිඵලය බාගන්න
+    either: එක්කෝ
+    email_to: 'විද්‍යුත් තැපෑල් යවන්න:'
+    feedback_received: ලැබුණු ප්රතිපෝෂණය
+    is_being: වෙමින් පවතී
+    not_open_yet: මෙම උපදේශනය තවමත් විවෘත කර නැත
+    'on':
+    opens: මෙම උපදේශනය විවෘත වේ
+    original_consultation: මුල් උපදේශනය
+    ran_from: මෙම උපදේශනය ක්‍රියාත්මක වුනේ
+    respond_online: මාර්ගගතව ප්රතිචාර දක්වන්න
+    'true': නිවැරදි
+    visit_soon: මෙම මහජන ප්රතිපෝෂණය සඳහා වූ ප්රතිඵල බාගත කිරීම&nbsp;සඳහා ළඟදීම නැවත
+      මෙම පිටුවට පිවිසෙන්න.
+    was: විය
+    ways_to_respond: ප්රතිචාර දැක්විමේ ක්‍රම
+    write_to: 'ලියන්න:'
+  contact:
+    email: විද්‍යුත් තැපෑල
+    find_call_charges: ඇමතුම් ගාස්තු ගැන සොයා බලන්න
+    online: මාර්ගගතව
+    phone: දුරකථනය
+    webchat: වෙබ් චැට්
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: සංවිධානයේ තොරතුරු
-    personal_information_charter_html: ඔබගේ පුද්ගලික තොරතුරු භාවිතා කිරීම ගැන අපේ %{link} පැහැදිලි කිරීම
-    publication_scheme_html: අප නිතර අපේ %{link} පල කරන තොරතුරු වර්ගයන් ගැන කියවන්න
-    social_media_use_html: " %{link}හිදී අපේ ප්‍රතිපත්ති කියවන්න"
-    welsh_language_scheme_html: " %{link} හි පල කිරීමට අපේ ඇති කැපවීම ගැන කියවන්න"
+    about_our_services_html: "%{link} සොයන්න."
+    corporate_information: ආයතනික තොරතුරු
+    personal_information_charter_html: අගේ %{link} අපි ඔබගේ පුද්ගලික තොරතුරු හසුරුවන
+      ආකාරය විස්තර කරයි.
+    publication_scheme_html: අපේ %{link} තුල අපි ආකාරික ලෙස ප්රකාශයට පත් කරන තොරතුරු
+      වර්ග ගැන කියවන්න.
+    social_media_use_html: අපේ ප්රතිපත්තිය කියවන්න %{link}.
+    welsh_language_scheme_html: "%{link} සඳහා අපේ කැපවීම ගැන සොයා බලන්න."
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: ආරක්ෂක අමාත්යාංශ ලාංඡනය
+    field_of_operation: මෙහෙයුම් ක්ෂේත්රය
+    operations_in: "%{location} තුළ මෙහෙයුම්"
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: තව දුරටත් ලද නොහැක
+    published_in_error: මෙම පිටුවේ ඇති තොරතුරු ඉවත් කර ඇත්තේ එය වැරදීමකින් ප්රකාශයට
+      පත් කර ඇති බැවිනි.
+    title: ඔබ සොයන පිටුව තවදුරටත් ලබා ගත නොහැක
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: මෙම මාර්ගෝපදේශයෙහි තුළ පිටු
+    skip_to_contents: මාර්ගෝපදේශය අන්තර්ගතය වෙත මඟහැරී යන්න
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: මෙම ප්රකාශනය %{url} වෙතින් ලබා ගත හැකිය
+      copyright: "© රාජ්‍ය කතුහිමිකම %{year}"
+      isbn: 'ISBN:'
+      licence_html: මෙම ප්රකාශනයට වෙනත් ආකාරයකින් සඳහන් කර ඇති අවස්ථාවන්හි හැර විවෘත
+        රාජ්ය බලපත්ර v3.0 හි නියමයන් යටතේ බලපත්ර ලබා දී ඇත. මෙම බලපත්‍රය බැලීමට, <a
+        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        වෙත පිවිසෙන්න නැතහොත් The Information Policy Team, The National Archives,
+        Kew, London TW9 4DU වෙත ලියන්න නැතහොත් <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk
+        </a> වෙත විද්‍යුත් තැපෑලක් එවන්න.
+      third_party: අපි යම් තෙවන පාර්ශවීය ප්රකාශන හිමිකම් තොරතුරු හඳුනාගෙන ඇති අවස්ථාවක
+        ඔබ අදාළ ප්රකාශන හිමිකම් හිමියන්ගෙන් අවසර ලබා ගත යුතුය.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
     si: සිංහල
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one: ලේඛණය
-      other: ලේඛණ
+    next_page: ඊළඟ
+    previous_page: පෙර
+    print_entire_guide: සම්පූර්ණ මාර්ගෝපදේශය මුද්රණය කරන්න
   service_sign_in:
-    continue:
+    continue: ඉදිරියටයන්න
     error:
-      option:
-      title:
+      option: කරුණාකර විකල්පයක් තෝරන්න
+      title: ඔබ විකල්පයක් තෝරාගෙන නැත
   shared:
-    historically_political:
+    historically_political: මෙය %{government} යටතේ ප්‍රකාශණය කරණ ලදී
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: චැට් කිරීමට උපදේශකයින් ඇත.
+      busy: සියලුම වෙබ් චැට් උපදේශකයින් මේ මොහොතේ කාර්ය බහුලයි.
+      closed: වෙබ් චැට් මේ මොහොතේ වසා ඇත.
+      speak_to_adviser: දැන් උපදේශකයෙකුට කතා කරන්න
+      technical_problem: තාක්ෂණික ගැටළු හේතුවෙන් වෙබ් චැට් මේ මොහොතේ ලබා ගත නොහැක.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Designated Origin UK Protected යන වචන සහිත
+      කළු මුද්දරයක් වේ
+    pgi_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Geographic Origin UK Protected යන වචන සහිත
+      කළු මුද්දරයක් වේ
+    tsg_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Traditional Speciality UK Protected යන වචන
+      සහිත කළු මුද්දරයක් වේ
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: බෙදාහරින ලද දිනය
+    location: ස්ථානය
+    written_on: ලියන ලද දිනය
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: අවලංගු කිරීමේ දිනය
+    cancelled: සංඛ්යාලේඛන නිකුත් කිරීම අවලංගු කෙරිණි
+    changed_date: නිකුත් කිරීමේ දිනය වෙනස් කර ඇත
+    forthcoming: මෙම සංඛ්යාලේඛන නිකුත් කරනු ලබන්නේ
+    previous_date: පෙර දිනය
+    proposed_date: යෝජිත නිකුතුව
+    reason_for_change: වෙනස් වීමට හේතුව
+    release_date: නිකුත් කිරීමේ දිනය
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත්
+        අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය
+        සංවාරයක යෙදිය හැකිය.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
+    context: විදේශ ගමන් උපදෙස්
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          ඔබ කොහේ ජීවත් වූවත් වර්තමාන COVID-19 රීති අනුගමනය කරන්න: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">එංගලන්තය</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">ස්කොට්ලන්තය</a>, <a href="https://gov.wales/coronavirus-travel">වේල්ස්</a> සහ <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">උතුරු අයර්ලන්තය</a>.
+        </p>
+        <p class="govuk-body">
+          නම කොවිඩ් ප්‍රභේද එක්සත් රාජධානියට ඇතුළ් වීම වැළක්වීම පිණිස,ඔබ පහත සඳහන් රටවල සංචාරයේ නිරත විය නොයතුය <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber or red list countries</a>.
+        </p>
+        <p class="govuk-body">
+          රටක ඇති අවදානම දැන ගැනීමට <a href="/guidance/travel-advice-novel-coronavirus">FCDO සංචාර උපදෙස් අනුගමනය කරන්න</a>.
+        </p>
+        <p class="govuk-body">
+          ඔබ ආපසු පැමිණෙන විට <a href="/uk-border-control">විදේශයක සිට එක්සත් රාජධානියට අතුළු වීමේ රීති අනුගමනය කරන්න</a> (අයර්ලන්තය වෙතින් හැර).
+        </p>
+      text_assistive: වැදගත්
+      title: කොරෝනා වයිරස් (COVID-19) සංචාරය
+    still_current_at: තවමත් වත්මන්
+    summary: සාරාංශය
+    updated: යාවත්කාලීන කෙරිණි
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: තව දුරටත් ලද නොහැක
+    summary: මෙම පිටුවේ ඇති තොරතුරු ඉවත් කර ඇත්තේ එය වැරදීමකින් ප්රකාශයට පත් කර ඇති
+      බැවිනි.
+    title: ඔබ සොයන පිටුව තවදුරටත් ලබා ගත නොහැක
   working_group:
-    contact_details:
-    policies:
+    contact_details: විමසීම් විස්තර
+    policies: ප්රතිපත්ති

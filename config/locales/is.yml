@@ -1,484 +1,422 @@
----
 is:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Skýrsla Flugslysanefndar
+        other: Skýrslur Flugslysanefndar
+      announcement:
+        one: Tilkynning
+        other: Tilkynningar
+      asylum_support_decision:
+        one: Úrskurður dómstóls um hælisstuðning
+        other: Úrskurðir dómstóls um hælisstuðning
+      authored_article:
+        one: Samin grein
+        other: Samdar greinar
+      business_finance_support_scheme:
+        one: Ráðagerð um fjárhagslegan stuðning við fyrirtæki
+        other: Ráðagerðir um fjárhagslegan stuðning við fyrirtæki
+      case_study:
+        one: Ferilsathugun
+        other: Ferilsathuganir
+      closed_consultation:
+        one: Lokuð ráðgjöf
+        other: Lokaðar ráðgjafir
+      cma_case:
+        one: Mál Samkeppnis- og Markaðsstofu
+        other: Mál Samkeppnis- og Markaðsstofu
+      coming_soon:
+        one: Væntanlegt
+        other: Væntanlegt
+      consultation:
+        one: Ráðgjöf
+        other: Ráðgjafir
+      consultation_outcome:
+        one: Útkoma ráðgjafar
+        other: Útkomur ráðgjafar
+      corporate_information_page:
+        one: Upplýsingasíða
+        other: Upplýsingasíður
+      corporate_report:
+        one: Skýrsla fyrirtækis
+        other: Skýrslur fyrirtækja
+      correspondence:
+        one: Samskipti
+        other: Samskipti
+      countryside_stewardship_grant:
+        one: Styrkur til umsýslu sveitar
+        other: Styrkir til umsýslu sveitar
+      decision:
+        one: Ákvörðun
+        other: Ákvarðanir
+      detailed_guide:
+        one: Leiðsögn
+        other: Leiðsögn
+      dfid_research_output:
+        one: Útkoma úr Rannsóknum fyrir Uppbyggingu
+        other: Útkomur úr Rannsóknum fyrir Uppbyggingu
+      document_collection:
+        one: Safn
+        other: Söfn
+      draft_text:
+        one: Textadrög
+        other: Textadrög
+      drug_safety_update:
+        one: Uppfærsla varðandi lyfjaöryggi
+        other: Uppfærslur varðandi lyfjaöryggi
+      employment_appeal_tribunal_decision:
+        one: Úrskurður áfrýjunardómstóls um atvinnu
+        other: Úrskurðir áfrýjunardómstóls um atvinnu
+      employment_tribunal_decision:
+        one: Úrskurður dómstóls um atvinnu
+        other: Úrskurðir dómstóls um atvinnu
+      esi_fund:
+        one: Evrópskur Uppbyggingar- og Fjárfestingarsjóður (ESIF)
+        other: Evrópskir Uppbyggingar- og Fjárfestingarsjóðir (ESIF)
+      fatality_notice:
+        one: Tilkynning um dauðsfall
+        other: Tilkynningar um dauðsfall
+      foi_release:
+        one: Upplýsingafrelsi (FOI) útgáfa
+        other: Upplýsingafrelsi (FOI) útgáfur
+      form:
+        one: Eyðublað
+        other: Eyðublöð
+      government_response:
+        one: Viðbrögð stjórnvalda
+        other: Viðbrögð stjórnvalda
+      guidance:
+        one: Leiðbeiningar
+        other: Leiðbeiningar
+      impact_assessment:
+        one: Áhrifamat
+        other: Áhrifamöt
+      imported:
+        one: hlaðið inn - bíð eftir gerð
+        other: hlaðið inn - bíð eftir gerð
+      independent_report:
+        one: Óháð skýrsla
+        other: Óháðar skýrslur
+      international_development_fund:
+        one: Fjármögnun alþjóðlegrar uppbyggingar
+        other: Fjármögnun alþjóðlegrar uppbyggingar
+      international_treaty:
+        one: Alþjóðasamningur
+        other: Alþjóðasamningar
+      maib_report:
+        one: Skýrsla Sjóslysanefndar
+        other: Skýrslur Sjóslysanefndar
+      map:
+        one: Kort
+        other: Kort
+      medical_safety_alert:
+        one: Viðvaranir og innköllun lyfja og lækningatækja
+        other: Viðvaranir og innköllun lyfja og lækningatækja
+      national:
+        one: Tilkynning Hagstofu
+        other: Tilkynningar Hagstofur
+      national_statistics:
+        one: Hagstofa
+        other: Hagstofa
+      national_statistics_announcement:
+        one: Tilkynning Hagstofu
+        other: Tilkynningar Hagstofur
+      news_article:
+        one: Fréttagrein
+        other: Fréttagreinar
+      news_story:
+        one: Frétt
+        other: Fréttir
+      notice:
+        one: Tilkynning
+        other: Tilkynningar
+      official:
+        one: Tilkynning um opinbera tölfræði
+        other: Tilkynningar um opinbera tölfræði
+      official_statistics:
+        one: Opinber tölfræði
+        other: Opinber tölfræði
+      official_statistics_announcement:
+        one: Tilkynning um opinbera tölfræði
+        other: Tilkynningar um opinbera tölfræði
+      open_consultation:
+        one: Opin ráðgjöf
+        other: Opnar ráðgjafir
+      oral_statement:
+        one: Munnleg yfirlýsing til Þingsins
+        other: Munnlegar yfirlýsingar til Þingsins
+      policy:
+        one: Stefna
+        other: Stefnur
+      policy_paper:
+        one: Stefnu ritgerð
+        other: Stefnu ritgerðir
+      press_release:
+        one: Fréttatilkynning
+        other: Fréttatilkynningar
+      promotional:
+        one: Kynningarefni
+        other: Kynningarefni
+      publication:
+        one: Útgáfa
+        other: Útgáfa
+      raib_report:
+        one: Skýrsla Lestaslysanefndar
+        other: Skýrslur Lestaslysanefndar
+      regulation:
+        one: Reglugerð
+        other: Reglugerðir
+      research:
+        one: Rannsóknir og greining
+        other: Rannsóknir og greining
+      residential_property_tribunal_decision:
+        one: Úrskurður dómstóls íbúðarhúsnæði
+        other: Úrskurðir dómstóls íbúðarhúsnæði
+      service_sign_in:
+        one: Þjónustu innskráning
+        other: Þjónustu innskráning
+      service_standard_report:
+        one: Skýrsla um Þjónustustaðal
+        other: Skýrslur um Þjónustustaðal
+      speaking_notes:
+        one: Ræðupunktar
+        other: Ræðupunktar
+      speech:
+        one: Ræða
+        other: Ræður
+      standard:
+        one: Staðall
+        other: Staðlar
+      statement_to_parliament:
+        one: Yfirlýsing til Þingsins
+        other: Yfirlýsingar til Þingsins
+      statistical_data_set:
+        one: Tölfræðilegt gagnasett
+        other: Tölfræðileg gagnasett
+      statistics_announcement:
+        one: Tilkynning um útgáfu tölfræðigagna
+        other: Tilkynningar um útgáfu tölfræðigagna
+      statutory_guidance:
+        one: Lagalegar leiðbeiningar
+        other: Lagalegar leiðbeiningar
+      take_part:
+        one: Taka þátt
+        other: Taka þátt
+      tax_tribunal_decision:
+        one: Úrskurður dómstóls Skatta og Kansellísins
+        other: Úrskurðir dómstóls Skatta og Kansellísins
+      transcript:
+        one: Handrit
+        other: Handrit
+      transparency:
+        one: Gögn um gagnsæi
+        other: Gögn um gagnsæi
+      utaac_decision:
+        one: Úrskurður stjórnsýslulegs áfrýjunardómstóls
+        other: Úrskurðir stjórnsýslulegs áfrýjunardómstóls
+      world_location_news_article:
+        one: Fréttagrein
+        other: Fréttagreinar
+      world_news_story:
+        one: Heimsfrétt
+        other: Heimsfréttir
+      written_statement:
+        one: Skrifleg yfirlýsing til Þingsins
+        other: Skriflegar yfirlýsingar til Þingsins
+    coming_soon: Þetta skjal verður birt á
+    contents: Efni
+    metadata:
+      published: Birt
+      updated: Uppfært
+  publication:
+    documents:
+      one: Skjal
+      other: Skjöl
+    details: Nánari upplýsingar
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Brexit leiðbeiningar fyrir fyrirtæki
+    citizen_link: Brexit leiðbeiningar fyrir einstaklinga og fjölskyldur
+    heading_prefix: Það eru mismunandi
   common:
     last_updated:
-    visit:
+    visit: 'Heimsæktu:'
   components:
     figure:
-      image_credit:
+      image_credit: Uppruni myndar %{credit}
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: fela allar uppfærslur
+      last_updated: Síðast uppfært %{date}
+      published: Birt %{date}
+      see_all_updates: sjá allar uppfærslur
+      show_all_updates: sýna allar uppfærslur
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: fela allt
+      show_all: sýna allt
+    save_this_page:
+      add_page_button: Bæta í þínar vistaðar síður
+      confirmations:
+        page_removed:
+          message: Þú hefur fjarlægt þetta úr þínum vistuðu síðum
+        page_saved:
+          message: Þú hefur bætt þessu í þínar vistaðar síður
+      page_not_saved_heading: Vistaðu þessa síðu svo þú getir komið að henni aftur
+        seinna
+      page_was_saved_heading: Þú vistaðir þessa síðu
+      remove_page_button: Fjarlægt úr þínum vistuðu síðum
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Sjá
+        þínar vistuðu síður</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Skráðu
+        þig inn</a> til að sjá þínar vistuðu síður.
     share_links:
-      share_this_page:
+      share_this_page: Deila þessari síðu
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: og
+    another_website_html: Þessi ráðgjöf %{closed} var haldin á <a href="%{url}">annarri
+      vefsíðu</a>
+    at: þann
+    closes: Henni lýkur
+    closes_at: Þessari ráðgjöf lýkur
+    complete_a: Ljúka
+    description: Lýsing á ráðgjöf
+    detail_of_feedback_received: Nánari upplýsingar um fengna endurgjöf
+    detail_of_outcome: Nánari upplýsingar um útkomu
+    documents: Skjöl
+    download_outcome: Sækja alla útkomuna
+    either: eða
+    email_to: 'Senda tölvupóst á:'
+    feedback_received: Endurgjöf móttekin
+    is_being: er
+    not_open_yet: Þessi ráðgjöf er ekki enn opin
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Þessi ráðgjöf opnar
+    original_consultation: Upprunaleg ráðgjöf
+    ran_from: Þessi ráðgjöf stóð yfir frá
+    respond_online: Svara á netinu
+    'true': satt
+    visit_soon: Heimsæktu þessa síðu bráðlega aftur til að sækja útkomuna úr þessari
+      opinberu endurgjöf.
+    was: var
+    ways_to_respond: Leiðir til að svara
+    write_to: 'Skrifa til:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: Tölvupóstfang
+    find_call_charges: Komast að hvað símtöl kosta
+    online: Á netinu
+    phone: Í síma
+    webchat: Vefspjall
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Kynntu þér málið %{link}.
+    corporate_information: Upplýsingar um fyrirtæki
+    personal_information_charter_html: "%{link} okkar útskýrir hvernig við meðhöndlum
+      þínar persónulegu upplýsingar."
+    publication_scheme_html: Lestu um hvaða upplýsingar við birtum reglulega í %{link}
+      okkar.
+    social_media_use_html: Lestu stefnuna okkar varðandi %{link}.
+    welsh_language_scheme_html: Kynntu þér skuldbindingu okkar við %{link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Skjaldarmerki Varnarmálaráðuneytisins
+    field_of_operation: Starfsvið
+    operations_in: Starfsemi á %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Ekki lengur aðgengileg
+    published_in_error: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna
+      þess að þær voru birtar fyrir mistök.
+    title: Síðan sem þú leitar að er ekki lengur aðgengileg
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Síður í þessum leiðbeiningum
+    skip_to_contents: Fara beint í leiðbeiningarnar
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Þessi útgáfa er aðgengileg á %{url}
+      copyright: "© Höfundarréttur Krúnunnar %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Þessi útgáfa fellur undir skilmála Open Government Licence v3.0
+        nema annað sé tekið fram. Heimsæku til að skoða þessa skilmála <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        eða skrifaðu til Information Policy Team, The National Archives, Kew, London
+        TW9 4DU, eða sendu tölvupóst: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Þar sem við höfum auðkennt að eitthvað fellur undir höfundarrétt
+        þriðja aðila munt þú þurfa leyfi frá þeim höfundarrétthafa.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is: Íslensk
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    is: Íslenska
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Næsta
+    previous_page: Fyrri
+    print_entire_guide: Prenta allar leiðbeiningarnar
   service_sign_in:
-    continue:
+    continue: Halda áfram
     error:
-      option:
-      title:
+      option: Vinsamlegast veldu valmöguleika
+      title: Þú hefur ekki valið valmöguleika
   shared:
-    historically_political:
+    historically_political: Þetta var gefið út undir %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Ráðgjafar eru til taks í spjall.
+      busy: Allir ráðgjafar í vefspjalli eru uppteknir í augnablikinu.
+      closed: Vefspjallið er lokað í augnblikinu.
+      speak_to_adviser: Tala við ráðgjafa núna
+      technical_problem: Vefspjallið er ekki aðgengilegt í augnablikinu vegna tæknilegra
+        örðugleika.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Designated
+      Origin UK Protected
+    pgi_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Geographic
+      Origin UK Protected
+    tsg_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Traditional
+      Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Afhent þann
+    location: Staðsetning
+    written_on: Skrifað þann
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Dagsetning aflýsingar
+    cancelled: Útgáfu tölfræðigagna aflýst
+    changed_date: Útgáfudagsetningunni hefur verið breytt
+    forthcoming: Þessi tölfræði verður gefin út
+    previous_date: Fyrri dagsetning
+    proposed_date: Fyrirhuguð útgáfa
+    reason_for_change: Ástæða fyrir breytingu
+    release_date: Útgáfudagsetning
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins nema
+        þeim allra nauðsynlegustu.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins nema
+        þeim allra nauðsynlegustu.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        ráðleggur gegn öllum ferðalögum til hluta landsins.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        ráðleggur gegn öllum ferðalögum til alls landsins.
+    context: Ráðleggingar um ferðalög erlendis
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Fylgdu núverandi COVID-19 reglum þar sem þú býrð: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> og <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Norður-Írland</a>.
+        </p>
+        <p class="govuk-body">
+          Til að koma í veg fyrir að ný COVID afbrigði berist til Bretlands, ættir þú ekki að ferðast til <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">landa á gula eða rauða listanum </a>.
+        </p>
+        <p class="govuk-body">
+          Fylgdu til að átta þig á áhættunni í landi <a href="/guidance/travel-advice-novel-coronavirus"> Ferðaráðlegginar Utanríkis-, samveldis- og þróunarráðuneytið (FCDO)</a>.
+        </p>
+        <p class="govuk-body">
+          Þegar þú kemur aftur fylgdu reglunum til að <a href="/uk-border-control">koma til Bretlands að utan</a> (nema frá Írlandi).
+        </p>
+      text_assistive: Mikilvægt
+      title: Kórónavírus (COVID-19) ferðalög
+    still_current_at: Enn uppfært þann
+    summary: Samantekt
+    updated: Uppfært
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Ekki lengur aðgengilegt
+    summary: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna þess að þær
+      voru birtar fyrir mistök.
+    title: Síðan sem þú leitar að er ekki lengur aðgengileg
   working_group:
-    contact_details:
-    policies:
+    contact_details: Upplýsingar til að hafa samband
+    policies: Stefnur

@@ -1,484 +1,423 @@
----
 'no':
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Rapport fra Air Accident Investigation Branch
+        other: Air Accidents Investigation Branch-rapporterer
+      announcement:
+        one: Kunngjøring
+        other: Kunngjøringer
+      asylum_support_decision:
+        one: Asylstøttenemndavgjørelse
+        other: Asylstøttenemndavgjørelser
+      authored_article:
+        one: Forfatterartikkel
+        other: Forfatterartikler
+      business_finance_support_scheme:
+        one: Forretningsfinansieringsstøtteordning
+        other: Forretningsfinansieringsstøtteordninger
+      case_study:
+        one: Casestudie
+        other: Casestudier
+      closed_consultation:
+        one: Lukket konsultasjon
+        other: Lukkede konsultasjoner
+      cma_case:
+        one: Konkurranse- og markedstilsynsak
+        other: Konkurranse- og markedstilsynsaker
+      coming_soon:
+        one: Kommer snart
+        other: Kommer snart
+      consultation:
+        one: Konsultasjon
+        other: Konsultasjoner
+      consultation_outcome:
+        one: Konsultasjonsresultat
+        other: Konsultasjonsresultater
+      corporate_information_page:
+        one: Informasjonsside
+        other: Informasjonssider
+      corporate_report:
+        one: Bedriftsrapport
+        other: Bedriftsrapporter
+      correspondence:
+        one: Korrespondanse
+        other: Korrespondanser
+      countryside_stewardship_grant:
+        one: Countryside Stewardship-stipend
+        other: Tilskudd fra Countryside Stewardship-stipend
+      decision:
+        one: Beslutning
+        other: Beslutninger
+      detailed_guide:
+        one: Veiledning
+        other: Veiledning
+      dfid_research_output:
+        one: Resultater av forskning for utvikling
+        other: Resultater av forskning for utvikling
+      document_collection:
+        one: Samling
+        other: Samlinger
+      draft_text:
+        one: Utkast til tekst
+        other: Utkast til tekster
+      drug_safety_update:
+        one: Oppdatering av legemiddelsikkerhet
+        other: Oppdatering av legemiddelsikkerhet
+      employment_appeal_tribunal_decision:
+        one: Ansettelsesnemndas avgjørelse
+        other: Ansettelsesnemndas avgjørelser
+      employment_tribunal_decision:
+        one: Arbeidsrettsavgjørelse
+        other: Arbeidsrettsavgjørelser
+      esi_fund:
+        one: Det europeiske struktur- og investeringsfondet (ESIF)
+        other: Det europeiske struktur- og investeringsfond (ESIF)
+      fatality_notice:
+        one: Melding om dødsfall
+        other: Meldinger om dødsfall
+      foi_release:
+        one: Informasjonsfrihetstillatelse
+        other: Informasjonsfrihetstillatelser
+      form:
+        one: Skjema
+        other: Skjemaer
+      government_response:
+        one: Myndighetenes svar
+        other: Myndighetenes svar
+      guidance:
+        one: Veiledning
+        other: Veiledning
+      impact_assessment:
+        one: Konsekvensutredning
+        other: Konsekvensanalyser
+      imported:
+        one: importert - venter på type
+        other: importert - venter på type
+      independent_report:
+        one: Uavhengig rapport
+        other: Uavhengige rapporter
+      international_development_fund:
+        one: Finansiering for internasjonal utvikling
+        other: Finansiering for internasjonal utvikling
+      international_treaty:
+        one: Internasjonal traktat
+        other: Internasjonale traktater
+      maib_report:
+        one: Rapport fra havulykkeundersøkelsesavdelingen
+        other: Rapporter fra havulykkeundersøkelsesavdelingen
+      map:
+        one: Kart
+        other: Kart
+      medical_safety_alert:
+        one: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
+        other: Varsler og tilbakekallinger for medisiner og medisinsk utstyr
+      national:
+        one: Nasjonal statistikkmelding
+        other: Nasjonale statistikkmeldinger
+      national_statistics:
+        one: Nasjonal statistikk
+        other: Nasjonal statistikk
+      national_statistics_announcement:
+        one: Nasjonal statistikkmelding
+        other: Nasjonale statistikkmeldinger
+      news_article:
+        one: Nyhetsartikkel
+        other: Nyhetsartikler
+      news_story:
+        one: Nyhetssak
+        other: Nyheter
+      notice:
+        one: Merknad
+        other: Merknader
+      official:
+        one: Kunngjøring om offisiell statistikk
+        other: Kunngjøringer om offisiell statistikk
+      official_statistics:
+        one: Offisiell statistikk
+        other: Offisiell statistikk
+      official_statistics_announcement:
+        one: Kunngjøring om offisiell statistikk
+        other: Kunngjøringer om offisiell statistikk
+      open_consultation:
+        one: Åpen konsultasjon
+        other: Åpne konsultasjoner
+      oral_statement:
+        one: Muntlig uttalelse til Stortinget
+        other: Muntlige uttalelser til Stortinget
+      policy:
+        one: Retningslinjer
+        other: Retningslinjer
+      policy_paper:
+        one: Skriv om retningslinjer
+        other: Skriv om retningslinjer
+      press_release:
+        one: Pressemelding
+        other: Pressemeldinger
+      promotional:
+        one: Reklamemateriell
+        other: Reklamemateriell
+      publication:
+        one: Publikasjoner
+        other: Publikasjoner
+      raib_report:
+        one: Rapport om gransking av jernbaneulykker
+        other: Rapporter om gransking av jernbaneulykker
+      regulation:
+        one: Forskrift
+        other: Forskrifter
+      research:
+        one: Forskning og analyse
+        other: Forskning og analyse
+      residential_property_tribunal_decision:
+        one: Beslutning fra boligeiendomsnemnda
+        other: Beslutninger fra boligeiendomsnemnda
+      service_sign_in:
+        one: Tjenestepålogging
+        other: Tjeneste påloggin
+      service_standard_report:
+        one: Tjenestestandardrapport
+        other: Tjenestestandardrapporter
+      speaking_notes:
+        one: Talenotater
+        other: Talenotater
+      speech:
+        one: Tale
+        other: Taler
+      standard:
+        one: Standard
+        other: Standarder
+      statement_to_parliament:
+        one: Erklæring til Stortinget
+        other: Erklæringer til Stortinget
+      statistical_data_set:
+        one: Statistisk datasett
+        other: Statistiske datasett
+      statistics_announcement:
+        one: Kunngjøring om statistikk
+        other: Kunngjøringer om statistikk
+      statutory_guidance:
+        one: Lovpålagt veiledning
+        other: Lovpålagt veiledning
+      take_part:
+        one: Delta
+        other: Delta
+      tax_tribunal_decision:
+        one: Skatte- og kanslerettsavgjørelse
+        other: Skatte- og kanslerettsavgjørelser
+      transcript:
+        one: Transkripsjon
+        other: Transkripsjoner
+      transparency:
+        one: Åpenhetsdata
+        other: Åpenhetsdata
+      utaac_decision:
+        one: Administrativ ankenemndavgjørelse
+        other: Administrative ankenemndavgjørelser
+      world_location_news_article:
+        one: Nyhetsartikkel
+        other: Nyhetsartikler
+      world_news_story:
+        one: Verdensnyhet
+        other: Verdensnyheter
+      written_statement:
+        one: Skriftlig uttalelse til Stortinget
+        other: Skriftlige uttalelser til Stortinget
+    coming_soon: Dette dokumentet vil bli publisert den
+    contents: Innhold
+    metadata:
+      published: Publisert
+      updated: Oppdatert
+  publication:
+    documents:
+      one: Dokument
+      other: Dokumenter
+    details: Detaljer
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Brexit-veiledning for bedrifter
+    citizen_link: Brexit-veiledning for enkeltpersoner og familier
+    heading_prefix: Det er annerledes
   common:
     last_updated:
-    visit:
+    visit: 'Besøk:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Bildekreditt: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: skjul alle oppdateringer
+      last_updated: Sist oppdatert %{date}
+      published: Publisert %{date}
+      see_all_updates: se alle oppdateringer
+      show_all_updates: vis alle oppdateringer
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: Skjul alle
+      show_all: Vis alt
+    save_this_page:
+      add_page_button: Legg til til dine lagrede sider
+      confirmations:
+        page_removed:
+          message: Du har fjernet dette fra dine lagrede sider
+        page_saved:
+          message: Du har lagt dette til på dine lagrede sider
+      page_not_saved_heading: Lagre denne siden slik at du kan komme tilbake til den
+        senere
+      page_was_saved_heading: Du har lagret denne siden
+      remove_page_button: Fjern fra de lagrede sidene
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se
+        dine lagrede sider</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logg
+        inn</a> for å se dine lagrede sider.
     share_links:
-      share_this_page:
+      share_this_page: Del denne siden
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: og
+    another_website_html: Denne konsultasjonen %{closed} ble avholdt på <a href="%{url}">et
+      annet nettsted</a>
+    at: på
+    closes: Den avsluttes klokken
+    closes_at: Denne konsultasjonen avsluttes klokken
+    complete_a: Fullfør en
+    description: Konsultasjonsbeskrivelse
+    detail_of_feedback_received: Detalj av mottatt tilbakemelding
+    detail_of_outcome: Detalj av resultatet
+    documents: Dokumenter
+    download_outcome: Last ned hele resultatet
+    either: enten
+    email_to: 'E-post til:'
+    feedback_received: Tilbakemelding mottatt
+    is_being: blir
+    not_open_yet: Denne konsultasjonen er ikke åpen ennå
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Denne konsultasjonen åpner
+    original_consultation: Opprinnelig konsultasjon
+    ran_from: Denne konsultasjonen varte fra
+    respond_online: Svar online
+    'true': sant
+    visit_soon: Besøk denne siden igjen snart for å laste ned resultatet til denne
+      public&nbsp;feedback.
+    was: var
+    ways_to_respond: Måter å svare på
+    write_to: 'Skriv til:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: E-post
+    find_call_charges: Finn ut om samtalekostnader
+    online: På nett
+    phone: Telefon
+    webchat: Webchat
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Finn ut %{link}.
+    corporate_information: Bedriftsinformasjon
+    personal_information_charter_html: Vår %{link} forklarer hvordan vi behandler
+      dine personopplysninger.
+    publication_scheme_html: Les om informasjonstypene vi rutinemessig publiserer
+      i vår %{link}.
+    social_media_use_html: Les retningslinjene våre på %{link}.
+    welsh_language_scheme_html: Finn ut mer om vårt engasjement for %{link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Forsvarsdepartementets crest
+    field_of_operation: Operasjonsfelt
+    operations_in: Operasjoner i %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Ikke lenger tilgjengelig
+    published_in_error: Informasjonen på denne siden er fjernet fordi den ble publisert
+      ved en feil.
+    title: Siden du leter etter er ikke lenger tilgjengelig
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Sider i denne veiledningen
+    skip_to_contents: Gå til innholdet i guiden
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Denne publikasjonen er tilgjengelig på %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Denne publikasjonen er lisensiert under vilkårene i Open Government
+        License v3.0 med mindre annet er angitt. For å se denne lisensen, besøk <a
+        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        eller skriv til Information Policy Team, National Archives, Kew, London TW9
+        4DU, eller e-post: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Der vi har identifisert opphavsrettsinformasjon fra tredjepart,
+        må du få tillatelse fra berørte opphavsrettsinnehavere.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no': Norsk
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    'no': norsk
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Neste
+    previous_page: Forrige
+    print_entire_guide: Skriv ut hele guiden
   service_sign_in:
-    continue:
+    continue: Fortsett
     error:
-      option:
-      title:
+      option: Vennligst velg et alternativ
+      title: Du har ikke valgt et alternativ
   shared:
-    historically_political:
+    historically_political: Dette ble publisert under %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Våre rådgivere er tilgjengelige for å chatte.
+      busy: Alle webchat-rådgivere er opptatt for øyeblikket.
+      closed: Webchat er stengt for øyeblikket.
+      speak_to_adviser: Snakk med en rådgiver nå
+      technical_problem: Webchat er ikke tilgjengelig for øyeblikket på grunn av tekniske
+        problemer.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK
+      Protected
+    pgi_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK
+      Protected
+    tsg_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK
+      Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Levert på
+    location: Plassering
+    written_on: Skrevet på
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Avbestillingsdato
+    cancelled: Statistikkutgivelsen avbrutt
+    changed_date: Utgivelsesdatoen er endret
+    forthcoming: Denne statistikken vil bli offentliggjort
+    previous_date: Forrige dato
+    proposed_date: Foreslått utgivelse
+    reason_for_change: Årsak til endring
+    release_date: Utgivelsesdato
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler
+        av landet.
+      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler
+        av landet.
+      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        fraråder alle reiser til deler av landet.
+      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+        fraråder alle reiser til hele landet.
+    context: Råd om utenlandsreiser
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+        Følg de seneste COVID-19-reglene der du bor <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotttland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Nord-Irland</a>.
+        </p>
+        <p class="govuk-body">
+          For å hindre nye COVID-varianter å komme til Storbritannia, bør du ikke reise til <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">ravgule eller rødlistede land</a>.
+        </p>
+        <p class="govuk-body">
+          For å forstå et lands risiko, følg <a href="/guidance/travel-advice-novel-coronavirus">FCDO Reiseråd</a>.
+        </p>
+        <p class="govuk-body">
+          Når du kommer tilbake, følg reglene for å <a href="/uk-border-control">komme inn i Storbritannia fra utlandet</a> (unntatt fra Irland).
+        </p>
+      text_assistive: Viktig
+      title: Coronavirus-reiser (COVID-19-reiser)
+    still_current_at: Fortsatt aktuell
+    summary: Sammendrag
+    updated: Oppdatert
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Ikke lenger tilgjengelig
+    summary: Informasjonen på denne siden er fjernet fordi den ble publisert ved en
+      feil.
+    title: Siden du leter etter er ikke lenger tilgjengelig
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktinformasjon
+    policies: Retningslinjer

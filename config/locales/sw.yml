@@ -1,484 +1,422 @@
----
 sw:
+  content_item:
+    schema_name:
+      aaib_report:
+        one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Ndege
+        other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Ndege
+      announcement:
+        one: Tangazo
+        other: Matangazo
+      asylum_support_decision:
+        one: Uamuzi wa mahakama ya masuala ya msaada kwa wakimbizi wa kisiasa
+        other: Maamuzi ya mahakama ya masuala ya msaada kwa wakimbizi wa kisiasa
+      authored_article:
+        one: Makala ya maelezo ya mwandishi
+        other: Makala ya maelezo ya mwandishi
+      business_finance_support_scheme:
+        one: Mpango wa msaada wa fedha za biashara
+        other: Mipango ya msaada wa fedha za biashara
+      case_study:
+        one: Uchunguzi kifani
+        other: Uchunguzi kifani
+      closed_consultation:
+        one: Mashauriano ya watu wachache
+        other: Mashauriano ya watu wachache
+      cma_case:
+        one: Kesi ya Mamlaka ya Masoko na Ushindani
+        other: Kesi za Mamlaka ya Masoko na Ushindani
+      coming_soon:
+        one: Tunakuletea Hivi Karibuni
+        other: Tunakuletea Hivi Karibuni
+      consultation:
+        one: Mashauriano
+        other: Mashauriano
+      consultation_outcome:
+        one: Matokeo ya mashauriano
+        other: Matokeo ya mashauriano
+      corporate_information_page:
+        one: Ukurasa wa maelezo
+        other: Kurasa za maelezo
+      corporate_report:
+        one: Ripoti ya shirika
+        other: Ripoti za shirika
+      correspondence:
+        one: Mawasiliano
+        other: Mawasiliano
+      countryside_stewardship_grant:
+        one: Ruzuku ya Usimamizi wa Mashambani
+        other: Ruzuku za Usimamizi wa Mashambani
+      decision:
+        one: Uamuzi
+        other: Maamuzi
+      detailed_guide:
+        one: Mwongozo
+        other: Mwongozo
+      dfid_research_output:
+        one: Utafiti wa Matokeo ya Maendeleo
+        other: Utafiti wa Matokeo ya Maendeleo
+      document_collection:
+        one: Mkusanyiko
+        other: Mikusanyiko
+      draft_text:
+        one: Maandishi ya rasimu
+        other: Maandishi ya rasimu
+      drug_safety_update:
+        one: Taarifa ya Usalama wa Dawa
+        other: Taarifa za Usalama wa Dawa
+      employment_appeal_tribunal_decision:
+        one: Uamuzi wa mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
+        other: Maamuzi ya mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
+      employment_tribunal_decision:
+        one: Uamuzi wa mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
+        other: Maamuzi ya mahakama ya kusikiliza rufaa za mahakama za kesi za kazi
+      esi_fund:
+        one: Fedha za Muundo na Uwekezaji za Ulaya (ESIF)
+        other: Fedha za Muundo na Uwekezaji za Ulaya (ESIF)
+      fatality_notice:
+        one: Notisi ya idadi ya vifo
+        other: Notisi za idadi ya vifo
+      foi_release:
+        one: Taarifa ya FOI
+        other: Taarifa za FOI
+      form:
+        one: Fomu
+        other: Fomu
+      government_response:
+        one: Hatua iliyochukuliwa na serikali
+        other: Hatua zilizochukuliwa na serikali
+      guidance:
+        one: Mwongozo
+        other: Mwongozo
+      impact_assessment:
+        one: Utathmini wa athari
+        other: Tathmini za athari
+      imported:
+        one: zilizoagizwa kutoka nje - aina ya hali ya kusbiri
+        other: zilizoagizwa kutoka nje - aina ya hali ya kusbiri
+      independent_report:
+        one: Ripoti huru
+        other: Ripoti huru
+      international_development_fund:
+        one: Ufadhili wa maendeleo ya kimataifa
+        other: Ufadhili wa maendeleo ya kimataifa
+      international_treaty:
+        one: Mkataba wa kimataifa
+        other: Mikataba ya kimataifa
+      maib_report:
+        one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Baharini
+        other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Baharini
+      map:
+        one: Ramani
+        other: Ramani
+      medical_safety_alert:
+        one: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
+        other: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
+      national:
+        one: Tangazo la takwimu za kitaifa
+        other: Matangazo ya takwimu za kitaifa
+      national_statistics:
+        one: Takwimu za Kitaifa
+        other: Takwimu za Kitaifa
+      national_statistics_announcement:
+        one: Tangazo la takwimu za kitaifa
+        other: Matangazo ya takwimu za kitaifa
+      news_article:
+        one: Makala ya habari
+        other: Makala ya habari
+      news_story:
+        one: Taarifa ya habari
+        other: Taarifa za habari
+      notice:
+        one: Notisi
+        other: Notisi
+      official:
+        one: Tangazo la takwimu rasmi
+        other: Matangazo ya takwimu rasmi
+      official_statistics:
+        one: Takwimu Rasmi
+        other: Takwimu Rasmi
+      official_statistics_announcement:
+        one: Tangazo la takwimu rasmi
+        other: Matangazo ya takwimu rasmi
+      open_consultation:
+        one: Mashauriano ya watu wengi
+        other: Mashauriano ya watu wengi
+      oral_statement:
+        one: Taarifa ya Matamshi kwa Bunge
+        other: Taarifa za Matamshi kwa Bunge
+      policy:
+        one: Sera
+        other: Sera
+      policy_paper:
+        one: Hati ya sera
+        other: Hati za sera
+      press_release:
+        one: Taarifa kwa vyombo vya habari
+        other: Taarifa kwa vyombo vya habari
+      promotional:
+        one: Nyenzo ya matangazo
+        other: Nyenzo ya matangazo
+      publication:
+        one: Chapisho
+        other: Machapisho
+      raib_report:
+        one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Treni
+        other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Treni
+      regulation:
+        one: Kanuni
+        other: Kanuni
+      research:
+        one: Utafiti na uchanganuzi
+        other: Utafiti na uchanganuzi
+      residential_property_tribunal_decision:
+        one: Uamuzi wa mahakama ya kesi za mali ya makazi
+        other: Maamuzi ya mahakama ya kesi za mali ya makazi
+      service_sign_in:
+        one: Kuingia kwenye huduma
+        other: Kuingia kwenye huduma
+      service_standard_report:
+        one: Ripoti ya Kawaida ya Huduma
+        other: Ripoti za Kawaida za Huduma
+      speaking_notes:
+        one: Madokezo ya kutamka
+        other: Madokezo ya kutamka
+      speech:
+        one: Hotuba
+        other: Hotuba
+      standard:
+        one: Kiwango
+        other: Viwango
+      statement_to_parliament:
+        one: Taarifa kwa Bunge
+        other: Taarifa kwa Bunge
+      statistical_data_set:
+        one: Kikundi cha data ya takwimu
+        other: Vikundi vya data ya takwimu
+      statistics_announcement:
+        one: Tangazo la kutolewa kwa takwimu
+        other: Matangazo ya kutolewa kwa takwimu
+      statutory_guidance:
+        one: Mwongozo wa kisheria
+        other: Mwongozo wa kisheria
+      take_part:
+        one: Shiriki
+        other: Shiriki
+      tax_tribunal_decision:
+        one: Uamuzi wa mahakama ya Ushuru na Mahakama Kuu
+        other: Maamuzi ya mahakama ya Ushuru na Mahakama Kuu
+      transcript:
+        one: Maandishi
+        other: Maandishi
+      transparency:
+        one: Data ya uwazi
+        other: Data ya uwazi
+      utaac_decision:
+        one: Uamuzi wa mahakama ya rufaa za kesi za usimamizi
+        other: Maamuzi ya mahakama ya rufaa za kesi za usimamizi
+      world_location_news_article:
+        one: Makala ya habari
+        other: Makala ya habari
+      world_news_story:
+        one: Taarifa ya habari za kimataifa
+        other: Taarifa za habari za kimataifa
+      written_statement:
+        one: Taarifa ya Maandishi kwa Bunge
+        other: Taarifa za Maandishi kwa Bunge
+    coming_soon: Hati hii itachapishwa mnamo
+    contents: Maudhui
+    metadata:
+      published: Ilichapishwa
+      updated: Ilisasishwa
+  publication:
+    documents:
+      one: Hati
+      other: Hati
+    details: Maelezo
   brexit:
-    business_link:
-      path:
-      text:
-    citizen_link:
-      path:
-      text:
-    heading_prefix:
+    business_link: Mwongozo wa Brexit kuhusu biashara
+    citizen_link: Mwongozo wa Brexit kuhusu watu na familia
+    heading_prefix: Kuna utofauti
   common:
     last_updated:
-    visit:
+    visit: 'Tembelea:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Mpiga picha: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: ficha masasisho yote
+      last_updated: Ulisasishwa mara ya mwisho tarehe %{date}
+      published: Ulichapishwa tarehe %{date}
+      see_all_updates: angalia taarifa zote
+      show_all_updates: Onyesha taarifa zote
     publisher_metadata:
       collections:
       from:
-      hide_all:
-      show_all:
+      hide_all: ficha zote
+      show_all: onyesha zote
+    save_this_page:
+      add_page_button: Ongeza kwenye kurasa zako ulizohifadhi
+      confirmations:
+        page_removed:
+          message: Umeondoa huu kwenye kurasa zako ulizohifadhi
+        page_saved:
+          message: Umeongeza huu kwenye kurasa zako ulizohifadhi
+      page_not_saved_heading: Hifadhi ukurasa huu ili uweze kuusoma baadaye
+      page_was_saved_heading: Umehifadhi ukurasa huu
+      remove_page_button: Ondoa kwenye kurasa zako ulizohifadhi
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Angalia
+        kurasa zako ulizohifadhi</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Ingia</a>
+        ili uone kurasa zako ulizohifadhi.
     share_links:
-      share_this_page:
+      share_this_page: Shiriki ukurasa huu
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: na
+    another_website_html: Mashauriano haya %{closed} yalifanywa kwenye <a href="%{url}">tovuti
+      nyingine</a>
+    at: saa
+    closes: Yatafungwa saa
+    closes_at: Mashauriano haya yatafungwa saa
+    complete_a: Jaza
+    description: Maelezo ya mashauriano
+    detail_of_feedback_received: Maelezo ya maoni yamepokewa
+    detail_of_outcome: Maelezo ya matokeo
+    documents: Hati
+    download_outcome: Pakua matokeo yote
+    either: labda
+    email_to: 'Tuma barua pepe katika:'
+    feedback_received: Maoni yamepokewa
+    is_being: yana
+    not_open_yet: Bado mashauriano haya hayajafunguliwa
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Mashauriano haya yatafunguliwa
+    original_consultation: Mashauriano halisi
+    ran_from: Mashauriano haya yalifanywa kuanzia
+    respond_online: Jibu mtandaoni
+    'true': kweli
+    visit_soon: Tembelea ukurasa huu tena hivi karibuni ili upakue matokeo ya maoni
+      haya&nbsp;ya umma.
+    was: yalikuwa
+    ways_to_respond: Njia za kujibu
+    write_to: 'Andika barua kwa:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
-  content_item:
-    coming_soon:
-    contents:
-    metadata:
-      published:
-      updated:
-    schema_name:
-      aaib_report:
-        one:
-        other:
-      announcement:
-        one:
-        other:
-      asylum_support_decision:
-        one:
-        other:
-      authored_article:
-        one:
-        other:
-      business_finance_support_scheme:
-        one:
-        other:
-      case_study:
-        one:
-        other:
-      closed_consultation:
-        one:
-        other:
-      cma_case:
-        one:
-        other:
-      coming_soon:
-        one:
-        other:
-      consultation:
-        one:
-        other:
-      consultation_outcome:
-        one:
-        other:
-      corporate_information_page:
-        one:
-        other:
-      corporate_report:
-        one:
-        other:
-      correspondence:
-        one:
-        other:
-      countryside_stewardship_grant:
-        one:
-        other:
-      decision:
-        one:
-        other:
-      detailed_guide:
-        one:
-        other:
-      dfid_research_output:
-        one:
-        other:
-      document_collection:
-        one:
-        other:
-      draft_text:
-        one:
-        other:
-      drug_safety_update:
-        one:
-        other:
-      employment_appeal_tribunal_decision:
-        one:
-        other:
-      employment_tribunal_decision:
-        one:
-        other:
-      esi_fund:
-        one:
-        other:
-      fatality_notice:
-        one:
-        other:
-      foi_release:
-        one:
-        other:
-      form:
-        one:
-        other:
-      government_response:
-        one:
-        other:
-      guidance:
-        one:
-        other:
-      impact_assessment:
-        one:
-        other:
-      imported:
-        one:
-        other:
-      independent_report:
-        one:
-        other:
-      international_development_fund:
-        one:
-        other:
-      international_treaty:
-        one:
-        other:
-      maib_report:
-        one:
-        other:
-      map:
-        one:
-        other:
-      medical_safety_alert:
-        one:
-        other:
-      national:
-        one:
-        other:
-      national_statistics:
-        one:
-        other:
-      national_statistics_announcement:
-        one:
-        other:
-      news_article:
-        one:
-        other:
-      news_story:
-        one:
-        other:
-      notice:
-        one:
-        other:
-      official:
-        one:
-        other:
-      official_statistics:
-        one:
-        other:
-      official_statistics_announcement:
-        one:
-        other:
-      open_consultation:
-        one:
-        other:
-      oral_statement:
-        one:
-        other:
-      policy:
-        one:
-        other:
-      policy_paper:
-        one:
-        other:
-      press_release:
-        one:
-        other:
-      promotional:
-        one:
-        other:
-      publication:
-        one:
-        other:
-      raib_report:
-        one:
-        other:
-      regulation:
-        one:
-        other:
-      research:
-        one:
-        other:
-      residential_property_tribunal_decision:
-        one:
-        other:
-      service_sign_in:
-        one:
-        other:
-      service_standard_report:
-        one:
-        other:
-      speaking_notes:
-        one:
-        other:
-      speech:
-        one:
-        other:
-      standard:
-        one:
-        other:
-      statement_to_parliament:
-        one:
-        other:
-      statistical_data_set:
-        one:
-        other:
-      statistics_announcement:
-        one:
-        other:
-      statutory_guidance:
-        one:
-        other:
-      take_part:
-        one:
-        other:
-      tax_tribunal_decision:
-        one:
-        other:
-      transcript:
-        one:
-        other:
-      transparency:
-        one:
-        other:
-      utaac_decision:
-        one:
-        other:
-      world_location_news_article:
-        one:
-        other:
-      world_news_story:
-        one:
-        other:
-      written_statement:
-        one:
-        other:
+    email: Barua pepe
+    find_call_charges: Pata maelezo kuhusu gharama za kupiga simu
+    online: Mtandaoni
+    phone: Simu
+    webchat: Gumzo la mtandaoni
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Pata maelezo kuhusu %{link}.
+    corporate_information: Maelezo ya shirika
+    personal_information_charter_html: "%{link} yetu inafafanua jinsi tunavyoshughulikia
+      maelezo yako ya kibinafsi."
+    publication_scheme_html: Soma maelezo kuhusu aina za maelezo tunayochapisha kila
+      wakati kwenye %{link} yetu.
+    social_media_use_html: Soma sera yetu kwenye %{link}.
+    welsh_language_scheme_html: Pata maelezo kuhusu wajibu wetu wa %{link}.
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
-  get_involved:
-    active_blogs:
-    civil_service_quarterly:
-    civil_service:
-    closed:
-    closed_consultations:
-    closed_with_date:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fco_bloggers:
-    follow:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
-    intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
-    petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    see_the_outcome:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+    alt_text: Eneo la Wizara ya Ulinzi
+    field_of_operation: Sehemu ya kazi
+    operations_in: Shughuli zinazofanywa katika %{location}
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Hayapatikani tena
+    published_in_error: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu
+      yalichapishwa kimakosa.
+    title: Ukurasa unaotafuta haupatikani tena
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Kurasa za mwongozo huu
+    skip_to_contents: Nenda kwenye maudhui ya mwongozo
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Chapisho hili linapatikana katika %{url}
+      copyright: "© Hakimiliki ya Crown %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Chapisho hili limepewa leseni chini ya sheria na masharti ya
+        Open Government Licence v3.0 isipokuwa ibainishwe vinginevyo. Ili uone leseni,
+        tembelea <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
+        au andika barua kwa Information Policy Team, The National Archives, Kew, London
+        TW9 4DU au tuma barua pepe: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Tukitambua maelezo yoyote ya hakimiliki ya watu wengine, utahitaji
+        kupata ruhusa kutoka kwa wamiliki wa hakimiliki husika.
   i18n:
     direction:
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
     sw: Kiswahili
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
-  publication:
-    details:
-    documents:
-      one:
-      other:
+    next_page: Unaofuata
+    previous_page: Uliotangulia
+    print_entire_guide: Chapisha mwongozo wote
   service_sign_in:
-    continue:
+    continue: Endelea
     error:
-      option:
-      title:
+      option: Tafadhali teua chaguo
+      title: Hujateua chaguo lolote
   shared:
-    historically_political:
+    historically_political: Hii ilichapishwa chini ya %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Washauri wanapatikana ili kupiga gumzo nao.
+      busy: Washauri wote wa gumzo la mtandaoni hawapatikani kwa sasa.
+      closed: Huduma ya gumzo la mtandaoni imefungwa kwa sasa.
+      speak_to_adviser: Zungumza na mshauri sasa
+      technical_problem: Huduma ya gumzo la mtandaoni haipatikani kwa sasa kwa sababu
+        ya matatizo ya kiufundi.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Designated Origin
+      UK Protected
+    pgi_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Geographic Origin
+      UK Protected
+    tsg_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Traditional Speciality
+      UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Iliwasilishwa mnamo
+    location: Mahali
+    written_on: Iliandikwa mnamo
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Tarehe ya kughairiwa
+    cancelled: Taarifa ya kutangazwa kwa takwimu imeghairiwa
+    changed_date: Tarehe ya kutangazwa imebadilishwa
+    forthcoming: Takwimu hizi zitatangazwa
+    previous_date: Tarehe ya awali
+    proposed_date: Tarehe ya kutangazwa inayopendekezwa
+    reason_for_change: Sababu ya kubadilishwa
+    release_date: Tarehe ya kutangazwa
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts: Ushauri wa <abbr title="Foreign and
+        Commonwealth Office">FCO</abbr> dhidi ya usafiri wote isipokuwa usafiri muhimu
+        katika sehemu fulani za nchi.
+      avoid_all_but_essential_travel_to_whole_country: Ushauri wa <abbr title="Foreign
+        and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote isipokuwa usafiri
+        muhimu nchini kote.
+      avoid_all_travel_to_parts: Ushauri wa <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> dhidi ya usafiri wote katika sehemu fulani za nchi.
+      avoid_all_travel_to_whole_country: Ushauri wa <abbr title="Foreign and Commonwealth
+        Office">FCO</abbr> dhidi ya usafiri wote nchini kote.
+    context: Ushauri wa safari za nje ya nchi
+    coronavirus_warning:
+      content_html: |
+        <p class="govuk-body">
+          Fuata kanuni za sasa za COVID-19 mahali unakoishi: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Uingereza</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Uskoti</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Ayalandi Kaskazini</a>.
+        </p>
+        <p class="govuk-body">
+          Ili kuzuia kusambazwa kwa virusi vipya vya COVID nchini Uingereza, hupaswi kusafiri katika <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">nchi zilizowekwa kwenye orodha nyekundi au ya rangi ya kaharabu</a>.
+        </p>
+        <p class="govuk-body">
+          Ili kuelewa hatari za kusafiri katika nchi mahususi, fuata <a href="/guidance/travel-advice-novel-coronavirus">Ushauri wa Usafiri wa FCDO</a>.
+        </p>
+        <p class="govuk-body">
+          Ukirudi, fuata kanuni za <a href="/uk-border-control">kuingia nchini Uingereza kutoka nchi za nje</a> (isipokuwa ikiwa unatoka Ayalandi).
+        </p>
+      text_assistive: Muhimu
+      title: Mwongozo wa usafiri wakati wa janga la virusi vya korona (COVID-19)
+    still_current_at: Bado unapatikana katika
+    summary: Muhtasari
+    updated: Ulisasishwa
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Haupatikani tena
+    summary: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu yalichapishwa
+      kimakosa.
+    title: Ukurasa unaotafuta haupatikani tena
   working_group:
-    contact_details:
-    policies:
+    contact_details: Anwani za mawasiliano
+    policies: Sera
