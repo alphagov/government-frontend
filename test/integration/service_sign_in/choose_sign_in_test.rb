@@ -105,7 +105,7 @@ module ServiceSignIn
           end
         end
 
-        assert page.has_css?(".gem-c-button", text: "Bwrw ymlaen")
+        assert page.has_css?(".gem-c-button", text: "Parhau")
       end
     end
 
