@@ -10,4 +10,3 @@
 //= require govuk_publishing_components/components/step-by-step-nav
 
 //= require_tree ./modules
-//= require set-ga-client-id-on-form
