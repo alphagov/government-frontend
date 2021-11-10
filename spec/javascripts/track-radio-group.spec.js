@@ -13,17 +13,15 @@ describe('A radio group tracker', function () {
     spyOn(GOVUK.analytics, 'trackEvent')
 
     element = $(
-      '<div>' +
-        '<form onsubmit="event.preventDefault()">' +
-          '<input type="radio" name="sign-in-option" value="government-gateway">' +
-          '<input type="radio" name="sign-in-option" value="govuk-verify">' +
-          '<input type="radio" name="sign-in-option" value="create-an-account">' +
-          '<button>Submit</button>' +
-        '</form>' +
-      '</div>'
+      '<form onsubmit="event.preventDefault()">' +
+        '<input type="radio" name="sign-in-option" value="government-gateway">' +
+        '<input type="radio" name="sign-in-option" value="govuk-verify">' +
+        '<input type="radio" name="sign-in-option" value="create-an-account">' +
+        '<button>Submit</button>' +
+      '</form>'
     )
 
-    $(document.body).append(element)
+    $('body').append(element)
 
     tracker = new GOVUK.Modules.TrackRadioGroup(element[0])
     tracker.init()
@@ -154,19 +152,16 @@ describe('A radio group tracker', function () {
   })
 
   describe('cross domain tracking enabled', function () {
-    var $form
-
     beforeEach(function () {
       tracker.trackVerifyUser(element, { status: 'OK', value: true })
 
       spyOn(GOVUK.analytics, 'addLinkedTrackerDomain')
 
-      $form = element.find('form')
-      $form.attr('data-tracking-code', 'UA-xxxxxx')
-      $form.attr('data-tracking-domain', 'test.service.gov.uk')
-      $form.attr('data-tracking-name', 'testTracker')
+      element.attr('data-tracking-code', 'UA-xxxxxx')
+      element.attr('data-tracking-domain', 'test.service.gov.uk')
+      element.attr('data-tracking-name', 'testTracker')
 
-      tracker = new GOVUK.Modules.TrackRadioGroup($form[0])
+      tracker = new GOVUK.Modules.TrackRadioGroup(element[0])
       tracker.init()
     })
 
@@ -177,8 +172,8 @@ describe('A radio group tracker', function () {
     })
 
     it('sends an event to the linked tracker when the form is submitted', function () {
-      $form.find('input[value="govuk-verify"]').trigger('click')
-      $form.find('button').trigger('click')
+      element.find('input[value="govuk-verify"]').trigger('click')
+      element.find('button').trigger('click')
 
       expect(GOVUK.analytics.trackEvent).toHaveBeenCalledWith(
         'Radio button chosen', 'govuk-verify-with-hint', { trackerName: 'testTracker', transport: 'beacon' }

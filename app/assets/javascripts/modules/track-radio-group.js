@@ -7,7 +7,7 @@ window.GOVUK.TrackRadioGroupVerify = function (data) {
 
 (function (Modules) {
   function TrackRadioGroup (element) {
-    this.element = element.querySelector('form') || element
+    this.element = element
   }
 
   TrackRadioGroup.prototype.init = function () {
