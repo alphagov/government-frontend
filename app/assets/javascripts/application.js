@@ -11,9 +11,3 @@
 
 //= require_tree ./modules
 //= require set-ga-client-id-on-form
-
-var form = document.querySelector('.js-service-sign-in-form')
-
-if (form) {
-  new GOVUK.SetGaClientIdOnForm(form) // eslint-disable-line no-new
-}

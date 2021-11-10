@@ -1,12 +1,13 @@
-(function () {
-  'use strict'
+window.GOVUK = window.GOVUK || {}
+window.GOVUK.Modules = window.GOVUK.Modules || {};
 
-  window.GOVUK = window.GOVUK || {}
-  var GOVUK = window.GOVUK
+(function (Modules) {
+  function SetGaClientIdOnForm ($module) {
+    this.$module = $module
+  }
 
-  function SetGaClientIdOnForm (form) {
-    if (!form || !window.ga) { return }
-
+  SetGaClientIdOnForm.prototype.init = function () {
+    var form = this.$module
     window.ga(function (tracker) {
       var clientId = tracker.get('clientId')
       var action = form.getAttribute('action')
@@ -14,5 +15,5 @@
     })
   }
 
-  GOVUK.SetGaClientIdOnForm = SetGaClientIdOnForm
-})(window, window.GOVUK)
+  Modules.SetGaClientIdOnForm = SetGaClientIdOnForm
+})(window.GOVUK.Modules)
