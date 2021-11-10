@@ -1,478 +1,484 @@
+---
 ur:
-  organisations:
-    content_item:
-      schema_name:
-        aaib_report:
-          one: فضائی حادثات کی تفتیشی برانچ رپورٹ
-          other: فضائی حادثات کی تفتیشی برانچ رپورٹس
-        announcement:
-          one: اعلان
-          other: اعلانات
-        asylum_support_decision:
-          one: پناہ گزین کی معاونتی عدالت کا فیصلہ
-          other: پناہ گزین کی معاونتی عدالت کے فیصلے
-        authored_article:
-          one: مصنف کے نام کے ساتھ لکھا مضمون
-          other: مصنف کے نام کے ساتھ لکھے مضامین
-        business_finance_support_scheme:
-          one: بزنس فائنانس معاونتی اسکیم
-          other: بزنس فائنانس معاونتی اسکیمیں
-        case_study:
-          one: کیس اسٹڈی
-          other: کیس اسٹڈیز
-        closed_consultation:
-          one: محدود مشاورت
-          other: محدود مشاورتیں
-        cma_case:
-          one: مقابلے اور مارکیٹس کی اتھارٹی کا کیس
-          other: مقابلے اور مارکیٹس کی اتھارٹی کے کیسز
-        coming_soon:
-          one: جلد آ رہا ہے
-          other: جلد آ رہا ہے
-        consultation:
-          one: مشاورت
-          other: مشاورتیں
-        consultation_outcome:
-          one: مشاورت کا نتیجہ
-          other: مشاورت کے نتائج
-        corporate_information_page:
-          one: معلومات کا صفحہ
-          other: معلومات کے صفحات
-        corporate_report:
-          one: کارپوریٹ رپورٹ
-          other: کارپوریٹ رپورٹس
-        correspondence:
-          one: خط و کتابت
-          other: خط و کتابت
-        countryside_stewardship_grant:
-          one: Countryside Stewardship گرانٹ
-          other: Countryside Stewardship گرانٹس
-        decision:
-          one: فیصلہ
-          other: فیصلے
-        detailed_guide:
-          one: رہنمائی
-          other: رہنمائی
-        dfid_research_output:
-          one: ترقی کے نتیجے پر تحقیق
-          other: ترقی کے نتائج پر تحقیق
-        document_collection:
-          one: مجموعہ
-          other: مجموعے
-        draft_text:
-          one: ڈرافٹ کا متن
-          other: ڈرافٹ کے متن
-        drug_safety_update:
-          one: دوا کی حفاظتی اپ ڈیٹ
-          other: دوا کی حفاظتی اپ ڈیٹس
-        employment_appeal_tribunal_decision:
-          one: ملازمت کی اپیل کا عدالتی فیصلہ
-          other: ملازمت کی اپیل کے عدالتی فیصلے
-        employment_tribunal_decision:
-          one: ملازمت کی اپیل کا فیصلہ
-          other: ملازمت کی اپیل کے فیصلے
-        esi_fund:
-          one: یورپی بناوٹی اور سرمایہ کاری کا فنڈ (ESIF)
-          other: یورپی بناوٹی اور سرمایہ کاری کے فنڈز (ESIF)
-        fatality_notice:
-          one: موت کا نوٹس
-          other: موت کے نوٹسز
-        foi_release:
-          one: رہائی تھی۔
-          other: رہائی تھی۔
-        form:
-          one: فارم
-          other: فارمز
-        government_response:
-          one: حکومت کا جواب
-          other: حکومت کے جوابات
-        guidance:
-          one: رہنمائی
-          other: رہنمائی
-        impact_assessment:
-          one: اثر کی جانچ
-          other: اثر کی جانچ
-        imported:
-          one: درآمد شدہ - قسم کا انتظار
-          other: درآمد شدہ - قسم کا انتظار
-        independent_report:
-          one: خودمختار رپورٹ
-          other: خودمختار رپورٹس
-        international_development_fund:
-          one: عالمی ترقیاتی فنڈنگ
-          other: عالمی ترقیاتی فنڈنگ
-        international_treaty:
-          one: عالمی معاہدہ
-          other: عالمی معاہدے
-        maib_report:
-          one: میرین حادثے کی تفتیشی برانچ رپورٹ
-          other: میرین حادثے کی تفتیشی برانچ رپورٹس
-        map:
-          one: نقشہ
-          other: نقشے
-        medical_safety_alert:
-          one: ادویات اور طبی ڈیوائسز کے لیے انتباہات اور ری کالز
-          other: ادویات اور طبی ڈیوائسز کے لیے انتباہات اور ری کالز
-        national:
-          one: قومی شماریاتی اعلان
-          other: قومی شماریاتی اعلانات
-        national_statistics:
-          one: قومی شماریات
-          other: قومی شماریات
-        national_statistics_announcement:
-          one: قومی شماریاتی اعلان
-          other: قومی شماریاتی اعلانات
-        news_article:
-          one: خبروں کا مضمون
-          other: خبروں کا مضامین
-        news_story:
-          one: خبروں کی کہانی
-          other: خبروں کی کہانیاں
-        notice:
-          one: نوٹس
-          other: نوٹسز
-        official:
-          one: سرکاری شماریات کا اعلان
-          other: سرکاری شماریات کے اعلانات
-        official_statistics:
-          one: سرکاری شماریات
-          other: سرکاری شماریات
-        official_statistics_announcement:
-          one: سرکاری شماریات کا اعلان
-          other: سرکاری شماریات کے اعلانات
-        open_consultation:
-          one: آزاد مشاورت
-          other: آزاد مشاورت
-        oral_statement:
-          one: پارلیمان کے لیے زبانی بیان
-          other: پارلیمان کے لیے زبانی بیانات
-        policy:
-          one: پالیسی
-          other: پالیسیاں
-        policy_paper:
-          one: پالیسی کا کاغذ
-          other: پالیسی کے کاغذات
-        press_release:
-          one: پریس ریلیز
-          other: پریس ریلیزز
-        promotional:
-          one: تشہیری مواد
-          other: تشہیری مواد
-        publication:
-          one: پبلیکیشن
-          other: پبلیکیشنز
-        raib_report:
-          one: ریل حادثے کی تفتیشی برانچ رپورٹ
-          other: ریل حادثے کی تفتیشی برانچ رپورٹس
-        regulation:
-          one: ضابطہ
-          other: ضابطے
-        research:
-          one: تحقیق اور تجزیہ
-          other: تحقیق اور تجزیہ
-        residential_property_tribunal_decision:
-          one: رہائشی پراپرٹی کے لیے عدالتی فیصلہ
-          other: رہائشی پراپرٹی کے لیے عدالتی فیصلے
-        service_sign_in:
-          one: سروس سائن ان
-          other: سروس سائن ان
-        service_standard_report:
-          one: سروس کے معیار کی رپورٹ
-          other: سروس کے معیار کی رپورٹس
-        speaking_notes:
-          one: صوتی نوٹس
-          other: صوتی نوٹس
-        speech:
-          one: تقریر
-          other: تقاریر
-        standard:
-          one: معیار
-          other: معیارات
-        statement_to_parliament:
-          one: پارلیمان میں بیان
-          other: پارلیمان میں بیانات
-        statistical_data_set:
-          one: شماریاتی ڈیٹا سیٹ
-          other: شماریاتی ڈیٹا سیٹس
-        statistics_announcement:
-          one: شماریات کے اجراء کا اعلان
-          other: شماریات کے اجراء کا اعلانات
-        statutory_guidance:
-          one: قانونی رہنمائی
-          other: قانونی رہنمائی
-        take_part:
-          one: شرکت کریں
-          other: شرکت کریں
-        tax_tribunal_decision:
-          one: ٹیکس اینڈ چانسری عدالتی فیصلہ
-          other: ٹیکس اینڈ چانسری عدالتی فیصلے
-        transcript:
-          one: ٹرانسکرپٹ
-          other: ٹرانسکرپٹس
-        transparency:
-          one: شفافیت کا ڈیٹا
-          other: شفافیت کا ڈیٹا
-        utaac_decision:
-          one: انتظامی اپیلز کا عدالتی فیصلہ
-          other: انتظامی اپیلز کے عدالتی فیصلے
-        world_location_news_article:
-          one: خبروں کا مضمون
-          other: خبروں کے مضامین
-        world_news_story:
-          one: دنیا کی خبروں کی کہانی
-          other: دنیا کی خبروں کی کہانیاں
-        written_statement:
-          one: پالیمان کے لیے تحریری بیان
-          other: پالیمان کے لیے تحریری بیانات
-    about_page_path: "/government/organisations/%{organisation}/about"
-    administered_by: منتظم کردہ از
-    breadcrumbs:
-      courts_and_tribunals: عدالتیں اور ٹریبیونلز
-      organisations: تنظیمیں
-    contact:
-      contact_details: رابطے کی تفصیلات
-      contact_form: 'رابطے کا فارم: %{title}'
-      contact_organisation: رابطہ %{organisation}
-      email: ای میل
-      telephone: ٹیلیفون
-    corporate_information: کارپوریٹ معلومات
-    document_types:
-      documents: دستاویزات
-      guidance_and_regulation:
-        see_all:
-          path: "/search/guidance-and-regulation?organisations[]=%{organisation}&parent=%{organisation}"
-          text: تمام رہنمائی اور ضابطہ دیکھیں
-        title: رہنمائی اور ضابطہ
-      news_and_communications:
-        see_all:
-          path: "/search/news-and-communications?organisations[]=%{organisation}&parent=%{organisation}"
-          text: تمام خبریں اور مواصلات دیکھیں
-        title: خبریں اور مواصلات
-      policy_and_engagement:
-        see_all:
-          path: "/search/policy-papers-and-consultations?organisations[]=%{organisation}&parent=%{organisation}"
-          text: پالیسی کے تمام کاغذات اور مشاورتیں دیکھیں
-        title: پالیسی کے کاغذات اور مشاورتیں
-      research_and_statistics:
-        see_all:
-          path: "/search/research-and-statistics?organisations[]=%{organisation}&parent=%{organisation}"
-          text: تمام تحقیق اور شماریات
-        title: تحقیق اور شماریات
-      services:
-        see_all:
-          path: "/search/services?organisations[]=%{organisation}&parent=%{organisation}"
-          text: تمام سروسز دیکھیں
-        title: سروسز
+  brexit:
+    business_link:
+      path:
+      text:
+    citizen_link:
+      path:
+      text:
+    heading_prefix:
+  common:
+    last_updated:
+    visit:
+  components:
+    figure:
+      image_credit:
+    published_dates:
+      hide_all_updates:
+      last_updated:
+      published:
+      see_all_updates:
+      show_all_updates:
+    publisher_metadata:
+      collections:
+      from:
+      hide_all:
+      show_all:
+    share_links:
+      share_this_page:
+  consultation:
+    and:
+    another_website_html:
+    at:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_feedback_received:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    feedback_received:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    original_consultation:
+    ran_from:
+    respond_online:
+    'true':
+    visit_soon:
+    was:
+    ways_to_respond:
+    write_to:
+  contact:
+    email:
+    find_call_charges:
+    online:
+    phone:
+    webchat:
+  content_item:
+    coming_soon:
+    contents:
+    metadata:
+      published: شائع شدہ
+      updated: تجدید شدہ
+    schema_name:
+      aaib_report:
+        one:
+        other:
+      announcement:
+        one: اعلان
+        other: اعلانات
+      asylum_support_decision:
+        one:
+        other:
+      authored_article:
+        one: تحریر کردہ مضمون
+        other: تحریر کردہ مضامین
+      business_finance_support_scheme:
+        one:
+        other:
+      case_study:
+        one: کیس اسٹڈی
+        other: کیس اسٹڈیز
+      closed_consultation:
+        one: مشاورت ختم
+        other: " مشاورت ختم"
+      cma_case:
+        one:
+        other:
+      coming_soon:
+        one:
+        other:
+      consultation:
+        one: مشاورت
+        other: مشاورت
+      consultation_outcome:
+        one: مشاورت کا نتیجہ
+        other: مشاورت کے نتائج
+      corporate_information_page:
+        one:
+        other:
+      corporate_report:
+        one: کارپوریٹ رپورٹ
+        other: کارپوریٹ رپورٹس
+      correspondence:
+        one: مراسلت
+        other: مراسلات
+      countryside_stewardship_grant:
+        one:
+        other:
+      decision:
+        one:
+        other:
+      detailed_guide:
+        one: مفصل رہنمائی
+        other: مفصل رہنمائی
+      dfid_research_output:
+        one:
+        other:
+      document_collection:
+        one: سلسلہ
+        other:
+      draft_text:
+        one: ڈرافٹ متن
+        other: ڈرافٹ متن
+      drug_safety_update:
+        one:
+        other:
+      employment_appeal_tribunal_decision:
+        one:
+        other:
+      employment_tribunal_decision:
+        one:
+        other:
+      esi_fund:
+        one:
+        other:
+      fatality_notice:
+        one: وفات کی اطلاع
+        other: وفات کی اطلاعات
+      foi_release:
+        one: آزادئی معلومات کی اشاعت
+        other: آزادئی معلومات کی اشاعت
+      form:
+        one: فارم
+        other: فارمز
+      government_response:
+        one: حکومتی جوابی اقدام
+        other: حکومتی جوابی اقدامات
+      guidance:
+        one: رہنمائی
+        other: رہنمائی
+      impact_assessment:
+        one: اثرات کا تجزیہ
+        other: اثرات کے تجزیے
+      imported:
+        one: امپورٹڈ- نوع کا انتظار
+        other: امپورٹڈ- نوع کا انتظار
+      independent_report:
+        one: غیر جانبدار رپورٹ
+        other: غیر جانبداررپورٹس
+      international_development_fund:
+        one:
+        other:
+      international_treaty:
+        one:
+        other:
+      maib_report:
+        one:
+        other:
+      map:
+        one: نقشہ
+        other: نقشے
+      medical_safety_alert:
+        one:
+        other:
+      national:
+        one:
+        other:
+      national_statistics:
+        one: شماریات- قومی اعدادوشمار
+        other: شماریات- قومی اعدادوشمار
+      national_statistics_announcement:
+        one:
+        other:
+      news_article:
+        one: نیوزآرٹیکل
+        other: نیوزآرٹیکلز
+      news_story:
+        one: نیوز اسٹوری
+        other: نیوزاسٹوریز
+      notice:
+        one:
+        other:
+      official:
+        one:
+        other:
+      official_statistics:
+        one: اعدادوشمار
+        other: اعدادو شمار
+      official_statistics_announcement:
+        one:
+        other:
+      open_consultation:
+        one: جاری مشاورت
+        other: جاری مشاورت
+      oral_statement:
+        one: پارلیمنٹ میں زبانی بیان
+        other: پارلیمنٹ میں زبانی بیانات
+      policy:
+        one: پالیسی
+        other: پالیسیاں
+      policy_paper:
+        one: پالیسی پیپر
+        other: پالیسی پیپرز
+      press_release:
+        one: پریس ریلیز
+        other: پریس ریلیزز
+      promotional:
+        one: تشہیری مواد
+        other: تشہیری مواد
+      publication:
+        one: مطبوعہ
+        other: مطبوعات
+      raib_report:
+        one:
+        other:
+      regulation:
+        one:
+        other:
+      research:
+        one: تحقیق وتجزیہ
+        other: تحقیق وتجزیہ
+      residential_property_tribunal_decision:
+        one:
+        other:
+      service_sign_in:
+        one:
+        other:
+      service_standard_report:
+        one:
+        other:
+      speaking_notes:
+        one: تقریری نوٹ
+        other: تقریری نوٹ
+      speech:
+        one: تقریر
+        other: تقاریر
+      standard:
+        one:
+        other:
+      statement_to_parliament:
+        one: پارلیمنٹ میں بیان
+        other: پارلیمنٹ میں بیانات
+      statistical_data_set:
+        one: شماریاتی ڈیٹا سیٹ
+        other: " شماریاتی ڈیٹا سیٹس"
+      statistics_announcement:
+        one:
+        other:
+      statutory_guidance:
+        one:
+        other:
+      take_part:
+        one:
+        other:
+      tax_tribunal_decision:
+        one:
+        other:
+      transcript:
+        one: ٹرانسکرپٹ
+        other: ٹرانسکرپٹس
       transparency:
-        see_all:
-          path: "/search/transparency-and-freedom-of-information-releases?organisations[]=%{organisation}&parent=%{organisation}"
-          text: معلومات کے اجراء کی تمام شفافیت اور آزادی دیکھیں
-        title: معلومات کے اجراء کی شفافیت اور آزادی
-    errors_or_omissions_html: <p>نقائص یا چوک؟ <a class="govuk-link" href="/contact/govuk">ہمیں
-      یہاں پر آگاہ کریں</a>۔ غیر محکماتی عوامی دھڑوں کے لیے <a class="govuk-link"
-      href="/government/collections/public-bodies">عوامی دھڑے دیکھیں</a>۔</p>
-    featured: فیچرڈ
-    foi:
-      contact_form: FOI رابطے کا فارم
-      foi_exemption_html: |
-        تنظیم فریڈم آف انفارمیشن ایکٹ کے تحت احاطہ کردہ نہیں ہے۔
-        یہ دیکھنے کے لیے کہ کون سی تنظیمیں شامل ہیں، <a href="%{foi_url}" class="govuk-link brand__color">قانون سازی دیکھیں</a>۔
-      freedom_of_information_act: فریڈم آف انفارمیشن (FOI) ایکٹ
-      freedom_of_information_requests: فریڈم آف انفارمیشن کی درخواستیں
-      make_an_foi_request: FOI درخواست کریں
-      making_foi_requests:
-        step1_html: فریڈم آف انفارمیشن (FOI) ایکٹ اور <a href="%{how_to_path}" class="govuk-link
-          brand__color">درخواست کرنے کے طریقے کے بارے میں پڑھیں۔
-        step2_html: یہ دیکھنے کے لیے <a href="%{our_releases_path}" class="govuk-link
-          brand__color">ہماری پچھلی ریلیز</a> کی پڑتال کریں آیا ہم پہلے ہی آپ کے سوال
-          کا جواب دے چکے ہیں۔
-        step3_html: درج ذیل تفصیلات کا استعمال کرتے ہوئے ایک نئی درخواست کریں۔
-    follow_us: ہمیں فالو کریں
-    hidden_share_link: یہاں فالو کریں
-    high_profile_groups: "%{title} کے اندر اعلیٰ سطح کے گروپس"
-    index_title: "%{title} - GOV.UK"
-    jobs_contracts: نوکریاں اور معاہدے
-    latest_from: "%{title} سے تازہ ترین"
-    notices:
-      changed_name: "%{title} کو اب <a href='%{link_href}'>%{link_text}</a> کہا جاتا
-        ہے"
-      devolved: "%{title} <a href='%{link_href}'>%{link_text}</a> کی باڈی ہے"
-      joining: "%{title} کو جلد GOV.UK میں شامل کر دیا جائے گا"
-      left_gov: "%{title} اب UK حکومت سے آزاد ہے"
-      merged: "%{title} %{updated} میں <a href='%{link_href}'>%{link_text}</a> کا
-        حصہ بنا"
-      merged_no_date: "%{title} اب <a href='%{link_href}'>%{link_text}</a> کا حصہ
-        ہے"
-      no_longer_exists: "%{title} بند ہو گیا ہے"
-      no_website: "%{title} کو کوئی ویب سائٹ نہیں"
-      separate_website: "%{title} کی <a href='%{url}'>علیحدہ ویب سائٹ</a> ہے"
-      split: "%{title} کو %{links} سے تبدیل کیا گیا تھا"
-    part_of: حصہ از
-    people:
-      board_members: ہماری انتظامیہ
-      chief_professional_officers: چیف پروفیشنل آفیسرز
-      military_personnel: ہمارے سینیئر ملٹری آفیشلز
-      ministers: ہمارے وزراء
-      special_representatives: خصوصی نمائندگا
-      traffic_commissioners: ٹریفک کمشنرز
-    read_more: اس بارے میں مزید پڑھیں کہ ہم کیا کرتے ہیں
-    search_for_department: کسی محکمے، ایجنسی یا عوامی دھڑے کی تلاش کریں
-    see_all_latest_documents: تمام تازہ ترین دستاویزات دیکھیں
-    separate_website: علیحدہ ویب سائٹ
-    services_and_information: "%{acronym} کی تمام سروسز اور معلومات"
-    subscription:
-      email: ای میلز حاصل کریں
-      feed: فیڈ پر سبسکرائب کریں
-    type:
-      adhoc_advisory_group: ایڈہاک مشاورتی گروپ
-      advisory_ndpb: مشاورتی غیر محکماتی عوامی دھڑا
-      civil_service: سروس سروس
-      executive_agency: ایگزیکٹیو ایجنسی
-      executive_ndpb: ایگزیکٹیو غیر محکماتی عوامی دھڑا
-      independent_monitoring_body: خود مختار نگران باڈی
-      non_ministerial_department: غیر وزارتی محکمہ
-      other: دیگر
-      public_corporation: عوامی کارپوریشن
-      tribunal: ٹریبیونل
-    view_all: تمام کو دیکھیں
-    view_less: کم دیکھیں
-    what_we_do: "%{title} کیا کرتا ہے"
-    works_with_statement:
-      multiple: "%{works_with_count} ایجنسیوں اور عوامی دھڑوں کے ساتھ کام کرتا ہے"
-      one: "%{works_with_count} عوامی دھڑے کے ساتھ کام کرتا ہے"
-  roles:
-    heading:
-      one: کردار
-      other: کردار
-    find_out_more_html: ہمارے %{link} سیکشن میں اس کردار کے گزشتہ ہولڈرز کے بارے میں
-      مزید جانیں۔
-    headings:
-      current_holder: حالیہ کردار کا ہولڈر
-      previous_holders: گزشتہ ہولڈرز
-      responsibilities: ذمہ داریاں
-    ministerial: وزارتی کردارا
-    past: ماضی
-    previous_holders: اس کردار کے گزشتہ ہولڈرز
-    read_more: اس کردار کے بارے میں مزید
-  brexit_landing_page:
-    campaign_links:
-      lead_in: 'اگر آپ مندرجہ بالا ہیں تو پڑتال کریں کہ آپ کو کیا مختلف طور پر کرنے
-        کی ضرورت ہے:'
-      lead_out: <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click"
-        data-track-action="/transition-check/questions" data-track-category="transition-landing-page"
-        data-track-label="Get the complete list">اس بات کی مکمل فہرست</a> حاصل کریں
-        کہ آپ کو اپنے، اپنے بزنس اور اپنے اہل خانہ کے لیے کن چیزوں کی ضرورت ہے۔
-    comms:
-      read_transcript: اس ویڈیو کی ٹرانسکرپٹ کو پڑھیں
-    comms_header: اعلانات
-    data_list_title: 'Brexit کا لینڈنگ کا صفحہ: %{header}'
-    email_mailto_subject: UK's%20new%20start:%20let's%20get%20going-%20GOV.UK
-    guidance_header: بزنسز اور شہریوں کے لیے تبدیلیاں
-    meta_description: جانیں کہ سفر اور یورپ کے ساتھ کاروبار جیسی چیزوں کا Brexit کے
-      نئے اصولوں کا اطلاق کیسے ہوتا ہے۔ کارروائیوں کی شخصی کردہ فہرست حاصل کرنھے کے
-      لیے Brexit چیکر کا استعمال کریں۔
-    meta_title: Brexit
-    no_cookies:
-      change_settings_text: اپنی کوکی کی ترتیبات تبدیل کریں
-      icon_text: ویڈیو
-      or_text: یا
-      to_watch_text: ویڈیو دیکھنے کے لیے
-      watch_link_text: YouTube پر دیکھیں
-    page_header: Brexit:<br/>نئے اصول یہاں پر ہیں
-    page_header_explainer: سفر اور یورپ کے ساتھ کاروبار پر نئے اصولوں کا اطلاق ہوتا
-      ہے۔ اپنے، اپنے بزنس اور اپنے اہل خانہ کے لیے کارروائیوں کی شخصی کردہ فہرست حاصل
-      کرنے کے لیے Brexit چیکر کا استعمال کریں۔
-    sections:
-      aria_string_suffix: Brexit سے متعلق
-      guidance_and_regulation: رہنمائی اور ضابطہ
-      news_and_communications: خبریں اور مواصلات
-      policy_and_engagement: پالیسی کے کاغذات اور مشاورتیں
-      research_and_statistics: تحقیق اور شماریات
-      services: سروسز
-      transparency: معلومات کے اجراء کی شفافیت اور آزادی
-    share_links: اس صفحے کو شیئر کریں
-    take_action_list:
-      amber: تبدیل کریں
-      green: جائیں
-      red: پڑتال کریں
-    take_action_start_now: 'Brexit چیکر: ابھی شروع کریں'
-    take_action_start_now_link: "/transition-check/questions"
-    topic_section_header: Brexit کی تمام معلومات
-    topic_section_subheading: Brexit سے متعلق تمام معلومات کو براؤز کریں
-    video_section_description: |
-      <p>یورپ کے ساتھ بزنس کرنے کا طریقہ تبدیل ہو گیا ہے۔ آپ کو برآمدات، درآمدات، محصولات، ڈیٹا اور &nbsp;خدمات فراہم کرنے پر نئے اصولوں پر عمل درآمد کی ضرورت ہے۔</p>
-      <p>یہ جاننے کے لیے ویڈیو دیکھیں کہ نئے اصول آپ کے بزنس کے لیے کیا اہمیت رکھتے ہیں۔ آپ شخصی کردہ کارروائیوں کی فہرست حاصل کرنے کے لیے Brexit چیکر</a> <a href="/transition-check/questions" class="govuk-link" data-module="gem-track-click" data-track-action="/transition-check/questions" data-track-category="transition-landing-page" data-track-label="use the Brexit checker"> بھی استعمال کر سکتے ہیں۔</p>
-    video_section_link: https://www.youtube.com/watch?v=AesZZsO9mm4
-    video_section_title: اپنے بزنس کو جاری رکھیں
-    video_section_transcription_summary: ویڈیو کی ٹرانسکرپٹ دیکھیں
-    video_section_transcription_text: |
-      <p>بزنسز، UK نے اب EU کو چھوڑ دیا ہے اور اب نئے اصولوں کا اطلاق ہوتا ہے۔</p>
-      <p>اپنا بزنس جاری رکھنے کے لیے، اپنے بزنس کے لیے شخصی کردہ کارروائیاں حاصل کرنے کے لیے gov.uk/transition پر Brexit چیکر ٹول کا استعمال کریں۔</p>
-      <p>چلیے بزنس کو جاری رکھتے ہیں۔</p>
-  browse:
-    all_categories: تمام زمرہ جات
-  coronavirus_landing_page:
-    title: کورونا وائرس (COVID-19)
-  dit_landing_page:
-    guidance_title: آپ کے بزنس کو کیا جاننے کی ضرورت ہے
-    kbm-logo-alt-text: بزنس کو جاری رکھیں
-    meta_description: UK میں ٹریڈنگ کے اصول تبدیل ہو گئے ہیں۔
-    meta_title: EU میں قائم شدہ بزنس کے طور پر UK کے ساتھ ٹریڈ کریں
-    page_header: EU میں قائم شدہ بزنس کے طور پر UK کے ساتھ ٹریڈ کریں
-    page_header_explainer: "<p>UK کے ساتھ ٹریڈ کرنے کے اصول تبدیل ہو گئے ہیں۔<p>\n"
-    ribbon_text: 'اگر آپ کوئی EU میں قائم شدہ بزنس چلاتے ہیں، تو ان اصولوں کی پڑتال
-      کریں جن پر آپ کو UK میں ٹریڈنگ جاری رکھنے کے لیے عمل کرنے کی ضرورت ہے۔
-
-'
-    ribbon_title: یقینی بنائیں کہ آپ کا EU میں قائم شدہ بزنس&nbsp;تیار ہے
-    training_section_description: 'آنے والے ویبینار یا انڈسٹری کے دن کے لیے رجسٹر
-      کر کے <a href="/guidance/webinars-for-eu-based-organisations-that-trade-with-the-uk"
-      class="govuk-link"> UK بارڈر کی شرائط کے بارے میں مزید جانیں</a>۔
-
-'
-    training_section_title: UK کے ساتھ ٹریڈنگ کے لیے EU میں قائم شدہ بزنسز کے لیے
-      ویبنارز
-  latest_changes:
-    next: اگلا
-    previous: گزشتہ
-    title: تازہ ترین دستاویزات
-  ministers:
-    also_attends: کیبنٹ میں بھی شرکت کرتا ہے
-    by_department: محکمے کے وزراء
-    cabinet: کیبنٹ کے وزراء
-    govuk_title: وزراء - GOV.UK
-    title: وزراء
-    whips: Whips
-  people:
-    biography: سوانح عمری
-    previous_roles: گزشتہ کردار
-    previous_roles_in_government: حکومت میں گزشتہ کردار
-    read_more: اس شخص کے بارے میں مزید
-  second_level_browse:
-    a_to_z: A سے Z
-    detailed_guidance: حذف کردہ رہنمائی
-  services_and_information:
-    organisation_title: سروسز اور معلومات - %{title}
-    see_more_link: مزید دیکھیں
-    title: سروسز اور معلومات
+        one: ٹرانسپیرنسی ڈیٹا
+        other: ٹرانسپیرنسی ڈیٹا
+      utaac_decision:
+        one:
+        other:
+      world_location_news_article:
+        one: نیوزآرٹیکل
+        other: نیوزآرٹیکلز
+      world_news_story:
+        one:
+        other:
+      written_statement:
+        one: پارلیمنٹ میں تحریری بیان
+        other: پارلیمنٹ میں تحریری بیانات
+  corporate_information_page:
+    about_our_services_html:
+    corporate_information: کارپوریٹ معلومات
+    personal_information_charter_html: ہمارے %{link} واضح کرتے ہیں کہ ہم آپکی ذاتی معلومات کو کیسے استعمال کرتے ہیں
+    publication_scheme_html: 'ہماری معمول کے مطابق  شائع کردہ معلومات کی نوعیت  %{link} پرملاحظہ کیجئیے '
+    social_media_use_html: ہماری پالیسی  %{link} پر ملاحظہ کیجئیے
+    welsh_language_scheme_html: اشاعت کے باب میں ہمارے کمٹ منٹ %{link} میں ملاحظہ کیجئیے
+  fatality_notice:
+    alt_text:
+    field_of_operation:
+    operations_in:
+  get_involved:
+    active_blogs:
+    civil_service_quarterly:
+    civil_service:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    see_the_outcome:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
+  gone:
+    page_title:
+    published_in_error:
+    title:
+  guide:
+    pages_in_guide:
+    skip_to_contents:
+  html_publication:
+    print_meta_data:
+      available_at:
+      copyright:
+      isbn:
+      licence_html:
+      third_party:
+  i18n:
+    direction: rtl
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur: اردو
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
+  multi_page:
+    next_page:
+    previous_page:
+    print_entire_guide:
+  publication:
+    details:
+    documents:
+      one: دستاویز
+      other: دستاویزات
+  service_sign_in:
+    continue:
+    error:
+      option:
+      title:
   shared:
-    breadcrumbs_home: ہوم
-    browse:
-      prefix: 'براؤز کریں:'
-      title: GOV.UK کو براؤز کریں
-    get_emails: اس موضوع کے لیے ای میلز حاصل کریں
-    language_direction: rtl
-    language_name: انگریزی
-    topics:
-      title: "%{title}: تفصیلی معلومات"
-  subtopics:
-    get_latest: اس مواد کے لیے جدید ترین تبدیلیاں دیکھیں
-  taxons:
-    explore_sub_topics: ذیلی موضوعات کو دریافت کریں
-    organisations: تنظیمیں
-    see_all_in_topic: اس موضوع میں مزید %{type} دیکھیں
-    show_fewer_orgs: کم تنظیمیں دکھائیں
-    show_more_orgs: مزید تنظیمیں دکھائیں
-  world_wide_taxons:
-    take_the_survey: سروے کو بہتر بنانے میں مدد کے لیے اسے کریں
-    test_banner: یہ اس صفحے کے لے آؤٹ کا ٹیسٹ ورژن ہے۔
+    historically_political:
+    webchat:
+      available:
+      busy:
+      closed:
+      speak_to_adviser:
+      technical_problem:
+  specialist_document:
+    pdo_alt_text:
+    pgi_alt_text:
+    tsg_alt_text:
+  speech:
+    delivered_on:
+    location:
+    written_on:
+  statistics_announcement:
+    cancellation_date:
+    cancelled:
+    changed_date:
+    forthcoming:
+    previous_date:
+    proposed_date:
+    reason_for_change:
+    release_date:
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts:
+      avoid_all_but_essential_travel_to_whole_country:
+      avoid_all_travel_to_parts:
+      avoid_all_travel_to_whole_country:
+    context:
+    still_current_at:
+    summary:
+    updated:
+  unpublishing:
+    page_title:
+    summary:
+    title:
+  working_group:
+    contact_details:
+    policies:
