@@ -8,10 +8,8 @@ describe('SetGaClientIdOnForm', function () {
   var form
 
   beforeEach(function () {
-    form = $(
-      '<form class="js-service-sign-in-form" action="/endpoint"></form>'
-    )
-    var setId = new GOVUK.Modules.SetGaClientIdOnForm(form[0]) // eslint-disable-line no-new
+    form = $('<form action="/endpoint"></form>')
+    var setId = new GOVUK.Modules.SetGaClientIdOnForm(form[0])
     setId.init()
   })
 
