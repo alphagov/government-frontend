@@ -1,5 +1,9 @@
 window.GOVUK = window.GOVUK || {}
-window.GOVUK.Modules = window.GOVUK.Modules || {};
+window.GOVUK.Modules = window.GOVUK.Modules || {}
+
+window.GOVUK.TrackRadioGroupVerify = function (data) {
+  window.GOVUK.triggerEvent(document, 'have-verify-data', { detail: data })
+};
 
 (function (Modules) {
   function TrackRadioGroup (element) {
@@ -7,6 +11,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   TrackRadioGroup.prototype.init = function () {
+    document.addEventListener('have-verify-data', function (event) {
+      this.reportVerifyUser(this.element, event.detail)
+    }.bind(this))
+
     this.track(this.element)
 
     if (this.crossDomainTrackingEnabled(this.element)) {
@@ -32,16 +40,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   }
 
   TrackRadioGroup.prototype.checkVerifyUser = function (element) {
-    var that = this
-
-    $.ajax({
-      url: 'https://www.signin.service.gov.uk/hint',
-      cache: false,
-      dataType: 'jsonp',
-      timeout: 3000
-    }).then(function (data) {
-      that.reportVerifyUser(element, data)
-    }, function (e) { console.log('error', e) })
+    var url = 'https://www.signin.service.gov.uk/hint'
+    var timestamp = Math.floor(Date.now() / 1000)
+    var script = document.createElement('script')
+    script.setAttribute('src', url + '?callback=window.GOVUK.TrackRadioGroupVerify&_=' + timestamp)
+    document.body.appendChild(script)
   }
 
   TrackRadioGroup.prototype.trackVerifyUser = function (element, data) {
