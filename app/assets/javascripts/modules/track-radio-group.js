@@ -1,6 +1,9 @@
 window.GOVUK = window.GOVUK || {}
 window.GOVUK.Modules = window.GOVUK.Modules || {}
 
+// This callback is triggered by the script attached to the DOM by the
+// checkVerifyUser function. It has to be outside the module because the script
+// can't access the running instance of TrackRadioGroup
 window.GOVUK.TrackRadioGroupVerify = function (data) {
   window.GOVUK.triggerEvent(document, 'have-verify-data', { detail: data })
 };
@@ -39,6 +42,9 @@ window.GOVUK.TrackRadioGroupVerify = function (data) {
     }.bind(this))
   }
 
+  // The analytics data should include whether the user has previously signed in
+  // to Verify this simulates the behaviour of JSONP, returning a true or false
+  // value from Verify
   TrackRadioGroup.prototype.checkVerifyUser = function (element) {
     var url = 'https://www.signin.service.gov.uk/hint'
     var timestamp = Math.floor(Date.now() / 1000)
@@ -83,20 +89,18 @@ window.GOVUK.TrackRadioGroupVerify = function (data) {
 
   TrackRadioGroup.prototype.trackCrossDomainEvent = function (element, eventValue, options) {
     var name = element.getAttribute('data-tracking-name')
-    var eventOptions = { trackerName: name }
-
-    for (var prop in options) {
-      eventOptions[prop] = options[prop]
+    if (name) {
+      options.trackerName = name
     }
 
-    GOVUK.analytics.trackEvent('Radio button chosen', eventValue, eventOptions)
+    GOVUK.analytics.trackEvent('Radio button chosen', eventValue, options)
   }
 
   TrackRadioGroup.prototype.crossDomainTrackingEnabled = function (element) {
     return (
-      typeof element.getAttribute('data-tracking-code') !== 'undefined' &&
-      typeof element.getAttribute('data-tracking-domain') !== 'undefined' &&
-      typeof element.getAttribute('data-tracking-name') !== 'undefined'
+      element.getAttribute('data-tracking-code') &&
+      element.getAttribute('data-tracking-domain') &&
+      element.getAttribute('data-tracking-name')
     )
   }
 
