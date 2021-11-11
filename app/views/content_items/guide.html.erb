@@ -18,8 +18,6 @@
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
 
-    <%= render 'govuk_publishing_components/components/intervention' if should_show_sab_intervention? %>
-
     <% if @content_item.show_guide_navigation? %>
       <%= render "govuk_publishing_components/components/skip_link", {
         text: t("guide.skip_to_contents"),
