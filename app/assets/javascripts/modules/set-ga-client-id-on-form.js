@@ -8,11 +8,14 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
   SetGaClientIdOnForm.prototype.init = function () {
     var form = this.$module
-    window.ga(function (tracker) {
-      var clientId = tracker.get('clientId')
-      var action = form.getAttribute('action')
-      form.setAttribute('action', action + '?_ga=' + clientId)
-    })
+
+    if (window.ga) {
+      window.ga(function (tracker) {
+        var clientId = tracker.get('clientId')
+        var action = form.getAttribute('action')
+        form.setAttribute('action', action + '?_ga=' + clientId)
+      })
+    }
   }
 
   Modules.SetGaClientIdOnForm = SetGaClientIdOnForm
