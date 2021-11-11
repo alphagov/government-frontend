@@ -1,13 +1,22 @@
 <%
   published ||= false
-  history ||= []
-  history = Array(history)
+  data ||= {}
   last_updated ||= false
   link_to_history ||= false
-  history_class = "app-c-published-dates--history" if history.any?
+  notification_button_visible ||= false
+
+  history ||= []
+  history = Array(history)
+  id = "history" if history.any?
+  data[:module] = "gem-toggle" if history.any?
+
+  classes = %w(app-c-published-dates)
+  classes << "app-c-published-dates--history" if history.any?
+  # the wrapper needs some extra margin on the bottom when it is followed by the page notification button
+  classes << GovukPublishingComponents::Presenters::SharedHelper.new({margin_bottom: 2}).get_margin_bottom if notification_button_visible
 %>
 <% if published || last_updated %>
-<div class="app-c-published-dates <%= history_class %>" <% if history.any? %>id="history" data-module="gem-toggle"<% end %> lang="en">
+<%= content_tag :div, class: classes, data: data, id: id, lang: "en" do %>
   <% if published %>
     <%= t('components.published_dates.published', date: published) %>
   <% end %>
@@ -33,5 +42,5 @@
       </div>
     <% end %>
   <% end %>
-</div>
+<% end %>
 <% end %>

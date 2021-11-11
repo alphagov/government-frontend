@@ -72,4 +72,23 @@ class PublisherMetadataTest < ComponentTestCase
     assert_select ".app-c-publisher-metadata__other a[href='/government/collections/civil-justice-statistics-quarterly']", text: "Civil justice statistics quarterly"
     assert_select ".app-c-publisher-metadata__other a[href='/government/collections/offender-management-statistics-quarterly']", text: "Offender management statistics quarterly"
   end
+
+  test "can render the component with a single page notification button, when link_to_history is true and base_path is present" do
+    render_component(other: { from: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>"] }, published: "31 July 2017", last_updated: "20 September 2017", link_to_history: true, include_notification_button: true, base_path: "/current-page")
+
+    assert_select ".app-c-publisher-metadata .gem-c-single-page-notification-button"
+    assert_select ".app-c-publisher-metadata .gem-c-single-page-notification-button input[type='hidden'][value='/current-page']"
+  end
+
+  test "does not render a single page notification button when link_to_history is not present" do
+    render_component(other: { from: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>"] }, published: "31 July 2017", last_updated: "20 September 2017", include_notification_button: true, base_path: "/current-page")
+
+    assert_select ".app-c-publisher-metadata .gem-c-single-page-notification-button", false
+  end
+
+  test "does not render a single page notification button when base_path is not present" do
+    render_component(other: { from: ["<a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>"] }, published: "31 July 2017", last_updated: "20 September 2017", link_to_history: true, include_notification_button: true)
+
+    assert_select ".app-c-publisher-metadata .gem-c-single-page-notification-button", false
+  end
 end

@@ -5,10 +5,13 @@
   other ||= {}
   other_has_values = other.values.compact.reject(&:blank?).any?
   metadata = [published, last_updated]
+  base_path ||= nil
+  notification_button_visible = base_path && local_assigns.include?(:include_notification_button) && link_to_history
 %>
 <% if metadata.any? || other_has_values %>
   <div class="app-c-publisher-metadata" lang="en">
-    <%= render 'components/published-dates', published: published, last_updated: last_updated, link_to_history: link_to_history %>
+    <%= render 'components/published-dates', published: published, last_updated: last_updated, link_to_history: link_to_history, notification_button_visible: notification_button_visible %>
+    <%= render 'govuk_publishing_components/components/single_page_notification_button', base_path: base_path if notification_button_visible %>
     <% if other_has_values %>
       <div class="app-c-publisher-metadata__other">
         <dl data-module="gem-track-click">

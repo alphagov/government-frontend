@@ -89,3 +89,17 @@ examples:
             - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
     context:
       right_to_left: true
+  with_single_page_notification_button:
+    description: |
+      The component can render with a single page email notification button which allows the user to subscribe to email notifications about the current page. The button should only appear on pages with an update history (therefore it has been set to appear only if `link_to_history` is true).
+
+      In the initial stages, there is a requirement to control which pages the button appears on – hence the presence of an additional `include_notification_button` flag.
+    data:
+      published: 31 July 2017
+      last_updated: 20 September 2017
+      link_to_history: true
+      include_notification_button: true
+      base_path: '/the-current-page'
+      other:
+        from:
+          - <a href='/government/organisations/ministry-of-defence'>Ministry of Defence</a>
