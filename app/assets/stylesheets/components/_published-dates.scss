@@ -1,6 +1,7 @@
 .app-c-published-dates {
   direction: ltr;
   line-height: 1.45em;
+  color: govuk-colour("black");
 }
 
 .app-c-published-dates__toggle {
@@ -12,7 +13,7 @@
 }
 
 .app-c-published-dates__change-history {
-  margin: 20px 0;
+  margin: govuk-spacing(4) 0;
 }
 
 .app-c-published-dates__list {
@@ -21,7 +22,7 @@
 
 .app-c-published-dates__change-item {
   list-style-type: none;
-  margin-bottom: 10px;
+  margin-bottom: govuk-spacing(2);
 }
 
 .app-c-published-dates__change-date {
