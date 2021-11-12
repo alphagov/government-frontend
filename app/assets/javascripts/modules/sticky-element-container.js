@@ -7,111 +7,112 @@
   Use 'data-module="sticky-element-container"' to instantiate, and add
   `[data-sticky-element]` to the child you want to position.
 */
+
+window.GOVUK = window.GOVUK || {}
+window.GOVUK.Modules = window.GOVUK.Modules || {};
+
 (function (Modules) {
-  'use strict'
+  function StickyElementContainer (element) {
+    this.wrapper = element
+    this.stickyElement = this.wrapper.querySelector('[data-sticky-element]')
+    this.hasResized = true
+    this.hasScrolled = true
+    this.interval = 50
+    this.windowVerticalPosition = 1
+    this.startPosition = 0
+    this.stopPosition = 0
+  }
 
-  Modules.StickyElementContainer = function () {
-    var self = this
+  StickyElementContainer.prototype.init = function () {
+    if (!this.stickyElement) return
 
-    self.getWindowDimensions = function () {
-      return {
-        height: window.innerHeight,
-        width: window.innerWidth
-      }
-    }
+    window.onresize = this.onResize
+    window.onscroll = this.onScroll
+    setInterval(this.checkResize.bind(this), this.interval)
+    setInterval(this.checkScroll.bind(this), this.interval)
+    this.checkResize()
+    this.checkScroll()
+    this.stickyElement.classList.add('sticky-element--enabled')
+  }
 
-    self.getWindowPositions = function () {
-      return {
-        scrollTop: window.scrollY
-      }
-    }
-
-    self.start = function ($el) {
-      var wrapper = $el[0]
-      var stickyElement = wrapper.querySelector('[data-sticky-element]')
-
-      var hasResized = true
-      var hasScrolled = true
-      var interval = 50
-      var windowVerticalPosition = 1
-      var startPosition, stopPosition
-
-      initialise()
-
-      function initialise () {
-        window.onresize = onResize
-        window.onscroll = onScroll
-        setInterval(checkResize, interval)
-        setInterval(checkScroll, interval)
-        checkResize()
-        checkScroll()
-        stickyElement.classList.add('sticky-element--enabled')
-      }
-
-      function onResize () {
-        hasResized = true
-      }
-
-      function onScroll () {
-        hasScrolled = true
-      }
-
-      function checkResize () {
-        if (hasResized) {
-          hasResized = false
-          hasScrolled = true
-
-          var windowDimensions = self.getWindowDimensions()
-          var elementHeight = wrapper.offsetHeight || parseFloat(wrapper.style.height.replace('px', ''))
-          startPosition = wrapper.offsetTop
-          stopPosition = wrapper.offsetTop + elementHeight - windowDimensions.height
-        }
-      }
-
-      function checkScroll () {
-        if (hasScrolled) {
-          hasScrolled = false
-
-          windowVerticalPosition = self.getWindowPositions().scrollTop
-
-          updateVisibility()
-          updatePosition()
-        }
-      }
-
-      function updateVisibility () {
-        var isPastStart = startPosition < windowVerticalPosition
-        if (isPastStart) {
-          show()
-        } else {
-          hide()
-        }
-      }
-
-      function updatePosition () {
-        var isPastEnd = stopPosition < windowVerticalPosition
-        if (isPastEnd) {
-          stickToParent()
-        } else {
-          stickToWindow()
-        }
-      }
-
-      function stickToWindow () {
-        stickyElement.classList.add('sticky-element--stuck-to-window')
-      }
-
-      function stickToParent () {
-        stickyElement.classList.remove('sticky-element--stuck-to-window')
-      }
-
-      function show () {
-        stickyElement.classList.remove('sticky-element--hidden')
-      }
-
-      function hide () {
-        stickyElement.classList.add('sticky-element--hidden')
-      }
+  StickyElementContainer.prototype.getWindowDimensions = function () {
+    return {
+      height: window.innerHeight,
+      width: window.innerWidth
     }
   }
+
+  StickyElementContainer.prototype.getWindowPositions = function () {
+    return {
+      scrollTop: window.scrollY
+    }
+  }
+
+  StickyElementContainer.prototype.onResize = function () {
+    this.hasResized = true
+  }
+
+  StickyElementContainer.prototype.onScroll = function () {
+    this.hasScrolled = true
+  }
+
+  StickyElementContainer.prototype.checkResize = function () {
+    if (this.hasResized) {
+      this.hasResized = false
+      this.hasScrolled = true
+
+      var windowDimensions = this.getWindowDimensions()
+      var elementHeight = this.wrapper.offsetHeight || parseFloat(this.wrapper.style.height.replace('px', ''))
+      this.startPosition = this.wrapper.offsetTop
+      this.stopPosition = this.wrapper.offsetTop + elementHeight - windowDimensions.height
+    }
+  }
+
+  StickyElementContainer.prototype.checkScroll = function () {
+    if (this.hasScrolled) {
+      this.hasScrolled = false
+      this.hasResized = true
+
+      this.windowVerticalPosition = this.getWindowPositions().scrollTop
+
+      this.updateVisibility()
+      this.updatePosition()
+    }
+  }
+
+  StickyElementContainer.prototype.updateVisibility = function () {
+    var isPastStart = this.startPosition < this.windowVerticalPosition
+    if (isPastStart) {
+      this.show()
+    } else {
+      this.hide()
+    }
+  }
+
+  StickyElementContainer.prototype.updatePosition = function () {
+    var isPastEnd = this.stopPosition < this.windowVerticalPosition
+    if (isPastEnd) {
+      this.stickToParent()
+    } else {
+      this.stickToWindow()
+    }
+  }
+
+  StickyElementContainer.prototype.stickToWindow = function () {
+    this.stickyElement.classList.add('sticky-element--stuck-to-window')
+  }
+
+  StickyElementContainer.prototype.stickToParent = function () {
+    this.stickyElement.classList.remove('sticky-element--stuck-to-window')
+  }
+
+  StickyElementContainer.prototype.show = function () {
+    this.stickyElement.classList.remove('sticky-element--hidden')
+  }
+
+  StickyElementContainer.prototype.hide = function () {
+    this.stickyElement.classList.add('sticky-element--hidden')
+  }
+
+  Modules.StickyElementContainer = StickyElementContainer
 })(window.GOVUK.Modules)
