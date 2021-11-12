@@ -134,6 +134,10 @@ private
       return
     end
 
+    # use these and `@content_item.base_path` in the template
+    @notification_button_visible = in_single_page_notifications_trial?
+    @include_single_page_notification_button_js = account_session_header.present?
+
     request.variant = :print if params[:variant] == "print"
 
     respond_to do |format|
@@ -205,6 +209,13 @@ private
   def set_account_vary_header
     # Override the default from GovukPersonalisation::ControllerConcern so pages are cached on each flash message
     # variation, rather than caching pages per user
-    response.headers["Vary"] = [response.headers["Vary"], "GOVUK-Account-Session-Flash"].compact.join(", ")
+    response.headers["Vary"] = [response.headers["Vary"], "GOVUK-Account-Session-Exists", "GOVUK-Account-Session-Flash"].compact.join(", ")
+  end
+
+  def in_single_page_notifications_trial?
+    %w[
+      /government/publications/open-standards-for-government
+      /government/publications/identity-proofing-and-verification-of-an-individual
+    ].include? @content_item.base_path
   end
 end
