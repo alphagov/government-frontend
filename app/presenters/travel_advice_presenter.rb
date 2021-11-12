@@ -80,7 +80,7 @@ class TravelAdvicePresenter < ContentItemPresenter
     alert_statuses = content_item["details"]["alert_status"] || []
     alert_statuses = alert_statuses.map do |alert|
       if allowed_statuses.include?(alert)
-        copy = I18n.t("travel_advice.alert_status.#{alert}").html_safe
+        copy = I18n.t("travel_advice.alert_status.#{alert}_html").html_safe
         view_context.tag.p(copy)
       end
     end

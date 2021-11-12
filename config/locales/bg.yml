@@ -386,15 +386,15 @@ bg:
     release_date: Дата на издаване
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> препоръчва да не се пътува до някои части на страната,
         освен ако това не е необходимо.
-      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> препоръчва да не се пътува из цялата страна, освен ако
         не е необходимо.
-      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         препоръчва да не се пътува до някои части на страната.
-      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         препоръчва да не се пътува из цялата страна.
     context: Съвети при пътуване в чужбина
     coronavirus_warning:

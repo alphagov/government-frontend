@@ -385,15 +385,15 @@ it:
     release_date: Data di rilascio
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: L’<abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_parts_html: L’<abbr title="Foreign and Commonwealth
         Office">FCO</abbr> sconsiglia tutti i viaggi tranne quelli essenziali in alcune
         parti del paese.
-      avoid_all_but_essential_travel_to_whole_country: L’<abbr title="Foreign and
+      avoid_all_but_essential_travel_to_whole_country_html: L’<abbr title="Foreign and
         Commonwealth Office">FCO</abbr> sconsiglia tutti i viaggi tranne quelli essenziali
         in tutto il paese.
-      avoid_all_travel_to_parts: L’<abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_parts_html: L’<abbr title="Foreign and Commonwealth Office">FCO</abbr>
         sconsiglia tutti i viaggi in alcune parti del paese.
-      avoid_all_travel_to_whole_country: L’<abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_whole_country_html: L’<abbr title="Foreign and Commonwealth Office">FCO</abbr>
         sconsiglia tutti i viaggi in tutto il paese.
     context: Consigli per viaggi all'estero
     coronavirus_warning:

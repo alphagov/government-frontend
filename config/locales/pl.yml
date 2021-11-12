@@ -535,14 +535,14 @@ pl:
     release_date: Data publikacji
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> odradza wszelkie podróże do niektórych części kraju, z
         wyjątkiem tych niezbędnych.
-      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> odradza wszelkie podróże do kraju, z wyjątkiem tych niezbędnych.
-      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         odradza wszelkie podróże do niektórych części kraju.
-      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         odradza wszelkie podróże do kraju.
     context: Porady dotyczące podróży zagranicznych
     coronavirus_warning:

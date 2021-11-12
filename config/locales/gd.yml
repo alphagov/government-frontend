@@ -538,15 +538,15 @@ gd:
     release_date: Dáta foilsithe
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: Molann an <abbr title="Foreign and
+      avoid_all_but_essential_travel_to_parts_html: Molann an <abbr title="Foreign and
         Commonwealth Office">FCO</abbr> gach taisteal ach an taisteal is riachtanaí
         chuig áiteanna áirithe sa tír a sheachaint.
-      avoid_all_but_essential_travel_to_whole_country: Molann an <abbr title="Foreign
+      avoid_all_but_essential_travel_to_whole_country_html: Molann an <abbr title="Foreign
         and Commonwealth Office">FCO</abbr> gach taisteal, seachas taisteal riachtanach,
         a sheachaint ar fud na tíre.
-      avoid_all_travel_to_parts: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_parts_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         gach taisteal chuig codanna den tír a sheachaint.
-      avoid_all_travel_to_whole_country: Molann an <abbr title="Foreign and Commonwealth
+      avoid_all_travel_to_whole_country_html: Molann an <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> duit gach taisteal ar fud na tíre a sheachaint.
     context: Comhairle phraiticiúil do thaistealaithe eachtracha
     coronavirus_warning:

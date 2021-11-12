@@ -375,13 +375,13 @@ ko:
     release_date: 공개 날짜
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> 는 해당 국가의 각지를 여행하지 말라고 권고합니다.
-      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> 는 해당 국가의 전역을 여행하지 말라고 권고합니다.
-      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         는 해당 국가 각지로의 모든 여행을 삼가라고 권고합니다.
-      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         는 해당 국가 전역으로의 모든 여행을 삼가라고 권고합니다.
     context: 외국 여행 권고
     coronavirus_warning:

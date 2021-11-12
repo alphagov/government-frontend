@@ -536,15 +536,15 @@ sr:
     release_date: Datum objavljivanja
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> ne preporučuje putovanja koja nisu esencijalna za delove
         zemlje.
-      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
         Office">FCO</abbr> ne preporučuje putovanja koja nisu esencijalna za celu
         zemlju.
-      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         ne preporučuje putovanja za delove zemlje.
-      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
         ne preporučuje putovanja za celu zemlju.
     context: Preporuka o putovanjima van zemlje
     coronavirus_warning:

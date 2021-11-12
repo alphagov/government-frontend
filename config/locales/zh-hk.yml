@@ -374,11 +374,11 @@ zh-hk:
     release_date: 發佈日期
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，如非必要，請勿前往該國部份地區。
-      avoid_all_but_essential_travel_to_whole_country: <abbr title="外交及聯邦事務部">FCO</abbr>
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，如非必要，請勿前往該國部份地區。
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr>
         建議，如非必要，請勿前往該國全部地區。
-      avoid_all_travel_to_parts: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國部份地區。
-      avoid_all_travel_to_whole_country: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國全部地區。
+      avoid_all_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國部份地區。
+      avoid_all_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國全部地區。
     context: 海外旅行建議
     coronavirus_warning:
       content_html: |
