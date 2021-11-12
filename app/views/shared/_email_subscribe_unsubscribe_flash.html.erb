@@ -1,0 +1,20 @@
+<% if @account_flash.include?("email-subscription-success") %>
+  <div class="govuk-grid-row govuk-!-margin-top-7">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/success_alert", {
+        message: sanitize(t("email.subscribe_title")),
+        description: sanitize(t("email.description_html"))
+      } %>
+    </div>
+  </div>
+
+<% elsif @account_flash.include?("email-unsubscribe-success") %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-7">
+      <%= render "govuk_publishing_components/components/success_alert", {
+        message: sanitize(t("email.unsubscribe_title")),
+        description: sanitize(t("email.description_html"))
+      } %>
+    </div>
+  </div>
+<% end %>

@@ -366,6 +366,29 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
+  test "sets GOVUK-Account-Session-Flash in the Vary header" do
+    content_item = content_store_has_schema_example("case_study", "case_study")
+    get :show, params: { path: path_for(content_item) }
+
+    assert response.headers["Vary"].include?("GOVUK-Account-Session-Flash")
+  end
+
+  test "displays the subscription success banner when the 'email-subscription-success' flash is present" do
+    content_item = content_store_has_schema_example("publication", "publication")
+
+    request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-subscription-success])
+    get :show, params: { path: path_for(content_item) }
+    assert response.body.include?("subscribed to emails about this page")
+  end
+
+  test "displays the unsubscribe success banner when the 'email-unsubscribe-success' flash is present" do
+    content_item = content_store_has_schema_example("publication", "publication")
+
+    request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-unsubscribe-success])
+    get :show, params: { path: path_for(content_item) }
+    assert response.body.include?("unsubscribed from emails about this page")
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale
