@@ -1,5 +1,83 @@
+---
 es-419:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Orientación sobre el Brexit para las empresas
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Orientación sobre el Brexit para familias y particulares
+    heading_prefix: Hay distintos
+  common:
+    last_updated:
+    visit: 'Visite:'
+  components:
+    figure:
+      image_credit: 'Crédito de la imagen: %{credit}'
+    published_dates:
+      hide_all_updates: ocultar todas las novedades
+      last_updated: Última actualización %{date}
+      published: Publicado %{date}
+      see_all_updates: ver todas las novedades
+      show_all_updates: mostrar todas las actualizaciones
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: ocultar todo
+      show_all: mostrar todo
+    save_this_page:
+      add_page_button: Añadir a sus páginas guardadas
+      confirmations:
+        page_removed:
+          message: Has eliminado esto de tus páginas guardadas
+        page_saved:
+          message: Has añadido esto a tus páginas guardadas
+      page_not_saved_heading: Guarde esta página para poder volver a ella más tarde
+      page_was_saved_heading: Has guardado esta página
+      remove_page_button: Eliminar de sus páginas guardadas
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Ver sus páginas guardadas</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Iniciar sesión</a> para ver sus páginas guardadas.
+    share_links:
+      share_this_page: Compartir esta página
+  consultation:
+    and: y
+    another_website_html: Esta consulta %{closed} realizada en <a href="%{url}">otro sitio web</a>
+    at: en
+    closes: Se cierra a
+    closes_at: Esta consulta se cierra a las
+    complete_a: Completar un
+    description: Descripción de la consulta
+    detail_of_feedback_received: Detalle de los comentarios recibidos
+    detail_of_outcome: Detalle del resultado
+    documents: Documentos
+    download_outcome: Descargar el resultado completo
+    either: tampoco
+    email_to: 'Enviar un email a:'
+    feedback_received: Comentarios recibidos
+    is_being: está siendo
+    not_open_yet: Esta consulta aún no está abierta
+    'on':
+    opens: Esta consulta abre
+    original_consultation: Consulta inicial
+    ran_from: Esta consulta se llevó a cabo desde
+    respond_online: Responder en línea
+    'true': verdadero
+    visit_soon: Vuelva a visitar esta página próximamente para descargar el resultado de esta opinión&nbsp;pública.
+    was: fue
+    ways_to_respond: Formas de responder
+    write_to: 'Escriba a:'
+  contact:
+    email: Email
+    find_call_charges: Conozca las tarifas de las llamadas
+    online: En línea
+    phone: Teléfono
+    webchat: Chat web
   content_item:
+    coming_soon: Este documento se publicará en
+    contents: Contenido
+    metadata:
+      published: Publicado
+      updated: Actualizado
     schema_name:
       aaib_report:
         one: Informe de la División de Investigación de Accidentes Aéreos
@@ -223,99 +301,11 @@ es-419:
       written_statement:
         one: Declaración escrita ante el Parlamento
         other: Declaraciones escritas ante el Parlamento
-    coming_soon: Este documento se publicará en
-    contents: Contenido
-    metadata:
-      published: Publicado
-      updated: Actualizado
-  publication:
-    documents:
-      one: Documento
-      other: Documentos
-    details: Detalles
-  brexit:
-    business_link:
-      text: Orientación sobre el Brexit para las empresas
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Orientación sobre el Brexit para familias y particulares
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Hay distintos
-  common:
-    last_updated:
-    visit: 'Visite:'
-  components:
-    figure:
-      image_credit: 'Crédito de la imagen: %{credit}'
-    published_dates:
-      hide_all_updates: ocultar todas las novedades
-      last_updated: Última actualización %{date}
-      published: Publicado %{date}
-      see_all_updates: ver todas las novedades
-      show_all_updates: mostrar todas las actualizaciones
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: ocultar todo
-      show_all: mostrar todo
-    save_this_page:
-      add_page_button: Añadir a sus páginas guardadas
-      confirmations:
-        page_removed:
-          message: Has eliminado esto de tus páginas guardadas
-        page_saved:
-          message: Has añadido esto a tus páginas guardadas
-      page_not_saved_heading: Guarde esta página para poder volver a ella más tarde
-      page_was_saved_heading: Has guardado esta página
-      remove_page_button: Eliminar de sus páginas guardadas
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Ver
-        sus páginas guardadas</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Iniciar
-        sesión</a> para ver sus páginas guardadas.
-    share_links:
-      share_this_page: Compartir esta página
-  consultation:
-    and: y
-    another_website_html: Esta consulta %{closed} realizada en <a href="%{url}">otro
-      sitio web</a>
-    at: en
-    closes: Se cierra a
-    closes_at: Esta consulta se cierra a las
-    complete_a: Completar un
-    description: Descripción de la consulta
-    detail_of_feedback_received: Detalle de los comentarios recibidos
-    detail_of_outcome: Detalle del resultado
-    documents: Documentos
-    download_outcome: Descargar el resultado completo
-    either: tampoco
-    email_to: 'Enviar un email a:'
-    feedback_received: Comentarios recibidos
-    is_being: está siendo
-    not_open_yet: Esta consulta aún no está abierta
-    'on':
-    opens: Esta consulta abre
-    original_consultation: Consulta inicial
-    ran_from: Esta consulta se llevó a cabo desde
-    respond_online: Responder en línea
-    'true': verdadero
-    visit_soon: Vuelva a visitar esta página próximamente para descargar el resultado
-      de esta opinión&nbsp;pública.
-    was: fue
-    ways_to_respond: Formas de responder
-    write_to: 'Escriba a:'
-  contact:
-    email: Email
-    find_call_charges: Conozca las tarifas de las llamadas
-    online: En línea
-    phone: Teléfono
-    webchat: Chat web
   corporate_information_page:
     about_our_services_html: Conozca %{link}.
     corporate_information: Información corporativa
-    personal_information_charter_html: Nuestro %{link} explica cómo manejamos su información
-      personal.
-    publication_scheme_html: Lea los tipos de información que publicamos habitualmente
-      en nuestro %{link}.
+    personal_information_charter_html: Nuestro %{link} explica cómo manejamos su información personal.
+    publication_scheme_html: Lea los tipos de información que publicamos habitualmente en nuestro %{link}.
     social_media_use_html: Lea nuestra normativa en %{link}.
     welsh_language_scheme_html: Conozca nuestro compromiso con %{link}.
   fatality_notice:
@@ -324,8 +314,7 @@ es-419:
     operations_in: Operaciones en %{location}
   gone:
     page_title: No disponible
-    published_in_error: La información de esta página se ha eliminado porque se publicó
-      erróneamente.
+    published_in_error: La información de esta página se ha eliminado porque se publicó erróneamente.
     title: La página que busca ya no está disponible
   guide:
     pages_in_guide: Páginas en esta guía
@@ -335,14 +324,8 @@ es-419:
       available_at: Esta publicación está disponible en %{url}
       copyright: "© Crown copyright %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Esta publicación está autorizada bajo los términos de la Licencia
-        de Gobierno Abierto v3.0, salvo que se indique lo contrario. Para ver esta
-        licencia, visite <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        o escriba a Information Policy Team, The National Archives, Kew, London TW9
-        4DU, o envíe un correo electrónico: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Cuando identifiquemos cualquier información de derechos de autor
-        de terceros, deberá obtener el permiso de los titulares de los derechos de
-        autor correspondientes.
+      licence_html: 'Esta publicación está autorizada bajo los términos de la Licencia de Gobierno Abierto v3.0, salvo que se indique lo contrario. Para ver esta licencia, visite <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> o escriba a Information Policy Team, The National Archives, Kew, London TW9 4DU, o envíe un correo electrónico: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Cuando identifiquemos cualquier información de derechos de autor de terceros, deberá obtener el permiso de los titulares de los derechos de autor correspondientes.
   i18n:
     direction:
   language_names:
@@ -351,6 +334,11 @@ es-419:
     next_page: Siguiente
     previous_page: Anterior
     print_entire_guide: Imprimir la guía completa
+  publication:
+    details: Detalles
+    documents:
+      one: Documento
+      other: Documentos
   service_sign_in:
     continue: Continúa
     error:
@@ -363,15 +351,11 @@ es-419:
       busy: Todos los asesores del Chat web están ocupados en este momento.
       closed: El Chat web está cerrado en este momento.
       speak_to_adviser: Hable con un asesor ahora
-      technical_problem: El Chat web no está disponible en este momento debido a problemas
-        técnicos.
+      technical_problem: El Chat web no está disponible en este momento debido a problemas técnicos.
   specialist_document:
-    pdo_alt_text: El logotipo del programa es un sello negro con las palabras "Designated
-      Origin UK Protected"
-    pgi_alt_text: El logotipo del programa es un sello negro con las palabras "Geographic
-      Origin UK Protected"
-    tsg_alt_text: El logotipo del programa es un sello negro con las palabras "Traditional
-      Speciality UK Protected"
+    pdo_alt_text: El logotipo del programa es un sello negro con las palabras "Designated Origin UK Protected"
+    pgi_alt_text: El logotipo del programa es un sello negro con las palabras "Geographic Origin UK Protected"
+    tsg_alt_text: El logotipo del programa es un sello negro con las palabras "Traditional Speciality UK Protected"
   speech:
     delivered_on: Entregado en
     location: Ubicación
@@ -387,16 +371,10 @@ es-419:
     release_date: Fecha de publicación
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: El <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> desaconseja todos los viajes que no sean imprescindibles
-        a algunas zonas del país.
-      avoid_all_but_essential_travel_to_whole_country_html: El <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> desaconseja todo viaje que no sea imprescindible
-        a todo el país.
-      avoid_all_travel_to_parts_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        desaconseja todo viaje a partes del país.
-      avoid_all_travel_to_whole_country_html: El <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> desaconseja todo viaje a todo el país.
+      avoid_all_but_essential_travel_to_parts_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todos los viajes que no sean imprescindibles a algunas zonas del país.
+      avoid_all_but_essential_travel_to_whole_country_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todo viaje que no sea imprescindible a todo el país.
+      avoid_all_travel_to_parts_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todo viaje a partes del país.
+      avoid_all_travel_to_whole_country_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todo viaje a todo el país.
     context: Consejos para viajar al extranjero
     coronavirus_warning:
       content_html: |

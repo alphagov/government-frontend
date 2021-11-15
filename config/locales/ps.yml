@@ -1,5 +1,83 @@
+---
 ps:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: د سوداګرۍ لپاره د بریکسیت لارښود
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: د افرادو او کورنیو لپاره د بریکسیت لارښود
+    heading_prefix: توپیر لري
+  common:
+    last_updated:
+    visit: 'لیدنه:'
+  components:
+    figure:
+      image_credit: د انځور کریډیټ:%{credit}
+    published_dates:
+      hide_all_updates: ټول تازه معلومات پټ کړئ
+      last_updated: وروستی تازه شوی%{date}
+      published: خپور شوی%{date}
+      see_all_updates: ټول تازه معلومات وګورئ
+      show_all_updates: ټول تازه معلومات وښایاست
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: ټول پټ کړئ
+      show_all: ټول ښکاره کړه
+    save_this_page:
+      add_page_button: خپلو خوندي شویو پاو ته اضافه کړئ
+      confirmations:
+        page_removed:
+          message: تاسو دا له خپلو خوندي شویو پا .و لرې کړی دی
+        page_saved:
+          message: تاسو دا خپل خوندي شوي پاڼه کې اضافه کړی
+      page_not_saved_heading: دا پاڼه خوندي کړئ نو تاسو کولی شئ وروسته دې ته راشئ
+      page_was_saved_heading: تاسو دا پا savedه خوندي کړې
+      remove_page_button: له خپلو خوندي شویو پا .و څخه لرې کړئ
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">خپل خوندي شوي پا ڼې وګورئ</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">ننوتل</a> د خپلو خوندي شویو پا seeو لیدو لپاره.
+    share_links:
+      share_this_page: دا پاه شریکه کړئ
+  consultation:
+    and: او
+    another_website_html: دا مشوره <a href="%{url}">په بله ویبپا ڼه  کې %{closed}ترسره شوه</a>
+    at: په
+    closes: په کې بندیږي
+    closes_at: دا مشوره په پای کې پای ته رسیږي
+    complete_a: بشپړ کړئ
+    description: د مشورې توضیحات
+    detail_of_feedback_received: د ترلاسه شوي نظریاتو تفصیل
+    detail_of_outcome: د پایلې تفصیل
+    documents: اسناد
+    download_outcome: بشپړه پایله ډاونلوډ کړئ
+    either: یا هم
+    email_to: 'ته بریښنالیک:'
+    feedback_received: نظر ترلاسه شو
+    is_being: کېږي
+    not_open_yet: دا مشوره لاهم خلاص نده
+    'on':
+    opens: دا مشوره خلاصیږي
+    original_consultation: اصلي مشوره
+    ran_from: دا مشوره له دې ځایه روانه وه
+    respond_online: آنلاین ځواب ورکړئ
+    'true': ریښتیا
+    visit_soon: ژر تر ژره دې پاڼه څخه لیدنه وکړئ ترڅو دې عامه & nbsp feedback نظریاتو ته پایله ډاونلوډ کړئ.
+    was: وه
+    ways_to_respond: د ځواب ویلو لارې
+    write_to: 'ته یې ولیکئ:'
+  contact:
+    email: بریښنالیک
+    find_call_charges: د تلیفون لګښتونو په اړه معلومات ترلاسه کړئ
+    online: آنلاین
+    phone: تلیفون
+    webchat: ویب چیٹ
   content_item:
+    coming_soon: دا سند به په نشر شي
+    contents: منځپانګې
+    metadata:
+      published: خپور شوی
+      updated: تازه شوی
     schema_name:
       aaib_report:
         one: د هوایي پیښو د تحقیقاتو د څانګې راپور
@@ -223,99 +301,11 @@ ps:
       written_statement:
         one: پارلمان ته لیکلې وینا
         other: پارلمان ته لیکلي بیانونه
-    coming_soon: دا سند به په نشر شي
-    contents: منځپانګې
-    metadata:
-      published: خپور شوی
-      updated: تازه شوی
-  publication:
-    documents:
-      one: اسناد
-      other: اسناد
-    details: جزیات
-  brexit:
-    business_link:
-      text: د سوداګرۍ لپاره د بریکسیت لارښود
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: د افرادو او کورنیو لپاره د بریکسیت لارښود
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: توپیر لري
-  common:
-    last_updated:
-    visit: 'لیدنه:'
-  components:
-    figure:
-      image_credit: د انځور کریډیټ:%{credit}
-    published_dates:
-      hide_all_updates: ټول تازه معلومات پټ کړئ
-      last_updated: وروستی تازه شوی%{date}
-      published: خپور شوی%{date}
-      see_all_updates: ټول تازه معلومات وګورئ
-      show_all_updates: ټول تازه معلومات وښایاست
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: ټول پټ کړئ
-      show_all: ټول ښکاره کړه
-    save_this_page:
-      add_page_button: خپلو خوندي شویو پاو ته اضافه کړئ
-      confirmations:
-        page_removed:
-          message: تاسو دا له خپلو خوندي شویو پا .و لرې کړی دی
-        page_saved:
-          message: تاسو دا خپل خوندي شوي پاڼه کې اضافه کړی
-      page_not_saved_heading: دا پاڼه خوندي کړئ نو تاسو کولی شئ وروسته دې ته راشئ
-      page_was_saved_heading: تاسو دا پا savedه خوندي کړې
-      remove_page_button: له خپلو خوندي شویو پا .و څخه لرې کړئ
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">خپل
-        خوندي شوي پا ڼې وګورئ</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">ننوتل</a>
-        د خپلو خوندي شویو پا seeو لیدو لپاره.
-    share_links:
-      share_this_page: دا پاه شریکه کړئ
-  consultation:
-    and: او
-    another_website_html: دا مشوره <a href="%{url}">په بله ویبپا ڼه  کې %{closed}ترسره
-      شوه</a>
-    at: په
-    closes: په کې بندیږي
-    closes_at: دا مشوره په پای کې پای ته رسیږي
-    complete_a: بشپړ کړئ
-    description: د مشورې توضیحات
-    detail_of_feedback_received: د ترلاسه شوي نظریاتو تفصیل
-    detail_of_outcome: د پایلې تفصیل
-    documents: اسناد
-    download_outcome: بشپړه پایله ډاونلوډ کړئ
-    either: یا هم
-    email_to: 'ته بریښنالیک:'
-    feedback_received: نظر ترلاسه شو
-    is_being: کېږي
-    not_open_yet: دا مشوره لاهم خلاص نده
-    'on':
-    opens: دا مشوره خلاصیږي
-    original_consultation: اصلي مشوره
-    ran_from: دا مشوره له دې ځایه روانه وه
-    respond_online: آنلاین ځواب ورکړئ
-    'true': ریښتیا
-    visit_soon: ژر تر ژره دې پاڼه څخه لیدنه وکړئ ترڅو دې عامه & nbsp feedback نظریاتو
-      ته پایله ډاونلوډ کړئ.
-    was: وه
-    ways_to_respond: د ځواب ویلو لارې
-    write_to: 'ته یې ولیکئ:'
-  contact:
-    email: بریښنالیک
-    find_call_charges: د تلیفون لګښتونو په اړه معلومات ترلاسه کړئ
-    online: آنلاین
-    phone: تلیفون
-    webchat: ویب چیٹ
   corporate_information_page:
     about_our_services_html: "%{link} ومومئ."
     corporate_information: د شرکت معلومات
-    personal_information_charter_html: زموږ %{link} تشریح کوي چې موږ ستاسو شخصي معلوماتو
-      سره څنګه چلند کوو.
-    publication_scheme_html: د هغه معلوماتو ډولونو په اړه ولولئ چې موږ یې په منظم
-      ډول زموږ په %{link} کې خپروو.
+    personal_information_charter_html: زموږ %{link} تشریح کوي چې موږ ستاسو شخصي معلوماتو سره څنګه چلند کوو.
+    publication_scheme_html: د هغه معلوماتو ډولونو په اړه ولولئ چې موږ یې په منظم ډول زموږ په %{link} کې خپروو.
     social_media_use_html: زموږ پالیسي په%{link} ولولئ.
     welsh_language_scheme_html: "%{link} ته زموږ د ژمنتیا په اړه معلومات ترلاسه کړئ."
   fatality_notice:
@@ -334,15 +324,8 @@ ps:
       available_at: دا خپرونه په%{url} کې شتون لري
       copyright: "© {year}% کراون د چاپ حق"
       isbn: 'ISBN:'
-      licence_html: 'دا نشریه د حکومت د آزاد جواز د قوانینو v3.0 مطابق دغه نشریه د
-        حکومت د آزاد جواز د شرائطو v3.0 مطابق دقانوي جواز لرونکې نشریه ده،مګر په هغه
-        صورت کې چې پروړاندې یې د بل ضد قانون یاونه شویې وي. که غواړئ دغه جواز وګورئ،
-        نو <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        ته مراجعه وکړئ یا د معلوماتو د پالیسۍ ټیم ته چې په The National Archives,
-        Kew, London TW9 4DU  یا دغه آدرس ته ایمېل وکړئ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.کې
-        موقعیت لري لیک واستوئ'
-      third_party: چیرې چې موږ د دریمې ډلې د چاپ حق معلومات پیژندلي تاسو به اړتیا
-        ولرئ د اړونده کاپي حق لرونکو څخه اجازه ترلاسه کړئ.
+      licence_html: 'دا نشریه د حکومت د آزاد جواز د قوانینو v3.0 مطابق دغه نشریه د حکومت د آزاد جواز د شرائطو v3.0 مطابق دقانوي جواز لرونکې نشریه ده،مګر په هغه صورت کې چې پروړاندې یې د بل ضد قانون یاونه شویې وي. که غواړئ دغه جواز وګورئ، نو <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ته مراجعه وکړئ یا د معلوماتو د پالیسۍ ټیم ته چې په The National Archives, Kew, London TW9 4DU  یا دغه آدرس ته ایمېل وکړئ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.کې موقعیت لري لیک واستوئ'
+      third_party: چیرې چې موږ د دریمې ډلې د چاپ حق معلومات پیژندلي تاسو به اړتیا ولرئ د اړونده کاپي حق لرونکو څخه اجازه ترلاسه کړئ.
   i18n:
     direction:
   language_names:
@@ -351,6 +334,11 @@ ps:
     next_page: بل
     previous_page: مخکینی
     print_entire_guide: ټول لارښود چاپ کړئ
+  publication:
+    details: جزیات
+    documents:
+      one: اسناد
+      other: اسناد
   service_sign_in:
     continue: ادامه ورکړئ
     error:
@@ -365,12 +353,9 @@ ps:
       speak_to_adviser: همدا اوس له یوه سلاکار سره خبرې وکړئ
       technical_problem: ویب چیٹ دا مهال د تخنیکي ستونزو له امله شتون نلري.
   specialist_document:
-    pdo_alt_text: د سکیم لوگو یو تور ټاپه ده چې د ډیزاین شوي اصلي انګلستان محافظت
-      کلمو سره دی
-    pgi_alt_text: د سکیم لوګو یو تور ټاپه ده چې د جغرافیائی اصل انګلستان محافظت کلمو
-      سره دی
-    tsg_alt_text: د سکیم لوگو یو تور ټاپه ده چې د دودیز تخصص انګلستان محافظت کلمو
-      سره دی
+    pdo_alt_text: د سکیم لوگو یو تور ټاپه ده چې د ډیزاین شوي اصلي انګلستان محافظت کلمو سره دی
+    pgi_alt_text: د سکیم لوګو یو تور ټاپه ده چې د جغرافیائی اصل انګلستان محافظت کلمو سره دی
+    tsg_alt_text: د سکیم لوگو یو تور ټاپه ده چې د دودیز تخصص انګلستان محافظت کلمو سره دی
   speech:
     delivered_on: ته وسپارل شو
     location: ځای
@@ -386,14 +371,10 @@ ps:
     release_date: دخپریدو نیټه
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> د هیواد برخو ته د لازمي سفر پرته ټولو ته مشوره ورکوي.
-      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> ټول هیواد ته د لازمي سفر پرته مشوره ورکوي.
-      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        د هیواد برخو ته د ټولو سفرونو پروړاندې مشوره ورکوي.
-      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ټول هیواد ته د ټولو سفرونو پروړاندې مشوره ورکوي.
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د لازمي سفر پرته ټولو ته مشوره ورکوي.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ټول هیواد ته د لازمي سفر پرته مشوره ورکوي.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د ټولو سفرونو پروړاندې مشوره ورکوي.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ټول هیواد ته د ټولو سفرونو پروړاندې مشوره ورکوي.
     context: د بهرني سفر مشوره
     coronavirus_warning:
       content_html: |-

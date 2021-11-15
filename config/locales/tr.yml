@@ -1,11 +1,12 @@
+---
 tr:
   brexit:
     business_link:
-      text: İşletmeler için Brexit rehberi
       path: "/guidance/brexit-guidance-for-businesses"
+      text: İşletmeler için Brexit rehberi
     citizen_link:
-      text: Kişiler ve aileler için Brexit rehberi
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Kişiler ve aileler için Brexit rehberi
     heading_prefix: Farklılık var
   common:
     last_updated:
@@ -34,10 +35,8 @@ tr:
       page_not_saved_heading: Daha sonra gelebilmek için bu sayfayı kaydedin
       page_was_saved_heading: Bu sayfayı kaydettiniz
       remove_page_button: Kayıtlı sayfalarından çıkar
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı
-        sayfalarını gör</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı
-        sayfalarını görmek için</a> oturum aç.
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı sayfalarını gör</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı sayfalarını görmek için</a> oturum aç.
     share_links:
       share_this_page: Bu sayfayı paylaş
   consultation:
@@ -63,8 +62,7 @@ tr:
     ran_from: Bu danışma şuradan başladı
     respond_online: Çevrimiçi yanıtla
     'true': doğru
-    visit_soon: Sonucu bu açık&nbsp;geri bildirime yüklemek için sayfayı kısa süre
-      sonra tekrar ziyaret edin.
+    visit_soon: Sonucu bu açık&nbsp;geri bildirime yüklemek için sayfayı kısa süre sonra tekrar ziyaret edin.
     was: idi
     ways_to_respond: Yanıtlama şekilleri
     write_to: 'Şuraya yaz:'
@@ -306,10 +304,8 @@ tr:
   corporate_information_page:
     about_our_services_html: "%{link} bağlantısını keşfedin."
     corporate_information: Kurumsal bilgiler
-    personal_information_charter_html: "%{link} bağlantımız özel bilgilerinizi nasıl
-      işlediğimizi açıklamaktadır."
-    publication_scheme_html: "%{link} bağlantımızda düzenli olarak yayınladığımız
-      bilgi türlerini okuyun."
+    personal_information_charter_html: "%{link} bağlantımız özel bilgilerinizi nasıl işlediğimizi açıklamaktadır."
+    publication_scheme_html: "%{link} bağlantımızda düzenli olarak yayınladığımız bilgi türlerini okuyun."
     social_media_use_html: "%{link} bağlantısındaki politikamızı okuyun."
     welsh_language_scheme_html: "%{link} bağlantısına taahhüdümüzü okuyun."
   fatality_notice:
@@ -328,12 +324,8 @@ tr:
       available_at: Bu yayına %{url} üzerinden ulaşılabilir
       copyright: "© Crown telif hakkı %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Aksi ifade edilmedikçe, bu yayın Açık Hükümet Lisansı v3.0 hükümleri
-        kapsamında lisanslıdır. Bu lisansı görüntülemek için, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        adresini ziyaret edin veya The National Archives, Kew, London TW9 4DU adresindeki
-        Bilgi Politikası Ekibine yazın ya da şuraya e-posta gönderin: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Üçüncü taraf telif hakkı bilgilerini tespit etmemiz halinde, ilgili
-        telif hakkı sahiplerinden izin almanız gerekir.
+      licence_html: 'Aksi ifade edilmedikçe, bu yayın Açık Hükümet Lisansı v3.0 hükümleri kapsamında lisanslıdır. Bu lisansı görüntülemek için, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> adresini ziyaret edin veya The National Archives, Kew, London TW9 4DU adresindeki Bilgi Politikası Ekibine yazın ya da şuraya e-posta gönderin: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Üçüncü taraf telif hakkı bilgilerini tespit etmemiz halinde, ilgili telif hakkı sahiplerinden izin almanız gerekir.
   i18n:
     direction:
   language_names:
@@ -361,12 +353,9 @@ tr:
       speak_to_adviser: Bir danışmanla konuşun
       technical_problem: Teknik sorunlar nedeniyle şu an Webchat’e ulaşılamıyor.
   specialist_document:
-    pdo_alt_text: Şema logosu Designated Origin UK Protected sözcüklerini içeren siyah
-      bir damgadır
-    pgi_alt_text: Şema logosu Geographic Origin UK Protected sözcüklerini içeren siyah
-      bir damgadır
-    tsg_alt_text: Şema logosu Traditional Specialty UK Protected sözcüklerini içeren
-      siyah bir damgadır
+    pdo_alt_text: Şema logosu Designated Origin UK Protected sözcüklerini içeren siyah bir damgadır
+    pgi_alt_text: Şema logosu Geographic Origin UK Protected sözcüklerini içeren siyah bir damgadır
+    tsg_alt_text: Şema logosu Traditional Specialty UK Protected sözcüklerini içeren siyah bir damgadır
   speech:
     delivered_on: 'Teslim tarihi:'
     location: Konum
@@ -382,16 +371,10 @@ tr:
     release_date: Açıklama tarihi
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ülkenin bazı bölgelerine zorunlu seyahatler haricinde seyahat
-        edilmemesini tavsiye etmektedir.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> zorunlu seyahatler haricinde ülke geneline seyahat edilmemesini
-        tavsiye etmektedir.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ülkeye bazı kısımlarına hiçbir seyahat yapılmamasını tavsiye etmektedir.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ülke geneline hiçbir seyahat yapılmamasını tavsiye etmektedir.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülkenin bazı bölgelerine zorunlu seyahatler haricinde seyahat edilmemesini tavsiye etmektedir.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> zorunlu seyahatler haricinde ülke geneline seyahat edilmemesini tavsiye etmektedir.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülkeye bazı kısımlarına hiçbir seyahat yapılmamasını tavsiye etmektedir.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülke geneline hiçbir seyahat yapılmamasını tavsiye etmektedir.
     context: Yurtdışı seyahat tavsiyesi
     coronavirus_warning:
       content_html: |

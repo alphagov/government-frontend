@@ -1,5 +1,83 @@
+---
 is:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexit leiðbeiningar fyrir fyrirtæki
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexit leiðbeiningar fyrir einstaklinga og fjölskyldur
+    heading_prefix: Það eru mismunandi
+  common:
+    last_updated:
+    visit: 'Heimsæktu:'
+  components:
+    figure:
+      image_credit: Uppruni myndar %{credit}
+    published_dates:
+      hide_all_updates: fela allar uppfærslur
+      last_updated: Síðast uppfært %{date}
+      published: Birt %{date}
+      see_all_updates: sjá allar uppfærslur
+      show_all_updates: sýna allar uppfærslur
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: fela allt
+      show_all: sýna allt
+    save_this_page:
+      add_page_button: Bæta í þínar vistaðar síður
+      confirmations:
+        page_removed:
+          message: Þú hefur fjarlægt þetta úr þínum vistuðu síðum
+        page_saved:
+          message: Þú hefur bætt þessu í þínar vistaðar síður
+      page_not_saved_heading: Vistaðu þessa síðu svo þú getir komið að henni aftur seinna
+      page_was_saved_heading: Þú vistaðir þessa síðu
+      remove_page_button: Fjarlægt úr þínum vistuðu síðum
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Sjá þínar vistuðu síður</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Skráðu þig inn</a> til að sjá þínar vistuðu síður.
+    share_links:
+      share_this_page: Deila þessari síðu
+  consultation:
+    and: og
+    another_website_html: Þessi ráðgjöf %{closed} var haldin á <a href="%{url}">annarri vefsíðu</a>
+    at: þann
+    closes: Henni lýkur
+    closes_at: Þessari ráðgjöf lýkur
+    complete_a: Ljúka
+    description: Lýsing á ráðgjöf
+    detail_of_feedback_received: Nánari upplýsingar um fengna endurgjöf
+    detail_of_outcome: Nánari upplýsingar um útkomu
+    documents: Skjöl
+    download_outcome: Sækja alla útkomuna
+    either: eða
+    email_to: 'Senda tölvupóst á:'
+    feedback_received: Endurgjöf móttekin
+    is_being: er
+    not_open_yet: Þessi ráðgjöf er ekki enn opin
+    'on':
+    opens: Þessi ráðgjöf opnar
+    original_consultation: Upprunaleg ráðgjöf
+    ran_from: Þessi ráðgjöf stóð yfir frá
+    respond_online: Svara á netinu
+    'true': satt
+    visit_soon: Heimsæktu þessa síðu bráðlega aftur til að sækja útkomuna úr þessari opinberu endurgjöf.
+    was: var
+    ways_to_respond: Leiðir til að svara
+    write_to: 'Skrifa til:'
+  contact:
+    email: Tölvupóstfang
+    find_call_charges: Komast að hvað símtöl kosta
+    online: Á netinu
+    phone: Í síma
+    webchat: Vefspjall
   content_item:
+    coming_soon: Þetta skjal verður birt á
+    contents: Efni
+    metadata:
+      published: Birt
+      updated: Uppfært
     schema_name:
       aaib_report:
         one: Skýrsla Flugslysanefndar
@@ -223,100 +301,11 @@ is:
       written_statement:
         one: Skrifleg yfirlýsing til Þingsins
         other: Skriflegar yfirlýsingar til Þingsins
-    coming_soon: Þetta skjal verður birt á
-    contents: Efni
-    metadata:
-      published: Birt
-      updated: Uppfært
-  publication:
-    documents:
-      one: Skjal
-      other: Skjöl
-    details: Nánari upplýsingar
-  brexit:
-    business_link:
-      text: Brexit leiðbeiningar fyrir fyrirtæki
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexit leiðbeiningar fyrir einstaklinga og fjölskyldur
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Það eru mismunandi
-  common:
-    last_updated:
-    visit: 'Heimsæktu:'
-  components:
-    figure:
-      image_credit: Uppruni myndar %{credit}
-    published_dates:
-      hide_all_updates: fela allar uppfærslur
-      last_updated: Síðast uppfært %{date}
-      published: Birt %{date}
-      see_all_updates: sjá allar uppfærslur
-      show_all_updates: sýna allar uppfærslur
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: fela allt
-      show_all: sýna allt
-    save_this_page:
-      add_page_button: Bæta í þínar vistaðar síður
-      confirmations:
-        page_removed:
-          message: Þú hefur fjarlægt þetta úr þínum vistuðu síðum
-        page_saved:
-          message: Þú hefur bætt þessu í þínar vistaðar síður
-      page_not_saved_heading: Vistaðu þessa síðu svo þú getir komið að henni aftur
-        seinna
-      page_was_saved_heading: Þú vistaðir þessa síðu
-      remove_page_button: Fjarlægt úr þínum vistuðu síðum
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Sjá
-        þínar vistuðu síður</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Skráðu
-        þig inn</a> til að sjá þínar vistuðu síður.
-    share_links:
-      share_this_page: Deila þessari síðu
-  consultation:
-    and: og
-    another_website_html: Þessi ráðgjöf %{closed} var haldin á <a href="%{url}">annarri
-      vefsíðu</a>
-    at: þann
-    closes: Henni lýkur
-    closes_at: Þessari ráðgjöf lýkur
-    complete_a: Ljúka
-    description: Lýsing á ráðgjöf
-    detail_of_feedback_received: Nánari upplýsingar um fengna endurgjöf
-    detail_of_outcome: Nánari upplýsingar um útkomu
-    documents: Skjöl
-    download_outcome: Sækja alla útkomuna
-    either: eða
-    email_to: 'Senda tölvupóst á:'
-    feedback_received: Endurgjöf móttekin
-    is_being: er
-    not_open_yet: Þessi ráðgjöf er ekki enn opin
-    'on':
-    opens: Þessi ráðgjöf opnar
-    original_consultation: Upprunaleg ráðgjöf
-    ran_from: Þessi ráðgjöf stóð yfir frá
-    respond_online: Svara á netinu
-    'true': satt
-    visit_soon: Heimsæktu þessa síðu bráðlega aftur til að sækja útkomuna úr þessari
-      opinberu endurgjöf.
-    was: var
-    ways_to_respond: Leiðir til að svara
-    write_to: 'Skrifa til:'
-  contact:
-    email: Tölvupóstfang
-    find_call_charges: Komast að hvað símtöl kosta
-    online: Á netinu
-    phone: Í síma
-    webchat: Vefspjall
   corporate_information_page:
     about_our_services_html: Kynntu þér málið %{link}.
     corporate_information: Upplýsingar um fyrirtæki
-    personal_information_charter_html: "%{link} okkar útskýrir hvernig við meðhöndlum
-      þínar persónulegu upplýsingar."
-    publication_scheme_html: Lestu um hvaða upplýsingar við birtum reglulega í %{link}
-      okkar.
+    personal_information_charter_html: "%{link} okkar útskýrir hvernig við meðhöndlum þínar persónulegu upplýsingar."
+    publication_scheme_html: Lestu um hvaða upplýsingar við birtum reglulega í %{link} okkar.
     social_media_use_html: Lestu stefnuna okkar varðandi %{link}.
     welsh_language_scheme_html: Kynntu þér skuldbindingu okkar við %{link}.
   fatality_notice:
@@ -325,8 +314,7 @@ is:
     operations_in: Starfsemi á %{location}
   gone:
     page_title: Ekki lengur aðgengileg
-    published_in_error: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna
-      þess að þær voru birtar fyrir mistök.
+    published_in_error: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna þess að þær voru birtar fyrir mistök.
     title: Síðan sem þú leitar að er ekki lengur aðgengileg
   guide:
     pages_in_guide: Síður í þessum leiðbeiningum
@@ -336,12 +324,8 @@ is:
       available_at: Þessi útgáfa er aðgengileg á %{url}
       copyright: "© Höfundarréttur Krúnunnar %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Þessi útgáfa fellur undir skilmála Open Government Licence v3.0
-        nema annað sé tekið fram. Heimsæku til að skoða þessa skilmála <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        eða skrifaðu til Information Policy Team, The National Archives, Kew, London
-        TW9 4DU, eða sendu tölvupóst: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Þar sem við höfum auðkennt að eitthvað fellur undir höfundarrétt
-        þriðja aðila munt þú þurfa leyfi frá þeim höfundarrétthafa.
+      licence_html: 'Þessi útgáfa fellur undir skilmála Open Government Licence v3.0 nema annað sé tekið fram. Heimsæku til að skoða þessa skilmála <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> eða skrifaðu til Information Policy Team, The National Archives, Kew, London TW9 4DU, eða sendu tölvupóst: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Þar sem við höfum auðkennt að eitthvað fellur undir höfundarrétt þriðja aðila munt þú þurfa leyfi frá þeim höfundarrétthafa.
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ is:
     next_page: Næsta
     previous_page: Fyrri
     print_entire_guide: Prenta allar leiðbeiningarnar
+  publication:
+    details: Nánari upplýsingar
+    documents:
+      one: Skjal
+      other: Skjöl
   service_sign_in:
     continue: Halda áfram
     error:
@@ -362,15 +351,11 @@ is:
       busy: Allir ráðgjafar í vefspjalli eru uppteknir í augnablikinu.
       closed: Vefspjallið er lokað í augnblikinu.
       speak_to_adviser: Tala við ráðgjafa núna
-      technical_problem: Vefspjallið er ekki aðgengilegt í augnablikinu vegna tæknilegra
-        örðugleika.
+      technical_problem: Vefspjallið er ekki aðgengilegt í augnablikinu vegna tæknilegra örðugleika.
   specialist_document:
-    pdo_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Designated
-      Origin UK Protected
-    pgi_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Geographic
-      Origin UK Protected
-    tsg_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Traditional
-      Speciality UK Protected
+    pdo_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Designated Origin UK Protected
+    pgi_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Geographic Origin UK Protected
+    tsg_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Traditional Speciality UK Protected
   speech:
     delivered_on: Afhent þann
     location: Staðsetning
@@ -386,16 +371,10 @@ is:
     release_date: Útgáfudagsetning
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins nema
-        þeim allra nauðsynlegustu.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins nema
-        þeim allra nauðsynlegustu.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ráðleggur gegn öllum ferðalögum til hluta landsins.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ráðleggur gegn öllum ferðalögum til alls landsins.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins nema þeim allra nauðsynlegustu.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins nema þeim allra nauðsynlegustu.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins.
     context: Ráðleggingar um ferðalög erlendis
     coronavirus_warning:
       content_html: |
@@ -418,8 +397,7 @@ is:
     updated: Uppfært
   unpublishing:
     page_title: Ekki lengur aðgengilegt
-    summary: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna þess að þær
-      voru birtar fyrir mistök.
+    summary: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna þess að þær voru birtar fyrir mistök.
     title: Síðan sem þú leitar að er ekki lengur aðgengileg
   working_group:
     contact_details: Upplýsingar til að hafa samband

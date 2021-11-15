@@ -1,5 +1,83 @@
+---
 bn:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: ব্যবসার জন্য ব্রেক্সিটের নির্দেশনা
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: ব্যক্তি ও পরিবারবর্গের জন্য ব্রেক্সিটের নির্দেশনা
+    heading_prefix: পার্থক্য আছে
+  common:
+    last_updated:
+    visit: 'ভিজিট করুন:'
+  components:
+    figure:
+      image_credit: 'ছবির কৃতিত্ব: %{credit}'
+    published_dates:
+      hide_all_updates: সকল আপডেট লুকান
+      last_updated: সর্বশেষ হালনাগাদ হয়েছে %{date}
+      published: প্রকাশিত হওয়ার তারিখ %{date}
+      see_all_updates: সকল আপডেট দেখুন
+      show_all_updates: সকল আপডেট দেখান
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: সবগুলো লুকান
+      show_all: সবগুলো দেখান
+    save_this_page:
+      add_page_button: আপনার সেভ করা পেজসমূহে যোগ করুন
+      confirmations:
+        page_removed:
+          message: আপনি এটি আপনার সেভ করা পেজগুলো থেকে সরিয়ে ফেলেছেন
+        page_saved:
+          message: আপনি এটি আপনার সেভ করা পেজগুলোতে যোগ করেছেন
+      page_not_saved_heading: এই পেজটি সেভ করুন, যেন আপনি পরে এখানে আসতে পারেন
+      page_was_saved_heading: আপনি এই পেজটি সেভ করেছেন
+      remove_page_button: আপনার সেভ করা পেজগুলো থেকে সরিয়ে ফেলুন
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">আপনার সেভ করা পেজগুলো দেখুন</a>
+      see_saved_pages_signed_out: আপনার সেভ করা পেজগুলো দেখতে <a href="%{link}" class="govuk-link %{additional_class}">সাইন ইন করুন</a>।
+    share_links:
+      share_this_page: এই পেজটি শেয়ার করুন
+  consultation:
+    and: এবং
+    another_website_html: এই পরামর্শটি %{closed} <a href="%{url}">আরেকটি ওয়েবসাইটে</a> অনুষ্ঠিত হয়
+    at: এ
+    closes: এটি বন্ধ হচ্ছে
+    closes_at: এই পরামর্শটি বন্ধ হচ্ছে
+    complete_a: একটি সম্পন্ন করুন
+    description: পরামর্শের বর্ণনা
+    detail_of_feedback_received: ফিডব্যাকের বিস্তারিত গৃহীত হয়েছে
+    detail_of_outcome: ফলাফলের বিস্তারিত
+    documents: নথিপত্র
+    download_outcome: সম্পূর্ণ ফলাফল ডাউনলোড করুন
+    either: হয়তো
+    email_to: 'এখানে ইমেইল করুন:'
+    feedback_received: ফিডব্যাক গৃহীত হয়েছে
+    is_being: হয়েছে
+    not_open_yet: এই পরামর্শটি এখনও চালু হয়নি
+    'on':
+    opens: এই পরামর্শটি চালু হচ্ছে
+    original_consultation: মূল পরামর্শ
+    ran_from: এই পরামর্শটি যেখান থেকে চলেছে
+    respond_online: অনলাইনে উত্তর দিন
+    'true': সত্য
+    visit_soon: সর্বসাধারণের ফিডব্যাকের এই ফলাফল ডাউনলোড করতে শীঘ্রই পুনরায় এই পেজটি ভিজিট করুন।
+    was: ছিল
+    ways_to_respond: উত্তর দেওয়ার উপায়
+    write_to: 'যার কাছে লিখবেন:'
+  contact:
+    email: ইমেইল
+    find_call_charges: কল চার্জগুলো সম্পর্কে খুঁজে দেখুন
+    online: অনলাইন
+    phone: ফোন
+    webchat: ওয়েবচ্যাট
   content_item:
+    coming_soon: এই নথিটি যেখানে প্রকাশিত হবে
+    contents: বিষয়সূচী
+    metadata:
+      published: প্রকাশিত হয়েছে
+      updated: হালনাগাদ করা হয়েছে
     schema_name:
       aaib_report:
         one: বিমান দুর্ঘটনা তদন্ত শাখা প্রতিবেদন
@@ -223,99 +301,11 @@ bn:
       written_statement:
         one: সংসদে লিখিত বিবৃতি
         other: সংসদে লিখিত বিবৃতিসমূহ
-    coming_soon: এই নথিটি যেখানে প্রকাশিত হবে
-    contents: বিষয়সূচী
-    metadata:
-      published: প্রকাশিত হয়েছে
-      updated: হালনাগাদ করা হয়েছে
-  publication:
-    documents:
-      one: নথিপত্র
-      other: নথিপত্র
-    details: বিস্তারিত
-  brexit:
-    business_link:
-      text: ব্যবসার জন্য ব্রেক্সিটের নির্দেশনা
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: ব্যক্তি ও পরিবারবর্গের জন্য ব্রেক্সিটের নির্দেশনা
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: পার্থক্য আছে
-  common:
-    last_updated:
-    visit: 'ভিজিট করুন:'
-  components:
-    figure:
-      image_credit: 'ছবির কৃতিত্ব: %{credit}'
-    published_dates:
-      hide_all_updates: সকল আপডেট লুকান
-      last_updated: সর্বশেষ হালনাগাদ হয়েছে %{date}
-      published: প্রকাশিত হওয়ার তারিখ %{date}
-      see_all_updates: সকল আপডেট দেখুন
-      show_all_updates: সকল আপডেট দেখান
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: সবগুলো লুকান
-      show_all: সবগুলো দেখান
-    save_this_page:
-      add_page_button: আপনার সেভ করা পেজসমূহে যোগ করুন
-      confirmations:
-        page_removed:
-          message: আপনি এটি আপনার সেভ করা পেজগুলো থেকে সরিয়ে ফেলেছেন
-        page_saved:
-          message: আপনি এটি আপনার সেভ করা পেজগুলোতে যোগ করেছেন
-      page_not_saved_heading: এই পেজটি সেভ করুন, যেন আপনি পরে এখানে আসতে পারেন
-      page_was_saved_heading: আপনি এই পেজটি সেভ করেছেন
-      remove_page_button: আপনার সেভ করা পেজগুলো থেকে সরিয়ে ফেলুন
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">আপনার
-        সেভ করা পেজগুলো দেখুন</a>
-      see_saved_pages_signed_out: আপনার সেভ করা পেজগুলো দেখতে <a href="%{link}" class="govuk-link
-        %{additional_class}">সাইন ইন করুন</a>।
-    share_links:
-      share_this_page: এই পেজটি শেয়ার করুন
-  consultation:
-    and: এবং
-    another_website_html: এই পরামর্শটি %{closed} <a href="%{url}">আরেকটি ওয়েবসাইটে</a>
-      অনুষ্ঠিত হয়
-    at: এ
-    closes: এটি বন্ধ হচ্ছে
-    closes_at: এই পরামর্শটি বন্ধ হচ্ছে
-    complete_a: একটি সম্পন্ন করুন
-    description: পরামর্শের বর্ণনা
-    detail_of_feedback_received: ফিডব্যাকের বিস্তারিত গৃহীত হয়েছে
-    detail_of_outcome: ফলাফলের বিস্তারিত
-    documents: নথিপত্র
-    download_outcome: সম্পূর্ণ ফলাফল ডাউনলোড করুন
-    either: হয়তো
-    email_to: 'এখানে ইমেইল করুন:'
-    feedback_received: ফিডব্যাক গৃহীত হয়েছে
-    is_being: হয়েছে
-    not_open_yet: এই পরামর্শটি এখনও চালু হয়নি
-    'on':
-    opens: এই পরামর্শটি চালু হচ্ছে
-    original_consultation: মূল পরামর্শ
-    ran_from: এই পরামর্শটি যেখান থেকে চলেছে
-    respond_online: অনলাইনে উত্তর দিন
-    'true': সত্য
-    visit_soon: সর্বসাধারণের ফিডব্যাকের এই ফলাফল ডাউনলোড করতে শীঘ্রই পুনরায় এই পেজটি
-      ভিজিট করুন।
-    was: ছিল
-    ways_to_respond: উত্তর দেওয়ার উপায়
-    write_to: 'যার কাছে লিখবেন:'
-  contact:
-    email: ইমেইল
-    find_call_charges: কল চার্জগুলো সম্পর্কে খুঁজে দেখুন
-    online: অনলাইন
-    phone: ফোন
-    webchat: ওয়েবচ্যাট
   corporate_information_page:
     about_our_services_html: "%{link} খুঁজুন।"
     corporate_information: কর্পোরেট তথ্য
-    personal_information_charter_html: আমরা কিভাবে আপনার ব্যক্তিগত তথ্য নিয়ে কাজ করি
-      তা আমাদের %{link}-এ ব্যাখ্যা করা হয়েছে।
-    publication_scheme_html: আমরা নিয়মিতভাবে যে প্রকারের সংবাদ প্রকাশ করি তা আমাদের
-      %{link}-এ পড়ুন।
+    personal_information_charter_html: আমরা কিভাবে আপনার ব্যক্তিগত তথ্য নিয়ে কাজ করি তা আমাদের %{link}-এ ব্যাখ্যা করা হয়েছে।
+    publication_scheme_html: আমরা নিয়মিতভাবে যে প্রকারের সংবাদ প্রকাশ করি তা আমাদের %{link}-এ পড়ুন।
     social_media_use_html: "%{link}-এ আমাদের নীতিমালা পড়ুন।"
     welsh_language_scheme_html: "%{link}-এ আপনার আমাদের অঙ্গীকার সম্পর্কে জানুন।"
   fatality_notice:
@@ -324,8 +314,7 @@ bn:
     operations_in: "%{location}-এ পরিচালনা"
   gone:
     page_title: আর উপলভ্য নেই
-    published_in_error: এই পেজের তথ্য সরিয়ে নেওয়া হয়েছে, কারণ এটি ভুলক্রমে প্রকাশিত
-      হয়েছিল।
+    published_in_error: এই পেজের তথ্য সরিয়ে নেওয়া হয়েছে, কারণ এটি ভুলক্রমে প্রকাশিত হয়েছিল।
     title: আপনি যে পেজটি খুঁজছেন তা আর উপলভ্য নেই
   guide:
     pages_in_guide: এই নির্দেশিকাতে পৃষ্ঠা
@@ -335,12 +324,8 @@ bn:
       available_at: এই প্রকাশনাটি %{url}-এ উপলভ্য
       copyright: "© ক্রাউন কপিরাইট %{year}"
       isbn: 'ISBN:'
-      licence_html: 'অন্যভাবে বলা না থাকলে, এই প্রকাশনাটি ওপেন গভর্নমেন্ট লাইসেন্স
-        v3.0-এর শর্তাধীন লাইসেন্স করা হয়েছে। এই লাইসেন্সটি দেখতে, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        ভিজিট করুন বা Information Policy Team, The National Archives, Kew, London
-        TW9 4DU ঠিকানায় লিখুন বা এই ঠিকানায় ইমেইল করুন: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
-      third_party: আমরা যখন কোনো তৃতীয় পক্ষের কপিরাইটের তথ্য শনাক্ত করবো, তখন আপনাকে
-        সংশ্লিষ্ট কপিরাইট ধারকের কাছ থেকে অনুমতি নিতে হবে।
+      licence_html: 'অন্যভাবে বলা না থাকলে, এই প্রকাশনাটি ওপেন গভর্নমেন্ট লাইসেন্স v3.0-এর শর্তাধীন লাইসেন্স করা হয়েছে। এই লাইসেন্সটি দেখতে, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ভিজিট করুন বা Information Policy Team, The National Archives, Kew, London TW9 4DU ঠিকানায় লিখুন বা এই ঠিকানায় ইমেইল করুন: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
+      third_party: আমরা যখন কোনো তৃতীয় পক্ষের কপিরাইটের তথ্য শনাক্ত করবো, তখন আপনাকে সংশ্লিষ্ট কপিরাইট ধারকের কাছ থেকে অনুমতি নিতে হবে।
   i18n:
     direction:
   language_names:
@@ -349,6 +334,11 @@ bn:
     next_page: পরবর্তী
     previous_page: পূর্ববর্তী
     print_entire_guide: সম্পূর্ণ নির্দেশিকাটি প্রিন্ট করুন
+  publication:
+    details: বিস্তারিত
+    documents:
+      one: নথিপত্র
+      other: নথিপত্র
   service_sign_in:
     continue: চালিয়ে যান
     error:
@@ -363,12 +353,9 @@ bn:
       speak_to_adviser: এখনই একজন উপদেষ্টার সাথে কথা বলুন
       technical_problem: কারিগরি সমস্যার কারণে এই মুহূর্তে ওয়েবচ্যাট উপলভ্য নেই।
   specialist_document:
-    pdo_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Designated Origin UK Protected
-      শব্দগুলো রয়েছে
-    pgi_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Geographic Origin UK Protected
-      শব্দগুলো রয়েছে
-    tsg_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Traditional Speciality UK Protected
-      শব্দগুলো রয়েছে
+    pdo_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Designated Origin UK Protected শব্দগুলো রয়েছে
+    pgi_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Geographic Origin UK Protected শব্দগুলো রয়েছে
+    tsg_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Traditional Speciality UK Protected শব্দগুলো রয়েছে
   speech:
     delivered_on: পাঠানো হয়েছে
     location: অবস্থান
@@ -384,16 +371,10 @@ bn:
     release_date: প্রকাশের তারিখ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> দেশের কিছু অংশে শুধু প্রয়োজনীয় ভ্রমণ ছাড়া সকল ধরনের ভ্রমণের
-        বিরুদ্ধে পরামর্শ দিয়েছে।
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> সমগ্র দেশে শুধু প্রয়োজনীয় ভ্রমণ ছাড়া সকল ধরনের ভ্রমণের
-        বিরুদ্ধে পরামর্শ দিয়েছে।
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        দেশের কিছু অংশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        সমগ্র দেশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> দেশের কিছু অংশে শুধু প্রয়োজনীয় ভ্রমণ ছাড়া সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> সমগ্র দেশে শুধু প্রয়োজনীয় ভ্রমণ ছাড়া সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> দেশের কিছু অংশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> সমগ্র দেশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
     context: বিদেশ ভ্রমণ সম্পর্কিত পরামর্শ
     coronavirus_warning:
       content_html: |

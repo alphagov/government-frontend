@@ -1,5 +1,83 @@
+---
 sw:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Mwongozo wa Brexit kuhusu biashara
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Mwongozo wa Brexit kuhusu watu na familia
+    heading_prefix: Kuna utofauti
+  common:
+    last_updated:
+    visit: 'Tembelea:'
+  components:
+    figure:
+      image_credit: 'Mpiga picha: %{credit}'
+    published_dates:
+      hide_all_updates: ficha masasisho yote
+      last_updated: Ulisasishwa mara ya mwisho tarehe %{date}
+      published: Ulichapishwa tarehe %{date}
+      see_all_updates: angalia taarifa zote
+      show_all_updates: Onyesha taarifa zote
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: ficha zote
+      show_all: onyesha zote
+    save_this_page:
+      add_page_button: Ongeza kwenye kurasa zako ulizohifadhi
+      confirmations:
+        page_removed:
+          message: Umeondoa huu kwenye kurasa zako ulizohifadhi
+        page_saved:
+          message: Umeongeza huu kwenye kurasa zako ulizohifadhi
+      page_not_saved_heading: Hifadhi ukurasa huu ili uweze kuusoma baadaye
+      page_was_saved_heading: Umehifadhi ukurasa huu
+      remove_page_button: Ondoa kwenye kurasa zako ulizohifadhi
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Angalia kurasa zako ulizohifadhi</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Ingia</a> ili uone kurasa zako ulizohifadhi.
+    share_links:
+      share_this_page: Shiriki ukurasa huu
+  consultation:
+    and: na
+    another_website_html: Mashauriano haya %{closed} yalifanywa kwenye <a href="%{url}">tovuti nyingine</a>
+    at: saa
+    closes: Yatafungwa saa
+    closes_at: Mashauriano haya yatafungwa saa
+    complete_a: Jaza
+    description: Maelezo ya mashauriano
+    detail_of_feedback_received: Maelezo ya maoni yamepokewa
+    detail_of_outcome: Maelezo ya matokeo
+    documents: Hati
+    download_outcome: Pakua matokeo yote
+    either: labda
+    email_to: 'Tuma barua pepe katika:'
+    feedback_received: Maoni yamepokewa
+    is_being: yana
+    not_open_yet: Bado mashauriano haya hayajafunguliwa
+    'on':
+    opens: Mashauriano haya yatafunguliwa
+    original_consultation: Mashauriano halisi
+    ran_from: Mashauriano haya yalifanywa kuanzia
+    respond_online: Jibu mtandaoni
+    'true': kweli
+    visit_soon: Tembelea ukurasa huu tena hivi karibuni ili upakue matokeo ya maoni haya&nbsp;ya umma.
+    was: yalikuwa
+    ways_to_respond: Njia za kujibu
+    write_to: 'Andika barua kwa:'
+  contact:
+    email: Barua pepe
+    find_call_charges: Pata maelezo kuhusu gharama za kupiga simu
+    online: Mtandaoni
+    phone: Simu
+    webchat: Gumzo la mtandaoni
   content_item:
+    coming_soon: Hati hii itachapishwa mnamo
+    contents: Maudhui
+    metadata:
+      published: Ilichapishwa
+      updated: Ilisasishwa
     schema_name:
       aaib_report:
         one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Ndege
@@ -223,99 +301,11 @@ sw:
       written_statement:
         one: Taarifa ya Maandishi kwa Bunge
         other: Taarifa za Maandishi kwa Bunge
-    coming_soon: Hati hii itachapishwa mnamo
-    contents: Maudhui
-    metadata:
-      published: Ilichapishwa
-      updated: Ilisasishwa
-  publication:
-    documents:
-      one: Hati
-      other: Hati
-    details: Maelezo
-  brexit:
-    business_link:
-      text: Mwongozo wa Brexit kuhusu biashara
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Mwongozo wa Brexit kuhusu watu na familia
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Kuna utofauti
-  common:
-    last_updated:
-    visit: 'Tembelea:'
-  components:
-    figure:
-      image_credit: 'Mpiga picha: %{credit}'
-    published_dates:
-      hide_all_updates: ficha masasisho yote
-      last_updated: Ulisasishwa mara ya mwisho tarehe %{date}
-      published: Ulichapishwa tarehe %{date}
-      see_all_updates: angalia taarifa zote
-      show_all_updates: Onyesha taarifa zote
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: ficha zote
-      show_all: onyesha zote
-    save_this_page:
-      add_page_button: Ongeza kwenye kurasa zako ulizohifadhi
-      confirmations:
-        page_removed:
-          message: Umeondoa huu kwenye kurasa zako ulizohifadhi
-        page_saved:
-          message: Umeongeza huu kwenye kurasa zako ulizohifadhi
-      page_not_saved_heading: Hifadhi ukurasa huu ili uweze kuusoma baadaye
-      page_was_saved_heading: Umehifadhi ukurasa huu
-      remove_page_button: Ondoa kwenye kurasa zako ulizohifadhi
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Angalia
-        kurasa zako ulizohifadhi</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Ingia</a>
-        ili uone kurasa zako ulizohifadhi.
-    share_links:
-      share_this_page: Shiriki ukurasa huu
-  consultation:
-    and: na
-    another_website_html: Mashauriano haya %{closed} yalifanywa kwenye <a href="%{url}">tovuti
-      nyingine</a>
-    at: saa
-    closes: Yatafungwa saa
-    closes_at: Mashauriano haya yatafungwa saa
-    complete_a: Jaza
-    description: Maelezo ya mashauriano
-    detail_of_feedback_received: Maelezo ya maoni yamepokewa
-    detail_of_outcome: Maelezo ya matokeo
-    documents: Hati
-    download_outcome: Pakua matokeo yote
-    either: labda
-    email_to: 'Tuma barua pepe katika:'
-    feedback_received: Maoni yamepokewa
-    is_being: yana
-    not_open_yet: Bado mashauriano haya hayajafunguliwa
-    'on':
-    opens: Mashauriano haya yatafunguliwa
-    original_consultation: Mashauriano halisi
-    ran_from: Mashauriano haya yalifanywa kuanzia
-    respond_online: Jibu mtandaoni
-    'true': kweli
-    visit_soon: Tembelea ukurasa huu tena hivi karibuni ili upakue matokeo ya maoni
-      haya&nbsp;ya umma.
-    was: yalikuwa
-    ways_to_respond: Njia za kujibu
-    write_to: 'Andika barua kwa:'
-  contact:
-    email: Barua pepe
-    find_call_charges: Pata maelezo kuhusu gharama za kupiga simu
-    online: Mtandaoni
-    phone: Simu
-    webchat: Gumzo la mtandaoni
   corporate_information_page:
     about_our_services_html: Pata maelezo kuhusu %{link}.
     corporate_information: Maelezo ya shirika
-    personal_information_charter_html: "%{link} yetu inafafanua jinsi tunavyoshughulikia
-      maelezo yako ya kibinafsi."
-    publication_scheme_html: Soma maelezo kuhusu aina za maelezo tunayochapisha kila
-      wakati kwenye %{link} yetu.
+    personal_information_charter_html: "%{link} yetu inafafanua jinsi tunavyoshughulikia maelezo yako ya kibinafsi."
+    publication_scheme_html: Soma maelezo kuhusu aina za maelezo tunayochapisha kila wakati kwenye %{link} yetu.
     social_media_use_html: Soma sera yetu kwenye %{link}.
     welsh_language_scheme_html: Pata maelezo kuhusu wajibu wetu wa %{link}.
   fatality_notice:
@@ -324,8 +314,7 @@ sw:
     operations_in: Shughuli zinazofanywa katika %{location}
   gone:
     page_title: Hayapatikani tena
-    published_in_error: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu
-      yalichapishwa kimakosa.
+    published_in_error: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu yalichapishwa kimakosa.
     title: Ukurasa unaotafuta haupatikani tena
   guide:
     pages_in_guide: Kurasa za mwongozo huu
@@ -335,13 +324,8 @@ sw:
       available_at: Chapisho hili linapatikana katika %{url}
       copyright: "© Hakimiliki ya Crown %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Chapisho hili limepewa leseni chini ya sheria na masharti ya
-        Open Government Licence v3.0 isipokuwa ibainishwe vinginevyo. Ili uone leseni,
-        tembelea <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        au andika barua kwa Information Policy Team, The National Archives, Kew, London
-        TW9 4DU au tuma barua pepe: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Tukitambua maelezo yoyote ya hakimiliki ya watu wengine, utahitaji
-        kupata ruhusa kutoka kwa wamiliki wa hakimiliki husika.
+      licence_html: 'Chapisho hili limepewa leseni chini ya sheria na masharti ya Open Government Licence v3.0 isipokuwa ibainishwe vinginevyo. Ili uone leseni, tembelea <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> au andika barua kwa Information Policy Team, The National Archives, Kew, London TW9 4DU au tuma barua pepe: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Tukitambua maelezo yoyote ya hakimiliki ya watu wengine, utahitaji kupata ruhusa kutoka kwa wamiliki wa hakimiliki husika.
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ sw:
     next_page: Unaofuata
     previous_page: Uliotangulia
     print_entire_guide: Chapisha mwongozo wote
+  publication:
+    details: Maelezo
+    documents:
+      one: Hati
+      other: Hati
   service_sign_in:
     continue: Endelea
     error:
@@ -362,15 +351,11 @@ sw:
       busy: Washauri wote wa gumzo la mtandaoni hawapatikani kwa sasa.
       closed: Huduma ya gumzo la mtandaoni imefungwa kwa sasa.
       speak_to_adviser: Zungumza na mshauri sasa
-      technical_problem: Huduma ya gumzo la mtandaoni haipatikani kwa sasa kwa sababu
-        ya matatizo ya kiufundi.
+      technical_problem: Huduma ya gumzo la mtandaoni haipatikani kwa sasa kwa sababu ya matatizo ya kiufundi.
   specialist_document:
-    pdo_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Designated Origin
-      UK Protected
-    pgi_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Geographic Origin
-      UK Protected
-    tsg_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Traditional Speciality
-      UK Protected
+    pdo_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Designated Origin UK Protected
+    pgi_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Geographic Origin UK Protected
+    tsg_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Traditional Speciality UK Protected
   speech:
     delivered_on: Iliwasilishwa mnamo
     location: Mahali
@@ -386,16 +371,10 @@ sw:
     release_date: Tarehe ya kutangazwa
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Ushauri wa <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> dhidi ya usafiri wote isipokuwa usafiri muhimu
-        katika sehemu fulani za nchi.
-      avoid_all_but_essential_travel_to_whole_country_html: Ushauri wa <abbr title="Foreign
-        and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote isipokuwa usafiri
-        muhimu nchini kote.
-      avoid_all_travel_to_parts_html: Ushauri wa <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> dhidi ya usafiri wote katika sehemu fulani za nchi.
-      avoid_all_travel_to_whole_country_html: Ushauri wa <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> dhidi ya usafiri wote nchini kote.
+      avoid_all_but_essential_travel_to_parts_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote isipokuwa usafiri muhimu katika sehemu fulani za nchi.
+      avoid_all_but_essential_travel_to_whole_country_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote isipokuwa usafiri muhimu nchini kote.
+      avoid_all_travel_to_parts_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote katika sehemu fulani za nchi.
+      avoid_all_travel_to_whole_country_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote nchini kote.
     context: Ushauri wa safari za nje ya nchi
     coronavirus_warning:
       content_html: |
@@ -418,8 +397,7 @@ sw:
     updated: Ulisasishwa
   unpublishing:
     page_title: Haupatikani tena
-    summary: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu yalichapishwa
-      kimakosa.
+    summary: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu yalichapishwa kimakosa.
     title: Ukurasa unaotafuta haupatikani tena
   working_group:
     contact_details: Anwani za mawasiliano

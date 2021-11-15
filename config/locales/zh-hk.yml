@@ -1,5 +1,83 @@
+---
 zh-hk:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: 英國脫歐商業指引
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: 英國脫歐個人及家庭指引
+    heading_prefix: 與別不同
+  common:
+    last_updated:
+    visit: 訪問：
+  components:
+    figure:
+      image_credit: 圖片來源： %{credit}
+    published_dates:
+      hide_all_updates: 隱藏所有更新
+      last_updated: 最近更新 %{date}
+      published: 已發佈 %{date}
+      see_all_updates: 查看所有更新
+      show_all_updates: 顯示所有更新
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: 全部隱藏
+      show_all: 全部顯示
+    save_this_page:
+      add_page_button: 加入您的已保存頁面
+      confirmations:
+        page_removed:
+          message: 您已從您的已保存頁面移除此項
+        page_saved:
+          message: 您已將此項加入您的已保存頁面
+      page_not_saved_heading: 保存此一頁面以供今後返回
+      page_was_saved_heading: 您已保存此一頁面
+      remove_page_button: 從您的已保存頁面移除
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">查閱您的已保存頁面</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登入</a> 以查閱您的已保存頁面。
+    share_links:
+      share_this_page: 轉載此一頁面
+  consultation:
+    and: 及
+    another_website_html: 本次諮詢 %{closed} 在 <a href="%{url}">另一網站舉行</a>
+    at: 位於
+    closes: 截止日期為
+    closes_at: 本次諮詢結束於
+    complete_a: 完成一項
+    description: 諮詢詳情
+    detail_of_feedback_received: 已收到回饋意見之詳情
+    detail_of_outcome: 結果詳情
+    documents: 文件
+    download_outcome: 下載完整結果
+    either: 或
+    email_to: 以電郵寄至：
+    feedback_received: 已收到之回饋意見
+    is_being: 正在進行
+    not_open_yet: 諮詢仍未開始
+    'on':
+    opens: 本次諮詢開始
+    original_consultation: 原有諮詢
+    ran_from: 本次諮詢開始於
+    respond_online: 線上回覆
+    'true': 正確
+    visit_soon: 請儘快再次訪問本頁面，以下載此一公共&nbsp;回饋意見。
+    was: 曾是
+    ways_to_respond: 回應方式
+    write_to: 致函：
+  contact:
+    email: 電子郵件
+    find_call_charges: 了解通話費用之狀況
+    online: 線上
+    phone: 電話
+    webchat: 網絡對話
   content_item:
+    coming_soon: 本文件將發佈於
+    contents: 內容
+    metadata:
+      published: 已發布
+      updated: 已更新
     schema_name:
       aaib_report:
         one: 空中意外事故調查報告
@@ -223,89 +301,6 @@ zh-hk:
       written_statement:
         one: 提交國會的書面聲明
         other: 提交國會的其他書面聲明
-    coming_soon: 本文件將發佈於
-    contents: 內容
-    metadata:
-      published: 已發布
-      updated: 已更新
-  publication:
-    documents:
-      one: 文件
-      other: 其他文件
-    details: 詳情
-  brexit:
-    business_link:
-      text: 英國脫歐商業指引
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: 英國脫歐個人及家庭指引
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: 與別不同
-  common:
-    last_updated:
-    visit: 訪問：
-  components:
-    figure:
-      image_credit: 圖片來源： %{credit}
-    published_dates:
-      hide_all_updates: 隱藏所有更新
-      last_updated: 最近更新 %{date}
-      published: 已發佈 %{date}
-      see_all_updates: 查看所有更新
-      show_all_updates: 顯示所有更新
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: 全部隱藏
-      show_all: 全部顯示
-    save_this_page:
-      add_page_button: 加入您的已保存頁面
-      confirmations:
-        page_removed:
-          message: 您已從您的已保存頁面移除此項
-        page_saved:
-          message: 您已將此項加入您的已保存頁面
-      page_not_saved_heading: 保存此一頁面以供今後返回
-      page_was_saved_heading: 您已保存此一頁面
-      remove_page_button: 從您的已保存頁面移除
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">查閱您的已保存頁面</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登入</a>
-        以查閱您的已保存頁面。
-    share_links:
-      share_this_page: 轉載此一頁面
-  consultation:
-    and: 及
-    another_website_html: 本次諮詢 %{closed} 在 <a href="%{url}">另一網站舉行</a>
-    at: 位於
-    closes: 截止日期為
-    closes_at: 本次諮詢結束於
-    complete_a: 完成一項
-    description: 諮詢詳情
-    detail_of_feedback_received: 已收到回饋意見之詳情
-    detail_of_outcome: 結果詳情
-    documents: 文件
-    download_outcome: 下載完整結果
-    either: 或
-    email_to: 以電郵寄至：
-    feedback_received: 已收到之回饋意見
-    is_being: 正在進行
-    not_open_yet: 諮詢仍未開始
-    'on':
-    opens: 本次諮詢開始
-    original_consultation: 原有諮詢
-    ran_from: 本次諮詢開始於
-    respond_online: 線上回覆
-    'true': 正確
-    visit_soon: 請儘快再次訪問本頁面，以下載此一公共&nbsp;回饋意見。
-    was: 曾是
-    ways_to_respond: 回應方式
-    write_to: 致函：
-  contact:
-    email: 電子郵件
-    find_call_charges: 了解通話費用之狀況
-    online: 線上
-    phone: 電話
-    webchat: 網絡對話
   corporate_information_page:
     about_our_services_html: 找尋 %{link}。
     corporate_information: 政府資訊
@@ -329,10 +324,7 @@ zh-hk:
       available_at: 本出版品可在 %{url} 獲取
       copyright: "© Crown 版權所有 %{year}"
       isbn: ISBN：
-      licence_html: 本出版品依據 Open Government Licence v3.0 之條款授權，但另有說明者除外。要查閱此一許可證，請訪問
-        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        或致函 Information Policy Team, The National Archives, Kew, London TW9 4DU，或寄電郵至：
-        <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>。
+      licence_html: 本出版品依據 Open Government Licence v3.0 之條款授權，但另有說明者除外。要查閱此一許可證，請訪問 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> 或致函 Information Policy Team, The National Archives, Kew, London TW9 4DU，或寄電郵至： <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>。
       third_party: 如我們發現任何第三方之版權資訊，您將需獲得有關版權人之許可。
   i18n:
     direction:
@@ -342,6 +334,11 @@ zh-hk:
     next_page: 下一項
     previous_page: 上一項
     print_entire_guide: 列印完整指引
+  publication:
+    details: 詳情
+    documents:
+      one: 文件
+      other: 其他文件
   service_sign_in:
     continue: 繼續
     error:
@@ -375,8 +372,7 @@ zh-hk:
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，如非必要，請勿前往該國部份地區。
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr>
-        建議，如非必要，請勿前往該國全部地區。
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，如非必要，請勿前往該國全部地區。
       avoid_all_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國部份地區。
       avoid_all_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國全部地區。
     context: 海外旅行建議

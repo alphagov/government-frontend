@@ -1,5 +1,83 @@
+---
 so:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Tilmaamaha Brexit ee ganacsiyada
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Tilmaamaha Brexit ee qoysaska iyo shaqsiyaadka
+    heading_prefix: Waxa jira kala duwanaansho
+  common:
+    last_updated:
+    visit: 'Booqo:'
+  components:
+    figure:
+      image_credit: 'Xuquuqda sawirka: %{credit}'
+    published_dates:
+      hide_all_updates: qari dhamaan waxa cusub
+      last_updated: Markii ugu dambaysay ee la cusboonaysiiyay %{date}
+      published: La daabacay %{date}
+      see_all_updates: eeg dhamaan cusboonaysiinaha
+      show_all_updates: muuji dhamaan cusboonaysiinaha
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: qari dhamaan
+      show_all: Muuji dhamaan
+    save_this_page:
+      add_page_button: Ku dar bogagaaga xafidan
+      confirmations:
+        page_removed:
+          message: Waxaad ka saartay bogagaaga xafidan
+        page_saved:
+          message: Waxaad ka dartay bogagaaga xafidan
+      page_not_saved_heading: Bogan xafid markaa waxaad kusoo noqon kartaa mardambe
+      page_was_saved_heading: Waad xafiday bogan
+      remove_page_button: Ka saar bogagaaga xafidan
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Eeg bogagaaga xafidan</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Gal</a> Bogagaaaga xafidan.
+    share_links:
+      share_this_page: Lawadaag bogan
+  consultation:
+    and: iyo
+    another_website_html: Latalintan %{closed} held on <a href="%{url}">websaayt kale</a>
+    at: ee
+    closes: U dhaw goobta
+    closes_at: Latalintan waxay aad ugu dhawdahay meesha
+    complete_a: Dhamaystirka
+    description: Qoraalada latalinta
+    detail_of_feedback_received: Faah-faahinta falcelinta la helay
+    detail_of_outcome: Faah-faahinta maxsuulka
+    documents: Dukumentiyada
+    download_outcome: Dejiso maxsuulka oo dhamaystiran
+    either: ama
+    email_to: 'Ku dirso iimayl:'
+    feedback_received: Falcelinta la helay
+    is_being: waa
+    not_open_yet: Latalinta aan wali furnayn
+    'on':
+    opens: Latalintan waxay furantahay
+    original_consultation: Latalinta asalka ah
+    ran_from: Latalinta waxay ka timid
+    respond_online: Jawaab onlaayn ah
+    'true': run ah
+    visit_soon: Markale booqo boga si aad udejisato maxsuulka dejisan ee dadwaynaha & nbsp;falcelinta.
+    was: waxay ahayd
+    ways_to_respond: Hababka loo jawaabo
+    write_to: 'Loogu qoro:'
+  contact:
+    email: Iimaylka
+    find_call_charges: Loo raadiyo maxsuulada kasoo baxa wicitaanka
+    online: Onlaaynka ah
+    phone: Telefoonka
+    webchat: Wada hadalka websaayka
   content_item:
+    coming_soon: Dhokumantigan waxa la daabici doonaa
+    contents: Waxyaabaha uu ka koobanyahay
+    metadata:
+      published: Daabacaada
+      updated: La cusboonaysiiyay
     schema_name:
       aaib_report:
         one: Warbixinta Qeybta Baadhitaanada Shilalka Hawada
@@ -223,98 +301,11 @@ so:
       written_statement:
         one: Bayaan qoran oo loogu talogalay Baarlamaanka
         other: Bayaanada qoran ee loogu talogalay Baarlamaanka
-    coming_soon: Dhokumantigan waxa la daabici doonaa
-    contents: Waxyaabaha uu ka koobanyahay
-    metadata:
-      published: Daabacaada
-      updated: La cusboonaysiiyay
-  publication:
-    documents:
-      one: Dukumenti
-      other: Dukumentiyada
-    details: Faah-faahin
-  brexit:
-    business_link:
-      text: Tilmaamaha Brexit ee ganacsiyada
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Tilmaamaha Brexit ee qoysaska iyo shaqsiyaadka
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Waxa jira kala duwanaansho
-  common:
-    last_updated:
-    visit: 'Booqo:'
-  components:
-    figure:
-      image_credit: 'Xuquuqda sawirka: %{credit}'
-    published_dates:
-      hide_all_updates: qari dhamaan waxa cusub
-      last_updated: Markii ugu dambaysay ee la cusboonaysiiyay %{date}
-      published: La daabacay %{date}
-      see_all_updates: eeg dhamaan cusboonaysiinaha
-      show_all_updates: muuji dhamaan cusboonaysiinaha
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: qari dhamaan
-      show_all: Muuji dhamaan
-    save_this_page:
-      add_page_button: Ku dar bogagaaga xafidan
-      confirmations:
-        page_removed:
-          message: Waxaad ka saartay bogagaaga xafidan
-        page_saved:
-          message: Waxaad ka dartay bogagaaga xafidan
-      page_not_saved_heading: Bogan xafid markaa waxaad kusoo noqon kartaa mardambe
-      page_was_saved_heading: Waad xafiday bogan
-      remove_page_button: Ka saar bogagaaga xafidan
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Eeg
-        bogagaaga xafidan</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Gal</a>
-        Bogagaaaga xafidan.
-    share_links:
-      share_this_page: Lawadaag bogan
-  consultation:
-    and: iyo
-    another_website_html: Latalintan %{closed} held on <a href="%{url}">websaayt kale</a>
-    at: ee
-    closes: U dhaw goobta
-    closes_at: Latalintan waxay aad ugu dhawdahay meesha
-    complete_a: Dhamaystirka
-    description: Qoraalada latalinta
-    detail_of_feedback_received: Faah-faahinta falcelinta la helay
-    detail_of_outcome: Faah-faahinta maxsuulka
-    documents: Dukumentiyada
-    download_outcome: Dejiso maxsuulka oo dhamaystiran
-    either: ama
-    email_to: 'Ku dirso iimayl:'
-    feedback_received: Falcelinta la helay
-    is_being: waa
-    not_open_yet: Latalinta aan wali furnayn
-    'on':
-    opens: Latalintan waxay furantahay
-    original_consultation: Latalinta asalka ah
-    ran_from: Latalinta waxay ka timid
-    respond_online: Jawaab onlaayn ah
-    'true': run ah
-    visit_soon: Markale booqo boga si aad udejisato maxsuulka dejisan ee dadwaynaha
-      & nbsp;falcelinta.
-    was: waxay ahayd
-    ways_to_respond: Hababka loo jawaabo
-    write_to: 'Loogu qoro:'
-  contact:
-    email: Iimaylka
-    find_call_charges: Loo raadiyo maxsuulada kasoo baxa wicitaanka
-    online: Onlaaynka ah
-    phone: Telefoonka
-    webchat: Wada hadalka websaayka
   corporate_information_page:
     about_our_services_html: Ka raadi %{link}.
     corporate_information: Macluumaadka shirkada
-    personal_information_charter_html: Sharaxadahayagu %{link} waxay sheegayaan sida
-      loola dhaqmayo macluumaadkaaga shaqsiyeed.
-    publication_scheme_html: Akhri waxyaabaha ku saabsan nooca macluumaadka aan si
-      joogto ugu daabacno %{link}.
+    personal_information_charter_html: Sharaxadahayagu %{link} waxay sheegayaan sida loola dhaqmayo macluumaadkaaga shaqsiyeed.
+    publication_scheme_html: Akhri waxyaabaha ku saabsan nooca macluumaadka aan si joogto ugu daabacno %{link}.
     social_media_use_html: Ka akhri siyaasadayahaga %{link}.
     welsh_language_scheme_html: Raadi waxyaabaha ku saabsan ka go'naanshahayaga %{link}.
   fatality_notice:
@@ -323,8 +314,7 @@ so:
     operations_in: Hawalaha %{location}
   gone:
     page_title: Lama hali karo
-    published_in_error: Macluumaadka kujiray bogan waa laga saaray waayo waxa loo
-      daabacay si qaldan.
+    published_in_error: Macluumaadka kujiray bogan waa laga saaray waayo waxa loo daabacay si qaldan.
     title: Boga aad doon doonaysaa lama heli karo
   guide:
     pages_in_guide: Bogaga tilmaamahan
@@ -334,14 +324,8 @@ so:
       available_at: Daabacaadan waxa laga heli karaa %{url}
       copyright: "© Crown copyright %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Daabacaadani waxay ku diwaangashantahay xeerarka kujira Liisanka
-        Furan ee Dawlada v3.0 marka laga reebo halka kuwo kale lagu xusay. Si aad
-        dib ugu dheehato, booqo <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        ama qor Macluumaadka Kooxda Siyaasada, The National Archives, Kew, London
-        TW9 4DU, ama iimayl u dir: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Halkaas oo aan aqoonsanay macluumaad kasta oo gacan sadexaad xaq
-        u leedahay waxaad u baahan doontaa inaad hesho ogolaansho la xidhiidha qofka
-        xuquuqda iska leh.
+      licence_html: 'Daabacaadani waxay ku diwaangashantahay xeerarka kujira Liisanka Furan ee Dawlada v3.0 marka laga reebo halka kuwo kale lagu xusay. Si aad dib ugu dheehato, booqo <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ama qor Macluumaadka Kooxda Siyaasada, The National Archives, Kew, London TW9 4DU, ama iimayl u dir: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Halkaas oo aan aqoonsanay macluumaad kasta oo gacan sadexaad xaq u leedahay waxaad u baahan doontaa inaad hesho ogolaansho la xidhiidha qofka xuquuqda iska leh.
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ so:
     next_page: Ku xiga
     previous_page: Hore
     print_entire_guide: Ku qor tilmaamta guud
+  publication:
+    details: Faah-faahin
+    documents:
+      one: Dukumenti
+      other: Dukumentiyada
   service_sign_in:
     continue: Sii wad
     error:
@@ -362,15 +351,11 @@ so:
       busy: Dhamaan la taliyaasha websaaytku waa mashquul wakhti xaadirkan
       closed: Lahadalka websaaytka dhexdiisu xiligan wuu xidhanyahay
       speak_to_adviser: Hada la hadal lataliye
-      technical_problem: Wadahadalka websaaytka dhexdiisa hada lama heli karo iyadoo
-        ay ugu wacantahay dhibaatooyin farsamo.
+      technical_problem: Wadahadalka websaaytka dhexdiisa hada lama heli karo iyadoo ay ugu wacantahay dhibaatooyin farsamo.
   specialist_document:
-    pdo_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayada Lagu Nashqadeeyay
-      asal ahaana UK Ilaashan ah
-    pgi_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayada Lagu Nashqadeeyay
-      Goob ahaana UK Ilaashan ah
-    tsg_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayo lagu nashqadeeyay
-      Dhaqaan u gaar ah UK Ilaashan ah
+    pdo_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayada Lagu Nashqadeeyay asal ahaana UK Ilaashan ah
+    pgi_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayada Lagu Nashqadeeyay Goob ahaana UK Ilaashan ah
+    tsg_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayo lagu nashqadeeyay Dhaqaan u gaar ah UK Ilaashan ah
   speech:
     delivered_on: Loo diray
     location: Goobta
@@ -386,16 +371,10 @@ so:
     release_date: Taariikhda sii daynta
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> talo dhamaan kasoo wada horjeeda lakin socdaal muhiim ah
-        oo qaybaha dalka oo dhan ah.
-      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda lakin socdaal
-        muhiim ah guud ahaan dalka.
-      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        talo dhamaan kasoo wada horjeeda socdaalka dhamaan qaybaha dalka.
-      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> talo dhamaan kasoo wada horjeeda socdaalka dalka oo dhan.
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda lakin socdaal muhiim ah oo qaybaha dalka oo dhan ah.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda lakin socdaal muhiim ah guud ahaan dalka.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda socdaalka dhamaan qaybaha dalka.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda socdaalka dalka oo dhan.
     context: Talada socdaalka ajaanibka
     coronavirus_warning:
       content_html: |
@@ -418,8 +397,7 @@ so:
     updated: La cusboonaysiiyay
   unpublishing:
     page_title: Lama hali karo
-    summary: Macluumaadka kujiray bogan waa laga saaray waayo waxa loo daabacay si
-      qaldan.
+    summary: Macluumaadka kujiray bogan waa laga saaray waayo waxa loo daabacay si qaldan.
     title: Boga aad doon doonaysaa lama heli karo
   working_group:
     contact_details: Faahfaahinta xidhiidhka

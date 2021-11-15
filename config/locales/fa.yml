@@ -1,11 +1,12 @@
+---
 fa:
   brexit:
     business_link:
-      text: راهنمای برگزیت برای کسب‌و‌کارها
       path: "/guidance/brexit-guidance-for-businesses"
+      text: راهنمای برگزیت برای کسب‌و‌کارها
     citizen_link:
-      text: راهنمای برگزیت برای کسب‌و‌کارها و خانواده‌ها
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: راهنمای برگزیت برای کسب‌و‌کارها و خانواده‌ها
     heading_prefix: مختلف وجود دارد
   common:
     last_updated:
@@ -34,16 +35,13 @@ fa:
       page_not_saved_heading: این صفحه را ذخیره کنید تا بتوانید بعداً به آن بازگردید
       page_was_saved_heading: شما اسن صفحه را ذخیره کردید
       remove_page_button: حذف از صفحات ذخیره‌شده شما
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">مشاهده
-        صفحات ذخیره‌شده شما</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">برای
-        مشاهده</a> ذخیره‌شده خود وارد شوید.
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">مشاهده صفحات ذخیره‌شده شما</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">برای مشاهده</a> ذخیره‌شده خود وارد شوید.
     share_links:
       share_this_page: اشتراک‌گذاری این صفحه
   consultation:
     and: و
-    another_website_html: این مشاوره %{closed} در <a href="%{url}">وب‌سات دیگر برگزار
-      شد</a>
+    another_website_html: این مشاوره %{closed} در <a href="%{url}">وب‌سات دیگر برگزار شد</a>
     at: در
     closes: بسته می‌شود در
     closes_at: این مشاوره بسته می‌شود در
@@ -64,8 +62,7 @@ fa:
     ran_from: این مشاوره در حال اجرا است از
     respond_online: آنلاین پاسخ دهید
     'true': صحیح
-    visit_soon: برای دانلود نتیجه این بازخورد عمومی، خیلی زود دوباره از این صفحه بازدید
-      کنید.
+    visit_soon: برای دانلود نتیجه این بازخورد عمومی، خیلی زود دوباره از این صفحه بازدید کنید.
     was: بود
     ways_to_respond: راه‌های پاسخ
     write_to: 'پیام دهید به:'
@@ -307,10 +304,8 @@ fa:
   corporate_information_page:
     about_our_services_html: اطلاعات کسب کنید %{link}.
     corporate_information: اطلاعات شرکت
-    personal_information_charter_html: "%{link} نحوه رفتار ما با اطلاعات شخصی شما
-      را توضیح می‌دهد."
-    publication_scheme_html: درباره انواع اطلاعاتی که معمولاً در %{link} خود منتشر
-      می‌کنیم، اطلاعات بیشتری کسب کنید.
+    personal_information_charter_html: "%{link} نحوه رفتار ما با اطلاعات شخصی شما را توضیح می‌دهد."
+    publication_scheme_html: درباره انواع اطلاعاتی که معمولاً در %{link} خود منتشر می‌کنیم، اطلاعات بیشتری کسب کنید.
     social_media_use_html: سیاست ما را درباره %{link} مطالعه کنید.
     welsh_language_scheme_html: درباره تعهد ما نسبت به %{link} اطلاعات کسب کنید.
   fatality_notice:
@@ -329,12 +324,8 @@ fa:
       available_at: این مورد منتشر شده در %{url} در دسترس است
       copyright: "© کپی‌رایت Crown %{year}"
       isbn: 'شابک:'
-      licence_html: 'این مورد منتشر شده تحت شرایط مجوز دولت باز نسخه 3.0 قرار دارد،
-        مگر در مواردی که خلاف آن بیان شده باشد. برای مشاهده این مجوز، از <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        بازدید کرده یا به تیم سیاست اطلاع‌رسانی، آرشیوهای ملی به آدرس Kew, London
-        TW9 4DU نامه بنویسید یا ایمیل بزنید: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: در مواقعی که ما هر گونه اطلاعات کپی‌رایت شخص ثالث شناسایی کنیم،
-        شما باید از صاحبان کپی‌رایت مربوطه، مجوز کسب کنید.
+      licence_html: 'این مورد منتشر شده تحت شرایط مجوز دولت باز نسخه 3.0 قرار دارد، مگر در مواردی که خلاف آن بیان شده باشد. برای مشاهده این مجوز، از <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> بازدید کرده یا به تیم سیاست اطلاع‌رسانی، آرشیوهای ملی به آدرس Kew, London TW9 4DU نامه بنویسید یا ایمیل بزنید: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: در مواقعی که ما هر گونه اطلاعات کپی‌رایت شخص ثالث شناسایی کنیم، شما باید از صاحبان کپی‌رایت مربوطه، مجوز کسب کنید.
   i18n:
     direction: rtl
   language_names:
@@ -380,18 +371,10 @@ fa:
     release_date: تاریخ انتشار
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign
-        and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای غیر ضروری به
-        بخش‌هایی از این کشور خودداری کنید.
-      avoid_all_but_essential_travel_to_whole_country_html: وزارت امور خارجه بریتانیا <abbr
-        title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای
-        غیر ضروری به تمام نقاط این کشور خودداری کنید.
-      avoid_all_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and
-        Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به بخش‌هایی از این کشور
-        خودداری کنید.
-      avoid_all_travel_to_whole_country_html: وزارت امور خارجه بریتانیا <abbr title="Foreign
-        and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به تمام نقاط این
-        کشور خودداری کنید.
+      avoid_all_but_essential_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای غیر ضروری به بخش‌هایی از این کشور خودداری کنید.
+      avoid_all_but_essential_travel_to_whole_country_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای غیر ضروری به تمام نقاط این کشور خودداری کنید.
+      avoid_all_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به بخش‌هایی از این کشور خودداری کنید.
+      avoid_all_travel_to_whole_country_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به تمام نقاط این کشور خودداری کنید.
     context: توصیه‌های مربوط به سفر خارجی
     coronavirus_warning:
       content_html: |

@@ -1,5 +1,83 @@
+---
 kk:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Компанияларға арналған Brexit нұсқаулығы
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Жеке тұлғалар мен отбасыларға арналған Brexit нұсқаулығы
+    heading_prefix: Әртүрлісі бар
+  common:
+    last_updated:
+    visit: 'Мұнда өтіңіз:'
+  components:
+    figure:
+      image_credit: 'Суретті түсірген: %{credit}'
+    published_dates:
+      hide_all_updates: барлық жаңартуларды жасыру
+      last_updated: Соңғы рет %{date} жаңартылды
+      published: "%{date} күні жарияланды"
+      see_all_updates: барлық жаңартуларды қарау
+      show_all_updates: барлық жаңартуларды көрсету
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: барлығын жасыру
+      show_all: барлығын көрсету
+    save_this_page:
+      add_page_button: Сақталған беттерге қосыңыз
+      confirmations:
+        page_removed:
+          message: Мұны сақталған беттерден жойдыңыз
+        page_saved:
+          message: Мұны сақталған беттерге қостыңыз
+      page_not_saved_heading: Бұл бетті оған кейінірек орала алатындай сақтаңыз
+      page_was_saved_heading: Сіз бұл бетті сақтадыңыз
+      remove_page_button: Сақталған беттерден алып тастау
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Сақталған беттерді қараңыз</a>
+      see_saved_pages_signed_out: Сақталған беттерді қарау үшін <a href="%{link}" class="govuk-link %{additional_class}">Кіріңіз</a>.
+    share_links:
+      share_this_page: Осы бетпен бөлісу
+  consultation:
+    and: және
+    another_website_html: Бұл кеңес %{closed} <a href="%{url}">басқа веб-сайтта өтті</a>
+    at: мына уақытта
+    closes: Ол мына уақытта жабылды
+    closes_at: Бұл кеңес мына уақытта жабылады
+    complete_a: Аяқтау
+    description: Кеңес сипаттамасы
+    detail_of_feedback_received: Алынған пікір мәліметі
+    detail_of_outcome: Нәтиже мәліметі
+    documents: Құжаттар
+    download_outcome: Толық нәтижені жүктеп алу
+    either: немесе
+    email_to: 'Электрондых хат жіберу:'
+    feedback_received: Алынған пікір
+    is_being: жіберілуде
+    not_open_yet: Бұл кеңес әлі ашылмаған
+    'on':
+    opens: Бұл кеңес ашылды
+    original_consultation: Бастапқы кеңес
+    ran_from: Бұл кеңес мына жерден басталады
+    respond_online: Онлайн жауап беру
+    'true': шын
+    visit_soon: Нәтижені осы қоғамдық&nbsp;пікірге жүктеу үшін жақында осы бетке қайта кіріңіз.
+    was: болды
+    ways_to_respond: Жауап беру жолдары
+    write_to: 'Мынаған жазу:'
+  contact:
+    email: Электрондық пошта
+    find_call_charges: Барлық алынатын ақылар туралы мәлімет алу
+    online: Онлайн
+    phone: Телефон
+    webchat: Вебчат
   content_item:
+    coming_soon: Бұл құжат мына күні жарияланады
+    contents: Мазмұны
+    metadata:
+      published: Жарияланды
+      updated: Жаңартылды
     schema_name:
       aaib_report:
         one: Әуе апаттарын тергеу бөлімінің есебі
@@ -223,98 +301,11 @@ kk:
       written_statement:
         one: Парламентке жазбаша мәлімдеме
         other: Парламентке жазбаша мәлімдемелер
-    coming_soon: Бұл құжат мына күні жарияланады
-    contents: Мазмұны
-    metadata:
-      published: Жарияланды
-      updated: Жаңартылды
-  publication:
-    documents:
-      one: Құжат
-      other: Құжаттар
-    details: Толық мәліметтер
-  brexit:
-    business_link:
-      text: Компанияларға арналған Brexit нұсқаулығы
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Жеке тұлғалар мен отбасыларға арналған Brexit нұсқаулығы
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Әртүрлісі бар
-  common:
-    last_updated:
-    visit: 'Мұнда өтіңіз:'
-  components:
-    figure:
-      image_credit: 'Суретті түсірген: %{credit}'
-    published_dates:
-      hide_all_updates: барлық жаңартуларды жасыру
-      last_updated: Соңғы рет %{date} жаңартылды
-      published: "%{date} күні жарияланды"
-      see_all_updates: барлық жаңартуларды қарау
-      show_all_updates: барлық жаңартуларды көрсету
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: барлығын жасыру
-      show_all: барлығын көрсету
-    save_this_page:
-      add_page_button: Сақталған беттерге қосыңыз
-      confirmations:
-        page_removed:
-          message: Мұны сақталған беттерден жойдыңыз
-        page_saved:
-          message: Мұны сақталған беттерге қостыңыз
-      page_not_saved_heading: Бұл бетті оған кейінірек орала алатындай сақтаңыз
-      page_was_saved_heading: Сіз бұл бетті сақтадыңыз
-      remove_page_button: Сақталған беттерден алып тастау
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Сақталған
-        беттерді қараңыз</a>
-      see_saved_pages_signed_out: Сақталған беттерді қарау үшін <a href="%{link}"
-        class="govuk-link %{additional_class}">Кіріңіз</a>.
-    share_links:
-      share_this_page: Осы бетпен бөлісу
-  consultation:
-    and: және
-    another_website_html: Бұл кеңес %{closed} <a href="%{url}">басқа веб-сайтта өтті</a>
-    at: мына уақытта
-    closes: Ол мына уақытта жабылды
-    closes_at: Бұл кеңес мына уақытта жабылады
-    complete_a: Аяқтау
-    description: Кеңес сипаттамасы
-    detail_of_feedback_received: Алынған пікір мәліметі
-    detail_of_outcome: Нәтиже мәліметі
-    documents: Құжаттар
-    download_outcome: Толық нәтижені жүктеп алу
-    either: немесе
-    email_to: 'Электрондых хат жіберу:'
-    feedback_received: Алынған пікір
-    is_being: жіберілуде
-    not_open_yet: Бұл кеңес әлі ашылмаған
-    'on':
-    opens: Бұл кеңес ашылды
-    original_consultation: Бастапқы кеңес
-    ran_from: Бұл кеңес мына жерден басталады
-    respond_online: Онлайн жауап беру
-    'true': шын
-    visit_soon: Нәтижені осы қоғамдық&nbsp;пікірге жүктеу үшін жақында осы бетке қайта
-      кіріңіз.
-    was: болды
-    ways_to_respond: Жауап беру жолдары
-    write_to: 'Мынаған жазу:'
-  contact:
-    email: Электрондық пошта
-    find_call_charges: Барлық алынатын ақылар туралы мәлімет алу
-    online: Онлайн
-    phone: Телефон
-    webchat: Вебчат
   corporate_information_page:
     about_our_services_html: "%{link} туралы мәлімет алу."
     corporate_information: Корпоративтік ақпарат
-    personal_information_charter_html: Біздің %{link} жеке басқа қатысты ақпаратты
-      қалай пайдалану керектігін түсіндіреді.
-    publication_scheme_html: Біз үнемі %{link} бөлімінде жариялайтын ақпарат түрлері
-      туралы оқыңыз.
+    personal_information_charter_html: Біздің %{link} жеке басқа қатысты ақпаратты қалай пайдалану керектігін түсіндіреді.
+    publication_scheme_html: Біз үнемі %{link} бөлімінде жариялайтын ақпарат түрлері туралы оқыңыз.
     social_media_use_html: "%{link} мекенжайындағы саясатымызды оқыңыз."
     welsh_language_scheme_html: "%{link} қосқан үлесіміз туралы оқыңыз."
   fatality_notice:
@@ -333,14 +324,8 @@ kk:
       available_at: Бұл жарияланым %{url} сайтында қолжетімді
       copyright: "© Crown авторлық құқығы %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Бұл жарияланым басқаша көрсетілмеген жағдайларды қоспағанда,
-        v3.0 Ашық Үкімет лицензиясының шарттары бойынша лицензияланған. Осы лицензияны
-        көру үшін, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        веб-сайтына өтіңіз немесе немесе Ақпараттық саясат тобына, Ұлттық мұрағаттарға,
-        Kew, London TW9 4DU жазыңыз немесе төмендегі мекенжайға электрондық хат жазыңыз:
-        <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Егер біз авторлық құқық туралы кез келген үшінші тарап ақпаратын
-        анықтаған болсақ, сізге тиісті авторлық құқық иелерінен рұқсат алу қажет болады.
+      licence_html: 'Бұл жарияланым басқаша көрсетілмеген жағдайларды қоспағанда, v3.0 Ашық Үкімет лицензиясының шарттары бойынша лицензияланған. Осы лицензияны көру үшін, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> веб-сайтына өтіңіз немесе немесе Ақпараттық саясат тобына, Ұлттық мұрағаттарға, Kew, London TW9 4DU жазыңыз немесе төмендегі мекенжайға электрондық хат жазыңыз: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Егер біз авторлық құқық туралы кез келген үшінші тарап ақпаратын анықтаған болсақ, сізге тиісті авторлық құқық иелерінен рұқсат алу қажет болады.
   i18n:
     direction:
   language_names:
@@ -349,6 +334,11 @@ kk:
     next_page: Келесі
     previous_page: Алдыңғы
     print_entire_guide: Нұсқаулықты толығымен басып шығару
+  publication:
+    details: Толық мәліметтер
+    documents:
+      one: Құжат
+      other: Құжаттар
   service_sign_in:
     continue: Жалғастыру
     error:
@@ -361,15 +351,11 @@ kk:
       busy: Барлық вебчат кеңесшілері қазір бос емес.
       closed: Дәл қазір вебчат жабық.
       speak_to_adviser: Қазір кеңесшімен сөйлесіңіз
-      technical_problem: Қазіргі уақытта техникалық ақауларға байланысты вебчат қолжетімді
-        емес.
+      technical_problem: Қазіргі уақытта техникалық ақауларға байланысты вебчат қолжетімді емес.
   specialist_document:
-    pdo_alt_text: Схема логотипі - Ұлыбританияда тағайындалған шығу тегі жазылған
-      қара мөр
-    pgi_alt_text: Схема логотипі - Ұлыбританияда географиялық шығу тегі жазылған қара
-      мөр
-    tsg_alt_text: Схема логотипі - Ұлыбританияда дәстүрлі ерекшелігі жазылған қара
-      мөр
+    pdo_alt_text: Схема логотипі - Ұлыбританияда тағайындалған шығу тегі жазылған қара мөр
+    pgi_alt_text: Схема логотипі - Ұлыбританияда географиялық шығу тегі жазылған қара мөр
+    tsg_alt_text: Схема логотипі - Ұлыбританияда дәстүрлі ерекшелігі жазылған қара мөр
   speech:
     delivered_on: Жеткізілген күні
     location: Орны
@@ -385,16 +371,10 @@ kk:
     release_date: Шығарылым күні
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> маңыздысынан басқа елдің барлық аймақтарына барудан бас
-        тартуға кеңес береді.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> қажеттісінен басқа бүкіл елге барудан бас тартуға кеңес
-        береді.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        елдің барлық аймақтарына барудан бас тартуға кеңес береді.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        бүкіл елге баруға тыйым салады.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> маңыздысынан басқа елдің барлық аймақтарына барудан бас тартуға кеңес береді.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> қажеттісінен басқа бүкіл елге барудан бас тартуға кеңес береді.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> елдің барлық аймақтарына барудан бас тартуға кеңес береді.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> бүкіл елге баруға тыйым салады.
     context: Шетелге саяхат туралы кеңес
     coronavirus_warning:
       content_html: |

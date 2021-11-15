@@ -1,5 +1,83 @@
+---
 dr:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: راهنمایی برکست برای کسب و کار
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: راهنمایی برکست برای افراد و فامیل ها
+    heading_prefix: تفاوت وجود دارد
+  common:
+    last_updated:
+    visit: 'بازدید:'
+  components:
+    figure:
+      image_credit: "%{credit}:کریدت تصویر\n"
+    published_dates:
+      hide_all_updates: مخفی کردن تمام آپدیت ها
+      last_updated: آخرین آپدیت%{date}
+      published: منتشر شده%{date}
+      see_all_updates: تمام آپدیت ها را مشاهده نمایید
+      show_all_updates: تمام آپدیت ها را نمایش دهید
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: همه را مخفی نمایید
+      show_all: همه را نمایش دهید
+    save_this_page:
+      add_page_button: به صفحات ذخیره شدهء خود اضافه نمایید
+      confirmations:
+        page_removed:
+          message: شما این را از صفحات ذخیره شدهء خود حذف نمودید
+        page_saved:
+          message: شما این را به صفحات ذخیره شدهء خود اضافه نمودید
+      page_not_saved_heading: این صفحه را ذخیره نماید تا دوباره برگردید
+      page_was_saved_heading: شما این صفحه را ذخیره نمودید
+      remove_page_button: از صفحات ذخیره شدهء خود حذف نمایید
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">ازصفحات ذخیره شدهء خود دیدن نمایید</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">وارد سیستم شوید</a>تا صفحات ذخیره شدهء خودرا بیبینید
+    share_links:
+      share_this_page: این صفحه را به اشتراک بگذارید
+  consultation:
+    and: و
+    another_website_html: این مشاوره%{closed}برگزار میشود در<a href="%{url}">ویبسایت دیگر</a>
+    at: در
+    closes: این بسته میشود در
+    closes_at: این مشاوره بسته میشود در
+    complete_a: تکمیل نمایید یک
+    description: شرح مشاوره
+    detail_of_feedback_received: جزیٔیات فیدبک دریافت شده
+    detail_of_outcome: جزیٔیات نتیجه
+    documents: اسناد
+    download_outcome: تمام نتیجه را دانلود نمایید
+    either: و یا
+    email_to: 'ایمل به:'
+    feedback_received: فیدبک دریافت گردید
+    is_being: موجود
+    not_open_yet: مشاوره تا هنوز شروع نشده است
+    'on':
+    opens: مشاوره شروع میشود
+    original_consultation: مشاورهء اصلی
+    ran_from: این مشاوره اجرا میشود از
+    respond_online: بصورت آنلاین پاسخ دهید
+    'true': درست
+    visit_soon: به زودی بار دیگر از این صفحه دیدن نمایید تا نتیجه را از این  فیدبک عمومی دانلود نمایید
+    was: بود
+    ways_to_respond: طریقه هایی پاسخ دهی
+    write_to: 'نوشته کنید به:'
+  contact:
+    email: ایمل
+    find_call_charges: از هزینه هایی تماس مطلع شوید
+    online: آنلاین
+    phone: تلیفون
+    webchat: وب چت
   content_item:
+    coming_soon: این سند منتشر خواهد شد در
+    contents: محتویات
+    metadata:
+      published: منتشر شده
+      updated: آپدیت شده
     schema_name:
       aaib_report:
         one: گزارش شعبهء بررسی حوادث هوایی
@@ -223,97 +301,10 @@ dr:
       written_statement:
         one: بیانیهء کتبی به پارلمان
         other: بیانیه هایی کتبی به پارلمان
-    coming_soon: این سند منتشر خواهد شد در
-    contents: محتویات
-    metadata:
-      published: منتشر شده
-      updated: آپدیت شده
-  publication:
-    documents:
-      one: سند
-      other: اسناد
-    details: جزیٔیات
-  brexit:
-    business_link:
-      text: راهنمایی برکست برای کسب و کار
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: راهنمایی برکست برای افراد و فامیل ها
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: تفاوت وجود دارد
-  common:
-    last_updated:
-    visit: 'بازدید:'
-  components:
-    figure:
-      image_credit: "%{credit}:کریدت تصویر\n"
-    published_dates:
-      hide_all_updates: مخفی کردن تمام آپدیت ها
-      last_updated: آخرین آپدیت%{date}
-      published: منتشر شده%{date}
-      see_all_updates: تمام آپدیت ها را مشاهده نمایید
-      show_all_updates: تمام آپدیت ها را نمایش دهید
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: همه را مخفی نمایید
-      show_all: همه را نمایش دهید
-    save_this_page:
-      add_page_button: به صفحات ذخیره شدهء خود اضافه نمایید
-      confirmations:
-        page_removed:
-          message: شما این را از صفحات ذخیره شدهء خود حذف نمودید
-        page_saved:
-          message: شما این را به صفحات ذخیره شدهء خود اضافه نمودید
-      page_not_saved_heading: این صفحه را ذخیره نماید تا دوباره برگردید
-      page_was_saved_heading: شما این صفحه را ذخیره نمودید
-      remove_page_button: از صفحات ذخیره شدهء خود حذف نمایید
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">ازصفحات
-        ذخیره شدهء خود دیدن نمایید</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">وارد
-        سیستم شوید</a>تا صفحات ذخیره شدهء خودرا بیبینید
-    share_links:
-      share_this_page: این صفحه را به اشتراک بگذارید
-  consultation:
-    and: و
-    another_website_html: این مشاوره%{closed}برگزار میشود در<a href="%{url}">ویبسایت
-      دیگر</a>
-    at: در
-    closes: این بسته میشود در
-    closes_at: این مشاوره بسته میشود در
-    complete_a: تکمیل نمایید یک
-    description: شرح مشاوره
-    detail_of_feedback_received: جزیٔیات فیدبک دریافت شده
-    detail_of_outcome: جزیٔیات نتیجه
-    documents: اسناد
-    download_outcome: تمام نتیجه را دانلود نمایید
-    either: و یا
-    email_to: 'ایمل به:'
-    feedback_received: فیدبک دریافت گردید
-    is_being: موجود
-    not_open_yet: مشاوره تا هنوز شروع نشده است
-    'on':
-    opens: مشاوره شروع میشود
-    original_consultation: مشاورهء اصلی
-    ran_from: این مشاوره اجرا میشود از
-    respond_online: بصورت آنلاین پاسخ دهید
-    'true': درست
-    visit_soon: به زودی بار دیگر از این صفحه دیدن نمایید تا نتیجه را از این  فیدبک
-      عمومی دانلود نمایید
-    was: بود
-    ways_to_respond: طریقه هایی پاسخ دهی
-    write_to: 'نوشته کنید به:'
-  contact:
-    email: ایمل
-    find_call_charges: از هزینه هایی تماس مطلع شوید
-    online: آنلاین
-    phone: تلیفون
-    webchat: وب چت
   corporate_information_page:
     about_our_services_html: دریابید%{link}.
     corporate_information: اطلاعات شرکت
-    personal_information_charter_html: ما%{link} نحوهء برخورد ما با اطلاعات شخصی شما
-      را بیان مینماید
+    personal_information_charter_html: ما%{link} نحوهء برخورد ما با اطلاعات شخصی شما را بیان مینماید
     publication_scheme_html: در بارهء انواع اطلاعاتی که بطور معمول نشرمیشود در%{link}.
     social_media_use_html: سیاست ما را در اینجا بخوانید%{link}.
     welsh_language_scheme_html: از تعهد ما به %{link} مطلع شوید.
@@ -337,8 +328,7 @@ dr:
         این نشریه تحت شرایط مجوز دولت باز v3.0 جواز دارد مگر در مواردی که خلاف آن ذکر شده باشد.
         جهت بازدید از این جواز، مراجعه نمایید به<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> و یا به تیم پالیسی معلومات اطلاع دهید، آرشیف ملی، کیو، لندن TW9 4DU، یا ایمل
         <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
-      third_party: در مواردی که ما حق چاپ برداری شخص ثالث را شناسایی نمودیم، شما نیاز
-        دارید تا از صاحبان دارندهء حق چاپ اجازه بگیرید
+      third_party: در مواردی که ما حق چاپ برداری شخص ثالث را شناسایی نمودیم، شما نیاز دارید تا از صاحبان دارندهء حق چاپ اجازه بگیرید
   i18n:
     direction: rtl
   language_names:
@@ -347,6 +337,11 @@ dr:
     next_page: قبلی
     previous_page: قبلی
     print_entire_guide: تمام راهنما را پرنت نمایید
+  publication:
+    details: جزیٔیات
+    documents:
+      one: سند
+      other: اسناد
   service_sign_in:
     continue: ادامه بدهید
     error:
@@ -361,12 +356,9 @@ dr:
       speak_to_adviser: همین حالا با یک مشاور صحبت نمایید
       technical_problem: ویب چت در حال حاضر بنا بر مشکلات تخنیکی در دسترس نیست
   specialist_document:
-    pdo_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتDesignated Origin UK Protected
-      است
-    pgi_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتeographic Origin UK Protected
-      است
-    tsg_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتTraditional Specialty UK Protected
-      است
+    pdo_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتDesignated Origin UK Protected است
+    pgi_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتeographic Origin UK Protected است
+    tsg_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتTraditional Specialty UK Protected است
   speech:
     delivered_on: تحویل داده شد به
     location: موقعیت
@@ -382,15 +374,10 @@ dr:
     release_date: تاریخ انتشار
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: این<abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> در مورد هر گونه سفر ضروری به تمام نقاط کشور توصیه مینماید.
-      avoid_all_but_essential_travel_to_whole_country_html: این<abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> در مورد هرگونه سفر ضروری به تمام کشور توصیه
-        مینماید.
-      avoid_all_travel_to_parts_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        درمورد سفر به تمام نقاط کشور توصیه مینماید.
-      avoid_all_travel_to_whole_country_html: این<abbr title="Foreign and Commonwealth
-        Office">FCO</abbr>در مورد سفر به تمام کشور توصیه مینماید.
+      avoid_all_but_essential_travel_to_parts_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr> در مورد هر گونه سفر ضروری به تمام نقاط کشور توصیه مینماید.
+      avoid_all_but_essential_travel_to_whole_country_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr> در مورد هرگونه سفر ضروری به تمام کشور توصیه مینماید.
+      avoid_all_travel_to_parts_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr> درمورد سفر به تمام نقاط کشور توصیه مینماید.
+      avoid_all_travel_to_whole_country_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr>در مورد سفر به تمام کشور توصیه مینماید.
     context: مشاوره سفر هایی خارجی
     coronavirus_warning:
       content_html: |

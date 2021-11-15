@@ -1,5 +1,83 @@
+---
 sq:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Udhëzime për Brexit për bizneset
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Udhëzime për Brexit për individët dhe familjet
+    heading_prefix: Ka të ndryshme
+  common:
+    last_updated:
+    visit: 'Vizitoni:'
+  components:
+    figure:
+      image_credit: 'Kreditet e imazhit: %{credit}'
+    published_dates:
+      hide_all_updates: fshih të gjitha përditësimet
+      last_updated: Përditësuar së fundi %{date}
+      published: Publikuar %{date}
+      see_all_updates: shih të gjitha përditësimet
+      show_all_updates: shfaq të gjitha përditësimet
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: fshih të gjitha
+      show_all: shfaq të gjitha
+    save_this_page:
+      add_page_button: Shtoni në faqet tuaja të ruajtura
+      confirmations:
+        page_removed:
+          message: Ju e keni hequr këtë nga faqet tuaja të ruajtura
+        page_saved:
+          message: Ju e keni shtuar këtë në faqet tuaja të ruajtura
+      page_not_saved_heading: Ruajeni këtë faqe në mënyrë që të ktheheni tek ajo më vonë
+      page_was_saved_heading: Ju e keni ruajtur këtë faqe
+      remove_page_button: Hiqe nga faqet e tua të ruajtura
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Shih faqet tuaja të ruajtura</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Hyr</a> për të parë faqet tua të ruajtura.
+    share_links:
+      share_this_page: Shpërdaj këtë faqe
+  consultation:
+    and: dhe
+    another_website_html: Ky konsultim %{closed} u mbajt <a href="%{url}">uebfaqe tjetër</a>
+    at: në
+    closes: Mbyllet në
+    closes_at: Ky konsultim mbyllet në
+    complete_a: Kompleto një
+    description: Përshkrimi i konsultimit
+    detail_of_feedback_received: Detajet e reagimit të marrë
+    detail_of_outcome: Detajet e rezultatit
+    documents: Dokumentet
+    download_outcome: Shkarkoni rezultatin e plotë
+    either: ose
+    email_to: 'Dërgo email në:'
+    feedback_received: Reagimi i marrë
+    is_being: është duke u
+    not_open_yet: Ky konsultim nuk është hapur ende
+    'on':
+    opens: Ky konsultim hapet
+    original_consultation: Konsultimi origjinal
+    ran_from: Ky konsultim filloi nga
+    respond_online: Përgjigju online
+    'true': e vërtetë
+    visit_soon: Vizitoni përsëri këtë faqe së shpejti për të shkarkuar rezultatin në këtë & nbsp; reagimi.
+    was: ishte
+    ways_to_respond: Mënyrat për tu përgjigjur
+    write_to: 'Shkruaj tek:'
+  contact:
+    email: Email
+    find_call_charges: Mësoni për tarifat e thirrjeve
+    online: Online
+    phone: Telefon
+    webchat: Uebchat
   content_item:
+    coming_soon: Ky dokument do të publikohet në
+    contents: Përmbajtja
+    metadata:
+      published: Publikuar
+      updated: Përditësuar
     schema_name:
       aaib_report:
         one: Raporti i Degës së Hetimit të Aksidenteve Ajrore
@@ -223,100 +301,11 @@ sq:
       written_statement:
         one: Deklaratë me shkrim në Parlament
         other: Deklarata me shkrim në Parlament
-    coming_soon: Ky dokument do të publikohet në
-    contents: Përmbajtja
-    metadata:
-      published: Publikuar
-      updated: Përditësuar
-  publication:
-    documents:
-      one: Dokument
-      other: Dokumente
-    details: Detajet
-  brexit:
-    business_link:
-      text: Udhëzime për Brexit për bizneset
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Udhëzime për Brexit për individët dhe familjet
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Ka të ndryshme
-  common:
-    last_updated:
-    visit: 'Vizitoni:'
-  components:
-    figure:
-      image_credit: 'Kreditet e imazhit: %{credit}'
-    published_dates:
-      hide_all_updates: fshih të gjitha përditësimet
-      last_updated: Përditësuar së fundi %{date}
-      published: Publikuar %{date}
-      see_all_updates: shih të gjitha përditësimet
-      show_all_updates: shfaq të gjitha përditësimet
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: fshih të gjitha
-      show_all: shfaq të gjitha
-    save_this_page:
-      add_page_button: Shtoni në faqet tuaja të ruajtura
-      confirmations:
-        page_removed:
-          message: Ju e keni hequr këtë nga faqet tuaja të ruajtura
-        page_saved:
-          message: Ju e keni shtuar këtë në faqet tuaja të ruajtura
-      page_not_saved_heading: Ruajeni këtë faqe në mënyrë që të ktheheni tek ajo më
-        vonë
-      page_was_saved_heading: Ju e keni ruajtur këtë faqe
-      remove_page_button: Hiqe nga faqet e tua të ruajtura
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Shih
-        faqet tuaja të ruajtura</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Hyr</a>
-        për të parë faqet tua të ruajtura.
-    share_links:
-      share_this_page: Shpërdaj këtë faqe
-  consultation:
-    and: dhe
-    another_website_html: Ky konsultim %{closed} u mbajt <a href="%{url}">uebfaqe
-      tjetër</a>
-    at: në
-    closes: Mbyllet në
-    closes_at: Ky konsultim mbyllet në
-    complete_a: Kompleto një
-    description: Përshkrimi i konsultimit
-    detail_of_feedback_received: Detajet e reagimit të marrë
-    detail_of_outcome: Detajet e rezultatit
-    documents: Dokumentet
-    download_outcome: Shkarkoni rezultatin e plotë
-    either: ose
-    email_to: 'Dërgo email në:'
-    feedback_received: Reagimi i marrë
-    is_being: është duke u
-    not_open_yet: Ky konsultim nuk është hapur ende
-    'on':
-    opens: Ky konsultim hapet
-    original_consultation: Konsultimi origjinal
-    ran_from: Ky konsultim filloi nga
-    respond_online: Përgjigju online
-    'true': e vërtetë
-    visit_soon: Vizitoni përsëri këtë faqe së shpejti për të shkarkuar rezultatin
-      në këtë & nbsp; reagimi.
-    was: ishte
-    ways_to_respond: Mënyrat për tu përgjigjur
-    write_to: 'Shkruaj tek:'
-  contact:
-    email: Email
-    find_call_charges: Mësoni për tarifat e thirrjeve
-    online: Online
-    phone: Telefon
-    webchat: Uebchat
   corporate_information_page:
     about_our_services_html: Mësoni %{link}.
     corporate_information: Informacioni i korporatës
-    personal_information_charter_html: "%{link} ynë shpjegon se si i trajtojmë informacionet
-      tuaja personale."
-    publication_scheme_html: Lexoni për llojet e informacionit që botojmë në mënyrë
-      rutinore në %{link} tonë.
+    personal_information_charter_html: "%{link} ynë shpjegon se si i trajtojmë informacionet tuaja personale."
+    publication_scheme_html: Lexoni për llojet e informacionit që botojmë në mënyrë rutinore në %{link} tonë.
     social_media_use_html: Lexoni politikën tonë në %{link}.
     welsh_language_scheme_html: Mësoni rreth angazhimit tonë ndaj %{link}.
   fatality_notice:
@@ -325,8 +314,7 @@ sq:
     operations_in: Operacione në %{location}
   gone:
     page_title: Nuk është më e disponueshme
-    published_in_error: Informacioni në këtë faqe është hequr sepse është publikuar
-      gabimisht.
+    published_in_error: Informacioni në këtë faqe është hequr sepse është publikuar gabimisht.
     title: Faqja që po kërkoni nuk është më e disponueshme
   guide:
     pages_in_guide: Faqet në këtë udhëzim
@@ -336,14 +324,8 @@ sq:
       available_at: Ky publikim është i disponueshëm në %{url}
       copyright: "© Crown e drejta e autorit %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Ky publikim është i licencuar sipas kushteve të Licencës së Qeverisë
-        së Hapur v3.0, përveç rasteve kur përcaktohet ndryshe. Për të parë këtë licencë,
-        vizitoni <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        ose i shkruani Ekipit të Politikave të Informacionit, Arkivave Kombëtare,
-        Kew, London TW9 4DU, ose email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Aty ku kemi identifikuar ndonjë informacion të palës së tretë për
-        të drejtën e autorit, do t'ju duhet të merrni leje nga mbajtësit e të drejtave
-        të autorit në fjalë.
+      licence_html: 'Ky publikim është i licencuar sipas kushteve të Licencës së Qeverisë së Hapur v3.0, përveç rasteve kur përcaktohet ndryshe. Për të parë këtë licencë, vizitoni <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ose i shkruani Ekipit të Politikave të Informacionit, Arkivave Kombëtare, Kew, London TW9 4DU, ose email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Aty ku kemi identifikuar ndonjë informacion të palës së tretë për të drejtën e autorit, do t'ju duhet të merrni leje nga mbajtësit e të drejtave të autorit në fjalë.
   i18n:
     direction:
   language_names:
@@ -352,6 +334,11 @@ sq:
     next_page: Tjetër
     previous_page: I mëparshëm
     print_entire_guide: Printo komplet udhëzimin
+  publication:
+    details: Detajet
+    documents:
+      one: Dokument
+      other: Dokumente
   service_sign_in:
     continue: Vazhdo
     error:
@@ -364,15 +351,11 @@ sq:
       busy: Të gjithë këshilltarët e webchat janë të zënë për momentin.
       closed: Webchat është e mbyllur për momentin.
       speak_to_adviser: Flisni me një këshilltar tani
-      technical_problem: Webchat nuk është i disponueshëm për momentin për shkak të
-        problemeve teknike.
+      technical_problem: Webchat nuk është i disponueshëm për momentin për shkak të problemeve teknike.
   specialist_document:
-    pdo_alt_text: Logoja e skemës është një pullë e zezë me fjalët Designed Origin
-      UK Protected
-    pgi_alt_text: Logoja e skemës është një pullë e zezë me fjalët Geographic Origin
-      UK Protected
-    tsg_alt_text: Logoja e skemës është një pullë e zezë me fjalët Traditional Specialty
-      UK Protected
+    pdo_alt_text: Logoja e skemës është një pullë e zezë me fjalët Designed Origin UK Protected
+    pgi_alt_text: Logoja e skemës është një pullë e zezë me fjalët Geographic Origin UK Protected
+    tsg_alt_text: Logoja e skemës është një pullë e zezë me fjalët Traditional Specialty UK Protected
   speech:
     delivered_on: Dorëzuar më
     location: Vendndodhja
@@ -388,16 +371,10 @@ sq:
     release_date: Data e publikimit
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> këshillon kundër të gjitha udhëtimeve përveçse thelbësore
-        në pjesë të vendit.
-      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> këshillon kundër të gjitha udhëtimeve përveçse
-        thelbësore në të gjithë vendin.
-      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        këshilloni kundër të gjitha udhëtimeve në pjesë të vendit.
-      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> këshilloni kundër çdo udhëtimi në të gjithë vendin.
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> këshillon kundër të gjitha udhëtimeve përveçse thelbësore në pjesë të vendit.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> këshillon kundër të gjitha udhëtimeve përveçse thelbësore në të gjithë vendin.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> këshilloni kundër të gjitha udhëtimeve në pjesë të vendit.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> këshilloni kundër çdo udhëtimi në të gjithë vendin.
     context: Këshilla për udhëtime të huaja
     coronavirus_warning:
       content_html: |

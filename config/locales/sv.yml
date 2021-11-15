@@ -1,5 +1,83 @@
+---
 sv:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexitvägledning för företag
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexitvägledning för privatpersoner och familjer
+    heading_prefix: Det finns olika
+  common:
+    last_updated:
+    visit: 'Besök:'
+  components:
+    figure:
+      image_credit: 'Bild: %{credit}'
+    published_dates:
+      hide_all_updates: dölj alla uppdateringar
+      last_updated: Senast uppdaterad %{date}
+      published: Publicerad %{date}
+      see_all_updates: se alla uppdateringar
+      show_all_updates: Visa alla uppdateringar
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: dölja alla
+      show_all: visa alla
+    save_this_page:
+      add_page_button: Lägg till dina sparade sidor
+      confirmations:
+        page_removed:
+          message: Du har tagit bort detta från dina sparade sidor
+        page_saved:
+          message: Du har lagt till detta på dina sparade sidor
+      page_not_saved_heading: Spara den här sidan så att du kan komma tillbaka till den senare.
+      page_was_saved_heading: Du har sparat den här sidan
+      remove_page_button: Ta bort från dina sparade sidor
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se dina sparade sidor</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Lägg in</a> för att se dina sparade sidor.
+    share_links:
+      share_this_page: Dela den här sidan
+  consultation:
+    and: och
+    another_website_html: Detta samråd %{closed} hölls på <a href="%{url}">en annan webbplats</a>
+    at: kl
+    closes: Det avslutas kl
+    closes_at: Detta samråd avslutas på
+    complete_a: Fyll i ett
+    description: Beskrivning av samrådet
+    detail_of_feedback_received: Detaljerad information om den mottagna feedbacken
+    detail_of_outcome: Detaljerad information om resultatet
+    documents: Dokument
+    download_outcome: Ladda ner det fullständiga resultatet
+    either: antingen
+    email_to: 'E-post till:'
+    feedback_received: Återkoppling som mottagits
+    is_being: är på väg att
+    not_open_yet: Detta samråd är inte öppet ännu
+    'on':
+    opens: Detta samråd öppnas
+    original_consultation: Ursprungligt samråd
+    ran_from: Detta samråd pågick från och med
+    respond_online: Svara online
+    'true': sant
+    visit_soon: Besök den här sidan snart igen för att ladda ner resultatet av denna offentliga&nbsp;återkoppling.
+    was: var
+    ways_to_respond: Sätt att svara
+    write_to: 'Skriv till:'
+  contact:
+    email: E-post
+    find_call_charges: Ta reda på hur man tar ut samtalsavgifter
+    online: Online
+    phone: Telefon
+    webchat: Webbchatt
   content_item:
+    coming_soon: Detta dokument kommer att publiceras den
+    contents: Innehåll
+    metadata:
+      published: Publicerad
+      updated: Uppdaterad
     schema_name:
       aaib_report:
         one: Rapport från Avdelningen för utredning av flygolyckor
@@ -223,100 +301,11 @@ sv:
       written_statement:
         one: Skriftligt uttalande till parlamentet
         other: Skriftliga uttalanden till parlamentet
-    coming_soon: Detta dokument kommer att publiceras den
-    contents: Innehåll
-    metadata:
-      published: Publicerad
-      updated: Uppdaterad
-  publication:
-    documents:
-      one: Dokument
-      other: Dokument
-    details: Detaljer
-  brexit:
-    business_link:
-      text: Brexitvägledning för företag
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexitvägledning för privatpersoner och familjer
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Det finns olika
-  common:
-    last_updated:
-    visit: 'Besök:'
-  components:
-    figure:
-      image_credit: 'Bild: %{credit}'
-    published_dates:
-      hide_all_updates: dölj alla uppdateringar
-      last_updated: Senast uppdaterad %{date}
-      published: Publicerad %{date}
-      see_all_updates: se alla uppdateringar
-      show_all_updates: Visa alla uppdateringar
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: dölja alla
-      show_all: visa alla
-    save_this_page:
-      add_page_button: Lägg till dina sparade sidor
-      confirmations:
-        page_removed:
-          message: Du har tagit bort detta från dina sparade sidor
-        page_saved:
-          message: Du har lagt till detta på dina sparade sidor
-      page_not_saved_heading: Spara den här sidan så att du kan komma tillbaka till
-        den senare.
-      page_was_saved_heading: Du har sparat den här sidan
-      remove_page_button: Ta bort från dina sparade sidor
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se
-        dina sparade sidor</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Lägg
-        in</a> för att se dina sparade sidor.
-    share_links:
-      share_this_page: Dela den här sidan
-  consultation:
-    and: och
-    another_website_html: Detta samråd %{closed} hölls på <a href="%{url}">en annan
-      webbplats</a>
-    at: kl
-    closes: Det avslutas kl
-    closes_at: Detta samråd avslutas på
-    complete_a: Fyll i ett
-    description: Beskrivning av samrådet
-    detail_of_feedback_received: Detaljerad information om den mottagna feedbacken
-    detail_of_outcome: Detaljerad information om resultatet
-    documents: Dokument
-    download_outcome: Ladda ner det fullständiga resultatet
-    either: antingen
-    email_to: 'E-post till:'
-    feedback_received: Återkoppling som mottagits
-    is_being: är på väg att
-    not_open_yet: Detta samråd är inte öppet ännu
-    'on':
-    opens: Detta samråd öppnas
-    original_consultation: Ursprungligt samråd
-    ran_from: Detta samråd pågick från och med
-    respond_online: Svara online
-    'true': sant
-    visit_soon: Besök den här sidan snart igen för att ladda ner resultatet av denna
-      offentliga&nbsp;återkoppling.
-    was: var
-    ways_to_respond: Sätt att svara
-    write_to: 'Skriv till:'
-  contact:
-    email: E-post
-    find_call_charges: Ta reda på hur man tar ut samtalsavgifter
-    online: Online
-    phone: Telefon
-    webchat: Webbchatt
   corporate_information_page:
     about_our_services_html: Ta reda på %{link}.
     corporate_information: Företagsinformation
-    personal_information_charter_html: Vår %{link} förklarar hur vi behandlar din
-      personliga information.
-    publication_scheme_html: Läs om vilka typer av information vi rutinmässigt publicerar
-      i vår %{link}.
+    personal_information_charter_html: Vår %{link} förklarar hur vi behandlar din personliga information.
+    publication_scheme_html: Läs om vilka typer av information vi rutinmässigt publicerar i vår %{link}.
     social_media_use_html: Läs vår policy för %{link}.
     welsh_language_scheme_html: Ta reda på vårt åtagande om %{link}.
   fatality_notice:
@@ -325,8 +314,7 @@ sv:
     operations_in: Verksamhet på %{location}
   gone:
     page_title: Inte längre tillgänglig
-    published_in_error: Informationen på den här sidan har tagits bort eftersom den
-      publicerades felaktigt.
+    published_in_error: Informationen på den här sidan har tagits bort eftersom den publicerades felaktigt.
     title: Sidan du letar efter är inte längre tillgänglig.
   guide:
     pages_in_guide: Sidor i den här guiden
@@ -336,12 +324,8 @@ sv:
       available_at: Den här publikationen finns på %{url}
       copyright: "© Crown copyright %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Denna publikation är licensierad enligt villkoren i Open Government
-        Licence v3.0, om inget annat anges. För att se licensen, besök <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        eller skriv till Information Policy Team, The National Archives, The National
-        Archives, Kew, London TW9 4DU, eller skicka e-post: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Om vi har identifierat upphovsrättslig information från tredje
-        part måste du få tillstånd från de berörda upphovsrättsinnehavarna.
+      licence_html: 'Denna publikation är licensierad enligt villkoren i Open Government Licence v3.0, om inget annat anges. För att se licensen, besök <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> eller skriv till Information Policy Team, The National Archives, The National Archives, Kew, London TW9 4DU, eller skicka e-post: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Om vi har identifierat upphovsrättslig information från tredje part måste du få tillstånd från de berörda upphovsrättsinnehavarna.
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ sv:
     next_page: Nästa
     previous_page: Föregående
     print_entire_guide: Skriv ut hela guiden
+  publication:
+    details: Detaljer
+    documents:
+      one: Dokument
+      other: Dokument
   service_sign_in:
     continue: Fortsätt
     error:
@@ -362,15 +351,11 @@ sv:
       busy: Alla rådgivare för webbchatt är upptagna för tillfället.
       closed: Webbchatten är stängd för tillfället.
       speak_to_adviser: Prata med en rådgivare nu
-      technical_problem: Webbchatten är inte tillgänglig för tillfället på grund av
-        tekniska problem.
+      technical_problem: Webbchatten är inte tillgänglig för tillfället på grund av tekniska problem.
   specialist_document:
-    pdo_alt_text: Systemets logotyp är en svart stämpel med orden Designated Origin
-      UK Protected.
-    pgi_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin
-      UK Protected.
-    tsg_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin
-      UK Protected.
+    pdo_alt_text: Systemets logotyp är en svart stämpel med orden Designated Origin UK Protected.
+    pgi_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin UK Protected.
+    tsg_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin UK Protected.
   speech:
     delivered_on: Levererad den
     location: Plats
@@ -386,14 +371,10 @@ sv:
     release_date: Datum för offentliggörandet
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> avråder från alla utom nödvändiga resor till delar av landet.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> avråder från alla utom nödvändiga resor till hela landet.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        avråder från alla resor till delar av landet.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        avråder från alla resor till hela landet.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla utom nödvändiga resor till delar av landet.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla utom nödvändiga resor till hela landet.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla resor till delar av landet.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla resor till hela landet.
     context: Råd för resor utomlands
     coronavirus_warning:
       content_html: |
@@ -416,8 +397,7 @@ sv:
     updated: Uppdaterad
   unpublishing:
     page_title: Inte längre tillgänglig
-    summary: Informationen på den här sidan har tagits bort eftersom den publicerades
-      felaktigt.
+    summary: Informationen på den här sidan har tagits bort eftersom den publicerades felaktigt.
     title: Sidan du letar efter är inte längre tillgänglig
   working_group:
     contact_details: Kontaktuppgifter

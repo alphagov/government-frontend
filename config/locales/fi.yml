@@ -1,5 +1,83 @@
+---
 fi:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexit -opas yrityksille
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexit -opastus yksilöille ja perheille
+    heading_prefix: On erilaisia
+  common:
+    last_updated:
+    visit: 'Vierailla:'
+  components:
+    figure:
+      image_credit: 'Kuvaluotto: %{credit}'
+    published_dates:
+      hide_all_updates: piilota kaikki päivitykset
+      last_updated: Viimeksi päivitetty %{date}
+      published: Julkaistu %{date}
+      see_all_updates: katso kaikki palvelut
+      show_all_updates: näytä kaikki päivitykset
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: Piilota kaikki
+      show_all: näytä kaikki
+    save_this_page:
+      add_page_button: Lisää tallennettuihin sivuihisi
+      confirmations:
+        page_removed:
+          message: Olet poistanut tämän tallennetuilta sivuiltasi
+        page_saved:
+          message: Olet lisännyt tämän tallennetuille sivuillesi
+      page_not_saved_heading: Tallenna tämä sivu, jotta voit palata siihen myöhemmin
+      page_was_saved_heading: Olet tallentanut tämän sivun
+      remove_page_button: Poista tallennetuilta sivuilta
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Näytä tallennetut sivut</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kirjaudu sisään</a> nähdäksesi tallennetut sivusi.
+    share_links:
+      share_this_page: Jaa tämä sivu
+  consultation:
+    and: ja
+    another_website_html: Tämä kuuleminen %{closed} järjestettiin toisella <a href="%{url}">averkkosivustolla</a>
+    at: klo
+    closes: Se sulkeutuu klo
+    closes_at: Tämä kuuleminen päättyy klo
+    complete_a: Täytä
+    description: Konsultaation kuvaus
+    detail_of_feedback_received: Yksityiskohta saadusta palautteesta
+    detail_of_outcome: Yksityiskohta lopputuloksesta
+    documents: Asiakirjat
+    download_outcome: Lataa koko tulos
+    either: jompikumpi
+    email_to: 'lähetä sähköpostia osoitteeseen:'
+    feedback_received: Palaute Vastaanotettu
+    is_being: osoitteessa
+    not_open_yet: Tämä kuuleminen ei ole vielä auki
+    'on':
+    opens: Tämä kuuleminen avautuu
+    original_consultation: Alkuperäinen kuuleminen
+    ran_from: Tämä kuuleminen kesti
+    respond_online: Vastaa verkossa
+    'true': totta
+    visit_soon: Käy pian uudelleen tällä sivulla ja lataa tämän julkisen palautteen&nbsp;tulokset.
+    was: oli
+    ways_to_respond: Tapoja vastata
+    write_to: 'Kirjoittaa:'
+  contact:
+    email: Sähköposti
+    find_call_charges: Ota selvää puheluhinnoista
+    online: Verkossa
+    phone: Puhelin
+    webchat: Webchat
   content_item:
+    coming_soon: Tämä asiakirja julkaistaan
+    contents: Sisällys
+    metadata:
+      published: Julkaistu
+      updated: Päivitetty
     schema_name:
       aaib_report:
         one: Lento -onnettomuuksien tutkintaosaston raportti
@@ -223,96 +301,11 @@ fi:
       written_statement:
         one: Kirjallinen lausuma parlamentille
         other: Kirjallinen lausumat parlamentille
-    coming_soon: Tämä asiakirja julkaistaan
-    contents: Sisällys
-    metadata:
-      published: Julkaistu
-      updated: Päivitetty
-  publication:
-    documents:
-      one: Asiakirja
-      other: Asiakirjat
-    details: Yksityiskohdat
-  brexit:
-    business_link:
-      text: Brexit -opas yrityksille
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexit -opastus yksilöille ja perheille
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: On erilaisia
-  common:
-    last_updated:
-    visit: 'Vierailla:'
-  components:
-    figure:
-      image_credit: 'Kuvaluotto: %{credit}'
-    published_dates:
-      hide_all_updates: piilota kaikki päivitykset
-      last_updated: Viimeksi päivitetty %{date}
-      published: Julkaistu %{date}
-      see_all_updates: katso kaikki palvelut
-      show_all_updates: näytä kaikki päivitykset
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: Piilota kaikki
-      show_all: näytä kaikki
-    save_this_page:
-      add_page_button: Lisää tallennettuihin sivuihisi
-      confirmations:
-        page_removed:
-          message: Olet poistanut tämän tallennetuilta sivuiltasi
-        page_saved:
-          message: Olet lisännyt tämän tallennetuille sivuillesi
-      page_not_saved_heading: Tallenna tämä sivu, jotta voit palata siihen myöhemmin
-      page_was_saved_heading: Olet tallentanut tämän sivun
-      remove_page_button: Poista tallennetuilta sivuilta
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Näytä
-        tallennetut sivut</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kirjaudu
-        sisään</a> nähdäksesi tallennetut sivusi.
-    share_links:
-      share_this_page: Jaa tämä sivu
-  consultation:
-    and: ja
-    another_website_html: Tämä kuuleminen %{closed} järjestettiin toisella <a href="%{url}">averkkosivustolla</a>
-    at: klo
-    closes: Se sulkeutuu klo
-    closes_at: Tämä kuuleminen päättyy klo
-    complete_a: Täytä
-    description: Konsultaation kuvaus
-    detail_of_feedback_received: Yksityiskohta saadusta palautteesta
-    detail_of_outcome: Yksityiskohta lopputuloksesta
-    documents: Asiakirjat
-    download_outcome: Lataa koko tulos
-    either: jompikumpi
-    email_to: 'lähetä sähköpostia osoitteeseen:'
-    feedback_received: Palaute Vastaanotettu
-    is_being: osoitteessa
-    not_open_yet: Tämä kuuleminen ei ole vielä auki
-    'on':
-    opens: Tämä kuuleminen avautuu
-    original_consultation: Alkuperäinen kuuleminen
-    ran_from: Tämä kuuleminen kesti
-    respond_online: Vastaa verkossa
-    'true': totta
-    visit_soon: Käy pian uudelleen tällä sivulla ja lataa tämän julkisen palautteen&nbsp;tulokset.
-    was: oli
-    ways_to_respond: Tapoja vastata
-    write_to: 'Kirjoittaa:'
-  contact:
-    email: Sähköposti
-    find_call_charges: Ota selvää puheluhinnoista
-    online: Verkossa
-    phone: Puhelin
-    webchat: Webchat
   corporate_information_page:
     about_our_services_html: Ota selvää %{link}.
     corporate_information: Yritystiedot
     personal_information_charter_html: "%{link} selittää, miten käsittelemme henkilötietojasi."
-    publication_scheme_html: Lue, millaisia tietoja julkaisemme rutiininomaisesti
-      %{link}.
+    publication_scheme_html: Lue, millaisia tietoja julkaisemme rutiininomaisesti %{link}.
     social_media_use_html: Lue käytäntömme osoitteesta %{link}.
     welsh_language_scheme_html: Tutustu sitoumukseemme %{link}.
   fatality_notice:
@@ -331,13 +324,8 @@ fi:
       available_at: Tämä julkaisu on saatavilla osoitteessa %{url}
       copyright: "© kruunun tekijänoikeus %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Tämä julkaisu on lisensoitu Open Government Licence v3.0 lisenssin
-        ehdoilla, ellei toisin mainita. Voit tutustua tähän lisenssiin osoitteessa
-        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        tai kirjallisesti osoitteeseen Information Policy Team, Kansallisarkisto,
-        Kew, Lontoo TW9 4DU, tai sähköpostitse: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Jos olemme tunnistaneet kolmannen osapuolen tekijänoikeustietoja,
-        sinun on hankittava lupa tekijänoikeuksien haltijoilta huolestunut.
+      licence_html: 'Tämä julkaisu on lisensoitu Open Government Licence v3.0 lisenssin ehdoilla, ellei toisin mainita. Voit tutustua tähän lisenssiin osoitteessa <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> tai kirjallisesti osoitteeseen Information Policy Team, Kansallisarkisto, Kew, Lontoo TW9 4DU, tai sähköpostitse: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Jos olemme tunnistaneet kolmannen osapuolen tekijänoikeustietoja, sinun on hankittava lupa tekijänoikeuksien haltijoilta huolestunut.
   i18n:
     direction:
   language_names:
@@ -346,6 +334,11 @@ fi:
     next_page: Seuraava
     previous_page: Edellinen
     print_entire_guide: Tulosta koko opas
+  publication:
+    details: Yksityiskohdat
+    documents:
+      one: Asiakirja
+      other: Asiakirjat
   service_sign_in:
     continue: Jatkaa
     error:
@@ -358,15 +351,11 @@ fi:
       busy: Kaikki webchat-neuvojat ovat tällä hetkellä varattuja.
       closed: Webchat on suljettu tällä hetkellä.
       speak_to_adviser: Puhu nyt neuvonantajan kanssa
-      technical_problem: Webchat ei ole tällä hetkellä käytettävissä teknisten ongelmien
-        vuoksi.
+      technical_problem: Webchat ei ole tällä hetkellä käytettävissä teknisten ongelmien vuoksi.
   specialist_document:
-    pdo_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Nimetty
-      alkuperä Yhdistynyt kuningaskunta Suojattu
-    pgi_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Maantieteellinen
-      alkuperä Yhdistynyt kuningaskunta Suojattu
-    tsg_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Perinteinen
-      erikoisuus Yhdistynyt kuningaskunta Suojattu
+    pdo_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Nimetty alkuperä Yhdistynyt kuningaskunta Suojattu
+    pgi_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Maantieteellinen alkuperä Yhdistynyt kuningaskunta Suojattu
+    tsg_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Perinteinen erikoisuus Yhdistynyt kuningaskunta Suojattu
   speech:
     delivered_on: Toimitettu
     location: Sijainti
@@ -382,16 +371,10 @@ fi:
     release_date: Julkaisupäivä
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja
-        osissa maata.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja
-        koko maahan.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        kehottaa välttämään kaikkia matkoja osissa maata.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        kehottaa välttämään kaikkia matkoja koko maahan.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja osissa maata.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja koko maahan.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja osissa maata.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja koko maahan.
     context: Ulkomaan matkustusneuvonta
     coronavirus_warning:
       content_html: |

@@ -1,5 +1,83 @@
+---
 'no':
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexit-veiledning for bedrifter
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexit-veiledning for enkeltpersoner og familier
+    heading_prefix: Det er annerledes
+  common:
+    last_updated:
+    visit: 'Besøk:'
+  components:
+    figure:
+      image_credit: 'Bildekreditt: %{credit}'
+    published_dates:
+      hide_all_updates: skjul alle oppdateringer
+      last_updated: Sist oppdatert %{date}
+      published: Publisert %{date}
+      see_all_updates: se alle oppdateringer
+      show_all_updates: vis alle oppdateringer
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: Skjul alle
+      show_all: Vis alt
+    save_this_page:
+      add_page_button: Legg til til dine lagrede sider
+      confirmations:
+        page_removed:
+          message: Du har fjernet dette fra dine lagrede sider
+        page_saved:
+          message: Du har lagt dette til på dine lagrede sider
+      page_not_saved_heading: Lagre denne siden slik at du kan komme tilbake til den senere
+      page_was_saved_heading: Du har lagret denne siden
+      remove_page_button: Fjern fra de lagrede sidene
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se dine lagrede sider</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logg inn</a> for å se dine lagrede sider.
+    share_links:
+      share_this_page: Del denne siden
+  consultation:
+    and: og
+    another_website_html: Denne konsultasjonen %{closed} ble avholdt på <a href="%{url}">et annet nettsted</a>
+    at: på
+    closes: Den avsluttes klokken
+    closes_at: Denne konsultasjonen avsluttes klokken
+    complete_a: Fullfør en
+    description: Konsultasjonsbeskrivelse
+    detail_of_feedback_received: Detalj av mottatt tilbakemelding
+    detail_of_outcome: Detalj av resultatet
+    documents: Dokumenter
+    download_outcome: Last ned hele resultatet
+    either: enten
+    email_to: 'E-post til:'
+    feedback_received: Tilbakemelding mottatt
+    is_being: blir
+    not_open_yet: Denne konsultasjonen er ikke åpen ennå
+    'on':
+    opens: Denne konsultasjonen åpner
+    original_consultation: Opprinnelig konsultasjon
+    ran_from: Denne konsultasjonen varte fra
+    respond_online: Svar online
+    'true': sant
+    visit_soon: Besøk denne siden igjen snart for å laste ned resultatet til denne public&nbsp;feedback.
+    was: var
+    ways_to_respond: Måter å svare på
+    write_to: 'Skriv til:'
+  contact:
+    email: E-post
+    find_call_charges: Finn ut om samtalekostnader
+    online: På nett
+    phone: Telefon
+    webchat: Webchat
   content_item:
+    coming_soon: Dette dokumentet vil bli publisert den
+    contents: Innhold
+    metadata:
+      published: Publisert
+      updated: Oppdatert
     schema_name:
       aaib_report:
         one: Rapport fra Air Accident Investigation Branch
@@ -223,100 +301,11 @@
       written_statement:
         one: Skriftlig uttalelse til Stortinget
         other: Skriftlige uttalelser til Stortinget
-    coming_soon: Dette dokumentet vil bli publisert den
-    contents: Innhold
-    metadata:
-      published: Publisert
-      updated: Oppdatert
-  publication:
-    documents:
-      one: Dokument
-      other: Dokumenter
-    details: Detaljer
-  brexit:
-    business_link:
-      text: Brexit-veiledning for bedrifter
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexit-veiledning for enkeltpersoner og familier
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Det er annerledes
-  common:
-    last_updated:
-    visit: 'Besøk:'
-  components:
-    figure:
-      image_credit: 'Bildekreditt: %{credit}'
-    published_dates:
-      hide_all_updates: skjul alle oppdateringer
-      last_updated: Sist oppdatert %{date}
-      published: Publisert %{date}
-      see_all_updates: se alle oppdateringer
-      show_all_updates: vis alle oppdateringer
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: Skjul alle
-      show_all: Vis alt
-    save_this_page:
-      add_page_button: Legg til til dine lagrede sider
-      confirmations:
-        page_removed:
-          message: Du har fjernet dette fra dine lagrede sider
-        page_saved:
-          message: Du har lagt dette til på dine lagrede sider
-      page_not_saved_heading: Lagre denne siden slik at du kan komme tilbake til den
-        senere
-      page_was_saved_heading: Du har lagret denne siden
-      remove_page_button: Fjern fra de lagrede sidene
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se
-        dine lagrede sider</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logg
-        inn</a> for å se dine lagrede sider.
-    share_links:
-      share_this_page: Del denne siden
-  consultation:
-    and: og
-    another_website_html: Denne konsultasjonen %{closed} ble avholdt på <a href="%{url}">et
-      annet nettsted</a>
-    at: på
-    closes: Den avsluttes klokken
-    closes_at: Denne konsultasjonen avsluttes klokken
-    complete_a: Fullfør en
-    description: Konsultasjonsbeskrivelse
-    detail_of_feedback_received: Detalj av mottatt tilbakemelding
-    detail_of_outcome: Detalj av resultatet
-    documents: Dokumenter
-    download_outcome: Last ned hele resultatet
-    either: enten
-    email_to: 'E-post til:'
-    feedback_received: Tilbakemelding mottatt
-    is_being: blir
-    not_open_yet: Denne konsultasjonen er ikke åpen ennå
-    'on':
-    opens: Denne konsultasjonen åpner
-    original_consultation: Opprinnelig konsultasjon
-    ran_from: Denne konsultasjonen varte fra
-    respond_online: Svar online
-    'true': sant
-    visit_soon: Besøk denne siden igjen snart for å laste ned resultatet til denne
-      public&nbsp;feedback.
-    was: var
-    ways_to_respond: Måter å svare på
-    write_to: 'Skriv til:'
-  contact:
-    email: E-post
-    find_call_charges: Finn ut om samtalekostnader
-    online: På nett
-    phone: Telefon
-    webchat: Webchat
   corporate_information_page:
     about_our_services_html: Finn ut %{link}.
     corporate_information: Bedriftsinformasjon
-    personal_information_charter_html: Vår %{link} forklarer hvordan vi behandler
-      dine personopplysninger.
-    publication_scheme_html: Les om informasjonstypene vi rutinemessig publiserer
-      i vår %{link}.
+    personal_information_charter_html: Vår %{link} forklarer hvordan vi behandler dine personopplysninger.
+    publication_scheme_html: Les om informasjonstypene vi rutinemessig publiserer i vår %{link}.
     social_media_use_html: Les retningslinjene våre på %{link}.
     welsh_language_scheme_html: Finn ut mer om vårt engasjement for %{link}.
   fatality_notice:
@@ -325,8 +314,7 @@
     operations_in: Operasjoner i %{location}
   gone:
     page_title: Ikke lenger tilgjengelig
-    published_in_error: Informasjonen på denne siden er fjernet fordi den ble publisert
-      ved en feil.
+    published_in_error: Informasjonen på denne siden er fjernet fordi den ble publisert ved en feil.
     title: Siden du leter etter er ikke lenger tilgjengelig
   guide:
     pages_in_guide: Sider i denne veiledningen
@@ -336,13 +324,8 @@
       available_at: Denne publikasjonen er tilgjengelig på %{url}
       copyright: "© Crown copyright %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Denne publikasjonen er lisensiert under vilkårene i Open Government
-        License v3.0 med mindre annet er angitt. For å se denne lisensen, besøk <a
-        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        eller skriv til Information Policy Team, National Archives, Kew, London TW9
-        4DU, eller e-post: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Der vi har identifisert opphavsrettsinformasjon fra tredjepart,
-        må du få tillatelse fra berørte opphavsrettsinnehavere.
+      licence_html: 'Denne publikasjonen er lisensiert under vilkårene i Open Government License v3.0 med mindre annet er angitt. For å se denne lisensen, besøk <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> eller skriv til Information Policy Team, National Archives, Kew, London TW9 4DU, eller e-post: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Der vi har identifisert opphavsrettsinformasjon fra tredjepart, må du få tillatelse fra berørte opphavsrettsinnehavere.
   i18n:
     direction:
   language_names:
@@ -351,6 +334,11 @@
     next_page: Neste
     previous_page: Forrige
     print_entire_guide: Skriv ut hele guiden
+  publication:
+    details: Detaljer
+    documents:
+      one: Dokument
+      other: Dokumenter
   service_sign_in:
     continue: Fortsett
     error:
@@ -363,15 +351,11 @@
       busy: Alle webchat-rådgivere er opptatt for øyeblikket.
       closed: Webchat er stengt for øyeblikket.
       speak_to_adviser: Snakk med en rådgiver nå
-      technical_problem: Webchat er ikke tilgjengelig for øyeblikket på grunn av tekniske
-        problemer.
+      technical_problem: Webchat er ikke tilgjengelig for øyeblikket på grunn av tekniske problemer.
   specialist_document:
-    pdo_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK
-      Protected
-    pgi_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK
-      Protected
-    tsg_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK
-      Protected
+    pdo_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK Protected
+    pgi_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK Protected
+    tsg_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK Protected
   speech:
     delivered_on: Levert på
     location: Plassering
@@ -387,16 +371,10 @@
     release_date: Utgivelsesdato
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler
-        av landet.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler
-        av landet.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        fraråder alle reiser til deler av landet.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        fraråder alle reiser til hele landet.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler av landet.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler av landet.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser til deler av landet.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser til hele landet.
     context: Råd om utenlandsreiser
     coronavirus_warning:
       content_html: |
@@ -419,8 +397,7 @@
     updated: Oppdatert
   unpublishing:
     page_title: Ikke lenger tilgjengelig
-    summary: Informasjonen på denne siden er fjernet fordi den ble publisert ved en
-      feil.
+    summary: Informasjonen på denne siden er fjernet fordi den ble publisert ved en feil.
     title: Siden du leter etter er ikke lenger tilgjengelig
   working_group:
     contact_details: Kontaktinformasjon

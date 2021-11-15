@@ -1,5 +1,83 @@
+---
 pa-pk:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: کاروباراں لئی Brexitواسطے رہنمائی
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: بندیاں تے خانداں لئیBrexit واسطے رہنمائی
+    heading_prefix: ایہ فرق اے
+  common:
+    last_updated:
+    visit: 'ویکھو:'
+  components:
+    figure:
+      image_credit: 'امیج کریڈٹ: {credit} %'
+    published_dates:
+      hide_all_updates: سارے تازہ ترین حالات نوں لُکا لوؤ
+      last_updated: اخری وار تازہ ترین بنایا {date} %
+      published: شائع ہویا {date} %
+      see_all_updates: ساری تازہ ترین صورتِ حال
+      show_all_updates: ساری تازہ ترین صورتِ حال وکھاؤ
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: سارا لُکاؤ
+      show_all: سارا وکھاؤ
+    save_this_page:
+      add_page_button: اپنے بچے ہوئے ورقیاں وچ جمع کرو
+      confirmations:
+        page_removed:
+          message: تُسی اپنے محفوظ کیتے ورقے وچوں اینوں ہٹا لیا اے
+        page_saved:
+          message: تُسی اپنے محفوظ کیتے ورقے وچوں اینوں جمع کرلیا اے
+      page_not_saved_heading: ایس ورقے نوں محفوظ کر لو تاں جے تُسی ایندے تے بعد وچوں واپس آ سکو
+      page_was_saved_heading: تُسی ایہ ورقہ محفوظ کر لیا اے
+      remove_page_button: تُسی ایہ ورقہ محفوظ کیتے گئے ورقیاں وچوں ہٹا لیا اے
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">اپنے محفوظ ورقے ویکھو</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">سائن اِن</a> اپنے محفوظ ورقیاں نوں ویکھن لئی.
+    share_links:
+      share_this_page: ایہ ورقہ تقسیم کرو
+  consultation:
+    and: ہور
+    another_website_html: ایہ مشورہ  {closed} %ایندے تے وقوعہ ہویا <a href="%{url}">دُوسری ویب سائٹ</a>
+    at: ایندے تے
+    closes: ایہ ایندے تے بند ہوندا اے
+    closes_at: ایہ مشاورت ایندے تے بند ہوندی اے
+    complete_a: اک پُورا کرو
+    description: مشاورت دی وضاحت
+    detail_of_feedback_received: موصول شُدہ جواب دی تفصیل
+    detail_of_outcome: نتیجے دی تفصیل
+    documents: دستاویزات
+    download_outcome: سارے نتائج ڈاؤن لوڈ کرو
+    either: کوئی اک
+    email_to: اینوں ای میل کرو
+    feedback_received: جواب مل گیا
+    is_being: ایہ وی
+    not_open_yet: ایہ مشاورت ہلے نئیں کُھلی
+    'on':
+    opens: ایہ مشاورت کُھل گئی اے
+    original_consultation: اصلی مشاورت
+    ran_from: ایہ مشاورت داچلایا ہویا فارم اے
+    respond_online: آن لائن جاب دیوؤ
+    'true': سچ
+    visit_soon: ایس ورقے تے چھیتی واپس آؤ عوام ولوں دتے گئے جواب نوں ڈاؤن لوڈ کرو&nbsp;جواب۔
+    was: او سی
+    ways_to_respond: جواب دین دے طریقے
+    write_to: اینوں لکھو
+  contact:
+    email: ای میل
+    find_call_charges: سارے خرچے دے بارے جانو
+    online: آن لائن جاب دیوؤ
+    phone: فون
+    webchat: ویب چیٹ
   content_item:
+    coming_soon: ایہ دستاویز ایس دن شائع ہوؤئے گی
+    contents: مواد
+    metadata:
+      published: شائع ہویا
+      updated: تازہ ترین حال
     schema_name:
       aaib_report:
         one: ہوائی حادثیاں دی تفتیشی برانچ دی رپورٹ
@@ -223,99 +301,11 @@ pa-pk:
       written_statement:
         one: قومی مجلس دے سامنے تحریری بیان
         other: قومی مجلس دے سامنے تحریری بیانات
-    coming_soon: ایہ دستاویز ایس دن شائع ہوؤئے گی
-    contents: مواد
-    metadata:
-      published: شائع ہویا
-      updated: تازہ ترین حال
-  publication:
-    documents:
-      one: دستاویز
-      other: دستاویزات
-    details: تفصیلات
-  brexit:
-    business_link:
-      text: کاروباراں لئی Brexitواسطے رہنمائی
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: بندیاں تے خانداں لئیBrexit واسطے رہنمائی
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: ایہ فرق اے
-  common:
-    last_updated:
-    visit: 'ویکھو:'
-  components:
-    figure:
-      image_credit: 'امیج کریڈٹ: {credit} %'
-    published_dates:
-      hide_all_updates: سارے تازہ ترین حالات نوں لُکا لوؤ
-      last_updated: اخری وار تازہ ترین بنایا {date} %
-      published: شائع ہویا {date} %
-      see_all_updates: ساری تازہ ترین صورتِ حال
-      show_all_updates: ساری تازہ ترین صورتِ حال وکھاؤ
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: سارا لُکاؤ
-      show_all: سارا وکھاؤ
-    save_this_page:
-      add_page_button: اپنے بچے ہوئے ورقیاں وچ جمع کرو
-      confirmations:
-        page_removed:
-          message: تُسی اپنے محفوظ کیتے ورقے وچوں اینوں ہٹا لیا اے
-        page_saved:
-          message: تُسی اپنے محفوظ کیتے ورقے وچوں اینوں جمع کرلیا اے
-      page_not_saved_heading: ایس ورقے نوں محفوظ کر لو تاں جے تُسی ایندے تے بعد وچوں
-        واپس آ سکو
-      page_was_saved_heading: تُسی ایہ ورقہ محفوظ کر لیا اے
-      remove_page_button: تُسی ایہ ورقہ محفوظ کیتے گئے ورقیاں وچوں ہٹا لیا اے
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">اپنے
-        محفوظ ورقے ویکھو</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">سائن
-        اِن</a> اپنے محفوظ ورقیاں نوں ویکھن لئی.
-    share_links:
-      share_this_page: ایہ ورقہ تقسیم کرو
-  consultation:
-    and: ہور
-    another_website_html: ایہ مشورہ  {closed} %ایندے تے وقوعہ ہویا <a href="%{url}">دُوسری
-      ویب سائٹ</a>
-    at: ایندے تے
-    closes: ایہ ایندے تے بند ہوندا اے
-    closes_at: ایہ مشاورت ایندے تے بند ہوندی اے
-    complete_a: اک پُورا کرو
-    description: مشاورت دی وضاحت
-    detail_of_feedback_received: موصول شُدہ جواب دی تفصیل
-    detail_of_outcome: نتیجے دی تفصیل
-    documents: دستاویزات
-    download_outcome: سارے نتائج ڈاؤن لوڈ کرو
-    either: کوئی اک
-    email_to: اینوں ای میل کرو
-    feedback_received: جواب مل گیا
-    is_being: ایہ وی
-    not_open_yet: ایہ مشاورت ہلے نئیں کُھلی
-    'on':
-    opens: ایہ مشاورت کُھل گئی اے
-    original_consultation: اصلی مشاورت
-    ran_from: ایہ مشاورت داچلایا ہویا فارم اے
-    respond_online: آن لائن جاب دیوؤ
-    'true': سچ
-    visit_soon: ایس ورقے تے چھیتی واپس آؤ عوام ولوں دتے گئے جواب نوں ڈاؤن لوڈ کرو&nbsp;جواب۔
-    was: او سی
-    ways_to_respond: جواب دین دے طریقے
-    write_to: اینوں لکھو
-  contact:
-    email: ای میل
-    find_call_charges: سارے خرچے دے بارے جانو
-    online: آن لائن جاب دیوؤ
-    phone: فون
-    webchat: ویب چیٹ
   corporate_information_page:
     about_our_services_html: اینوں لبھو {link}%.
     corporate_information: کاروبار دی معلومات
-    personal_information_charter_html: ساڈا {link}% ایہ وضاحت کر دا اے کہ اسی ذاتی
-      معلومات نال کی سلوک کرنے آں۔
-    publication_scheme_html: ایس تے ایہ پڑھو کہ اسی رضاکارانہ طور تے کیس طراں دی معلومات
-      شائع کرنے آں {link}%.
+    personal_information_charter_html: ساڈا {link}% ایہ وضاحت کر دا اے کہ اسی ذاتی معلومات نال کی سلوک کرنے آں۔
+    publication_scheme_html: ایس تے ایہ پڑھو کہ اسی رضاکارانہ طور تے کیس طراں دی معلومات شائع کرنے آں {link}%.
     social_media_use_html: ایندے تے ساڈی حکمتِ عملی بارے پڑھو {link}%.
     welsh_language_scheme_html: ساڈی وابستگی دے بارے جانو {link}%.
   fatality_notice:
@@ -324,8 +314,7 @@ pa-pk:
     operations_in: ایندے بارے عمل {location}%
   gone:
     page_title: ہون دستیاب نئیں
-    published_in_error: ایس ورقے تے موجود خبراں ہٹا دتیاں  گیا نیں کیو جے او غلطی
-      نال چھپ گئے سن۔
+    published_in_error: ایس ورقے تے موجود خبراں ہٹا دتیاں  گیا نیں کیو جے او غلطی نال چھپ گئے سن۔
     title: جہیڑا ورقہ تُسی لبھ رئے او ہُن او موجود نئیں
   guide:
     pages_in_guide: ایس ہدایت نامے وچ ورقے
@@ -335,13 +324,8 @@ pa-pk:
       available_at: ایہ اشاعت ایتھے موجود اے {url}%
       copyright: "%{year}© کراؤن کاپی رائٹ"
       isbn: 'ISBN:'
-      licence_html: 'ایہ اشاعت نوں حکومت دے لائسنس  وی 3۔0 دی شرائط دے تحت لائسنس
-        ملیا اے سوائے اُس تھاں جتھے ایس توں علاوہ ہور کُج لکھیا اے۔ ایس لائسنس نوں
-        ویکھن لئی ایہ ملاحظہ کرو۔ , visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        or write to the Information Policy Team, The National Archives, Kew, London
-        TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: "جتھے اسی تیجے بندے دی کاپی رائٹ دی معلومات دی شناخت کراں گے تے
-        تہانوں اُس  کاپی رائٹ دے مالک توں اجازت لینا \nہوؤئے گی۔"
+      licence_html: 'ایہ اشاعت نوں حکومت دے لائسنس  وی 3۔0 دی شرائط دے تحت لائسنس ملیا اے سوائے اُس تھاں جتھے ایس توں علاوہ ہور کُج لکھیا اے۔ ایس لائسنس نوں ویکھن لئی ایہ ملاحظہ کرو۔ , visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: "جتھے اسی تیجے بندے دی کاپی رائٹ دی معلومات دی شناخت کراں گے تے تہانوں اُس  کاپی رائٹ دے مالک توں اجازت لینا \nہوؤئے گی۔"
   i18n:
     direction: rtl
   language_names:
@@ -350,6 +334,11 @@ pa-pk:
     next_page: اگلا
     previous_page: پچھلا
     print_entire_guide: سارا ورقہ چھاپو
+  publication:
+    details: تفصیلات
+    documents:
+      one: دستاویز
+      other: دستاویزات
   service_sign_in:
     continue: جاری رکھو
     error:
@@ -364,12 +353,9 @@ pa-pk:
       speak_to_adviser: ہُن اک مشیر نال گل کرو
       technical_problem: ویب چیٹ ٹیکنیکل مُشکلاں دی وجہ توں ایس ویلے نئیں مل سکدی۔
   specialist_document:
-    pdo_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں
-      Designated Origin UK Protected
-    pgi_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں
-      Geographic Origin UK Protected
-    tsg_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں
-      Traditional Speciality UK Protected
+    pdo_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Designated Origin UK Protected
+    pgi_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Geographic Origin UK Protected
+    tsg_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Traditional Speciality UK Protected
   speech:
     delivered_on: حوالے کیتا گیا
     location: تھاں
@@ -385,15 +371,10 @@ pa-pk:
     release_date: جاری کرن دی تاریخ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> مُلک دے سارے علاقیاں وچ  ضروری سفر کرن  لئی کیتی گئی نصحیت۔
-      avoid_all_but_essential_travel_to_whole_country_html: ایہ<abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> سارے مُلک دے وچ  ضروری سفر کرن لئی کیتی گئی
-        نصحیت۔
-      avoid_all_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        مُلک دے ساریاں علاقیاں وچ سفر کرن لئی نصحیت۔
-      avoid_all_travel_to_whole_country_html: ایہ<abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> مُلک دےسارےعلاقے وچ ہر طراں دا سفر کرن لئی کیتی گئی نصحیت۔
+      avoid_all_but_essential_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دے سارے علاقیاں وچ  ضروری سفر کرن  لئی کیتی گئی نصحیت۔
+      avoid_all_but_essential_travel_to_whole_country_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> سارے مُلک دے وچ  ضروری سفر کرن لئی کیتی گئی نصحیت۔
+      avoid_all_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دے ساریاں علاقیاں وچ سفر کرن لئی نصحیت۔
+      avoid_all_travel_to_whole_country_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دےسارےعلاقے وچ ہر طراں دا سفر کرن لئی کیتی گئی نصحیت۔
     context: غیر مُلکی سفر لئی نصحیت
     coronavirus_warning:
       content_html: |
@@ -416,8 +397,7 @@ pa-pk:
     updated: تازہ ترین حال
   unpublishing:
     page_title: ہون موجود نئیں
-    summary: ایس ورقے تے موجود خبراں ہٹا دتیاں  گیا نیں کیو جے او غلطی نال چھپ گیاں
-      سن۔
+    summary: ایس ورقے تے موجود خبراں ہٹا دتیاں  گیا نیں کیو جے او غلطی نال چھپ گیاں سن۔
     title: جس ورقے نوں تُسی لبھ رئے او ہُن او نئیں ملے گا
   working_group:
     contact_details: رابطہ تی تفصیلات

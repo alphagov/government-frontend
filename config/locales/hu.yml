@@ -1,5 +1,83 @@
+---
 hu:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexit-útmutató vállalkozások részére
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexit-útmutató egyének és családok részére
+    heading_prefix: Van különbség
+  common:
+    last_updated:
+    visit: 'Látogassa meg:'
+  components:
+    figure:
+      image_credit: 'Képaláírás: %{credit}'
+    published_dates:
+      hide_all_updates: minden frissítés elrejtése
+      last_updated: 'Utolsó frissítés: %{date}'
+      published: 'közzététel dátuma: %{date}'
+      see_all_updates: minden frissítés megtekintése
+      show_all_updates: minden frissítés megjelenítése
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: összes elrejtése
+      show_all: összes megjelenítése
+    save_this_page:
+      add_page_button: Hozzáadás a mentett oldalakhoz
+      confirmations:
+        page_removed:
+          message: Eltávolította ezt az oldalt a mentett oldalai közül
+        page_saved:
+          message: Hozzáadta ezt az oldalt a mentett oldalaihoz
+      page_not_saved_heading: Mentse el ezt az oldalt, hogy később vissza újra meg tudja nyitni
+      page_was_saved_heading: Elmentette ezt az oldalt
+      remove_page_button: Eltávolítás a mentett oldalak közül
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Mentett oldalak megtekintése</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Jelentkezzen be</a> a mentett oldalainak megtekintéséhez.
+    share_links:
+      share_this_page: Oldal megosztása
+  consultation:
+    and: és
+    another_website_html: A konzultáció %{closed} egy <a href="%{url}">másik weboldalon kerül megrendezésre</a>
+    at: 'itt:'
+    closes: 'Lezárul ekkor:'
+    closes_at: 'A konzultáció lezárul ekkor:'
+    complete_a: 'A következő befejezése:'
+    description: Konzultáció leírása
+    detail_of_feedback_received: A kapott visszajelzés részletei
+    detail_of_outcome: Kimenetel részletei
+    documents: Dokumentumok
+    download_outcome: Teljes kimenetel letöltése
+    either: vagy
+    email_to: 'E-mail küldése ide:'
+    feedback_received: Visszajelzés kézbesítve
+    is_being: folyamatban
+    not_open_yet: A konzultáció még nem nyitott
+    'on':
+    opens: A konzultáció megnyílik
+    original_consultation: Eredeti konzultáció
+    ran_from: 'A konzultáció kezdőidőpontja:'
+    respond_online: Válasz online
+    'true': igaz
+    visit_soon: Látogassa meg újra az oldalt a közeljövőben a jelen nyilvános&nbsp;visszajelzés kimenetelének megtekintése érdekében.
+    was: volt
+    ways_to_respond: Válaszadási lehetőségek
+    write_to: 'Levélírás a következőnek:'
+  contact:
+    email: E-mail
+    find_call_charges: Tudjon meg többet a hívás költségeiről
+    online: Online
+    phone: Telefon
+    webchat: Webchat
   content_item:
+    coming_soon: 'A dokumentum közzé lesz téve ekkor:'
+    contents: Tartalomjegyzék
+    metadata:
+      published: közzététel dátuma
+      updated: Frissítve
     schema_name:
       aaib_report:
         one: A Légi Balesetek Kivizsgálásáért Felelős Részleg jelentése
@@ -110,10 +188,8 @@ hu:
         one: Térkép
         other: Térképek
       medical_safety_alert:
-        one: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
-          és visszahívások
-        other: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések
-          és visszahívások
+        one: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések és visszahívások
+        other: Gyógyszerekre és orvostechnikai eszközökre vonatkozó figyelmeztetések és visszahívások
       national:
         one: Nemzeti statisztikai bejelentés
         other: Nemzeti statisztikai bejelentések
@@ -225,111 +301,20 @@ hu:
       written_statement:
         one: Írásbeli parlamenti nyilatkozat
         other: Írásbeli parlamenti nyilatkozatok
-    coming_soon: 'A dokumentum közzé lesz téve ekkor:'
-    contents: Tartalomjegyzék
-    metadata:
-      published: közzététel dátuma
-      updated: Frissítve
-  publication:
-    documents:
-      one: Dokumentum
-      other: Dokumentumok
-    details: Részletek
-  brexit:
-    business_link:
-      text: Brexit-útmutató vállalkozások részére
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexit-útmutató egyének és családok részére
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Van különbség
-  common:
-    last_updated:
-    visit: 'Látogassa meg:'
-  components:
-    figure:
-      image_credit: 'Képaláírás: %{credit}'
-    published_dates:
-      hide_all_updates: minden frissítés elrejtése
-      last_updated: 'Utolsó frissítés: %{date}'
-      published: 'közzététel dátuma: %{date}'
-      see_all_updates: minden frissítés megtekintése
-      show_all_updates: minden frissítés megjelenítése
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: összes elrejtése
-      show_all: összes megjelenítése
-    save_this_page:
-      add_page_button: Hozzáadás a mentett oldalakhoz
-      confirmations:
-        page_removed:
-          message: Eltávolította ezt az oldalt a mentett oldalai közül
-        page_saved:
-          message: Hozzáadta ezt az oldalt a mentett oldalaihoz
-      page_not_saved_heading: Mentse el ezt az oldalt, hogy később vissza újra meg
-        tudja nyitni
-      page_was_saved_heading: Elmentette ezt az oldalt
-      remove_page_button: Eltávolítás a mentett oldalak közül
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Mentett
-        oldalak megtekintése</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Jelentkezzen
-        be</a> a mentett oldalainak megtekintéséhez.
-    share_links:
-      share_this_page: Oldal megosztása
-  consultation:
-    and: és
-    another_website_html: A konzultáció %{closed} egy <a href="%{url}">másik weboldalon
-      kerül megrendezésre</a>
-    at: 'itt:'
-    closes: 'Lezárul ekkor:'
-    closes_at: 'A konzultáció lezárul ekkor:'
-    complete_a: 'A következő befejezése:'
-    description: Konzultáció leírása
-    detail_of_feedback_received: A kapott visszajelzés részletei
-    detail_of_outcome: Kimenetel részletei
-    documents: Dokumentumok
-    download_outcome: Teljes kimenetel letöltése
-    either: vagy
-    email_to: 'E-mail küldése ide:'
-    feedback_received: Visszajelzés kézbesítve
-    is_being: folyamatban
-    not_open_yet: A konzultáció még nem nyitott
-    'on':
-    opens: A konzultáció megnyílik
-    original_consultation: Eredeti konzultáció
-    ran_from: 'A konzultáció kezdőidőpontja:'
-    respond_online: Válasz online
-    'true': igaz
-    visit_soon: Látogassa meg újra az oldalt a közeljövőben a jelen nyilvános&nbsp;visszajelzés
-      kimenetelének megtekintése érdekében.
-    was: volt
-    ways_to_respond: Válaszadási lehetőségek
-    write_to: 'Levélírás a következőnek:'
-  contact:
-    email: E-mail
-    find_call_charges: Tudjon meg többet a hívás költségeiről
-    online: Online
-    phone: Telefon
-    webchat: Webchat
   corporate_information_page:
     about_our_services_html: 'Tudja meg: %{link}.'
     corporate_information: Vállalati adatok
-    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan
-      kezeljük a személyes adatokat: %{link}.'
-    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk
-      közzé: %{link}'
+    personal_information_charter_html: 'A következő oldalon olvashat róla, hogy hogyan kezeljük a személyes adatokat: %{link}.'
+    publication_scheme_html: 'Tekintse meg, hogy milyen jellegű információkat teszünk közzé: %{link}'
     social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
-    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos
-      elkötelezettségünkről: %{link}'
+    welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos elkötelezettségünkről: %{link}'
   fatality_notice:
     alt_text: A Védelmi Minisztérium címere
     field_of_operation: Működési terület
     operations_in: 'Tevékenységek itt: %{location}'
   gone:
     page_title: Már nem elérhető
-    published_in_error: Az ezen az oldalon található információ eltávolításra került,
-      mivel közzététele hiba volt.
+    published_in_error: Az ezen az oldalon található információ eltávolításra került, mivel közzététele hiba volt.
     title: Az Ön által keresett oldal már nem elérhető
   guide:
     pages_in_guide: A jelen útmutató oldalai
@@ -339,13 +324,8 @@ hu:
       available_at: 'A kiadvány elérhető a következő helyen: %{url}'
       copyright: "© Crown copyright %{year}"
       isbn: 'ISBN:'
-      licence_html: 'A jelen kiadvány licenceit a Nyílt Közigazgatási Engedélyek 3.0
-        biztosítja, kivéve, ha másként van jelölve. A licenc megtekintéséhez látogassa
-        meg a(z)  <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        vagy írjon az Információkezeléssel foglalkozó Csapatnak, The National Archives,
-        Kew, London TW9 4DU, vagy e-mailt a következő címre: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Enegdélyt kell kérnie az érintett szerzői jogok tulajdonosaitól
-        abban az esetben, ha harmadik fél szerzői jogi információkat közöltünk.
+      licence_html: 'A jelen kiadvány licenceit a Nyílt Közigazgatási Engedélyek 3.0 biztosítja, kivéve, ha másként van jelölve. A licenc megtekintéséhez látogassa meg a(z)  <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> vagy írjon az Információkezeléssel foglalkozó Csapatnak, The National Archives, Kew, London TW9 4DU, vagy e-mailt a következő címre: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Enegdélyt kell kérnie az érintett szerzői jogok tulajdonosaitól abban az esetben, ha harmadik fél szerzői jogi információkat közöltünk.
   i18n:
     direction:
   language_names:
@@ -354,6 +334,11 @@ hu:
     next_page: Következő
     previous_page: Előző
     print_entire_guide: Teljes útmutató nyomtatása
+  publication:
+    details: Részletek
+    documents:
+      one: Dokumentum
+      other: Dokumentumok
   service_sign_in:
     continue: Folytatás
     error:
@@ -368,12 +353,9 @@ hu:
       speak_to_adviser: Beszéljen egy tanácsadóval most.
       technical_problem: A webchat technikai problémák miatt jelenleg nem elérhető.
   specialist_document:
-    pdo_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Designated
-      Origin UK Protected'
-    pgi_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Geographic
-      Origin UK Protected'
-    tsg_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Traditional
-      Speciality UK Protected'
+    pdo_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Designated Origin UK Protected'
+    pgi_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Geographic Origin UK Protected'
+    tsg_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Traditional Speciality UK Protected'
   speech:
     delivered_on: 'Kézbesítve ekkor:'
     location: Helyszín
@@ -389,17 +371,10 @@ hu:
     release_date: Kiadás időpontja
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: A <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> azt javasolja, hogy az ország bizonyos részeire csak feltétlenül
-        szükséges esetben utazzanak.
-      avoid_all_but_essential_travel_to_whole_country_html: A <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> azt javasolja, hogy az országba csak feltétlenül
-        szükséges esetben utazzanak.
-      avoid_all_travel_to_parts_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        azt javasolja, hogy az ország bizonyos részeire semmilyen körülmények között
-        ne utazzanak.
-      avoid_all_travel_to_whole_country_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        azt javasolja, hogy az országba semmilyen körülmények között ne utazzanak.
+      avoid_all_but_essential_travel_to_parts_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az ország bizonyos részeire csak feltétlenül szükséges esetben utazzanak.
+      avoid_all_but_essential_travel_to_whole_country_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az országba csak feltétlenül szükséges esetben utazzanak.
+      avoid_all_travel_to_parts_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az ország bizonyos részeire semmilyen körülmények között ne utazzanak.
+      avoid_all_travel_to_whole_country_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az országba semmilyen körülmények között ne utazzanak.
     context: Külföldi utazásra vonatkozó tanácsok
     coronavirus_warning:
       content_html: |
@@ -422,8 +397,7 @@ hu:
     updated: Frissítve
   unpublishing:
     page_title: Már nem elérhető
-    summary: Az ezen az oldalon található információ eltávolításra került, mivel közzététele
-      hiba volt.
+    summary: Az ezen az oldalon található információ eltávolításra került, mivel közzététele hiba volt.
     title: Az Ön által keresett oldal már nem elérhető
   working_group:
     contact_details: Elérhetőségek

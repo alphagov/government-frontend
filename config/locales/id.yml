@@ -1,11 +1,12 @@
+---
 id:
   brexit:
     business_link:
-      text: Panduan Brexit untuk bisnis
       path: "/guidance/brexit-guidance-for-businesses"
+      text: Panduan Brexit untuk bisnis
     citizen_link:
-      text: Panduan Brexit untuk individu dan keluarga
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Panduan Brexit untuk individu dan keluarga
     heading_prefix: Ada perbedaan
   common:
     last_updated:
@@ -34,16 +35,13 @@ id:
       page_not_saved_heading: Simpan halaman ini sehingga Anda bisa kembali lagi nanti
       page_was_saved_heading: Anda menyimpan halaman ini
       remove_page_button: Hapus dari halaman yang Anda simpan
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Lihat
-        halaman yang Anda simpan</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Masuk</a>
-        untuk melihat halaman yang Anda simpan.
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Lihat halaman yang Anda simpan</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Masuk</a> untuk melihat halaman yang Anda simpan.
     share_links:
       share_this_page: Bagikan halaman ini
   consultation:
     and: dan
-    another_website_html: Konsultasi ini %{closed} diadakan di <a href="%{url}">situs
-      web lain</a>
+    another_website_html: Konsultasi ini %{closed} diadakan di <a href="%{url}">situs web lain</a>
     at: pada
     closes: Tutup pada
     closes_at: Konsultasi ini ditutup pada
@@ -64,8 +62,7 @@ id:
     ran_from: Konsultasi ini berlangsung dari
     respond_online: Respons online
     'true': benar
-    visit_soon: Segera kunjungi lagi halaman ini untuk mengunduh hasil dari umpan
-      balik publik ini.
+    visit_soon: Segera kunjungi lagi halaman ini untuk mengunduh hasil dari umpan balik publik ini.
     was: "."
     ways_to_respond: Cara merespons
     write_to: 'Tulis kepada:'
@@ -307,10 +304,8 @@ id:
   corporate_information_page:
     about_our_services_html: Temukan %{link}.
     corporate_information: Informasi korporat
-    personal_information_charter_html: "%{link} menjelaskan cara kami memperlakukan
-      informasi pribadi Anda."
-    publication_scheme_html: Bacalah jenis-jenis informasi yang kami terbitkan secara
-      rutin di %{link} kami.
+    personal_information_charter_html: "%{link} menjelaskan cara kami memperlakukan informasi pribadi Anda."
+    publication_scheme_html: Bacalah jenis-jenis informasi yang kami terbitkan secara rutin di %{link} kami.
     social_media_use_html: Baca kebijakan kami di %{link}.
     welsh_language_scheme_html: Cari tahu komitmen kami kepada %{link}.
   fatality_notice:
@@ -319,8 +314,7 @@ id:
     operations_in: Operasi di %{location}
   gone:
     page_title: Tidak lagi tersedia
-    published_in_error: Informasi di halaman ini telah dihapus karena diterbitkan
-      karena kesalahan.
+    published_in_error: Informasi di halaman ini telah dihapus karena diterbitkan karena kesalahan.
     title: Halaman yang dicari tidak lagi tersedia
   guide:
     pages_in_guide: Halaman dalam panduan ini
@@ -330,13 +324,8 @@ id:
       available_at: Publikasi ini tersedia di %{url}
       copyright: Hak cipta © Crown %{year}
       isbn: 'ISBN:'
-      licence_html: 'Publikasi ini berlisensi sesuai dengan ketentuan Lisensi Terbuka
-        Pemerintah v3.0 kecuali dinyatakan berbeda. Untuk melihat lisensi ini, kunjungi
-        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        atau kirim surat ke the Information Policy Team, The National Archives, Kew,
-        London TW9 4DU, atau email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Saat kami mengidentifikasi informasi hak cipta milik pihak ketigaa,
-        Anda harus mendapat izin dari pemegang hak cipta terkait.
+      licence_html: 'Publikasi ini berlisensi sesuai dengan ketentuan Lisensi Terbuka Pemerintah v3.0 kecuali dinyatakan berbeda. Untuk melihat lisensi ini, kunjungi <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> atau kirim surat ke the Information Policy Team, The National Archives, Kew, London TW9 4DU, atau email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Saat kami mengidentifikasi informasi hak cipta milik pihak ketigaa, Anda harus mendapat izin dari pemegang hak cipta terkait.
   i18n:
     direction:
   language_names:
@@ -364,12 +353,9 @@ id:
       speak_to_adviser: Bicara dengan penasihat sekarang
       technical_problem: Obrolan web tidak tersedia saat ini dikarenakan masalah teknis.
   specialist_document:
-    pdo_alt_text: Logo skema adalah cap hitam dengan kata-kata Designated Origin UK
-      Protected
-    pgi_alt_text: Logo skema adalah cap hitam dengan kata-kata Geographic Origin UK
-      Protected
-    tsg_alt_text: Logo skema adalah cap hitam dengan kata-kata Traditional Speciality
-      UK Protected
+    pdo_alt_text: Logo skema adalah cap hitam dengan kata-kata Designated Origin UK Protected
+    pgi_alt_text: Logo skema adalah cap hitam dengan kata-kata Geographic Origin UK Protected
+    tsg_alt_text: Logo skema adalah cap hitam dengan kata-kata Traditional Speciality UK Protected
   speech:
     delivered_on: Dikirim pada
     location: Lokasi
@@ -385,17 +371,10 @@ id:
     release_date: Tanggal rilis
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> melarang semua perjalanan yang tidak esensial ke bagian-bagian
-        dari negara itu.
-      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> melarang semua perjalanan yang tidak esensial
-        ke seluruh negara itu.
-      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        melarang semua perjalanan ke bagian-bagian dari negara itu.
-      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> melarang semua perjalanan ke seluruh bagian dari negara
-        itu.
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan yang tidak esensial ke bagian-bagian dari negara itu.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan yang tidak esensial ke seluruh negara itu.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan ke bagian-bagian dari negara itu.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan ke seluruh bagian dari negara itu.
     context: Nasihat perjalanan luar negeri
     coronavirus_warning:
       content_html: |

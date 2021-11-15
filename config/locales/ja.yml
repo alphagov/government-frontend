@@ -1,11 +1,12 @@
+---
 ja:
   brexit:
     business_link:
-      text: 企業向けBrexitガイダンス
       path: "/guidance/brexit-guidance-for-businesses"
+      text: 企業向けBrexitガイダンス
     citizen_link:
-      text: 個人および家族向けBrexitガイダンス
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: 個人および家族向けBrexitガイダンス
     heading_prefix: 違いがあります
   common:
     last_updated:
@@ -35,8 +36,7 @@ ja:
       page_was_saved_heading: このページを保存しました
       remove_page_button: 保存したページから削除します
       see_saved_pages_signed_in: <a href="%{link}" class="govuk-link%{additional_class}">保存したページを表示</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link%{additional_class}">ログイン</a>
-        して、保存したページを表示します。
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link%{additional_class}">ログイン</a> して、保存したページを表示します。
     share_links:
       share_this_page: このページを共有
   consultation:
@@ -324,10 +324,7 @@ ja:
       available_at: この出版物は％{url}で入手できます
       copyright: "© Crown copyright %{year}"
       isbn: ISBN：
-      licence_html: 本書は、特に明記されていない限り、Open Government License v 3.0の条件に基づいてライセンスされています。このライセンスを確認するには、<a
-        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        にアクセスするか、Information Policy Team、The National Archives、Kew、London TW 9 4 DU、またはEメールにて
-        <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>までお問い合わせください。
+      licence_html: 本書は、特に明記されていない限り、Open Government License v 3.0の条件に基づいてライセンスされています。このライセンスを確認するには、<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> にアクセスするか、Information Policy Team、The National Archives、Kew、London TW 9 4 DU、またはEメールにて <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>までお問い合わせください。
       third_party: 第三者の著作権情報を特定した場合は、関係する著作権所有者から許可を得る必要があります。
   i18n:
     direction:
@@ -374,14 +371,10 @@ ja:
     release_date: 発表日程
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title = "Foreign and Commonwealth
-        Office">FCO</abbr> は、国内一部地域への必要不可欠ものを除くすべての移動を控えるよう勧告しています。
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title = "Foreign and
-        Commonwealth Office">FCO</abbr> は、国内での必要不可欠ものを除くすべての移動を控えるよう勧告しています。
-      avoid_all_travel_to_parts_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr>
-        は、国内一部地域へのすべての移動を控えるよう勧告しています。
-      avoid_all_travel_to_whole_country_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr>
-        は、国内すべての移動を控えるよう勧告しています。
+      avoid_all_but_essential_travel_to_parts_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内一部地域への必要不可欠ものを除くすべての移動を控えるよう勧告しています。
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内での必要不可欠ものを除くすべての移動を控えるよう勧告しています。
+      avoid_all_travel_to_parts_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内一部地域へのすべての移動を控えるよう勧告しています。
+      avoid_all_travel_to_whole_country_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内すべての移動を控えるよう勧告しています。
     context: 海外旅行のアドバイス
     coronavirus_warning:
       content_html: |

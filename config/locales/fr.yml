@@ -1,5 +1,83 @@
+---
 fr:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Orientations sur le Brexit pour les entreprises
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Orientations sur le Brexit pour les individus et les familles
+    heading_prefix: Il y a différent
+  common:
+    last_updated:
+    visit: 'Visiter:'
+  components:
+    figure:
+      image_credit: Crédit d'image : %{credit}
+    published_dates:
+      hide_all_updates: masquer toutes les mises à jour
+      last_updated: Dernière mise à jour le %{date}
+      published: Publié le %{date}
+      see_all_updates: afficher toutes les mises à jour
+      show_all_updates: afficher toutes les mises à jour
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: masquer tout
+      show_all: afficher tout
+    save_this_page:
+      add_page_button: Ajouter à vos pages enregistrées
+      confirmations:
+        page_removed:
+          message: Vous l'avez supprimé de vos pages enregistrées
+        page_saved:
+          message: Vous l'avez ajouté à vos pages enregistrées
+      page_not_saved_heading: Enregistrez cette page pour pouvoir y revenir plus tard
+      page_was_saved_heading: Vous avez enregistré cette page
+      remove_page_button: Supprimer de vos pages enregistrées
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Voir vos pages enregistrées</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Connectez-vous</a> pour voir vos pages enregistrées.
+    share_links:
+      share_this_page: Partagez cette page
+  consultation:
+    and: et
+    another_website_html: Cette consultation %{closed} s'est tenue sur <a href="%{url}">un autre site Web</a>
+    at: à
+    closes: Elle s'achève à
+    closes_at: Cette consultation s'achève à
+    complete_a: Remplissez un
+    description: Description de la consultation
+    detail_of_feedback_received: Détail des commentaires reçus
+    detail_of_outcome: Détail du résultat
+    documents: Documents
+    download_outcome: Télécharger la totalité des résultats
+    either: Soit
+    email_to: 'Envoyer un courriel à:'
+    feedback_received: Commentaire reçu
+    is_being: est en train de
+    not_open_yet: Cette consultation n'a pas encore débuté.
+    'on':
+    opens: Cette consultation a débuté.
+    original_consultation: Consultation originale
+    ran_from: Cette consultation s'est tenue du
+    respond_online: Répondre en ligne
+    'true': 'TRUE'
+    visit_soon: Consultez à nouveau cette page prochainement pour télécharger le résultat de ce feedback public.
+    was: était
+    ways_to_respond: Moyens de répondre
+    write_to: 'Écrire à :'
+  contact:
+    email: Courriel
+    find_call_charges: Consultez les tarifs des appels
+    online: En ligne
+    phone: Téléphone
+    webchat: Webchat
   content_item:
+    coming_soon: Ce document sera publié le
+    contents: Contenu
+    metadata:
+      published: Publié
+      updated: Mis à jour
     schema_name:
       aaib_report:
         one: Rapport de la Division des enquêtes sur les accidents aériens
@@ -223,99 +301,11 @@ fr:
       written_statement:
         one: Déclaration écrite au Parlement
         other: Déclarations écrites au Parlement
-    coming_soon: Ce document sera publié le
-    contents: Contenu
-    metadata:
-      published: Publié
-      updated: Mis à jour
-  publication:
-    documents:
-      one: Document
-      other: Documents
-    details: Détails
-  brexit:
-    business_link:
-      text: Orientations sur le Brexit pour les entreprises
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Orientations sur le Brexit pour les individus et les familles
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Il y a différent
-  common:
-    last_updated:
-    visit: 'Visiter:'
-  components:
-    figure:
-      image_credit: Crédit d'image : %{credit}
-    published_dates:
-      hide_all_updates: masquer toutes les mises à jour
-      last_updated: Dernière mise à jour le %{date}
-      published: Publié le %{date}
-      see_all_updates: afficher toutes les mises à jour
-      show_all_updates: afficher toutes les mises à jour
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: masquer tout
-      show_all: afficher tout
-    save_this_page:
-      add_page_button: Ajouter à vos pages enregistrées
-      confirmations:
-        page_removed:
-          message: Vous l'avez supprimé de vos pages enregistrées
-        page_saved:
-          message: Vous l'avez ajouté à vos pages enregistrées
-      page_not_saved_heading: Enregistrez cette page pour pouvoir y revenir plus tard
-      page_was_saved_heading: Vous avez enregistré cette page
-      remove_page_button: Supprimer de vos pages enregistrées
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Voir
-        vos pages enregistrées</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Connectez-vous</a>
-        pour voir vos pages enregistrées.
-    share_links:
-      share_this_page: Partagez cette page
-  consultation:
-    and: et
-    another_website_html: Cette consultation %{closed} s'est tenue sur <a href="%{url}">un
-      autre site Web</a>
-    at: à
-    closes: Elle s'achève à
-    closes_at: Cette consultation s'achève à
-    complete_a: Remplissez un
-    description: Description de la consultation
-    detail_of_feedback_received: Détail des commentaires reçus
-    detail_of_outcome: Détail du résultat
-    documents: Documents
-    download_outcome: Télécharger la totalité des résultats
-    either: Soit
-    email_to: 'Envoyer un courriel à:'
-    feedback_received: Commentaire reçu
-    is_being: est en train de
-    not_open_yet: Cette consultation n'a pas encore débuté.
-    'on':
-    opens: Cette consultation a débuté.
-    original_consultation: Consultation originale
-    ran_from: Cette consultation s'est tenue du
-    respond_online: Répondre en ligne
-    'true': 'TRUE'
-    visit_soon: Consultez à nouveau cette page prochainement pour télécharger le résultat
-      de ce feedback public.
-    was: était
-    ways_to_respond: Moyens de répondre
-    write_to: 'Écrire à :'
-  contact:
-    email: Courriel
-    find_call_charges: Consultez les tarifs des appels
-    online: En ligne
-    phone: Téléphone
-    webchat: Webchat
   corporate_information_page:
     about_our_services_html: Découvrir %{link}.
     corporate_information: Informations sur l'entreprise
-    personal_information_charter_html: Notre %{link} décrit comment nous traitons
-      vos informations personnelles.
-    publication_scheme_html: Découvrez les types d'informations que nous publions
-      très souvent dans notre %{link}.
+    personal_information_charter_html: Notre %{link} décrit comment nous traitons vos informations personnelles.
+    publication_scheme_html: Découvrez les types d'informations que nous publions très souvent dans notre %{link}.
     social_media_use_html: Lisez notre politique générale sur %{link}.
     welsh_language_scheme_html: Découvrez comment nous nous engageons sur %{link}.
   fatality_notice:
@@ -324,8 +314,7 @@ fr:
     operations_in: Opérations à %{location}
   gone:
     page_title: N'est plus disponible
-    published_in_error: Les informations présentées sur cette page ont été supprimées
-      car elles ont été publiées par erreur.
+    published_in_error: Les informations présentées sur cette page ont été supprimées car elles ont été publiées par erreur.
     title: La page que vous recherchez n'est plus disponible
   guide:
     pages_in_guide: Pages de ce guide
@@ -335,14 +324,8 @@ fr:
       available_at: Cette publication est disponible à %{url}
       copyright: "© Copyright de la Couronne %{year}"
       isbn: 'Numéro International Normalisé du Livre (ISBN):'
-      licence_html: 'Cette publication est sous licence selon les termes de la Open
-        Government Licence v3.0, sauf indication contraire. Pour consulter cette licence,
-        visitez le site <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        ou écrivez à l''équipe chargée de la politique d''information, The National
-        Archives, Kew, London TW9 4DU, ou par courriel : <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Dans le cas où nous avons identifié des informations relatives
-        à des droits d'auteur de tiers, vous devrez obtenir l'autorisation des détenteurs
-        de droits d'auteur concernés.
+      licence_html: 'Cette publication est sous licence selon les termes de la Open Government Licence v3.0, sauf indication contraire. Pour consulter cette licence, visitez le site <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ou écrivez à l''équipe chargée de la politique d''information, The National Archives, Kew, London TW9 4DU, ou par courriel : <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Dans le cas où nous avons identifié des informations relatives à des droits d'auteur de tiers, vous devrez obtenir l'autorisation des détenteurs de droits d'auteur concernés.
   i18n:
     direction:
   language_names:
@@ -351,6 +334,11 @@ fr:
     next_page: Suivant
     previous_page: Précédent
     print_entire_guide: Imprimer le guide complet
+  publication:
+    details: Détails
+    documents:
+      one: Document
+      other: Documents
   service_sign_in:
     continue: Continuer
     error:
@@ -363,15 +351,11 @@ fr:
       busy: Tous les conseillers de webchat sont occupés en ce moment.
       closed: Le Webchat est fermé pour le moment.
       speak_to_adviser: Parlez à un conseiller maintenant
-      technical_problem: Webchat est indisponible pour le moment suite à des problèmes
-        techniques.
+      technical_problem: Webchat est indisponible pour le moment suite à des problèmes techniques.
   specialist_document:
-    pdo_alt_text: Le logo du système est un cachet noir portant la mention "Origine
-      désignée protégée par le Royaume-Uni"
-    pgi_alt_text: Le logo du système est un tampon noir portant la mention "Origine
-      géographique protégée par le Royaume-Uni"
-    tsg_alt_text: Le logo du système est un cachet noir portant la mention "Spécialité
-      traditionnelle protégée par le Royaume-Uni"
+    pdo_alt_text: Le logo du système est un cachet noir portant la mention "Origine désignée protégée par le Royaume-Uni"
+    pgi_alt_text: Le logo du système est un tampon noir portant la mention "Origine géographique protégée par le Royaume-Uni"
+    tsg_alt_text: Le logo du système est un cachet noir portant la mention "Spécialité traditionnelle protégée par le Royaume-Uni"
   speech:
     delivered_on: Livré le
     location: Emplacement
@@ -387,35 +371,13 @@ fr:
     release_date: Date de sortie
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth
-        Office" >Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille
-        tout voyage dans certaines parties du pays, à l'exception de ceux qui sont
-        indispensables.
-      avoid_all_but_essential_travel_to_whole_country_html: Le <abbr title="Foreign and
-        Commonwealth Office" >Bureau des affaires étrangères et du Commonwealth (FCO)</abbr>
-        déconseille tout voyage dans l'ensemble du pays, à l'exception de ceux qui
-        sont indispensables.
-      avoid_all_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth Office">Bureau
-        des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage
-        dans certaines parties du pays.
-      avoid_all_travel_to_whole_country_html: Le <abbr title="Foreign and Commonwealth
-        Office">Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille
-        tout voyage dans l'ensemble du pays.
+      avoid_all_but_essential_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth Office" >Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans certaines parties du pays, à l'exception de ceux qui sont indispensables.
+      avoid_all_but_essential_travel_to_whole_country_html: Le <abbr title="Foreign and Commonwealth Office" >Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans l'ensemble du pays, à l'exception de ceux qui sont indispensables.
+      avoid_all_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth Office">Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans certaines parties du pays.
+      avoid_all_travel_to_whole_country_html: Le <abbr title="Foreign and Commonwealth Office">Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans l'ensemble du pays.
     context: Conseils concernant les voyages à l'étranger
     coronavirus_warning:
-      content_html: "<p class=\"govuk-body\">\r\n  Suivez les règles COVID-19 en vigueur
-        là où vous vivez: <a href=\"/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do\">Angleterre</a>,
-        <a href =\"https://www.gov.scot/coronavirus-covid-19/\">Écosse</a>, <a href=\"https://gov.wales/coronavirus-travel\">Pays
-        de Galles< /a> et <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">Irlande
-        du Nord</a> .\r\n</p>\r\n<p class=\"govuk-body\">\r\n  Pour empêcher l'entrée
-        de nouvelles variantes COVID au Royaume-Uni, vous ne devez pas vous rendre
-        dans les <a href=\"/guidance/red-amber-and-green-list-rules-for-entering-england\">pays
-        de la liste orange ou rouge< /a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n
-        \ Pour comprendre les risques dans un pays, suivez les <a href=\"/guidance/travel-advice-novel-coronavirus\">Conseils
-        aux voyageurs du Bureau des affaires étrangères, du Commonwealth et du développement
-        (FCDO)</a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n  À votre retour, suivez
-        les règles pour <a href=\"/uk-border-control\">entrer au Royaume-Uni depuis
-        l'étranger</a> (sauf depuis l'Irlande).\r\n</p>\r\n"
+      content_html: "<p class=\"govuk-body\">\r\n  Suivez les règles COVID-19 en vigueur là où vous vivez: <a href=\"/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do\">Angleterre</a>, <a href =\"https://www.gov.scot/coronavirus-covid-19/\">Écosse</a>, <a href=\"https://gov.wales/coronavirus-travel\">Pays de Galles< /a> et <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">Irlande du Nord</a> .\r\n</p>\r\n<p class=\"govuk-body\">\r\n  Pour empêcher l'entrée de nouvelles variantes COVID au Royaume-Uni, vous ne devez pas vous rendre dans les <a href=\"/guidance/red-amber-and-green-list-rules-for-entering-england\">pays de la liste orange ou rouge< /a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n  Pour comprendre les risques dans un pays, suivez les <a href=\"/guidance/travel-advice-novel-coronavirus\">Conseils aux voyageurs du Bureau des affaires étrangères, du Commonwealth et du développement (FCDO)</a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n  À votre retour, suivez les règles pour <a href=\"/uk-border-control\">entrer au Royaume-Uni depuis l'étranger</a> (sauf depuis l'Irlande).\r\n</p>\r\n"
       text_assistive: Important
       title: Voyage coronavirus (COVID-19)
     still_current_at: Toujours d'actualité à
@@ -423,8 +385,7 @@ fr:
     updated: Mis à jour
   unpublishing:
     page_title: N'est plus disponible
-    summary: Les informations de cette page ont été supprimées car elles ont été publiées
-      par erreur.
+    summary: Les informations de cette page ont été supprimées car elles ont été publiées par erreur.
     title: La page que vous recherchez n'est plus disponible
   working_group:
     contact_details: Détails du contact

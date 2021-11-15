@@ -1,5 +1,83 @@
+---
 ta:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: வணிகங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: தனிநபர்கள் மற்றும் குடும்பங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
+    heading_prefix: இதில் வித்தியாசம் உள்ளது
+  common:
+    last_updated:
+    visit: 'வருகை:'
+  components:
+    figure:
+      image_credit: 'பட உதவி: %{credit}'
+    published_dates:
+      hide_all_updates: அனைத்து புதுப்பித்தல்களையும் மறை
+      last_updated: கடைசியாக புதுப்பிக்கப்பட்டது %{date}
+      published: வெளியிடப்பட்ட தேதி %{date}
+      see_all_updates: அனைத்து புதுப்பித்தல்களையும் பார்க்க
+      show_all_updates: அனைத்து புதுப்பித்தல்களையும் காட்டு
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: அனைத்தையும் மறை
+      show_all: அனைத்தையும் காட்டு
+    save_this_page:
+      add_page_button: உங்கள் சேமித்த பக்கங்களில் சேர்
+      confirmations:
+        page_removed:
+          message: உங்கள் சேமித்த பக்கங்களிலிருந்து இதை நீக்கியுள்ளீர்கள்
+        page_saved:
+          message: உங்கள் சேமித்த பக்கங்களில் இதைச் சேர்த்துள்ளீர்கள்
+      page_not_saved_heading: பின்னர் திரும்ப வருகை தர ஏதுவாக இந்தப் பக்கத்தை சேமிக்கவும்
+      page_was_saved_heading: இந்தப் பக்கத்தைச் சேமித்துள்ளீர்கள்
+      remove_page_button: உங்கள் சேமித்த பக்கங்களிலிருந்து நீக்கவும்
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">உங்கள் சேமித்த பக்கங்களைக் காண்க</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">உங்கள் சேமித்த பக்கங்களைப் பார்ப்பதற்கு</a>.
+    share_links:
+      share_this_page: இந்தப் பக்கத்தைப் பகிர்க
+  consultation:
+    and: மற்றும்
+    another_website_html: இந்தக் கலந்தாலோசனை %{closed} <a href="%{url}">வேறொரு இணையதளத்தில்</a>நடைபெற்றது
+    at: "-இல்"
+    closes: இது முடிவடைகிறது
+    closes_at: இந்தக் கலந்தாலோசனை முடிவடைகிறது
+    complete_a: கலந்தாலோசனை விளக்கத்தை
+    description: நிரப்பவும்
+    detail_of_feedback_received: மதிப்புரை விபரம் பெறப்பட்டது
+    detail_of_outcome: பயன் விபரம்
+    documents: ஆவணங்கள்
+    download_outcome: முழு முடிவுகளைப் பதிவிறக்கவும்
+    either: இரண்டிலொன்று
+    email_to: 'மின்னஞ்சல்:'
+    feedback_received: மதிப்புரை பெறப்பட்டது
+    is_being: இருக்கிறது
+    not_open_yet: இந்தக் கலந்தாலோசனை இன்னும் திறக்கப்படவில்லை
+    'on':
+    opens: இந்தக் கலந்தாலோசனை திறக்கிறது
+    original_consultation: மூலக் கலந்தாலோசனை
+    ran_from: "-லிருந்து இந்தக் கலந்தாலோசனை நடந்தது"
+    respond_online: இணையத்தில் பதிலளிக்கவும்
+    'true': உண்மை
+    visit_soon: இந்த பொதுமக்கள் மதிப்புரையின் விளைவை பதிவிறக்குவதற்கு இந்தப் பக்கத்துக்குத் திரும்பவும் வருகை தருக.
+    was: was
+    ways_to_respond: பதிலளிக்கும் வழிகள்
+    write_to: 'எங்களுக்கு எழுதுங்கள்:'
+  contact:
+    email: மின்னஞ்சல்
+    find_call_charges: அழைப்புக் கட்டணம் குறித்துத் தெரிந்துகொள்ளுங்கள்
+    online: இணையவழி
+    phone: தொலைபேசி
+    webchat: இணைய உரையாடல்
   content_item:
+    coming_soon: இந்த ஆவணம் வெளியிடப்படும் தேதி
+    contents: உள்ளடக்கம்
+    metadata:
+      published: வெளியிடப்பட்டது
+      updated: புதுப்பிக்கப்பட்டது
     schema_name:
       aaib_report:
         one: வான் விபத்து விசாரணைக் கிளை அறிக்கை
@@ -223,98 +301,11 @@ ta:
       written_statement:
         one: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்பு
         other: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்புகள்
-    coming_soon: இந்த ஆவணம் வெளியிடப்படும் தேதி
-    contents: உள்ளடக்கம்
-    metadata:
-      published: வெளியிடப்பட்டது
-      updated: புதுப்பிக்கப்பட்டது
-  publication:
-    documents:
-      one: ஆவணம்
-      other: ஆவணங்கள்
-    details: விபரங்கள்
-  brexit:
-    business_link:
-      text: வணிகங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: தனிநபர்கள் மற்றும் குடும்பங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: இதில் வித்தியாசம் உள்ளது
-  common:
-    last_updated:
-    visit: 'வருகை:'
-  components:
-    figure:
-      image_credit: 'பட உதவி: %{credit}'
-    published_dates:
-      hide_all_updates: அனைத்து புதுப்பித்தல்களையும் மறை
-      last_updated: கடைசியாக புதுப்பிக்கப்பட்டது %{date}
-      published: வெளியிடப்பட்ட தேதி %{date}
-      see_all_updates: அனைத்து புதுப்பித்தல்களையும் பார்க்க
-      show_all_updates: அனைத்து புதுப்பித்தல்களையும் காட்டு
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: அனைத்தையும் மறை
-      show_all: அனைத்தையும் காட்டு
-    save_this_page:
-      add_page_button: உங்கள் சேமித்த பக்கங்களில் சேர்
-      confirmations:
-        page_removed:
-          message: உங்கள் சேமித்த பக்கங்களிலிருந்து இதை நீக்கியுள்ளீர்கள்
-        page_saved:
-          message: உங்கள் சேமித்த பக்கங்களில் இதைச் சேர்த்துள்ளீர்கள்
-      page_not_saved_heading: பின்னர் திரும்ப வருகை தர ஏதுவாக இந்தப் பக்கத்தை சேமிக்கவும்
-      page_was_saved_heading: இந்தப் பக்கத்தைச் சேமித்துள்ளீர்கள்
-      remove_page_button: உங்கள் சேமித்த பக்கங்களிலிருந்து நீக்கவும்
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">உங்கள்
-        சேமித்த பக்கங்களைக் காண்க</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">உங்கள்
-        சேமித்த பக்கங்களைப் பார்ப்பதற்கு</a>.
-    share_links:
-      share_this_page: இந்தப் பக்கத்தைப் பகிர்க
-  consultation:
-    and: மற்றும்
-    another_website_html: இந்தக் கலந்தாலோசனை %{closed} <a href="%{url}">வேறொரு இணையதளத்தில்</a>நடைபெற்றது
-    at: "-இல்"
-    closes: இது முடிவடைகிறது
-    closes_at: இந்தக் கலந்தாலோசனை முடிவடைகிறது
-    complete_a: கலந்தாலோசனை விளக்கத்தை
-    description: நிரப்பவும்
-    detail_of_feedback_received: மதிப்புரை விபரம் பெறப்பட்டது
-    detail_of_outcome: பயன் விபரம்
-    documents: ஆவணங்கள்
-    download_outcome: முழு முடிவுகளைப் பதிவிறக்கவும்
-    either: இரண்டிலொன்று
-    email_to: 'மின்னஞ்சல்:'
-    feedback_received: மதிப்புரை பெறப்பட்டது
-    is_being: இருக்கிறது
-    not_open_yet: இந்தக் கலந்தாலோசனை இன்னும் திறக்கப்படவில்லை
-    'on':
-    opens: இந்தக் கலந்தாலோசனை திறக்கிறது
-    original_consultation: மூலக் கலந்தாலோசனை
-    ran_from: "-லிருந்து இந்தக் கலந்தாலோசனை நடந்தது"
-    respond_online: இணையத்தில் பதிலளிக்கவும்
-    'true': உண்மை
-    visit_soon: இந்த பொதுமக்கள் மதிப்புரையின் விளைவை பதிவிறக்குவதற்கு இந்தப் பக்கத்துக்குத்
-      திரும்பவும் வருகை தருக.
-    was: was
-    ways_to_respond: பதிலளிக்கும் வழிகள்
-    write_to: 'எங்களுக்கு எழுதுங்கள்:'
-  contact:
-    email: மின்னஞ்சல்
-    find_call_charges: அழைப்புக் கட்டணம் குறித்துத் தெரிந்துகொள்ளுங்கள்
-    online: இணையவழி
-    phone: தொலைபேசி
-    webchat: இணைய உரையாடல்
   corporate_information_page:
     about_our_services_html: கண்டறியுங்கள் %{link}.
     corporate_information: குழுமத் தகவல்கள்
-    personal_information_charter_html: எங்கள் %{link} உங்கள் தனிப்பட்ட தகவல்களை நாங்கள்
-      எவ்வாறு கையாள்கிறோம் என்பதை விளக்குகிறது.
-    publication_scheme_html: எங்கள் %{link}-ல் நாங்கள் வழக்கமாக வெளியிடும் தகவல்களின்
-      வகைகள் குறித்து வாசியுங்கள்.
+    personal_information_charter_html: எங்கள் %{link} உங்கள் தனிப்பட்ட தகவல்களை நாங்கள் எவ்வாறு கையாள்கிறோம் என்பதை விளக்குகிறது.
+    publication_scheme_html: எங்கள் %{link}-ல் நாங்கள் வழக்கமாக வெளியிடும் தகவல்களின் வகைகள் குறித்து வாசியுங்கள்.
     social_media_use_html: "%{link}-ல் எங்கள் கொள்கை குறித்து வாசியுங்கள்."
     welsh_language_scheme_html: "%{link}-க்கு எங்கள் கடப்பாடு குறித்துக் கண்டறியுங்கள்."
   fatality_notice:
@@ -323,8 +314,7 @@ ta:
     operations_in: "%{location}-ல் செயல்பாடுகள்"
   gone:
     page_title: இனி கிடைக்காது
-    published_in_error: இந்தப் பக்கத்திலிருந்த தகவல்கள் நீக்கப்பட்டுள்ளன. காரணம் அது
-      பிழையாக வெளியிடப்பட்டது.
+    published_in_error: இந்தப் பக்கத்திலிருந்த தகவல்கள் நீக்கப்பட்டுள்ளன. காரணம் அது பிழையாக வெளியிடப்பட்டது.
     title: நீங்கள் தேடும் பக்கம் இனி கிடைக்காது
   guide:
     pages_in_guide: இந்த வழிகாட்டுதலில் உள்ள பக்கங்கள்
@@ -334,14 +324,8 @@ ta:
       available_at: "%{url}-ல் இந்த வெளியீடு உள்ளது"
       copyright: "© Crown காப்புரிமை %{year}"
       isbn: 'ISBN:'
-      licence_html: 'வேறு வகையில் குறிப்பிடப்படாதவரையில் இந்த வெளியீடானது திறந்த அரசு
-        உரிமம் v3.0-வின் விதிமுறைகளின்கீழ் உரிமம் பெற்றது. இந்த உரிமத்தைப் பார்வையிட
-        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        பக்கத்துக்கு வருகைதாருங்கள் அல்லது தகவல் கொள்கைக் குழுவுக்கு The National
-        Archives, Kew, London TW9 4DU என்ற முகவரிக்கு எழுதுங்கள் அல்லது பின்வரும்
-        முகவரிக்கு மின்னஞ்சல் செய்யுங்கள்: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: தொடர்புடைய காப்புரிமைதாரர்களிடமிருந்து அனுமதி பெறுவதற்கு உங்களுக்குத்
-        தேவையான ஏதேனும் மூன்றாம் நபர் காப்புரிமைத் தகவல்கள் நாங்கள் அடையாளம் காணுமிடத்தில்.
+      licence_html: 'வேறு வகையில் குறிப்பிடப்படாதவரையில் இந்த வெளியீடானது திறந்த அரசு உரிமம் v3.0-வின் விதிமுறைகளின்கீழ் உரிமம் பெற்றது. இந்த உரிமத்தைப் பார்வையிட <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> பக்கத்துக்கு வருகைதாருங்கள் அல்லது தகவல் கொள்கைக் குழுவுக்கு The National Archives, Kew, London TW9 4DU என்ற முகவரிக்கு எழுதுங்கள் அல்லது பின்வரும் முகவரிக்கு மின்னஞ்சல் செய்யுங்கள்: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: தொடர்புடைய காப்புரிமைதாரர்களிடமிருந்து அனுமதி பெறுவதற்கு உங்களுக்குத் தேவையான ஏதேனும் மூன்றாம் நபர் காப்புரிமைத் தகவல்கள் நாங்கள் அடையாளம் காணுமிடத்தில்.
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ ta:
     next_page: அடுத்து
     previous_page: முந்தையது
     print_entire_guide: முழு வழிகாட்டுதலையும் அச்செடுக்க
+  publication:
+    details: விபரங்கள்
+    documents:
+      one: ஆவணம்
+      other: ஆவணங்கள்
   service_sign_in:
     continue: தொடர்க
     error:
@@ -362,15 +351,11 @@ ta:
       busy: அனைத்து இணைய உரையாடல் ஆலோசகர்களும் தற்போது வேலையில் உள்ளனர்.
       closed: இணைய உரையாடல் தற்போது மூடப்பட்டுள்ளது.
       speak_to_adviser: ஓர் ஆலோசகருடன் இப்போது பேசுங்கள்
-      technical_problem: தொழில்நுட்பப் பிரச்சினைகள் காரணமாக இணைய உரையாடல் தற்போது
-        கிடைக்கப்பெறவில்லை.
+      technical_problem: தொழில்நுட்பப் பிரச்சினைகள் காரணமாக இணைய உரையாடல் தற்போது கிடைக்கப்பெறவில்லை.
   specialist_document:
-    pdo_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நியமனத் தோற்றுவாயுள்ள வார்த்தைகளுடன்
-      கூடிய ஒரு கருப்பு முத்திரை
-    pgi_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நிலவியல் தோற்றுவாயுள்ள வார்த்தைகளுடன்
-      கூடிய ஒரு கருப்பு முத்திரை
-    tsg_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் மரபார்ந்த சிறப்பம்சமுள்ள வார்த்தைகளுடன்
-      கூடிய ஒரு கருப்பு முத்திரை
+    pdo_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நியமனத் தோற்றுவாயுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
+    pgi_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நிலவியல் தோற்றுவாயுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
+    tsg_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் மரபார்ந்த சிறப்பம்சமுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
   speech:
     delivered_on: ஒப்படைத்த தேதி
     location: இருப்பிடம்
@@ -386,18 +371,10 @@ ta:
     release_date: வெளியீட்டுத் தேதி
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு அத்தியாவசிய
-        பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் அத்தியாவசிய
-        பயணம் குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு,
-        காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு பயணம் செய்வது குறித்து அனைவருக்குமான
-        ஆலோசனை தருகிறது.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு,
-        காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் பயணம் செய்வது குறித்து அனைவருக்குமான
-        ஆலோசனை தருகிறது.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு அத்தியாவசிய பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் அத்தியாவசிய பயணம் குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
     context: அயல்நாட்டுப் பயண அறிவுரை
     coronavirus_warning:
       content_html: |
@@ -420,8 +397,7 @@ ta:
     updated: புதுப்பிக்கப்பட்டது
   unpublishing:
     page_title: இனி கிடைக்காது
-    summary: இந்தப் பக்கத்திலிருந்த தகவல்கள் நீக்கப்பட்டுள்ளன. காரணம் அது பிழையாக
-      வெளியிடப்பட்டது.
+    summary: இந்தப் பக்கத்திலிருந்த தகவல்கள் நீக்கப்பட்டுள்ளன. காரணம் அது பிழையாக வெளியிடப்பட்டது.
     title: நீங்கள் தேடும் பக்கம் இனி கிடைக்காது
   working_group:
     contact_details: தொடர்பு விபரங்கள்

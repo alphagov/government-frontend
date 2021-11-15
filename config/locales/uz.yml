@@ -1,5 +1,83 @@
+---
 uz:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Брексит шароитларида бизнес-доираларнинг вакиллари учун қўлланма
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Брексит шароитларида жисмоний ва юридик шахслар учун қўлланма
+    heading_prefix: Фарқ мавжуд
+  common:
+    last_updated:
+    visit: 'Ташриф буюринг:'
+  components:
+    figure:
+      image_credit: 'График материаллар тақдим этилган: %{credit}'
+    published_dates:
+      hide_all_updates: Барча янгиланишларни яшириш
+      last_updated: Сўнгги янгиланиш %{date}
+      published: Нашр қилинган %{date}
+      see_all_updates: Барча янгиланишларни кўриш
+      show_all_updates: янгиланишларни барчасини кўрсатиш
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: барчасини яшириш
+      show_all: барчасини кўрсатиш
+    save_this_page:
+      add_page_button: Ўз сақланган саҳифаларга қўшиш
+      confirmations:
+        page_removed:
+          message: Сиз буни ўз сақланган саҳифаларингиздан ўчириб юбордингиз
+        page_saved:
+          message: Сиз буни ўз сақланган саҳифаларингизга қўшдингиз
+      page_not_saved_heading: Орқага саҳифага қайтиш учун, уни сақлаб қўйиш.
+      page_was_saved_heading: Сиз бу саҳифани сақлаб қўйдингиз
+      remove_page_button: Сақланган саҳифалардан ўчириб юбориш
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Сақланган саҳифаларни кўриш</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Сақланган саҳифаларни кўриш учун</a> кириш.
+    share_links:
+      share_this_page: Саҳифа билан бўлишиш
+  consultation:
+    and: ва
+    another_website_html: Ушбу маслаҳат %{closed} бошқа <a href="%{url}"> веб-сайтда ўтказилди</a>
+    at: да
+    closes: да якунланади
+    closes_at: Ушбу маслаҳат да якунланади
+    complete_a: Якунлаш
+    description: Маслаҳат тавсифи
+    detail_of_feedback_received: Батафсил шарҳ олинди
+    detail_of_outcome: Натижалар бўйича батафсил маълумот
+    documents: Ҳужжатлар
+    download_outcome: Натижани юклаб олиш
+    either: ёки
+    email_to: 'Электрон почта орқали юбориш:'
+    feedback_received: Шарҳ олинди
+    is_being: ҳисобланади
+    not_open_yet: Маслаҳат ҳали бошланмади
+    'on':
+    opens: Маслаҳат бошланмоқда
+    original_consultation: Дастлабки маслаҳат
+    ran_from: Ушбу маслаҳат дан ўтказилган
+    respond_online: Онлайн жавоб бериш
+    'true': ҳақиқат
+    visit_soon: Мазкур саҳифага яқин вақтда яна бир марта ташриф буюринг ва ушбу &nbsp;шарҳга натижаларни юклаб олинг.
+    was: бўлган
+    ways_to_respond: Жавоб бериш усули
+    write_to: 'Ёзиш:'
+  contact:
+    email: Электрон почта
+    find_call_charges: Қўнғироқлар нархи ҳақида билиб олиш
+    online: Онлайн
+    phone: Телефон
+    webchat: Веб-чат
   content_item:
+    coming_soon: Ушбу ҳужжат нашр қилинган бўлади
+    contents: Мундарижа
+    metadata:
+      published: Нашр қилинган
+      updated: Янгиланган
     schema_name:
       aaib_report:
         one: Авиация ҳодисаларини тергов қилиш бўйича бўлим ҳисоботи
@@ -110,10 +188,8 @@ uz:
         one: Карта
         other: Карталар
       medical_safety_alert:
-        one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва
-          мулоҳазалар
-        other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва
-          мулоҳазалар
+        one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
+        other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
       national:
         one: Давлат статистик маълумотлар эълони
         other: Давлат статистик маълумотлар эълонлари
@@ -225,102 +301,13 @@ uz:
       written_statement:
         one: Парламентга ёзма баёнот
         other: Парламентга ёзма баёнотлар
-    coming_soon: Ушбу ҳужжат нашр қилинган бўлади
-    contents: Мундарижа
-    metadata:
-      published: Нашр қилинган
-      updated: Янгиланган
-  publication:
-    documents:
-      one: Ҳужжат
-      other: Ҳужжатлар
-    details: Батафсил маълумотлар
-  brexit:
-    business_link:
-      text: Брексит шароитларида бизнес-доираларнинг вакиллари учун қўлланма
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Брексит шароитларида жисмоний ва юридик шахслар учун қўлланма
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Фарқ мавжуд
-  common:
-    last_updated:
-    visit: 'Ташриф буюринг:'
-  components:
-    figure:
-      image_credit: 'График материаллар тақдим этилган: %{credit}'
-    published_dates:
-      hide_all_updates: Барча янгиланишларни яшириш
-      last_updated: Сўнгги янгиланиш %{date}
-      published: Нашр қилинган %{date}
-      see_all_updates: Барча янгиланишларни кўриш
-      show_all_updates: янгиланишларни барчасини кўрсатиш
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: барчасини яшириш
-      show_all: барчасини кўрсатиш
-    save_this_page:
-      add_page_button: Ўз сақланган саҳифаларга қўшиш
-      confirmations:
-        page_removed:
-          message: Сиз буни ўз сақланган саҳифаларингиздан ўчириб юбордингиз
-        page_saved:
-          message: Сиз буни ўз сақланган саҳифаларингизга қўшдингиз
-      page_not_saved_heading: Орқага саҳифага қайтиш учун, уни сақлаб қўйиш.
-      page_was_saved_heading: Сиз бу саҳифани сақлаб қўйдингиз
-      remove_page_button: Сақланган саҳифалардан ўчириб юбориш
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Сақланган
-        саҳифаларни кўриш</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Сақланган
-        саҳифаларни кўриш учун</a> кириш.
-    share_links:
-      share_this_page: Саҳифа билан бўлишиш
-  consultation:
-    and: ва
-    another_website_html: Ушбу маслаҳат %{closed} бошқа <a href="%{url}"> веб-сайтда
-      ўтказилди</a>
-    at: да
-    closes: да якунланади
-    closes_at: Ушбу маслаҳат да якунланади
-    complete_a: Якунлаш
-    description: Маслаҳат тавсифи
-    detail_of_feedback_received: Батафсил шарҳ олинди
-    detail_of_outcome: Натижалар бўйича батафсил маълумот
-    documents: Ҳужжатлар
-    download_outcome: Натижани юклаб олиш
-    either: ёки
-    email_to: 'Электрон почта орқали юбориш:'
-    feedback_received: Шарҳ олинди
-    is_being: ҳисобланади
-    not_open_yet: Маслаҳат ҳали бошланмади
-    'on':
-    opens: Маслаҳат бошланмоқда
-    original_consultation: Дастлабки маслаҳат
-    ran_from: Ушбу маслаҳат дан ўтказилган
-    respond_online: Онлайн жавоб бериш
-    'true': ҳақиқат
-    visit_soon: Мазкур саҳифага яқин вақтда яна бир марта ташриф буюринг ва ушбу &nbsp;шарҳга
-      натижаларни юклаб олинг.
-    was: бўлган
-    ways_to_respond: Жавоб бериш усули
-    write_to: 'Ёзиш:'
-  contact:
-    email: Электрон почта
-    find_call_charges: Қўнғироқлар нархи ҳақида билиб олиш
-    online: Онлайн
-    phone: Телефон
-    webchat: Веб-чат
   corporate_information_page:
     about_our_services_html: Билиб олиш %{link}.
     corporate_information: Корпоратив маълумотлар
-    personal_information_charter_html: Бизнинг %{link} биз сизнинг шахсий маълумотларингизга
-      қандай тарзда ишлов беришни бажараётганимизни тушунтириб беради.
-    publication_scheme_html: Биз мунтазам нашр қилаётган маълумотларнинг турлари ҳақида,
-      бизнинг %{link} да ўқинг.
+    personal_information_charter_html: Бизнинг %{link} биз сизнинг шахсий маълумотларингизга қандай тарзда ишлов беришни бажараётганимизни тушунтириб беради.
+    publication_scheme_html: Биз мунтазам нашр қилаётган маълумотларнинг турлари ҳақида, бизнинг %{link} да ўқинг.
     social_media_use_html: "%{link} да бизнинг сиёсатимиз билан танишинг."
-    welsh_language_scheme_html: "%{link} да бизнинг содиқлилигимиз ҳақида билиб олинг
-      ."
+    welsh_language_scheme_html: "%{link} да бизнинг содиқлилигимиз ҳақида билиб олинг ."
   fatality_notice:
     alt_text: Мудофаа вазирлигининг эмблемаси
     field_of_operation: Фаолият соҳаси
@@ -337,15 +324,8 @@ uz:
       available_at: Ушбу нашр этиш %{url} манзилда эришимли
       copyright: "© Британия миллатлар ҳамдўстлигининг Муаллифлик ҳуқуқи %{year}"
       isbn: 'Китобнинг халқаро стандарт рақами:'
-      licence_html: 'Ушбу нашр этиш 3.0 версиядаги Очиқ давлат лицензияси доирасида
-        лицензияланган, агар бошқа шарт кўрсатилмаган бўлса. Лицензия билан танишиш
-        учун <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        сайтларига ташриф буюринг ёки Ахборот сиёсати билан ишлаш бўйича гуруҳга,
-        Миллий архив, Кью, Лондон TW9 4DU, ёки улар билан қуйидаги электрон почта
-        бўйича боғланинг: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Агар учинчи шахсларнинг муаллифлик ҳуқуқлари ҳақида бирон бир маълумот
-        аниқланадиган бўлса, сизга мувофиқ ҳуқуқий ворислардан рухсатнома олишингиз
-        зарур бўлади.
+      licence_html: 'Ушбу нашр этиш 3.0 версиядаги Очиқ давлат лицензияси доирасида лицензияланган, агар бошқа шарт кўрсатилмаган бўлса. Лицензия билан танишиш учун <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> сайтларига ташриф буюринг ёки Ахборот сиёсати билан ишлаш бўйича гуруҳга, Миллий архив, Кью, Лондон TW9 4DU, ёки улар билан қуйидаги электрон почта бўйича боғланинг: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Агар учинчи шахсларнинг муаллифлик ҳуқуқлари ҳақида бирон бир маълумот аниқланадиган бўлса, сизга мувофиқ ҳуқуқий ворислардан рухсатнома олишингиз зарур бўлади.
   i18n:
     direction:
   language_names:
@@ -354,6 +334,11 @@ uz:
     next_page: Кейинги
     previous_page: Олдинги
     print_entire_guide: Бутун қўлланмани чоп этишга чиқариш
+  publication:
+    details: Батафсил маълумотлар
+    documents:
+      one: Ҳужжат
+      other: Ҳужжатлар
   service_sign_in:
     continue: Давом эттириш
     error:
@@ -368,12 +353,9 @@ uz:
       speak_to_adviser: Ҳозироқ маслаҳатчи билан суҳбатлашиш
       technical_problem: Веб-чат ҳозирги пайтда техник сабаблар бўйича эришимли эмас.
   specialist_document:
-    pdo_alt_text: Схема логотипи ўзи билан “Махсус мўлжалланиш. Буюк Британия. Ҳимояланган”
-      сўзлари билан қора штампни тақдим этади.
-    pgi_alt_text: Схема логотипи ўзи билан “Географик мўлжалланиш. Буюк Британия.
-      Ҳимояланган” сўзлари билан қора штампни тақдим этади.
-    tsg_alt_text: Схема логотипи ўзи билан “Анъанавий мўлжалланиш. Буюк Британия.
-      Ҳимояланган” сўзлари билан қора штампни тақдим этади.
+    pdo_alt_text: Схема логотипи ўзи билан “Махсус мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
+    pgi_alt_text: Схема логотипи ўзи билан “Географик мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
+    tsg_alt_text: Схема логотипи ўзи билан “Анъанавий мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
   speech:
     delivered_on: Етказиб берилди
     location: Жойлашиш жойи
@@ -389,19 +371,10 @@ uz:
     release_date: Нашр санаси
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth
-        Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> ўта заруратсиз
-        мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.
-      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and
-        Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr>
-        ўта заруратсиз бутун мамлакатнинг ҳудуди бўйлаб сақарларни амалга оширишни
-        тавсия этмайди.
-      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи
-        ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> мамлакатнинг муайян минтақаларига
-        сафарларни амалга оширишни тавсия этмайди.
-      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth
-        Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> бутун мамлакат
-        ҳудуди бўйлаб сафарларни амалга оширишни тавсия этмайди.
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> ўта заруратсиз мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> ўта заруратсиз бутун мамлакатнинг ҳудуди бўйлаб сақарларни амалга оширишни тавсия этмайди.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> бутун мамлакат ҳудуди бўйлаб сафарларни амалга оширишни тавсия этмайди.
     context: Хорижга сафарларга нисбатан маслаҳат бериш
     coronavirus_warning:
       content_html: |

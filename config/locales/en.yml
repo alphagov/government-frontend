@@ -320,17 +320,17 @@ en:
     social_media_use_html: Read our policy on %{link}.
     welsh_language_scheme_html: Find out about our commitment to %{link}.
   email:
+    description_html: <p class="govuk-body">Go to your GOV.UK account to <a class="govuk-link govuk-notification-banner__link" href="/email/manage">see and manage all your GOV.UK email subscriptions</a>.</p>
     subscribe_title: You’ve subscribed to emails about this page
     unsubscribe_title: You’ve unsubscribed from emails about this page
-    description_html: <p class="govuk-body">Go to your GOV.UK account to <a class="govuk-link govuk-notification-banner__link" href="/email/manage">see and manage all your GOV.UK email subscriptions</a>.</p>
   fatality_notice:
     alt_text: Ministry of Defence crest
     field_of_operation: Field of operation
     operations_in: Operations in %{location}
   get_involved:
-    active_blogs: "Some active government blogs include:"
-    civil_service_quarterly: Civil Service Quarterly
+    active_blogs: 'Some active government blogs include:'
     civil_service: Civil Service
+    civil_service_quarterly: Civil Service Quarterly
     closed: Closed
     closed_consultations: Closed consultations in the past 12 months
     closed_with_date: Closed %{closing_date}

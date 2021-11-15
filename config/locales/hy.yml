@@ -1,5 +1,83 @@
+---
 hy:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexit-ի ուղեցույց բիզնեսների համար
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexit-ի ուղեցույց անհատների և ընտանիքների համար
+    heading_prefix: Կա տարբեր
+  common:
+    last_updated:
+    visit: Այցելել՝
+  components:
+    figure:
+      image_credit: Նկարը՝ %{credit}
+    published_dates:
+      hide_all_updates: թաքցնել բոլոր թարմացումները
+      last_updated: Վերջին թարմացումը՝ %{date}
+      published: Հրապարակվել է՝ %{date}
+      see_all_updates: դիտել բոլոր թարմացումները
+      show_all_updates: ցույց տալ բոլոր թարմացումները
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: թաքցնել բոլորը
+      show_all: ցույց տալ բոլորը
+    save_this_page:
+      add_page_button: Ավելացնել ձեր պահպանված էջերի ցանկին
+      confirmations:
+        page_removed:
+          message: Դուք հեռացրել եք սա ձեր պահպանված էջերի ցանկից
+        page_saved:
+          message: Դուք ավելացրել եք սա ձեր պահպանված էջերի ցանկին
+      page_not_saved_heading: Պահպանել այս էջը՝ հետագայում կրկին դիտելու համար
+      page_was_saved_heading: Դուք պահպանել եք այս էջը
+      remove_page_button: Հեռացնել ձեր պահպանված էջերի ցանկից
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">See your saved pages</a>
+      see_saved_pages_signed_out: '<a href="%{link}" class="govuk-link %{additional_class}">Մուտք գործել</a> ձեր պահպանված էջերը տեսնելու համար:'
+    share_links:
+      share_this_page: Կիսվել այս էջով
+  consultation:
+    and: և
+    another_website_html: Այս խորհրդակցությունը %{closed} անցկացվել է <a href="%{url}">մեկ այլ</a>
+    at: վեբ կայքում՝
+    closes: Այն ավարտվում է
+    closes_at: Այս խորհրդակցությունն ավարտվում է
+    complete_a: Իրականացնել
+    description: Խորհրդակցության նկարագրություն
+    detail_of_feedback_received: Ստացված արձագանքի մանրամասներ
+    detail_of_outcome: Արդյունքի վերաբերյալ մանրամասներ
+    documents: Փաստաթղթեր
+    download_outcome: Ներբեռնել ամբողջական արդյունքը
+    either: կամ
+    email_to: Ուղարկել էլ․ փոստին՝
+    feedback_received: Ստացված արձագանքը
+    is_being: ենթարկվում է
+    not_open_yet: Այս խորհրդակցությունը դեռևս չի սկսվել
+    'on':
+    opens: Այս խորհրդակցությունը կսկսվի
+    original_consultation: Սկզբնական խորհրդակցություն
+    ran_from: Այս խորհրդակցությունն իրականացվել է
+    respond_online: Պատասխանել առցանց
+    'true': ճիշտ
+    visit_soon: 'Կրկին այցելել այս էջը՝ այս հասարակական& nbsp;արձանքի արդյունքը ներբեռնելու համար:'
+    was: էր
+    ways_to_respond: Պատասխանելու եղանակներ
+    write_to: Գրել՝
+  contact:
+    email: Էլ․ փոստ
+    find_call_charges: Տեղեկանալ զանգերի վճարների մասին
+    online: Առցանց
+    phone: Հեռախոսազանգ
+    webchat: Webchat
   content_item:
+    coming_soon: Այս փաստաթուղթը կհրապարակվի
+    contents: Բովանդակություն
+    metadata:
+      published: Հրապարակված
+      updated: Թարմացված
     schema_name:
       aaib_report:
         one: Ավիավթարների հետաքննության բաժանմունքի զեկույց
@@ -223,99 +301,11 @@ hy:
       written_statement:
         one: Խորհրդարանին ուղղված գրավոր հայտարարություն
         other: Խորհրդարանին ուղղված գրավոր հայտարարություններ
-    coming_soon: Այս փաստաթուղթը կհրապարակվի
-    contents: Բովանդակություն
-    metadata:
-      published: Հրապարակված
-      updated: Թարմացված
-  publication:
-    documents:
-      one: Փաստաթուղթ
-      other: Փաստաթղթեր
-    details: Մանրամասներ
-  brexit:
-    business_link:
-      text: Brexit-ի ուղեցույց բիզնեսների համար
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexit-ի ուղեցույց անհատների և ընտանիքների համար
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Կա տարբեր
-  common:
-    last_updated:
-    visit: Այցելել՝
-  components:
-    figure:
-      image_credit: Նկարը՝ %{credit}
-    published_dates:
-      hide_all_updates: թաքցնել բոլոր թարմացումները
-      last_updated: Վերջին թարմացումը՝ %{date}
-      published: Հրապարակվել է՝ %{date}
-      see_all_updates: դիտել բոլոր թարմացումները
-      show_all_updates: ցույց տալ բոլոր թարմացումները
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: թաքցնել բոլորը
-      show_all: ցույց տալ բոլորը
-    save_this_page:
-      add_page_button: Ավելացնել ձեր պահպանված էջերի ցանկին
-      confirmations:
-        page_removed:
-          message: Դուք հեռացրել եք սա ձեր պահպանված էջերի ցանկից
-        page_saved:
-          message: Դուք ավելացրել եք սա ձեր պահպանված էջերի ցանկին
-      page_not_saved_heading: Պահպանել այս էջը՝ հետագայում կրկին դիտելու համար
-      page_was_saved_heading: Դուք պահպանել եք այս էջը
-      remove_page_button: Հեռացնել ձեր պահպանված էջերի ցանկից
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">See
-        your saved pages</a>
-      see_saved_pages_signed_out: '<a href="%{link}" class="govuk-link %{additional_class}">Մուտք
-        գործել</a> ձեր պահպանված էջերը տեսնելու համար:'
-    share_links:
-      share_this_page: Կիսվել այս էջով
-  consultation:
-    and: և
-    another_website_html: Այս խորհրդակցությունը %{closed} անցկացվել է <a href="%{url}">մեկ
-      այլ</a>
-    at: վեբ կայքում՝
-    closes: Այն ավարտվում է
-    closes_at: Այս խորհրդակցությունն ավարտվում է
-    complete_a: Իրականացնել
-    description: Խորհրդակցության նկարագրություն
-    detail_of_feedback_received: Ստացված արձագանքի մանրամասներ
-    detail_of_outcome: Արդյունքի վերաբերյալ մանրամասներ
-    documents: Փաստաթղթեր
-    download_outcome: Ներբեռնել ամբողջական արդյունքը
-    either: կամ
-    email_to: Ուղարկել էլ․ փոստին՝
-    feedback_received: Ստացված արձագանքը
-    is_being: ենթարկվում է
-    not_open_yet: Այս խորհրդակցությունը դեռևս չի սկսվել
-    'on':
-    opens: Այս խորհրդակցությունը կսկսվի
-    original_consultation: Սկզբնական խորհրդակցություն
-    ran_from: Այս խորհրդակցությունն իրականացվել է
-    respond_online: Պատասխանել առցանց
-    'true': ճիշտ
-    visit_soon: 'Կրկին այցելել այս էջը՝ այս հասարակական& nbsp;արձանքի արդյունքը ներբեռնելու
-      համար:'
-    was: էր
-    ways_to_respond: Պատասխանելու եղանակներ
-    write_to: Գրել՝
-  contact:
-    email: Էլ․ փոստ
-    find_call_charges: Տեղեկանալ զանգերի վճարների մասին
-    online: Առցանց
-    phone: Հեռախոսազանգ
-    webchat: Webchat
   corporate_information_page:
     about_our_services_html: Տեղեկանալ %{link}։
     corporate_information: Կորպորատիվ տեղեկություն
-    personal_information_charter_html: Մեր %{link}-ում ներկայացված է, թե ինչպես ենք
-      մշակում ձեր անձնական տվյալները
-    publication_scheme_html: Կարդալ մեր %{link}-ում պարբերաբար հրապարակվող տեղեկությունների
-      տեսակների մասին։
+    personal_information_charter_html: Մեր %{link}-ում ներկայացված է, թե ինչպես ենք մշակում ձեր անձնական տվյալները
+    publication_scheme_html: Կարդալ մեր %{link}-ում պարբերաբար հրապարակվող տեղեկությունների տեսակների մասին։
     social_media_use_html: 'Կարդալ մեր քաղաքականությունը %{link} հղումով:'
     welsh_language_scheme_html: 'Տեղեկանալ մեր աշխատանքի մասին %{link} հղումով:'
   fatality_notice:
@@ -334,14 +324,8 @@ hy:
       available_at: Այս հրապարակումը հասանելի էt %{url} հասցեով
       copyright: "© Crown copyright %{year}"
       isbn: ISBN՝
-      licence_html: 'Այս հրապարակումը լիցենզավորված է Open Government Licence v3.0
-        հրապարակման սերվերի դրույթների ներքո, բացառությամբ այլ դեպքերի: Այս լիցենզիան
-        դիտելու համար այցելեք <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        կամ գրեք Տեղեկատվական քաղաքականության թիմին, Ազգային արխիվին, Kew, London
-        TW9 4DU կամ ուղարկեք էլ. Նամակ հետևյալ հասցեին՝ <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>։'
-      third_party: Եթե բացահայտենք երրորդ կողմի հեղինակային իրավունքի որևէ տեղեկություն,
-        ձեզնից կպահանջվի ստանալ թույլտվություն հեղինակային իրավունքի համապատասխան
-        սեփականատերերից։
+      licence_html: 'Այս հրապարակումը լիցենզավորված է Open Government Licence v3.0 հրապարակման սերվերի դրույթների ներքո, բացառությամբ այլ դեպքերի: Այս լիցենզիան դիտելու համար այցելեք <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> կամ գրեք Տեղեկատվական քաղաքականության թիմին, Ազգային արխիվին, Kew, London TW9 4DU կամ ուղարկեք էլ. Նամակ հետևյալ հասցեին՝ <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>։'
+      third_party: Եթե բացահայտենք երրորդ կողմի հեղինակային իրավունքի որևէ տեղեկություն, ձեզնից կպահանջվի ստանալ թույլտվություն հեղինակային իրավունքի համապատասխան սեփականատերերից։
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ hy:
     next_page: Հաջորդ
     previous_page: Նախորդ
     print_entire_guide: Տպել ամբողջ ուղեցույցը
+  publication:
+    details: Մանրամասներ
+    documents:
+      one: Փաստաթուղթ
+      other: Փաստաթղթեր
   service_sign_in:
     continue: Շարունակել
     error:
@@ -362,15 +351,11 @@ hy:
       busy: 'Webchat-ի բոլոր խորհրդատուներն այս պահին զբաղված են:'
       closed: 'Webchat-ն այս պահին հասանելի չէ:'
       speak_to_adviser: Զրուցել խորհրդատուի հետ հիմա
-      technical_problem: 'Տեխնիկական խնդիրների պատճառով այս պահին webchat-ը հասանելի
-        չէ:'
+      technical_problem: 'Տեխնիկական խնդիրների պատճառով այս պահին webchat-ը հասանելի չէ:'
   specialist_document:
-    pdo_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Designated
-      Origin UK Protected
-    pgi_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Geographic
-      Origin UK Protected
-    tsg_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Traditional
-      Speciality UK Protected
+    pdo_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Designated Origin UK Protected
+    pgi_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Geographic Origin UK Protected
+    tsg_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Traditional Speciality UK Protected
   speech:
     delivered_on: Ուղարկվել է
     location: Տեղանք
@@ -386,16 +371,10 @@ hy:
     release_date: Հրապարակման ամսաթիվ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի ամբողջ տարածք, բացառությամբ
-        էական նշանակություն ունեցող հատվածների։
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր, բացառությամբ էական
-        նշանակություն ունեցող դեպքերի։
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը
-        խորհուրդ է տալիս չմեկնել տվյալ երկրի որոշ հատվածներ։
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը
-        խորհուրդ է տալիս չմեկնել տվյալ երկիր։
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի ամբողջ տարածք, բացառությամբ էական նշանակություն ունեցող հատվածների։
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր, բացառությամբ էական նշանակություն ունեցող դեպքերի։
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի որոշ հատվածներ։
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր։
     context: Օտար երկիր ճամփորդելու վերաբերյալ օգտակար խորհուրդներ
     coronavirus_warning:
       content_html: |

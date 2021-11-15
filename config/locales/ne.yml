@@ -1,5 +1,83 @@
+---
 ne:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: व्यवसायको लागी ब्रेक्सिट मार्गदर्शन
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: व्यक्ति र परिवारहरूका लागी ब्रेक्सिट मार्गदर्शन
+    heading_prefix: त्यहाँ फरक छ
+  common:
+    last_updated:
+    visit: 'भ्रमण:'
+  components:
+    figure:
+      image_credit: 'छवि श्रेय: %{credit}'
+    published_dates:
+      hide_all_updates: सबै अद्यावधिक लुकाउनुहोस्
+      last_updated: पछिल्लो अद्यावधिक %{date}
+      published: प्रकाशित %{date}
+      see_all_updates: सबै अद्यावधिक हेर्नुहोस्
+      show_all_updates: सबै अद्यावधिक देखाउनुहोस्
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: सबै लुकाउनुहोस्
+      show_all: सबै देखाउनुहोस्
+    save_this_page:
+      add_page_button: तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुहोस्
+      confirmations:
+        page_removed:
+          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुभएको छ
+        page_saved:
+          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुभएको छ
+      page_not_saved_heading: यो पृष्ठ सुरक्षित गर्नुहोस् ताकि तपाईं यसलाई पछि फिर्ता आउन सक्नुहुन्छ
+      page_was_saved_heading: तपाईंले यो पृष्ठ सुरक्षित गर्नुभयो
+      remove_page_button: तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुहोस्
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">तपाईंको सुरक्षित पृष्ठहरू हेर्नुहोस्</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">साइन इन् गरेर</a> तपाईंको सुरक्षित पृष्ठहरू हेर्नुहोस्।
+    share_links:
+      share_this_page: यो पृष्ठ साझा गर्नुहोस्
+  consultation:
+    and: र
+    another_website_html: यो परामर्श %{बन्द} <a href="%{url}">अर्को वेबसाइट</a> मा आयोजित
+    at: मा
+    closes: मा बन्द हुन्छ
+    closes_at: यो परामर्श मा बन्द हुन्छ
+    complete_a: एउटा पूरा गर्नु
+    description: परामर्श विवरण
+    detail_of_feedback_received: प्रतिक्रियाको विवरण प्राप्त भयो
+    detail_of_outcome: परिणामको विवरण
+    documents: कागजातहरु
+    download_outcome: पूर्ण नतिजा डाउनलोड गर्नुहोस्
+    either: या त
+    email_to: 'ईमेल:'
+    feedback_received: प्रतिक्रिया प्राप्त भयो
+    is_being: हुँदैछ
+    not_open_yet: यो परामर्श अझै खुलेको छैन
+    'on':
+    opens: यो परामर्श खुल्छ
+    original_consultation: मूल परामर्श
+    ran_from: यो परामर्श बाट चलेको हो
+    respond_online: अनलाइन प्रतिक्रिया
+    'true': साँचो
+    visit_soon: यो सार्वजनिक प्रतिक्रियाको नतिजा डाउनलोड गर्नको लागी चाँडै यस पृष्ठमा फेरी जानुहोस्&nbsp;।
+    was: थियो
+    ways_to_respond: प्रतिक्रिया दिने तरिका
+    write_to: 'मा लेख्नुहोस्:'
+  contact:
+    email: इमेल
+    find_call_charges: कल शुल्कको बारेमा जानकारी पाउनुहोस्
+    online: अनलाइन
+    phone: फोन
+    webchat: वेबच्याट
   content_item:
+    coming_soon: मा यो कागजात प्रकाशित गरिनेछ
+    contents: विषयवस्तु
+    metadata:
+      published: प्रकाशित
+      updated: अद्यावधिक गरियो
     schema_name:
       aaib_report:
         one: हवाई दुर्घटना अनुसन्धान शाखा प्रतिवेदन
@@ -223,100 +301,11 @@ ne:
       written_statement:
         one: संसदमा लिखित वक्तव्य
         other: संसदमा लिखित वक्तव्यहरू
-    coming_soon: मा यो कागजात प्रकाशित गरिनेछ
-    contents: विषयवस्तु
-    metadata:
-      published: प्रकाशित
-      updated: अद्यावधिक गरियो
-  publication:
-    documents:
-      one: कागजात
-      other: कागजातहरु
-    details: विवरण
-  brexit:
-    business_link:
-      text: व्यवसायको लागी ब्रेक्सिट मार्गदर्शन
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: व्यक्ति र परिवारहरूका लागी ब्रेक्सिट मार्गदर्शन
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: त्यहाँ फरक छ
-  common:
-    last_updated:
-    visit: 'भ्रमण:'
-  components:
-    figure:
-      image_credit: 'छवि श्रेय: %{credit}'
-    published_dates:
-      hide_all_updates: सबै अद्यावधिक लुकाउनुहोस्
-      last_updated: पछिल्लो अद्यावधिक %{date}
-      published: प्रकाशित %{date}
-      see_all_updates: सबै अद्यावधिक हेर्नुहोस्
-      show_all_updates: सबै अद्यावधिक देखाउनुहोस्
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: सबै लुकाउनुहोस्
-      show_all: सबै देखाउनुहोस्
-    save_this_page:
-      add_page_button: तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुहोस्
-      confirmations:
-        page_removed:
-          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुभएको छ
-        page_saved:
-          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुभएको छ
-      page_not_saved_heading: यो पृष्ठ सुरक्षित गर्नुहोस् ताकि तपाईं यसलाई पछि फिर्ता
-        आउन सक्नुहुन्छ
-      page_was_saved_heading: तपाईंले यो पृष्ठ सुरक्षित गर्नुभयो
-      remove_page_button: तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुहोस्
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">तपाईंको
-        सुरक्षित पृष्ठहरू हेर्नुहोस्</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">साइन
-        इन् गरेर</a> तपाईंको सुरक्षित पृष्ठहरू हेर्नुहोस्।
-    share_links:
-      share_this_page: यो पृष्ठ साझा गर्नुहोस्
-  consultation:
-    and: र
-    another_website_html: यो परामर्श %{बन्द} <a href="%{url}">अर्को वेबसाइट</a> मा
-      आयोजित
-    at: मा
-    closes: मा बन्द हुन्छ
-    closes_at: यो परामर्श मा बन्द हुन्छ
-    complete_a: एउटा पूरा गर्नु
-    description: परामर्श विवरण
-    detail_of_feedback_received: प्रतिक्रियाको विवरण प्राप्त भयो
-    detail_of_outcome: परिणामको विवरण
-    documents: कागजातहरु
-    download_outcome: पूर्ण नतिजा डाउनलोड गर्नुहोस्
-    either: या त
-    email_to: 'ईमेल:'
-    feedback_received: प्रतिक्रिया प्राप्त भयो
-    is_being: हुँदैछ
-    not_open_yet: यो परामर्श अझै खुलेको छैन
-    'on':
-    opens: यो परामर्श खुल्छ
-    original_consultation: मूल परामर्श
-    ran_from: यो परामर्श बाट चलेको हो
-    respond_online: अनलाइन प्रतिक्रिया
-    'true': साँचो
-    visit_soon: यो सार्वजनिक प्रतिक्रियाको नतिजा डाउनलोड गर्नको लागी चाँडै यस पृष्ठमा
-      फेरी जानुहोस्&nbsp;।
-    was: थियो
-    ways_to_respond: प्रतिक्रिया दिने तरिका
-    write_to: 'मा लेख्नुहोस्:'
-  contact:
-    email: इमेल
-    find_call_charges: कल शुल्कको बारेमा जानकारी पाउनुहोस्
-    online: अनलाइन
-    phone: फोन
-    webchat: वेबच्याट
   corporate_information_page:
     about_our_services_html: पत्ता लगाउनुहोस् %{link}।
     corporate_information: निगम जानकारी
-    personal_information_charter_html: हाम्रो %{link} ले हामी तपाईंको व्यक्तिगत जानकारीलाई
-      कसरी व्यवहार गर्छौं भनेर व्याख्या गर्छ।
-    publication_scheme_html: हामी नियमित रूपमा हाम्रो %{link} मा प्रकाशित जानकारीको
-      प्रकारको बारेमा पढ्नुहोस्।
+    personal_information_charter_html: हाम्रो %{link} ले हामी तपाईंको व्यक्तिगत जानकारीलाई कसरी व्यवहार गर्छौं भनेर व्याख्या गर्छ।
+    publication_scheme_html: हामी नियमित रूपमा हाम्रो %{link} मा प्रकाशित जानकारीको प्रकारको बारेमा पढ्नुहोस्।
     social_media_use_html: "%{link} मा हाम्रो नीति पढ्नुहोस्।"
     welsh_language_scheme_html: "%{link} को हाम्रो प्रतिबद्धताको बारेमा जानकारी पाउनुहोस्।"
   fatality_notice:
@@ -325,8 +314,7 @@ ne:
     operations_in: "%{location} मा सञ्चालन"
   gone:
     page_title: अब उपलब्ध छैन
-    published_in_error: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण
-      तरिकाले प्रकाशित भएको थियो।
+    published_in_error: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित भएको थियो।
     title: तपाईंले खोज्नु भएको पृष्ठ अब उपलब्ध छैन
   guide:
     pages_in_guide: यस गाइडका पृष्ठहरू
@@ -336,13 +324,8 @@ ne:
       available_at: यो प्रकाशन %{url} मा उपलब्ध छ
       copyright: "© क्राउन प्रतिलिपि अधिकार %{year}"
       isbn: 'ISBN:'
-      licence_html: 'यो प्रकाशन कुनै ठाउँमा तोकिएको बाहेक खुला सरकार इजाजतपत्र v3.0
-        को शर्तहरु अन्तर्गत इजाजतपत्र प्राप्त छ। यो इजाजतपत्र हेर्नको लागी <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        मा जानुहोस् वा सूचना नीति टोलि, राष्ट्रिय अभिलेखालय, किउ, लन्डन TW9 4DU मा
-        पत्र लेख्नुहोस् वा ईमेल पठाउनुहोस्: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: यदि हामीले कुनै तेस्रो पक्ष प्रतिलिपि अधिकार जानकारीको पहिचान गरेका
-        छौं भने तपाईंले सम्बन्धित प्रतिलिपि अधिकार धारकहरु बाट अनुमति प्राप्त गर्न
-        आवश्यक छ।
+      licence_html: 'यो प्रकाशन कुनै ठाउँमा तोकिएको बाहेक खुला सरकार इजाजतपत्र v3.0 को शर्तहरु अन्तर्गत इजाजतपत्र प्राप्त छ। यो इजाजतपत्र हेर्नको लागी <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> मा जानुहोस् वा सूचना नीति टोलि, राष्ट्रिय अभिलेखालय, किउ, लन्डन TW9 4DU मा पत्र लेख्नुहोस् वा ईमेल पठाउनुहोस्: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: यदि हामीले कुनै तेस्रो पक्ष प्रतिलिपि अधिकार जानकारीको पहिचान गरेका छौं भने तपाईंले सम्बन्धित प्रतिलिपि अधिकार धारकहरु बाट अनुमति प्राप्त गर्न आवश्यक छ।
   i18n:
     direction:
   language_names:
@@ -351,6 +334,11 @@ ne:
     next_page: अर्को
     previous_page: अघिल्लो
     print_entire_guide: सम्पूर्ण गाइड छाप्नुहोस्
+  publication:
+    details: विवरण
+    documents:
+      one: कागजात
+      other: कागजातहरु
   service_sign_in:
     continue: जारी राख्नुहोस्
     error:
@@ -365,12 +353,9 @@ ne:
       speak_to_adviser: अब एक सल्लाहकार सँग कुरा गर्नुहोस्
       technical_problem: प्राविधिक समस्याको कारण अहिले वैबच्याट उपलब्ध छैन।
   specialist_document:
-    pdo_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, निर्दिष्ट मूल संयक्त
-      अधिराज्य संरक्षित
-    pgi_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, ग्राफिक मूल संयक्त
-      अधिराज्य संरक्षित
-    tsg_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, पारम्परिक विशेषता
-      संयक्त अधिराज्य संरक्षित
+    pdo_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, निर्दिष्ट मूल संयक्त अधिराज्य संरक्षित
+    pgi_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, ग्राफिक मूल संयक्त अधिराज्य संरक्षित
+    tsg_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, पारम्परिक विशेषता संयक्त अधिराज्य संरक्षित
   speech:
     delivered_on: मा वितरण गरियो
     location: स्थान
@@ -386,18 +371,10 @@ ne:
     release_date: बिज्ञप्ति मिति
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक देशको
-        केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक पुरै
-        देशमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">विदेश,
-        राष्ट्रमंडल र विकास कार्यालय</abbr> ले देशको केहि भागमा सबै यात्रा बिरूद्ध
-        सल्लाह दिएको छ।
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">विदेश,
-        राष्ट्रमंडल र विकास कार्यालय</abbr> ले पुरै देशमा सबै यात्रा बिरूद्ध सल्लाह
-        दिएको छ।
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक देशको केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक पुरै देशमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले देशको केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले पुरै देशमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
     context: विदेश यात्रा सल्लाह
     coronavirus_warning:
       content_html: |
@@ -421,8 +398,7 @@ ne:
     updated: अद्यावधिक गरियो
   unpublishing:
     page_title: अब उपलब्ध छैन
-    summary: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित
-      भएको थियो।
+    summary: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित भएको थियो।
     title: तपाईंले खोज्नु भएको पृष्ठ अब उपलब्ध छैन
   working_group:
     contact_details: सम्पर्क विवरण

@@ -1,11 +1,12 @@
+---
 zh:
   brexit:
     business_link:
-      text: 企业的英国脱欧指南
       path: "/guidance/brexit-guidance-for-businesses"
+      text: 企业的英国脱欧指南
     citizen_link:
-      text: 企业和家庭的英国脱欧指南
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: 企业和家庭的英国脱欧指南
     heading_prefix: 区别
   common:
     last_updated:
@@ -35,8 +36,7 @@ zh:
       page_was_saved_heading: 您已保存此页面
       remove_page_button: 从您保存的页面中删除
       see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">查看您的已保存页面</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登录</a>
-        以查看您保存的页面。
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登录</a> 以查看您保存的页面。
     share_links:
       share_this_page: 分享本页面
   consultation:
@@ -324,8 +324,7 @@ zh:
       available_at: 本发表内容可在 %{url} 获取。
       copyright: "© Crown 版权所有 %{year}"
       isbn: ISBN：
-      licence_html: 除非另有说明，本发表内容根据开放政府许可证3.0版的条款授权。  要浏览此许可证，请访问 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        或写信给资讯政策组，The National Archives, Kew, London TW9 4DU，或发送电子邮件：<a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
+      licence_html: 除非另有说明，本发表内容根据开放政府许可证3.0版的条款授权。  要浏览此许可证，请访问 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> 或写信给资讯政策组，The National Archives, Kew, London TW9 4DU，或发送电子邮件：<a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
       third_party: '如果我们发现任何第三者的版权资料，您需要获得有关版权持有人的许可。  '
   i18n:
     direction:
@@ -372,14 +371,10 @@ zh:
     release_date: 发布日期
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: '<abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> 建议除非必要，否则不要前往该国部分地区。  '
-      avoid_all_but_essential_travel_to_whole_country_html: '<abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。  '
-      avoid_all_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        建议除非必要，否则不要前往该国家的某些地区。  '
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        建议除非必要，否则不要前往该国全部地区。
+      avoid_all_but_essential_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国部分地区。  '
+      avoid_all_but_essential_travel_to_whole_country_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。  '
+      avoid_all_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国家的某些地区。  '
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。
     context: 国外差旅建议
     coronavirus_warning:
       content_html: |

@@ -1,5 +1,83 @@
+---
 de:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexit-Leitfaden für Unternehmen
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexit-Leitfaden für Einzelpersonen und Familien
+    heading_prefix: Es gibt verschiedene
+  common:
+    last_updated:
+    visit: 'Besuchen Sie:'
+  components:
+    figure:
+      image_credit: 'Abbildung: %{credit}'
+    published_dates:
+      hide_all_updates: alle Aktualisierungen ausblenden
+      last_updated: Letzte Aktualisierung am %{date}
+      published: Veröffentlicht am %{date}
+      see_all_updates: alle Aktualisierungen ansehen
+      show_all_updates: alle Aktualisierungen anzeigen
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: alle ausblenden
+      show_all: alle anzeigen
+    save_this_page:
+      add_page_button: Zu Ihren gespeicherten Seiten hinzufügen
+      confirmations:
+        page_removed:
+          message: Sie haben diese Seite aus Ihren gespeicherten Seiten entfernt
+        page_saved:
+          message: Sie haben diese Seite zu Ihren gespeicherten Seiten hinzugefügt
+      page_not_saved_heading: Speichern Sie diese Seite, damit Sie später wieder zu ihr zurückkehren können
+      page_was_saved_heading: Sie haben diese Seite gespeichert
+      remove_page_button: Aus Ihren gespeicherten Seiten entfernen
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Gespeicherte Seiten anzeigen</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Melden Sie sich an</a>, um Ihre gespeicherten Seiten zu sehen.
+    share_links:
+      share_this_page: Diese Seite teilen
+  consultation:
+    and: und
+    another_website_html: Diese Anhörung %{closed} fand auf einer <a href="%{url}">anderen Website</a> statt
+    at: um
+    closes: Sie schließt um
+    closes_at: Diese Anhörung endet um
+    complete_a: Vervollständigen einer
+    description: Beschreibung der Anhörung
+    detail_of_feedback_received: Einzelheiten zur erhaltenen Rückmeldung
+    detail_of_outcome: Einzelheiten zum Ergebnis
+    documents: Dokumente
+    download_outcome: Download der vollständigen Ergebnisse
+    either: entweder
+    email_to: 'Email an:'
+    feedback_received: Erhaltene Rückmeldungen
+    is_being: wird
+    not_open_yet: Diese Anhörung ist noch nicht eröffnet
+    'on':
+    opens: Diese Anhörung wird eröffnet
+    original_consultation: Originale Anhörung
+    ran_from: Diese Anhörung lief ab
+    respond_online: Online antworten
+    'true': wahr
+    visit_soon: Besuchen Sie diese Seite bald wieder, um das Ergebnis dieser öffentlichen&nbsp;Rückmeldung herunterzuladen.
+    was: war
+    ways_to_respond: Möglichkeiten, um zu antworten
+    write_to: 'Schreiben Sie an:'
+  contact:
+    email: Email
+    find_call_charges: Erkundigen Sie sich über Telefongebühren
+    online: Online
+    phone: Telefon
+    webchat: Internetchat
   content_item:
+    coming_soon: Dieses Dokument wird veröffentlicht auf
+    contents: Inhalte
+    metadata:
+      published: Veröffentlicht
+      updated: Aktualisiert
     schema_name:
       aaib_report:
         one: Untersuchungsbericht der Abteilung für Flugunfälle
@@ -111,8 +189,7 @@ de:
         other: Karten
       medical_safety_alert:
         one: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
-        other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische
-          Geräte
+        other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
       national:
         one: Veröffentlichung der Nationalen Statistik
         other: Veröffentlichungen der Nationalen Statistik
@@ -224,100 +301,11 @@ de:
       written_statement:
         one: Schriftliche Erklärung vor dem Parlament
         other: Schriftliche Erklärungen vor dem Parlament
-    coming_soon: Dieses Dokument wird veröffentlicht auf
-    contents: Inhalte
-    metadata:
-      published: Veröffentlicht
-      updated: Aktualisiert
-  publication:
-    documents:
-      one: Dokument
-      other: Dokumente
-    details: Einzelheiten
-  brexit:
-    business_link:
-      text: Brexit-Leitfaden für Unternehmen
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexit-Leitfaden für Einzelpersonen und Familien
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Es gibt verschiedene
-  common:
-    last_updated:
-    visit: 'Besuchen Sie:'
-  components:
-    figure:
-      image_credit: 'Abbildung: %{credit}'
-    published_dates:
-      hide_all_updates: alle Aktualisierungen ausblenden
-      last_updated: Letzte Aktualisierung am %{date}
-      published: Veröffentlicht am %{date}
-      see_all_updates: alle Aktualisierungen ansehen
-      show_all_updates: alle Aktualisierungen anzeigen
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: alle ausblenden
-      show_all: alle anzeigen
-    save_this_page:
-      add_page_button: Zu Ihren gespeicherten Seiten hinzufügen
-      confirmations:
-        page_removed:
-          message: Sie haben diese Seite aus Ihren gespeicherten Seiten entfernt
-        page_saved:
-          message: Sie haben diese Seite zu Ihren gespeicherten Seiten hinzugefügt
-      page_not_saved_heading: Speichern Sie diese Seite, damit Sie später wieder zu
-        ihr zurückkehren können
-      page_was_saved_heading: Sie haben diese Seite gespeichert
-      remove_page_button: Aus Ihren gespeicherten Seiten entfernen
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Gespeicherte
-        Seiten anzeigen</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Melden
-        Sie sich an</a>, um Ihre gespeicherten Seiten zu sehen.
-    share_links:
-      share_this_page: Diese Seite teilen
-  consultation:
-    and: und
-    another_website_html: Diese Anhörung %{closed} fand auf einer <a href="%{url}">anderen
-      Website</a> statt
-    at: um
-    closes: Sie schließt um
-    closes_at: Diese Anhörung endet um
-    complete_a: Vervollständigen einer
-    description: Beschreibung der Anhörung
-    detail_of_feedback_received: Einzelheiten zur erhaltenen Rückmeldung
-    detail_of_outcome: Einzelheiten zum Ergebnis
-    documents: Dokumente
-    download_outcome: Download der vollständigen Ergebnisse
-    either: entweder
-    email_to: 'Email an:'
-    feedback_received: Erhaltene Rückmeldungen
-    is_being: wird
-    not_open_yet: Diese Anhörung ist noch nicht eröffnet
-    'on':
-    opens: Diese Anhörung wird eröffnet
-    original_consultation: Originale Anhörung
-    ran_from: Diese Anhörung lief ab
-    respond_online: Online antworten
-    'true': wahr
-    visit_soon: Besuchen Sie diese Seite bald wieder, um das Ergebnis dieser öffentlichen&nbsp;Rückmeldung
-      herunterzuladen.
-    was: war
-    ways_to_respond: Möglichkeiten, um zu antworten
-    write_to: 'Schreiben Sie an:'
-  contact:
-    email: Email
-    find_call_charges: Erkundigen Sie sich über Telefongebühren
-    online: Online
-    phone: Telefon
-    webchat: Internetchat
   corporate_information_page:
     about_our_services_html: Finden Sie es heraus %{link}.
     corporate_information: Unternehmensinformationen
-    personal_information_charter_html: Unsere %{link} erläutert, wie wir mit Ihren
-      persönlichen Daten umgehen.
-    publication_scheme_html: Lesen Sie in unserem %{link}, welche Arten von Informationen
-      wir regelmäßig veröffentlichen.
+    personal_information_charter_html: Unsere %{link} erläutert, wie wir mit Ihren persönlichen Daten umgehen.
+    publication_scheme_html: Lesen Sie in unserem %{link}, welche Arten von Informationen wir regelmäßig veröffentlichen.
     social_media_use_html: Lesen Sie unsere Richtlinie zu %{link}.
     welsh_language_scheme_html: Informieren Sie sich über unser Engagement für %{link}.
   fatality_notice:
@@ -326,8 +314,7 @@ de:
     operations_in: Tätigkeiten in %{location}
   gone:
     page_title: Nicht mehr verfügbar
-    published_in_error: Die Informationen auf dieser Seite wurden entfernt, da sie
-      fälschlich veröffentlicht wurden.
+    published_in_error: Die Informationen auf dieser Seite wurden entfernt, da sie fälschlich veröffentlicht wurden.
     title: Die von Ihnen gesuchte Seite ist nicht mehr verfügbar
   guide:
     pages_in_guide: Seiten in diesem Leitfaden
@@ -337,14 +324,8 @@ de:
       available_at: Diese Veröffentlichung ist verfügbar unter %{url}
       copyright: "© Crown copyright %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Diese Veröffentlichung unterliegt, sofern nicht anders angegeben,
-        den Bedingungen der Open Government Licence v3.0. Um diese Lizenz einzusehen,
-        gehen Sie auf <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        oder schreiben Sie an das Information Policy Team, The National Archives,
-        Kew, London TW9 4DU, oder senden Sie eine Email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Wenn wir urheberrechtlich geschützte Informationen von Dritten
-        identifiziert haben, müssen Sie die Erlaubnis der betreffenden Urheberrechtsinhaber
-        einholen.
+      licence_html: 'Diese Veröffentlichung unterliegt, sofern nicht anders angegeben, den Bedingungen der Open Government Licence v3.0. Um diese Lizenz einzusehen, gehen Sie auf <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> oder schreiben Sie an das Information Policy Team, The National Archives, Kew, London TW9 4DU, oder senden Sie eine Email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Wenn wir urheberrechtlich geschützte Informationen von Dritten identifiziert haben, müssen Sie die Erlaubnis der betreffenden Urheberrechtsinhaber einholen.
   i18n:
     direction:
   language_names:
@@ -353,6 +334,11 @@ de:
     next_page: Weiter
     previous_page: Zurück
     print_entire_guide: Kompletten Leitfaden ausdrucken
+  publication:
+    details: Einzelheiten
+    documents:
+      one: Dokument
+      other: Dokumente
   service_sign_in:
     continue: Fortfahren
     error:
@@ -365,15 +351,11 @@ de:
       busy: Alle Chat-Berater sind im Moment beschäftigt.
       closed: Der Webchat ist im Moment geschlossen.
       speak_to_adviser: Sprechen Sie jetzt mit einem Berater
-      technical_problem: Der Webchat ist zur Zeit aufgrund technischer Probleme nicht
-        verfügbar.
+      technical_problem: Der Webchat ist zur Zeit aufgrund technischer Probleme nicht verfügbar.
   specialist_document:
-    pdo_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Designated
-      Origin UK Protected"
-    pgi_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Geographic
-      Origin UK Protected"
-    tsg_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Traditional
-      Speciality UK Protected"
+    pdo_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Designated Origin UK Protected"
+    pgi_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Geographic Origin UK Protected"
+    tsg_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Traditional Speciality UK Protected"
   speech:
     delivered_on: Geliefert am
     location: Standort
@@ -389,16 +371,10 @@ de:
     release_date: Veröffentlichungsdatum
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Das <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> rät von allen Reisen in Teile des Landes ab, die nicht
-        unbedingt erforderlich sind.
-      avoid_all_but_essential_travel_to_whole_country_html: Das <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> rät von allen Reisen in das ganze Land ab,
-        die nicht unbedingt notwendig sind.
-      avoid_all_travel_to_parts_html: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        rät von allen Reisen in Teile des Landes ab.
-      avoid_all_travel_to_whole_country_html: Das <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> rät von allen Reisen in das ganze Land ab.
+      avoid_all_but_essential_travel_to_parts_html: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr> rät von allen Reisen in Teile des Landes ab, die nicht unbedingt erforderlich sind.
+      avoid_all_but_essential_travel_to_whole_country_html: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr> rät von allen Reisen in das ganze Land ab, die nicht unbedingt notwendig sind.
+      avoid_all_travel_to_parts_html: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr> rät von allen Reisen in Teile des Landes ab.
+      avoid_all_travel_to_whole_country_html: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr> rät von allen Reisen in das ganze Land ab.
     context: Hinweise für Auslandsreisen
     coronavirus_warning:
       content_html: |
@@ -421,8 +397,7 @@ de:
     updated: Aktualisiert
   unpublishing:
     page_title: Nicht mehr verfügbar
-    summary: Die Informationen auf dieser Seite wurden entfernt, da sie fälschlich
-      veröffentlicht wurden.
+    summary: Die Informationen auf dieser Seite wurden entfernt, da sie fälschlich veröffentlicht wurden.
     title: Die von Ihnen gesuchte Seite ist nicht mehr verfügbar
   working_group:
     contact_details: Kontaktdaten

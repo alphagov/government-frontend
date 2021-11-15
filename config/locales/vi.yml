@@ -1,11 +1,12 @@
+---
 vi:
   brexit:
     business_link:
-      text: Hướng dẫn Brexit cho các doanh nghiệp
       path: "/guidance/brexit-guidance-for-businesses"
+      text: Hướng dẫn Brexit cho các doanh nghiệp
     citizen_link:
-      text: Hướng dẫn Brexit cho các cá nhân và gia đình
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Hướng dẫn Brexit cho các cá nhân và gia đình
     heading_prefix: Có sự khác nhau
   common:
     last_updated:
@@ -34,16 +35,13 @@ vi:
       page_not_saved_heading: Lưu trang này để bạn có thể quay lại sau
       page_was_saved_heading: Bạn đã lưu trang này
       remove_page_button: Xóa khỏi các trang đã lưu của bạn
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Xem
-        các trang đã lưu của bạn</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Đăng
-        nhập</a> để xem các trang đã lưu của bạn.
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Xem các trang đã lưu của bạn</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Đăng nhập</a> để xem các trang đã lưu của bạn.
     share_links:
       share_this_page: Chia sẻ trang này
   consultation:
     and: và
-    another_website_html: Buổi tham vấn này %{closed} được tổ chức trên <a href="%{url}">một
-      trang web khác</a>
+    another_website_html: Buổi tham vấn này %{closed} được tổ chức trên <a href="%{url}">một trang web khác</a>
     at: lúc
     closes: Và kết thúc lúc
     closes_at: Buổi tham vấn này kết thúc lúc
@@ -64,8 +62,7 @@ vi:
     ran_from: Buổi tham vấn này bắt đầu từ
     respond_online: Trả lời trực tuyến
     'true': đúng
-    visit_soon: Hãy sớm truy cập lại trang này để tải xuống kết quả cho phản hồi&nbsp;công
-      khai này.
+    visit_soon: Hãy sớm truy cập lại trang này để tải xuống kết quả cho phản hồi&nbsp;công khai này.
     was: là
     ways_to_respond: Cách trả lời
     write_to: 'Gửi thư đến:'
@@ -307,10 +304,8 @@ vi:
   corporate_information_page:
     about_our_services_html: Tìm hiểu %{link}.
     corporate_information: Thông tin doanh nghiệp
-    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng
-      tôi xử lý thông tin cá nhân của bạn."
-    publication_scheme_html: Tìm hiểu về các loại thông tin chúng tôi thường xuyên
-      xuất bản trong %{link} của chúng tôi.
+    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng tôi xử lý thông tin cá nhân của bạn."
+    publication_scheme_html: Tìm hiểu về các loại thông tin chúng tôi thường xuyên xuất bản trong %{link} của chúng tôi.
     social_media_use_html: Đọc chính sách của chúng tôi trên %{link}.
     welsh_language_scheme_html: Tìm hiểu về cam kết của chúng tôi đối với %{link}.
   fatality_notice:
@@ -319,8 +314,7 @@ vi:
     operations_in: Hoạt động ở %{location}
   gone:
     page_title: Không khả dụng
-    published_in_error: Thông tin trên trang này đã bị xóa vì đã được xuất bản do
-      nhầm lẫn.
+    published_in_error: Thông tin trên trang này đã bị xóa vì đã được xuất bản do nhầm lẫn.
     title: Trang bạn đang tìm không có sẵn
   guide:
     pages_in_guide: Các trang trong hướng dẫn này
@@ -330,13 +324,8 @@ vi:
       available_at: Ấn phẩm này có sẵn tại %{url}
       copyright: "© Bản quyền Crown %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Ấn phẩm này được cấp phép theo các điều khoản của Giấy phép Chính
-        phủ Mở pb3.0 trừ khi có quy định khác. Để xem giấy phép này, hãy truy cập
-        <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        hoặc gửi thư cho Nhóm Chính sách Thông tin, Cơ quan Lưu trữ Quốc gia, Kew,
-        London TW9 4DU hoặc gửi email đến: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Khi chúng tôi xác định được bất kỳ thông tin bản quyền nào của
-        bên thứ ba, bạn sẽ cần phải xin phép chủ sở hữu bản quyền liên quan.
+      licence_html: 'Ấn phẩm này được cấp phép theo các điều khoản của Giấy phép Chính phủ Mở pb3.0 trừ khi có quy định khác. Để xem giấy phép này, hãy truy cập <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> hoặc gửi thư cho Nhóm Chính sách Thông tin, Cơ quan Lưu trữ Quốc gia, Kew, London TW9 4DU hoặc gửi email đến: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Khi chúng tôi xác định được bất kỳ thông tin bản quyền nào của bên thứ ba, bạn sẽ cần phải xin phép chủ sở hữu bản quyền liên quan.
   i18n:
     direction:
   language_names:
@@ -364,12 +353,9 @@ vi:
       speak_to_adviser: Nói chuyện với tư vấn viên ngay bây giờ
       technical_problem: Webchat hiện không có sẵn do sự cố kỹ thuật.
   specialist_document:
-    pdo_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Designated
-      Origin UK Protected”
-    pgi_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Geographic
-      Origin UK Protected”
-    tsg_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Traditional
-      Speciality UK Protected”
+    pdo_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Designated Origin UK Protected”
+    pgi_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Geographic Origin UK Protected”
+    tsg_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Traditional Speciality UK Protected”
   speech:
     delivered_on: Ngày giao
     location: Vị trí
@@ -385,15 +371,10 @@ vi:
     release_date: Ngày phát hành
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> khuyến cáo chỉ nên đi đến một số nơi ở quốc gia này khi
-        thật cần thiết.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> khuyến cáo chỉ nên đi đến quốc gia này khi thật cần thiết.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        khuyến cáo không nên đi đến một số nơi ở quốc gia này.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        khuyến cáo không nên đi đến quốc gia này.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo chỉ nên đi đến một số nơi ở quốc gia này khi thật cần thiết.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo chỉ nên đi đến quốc gia này khi thật cần thiết.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến một số nơi ở quốc gia này.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến quốc gia này.
     context: Tư vấn đi nước ngoài
     coronavirus_warning:
       content_html: |

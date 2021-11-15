@@ -1,11 +1,12 @@
+---
 az:
   brexit:
     business_link:
-      text: Bizneslər üçün Brexit ilə bağlı göstərişlər
       path: "/guidance/brexit-guidance-for-businesses"
+      text: Bizneslər üçün Brexit ilə bağlı göstərişlər
     citizen_link:
-      text: Fərdlər və ailələr üçün Brexit ilə bağlı göstərişlər
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Fərdlər və ailələr üçün Brexit ilə bağlı göstərişlər
     heading_prefix: Fərqliliklər mövcuddur
   common:
     last_updated:
@@ -34,16 +35,13 @@ az:
       page_not_saved_heading: Sonra yenidən baxmaq üçün bu səhifəni yaddaşda saxlayın
       page_was_saved_heading: Bu səhifəni yaddaşda saxlamısınız
       remove_page_button: Yaddaşda saxladığınız səhifələrdən silin
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Yaddaşda
-        saxladığınız səhifələri nəzərdən keçirin</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Yaddaşda
-        saxladığınız səhifələri nəzərdən keçirmək üçün</a> sistemə daxil olun.
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Yaddaşda saxladığınız səhifələri nəzərdən keçirin</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Yaddaşda saxladığınız səhifələri nəzərdən keçirmək üçün</a> sistemə daxil olun.
     share_links:
       share_this_page: Bu səhifəni paylaşın
   consultation:
     and: və
-    another_website_html: Bu məsləhətləşmə %{closed} başqa <a href="%{url}">vebsaytda
-      həyata keçirilir</a>
+    another_website_html: Bu məsləhətləşmə %{closed} başqa <a href="%{url}">vebsaytda həyata keçirilir</a>
     at: "(vaxtı göstərir)"
     closes: O, saat ...də (da) bağlanır
     closes_at: Məsləhətləşmə saat ...də (da) bağlanır
@@ -64,8 +62,7 @@ az:
     ran_from: Bu məsləhətləşmə başlayır
     respond_online: Onlayn cavab verin
     'true': düzgün
-    visit_soon: Bu ictimai&nbsp;rəyin nəticəsini endirmək üçün bu səhifəyə tezliklə
-      yenidən baş çəkin.
+    visit_soon: Bu ictimai&nbsp;rəyin nəticəsini endirmək üçün bu səhifəyə tezliklə yenidən baş çəkin.
     was: idi
     ways_to_respond: Cavab vermək üçün yollar
     write_to: 'Yazın:'
@@ -307,10 +304,8 @@ az:
   corporate_information_page:
     about_our_services_html: Öyrənin %{link}.
     corporate_information: Korporativ məlumat
-    personal_information_charter_html: Bizim %{link} şəxsi məlumatlarınızla necə davrandığımızı
-      izah edir.
-    publication_scheme_html: "%{link}-də adətən istifadə etdiyimiz məlumatların növləri
-      barədə oxuyun."
+    personal_information_charter_html: Bizim %{link} şəxsi məlumatlarınızla necə davrandığımızı izah edir.
+    publication_scheme_html: "%{link}-də adətən istifadə etdiyimiz məlumatların növləri barədə oxuyun."
     social_media_use_html: "%{link}-də siyasətmizi oxuyun."
     welsh_language_scheme_html: "%{link} ilə bağlı öhdəliyimiz barədə öyrənin."
   fatality_notice:
@@ -329,14 +324,8 @@ az:
       available_at: Bu nəşr %{url} ünvanında mövcuddur
       copyright: "© Böyük Britaniyanın müəllif hüququ %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Bu nəşr v3.0 Açıq dövlət lisenziyasının şərtlərinə uyğun olaraq
-        lisenziya ilə təmin edilmişdir (başqa cür nəzərdə tutulmadığı halda). Bu lisenziyaya
-        baxmaq üçün <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        ünvanına baş çəkin və ya Information Policy Team, The National Archives, Kew,
-        London TW9 4DU ünvanına yazın, yaxud aşağıdakı ünvana e-məktub göndərin: <a
-        href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Hər hansı üçüncü tərəfin müəllif hüququ üzrə məlumatını müəyyən
-        etdiyimiz yerlərdə müvafiq müəllif hüququ sahiblərindən icazə almalı olacaqsınız.
+      licence_html: 'Bu nəşr v3.0 Açıq dövlət lisenziyasının şərtlərinə uyğun olaraq lisenziya ilə təmin edilmişdir (başqa cür nəzərdə tutulmadığı halda). Bu lisenziyaya baxmaq üçün <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ünvanına baş çəkin və ya Information Policy Team, The National Archives, Kew, London TW9 4DU ünvanına yazın, yaxud aşağıdakı ünvana e-məktub göndərin: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Hər hansı üçüncü tərəfin müəllif hüququ üzrə məlumatını müəyyən etdiyimiz yerlərdə müvafiq müəllif hüququ sahiblərindən icazə almalı olacaqsınız.
   i18n:
     direction:
   language_names:
@@ -364,12 +353,9 @@ az:
       speak_to_adviser: Məsləhətçi ilə indi danışın
       technical_problem: Texniki problemlər səbəbilə veb-çat indi mövcud deyildir.
   specialist_document:
-    pdo_alt_text: Qrafik loqo üzərində "Səlahiyyətli mənbə BK qorunur" sözləri olan
-      qara möhürdür
-    pgi_alt_text: Qrafik loqo üzərində "Coğrafi mənbə BK qorunur" sözləri olan qara
-      möhürdür
-    tsg_alt_text: Qrafik loqo üzərində "Ənənəvi məhsul BK qorunur" sözləri olan qara
-      möhürdür
+    pdo_alt_text: Qrafik loqo üzərində "Səlahiyyətli mənbə BK qorunur" sözləri olan qara möhürdür
+    pgi_alt_text: Qrafik loqo üzərində "Coğrafi mənbə BK qorunur" sözləri olan qara möhürdür
+    tsg_alt_text: Qrafik loqo üzərində "Ənənəvi məhsul BK qorunur" sözləri olan qara möhürdür
   speech:
     delivered_on: Çatdırılıb
     location: Yer
@@ -385,16 +371,10 @@ az:
     release_date: Buraxılış tarixi
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ölkənin bölgələrinə zəruri səyahət istisna olmaqla heç
-        birini məsləhət görmürlər.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ölkəyə ümumi zəruri səyahət istisna olmaqla heç birini
-        məsləhət görmürlər.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ölkənin bölgələrinə bütün səyahətləri məsləhət görmürlər.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ölkəyə ümumilikdə bütün səyahətləri məsləhət görmürlər.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ölkənin bölgələrinə zəruri səyahət istisna olmaqla heç birini məsləhət görmürlər.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ölkəyə ümumi zəruri səyahət istisna olmaqla heç birini məsləhət görmürlər.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ölkənin bölgələrinə bütün səyahətləri məsləhət görmürlər.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ölkəyə ümumilikdə bütün səyahətləri məsləhət görmürlər.
     context: Xaricə səyahət üzrə məsləhət
     coronavirus_warning:
       content_html: |

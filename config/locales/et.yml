@@ -1,5 +1,83 @@
+---
 et:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexiti juhised ettevõtetele
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexiti juhised üksikisikutele ja peredele
+    heading_prefix: On erinev
+  common:
+    last_updated:
+    visit: 'Külastus:'
+  components:
+    figure:
+      image_credit: 'Pildi autoriõigus: %{credit}'
+    published_dates:
+      hide_all_updates: peida kõik värskendused
+      last_updated: Viimati värskendatud %{date}
+      published: Avaldatud %{date}
+      see_all_updates: vt kõiki värskendusi
+      show_all_updates: kuva kõik värskendused
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: peida kõik
+      show_all: kuva kõik
+    save_this_page:
+      add_page_button: Lisa oma salvestatud lehtedele
+      confirmations:
+        page_removed:
+          message: Eemaldasite selle oma salvestatud lehtede hulgast
+        page_saved:
+          message: Lisasite selle oma salvestatud lehtede hulka
+      page_not_saved_heading: Salvestage see leht, et saaksite selle juurde hiljem tagasi tulla
+      page_was_saved_heading: Salvestasite selle lehe
+      remove_page_button: Eemaldage salvestatud lehtede hulgast
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Vt oma salvestatud lehti</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logige sisse,</a> et vaadata oma salvestatud lehti.
+    share_links:
+      share_this_page: Jaga seda lehte
+  consultation:
+    and: ja
+    another_website_html: See konsultatsioon %{closed} toimus <a href="%{url}">teisel veebisaidil</a>
+    at: kl
+    closes: See lõpeb kl
+    closes_at: See konsultatsioon lõpeb kell
+    complete_a: Täitke
+    description: Konsultatsiooni kirjeldus
+    detail_of_feedback_received: Tagasiside üksikasjad saadud
+    detail_of_outcome: Tulemuse üksikasjad
+    documents: Dokumendid
+    download_outcome: Laadi alla täielik tulemus
+    either: kas
+    email_to: 'E-posti adressaat:'
+    feedback_received: Tagasiside saadud
+    is_being: 'on'
+    not_open_yet: See konsultatsioon pole veel alanud
+    'on':
+    opens: See konsultatsioon algab
+    original_consultation: Algne konsultatsioon
+    ran_from: See konsultatsioon kestis
+    respond_online: Vastake võrgus
+    'true': tõene
+    visit_soon: Külastage seda lehte peagi uuesti, et selle avalik tagasiside alla laadida.
+    was: oli
+    ways_to_respond: Vastamise viisid
+    write_to: 'Kirja adressaat:'
+  contact:
+    email: E-post
+    find_call_charges: Uuri kõnetasude kohta
+    online: Võrgus
+    phone: Telefon
+    webchat: Veebivestlus
   content_item:
+    coming_soon: See dokument avaldatakse
+    contents: Sisu
+    metadata:
+      published: Avaldatud
+      updated: Uuendatud
     schema_name:
       aaib_report:
         one: Lennuõnnetuste uurimise haru aruanne
@@ -223,100 +301,11 @@ et:
       written_statement:
         one: Kirjalik avaldus parlamendile
         other: Kirjalikud avaldused parlamendile
-    coming_soon: See dokument avaldatakse
-    contents: Sisu
-    metadata:
-      published: Avaldatud
-      updated: Uuendatud
-  publication:
-    documents:
-      one: Dokument
-      other: Dokumendid
-    details: Üksikasjad
-  brexit:
-    business_link:
-      text: Brexiti juhised ettevõtetele
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexiti juhised üksikisikutele ja peredele
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: On erinev
-  common:
-    last_updated:
-    visit: 'Külastus:'
-  components:
-    figure:
-      image_credit: 'Pildi autoriõigus: %{credit}'
-    published_dates:
-      hide_all_updates: peida kõik värskendused
-      last_updated: Viimati värskendatud %{date}
-      published: Avaldatud %{date}
-      see_all_updates: vt kõiki värskendusi
-      show_all_updates: kuva kõik värskendused
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: peida kõik
-      show_all: kuva kõik
-    save_this_page:
-      add_page_button: Lisa oma salvestatud lehtedele
-      confirmations:
-        page_removed:
-          message: Eemaldasite selle oma salvestatud lehtede hulgast
-        page_saved:
-          message: Lisasite selle oma salvestatud lehtede hulka
-      page_not_saved_heading: Salvestage see leht, et saaksite selle juurde hiljem
-        tagasi tulla
-      page_was_saved_heading: Salvestasite selle lehe
-      remove_page_button: Eemaldage salvestatud lehtede hulgast
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Vt
-        oma salvestatud lehti</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logige
-        sisse,</a> et vaadata oma salvestatud lehti.
-    share_links:
-      share_this_page: Jaga seda lehte
-  consultation:
-    and: ja
-    another_website_html: See konsultatsioon %{closed} toimus <a href="%{url}">teisel
-      veebisaidil</a>
-    at: kl
-    closes: See lõpeb kl
-    closes_at: See konsultatsioon lõpeb kell
-    complete_a: Täitke
-    description: Konsultatsiooni kirjeldus
-    detail_of_feedback_received: Tagasiside üksikasjad saadud
-    detail_of_outcome: Tulemuse üksikasjad
-    documents: Dokumendid
-    download_outcome: Laadi alla täielik tulemus
-    either: kas
-    email_to: 'E-posti adressaat:'
-    feedback_received: Tagasiside saadud
-    is_being: 'on'
-    not_open_yet: See konsultatsioon pole veel alanud
-    'on':
-    opens: See konsultatsioon algab
-    original_consultation: Algne konsultatsioon
-    ran_from: See konsultatsioon kestis
-    respond_online: Vastake võrgus
-    'true': tõene
-    visit_soon: Külastage seda lehte peagi uuesti, et selle avalik tagasiside alla
-      laadida.
-    was: oli
-    ways_to_respond: Vastamise viisid
-    write_to: 'Kirja adressaat:'
-  contact:
-    email: E-post
-    find_call_charges: Uuri kõnetasude kohta
-    online: Võrgus
-    phone: Telefon
-    webchat: Veebivestlus
   corporate_information_page:
     about_our_services_html: Uuri välja %{link}.
     corporate_information: Ettevõtte teave
-    personal_information_charter_html: Meie %{link} selgitab, kuidas me teie isikuandmeid
-      käsitleme.
-    publication_scheme_html: Lisateavet selle kohta, millist teavet me regulaarselt
-      avaldame oma saidil %{link}.
+    personal_information_charter_html: Meie %{link} selgitab, kuidas me teie isikuandmeid käsitleme.
+    publication_scheme_html: Lisateavet selle kohta, millist teavet me regulaarselt avaldame oma saidil %{link}.
     social_media_use_html: Lugege meie eeskirju saidil %{link}.
     welsh_language_scheme_html: Lisateave meie pühendumuse kohta %{link}.
   fatality_notice:
@@ -335,13 +324,8 @@ et:
       available_at: See publikatsioon on saadaval aadressil %{url}
       copyright: "© Crowni autoriõigus %{year}"
       isbn: 'ISBN:'
-      licence_html: 'See publikatsioon on litsentsitud valitsuse avatud litsentsi
-        v3.0 kohaselt, kui pole märgitud teisiti. Selle litsentsi vaatamiseks külastage
-        saiti <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        või kirjutage aadressil Information Policy Team, The National Archives, Kew,
-        London TW9 4DU või saatke e-kiri: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Kui oleme tuvastanud kolmanda osapoole autoriõiguse teabe, peate
-        hankima loa vastavalt autoriõiguse hoidjalt.
+      licence_html: 'See publikatsioon on litsentsitud valitsuse avatud litsentsi v3.0 kohaselt, kui pole märgitud teisiti. Selle litsentsi vaatamiseks külastage saiti <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> või kirjutage aadressil Information Policy Team, The National Archives, Kew, London TW9 4DU või saatke e-kiri: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Kui oleme tuvastanud kolmanda osapoole autoriõiguse teabe, peate hankima loa vastavalt autoriõiguse hoidjalt.
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ et:
     next_page: Edasi
     previous_page: Eelmine
     print_entire_guide: Printige kogu juhend
+  publication:
+    details: Üksikasjad
+    documents:
+      one: Dokument
+      other: Dokumendid
   service_sign_in:
     continue: Jätka
     error:
@@ -382,14 +371,10 @@ et:
     release_date: Väljaande kuupäev
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> soovitab mitte reisida riigi osadesse muidu kui hädavajadusel.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> soovitab mitte reisida kogu riigis muidu kui hädavajadusel.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        soovitab mitte reisida riigi osades.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        soovitab mitte reisida kogu riigis.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida riigi osadesse muidu kui hädavajadusel.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida kogu riigis muidu kui hädavajadusel.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida riigi osades.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida kogu riigis.
     context: Välisreiside nõuanded
     coronavirus_warning:
       content_html: |

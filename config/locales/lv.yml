@@ -1,5 +1,83 @@
+---
 lv:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Brexit vadlīnijas uzņēmumiem
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Brexit vadlīnijas privātpersonām un ģimenēm
+    heading_prefix: Pastāv atšķirības
+  common:
+    last_updated:
+    visit: 'Apmeklējiet:'
+  components:
+    figure:
+      image_credit: 'Attēla autortiesības: %{credit}'
+    published_dates:
+      hide_all_updates: paslēpt visus atjauninājumus
+      last_updated: Pēdējoreiz atjaunināts %{date}
+      published: Publicēts %{date}
+      see_all_updates: skatīt visus atjauninājumus
+      show_all_updates: rādīt visus atjauninājumus
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: paslēpt visu
+      show_all: rādīt visu
+    save_this_page:
+      add_page_button: Pievienot saglabātajām lapām
+      confirmations:
+        page_removed:
+          message: Jūs noņēmāt šo no saglabāto lapu saraksta
+        page_saved:
+          message: Jūs pievienojāt šo saglabāto lapu sarakstam
+      page_not_saved_heading: Saglabājiet šo lapu, lai vēlāk varētu tajā atgriezties
+      page_was_saved_heading: Jūs saglabājāt šo lapu
+      remove_page_button: Noņemt no saglabāto lapu saraksta
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Skatīt saglabātās lapas</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Pierakstieties</a>, lai skatītu saglabātās lapas.
+    share_links:
+      share_this_page: Kopīgot šo lapu
+  consultation:
+    and: un
+    another_website_html: Šī konsultācija %{closed} notika <a href="%{url}">citā tīmekļa vietnē</a>
+    at: 'šajā laikā:'
+    closes: Slēgšanas laiks ir
+    closes_at: Šīs konsultācijas slēgšanas laiks ir
+    complete_a: Pabeigt
+    description: Konsultācijas apraksts
+    detail_of_feedback_received: Atsauksmes informācija saņemta
+    detail_of_outcome: Rezultāta informācija
+    documents: Dokumenti
+    download_outcome: Lejupielādēt pilnu rezultātu
+    either: vai
+    email_to: 'E-pasta ziņojums uz:'
+    feedback_received: Atsauksme saņemta
+    is_being: tiek
+    not_open_yet: Šī konsultācija vēl nav atvērta
+    'on':
+    opens: Šī konsultācija tiek atvērta
+    original_consultation: Oriģinālā konsultācija
+    ran_from: Šī konsultācija
+    respond_online: Atbildēt tiešsaistē
+    'true': patiess
+    visit_soon: Drīzumā apmeklējiet šo lapu atkal, lai lejupielādētu šīs publiskās&nbsp;atsauksmes rezultātu.
+    was: bija
+    ways_to_respond: Veidi, kā atbildēt
+    write_to: 'Rakstīt uz:'
+  contact:
+    email: E-pasts
+    find_call_charges: Informācija par maksu par zvaniem
+    online: Tiešsaiste
+    phone: Tālrunis
+    webchat: Tīmekļa tērzēšana
   content_item:
+    coming_soon: Šis dokuments tiks publicēts
+    contents: Saturs
+    metadata:
+      published: publicēts
+      updated: atjaunināts
     schema_name:
       aaib_report:
         one: Aviosatiksmes negadījumu izmeklēšanas nodaļas ziņojums
@@ -223,110 +301,20 @@ lv:
       written_statement:
         one: Rakstisks ziņojums parlamentam
         other: Rakstiski ziņojumi parlamentam
-    coming_soon: Šis dokuments tiks publicēts
-    contents: Saturs
-    metadata:
-      published: publicēts
-      updated: atjaunināts
-  publication:
-    documents:
-      one: Dokuments
-      other: Dokumenti
-    details: Detalizēta informācija
-  brexit:
-    business_link:
-      text: Brexit vadlīnijas uzņēmumiem
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Brexit vadlīnijas privātpersonām un ģimenēm
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Pastāv atšķirības
-  common:
-    last_updated:
-    visit: 'Apmeklējiet:'
-  components:
-    figure:
-      image_credit: 'Attēla autortiesības: %{credit}'
-    published_dates:
-      hide_all_updates: paslēpt visus atjauninājumus
-      last_updated: Pēdējoreiz atjaunināts %{date}
-      published: Publicēts %{date}
-      see_all_updates: skatīt visus atjauninājumus
-      show_all_updates: rādīt visus atjauninājumus
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: paslēpt visu
-      show_all: rādīt visu
-    save_this_page:
-      add_page_button: Pievienot saglabātajām lapām
-      confirmations:
-        page_removed:
-          message: Jūs noņēmāt šo no saglabāto lapu saraksta
-        page_saved:
-          message: Jūs pievienojāt šo saglabāto lapu sarakstam
-      page_not_saved_heading: Saglabājiet šo lapu, lai vēlāk varētu tajā atgriezties
-      page_was_saved_heading: Jūs saglabājāt šo lapu
-      remove_page_button: Noņemt no saglabāto lapu saraksta
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Skatīt
-        saglabātās lapas</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Pierakstieties</a>,
-        lai skatītu saglabātās lapas.
-    share_links:
-      share_this_page: Kopīgot šo lapu
-  consultation:
-    and: un
-    another_website_html: Šī konsultācija %{closed} notika <a href="%{url}">citā tīmekļa
-      vietnē</a>
-    at: 'šajā laikā:'
-    closes: Slēgšanas laiks ir
-    closes_at: Šīs konsultācijas slēgšanas laiks ir
-    complete_a: Pabeigt
-    description: Konsultācijas apraksts
-    detail_of_feedback_received: Atsauksmes informācija saņemta
-    detail_of_outcome: Rezultāta informācija
-    documents: Dokumenti
-    download_outcome: Lejupielādēt pilnu rezultātu
-    either: vai
-    email_to: 'E-pasta ziņojums uz:'
-    feedback_received: Atsauksme saņemta
-    is_being: tiek
-    not_open_yet: Šī konsultācija vēl nav atvērta
-    'on':
-    opens: Šī konsultācija tiek atvērta
-    original_consultation: Oriģinālā konsultācija
-    ran_from: Šī konsultācija
-    respond_online: Atbildēt tiešsaistē
-    'true': patiess
-    visit_soon: Drīzumā apmeklējiet šo lapu atkal, lai lejupielādētu šīs publiskās&nbsp;atsauksmes
-      rezultātu.
-    was: bija
-    ways_to_respond: Veidi, kā atbildēt
-    write_to: 'Rakstīt uz:'
-  contact:
-    email: E-pasts
-    find_call_charges: Informācija par maksu par zvaniem
-    online: Tiešsaiste
-    phone: Tālrunis
-    webchat: Tīmekļa tērzēšana
   corporate_information_page:
     about_our_services_html: Uzziniet vairāk %{link}.
     corporate_information: Korporatīva informācija
-    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta
-      Jūsu sniegtā personīgā informācija.
-    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta
-      mūsu %{link}.
+    personal_information_charter_html: Šeit %{link} izskaidrots, kā tiks apstrādāta Jūsu sniegtā personīgā informācija.
+    publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta mūsu %{link}.
     social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
-    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas
-      pieejamību %{link}.
+    welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas pieejamību %{link}.
   fatality_notice:
     alt_text: Aizsardzības ministrijas ģerbonis
     field_of_operation: Darbības joma
     operations_in: 'Darbības šeit: %{location}'
   gone:
     page_title: Vairs nav pieejams
-    published_in_error: Informācija šajā lapā ir noņemta, jo tā tika publicēta kļūdas
-      dēļ.
+    published_in_error: Informācija šajā lapā ir noņemta, jo tā tika publicēta kļūdas dēļ.
     title: Lapa, kuru meklējat, vairs nav pieejama
   guide:
     pages_in_guide: Lapas šajā ceļvedī
@@ -336,13 +324,8 @@ lv:
       available_at: Šī publikācija ir pieejama vietnē %{url}
       copyright: "© Britu sadraudzības autortiesības %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Šī publikācija ir licencēta saskaņā ar valsts izsniegtās atklātās
-        licences v3.0 nosacījumiem, izņemot, ja norādīts citādi. Lai skatītu šo licenci,
-        apmeklējiet <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        vai rakstiet uz adresi Information Policy Team, The National Archives, Kew,
-        London TW9 4DU vai e-pasta adresi: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Gadījumos, kur esam identificējuši trešo personu autortiesību informāciju,
-        jums ir nepieciešams saņemt atļauju no attiecīgajiem autortiesību īpašniekiem.
+      licence_html: 'Šī publikācija ir licencēta saskaņā ar valsts izsniegtās atklātās licences v3.0 nosacījumiem, izņemot, ja norādīts citādi. Lai skatītu šo licenci, apmeklējiet <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> vai rakstiet uz adresi Information Policy Team, The National Archives, Kew, London TW9 4DU vai e-pasta adresi: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Gadījumos, kur esam identificējuši trešo personu autortiesību informāciju, jums ir nepieciešams saņemt atļauju no attiecīgajiem autortiesību īpašniekiem.
   i18n:
     direction:
   language_names:
@@ -351,6 +334,11 @@ lv:
     next_page: Tālāk
     previous_page: Atpakaļ
     print_entire_guide: Drukāt visu ceļvedi
+  publication:
+    details: Detalizēta informācija
+    documents:
+      one: Dokuments
+      other: Dokumenti
   service_sign_in:
     continue: Turpināt
     error:
@@ -363,15 +351,11 @@ lv:
       busy: Visi konsultanti pašlaik ir aizņemti.
       closed: Tīmekļa tērzēšana pašlaik ir slēgta.
       speak_to_adviser: Runāt ar konsultantu tūlīt
-      technical_problem: Tīmekļa tērzēšana pašlaik nav pieejama tehnisku problēmu
-        dēļ.
+      technical_problem: Tīmekļa tērzēšana pašlaik nav pieejama tehnisku problēmu dēļ.
   specialist_document:
-    pdo_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Designated Origin UK
-      Protected
-    pgi_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Geographic Origin UK
-      Protected
-    tsg_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Traditional Speciality
-      UK Protected
+    pdo_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Designated Origin UK Protected
+    pgi_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Geographic Origin UK Protected
+    tsg_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Traditional Speciality UK Protected
   speech:
     delivered_on: Piegādāts
     location: Atrašanās vieta
@@ -387,16 +371,10 @@ lv:
     release_date: Publiskošanas datums
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas, izņemot neatliekamus
-        braucienus uz noteiktām valsts daļām.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas, izņemot neatliekamus
-        braucienus pa valsti.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        iesaka izvairīties no jebkādas ceļošanas uz noteiktām valsts daļām.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        iesaka izvairīties no jebkādas ceļošanas pa valsti.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas, izņemot neatliekamus braucienus uz noteiktām valsts daļām.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas, izņemot neatliekamus braucienus pa valsti.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas uz noteiktām valsts daļām.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas pa valsti.
     context: Ieteikums ārzemju ceļojumiem
     coronavirus_warning:
       content_html: |

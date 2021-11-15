@@ -1,5 +1,83 @@
+---
 si:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: ව්යාපාර සඳහා බ්රෙක්සිට් මඟ පෙන්වීම
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: පුද්ගලයින් සහ පවුල් සඳහා බ්රෙක්සිට් මඟ පෙන්වීම
+    heading_prefix: වෙනසක් තිබේ
+  common:
+    last_updated:
+    visit: 'පිවිසෙන්න:'
+  components:
+    figure:
+      image_credit: 'රූප සඳහා ස්තූතියි: %{credit}'
+    published_dates:
+      hide_all_updates: සියලු යාවත්කාලීන සඟවන්න
+      last_updated: අවසන් වරට යාවත්කාලීන කළේ %{date}
+      published: පළ කළේ %{date}
+      see_all_updates: සියලුම යාවත්කාලීනයන් බලන්න
+      show_all_updates: සියලු යාවත්කාලීනයන් පෙන්වන්න
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: සියල්ල සැඟවන්න
+      show_all: සියල්ල පෙන්වන්න
+    save_this_page:
+      add_page_button: ඔබගේ සුරකින ලද පිටු වලට එක් කරන්න
+      confirmations:
+        page_removed:
+          message: ඔබගේ සුරකින ලද පිටු වලින් ඔබ මෙය ඉවත් කර ඇත
+        page_saved:
+          message: ඔබගේ සුරකින ලද පිටු වලට ඔබ මෙය එක් කර ඇත
+      page_not_saved_heading: මෙම පිටුව සුරකින්න, එවිට ඔබට පසුව එය වෙත පැමිණිය හැකිය
+      page_was_saved_heading: ඔබ මෙම පිටුව සුරැකී ඇත
+      remove_page_button: ඔබගේ සුරකින ලද පිටු වලින් ඉවත් කරන්න
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">සුරකින ලද පිටු බලන්න</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">සයින් ඉන් වන්න</a> සුරකින ලද පිටු බැලීමට.
+    share_links:
+      share_this_page: මෙම පිටුව බෙදාගන්න
+  consultation:
+    and: සහ
+    another_website_html: මෙම උපදේශනය %{closed} <a href="%{url}">වෙනත් වෙබ් අඩවියක</a> පවත් වනු ලැබේ
+    at: දී
+    closes: එය වසන වේලාව
+    closes_at: මෙම උපදේශනය වසන වේලාව
+    complete_a: එකක් සම්පූර්ණ කරන්න
+    description: උපදේශන විස්තරය
+    detail_of_feedback_received: ලැබුණු ප්‍රතිපෝෂණ පිළිබඳ විස්තර
+    detail_of_outcome: ප්රතිඵලය පිළිබඳ විස්තර
+    documents: ලේඛන
+    download_outcome: සම්පූර්ණ ප්රතිඵලය බාගන්න
+    either: එක්කෝ
+    email_to: 'විද්‍යුත් තැපෑල් යවන්න:'
+    feedback_received: ලැබුණු ප්රතිපෝෂණය
+    is_being: වෙමින් පවතී
+    not_open_yet: මෙම උපදේශනය තවමත් විවෘත කර නැත
+    'on':
+    opens: මෙම උපදේශනය විවෘත වේ
+    original_consultation: මුල් උපදේශනය
+    ran_from: මෙම උපදේශනය ක්‍රියාත්මක වුනේ
+    respond_online: මාර්ගගතව ප්රතිචාර දක්වන්න
+    'true': නිවැරදි
+    visit_soon: මෙම මහජන ප්රතිපෝෂණය සඳහා වූ ප්රතිඵල බාගත කිරීම&nbsp;සඳහා ළඟදීම නැවත මෙම පිටුවට පිවිසෙන්න.
+    was: විය
+    ways_to_respond: ප්රතිචාර දැක්විමේ ක්‍රම
+    write_to: 'ලියන්න:'
+  contact:
+    email: විද්‍යුත් තැපෑල
+    find_call_charges: ඇමතුම් ගාස්තු ගැන සොයා බලන්න
+    online: මාර්ගගතව
+    phone: දුරකථනය
+    webchat: වෙබ් චැට්
   content_item:
+    coming_soon: මෙම ලේඛනය ප්රකාශයට පත් කෙරෙන දිනය
+    contents: අන්තර්ගත
+    metadata:
+      published: පළ කළේ
+      updated: යාවත්කාලීන කෙරිණි
     schema_name:
       aaib_report:
         one: ගුවන් අනතුරු විමර්ශන ශාඛා වාර්තාව
@@ -223,99 +301,11 @@ si:
       written_statement:
         one: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශය
         other: පාර්ලිමේන්තුව වෙත ලිඛිත ප්රකාශ
-    coming_soon: මෙම ලේඛනය ප්රකාශයට පත් කෙරෙන දිනය
-    contents: අන්තර්ගත
-    metadata:
-      published: පළ කළේ
-      updated: යාවත්කාලීන කෙරිණි
-  publication:
-    documents:
-      one: ලේඛණය
-      other: ලේඛන
-    details: විස්තර
-  brexit:
-    business_link:
-      text: ව්යාපාර සඳහා බ්රෙක්සිට් මඟ පෙන්වීම
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: පුද්ගලයින් සහ පවුල් සඳහා බ්රෙක්සිට් මඟ පෙන්වීම
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: වෙනසක් තිබේ
-  common:
-    last_updated:
-    visit: 'පිවිසෙන්න:'
-  components:
-    figure:
-      image_credit: 'රූප සඳහා ස්තූතියි: %{credit}'
-    published_dates:
-      hide_all_updates: සියලු යාවත්කාලීන සඟවන්න
-      last_updated: අවසන් වරට යාවත්කාලීන කළේ %{date}
-      published: පළ කළේ %{date}
-      see_all_updates: සියලුම යාවත්කාලීනයන් බලන්න
-      show_all_updates: සියලු යාවත්කාලීනයන් පෙන්වන්න
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: සියල්ල සැඟවන්න
-      show_all: සියල්ල පෙන්වන්න
-    save_this_page:
-      add_page_button: ඔබගේ සුරකින ලද පිටු වලට එක් කරන්න
-      confirmations:
-        page_removed:
-          message: ඔබගේ සුරකින ලද පිටු වලින් ඔබ මෙය ඉවත් කර ඇත
-        page_saved:
-          message: ඔබගේ සුරකින ලද පිටු වලට ඔබ මෙය එක් කර ඇත
-      page_not_saved_heading: මෙම පිටුව සුරකින්න, එවිට ඔබට පසුව එය වෙත පැමිණිය හැකිය
-      page_was_saved_heading: ඔබ මෙම පිටුව සුරැකී ඇත
-      remove_page_button: ඔබගේ සුරකින ලද පිටු වලින් ඉවත් කරන්න
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">සුරකින
-        ලද පිටු බලන්න</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">සයින්
-        ඉන් වන්න</a> සුරකින ලද පිටු බැලීමට.
-    share_links:
-      share_this_page: මෙම පිටුව බෙදාගන්න
-  consultation:
-    and: සහ
-    another_website_html: මෙම උපදේශනය %{closed} <a href="%{url}">වෙනත් වෙබ් අඩවියක</a>
-      පවත් වනු ලැබේ
-    at: දී
-    closes: එය වසන වේලාව
-    closes_at: මෙම උපදේශනය වසන වේලාව
-    complete_a: එකක් සම්පූර්ණ කරන්න
-    description: උපදේශන විස්තරය
-    detail_of_feedback_received: ලැබුණු ප්‍රතිපෝෂණ පිළිබඳ විස්තර
-    detail_of_outcome: ප්රතිඵලය පිළිබඳ විස්තර
-    documents: ලේඛන
-    download_outcome: සම්පූර්ණ ප්රතිඵලය බාගන්න
-    either: එක්කෝ
-    email_to: 'විද්‍යුත් තැපෑල් යවන්න:'
-    feedback_received: ලැබුණු ප්රතිපෝෂණය
-    is_being: වෙමින් පවතී
-    not_open_yet: මෙම උපදේශනය තවමත් විවෘත කර නැත
-    'on':
-    opens: මෙම උපදේශනය විවෘත වේ
-    original_consultation: මුල් උපදේශනය
-    ran_from: මෙම උපදේශනය ක්‍රියාත්මක වුනේ
-    respond_online: මාර්ගගතව ප්රතිචාර දක්වන්න
-    'true': නිවැරදි
-    visit_soon: මෙම මහජන ප්රතිපෝෂණය සඳහා වූ ප්රතිඵල බාගත කිරීම&nbsp;සඳහා ළඟදීම නැවත
-      මෙම පිටුවට පිවිසෙන්න.
-    was: විය
-    ways_to_respond: ප්රතිචාර දැක්විමේ ක්‍රම
-    write_to: 'ලියන්න:'
-  contact:
-    email: විද්‍යුත් තැපෑල
-    find_call_charges: ඇමතුම් ගාස්තු ගැන සොයා බලන්න
-    online: මාර්ගගතව
-    phone: දුරකථනය
-    webchat: වෙබ් චැට්
   corporate_information_page:
     about_our_services_html: "%{link} සොයන්න."
     corporate_information: ආයතනික තොරතුරු
-    personal_information_charter_html: අගේ %{link} අපි ඔබගේ පුද්ගලික තොරතුරු හසුරුවන
-      ආකාරය විස්තර කරයි.
-    publication_scheme_html: අපේ %{link} තුල අපි ආකාරික ලෙස ප්රකාශයට පත් කරන තොරතුරු
-      වර්ග ගැන කියවන්න.
+    personal_information_charter_html: අගේ %{link} අපි ඔබගේ පුද්ගලික තොරතුරු හසුරුවන ආකාරය විස්තර කරයි.
+    publication_scheme_html: අපේ %{link} තුල අපි ආකාරික ලෙස ප්රකාශයට පත් කරන තොරතුරු වර්ග ගැන කියවන්න.
     social_media_use_html: අපේ ප්රතිපත්තිය කියවන්න %{link}.
     welsh_language_scheme_html: "%{link} සඳහා අපේ කැපවීම ගැන සොයා බලන්න."
   fatality_notice:
@@ -324,8 +314,7 @@ si:
     operations_in: "%{location} තුළ මෙහෙයුම්"
   gone:
     page_title: තව දුරටත් ලද නොහැක
-    published_in_error: මෙම පිටුවේ ඇති තොරතුරු ඉවත් කර ඇත්තේ එය වැරදීමකින් ප්රකාශයට
-      පත් කර ඇති බැවිනි.
+    published_in_error: මෙම පිටුවේ ඇති තොරතුරු ඉවත් කර ඇත්තේ එය වැරදීමකින් ප්රකාශයට පත් කර ඇති බැවිනි.
     title: ඔබ සොයන පිටුව තවදුරටත් ලබා ගත නොහැක
   guide:
     pages_in_guide: මෙම මාර්ගෝපදේශයෙහි තුළ පිටු
@@ -335,14 +324,8 @@ si:
       available_at: මෙම ප්රකාශනය %{url} වෙතින් ලබා ගත හැකිය
       copyright: "© රාජ්‍ය කතුහිමිකම %{year}"
       isbn: 'ISBN:'
-      licence_html: මෙම ප්රකාශනයට වෙනත් ආකාරයකින් සඳහන් කර ඇති අවස්ථාවන්හි හැර විවෘත
-        රාජ්ය බලපත්ර v3.0 හි නියමයන් යටතේ බලපත්ර ලබා දී ඇත. මෙම බලපත්‍රය බැලීමට, <a
-        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        වෙත පිවිසෙන්න නැතහොත් The Information Policy Team, The National Archives,
-        Kew, London TW9 4DU වෙත ලියන්න නැතහොත් <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk
-        </a> වෙත විද්‍යුත් තැපෑලක් එවන්න.
-      third_party: අපි යම් තෙවන පාර්ශවීය ප්රකාශන හිමිකම් තොරතුරු හඳුනාගෙන ඇති අවස්ථාවක
-        ඔබ අදාළ ප්රකාශන හිමිකම් හිමියන්ගෙන් අවසර ලබා ගත යුතුය.
+      licence_html: මෙම ප්රකාශනයට වෙනත් ආකාරයකින් සඳහන් කර ඇති අවස්ථාවන්හි හැර විවෘත රාජ්ය බලපත්ර v3.0 හි නියමයන් යටතේ බලපත්ර ලබා දී ඇත. මෙම බලපත්‍රය බැලීමට, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> වෙත පිවිසෙන්න නැතහොත් The Information Policy Team, The National Archives, Kew, London TW9 4DU වෙත ලියන්න නැතහොත් <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk </a> වෙත විද්‍යුත් තැපෑලක් එවන්න.
+      third_party: අපි යම් තෙවන පාර්ශවීය ප්රකාශන හිමිකම් තොරතුරු හඳුනාගෙන ඇති අවස්ථාවක ඔබ අදාළ ප්රකාශන හිමිකම් හිමියන්ගෙන් අවසර ලබා ගත යුතුය.
   i18n:
     direction:
   language_names:
@@ -351,6 +334,11 @@ si:
     next_page: ඊළඟ
     previous_page: පෙර
     print_entire_guide: සම්පූර්ණ මාර්ගෝපදේශය මුද්රණය කරන්න
+  publication:
+    details: විස්තර
+    documents:
+      one: ලේඛණය
+      other: ලේඛන
   service_sign_in:
     continue: ඉදිරියටයන්න
     error:
@@ -365,12 +353,9 @@ si:
       speak_to_adviser: දැන් උපදේශකයෙකුට කතා කරන්න
       technical_problem: තාක්ෂණික ගැටළු හේතුවෙන් වෙබ් චැට් මේ මොහොතේ ලබා ගත නොහැක.
   specialist_document:
-    pdo_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Designated Origin UK Protected යන වචන සහිත
-      කළු මුද්දරයක් වේ
-    pgi_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Geographic Origin UK Protected යන වචන සහිත
-      කළු මුද්දරයක් වේ
-    tsg_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Traditional Speciality UK Protected යන වචන
-      සහිත කළු මුද්දරයක් වේ
+    pdo_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Designated Origin UK Protected යන වචන සහිත කළු මුද්දරයක් වේ
+    pgi_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Geographic Origin UK Protected යන වචන සහිත කළු මුද්දරයක් වේ
+    tsg_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Traditional Speciality UK Protected යන වචන සහිත කළු මුද්දරයක් වේ
   speech:
     delivered_on: බෙදාහරින ලද දිනය
     location: ස්ථානය
@@ -386,16 +371,10 @@ si:
     release_date: නිකුත් කිරීමේ දිනය
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත්
-        අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය
-        සංවාරයක යෙදිය හැකිය.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
     context: විදේශ ගමන් උපදෙස්
     coronavirus_warning:
       content_html: |
@@ -418,8 +397,7 @@ si:
     updated: යාවත්කාලීන කෙරිණි
   unpublishing:
     page_title: තව දුරටත් ලද නොහැක
-    summary: මෙම පිටුවේ ඇති තොරතුරු ඉවත් කර ඇත්තේ එය වැරදීමකින් ප්රකාශයට පත් කර ඇති
-      බැවිනි.
+    summary: මෙම පිටුවේ ඇති තොරතුරු ඉවත් කර ඇත්තේ එය වැරදීමකින් ප්රකාශයට පත් කර ඇති බැවිනි.
     title: ඔබ සොයන පිටුව තවදුරටත් ලබා ගත නොහැක
   working_group:
     contact_details: විමසීම් විස්තර

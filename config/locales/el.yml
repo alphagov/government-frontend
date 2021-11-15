@@ -1,5 +1,83 @@
+---
 el:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Οδηγίες Brexit για τις επιχειρήσεις
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Οδηγίες Brexit για άτομα και οικογένειες
+    heading_prefix: Υπάρχουν διαφορετικά
+  common:
+    last_updated:
+    visit: 'Επίσκεψη:'
+  components:
+    figure:
+      image_credit: 'Εικόνα από: %{credit}'
+    published_dates:
+      hide_all_updates: απόκρυψη όλων των ενημερώσεων
+      last_updated: Τελευταία ενημέρωση %{date}
+      published: Δημοσιεύτηκε %{date}
+      see_all_updates: δείτε όλες τις ενημερώσεις
+      show_all_updates: εμφάνιση όλων των ενημερώσεων
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: απόκρυψη όλων
+      show_all: εμφάνιση όλων
+    save_this_page:
+      add_page_button: Προσθήκη στις αποθηκευμένες σελίδες σας
+      confirmations:
+        page_removed:
+          message: Το καταργήσατε από τις αποθηκευμένες σελίδες σας
+        page_saved:
+          message: Το έχετε προσθέσει στις αποθηκευμένες σελίδες σας
+      page_not_saved_heading: Αποθηκεύστε αυτήν τη σελίδα για να μπορέσετε να επιστρέψετε σε αυτήν αργότερα
+      page_was_saved_heading: Έχετε αποθηκεύσει αυτήν τη σελίδα
+      remove_page_button: Κατάργηση από τις αποθηκευμένες σελίδες σας
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Δείτε τις αποθηκευμένες σελίδες σας</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Συνδεθείτε για</a> να δείτε τις αποθηκευμένες σελίδες σας.
+    share_links:
+      share_this_page: Κοινοποιήστε αυτή τη σελίδα
+  consultation:
+    and: και
+    another_website_html: Αυτή η διαβούλευση %{closed} πραγματοποιήθηκε σε <a href="%{url}">άλλο ιστότοπο</a>
+    at: στο
+    closes: Κλείνει στο
+    closes_at: Αυτή η διαβούλευση κλείνει στις
+    complete_a: Συμπληρώστε ένα
+    description: Περιγραφή διαβούλευσης
+    detail_of_feedback_received: Λεπτομέρειες για τα σχόλια που ελήφθησαν
+    detail_of_outcome: Λεπτομέρεια του αποτελέσματος
+    documents: Έγγραφα
+    download_outcome: Κατεβάστε το πλήρες αποτέλεσμα
+    either: είτε
+    email_to: 'Στείλε email στην διεύθυνση:'
+    feedback_received: Λήφθηκαν σχόλια
+    is_being: είναι
+    not_open_yet: Αυτή η διαβούλευση δεν είναι ακόμη ανοιχτή
+    'on':
+    opens: Αυτή η διαβούλευση ανοίγει
+    original_consultation: Αρχική διαβούλευση
+    ran_from: Αυτή η διαβούλευση ξεκίνησε από
+    respond_online: Απαντήστε online
+    'true': σωστό
+    visit_soon: Επισκεφτείτε ξανά αυτήν τη σελίδα σύντομα για να κάνετε λήψη του αποτελέσματος σε αυτό το δημόσιο σχόλιο.
+    was: ήταν
+    ways_to_respond: Τρόποι απάντησης
+    write_to: 'Γράψτε στην διεύθυνση:'
+  contact:
+    email: Email
+    find_call_charges: Ενημερωθείτε για τις χρεώσεις κλήσεων
+    online: Online
+    phone: Τηλέφωνο
+    webchat: Διαδικτυακή συνομιλία
   content_item:
+    coming_soon: Αυτό το έγγραφο θα δημοσιευτεί στις
+    contents: Περιεχόμενα
+    metadata:
+      published: Δημοσιεύθηκε
+      updated: Ενημερωμένο
     schema_name:
       aaib_report:
         one: Έκθεση του Τμήματος Έρευνας Αεροπορικών Ατυχημάτων
@@ -223,100 +301,11 @@ el:
       written_statement:
         one: Γραπτή δήλωση στη Βουλή
         other: Γραπτές δηλώσεις στη Βουλή
-    coming_soon: Αυτό το έγγραφο θα δημοσιευτεί στις
-    contents: Περιεχόμενα
-    metadata:
-      published: Δημοσιεύθηκε
-      updated: Ενημερωμένο
-  publication:
-    documents:
-      one: Έγγραφο
-      other: Έγγραφα
-    details: Λεπτομέρειες
-  brexit:
-    business_link:
-      text: Οδηγίες Brexit για τις επιχειρήσεις
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: Οδηγίες Brexit για άτομα και οικογένειες
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: Υπάρχουν διαφορετικά
-  common:
-    last_updated:
-    visit: 'Επίσκεψη:'
-  components:
-    figure:
-      image_credit: 'Εικόνα από: %{credit}'
-    published_dates:
-      hide_all_updates: απόκρυψη όλων των ενημερώσεων
-      last_updated: Τελευταία ενημέρωση %{date}
-      published: Δημοσιεύτηκε %{date}
-      see_all_updates: δείτε όλες τις ενημερώσεις
-      show_all_updates: εμφάνιση όλων των ενημερώσεων
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: απόκρυψη όλων
-      show_all: εμφάνιση όλων
-    save_this_page:
-      add_page_button: Προσθήκη στις αποθηκευμένες σελίδες σας
-      confirmations:
-        page_removed:
-          message: Το καταργήσατε από τις αποθηκευμένες σελίδες σας
-        page_saved:
-          message: Το έχετε προσθέσει στις αποθηκευμένες σελίδες σας
-      page_not_saved_heading: Αποθηκεύστε αυτήν τη σελίδα για να μπορέσετε να επιστρέψετε
-        σε αυτήν αργότερα
-      page_was_saved_heading: Έχετε αποθηκεύσει αυτήν τη σελίδα
-      remove_page_button: Κατάργηση από τις αποθηκευμένες σελίδες σας
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Δείτε
-        τις αποθηκευμένες σελίδες σας</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Συνδεθείτε
-        για</a> να δείτε τις αποθηκευμένες σελίδες σας.
-    share_links:
-      share_this_page: Κοινοποιήστε αυτή τη σελίδα
-  consultation:
-    and: και
-    another_website_html: Αυτή η διαβούλευση %{closed} πραγματοποιήθηκε σε <a href="%{url}">άλλο
-      ιστότοπο</a>
-    at: στο
-    closes: Κλείνει στο
-    closes_at: Αυτή η διαβούλευση κλείνει στις
-    complete_a: Συμπληρώστε ένα
-    description: Περιγραφή διαβούλευσης
-    detail_of_feedback_received: Λεπτομέρειες για τα σχόλια που ελήφθησαν
-    detail_of_outcome: Λεπτομέρεια του αποτελέσματος
-    documents: Έγγραφα
-    download_outcome: Κατεβάστε το πλήρες αποτέλεσμα
-    either: είτε
-    email_to: 'Στείλε email στην διεύθυνση:'
-    feedback_received: Λήφθηκαν σχόλια
-    is_being: είναι
-    not_open_yet: Αυτή η διαβούλευση δεν είναι ακόμη ανοιχτή
-    'on':
-    opens: Αυτή η διαβούλευση ανοίγει
-    original_consultation: Αρχική διαβούλευση
-    ran_from: Αυτή η διαβούλευση ξεκίνησε από
-    respond_online: Απαντήστε online
-    'true': σωστό
-    visit_soon: Επισκεφτείτε ξανά αυτήν τη σελίδα σύντομα για να κάνετε λήψη του αποτελέσματος
-      σε αυτό το δημόσιο σχόλιο.
-    was: ήταν
-    ways_to_respond: Τρόποι απάντησης
-    write_to: 'Γράψτε στην διεύθυνση:'
-  contact:
-    email: Email
-    find_call_charges: Ενημερωθείτε για τις χρεώσεις κλήσεων
-    online: Online
-    phone: Τηλέφωνο
-    webchat: Διαδικτυακή συνομιλία
   corporate_information_page:
     about_our_services_html: Μάθετε %{link}.
     corporate_information: Εταιρικές πληροφορίες
-    personal_information_charter_html: Το %{link} εξηγεί πώς αντιμετωπίζουμε τα προσωπικά
-      σας στοιχεία.
-    publication_scheme_html: Διαβάστε σχετικά με τους τύπους πληροφοριών που δημοσιεύουμε
-      συνήθως στο %{link}.
+    personal_information_charter_html: Το %{link} εξηγεί πώς αντιμετωπίζουμε τα προσωπικά σας στοιχεία.
+    publication_scheme_html: Διαβάστε σχετικά με τους τύπους πληροφοριών που δημοσιεύουμε συνήθως στο %{link}.
     social_media_use_html: Διαβάστε την πολιτική μας στο %{link}.
     welsh_language_scheme_html: Μάθετε για τη δέσμευσή μας στο %{link}.
   fatality_notice:
@@ -325,8 +314,7 @@ el:
     operations_in: Λειτουργίες στην τοποθεσία %{location}
   gone:
     page_title: Δεν είναι πλέον διαθέσιμο
-    published_in_error: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή
-      δημοσιεύθηκαν κατά λάθος.
+    published_in_error: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή δημοσιεύθηκαν κατά λάθος.
     title: Η σελίδα που αναζητάτε δεν είναι πλέον διαθέσιμη
   guide:
     pages_in_guide: Σελίδες σε αυτόν τον οδηγό
@@ -336,14 +324,8 @@ el:
       available_at: Αυτή η δημοσίευση είναι διαθέσιμη στο %{url}
       copyright: "© Crown copyright %{year}"
       isbn: 'ISBN:'
-      licence_html: 'Αυτή η δημοσίευση έχει άδεια σύμφωνα με τους όρους της Άδειας
-        Ανοικτής Κυβέρνησης v3.0, εκτός εάν αναφέρεται διαφορετικά. Για να δείτε αυτήν
-        την άδεια, επισκεφτείτε την διεύθυνση <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        ή γράψτε στην Information Policy Team, The National Archives, Kew, London
-        TW9 4DU, ή στείλτε email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Όπου έχουμε εντοπίσει οποιαδήποτε στοιχεία πνευματικών δικαιωμάτων
-        τρίτου μέρους, θα χρειαστεί να λάβετε άδεια από τους ενδιαφερόμενους κατόχους
-        πνευματικών δικαιωμάτων.
+      licence_html: 'Αυτή η δημοσίευση έχει άδεια σύμφωνα με τους όρους της Άδειας Ανοικτής Κυβέρνησης v3.0, εκτός εάν αναφέρεται διαφορετικά. Για να δείτε αυτήν την άδεια, επισκεφτείτε την διεύθυνση <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ή γράψτε στην Information Policy Team, The National Archives, Kew, London TW9 4DU, ή στείλτε email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Όπου έχουμε εντοπίσει οποιαδήποτε στοιχεία πνευματικών δικαιωμάτων τρίτου μέρους, θα χρειαστεί να λάβετε άδεια από τους ενδιαφερόμενους κατόχους πνευματικών δικαιωμάτων.
   i18n:
     direction:
   language_names:
@@ -352,6 +334,11 @@ el:
     next_page: Επόμενο
     previous_page: Προηγούμενο
     print_entire_guide: Εκτύπωση ολόκληρου του οδηγού
+  publication:
+    details: Λεπτομέρειες
+    documents:
+      one: Έγγραφο
+      other: Έγγραφα
   service_sign_in:
     continue: Συνέχεια
     error:
@@ -361,19 +348,14 @@ el:
     historically_political: Αυτό δημοσιεύτηκε στο %{government}
     webchat:
       available: Οι σύμβουλοι είναι διαθέσιμοι για συνομιλία.
-      busy: Όλοι οι σύμβουλοι διαδικτυακής συνομιλίας είναι απασχολημένοι αυτήν τη
-        στιγμή.
+      busy: Όλοι οι σύμβουλοι διαδικτυακής συνομιλίας είναι απασχολημένοι αυτήν τη στιγμή.
       closed: Η διαδικτυακή συνομιλία είναι κλειστή αυτήν τη στιγμή.
       speak_to_adviser: Μιλήστε τώρα με έναν σύμβουλο
-      technical_problem: Η διαδικτυακή συνομιλία δεν είναι διαθέσιμη αυτήν τη στιγμή
-        λόγω τεχνικών προβλημάτων.
+      technical_problem: Η διαδικτυακή συνομιλία δεν είναι διαθέσιμη αυτήν τη στιγμή λόγω τεχνικών προβλημάτων.
   specialist_document:
-    pdo_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Designated
-      Origin UK Protected
-    pgi_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Geographic
-      Origin UK Protected
-    tsg_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Traditional
-      Specialty UK Protected
+    pdo_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Designated Origin UK Protected
+    pgi_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Geographic Origin UK Protected
+    tsg_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Traditional Specialty UK Protected
   speech:
     delivered_on: Παραδόθηκε στις
     location: Τοποθεσία
@@ -389,17 +371,10 @@ el:
     release_date: Ημερομηνία κυκλοφορίας
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Το <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην των απαραίτητων,
-        σε μέρη της χώρας.
-      avoid_all_but_essential_travel_to_whole_country_html: Το <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην
-        των απαραίτητων, σε ολόκληρη την χώρα.
-      avoid_all_travel_to_parts_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        σας συμβουλεύει να αποφύγετε τα ταξίδια σε μέρη της χώρας.
-      avoid_all_travel_to_whole_country_html: Το <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια σε ολόκληρη την
-        χώρα.
+      avoid_all_but_essential_travel_to_parts_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην των απαραίτητων, σε μέρη της χώρας.
+      avoid_all_but_essential_travel_to_whole_country_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην των απαραίτητων, σε ολόκληρη την χώρα.
+      avoid_all_travel_to_parts_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια σε μέρη της χώρας.
+      avoid_all_travel_to_whole_country_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια σε ολόκληρη την χώρα.
     context: Συμβουλές για ταξίδια στο εξωτερικό
     coronavirus_warning:
       content_html: |
@@ -422,8 +397,7 @@ el:
     updated: Ενημερωμένο
   unpublishing:
     page_title: Δεν είναι πλέον διαθέσιμο
-    summary: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή δημοσιεύθηκαν
-      κατά λάθος.
+    summary: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή δημοσιεύθηκαν κατά λάθος.
     title: Η σελίδα που αναζητάτε δεν είναι πλέον διαθέσιμη
   working_group:
     contact_details: Στοιχεία επικοινωνίας

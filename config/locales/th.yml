@@ -1,11 +1,12 @@
+---
 th:
   brexit:
     business_link:
-      text: คำแนะนำ Brexit สำหรับธุรกิจ
       path: "/guidance/brexit-guidance-for-businesses"
+      text: คำแนะนำ Brexit สำหรับธุรกิจ
     citizen_link:
-      text: คำแนะนำ Brexit สำหรับบุคคลและครอบครัว
       path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: คำแนะนำ Brexit สำหรับบุคคลและครอบครัว
     heading_prefix: มีความแตกต่างกัน
   common:
     last_updated:
@@ -35,8 +36,7 @@ th:
       page_was_saved_heading: คุณบันทึกหน้านี้ไว้แล้ว
       remove_page_button: ลบออกจากหน้าที่บันทึกไว้
       see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">ดูหน้าที่บันทึกไว้ของคุณ</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">ลงชื่อเข้าใช้</a>
-        เพื่อดูหน้าที่บันทึกไว้ของคุณ
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">ลงชื่อเข้าใช้</a> เพื่อดูหน้าที่บันทึกไว้ของคุณ
     share_links:
       share_this_page: แชร์หน้านี้
   consultation:
@@ -305,8 +305,7 @@ th:
     about_our_services_html: ดูข้อมูลเพิ่มเติมที่ %{link}
     corporate_information: ข้อมูลองค์กร
     personal_information_charter_html: "%{link} ของเราอธิบายว่าเราปฏิบัติต่อข้อมูลส่วนบุคคลของคุณอย่างไร"
-    publication_scheme_html: อ่านเกี่ยวกับประเภทข้อมูลที่เราเผยแพร่เป็นประจำใน %{link}
-      ของเรา
+    publication_scheme_html: อ่านเกี่ยวกับประเภทข้อมูลที่เราเผยแพร่เป็นประจำใน %{link} ของเรา
     social_media_use_html: อ่านนโยบายของเราที่ %{link}
     welsh_language_scheme_html: ดูข้อมูลเพิ่มเติมเกี่ยวกับพันธกิจของเราสำหรับ %{link}
   fatality_notice:
@@ -325,10 +324,7 @@ th:
       available_at: สิ่งพิมพ์นี้สามารถดูได้ที่ %{url}
       copyright: ลิขสิทธิ์ © Crown %{year}
       isbn: 'ISBN:'
-      licence_html: 'สิ่งพิมพ์นี้ได้รับอนุญาตภายใต้ข้อกำหนดของ Open Government License
-        v3.0 เว้นแต่จะระบุไว้เป็นอย่างอื่น เพื่อดูใบอนุญาตนี้ โปรดไปที่ <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        หรือส่งจดหมายถึงInformation Policy Team, The National Archives, Kew, London
-        TW9 4DU หรือส่งอีเมลไปที่: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>'
+      licence_html: 'สิ่งพิมพ์นี้ได้รับอนุญาตภายใต้ข้อกำหนดของ Open Government License v3.0 เว้นแต่จะระบุไว้เป็นอย่างอื่น เพื่อดูใบอนุญาตนี้ โปรดไปที่ <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> หรือส่งจดหมายถึงInformation Policy Team, The National Archives, Kew, London TW9 4DU หรือส่งอีเมลไปที่: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>'
       third_party: ในกรณีที่เราพบข้อมูลลิขสิทธิ์ของบุคคลที่สามใดๆ คุณจะต้องขอรับการอนุญาตจากผู้ถือลิขสิทธิ์ที่เกี่ยวข้องนั้นๆ
   i18n:
     direction:
@@ -357,12 +353,9 @@ th:
       speak_to_adviser: พูดคุยกับที่ปรึกษาตอนนี้
       technical_problem: Webchat ไม่พร้อมให้บริการในขณะนี้เนื่องจากปัญหาทางเทคนิค
   specialist_document:
-    pdo_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Designated Origin UK
-      Protected
-    pgi_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Geographic Origin UK
-      Protected
-    tsg_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Traditional Speciality
-      UK Protected
+    pdo_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Designated Origin UK Protected
+    pgi_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Geographic Origin UK Protected
+    tsg_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Traditional Speciality UK Protected
   speech:
     delivered_on: ส่งมอบเมื่อ
     location: ตำแหน่งที่ตั้ง
@@ -378,26 +371,13 @@ th:
     release_date: วันเผยแพร่
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ไม่แนะนำให้เดินทางไปยังบางส่วนของประเทศ นอกจากมีเหตุจำเป็น
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ไม่แนะนำให้เดินทางไปยังทุกส่วนของประเทศ นอกจากมีเหตุจำเป็น
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ไม่แนะนำให้เดินทางไปยังบางส่วนของประเทศในทุกกรณี
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ไม่แนะนำให้เดินทางไปทุกส่วนของประเทศในทุกกรณี
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ไม่แนะนำให้เดินทางไปยังบางส่วนของประเทศ นอกจากมีเหตุจำเป็น
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ไม่แนะนำให้เดินทางไปยังทุกส่วนของประเทศ นอกจากมีเหตุจำเป็น
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ไม่แนะนำให้เดินทางไปยังบางส่วนของประเทศในทุกกรณี
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ไม่แนะนำให้เดินทางไปทุกส่วนของประเทศในทุกกรณี
     context: คำแนะนำการเดินทางไปต่างประเทศ
     coronavirus_warning:
-      content_html: "<p class=\"govuk-body\">\n  ปฏิบัติตามกฎปัจจุบันเกี่ยวกับโรคโควิด-19
-        ในที่ที่คุณอาศัยอยู่: <a href=\"/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do\">อังกฤษ</a>
-        <a href=\"https://www.gov.scot/coronavirus-covid-19/\">สกอตแลนด์</a> <a href=\"https://gov.wales/coronavirus-travel\">เวลส์</a>
-        และ <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">ไอร์แลนด์เหนือ</a>\n</p>\n<p
-        class=\"govuk-body\">\n  เพื่อป้องกันไม่ให้เชื้อโรคโควิดสายพันธุ์ใหม่เข้ามาสู่สหราชอาณาจักร
-        คุณไม่ควรเดินทางไปยังประเทศ<a href=\"/guidance/red-amber-and-green-list-rules-for-entering-england\">สีเหลืองเข้มหรือสีแดง</a>\n</p>\n<p
-        class=\"govuk-body\">\n  เพื่อให้เข้าใจความเสี่ยงในประเทศ โปรดปฏิบัติตาม <a
-        href=\"/guidance/travel-advice-novel-coronavirus\">คำแนะนำการเดินทางของ FCDO</a>
-        \ \n</p>\n<p class=\"govuk-body\">\n  เมื่อคุณเดินทางกลับมา ให้ปฏิบัติตามกฎในการ<a
-        href=\"/uk-border-control\">เข้าสู่สหราชอาณาจักรจากต่างประเทศ</a> (ยกเว้นจากไอร์แลนด์)\n</p>\n"
+      content_html: "<p class=\"govuk-body\">\n  ปฏิบัติตามกฎปัจจุบันเกี่ยวกับโรคโควิด-19 ในที่ที่คุณอาศัยอยู่: <a href=\"/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do\">อังกฤษ</a> <a href=\"https://www.gov.scot/coronavirus-covid-19/\">สกอตแลนด์</a> <a href=\"https://gov.wales/coronavirus-travel\">เวลส์</a> และ <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">ไอร์แลนด์เหนือ</a>\n</p>\n<p class=\"govuk-body\">\n  เพื่อป้องกันไม่ให้เชื้อโรคโควิดสายพันธุ์ใหม่เข้ามาสู่สหราชอาณาจักร คุณไม่ควรเดินทางไปยังประเทศ<a href=\"/guidance/red-amber-and-green-list-rules-for-entering-england\">สีเหลืองเข้มหรือสีแดง</a>\n</p>\n<p class=\"govuk-body\">\n  เพื่อให้เข้าใจความเสี่ยงในประเทศ โปรดปฏิบัติตาม <a href=\"/guidance/travel-advice-novel-coronavirus\">คำแนะนำการเดินทางของ FCDO</a>  \n</p>\n<p class=\"govuk-body\">\n  เมื่อคุณเดินทางกลับมา ให้ปฏิบัติตามกฎในการ<a href=\"/uk-border-control\">เข้าสู่สหราชอาณาจักรจากต่างประเทศ</a> (ยกเว้นจากไอร์แลนด์)\n</p>\n"
       text_assistive: สำคัญ
       title: 'การเดินทางในสถานการไวรัสโคโรน่า (โรคโควิด-19):'
     still_current_at: ยังคงเป็นปัจจุบันเมื่อ

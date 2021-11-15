@@ -1,5 +1,83 @@
+---
 hi:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: व्यवसायों के लिए ब्रेक्सिट मार्गदर्शन
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: लोगों और परिवारों के लिए ब्रेक्सिट मार्गदर्शन
+    heading_prefix: इसमें अंतर है
+  common:
+    last_updated:
+    visit: 'इस पर जाएं:'
+  components:
+    figure:
+      image_credit: 'इमेज क्रेडिट: %{credit}'
+    published_dates:
+      hide_all_updates: सारे अपडेट छिपाएं
+      last_updated: पिछली बार अपडेट किया गया %{date}
+      published: प्रकाशित %{date}
+      see_all_updates: सभी अपडेट देखें
+      show_all_updates: सभी अपडेट दिखाएं
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: सब छिपाएं
+      show_all: सब दिखाएं
+    save_this_page:
+      add_page_button: अपने सेव किए गए पेजों में जोड़ें
+      confirmations:
+        page_removed:
+          message: आपने इसे अपने सेव किए गए पेजों से हटा दिया है
+        page_saved:
+          message: आपने इसे अपने सेव किए गए पेजों में जोड़ लिया है
+      page_not_saved_heading: यह पेज सेव करें ताकि आप इस पर बाद में वापस आ सकें
+      page_was_saved_heading: आपने यह पेज सेव कर लिया है
+      remove_page_button: अपने सेव किए गए पेजों से निकालें
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">अपने सेव किए गए पेज देखें</a>
+      see_saved_pages_signed_out: अपने सेव किए गए पेजों को देखने के लिए <a href="%{link}" class="govuk-link %{additional_class}">साइन इन करें</a>।
+    share_links:
+      share_this_page: यह पेज शेयर करें
+  consultation:
+    and: और
+    another_website_html: यह परामर्श %{closed} <a href="%{url}">एक अन्य वेबसाइट</a>पर आयोजित किया गया
+    at: पर
+    closes: यह बंद होता है
+    closes_at: यह परामर्श पर बंद होता है
+    complete_a: पूरा करें
+    description: परामर्श का विवरण
+    detail_of_feedback_received: प्राप्त फीडबैक का विवरण
+    detail_of_outcome: परिणाम का विवरण
+    documents: दस्तावेज़
+    download_outcome: पूरा परिणाम डाउनलोड करें
+    either: या फिर
+    email_to: 'ईमेल करें:'
+    feedback_received: फीडबैक प्राप्त हुआ
+    is_being: हो रहा है
+    not_open_yet: यह परामर्श अभी तक खोला नहीं गया है
+    'on':
+    opens: यह परामर्श खुलता है
+    original_consultation: असली परामर्श
+    ran_from: यह परामर्श चला था
+    respond_online: ऑनलाइन जवाब दें
+    'true': सही
+    visit_soon: जल्द ही इस पेज में वापस आकर इस सार्वजनिक प्रतिक्रिया का परिणाम डाउनलोड करें।
+    was: था
+    ways_to_respond: जवाब देने के तरीके
+    write_to: 'इसे लिखें:'
+  contact:
+    email: ईमेल
+    find_call_charges: कॉल शुल्क के बारे में जानें
+    online: ऑनलाइन
+    phone: फ़ोन
+    webchat: वेब चैट
   content_item:
+    coming_soon: यह दस्तावेज़ इस पर प्रकाशित किया जाएगा
+    contents: विषय-वस्तु
+    metadata:
+      published: प्रकाशित
+      updated: अपडेट किया गया
     schema_name:
       aaib_report:
         one: हवाई दुर्घटना जांच शाखा की रिपोर्ट
@@ -71,10 +149,8 @@ hi:
         one: रोजगार न्यायाधिकरण का फैसला
         other: रोजगार न्यायाधिकरण के फैसले
       esi_fund:
-        one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund,
-          ESIF)
-        other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment
-          Fund, ESIF)
+        one: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
+        other: यूरोपीय संरचनात्मक और निवेश कोष (European Structural and Investment Fund, ESIF)
       fatality_notice:
         one: विपत्ति की सूचना
         other: विपत्ति की सूचना
@@ -225,110 +301,20 @@ hi:
       written_statement:
         one: संसद में लिखित बयान
         other: संसद में लिखित बयान
-    coming_soon: यह दस्तावेज़ इस पर प्रकाशित किया जाएगा
-    contents: विषय-वस्तु
-    metadata:
-      published: प्रकाशित
-      updated: अपडेट किया गया
-  publication:
-    documents:
-      one: दस्तावेज़
-      other: दस्तावेज़
-    details: विवरण
-  brexit:
-    business_link:
-      text: व्यवसायों के लिए ब्रेक्सिट मार्गदर्शन
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: लोगों और परिवारों के लिए ब्रेक्सिट मार्गदर्शन
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: इसमें अंतर है
-  common:
-    last_updated:
-    visit: 'इस पर जाएं:'
-  components:
-    figure:
-      image_credit: 'इमेज क्रेडिट: %{credit}'
-    published_dates:
-      hide_all_updates: सारे अपडेट छिपाएं
-      last_updated: पिछली बार अपडेट किया गया %{date}
-      published: प्रकाशित %{date}
-      see_all_updates: सभी अपडेट देखें
-      show_all_updates: सभी अपडेट दिखाएं
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: सब छिपाएं
-      show_all: सब दिखाएं
-    save_this_page:
-      add_page_button: अपने सेव किए गए पेजों में जोड़ें
-      confirmations:
-        page_removed:
-          message: आपने इसे अपने सेव किए गए पेजों से हटा दिया है
-        page_saved:
-          message: आपने इसे अपने सेव किए गए पेजों में जोड़ लिया है
-      page_not_saved_heading: यह पेज सेव करें ताकि आप इस पर बाद में वापस आ सकें
-      page_was_saved_heading: आपने यह पेज सेव कर लिया है
-      remove_page_button: अपने सेव किए गए पेजों से निकालें
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">अपने
-        सेव किए गए पेज देखें</a>
-      see_saved_pages_signed_out: अपने सेव किए गए पेजों को देखने के लिए <a href="%{link}"
-        class="govuk-link %{additional_class}">साइन इन करें</a>।
-    share_links:
-      share_this_page: यह पेज शेयर करें
-  consultation:
-    and: और
-    another_website_html: यह परामर्श %{closed} <a href="%{url}">एक अन्य वेबसाइट</a>पर
-      आयोजित किया गया
-    at: पर
-    closes: यह बंद होता है
-    closes_at: यह परामर्श पर बंद होता है
-    complete_a: पूरा करें
-    description: परामर्श का विवरण
-    detail_of_feedback_received: प्राप्त फीडबैक का विवरण
-    detail_of_outcome: परिणाम का विवरण
-    documents: दस्तावेज़
-    download_outcome: पूरा परिणाम डाउनलोड करें
-    either: या फिर
-    email_to: 'ईमेल करें:'
-    feedback_received: फीडबैक प्राप्त हुआ
-    is_being: हो रहा है
-    not_open_yet: यह परामर्श अभी तक खोला नहीं गया है
-    'on':
-    opens: यह परामर्श खुलता है
-    original_consultation: असली परामर्श
-    ran_from: यह परामर्श चला था
-    respond_online: ऑनलाइन जवाब दें
-    'true': सही
-    visit_soon: जल्द ही इस पेज में वापस आकर इस सार्वजनिक प्रतिक्रिया का परिणाम डाउनलोड
-      करें।
-    was: था
-    ways_to_respond: जवाब देने के तरीके
-    write_to: 'इसे लिखें:'
-  contact:
-    email: ईमेल
-    find_call_charges: कॉल शुल्क के बारे में जानें
-    online: ऑनलाइन
-    phone: फ़ोन
-    webchat: वेब चैट
   corporate_information_page:
     about_our_services_html: "%{link} खोजें।"
     corporate_information: कारपोरेट सूचना
-    personal_information_charter_html: हमारे %{link} बताते हैं कि हम कैसे आपकी व्यक्तिगत
-      सूचना का उपयोग करते हैं।
-    publication_scheme_html: सूचना के उन प्रकारों के बारे में पढ़ें, जिन्हें हम अपने
-      %{link} में नियमित रूप से प्रकाशित करते हैं।
+    personal_information_charter_html: हमारे %{link} बताते हैं कि हम कैसे आपकी व्यक्तिगत सूचना का उपयोग करते हैं।
+    publication_scheme_html: सूचना के उन प्रकारों के बारे में पढ़ें, जिन्हें हम अपने %{link} में नियमित रूप से प्रकाशित करते हैं।
     social_media_use_html: इस बारे में हमारी नीतियां पढ़ें %{link}
-    welsh_language_scheme_html: हमारी प्रकाशन के प्रति वचनबद्धता के बारे में जानें
-      %(link)।
+    welsh_language_scheme_html: हमारी प्रकाशन के प्रति वचनबद्धता के बारे में जानें %(link)।
   fatality_notice:
     alt_text: रक्षा मंत्रालय का क्रेस्ट
     field_of_operation: संचालन का क्षेत्र
     operations_in: "%{location} में संचालन"
   gone:
     page_title: अब उपलब्ध नहीं है
-    published_in_error: इस पेज की जानकारी गलती से प्रकाशित होने की वज़ह से हटा दी
-      गई है।
+    published_in_error: इस पेज की जानकारी गलती से प्रकाशित होने की वज़ह से हटा दी गई है।
     title: आप जो पेज खोज रहे हैं वह अब उपलब्ध नहीं है
   guide:
     pages_in_guide: इस गाइड में पेज
@@ -338,13 +324,8 @@ hi:
       available_at: यह प्रकाशन %{url} पर उपलब्ध है
       copyright: "© क्राउन कॉपीराइट %{year}"
       isbn: 'आईएसबीएन:'
-      licence_html: 'यह प्रकाशन ओपन गवर्नमेंट लाइसेंस v3.0 के नियमों के तहत लाइसेंस
-        प्राप्त है, जहां अन्यथा कहा गया है उसे छोड़कर। यह लाइसेंस देखने के लिए, <a
-        href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        पर जाएं, या Information Policy Team, The National Archives, Kew, London TW9
-        4DU को लिखें, या ईमेल करें: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
-      third_party: जहां हमने किसी तीसरे पक्ष की कॉपीराइट जानकारी को मान्य किया हो,
-        वहां आपको संबंधित कॉपीराइट धारकों से अनुमति लेनी होगी।
+      licence_html: 'यह प्रकाशन ओपन गवर्नमेंट लाइसेंस v3.0 के नियमों के तहत लाइसेंस प्राप्त है, जहां अन्यथा कहा गया है उसे छोड़कर। यह लाइसेंस देखने के लिए, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> पर जाएं, या Information Policy Team, The National Archives, Kew, London TW9 4DU को लिखें, या ईमेल करें: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
+      third_party: जहां हमने किसी तीसरे पक्ष की कॉपीराइट जानकारी को मान्य किया हो, वहां आपको संबंधित कॉपीराइट धारकों से अनुमति लेनी होगी।
   i18n:
     direction:
   language_names:
@@ -353,6 +334,11 @@ hi:
     next_page: अगला
     previous_page: पिछला
     print_entire_guide: पूरी गाइड प्रिंट करें
+  publication:
+    details: विवरण
+    documents:
+      one: दस्तावेज़
+      other: दस्तावेज़
   service_sign_in:
     continue: जारी रखें
     error:
@@ -367,12 +353,9 @@ hi:
       speak_to_adviser: अभी एक सलाहकार से बात करें
       technical_problem: तकनीकी समस्याओं की वज़ह से इस समय वेबचैट अनुपलब्ध है।
   specialist_document:
-    pdo_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है, जिस पर Designated Origin UK Protected
-      शब्द हैं
-    pgi_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है जिसमें Geographic Origin UK Protected
-      शब्द हैं
-    tsg_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है जिसमें Traditional Speciality
-      UK Protected शब्द हैं
+    pdo_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है, जिस पर Designated Origin UK Protected शब्द हैं
+    pgi_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है जिसमें Geographic Origin UK Protected शब्द हैं
+    tsg_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है जिसमें Traditional Speciality UK Protected शब्द हैं
   speech:
     delivered_on: इस पर डिलीवरी किया गया
     location: स्थान
@@ -388,16 +371,10 @@ hi:
     release_date: जारी करने की तारीख
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> देश के कुछ हिस्सों में अनिवार्य यात्रा को छोड़कर बाकी सबके
-        विरुद्ध सलाह देता है।
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> देश के पूरे हिस्से में अनिवार्य यात्रा को छोड़कर बाकी सबके
-        विरुद्ध सलाह देता है।
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        देश के कुछ हिस्सों में सभी यात्राओं के विरुद्ध सलाह देता है।
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        देश के पूरे हिस्से में सभी यात्राओं के विरुद्ध सलाह देता है।
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> देश के कुछ हिस्सों में अनिवार्य यात्रा को छोड़कर बाकी सबके विरुद्ध सलाह देता है।
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> देश के पूरे हिस्से में अनिवार्य यात्रा को छोड़कर बाकी सबके विरुद्ध सलाह देता है।
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> देश के कुछ हिस्सों में सभी यात्राओं के विरुद्ध सलाह देता है।
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> देश के पूरे हिस्से में सभी यात्राओं के विरुद्ध सलाह देता है।
     context: विदेश यात्रा का सुझाव
     coronavirus_warning:
       content_html: |

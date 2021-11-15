@@ -1,5 +1,83 @@
+---
 pa:
+  brexit:
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: ਕਾਰੋਬਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: ਵਿਅਕਤੀਆਂ ਅਤੇ ਪਰਿਵਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
+    heading_prefix: ਵੱਖਰਾ ਹੈ
+  common:
+    last_updated:
+    visit: 'ਮੁਲਾਕਾਤ:'
+  components:
+    figure:
+      image_credit: 'ਚਿੱਤਰ ਕ੍ਰੈਡਿਟ: %{credit}'
+    published_dates:
+      hide_all_updates: ਸਾਰੇ ਅਪਡੇਟਾਂ ਨੂੰ ਲੁਕਾਓ
+      last_updated: ਪਿਛਲੀ ਵਾਰ ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ %{date}
+      published: ਪ੍ਰਕਾਸ਼ਿਤ %{date}
+      see_all_updates: ਸਾਰੇ ਅਪਡੇਟਸ ਵੇਖੋ
+      show_all_updates: ਸਾਰੇ ਅਪਡੇਟ ਦਿਖਾਉ
+    publisher_metadata:
+      collections:
+      from:
+      hide_all: ਸਭ ਨੂੰ ਲੁਕਾਓ
+      show_all: ਸਾਰੇ ਦਿਖਾਓ
+    save_this_page:
+      add_page_button: ਆਪਣੇ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ
+      confirmations:
+        page_removed:
+          message: ਤੁਸੀਂ ਇਸਨੂੰ ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਹੈ
+        page_saved:
+          message: ਤੁਸੀਂ ਇਸਨੂੰ ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ ਹੈ
+      page_not_saved_heading: ਇਸ ਪੰਨੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ ਤਾਂ ਜੋ ਤੁਸੀਂ ਬਾਅਦ ਵਿੱਚ ਇਸ ਤੇ ਵਾਪਸ ਆ ਸਕੋ
+      page_was_saved_heading: ਤੁਸੀਂ ਇਸ ਪੰਨੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਹੈ
+      remove_page_button: ਆਪਣੇ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਤੋਂ ਹਟਾਓ
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}"> ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨੇ ਵੇਖੋ </a>
+      see_saved_pages_signed_out: ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਨੂੰ ਦੇਖਣ ਲਈ <a href="%{link}" class="govuk-link %{additional_class}"> ਸਾਈਨ ਇਨ ਕਰੋ </a>
+    share_links:
+      share_this_page: ਇਸ ਪੇਜ ਨੂੰ ਸ਼ੇਅਰ ਕਰੋ
+  consultation:
+    and: ਅਤੇ
+    another_website_html: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ %{close} <a href="%{url}"> ਹੋਰ ਵੈਬਸਾਈਟ </a> 'ਤੇ ਆਯੋਜਿਤ ਕੀਤਾ ਗਿਆ
+    at: "'ਤੇ"
+    closes: "'ਤੇ ਬੰਦ ਹੁੰਦਾ ਹੈ"
+    closes_at: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇੱਥੇ ਬੰਦ ਹੁੰਦਾ ਹੈ
+    complete_a: ਪੂਰਾ ਕਰੋ
+    description: ਸਲਾਹ ਮਸ਼ਵਰਾ
+    detail_of_feedback_received: ਪ੍ਰਾਪਤ ਫੀਡਬੈਕ ਦਾ ਵੇਰਵਾ
+    detail_of_outcome: ਨਤੀਜਿਆਂ ਦਾ ਵੇਰਵਾ
+    documents: ਦਸਤਾਵੇਜ਼
+    download_outcome: ਪੂਰਾ ਨਤੀਜਾ ਡਾਉਨਲੋਡ ਕਰੋ
+    either: ਜਾਂ ਤਾਂ
+    email_to: 'ਨੂੰ ਈਮੇਲ ਕਰੋ:'
+    feedback_received: ਫੀਡਬੈਕ ਪ੍ਰਾਪਤ ਹੋਇਆ
+    is_being: ਹੋ ਰਿਹਾ ਹੈ
+    not_open_yet: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਅਜੇ ਖੁੱਲ੍ਹਾ ਨਹੀਂ ਹੈ
+    'on':
+    opens: ਇਹ ਸਲਾਹ ਮਸ਼ਵਰਾ ਖੁੱਲਦਾ ਹੈ
+    original_consultation: ਮੂਲ ਸਲਾਹ
+    ran_from: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇਸ ਤੋਂ ਚੱਲਿਆ
+    respond_online: ਆਨਲਾਈਨ ਜਵਾਬ ਦਿਓ
+    'true': ਸੱਚ
+    visit_soon: ਇਸ ਜਨਤਕ &nbsp;ਫੀਡਬੈਕ ਦੇ ਨਤੀਜਿਆਂ ਨੂੰ ਡਾਉਨਲੋਡ ਕਰਨ ਲਈ ਜਲਦੀ ਹੀ ਇਸ ਪੰਨੇ ਤੇ ਦੁਬਾਰਾ ਜਾਓ।
+    was: ਸੀ
+    ways_to_respond: ਜਵਾਬ ਦੇਣ ਦੇ ਤਰੀਕੇ
+    write_to: 'ਨੂੰ ਲਿਖੋ:'
+  contact:
+    email: ਈ - ਮੇਲ
+    find_call_charges: ਕਾਲ ਖਰਚਿਆਂ ਬਾਰੇ ਜਾਣੋ
+    online: ਆਨਲਾਈਨ
+    phone: ਫ਼ੋਨ
+    webchat: ਵੈਬਚੈਟ
   content_item:
+    coming_soon: ਇਸ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤਾ ਜਾਵੇਗਾ
+    contents: ਸਮਗਰੀ
+    metadata:
+      published: ਪ੍ਰਕਾਸ਼ਿਤ
+      updated: ਅੱਪਡੇਟ ਕੀਤਾ
     schema_name:
       aaib_report:
         one: ਹਵਾਈ ਹਾਦਸੇ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
@@ -223,100 +301,11 @@ pa:
       written_statement:
         one: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ
         other: ਸੰਸਦ ਨੂੰ ਲਿਖਤੀ ਬਿਆਨ ਦਿੱਤੇ
-    coming_soon: ਇਸ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤਾ ਜਾਵੇਗਾ
-    contents: ਸਮਗਰੀ
-    metadata:
-      published: ਪ੍ਰਕਾਸ਼ਿਤ
-      updated: ਅੱਪਡੇਟ ਕੀਤਾ
-  publication:
-    documents:
-      one: ਦਸਤਾਵੇਜ਼
-      other: ਦਸਤਾਵੇਜ਼
-    details: ਵੇਰਵੇ
-  brexit:
-    business_link:
-      text: ਕਾਰੋਬਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
-      path: "/guidance/brexit-guidance-for-businesses"
-    citizen_link:
-      text: ਵਿਅਕਤੀਆਂ ਅਤੇ ਪਰਿਵਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-    heading_prefix: ਵੱਖਰਾ ਹੈ
-  common:
-    last_updated:
-    visit: 'ਮੁਲਾਕਾਤ:'
-  components:
-    figure:
-      image_credit: 'ਚਿੱਤਰ ਕ੍ਰੈਡਿਟ: %{credit}'
-    published_dates:
-      hide_all_updates: ਸਾਰੇ ਅਪਡੇਟਾਂ ਨੂੰ ਲੁਕਾਓ
-      last_updated: ਪਿਛਲੀ ਵਾਰ ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ %{date}
-      published: ਪ੍ਰਕਾਸ਼ਿਤ %{date}
-      see_all_updates: ਸਾਰੇ ਅਪਡੇਟਸ ਵੇਖੋ
-      show_all_updates: ਸਾਰੇ ਅਪਡੇਟ ਦਿਖਾਉ
-    publisher_metadata:
-      collections:
-      from:
-      hide_all: ਸਭ ਨੂੰ ਲੁਕਾਓ
-      show_all: ਸਾਰੇ ਦਿਖਾਓ
-    save_this_page:
-      add_page_button: ਆਪਣੇ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ
-      confirmations:
-        page_removed:
-          message: ਤੁਸੀਂ ਇਸਨੂੰ ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਹੈ
-        page_saved:
-          message: ਤੁਸੀਂ ਇਸਨੂੰ ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ ਹੈ
-      page_not_saved_heading: ਇਸ ਪੰਨੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ ਤਾਂ ਜੋ ਤੁਸੀਂ ਬਾਅਦ ਵਿੱਚ ਇਸ ਤੇ
-        ਵਾਪਸ ਆ ਸਕੋ
-      page_was_saved_heading: ਤੁਸੀਂ ਇਸ ਪੰਨੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਹੈ
-      remove_page_button: ਆਪਣੇ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਤੋਂ ਹਟਾਓ
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">
-        ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨੇ ਵੇਖੋ </a>
-      see_saved_pages_signed_out: ਆਪਣੇ ਰੱਖਿਅਤ ਕੀਤੇ ਪੰਨਿਆਂ ਨੂੰ ਦੇਖਣ ਲਈ <a href="%{link}"
-        class="govuk-link %{additional_class}"> ਸਾਈਨ ਇਨ ਕਰੋ </a>
-    share_links:
-      share_this_page: ਇਸ ਪੇਜ ਨੂੰ ਸ਼ੇਅਰ ਕਰੋ
-  consultation:
-    and: ਅਤੇ
-    another_website_html: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ %{close} <a href="%{url}"> ਹੋਰ ਵੈਬਸਾਈਟ </a>
-      'ਤੇ ਆਯੋਜਿਤ ਕੀਤਾ ਗਿਆ
-    at: "'ਤੇ"
-    closes: "'ਤੇ ਬੰਦ ਹੁੰਦਾ ਹੈ"
-    closes_at: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇੱਥੇ ਬੰਦ ਹੁੰਦਾ ਹੈ
-    complete_a: ਪੂਰਾ ਕਰੋ
-    description: ਸਲਾਹ ਮਸ਼ਵਰਾ
-    detail_of_feedback_received: ਪ੍ਰਾਪਤ ਫੀਡਬੈਕ ਦਾ ਵੇਰਵਾ
-    detail_of_outcome: ਨਤੀਜਿਆਂ ਦਾ ਵੇਰਵਾ
-    documents: ਦਸਤਾਵੇਜ਼
-    download_outcome: ਪੂਰਾ ਨਤੀਜਾ ਡਾਉਨਲੋਡ ਕਰੋ
-    either: ਜਾਂ ਤਾਂ
-    email_to: 'ਨੂੰ ਈਮੇਲ ਕਰੋ:'
-    feedback_received: ਫੀਡਬੈਕ ਪ੍ਰਾਪਤ ਹੋਇਆ
-    is_being: ਹੋ ਰਿਹਾ ਹੈ
-    not_open_yet: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਅਜੇ ਖੁੱਲ੍ਹਾ ਨਹੀਂ ਹੈ
-    'on':
-    opens: ਇਹ ਸਲਾਹ ਮਸ਼ਵਰਾ ਖੁੱਲਦਾ ਹੈ
-    original_consultation: ਮੂਲ ਸਲਾਹ
-    ran_from: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇਸ ਤੋਂ ਚੱਲਿਆ
-    respond_online: ਆਨਲਾਈਨ ਜਵਾਬ ਦਿਓ
-    'true': ਸੱਚ
-    visit_soon: ਇਸ ਜਨਤਕ &nbsp;ਫੀਡਬੈਕ ਦੇ ਨਤੀਜਿਆਂ ਨੂੰ ਡਾਉਨਲੋਡ ਕਰਨ ਲਈ ਜਲਦੀ ਹੀ ਇਸ ਪੰਨੇ
-      ਤੇ ਦੁਬਾਰਾ ਜਾਓ।
-    was: ਸੀ
-    ways_to_respond: ਜਵਾਬ ਦੇਣ ਦੇ ਤਰੀਕੇ
-    write_to: 'ਨੂੰ ਲਿਖੋ:'
-  contact:
-    email: ਈ - ਮੇਲ
-    find_call_charges: ਕਾਲ ਖਰਚਿਆਂ ਬਾਰੇ ਜਾਣੋ
-    online: ਆਨਲਾਈਨ
-    phone: ਫ਼ੋਨ
-    webchat: ਵੈਬਚੈਟ
   corporate_information_page:
     about_our_services_html: "%{link} ਪਤਾ ਕਰੋ।"
     corporate_information: ਕਾਰਪੋਰੇਟ ਜਾਣਕਾਰੀ
-    personal_information_charter_html: ਸਾਡਾ %{link} ਦੱਸਦਾ ਹੈ ਕਿ ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ
-      ਜਾਣਕਾਰੀ ਨਾਲ ਕਿਵੇਂ ਵਿਵਹਾਰ ਕਰਦੇ ਹਾਂ.
-    publication_scheme_html: ਉਹਨਾਂ ਜਾਣਕਾਰੀ ਦੀਆਂ ਕਿਸਮਾਂ ਬਾਰੇ ਪੜ੍ਹੋ ਜੋ ਅਸੀਂ ਨਿਯਮਿਤ ਤੌਰ
-      ਤੇ ਸਾਡੇ %{link} ਵਿੱਚ ਪ੍ਰਕਾਸ਼ਤ ਕਰਦੇ ਹਾਂ।
+    personal_information_charter_html: ਸਾਡਾ %{link} ਦੱਸਦਾ ਹੈ ਕਿ ਅਸੀਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਨਾਲ ਕਿਵੇਂ ਵਿਵਹਾਰ ਕਰਦੇ ਹਾਂ.
+    publication_scheme_html: ਉਹਨਾਂ ਜਾਣਕਾਰੀ ਦੀਆਂ ਕਿਸਮਾਂ ਬਾਰੇ ਪੜ੍ਹੋ ਜੋ ਅਸੀਂ ਨਿਯਮਿਤ ਤੌਰ ਤੇ ਸਾਡੇ %{link} ਵਿੱਚ ਪ੍ਰਕਾਸ਼ਤ ਕਰਦੇ ਹਾਂ।
     social_media_use_html: "%{link} 'ਤੇ ਸਾਡੀ ਨੀਤੀ ਪੜ੍ਹੋ।"
     welsh_language_scheme_html: "%{link} ਪ੍ਰਤੀ ਸਾਡੀ ਵਚਨਬੱਧਤਾ ਬਾਰੇ ਜਾਣੋ।"
   fatality_notice:
@@ -325,8 +314,7 @@ pa:
     operations_in: "%{location} ਵਿੱਚ ਕਾਰਜ"
   gone:
     page_title: ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
-    published_in_error: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ
-      ਪ੍ਰਕਾਸ਼ਤ ਕੀਤਾ ਗਿਆ ਸੀ।
+    published_in_error: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ ਪ੍ਰਕਾਸ਼ਤ ਕੀਤਾ ਗਿਆ ਸੀ।
     title: ਜਿਸ ਪੰਨੇ ਨੂੰ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
   guide:
     pages_in_guide: ਇਸ ਗਾਈਡ ਦੇ ਪੰਨੇ
@@ -336,12 +324,8 @@ pa:
       available_at: ਇਹ ਪ੍ਰਕਾਸ਼ਨ %{url} ਤੇ ਉਪਲਬਧ ਹੈ
       copyright: "©ਕ੍ਰਾਊਨ ਕਾਪੀਰਾਈਟ %{year}"
       isbn: 'ISBN:'
-      licence_html: 'ਇਹ ਪ੍ਰਕਾਸ਼ਨ ਓਪਨ ਗਵਰਨਮੈਂਟ ਲਾਇਸੈਂਸ v3.0 ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੇ ਅਧੀਨ ਲਾਇਸੈਂਸਸ਼ੁਦਾ
-        ਹੈ, ਸਿਵਾਏ ਜਿੱਥੇ ਹੋਰ ਨਹੀਂ ਕਿਹਾ ਗਿਆ ਹੈ। ਇਸ ਲਾਇਸੈਂਸ ਨੂੰ ਦੇਖਣ ਲਈ, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">
-        nationalarchives.gov.uk/doc/open-government-licence/version/3 </a> ਜਾਂ ਸੂਚਨਾ
-        ਨੀਤੀ ਟੀਮ, ਦਿ ਨੈਸ਼ਨਲ ਆਰਕਾਈਵਜ਼, ਕੇਵ, ਲੰਡਨ TW9 4DU, ਜਾਂ ਈਮੇਲ ਨੂੰ ਲਿਖੋ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
-      third_party: ਜਿੱਥੇ ਅਸੀਂ ਕਿਸੇ ਤੀਜੀ ਧਿਰ ਦੀ ਕਾਪੀਰਾਈਟ ਜਾਣਕਾਰੀ ਦੀ ਪਛਾਣ ਕੀਤੀ ਹੈ ਤੁਹਾਨੂੰ
-        ਸਬੰਧਤ ਕਾਪੀਰਾਈਟ ਧਾਰਕਾਂ ਤੋਂ ਇਜਾਜ਼ਤ ਲੈਣ ਦੀ ਜ਼ਰੂਰਤ ਹੋਏਗੀ।
+      licence_html: 'ਇਹ ਪ੍ਰਕਾਸ਼ਨ ਓਪਨ ਗਵਰਨਮੈਂਟ ਲਾਇਸੈਂਸ v3.0 ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੇ ਅਧੀਨ ਲਾਇਸੈਂਸਸ਼ੁਦਾ ਹੈ, ਸਿਵਾਏ ਜਿੱਥੇ ਹੋਰ ਨਹੀਂ ਕਿਹਾ ਗਿਆ ਹੈ। ਇਸ ਲਾਇਸੈਂਸ ਨੂੰ ਦੇਖਣ ਲਈ, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3"> nationalarchives.gov.uk/doc/open-government-licence/version/3 </a> ਜਾਂ ਸੂਚਨਾ ਨੀਤੀ ਟੀਮ, ਦਿ ਨੈਸ਼ਨਲ ਆਰਕਾਈਵਜ਼, ਕੇਵ, ਲੰਡਨ TW9 4DU, ਜਾਂ ਈਮੇਲ ਨੂੰ ਲਿਖੋ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
+      third_party: ਜਿੱਥੇ ਅਸੀਂ ਕਿਸੇ ਤੀਜੀ ਧਿਰ ਦੀ ਕਾਪੀਰਾਈਟ ਜਾਣਕਾਰੀ ਦੀ ਪਛਾਣ ਕੀਤੀ ਹੈ ਤੁਹਾਨੂੰ ਸਬੰਧਤ ਕਾਪੀਰਾਈਟ ਧਾਰਕਾਂ ਤੋਂ ਇਜਾਜ਼ਤ ਲੈਣ ਦੀ ਜ਼ਰੂਰਤ ਹੋਏਗੀ।
   i18n:
     direction:
   language_names:
@@ -350,6 +334,11 @@ pa:
     next_page: ਅਗਲਾ
     previous_page: ਪਿਛਲਾ
     print_entire_guide: ਸਾਰੀ ਗਾਈਡ ਛਾਪੋ
+  publication:
+    details: ਵੇਰਵੇ
+    documents:
+      one: ਦਸਤਾਵੇਜ਼
+      other: ਦਸਤਾਵੇਜ਼
   service_sign_in:
     continue: ਜਾਰੀ ਰੱਖੋ
     error:
@@ -364,12 +353,9 @@ pa:
       speak_to_adviser: ਹੁਣ ਕਿਸੇ ਸਲਾਹਕਾਰ ਨਾਲ ਗੱਲ ਕਰੋ
       technical_problem: ਵੈਬਚੈਟ ਇਸ ਸਮੇਂ ਤਕਨੀਕੀ ਸਮੱਸਿਆਵਾਂ ਦੇ ਕਾਰਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।
   specialist_document:
-    pdo_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਇੱਕ ਕਾਲਾ ਮੋਹਰ ਹੈ ਜਿਸਦੇ ਨਾਲ ਡਿਜ਼ਾਈਨਡ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ
-      ਸ਼ਬਦ ਹਨ
-    pgi_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਜੀਓਗ੍ਰਾਫਿਕ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ ਕਾਲੀ
-      ਮੋਹਰ ਹੈ
-    tsg_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਟ੍ਰੈਡੀਸ਼ਨਲ ਸਪੈਸ਼ਲਿਟੀ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ
-      ਕਾਲਾ ਮੋਹਰ ਹੈ
+    pdo_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਇੱਕ ਕਾਲਾ ਮੋਹਰ ਹੈ ਜਿਸਦੇ ਨਾਲ ਡਿਜ਼ਾਈਨਡ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦ ਹਨ
+    pgi_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਜੀਓਗ੍ਰਾਫਿਕ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ ਕਾਲੀ ਮੋਹਰ ਹੈ
+    tsg_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਟ੍ਰੈਡੀਸ਼ਨਲ ਸਪੈਸ਼ਲਿਟੀ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ ਕਾਲਾ ਮੋਹਰ ਹੈ
   speech:
     delivered_on: "'ਤੇ ਦਿੱਤਾ ਗਿਆ"
     location: ਟਿਕਾਣਾ
@@ -385,16 +371,10 @@ pa:
     release_date: ਰਿਹਾਈ ਤਾਰੀਖ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ਦੇਸ਼ ਦੇ ਕੁਝ ਹਿੱਸਿਆਂ ਦੀ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਦੇ
-        ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> ਸਾਰੇ ਦੇਸ਼ ਨੂੰ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਛੱਡ ਕੇ ਯਾਤਰਾ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ
-        ਹੈ।
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ਦੇਸ਼ ਦੇ ਹਿੱਸਿਆਂ ਦੀ ਹਰ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        ਸਾਰੇ ਦੇਸ਼ ਦੀ ਸਾਰੀ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਦੇਸ਼ ਦੇ ਕੁਝ ਹਿੱਸਿਆਂ ਦੀ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਸਾਰੇ ਦੇਸ਼ ਨੂੰ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਛੱਡ ਕੇ ਯਾਤਰਾ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਦੇਸ਼ ਦੇ ਹਿੱਸਿਆਂ ਦੀ ਹਰ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਸਾਰੇ ਦੇਸ਼ ਦੀ ਸਾਰੀ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
     context: ਵਿਦੇਸ਼ੀ ਯਾਤਰਾ ਸਲਾਹ
     coronavirus_warning:
       content_html: |
@@ -417,8 +397,7 @@ pa:
     updated: ਅੱਪਡੇਟ ਕੀਤਾ
   unpublishing:
     page_title: ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
-    summary: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ ਪ੍ਰਕਾਸ਼ਤ
-      ਕੀਤਾ ਗਿਆ ਸੀ।
+    summary: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ ਪ੍ਰਕਾਸ਼ਤ ਕੀਤਾ ਗਿਆ ਸੀ।
     title: ਜਿਸ ਪੰਨੇ ਨੂੰ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
   working_group:
     contact_details: ਸੰਪਰਕ ਵੇਰਵੇ
