@@ -40,3 +40,9 @@ examples:
       - display_time: 14th October 2000
         note: Updated information on pupil premium reviews and what information schools need to publish on their websites.
         timestamp: 2000-10-14T15:42:37.000+00:00
+  with_custom_margin_bottom:
+    description: |
+      The component accepts a number for margin bottom from 0 to 9 (0px to 60px) using the [GOV.UK Frontend spacing scale](https://design-system.service.gov.uk/styles/spacing/#the-responsive-spacing-scale). By default, the component does not have a bottom margin.
+    data:
+      published: 1st January 1990
+      margin_bottom: 8

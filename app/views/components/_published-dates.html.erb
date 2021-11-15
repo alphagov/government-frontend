@@ -4,10 +4,13 @@
   history = Array(history)
   last_updated ||= false
   link_to_history ||= false
-  history_class = "app-c-published-dates--history" if history.any?
+  shared_helper = GovukPublishingComponents::Presenters::SharedHelper.new(local_assigns)
+  classes = %w(app-c-published-dates)
+  classes << "app-c-published-dates--history" if history.any?
+  classes << shared_helper.get_margin_bottom if local_assigns[:margin_bottom]
 %>
 <% if published || last_updated %>
-<div class="app-c-published-dates <%= history_class %>" <% if history.any? %>id="history" data-module="gem-toggle"<% end %> lang="en">
+<div class="<%= classes.join(' ') %>" <% if history.any? %>id="history" data-module="gem-toggle"<% end %> lang="en">
   <% if published %>
     <%= t('components.published_dates.published', date: published) %>
   <% end %>
