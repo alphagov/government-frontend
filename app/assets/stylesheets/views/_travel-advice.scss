@@ -23,3 +23,23 @@
   display: block;
   margin-bottom: govuk-spacing(2);
 }
+
+.travel-advice-notice {
+  background-color: govuk-colour("light-grey");
+  border: 1px solid $govuk-border-colour;
+  margin-bottom: govuk-spacing(7);
+  position: relative;
+}
+
+.travel-advice-notice__header {
+  padding: govuk-spacing(4) govuk-spacing(4) 0 govuk-spacing(3);
+}
+
+.travel-advice-notice__content {
+  margin-top: - govuk-spacing(3);
+  padding: 0 govuk-spacing(4) 0 govuk-spacing(9);
+}
+
+.travel-advice-notice__icon {
+  margin-left: govuk-spacing(3);
+}
