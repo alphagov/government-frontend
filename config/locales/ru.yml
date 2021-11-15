@@ -98,6 +98,7 @@ ru:
         many:
         one: Закрытая консультация
         other: Закрытые консультации
+        overview:
       cma_case:
         few:
         many:
@@ -118,6 +119,7 @@ ru:
         many:
         one: Результат консультации
         other: Результаты консультаций
+        overview:
       corporate_information_page:
         few:
         many:
@@ -128,11 +130,13 @@ ru:
         many:
         one: Корпоративный отчет
         other: Корпоративные отчеты
+        overview:
       correspondence:
         few:
         many:
         one: Корреспонденция
         other: Корреспонденция
+        overview:
       countryside_stewardship_grant:
         few:
         many:
@@ -143,6 +147,7 @@ ru:
         many:
         one:
         other:
+        overview:
       detailed_guide:
         few:
         many:
@@ -193,11 +198,13 @@ ru:
         many:
         one: 'Свобода распространения информации '
         other: 'Свобода распространения информации '
+        overview:
       form:
         few:
         many:
         one: Форма
         other: Формы
+        overview:
       government_response:
         few:
         many:
@@ -208,11 +215,13 @@ ru:
         many:
         one: Руководство
         other: Руководство
+        overview:
       impact_assessment:
         few:
         many:
         one: Оценка воздействия
         other: Оценки воздействия
+        overview:
       imported:
         few:
         many:
@@ -223,6 +232,7 @@ ru:
         many:
         one: Независимый отчет
         other: Независимые отчеты
+        overview:
       international_development_fund:
         few:
         many:
@@ -233,6 +243,7 @@ ru:
         many:
         one:
         other:
+        overview:
       maib_report:
         few:
         many:
@@ -243,6 +254,7 @@ ru:
         many:
         one: Карта
         other: Карты
+        overview:
       medical_safety_alert:
         few:
         many:
@@ -258,6 +270,7 @@ ru:
         many:
         one: Статистика - национальная статистика
         other: Статистика - национальная статистика
+        overview:
       national_statistics_announcement:
         few:
         many:
@@ -278,6 +291,7 @@ ru:
         many:
         one:
         other:
+        overview:
       official:
         few:
         many:
@@ -288,6 +302,7 @@ ru:
         many:
         one: Статистика
         other: Статистика
+        overview:
       official_statistics_announcement:
         few:
         many:
@@ -298,6 +313,7 @@ ru:
         many:
         one: Открытая консультация
         other: Открытые консультации
+        overview:
       oral_statement:
         few:
         many:
@@ -313,6 +329,7 @@ ru:
         many:
         one: Директивный документ
         other: Директивные документы
+        overview:
       press_release:
         few:
         many:
@@ -323,6 +340,7 @@ ru:
         many:
         one: Рекламный материал
         other: Рекламные материалы
+        overview:
       publication:
         few:
         many:
@@ -338,11 +356,13 @@ ru:
         many:
         one:
         other:
+        overview:
       research:
         few:
         many:
         one: Исследования и аналитика
         other: Исследования и аналитика
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
@@ -373,6 +393,7 @@ ru:
         many:
         one:
         other:
+        overview:
       statement_to_parliament:
         few:
         many:
@@ -393,6 +414,7 @@ ru:
         many:
         one:
         other:
+        overview:
       take_part:
         few:
         many:
@@ -413,6 +435,7 @@ ru:
         many:
         one: Прозрачность данных
         other: Прозрачность данных
+        overview:
       utaac_decision:
         few:
         many:
@@ -440,6 +463,10 @@ ru:
     publication_scheme_html: Прочитать информацию, которая обычно публикуется,  по указанной %{link}.
     social_media_use_html: Ознакомиться с нашей политикой по %{link}.
     welsh_language_scheme_html: Выяснить о наших обязательствах по публикации можно по %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text:
     field_of_operation:

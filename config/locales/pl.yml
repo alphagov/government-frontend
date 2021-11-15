@@ -98,6 +98,7 @@ pl:
         many:
         one: Konsultacja zamknięta
         other: Konsultacje zamknięte
+        overview:
       cma_case:
         few:
         many:
@@ -118,6 +119,7 @@ pl:
         many:
         one: Wynik konsultacji
         other: Wyniki konsultacji
+        overview:
       corporate_information_page:
         few:
         many:
@@ -128,11 +130,13 @@ pl:
         many:
         one: Raport korporacyjny
         other: Raporty korporacyjne
+        overview:
       correspondence:
         few:
         many:
         one: Korespondencja
         other: Korespondencje
+        overview:
       countryside_stewardship_grant:
         few:
         many:
@@ -143,6 +147,7 @@ pl:
         many:
         one: Decyzja
         other: Decyzje
+        overview:
       detailed_guide:
         few:
         many:
@@ -193,11 +198,13 @@ pl:
         many:
         one: Informacja zgodnie z ustawą o wolnosci informacji
         other: Informacje zgodnie z ustawą o wolności informacji
+        overview:
       form:
         few:
         many:
         one: Formularz
         other: Formularze
+        overview:
       government_response:
         few:
         many:
@@ -208,11 +215,13 @@ pl:
         many:
         one: Wskazówki
         other: Wskazówki
+        overview:
       impact_assessment:
         few:
         many:
         one: Ocena oddziaływania
         other: Oceny oddziaływania
+        overview:
       imported:
         few:
         many:
@@ -223,6 +232,7 @@ pl:
         many:
         one: Niezależny raport
         other: Niezależne raporty
+        overview:
       international_development_fund:
         few:
         many:
@@ -233,6 +243,7 @@ pl:
         many:
         one: Traktat międzynarodowy
         other: Traktaty międzynarodowe
+        overview:
       maib_report:
         few:
         many:
@@ -243,6 +254,7 @@ pl:
         many:
         one: Mapa
         other: Mapy
+        overview:
       medical_safety_alert:
         few:
         many:
@@ -258,6 +270,7 @@ pl:
         many:
         one: Statystyki - statystyki narodowe
         other: Statystyki - statystyki narodowe
+        overview:
       national_statistics_announcement:
         few:
         many:
@@ -278,6 +291,7 @@ pl:
         many:
         one: Powiadomienie
         other: Powiadomienia
+        overview:
       official:
         few:
         many:
@@ -288,6 +302,7 @@ pl:
         many:
         one: Statystyki
         other: Statystyki
+        overview:
       official_statistics_announcement:
         few:
         many:
@@ -298,6 +313,7 @@ pl:
         many:
         one: Konsultacje otwarte
         other: Konsultacje otwarte
+        overview:
       oral_statement:
         few:
         many:
@@ -313,6 +329,7 @@ pl:
         many:
         one: Dokument programowy
         other: Dokumenty programowe
+        overview:
       press_release:
         few:
         many:
@@ -323,6 +340,7 @@ pl:
         many:
         one: Materiał promocyjny
         other: Materiał promocyjny
+        overview:
       publication:
         few:
         many:
@@ -338,11 +356,13 @@ pl:
         many:
         one: Rozporządzenie
         other: Rozporządzenia
+        overview:
       research:
         few:
         many:
         one: Badania i analiza
         other: Badania i analiza
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
@@ -373,6 +393,7 @@ pl:
         many:
         one: Standard
         other: Standardy
+        overview:
       statement_to_parliament:
         few:
         many:
@@ -393,6 +414,7 @@ pl:
         many:
         one: Wytyczne ustawowe
         other: Wytyczne ustawowe
+        overview:
       take_part:
         few:
         many:
@@ -413,6 +435,7 @@ pl:
         many:
         one: Dane o transparentności
         other: Dane o transparentności
+        overview:
       utaac_decision:
         few:
         many:
@@ -440,10 +463,56 @@ pl:
     publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle w naszym %{link}.
     social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}.
     welsh_language_scheme_html: Poznaj nasze zobowiązania związane z publikowaniem w %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Herb Ministerstwa Obrony
     field_of_operation: Zakres działania
     operations_in: Działania w %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Już niedostępne
     published_in_error: Informacje na tej stronie zostały usunięte, ponieważ zostały błędnie opublikowane.
@@ -461,7 +530,72 @@ pl:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
     pl: Polski
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Następny
     previous_page: Poprzedni

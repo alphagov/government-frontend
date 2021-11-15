@@ -84,6 +84,7 @@ uz:
       closed_consultation:
         one: Батафсил маслаҳат
         other: Батафсил маслаҳатлар
+        overview:
       cma_case:
         one: Рақобат ва бозорни муҳофаза қилиш Бошқармаси Иши
         other: Рақобат ва бозорни муҳофаза қилиш Бошқармаси Ишлари
@@ -96,21 +97,25 @@ uz:
       consultation_outcome:
         one: Маслаҳат натижаси
         other: Маслаҳат натижалари
+        overview:
       corporate_information_page:
         one: Маълумотлар саҳифаси
         other: Маълумотлар саҳифалари
       corporate_report:
         one: Корпорация фаолияти тўғрисида ҳисобот
         other: Корпорация фаолияти тўғрисида ҳисоботлар
+        overview:
       correspondence:
         one: Ёзишма
         other: Ёзишмалар
+        overview:
       countryside_stewardship_grant:
         one: Қишлоқ жойда тезкор бошқармани ташкиллаштириш гранти
         other: Қишлоқ жойда тезкор бошқармани ташкиллаштириш грантлари
       decision:
         one: Қарор
         other: Қарорлар
+        overview:
       detailed_guide:
         one: Қўлланма
         other: Қўлланма
@@ -141,36 +146,43 @@ uz:
       foi_release:
         one: Маълумот эркинлиги нашри
         other: Маълумот эркинлиги нашрлари
+        overview:
       form:
         one: Шакл
         other: Шакллар
+        overview:
       government_response:
         one: Ҳукумат жавоби
         other: Ҳукумат жавоблари
       guidance:
         one: Қўлланма
         other: Қўлланма
+        overview:
       impact_assessment:
         one: Таъсир этиш баҳоси
         other: Таъсир этиш баҳолари
+        overview:
       imported:
         one: импорт қилинган - кутиш тури
         other: импорт қилинган - кутиш тури
       independent_report:
         one: Мустақил ҳисобот
         other: Мустақил ҳисоботлар
+        overview:
       international_development_fund:
         one: Халқаро ривожлантиришни молиялаштириш
         other: Халқаро ривожлантиришни молиялаштириш
       international_treaty:
         one: Халқаро шартнома
         other: Халқаро шартномалар
+        overview:
       maib_report:
         one: Денгизда бахтсиз ҳодисаларни тергов қилиш бўйича бўлим ҳисоботи
         other: Денгизда бахтсиз ҳодисаларни тергов қилиш бўйича бўлим ҳисоботлари
       map:
         one: Карта
         other: Карталар
+        overview:
       medical_safety_alert:
         one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
         other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
@@ -180,6 +192,7 @@ uz:
       national_statistics:
         one: Давлат статистик маълумотлар
         other: Давлат статистик маълумотлар
+        overview:
       national_statistics_announcement:
         one: Давлат статистик маълумотлар эълони
         other: Давлат статистик маълумотлар эълонлари
@@ -192,18 +205,21 @@ uz:
       notice:
         one: Хабарнома
         other: Хабарномалар
+        overview:
       official:
         one: Расмий статистик маълумотлар эълони
         other: Расмий статистик маълумотлар эълонлари
       official_statistics:
         one: Расмий статистик маълумотлар
         other: Расмий статистик маълумотлар
+        overview:
       official_statistics_announcement:
         one: Расмий статистик маълумотлар эълони
         other: Расмий статистик маълумотлар эълонлари
       open_consultation:
         one: Очиқ маслаҳат
         other: Очиқ маслаҳатлар
+        overview:
       oral_statement:
         one: Парламентга оғзаки баёнот
         other: Парламентга оғзаки баёнотлар
@@ -213,12 +229,14 @@ uz:
       policy_paper:
         one: Сиёсат масалалари бўйича ҳужжат
         other: Сиёсат масалалари бўйича ҳужжатлари
+        overview:
       press_release:
         one: Матбуот-релизи
         other: Матбуот-релизлари
       promotional:
         one: Реклама материаллари
         other: Реклама материаллари
+        overview:
       publication:
         one: Нашр қилиш
         other: Нашр қилишлар
@@ -228,9 +246,11 @@ uz:
       regulation:
         one: Низом
         other: Низомлар
+        overview:
       research:
         one: Тадқиқот ва таҳлил
         other: Тадқиқот ва таҳлил
+        overview:
       residential_property_tribunal_decision:
         one: Турар-жой объектига нисбатан трибунал қарори
         other: Турар-жой объектига нисбатан трибунал қарорлари
@@ -249,6 +269,7 @@ uz:
       standard:
         one: Стандарт
         other: Стандартлар
+        overview:
       statement_to_parliament:
         one: Парламентга баёнот
         other: Парламентга баёнотлар
@@ -261,6 +282,7 @@ uz:
       statutory_guidance:
         one: Норматив қўлланма
         other: Норматив қўлланма
+        overview:
       take_part:
         one: Иштирок этиш
         other: Иштирок этиш
@@ -273,6 +295,7 @@ uz:
       transparency:
         one: Шаффоф маълумотлар
         other: Шаффоф маълумотлар
+        overview:
       utaac_decision:
         one: Маъмурий апелляция трибуналининг қарори
         other: Маъмурий апелляция трибуналининг қарорлари
@@ -292,10 +315,56 @@ uz:
     publication_scheme_html: Биз мунтазам нашр қилаётган маълумотларнинг турлари ҳақида, бизнинг %{link} да ўқинг.
     social_media_use_html: "%{link} да бизнинг сиёсатимиз билан танишинг."
     welsh_language_scheme_html: "%{link} да бизнинг содиқлилигимиз ҳақида билиб олинг ."
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Мудофаа вазирлигининг эмблемаси
     field_of_operation: Фаолият соҳаси
     operations_in: "%{location} да ишлаш"
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Бундан буён йўқ
     published_in_error: Ушбу саҳифадаги маълумот ўчириб юборилган, чунки у хато бўлган.
@@ -313,7 +382,72 @@ uz:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
     uz: Ўзбеклар
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Кейинги
     previous_page: Олдинги

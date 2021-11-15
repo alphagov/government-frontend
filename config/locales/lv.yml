@@ -84,6 +84,7 @@ lv:
       closed_consultation:
         one: Slēgta tipa konsultācija
         other: Slēgta tipa konsultācijas
+        overview:
       cma_case:
         one: Konkurences un tirgus iestādes lieta
         other: Konkurences un tirgus iestādes lietas
@@ -96,21 +97,25 @@ lv:
       consultation_outcome:
         one: Konsultāciju rezultāts
         other: Konsultāciju rezultāti
+        overview:
       corporate_information_page:
         one: Informācijas lapa
         other: Informācijas lapas
       corporate_report:
         one: Korporatīvais ziņojums
         other: Korporatīvie ziņojumi
+        overview:
       correspondence:
         one: Sarakste
         other: Sarakstes
+        overview:
       countryside_stewardship_grant:
         one: Lauku vides pārvaldības grants
         other: Lauku vides pārvaldības granti
       decision:
         one: Lēmums
         other: Lēmumi
+        overview:
       detailed_guide:
         one: Detalizētas norādes
         other: Detalizētas norādes
@@ -141,36 +146,43 @@ lv:
       foi_release:
         one: Informācijas atklātības datu publicēšana
         other: Informācijas atklātības datu publicēšana
+        overview:
       form:
         one: Forma
         other: Formas
+        overview:
       government_response:
         one: Valdības atbilde
         other: Valdības atbildes
       guidance:
         one: Norādes
         other: Norādes
+        overview:
       impact_assessment:
         one: Ietekmes novērtējums
         other: Ietekmes novērtējumi
+        overview:
       imported:
         one: importēts-gaidīšanas režīmā
         other: importēts-gaidīšanas režīmā
       independent_report:
         one: Neatkarīgs ziņojums
         other: Neatkarīgi ziņojumi
+        overview:
       international_development_fund:
         one: Starptautiskās attīstības finansējums
         other: Starptautiskās attīstības finansējums
       international_treaty:
         one: Starptautiskais līgums
         other: Starptautiskie līgumi
+        overview:
       maib_report:
         one: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojums
         other: Kuģniecības negadījumu izmeklēšanas nodaļas ziņojumi
       map:
         one: Karte
         other: Kartes
+        overview:
       medical_safety_alert:
         one: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
         other: Brīdinājumi un zāļu un medicīnas ierīču atsaukšana
@@ -180,6 +192,7 @@ lv:
       national_statistics:
         one: Statistika - valsts dati
         other: Statistika - valsts dati
+        overview:
       national_statistics_announcement:
         one: Paziņojums par valsts statistiku
         other: Paziņojumi par valsts statistiku
@@ -192,18 +205,21 @@ lv:
       notice:
         one: Paziņojums
         other: Paziņojumi
+        overview:
       official:
         one: Paziņojums par oficiālo statistiku
         other: Paziņojumi par oficiālo statistiku
       official_statistics:
         one: Statistika
         other: Statistika
+        overview:
       official_statistics_announcement:
         one: Paziņojums par oficiālo statistiku
         other: Paziņojumi par oficiālo statistiku
       open_consultation:
         one: Atklāta konsultācija
         other: Atklātas konsultācijas
+        overview:
       oral_statement:
         one: Mutisks paziņojums parlamentam
         other: Mutiski paziņojumi parlamentam
@@ -213,12 +229,14 @@ lv:
       policy_paper:
         one: Politikas dokuments
         other: Politikas dokumenti
+        overview:
       press_release:
         one: Paziņojums presei
         other: Paziņojumi presei
       promotional:
         one: Reklāmas materiāls
         other: Reklāmas materiāli
+        overview:
       publication:
         one: Publikācija
         other: Publikācijas
@@ -228,9 +246,11 @@ lv:
       regulation:
         one: Regula
         other: Regulas
+        overview:
       research:
         one: Izpēte un analīze
         other: Izpēte un analīze
+        overview:
       residential_property_tribunal_decision:
         one: Mājokļu īpašuma lietu tiesas lēmums
         other: Mājokļu īpašuma lietu tiesas lēmumi
@@ -249,6 +269,7 @@ lv:
       standard:
         one: Standarts
         other: Standarti
+        overview:
       statement_to_parliament:
         one: Ziņojums parlamentam
         other: Ziņojumi parlamentam
@@ -261,6 +282,7 @@ lv:
       statutory_guidance:
         one: Saistošās vadlīnijas
         other: Saistošās vadlīnijas
+        overview:
       take_part:
         one: Piedalīties
         other: Piedalīties
@@ -273,6 +295,7 @@ lv:
       transparency:
         one: Atklātības dati
         other: Atklātības dati
+        overview:
       utaac_decision:
         one: Administratīvo lietu apelācijas tiesas lēmums
         other: Administratīvo lietu apelācijas tiesas lēmumi
@@ -292,10 +315,56 @@ lv:
     publication_scheme_html: Iepazīsties ar informāciju, kāda parasti tiek publicēta mūsu %{link}.
     social_media_use_html: Iepazīsties ar mūsu nostāju par %{link}.
     welsh_language_scheme_html: Vairāk par mūsu apņemšanos nodrošināt informācijas pieejamību %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Aizsardzības ministrijas ģerbonis
     field_of_operation: Darbības joma
     operations_in: 'Darbības šeit: %{location}'
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Vairs nav pieejams
     published_in_error: Informācija šajā lapā ir noņemta, jo tā tika publicēta kļūdas dēļ.
@@ -313,7 +382,72 @@ lv:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
     lv: Latviešu
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Tālāk
     previous_page: Atpakaļ

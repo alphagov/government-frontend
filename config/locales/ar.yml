@@ -110,6 +110,7 @@ ar:
         many:
         one: استشارة مغلقة
         other: استشارات مغلقة
+        overview:
         two:
         zero:
       cma_case:
@@ -138,6 +139,7 @@ ar:
         many:
         one: نتيجة الاستشارة
         other: نتائج الاستشارة
+        overview:
         two:
         zero:
       corporate_information_page:
@@ -152,6 +154,7 @@ ar:
         many:
         one: تقرير الشركة
         other: تقارير الشركة
+        overview:
         two:
         zero:
       correspondence:
@@ -159,6 +162,7 @@ ar:
         many:
         one: مراسلة
         other: مراسلات
+        overview:
         two:
         zero:
       countryside_stewardship_grant:
@@ -173,6 +177,7 @@ ar:
         many:
         one: قرار
         other: قرارات
+        overview:
         two:
         zero:
       detailed_guide:
@@ -243,6 +248,7 @@ ar:
         many:
         one: إصدار  حرية تداول المعلومات
         other: إصدارات حرية تداول المعلومات
+        overview:
         two:
         zero:
       form:
@@ -250,6 +256,7 @@ ar:
         many:
         one: نموذج
         other: نماذج
+        overview:
         two:
         zero:
       government_response:
@@ -264,6 +271,7 @@ ar:
         many:
         one: توجيه
         other: توجيه
+        overview:
         two:
         zero:
       impact_assessment:
@@ -271,6 +279,7 @@ ar:
         many:
         one: تقييم الأثر
         other: تقييمات الأثر
+        overview:
         two:
         zero:
       imported:
@@ -285,6 +294,7 @@ ar:
         many:
         one: تقرير مستقل
         other: تقارير مستقلة
+        overview:
         two:
         zero:
       international_development_fund:
@@ -299,6 +309,7 @@ ar:
         many:
         one: معاهدة دولية
         other: معاهدات دولية
+        overview:
         two:
         zero:
       maib_report:
@@ -313,6 +324,7 @@ ar:
         many:
         one: خريطة
         other: خرائط
+        overview:
         two:
         zero:
       medical_safety_alert:
@@ -334,6 +346,7 @@ ar:
         many:
         one: الإحصاءات الوطنية
         other: الإحصاءات الوطنية
+        overview:
         two:
         zero:
       national_statistics_announcement:
@@ -362,6 +375,7 @@ ar:
         many:
         one: إشعار
         other: إشعارات
+        overview:
         two:
         zero:
       official:
@@ -376,6 +390,7 @@ ar:
         many:
         one: الإحصاءات الرسمية
         other: الإحصاءات الرسمية
+        overview:
         two:
         zero:
       official_statistics_announcement:
@@ -390,6 +405,7 @@ ar:
         many:
         one: استشارة مفتوحة
         other: استشارات مفتوحة
+        overview:
         two:
         zero:
       oral_statement:
@@ -411,6 +427,7 @@ ar:
         many:
         one: ورقة السياسة
         other: أوراق السياسة
+        overview:
         two:
         zero:
       press_release:
@@ -425,6 +442,7 @@ ar:
         many:
         one: مادة ترويجية
         other: مادة ترويجية
+        overview:
         two:
         zero:
       publication:
@@ -446,6 +464,7 @@ ar:
         many:
         one: لائحة
         other: لوائح
+        overview:
         two:
         zero:
       research:
@@ -453,6 +472,7 @@ ar:
         many:
         one: البحث والتحليل
         other: البحث والتحليل
+        overview:
         two:
         zero:
       residential_property_tribunal_decision:
@@ -495,6 +515,7 @@ ar:
         many:
         one: معيار
         other: معايير
+        overview:
         two:
         zero:
       statement_to_parliament:
@@ -523,6 +544,7 @@ ar:
         many:
         one: التوجيه القانوني
         other: التوجيه القانوني
+        overview:
         two:
         zero:
       take_part:
@@ -551,6 +573,7 @@ ar:
         many:
         one: بيانات الشفافية
         other: بيانات الشفافية
+        overview:
         two:
         zero:
       utaac_decision:
@@ -588,10 +611,56 @@ ar:
     publication_scheme_html: اقرأ عن أنواع المعلومات التي ننشرها بشكل روتيني في %{link}.
     social_media_use_html: اقرأ سياستنا على %{link}.
     welsh_language_scheme_html: تعرف على التزامنا بشأن %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: شعار وزارة الدفاع
     field_of_operation: ساحة العمليات
     operations_in: العمليات الدائرة في %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: لم تعد متاحة
     published_in_error: تمت إزالة المعلومات الموجودة في هذه الصفحة لأنها قد نُشِرت عن طريق الخطأ.
@@ -610,6 +679,71 @@ ar:
     direction: rtl
   language_names:
     ar: العربيَّة
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: التالي
     previous_page: السابق

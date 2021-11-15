@@ -91,6 +91,7 @@ cs:
         few:
         one: Uzavřená konzultace
         other: Uzavřené konzultace
+        overview:
       cma_case:
         few:
         one: Případ Úřadu pro hospodářskou soutěž a trhy
@@ -107,6 +108,7 @@ cs:
         few:
         one: Výsledek konzultace
         other: Výsledky konzultací
+        overview:
       corporate_information_page:
         few:
         one: Informační stránka
@@ -115,10 +117,12 @@ cs:
         few:
         one: Podniková zpráva
         other: Podnikové zprávy
+        overview:
       correspondence:
         few:
         one: Korespondence
         other: Korespondence
+        overview:
       countryside_stewardship_grant:
         few:
         one: Grant na správu krajiny
@@ -127,6 +131,7 @@ cs:
         few:
         one: Rozhodnutí
         other: Rozhodnutí
+        overview:
       detailed_guide:
         few:
         one: Směrnice
@@ -167,10 +172,12 @@ cs:
         few:
         one: Zveřejnění informací
         other: Zveřejnění informací
+        overview:
       form:
         few:
         one: Formulář
         other: Formuláře
+        overview:
       government_response:
         few:
         one: Reakce vlády
@@ -179,10 +186,12 @@ cs:
         few:
         one: Směrnice
         other: Směrnice
+        overview:
       impact_assessment:
         few:
         one: Posouzení dopadu
         other: Posouzení dopadů
+        overview:
       imported:
         few:
         one: importované - čekající na typ
@@ -191,6 +200,7 @@ cs:
         few:
         one: Nezávislá zpráva
         other: Nezávislé zprávy
+        overview:
       international_development_fund:
         few:
         one: Financování mezinárodního rozvoje
@@ -199,6 +209,7 @@ cs:
         few:
         one: Mezinárodní smlouva
         other: Mezinárodní smlouvy
+        overview:
       maib_report:
         few:
         one: Zpráva oddělení pro vyšetřování námořních nehod
@@ -207,6 +218,7 @@ cs:
         few:
         one: Mapa
         other: Mapy
+        overview:
       medical_safety_alert:
         few:
         one: Upozornění a stahování léčiv a zdravotnických prostředků z trhu
@@ -219,6 +231,7 @@ cs:
         few:
         one: Národní statistiky
         other: Národní statistiky
+        overview:
       national_statistics_announcement:
         few:
         one: Oznámení národních statistik
@@ -235,6 +248,7 @@ cs:
         few:
         one: Oznámení
         other: Oznámení
+        overview:
       official:
         few:
         one: Oficiální statistické oznámení
@@ -243,6 +257,7 @@ cs:
         few:
         one: Oficiální statistiky
         other: Oficiální statistiky
+        overview:
       official_statistics_announcement:
         few:
         one: Oficiální statistické oznámení
@@ -251,6 +266,7 @@ cs:
         few:
         one: Otevřená konzultace
         other: Otevřené konzultace
+        overview:
       oral_statement:
         few:
         one: Ústní prohlášení pro Parlament
@@ -263,6 +279,7 @@ cs:
         few:
         one: Politický dokument
         other: Politické dokumenty
+        overview:
       press_release:
         few:
         one: Tisková zpráva
@@ -271,6 +288,7 @@ cs:
         few:
         one: Propagační materiály
         other: Propagační materiály
+        overview:
       publication:
         few:
         one: Publikace
@@ -283,10 +301,12 @@ cs:
         few:
         one: Nařízení
         other: nařízení
+        overview:
       research:
         few:
         one: Výzkum a analýza
         other: Výzkum a analýza
+        overview:
       residential_property_tribunal_decision:
         few:
         one: Rozhodnutí tribunálu pro obytné nemovitosti
@@ -311,6 +331,7 @@ cs:
         few:
         one: Standardní
         other: Standardy
+        overview:
       statement_to_parliament:
         few:
         one: Prohlášení pro Parlament
@@ -327,6 +348,7 @@ cs:
         few:
         one: Zákonné směrnice
         other: Zákonné směrnice
+        overview:
       take_part:
         few:
         one: Zúčastněte se
@@ -343,6 +365,7 @@ cs:
         few:
         one: Údaje o transparentnosti
         other: Údaje o transparentnosti
+        overview:
       utaac_decision:
         few:
         one: Rozhodnutí odvolacího správního soudu
@@ -366,10 +389,56 @@ cs:
     publication_scheme_html: Přečtěte si, jaké informace běžně zveřejňujeme v našem %{link}.
     social_media_use_html: Přečtěte si naše zásady na %{link}.
     welsh_language_scheme_html: Přečtěte si o našem závazku k %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Ministerstvo obrany
     field_of_operation: Oblast provozu
     operations_in: Operace v %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Již není k dispozici
     published_in_error: Informace na této stránce byly odstraněny, protože byly zveřejněny omylem.
@@ -387,7 +456,72 @@ cs:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
     cs: Čeština
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Další
     previous_page: Předchozí

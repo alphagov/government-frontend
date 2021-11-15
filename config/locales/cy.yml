@@ -110,6 +110,7 @@ cy:
         many:
         one: Ymgynghoriad caeedig
         other: Ymgynghoriadau caeedig
+        overview:
         two:
         zero:
       cma_case:
@@ -138,6 +139,7 @@ cy:
         many:
         one: Canlyniad yr ymgynghoriad
         other: Canlyniadau'r ymgynghoriad
+        overview:
         two:
         zero:
       corporate_information_page:
@@ -152,6 +154,7 @@ cy:
         many:
         one: Adroddiad corfforaethol
         other: Adroddiadau corfforaethol
+        overview:
         two:
         zero:
       correspondence:
@@ -159,6 +162,7 @@ cy:
         many:
         one: Gohebiaeth
         other: Gohebiaethau
+        overview:
         two:
         zero:
       countryside_stewardship_grant:
@@ -173,6 +177,7 @@ cy:
         many:
         one: Penderfyniad
         other: Penderfyniadau
+        overview:
         two:
         zero:
       detailed_guide:
@@ -243,6 +248,7 @@ cy:
         many:
         one: Gwybodaeth a ryddhawyd o dan FOI
         other: Gwybodaeth a ryddhawyd o dan FOI
+        overview:
         two:
         zero:
       form:
@@ -250,6 +256,7 @@ cy:
         many:
         one: Ffurflen
         other: Ffurflenni
+        overview:
         two:
         zero:
       government_response:
@@ -264,6 +271,7 @@ cy:
         many:
         one: Canllawiau
         other: Canllawiau
+        overview:
         two:
         zero:
       impact_assessment:
@@ -271,6 +279,7 @@ cy:
         many:
         one: Asesiad o effaith
         other: Asesiadau o effaith
+        overview:
         two:
         zero:
       imported:
@@ -285,6 +294,7 @@ cy:
         many:
         one: Adroddiad annibynnol
         other: Adroddiadau annibynnol
+        overview:
         two:
         zero:
       international_development_fund:
@@ -299,6 +309,7 @@ cy:
         many:
         one: Cytuniad rhyngwladol
         other: Cytuniadau rhyngwladol
+        overview:
         two:
         zero:
       maib_report:
@@ -313,6 +324,7 @@ cy:
         many:
         one: Map
         other: Mapiau
+        overview:
         two:
         zero:
       medical_safety_alert:
@@ -334,6 +346,7 @@ cy:
         many:
         one: Ystadegau Gwladol
         other: Ystadegau Gwladol
+        overview:
         two:
         zero:
       national_statistics_announcement:
@@ -362,6 +375,7 @@ cy:
         many:
         one: Hysbysiad
         other: Hysbysiadau
+        overview:
         two:
         zero:
       official:
@@ -376,6 +390,7 @@ cy:
         many:
         one: Ystadegau Swyddogol
         other: Ystadegau Swyddogol
+        overview:
         two:
         zero:
       official_statistics_announcement:
@@ -390,6 +405,7 @@ cy:
         many:
         one: Ymgynghoriad agored
         other: Ymgynghoriadau agored
+        overview:
         two:
         zero:
       oral_statement:
@@ -411,6 +427,7 @@ cy:
         many:
         one: Papur polisi
         other: Papurau polisi
+        overview:
         two:
         zero:
       press_release:
@@ -425,6 +442,7 @@ cy:
         many:
         one: Deunydd hyrwyddo
         other: Deunyddiau hyrwyddo
+        overview:
         two:
         zero:
       publication:
@@ -446,6 +464,7 @@ cy:
         many:
         one: Rheoliad
         other: Rheoliadau
+        overview:
         two:
         zero:
       research:
@@ -453,6 +472,7 @@ cy:
         many:
         one: Ymchwil a dadansoddi
         other: Ymchwil a dadansoddi
+        overview:
         two:
         zero:
       residential_property_tribunal_decision:
@@ -495,6 +515,7 @@ cy:
         many:
         one: Safon
         other: Safonau
+        overview:
         two:
         zero:
       statement_to_parliament:
@@ -523,6 +544,7 @@ cy:
         many:
         one: Canllawiau statudol
         other: Canllawiau statudol
+        overview:
         two:
         zero:
       take_part:
@@ -551,6 +573,7 @@ cy:
         many:
         one: Data tryloywder
         other: Data tryloywder
+        overview:
         two:
         zero:
       utaac_decision:
@@ -588,10 +611,56 @@ cy:
     publication_scheme_html: Darllenwch am y mathau o wybodaeth rydyn ni'n ei chyhoeddi'n rheolaidd yn ein %{link}.
     social_media_use_html: Darllenwch ein polisi ar %{link}.
     welsh_language_scheme_html: Dysgwch am ein hymrwymiad i %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Arwyddlun y Weinyddiaeth Amddiffyn
     field_of_operation: Maes gweithredu
     operations_in: Gweithrediadau yn %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ddim ar gael mwyach
     published_in_error: Mae'r wybodaeth ar y dudalen hon wedi'i thynnu am ei bod wedi'i chyhoeddi ar gam.
@@ -609,7 +678,72 @@ cy:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
     cy: Cymraeg
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Nesaf
     previous_page: Blaenorol

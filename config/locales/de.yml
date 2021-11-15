@@ -84,6 +84,7 @@ de:
       closed_consultation:
         one: Abgeschlossene Beratung
         other: Abgeschlossene Beratungen
+        overview:
       cma_case:
         one: Rechtsfall der Behörde für Wettbewerb und Märkte
         other: Rechtsfälle der Behörde für Wettbewerb und Märkte
@@ -96,21 +97,25 @@ de:
       consultation_outcome:
         one: Beratungsergebnis
         other: Beratungsergebnisse
+        overview:
       corporate_information_page:
         one: Informationsseite
         other: Informationsseiten
       corporate_report:
         one: Unternehmensbericht
         other: Unternehmensberichte
+        overview:
       correspondence:
         one: Korrespondenz
         other: Korrespondenzen
+        overview:
       countryside_stewardship_grant:
         one: Zuschuss zur Landschaftspflege
         other: Zuschüsse zur Landschaftspflege
       decision:
         one: Entscheidung
         other: Entscheidungen
+        overview:
       detailed_guide:
         one: Detaillierte Hinweise
         other: Detaillierte Hinweise
@@ -141,36 +146,43 @@ de:
       foi_release:
         one: Freigabe gemäß Informationsfreiheitsgesetz
         other: Freigaben gemäß Informationsfreiheitsgesetz
+        overview:
       form:
         one: Formular
         other: Formulare
+        overview:
       government_response:
         one: Antwort der Regierung
         other: Antworten der Regierung
       guidance:
         one: Detaillierte Hinweise
         other: Detaillierte Hinweise
+        overview:
       impact_assessment:
         one: Folgenabschätzung
         other: Folgenabschätzungen
+        overview:
       imported:
         one: importiert - Warten auf Dokumententyp
         other: importiert - Warten auf Dokumententyp
       independent_report:
         one: Unabhängiger Bericht
         other: Unabhängige Berichte
+        overview:
       international_development_fund:
         one: Internationale Entwicklungsfinanzierung
         other: Internationale Entwicklungsfinanzierung
       international_treaty:
         one: Internationaler Vertrag
         other: Internationale Verträge
+        overview:
       maib_report:
         one: Untersuchungsbericht der Abteilung für Seeunfälle
         other: Untersuchungsberichte der Abteilung für Seeunfälle
       map:
         one: Karte
         other: Karten
+        overview:
       medical_safety_alert:
         one: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
         other: Warnmeldungen und Rückrufaktionen für Arzneimittel und medizinische Geräte
@@ -180,6 +192,7 @@ de:
       national_statistics:
         one: Nationale Statistik
         other: Nationale Statistik
+        overview:
       national_statistics_announcement:
         one: Veröffentlichung der Nationalen Statistik
         other: Veröffentlichungen der Nationalen Statistik
@@ -192,18 +205,21 @@ de:
       notice:
         one: Hinweis
         other: Hinweise
+        overview:
       official:
         one: Veröffentlichungen der Statistik
         other: Veröffentlichungen der Statistik
       official_statistics:
         one: Statistiken
         other: Statistiken
+        overview:
       official_statistics_announcement:
         one: Veröffentlichungen der Statistik
         other: Veröffentlichungen der Statistik
       open_consultation:
         one: Laufende Beratung
         other: Laufende Beratungen
+        overview:
       oral_statement:
         one: Mündliche Erklärung vor dem Parlament
         other: Mündliche Erklärungen vor dem Parlament
@@ -213,12 +229,14 @@ de:
       policy_paper:
         one: Grundsatzpapier
         other: Grundsatzpapiere
+        overview:
       press_release:
         one: Pressemitteilung
         other: Pressemitteilungen
       promotional:
         one: Werbematerial
         other: Werbematerial
+        overview:
       publication:
         one: Veröffentlichung
         other: Veröffentlichungen
@@ -228,9 +246,11 @@ de:
       regulation:
         one: Regulierung
         other: Regulierungen
+        overview:
       research:
         one: Forschung und Analyse
         other: Forschung und Analyse
+        overview:
       residential_property_tribunal_decision:
         one: Gerichtsentscheidung über Wohneigentum
         other: Gerichtsentscheidungen über Wohneigentum
@@ -249,6 +269,7 @@ de:
       standard:
         one: Standard
         other: Standards
+        overview:
       statement_to_parliament:
         one: Erklärung vor dem Parlament
         other: Erklärungen vor dem Parlament
@@ -261,6 +282,7 @@ de:
       statutory_guidance:
         one: Gesetzlicher Leitfaden
         other: Gesetzlicher Leitfaden
+        overview:
       take_part:
         one: Teilnehmen
         other: Teilnehmen
@@ -273,6 +295,7 @@ de:
       transparency:
         one: Transparenzdaten
         other: Transparenzdaten
+        overview:
       utaac_decision:
         one: Entscheidung des Verwaltungsberufungsgerichts
         other: Entscheidungen des Verwaltungsberufungsgerichts
@@ -292,10 +315,56 @@ de:
     publication_scheme_html: Lesen Sie in unserem %{link}, welche Arten von Informationen wir regelmäßig veröffentlichen.
     social_media_use_html: Lesen Sie unsere Richtlinie zu %{link}.
     welsh_language_scheme_html: Informieren Sie sich über unser Engagement für %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Wappen des Verteidigungsministeriums
     field_of_operation: Tätigkeitsbereich
     operations_in: Tätigkeiten in %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Nicht mehr verfügbar
     published_in_error: Die Informationen auf dieser Seite wurden entfernt, da sie fälschlich veröffentlicht wurden.
@@ -313,7 +382,72 @@ de:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
     de: Deutsch
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Weiter
     previous_page: Zurück

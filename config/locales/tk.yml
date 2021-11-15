@@ -84,6 +84,7 @@ tk:
       closed_consultation:
         one: Ýapyk maslahat
         other: Ýapyk maslahatlar
+        overview:
       cma_case:
         one: Bäsdeşlik we bazar häkimiýeti ýagdaýy
         other: Bäsdeşlik we bazar häkimiýeti ýagdaýlary
@@ -96,21 +97,25 @@ tk:
       consultation_outcome:
         one: Maslahatyň netijesi
         other: Maslahatyň netijeleri
+        overview:
       corporate_information_page:
         one: Maglumat sahypasy
         other: Maglumat sahypalary
       corporate_report:
         one: Korperatiw hasabat
         other: Korperatiw hasabatlar
+        overview:
       correspondence:
         one: Gabat gelme
         other: Gabat gelmeler
+        overview:
       countryside_stewardship_grant:
         one: Oba dolandyryş gullugy granty
         other: Oba dolandyryş gullugy grantlary
       decision:
         one: Karar
         other: Kararlar
+        overview:
       detailed_guide:
         one: Gözkezme
         other: Gözkezme
@@ -141,36 +146,43 @@ tk:
       foi_release:
         one: FOI goýberilişi
         other: FOI goýberişleri
+        overview:
       form:
         one: Forma
         other: Formalar
+        overview:
       government_response:
         one: Hökümetiň jogaby
         other: Hökümetiň jogaplary
       guidance:
         one: Gözkezme
         other: Gözkezme
+        overview:
       impact_assessment:
         one: Täsir bahalandyrmasy
         other: Täsir bahalandyrmalary
+        overview:
       imported:
         one: getirilen - garaşýan görnüş
         other: getirilen - garaşýan görnüş
       independent_report:
         one: Garaşsyz hasabat
         other: Garaşsyz hasabatlar
+        overview:
       international_development_fund:
         one: Halkara ösüşiň gaznalary
         other: Halkara ösüşiň gaznalary
       international_treaty:
         one: Halkara şertnama
         other: Halkara şertnamalar
+        overview:
       maib_report:
         one: Deňiz heläkçiligini derňemek bölüminiň hasabaty
         other: Deňiz heläkçiligini derňemek bölüminiň hasabatlary
       map:
         one: Karta
         other: Kartalar
+        overview:
       medical_safety_alert:
         one: Dermanlar we lukmançylyk enjamlary barada habar berişler we duýduryşlar
         other: Dermanlar we lukmançylyk enjamlary barada habar berişler we duýduryşlar
@@ -180,6 +192,7 @@ tk:
       national_statistics:
         one: Milli statistika
         other: Milli statistika
+        overview:
       national_statistics_announcement:
         one: Milli statistika bildirişi
         other: Milli statistika bildirişleri
@@ -192,18 +205,21 @@ tk:
       notice:
         one: Bellik
         other: Bellikler
+        overview:
       official:
         one: Resmi statistika bildirişi
         other: Resmi statistika bildirişleri
       official_statistics:
         one: Resmi statistika
         other: Resmi statistika
+        overview:
       official_statistics_announcement:
         one: Resmi statistika bildirişi
         other: Resmi statistika bildirişleri
       open_consultation:
         one: Açyk maslahat
         other: Açyk maslahatlar
+        overview:
       oral_statement:
         one: Mejlise dilden beýan
         other: Mejlise dilden beýanlar
@@ -213,12 +229,14 @@ tk:
       policy_paper:
         one: Syýasat kagyzy
         other: Syýasat kagyzlary
+        overview:
       press_release:
         one: Goýberiliş neşiri
         other: Goýberiliş neşirleri
       promotional:
         one: Mahabat materialy
         other: Mahabat materialy
+        overview:
       publication:
         one: Neşir
         other: Neşirler
@@ -228,9 +246,11 @@ tk:
       regulation:
         one: Düzgünnama
         other: Düzgünnamalar
+        overview:
       research:
         one: Gözleg we derňew
         other: Gözleg we derňew
+        overview:
       residential_property_tribunal_decision:
         one: Ýaşaýyş jaý kazyýetiniň karary
         other: Ýaşaýyş jaý kazyýetiniň kararlary
@@ -249,6 +269,7 @@ tk:
       standard:
         one: Standart
         other: Standartlar
+        overview:
       statement_to_parliament:
         one: Mejlise beýan
         other: Mejlise beýanlar
@@ -261,6 +282,7 @@ tk:
       statutory_guidance:
         one: Kanun boýunça görkezme
         other: Kanun boýunça görkezme
+        overview:
       take_part:
         one: Gatnaşmak
         other: Gatnaşmak
@@ -273,6 +295,7 @@ tk:
       transparency:
         one: Aç-açanlyk maglumatlar
         other: Aç-açanlyk maglumatlar
+        overview:
       utaac_decision:
         one: Administratiw arza kazyýetiň karary
         other: Administratiw arza kazyýetiň kararlary
@@ -292,10 +315,56 @@ tk:
     publication_scheme_html: Biziň %{link} baglanyşygymyzdan nähili habarlary yzygiderli neşir edýändigimizi okaň.
     social_media_use_html: Biziň syýasatymyz barada %{link} baglanyşygymyzda okaň.
     welsh_language_scheme_html: Niýetimiz barada %{link}-da okaň.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Goranmak ministrliginiň nyşany
     field_of_operation: Iş meýdany
     operations_in: "%{location} ýerindäki işler"
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Indi elýeter däl
     published_in_error: Bu sahypadaky maglumatlar ýalňyş çap edilendigi üçin aýryldy.
@@ -313,7 +382,72 @@ tk:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
     tk: Türkmen
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Indiki
     previous_page: Öňki

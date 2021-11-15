@@ -84,6 +84,7 @@ fi:
       closed_consultation:
         one: Suljettu kuuleminen
         other: Suljetut neuvottelut
+        overview:
       cma_case:
         one: Kilpailu- ja markkinaviranomaisen tapaus
         other: Kilpailu- ja markkinaviranomaisen tapaukset
@@ -96,21 +97,25 @@ fi:
       consultation_outcome:
         one: Konsultoinnin tulos
         other: Konsultoinnin tulokset
+        overview:
       corporate_information_page:
         one: Tietosivu
         other: Tietosivut
       corporate_report:
         one: Yrityksen raportti
         other: Yritysraportit
+        overview:
       correspondence:
         one: Kirjeenvaihto
         other: Kirjeenvaihto
+        overview:
       countryside_stewardship_grant:
         one: Maaseudun apuraha
         other: Maaseudun apurahat
       decision:
         one: Päätös
         other: Päätökset
+        overview:
       detailed_guide:
         one: Ohjaus
         other: Ohjaus
@@ -141,36 +146,43 @@ fi:
       foi_release:
         one: Tiedonvälityksen vapaus julkaisu
         other: Tiedonvälityksen vapaus julkaisut
+        overview:
       form:
         one: Lomake
         other: Lomakkeet
+        overview:
       government_response:
         one: Hallituksen vastaus
         other: Hallituksen vastaukset
       guidance:
         one: Ohjaus
         other: Ohjaus
+        overview:
       impact_assessment:
         one: Vaikutuksen arviointi
         other: Vaikutustenarvioinnit
+        overview:
       imported:
         one: tuotu - odottava tyyppi
         other: tuotu - odottava tyyppi
       independent_report:
         one: Riippumaton raportti
         other: Riippumattomat raportit
+        overview:
       international_development_fund:
         one: Kansainvälinen kehitysrahoitus
         other: Kansainvälinen kehitysrahoitus
       international_treaty:
         one: Kansainvälinen sopimus
         other: Kansainväliset sopimukset
+        overview:
       maib_report:
         one: Merionnettomuuksien tutkintaosaston raportti
         other: Merionnettomuuksien tutkintaosaston raportit
       map:
         one: Kartta
         other: Kartat
+        overview:
       medical_safety_alert:
         one: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
         other: Lääkkeitä ja lääkinnällisiä laitteita koskevat varoitukset ja takaisinvedot
@@ -180,6 +192,7 @@ fi:
       national_statistics:
         one: Kansalliset tilastot
         other: Kansalliset tilastot
+        overview:
       national_statistics_announcement:
         one: Kansallinen tilastoilmoitus
         other: Kansalliset tilastoilmoitukset
@@ -192,18 +205,21 @@ fi:
       notice:
         one: Ilmoitus
         other: Ilmoitukset
+        overview:
       official:
         one: Virallinen tilastoilmoitus
         other: Viralliset tilastotiedot
       official_statistics:
         one: Viralliset tilastot
         other: Viralliset tilastot
+        overview:
       official_statistics_announcement:
         one: Virallinen tilastoilmoitus
         other: Viralliset tilastotiedot
       open_consultation:
         one: Avoin kuuleminen
         other: Avoimet kuulemiset
+        overview:
       oral_statement:
         one: Suullinen lausuma parlamentille
         other: Suulliset lausumat parlamentille
@@ -213,12 +229,14 @@ fi:
       policy_paper:
         one: Toimintapoliittinen asiakirja
         other: Toimintapoliittiset asiakirjat
+        overview:
       press_release:
         one: Lehdistötiedote
         other: Lehdistötiedotteet
       promotional:
         one: Myynninedistämismateriaali
         other: Myynninedistämismateriaali
+        overview:
       publication:
         one: Julkaisu
         other: Julkaisut
@@ -228,9 +246,11 @@ fi:
       regulation:
         one: Asetus
         other: Asetukset
+        overview:
       research:
         one: Tutkimus ja analyysi
         other: Tutkimus ja analyysi
+        overview:
       residential_property_tribunal_decision:
         one: Asunto -omaisuuden tuomioistuimen päätös
         other: Asunto -omaisuuden tuomioistuimen päätökset
@@ -249,6 +269,7 @@ fi:
       standard:
         one: Standardi
         other: Standardit
+        overview:
       statement_to_parliament:
         one: Lausuma parlamentille
         other: Lausumat parlamentille
@@ -261,6 +282,7 @@ fi:
       statutory_guidance:
         one: Lakisääteiset ohjeet
         other: Lakisääteiset ohjeet
+        overview:
       take_part:
         one: Osallistu
         other: Osallistu
@@ -273,6 +295,7 @@ fi:
       transparency:
         one: Avoimuustiedot
         other: Avoimuustiedot
+        overview:
       utaac_decision:
         one: Hallinnollisen muutoksenhakutuomioistuimen päätös
         other: Hallinnollisen muutoksenhakutuomioistuimen päätökset
@@ -292,10 +315,56 @@ fi:
     publication_scheme_html: Lue, millaisia tietoja julkaisemme rutiininomaisesti %{link}.
     social_media_use_html: Lue käytäntömme osoitteesta %{link}.
     welsh_language_scheme_html: Tutustu sitoumukseemme %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Puolustusministeriön vaakuna
     field_of_operation: Toiminta -alue
     operations_in: Toiminnot paikassa %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ei ole enää käytettävissä
     published_in_error: Tämän sivun tiedot on poistettu, koska ne on julkaistu virheellisesti.
@@ -313,7 +382,72 @@ fi:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
     fi: Viimeiste
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Seuraava
     previous_page: Edellinen

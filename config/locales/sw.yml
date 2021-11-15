@@ -84,6 +84,7 @@ sw:
       closed_consultation:
         one: Mashauriano ya watu wachache
         other: Mashauriano ya watu wachache
+        overview:
       cma_case:
         one: Kesi ya Mamlaka ya Masoko na Ushindani
         other: Kesi za Mamlaka ya Masoko na Ushindani
@@ -96,21 +97,25 @@ sw:
       consultation_outcome:
         one: Matokeo ya mashauriano
         other: Matokeo ya mashauriano
+        overview:
       corporate_information_page:
         one: Ukurasa wa maelezo
         other: Kurasa za maelezo
       corporate_report:
         one: Ripoti ya shirika
         other: Ripoti za shirika
+        overview:
       correspondence:
         one: Mawasiliano
         other: Mawasiliano
+        overview:
       countryside_stewardship_grant:
         one: Ruzuku ya Usimamizi wa Mashambani
         other: Ruzuku za Usimamizi wa Mashambani
       decision:
         one: Uamuzi
         other: Maamuzi
+        overview:
       detailed_guide:
         one: Mwongozo
         other: Mwongozo
@@ -141,36 +146,43 @@ sw:
       foi_release:
         one: Taarifa ya FOI
         other: Taarifa za FOI
+        overview:
       form:
         one: Fomu
         other: Fomu
+        overview:
       government_response:
         one: Hatua iliyochukuliwa na serikali
         other: Hatua zilizochukuliwa na serikali
       guidance:
         one: Mwongozo
         other: Mwongozo
+        overview:
       impact_assessment:
         one: Utathmini wa athari
         other: Tathmini za athari
+        overview:
       imported:
         one: zilizoagizwa kutoka nje - aina ya hali ya kusbiri
         other: zilizoagizwa kutoka nje - aina ya hali ya kusbiri
       independent_report:
         one: Ripoti huru
         other: Ripoti huru
+        overview:
       international_development_fund:
         one: Ufadhili wa maendeleo ya kimataifa
         other: Ufadhili wa maendeleo ya kimataifa
       international_treaty:
         one: Mkataba wa kimataifa
         other: Mikataba ya kimataifa
+        overview:
       maib_report:
         one: Ripoti ya Kitengo cha Uchunguzi wa Ajali za Baharini
         other: Ripoti za Kitengo cha Uchunguzi wa Ajali za Baharini
       map:
         one: Ramani
         other: Ramani
+        overview:
       medical_safety_alert:
         one: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
         other: Taarifa na kuondolewa kwa dawa na vifaa vya matibabu sokoni
@@ -180,6 +192,7 @@ sw:
       national_statistics:
         one: Takwimu za Kitaifa
         other: Takwimu za Kitaifa
+        overview:
       national_statistics_announcement:
         one: Tangazo la takwimu za kitaifa
         other: Matangazo ya takwimu za kitaifa
@@ -192,18 +205,21 @@ sw:
       notice:
         one: Notisi
         other: Notisi
+        overview:
       official:
         one: Tangazo la takwimu rasmi
         other: Matangazo ya takwimu rasmi
       official_statistics:
         one: Takwimu Rasmi
         other: Takwimu Rasmi
+        overview:
       official_statistics_announcement:
         one: Tangazo la takwimu rasmi
         other: Matangazo ya takwimu rasmi
       open_consultation:
         one: Mashauriano ya watu wengi
         other: Mashauriano ya watu wengi
+        overview:
       oral_statement:
         one: Taarifa ya Matamshi kwa Bunge
         other: Taarifa za Matamshi kwa Bunge
@@ -213,12 +229,14 @@ sw:
       policy_paper:
         one: Hati ya sera
         other: Hati za sera
+        overview:
       press_release:
         one: Taarifa kwa vyombo vya habari
         other: Taarifa kwa vyombo vya habari
       promotional:
         one: Nyenzo ya matangazo
         other: Nyenzo ya matangazo
+        overview:
       publication:
         one: Chapisho
         other: Machapisho
@@ -228,9 +246,11 @@ sw:
       regulation:
         one: Kanuni
         other: Kanuni
+        overview:
       research:
         one: Utafiti na uchanganuzi
         other: Utafiti na uchanganuzi
+        overview:
       residential_property_tribunal_decision:
         one: Uamuzi wa mahakama ya kesi za mali ya makazi
         other: Maamuzi ya mahakama ya kesi za mali ya makazi
@@ -249,6 +269,7 @@ sw:
       standard:
         one: Kiwango
         other: Viwango
+        overview:
       statement_to_parliament:
         one: Taarifa kwa Bunge
         other: Taarifa kwa Bunge
@@ -261,6 +282,7 @@ sw:
       statutory_guidance:
         one: Mwongozo wa kisheria
         other: Mwongozo wa kisheria
+        overview:
       take_part:
         one: Shiriki
         other: Shiriki
@@ -273,6 +295,7 @@ sw:
       transparency:
         one: Data ya uwazi
         other: Data ya uwazi
+        overview:
       utaac_decision:
         one: Uamuzi wa mahakama ya rufaa za kesi za usimamizi
         other: Maamuzi ya mahakama ya rufaa za kesi za usimamizi
@@ -292,10 +315,56 @@ sw:
     publication_scheme_html: Soma maelezo kuhusu aina za maelezo tunayochapisha kila wakati kwenye %{link} yetu.
     social_media_use_html: Soma sera yetu kwenye %{link}.
     welsh_language_scheme_html: Pata maelezo kuhusu wajibu wetu wa %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Eneo la Wizara ya Ulinzi
     field_of_operation: Sehemu ya kazi
     operations_in: Shughuli zinazofanywa katika %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Hayapatikani tena
     published_in_error: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu yalichapishwa kimakosa.
@@ -313,7 +382,72 @@ sw:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
     sw: Kiswahili
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Unaofuata
     previous_page: Uliotangulia

@@ -84,6 +84,7 @@ pt:
       closed_consultation:
         one: Consulta fechada
         other: Consultas fechadas
+        overview:
       cma_case:
         one:
         other:
@@ -96,21 +97,25 @@ pt:
       consultation_outcome:
         one: Resultado de consulta
         other: Resultados de consultas
+        overview:
       corporate_information_page:
         one:
         other:
       corporate_report:
         one: Relatório Corporativo
         other: Relatórios Corporativos
+        overview:
       correspondence:
         one: Correspondência
         other: Correspondências
+        overview:
       countryside_stewardship_grant:
         one:
         other:
       decision:
         one:
         other:
+        overview:
       detailed_guide:
         one: Guia detalhado
         other: Guias detalhados
@@ -141,36 +146,43 @@ pt:
       foi_release:
         one: Comunicado sobre pedido de acesso a informação
         other: Comunicados sobre pedidos de acesso a informação
+        overview:
       form:
         one: Formulário
         other: Formulários
+        overview:
       government_response:
         one: Resposta governamental
         other: Respostas governamentais
       guidance:
         one: Instrução
         other: Instruções
+        overview:
       impact_assessment:
         one: Relatório de Impacto
         other: Relatórios de Impacto
+        overview:
       imported:
         one: importado - esperando tipo
         other: importados - esperando tipo
       independent_report:
         one: Relatório independente
         other: Relatórios independentes
+        overview:
       international_development_fund:
         one:
         other:
       international_treaty:
         one:
         other:
+        overview:
       maib_report:
         one:
         other:
       map:
         one: Mapa
         other: Mapas
+        overview:
       medical_safety_alert:
         one:
         other:
@@ -180,6 +192,7 @@ pt:
       national_statistics:
         one: Estatística - estatística nacional
         other: Estatísticas - estatísticas nacionais
+        overview:
       national_statistics_announcement:
         one:
         other:
@@ -192,18 +205,21 @@ pt:
       notice:
         one:
         other:
+        overview:
       official:
         one:
         other:
       official_statistics:
         one: Estatística
         other: Estatísticas
+        overview:
       official_statistics_announcement:
         one:
         other:
       open_consultation:
         one: Consulta aberta
         other: Consultas abertas
+        overview:
       oral_statement:
         one: Declaração verbal ao Parlamento
         other: Declarações verbais ao Parlamento
@@ -213,12 +229,14 @@ pt:
       policy_paper:
         one: Relatório sobre políticas
         other: Relatórios sobre políticas
+        overview:
       press_release:
         one: Comunicado de Imprensa
         other: Comunicados de Imprensa
       promotional:
         one: Material promocional
         other: Materiais promocionais
+        overview:
       publication:
         one: Publicação
         other: Publicações
@@ -228,9 +246,11 @@ pt:
       regulation:
         one:
         other:
+        overview:
       research:
         one: Pesquisa e análise
         other: Pesquisas e análises
+        overview:
       residential_property_tribunal_decision:
         one:
         other:
@@ -249,6 +269,7 @@ pt:
       standard:
         one:
         other:
+        overview:
       statement_to_parliament:
         one: Declaração ao Parlamento
         other: Declarações ao Parlamento
@@ -261,6 +282,7 @@ pt:
       statutory_guidance:
         one:
         other:
+        overview:
       take_part:
         one:
         other:
@@ -273,6 +295,7 @@ pt:
       transparency:
         one: Dado de Transparência
         other: Dados de Transparência
+        overview:
       utaac_decision:
         one:
         other:
@@ -292,6 +315,10 @@ pt:
     publication_scheme_html: Leia sobre os tipos de informações que publicamos rotineiramente em nosso %{link}.
     social_media_use_html: Leia nossa política sobre %{link}
     welsh_language_scheme_html: Saiba mais sobre nosso comprometimento em publicar em %{link}
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text:
     field_of_operation:

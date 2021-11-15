@@ -97,6 +97,7 @@ gd:
         few:
         one: Nós imeachta comhairliúcháin dúnta
         other: Téigh i gcomhairle go príobháideach
+        overview:
         two:
       cma_case:
         few:
@@ -117,6 +118,7 @@ gd:
         few:
         one: Torthaí comhairliúcháin
         other: Torthaí comhairliúcháin
+        overview:
         two:
       corporate_information_page:
         few:
@@ -127,11 +129,13 @@ gd:
         few:
         one: Tuarascáil cuideachta
         other: Tuarascálacha cuideachta
+        overview:
         two:
       correspondence:
         few:
         one: Comhfhreagras
         other: Comhfhreagras
+        overview:
         two:
       countryside_stewardship_grant:
         few:
@@ -142,6 +146,7 @@ gd:
         few:
         one: Cinneadh
         other: Cinntí
+        overview:
         two:
       detailed_guide:
         few:
@@ -192,11 +197,13 @@ gd:
         few:
         one: Preasráiteas FAITH
         other: Scaoileadh Shaoráil Faisnéise
+        overview:
         two:
       form:
         few:
         one: Foirm
         other: Foirmeacha
+        overview:
         two:
       government_response:
         few:
@@ -207,11 +214,13 @@ gd:
         few:
         one: Treoshuíomh
         other: Treoshuímh
+        overview:
         two:
       impact_assessment:
         few:
         one: Anailís tionchair
         other: Anailísí tionchair
+        overview:
         two:
       imported:
         few:
@@ -222,6 +231,7 @@ gd:
         few:
         one: Tuarascáil neamhspleách
         other: Tuarascálacha neamhspleácha
+        overview:
         two:
       international_development_fund:
         few:
@@ -232,6 +242,7 @@ gd:
         few:
         one: Conradh idirnáisiúnta
         other: Conarthaí idirnáisiúnta
+        overview:
         two:
       maib_report:
         few:
@@ -242,6 +253,7 @@ gd:
         few:
         one: Roghchlár
         other: Cártaí
+        overview:
         two:
       medical_safety_alert:
         few:
@@ -257,6 +269,7 @@ gd:
         few:
         one: Staitisticí náisiúnta
         other: Staitisticí náisiúnta
+        overview:
         two:
       national_statistics_announcement:
         few:
@@ -277,6 +290,7 @@ gd:
         few:
         one: Tuairim
         other: Tuairim
+        overview:
         two:
       official:
         few:
@@ -287,6 +301,7 @@ gd:
         few:
         one: Staitisticí oifigiúla
         other: Staitisticí oifigiúla
+        overview:
         two:
       official_statistics_announcement:
         few:
@@ -297,6 +312,7 @@ gd:
         few:
         one: Comhairliúcháin oscailte
         other: Comhairliúcháin oscailte
+        overview:
         two:
       oral_statement:
         few:
@@ -312,6 +328,7 @@ gd:
         few:
         one: Doiciméad beartais
         other: Doiciméid bheartais
+        overview:
         two:
       press_release:
         few:
@@ -322,6 +339,7 @@ gd:
         few:
         one: Ábhar cur chun cinn
         other: Ábhar cur chun cinn
+        overview:
         two:
       publication:
         few:
@@ -337,11 +355,13 @@ gd:
         few:
         one: Rialacha
         other: Rialacháin
+        overview:
         two:
       research:
         few:
         one: Taighde agus anailís
         other: Taighde agus anailís
+        overview:
         two:
       residential_property_tribunal_decision:
         few:
@@ -372,6 +392,7 @@ gd:
         few:
         one: Caighdeán
         other: Caighdeáin
+        overview:
         two:
       statement_to_parliament:
         few:
@@ -392,6 +413,7 @@ gd:
         few:
         one: Treoir reachtúil
         other: Treoir reachtúil
+        overview:
         two:
       take_part:
         few:
@@ -412,6 +434,7 @@ gd:
         few:
         one: Sonraí trédhearcachta
         other: Sonraí trédhearcachta
+        overview:
         two:
       utaac_decision:
         few:
@@ -440,10 +463,56 @@ gd:
     publication_scheme_html: Faigh amach na príomhchineálacha faisnéise a ndéanaimid cumarsáid rialta inár %{link}.
     social_media_use_html: Léigh ár mbeartas ar %{link}.
     welsh_language_scheme_html: Faigh amach ár gcomhréiteach ar an %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Suaitheantas rialtais Chónaidhme
     field_of_operation: Réimse oibríochta
     operations_in: Idirbhearta I %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Níl sé ar fáil
     published_in_error: Baineadh an fhaisnéis ar an leathanach seo toisc gur cuireadh trí phost í trí dhearmad.
@@ -461,7 +530,72 @@ gd:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
     gd: Gaeilge
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Ag leanúint
     previous_page: Roimhe seo

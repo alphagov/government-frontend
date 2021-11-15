@@ -84,6 +84,7 @@ yi:
       closed_consultation:
         one:
         other:
+        overview:
       cma_case:
         one:
         other:
@@ -96,21 +97,25 @@ yi:
       consultation_outcome:
         one:
         other:
+        overview:
       corporate_information_page:
         one:
         other:
       corporate_report:
         one:
         other:
+        overview:
       correspondence:
         one:
         other:
+        overview:
       countryside_stewardship_grant:
         one:
         other:
       decision:
         one:
         other:
+        overview:
       detailed_guide:
         one:
         other:
@@ -141,36 +146,43 @@ yi:
       foi_release:
         one:
         other:
+        overview:
       form:
         one:
         other:
+        overview:
       government_response:
         one:
         other:
       guidance:
         one: גיידאַנס
         other:
+        overview:
       impact_assessment:
         one:
         other:
+        overview:
       imported:
         one:
         other:
       independent_report:
         one:
         other:
+        overview:
       international_development_fund:
         one:
         other:
       international_treaty:
         one:
         other:
+        overview:
       maib_report:
         one:
         other:
       map:
         one:
         other:
+        overview:
       medical_safety_alert:
         one:
         other:
@@ -180,6 +192,7 @@ yi:
       national_statistics:
         one:
         other:
+        overview:
       national_statistics_announcement:
         one:
         other:
@@ -192,18 +205,21 @@ yi:
       notice:
         one:
         other:
+        overview:
       official:
         one:
         other:
       official_statistics:
         one:
         other:
+        overview:
       official_statistics_announcement:
         one:
         other:
       open_consultation:
         one:
         other:
+        overview:
       oral_statement:
         one:
         other:
@@ -213,12 +229,14 @@ yi:
       policy_paper:
         one:
         other:
+        overview:
       press_release:
         one:
         other:
       promotional:
         one:
         other:
+        overview:
       publication:
         one:
         other:
@@ -228,9 +246,11 @@ yi:
       regulation:
         one:
         other:
+        overview:
       research:
         one:
         other:
+        overview:
       residential_property_tribunal_decision:
         one:
         other:
@@ -249,6 +269,7 @@ yi:
       standard:
         one:
         other:
+        overview:
       statement_to_parliament:
         one:
         other:
@@ -261,6 +282,7 @@ yi:
       statutory_guidance:
         one:
         other:
+        overview:
       take_part:
         one:
         other:
@@ -273,6 +295,7 @@ yi:
       transparency:
         one:
         other:
+        overview:
       utaac_decision:
         one:
         other:
@@ -292,6 +315,10 @@ yi:
     publication_scheme_html:
     social_media_use_html:
     welsh_language_scheme_html:
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text:
     field_of_operation:

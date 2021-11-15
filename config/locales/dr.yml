@@ -84,6 +84,7 @@ dr:
       closed_consultation:
         one: مشاورهء متوقف شده
         other: مشاوره هایی متوقف شده
+        overview:
       cma_case:
         one: پروندهء  رقابت و قدرت بازار
         other: پروندهء رقابت پ قدرت بازار
@@ -96,21 +97,25 @@ dr:
       consultation_outcome:
         one: نتیجهء مشاوره
         other: نتایج مشاوره
+        overview:
       corporate_information_page:
         one: صفحه معلومات
         other: صفحات معلومات
       corporate_report:
         one: گزارش شرکت
         other: گزارشات شرکت
+        overview:
       correspondence:
         one: مکاتبه
         other: مکاتیب
+        overview:
       countryside_stewardship_grant:
         one: هزینهء معاونت روستایی
         other: هزینه هایی معاونت روستایی
       decision:
         one: تصمیم
         other: تصامیم
+        overview:
       detailed_guide:
         one: راهنمایی
         other: راهنمایی
@@ -141,36 +146,43 @@ dr:
       foi_release:
         one: انتشار آزادی اطلاعات
         other: انتشارات آزادی اطلاعات
+        overview:
       form:
         one: فارم
         other: فارم ها
+        overview:
       government_response:
         one: پاسخ حکومت
         other: پاسخ هایی حکومت
       guidance:
         one: راهنمایی
         other: راهنمایی
+        overview:
       impact_assessment:
         one: ارزیابی تأثیر
         other: ارزیابی هایی تأثیر
+        overview:
       imported:
         one: وارد شده – بصورت معلق
         other: وارد شده – بصورت معلق
       independent_report:
         one: گزارش مستقل
         other: گزارشات مستقل
+        overview:
       international_development_fund:
         one: بودیجه توسعه بین المللی
         other: بودیجه توسعه بین المللی
       international_treaty:
         one: معاهده بین المللی
         other: معاهدات بین المللی
+        overview:
       maib_report:
         one: گزارش شعبهء بررسی حوادث بحری
         other: گزارشات شعبهء بررسی حوادث بحری
       map:
         one: نقشه
         other: نقشه ها
+        overview:
       medical_safety_alert:
         one: هشدار ها و فراخوانی برای دوا ها و تجهیزات طبی
         other: هشدار ها و فراخوانی دوا ها و تجهیرات طبی
@@ -180,6 +192,7 @@ dr:
       national_statistics:
         one: آمار ملی
         other: آمار ملی
+        overview:
       national_statistics_announcement:
         one: اطلاعیه آمار ملی
         other: اطلاعیه آمار ملی
@@ -192,18 +205,21 @@ dr:
       notice:
         one: اطلاعیه
         other: اطلاعیه ها
+        overview:
       official:
         one: اطلاعیه آمار رسمی
         other: اطلاعیه هایی آمار رسمی
       official_statistics:
         one: آمار رسمی
         other: آمار رسمی
+        overview:
       official_statistics_announcement:
         one: اطلاعیه آمار رسمی
         other: اطلاعیه آمار رسمی
       open_consultation:
         one: مشاوره آزاد
         other: مشاوره هایی آزاد
+        overview:
       oral_statement:
         one: بیانیهء شفاهی به پارلمان
         other: بیانیه هایی شفاهی به پارلمان
@@ -213,12 +229,14 @@ dr:
       policy_paper:
         one: مقاله سیاست
         other: اوراق سیاست
+        overview:
       press_release:
         one: بیانیه مطبوعاتی
         other: بیانیه هایی مطبوعاتی
       promotional:
         one: مواد تبلیغاتی
         other: مواد تبلیغاتی
+        overview:
       publication:
         one: انتشار
         other: انتشارات
@@ -228,9 +246,11 @@ dr:
       regulation:
         one: قانون
         other: قوانین
+        overview:
       research:
         one: تحقیق و تجزیه و تحلیل
         other: تحقیق و تجزیه و تحلیل
+        overview:
       residential_property_tribunal_decision:
         one: تصمیم دادگاه ملکیت مسکونی
         other: تصامیم دادگاه ملکیت مسکونی
@@ -249,6 +269,7 @@ dr:
       standard:
         one: استندرد
         other: استندرد ها
+        overview:
       statement_to_parliament:
         one: بیانیه به پارلمان
         other: بیانیه های به پارلمان
@@ -261,6 +282,7 @@ dr:
       statutory_guidance:
         one: راهنمایی قانونی
         other: راهنمایی قانونی
+        overview:
       take_part:
         one: سهم بگیرید
         other: سهم بگیرید
@@ -273,6 +295,7 @@ dr:
       transparency:
         one: داده هایی شفافیت
         other: داده هایی شفافیت
+        overview:
       utaac_decision:
         one: تصمیم دادگاه استیناف اداری
         other: تصامیم دادگاه استیناف اداری
@@ -292,10 +315,56 @@ dr:
     publication_scheme_html: در بارهء انواع اطلاعاتی که بطور معمول نشرمیشود در%{link}.
     social_media_use_html: سیاست ما را در اینجا بخوانید%{link}.
     welsh_language_scheme_html: از تعهد ما به %{link} مطلع شوید.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: وزارت دفاع
     field_of_operation: ساحهء عملیات
     operations_in: عملیات در%{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: دیگر در دسترس نیست
     published_in_error: اطلاعات این صفحه حذف شده است چونکه اشتباهاً منتشر شده بود.
@@ -316,7 +385,72 @@ dr:
   i18n:
     direction: rtl
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
     dr: بعدی
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: قبلی
     previous_page: قبلی

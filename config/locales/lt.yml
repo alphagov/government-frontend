@@ -91,6 +91,7 @@ lt:
         few:
         one: Pasibaigusi konsultacija
         other: Pasibaigusios konsultacijos
+        overview:
       cma_case:
         few:
         one: Konkurencijos ir rinkos institucijos byla
@@ -107,6 +108,7 @@ lt:
         few:
         one: Konsultacijos rezultatas
         other: Konsultacijos rezultatai
+        overview:
       corporate_information_page:
         few:
         one: Informacinis puslapis
@@ -115,10 +117,12 @@ lt:
         few:
         one: Bendra ataskaita
         other: Bendros ataskaitos
+        overview:
       correspondence:
         few:
         one: Korespondencija
         other: Korespondencija
+        overview:
       countryside_stewardship_grant:
         few:
         one: Kaimo priežiūros dotacija
@@ -127,6 +131,7 @@ lt:
         few:
         one: Sprendimas
         other: Sprendimai
+        overview:
       detailed_guide:
         few:
         one: Detalesnė informacija
@@ -167,10 +172,12 @@ lt:
         few:
         one: 'Informacijos laisvė: pranešimas'
         other: 'Informacijos laisvė: pranešimai'
+        overview:
       form:
         few:
         one: Forma
         other: Formos
+        overview:
       government_response:
         few:
         one: Vyriausybės atsakas
@@ -179,10 +186,12 @@ lt:
         few:
         one: Informacija
         other: Informacija
+        overview:
       impact_assessment:
         few:
         one: Poveikio įvertinimas
         other: Poveikio įvertinimai
+        overview:
       imported:
         few:
         one: Patalpinta - laukiama publikavimo
@@ -191,6 +200,7 @@ lt:
         few:
         one: Nepriklausoma ataskaita
         other: Nepriklausomos ataskaitos
+        overview:
       international_development_fund:
         few:
         one: Tarptautinis plėtros finansavimas
@@ -199,6 +209,7 @@ lt:
         few:
         one: Tarptautinė sutartis
         other: Tarptautinės sutartys
+        overview:
       maib_report:
         few:
         one: Jūrų laivų avarijų tyrimo skyriaus ataskaita
@@ -207,6 +218,7 @@ lt:
         few:
         one: Žemėlapis
         other: Žemėlapiai
+        overview:
       medical_safety_alert:
         few:
         one: Įspėjimai dėl vaistų ir medicininių prietaisų, jų atšaukimas
@@ -219,6 +231,7 @@ lt:
         few:
         one: Statistika - nacionalinė statistika
         other: Statistika - nacionalinė statistika
+        overview:
       national_statistics_announcement:
         few:
         one: Nacionalinės statistikos pranešimas
@@ -235,6 +248,7 @@ lt:
         few:
         one: Pranešimas
         other: Pranešimai
+        overview:
       official:
         few:
         one: Oficialios statistikos pranešimas
@@ -243,6 +257,7 @@ lt:
         few:
         one: Statistika
         other: Statistika
+        overview:
       official_statistics_announcement:
         few:
         one: Oficialios statistikos pranešimas
@@ -251,6 +266,7 @@ lt:
         few:
         one: Atvira konsultacija
         other: Atviros konsultacijos
+        overview:
       oral_statement:
         few:
         one: Žodinis kreipimasis į parlamentą
@@ -263,6 +279,7 @@ lt:
         few:
         one: Strategijos dokumentas
         other: Strategijų dokumentai
+        overview:
       press_release:
         few:
         one: Pranešimas spaudai
@@ -271,6 +288,7 @@ lt:
         few:
         one: Reklaminė medžiaga
         other: Reklaminė medžiaga
+        overview:
       publication:
         few:
         one: Leidinys
@@ -283,10 +301,12 @@ lt:
         few:
         one: Reglamentas
         other: Reglamentai
+        overview:
       research:
         few:
         one: Tyrimas ir analizė
         other: Tyrimai ir analizės
+        overview:
       residential_property_tribunal_decision:
         few:
         one: Gyvenamosios nuosavybės tribunolo sprendimas
@@ -311,6 +331,7 @@ lt:
         few:
         one: Standartas
         other: Standartai
+        overview:
       statement_to_parliament:
         few:
         one: Kreipimasis į parlamentą
@@ -327,6 +348,7 @@ lt:
         few:
         one: Įstatyminė informacija
         other: Įstatyminė informacija
+        overview:
       take_part:
         few:
         one: Dalyvauti
@@ -343,6 +365,7 @@ lt:
         few:
         one: Skaidrumo informacija
         other: Skaidrumo informacija
+        overview:
       utaac_decision:
         few:
         one: Administracinių bylų apeliacijų tribunolo sprendimas
@@ -366,10 +389,56 @@ lt:
     publication_scheme_html: Sužinokite, kokią informaciją mes pastoviai pateikiame puslapyje %{link}.
     social_media_use_html: Perskaitykite mūsų strategiją %{link}.
     welsh_language_scheme_html: Sužinokite apie mūsų įsipareigojimą skelbti %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Apsaugos ministerijos herbas
     field_of_operation: Veiklos sritis
     operations_in: Veikla vykdoma %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Nebepasiekiama
     published_in_error: Šio puslapio informacija buvo pašalinta, kadangi ji buvo publikuota per klaidą.
@@ -387,7 +456,72 @@ lt:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
     lt: Lietuvių
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Kitas
     previous_page: Ankstesnis

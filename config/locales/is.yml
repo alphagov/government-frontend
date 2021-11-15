@@ -84,6 +84,7 @@ is:
       closed_consultation:
         one: Lokuð ráðgjöf
         other: Lokaðar ráðgjafir
+        overview:
       cma_case:
         one: Mál Samkeppnis- og Markaðsstofu
         other: Mál Samkeppnis- og Markaðsstofu
@@ -96,21 +97,25 @@ is:
       consultation_outcome:
         one: Útkoma ráðgjafar
         other: Útkomur ráðgjafar
+        overview:
       corporate_information_page:
         one: Upplýsingasíða
         other: Upplýsingasíður
       corporate_report:
         one: Skýrsla fyrirtækis
         other: Skýrslur fyrirtækja
+        overview:
       correspondence:
         one: Samskipti
         other: Samskipti
+        overview:
       countryside_stewardship_grant:
         one: Styrkur til umsýslu sveitar
         other: Styrkir til umsýslu sveitar
       decision:
         one: Ákvörðun
         other: Ákvarðanir
+        overview:
       detailed_guide:
         one: Leiðsögn
         other: Leiðsögn
@@ -141,36 +146,43 @@ is:
       foi_release:
         one: Upplýsingafrelsi (FOI) útgáfa
         other: Upplýsingafrelsi (FOI) útgáfur
+        overview:
       form:
         one: Eyðublað
         other: Eyðublöð
+        overview:
       government_response:
         one: Viðbrögð stjórnvalda
         other: Viðbrögð stjórnvalda
       guidance:
         one: Leiðbeiningar
         other: Leiðbeiningar
+        overview:
       impact_assessment:
         one: Áhrifamat
         other: Áhrifamöt
+        overview:
       imported:
         one: hlaðið inn - bíð eftir gerð
         other: hlaðið inn - bíð eftir gerð
       independent_report:
         one: Óháð skýrsla
         other: Óháðar skýrslur
+        overview:
       international_development_fund:
         one: Fjármögnun alþjóðlegrar uppbyggingar
         other: Fjármögnun alþjóðlegrar uppbyggingar
       international_treaty:
         one: Alþjóðasamningur
         other: Alþjóðasamningar
+        overview:
       maib_report:
         one: Skýrsla Sjóslysanefndar
         other: Skýrslur Sjóslysanefndar
       map:
         one: Kort
         other: Kort
+        overview:
       medical_safety_alert:
         one: Viðvaranir og innköllun lyfja og lækningatækja
         other: Viðvaranir og innköllun lyfja og lækningatækja
@@ -180,6 +192,7 @@ is:
       national_statistics:
         one: Hagstofa
         other: Hagstofa
+        overview:
       national_statistics_announcement:
         one: Tilkynning Hagstofu
         other: Tilkynningar Hagstofur
@@ -192,18 +205,21 @@ is:
       notice:
         one: Tilkynning
         other: Tilkynningar
+        overview:
       official:
         one: Tilkynning um opinbera tölfræði
         other: Tilkynningar um opinbera tölfræði
       official_statistics:
         one: Opinber tölfræði
         other: Opinber tölfræði
+        overview:
       official_statistics_announcement:
         one: Tilkynning um opinbera tölfræði
         other: Tilkynningar um opinbera tölfræði
       open_consultation:
         one: Opin ráðgjöf
         other: Opnar ráðgjafir
+        overview:
       oral_statement:
         one: Munnleg yfirlýsing til Þingsins
         other: Munnlegar yfirlýsingar til Þingsins
@@ -213,12 +229,14 @@ is:
       policy_paper:
         one: Stefnu ritgerð
         other: Stefnu ritgerðir
+        overview:
       press_release:
         one: Fréttatilkynning
         other: Fréttatilkynningar
       promotional:
         one: Kynningarefni
         other: Kynningarefni
+        overview:
       publication:
         one: Útgáfa
         other: Útgáfa
@@ -228,9 +246,11 @@ is:
       regulation:
         one: Reglugerð
         other: Reglugerðir
+        overview:
       research:
         one: Rannsóknir og greining
         other: Rannsóknir og greining
+        overview:
       residential_property_tribunal_decision:
         one: Úrskurður dómstóls íbúðarhúsnæði
         other: Úrskurðir dómstóls íbúðarhúsnæði
@@ -249,6 +269,7 @@ is:
       standard:
         one: Staðall
         other: Staðlar
+        overview:
       statement_to_parliament:
         one: Yfirlýsing til Þingsins
         other: Yfirlýsingar til Þingsins
@@ -261,6 +282,7 @@ is:
       statutory_guidance:
         one: Lagalegar leiðbeiningar
         other: Lagalegar leiðbeiningar
+        overview:
       take_part:
         one: Taka þátt
         other: Taka þátt
@@ -273,6 +295,7 @@ is:
       transparency:
         one: Gögn um gagnsæi
         other: Gögn um gagnsæi
+        overview:
       utaac_decision:
         one: Úrskurður stjórnsýslulegs áfrýjunardómstóls
         other: Úrskurðir stjórnsýslulegs áfrýjunardómstóls
@@ -292,10 +315,56 @@ is:
     publication_scheme_html: Lestu um hvaða upplýsingar við birtum reglulega í %{link} okkar.
     social_media_use_html: Lestu stefnuna okkar varðandi %{link}.
     welsh_language_scheme_html: Kynntu þér skuldbindingu okkar við %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Skjaldarmerki Varnarmálaráðuneytisins
     field_of_operation: Starfsvið
     operations_in: Starfsemi á %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ekki lengur aðgengileg
     published_in_error: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna þess að þær voru birtar fyrir mistök.
@@ -313,7 +382,72 @@ is:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
     is: Íslenska
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Næsta
     previous_page: Fyrri

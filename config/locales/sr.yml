@@ -98,6 +98,7 @@ sr:
         many:
         one: Zatvorena konsultacija
         other: Zatvorene konsultacije
+        overview:
       cma_case:
         few:
         many:
@@ -118,6 +119,7 @@ sr:
         many:
         one: Ishod konsultacija
         other: Ishodi konsultacija
+        overview:
       corporate_information_page:
         few:
         many:
@@ -128,11 +130,13 @@ sr:
         many:
         one: Organizacioni izveštaj
         other: Organizacioni izveštaji
+        overview:
       correspondence:
         few:
         many:
         one: Prepiska
         other: Prepiske
+        overview:
       countryside_stewardship_grant:
         few:
         many:
@@ -143,6 +147,7 @@ sr:
         many:
         one: Odluka
         other: Odluke
+        overview:
       detailed_guide:
         few:
         many:
@@ -193,11 +198,13 @@ sr:
         many:
         one: Odgovor na zahtev za pristup informacijama od javnog značaja
         other: Odgovori na zahteve za pristup informacijama od javnog značaja
+        overview:
       form:
         few:
         many:
         one: Formular
         other: Obrasci
+        overview:
       government_response:
         few:
         many:
@@ -208,11 +215,13 @@ sr:
         many:
         one: Detaljno uputstvo
         other: Detaljno uputstvo
+        overview:
       impact_assessment:
         few:
         many:
         one: Procena efekta
         other: Procene efekata
+        overview:
       imported:
         few:
         many:
@@ -223,6 +232,7 @@ sr:
         many:
         one: Nezavisni izveštaj
         other: Nezavisni izveštaji
+        overview:
       international_development_fund:
         few:
         many:
@@ -233,6 +243,7 @@ sr:
         many:
         one: Međunarodni sporazum
         other: Međunarodni sporazumi
+        overview:
       maib_report:
         few:
         many:
@@ -243,6 +254,7 @@ sr:
         many:
         one: Mapa
         other: Mape
+        overview:
       medical_safety_alert:
         few:
         many:
@@ -258,6 +270,7 @@ sr:
         many:
         one: Državna statistika
         other: Državna statistika
+        overview:
       national_statistics_announcement:
         few:
         many:
@@ -278,6 +291,7 @@ sr:
         many:
         one: Obaveštenje
         other: Obaveštenja
+        overview:
       official:
         few:
         many:
@@ -288,6 +302,7 @@ sr:
         many:
         one: Zvanična statistika
         other: Zvanična statistika
+        overview:
       official_statistics_announcement:
         few:
         many:
@@ -298,6 +313,7 @@ sr:
         many:
         one: Otvorena konsultacija
         other: Otvorene konsultacije
+        overview:
       oral_statement:
         few:
         many:
@@ -313,6 +329,7 @@ sr:
         many:
         one: Predlog politike
         other: Predlozi politike
+        overview:
       press_release:
         few:
         many:
@@ -323,6 +340,7 @@ sr:
         many:
         one: Promotivni materijal
         other: Promotivni materijal
+        overview:
       publication:
         few:
         many:
@@ -338,11 +356,13 @@ sr:
         many:
         one: Propis
         other: Propisi
+        overview:
       research:
         few:
         many:
         one: Istraživanje i analiza
         other: Istraživanje i analiza
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
@@ -373,6 +393,7 @@ sr:
         many:
         one: Standard
         other: Standardi
+        overview:
       statement_to_parliament:
         few:
         many:
@@ -393,6 +414,7 @@ sr:
         many:
         one: Zakonska uputstva
         other: Zakonska uputstva
+        overview:
       take_part:
         few:
         many:
@@ -413,6 +435,7 @@ sr:
         many:
         one: Podaci o transparentnosti
         other: Podaci o transparentnosti
+        overview:
       utaac_decision:
         few:
         many:
@@ -440,10 +463,56 @@ sr:
     publication_scheme_html: Pročitajte koje vrste podataka redovno objavljujemo na lokaciji %{link}.
     social_media_use_html: Pročitajte našu politiku na %{link}.
     welsh_language_scheme_html: Saznajte više o našoj posvećenosti %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Grb Ministarstva odbrane
     field_of_operation: Oblast delovanja
     operations_in: Delovanje na lokaciji %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Nije više dostupno
     published_in_error: Informacije sa ove stranice su uklonjene jer su bile objavljene greškom.
@@ -461,7 +530,72 @@ sr:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
     sr: srpski
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Sledeće
     previous_page: Prethodno

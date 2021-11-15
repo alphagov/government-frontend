@@ -91,6 +91,7 @@ ro:
         few:
         one: Dezbatere
         other: Dezbateri
+        overview:
       cma_case:
         few:
         one:
@@ -107,6 +108,7 @@ ro:
         few:
         one: Concluzia dezbaterii
         other: Concluziile dezbaterii
+        overview:
       corporate_information_page:
         few:
         one:
@@ -115,10 +117,12 @@ ro:
         few:
         one: Raport
         other: Rapoarte
+        overview:
       correspondence:
         few:
         one: Similaritate
         other: Similarităţi
+        overview:
       countryside_stewardship_grant:
         few:
         one:
@@ -127,6 +131,7 @@ ro:
         few:
         one:
         other:
+        overview:
       detailed_guide:
         few:
         one: Mai multe detalii
@@ -167,10 +172,12 @@ ro:
         few:
         one: 'Acces la informații publice '
         other: 'Acces la informații publice '
+        overview:
       form:
         few:
         one: Formular
         other: Formulare
+        overview:
       government_response:
         few:
         one: 'Document de poziție '
@@ -179,10 +186,12 @@ ro:
         few:
         one: Mai multe detalii
         other: Mai multe detalii
+        overview:
       impact_assessment:
         few:
         one: 'Evaluarea impactului '
         other: 'Evaluarea impactului '
+        overview:
       imported:
         few:
         one:
@@ -191,6 +200,7 @@ ro:
         few:
         one: Raport independent
         other: Rapoarte independente
+        overview:
       international_development_fund:
         few:
         one:
@@ -199,6 +209,7 @@ ro:
         few:
         one:
         other:
+        overview:
       maib_report:
         few:
         one:
@@ -207,6 +218,7 @@ ro:
         few:
         one: Hartă
         other: Hărţi
+        overview:
       medical_safety_alert:
         few:
         one:
@@ -219,6 +231,7 @@ ro:
         few:
         one: Statistici - statistici naționale
         other: Statistici - statistici naționale
+        overview:
       national_statistics_announcement:
         few:
         one:
@@ -235,6 +248,7 @@ ro:
         few:
         one:
         other:
+        overview:
       official:
         few:
         one:
@@ -243,6 +257,7 @@ ro:
         few:
         one: Statistici
         other: Statistici
+        overview:
       official_statistics_announcement:
         few:
         one:
@@ -251,6 +266,7 @@ ro:
         few:
         one: Dezbatere
         other: Dezbateri
+        overview:
       oral_statement:
         few:
         one: 'Declarație verbală în fața Parlamentului '
@@ -263,6 +279,7 @@ ro:
         few:
         one:
         other:
+        overview:
       press_release:
         few:
         one: Știre
@@ -271,6 +288,7 @@ ro:
         few:
         one: Material promoțional
         other: Materiale promoționale
+        overview:
       publication:
         few:
         one: Publicație
@@ -283,10 +301,12 @@ ro:
         few:
         one:
         other:
+        overview:
       research:
         few:
         one: Analiză și cercetare
         other: Analiză și cercetare
+        overview:
       residential_property_tribunal_decision:
         few:
         one:
@@ -311,6 +331,7 @@ ro:
         few:
         one:
         other:
+        overview:
       statement_to_parliament:
         few:
         one: Declarație în Parlament
@@ -327,6 +348,7 @@ ro:
         few:
         one:
         other:
+        overview:
       take_part:
         few:
         one:
@@ -343,6 +365,7 @@ ro:
         few:
         one:
         other:
+        overview:
       utaac_decision:
         few:
         one:
@@ -366,6 +389,10 @@ ro:
     publication_scheme_html: Citește mai multe despre informațiile pe care le publigăm în mod regulat pe  %{link}.
     social_media_use_html: 'Citește mai multe despre strategia noastră pe '
     welsh_language_scheme_html: Află mai multe despre angajamentul nostru față de accesul la informații publice pe %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text:
     field_of_operation:

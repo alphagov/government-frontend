@@ -98,6 +98,7 @@ be:
         many:
         one: Закрытая кансультацыя
         other: Закрытыя кансультацыі
+        overview:
       cma_case:
         few:
         many:
@@ -118,6 +119,7 @@ be:
         many:
         one: Вынік кансультацыі
         other: Вынікі кансультацыі
+        overview:
       corporate_information_page:
         few:
         many:
@@ -128,11 +130,13 @@ be:
         many:
         one: Карпаратыўная справаздача
         other: Карпаратыўныя справаздачы
+        overview:
       correspondence:
         few:
         many:
         one: Перапіска
         other: Перапіска
+        overview:
       countryside_stewardship_grant:
         few:
         many:
@@ -143,6 +147,7 @@ be:
         many:
         one: Пастанова
         other: Пастановы
+        overview:
       detailed_guide:
         few:
         many:
@@ -193,11 +198,13 @@ be:
         many:
         one: Рэліз у межах Закона аб свабодзе інфармацыі
         other: Рэлізы ў межах Закона аб свабодзе інфармацыі
+        overview:
       form:
         few:
         many:
         one: Форма
         other: Формы
+        overview:
       government_response:
         few:
         many:
@@ -208,11 +215,13 @@ be:
         many:
         one: Кіраўніцтва
         other: Кіраўніцтва
+        overview:
       impact_assessment:
         few:
         many:
         one: Ацэнка ўплыву
         other: Ацэнкі ўплыву
+        overview:
       imported:
         few:
         many:
@@ -223,6 +232,7 @@ be:
         many:
         one: Незалежная справаздача
         other: Незалежныя справаздачы
+        overview:
       international_development_fund:
         few:
         many:
@@ -233,6 +243,7 @@ be:
         many:
         one: Міжнароднае пагадненне
         other: Міжнародныя пагадненнi
+        overview:
       maib_report:
         few:
         many:
@@ -243,6 +254,7 @@ be:
         many:
         one: Карта
         other: Карты
+        overview:
       medical_safety_alert:
         few:
         many:
@@ -258,6 +270,7 @@ be:
         many:
         one: Нацыянальная статыстыка
         other: Нацыянальная статыстыка
+        overview:
       national_statistics_announcement:
         few:
         many:
@@ -278,6 +291,7 @@ be:
         many:
         one: Паведамленне
         other: Паведамленні
+        overview:
       official:
         few:
         many:
@@ -288,6 +302,7 @@ be:
         many:
         one: Афіцыйная статыстыка
         other: Афіцыйная статыстыка
+        overview:
       official_statistics_announcement:
         few:
         many:
@@ -298,6 +313,7 @@ be:
         many:
         one: Адкрытая кансультацыя
         other: Адкрытыя кансультацыі
+        overview:
       oral_statement:
         few:
         many:
@@ -313,6 +329,7 @@ be:
         many:
         one: Праграмны дакумент
         other: Праграмныя дакументы
+        overview:
       press_release:
         few:
         many:
@@ -323,6 +340,7 @@ be:
         many:
         one: Рэкламны матэрыял
         other: Рэкламны матэрыял
+        overview:
       publication:
         few:
         many:
@@ -338,11 +356,13 @@ be:
         many:
         one: Тэзіс
         other: Тэзісы
+        overview:
       research:
         few:
         many:
         one: Даследаванні і аналіз
         other: Даследаванні і аналіз
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
@@ -373,6 +393,7 @@ be:
         many:
         one: Стандарт
         other: Стандарты
+        overview:
       statement_to_parliament:
         few:
         many:
@@ -393,6 +414,7 @@ be:
         many:
         one: Заканадаўчае кіраўніцтва
         other: Заканадаўчае кіраўніцтва
+        overview:
       take_part:
         few:
         many:
@@ -413,6 +435,7 @@ be:
         many:
         one: Адкрытыя дадзеныя
         other: Адкрытыя дадзеныя
+        overview:
       utaac_decision:
         few:
         many:
@@ -440,10 +463,56 @@ be:
     publication_scheme_html: Чытайце пра тыпы інфармацыі, якую мы рэгулярна публікуем, у нашым %{link}.
     social_media_use_html: Прачытайце пра нашу палітыку датычна %{link}.
     welsh_language_scheme_html: Даведайцеся аб нашых абавязках да публікацыі ў %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Герб Міністэрства абароны
     field_of_operation: Сфера дзейнасці
     operations_in: Дзейнасць у %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Больш няма ў наяўнасці
     published_in_error: Інфармацыя на гэтай старонцы была выдалена, бо была апублікавана з памылкай.
@@ -461,7 +530,72 @@ be:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
     be: Беларуская
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Далей
     previous_page: Папярэдні

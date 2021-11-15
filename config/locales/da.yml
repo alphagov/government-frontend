@@ -84,6 +84,7 @@ da:
       closed_consultation:
         one: Lukket konsultation
         other: Lukkede konsultationer
+        overview:
       cma_case:
         one: Konkurrence- og markedsmyndighedens sag
         other: Konkurrence- og markedsmyndighedens sager
@@ -96,21 +97,25 @@ da:
       consultation_outcome:
         one: Resultatet af høringen
         other: Resultater af høringen
+        overview:
       corporate_information_page:
         one: Informationsside
         other: Informationssider
       corporate_report:
         one: Virksomhedsrapport
         other: Virksomhedsrapporter
+        overview:
       correspondence:
         one: Korrespondance
         other: Korrespondancer
+        overview:
       countryside_stewardship_grant:
         one: Countryside Stewardship tilskud
         other: Countryside Stewardship -tilskud
       decision:
         one: Beslutning
         other: Beslutninger
+        overview:
       detailed_guide:
         one: Vejledning
         other: Vejledning
@@ -149,36 +154,43 @@ da:
       foi_release:
         one: FOI frigivelse
         other: FOI frigivelser
+        overview:
       form:
         one: Formular
         other: Formularer
+        overview:
       government_response:
         one: Regeringens reaktion
         other: Regeringens reaktioner
       guidance:
         one: Vejledning
         other: Vejledning
+        overview:
       impact_assessment:
         one: Konsekvensanalyse
         other: Konsekvensanalyser
+        overview:
       imported:
         one: importeret - afventer type
         other: importeret - afventer type
       independent_report:
         one: Uafhængig rapport
         other: Uafhængige rapporter
+        overview:
       international_development_fund:
         one: International udviklingsfinansiering
         other: International udviklingsfinansiering
       international_treaty:
         one: International traktat
         other: Internationale traktater
+        overview:
       maib_report:
         one: Rapport fra afdelingen for undersøgelse af flyulykker
         other: Rapporter fra afdelingen for undersøgelse af flyulykker
       map:
         one: Kort
         other: Kort
+        overview:
       medical_safety_alert:
         one: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
         other: Advarsler og tilbagekaldelser af lægemidler og medicinsk udstyr
@@ -188,6 +200,7 @@ da:
       national_statistics:
         one: Nationale statistikker
         other: Nationale statistikker
+        overview:
       national_statistics_announcement:
         one: Nationale statistikmeddelelse
         other: Nationale statistikmeddelelser
@@ -200,18 +213,21 @@ da:
       notice:
         one: Meddelelse
         other: Meddelelser
+        overview:
       official:
         one: Officielle statistikmeddelelse
         other: Officielle statistikmeddelelser
       official_statistics:
         one: Officielle statistikker
         other: Officielle statistikker
+        overview:
       official_statistics_announcement:
         one: Officielle statistikmeddelelse
         other: Officielle statistikmeddelelser
       open_consultation:
         one: Åben konsultation
         other: Åbne konsultationer
+        overview:
       oral_statement:
         one: Mundtlig erklæring til Parlamentet
         other: Mundtlige erklæring til Parlamentet
@@ -221,12 +237,14 @@ da:
       policy_paper:
         one: Politikdokument
         other: Politikdokumenter
+        overview:
       press_release:
         one: Pressemeddelelse
         other: Pressemeddelelser
       promotional:
         one: Reklamemateriale
         other: Reklamemateriale
+        overview:
       publication:
         one: Publikation
         other: Publikationer
@@ -236,9 +254,11 @@ da:
       regulation:
         one: Forordning
         other: Forordninger
+        overview:
       research:
         one: Forskning og analyse
         other: Forskning og analyse
+        overview:
       residential_property_tribunal_decision:
         one: Afgørelse fra domstolene om boligejendomme
         other: Afgørelser fra domstolene om boligejendomme
@@ -257,6 +277,7 @@ da:
       standard:
         one: Standard
         other: Standarder
+        overview:
       statement_to_parliament:
         one: Erklæring til Parlamentet
         other: Erklæringer til Parlamentet
@@ -269,6 +290,7 @@ da:
       statutory_guidance:
         one: Lovpligtig vejledning
         other: Lovpligtig vejledning
+        overview:
       take_part:
         one: Deltage
         other: Deltage
@@ -281,6 +303,7 @@ da:
       transparency:
         one: Data om gennemsigtighed
         other: Data om gennemsigtighed
+        overview:
       utaac_decision:
         one: |-
           Afgørelse om forvaltningsappelsager
@@ -304,10 +327,56 @@ da:
     publication_scheme_html: Læs om de typer af oplysninger, som vi rutinemæssigt offentliggør i vores %{link}.
     social_media_use_html: Læs vores politik om %{link}.
     welsh_language_scheme_html: Learn more about our commitment to% {link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Forsvarsministeriets kam
     field_of_operation: Operationsområde
     operations_in: Handlinger i %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ikke længere tilgængelig
     published_in_error: Oplysningerne på denne side er blevet fjernet, fordi de er udgivet ved en fejl.
@@ -325,7 +394,72 @@ da:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
     da: Dansk
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Næste
     previous_page: Forrige

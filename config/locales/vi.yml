@@ -84,6 +84,7 @@ vi:
       closed_consultation:
         one: Tham vấn kín
         other: Tham vấn kín
+        overview:
       cma_case:
         one: Vụ án của Cơ quan Cạnh tranh và Thị trường
         other: Vụ án của Cơ quan Cạnh tranh và Thị trường
@@ -96,21 +97,25 @@ vi:
       consultation_outcome:
         one: Kết quả tham vấn
         other: Kết quả tham vấn
+        overview:
       corporate_information_page:
         one: Trang thông tin
         other: Trang thông tin
       corporate_report:
         one: Báo cáo của doanh nghiệp
         other: Báo cáo của doanh nghiệp
+        overview:
       correspondence:
         one: Thư từ
         other: Thư từ
+        overview:
       countryside_stewardship_grant:
         one: Trợ cấp Quản lý Vùng nông thôn
         other: Trợ cấp Quản lý Vùng nông thôn
       decision:
         one: Quyết định
         other: Quyết định
+        overview:
       detailed_guide:
         one: Hướng dẫn
         other: Hướng dẫn
@@ -141,36 +146,43 @@ vi:
       foi_release:
         one: Công bố FOI
         other: Công bố FOI
+        overview:
       form:
         one: Biểu mẫu
         other: Biểu mẫu
+        overview:
       government_response:
         one: Phản hồi của chính phủ
         other: Phản hồi của chính phủ
       guidance:
         one: Hướng dẫn
         other: Hướng dẫn
+        overview:
       impact_assessment:
         one: Đánh giá tác động
         other: Đánh giá tác động
+        overview:
       imported:
         one: loại đã nhập - đang chờ
         other: loại đã nhập - đang chờ
       independent_report:
         one: Báo cáo độc lập
         other: Báo cáo độc lập
+        overview:
       international_development_fund:
         one: Tài trợ phát triển quốc tế
         other: Tài trợ phát triển quốc tế
       international_treaty:
         one: Hiệp ước quốc tế
         other: Hiệp ước quốc tế
+        overview:
       maib_report:
         one: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
         other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
       map:
         one: Bản đồ
         other: Bản đồ
+        overview:
       medical_safety_alert:
         one: Cảnh báo và thu hồi thuốc và thiết bị y tế
         other: Cảnh báo và thu hồi thuốc và thiết bị y tế
@@ -180,6 +192,7 @@ vi:
       national_statistics:
         one: Thống kê Quốc gia
         other: Thống kê Quốc gia
+        overview:
       national_statistics_announcement:
         one: Thông báo thống kê quốc gia
         other: Công bố thống kê quốc gia
@@ -192,18 +205,21 @@ vi:
       notice:
         one: Thông báo
         other: Thông báo
+        overview:
       official:
         one: Thông báo thống kê chính thức
         other: Thông báo thống kê chính thức
       official_statistics:
         one: Thống kê Chính thức
         other: Thống kê Chính thức
+        overview:
       official_statistics_announcement:
         one: Thông báo thống kê chính thức
         other: Thông báo thống kê chính thức
       open_consultation:
         one: Tham vấn mở
         other: Tham vấn mở
+        overview:
       oral_statement:
         one: Tuyên bố bằng lời trước Quốc hội
         other: Tuyên bố bằng lời trước Quốc hội
@@ -213,12 +229,14 @@ vi:
       policy_paper:
         one: Tài liệu chính sách
         other: Tài liệu chính sách
+        overview:
       press_release:
         one: Thông cáo báo chí
         other: Thông cáo báo chí
       promotional:
         one: Tài liệu quảng cáo
         other: Tài liệu quảng cáo
+        overview:
       publication:
         one: Ấn phẩm
         other: Ấn phẩm
@@ -228,9 +246,11 @@ vi:
       regulation:
         one: Quy định
         other: Quy định
+        overview:
       research:
         one: Nghiên cứu và phân tích
         other: Nghiên cứu và phân tích
+        overview:
       residential_property_tribunal_decision:
         one: Quyết định của tòa án bất động sản nhà ở
         other: Quyết định của tòa án bất động sản nhà ở
@@ -249,6 +269,7 @@ vi:
       standard:
         one: Tiêu chuẩn
         other: Tiêu chuẩn
+        overview:
       statement_to_parliament:
         one: Tuyên bố trước Quốc hội
         other: Tuyên bố trước Quốc hội
@@ -261,6 +282,7 @@ vi:
       statutory_guidance:
         one: Hướng dẫn theo luật định
         other: Hướng dẫn theo luật định
+        overview:
       take_part:
         one: Tham gia
         other: Tham gia
@@ -273,6 +295,7 @@ vi:
       transparency:
         one: Dữ liệu về tính minh bạch
         other: Dữ liệu về tính minh bạch
+        overview:
       utaac_decision:
         one: Quyết định của tòa phúc thẩm hành chính
         other: Quyết định của tòa phúc thẩm hành chính
@@ -292,10 +315,56 @@ vi:
     publication_scheme_html: Tìm hiểu về các loại thông tin chúng tôi thường xuyên xuất bản trong %{link} của chúng tôi.
     social_media_use_html: Đọc chính sách của chúng tôi trên %{link}.
     welsh_language_scheme_html: Tìm hiểu về cam kết của chúng tôi đối với %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Huy hiệu Bộ trưởng Quốc phòng
     field_of_operation: Lĩnh vực hoạt động
     operations_in: Hoạt động ở %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Không khả dụng
     published_in_error: Thông tin trên trang này đã bị xóa vì đã được xuất bản do nhầm lẫn.
@@ -313,7 +382,72 @@ vi:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
     vi: Tiếng Việt
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Tiếp theo
     previous_page: Trước

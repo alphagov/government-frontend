@@ -98,6 +98,7 @@ mt:
         many:
         one: Konsultazzjoni magħluqa
         other: Konsultazzjonijiet magħluqa
+        overview:
       cma_case:
         few:
         many:
@@ -118,6 +119,7 @@ mt:
         many:
         one: Riżultat tal-konsultazzjoni
         other: Riżultati tal-konsultazzjoni
+        overview:
       corporate_information_page:
         few:
         many:
@@ -128,11 +130,13 @@ mt:
         many:
         one: Rapport korporattiv
         other: Rapporti korporattivi
+        overview:
       correspondence:
         few:
         many:
         one: Korrispondenza
         other: Korrispondenzi
+        overview:
       countryside_stewardship_grant:
         few:
         many:
@@ -143,6 +147,7 @@ mt:
         many:
         one: Deċiżjoni
         other: Deċiżjonijiet
+        overview:
       detailed_guide:
         few:
         many:
@@ -193,11 +198,13 @@ mt:
         many:
         one: Stqarrija tal-Libertà għall-Informazzjoni
         other: Stqarrijiet tal-Libertà għall-Informazzjoni
+        overview:
       form:
         few:
         many:
         one: Formola
         other: Formoli
+        overview:
       government_response:
         few:
         many:
@@ -208,11 +215,13 @@ mt:
         many:
         one: Gwida
         other: Gwida
+        overview:
       impact_assessment:
         few:
         many:
         one: Assessjar tal-impatt
         other: Assessjar tal-impatt
+        overview:
       imported:
         few:
         many:
@@ -223,6 +232,7 @@ mt:
         many:
         one: Rapport indipendenti
         other: Rapporti indipendenti
+        overview:
       international_development_fund:
         few:
         many:
@@ -233,6 +243,7 @@ mt:
         many:
         one: Trattat internazzjonali
         other: Trattati internazzjonali
+        overview:
       maib_report:
         few:
         many:
@@ -243,6 +254,7 @@ mt:
         many:
         one: Mappa
         other: Mapep
+        overview:
       medical_safety_alert:
         few:
         many:
@@ -258,6 +270,7 @@ mt:
         many:
         one: Statistiċi nazzjonali
         other: Statistiċi nazzjonali
+        overview:
       national_statistics_announcement:
         few:
         many:
@@ -278,6 +291,7 @@ mt:
         many:
         one: Avviż
         other: Avviżi
+        overview:
       official:
         few:
         many:
@@ -288,6 +302,7 @@ mt:
         many:
         one: Statistiċi uffiċjali
         other: Statistiċi uffiċjali
+        overview:
       official_statistics_announcement:
         few:
         many:
@@ -298,6 +313,7 @@ mt:
         many:
         one: Konsultazzjoni miftuħa
         other: Konsultazzjonijiet miftuħa
+        overview:
       oral_statement:
         few:
         many:
@@ -313,6 +329,7 @@ mt:
         many:
         one: Dokument tal-Politika
         other: Dokumenti tal-Politika
+        overview:
       press_release:
         few:
         many:
@@ -323,6 +340,7 @@ mt:
         many:
         one: Materjal promozzjonali
         other: Materjal promozzjonali
+        overview:
       publication:
         few:
         many:
@@ -338,11 +356,13 @@ mt:
         many:
         one: Regolament
         other: Regolamenti
+        overview:
       research:
         few:
         many:
         one: Riċerka u analiżi
         other: Riċerka u analiżi
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
@@ -373,6 +393,7 @@ mt:
         many:
         one: Standard
         other: Standards
+        overview:
       statement_to_parliament:
         few:
         many:
@@ -393,6 +414,7 @@ mt:
         many:
         one: Gwida statutorja
         other: Gwida statutorja
+        overview:
       take_part:
         few:
         many:
@@ -413,6 +435,7 @@ mt:
         many:
         one: Dejta dwar it-trasparenza
         other: Dejta dwar it-trasparenza
+        overview:
       utaac_decision:
         few:
         many:
@@ -440,10 +463,56 @@ mt:
     publication_scheme_html: Aqra dwar it-tipi ta' informazzjoni li aħna nippubblikaw regolarment fuq %{link}.
     social_media_use_html: Aqra l-politika tagħna fuq %{link}.
     welsh_language_scheme_html: Kun af dwar l-impenn tagħna lejn %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Il-Ministeru tad-Difiża
     field_of_operation: Qasam tal-operazzjoni
     operations_in: Operazzjonijiet fil- %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Mhuwiex iktar disponibbli
     published_in_error: L-informazzjoni fuq din il-paġna tneħħiet għax ġiet ippubblikata bi żball.
@@ -461,7 +530,72 @@ mt:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
     mt: Malti
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Li jmiss
     previous_page: Ta' qabel

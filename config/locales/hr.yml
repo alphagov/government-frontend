@@ -98,6 +98,7 @@ hr:
         many:
         one: Zatvorena konzultacija
         other: Zatvorene konzultacije
+        overview:
       cma_case:
         few:
         many:
@@ -118,6 +119,7 @@ hr:
         many:
         one: Ishod konzultacija
         other: Ishodi konzultacija
+        overview:
       corporate_information_page:
         few:
         many:
@@ -128,11 +130,13 @@ hr:
         many:
         one: Korporativno izvješće
         other: Korporativna izvješća
+        overview:
       correspondence:
         few:
         many:
         one: Prepiska
         other: Prepiske
+        overview:
       countryside_stewardship_grant:
         few:
         many:
@@ -143,6 +147,7 @@ hr:
         many:
         one: Odluka
         other: Odluke
+        overview:
       detailed_guide:
         few:
         many:
@@ -193,11 +198,13 @@ hr:
         many:
         one: Izdanje slobode informacija
         other: Izdanje slobode informacija
+        overview:
       form:
         few:
         many:
         one: Obrazac
         other: Obrasci
+        overview:
       government_response:
         few:
         many:
@@ -208,11 +215,13 @@ hr:
         many:
         one: Upute
         other: Upute
+        overview:
       impact_assessment:
         few:
         many:
         one: Procjena utjecaja
         other: Procjene utjecaja
+        overview:
       imported:
         few:
         many:
@@ -223,6 +232,7 @@ hr:
         many:
         one: Nezavisno izvješće
         other: Nezavisna izvješća
+        overview:
       international_development_fund:
         few:
         many:
@@ -233,6 +243,7 @@ hr:
         many:
         one: Međunarodni ugovor
         other: Međunarodni ugovori
+        overview:
       maib_report:
         few:
         many:
@@ -243,6 +254,7 @@ hr:
         many:
         one: Karta
         other: Karte
+        overview:
       medical_safety_alert:
         few:
         many:
@@ -258,6 +270,7 @@ hr:
         many:
         one: Nacionalna statistika
         other: Nacionalna statistika
+        overview:
       national_statistics_announcement:
         few:
         many:
@@ -278,6 +291,7 @@ hr:
         many:
         one: Obavijest
         other: Obavijesti
+        overview:
       official:
         few:
         many:
@@ -288,6 +302,7 @@ hr:
         many:
         one: Službena statistika
         other: Službena statistika
+        overview:
       official_statistics_announcement:
         few:
         many:
@@ -298,6 +313,7 @@ hr:
         many:
         one: Otvorena konzultacija
         other: Otvorene konzultacije
+        overview:
       oral_statement:
         few:
         many:
@@ -313,6 +329,7 @@ hr:
         many:
         one: Dokument o pravilima
         other: Dokumenti o pravilima
+        overview:
       press_release:
         few:
         many:
@@ -323,6 +340,7 @@ hr:
         many:
         one: Promidžbeni materijal
         other: Promidžbeni materijal
+        overview:
       publication:
         few:
         many:
@@ -338,11 +356,13 @@ hr:
         many:
         one: Regulacija
         other: Regulacije
+        overview:
       research:
         few:
         many:
         one: Istraživanje i analiza
         other: Istraživanje i analiza
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
@@ -373,6 +393,7 @@ hr:
         many:
         one: Standard
         other: Standardi
+        overview:
       statement_to_parliament:
         few:
         many:
@@ -393,6 +414,7 @@ hr:
         many:
         one: Zakonske smjernice
         other: Zakonske smjernice
+        overview:
       take_part:
         few:
         many:
@@ -413,6 +435,7 @@ hr:
         many:
         one: Podaci o transparentnosti
         other: Podaci o transparentnosti
+        overview:
       utaac_decision:
         few:
         many:
@@ -440,10 +463,56 @@ hr:
     publication_scheme_html: Pročitajte o vrstama informacija koje redovito objavljujemo u našoj %{link}.
     social_media_use_html: Pročitajte naša pravila na %{link}.
     welsh_language_scheme_html: Saznajte o našoj predanosti %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Grb Ministarstva obrane
     field_of_operation: Područje djelovanja
     operations_in: Operacije u %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Nedostupno
     published_in_error: Podaci na ovoj stranici uklonjeni su jer su pogrešno objavljeni.
@@ -461,7 +530,72 @@ hr:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
     hr: Hrvatski
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Sljedeće
     previous_page: Prethodno

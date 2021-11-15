@@ -84,6 +84,7 @@ zh-tw:
       closed_consultation:
         one: 非公開協商
         other: 非公開協商
+        overview:
       cma_case:
         one: 競爭及市場管理局案例
         other: 競爭及市場管理局案例
@@ -96,21 +97,25 @@ zh-tw:
       consultation_outcome:
         one: 協商結果
         other: 協商結果
+        overview:
       corporate_information_page:
         one: 資訊頁
         other: 資訊頁
       corporate_report:
         one: 企業報告
         other: 企業報告
+        overview:
       correspondence:
         one: 信函
         other: 信函
+        overview:
       countryside_stewardship_grant:
         one: 地方管理補助
         other: 地方管理補助
       decision:
         one: 決定
         other: 決定
+        overview:
       detailed_guide:
         one: 指導
         other: 指導
@@ -141,36 +146,43 @@ zh-tw:
       foi_release:
         one: 資訊自由發布
         other: 資訊自由發布
+        overview:
       form:
         one: 形式
         other: 形式
+        overview:
       government_response:
         one: 政府回應
         other: 政府回應
       guidance:
         one: 指導
         other: 指導
+        overview:
       impact_assessment:
         one: 影響評估
         other: 影響評估
+        overview:
       imported:
         one: 進口－等待類型
         other: 進口－等待類型
       independent_report:
         one: 獨立報告
         other: 獨立報告
+        overview:
       international_development_fund:
         one: 國際發展基金
         other: 國際發展基金
       international_treaty:
         one: 國際條約
         other: 國際條約
+        overview:
       maib_report:
         one: 海事事故調查局報告
         other: 海事事故調查局報告
       map:
         one: 地圖
         other: 地圖
+        overview:
       medical_safety_alert:
         one: 藥品和醫療器材的警示召回
         other: 藥品和醫療器材的警示召回
@@ -180,6 +192,7 @@ zh-tw:
       national_statistics:
         one: 國家統計
         other: 國家統計
+        overview:
       national_statistics_announcement:
         one: 國家統計公告
         other: 國家統計公告
@@ -192,18 +205,21 @@ zh-tw:
       notice:
         one: 通知
         other: 通知
+        overview:
       official:
         one: 官方統計公告
         other: 官方統計公告
       official_statistics:
         one: 官方統計
         other: 官方統計
+        overview:
       official_statistics_announcement:
         one: 官方統計公告
         other: 官方統計公告
       open_consultation:
         one: 公開諮詢
         other: 公開諮詢
+        overview:
       oral_statement:
         one: 對議會的口頭聲明
         other: 對議會的口頭聲明
@@ -213,12 +229,14 @@ zh-tw:
       policy_paper:
         one: 政策文件
         other: 政策文件
+        overview:
       press_release:
         one: 新聞稿
         other: 新聞稿
       promotional:
         one: 宣傳資料
         other: 宣傳資料
+        overview:
       publication:
         one: 出版
         other: 出版
@@ -228,9 +246,11 @@ zh-tw:
       regulation:
         one: 法規
         other: 法規
+        overview:
       research:
         one: 研究與分析
         other: 研究與分析
+        overview:
       residential_property_tribunal_decision:
         one: 住宅房產法庭裁決
         other: 住宅房產法庭裁決
@@ -249,6 +269,7 @@ zh-tw:
       standard:
         one: 標準
         other: 標準
+        overview:
       statement_to_parliament:
         one: 向議會發表聲明
         other: 向議會發表聲明
@@ -261,6 +282,7 @@ zh-tw:
       statutory_guidance:
         one: 法令指導
         other: 法令指導
+        overview:
       take_part:
         one: 參與
         other: 參與
@@ -273,6 +295,7 @@ zh-tw:
       transparency:
         one: 透明數據
         other: 透明數據
+        overview:
       utaac_decision:
         one: 行政上訴審裁處裁決
         other: 勞資上訴審裁處裁決
@@ -292,10 +315,56 @@ zh-tw:
     publication_scheme_html: 閱讀我們在 %{link} 中定期發布的資訊類型。
     social_media_use_html: 在 %{link} 上閱讀我們政策。
     welsh_language_scheme_html: 了解我們對 %{link} 的承諾。
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: 國防部紋章
     field_of_operation: 經營領域
     operations_in: 在 %{location} 的領域
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: 不再適用
     published_in_error: 此頁面上的資訊已被刪除，因為發佈有誤。
@@ -313,6 +382,71 @@ zh-tw:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
     zh-tw: 繁體中文
   multi_page:
     next_page: 接續

@@ -76,7 +76,9 @@ ka:
       case_study:
         other:
       closed_consultation:
+        one:
         other:
+        overview:
       cma_case:
         other:
       coming_soon:
@@ -84,17 +86,25 @@ ka:
       consultation:
         other:
       consultation_outcome:
+        one:
         other:
+        overview:
       corporate_information_page:
         other:
       corporate_report:
+        one:
         other:
+        overview:
       correspondence:
+        one:
         other:
+        overview:
       countryside_stewardship_grant:
         other:
       decision:
+        one:
         other:
+        overview:
       detailed_guide:
         other:
       dfid_research_output:
@@ -114,33 +124,49 @@ ka:
       fatality_notice:
         other:
       foi_release:
+        one:
         other:
+        overview:
       form:
+        one:
         other:
+        overview:
       government_response:
         other:
       guidance:
+        one:
         other:
+        overview:
       impact_assessment:
+        one:
         other:
+        overview:
       imported:
         other:
       independent_report:
+        one:
         other:
+        overview:
       international_development_fund:
         other:
       international_treaty:
+        one:
         other:
+        overview:
       maib_report:
         other:
       map:
+        one:
         other:
+        overview:
       medical_safety_alert:
         other:
       national:
         other:
       national_statistics:
+        one:
         other:
+        overview:
       national_statistics_announcement:
         other:
       news_article:
@@ -148,33 +174,47 @@ ka:
       news_story:
         other:
       notice:
+        one:
         other:
+        overview:
       official:
         other:
       official_statistics:
+        one:
         other:
+        overview:
       official_statistics_announcement:
         other:
       open_consultation:
+        one:
         other:
+        overview:
       oral_statement:
         other:
       policy:
         other:
       policy_paper:
+        one:
         other:
+        overview:
       press_release:
         other:
       promotional:
+        one:
         other:
+        overview:
       publication:
         other:
       raib_report:
         other:
       regulation:
+        one:
         other:
+        overview:
       research:
+        one:
         other:
+        overview:
       residential_property_tribunal_decision:
         other:
       service_sign_in:
@@ -186,7 +226,9 @@ ka:
       speech:
         other:
       standard:
+        one:
         other:
+        overview:
       statement_to_parliament:
         other:
       statistical_data_set:
@@ -194,7 +236,9 @@ ka:
       statistics_announcement:
         other:
       statutory_guidance:
+        one:
         other:
+        overview:
       take_part:
         other:
       tax_tribunal_decision:
@@ -202,7 +246,9 @@ ka:
       transcript:
         other:
       transparency:
+        one:
         other:
+        overview:
       utaac_decision:
         other:
       world_location_news_article:
@@ -218,6 +264,10 @@ ka:
     publication_scheme_html:
     social_media_use_html:
     welsh_language_scheme_html:
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text:
     field_of_operation:
@@ -353,6 +403,9 @@ ka:
     print_entire_guide:
   publication:
     details:
+    documents:
+      one:
+      other:
   service_sign_in:
     continue:
     error:

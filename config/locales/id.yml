@@ -84,6 +84,7 @@ id:
       closed_consultation:
         one: Konsultasi tertutup
         other: Konsultasi tertutup
+        overview:
       cma_case:
         one: Kasus Otoritas Persaingan dan Pasar
         other: Kasus Otoritas Persaingan dan Pasar
@@ -96,21 +97,25 @@ id:
       consultation_outcome:
         one: Hasil konsultasi
         other: Hasil konsultasi
+        overview:
       corporate_information_page:
         one: Halaman informasi
         other: Halaman informasi
       corporate_report:
         one: Laporan korporat
         other: Laporan korporat
+        overview:
       correspondence:
         one: Korespondensi
         other: Korespondensi
+        overview:
       countryside_stewardship_grant:
         one: Hibah Countryside Stewardship
         other: Hibah Countryside Stewardship
       decision:
         one: Keputusan
         other: Keputusan
+        overview:
       detailed_guide:
         one: Panduan
         other: Panduan
@@ -141,36 +146,43 @@ id:
       foi_release:
         one: Rilis Kebebasan Informasi
         other: Rilis Kebebasan Informasi
+        overview:
       form:
         one: Formulir
         other: Formulir
+        overview:
       government_response:
         one: Respons pemerintah
         other: Respons pemerintah
       guidance:
         one: Panduan
         other: Panduan
+        overview:
       impact_assessment:
         one: Penilaian dampak
         other: Penilaian dampak
+        overview:
       imported:
         one: diimpor- menunggu jenis
         other: diimpor- menunggu jenis
       independent_report:
         one: Laporan independen
         other: Laporan independen
+        overview:
       international_development_fund:
         one: Pendanaan pembangunan internasional
         other: Pendanaan pembangunan internasional
       international_treaty:
         one: Pakta internasional
         other: Pakta internasional
+        overview:
       maib_report:
         one: Laporan Cabang Investigasi Kecelakaan Maritim
         other: Laporan Cabang Investigasi Kecelakaan Maritim
       map:
         one: Peta
         other: Peta
+        overview:
       medical_safety_alert:
         one: Peringatan dan panggilan ulang untuk obat-obatan dan perangkat medis
         other: Peringatan dan panggilan ulang untuk obat-obatan dan perangkat medis
@@ -180,6 +192,7 @@ id:
       national_statistics:
         one: Statistik Nasional
         other: Statistik Nasional
+        overview:
       national_statistics_announcement:
         one: Pengumuman statistik nasional
         other: Pengumuman statistik nasional
@@ -192,18 +205,21 @@ id:
       notice:
         one: Pemberitahuan
         other: Pemberitahuan
+        overview:
       official:
         one: Pengumuman statistik resmi
         other: Pengumuman statistik resmi
       official_statistics:
         one: Statistik Resmi
         other: Statistik Resmi
+        overview:
       official_statistics_announcement:
         one: Pengumuman statistik resmi
         other: Pengumuman statistik resmi
       open_consultation:
         one: Konsultasi terbuka
         other: Konsultasi terbuka
+        overview:
       oral_statement:
         one: Pernyataan lisan kepada Parlemen
         other: Pernyataan lisan kepada Parlemen
@@ -213,12 +229,14 @@ id:
       policy_paper:
         one: Kertas kebijakan
         other: Kertas kebijakan
+        overview:
       press_release:
         one: Siaran pers
         other: Siaran pers
       promotional:
         one: Bahan promosi
         other: Bahan promosi
+        overview:
       publication:
         one: Publikasi
         other: Publikasi
@@ -228,9 +246,11 @@ id:
       regulation:
         one: Regulasi
         other: Regulasi
+        overview:
       research:
         one: Riset dan analisis
         other: Riset dan analisis
+        overview:
       residential_property_tribunal_decision:
         one: Keputusan persidangan properti permukiman
         other: Keputusan persidangan properti permukiman
@@ -249,6 +269,7 @@ id:
       standard:
         one: Standar
         other: Standar
+        overview:
       statement_to_parliament:
         one: Pernyataan kepada Parlemen
         other: Pernyataan kepada Parlemen
@@ -261,6 +282,7 @@ id:
       statutory_guidance:
         one: Panduan perundang-undangan
         other: Panduan perundang-undangan
+        overview:
       take_part:
         one: Ikut serta
         other: Ikut serta
@@ -273,6 +295,7 @@ id:
       transparency:
         one: Data transparansi
         other: Data transparansi
+        overview:
       utaac_decision:
         one: Keputusan persidangan banding administratif
         other: Keputusan persidangan banding administratif
@@ -292,10 +315,56 @@ id:
     publication_scheme_html: Bacalah jenis-jenis informasi yang kami terbitkan secara rutin di %{link} kami.
     social_media_use_html: Baca kebijakan kami di %{link}.
     welsh_language_scheme_html: Cari tahu komitmen kami kepada %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Lambang Kementerian Pertahanan
     field_of_operation: Bidang operasi
     operations_in: Operasi di %{location}
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Tidak lagi tersedia
     published_in_error: Informasi di halaman ini telah dihapus karena diterbitkan karena kesalahan.
@@ -313,7 +382,72 @@ id:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
     id: Bahasa Indonesia
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Selanjutnya
     previous_page: Sebelumnya

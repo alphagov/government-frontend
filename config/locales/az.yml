@@ -84,6 +84,7 @@ az:
       closed_consultation:
         one: Qapalı məsləhətləşmə
         other: Qapalı məsləhətləşmələr
+        overview:
       cma_case:
         one: Rəqabət və Bazar üzrə səlahiyyət məsələsi
         other: Rəqabət və Bazar üzrə səlahiyyət məsələləri
@@ -96,21 +97,25 @@ az:
       consultation_outcome:
         one: Məsləhətləşmə nəticəsi
         other: Məsləhətləşmə nəticələri
+        overview:
       corporate_information_page:
         one: Məlumat səhifəsi
         other: Məlumat səhifələri
       corporate_report:
         one: Şirkətin fəaliyyəti üzrə hesabat
         other: Şirkətin fəaliyyəti üzrə hesabatlar
+        overview:
       correspondence:
         one: Yazışma
         other: Yazışmalar
+        overview:
       countryside_stewardship_grant:
         one: Kənddə idarəetmə üçün maliyyə təşviqi
         other: Kənddə idarəetmə üçün maliyyə təşviqləri
       decision:
         one: Qərar
         other: Qərarlar
+        overview:
       detailed_guide:
         one: Göstəriş
         other: Göstəriş
@@ -141,36 +146,43 @@ az:
       foi_release:
         one: Məlumat əldə etmə azadlığı buraxılışı
         other: Məlumat əldə etmə azadlığı buraxılışları
+        overview:
       form:
         one: Forma
         other: Formalar
+        overview:
       government_response:
         one: Hökumətin reaksiyası
         other: Hökumətin reaksiyaları
       guidance:
         one: Göstəriş
         other: Göstəriş
+        overview:
       impact_assessment:
         one: Təsirin dəyərləndirilməsi
         other: Təsirin dəyərləndirilmələri
+        overview:
       imported:
         one: idxal edilmiş - gözlənilən növ
         other: idxal edilmiş - gözlənilən növ
       independent_report:
         one: Müstəqil hesabat
         other: Müstəqil hesabatlar
+        overview:
       international_development_fund:
         one: İnkişaf üçün beynəlxalq fondlar
         other: İnkişaf üçün beynəlxalq fondlar
       international_treaty:
         one: Beynəlxalq saziş
         other: Beynəlxalq sazişlər
+        overview:
       maib_report:
         one: Dəniz qəzalarının araşdırılması üzrə şöbə hesabatı
         other: Dəniz qəzalarının araşdırılması üzrə şöbə hesabatları
       map:
         one: Xəritə
         other: Xəritələr
+        overview:
       medical_safety_alert:
         one: Dərman və tibbi avadanlıq üçün xəbərdarlıq bildirişləri və geri çağırmalar
         other: Dərman və tibbi avadanlıq üçün xəbərdarlıq bildirişləri və geri çağırmalar
@@ -180,6 +192,7 @@ az:
       national_statistics:
         one: Milli statistika
         other: Milli statistika
+        overview:
       national_statistics_announcement:
         one: Milli statistika elanı
         other: Milli statistika elanları
@@ -192,18 +205,21 @@ az:
       notice:
         one: Bildiriş
         other: Bildirişlər
+        overview:
       official:
         one: Rəsmi statistika elanı
         other: Rəsmi statistika elanları
       official_statistics:
         one: Rəsmi statistika
         other: Rəsmi statistika
+        overview:
       official_statistics_announcement:
         one: Rəsmi statistika elanı
         other: Rəsmi statistika elanları
       open_consultation:
         one: Açıq məsləhətləşmə
         other: Açıq məsləhətləşmələr
+        overview:
       oral_statement:
         one: Parlamentə şifahi müraciət
         other: Parlamentə şifahi müraciətlər
@@ -213,12 +229,14 @@ az:
       policy_paper:
         one: Siyasət sənədi
         other: Siyasət sənədləri
+        overview:
       press_release:
         one: Press-reliz
         other: Press-relizlər
       promotional:
         one: Reklam materialı
         other: Reklam materialı
+        overview:
       publication:
         one: Nəşr
         other: Nəşrlər
@@ -228,9 +246,11 @@ az:
       regulation:
         one: Tənzimləmə
         other: Tənzimləmələr
+        overview:
       research:
         one: Araşdırma və təhlil
         other: Araşdırma və təhlil
+        overview:
       residential_property_tribunal_decision:
         one: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarı
         other: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarları
@@ -249,6 +269,7 @@ az:
       standard:
         one: Standart
         other: Standartlar
+        overview:
       statement_to_parliament:
         one: Parlamentə müraciət
         other: Parlamentə müraciətlər
@@ -261,6 +282,7 @@ az:
       statutory_guidance:
         one: Normativ göstərişlər
         other: Normativ göstərişlər
+        overview:
       take_part:
         one: İştirak edin
         other: İştirak edin
@@ -273,6 +295,7 @@ az:
       transparency:
         one: Məlumatla bağlı şəffaflıq
         other: Məlumatla bağlı şəffaflıq
+        overview:
       utaac_decision:
         one: İnzibati şikayətlər üzrə məhkəmə kollegiyası qərarı
         other: İnzibati şikayətlər üzrə məhkəmə kollegiyası qərarları
@@ -292,10 +315,56 @@ az:
     publication_scheme_html: "%{link}-də adətən istifadə etdiyimiz məlumatların növləri barədə oxuyun."
     social_media_use_html: "%{link}-də siyasətmizi oxuyun."
     welsh_language_scheme_html: "%{link} ilə bağlı öhdəliyimiz barədə öyrənin."
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Müdafiə nazirliyinin emblemi
     field_of_operation: Əməliyyat sahəsi
     operations_in: "%{location}-də olan əməliyyatlar"
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Artıq mövcud deyildir
     published_in_error: Bu səhifədəki məlumat səhvən dərc edilmiş olduğuna görə silinmişdir.
@@ -313,7 +382,72 @@ az:
   i18n:
     direction:
   language_names:
+    ar:
     az: Azeri
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Sonrakı
     previous_page: Əvvəlki

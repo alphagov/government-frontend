@@ -84,6 +84,7 @@ kk:
       closed_consultation:
         one: Жабық кеңес
         other: Жабық кеңестер
+        overview:
       cma_case:
         one: Бәсекелестік және нарықтар бойынша басқарма ісі
         other: Бәсекелестік және нарықтар бойынша басқарма істері
@@ -96,21 +97,25 @@ kk:
       consultation_outcome:
         one: Кеңес нәтижесі
         other: Кеңес нәтижелері
+        overview:
       corporate_information_page:
         one: Ақпараттық бет
         other: Ақпараттық беттер
       corporate_report:
         one: Корпоративтік есеп
         other: Корпоративтік есептер
+        overview:
       correspondence:
         one: Хат алмасу
         other: Хат алмасулар
+        overview:
       countryside_stewardship_grant:
         one: Countryside Stewardship гранты
         other: Countryside Stewardship гранттары
       decision:
         one: Шешім
         other: Шешімдер
+        overview:
       detailed_guide:
         one: Нұсқаулық
         other: Нұсқаулық
@@ -141,36 +146,43 @@ kk:
       foi_release:
         one: FOI шығарылымы
         other: FOI шығарылымдары
+        overview:
       form:
         one: Форма
         other: Формалар
+        overview:
       government_response:
         one: Мемлекет жауабы
         other: Мемлекет жауаптары
       guidance:
         one: Нұсқаулық
         other: Нұсқаулық
+        overview:
       impact_assessment:
         one: Ықпалын бағалау
         other: Ықпалын бағалаулар
+        overview:
       imported:
         one: импортталған - күтілетін түрі
         other: импортталған - күтілетін түрі
       independent_report:
         one: Тәуелсіз есеп
         other: Тәуелсіз есептер
+        overview:
       international_development_fund:
         one: Халықаралық даму қоры
         other: Халықаралық даму қоры
       international_treaty:
         one: Халықаралық келісім
         other: Халықаралық келісімдер
+        overview:
       maib_report:
         one: Теңіз апаттарын тергеу бөлімінің есебі
         other: Теңіз апаттарын тергеу бөлімінің есептері
       map:
         one: Карта
         other: Карталар
+        overview:
       medical_safety_alert:
         one: Дәрі-дәрмектер мен медициналық құрылғылар бойынша пікірлер мен ескертулер
         other: Дәрі-дәрмектер мен медициналық құрылғылар бойынша пікірлер мен ескертулер
@@ -180,6 +192,7 @@ kk:
       national_statistics:
         one: Ұлттық статистика
         other: Ұлттық статистика
+        overview:
       national_statistics_announcement:
         one: Ұлттық статистика хабарландыруы
         other: Ұлттық статистика хабарландырулары
@@ -192,18 +205,21 @@ kk:
       notice:
         one: Ескертпе
         other: Ескертпелер
+        overview:
       official:
         one: Ресми статистика хабарландыруы
         other: Ресми статистика хабарландырулары
       official_statistics:
         one: Ресми статистика
         other: Ресми статистика
+        overview:
       official_statistics_announcement:
         one: Ресми статистика хабарландыруы
         other: Ресми статистика хабарландырулары
       open_consultation:
         one: Ашық кеңес
         other: Ашық кеңестер
+        overview:
       oral_statement:
         one: Парламентке ауызша мәлімдеме
         other: Парламентке ауызша мәлімдемелер
@@ -213,12 +229,14 @@ kk:
       policy_paper:
         one: Саяси құжат
         other: Саяси құжаттар
+        overview:
       press_release:
         one: Пресс-релиз
         other: Пресс-релиздер
       promotional:
         one: Жарнамалық материал
         other: Жарнамалық материал
+        overview:
       publication:
         one: Жарияланым
         other: Жарияланымдар
@@ -228,9 +246,11 @@ kk:
       regulation:
         one: Ереже
         other: Ережелер
+        overview:
       research:
         one: Зерттеу және талдау
         other: Зерттеу және талдау
+        overview:
       residential_property_tribunal_decision:
         one: Тұрғын үйге қатысты сот шешімі
         other: Тұрғын үйге қатысты сот шешімдері
@@ -249,6 +269,7 @@ kk:
       standard:
         one: Стандарт
         other: Стандарттар
+        overview:
       statement_to_parliament:
         one: Парламент мәлімдемесі
         other: Парламент мәлімдемелері
@@ -261,6 +282,7 @@ kk:
       statutory_guidance:
         one: Заң нұсқаулығы
         other: Заң нұсқаулығы
+        overview:
       take_part:
         one: Қатысу
         other: Қатысу
@@ -273,6 +295,7 @@ kk:
       transparency:
         one: Ашықтық деректері
         other: Ашықтық деректері
+        overview:
       utaac_decision:
         one: Әкімшілік аппеляциялық сот шешімі
         other: Әкімшілік аппеляциялық сот шешімдері
@@ -292,10 +315,56 @@ kk:
     publication_scheme_html: Біз үнемі %{link} бөлімінде жариялайтын ақпарат түрлері туралы оқыңыз.
     social_media_use_html: "%{link} мекенжайындағы саясатымызды оқыңыз."
     welsh_language_scheme_html: "%{link} қосқан үлесіміз туралы оқыңыз."
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Қорғаныс министрлігінің елтаңбасы
     field_of_operation: Жұмыс аймағы
     operations_in: "%{location} орнындағы жұмыстар"
+  get_involved:
+    active_blogs:
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closed_with_date:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fco_bloggers:
+    follow:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
+    intro_paragraph:
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
+    petition_paragraph:
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Енді қолжетімді емес
     published_in_error: Осы беттегі ақпарат қате жарияланғандықтан алынып тасталды.
@@ -313,7 +382,72 @@ kk:
   i18n:
     direction:
   language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
     kk: Қазақ
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Келесі
     previous_page: Алдыңғы
