@@ -9,7 +9,6 @@ fr:
       text: Orientations sur le Brexit pour les individus et les familles
     heading_prefix: Il y a différent
   common:
-    last_updated:
     visit: 'Visiter:'
   components:
     figure:
@@ -21,22 +20,8 @@ fr:
       see_all_updates: afficher toutes les mises à jour
       show_all_updates: afficher toutes les mises à jour
     publisher_metadata:
-      collections:
-      from:
       hide_all: masquer tout
       show_all: afficher tout
-    save_this_page:
-      add_page_button: Ajouter à vos pages enregistrées
-      confirmations:
-        page_removed:
-          message: Vous l'avez supprimé de vos pages enregistrées
-        page_saved:
-          message: Vous l'avez ajouté à vos pages enregistrées
-      page_not_saved_heading: Enregistrez cette page pour pouvoir y revenir plus tard
-      page_was_saved_heading: Vous avez enregistré cette page
-      remove_page_button: Supprimer de vos pages enregistrées
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Voir vos pages enregistrées</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Connectez-vous</a> pour voir vos pages enregistrées.
     share_links:
       share_this_page: Partagez cette page
   consultation:
@@ -61,7 +46,6 @@ fr:
     original_consultation: Consultation originale
     ran_from: Cette consultation s'est tenue du
     respond_online: Répondre en ligne
-    'true': 'TRUE'
     visit_soon: Consultez à nouveau cette page prochainement pour télécharger le résultat de ce feedback public.
     was: était
     ways_to_respond: Moyens de répondre
@@ -376,10 +360,6 @@ fr:
       avoid_all_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth Office">Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans certaines parties du pays.
       avoid_all_travel_to_whole_country_html: Le <abbr title="Foreign and Commonwealth Office">Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans l'ensemble du pays.
     context: Conseils concernant les voyages à l'étranger
-    coronavirus_warning:
-      content_html: "<p class=\"govuk-body\">\r\n  Suivez les règles COVID-19 en vigueur là où vous vivez: <a href=\"/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do\">Angleterre</a>, <a href =\"https://www.gov.scot/coronavirus-covid-19/\">Écosse</a>, <a href=\"https://gov.wales/coronavirus-travel\">Pays de Galles< /a> et <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">Irlande du Nord</a> .\r\n</p>\r\n<p class=\"govuk-body\">\r\n  Pour empêcher l'entrée de nouvelles variantes COVID au Royaume-Uni, vous ne devez pas vous rendre dans les <a href=\"/guidance/red-amber-and-green-list-rules-for-entering-england\">pays de la liste orange ou rouge< /a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n  Pour comprendre les risques dans un pays, suivez les <a href=\"/guidance/travel-advice-novel-coronavirus\">Conseils aux voyageurs du Bureau des affaires étrangères, du Commonwealth et du développement (FCDO)</a>.\r\n</p>\r\n<p class=\"govuk-body\">\r\n  À votre retour, suivez les règles pour <a href=\"/uk-border-control\">entrer au Royaume-Uni depuis l'étranger</a> (sauf depuis l'Irlande).\r\n</p>\r\n"
-      text_assistive: Important
-      title: Voyage coronavirus (COVID-19)
     still_current_at: Toujours d'actualité à
     summary: Sommaire
     updated: Mis à jour

@@ -9,7 +9,6 @@ sv:
       text: Brexitvägledning för privatpersoner och familjer
     heading_prefix: Det finns olika
   common:
-    last_updated:
     visit: 'Besök:'
   components:
     figure:
@@ -21,22 +20,8 @@ sv:
       see_all_updates: se alla uppdateringar
       show_all_updates: Visa alla uppdateringar
     publisher_metadata:
-      collections:
-      from:
       hide_all: dölja alla
       show_all: visa alla
-    save_this_page:
-      add_page_button: Lägg till dina sparade sidor
-      confirmations:
-        page_removed:
-          message: Du har tagit bort detta från dina sparade sidor
-        page_saved:
-          message: Du har lagt till detta på dina sparade sidor
-      page_not_saved_heading: Spara den här sidan så att du kan komma tillbaka till den senare.
-      page_was_saved_heading: Du har sparat den här sidan
-      remove_page_button: Ta bort från dina sparade sidor
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se dina sparade sidor</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Lägg in</a> för att se dina sparade sidor.
     share_links:
       share_this_page: Dela den här sidan
   consultation:
@@ -61,7 +46,6 @@ sv:
     original_consultation: Ursprungligt samråd
     ran_from: Detta samråd pågick från och med
     respond_online: Svara online
-    'true': sant
     visit_soon: Besök den här sidan snart igen för att ladda ner resultatet av denna offentliga&nbsp;återkoppling.
     was: var
     ways_to_respond: Sätt att svara
@@ -376,22 +360,6 @@ sv:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla resor till delar av landet.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla resor till hela landet.
     context: Råd för resor utomlands
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Följ de gällande COVID-19-reglerna där du bor: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skottland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> och <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Nordirland</a>.
-        </p>
-        <p class="govuk-body">
-          För att förhindra att nya COVID-varianter kommer in i Storbritannien bör du inte resa till <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">länder som är upptagna på den röda listan</a>.
-        </p>
-        <p class="govuk-body">
-          För att förstå riskerna i ett land följer du <a href="/guidance/travel-advice-novel-coronavirus">FCDOs reserådgivning</a>.
-        </p>
-        <p class="govuk-body">
-          När du återvänder följer du reglerna för <a href="/uk-border-control">inresa till Storbritannien från utlandet</a> (utom från Irland).
-        </p>
-      text_assistive: Viktigt
-      title: Resa under pandemin (COVID-19)
     still_current_at: Fortfarande aktuell på
     summary: Sammanfattning
     updated: Uppdaterad

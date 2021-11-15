@@ -9,7 +9,6 @@ az:
       text: Fərdlər və ailələr üçün Brexit ilə bağlı göstərişlər
     heading_prefix: Fərqliliklər mövcuddur
   common:
-    last_updated:
     visit: 'Baş çəkin:'
   components:
     figure:
@@ -21,22 +20,8 @@ az:
       see_all_updates: bütün yeniləmələrə baxın
       show_all_updates: bütün yeniləmələri göstər
     publisher_metadata:
-      collections:
-      from:
       hide_all: hamısını gizlət
       show_all: hamısını göstər
-    save_this_page:
-      add_page_button: Yaddaşda saxladığınız səhifələrə əlavə edin
-      confirmations:
-        page_removed:
-          message: Bunu yaddaşda saxladığınız səhifələrdən silmisiniz
-        page_saved:
-          message: Bunu yaddaşda saxladığınız səhifələrə əlavə etmisiniz
-      page_not_saved_heading: Sonra yenidən baxmaq üçün bu səhifəni yaddaşda saxlayın
-      page_was_saved_heading: Bu səhifəni yaddaşda saxlamısınız
-      remove_page_button: Yaddaşda saxladığınız səhifələrdən silin
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Yaddaşda saxladığınız səhifələri nəzərdən keçirin</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Yaddaşda saxladığınız səhifələri nəzərdən keçirmək üçün</a> sistemə daxil olun.
     share_links:
       share_this_page: Bu səhifəni paylaşın
   consultation:
@@ -61,7 +46,6 @@ az:
     original_consultation: İlkin məsləhətləşmə
     ran_from: Bu məsləhətləşmə başlayır
     respond_online: Onlayn cavab verin
-    'true': düzgün
     visit_soon: Bu ictimai&nbsp;rəyin nəticəsini endirmək üçün bu səhifəyə tezliklə yenidən baş çəkin.
     was: idi
     ways_to_respond: Cavab vermək üçün yollar
@@ -376,22 +360,6 @@ az:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ölkənin bölgələrinə bütün səyahətləri məsləhət görmürlər.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ölkəyə ümumilikdə bütün səyahətləri məsləhət görmürlər.
     context: Xaricə səyahət üzrə məsləhət
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Yaşadığınız yerdə COVID-19 qaydalarına əməl edin: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
-        </p>
-        <p class="govuk-body">
-          COVID variant BK-a daxil olmasının qarşısını almaq üçün <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber or red list countries</a> səyahət etməməlisiniz.
-        </p>
-        <p class="govuk-body">
-          Ölkədəki riskləri başa düşmək üçün <a href="/guidance/travel-advice-novel-coronavirus">Böyük Britaniyanın xarici işlər və beynəlxalq inkişaf nazirliyinin Səyahətlər üzrə məsləhətlərinə əməl edin </a>.
-        </p>
-        <p class="govuk-body">
-          Geri qayıdanda, xaricdən <a href="/uk-border-control">BK-a daxil olmaq üçün qaydalara əməl edin</a> (İrlandiyadan gələnlər istisna olmaqla).
-        </p>
-      text_assistive: Önəmli qeydlər
-      title: Koronavirus (COVID-19) pandemiyası zamanı səyahət
     still_current_at: Hələ də qüvvədədir
     summary: İcmal
     updated: Yenilənib

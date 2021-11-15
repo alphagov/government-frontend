@@ -9,7 +9,6 @@ pa-pk:
       text: بندیاں تے خانداں لئیBrexit واسطے رہنمائی
     heading_prefix: ایہ فرق اے
   common:
-    last_updated:
     visit: 'ویکھو:'
   components:
     figure:
@@ -21,22 +20,8 @@ pa-pk:
       see_all_updates: ساری تازہ ترین صورتِ حال
       show_all_updates: ساری تازہ ترین صورتِ حال وکھاؤ
     publisher_metadata:
-      collections:
-      from:
       hide_all: سارا لُکاؤ
       show_all: سارا وکھاؤ
-    save_this_page:
-      add_page_button: اپنے بچے ہوئے ورقیاں وچ جمع کرو
-      confirmations:
-        page_removed:
-          message: تُسی اپنے محفوظ کیتے ورقے وچوں اینوں ہٹا لیا اے
-        page_saved:
-          message: تُسی اپنے محفوظ کیتے ورقے وچوں اینوں جمع کرلیا اے
-      page_not_saved_heading: ایس ورقے نوں محفوظ کر لو تاں جے تُسی ایندے تے بعد وچوں واپس آ سکو
-      page_was_saved_heading: تُسی ایہ ورقہ محفوظ کر لیا اے
-      remove_page_button: تُسی ایہ ورقہ محفوظ کیتے گئے ورقیاں وچوں ہٹا لیا اے
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">اپنے محفوظ ورقے ویکھو</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">سائن اِن</a> اپنے محفوظ ورقیاں نوں ویکھن لئی.
     share_links:
       share_this_page: ایہ ورقہ تقسیم کرو
   consultation:
@@ -61,7 +46,6 @@ pa-pk:
     original_consultation: اصلی مشاورت
     ran_from: ایہ مشاورت داچلایا ہویا فارم اے
     respond_online: آن لائن جاب دیوؤ
-    'true': سچ
     visit_soon: ایس ورقے تے چھیتی واپس آؤ عوام ولوں دتے گئے جواب نوں ڈاؤن لوڈ کرو&nbsp;جواب۔
     was: او سی
     ways_to_respond: جواب دین دے طریقے
@@ -376,22 +360,6 @@ pa-pk:
       avoid_all_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دے ساریاں علاقیاں وچ سفر کرن لئی نصحیت۔
       avoid_all_travel_to_whole_country_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دےسارےعلاقے وچ ہر طراں دا سفر کرن لئی کیتی گئی نصحیت۔
     context: غیر مُلکی سفر لئی نصحیت
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-           دے موجودہ قانون دی پیروی کرن لئی تُسی ایندے تے لائیو ہو سکدے او COVID-19: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">انگلستان</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">سکاٹ لینڈ</a>, <a href="https://gov.wales/coronavirus-travel">ویلز</a> اور <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">شمالی ائرلینڈ</a>.
-        </p>
-        <p class="govuk-body">
-          نویں شکل دے وائرس نوں یو کے داخل ہون توں روکن لئی تہانوں سفر نئیں کرنا چائی دا   <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">امبر یا سُرخ رنگ والی لسٹ دے مُلک</a>.
-        </p>
-        <p class="govuk-body">
-          خطرے نوں کسے وی مُلک بارے سمجھن لئی  <a href="/guidance/travel-advice-novel-coronavirus">FCDO ٹریول ایڈوائس</a>.
-        </p>
-        <p class="govuk-body">
-          جدوں تُسی واپس جاؤ تے قانون دی پیروی کرو <a href="/uk-border-control">باروں یوکے وچ داخل ہونا</a> (سوائے ائرلینڈ توں).
-        </p>
-      text_assistive: اہم
-      title: Coronavirus (COVID-19) سفر
     still_current_at: ہون ایس ویلے وی اوتھے ای اے
     summary: خلاصہ
     updated: تازہ ترین حال

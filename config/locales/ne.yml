@@ -9,7 +9,6 @@ ne:
       text: व्यक्ति र परिवारहरूका लागी ब्रेक्सिट मार्गदर्शन
     heading_prefix: त्यहाँ फरक छ
   common:
-    last_updated:
     visit: 'भ्रमण:'
   components:
     figure:
@@ -21,22 +20,8 @@ ne:
       see_all_updates: सबै अद्यावधिक हेर्नुहोस्
       show_all_updates: सबै अद्यावधिक देखाउनुहोस्
     publisher_metadata:
-      collections:
-      from:
       hide_all: सबै लुकाउनुहोस्
       show_all: सबै देखाउनुहोस्
-    save_this_page:
-      add_page_button: तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुहोस्
-      confirmations:
-        page_removed:
-          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुभएको छ
-        page_saved:
-          message: तपाईं यसलाई तपाईंको सुरक्षित पृष्ठहरुमा जोड्नुभएको छ
-      page_not_saved_heading: यो पृष्ठ सुरक्षित गर्नुहोस् ताकि तपाईं यसलाई पछि फिर्ता आउन सक्नुहुन्छ
-      page_was_saved_heading: तपाईंले यो पृष्ठ सुरक्षित गर्नुभयो
-      remove_page_button: तपाईंको सुरक्षित पृष्ठहरु बाट हटाउनुहोस्
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">तपाईंको सुरक्षित पृष्ठहरू हेर्नुहोस्</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">साइन इन् गरेर</a> तपाईंको सुरक्षित पृष्ठहरू हेर्नुहोस्।
     share_links:
       share_this_page: यो पृष्ठ साझा गर्नुहोस्
   consultation:
@@ -61,7 +46,6 @@ ne:
     original_consultation: मूल परामर्श
     ran_from: यो परामर्श बाट चलेको हो
     respond_online: अनलाइन प्रतिक्रिया
-    'true': साँचो
     visit_soon: यो सार्वजनिक प्रतिक्रियाको नतिजा डाउनलोड गर्नको लागी चाँडै यस पृष्ठमा फेरी जानुहोस्&nbsp;।
     was: थियो
     ways_to_respond: प्रतिक्रिया दिने तरिका
@@ -376,23 +360,6 @@ ne:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले देशको केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले पुरै देशमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
     context: विदेश यात्रा सल्लाह
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          तपाईं बस्नु भएको ठाउँमा हालको कोभिड -19 नियमहरु पालना गर्नुहोस्: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">इंग्ल्यान्ड</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">स्कटल्याण्ड</a>, <a href="https://gov.wales/coronavirus-travel">वेल्स</a> र <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">उत्तरी आयरल्याण्ड</a>।
-        </p>
-        <p class="govuk-body">
-          संयुक्त अधिराज्यमा नयाँ कोभिड प्रकारहरूको प्रवेश रोक्नलाई तपाईंले <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">एम्बर वा रातो सूचीका देशहरुमा भ्रमण गर्नु हुँदैन </a>।
-
-        </p><p class="govuk-body">
-          कुनै देशमा जोखिमको बारेमा जानकारी प्राप्त गर्नको लागि <a href="/guidance/travel-advice-novel-coronavirus">विदेश, राष्ट्रमंडल र विकास कार्यालयको भ्रमण सल्लाह पालन गर्नुहोस्</a>।
-
-
-        </p><p class="govuk-body">
-          तपाईं विदेश बाट फर्कने बेला <a href="/uk-border-control">संयुक्त अधिराज्यमा प्रवेश गर्नको लागि नियमहरू पालना गर्नुहोस्</a> (आयरल्याण्ड बाहेक)।
-        </p>
-      text_assistive: महत्त्वपूर्ण
-      title: कोरोनाभाइरस (कोभिड-19) यात्रा
     still_current_at: अहिले सम्म वर्तमानमा
     summary: सारांश
     updated: अद्यावधिक गरियो

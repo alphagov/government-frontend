@@ -9,7 +9,6 @@ sr:
       text: Uputstva za Bregzit za fizička lica i porodice
     heading_prefix: Postoje razlike
   common:
-    last_updated:
     visit: 'Posetite:'
   components:
     figure:
@@ -21,22 +20,8 @@ sr:
       see_all_updates: pogledajte sva ažuriranja
       show_all_updates: prikaži sva ažuriranja
     publisher_metadata:
-      collections:
-      from:
       hide_all: sakrij sve
       show_all: prikaži sve
-    save_this_page:
-      add_page_button: Dodajte u sačuvane stranice
-      confirmations:
-        page_removed:
-          message: Uklonili ste ovo iz sačuvanih stranica
-        page_saved:
-          message: Dodali ste ovo u sačuvane stranice
-      page_not_saved_heading: Sačuvajte ovu stranicu kako biste kasnije mogli da se vratite na nju
-      page_was_saved_heading: Sačuvali ste ovu stranicu
-      remove_page_button: Uklonite iz sačuvanih stranica
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Pogledajte sačuvane stranice</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Prijavite se</a> da biste videli sačuvane stranice.
     share_links:
       share_this_page: Podeli ovu stranicu
   consultation:
@@ -61,7 +46,6 @@ sr:
     original_consultation: Prvobitne konsultacije
     ran_from: Ove konsultacije se održavaju od
     respond_online: Odgovori onlajn
-    'true': tačno
     visit_soon: Vratite se na ovu stranicu uskoro da biste preuzeli ishod ovih javnih&nbsp;povratnih informacija.
     was: je bio
     ways_to_respond: Mogućnosti odgovora
@@ -526,22 +510,6 @@ sr:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ne preporučuje putovanja za delove zemlje.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ne preporučuje putovanja za celu zemlju.
     context: Preporuka o putovanjima van zemlje
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-         Pridržavajte se važećih pravila vezanih za KOVID-19 na svojoj lokaciji prebivališta: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Engleska</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Škotska</a>, <a href="https://gov.wales/coronavirus-travel">Vels</a> i <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Severna Irska</a>.
-        </p>
-        <p class="govuk-body">
-          Radi sprečavanja ulaska novih varijanti virusa KOVID u UK, ne bi trebalo da putujete u <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">zemlje sa žute ili crvene liste</a>.
-        </p>
-        <p class="govuk-body">
-          Da biste razumeli rizike unutar zemlje, pratite <a href="/guidance/travel-advice-novel-coronavirus">preporuke za putovanja Ministarstva za spoljne poslove, Komonvelt i razvoj Ujedinjenog Kraljevstva</a>.
-        </p>
-        <p class="govuk-body">
-          Pri povratku, pridržavajte se pravila za <a href="/uk-border-control">ulazak u UK iz inostranstva</a> (izuzev Irske).
-        </p>
-      text_assistive: Važno
-      title: Putovanja u uslovima koronavirusa (KOVID-19)
     still_current_at: Još važi za
     summary: Rezime
     updated: Ažurirano

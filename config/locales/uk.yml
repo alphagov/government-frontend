@@ -9,7 +9,6 @@ uk:
       text: Поради щодо Brexit для окремих осіб та сімей
     heading_prefix: Є різні
   common:
-    last_updated:
     visit: 'Відвідайте:'
   components:
     figure:
@@ -21,22 +20,8 @@ uk:
       see_all_updates: переглянути всі оновлення
       show_all_updates: показати всі оновлення
     publisher_metadata:
-      collections:
-      from:
       hide_all: приховати всі
       show_all: показати всі
-    save_this_page:
-      add_page_button: Додати до збережених сторінок
-      confirmations:
-        page_removed:
-          message: Ви видалили це зі збережених сторінок
-        page_saved:
-          message: Ви додали це до збережених сторінок
-      page_not_saved_heading: Збережіть цю сторінку, щоб переглянути пізніше
-      page_was_saved_heading: Ви зберегли цю сторінку
-      remove_page_button: Видалити зі збережених сторінок
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Переглянути збережені сторінки</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Увійдіть </a>, щоб побачити збережені сторінки.
     share_links:
       share_this_page: Поділіться цією сторінкою
   consultation:
@@ -61,7 +46,6 @@ uk:
     original_consultation: Первісна консультація
     ran_from: Ця консультація розпочалася з
     respond_online: Відповідати онлайн
-    'true': вірно
     visit_soon: Відвідайте цю сторінку незабаром, щоб завантажити результат до цього загальнодоступного public&nbsp;відгуку.
     was: був
     ways_to_respond: Способи реагування
@@ -526,22 +510,6 @@ uk:
       avoid_all_travel_to_parts_html: Міністерство закордонних справ<abbr title="Foreign and Commonwealth Office">(FCO)</abbr> забороняє будь-які поїздки до певних областей країни.
       avoid_all_travel_to_whole_country_html: Міністерство закордонних справ<abbr title="Foreign and Commonwealth Office">(FCO)</abbr> забороняє будь-які поїздки по країні.
     context: Поради щодо подорожей за кордон
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Дотримуйтесь діючих правил щодо COVID-19 в місці вашого проживання: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> та <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
-        </p>
-        <p class="govuk-body">
-          Щоб запобігти проникненню нових варіантів COVID у Велику Британію, не варто їхати до <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">країн із бурштинового або червоного списку</a>.
-        </p>
-        <p class="govuk-body">
-          Щоб зрозуміти ризики в країні, дотримуйтеся інструкцій <a href="/guidance/travel-advice-novel-coronavirus">Міністерства закордонних справ і міжнародного розвитку щодо подорожей</a>.
-        </p>
-        <p class="govuk-body">
-          Повернувшись, дотримуйтесь правил, щоб <a href="/uk-border-control">в’їхати до Великобританії з-за кордону </a> (крім Ірландії).
-        </p>
-      text_assistive: Важливо
-      title: Подорожі під час епідемії коронавірусу (COVID-19)
     still_current_at: Досі актуально на
     summary: Резюме
     updated: Оновлено

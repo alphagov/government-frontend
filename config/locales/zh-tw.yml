@@ -9,7 +9,6 @@ zh-tw:
       text: 針對個人和家庭的英國脫歐指南
     heading_prefix: 不同之處
   common:
-    last_updated:
     visit: 探訪：
   components:
     figure:
@@ -21,22 +20,8 @@ zh-tw:
       see_all_updates: 查看所有更新
       show_all_updates: 展開所有更新
     publisher_metadata:
-      collections:
-      from:
       hide_all: 隱藏全部
       show_all: 展開全部
-    save_this_page:
-      add_page_button: 添加至你儲存頁面
-      confirmations:
-        page_removed:
-          message: 已從儲存頁面中移除
-        page_saved:
-          message: 已儲存至儲存頁面
-      page_not_saved_heading: 已儲存至閱讀列表已供未來瀏覽
-      page_was_saved_heading: 已儲存此頁面
-      remove_page_button: 從儲存頁面中移除
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">查看儲存頁面</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登入</a> 以查看儲存頁面。
     share_links:
       share_this_page: 分享此頁面
   consultation:
@@ -61,7 +46,6 @@ zh-tw:
     original_consultation: 最初諮詢
     ran_from: 此諮詢從
     respond_online: 線上回覆
-    'true': 正確
     visit_soon: 稍後再次到訪此頁面，將下載結果到此公共機構&nbsp；反饋。
     was: 曾
     ways_to_respond: 回覆方式
@@ -376,22 +360,6 @@ zh-tw:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議不要前往該國部分地區。
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議不要前往該國。
     context: 國外旅行建議
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-        遵循居住地的當前 COVID-19 規範：<a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">英國</a>、<a href="https://www.gov.scot/coronavirus-covid-19/">蘇格蘭</a>、 <a href="https://gov.wales/coronavirus-travel">威爾斯</a> 和 <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">北愛爾蘭</a>。
-        </p>
-        <p class="govuk-body">
-        為防止新的新冠病毒變種株進入英國，你不應前往 <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber 或 red 名單上的國家</a>。
-        </p>
-        <p class="govuk-body">
-        要了解國家 / 地區的風險，請遵循 <a href="/guidance/travel-advice-novel-coronavirus">外交、聯邦及發展事務部的旅行建議</a>。
-        </p>
-        <p class="govuk-body">
-         當你返國，請遵守<a href="/uk-border-control">從海外入境英國</a> （愛爾蘭除外）的規定。
-        </p>
-      text_assistive: 重要
-      title: 新冠病毒（COVID-19）旅行
     still_current_at: 目前仍
     summary: 概括
     updated: 更新

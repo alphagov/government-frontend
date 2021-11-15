@@ -9,7 +9,6 @@ fa:
       text: راهنمای برگزیت برای کسب‌و‌کارها و خانواده‌ها
     heading_prefix: مختلف وجود دارد
   common:
-    last_updated:
     visit: 'بازدید کنید:'
   components:
     figure:
@@ -21,22 +20,8 @@ fa:
       see_all_updates: مشاهده تمام بروزرسانی‌ها
       show_all_updates: نمایش تمام بروزرسانی‌ها
     publisher_metadata:
-      collections:
-      from:
       hide_all: مخفی کردن همه
       show_all: نمایش همه
-    save_this_page:
-      add_page_button: افزودن به صفحات ذخیره‌شده شما
-      confirmations:
-        page_removed:
-          message: شما این صفحه را از صفحات ذخیره‌شده خود حذف کردید
-        page_saved:
-          message: شما این صفحه را به صفحات ذخیره‌شده خود اضافه کردید
-      page_not_saved_heading: این صفحه را ذخیره کنید تا بتوانید بعداً به آن بازگردید
-      page_was_saved_heading: شما اسن صفحه را ذخیره کردید
-      remove_page_button: حذف از صفحات ذخیره‌شده شما
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">مشاهده صفحات ذخیره‌شده شما</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">برای مشاهده</a> ذخیره‌شده خود وارد شوید.
     share_links:
       share_this_page: اشتراک‌گذاری این صفحه
   consultation:
@@ -61,7 +46,6 @@ fa:
     original_consultation: مشاوره اصلی
     ran_from: این مشاوره در حال اجرا است از
     respond_online: آنلاین پاسخ دهید
-    'true': صحیح
     visit_soon: برای دانلود نتیجه این بازخورد عمومی، خیلی زود دوباره از این صفحه بازدید کنید.
     was: بود
     ways_to_respond: راه‌های پاسخ
@@ -376,22 +360,6 @@ fa:
       avoid_all_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به بخش‌هایی از این کشور خودداری کنید.
       avoid_all_travel_to_whole_country_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به تمام نقاط این کشور خودداری کنید.
     context: توصیه‌های مربوط به سفر خارجی
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-        از قوانین فعلی کووید-19 در محلی که زندگی می‌کنید، پیروی کنید: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">اسکاتلند</a>, <a href="https://gov.wales/coronavirus-travel">ولز</a> و <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">ایرلند شمالی</a>.
-        </p>
-        <p class="govuk-body">
-          برای جلوگیری از ورود گونه‌های جدید کووید به انگلستان، نباید به کشورهای <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">لیست زرد یا قرمز سفر کنید</a>.
-        </p>
-        <p class="govuk-body">
-          برای اطلاع از خطرات موجود در کشورها از <a href="/guidance/travel-advice-novel-coronavirus">توصیه‌های سفر وزارت امور خارجه بریتانیا پیروی کنید</a>.
-        </p>
-        <p class="govuk-body">
-          هنگام بازگشت، از قوانین <a href="/uk-border-control">ورود به انگلستان از خارج از کشور پیروی کنید</a> (به جز از ایرلند).
-        </p>
-      text_assistive: مهم
-      title: سفر کرونا ویروس (کووید-19)
     still_current_at: همچنان جاری است در
     summary: خلاصه
     updated: بروز شده

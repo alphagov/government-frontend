@@ -9,7 +9,6 @@ uz:
       text: Брексит шароитларида жисмоний ва юридик шахслар учун қўлланма
     heading_prefix: Фарқ мавжуд
   common:
-    last_updated:
     visit: 'Ташриф буюринг:'
   components:
     figure:
@@ -21,22 +20,8 @@ uz:
       see_all_updates: Барча янгиланишларни кўриш
       show_all_updates: янгиланишларни барчасини кўрсатиш
     publisher_metadata:
-      collections:
-      from:
       hide_all: барчасини яшириш
       show_all: барчасини кўрсатиш
-    save_this_page:
-      add_page_button: Ўз сақланган саҳифаларга қўшиш
-      confirmations:
-        page_removed:
-          message: Сиз буни ўз сақланган саҳифаларингиздан ўчириб юбордингиз
-        page_saved:
-          message: Сиз буни ўз сақланган саҳифаларингизга қўшдингиз
-      page_not_saved_heading: Орқага саҳифага қайтиш учун, уни сақлаб қўйиш.
-      page_was_saved_heading: Сиз бу саҳифани сақлаб қўйдингиз
-      remove_page_button: Сақланган саҳифалардан ўчириб юбориш
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Сақланган саҳифаларни кўриш</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Сақланган саҳифаларни кўриш учун</a> кириш.
     share_links:
       share_this_page: Саҳифа билан бўлишиш
   consultation:
@@ -61,7 +46,6 @@ uz:
     original_consultation: Дастлабки маслаҳат
     ran_from: Ушбу маслаҳат дан ўтказилган
     respond_online: Онлайн жавоб бериш
-    'true': ҳақиқат
     visit_soon: Мазкур саҳифага яқин вақтда яна бир марта ташриф буюринг ва ушбу &nbsp;шарҳга натижаларни юклаб олинг.
     was: бўлган
     ways_to_respond: Жавоб бериш усули
@@ -376,22 +360,6 @@ uz:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> бутун мамлакат ҳудуди бўйлаб сафарларни амалга оширишни тавсия этмайди.
     context: Хорижга сафарларга нисбатан маслаҳат бериш
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-        Ўз минтақангизда COVID-19 билан боғлиқ амалдаги қоидаларга риоя қилинг:  <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Англия</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Шимолий Ирландия</a>.
-        </p>
-        <p class="govuk-body">
-        Буюк Британия  ҳудудида COVID янги штаммларидан пайдо бўлишни олдини олиш учун, сизга сариқ ёки қизил рўйхат тоифаларига киритилган <a href="/guidance/red-amber-and-green-list-rules-for-entering-england"> мамлакатга сафарларни амалга ошириш керак бўлмайди</a>.
-        </p>
-        <p class="govuk-body">
-         Мамлакатдаги хавфларни фаҳмлаш учун, <a href="/guidance/travel-advice-novel-coronavirus">Ташқи ишлар, Ҳамдўстлик ишлари бўйича ва ривожлантириш вазирлигининг жойдан жойга кўчиб ўтишга нисбатан тавсиялар билан танишиб чиқинг</a>.
-        </p>
-        <p class="govuk-body">
-          Қайтиб келгандан кейин хориждан Буюк Британияга кириб келиш <a href="/uk-border-control">қоидаларига риоя қилиш зарур бўлади</a> (Ирландия бундан мустасно).
-        </p>
-      text_assistive: Муҳим
-      title: Коронавирус (COVID-19) шароитларида саёҳат
     still_current_at: Ҳанузгача кучда
     summary: Жамланма маълумот
     updated: Янгиланган

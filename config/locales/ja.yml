@@ -9,7 +9,6 @@ ja:
       text: 個人および家族向けBrexitガイダンス
     heading_prefix: 違いがあります
   common:
-    last_updated:
     visit: 訪問：
   components:
     figure:
@@ -21,22 +20,8 @@ ja:
       see_all_updates: すべての更新を見る
       show_all_updates: すべての更新を表示
     publisher_metadata:
-      collections:
-      from:
       hide_all: すべて非表示
       show_all: すべて表示
-    save_this_page:
-      add_page_button: 保存したページに追加
-      confirmations:
-        page_removed:
-          message: 保存したページから削除されました
-        page_saved:
-          message: 保存したページに追加されました
-      page_not_saved_heading: このページを保存して、後で見られるようにする
-      page_was_saved_heading: このページを保存しました
-      remove_page_button: 保存したページから削除します
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link%{additional_class}">保存したページを表示</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link%{additional_class}">ログイン</a> して、保存したページを表示します。
     share_links:
       share_this_page: このページを共有
   consultation:
@@ -61,7 +46,6 @@ ja:
     original_consultation: 当初の審議
     ran_from: この審議が始まった時間：
     respond_online: オンラインで返信する
-    'true': 調整
     visit_soon: この一般向けフィードバックの結果をダウンロードするには、すぐにこのページにアクセスしてください。
     was: 終了
     ways_to_respond: 対応方法
@@ -376,19 +360,6 @@ ja:
       avoid_all_travel_to_parts_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内一部地域へのすべての移動を控えるよう勧告しています。
       avoid_all_travel_to_whole_country_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内すべての移動を控えるよう勧告しています。
     context: 海外旅行のアドバイス
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">現在お住まいのCOVID-19ルールを守ってください：<a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">英国</a>、<a href="https://www.gov.scot/coronavirus-covid-19/">スコットランド</a>、<a href="https://gov.wales/coronavirus-travel">ウェールズ</a>、<a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">北アイルランド</a>。<p class="govuk-body">
-          新しいCOVID変種が英国に入るのを防ぐために、<a href="/guidance/red-amber-and-green-list-rules-for-entering-england">琥珀色または赤のリスト国</a>に旅行しないでください。
-        </p>
-        <p class="govuk-body">
-          ある国のリスクを知るには、<a href="/guidance/travel-advice-novel-coronavirus">FCDO travel advice (FCDOの旅行に関するガイドライン)</a>に従ってください。
-        </p>
-        <p class="govuk-body">
-          帰国する際には、ルールどおりに<a href="/uk-border-control">外国 (アイルランド以外) から英国に入国</a> してください。
-        </p>
-      text_assistive: 重要
-      title: コロナウイルス（COVID-19）旅行
     still_current_at: 現状：
     summary: 概要
     updated: 更新済み

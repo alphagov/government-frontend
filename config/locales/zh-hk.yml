@@ -9,7 +9,6 @@ zh-hk:
       text: 英國脫歐個人及家庭指引
     heading_prefix: 與別不同
   common:
-    last_updated:
     visit: 訪問：
   components:
     figure:
@@ -21,22 +20,8 @@ zh-hk:
       see_all_updates: 查看所有更新
       show_all_updates: 顯示所有更新
     publisher_metadata:
-      collections:
-      from:
       hide_all: 全部隱藏
       show_all: 全部顯示
-    save_this_page:
-      add_page_button: 加入您的已保存頁面
-      confirmations:
-        page_removed:
-          message: 您已從您的已保存頁面移除此項
-        page_saved:
-          message: 您已將此項加入您的已保存頁面
-      page_not_saved_heading: 保存此一頁面以供今後返回
-      page_was_saved_heading: 您已保存此一頁面
-      remove_page_button: 從您的已保存頁面移除
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">查閱您的已保存頁面</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登入</a> 以查閱您的已保存頁面。
     share_links:
       share_this_page: 轉載此一頁面
   consultation:
@@ -61,7 +46,6 @@ zh-hk:
     original_consultation: 原有諮詢
     ran_from: 本次諮詢開始於
     respond_online: 線上回覆
-    'true': 正確
     visit_soon: 請儘快再次訪問本頁面，以下載此一公共&nbsp;回饋意見。
     was: 曾是
     ways_to_respond: 回應方式
@@ -376,21 +360,6 @@ zh-hk:
       avoid_all_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國部份地區。
       avoid_all_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國全部地區。
     context: 海外旅行建議
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          遵循您居住地的 COVID-19 原則： <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">英格蘭</a>、<a href="https://www.gov.scot/coronavirus-covid-19/">蘇格蘭</a>、<a href="https://gov.wales/coronavirus-travel">威爾士</a> 及 <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">北愛爾蘭</a>。
-        </p>
-        <p class="govuk-body">
-          為防止新的 COVID 變種病毒進入英國，您不應前往 <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">黃色或紅色名單之國家旅行</a>。
-        </p>
-        <p class="govuk-body">
-          為了解某一國家之風險，請遵循 <a href="/guidance/travel-advice-novel-coronavirus">FCDO 旅行建議</a>。
-        </p>
-        <p class="govuk-body">
-          當您返回時，請遵循 <a href="/uk-border-control">由海外進入英國</a>（愛爾蘭除外）之規定。</p>
-      text_assistive: 重要事項
-      title: 新型冠狀病毒 (COVID-19) 疫情下旅行
     still_current_at: 目前仍在
     summary: 摘要
     updated: 已更新

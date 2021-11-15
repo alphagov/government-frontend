@@ -9,7 +9,6 @@ zh:
       text: 企业和家庭的英国脱欧指南
     heading_prefix: 区别
   common:
-    last_updated:
     visit: 访问：
   components:
     figure:
@@ -21,22 +20,8 @@ zh:
       see_all_updates: 查看全部更新
       show_all_updates: 显示全部更新
     publisher_metadata:
-      collections:
-      from:
       hide_all: 隐藏全部
       show_all: 显示全部
-    save_this_page:
-      add_page_button: 添加到您保存的页面
-      confirmations:
-        page_removed:
-          message: 您已经从保存的页面中删除了这个
-        page_saved:
-          message: 您已将这个添加到保存的页面中
-      page_not_saved_heading: 保存此页面，以便稍后再查看
-      page_was_saved_heading: 您已保存此页面
-      remove_page_button: 从您保存的页面中删除
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">查看您的已保存页面</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">登录</a> 以查看您保存的页面。
     share_links:
       share_this_page: 分享本页面
   consultation:
@@ -61,7 +46,6 @@ zh:
     original_consultation: 最初咨询
     ran_from: 本咨询的时间
     respond_online: 在线回复
-    'true': 真
     visit_soon: 请尽快再次访问此页面，将结果下载给公众&nbsp;反馈。
     was: 是
     ways_to_respond: 回复方法
@@ -376,22 +360,6 @@ zh:
       avoid_all_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国家的某些地区。  '
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。
     context: 国外差旅建议
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-        在居住地遵循当前的COVID-19规则：<a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">苏格兰</a>、<a href="https://gov.wales/coronavirus-travel">威尔士</a> 和 <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">北爱尔兰</a>。
-        </p>
-        <p class="govuk-body">
-        为防止新的COVID变体进入英国，您不应前往 <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">琥珀色或红色名单国家</a>。
-        </p>
-        <p class="govuk-body">
-        要了解一个国家的风险，请遵循 <a href="/guidance/travel-advice-novel-coronavirus">FCDO差旅建议</a>。
-        </p>
-        <p class="govuk-body">
-        当您返回时，遵循<a href="/uk-border-control">从国外进入英国的建议</a>（爱尔兰除外）。
-        </p>
-      text_assistive: 重要信息
-      title: 冠状病毒(COVID-19)差旅
     still_current_at: 有效范围
     summary: 总结
     updated: 已更新

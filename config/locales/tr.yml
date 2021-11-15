@@ -9,7 +9,6 @@ tr:
       text: Kişiler ve aileler için Brexit rehberi
     heading_prefix: Farklılık var
   common:
-    last_updated:
     visit: 'Ziyaret et:'
   components:
     figure:
@@ -21,22 +20,8 @@ tr:
       see_all_updates: tüm güncellemeleri görün
       show_all_updates: tüm güncellemeleri göster
     publisher_metadata:
-      collections:
-      from:
       hide_all: hepsini gizle
       show_all: hepsini göster
-    save_this_page:
-      add_page_button: Kayıtlı sayfalarına ekle
-      confirmations:
-        page_removed:
-          message: Bunu kayıtlı sayfalarınızdan çıkardınız
-        page_saved:
-          message: Bunu kayıtlı sayfalarınıza eklediniz
-      page_not_saved_heading: Daha sonra gelebilmek için bu sayfayı kaydedin
-      page_was_saved_heading: Bu sayfayı kaydettiniz
-      remove_page_button: Kayıtlı sayfalarından çıkar
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı sayfalarını gör</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kayıtlı sayfalarını görmek için</a> oturum aç.
     share_links:
       share_this_page: Bu sayfayı paylaş
   consultation:
@@ -61,7 +46,6 @@ tr:
     original_consultation: Orijinal danışma
     ran_from: Bu danışma şuradan başladı
     respond_online: Çevrimiçi yanıtla
-    'true': doğru
     visit_soon: Sonucu bu açık&nbsp;geri bildirime yüklemek için sayfayı kısa süre sonra tekrar ziyaret edin.
     was: idi
     ways_to_respond: Yanıtlama şekilleri
@@ -376,22 +360,6 @@ tr:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülkeye bazı kısımlarına hiçbir seyahat yapılmamasını tavsiye etmektedir.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülke geneline hiçbir seyahat yapılmamasını tavsiye etmektedir.
     context: Yurtdışı seyahat tavsiyesi
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-        Yaşadığınız yerdeki mevcut COVID-19 kurallarını takip edin: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">İngiltere</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">İskoçya</a>, <a href="https://gov.wales/coronavirus-travel">Galler</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Kuzey İrlanda</a>.
-        </p>
-        <p class="govuk-body">
-          Yeni COVID varyantlarının İngiltere’ye girmesini engellemek için, <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">kehribar rengi veya kırmızı listedeki ülkelere</a> seyahat etmemelisiniz.
-        </p>
-        <p class="govuk-body">
-          Bir ülkedeki riskleri öğrenmek için <a href="/guidance/travel-advice-novel-coronavirus">Dışişleri Bakanlığı Seyahat Tavsiyesine uyun</a>.
-        </p>
-        <p class="govuk-body">
-          Geri döndüğünüzde,  (İrlanda hariç) <a href="/uk-border-control">yurtdışından İngiltere’ye giriş</a> kurallarına uyun.
-        </p>
-      text_assistive: Önemli
-      title: Koronavirüs (COVID-19) seyahat
     still_current_at: Halen şurada
     summary: Özet
     updated: Güncelleme

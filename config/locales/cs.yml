@@ -9,7 +9,6 @@ cs:
       text: Pokyny k brexitu pro jednotlivce a rodiny
     heading_prefix: Existují různé
   common:
-    last_updated:
     visit: 'Navštivte:'
   components:
     figure:
@@ -21,22 +20,8 @@ cs:
       see_all_updates: vidět všechny aktualizace
       show_all_updates: zobrazit všechny aktualizace
     publisher_metadata:
-      collections:
-      from:
       hide_all: skrýt vše
       show_all: zobrazit vše
-    save_this_page:
-      add_page_button: Přidat do uložených stránek
-      confirmations:
-        page_removed:
-          message: Odstranili jste ji z uložených stránek
-        page_saved:
-          message: Toto jste přidali do uložených stránek
-      page_not_saved_heading: Uložte si tuto stránku, abyste se k ní mohli později vrátit
-      page_was_saved_heading: Tuto stránku jste uložili
-      remove_page_button: Odstranění z uložených stránek
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Podívejte se na své uložené stránky</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Přihlaste se</a> pro zobrazení uložených stránek.
     share_links:
       share_this_page: Sdílet tuto stránku
   consultation:
@@ -61,7 +46,6 @@ cs:
     original_consultation: Původní konzultace
     ran_from: Tato konzultace probíhala od
     respond_online: Reagovat online
-    'true': platí
     visit_soon: Brzy tuto stránku znovu navštivte a stáhněte si výsledek této veřejné&nbsp;zpětné vazby.
     was: byl
     ways_to_respond: Způsoby reakce
@@ -451,22 +435,6 @@ cs:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">Úřad pro zahraniční věci, společenství národů a rozvoj</abbr> nedoporučuje do některých částí země cestovat.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">Úřad pro zahraniční věci, společenství národů a rozvoj</abbr> nedoporučuje cestovat do celé země.
     context: Rady pro cestování do zahraničí
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Dodržujte aktuální pravidla COVID-19 v místě, kde žijete: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglii</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotsku</a>, <a href="https://gov.wales/coronavirus-travel">Walesu</a> a <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Severním Irsku</a>.
-        </p>
-        <p class="govuk-body">
-          Abyste zabránili vstupu nových variant COVID do Spojeného království, neměli byste cestovat do <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">zemí uvedených na žlutém nebo červeném seznamu</a>.
-        </p>
-        <p class="govuk-body">
-          Pro pochopení rizik v dané zemi sledujte <a href="/guidance/travel-advice-novel-coronavirus">Cestovní doporučení Úřadu pro zahraniční věci, společenství národů a rozvoj</a>.
-        </p>
-        <p class="govuk-body">
-          Po návratu postupujte podle pravidel pro <a href="/uk-border-control">vstup do Spojeného království ze zahraničí</a> (kromě Irska).
-        </p>
-      text_assistive: 'Důležité:'
-      title: Cestování s koronavirem (COVID-19)
     still_current_at: Stále aktuální na
     summary: Shrnutí
     updated: Aktualizováno

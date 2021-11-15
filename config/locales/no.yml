@@ -9,7 +9,6 @@
       text: Brexit-veiledning for enkeltpersoner og familier
     heading_prefix: Det er annerledes
   common:
-    last_updated:
     visit: 'Besøk:'
   components:
     figure:
@@ -21,22 +20,8 @@
       see_all_updates: se alle oppdateringer
       show_all_updates: vis alle oppdateringer
     publisher_metadata:
-      collections:
-      from:
       hide_all: Skjul alle
       show_all: Vis alt
-    save_this_page:
-      add_page_button: Legg til til dine lagrede sider
-      confirmations:
-        page_removed:
-          message: Du har fjernet dette fra dine lagrede sider
-        page_saved:
-          message: Du har lagt dette til på dine lagrede sider
-      page_not_saved_heading: Lagre denne siden slik at du kan komme tilbake til den senere
-      page_was_saved_heading: Du har lagret denne siden
-      remove_page_button: Fjern fra de lagrede sidene
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Se dine lagrede sider</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logg inn</a> for å se dine lagrede sider.
     share_links:
       share_this_page: Del denne siden
   consultation:
@@ -61,7 +46,6 @@
     original_consultation: Opprinnelig konsultasjon
     ran_from: Denne konsultasjonen varte fra
     respond_online: Svar online
-    'true': sant
     visit_soon: Besøk denne siden igjen snart for å laste ned resultatet til denne public&nbsp;feedback.
     was: var
     ways_to_respond: Måter å svare på
@@ -376,22 +360,6 @@
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser til deler av landet.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser til hele landet.
     context: Råd om utenlandsreiser
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-        Følg de seneste COVID-19-reglene der du bor <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotttland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Nord-Irland</a>.
-        </p>
-        <p class="govuk-body">
-          For å hindre nye COVID-varianter å komme til Storbritannia, bør du ikke reise til <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">ravgule eller rødlistede land</a>.
-        </p>
-        <p class="govuk-body">
-          For å forstå et lands risiko, følg <a href="/guidance/travel-advice-novel-coronavirus">FCDO Reiseråd</a>.
-        </p>
-        <p class="govuk-body">
-          Når du kommer tilbake, følg reglene for å <a href="/uk-border-control">komme inn i Storbritannia fra utlandet</a> (unntatt fra Irland).
-        </p>
-      text_assistive: Viktig
-      title: Coronavirus-reiser (COVID-19-reiser)
     still_current_at: Fortsatt aktuell
     summary: Sammendrag
     updated: Oppdatert

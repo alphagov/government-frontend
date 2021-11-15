@@ -9,7 +9,6 @@ ps:
       text: د افرادو او کورنیو لپاره د بریکسیت لارښود
     heading_prefix: توپیر لري
   common:
-    last_updated:
     visit: 'لیدنه:'
   components:
     figure:
@@ -21,22 +20,8 @@ ps:
       see_all_updates: ټول تازه معلومات وګورئ
       show_all_updates: ټول تازه معلومات وښایاست
     publisher_metadata:
-      collections:
-      from:
       hide_all: ټول پټ کړئ
       show_all: ټول ښکاره کړه
-    save_this_page:
-      add_page_button: خپلو خوندي شویو پاو ته اضافه کړئ
-      confirmations:
-        page_removed:
-          message: تاسو دا له خپلو خوندي شویو پا .و لرې کړی دی
-        page_saved:
-          message: تاسو دا خپل خوندي شوي پاڼه کې اضافه کړی
-      page_not_saved_heading: دا پاڼه خوندي کړئ نو تاسو کولی شئ وروسته دې ته راشئ
-      page_was_saved_heading: تاسو دا پا savedه خوندي کړې
-      remove_page_button: له خپلو خوندي شویو پا .و څخه لرې کړئ
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">خپل خوندي شوي پا ڼې وګورئ</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">ننوتل</a> د خپلو خوندي شویو پا seeو لیدو لپاره.
     share_links:
       share_this_page: دا پاه شریکه کړئ
   consultation:
@@ -61,7 +46,6 @@ ps:
     original_consultation: اصلي مشوره
     ran_from: دا مشوره له دې ځایه روانه وه
     respond_online: آنلاین ځواب ورکړئ
-    'true': ریښتیا
     visit_soon: ژر تر ژره دې پاڼه څخه لیدنه وکړئ ترڅو دې عامه & nbsp feedback نظریاتو ته پایله ډاونلوډ کړئ.
     was: وه
     ways_to_respond: د ځواب ویلو لارې
@@ -376,22 +360,6 @@ ps:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د ټولو سفرونو پروړاندې مشوره ورکوي.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ټول هیواد ته د ټولو سفرونو پروړاندې مشوره ورکوي.
     context: د بهرني سفر مشوره
-    coronavirus_warning:
-      content_html: |-
-        <p class = "govuk-body">
-           د اوسني COVID-19 مقررات تعقیب کړئ چیرې چې تاسو اوسئ: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do"> انګلستان </a> ، <a href = " https://www.gov.scot/coronavirus-covid-19/"> سکاټلینډ </a> ، <a href="https://gov.wales/coronavirus-travel"> ویلز </a> او <a href = "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you"> شمالي ایرلنډ </a>.
-        </p>
-        <p class = "govuk-body">
-           انګلستان ته د ننوتلو څخه د نوي COVID ډولونو مخنیوي لپاره ، تاسو باید <a href="/guidance/red-amber-and-green-list-rules-for-entering-england"> امبر یا سور لیست هیوادونو ته سفر ونه کړئ </a >.
-        </p>
-        <p class = "govuk-body">
-           په هیواد کې د خطرونو درک کولو لپاره <a href="/guidance/travel-advice-novel-coronavirus"> د FCDO سفر مشوره </a> تعقیب کړئ.
-        </p>
-        <p class = "govuk-body">
-           کله چې تاسو بیرته راشئ ، د <a href="/uk-border-control"> له بهر څخه انګلستان ته د ننوتلو </a> لپاره مقررات تعقیب کړئ (پرته له آیرلینډ څخه).
-        </p>
-      text_assistive: مهم
-      title: کوروناویرس (COVID-19) سفر
     still_current_at: په اوسني وخت کې
     summary: لنډيز
     updated: تازه شوی

@@ -9,7 +9,6 @@ sw:
       text: Mwongozo wa Brexit kuhusu watu na familia
     heading_prefix: Kuna utofauti
   common:
-    last_updated:
     visit: 'Tembelea:'
   components:
     figure:
@@ -21,22 +20,8 @@ sw:
       see_all_updates: angalia taarifa zote
       show_all_updates: Onyesha taarifa zote
     publisher_metadata:
-      collections:
-      from:
       hide_all: ficha zote
       show_all: onyesha zote
-    save_this_page:
-      add_page_button: Ongeza kwenye kurasa zako ulizohifadhi
-      confirmations:
-        page_removed:
-          message: Umeondoa huu kwenye kurasa zako ulizohifadhi
-        page_saved:
-          message: Umeongeza huu kwenye kurasa zako ulizohifadhi
-      page_not_saved_heading: Hifadhi ukurasa huu ili uweze kuusoma baadaye
-      page_was_saved_heading: Umehifadhi ukurasa huu
-      remove_page_button: Ondoa kwenye kurasa zako ulizohifadhi
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Angalia kurasa zako ulizohifadhi</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Ingia</a> ili uone kurasa zako ulizohifadhi.
     share_links:
       share_this_page: Shiriki ukurasa huu
   consultation:
@@ -61,7 +46,6 @@ sw:
     original_consultation: Mashauriano halisi
     ran_from: Mashauriano haya yalifanywa kuanzia
     respond_online: Jibu mtandaoni
-    'true': kweli
     visit_soon: Tembelea ukurasa huu tena hivi karibuni ili upakue matokeo ya maoni haya&nbsp;ya umma.
     was: yalikuwa
     ways_to_respond: Njia za kujibu
@@ -376,22 +360,6 @@ sw:
       avoid_all_travel_to_parts_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote katika sehemu fulani za nchi.
       avoid_all_travel_to_whole_country_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote nchini kote.
     context: Ushauri wa safari za nje ya nchi
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Fuata kanuni za sasa za COVID-19 mahali unakoishi: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Uingereza</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Uskoti</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Ayalandi Kaskazini</a>.
-        </p>
-        <p class="govuk-body">
-          Ili kuzuia kusambazwa kwa virusi vipya vya COVID nchini Uingereza, hupaswi kusafiri katika <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">nchi zilizowekwa kwenye orodha nyekundi au ya rangi ya kaharabu</a>.
-        </p>
-        <p class="govuk-body">
-          Ili kuelewa hatari za kusafiri katika nchi mahususi, fuata <a href="/guidance/travel-advice-novel-coronavirus">Ushauri wa Usafiri wa FCDO</a>.
-        </p>
-        <p class="govuk-body">
-          Ukirudi, fuata kanuni za <a href="/uk-border-control">kuingia nchini Uingereza kutoka nchi za nje</a> (isipokuwa ikiwa unatoka Ayalandi).
-        </p>
-      text_assistive: Muhimu
-      title: Mwongozo wa usafiri wakati wa janga la virusi vya korona (COVID-19)
     still_current_at: Bado unapatikana katika
     summary: Muhtasari
     updated: Ulisasishwa

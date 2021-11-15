@@ -9,7 +9,6 @@ de:
       text: Brexit-Leitfaden für Einzelpersonen und Familien
     heading_prefix: Es gibt verschiedene
   common:
-    last_updated:
     visit: 'Besuchen Sie:'
   components:
     figure:
@@ -21,22 +20,8 @@ de:
       see_all_updates: alle Aktualisierungen ansehen
       show_all_updates: alle Aktualisierungen anzeigen
     publisher_metadata:
-      collections:
-      from:
       hide_all: alle ausblenden
       show_all: alle anzeigen
-    save_this_page:
-      add_page_button: Zu Ihren gespeicherten Seiten hinzufügen
-      confirmations:
-        page_removed:
-          message: Sie haben diese Seite aus Ihren gespeicherten Seiten entfernt
-        page_saved:
-          message: Sie haben diese Seite zu Ihren gespeicherten Seiten hinzugefügt
-      page_not_saved_heading: Speichern Sie diese Seite, damit Sie später wieder zu ihr zurückkehren können
-      page_was_saved_heading: Sie haben diese Seite gespeichert
-      remove_page_button: Aus Ihren gespeicherten Seiten entfernen
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Gespeicherte Seiten anzeigen</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Melden Sie sich an</a>, um Ihre gespeicherten Seiten zu sehen.
     share_links:
       share_this_page: Diese Seite teilen
   consultation:
@@ -61,7 +46,6 @@ de:
     original_consultation: Originale Anhörung
     ran_from: Diese Anhörung lief ab
     respond_online: Online antworten
-    'true': wahr
     visit_soon: Besuchen Sie diese Seite bald wieder, um das Ergebnis dieser öffentlichen&nbsp;Rückmeldung herunterzuladen.
     was: war
     ways_to_respond: Möglichkeiten, um zu antworten
@@ -376,22 +360,6 @@ de:
       avoid_all_travel_to_parts_html: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr> rät von allen Reisen in Teile des Landes ab.
       avoid_all_travel_to_whole_country_html: Das <abbr title="Foreign and Commonwealth Office">FCO</abbr> rät von allen Reisen in das ganze Land ab.
     context: Hinweise für Auslandsreisen
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Halten Sie sich an die geltenden COVID-19-Vorschriften an Ihrem Wohnort: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Schottland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Nordirland</a>.
-        </p>
-        <p class="govuk-body">
-          Um zu verhindern, dass neue COVID-Varianten in das Vereinigte Königreich gelangen, sollten Sie nicht in Länder der <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">gelben oder roten Liste reisen</a>.
-        </p>
-        <p class="govuk-body">
-          Um sich über die Risiken in einem Land zu informieren, folgen Sie den <a href="/guidance/travel-advice-novel-coronavirus">Reisehinweisen vom Amt des Auswärtigen, des Commonwealth und der Entwicklung</a>.
-        </p>
-        <p class="govuk-body">
-          Bei Ihrer Rückkehr befolgen Sie die Vorschriften für die <a href="/uk-border-control">Einreise in das Vereinigte Königreich aus dem Ausland</a> (außer aus Irland).
-        </p>
-      text_assistive: Wichtig
-      title: Coronavirus (COVID-19) Reisen
     still_current_at: Aktuell noch bei
     summary: Zusammenfassung
     updated: Aktualisiert

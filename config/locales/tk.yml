@@ -9,7 +9,6 @@ tk:
       text: Raýatlara we maşgalalara Brexit görkezmesi
     heading_prefix: Tapawut bar
   common:
-    last_updated:
     visit: 'Serediň:'
   components:
     figure:
@@ -21,22 +20,8 @@ tk:
       see_all_updates: ähli täzelenmelere serediň
       show_all_updates: ähli täzelenmeleri görkez
     publisher_metadata:
-      collections:
-      from:
       hide_all: ählisini gizle
       show_all: ählisini görkez
-    save_this_page:
-      add_page_button: Ýatda saklanan sahypalaryň arasyna goş
-      confirmations:
-        page_removed:
-          message: Siz bu sahypany ýatda saklananlaryň arasyndan aýyrdyňyz
-        page_saved:
-          message: Siz bu sahypany ýatda saklananlaryň arasyna goşduňyz
-      page_not_saved_heading: Geljekde dolanyp gelmek üçin bu sahypany ýatda saklaň
-      page_was_saved_heading: Bu sahypany ýatda sakladyňyz
-      remove_page_button: Ýatda saklanan sahypalaryň arasyndan aýryň
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Ýatda saklanan sahypalary görmek</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Hasaba girmek</a> ýatda saklanan sahypalary görmek üçin.
     share_links:
       share_this_page: Bu sahypany paýlaşyň
   consultation:
@@ -61,7 +46,6 @@ tk:
     original_consultation: Hakyky maslahat beriş
     ran_from: Bu maslahat beriş dowam edýär
     respond_online: Onlaýn jogap bermek
-    'true': dogry
     visit_soon: Jemgyýetçilik&nbsp;seslenme netijelerini göçürmek üçin bu internet sahypasyny ýene-de zyýarat ediň.
     was: boldy
     ways_to_respond: Jogap bermegiň görnüşleri
@@ -376,21 +360,6 @@ tk:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ýurduň dürli künjeklerine syýahat etmegiň öňüni alýar.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> tutuş ýurda syýahat etmegiň öňüni alýar.
     context: Daşary ýurda syýahat maslahaty
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body"> Ýaşaýan ýeriňizdäki COVID-19 düzgünlerine eýeriň: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Angliýa</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Şotlandiýa</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> we <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Demirgazyk Irlandiýa</a>.
-        </p>
-        <p class="govuk-body">
-          Täze COVID gornüşleriniň Angliýanyň çägine girmeginiň öňüni almak üçin <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber ýa-da gyzyl sanaw ýurtlaryna</a> syýahat etmeli dälsiňiz.
-        </p>
-        <p class="govuk-body">
-          Ýurtdaky howplara düşünmek üçin <a href="/guidance/travel-advice-novel-coronavirus">Daşary, Raýdaşlyk we Ösüş edarasy (FCDO) Syýahat Maslahaty</a>.
-        </p>
-        <p class="govuk-body">
-         Dolanyp geleniňizde<a href="/uk-border-control">BK girmek boýunça düzgümlere eýeriň</a> (Irlandiýadan başga).
-        </p>
-      text_assistive: Möhüm
-      title: Koronawirus (COVID-19) syýahat
     still_current_at: Häzir hem bar
     summary: Gysgaça
     updated: Täzelenen

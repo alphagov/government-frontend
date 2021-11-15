@@ -9,7 +9,6 @@ gd:
       text: Moltaí Brexit do dhaoine aonair agus do theaghlaigh
     heading_prefix: Tá difríochtaí ann
   common:
-    last_updated:
     visit: 'Cuairt:'
   components:
     figure:
@@ -21,22 +20,8 @@ gd:
       see_all_updates: féach gach nuashonrú
       show_all_updates: Taispeáin gach nuashonrú
     publisher_metadata:
-      collections:
-      from:
       hide_all: gach rud a cheilt
       show_all: Taispeáin go léir
-    save_this_page:
-      add_page_button: Ag cur le leathanaigh shábháilte
-      confirmations:
-        page_removed:
-          message: Scrios tú an leathanach cúltaca seo uaidh
-        page_saved:
-          message: Chuir tú cuid le do bhileoga taifid
-      page_not_saved_heading: Sábháil an teachtaireacht seo ionas gur féidir leat teacht ar ais uirthi níos déanaí.
-      page_was_saved_heading: Tá an leathanach seo curtha i gcuimhne agat
-      remove_page_button: Scrios ó mo leathanaigh shábháilte
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Féach ar do leathanaigh shábháilte</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Sínigh isteach</a> chun féachaint ar do leathanaigh shábháilte.
     share_links:
       share_this_page: Comhroinn an leathanach seo
   consultation:
@@ -61,7 +46,6 @@ gd:
     original_consultation: Comhairliúchán bunaidh
     ran_from: Rinneadh an comhairliúchán seo ó
     respond_online: Tabhair freagra ar líne
-    'true': fíor
     visit_soon: Tar ar ais go luath chun cuairt a thabhairt orainn ar an leathanach seo chun tuarascáil an chomhairliúcháin phoiblí seo a íoslódáil.
     was: bhí
     ways_to_respond: Bealaí chun freagra a thabhairt
@@ -526,22 +510,6 @@ gd:
       avoid_all_travel_to_parts_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr> gach taisteal chuig codanna den tír a sheachaint.
       avoid_all_travel_to_whole_country_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr> duit gach taisteal ar fud na tíre a sheachaint.
     context: Comhairle phraiticiúil do thaistealaithe eachtracha
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Lean rialacha COVID-19 atá in úsáid i do thír chónaithe: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Sasana</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Albain</a>, <a href="https://gov.wales/coronavirus-travel">An Bhreatain Bheag</a> agus <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Éire du Thuaidh</a>.
-        </p>
-        <p class="govuk-body">
-          D’fhonn cosc ​​a chur ar leaganacha nua COVID a iontráil sa RA, seachain dul chuig <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">liosta oráiste nó dearg tíortha</a>.
-        </p>
-        <p class="govuk-body">
-          Chun na rioscaí i dtír a thuiscint go hiomlán, lean <a href="/guidance/travel-advice-novel-coronavirus">Comhairle Taistil Aireacht Gnóthaí Eachtracha, Comhlathas agus Forbairt</a>.
-        </p>
-        <p class="govuk-body">
-          Ar fhilleadh duit, lean na rialacha maidir le <a href="/uk-border-control">dul isteach sa RA ó thar lear</a> (seachas as Éirinn).
-        </p>
-      text_assistive: Tábhachtach
-      title: Taisteal de bharr coronavirus (COVID-19)
     still_current_at: Bailí i gcónaí ar
     summary: Coimriú
     updated: Athnuachan

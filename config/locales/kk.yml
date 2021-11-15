@@ -9,7 +9,6 @@ kk:
       text: Жеке тұлғалар мен отбасыларға арналған Brexit нұсқаулығы
     heading_prefix: Әртүрлісі бар
   common:
-    last_updated:
     visit: 'Мұнда өтіңіз:'
   components:
     figure:
@@ -21,22 +20,8 @@ kk:
       see_all_updates: барлық жаңартуларды қарау
       show_all_updates: барлық жаңартуларды көрсету
     publisher_metadata:
-      collections:
-      from:
       hide_all: барлығын жасыру
       show_all: барлығын көрсету
-    save_this_page:
-      add_page_button: Сақталған беттерге қосыңыз
-      confirmations:
-        page_removed:
-          message: Мұны сақталған беттерден жойдыңыз
-        page_saved:
-          message: Мұны сақталған беттерге қостыңыз
-      page_not_saved_heading: Бұл бетті оған кейінірек орала алатындай сақтаңыз
-      page_was_saved_heading: Сіз бұл бетті сақтадыңыз
-      remove_page_button: Сақталған беттерден алып тастау
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Сақталған беттерді қараңыз</a>
-      see_saved_pages_signed_out: Сақталған беттерді қарау үшін <a href="%{link}" class="govuk-link %{additional_class}">Кіріңіз</a>.
     share_links:
       share_this_page: Осы бетпен бөлісу
   consultation:
@@ -61,7 +46,6 @@ kk:
     original_consultation: Бастапқы кеңес
     ran_from: Бұл кеңес мына жерден басталады
     respond_online: Онлайн жауап беру
-    'true': шын
     visit_soon: Нәтижені осы қоғамдық&nbsp;пікірге жүктеу үшін жақында осы бетке қайта кіріңіз.
     was: болды
     ways_to_respond: Жауап беру жолдары
@@ -376,22 +360,6 @@ kk:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> елдің барлық аймақтарына барудан бас тартуға кеңес береді.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> бүкіл елге баруға тыйым салады.
     context: Шетелге саяхат туралы кеңес
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Тұрып жатқан жеріңізде ағымдағы COVID-19 ережелерін сақтаңыз: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Англия</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Шотландия</a>, <a href="https://gov.wales/coronavirus-travel">Уэльс</a> және <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Солтүстік Ирландия</a>.
-        </p>
-        <p class="govuk-body">
-          Ұлыбританияға жаңа COVID түрлері кірмес үшін, сіз <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">сарғылт немесе қызыл тізімдегі елдер</a> саяхаттамауыңыз керек.
-        </p>
-        <p class="govuk-body">
-          Елдегі қауіптерді түсіну үшін <a href="/guidance/travel-advice-novel-coronavirus">FCDO саяхаттау кеңесін</a> сақтаңыз.
-        </p>
-        <p class="govuk-body">
-          Оралған кезде <a href="/uk-border-control">шетелден Ұлыбританияға кіру үшін</a> (Ирландияны қоспағанда) ережелерді сақтаңыз.
-        </p>
-      text_assistive: Маңызды
-      title: Коронавирус (COVID-19) саяхаттау
     still_current_at: Әлі де ағымдағы
     summary: Қысқаша мазмұны
     updated: Жаңартылды

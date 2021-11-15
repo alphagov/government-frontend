@@ -9,7 +9,6 @@ id:
       text: Panduan Brexit untuk individu dan keluarga
     heading_prefix: Ada perbedaan
   common:
-    last_updated:
     visit: 'Kunjungan:'
   components:
     figure:
@@ -21,22 +20,8 @@ id:
       see_all_updates: lihat semua pembaruan
       show_all_updates: Tampilkan semua pembaruan
     publisher_metadata:
-      collections:
-      from:
       hide_all: sembunyikan semua
       show_all: tampilkan semua
-    save_this_page:
-      add_page_button: Tambah ke halaman yang Anda simpan
-      confirmations:
-        page_removed:
-          message: Anda menghapus ini dari halaman yang Anda simpan
-        page_saved:
-          message: Anda menambah ini ke halaman yang Anda simpan
-      page_not_saved_heading: Simpan halaman ini sehingga Anda bisa kembali lagi nanti
-      page_was_saved_heading: Anda menyimpan halaman ini
-      remove_page_button: Hapus dari halaman yang Anda simpan
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Lihat halaman yang Anda simpan</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Masuk</a> untuk melihat halaman yang Anda simpan.
     share_links:
       share_this_page: Bagikan halaman ini
   consultation:
@@ -61,7 +46,6 @@ id:
     original_consultation: Konsultasi asli
     ran_from: Konsultasi ini berlangsung dari
     respond_online: Respons online
-    'true': benar
     visit_soon: Segera kunjungi lagi halaman ini untuk mengunduh hasil dari umpan balik publik ini.
     was: "."
     ways_to_respond: Cara merespons
@@ -376,22 +360,6 @@ id:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan ke bagian-bagian dari negara itu.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan ke seluruh bagian dari negara itu.
     context: Nasihat perjalanan luar negeri
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Ikuti aturan COVID-19 yang berlaku di tempat Anda tinggal: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Inggris</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotlandia</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> dan <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Irlandia Utara</a>.
-        </p>
-        <p class="govuk-body">
-          Untuk mencegah varian baru COVID memasuki Inggris Raya, Anda tidak boleh bepergian ke <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">negara berwarna kuning atau merah</a>.
-        </p>
-        <p class="govuk-body">
-          Untuk memahami risiko dalam suatu negara, ikuti <a href="/guidance/travel-advice-novel-coronavirus">Nasihat Perjalanan FCDO</a>.
-        </p>
-        <p class="govuk-body">
-          Saat kembali, ikuti aturan <a href="/uk-border-control">untuk memasuki Inggris Raya dari luar negeri</a> (kecuali dari Irlandia).
-        </p>
-      text_assistive: Penting
-      title: Perjalanan selama pandemi Coronavirus (COVID-19)
     still_current_at: Masih berlaku di
     summary: Rangkuman
     updated: Diperbarui

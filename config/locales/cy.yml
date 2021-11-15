@@ -9,7 +9,6 @@ cy:
       text: Canllawiau Brexit i unigolion a theuluoedd
     heading_prefix: Dyna wahaniaeth
   common:
-    last_updated:
     visit: 'Ymweld:'
   components:
     figure:
@@ -21,22 +20,8 @@ cy:
       see_all_updates: gweld pob diweddariad
       show_all_updates: dangos pob diweddariad
     publisher_metadata:
-      collections:
-      from:
       hide_all: cuddio popeth
       show_all: dangos popeth
-    save_this_page:
-      add_page_button: Ychwanegu at eich tudalennau wedi'u cadw
-      confirmations:
-        page_removed:
-          message: Rydych chi wedi tynnu hwn o'ch tudalennau wedi'u cadw
-        page_saved:
-          message: Rydych chi wedi ychwanegu hwn at eich tudalennau wedi'u cadw
-      page_not_saved_heading: Cadwch y dudalen hon er mwyn gallu dychwelyd nes ymlaen
-      page_was_saved_heading: Rydych chi wedi cadw'r dudalen hon
-      remove_page_button: Tynnu o'ch tudalennau wedi'u cadw
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Gweld eich tudalennau wedi'u cadw</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Mewngofnodwch</a> i weld eich tudalennau wedi'u cadw.
     share_links:
       share_this_page: Rhannu'r dudalen hon
   consultation:
@@ -61,7 +46,6 @@ cy:
     original_consultation: Ymgynghoriad gwreiddiol
     ran_from: Roedd yr ymgynghoriad hwn yn rhedeg o
     respond_online: Ymateb ar-lein
-    'true': gwir
     visit_soon: Dewch yn ôl at y wefan hon yn fuan i lwytho'r canlyniad i lawr ar gyfer yr adborth&nbsp;cyhoeddus hwn.
     was: roedd
     ways_to_respond: Ffyrdd o ymateb
@@ -676,22 +660,6 @@ cy:
       avoid_all_travel_to_parts_html: Mae'r <abbr title="Foreign and Commonwealth Office">Swyddfa Dramor, y Gymanwlad a Datblygu</abbr> yn cynghori yn erbyn pob taith i rannau o'r wlad.
       avoid_all_travel_to_whole_country_html: Mae'r <abbr title="Foreign and Commonwealth Office">Swyddfa Dramor, y Gymanwlad a Datblygu</abbr> yn cynghori yn erbyn pob taith i'r wlad gyfan.
     context: Cyngor ar deithio dramor
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Dilynwch y rheolau presennol ar gyfer COVID-19 ble rydych chi'n byw: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Lloegr</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">yr Alban</a>, <a href="https://gov.wales/coronavirus-travel">Cymru</a> a <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Gogledd Iwerddon</a>.
-        </p>
-        <p class="govuk-body">
-          I atal amrywolion newydd o COVID rhag dod i mewn i'r DU, ni ddylech deithio i <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">wledydd ar y rhestr felen neu goch</a>.
-        </p>
-        <p class="govuk-body">
-          Er mwyn deall y risgiau mewn gwlad, dilynwch <a href="/guidance/travel-advice-novel-coronavirus">Gyngor Teithio'r Swyddfa Dramor, y Gymanwlad a Datblygu</a>.
-        </p>
-        <p class="govuk-body">
-          Pan fyddwch chi'n dychwelyd, dilynwch y rheolau i <a href="/uk-border-control">ddod i mewn i'r DU o dramor</a> (ac eithrio Iwerddon).
-        </p>
-      text_assistive: Pwysig
-      title: Teithio a'r Coronafeirws (COVID-19)
     still_current_at: Yn gyfredol o hyd ar
     summary: Crynodeb
     updated: Diweddarwyd

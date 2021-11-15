@@ -9,7 +9,6 @@ ar:
       text: توجيهات للأفراد والعائلات بخصوص برِيكْسِت
     heading_prefix: هناك نسخة مختلفة من
   common:
-    last_updated:
     visit: 'تفضّل بزيارة:'
   components:
     figure:
@@ -21,22 +20,8 @@ ar:
       see_all_updates: اطلع على كل التحديثات
       show_all_updates: إظهار كل التحديثات
     publisher_metadata:
-      collections:
-      from:
       hide_all: إخفاء الكل
       show_all: إظهار الكل
-    save_this_page:
-      add_page_button: أضف إلى صفحاتك المحفوظة
-      confirmations:
-        page_removed:
-          message: لقد قمت بإزالة هذا من صفحاتك المحفوظة
-        page_saved:
-          message: لقد أضفت هذا إلى صفحاتك المحفوظة
-      page_not_saved_heading: احفظ هذه الصفحة حتى تتمكن من العودة إليها لاحقًا
-      page_was_saved_heading: لقد حفظت هذه الصفحة
-      remove_page_button: إزالة من صفحاتك المحفوظة
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">اطلع على صفحاتك المحفوظة</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">سجّل دخولك</a> للاطلاع على صفحاتك المحفوظة.
     share_links:
       share_this_page: شارك هذه الصفحة
   consultation:
@@ -61,7 +46,6 @@ ar:
     original_consultation: الاستشارة الأصلية
     ran_from: أجريت هذه الاستشارة من
     respond_online: الرد عبر الإنترنت
-    'true': صحيح
     visit_soon: قم بزيارة هذه الصفحة مرة أخرى قريبًا لتنزيل النتيجة لهذه التعليقات&nbsp;العامة.
     was: كان
     ways_to_respond: طرق الرد
@@ -676,22 +660,6 @@ ar:
       avoid_all_travel_to_parts_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعدم السفر إلى بعض أجزاء البلد.
       avoid_all_travel_to_whole_country_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعدم السفر إلى جميع أنحاء البلد.
     context: نصائح السفر إلى الخارج
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          اتبع قواعد كوفيد-19 الحالية في المكان الذي تعيش فيه: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">إنجلترا</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">واسكتلندا</a>, <a href="https://gov.wales/coronavirus-travel">وويلز</a> و<a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">أيرلندا الشمالية</a>.
-        </p>
-        <p class="govuk-body">
-          لمنع متحورات كوفيد الجديدة من دخول المملكة المتحدة، يجب عليك ألا تسافر إلى <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">دول القائمة المحددة باللون الكهرماني أو الأحمر</a>.
-        </p>
-        <p class="govuk-body">
-          لاستيعاب المخاطر في بلد ما، اتبع <a href="/guidance/travel-advice-novel-coronavirus">نصائح السفر من وزارة الخارجية وشؤون الكومنولث والتنمية</a>.
-        </p>
-        <p class="govuk-body">
-          عند عودتك، اتبع القواعد المفروضة <a href="/uk-border-control">لدخول المملكة المتحدة من الخارج</a> (باستثناء القادمين من أيرلندا).
-        </p>
-      text_assistive: مهم
-      title: السفر في ظل فيروس كورونا (كوفيد-19)
     still_current_at: لا يزال ساريًا في
     summary: ملخص
     updated: تاريخ التحديث

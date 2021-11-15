@@ -9,7 +9,6 @@ he:
       text: 'הדרכת ברקזיט לאנשים ומשפחות '
     heading_prefix: 'יש הבדל '
   common:
-    last_updated:
     visit: 'בקר:'
   components:
     figure:
@@ -21,22 +20,8 @@ he:
       see_all_updates: ראה כל העדכונים
       show_all_updates: הצג כל עדכונים
     publisher_metadata:
-      collections:
-      from:
       hide_all: הסתר הכל
       show_all: הצג הכל
-    save_this_page:
-      add_page_button: הוסף לדפים השמורים
-      confirmations:
-        page_removed:
-          message: הסרת את זה מהדפים השמורים
-        page_saved:
-          message: הוספת זאת לדפים השמורים
-      page_not_saved_heading: שמור דף זה כדי שתוכל לחזור אליו מאוחר יותר
-      page_was_saved_heading: שמרת את הדף הזה
-      remove_page_button: הסר מהדפים השמורים
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">עיין בדפים השמורים</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">היכנס</a> כדי לראות את הדפים השמורים שלך.
     share_links:
       share_this_page: שתף דף זה
   consultation:
@@ -61,7 +46,6 @@ he:
     original_consultation: דיון מקורי
     ran_from: דיון זו נערך מ-
     respond_online: להגיב באינטרנט
-    'true': אמת
     visit_soon: בקר בדף זה שוב בקרוב כדי להוריד את התוצאה &nbspלמשוב הציבורי הזה
     was: היה
     ways_to_respond: דרכים להגיב
@@ -376,22 +360,6 @@ he:
       avoid_all_travel_to_parts_html: ' <abbr title="Foreign and Commonwealth Office">FCO</abbr> ממליץ לא לנסוע לאזורים שונים בארץ.'
       avoid_all_travel_to_whole_country_html: ' <abbr title="Foreign and Commonwealth Office">FCO</abbr> ממליץ לא לטייל בכל רחבי הארץ.'
     context: ייעוץ לטיולי חוץ
-    coronavirus_warning:
-      content_html: |-
-        <p class="govuk-body">
-          עקוב אחר כללי COVID-19 הנוכחיים במקום מגוריךe: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">אנגליה</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">סקוטלנד</a>, <a href="https://gov.wales/coronavirus-travel">וויילס</a> ו <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">צפון אירלנד </a>.
-        </p>
-        <p class="govuk-body">
-          כדי למנוע כניסת גרסאות COVID חדשות לבריטניה, אין לנסוע למדינות <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">ענבר או רשימה אדומה</a>.
-        </p>
-        <p class="govuk-body">
-          כדי להבין את הסיכונים במדינה עקוב אחר <a href="/guidance/travel-advice-novel-coronavirus">ייעוץ לנסיעות במשרד החוץ, חבר העמים ופיתוח</a>.
-        </p>
-        <p class="govuk-body">
-           כאשר אתה חוזר, פעל לפי הכללים כדי <a href="/uk-border-control">להיכנס לבריטניה מחו"ל</a> (למעט מאירלנד).
-        </p>
-      text_assistive: חשוב
-      title: 'נסיעות הקורונה (COVID-19) '
     still_current_at: עדיין עדכני ב
     summary: סיכום
     updated: מעודכן

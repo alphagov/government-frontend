@@ -9,7 +9,6 @@ el:
       text: Οδηγίες Brexit για άτομα και οικογένειες
     heading_prefix: Υπάρχουν διαφορετικά
   common:
-    last_updated:
     visit: 'Επίσκεψη:'
   components:
     figure:
@@ -21,22 +20,8 @@ el:
       see_all_updates: δείτε όλες τις ενημερώσεις
       show_all_updates: εμφάνιση όλων των ενημερώσεων
     publisher_metadata:
-      collections:
-      from:
       hide_all: απόκρυψη όλων
       show_all: εμφάνιση όλων
-    save_this_page:
-      add_page_button: Προσθήκη στις αποθηκευμένες σελίδες σας
-      confirmations:
-        page_removed:
-          message: Το καταργήσατε από τις αποθηκευμένες σελίδες σας
-        page_saved:
-          message: Το έχετε προσθέσει στις αποθηκευμένες σελίδες σας
-      page_not_saved_heading: Αποθηκεύστε αυτήν τη σελίδα για να μπορέσετε να επιστρέψετε σε αυτήν αργότερα
-      page_was_saved_heading: Έχετε αποθηκεύσει αυτήν τη σελίδα
-      remove_page_button: Κατάργηση από τις αποθηκευμένες σελίδες σας
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Δείτε τις αποθηκευμένες σελίδες σας</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Συνδεθείτε για</a> να δείτε τις αποθηκευμένες σελίδες σας.
     share_links:
       share_this_page: Κοινοποιήστε αυτή τη σελίδα
   consultation:
@@ -61,7 +46,6 @@ el:
     original_consultation: Αρχική διαβούλευση
     ran_from: Αυτή η διαβούλευση ξεκίνησε από
     respond_online: Απαντήστε online
-    'true': σωστό
     visit_soon: Επισκεφτείτε ξανά αυτήν τη σελίδα σύντομα για να κάνετε λήψη του αποτελέσματος σε αυτό το δημόσιο σχόλιο.
     was: ήταν
     ways_to_respond: Τρόποι απάντησης
@@ -376,22 +360,6 @@ el:
       avoid_all_travel_to_parts_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια σε μέρη της χώρας.
       avoid_all_travel_to_whole_country_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια σε ολόκληρη την χώρα.
     context: Συμβουλές για ταξίδια στο εξωτερικό
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Ακολουθήστε τους ισχύοντες κανόνες για τον COVID-19 στο μέρος που ζείτε: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Αγγλία</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Σκωτία</a>, <a href="https://gov.wales/coronavirus-travel">Ουαλία</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Βόρεια Ιρλανδία</a>.
-        </p>
-        <p class="govuk-body">
-          Για να αποτρέψετε την είσοδο νέων παραλλαγών COVID στο Ηνωμένο Βασίλειο, δεν πρέπει να ταξιδεύετε σε <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">χώρες στην πορτοκαλί ή στην κόκκινη λίστα</a> .
-        </p>
-        <p class="govuk-body">
-          Για να κατανοήσετε τους κινδύνους σε μια χώρα, ακολουθήστε <a href="/guidance/travel-advice-novel-coronavirus">τις ταξιδιωτικές οδηγίες του FCDO</a> .
-        </p>
-        <p class="govuk-body">
-          Όταν επιστρέψετε, ακολουθήστε τους κανόνες για να <a href="/uk-border-control">εισέλθετε στο Ηνωμένο Βασίλειο από το εξωτερικό</a> (εκτός από την Ιρλανδία).
-        </p>
-      text_assistive: Σημαντικό
-      title: Ταξίδια με τον Κορωνοϊό (COVID-19)
     still_current_at: Ακόμα επίκαιρο στο
     summary: Περίληψη
     updated: Ενημερωμένο

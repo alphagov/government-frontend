@@ -9,7 +9,6 @@ hu:
       text: Brexit-útmutató egyének és családok részére
     heading_prefix: Van különbség
   common:
-    last_updated:
     visit: 'Látogassa meg:'
   components:
     figure:
@@ -21,22 +20,8 @@ hu:
       see_all_updates: minden frissítés megtekintése
       show_all_updates: minden frissítés megjelenítése
     publisher_metadata:
-      collections:
-      from:
       hide_all: összes elrejtése
       show_all: összes megjelenítése
-    save_this_page:
-      add_page_button: Hozzáadás a mentett oldalakhoz
-      confirmations:
-        page_removed:
-          message: Eltávolította ezt az oldalt a mentett oldalai közül
-        page_saved:
-          message: Hozzáadta ezt az oldalt a mentett oldalaihoz
-      page_not_saved_heading: Mentse el ezt az oldalt, hogy később vissza újra meg tudja nyitni
-      page_was_saved_heading: Elmentette ezt az oldalt
-      remove_page_button: Eltávolítás a mentett oldalak közül
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Mentett oldalak megtekintése</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Jelentkezzen be</a> a mentett oldalainak megtekintéséhez.
     share_links:
       share_this_page: Oldal megosztása
   consultation:
@@ -61,7 +46,6 @@ hu:
     original_consultation: Eredeti konzultáció
     ran_from: 'A konzultáció kezdőidőpontja:'
     respond_online: Válasz online
-    'true': igaz
     visit_soon: Látogassa meg újra az oldalt a közeljövőben a jelen nyilvános&nbsp;visszajelzés kimenetelének megtekintése érdekében.
     was: volt
     ways_to_respond: Válaszadási lehetőségek
@@ -376,22 +360,6 @@ hu:
       avoid_all_travel_to_parts_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az ország bizonyos részeire semmilyen körülmények között ne utazzanak.
       avoid_all_travel_to_whole_country_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az országba semmilyen körülmények között ne utazzanak.
     context: Külföldi utazásra vonatkozó tanácsok
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-         Tartsa be az érvényes, lakóhelye szerinti COVID-19-szabályokat: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglia</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skócia</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> és <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Észak-Írország</a>.
-        </p>
-        <p class="govuk-body">
-          Annak érdekében, hogy megakadályozzuk az új COVID-változatok az Egyesült Királyságba történő bejutását, kérjük, <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">a sárga vagy piros listán szereplő országokba</a>.
-        </p>
-        <p class="govuk-body">
-          Ha szeretné megérteni a bizonyos országokra vonatrkozó kockázatokat, akkor kövesse a <a href="/guidance/travel-advice-novel-coronavirus">Külügyi, Nemzetbiztonsági és Fejlesztési Iroda utazási tanácsait.</a>.
-        </p>
-        <p class="govuk-body">
-          Visszatérésekor tartsa be az <a href="/uk-border-control">Egyesült Királyságba külföldről történő belépés szabályait</a> (kivéve, ha Írországból érkezik).
-        </p>
-      text_assistive: Fontos
-      title: Koronavírus (COVID-19) utazás
     still_current_at: 'Még érvényben itt:'
     summary: Összefoglalás
     updated: Frissítve

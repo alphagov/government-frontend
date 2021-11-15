@@ -9,7 +9,6 @@ hy:
       text: Brexit-ի ուղեցույց անհատների և ընտանիքների համար
     heading_prefix: Կա տարբեր
   common:
-    last_updated:
     visit: Այցելել՝
   components:
     figure:
@@ -21,22 +20,8 @@ hy:
       see_all_updates: դիտել բոլոր թարմացումները
       show_all_updates: ցույց տալ բոլոր թարմացումները
     publisher_metadata:
-      collections:
-      from:
       hide_all: թաքցնել բոլորը
       show_all: ցույց տալ բոլորը
-    save_this_page:
-      add_page_button: Ավելացնել ձեր պահպանված էջերի ցանկին
-      confirmations:
-        page_removed:
-          message: Դուք հեռացրել եք սա ձեր պահպանված էջերի ցանկից
-        page_saved:
-          message: Դուք ավելացրել եք սա ձեր պահպանված էջերի ցանկին
-      page_not_saved_heading: Պահպանել այս էջը՝ հետագայում կրկին դիտելու համար
-      page_was_saved_heading: Դուք պահպանել եք այս էջը
-      remove_page_button: Հեռացնել ձեր պահպանված էջերի ցանկից
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">See your saved pages</a>
-      see_saved_pages_signed_out: '<a href="%{link}" class="govuk-link %{additional_class}">Մուտք գործել</a> ձեր պահպանված էջերը տեսնելու համար:'
     share_links:
       share_this_page: Կիսվել այս էջով
   consultation:
@@ -61,7 +46,6 @@ hy:
     original_consultation: Սկզբնական խորհրդակցություն
     ran_from: Այս խորհրդակցությունն իրականացվել է
     respond_online: Պատասխանել առցանց
-    'true': ճիշտ
     visit_soon: 'Կրկին այցելել այս էջը՝ այս հասարակական& nbsp;արձանքի արդյունքը ներբեռնելու համար:'
     was: էր
     ways_to_respond: Պատասխանելու եղանակներ
@@ -376,22 +360,6 @@ hy:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի որոշ հատվածներ։
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր։
     context: Օտար երկիր ճամփորդելու վերաբերյալ օգտակար խորհուրդներ
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Հետևեք ձեր բնակության վայրում գործող COVID-19 կանոններին՝ <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>։
-        </p>
-        <p class="govuk-body">
-          COVID-ի նոր տարբերակների մուտքը ՄԹ կանխելու համար անհրաժեշտ է չմեկնել <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber or red list countries</a>։
-        </p>
-        <p class="govuk-body">
-          Տվյալ երկրում առկա ռիսկերի մասին տեղեկանալու համար հետևեք՝ <a href="/guidance/travel-advice-novel-coronavirus">FCDO Travel Advice</a>։
-        </p>
-        <p class="govuk-body">
-          Տվյալ երկրից վերադառնալուց անմիջապես հետո հետևեք <a href="/uk-border-control">արտերկրից Միացյալ Թագավորություն մուտք գործելու կանոնների</a> (բացառությամբ Իռլանդիայի դեպքում)։
-        </p>
-      text_assistive: Կարևոր
-      title: 'Ճամփորդություն Կորոնավիրուսի (COVID-19) ընթացքում '
     still_current_at: Դեռևս ընթացիկ
     summary: Ամփոփ
     updated: Թարմացված

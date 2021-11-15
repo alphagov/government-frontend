@@ -9,7 +9,6 @@ si:
       text: පුද්ගලයින් සහ පවුල් සඳහා බ්රෙක්සිට් මඟ පෙන්වීම
     heading_prefix: වෙනසක් තිබේ
   common:
-    last_updated:
     visit: 'පිවිසෙන්න:'
   components:
     figure:
@@ -21,22 +20,8 @@ si:
       see_all_updates: සියලුම යාවත්කාලීනයන් බලන්න
       show_all_updates: සියලු යාවත්කාලීනයන් පෙන්වන්න
     publisher_metadata:
-      collections:
-      from:
       hide_all: සියල්ල සැඟවන්න
       show_all: සියල්ල පෙන්වන්න
-    save_this_page:
-      add_page_button: ඔබගේ සුරකින ලද පිටු වලට එක් කරන්න
-      confirmations:
-        page_removed:
-          message: ඔබගේ සුරකින ලද පිටු වලින් ඔබ මෙය ඉවත් කර ඇත
-        page_saved:
-          message: ඔබගේ සුරකින ලද පිටු වලට ඔබ මෙය එක් කර ඇත
-      page_not_saved_heading: මෙම පිටුව සුරකින්න, එවිට ඔබට පසුව එය වෙත පැමිණිය හැකිය
-      page_was_saved_heading: ඔබ මෙම පිටුව සුරැකී ඇත
-      remove_page_button: ඔබගේ සුරකින ලද පිටු වලින් ඉවත් කරන්න
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">සුරකින ලද පිටු බලන්න</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">සයින් ඉන් වන්න</a> සුරකින ලද පිටු බැලීමට.
     share_links:
       share_this_page: මෙම පිටුව බෙදාගන්න
   consultation:
@@ -61,7 +46,6 @@ si:
     original_consultation: මුල් උපදේශනය
     ran_from: මෙම උපදේශනය ක්‍රියාත්මක වුනේ
     respond_online: මාර්ගගතව ප්රතිචාර දක්වන්න
-    'true': නිවැරදි
     visit_soon: මෙම මහජන ප්රතිපෝෂණය සඳහා වූ ප්රතිඵල බාගත කිරීම&nbsp;සඳහා ළඟදීම නැවත මෙම පිටුවට පිවිසෙන්න.
     was: විය
     ways_to_respond: ප්රතිචාර දැක්විමේ ක්‍රම
@@ -376,22 +360,6 @@ si:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
     context: විදේශ ගමන් උපදෙස්
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          ඔබ කොහේ ජීවත් වූවත් වර්තමාන COVID-19 රීති අනුගමනය කරන්න: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">එංගලන්තය</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">ස්කොට්ලන්තය</a>, <a href="https://gov.wales/coronavirus-travel">වේල්ස්</a> සහ <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">උතුරු අයර්ලන්තය</a>.
-        </p>
-        <p class="govuk-body">
-          නම කොවිඩ් ප්‍රභේද එක්සත් රාජධානියට ඇතුළ් වීම වැළක්වීම පිණිස,ඔබ පහත සඳහන් රටවල සංචාරයේ නිරත විය නොයතුය <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber or red list countries</a>.
-        </p>
-        <p class="govuk-body">
-          රටක ඇති අවදානම දැන ගැනීමට <a href="/guidance/travel-advice-novel-coronavirus">FCDO සංචාර උපදෙස් අනුගමනය කරන්න</a>.
-        </p>
-        <p class="govuk-body">
-          ඔබ ආපසු පැමිණෙන විට <a href="/uk-border-control">විදේශයක සිට එක්සත් රාජධානියට අතුළු වීමේ රීති අනුගමනය කරන්න</a> (අයර්ලන්තය වෙතින් හැර).
-        </p>
-      text_assistive: වැදගත්
-      title: කොරෝනා වයිරස් (COVID-19) සංචාරය
     still_current_at: තවමත් වත්මන්
     summary: සාරාංශය
     updated: යාවත්කාලීන කෙරිණි

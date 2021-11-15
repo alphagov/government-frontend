@@ -9,7 +9,6 @@ ta:
       text: தனிநபர்கள் மற்றும் குடும்பங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
     heading_prefix: இதில் வித்தியாசம் உள்ளது
   common:
-    last_updated:
     visit: 'வருகை:'
   components:
     figure:
@@ -21,22 +20,8 @@ ta:
       see_all_updates: அனைத்து புதுப்பித்தல்களையும் பார்க்க
       show_all_updates: அனைத்து புதுப்பித்தல்களையும் காட்டு
     publisher_metadata:
-      collections:
-      from:
       hide_all: அனைத்தையும் மறை
       show_all: அனைத்தையும் காட்டு
-    save_this_page:
-      add_page_button: உங்கள் சேமித்த பக்கங்களில் சேர்
-      confirmations:
-        page_removed:
-          message: உங்கள் சேமித்த பக்கங்களிலிருந்து இதை நீக்கியுள்ளீர்கள்
-        page_saved:
-          message: உங்கள் சேமித்த பக்கங்களில் இதைச் சேர்த்துள்ளீர்கள்
-      page_not_saved_heading: பின்னர் திரும்ப வருகை தர ஏதுவாக இந்தப் பக்கத்தை சேமிக்கவும்
-      page_was_saved_heading: இந்தப் பக்கத்தைச் சேமித்துள்ளீர்கள்
-      remove_page_button: உங்கள் சேமித்த பக்கங்களிலிருந்து நீக்கவும்
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">உங்கள் சேமித்த பக்கங்களைக் காண்க</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">உங்கள் சேமித்த பக்கங்களைப் பார்ப்பதற்கு</a>.
     share_links:
       share_this_page: இந்தப் பக்கத்தைப் பகிர்க
   consultation:
@@ -61,7 +46,6 @@ ta:
     original_consultation: மூலக் கலந்தாலோசனை
     ran_from: "-லிருந்து இந்தக் கலந்தாலோசனை நடந்தது"
     respond_online: இணையத்தில் பதிலளிக்கவும்
-    'true': உண்மை
     visit_soon: இந்த பொதுமக்கள் மதிப்புரையின் விளைவை பதிவிறக்குவதற்கு இந்தப் பக்கத்துக்குத் திரும்பவும் வருகை தருக.
     was: was
     ways_to_respond: பதிலளிக்கும் வழிகள்
@@ -376,22 +360,6 @@ ta:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
     context: அயல்நாட்டுப் பயண அறிவுரை
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          பின்வரும் இடங்களில் வசிப்பவர்கள் தற்போதைய COVID-19 விதிகளைப் பின்பற்றவும்: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> மற்றும் <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
-        </p>
-        <p class="govuk-body">
-          UK-வுக்குள் COVID புதிய மாற்றுருக்கள் நுழைவதைத் தடுக்க <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">மஞ்சள் அல்லது சிவப்புப் பட்டியல் நாடுகளுக்குப் பயணிப்பதை நீங்கள் தவிர்க்க வேண்டும்.</a>.
-        </p>
-        <p class="govuk-body">
-          ஒரு நாட்டிலுள்ள அபாயங்களைப் புரிந்துகொள்ள <a href="/guidance/travel-advice-novel-coronavirus">FCDO Travel Advice</a>-வைப் பின்பற்றுங்கள்.
-        </p>
-        <p class="govuk-body">
-          நீங்கள் திரும்பும்போது, வெளிநாட்டிலிருந்து UKவுக்குள் நுழைவதற்கு (அயர்லாந்து தவிர) <a href="/uk-border-control">விதிகளைப் பின்பற்றவும்.
-        </p>
-      text_assistive: முக்கியம்
-      title: கொரோனாவைரஸ் (COVID-19) பயணம்
     still_current_at: தற்போதும் உள்ளது
     summary: சுருக்கம்
     updated: புதுப்பிக்கப்பட்டது

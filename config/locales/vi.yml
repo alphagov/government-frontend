@@ -9,7 +9,6 @@ vi:
       text: Hướng dẫn Brexit cho các cá nhân và gia đình
     heading_prefix: Có sự khác nhau
   common:
-    last_updated:
     visit: 'Truy cập:'
   components:
     figure:
@@ -21,22 +20,8 @@ vi:
       see_all_updates: xem tất cả nội dung cập nhật
       show_all_updates: hiển thị tất cả nội dung cập nhật
     publisher_metadata:
-      collections:
-      from:
       hide_all: ẩn tất cả
       show_all: hiển thị tất cả
-    save_this_page:
-      add_page_button: Thêm vào các trang đã lưu của bạn
-      confirmations:
-        page_removed:
-          message: Bạn đã xóa trang này khỏi các trang đã lưu của mình
-        page_saved:
-          message: Bạn đã thêm trang này vào các trang đã lưu của mình
-      page_not_saved_heading: Lưu trang này để bạn có thể quay lại sau
-      page_was_saved_heading: Bạn đã lưu trang này
-      remove_page_button: Xóa khỏi các trang đã lưu của bạn
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Xem các trang đã lưu của bạn</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Đăng nhập</a> để xem các trang đã lưu của bạn.
     share_links:
       share_this_page: Chia sẻ trang này
   consultation:
@@ -61,7 +46,6 @@ vi:
     original_consultation: Buổi tham vấn nguyên bản
     ran_from: Buổi tham vấn này bắt đầu từ
     respond_online: Trả lời trực tuyến
-    'true': đúng
     visit_soon: Hãy sớm truy cập lại trang này để tải xuống kết quả cho phản hồi&nbsp;công khai này.
     was: là
     ways_to_respond: Cách trả lời
@@ -376,22 +360,6 @@ vi:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến một số nơi ở quốc gia này.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến quốc gia này.
     context: Tư vấn đi nước ngoài
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Tuân theo các quy tắc COVID-19 hiện tại ở nơi bạn sống: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> và <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
-        </p>
-        <p class="govuk-body">
-          Để ngăn chặn các biến thể COVID mới xâm nhập vào Vương quốc Anh, bạn không nên đến <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">các quốc gia trong danh sách màu hổ phách hoặc đỏ</a>.
-        </p>
-        <p class="govuk-body">
-          Để hiểu những rủi ro ở một quốc gia, hãy làm theo <a href="/guidance/travel-advice-novel-coronavirus">Lời khuyên Du lịch của Bộ Ngoại giao và Phát triển Liên hiệp Vương quốc Anh & Bắc Ai-len</a>.
-        </p>
-        <p class="govuk-body">
-          Khi bạn trở về, hãy tuân theo các quy tắc <a href="/uk-border-control">nhập cảnh vào Vương quốc Anh từ nước ngoài</a> (ngoại trừ từ Ireland).
-        </p>
-      text_assistive: Quan trọng
-      title: Quy định di chuyển liên quan đến vi-rút Corona (COVID-19)
     still_current_at: Vẫn đang ở
     summary: Tóm tắt
     updated: Đã cập nhật

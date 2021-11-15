@@ -9,7 +9,6 @@ fi:
       text: Brexit -opastus yksilöille ja perheille
     heading_prefix: On erilaisia
   common:
-    last_updated:
     visit: 'Vierailla:'
   components:
     figure:
@@ -21,22 +20,8 @@ fi:
       see_all_updates: katso kaikki palvelut
       show_all_updates: näytä kaikki päivitykset
     publisher_metadata:
-      collections:
-      from:
       hide_all: Piilota kaikki
       show_all: näytä kaikki
-    save_this_page:
-      add_page_button: Lisää tallennettuihin sivuihisi
-      confirmations:
-        page_removed:
-          message: Olet poistanut tämän tallennetuilta sivuiltasi
-        page_saved:
-          message: Olet lisännyt tämän tallennetuille sivuillesi
-      page_not_saved_heading: Tallenna tämä sivu, jotta voit palata siihen myöhemmin
-      page_was_saved_heading: Olet tallentanut tämän sivun
-      remove_page_button: Poista tallennetuilta sivuilta
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Näytä tallennetut sivut</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Kirjaudu sisään</a> nähdäksesi tallennetut sivusi.
     share_links:
       share_this_page: Jaa tämä sivu
   consultation:
@@ -61,7 +46,6 @@ fi:
     original_consultation: Alkuperäinen kuuleminen
     ran_from: Tämä kuuleminen kesti
     respond_online: Vastaa verkossa
-    'true': totta
     visit_soon: Käy pian uudelleen tällä sivulla ja lataa tämän julkisen palautteen&nbsp;tulokset.
     was: oli
     ways_to_respond: Tapoja vastata
@@ -376,22 +360,6 @@ fi:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja osissa maata.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja koko maahan.
     context: Ulkomaan matkustusneuvonta
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Noudata asuinpaikkasi nykyisiä COVID-19-sääntöjä: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Englanti</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotlanti</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Pohjois-Irlanti</a>.
-        </p>
-        <p class="govuk-body">
-          Jotta uudet COVID-muunnokset eivät pääsisi Yhdistyneeseen kuningaskuntaan, sinun ei pitäisi matkustaa seuraaviin paikkoihin <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">meripihka tai punaisen listan maat</a>.
-        </p>
-        <p class="govuk-body">
-          Jos haluat ymmärtää jonkin maan riskejä, seuraa <a href="/guidance/travel-advice-novel-coronavirus">Ulkoasiain-, kansainyhteisö- ja kehitysyhteistyöviraston matkustusneuvoja</a>.
-        </p>
-        <p class="govuk-body">
-          Kun palaat, noudata seuraavia sääntöjä <a href="/uk-border-control">saapua Yhdistyneeseen kuningaskuntaan ulkomailta</a> (lukuun ottamatta Irlantia).
-        </p>
-      text_assistive: Tärkeä
-      title: Koronavirus (COVID-19) -matkailu
     still_current_at: Vielä ajankohtainen klo
     summary: Yhteenveto
     updated: Päivitetty

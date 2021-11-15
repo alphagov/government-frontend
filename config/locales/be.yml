@@ -9,7 +9,6 @@ be:
       text: Кіраўніцтва па Брэкзiт для асобных асоб і сем'яў
     heading_prefix: Ёсць розныя
   common:
-    last_updated:
     visit: 'Наведайце:'
   components:
     figure:
@@ -21,22 +20,8 @@ be:
       see_all_updates: паглядзець усе абнаўленні
       show_all_updates: паказаць усе абнаўленні
     publisher_metadata:
-      collections:
-      from:
       hide_all: 'схаваць усе '
       show_all: 'паказаць усе '
-    save_this_page:
-      add_page_button: Дадаць у захаваныя старонкі
-      confirmations:
-        page_removed:
-          message: Вы выдалілі гэта з захаваных старонак
-        page_saved:
-          message: Вы дадалі гэта ў захаваныя старонкі
-      page_not_saved_heading: Захавайце гэту старонку, каб вярнуцца да яе пазней
-      page_was_saved_heading: Вы захавалі гэту старонку
-      remove_page_button: Выдаліць з захаваных старонак
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Паглядзець вашы захаваныя старонкi</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Увайдзiце</a> каб паглядзець вашы захаваныя старонкi.
     share_links:
       share_this_page: Падзяліцца гэтай старонкай
   consultation:
@@ -61,7 +46,6 @@ be:
     original_consultation: Арыгінальная кансультацыя
     ran_from: Кансультацыя доўжылася з
     respond_online: Адказаць анлайн
-    'true': праўда
     visit_soon: Наведайце гэту старонку зноў хуткім часам, каб скачаць вынікі гэтай&nbsp;зваротнай сувязі з грамадскасцю.
     was: было
     ways_to_respond: Спосабы рэагавання
@@ -526,22 +510,6 @@ be:
       avoid_all_travel_to_parts_html: Міністэрства замежных спраў і па справах Садружнасці <abbr title="Foreign and Commonwealth Office">FCO</abbr> раяць устрымацца ад усіх падарожжаў, апроч самых патрэбных, у некаторыя раёны краіны.
       avoid_all_travel_to_whole_country_html: Міністэрства замежных спраў і па справах Садружнасці <abbr title="Foreign and Commonwealth Office">FCO</abbr> раяць устрымацца ад усіх падарожжаў, апроч самых патрэбных, у некаторыя раёны краіны.
     context: Рады па замежных падарожжах
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Ідзіце дзейным правілам COVID-19 там, дзе вы жывяце: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> i <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
-        </p>
-        <p class="govuk-body">
-          Каб запабегчы пранікнення новых варыянтаў COVID у Вялікабрытанію, вы не павінны падарожнічаць у <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">amber or red list countries</a>.
-        </p>
-        <p class="govuk-body">
-          Каб зразумець рызыкі ў краіне, ідзіце <a href="/guidance/travel-advice-novel-coronavirus">FCDO Travel Advice</a>.
-        </p>
-        <p class="govuk-body">
-          Пасля вяртання трымайцеся правілаў <a href="/uk-border-control">заезду ў Вялікабрытанію з-за мяжы. abroad</a> (апроч Ірландыі).
-        </p>
-      text_assistive: Важна
-      title: Падарожжа з каранавірусам (COVID-19)
     still_current_at: Усё яшчэ актуальна
     summary: Рэзюмэ
     updated: Адноўлена

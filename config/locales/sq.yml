@@ -9,7 +9,6 @@ sq:
       text: Udhëzime për Brexit për individët dhe familjet
     heading_prefix: Ka të ndryshme
   common:
-    last_updated:
     visit: 'Vizitoni:'
   components:
     figure:
@@ -21,22 +20,8 @@ sq:
       see_all_updates: shih të gjitha përditësimet
       show_all_updates: shfaq të gjitha përditësimet
     publisher_metadata:
-      collections:
-      from:
       hide_all: fshih të gjitha
       show_all: shfaq të gjitha
-    save_this_page:
-      add_page_button: Shtoni në faqet tuaja të ruajtura
-      confirmations:
-        page_removed:
-          message: Ju e keni hequr këtë nga faqet tuaja të ruajtura
-        page_saved:
-          message: Ju e keni shtuar këtë në faqet tuaja të ruajtura
-      page_not_saved_heading: Ruajeni këtë faqe në mënyrë që të ktheheni tek ajo më vonë
-      page_was_saved_heading: Ju e keni ruajtur këtë faqe
-      remove_page_button: Hiqe nga faqet e tua të ruajtura
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Shih faqet tuaja të ruajtura</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Hyr</a> për të parë faqet tua të ruajtura.
     share_links:
       share_this_page: Shpërdaj këtë faqe
   consultation:
@@ -61,7 +46,6 @@ sq:
     original_consultation: Konsultimi origjinal
     ran_from: Ky konsultim filloi nga
     respond_online: Përgjigju online
-    'true': e vërtetë
     visit_soon: Vizitoni përsëri këtë faqe së shpejti për të shkarkuar rezultatin në këtë & nbsp; reagimi.
     was: ishte
     ways_to_respond: Mënyrat për tu përgjigjur
@@ -376,22 +360,6 @@ sq:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> këshilloni kundër të gjitha udhëtimeve në pjesë të vendit.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> këshilloni kundër çdo udhëtimi në të gjithë vendin.
     context: Këshilla për udhëtime të huaja
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Ndiqni rregullat aktuale të COVID-19 ku jetoni: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Angli</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skoci</a>, <a href="https://gov.wales/coronavirus-travel">Wells</a> dhe <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Irlandë e Veriut</a>.
-        </p>
-        <p class="govuk-body">
-          Për të parandaluar që variantet e reja të COVID të hyjnë në MB, nuk duhet të udhëtoni në <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">vendet e listës portokalli ose të kuqe</a>.
-        </p>
-        <p class="govuk-body">
-          Për të kuptuar rreziqet në një vend ndiqni <a href="/guidance/travel-advice-novel-coronavirus">Këshillat e Ushëtimit FCDO</a>.
-        </p>
-        <p class="govuk-body">
-          Kur të ktheheni, ndiqni rregullat për <a href="/uk-border-control">hyni në MB nga jashtë </a> (përveç Irlandës).
-        </p>
-      text_assistive: E rëndësishme
-      title: Udhëtimi gjatë Coronavirus (COVID-19)
     still_current_at: Ende aktuale në
     summary: Përmbajtja
     updated: Përditësuar

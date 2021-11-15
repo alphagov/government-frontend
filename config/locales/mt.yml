@@ -9,7 +9,6 @@ mt:
       text: Gwida għal individwi u familji dwar Brexit
     heading_prefix: Hawn differenti
   common:
-    last_updated:
     visit: 'Żur:'
   components:
     figure:
@@ -21,22 +20,8 @@ mt:
       see_all_updates: ara l-aġġornamenti kollha
       show_all_updates: uri l-aġġornamenti kollha
     publisher_metadata:
-      collections:
-      from:
       hide_all: aħbi kollox
       show_all: uri kollox
-    save_this_page:
-      add_page_button: Żid mal-paġni maħżuna
-      confirmations:
-        page_removed:
-          message: Inti neħħejt dan mill-paġni maħżuna tiegħek
-        page_saved:
-          message: Inti żidt dan mill-paġni maħżuna tiegħek
-      page_not_saved_heading: Aħżen din il-paġna ħalli tkun tista' tiġi għaliha iktar tard
-      page_was_saved_heading: Inti ħżint din il-paġna
-      remove_page_button: Neħħi minn mill-paġni maħżuna
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Ara l-paġni maħżuna</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Iffirma</a> biex tara l-paġni maħżuna tiegħek.
     share_links:
       share_this_page: Aqsam din il-paġna ma'
   consultation:
@@ -61,7 +46,6 @@ mt:
     original_consultation: Konsultazzjoni oriġinali
     ran_from: Din il-konsultazzjoni bdiet minn
     respond_online: Irrispondi onlajn
-    'true': vera
     visit_soon: Żur din il-paġna darb'oħra biex tniżżel ir-riżultat għall-feedback&nbsp;pubbliku.
     was: kien
     ways_to_respond: Metodi kif twieġeb
@@ -526,21 +510,6 @@ mt:
       avoid_all_travel_to_parts_html: Il- <abbr title="Foreign and Commonwealth Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi lejn xi partijiet tal-pajjiż.
       avoid_all_travel_to_whole_country_html: Il- <abbr title="Foreign and Commonwealth Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi fil-pajjiż kollu.
     context: Rakkomandazzjonijiet dwar ivvjaġġar barra mill-pajjiż
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">Segwi r-regoli attwali tal-COVID-19 fejn qed tgħix: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Ingilterra</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skozja</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> u <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Irlanda ta' Fuq/a>.
-        </p>
-        <p class="govuk-body">
-          Biex nipprevjenu li jkun hemm varjanti differenti tal-COVID li jiddaħħlu fir-RU, m'għandekx tivvjaġġa lejn <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">pajjiżi fil-lista kannella jew ħamra</a>.
-        </p>
-        <p class="govuk-body">
-        Biex tifhem ir-riskji f'pajjiż segwi <a href="/guidance/travel-advice-novel-coronavirus">Rakkomandazzjonijiet tal-FCDO għall-Ivvjaġġar</a>.
-        </p>
-        <p class="govuk-body">
-         Meta tiġi lura, segwi r-regoli biex <a href="/uk-border-control">tidħol fir-RU minn barra</a> (bl-eċċezzjoni tal-Irlanda).
-        </p>
-      text_assistive: Importanti
-      title: Ivvjaġġar fil-Coronavirus (COVID-19)
     still_current_at: Għadu jeżisti fuq
     summary: Sommarju
     updated: Aġġornat

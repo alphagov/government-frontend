@@ -9,7 +9,6 @@ lv:
       text: Brexit vadlīnijas privātpersonām un ģimenēm
     heading_prefix: Pastāv atšķirības
   common:
-    last_updated:
     visit: 'Apmeklējiet:'
   components:
     figure:
@@ -21,22 +20,8 @@ lv:
       see_all_updates: skatīt visus atjauninājumus
       show_all_updates: rādīt visus atjauninājumus
     publisher_metadata:
-      collections:
-      from:
       hide_all: paslēpt visu
       show_all: rādīt visu
-    save_this_page:
-      add_page_button: Pievienot saglabātajām lapām
-      confirmations:
-        page_removed:
-          message: Jūs noņēmāt šo no saglabāto lapu saraksta
-        page_saved:
-          message: Jūs pievienojāt šo saglabāto lapu sarakstam
-      page_not_saved_heading: Saglabājiet šo lapu, lai vēlāk varētu tajā atgriezties
-      page_was_saved_heading: Jūs saglabājāt šo lapu
-      remove_page_button: Noņemt no saglabāto lapu saraksta
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Skatīt saglabātās lapas</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Pierakstieties</a>, lai skatītu saglabātās lapas.
     share_links:
       share_this_page: Kopīgot šo lapu
   consultation:
@@ -61,7 +46,6 @@ lv:
     original_consultation: Oriģinālā konsultācija
     ran_from: Šī konsultācija
     respond_online: Atbildēt tiešsaistē
-    'true': patiess
     visit_soon: Drīzumā apmeklējiet šo lapu atkal, lai lejupielādētu šīs publiskās&nbsp;atsauksmes rezultātu.
     was: bija
     ways_to_respond: Veidi, kā atbildēt
@@ -376,22 +360,6 @@ lv:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas uz noteiktām valsts daļām.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas pa valsti.
     context: Ieteikums ārzemju ceļojumiem
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Ievērojiet spēkā esošos COVID-19 noteikumus jūsu dzīvesvietā: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglijā</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotijā</a>, <a href="https://gov.wales/coronavirus-travel">Velsā</a> un <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Ziemeļīrijā</a>.
-        </p>
-        <p class="govuk-body">
-          Lai nepieļautu jaunu COVID variāciju iekļūšanu Apvienotajā Karalistē, ieteicams izvairīties no ceļošanas uz <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">oranžā vai sarkanā saraksta valstīm</a>.
-        </p>
-        <p class="govuk-body">
-          Lai izprastu riskus konkrētā valstī, ievērojiet <a href="/guidance/travel-advice-novel-coronavirus">Ārlietu, Sadraudzības lietu un attīstības ministrijas ieteikumus ceļojumiem</a>.
-        </p>
-        <p class="govuk-body">
-          Atgriežoties ievērojiet noteikumus par <a href="/uk-border-control">ierašanos Apvienotajā Karalistē no ārzemēm</a> (izņemot Īriju).
-        </p>
-      text_assistive: Svarīgi
-      title: Ceļošana koronavīrusa (COVID-19) laikā
     still_current_at: Joprojām aktuāli
     summary: Kopsavilkums
     updated: Atjaunināts

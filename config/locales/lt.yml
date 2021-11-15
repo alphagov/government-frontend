@@ -9,7 +9,6 @@ lt:
       text: 'Informacija fiziniams asmenims ir šeimoms apie „Brexitą“ '
     heading_prefix: Yra kitokių
   common:
-    last_updated:
     visit: 'Apsilankykite:'
   components:
     figure:
@@ -21,22 +20,8 @@ lt:
       see_all_updates: matyti visą naują informaciją
       show_all_updates: rodyti visą naują informaciją
     publisher_metadata:
-      collections:
-      from:
       hide_all: slėpti visus
       show_all: rodyti visus
-    save_this_page:
-      add_page_button: Pridėti prie išsaugotų puslapių
-      confirmations:
-        page_removed:
-          message: Pašalinote tai iš išsaugotų puslapių
-        page_saved:
-          message: Pridėjote tai prie išsaugotų puslapių
-      page_not_saved_heading: Išsaugokite šį puslapį, kaf galėtumėte sugrįžti vėliau
-      page_was_saved_heading: Išsaugojote šį puslapį
-      remove_page_button: Pašalinti iš išsaugotų puslapių
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Peržiūrėti išsaugotus puslapius</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Prisijunkite,</a> kad galėtumėte peržiūrėti išsaugotus puslapius.
     share_links:
       share_this_page: Bendrinti šį puslapį
   consultation:
@@ -61,7 +46,6 @@ lt:
     original_consultation: Pirminė konsultacija
     ran_from: Ši konsultacija tęsėsi nuo
     respond_online: Atsakyti internetu
-    'true': tiesa
     visit_soon: Netrukus vėl apsilankykite šiame puslapyje ir atsisiųskite šio viešo&nbsp;atsiliepimo rezultatą.
     was: buvo
     ways_to_respond: Kaip pateikti atsakymą
@@ -451,22 +435,6 @@ lt:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nepataria keliauti į skirtingas šalies veitas.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nepataria keliauti po šalį.
     context: Patarimai dėl keliavimo po užsienį
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Peržiūrėkite dabartines jūsų gyvenamosios vietos COVID-19 taisykles: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglija</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Škotija</a>, <a href="https://gov.wales/coronavirus-travel">Velsas</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Šiaurės Airija</a>.
-        </p>
-        <p class="govuk-body">
-          Siekdami išvengti naujų COVID atmainų patekimo į JK, neturėtumėte keliauti į <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">šalis, patenkančias į geltonąjį ir raudonąjį šalių sąrašus.
-        </p>
-        <p class="govuk-body">
-          Kad suprastumėte šaliai gresiančią riziką, laikykitės <a href="/guidance/travel-advice-novel-coronavirus">Užsienio, sandraugos ir plėtros biurų patarimų keliavimui</a>.
-        </p>
-        <p class="govuk-body">
-          Grįžę laikykitės taisyklių, <a href="/uk-border-control">taikomų patekimui į JK iš užsienio</a> (netaikoma Airijai).
-        </p>
-      text_assistive: Svarbu
-      title: Kelionės esant koronaviruso (COVID-19) situacijai
     still_current_at: Vis dar
     summary: Santrauka
     updated: Atnaujinta

@@ -9,7 +9,6 @@ hr:
       text: Upute za Brexit za pojedince i obitelji
     heading_prefix: Ima različitih
   common:
-    last_updated:
     visit: 'Posjetite:'
   components:
     figure:
@@ -21,22 +20,8 @@ hr:
       see_all_updates: pogledajte sva ažuriranja
       show_all_updates: prikaži sva ažuriranja
     publisher_metadata:
-      collections:
-      from:
       hide_all: sakrij sve
       show_all: prikaži sve
-    save_this_page:
-      add_page_button: Dodajte u svoje sačuvane stranice
-      confirmations:
-        page_removed:
-          message: Uklonili ste ovo sa svojih sačuvanih stranica
-        page_saved:
-          message: Dodali ste ovo u svoje sačuvane stranice
-      page_not_saved_heading: Sačuvajte ovu stranicu kako biste joj se kasnije mogli vratiti
-      page_was_saved_heading: Sačuvali ste ovu stranicu
-      remove_page_button: Uklonite iz svojih sačuvanih stranica
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Pogledajte sačuvane stranice</a>
-      see_saved_pages_signed_out: <a href="%{link}"class="govuk-link %{additional_class}">Prijavite se</a> da biste vidjeli sačuvane stranice.
     share_links:
       share_this_page: Podijelite ovu stranicu
   consultation:
@@ -61,7 +46,6 @@ hr:
     original_consultation: Originalno savjetovanje
     ran_from: Ovo savjetovanje je trajalo od
     respond_online: Odgovorite na mreži
-    'true': točno
     visit_soon: Uskoro ponovno posjetite ovu stranicu kako biste rezultat prenijeli na ovu javnu public&nbsp;povratnu informaciju.
     was: bio
     ways_to_respond: Načini reagiranja
@@ -526,22 +510,6 @@ hr:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> savjetuje protiv svih putovanja u dijelove zemlje.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> savjetuje protiv svih putovanja u cijeloj zemlji.
     context: Savjeti za putovanja u inozemstvo
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-         Slijedite trenutna pravila o COVID-19 u kojima živite: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Engleska</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Škotska</a>, <a href="https://gov.wales/coronavirus-travel">Vels</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Sjeverna Irska</a>.
-        </p>
-        <p class="govuk-body">
-          Kako biste spriječili ulazak novih varijanti COVID-a u UK, ne biste trebali putovati u <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">zemlje jantarnog ili crvenog popisa</a>.
-        </p>
-        <p class="govuk-body">
-           Da biste razumjeli rizike u zemlji, slijedite <a href="/guidance/travel-advice-novel-coronavirus">savjet za putovanja Ureda za vanjske poslove, Komonvelta i razvoja</a>.
-        </p>
-        <p class="govuk-body">
-          Kad se vratite, slijedite pravila za <a href="/uk-border-control">ulazak u Veliku Britaniju iz inozemstva</a> (osim iz Irske).
-        </p>
-      text_assistive: Važno
-      title: Koronavirus (COVID-19) putovanje
     still_current_at: Još uvijek aktualno u
     summary: Sažetak
     updated: Ažurirano

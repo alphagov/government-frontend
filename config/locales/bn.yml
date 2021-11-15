@@ -9,7 +9,6 @@ bn:
       text: ব্যক্তি ও পরিবারবর্গের জন্য ব্রেক্সিটের নির্দেশনা
     heading_prefix: পার্থক্য আছে
   common:
-    last_updated:
     visit: 'ভিজিট করুন:'
   components:
     figure:
@@ -21,22 +20,8 @@ bn:
       see_all_updates: সকল আপডেট দেখুন
       show_all_updates: সকল আপডেট দেখান
     publisher_metadata:
-      collections:
-      from:
       hide_all: সবগুলো লুকান
       show_all: সবগুলো দেখান
-    save_this_page:
-      add_page_button: আপনার সেভ করা পেজসমূহে যোগ করুন
-      confirmations:
-        page_removed:
-          message: আপনি এটি আপনার সেভ করা পেজগুলো থেকে সরিয়ে ফেলেছেন
-        page_saved:
-          message: আপনি এটি আপনার সেভ করা পেজগুলোতে যোগ করেছেন
-      page_not_saved_heading: এই পেজটি সেভ করুন, যেন আপনি পরে এখানে আসতে পারেন
-      page_was_saved_heading: আপনি এই পেজটি সেভ করেছেন
-      remove_page_button: আপনার সেভ করা পেজগুলো থেকে সরিয়ে ফেলুন
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">আপনার সেভ করা পেজগুলো দেখুন</a>
-      see_saved_pages_signed_out: আপনার সেভ করা পেজগুলো দেখতে <a href="%{link}" class="govuk-link %{additional_class}">সাইন ইন করুন</a>।
     share_links:
       share_this_page: এই পেজটি শেয়ার করুন
   consultation:
@@ -61,7 +46,6 @@ bn:
     original_consultation: মূল পরামর্শ
     ran_from: এই পরামর্শটি যেখান থেকে চলেছে
     respond_online: অনলাইনে উত্তর দিন
-    'true': সত্য
     visit_soon: সর্বসাধারণের ফিডব্যাকের এই ফলাফল ডাউনলোড করতে শীঘ্রই পুনরায় এই পেজটি ভিজিট করুন।
     was: ছিল
     ways_to_respond: উত্তর দেওয়ার উপায়
@@ -376,15 +360,6 @@ bn:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> দেশের কিছু অংশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> সমগ্র দেশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
     context: বিদেশ ভ্রমণ সম্পর্কিত পরামর্শ
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">  আপনি যেখানে বাস করেন সেখানকার কোভিড-19 সম্পর্কিত চলমান নিয়মকানুন মেনে চলুন: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">ইংল্যান্ড</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">স্কটল্যান্ড</a>, <a href="https://gov.wales/coronavirus-travel">ওয়েলস</a> এবং <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">নরদার্ন আয়ারল্যান্ড</a>।
-        </p><p class="govuk-body">  কোভিড-এর নতুন রূপটির যুক্তরাজ্যে প্রবেশ প্রতিরোধ করতে, আপনার <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">হলুদাভ (amber) বা লাল তালিকাভুক্ত দেশগুলোতে</a> ভ্রমণ করা উচিত নয়।
-        </p><p class="govuk-body">  কোনো দেশের ঝুঁকি বোঝার জন্য, <a href="/guidance/travel-advice-novel-coronavirus">FCDO ভ্রমণ পরামর্শ</a> অনুসরণ করুন।
-        </p><p class="govuk-body">  আপনি যখন ফিরে আসবেন,তখন <a href="/uk-border-control">বিদেশ থেকে যুক্তরাজ্যে প্রবেশের</a> (আয়ারল্যান্ড ছাড়া) নিয়মাবলী অনুসরণ করুন।
-        </p>
-      text_assistive: গুরুত্বপূর্ণ
-      title: করোনা ভাইরাস (কোভিড-19) ভ্রমণ
     still_current_at: এখানে এখনও চলমান
     summary: সারসংক্ষেপ
     updated: হালনাগাদ করা হয়েছে

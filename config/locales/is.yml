@@ -9,7 +9,6 @@ is:
       text: Brexit leiðbeiningar fyrir einstaklinga og fjölskyldur
     heading_prefix: Það eru mismunandi
   common:
-    last_updated:
     visit: 'Heimsæktu:'
   components:
     figure:
@@ -21,22 +20,8 @@ is:
       see_all_updates: sjá allar uppfærslur
       show_all_updates: sýna allar uppfærslur
     publisher_metadata:
-      collections:
-      from:
       hide_all: fela allt
       show_all: sýna allt
-    save_this_page:
-      add_page_button: Bæta í þínar vistaðar síður
-      confirmations:
-        page_removed:
-          message: Þú hefur fjarlægt þetta úr þínum vistuðu síðum
-        page_saved:
-          message: Þú hefur bætt þessu í þínar vistaðar síður
-      page_not_saved_heading: Vistaðu þessa síðu svo þú getir komið að henni aftur seinna
-      page_was_saved_heading: Þú vistaðir þessa síðu
-      remove_page_button: Fjarlægt úr þínum vistuðu síðum
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Sjá þínar vistuðu síður</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Skráðu þig inn</a> til að sjá þínar vistuðu síður.
     share_links:
       share_this_page: Deila þessari síðu
   consultation:
@@ -61,7 +46,6 @@ is:
     original_consultation: Upprunaleg ráðgjöf
     ran_from: Þessi ráðgjöf stóð yfir frá
     respond_online: Svara á netinu
-    'true': satt
     visit_soon: Heimsæktu þessa síðu bráðlega aftur til að sækja útkomuna úr þessari opinberu endurgjöf.
     was: var
     ways_to_respond: Leiðir til að svara
@@ -376,22 +360,6 @@ is:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins.
     context: Ráðleggingar um ferðalög erlendis
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Fylgdu núverandi COVID-19 reglum þar sem þú býrð: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Skotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> og <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Norður-Írland</a>.
-        </p>
-        <p class="govuk-body">
-          Til að koma í veg fyrir að ný COVID afbrigði berist til Bretlands, ættir þú ekki að ferðast til <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">landa á gula eða rauða listanum </a>.
-        </p>
-        <p class="govuk-body">
-          Fylgdu til að átta þig á áhættunni í landi <a href="/guidance/travel-advice-novel-coronavirus"> Ferðaráðlegginar Utanríkis-, samveldis- og þróunarráðuneytið (FCDO)</a>.
-        </p>
-        <p class="govuk-body">
-          Þegar þú kemur aftur fylgdu reglunum til að <a href="/uk-border-control">koma til Bretlands að utan</a> (nema frá Írlandi).
-        </p>
-      text_assistive: Mikilvægt
-      title: Kórónavírus (COVID-19) ferðalög
     still_current_at: Enn uppfært þann
     summary: Samantekt
     updated: Uppfært

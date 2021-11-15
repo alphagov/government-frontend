@@ -9,7 +9,6 @@ so:
       text: Tilmaamaha Brexit ee qoysaska iyo shaqsiyaadka
     heading_prefix: Waxa jira kala duwanaansho
   common:
-    last_updated:
     visit: 'Booqo:'
   components:
     figure:
@@ -21,22 +20,8 @@ so:
       see_all_updates: eeg dhamaan cusboonaysiinaha
       show_all_updates: muuji dhamaan cusboonaysiinaha
     publisher_metadata:
-      collections:
-      from:
       hide_all: qari dhamaan
       show_all: Muuji dhamaan
-    save_this_page:
-      add_page_button: Ku dar bogagaaga xafidan
-      confirmations:
-        page_removed:
-          message: Waxaad ka saartay bogagaaga xafidan
-        page_saved:
-          message: Waxaad ka dartay bogagaaga xafidan
-      page_not_saved_heading: Bogan xafid markaa waxaad kusoo noqon kartaa mardambe
-      page_was_saved_heading: Waad xafiday bogan
-      remove_page_button: Ka saar bogagaaga xafidan
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Eeg bogagaaga xafidan</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Gal</a> Bogagaaaga xafidan.
     share_links:
       share_this_page: Lawadaag bogan
   consultation:
@@ -61,7 +46,6 @@ so:
     original_consultation: Latalinta asalka ah
     ran_from: Latalinta waxay ka timid
     respond_online: Jawaab onlaayn ah
-    'true': run ah
     visit_soon: Markale booqo boga si aad udejisato maxsuulka dejisan ee dadwaynaha & nbsp;falcelinta.
     was: waxay ahayd
     ways_to_respond: Hababka loo jawaabo
@@ -376,22 +360,6 @@ so:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda socdaalka dhamaan qaybaha dalka.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda socdaalka dalka oo dhan.
     context: Talada socdaalka ajaanibka
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Raac talaabooyinka hada ee COVID-19 ee goobta aad ku noshahay: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> and <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Northern Ireland</a>.
-        </p>
-        <p class="govuk-body">
-          Si looga hortago kiisas ka duwan oo cusub COVID kuwaasoo soo galaya UK waa inaanad u socdaalin <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">dalalka liisaska amber ama cas</a>.
-        </p>
-        <p class="govuk-body">
-        Si aad u fahanto khataraha wadanka raac <a href="/guidance/travel-advice-novel-coronavirus">Talada Socdaalka ee FCDO</a>.
-        </p>
-        <p class="govuk-body">
-         Markaan soo noqoto, raac tilmaamaha <a href="/uk-border-control">UK ka soo gal dibadda</a> (marka laga reebo Ireland).
-        </p>
-      text_assistive: Muhiim ah
-      title: Coronavirus (COVID-19) socdaalka
     still_current_at: Ilaa hadadan
     summary: Soo koobitaanka
     updated: La cusboonaysiiyay

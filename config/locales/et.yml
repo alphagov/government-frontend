@@ -9,7 +9,6 @@ et:
       text: Brexiti juhised üksikisikutele ja peredele
     heading_prefix: On erinev
   common:
-    last_updated:
     visit: 'Külastus:'
   components:
     figure:
@@ -21,22 +20,8 @@ et:
       see_all_updates: vt kõiki värskendusi
       show_all_updates: kuva kõik värskendused
     publisher_metadata:
-      collections:
-      from:
       hide_all: peida kõik
       show_all: kuva kõik
-    save_this_page:
-      add_page_button: Lisa oma salvestatud lehtedele
-      confirmations:
-        page_removed:
-          message: Eemaldasite selle oma salvestatud lehtede hulgast
-        page_saved:
-          message: Lisasite selle oma salvestatud lehtede hulka
-      page_not_saved_heading: Salvestage see leht, et saaksite selle juurde hiljem tagasi tulla
-      page_was_saved_heading: Salvestasite selle lehe
-      remove_page_button: Eemaldage salvestatud lehtede hulgast
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Vt oma salvestatud lehti</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Logige sisse,</a> et vaadata oma salvestatud lehti.
     share_links:
       share_this_page: Jaga seda lehte
   consultation:
@@ -61,7 +46,6 @@ et:
     original_consultation: Algne konsultatsioon
     ran_from: See konsultatsioon kestis
     respond_online: Vastake võrgus
-    'true': tõene
     visit_soon: Külastage seda lehte peagi uuesti, et selle avalik tagasiside alla laadida.
     was: oli
     ways_to_respond: Vastamise viisid
@@ -376,22 +360,6 @@ et:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida riigi osades.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida kogu riigis.
     context: Välisreiside nõuanded
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Järgige oma elukohas kehtivaid COVID-19 reegleid: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Inglismaa</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Šotimaa</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> ja <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Põhja-Iirimaa</a>.
-        </p>
-        <p class="govuk-body">
-          Vältimaks uute COVID-i tüvede sisenemist Ühendkuningriiki, vältige reisimist riikidesse <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">kollase või punase nimekirja riikidesse</a>.
-        </p>
-        <p class="govuk-body">
-          Riskide mõistmiseks riigis järgige <a href="/guidance/travel-advice-novel-coronavirus">FCDO reisinõuandeid</a>.
-        </p>
-        <p class="govuk-body">
-          Tagasi tulles järgige reegleid <a href="/uk-border-control"></a> (välja arvatud Iirimaalt).
-        </p>
-      text_assistive: Oluline
-      title: Reisimine koroonaviiruse (COVID-19) ajal
     still_current_at: Ikka praegune
     summary: Kokkuvõte
     updated: Uuendatud
