@@ -27,14 +27,12 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-translation-nav")
     assert page.has_css?(".gem-c-translation-nav__list-item")
 
-    assert page.has_content?(:all, "English हिंदी 日本語 中文 中文")
-
     assert_not page.has_link?("English")
 
     assert page.has_link?("हिंदी", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.hi")
-    assert page.has_link?("日本語", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.ja")
+    assert page.has_link?("日本", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.ja")
     assert page.has_link?("中文", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.zh")
-    assert page.has_link?("中文", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.zh-tw")
+    assert page.has_link?("繁體中文", href: "/government/world-location-news/changes-to-secure-english-language-test-providers-for-uk-visas.zh-tw")
   end
 
   test "renders the lead image" do

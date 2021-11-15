@@ -19,8 +19,10 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test "#t_locale_fallback returns default locale for a string with no locale translation" do
+    I18n.stubs(:t).returns("translation missing: en.some_missing.key")
+
     I18n.with_locale(:de) do
-      fallback = t_locale_fallback("content_item.schema_name.decision", count: 1, locale: :de)
+      fallback = t_locale_fallback("some_missing.key", count: 1, locale: :fake)
       assert_equal :en, fallback
     end
   end

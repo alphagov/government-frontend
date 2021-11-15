@@ -2,308 +2,331 @@
 ta:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: வணிகங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: தனிநபர்கள் மற்றும் குடும்பங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
+    heading_prefix: இதில் வித்தியாசம் உள்ளது
   common:
-    last_updated:
-    visit:
+    visit: 'வருகை:'
   components:
     figure:
-      image_credit:
+      image_credit: 'பட உதவி: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: அனைத்து புதுப்பித்தல்களையும் மறை
+      last_updated: கடைசியாக புதுப்பிக்கப்பட்டது %{date}
+      published: வெளியிடப்பட்ட தேதி %{date}
+      see_all_updates: அனைத்து புதுப்பித்தல்களையும் பார்க்க
+      show_all_updates: அனைத்து புதுப்பித்தல்களையும் காட்டு
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: அனைத்தையும் மறை
+      show_all: அனைத்தையும் காட்டு
     share_links:
-      share_this_page:
+      share_this_page: இந்தப் பக்கத்தைப் பகிர்க
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: மற்றும்
+    another_website_html: இந்தக் கலந்தாலோசனை %{closed} <a href="%{url}">வேறொரு இணையதளத்தில்</a>நடைபெற்றது
+    at: "-இல்"
+    closes: இது முடிவடைகிறது
+    closes_at: இந்தக் கலந்தாலோசனை முடிவடைகிறது
+    complete_a: கலந்தாலோசனை விளக்கத்தை
+    description: நிரப்பவும்
+    detail_of_feedback_received: மதிப்புரை விபரம் பெறப்பட்டது
+    detail_of_outcome: பயன் விபரம்
+    documents: ஆவணங்கள்
+    download_outcome: முழு முடிவுகளைப் பதிவிறக்கவும்
+    either: இரண்டிலொன்று
+    email_to: 'மின்னஞ்சல்:'
+    feedback_received: மதிப்புரை பெறப்பட்டது
+    is_being: இருக்கிறது
+    not_open_yet: இந்தக் கலந்தாலோசனை இன்னும் திறக்கப்படவில்லை
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: இந்தக் கலந்தாலோசனை திறக்கிறது
+    original_consultation: மூலக் கலந்தாலோசனை
+    ran_from: "-லிருந்து இந்தக் கலந்தாலோசனை நடந்தது"
+    respond_online: இணையத்தில் பதிலளிக்கவும்
+    visit_soon: இந்த பொதுமக்கள் மதிப்புரையின் விளைவை பதிவிறக்குவதற்கு இந்தப் பக்கத்துக்குத் திரும்பவும் வருகை தருக.
+    was: was
+    ways_to_respond: பதிலளிக்கும் வழிகள்
+    write_to: 'எங்களுக்கு எழுதுங்கள்:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: மின்னஞ்சல்
+    find_call_charges: அழைப்புக் கட்டணம் குறித்துத் தெரிந்துகொள்ளுங்கள்
+    online: இணையவழி
+    phone: தொலைபேசி
+    webchat: இணைய உரையாடல்
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: இந்த ஆவணம் வெளியிடப்படும் தேதி
+    contents: உள்ளடக்கம்
     metadata:
-      published: பிரசுரிக்கப்பட்டது
-      updated: இற்றைப்படுத்தப்பட்டது
+      published: வெளியிடப்பட்டது
+      updated: புதுப்பிக்கப்பட்டது
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: வான் விபத்து விசாரணைக் கிளை அறிக்கை
+        other: வான் விபத்து விசாரணைக் கிளை அறிக்கைகள்
       announcement:
         one: அறிவிப்பு
         other: அறிவிப்புகள்
       asylum_support_decision:
-        one:
-        other:
+        one: அடைக்கல உதவி தீர்ப்பாய முடிவு
+        other: அடைக்கல உதவி தீர்ப்பாய முடிவுகள்
       authored_article:
-        one: " எழுதப்பட்ட   கட்டுரை"
-        other: எழுதப்பட்ட கட்டுரைகள்
+        one: எழுதிய கட்டுரை
+        other: எழுதிய கட்டுரைகள்
       business_finance_support_scheme:
-        one:
-        other:
+        one: தொழில் நிதி உதவித் திட்டம்
+        other: தொழில் நிதி உதவித் திட்டங்கள்
       case_study:
-        one: சம்பவ ஆய்வுக் கற்கை
-        other: சம்பவ ஆய்வுக் கற்கைகள்
+        one: நிகழ்வு ஆய்வு
+        other: நிகழ்வு ஆய்வுகள்
       closed_consultation:
-        one: வரையறுக்கப்பட்ட நிலையிலான கலந்தாலோசனை
-        other: வரையறுக்கப்பட்ட நிலையிலான  கலந்தாலோசனைகள்
+        one: மூடிய கலந்தாய்வு
+        other: மூடிய கலந்தாய்வுகள்
+        overview:
       cma_case:
-        one:
-        other:
+        one: போட்டி மற்றும் சந்தைகளில் வலிமை வழக்கு
+        other: போட்டி மற்றும் சந்தைகளில் வலிமை வழக்குகள்
       coming_soon:
-        one:
-        other:
+        one: விரைவில் வருகிறது
+        other: விரைவில் வருகிறது
       consultation:
-        one: கலந்தாலோசனை
-        other: கலந்தாலோசனைகள்
+        one: கலந்தாய்வு
+        other: கலந்தாய்வுகள்
       consultation_outcome:
-        one: கலந்தாலோசனையின் முடிவு
-        other: கலந்தாலோசனைப்முடிவுகள்
+        one: கலந்தாய்வின் விளைவு
+        other: கலந்தாய்வின் விளைவுகள்
+        overview:
       corporate_information_page:
-        one:
-        other:
+        one: தகவல் பக்கம்
+        other: தகவல் பக்கங்கள்
       corporate_report:
-        one: கூட்டாண்மை அறிக்கை
-        other: கூட்டாண்மை அறிக்கைகள்
+        one: குழும அறிக்கை
+        other: குழும அறிக்கைகள்
+        overview:
       correspondence:
-        one: தொடர்பு
-        other: தொடர்புகள்
+        one: கடிதத் தொடர்பு
+        other: கடிதத் தொடர்புகள்
+        overview:
       countryside_stewardship_grant:
-        one:
-        other:
+        one: கிராமப் பொறுப்பாளர் மானியம்
+        other: கிராமப் பொறுப்பாளர் மானியங்கள்
       decision:
-        one:
-        other:
+        one: முடிவு
+        other: முடிவுகள்
+        overview:
       detailed_guide:
-        one: விளக்கமான வழிகாட்டல்
-        other: விளக்கமான வழிகாட்டல்
+        one: வழிகாட்டுதல்
+        other: வழிகாட்டுதல்
       dfid_research_output:
-        one:
-        other:
+        one: மேம்பாட்டு விளைபொருளுக்கான ஆராய்ச்சி
+        other: மேம்பாட்டு விளைபொருள்களுக்கான ஆராய்ச்சி
       document_collection:
-        one: தொடர்
-        other:
+        one: சேகரிப்பு
+        other: சேகரிப்புகள்
       draft_text:
-        one: வரைபு உரை
-        other: வரைபு உரைகள்
+        one: வரைவு உரை
+        other: வரைவு உரைகள்
       drug_safety_update:
-        one:
-        other:
+        one: மருந்து பாதுகாப்பு புதிய தகவல்
+        other: மருந்து பாதுகாப்பு புதிய தகவல்கள்
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: பணி மேல்முறையீட்டுத் தீர்ப்பாய முடிவு
+        other: பணி மேல்முறையீட்டுத் தீர்ப்பாய முடிவுகள்
       employment_tribunal_decision:
-        one:
-        other:
+        one: பணித் தீர்ப்பாய முடிவு
+        other: பணித் தீர்ப்பாய முடிவுகள்
       esi_fund:
-        one:
-        other:
+        one: ஐரோப்பிய அமைப்புசார் மற்றும் முதலீட்டு நிதி (ESIF)
+        other: ஐரோப்பிய அமைப்புசார் மற்றும் முதலீட்டு நிதிகள் (ESIF)
       fatality_notice:
-        one: இடர் அறிவித்தல்
-        other: இடர் அறிவித்தல்கள்
+        one: இறப்பு அறிவிப்பு
+        other: இறப்பு அறிவிப்புகள்
       foi_release:
-        one: தகவலின் சுதந்திரமான  வெளியிடுதல்
-        other: தகவல்களின் சுதந்திரமான  வெளியிடுதல்கள்
+        one: தகவல் சுதந்திர வெளியீடு
+        other: தகவல் சுதந்திர வெளியீடுகள்
+        overview:
       form:
         one: படிவம்
         other: படிவங்கள்
+        overview:
       government_response:
-        one: அரசாங்க பதிலிறுப்பு
-        other: அரசாங்க பதிலிறுப்புகள்
+        one: அரசாங்க பதில்
+        other: அரசாங்க பதில்கள்
       guidance:
-        one: வழிகாட்டல்
-        other: வழிகாட்டல்
+        one: வழிகாட்டுதல்
+        other: வழிகாட்டுதல்
+        overview:
       impact_assessment:
         one: தாக்க மதிப்பீடு
         other: தாக்க மதிப்பீடுகள்
+        overview:
       imported:
-        one: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
-        other: இறக்குமதி செய்யப்பட்ட - எதிர்பார்க்கும் வகை
+        one: இறக்குமதியானது - எதிர்பார்க்கும் வகை
+        other: இறக்குமதியானது - எதிர்பார்க்கும் வகை
       independent_report:
-        one: சுயாதீன அறிக்கை
-        other: சுயாதீன அறிக்கைகள்
+        one: தற்சார்பு அறிக்கை
+        other: தற்சார்பு அறிக்கைகள்
+        overview:
       international_development_fund:
-        one:
-        other:
+        one: சர்வதேச மேம்பாட்டு நிதியளிப்பு
+        other: சர்வதேச மேம்பாட்டு நிதியளிப்பு
       international_treaty:
-        one:
-        other:
+        one: சர்வதேச உடன்படிக்கை
+        other: சர்வதேச உடன்படிக்கைகள்
+        overview:
       maib_report:
-        one:
-        other:
+        one: கடல் விபத்து விசாரணைக் கிளை அறிக்கை
+        other: கடல் விபத்து விசாரணைக் கிளை அறிக்கைகள்
       map:
         one: வரைபடம்
         other: வரைபடங்கள்
+        overview:
       medical_safety_alert:
-        one:
-        other:
+        one: மருந்துகள் மற்றும் மருத்துவ சாதனங்களுக்கான விழிப்பூட்டல்களும் நினைவுமீட்டல்களும்
+        other: மருந்துகள் மற்றும் மருத்துவ சாதனங்களுக்கான விழிப்பூட்டல்களும் நினைவுமீட்டல்களும்
       national:
-        one:
-        other:
+        one: தேசிய புள்ளியியல் அறிவிப்பு
+        other: தேசிய புள்ளியியல் அறிவிப்புகள்
       national_statistics:
-        one: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
-        other: புள்ளிவிபரம் - தேசிய புள்ளிவிபரம்
+        one: தேசிய புள்ளியியல்
+        other: தேசிய புள்ளியியல்
+        overview:
       national_statistics_announcement:
-        one:
-        other:
+        one: தேசிய புள்ளியியல் அறிவிப்பு
+        other: தேசிய புள்ளியியல் அறிவிப்புகள்
       news_article:
         one: செய்திக் கட்டுரை
         other: செய்திக் கட்டுரைகள்
       news_story:
-        one: செய்திக் கதை
-        other: செய்திக் கதைகள்
+        one: செய்தி
+        other: செய்திகள்
       notice:
-        one:
-        other:
+        one: அறிவிப்பு
+        other: அறிவிப்புகள்
+        overview:
       official:
-        one:
-        other:
+        one: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்பு
+        other: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்புகள்
       official_statistics:
-        one: புள்ளிவிபரம்
-        other: புள்ளிவிபரம்
+        one: அதிகாரப்பூர்வ புள்ளியியல்
+        other: அதிகாரப்பூர்வ புள்ளியியல்
+        overview:
       official_statistics_announcement:
-        one:
-        other:
+        one: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்பு
+        other: அதிகாரப்பூர்வ புள்ளியியல் அறிவிப்புகள்
       open_consultation:
         one: திறந்த கலந்தாலோசனை
         other: திறந்த கலந்தாலோசனைகள்
+        overview:
       oral_statement:
-        one: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கை
-        other: பாராளுமன்றத்துக்கு வாய் மூலமான அறிக்கைகள்
+        one: பாராளுமன்றத்துக்கு வாய்வழி அறிவிப்பு
+        other: பாராளுமன்றத்துக்கு வாய்வழி அறிவிப்புகள்
       policy:
         one: கொள்கை
         other: கொள்கைகள்
       policy_paper:
-        one: கொள்கைப் பத்திரம்
-        other: கொள்கைப் பத்திரங்கள்
+        one: கொள்கை ஆவணம்
+        other: கொள்கை ஆவணங்கள்
+        overview:
       press_release:
-        one: செய்தி வெளியீடு
-        other: செய்தி வெளியீடுகள்
+        one: செய்திக் குறிப்பு
+        other: செய்திக் குறிப்புகள்
       promotional:
-        one: விளம்பர ஊக்குவிப்பு பொருள்
-        other: விளம்பர ஊக்குவிப்பு பொருள்
+        one: விளம்பரப் பொருள்
+        other: விளம்பரப் பொருள்
+        overview:
       publication:
         one: பிரசுரம்
         other: பிரசுரங்கள்
       raib_report:
-        one:
-        other:
+        one: இரயில் விபத்து விசாரணைக் கிளை அறிக்கை
+        other: இரயில் விபத்து விசாரணைக் கிளை அறிக்கைகள்
       regulation:
-        one:
-        other:
+        one: ஒழுங்குமுறை
+        other: ஒழுங்குமுறைகள்
+        overview:
       research:
-        one: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
-        other: ஆராய்ச்சி மற்றும் பகுப்பாய்தல்
+        one: ஆராய்ச்சி மற்றும் பகுப்பாய்வு
+        other: ஆராய்ச்சி மற்றும் பகுப்பாய்வு
+        overview:
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவு
+        other: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவுகள்
       service_sign_in:
-        one:
-        other:
+        one: சேவை உள்நுழைவு
+        other: சேவை உள்நுழைவு
       service_standard_report:
-        one:
-        other:
+        one: சேவைத் தர அறிக்கை
+        other: சேவைத் தர அறிக்கைகள்
       speaking_notes:
-        one: உரைக் குறிப்புகள்
-        other: உரைக் குறிப்புகள்
+        one: பேச்சுக் குறிப்புகள்
+        other: பேச்சுக் குறிப்புகள்
       speech:
-        one: உரை
-        other: உரைகள்
+        one: பேச்சு
+        other: பேச்சுகள்
       standard:
-        one:
-        other:
+        one: தரநிலை
+        other: தரநிலைகள்
+        overview:
       statement_to_parliament:
         one: பாராளுமன்றத்துக்கான அறிக்கை
         other: பாராளுமன்றத்துக்கான அறிக்கைகள்
       statistical_data_set:
-        one: புள்ளிவிபர தரவுத் தொகுதி
-        other: புள்ளிவிபர தரவுத் தொகுதிகள்
+        one: புள்ளியியல் தரவுத் தொகுதி
+        other: புள்ளியியல் தரவுத் தொகுதிகள்
       statistics_announcement:
-        one:
-        other:
+        one: புள்ளியியல் வெளியீட்டு அறிவிப்பு
+        other: புள்ளியியல் வெளியீட்டு அறிவிப்புகள்
       statutory_guidance:
-        one:
-        other:
+        one: சட்டப்பூர்வ வழிகாட்டுதல்
+        other: சட்டப்பூர்வ வழிகாட்டுதல்
+        overview:
       take_part:
-        one:
-        other:
+        one: பங்கெடுத்தல்
+        other: பங்கெடுத்தல்
       tax_tribunal_decision:
-        one:
-        other:
+        one: வரி மற்றும் உயர்நீதிமன்றத் தீர்ப்பாய முடிவு
+        other: வரி மற்றும் உயர்நீதிமன்றத் தீர்ப்பாய முடிவுகள்
       transcript:
-        one: உரை வடிவம்
-        other: உரை வடிவங்கள்
+        one: எழுத்துப்படிவம்
+        other: எழுத்துப்படிவங்கள்
       transparency:
         one: வெளிப்படையான தரவு
         other: வெளிப்படையான தரவு
+        overview:
       utaac_decision:
-        one:
-        other:
+        one: நிர்வாக மேல்முறையீட்டுத் தீர்ப்பாய முடிவு
+        other: நிர்வாக மேல்முறையீட்டுத் தீர்ப்பாய முடிவுகள்
       world_location_news_article:
         one: செய்திக் கட்டுரை
         other: செய்திக் கட்டுரைகள்
       world_news_story:
-        one:
-        other:
+        one: உலகச் செய்தி
+        other: உலகச் செய்திகள்
       written_statement:
-        one: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கை
-        other: பாராளுமன்றத்துக்கான எழுத்து மூலமான அறிக்கைகள்
+        one: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்பு
+        other: பாராளுமன்றத்துக்கு எழுத்துப்பூர்வ அறிவிப்புகள்
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: கூட்டாண்மைத் தகவல்
-    personal_information_charter_html: உங்களது தனிப்பட்ட தகவல்களை எப்படி நாங்கள் கையாள்கிறோம் என்பதை எங்களது %{link} விளக்கும்
-    publication_scheme_html: எங்களது %{link} நாங்கள் வழமையாக வெளியிடும் தகவல்களின்  வகைகள் பற்றி வாசிக்கவும்
-    social_media_use_html: எங்களது  கொள்கையை %{link} இல் வாசிக்கவும்
-    welsh_language_scheme_html: "%{link} இல் பிரசுரிப்பதற்கான எங்களது பற்றுறுதி பற்றி கண்டறியவும்"
+    about_our_services_html: கண்டறியுங்கள் %{link}.
+    corporate_information: குழுமத் தகவல்கள்
+    personal_information_charter_html: எங்கள் %{link} உங்கள் தனிப்பட்ட தகவல்களை நாங்கள் எவ்வாறு கையாள்கிறோம் என்பதை விளக்குகிறது.
+    publication_scheme_html: எங்கள் %{link}-ல் நாங்கள் வழக்கமாக வெளியிடும் தகவல்களின் வகைகள் குறித்து வாசியுங்கள்.
+    social_media_use_html: "%{link}-ல் எங்கள் கொள்கை குறித்து வாசியுங்கள்."
+    welsh_language_scheme_html: "%{link}-க்கு எங்கள் கடப்பாடு குறித்துக் கண்டறியுங்கள்."
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: பாதுகாப்பு காவல்துறை அமைச்சர்
+    field_of_operation: இயங்குதளம்
+    operations_in: "%{location}-ல் செயல்பாடுகள்"
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -338,25 +361,24 @@ ta:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: இனி கிடைக்காது
+    published_in_error: இந்தப் பக்கத்திலிருந்த தகவல்கள் நீக்கப்பட்டுள்ளன. காரணம் அது பிழையாக வெளியிடப்பட்டது.
+    title: நீங்கள் தேடும் பக்கம் இனி கிடைக்காது
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: இந்த வழிகாட்டுதலில் உள்ள பக்கங்கள்
+    skip_to_contents: வழிகாட்டுதல் விபரங்களுக்குச் செல்க
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: "%{url}-ல் இந்த வெளியீடு உள்ளது"
+      copyright: "© Crown காப்புரிமை %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'வேறு வகையில் குறிப்பிடப்படாதவரையில் இந்த வெளியீடானது திறந்த அரசு உரிமம் v3.0-வின் விதிமுறைகளின்கீழ் உரிமம் பெற்றது. இந்த உரிமத்தைப் பார்வையிட <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> பக்கத்துக்கு வருகைதாருங்கள் அல்லது தகவல் கொள்கைக் குழுவுக்கு The National Archives, Kew, London TW9 4DU என்ற முகவரிக்கு எழுதுங்கள் அல்லது பின்வரும் முகவரிக்கு மின்னஞ்சல் செய்யுங்கள்: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: தொடர்புடைய காப்புரிமைதாரர்களிடமிருந்து அனுமதி பெறுவதற்கு உங்களுக்குத் தேவையான ஏதேனும் மூன்றாம் நபர் காப்புரிமைத் தகவல்கள் நாங்கள் அடையாளம் காணுமிடத்தில்.
   i18n:
     direction:
   language_names:
@@ -427,58 +449,58 @@ ta:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: அடுத்து
+    previous_page: முந்தையது
+    print_entire_guide: முழு வழிகாட்டுதலையும் அச்செடுக்க
   publication:
-    details:
+    details: விபரங்கள்
     documents:
-      one: " ஆவணம்"
+      one: ஆவணம்
       other: ஆவணங்கள்
   service_sign_in:
-    continue:
+    continue: தொடர்க
     error:
-      option:
-      title:
+      option: தயவுசெது ஒரு விருப்பத்தேர்வைத் தேர்ந்தெடுக்கவும்
+      title: ஒரு விருப்பத்தேர்வை நீங்கள் தேர்ந்தெடுக்கவில்லை
   shared:
-    historically_political:
+    historically_political: "%{government}-ன்கீழ் இது வெளியிடப்பட்டது"
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: உரையாடலுக்கு ஆலோசகர்கள் உள்ளனர்.
+      busy: அனைத்து இணைய உரையாடல் ஆலோசகர்களும் தற்போது வேலையில் உள்ளனர்.
+      closed: இணைய உரையாடல் தற்போது மூடப்பட்டுள்ளது.
+      speak_to_adviser: ஓர் ஆலோசகருடன் இப்போது பேசுங்கள்
+      technical_problem: தொழில்நுட்பப் பிரச்சினைகள் காரணமாக இணைய உரையாடல் தற்போது கிடைக்கப்பெறவில்லை.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நியமனத் தோற்றுவாயுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
+    pgi_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நிலவியல் தோற்றுவாயுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
+    tsg_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் மரபார்ந்த சிறப்பம்சமுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: ஒப்படைத்த தேதி
+    location: இருப்பிடம்
+    written_on: எழுதப்பட்ட தேதி
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: இரத்தாகும் தேதி
+    cancelled: புள்ளியியல் வெளியீடு இரத்தானது
+    changed_date: வெளியீட்டுத் தேதி மாற்றப்பட்டுள்ளது
+    forthcoming: இந்த புள்ளியியல் வெளியிடப்படும்
+    previous_date: முந்தைய தேதி
+    proposed_date: முன்மொழியப்பட்ட வெளியீடு
+    reason_for_change: மாற்றத்துக்கான காரணம்
+    release_date: வெளியீட்டுத் தேதி
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு அத்தியாவசிய பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் அத்தியாவசிய பயணம் குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
+    context: அயல்நாட்டுப் பயண அறிவுரை
+    still_current_at: தற்போதும் உள்ளது
+    summary: சுருக்கம்
+    updated: புதுப்பிக்கப்பட்டது
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: இனி கிடைக்காது
+    summary: இந்தப் பக்கத்திலிருந்த தகவல்கள் நீக்கப்பட்டுள்ளன. காரணம் அது பிழையாக வெளியிடப்பட்டது.
+    title: நீங்கள் தேடும் பக்கம் இனி கிடைக்காது
   working_group:
-    contact_details:
-    policies:
+    contact_details: தொடர்பு விபரங்கள்
+    policies: கொள்கைகள்

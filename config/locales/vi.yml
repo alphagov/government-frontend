@@ -2,234 +2,331 @@
 vi:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Hướng dẫn Brexit cho các doanh nghiệp
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Hướng dẫn Brexit cho các cá nhân và gia đình
+    heading_prefix: Có sự khác nhau
   common:
-    last_updated:
-    visit:
+    visit: 'Truy cập:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Nguồn hình ảnh: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: ẩn tất cả các cập nhật
+      last_updated: Lần cập nhật gần đây nhất %{date}
+      published: Ngày xuất bản %{date}
+      see_all_updates: xem tất cả nội dung cập nhật
+      show_all_updates: hiển thị tất cả nội dung cập nhật
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: ẩn tất cả
+      show_all: hiển thị tất cả
     share_links:
-      share_this_page:
+      share_this_page: Chia sẻ trang này
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: và
+    another_website_html: Buổi tham vấn này %{closed} được tổ chức trên <a href="%{url}">một trang web khác</a>
+    at: lúc
+    closes: Và kết thúc lúc
+    closes_at: Buổi tham vấn này kết thúc lúc
+    complete_a: Hoàn thành
+    description: Mô tả buổi tham vấn
+    detail_of_feedback_received: Chi tiết phản hồi đã nhận được
+    detail_of_outcome: Chi tiết kết quả
+    documents: Tài liệu
+    download_outcome: Tải xuống toàn bộ kết quả
+    either: một trong hai
+    email_to: 'Email đến:'
+    feedback_received: Phản hồi đã nhận
+    is_being: đang được
+    not_open_yet: Buổi tham vấn này chưa mở
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Buổi tham vấn này đang diễn ra
+    original_consultation: Buổi tham vấn nguyên bản
+    ran_from: Buổi tham vấn này bắt đầu từ
+    respond_online: Trả lời trực tuyến
+    visit_soon: Hãy sớm truy cập lại trang này để tải xuống kết quả cho phản hồi&nbsp;công khai này.
+    was: là
+    ways_to_respond: Cách trả lời
+    write_to: 'Gửi thư đến:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: Email
+    find_call_charges: Tìm hiểu về phí cuộc gọi
+    online: Trực tuyến
+    phone: Điện thoại
+    webchat: Webchat
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Tài liệu này sẽ được xuất bản trên
+    contents: Mục lục
     metadata:
       published: Đã xuất bản
-      updated: Cập nhật
+      updated: Đã cập nhật
     schema_name:
       aaib_report:
-        other:
+        one: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng không
+        other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng không
       announcement:
-        other: Các thông báo
+        one: Thông báo
+        other: Thông báo
       asylum_support_decision:
-        other:
+        one: Quyết định của tòa án hỗ trợ tị nạn
+        other: Quyết định của tòa án hỗ trợ tị nạn
       authored_article:
-        other: Các bài viết do tác giả
+        one: Bài viết có tác giả
+        other: Bài viết có tác giả
       business_finance_support_scheme:
-        other:
+        one: Kế hoạch hỗ trợ tài chính doanh nghiệp
+        other: Kế hoạch hỗ trợ tài chính doanh nghiệp
       case_study:
-        other: Các Trường hợp cụ thể
+        one: Nghiên cứu điển hình
+        other: Nghiên cứu điển hình
       closed_consultation:
-        other: Kết thúc các cuộc tham vấn
+        one: Tham vấn kín
+        other: Tham vấn kín
+        overview:
       cma_case:
-        other:
+        one: Vụ án của Cơ quan Cạnh tranh và Thị trường
+        other: Vụ án của Cơ quan Cạnh tranh và Thị trường
       coming_soon:
-        other:
+        one: Sắp Diễn ra
+        other: Sắp Diễn ra
       consultation:
-        other: Các cuộc tham vấn
+        one: Tham vấn
+        other: Tham vấn
       consultation_outcome:
-        other: Các Kết quả tham vấn
+        one: Kết quả tham vấn
+        other: Kết quả tham vấn
+        overview:
       corporate_information_page:
-        other:
+        one: Trang thông tin
+        other: Trang thông tin
       corporate_report:
-        other: Các báo cáo tổng hợp
+        one: Báo cáo của doanh nghiệp
+        other: Báo cáo của doanh nghiệp
+        overview:
       correspondence:
-        other: Liên hệ
+        one: Thư từ
+        other: Thư từ
+        overview:
       countryside_stewardship_grant:
-        other:
+        one: Trợ cấp Quản lý Vùng nông thôn
+        other: Trợ cấp Quản lý Vùng nông thôn
       decision:
-        other:
+        one: Quyết định
+        other: Quyết định
+        overview:
       detailed_guide:
-        other: Hướng dẫn chi tiết
+        one: Hướng dẫn
+        other: Hướng dẫn
       dfid_research_output:
-        other:
+        one: Đầu ra của Nghiên cứu Phát triển
+        other: Đầu ra của Nghiên cứu Phát triển
       document_collection:
-        other:
+        one: Bộ sưu tập
+        other: Bộ sưu tập
       draft_text:
-        other: Các nội dung dự thảo
+        one: Dự thảo
+        other: Dự thảo
       drug_safety_update:
-        other:
+        one: Cập nhật về Dùng Thuốc An toàn
+        other: Cập nhật về Dùng Thuốc An toàn
       employment_appeal_tribunal_decision:
-        other:
+        one: Quyết định của tòa phúc thẩm việc làm
+        other: Quyết định của tòa phúc thẩm việc làm
       employment_tribunal_decision:
-        other:
+        one: Quyết định của tòa án việc làm
+        other: Quyết định của tòa án việc làm
       esi_fund:
-        other:
+        one: Quỹ Đầu tư và Cấu trúc Châu Âu (ESIF)
+        other: Quỹ Đầu tư và Cấu trúc Châu Âu (ESIF)
       fatality_notice:
-        other: Tin buồn
+        one: Thông báo tử vong
+        other: Thông báo tử vong
       foi_release:
-        other: Thông cáo FOI
+        one: Công bố FOI
+        other: Công bố FOI
+        overview:
       form:
-        other: Các mẫu đơn
+        one: Biểu mẫu
+        other: Biểu mẫu
+        overview:
       government_response:
-        other: các phản hồi của Chính phủ
+        one: Phản hồi của chính phủ
+        other: Phản hồi của chính phủ
       guidance:
-        other: hướng dẫn
+        one: Hướng dẫn
+        other: Hướng dẫn
+        overview:
       impact_assessment:
+        one: Đánh giá tác động
         other: Đánh giá tác động
+        overview:
       imported:
-        other: Loại tài liệu đính kèm
+        one: loại đã nhập - đang chờ
+        other: loại đã nhập - đang chờ
       independent_report:
-        other: Các báo cáo độc lập
+        one: Báo cáo độc lập
+        other: Báo cáo độc lập
+        overview:
       international_development_fund:
-        other:
+        one: Tài trợ phát triển quốc tế
+        other: Tài trợ phát triển quốc tế
       international_treaty:
-        other:
+        one: Hiệp ước quốc tế
+        other: Hiệp ước quốc tế
+        overview:
       maib_report:
-        other:
+        one: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
+        other: Báo cáo của Chi nhánh Điều tra Tai nạn Hàng hải
       map:
-        other: Các bản đồ
+        one: Bản đồ
+        other: Bản đồ
+        overview:
       medical_safety_alert:
-        other:
+        one: Cảnh báo và thu hồi thuốc và thiết bị y tế
+        other: Cảnh báo và thu hồi thuốc và thiết bị y tế
       national:
-        other:
+        one: Thông báo thống kê quốc gia
+        other: Công bố thống kê quốc gia
       national_statistics:
-        other: Thống kê - Thống kê quốc gia
+        one: Thống kê Quốc gia
+        other: Thống kê Quốc gia
+        overview:
       national_statistics_announcement:
-        other:
+        one: Thông báo thống kê quốc gia
+        other: Công bố thống kê quốc gia
       news_article:
-        other: Tin tức
+        one: Bài báo
+        other: Bài viết thời sự
       news_story:
-        other: Câu chuyện tin tức
+        one: Bài phóng sự
+        other: Bài phóng sự
       notice:
-        other:
+        one: Thông báo
+        other: Thông báo
+        overview:
       official:
-        other:
+        one: Thông báo thống kê chính thức
+        other: Thông báo thống kê chính thức
       official_statistics:
-        other: Thống kê
+        one: Thống kê Chính thức
+        other: Thống kê Chính thức
+        overview:
       official_statistics_announcement:
-        other:
+        one: Thông báo thống kê chính thức
+        other: Thông báo thống kê chính thức
       open_consultation:
-        other: Tham vấn mở rộng
+        one: Tham vấn mở
+        other: Tham vấn mở
+        overview:
       oral_statement:
-        other: Tuyên bố bằng lời nói tới quốc hội
+        one: Tuyên bố bằng lời trước Quốc hội
+        other: Tuyên bố bằng lời trước Quốc hội
       policy:
-        other: Các chính sách
+        one: Chính sách
+        other: Chính sách
       policy_paper:
+        one: Tài liệu chính sách
         other: Tài liệu chính sách
+        overview:
       press_release:
+        one: Thông cáo báo chí
         other: Thông cáo báo chí
       promotional:
-        other: Tài liệu truyền thông
+        one: Tài liệu quảng cáo
+        other: Tài liệu quảng cáo
+        overview:
       publication:
-        other: Tài liệu truyền thông
+        one: Ấn phẩm
+        other: Ấn phẩm
       raib_report:
-        other:
+        one: Báo cáo của Chi nhánh Điều tra Tai nạn Đường sắt
+        other: Báo cáo của Chi nhánh Điều tra Tai nạn Đường sắt
       regulation:
-        other:
+        one: Quy định
+        other: Quy định
+        overview:
       research:
+        one: Nghiên cứu và phân tích
         other: Nghiên cứu và phân tích
+        overview:
       residential_property_tribunal_decision:
-        other:
+        one: Quyết định của tòa án bất động sản nhà ở
+        other: Quyết định của tòa án bất động sản nhà ở
       service_sign_in:
-        other:
+        one: Đăng nhập dịch vụ
+        other: Đăng nhập dịch vụ
       service_standard_report:
-        other:
+        one: Báo cáo Tiêu chuẩn Dịch vụ
+        other: Báo cáo Tiêu chuẩn Dịch vụ
       speaking_notes:
-        other: Bài phát biểu
+        one: Ghi chú cho bài nói
+        other: Ghi chú cho bài nói
       speech:
-        other: Các bài phát biểu
+        one: Bài phát biểu
+        other: Bài phát biểu
       standard:
-        other:
+        one: Tiêu chuẩn
+        other: Tiêu chuẩn
+        overview:
       statement_to_parliament:
-        other: Tuyên bố tới Quốc hội
+        one: Tuyên bố trước Quốc hội
+        other: Tuyên bố trước Quốc hội
       statistical_data_set:
+        one: Bộ dữ liệu thống kê
         other: Bộ dữ liệu thống kê
       statistics_announcement:
-        other:
+        one: Thông báo phát hành thống kê
+        other: Thông báo phát hành thống kê
       statutory_guidance:
-        other:
+        one: Hướng dẫn theo luật định
+        other: Hướng dẫn theo luật định
+        overview:
       take_part:
-        other:
+        one: Tham gia
+        other: Tham gia
       tax_tribunal_decision:
-        other:
+        one: Quyết định của Tòa án về Thuế và Pháp lý
+        other: Quyết định của Tòa án về Thuế và Pháp lý
       transcript:
-        other: Kịch bản
+        one: Bản ghi nội dung
+        other: Bản ghi nội dung
       transparency:
-        other: Dữ liệu kịch bản
+        one: Dữ liệu về tính minh bạch
+        other: Dữ liệu về tính minh bạch
+        overview:
       utaac_decision:
-        other:
+        one: Quyết định của tòa phúc thẩm hành chính
+        other: Quyết định của tòa phúc thẩm hành chính
       world_location_news_article:
-        other: Tin tức
+        one: Bài báo
+        other: Bài viết thời sự
       world_news_story:
-        other:
+        one: Bài phóng sự thế giới
+        other: Bài phóng sự thế giới
       written_statement:
-        other: Các Tuyên bố bằng văn bản tới quốc hội
+        one: Tuyên bố bằng văn bản trước Quốc hội
+        other: Tuyên bố bằng văn bản trước Quốc hội
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: Thông tin về phòng tổng hợp
-    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng tôi xử lý thông tin cá nhân của bạn"
-    publication_scheme_html: Xem các loại thông tin mà chúng tôi cập nhật thường xuyên tại %{link}
-    social_media_use_html: Đọc chính sách của chúng tôi tại %{link}
-    welsh_language_scheme_html: Tìm hiểu các cam kết của chúng tôi trong việc công bố thông tin tại %{link}
+    about_our_services_html: Tìm hiểu %{link}.
+    corporate_information: Thông tin doanh nghiệp
+    personal_information_charter_html: "%{link} của chúng tôi giải thích cách chúng tôi xử lý thông tin cá nhân của bạn."
+    publication_scheme_html: Tìm hiểu về các loại thông tin chúng tôi thường xuyên xuất bản trong %{link} của chúng tôi.
+    social_media_use_html: Đọc chính sách của chúng tôi trên %{link}.
+    welsh_language_scheme_html: Tìm hiểu về cam kết của chúng tôi đối với %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Huy hiệu Bộ trưởng Quốc phòng
+    field_of_operation: Lĩnh vực hoạt động
+    operations_in: Hoạt động ở %{location}
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -264,25 +361,24 @@ vi:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Không khả dụng
+    published_in_error: Thông tin trên trang này đã bị xóa vì đã được xuất bản do nhầm lẫn.
+    title: Trang bạn đang tìm không có sẵn
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Các trang trong hướng dẫn này
+    skip_to_contents: Chuyển đến nội dung của hướng dẫn
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Ấn phẩm này có sẵn tại %{url}
+      copyright: "© Bản quyền Crown %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Ấn phẩm này được cấp phép theo các điều khoản của Giấy phép Chính phủ Mở pb3.0 trừ khi có quy định khác. Để xem giấy phép này, hãy truy cập <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> hoặc gửi thư cho Nhóm Chính sách Thông tin, Cơ quan Lưu trữ Quốc gia, Kew, London TW9 4DU hoặc gửi email đến: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Khi chúng tôi xác định được bất kỳ thông tin bản quyền nào của bên thứ ba, bạn sẽ cần phải xin phép chủ sở hữu bản quyền liên quan.
   i18n:
     direction:
   language_names:
@@ -353,57 +449,58 @@ vi:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Tiếp theo
+    previous_page: Trước
+    print_entire_guide: In toàn bộ hướng dẫn ra
   publication:
-    details:
+    details: Chi tiết
     documents:
+      one: Tài liệu
       other: Tài liệu
   service_sign_in:
-    continue:
+    continue: Tiếp tục
     error:
-      option:
-      title:
+      option: Vui lòng chọn một tùy chọn
+      title: Bạn chưa chọn tùy chọn
   shared:
-    historically_political:
+    historically_political: Điều này đã được xuất bản trong %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Tư vấn viên đã sẵn sàng trò chuyện.
+      busy: Tất cả các tư vấn viên webchat hiện đang bận.
+      closed: Webchat hiện đã bị đóng.
+      speak_to_adviser: Nói chuyện với tư vấn viên ngay bây giờ
+      technical_problem: Webchat hiện không có sẵn do sự cố kỹ thuật.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Designated Origin UK Protected”
+    pgi_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Geographic Origin UK Protected”
+    tsg_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Traditional Speciality UK Protected”
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Ngày giao
+    location: Vị trí
+    written_on: Ngày viết
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Ngày hủy bỏ
+    cancelled: Đã hủy phát hành thống kê
+    changed_date: Đã thay đổi ngày phát hành
+    forthcoming: Những thống kê này sẽ được phát hành
+    previous_date: Ngày trước đó
+    proposed_date: Thông tin được đề nghị phát hành
+    reason_for_change: Lý do thay đổi
+    release_date: Ngày phát hành
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo chỉ nên đi đến một số nơi ở quốc gia này khi thật cần thiết.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo chỉ nên đi đến quốc gia này khi thật cần thiết.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến một số nơi ở quốc gia này.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến quốc gia này.
+    context: Tư vấn đi nước ngoài
+    still_current_at: Vẫn đang ở
+    summary: Tóm tắt
+    updated: Đã cập nhật
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Không khả dụng
+    summary: Thông tin trên trang này đã bị xóa vì đã được xuất bản do nhầm lẫn.
+    title: Trang bạn đang tìm không có sẵn
   working_group:
-    contact_details:
-    policies:
+    contact_details: Chi tiết liên hệ
+    policies: Chính sách

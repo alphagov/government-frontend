@@ -2,308 +2,331 @@
 ps:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: د سوداګرۍ لپاره د بریکسیت لارښود
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: د افرادو او کورنیو لپاره د بریکسیت لارښود
+    heading_prefix: توپیر لري
   common:
-    last_updated:
-    visit:
+    visit: 'لیدنه:'
   components:
     figure:
-      image_credit:
+      image_credit: د انځور کریډیټ:%{credit}
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: ټول تازه معلومات پټ کړئ
+      last_updated: وروستی تازه شوی%{date}
+      published: خپور شوی%{date}
+      see_all_updates: ټول تازه معلومات وګورئ
+      show_all_updates: ټول تازه معلومات وښایاست
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: ټول پټ کړئ
+      show_all: ټول ښکاره کړه
     share_links:
-      share_this_page:
+      share_this_page: دا پاه شریکه کړئ
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: او
+    another_website_html: دا مشوره <a href="%{url}">په بله ویبپا ڼه  کې %{closed}ترسره شوه</a>
+    at: په
+    closes: په کې بندیږي
+    closes_at: دا مشوره په پای کې پای ته رسیږي
+    complete_a: بشپړ کړئ
+    description: د مشورې توضیحات
+    detail_of_feedback_received: د ترلاسه شوي نظریاتو تفصیل
+    detail_of_outcome: د پایلې تفصیل
+    documents: اسناد
+    download_outcome: بشپړه پایله ډاونلوډ کړئ
+    either: یا هم
+    email_to: 'ته بریښنالیک:'
+    feedback_received: نظر ترلاسه شو
+    is_being: کېږي
+    not_open_yet: دا مشوره لاهم خلاص نده
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: دا مشوره خلاصیږي
+    original_consultation: اصلي مشوره
+    ran_from: دا مشوره له دې ځایه روانه وه
+    respond_online: آنلاین ځواب ورکړئ
+    visit_soon: ژر تر ژره دې پاڼه څخه لیدنه وکړئ ترڅو دې عامه & nbsp feedback نظریاتو ته پایله ډاونلوډ کړئ.
+    was: وه
+    ways_to_respond: د ځواب ویلو لارې
+    write_to: 'ته یې ولیکئ:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: بریښنالیک
+    find_call_charges: د تلیفون لګښتونو په اړه معلومات ترلاسه کړئ
+    online: آنلاین
+    phone: تلیفون
+    webchat: ویب چیٹ
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: دا سند به په نشر شي
+    contents: منځپانګې
     metadata:
       published: خپور شوی
-      updated: تازه شوي
+      updated: تازه شوی
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: د هوایي پیښو د تحقیقاتو د څانګې راپور
+        other: د هوایي پیښو د تحقیقاتو د څانګې راپور وګورئ
       announcement:
-        one: خبرتیا
-        other: خبرتیاوې
+        one: اعلان
+        other: اعلانونه
       asylum_support_decision:
-        one:
-        other:
+        one: د پناه غوښتنې د ملاتړ محکمې پریکړه
+        other: د پناه غوښتنې د ملاتړ محکمې پریکړې
       authored_article:
-        one: تالیف شوی مضمون
-        other: تالیف شوي مضامین
+        one: لیکل شوې مقاله
+        other: لیکل شوي مقالې
       business_finance_support_scheme:
-        one:
-        other:
+        one: د سوداګرۍ د مالي ملاتړ طرحه
+        other: د سوداګرۍ د مالي ملاتړ طرحې
       case_study:
-        one: موردی څیړنه
-        other: مودری څیړنی
+        one: موردي مطالعه
+        other: موردي مطالعات
       closed_consultation:
-        one: محرمه مشوره
-        other: محرمه مشوری
+        one: له نيژدې مشوره
+        other: له نيژدې مشورې
+        overview:
       cma_case:
-        one:
-        other:
+        one: د سیالۍ او بازارونو ادارې قضیه
+        other: د سیالۍ او بازارونو ادارې قضیې
       coming_soon:
-        one:
-        other:
+        one: ډېر ژر
+        other: ډېرژر
       consultation:
         one: مشوره
-        other: مشوری
+        other: مشورې
       consultation_outcome:
-        one: د مشوری پایله
-        other: د مشورو پایله
+        one: د مشورې پایله
+        other: د مشورې پایلې
+        overview:
       corporate_information_page:
-        one:
-        other:
+        one: د معلوماتو پاڼه
+        other: د معلوماتو پاڼې
       corporate_report:
-        one: متحد راپور
-        other: متحد راپورونه
+        one: د کارپوریټ راپور
+        other: د شرکت راپورونه
+        overview:
       correspondence:
-        one: ارتباط ساتنه
-        other: ارتباطات ساتنه
+        one: لیکنه
+        other: لیکنې
+        overview:
       countryside_stewardship_grant:
-        one:
-        other:
+        one: د کلیوالي چارو سرپرستي مرسته
+        other: د کلیو د ساتنې بورسونه
       decision:
-        one:
-        other:
+        one: پریکړه
+        other: پریکړې
+        overview:
       detailed_guide:
-        one: مفصله لارښوونه
-        other: مفصلی لارښوونی
+        one: لارښود
+        other: لارښود
       dfid_research_output:
-        one:
-        other:
+        one: د پرمختیایی محصول لپاره څیړنه
+        other: د پراختیا محصولاتو لپاره څیړنه
       document_collection:
-        one: سلسله
-        other:
+        one: ټولګه
+        other: ټولګه
       draft_text:
-        one: مسوده
-        other: مسودی
+        one: مسوده متن
+        other: د متن مسوده
       drug_safety_update:
-        one:
-        other:
+        one: د مخدره توکو خوندیتوب تازه کول
+        other: د مخدره توکو خوندیتوب تازه معلومات
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: د کار موندنې اپیل محکمه پریکړه
+        other: د کار موندنې اپیل محکمه پریکړې
       employment_tribunal_decision:
-        one:
-        other:
+        one: د کار موندنې محکمې پریکړه
+        other: د کارموندنې محکمې پریکړې
       esi_fund:
-        one:
-        other:
+        one: د اروپا ساختماني او پانګوونې فنډ (ESIF)
+        other: د اروپا ساختماني او پانګوونې فنډونه (ESIF)
       fatality_notice:
-        one: دمړینی خبرتیا
-        other: دمړینی خبرتیاوی
+        one: د مرګ خبرتیا
+        other: د مرګ خبرتیا
       foi_release:
-        one: د بیان د آزادی خپرونه
-        other: د بیان د آزادی خپرونی
+        one: د د معلوماتو د آزادۍ قانون خوشې کول
+        other: د معلوماتو د آزادۍ قانون خپروي
+        overview:
       form:
-        one: فارم
-        other: فارمونه
+        one: فورمه
+        other: فورمې
+        overview:
       government_response:
-        one: د دولت ځواب
-        other: د دولت ځوابونه
+        one: د حکومت غبرګون
+        other: د حکومت غبرګون
       guidance:
-        one: رهنمایی
-        other: رهنمایی
+        one: لارښود
+        other: لارښود
+        overview:
       impact_assessment:
-        one: د تاثیراتو څیړنه
-        other: د تاثیراتو څیړنی
+        one: د اغیز ارزونه
+        other: د اغیزو ارزونه
+        overview:
       imported:
-        one: وارد شوی - د انتظار نمونه
-        other: وارد شوی - د انتظار نمونه
+        one: وارد شوی - په تمه ډول
+        other: وارد شوی - په تمه ډول
       independent_report:
-        one: آزاد راپور
-        other: آزاد راپورونه
+        one: خپلواک راپور
+        other: خپلواک راپورونه
+        overview:
       international_development_fund:
-        one:
-        other:
+        one: د نړیوالې پراختیا تمویل
+        other: د نړیوالې پراختیا تمویل
       international_treaty:
-        one:
-        other:
+        one: نړیوال تړون
+        other: نړیوال تړونونه
+        overview:
       maib_report:
-        one:
-        other:
+        one: د سمندري پیښو د تحقیقاتو د څانګې راپور
+        other: د سمندري پېښو د تحقیقاتو څانګې راپورونه
       map:
         one: نقشه
-        other: نقشی
+        other: نقشې
+        overview:
       medical_safety_alert:
-        one:
-        other:
+        one: د درملو او طبي وسایلو لپاره خبرتیا او بیا بلنه
+        other: د درملو او طبي وسایلو لپاره خبرتیا او بیل بلنې
       national:
-        one:
-        other:
+        one: د ملي احصایې اعلان
+        other: د ملي احصایې اعلانونه
       national_statistics:
-        one: شمیرنه - ملی شمیرنې
-        other: شمیرنه - ملی شمیرنې
+        one: ملي احصایې
+        other: ملي احصایې
+        overview:
       national_statistics_announcement:
-        one:
-        other:
+        one: د ملي احصایې اعلان
+        other: د ملي احصایې اعلانونه
       news_article:
-        one: خبری مقاله
-        other: خبری مقالی
+        one: د خبر مقاله
+        other: د خبر مقالې
       news_story:
-        one: خبری راپور
-        other: خبری راپورونه
+        one: د خبر کیسه
+        other: د خبرونو کیسې
       notice:
-        one:
-        other:
+        one: خبرتیا
+        other: خبرتیاوې
+        overview:
       official:
-        one:
-        other:
+        one: د رسمي احصایې اعلان
+        other: د رسمي احصایې اعلانونه
       official_statistics:
-        one: شمیرنه
-        other: شمیرنه
+        one: رسمي احصایې
+        other: رسمي احصایې
+        overview:
       official_statistics_announcement:
-        one:
-        other:
+        one: د رسمي احصایې اعلان
+        other: د رسمي احصایې اعلانونه
       open_consultation:
-        one: آزاده مشوره
-        other: آزادې مشورې
+        one: خلاص مشوره
+        other: مشورې خلاص کړئ
+        overview:
       oral_statement:
-        one: پارلمان ته شفاهی اعلامیه
-        other: پارلمان ته شفاهی اعلامیی
+        one: پارلماني غونډې ته وینا
+        other: پارلمان ته شفاهي څرګندونې
       policy:
-        one: پالیسی
-        other: پالیسی ګانی
+        one: پالیسي
+        other: پالیسۍ
       policy_paper:
-        one: د پالیسۍ سند
-        other: د پالیسې سندونه
+        one: د پالیسۍ پاڼه
+        other: د پالیسۍ ڼې
+        overview:
       press_release:
-        one: مطبوعاتی خبرپاڼه
-        other: مطبوعاتی خبرپاڼې
+        one: مطبوعاتي اعلامیه
+        other: مطبوعاتي اعلامیې
       promotional:
-        one: روزونکې مواد
-        other: روزونکی مواد
+        one: تشویقي مواد
+        other: تشویقي مواد
+        overview:
       publication:
         one: خپرونه
         other: خپرونې
       raib_report:
-        one:
-        other:
+        one: د ریل د پېښو د تحقیقاتو د څانګې راپور
+        other: د ریل د پېښود د تحقیقاتو د څانګې راپورونه
       regulation:
-        one:
-        other:
+        one: مقررات
+        other: مقررات
+        overview:
       research:
-        one: څیړنه او تجزیه
-        other: ځیړنه او تجزیه
+        one: څیړنه او تحلیل
+        other: څیړنه او تحلیل
+        overview:
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: د استوګنې د ملکیت د محکمې پریکړه
+        other: د استوګنې د ملکیت د محکمې پریکړې
       service_sign_in:
-        one:
-        other:
+        one: د خدمت ننوتل
+        other: د خدمت ننوتل
       service_standard_report:
-        one:
-        other:
+        one: د خدمت معیاري راپور
+        other: د خدمت معیاري راپورونه
       speaking_notes:
-        one: د وینا یادښت
-        other: د وینا یادښتونه
+        one: د وینا یادونه
+        other: د وینا یادونه
       speech:
         one: وینا
-        other: ویناوې
+        other: ويناوې
       standard:
-        one:
-        other:
+        one: معیاري
+        other: معیارونه
+        overview:
       statement_to_parliament:
-        one: پارلمان ته اعلامیه
-        other: پارلمان ته اعلامیې
+        one: پارلمان ته وینا
+        other: پارلمان ته وینا
       statistical_data_set:
-        one: د شمیرنې اطلاعات
-        other: د شمیرنې اطلاعات
+        one: د احصایوي معلوماتو سیټ
+        other: د احصایوي معلوماتو سیټونه
       statistics_announcement:
-        one:
-        other:
+        one: د احصایې خپریدو اعلان
+        other: احصایې اعلانات خپروي
       statutory_guidance:
-        one:
-        other:
+        one: قانوني لارښود
+        other: قانوني لارښود
+        overview:
       take_part:
-        one:
-        other:
+        one: برخه واخلئ
+        other: برخه واخلئ
       tax_tribunal_decision:
-        one:
-        other:
+        one: د مالیې او چانسري محکمې پریکړه
+        other: د مالیې او چانسري محکمې پریکړې
       transcript:
-        one: لیکنه
-        other: لیکنې
+        one: نقل
+        other: نقلونه
       transparency:
-        one: د روڼوالې اطلاعات
-        other: د روڼوالي اطلاعات
+        one: د شفافیت معلومات
+        other: د شفافیت معلومات
+        overview:
       utaac_decision:
-        one:
-        other:
+        one: اداري استیناف د محکمې پریکړه
+        other: د اداري استیناف د محکمې پریکړې
       world_location_news_article:
-        one: خبری مقاله
-        other: خبری مقالی
+        one: د خبر مقاله
+        other: د خبر مقالې
       world_news_story:
-        one:
-        other:
+        one: د نړۍ خبرونه
+        other: د نړۍ خبرونه
       written_statement:
-        one: پارلمان ته لیکلې اعلامیه
-        other: پارلمان ته لیکلې اعلامیې
+        one: پارلمان ته لیکلې وینا
+        other: پارلمان ته لیکلي بیانونه
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: متحد معلومات
-    personal_information_charter_html: " زموږ تشریح کوی چې موږ د شخصی معلوماتو سره څرنګه چلند کوو"
-    publication_scheme_html: زموږ د هغو معلوماتو په اړه ولولۍ چې هره ورڅ یې موږ خپروو %{link}.
-    social_media_use_html: زموږه پالسی ولولی %{link}.
-    welsh_language_scheme_html: د نشریاتو په اړه  زموږ د ژمنو  معلومات ترلاسه کړۍ %{link}.
+    about_our_services_html: "%{link} ومومئ."
+    corporate_information: د شرکت معلومات
+    personal_information_charter_html: زموږ %{link} تشریح کوي چې موږ ستاسو شخصي معلوماتو سره څنګه چلند کوو.
+    publication_scheme_html: د هغه معلوماتو ډولونو په اړه ولولئ چې موږ یې په منظم ډول زموږ په %{link} کې خپروو.
+    social_media_use_html: زموږ پالیسي په%{link} ولولئ.
+    welsh_language_scheme_html: "%{link} ته زموږ د ژمنتیا په اړه معلومات ترلاسه کړئ."
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: د دفاع وزارت کریسټ
+    field_of_operation: د عملیاتو ساحه
+    operations_in: په%{location} کې عملیات
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -338,27 +361,26 @@ ps:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: نور شتون نلري
+    published_in_error: پدې پاڼه کې معلومات حذف شوي ځکه چې دا په غلطۍ کې خپور شوی.
+    title: هغه پاڼه چې تاسو یې په لټه کې یاست نور شتون نلري
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: په دې لارښود کې پاڼې
+    skip_to_contents: د لارښود مینځپانګې ته لاړشئ
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: دا خپرونه په%{url} کې شتون لري
+      copyright: "© {year}% کراون د چاپ حق"
+      isbn: 'ISBN:'
+      licence_html: 'دا نشریه د حکومت د آزاد جواز د قوانینو v3.0 مطابق دغه نشریه د حکومت د آزاد جواز د شرائطو v3.0 مطابق دقانوي جواز لرونکې نشریه ده،مګر په هغه صورت کې چې پروړاندې یې د بل ضد قانون یاونه شویې وي. که غواړئ دغه جواز وګورئ، نو <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ته مراجعه وکړئ یا د معلوماتو د پالیسۍ ټیم ته چې په The National Archives, Kew, London TW9 4DU  یا دغه آدرس ته ایمېل وکړئ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.کې موقعیت لري لیک واستوئ'
+      third_party: چیرې چې موږ د دریمې ډلې د چاپ حق معلومات پیژندلي تاسو به اړتیا ولرئ د اړونده کاپي حق لرونکو څخه اجازه ترلاسه کړئ.
   i18n:
-    direction: rtl
+    direction:
   language_names:
     ar:
     az:
@@ -402,7 +424,7 @@ ps:
     pa:
     pa-pk:
     pl:
-    ps: پښتو
+    ps: جرمني
     pt:
     ro:
     ru:
@@ -427,58 +449,58 @@ ps:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: بل
+    previous_page: مخکینی
+    print_entire_guide: ټول لارښود چاپ کړئ
   publication:
-    details:
+    details: جزیات
     documents:
-      one: سند
-      other: سندونه
+      one: اسناد
+      other: اسناد
   service_sign_in:
-    continue:
+    continue: ادامه ورکړئ
     error:
-      option:
-      title:
+      option: مهرباني وکړئ یو انتخاب غوره کړئ
+      title: تاسو یو انتخاب ندی ټاکلی
   shared:
-    historically_political:
+    historically_political: دا د%{government} لاندې خپور شوی
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: د خبرو اترو لپاره مشاورین شتون لري.
+      busy: ټول د ویب چیټ مشاورین دا مهال بوخت دي.
+      closed: ویب چیٹ دا مهال بند دی.
+      speak_to_adviser: همدا اوس له یوه سلاکار سره خبرې وکړئ
+      technical_problem: ویب چیٹ دا مهال د تخنیکي ستونزو له امله شتون نلري.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: د سکیم لوگو یو تور ټاپه ده چې د ډیزاین شوي اصلي انګلستان محافظت کلمو سره دی
+    pgi_alt_text: د سکیم لوګو یو تور ټاپه ده چې د جغرافیائی اصل انګلستان محافظت کلمو سره دی
+    tsg_alt_text: د سکیم لوگو یو تور ټاپه ده چې د دودیز تخصص انګلستان محافظت کلمو سره دی
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: ته وسپارل شو
+    location: ځای
+    written_on: باندې لیکل شوی
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: د لغوه کولو نیټه
+    cancelled: د احصایې خپریدل لغوه شول
+    changed_date: د خپریدو نیټه بدله شوې
+    forthcoming: دا احصایې به خپاره شي
+    previous_date: پخوانۍ نیټه
+    proposed_date: وړاندیز شوی خوشې کول
+    reason_for_change: د بدلون لپاره دلیل
+    release_date: دخپریدو نیټه
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د لازمي سفر پرته ټولو ته مشوره ورکوي.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ټول هیواد ته د لازمي سفر پرته مشوره ورکوي.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د ټولو سفرونو پروړاندې مشوره ورکوي.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ټول هیواد ته د ټولو سفرونو پروړاندې مشوره ورکوي.
+    context: د بهرني سفر مشوره
+    still_current_at: په اوسني وخت کې
+    summary: لنډيز
+    updated: تازه شوی
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: نور شتون نلري
+    summary: له دې پاڼې څخه معلومات ایسته شوي ځکه چې  په غلطۍ کې خپاره شوي و.
+    title: هغه پاڼه چې تاسو یې په لټه کې یاست نور شتون نلري
   working_group:
-    contact_details:
-    policies:
+    contact_details: د اړیکو نیولو معلومات
+    policies: پالیسۍ

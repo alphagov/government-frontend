@@ -2,3 +2,7 @@ data:
   yaml:
     write:
       line_width: -1
+ignore_unused:
+  - 'content_item.schema_name.*.{one,other,zero,few,many,two}'
+  - 'corporate_information_page.*'
+  - 'travel_advice.alert_status.*'

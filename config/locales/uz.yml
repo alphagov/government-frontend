@@ -2,308 +2,331 @@
 uz:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Брексит шароитларида бизнес-доираларнинг вакиллари учун қўлланма
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Брексит шароитларида жисмоний ва юридик шахслар учун қўлланма
+    heading_prefix: Фарқ мавжуд
   common:
-    last_updated:
-    visit:
+    visit: 'Ташриф буюринг:'
   components:
     figure:
-      image_credit:
+      image_credit: 'График материаллар тақдим этилган: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: Барча янгиланишларни яшириш
+      last_updated: Сўнгги янгиланиш %{date}
+      published: Нашр қилинган %{date}
+      see_all_updates: Барча янгиланишларни кўриш
+      show_all_updates: янгиланишларни барчасини кўрсатиш
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: барчасини яшириш
+      show_all: барчасини кўрсатиш
     share_links:
-      share_this_page:
+      share_this_page: Саҳифа билан бўлишиш
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: ва
+    another_website_html: Ушбу маслаҳат %{closed} бошқа <a href="%{url}"> веб-сайтда ўтказилди</a>
+    at: да
+    closes: да якунланади
+    closes_at: Ушбу маслаҳат да якунланади
+    complete_a: Якунлаш
+    description: Маслаҳат тавсифи
+    detail_of_feedback_received: Батафсил шарҳ олинди
+    detail_of_outcome: Натижалар бўйича батафсил маълумот
+    documents: Ҳужжатлар
+    download_outcome: Натижани юклаб олиш
+    either: ёки
+    email_to: 'Электрон почта орқали юбориш:'
+    feedback_received: Шарҳ олинди
+    is_being: ҳисобланади
+    not_open_yet: Маслаҳат ҳали бошланмади
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Маслаҳат бошланмоқда
+    original_consultation: Дастлабки маслаҳат
+    ran_from: Ушбу маслаҳат дан ўтказилган
+    respond_online: Онлайн жавоб бериш
+    visit_soon: Мазкур саҳифага яқин вақтда яна бир марта ташриф буюринг ва ушбу &nbsp;шарҳга натижаларни юклаб олинг.
+    was: бўлган
+    ways_to_respond: Жавоб бериш усули
+    write_to: 'Ёзиш:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: Электрон почта
+    find_call_charges: Қўнғироқлар нархи ҳақида билиб олиш
+    online: Онлайн
+    phone: Телефон
+    webchat: Веб-чат
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Ушбу ҳужжат нашр қилинган бўлади
+    contents: Мундарижа
     metadata:
-      published: nashr qilindi
-      updated: yangilandi
+      published: Нашр қилинган
+      updated: Янгиланган
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: Авиация ҳодисаларини тергов қилиш бўйича бўлим ҳисоботи
+        other: Авиация ҳодисаларини тергов қилиш бўйича бўлим ҳисоботлари
       announcement:
-        one: E'lon
-        other: E'lonlar
+        one: Эълон
+        other: Эълонлар
       asylum_support_decision:
-        one:
-        other:
+        one: Бошпана тақдим этиш ҳақида ҳакамлик суди қарори
+        other: Бошпана тақдим этиш ҳақида ҳакамлик суди қарорлари
       authored_article:
-        one: Muallif maqolasi
-        other: Muallif maqolalari
+        one: Муаллифлик мақоласи
+        other: Муаллифлик мақолалари
       business_finance_support_scheme:
-        one:
-        other:
+        one: Бизнесни молиялаштиришни қўллаб-қувватлаш режаси
+        other: Бизнесни молиялаштиришни қўллаб-қувватлаш режалари
       case_study:
-        one: Holat o'rganilishi
-        other: Holat o'rganilishlari
+        one: Ҳолатларнинг таҳлили
+        other: Ҳолатларнинг таҳлиллари
       closed_consultation:
-        one: Yopiq fikr almashish
-        other: Yopiq fikr almashishlar
+        one: Батафсил маслаҳат
+        other: Батафсил маслаҳатлар
+        overview:
       cma_case:
-        one:
-        other:
+        one: Рақобат ва бозорни муҳофаза қилиш Бошқармаси Иши
+        other: Рақобат ва бозорни муҳофаза қилиш Бошқармаси Ишлари
       coming_soon:
-        one:
-        other:
+        one: Яқин кунларда
+        other: Яқин кунларда
       consultation:
-        one: Fikr almashish
-        other: Fikr almashishlar
+        one: Маслаҳат
+        other: Маслаҳатлар
       consultation_outcome:
-        one: Fikr almashish natijasi
-        other: Fikr almashish natijalari
+        one: Маслаҳат натижаси
+        other: Маслаҳат натижалари
+        overview:
       corporate_information_page:
-        one:
-        other:
+        one: Маълумотлар саҳифаси
+        other: Маълумотлар саҳифалари
       corporate_report:
-        one: Korporativ hisobot
-        other: Korporativ hisobotlar
+        one: Корпорация фаолияти тўғрисида ҳисобот
+        other: Корпорация фаолияти тўғрисида ҳисоботлар
+        overview:
       correspondence:
-        one: Muvofiqlik
-        other: Muvofiqliklar
+        one: Ёзишма
+        other: Ёзишмалар
+        overview:
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Қишлоқ жойда тезкор бошқармани ташкиллаштириш гранти
+        other: Қишлоқ жойда тезкор бошқармани ташкиллаштириш грантлари
       decision:
-        one:
-        other:
+        one: Қарор
+        other: Қарорлар
+        overview:
       detailed_guide:
-        one: Batafsil ko'mak
-        other: Batafsil ko'mak
+        one: Қўлланма
+        other: Қўлланма
       dfid_research_output:
-        one:
-        other:
+        one: Ишлаб чиқиш натижалари бўйича тадқиқот
+        other: Ишлаб чиқиш натижалари бўйича тадқиқотлар
       document_collection:
-        one: Bir talay
-        other:
+        one: Йиғиш
+        other: Йиғимлар
       draft_text:
-        one: Matn loyihasi
-        other: Matn loyihalari
+        one: Матн лойиҳаси
+        other: Матн лойиҳалари
       drug_safety_update:
-        one:
-        other:
+        one: Дори хавфсизлиги маълумотларини янгилаш
+        other: Дори хавфсизлиги маълумотларини янгилашлари
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: Меҳнат ишлари бўйича апелляцион трибуналнинг қарори
+        other: Меҳнат ишлари бўйича апелляцион трибуналнинг қарорлари
       employment_tribunal_decision:
-        one:
-        other:
+        one: Меҳнат ишлари бўйича трибуналнинг қарори
+        other: Меҳнат ишлари бўйича трибуналнинг қарорлари
       esi_fund:
-        one:
-        other:
+        one: Европа тузилмавий ва инвестицион фонд (ESIF)
+        other: Европа тузилмавий ва инвестицион фондлари (ESIF)
       fatality_notice:
-        one: Falokat haqida e'lon
-        other: Falokat haqida e'lonlar
+        one: Ўлим оқибатли бахтсиз ҳодиса ҳақида хабарнома
+        other: Ўлим оқибатли бахтсиз ҳодиса ҳақида хабарномалар
       foi_release:
-        one: So'z erkinligiga bag'ishlangan nashr
-        other: So'z erkinligiga bag'ishlangan nashrlar
+        one: Маълумот эркинлиги нашри
+        other: Маълумот эркинлиги нашрлари
+        overview:
       form:
-        one: Anketa
-        other: Anketalar
+        one: Шакл
+        other: Шакллар
+        overview:
       government_response:
-        one: Hukumat javobi
-        other: Hukumat javoblari
+        one: Ҳукумат жавоби
+        other: Ҳукумат жавоблари
       guidance:
-        one: Rahbarlik
-        other: Rahbarlik
+        one: Қўлланма
+        other: Қўлланма
+        overview:
       impact_assessment:
-        one: Ta'sir etuvchi omillar tahlili
-        other: Ta'sir etuvchi omillar tahlillari
+        one: Таъсир этиш баҳоси
+        other: Таъсир этиш баҳолари
+        overview:
       imported:
-        one: 'yuklandi - kutilmoqda '
-        other: 'yuklandi - kutilmoqda '
+        one: импорт қилинган - кутиш тури
+        other: импорт қилинган - кутиш тури
       independent_report:
-        one: Mustaqil hisobot
-        other: Mustaqil hisobotlar
+        one: Мустақил ҳисобот
+        other: Мустақил ҳисоботлар
+        overview:
       international_development_fund:
-        one:
-        other:
+        one: Халқаро ривожлантиришни молиялаштириш
+        other: Халқаро ривожлантиришни молиялаштириш
       international_treaty:
-        one:
-        other:
+        one: Халқаро шартнома
+        other: Халқаро шартномалар
+        overview:
       maib_report:
-        one:
-        other:
+        one: Денгизда бахтсиз ҳодисаларни тергов қилиш бўйича бўлим ҳисоботи
+        other: Денгизда бахтсиз ҳодисаларни тергов қилиш бўйича бўлим ҳисоботлари
       map:
-        one: Xarita
-        other: Xaritalar
+        one: Карта
+        other: Карталар
+        overview:
       medical_safety_alert:
-        one:
-        other:
+        one: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
+        other: Дори препаратлари ва тиббиёт қурилмалари ҳақидаги огоҳлантиришлар ва мулоҳазалар
       national:
-        one:
-        other:
+        one: Давлат статистик маълумотлар эълони
+        other: Давлат статистик маълумотлар эълонлари
       national_statistics:
-        one: Statistika - milliy statistika
-        other: Statistika - milliy statistika
+        one: Давлат статистик маълумотлар
+        other: Давлат статистик маълумотлар
+        overview:
       national_statistics_announcement:
-        one:
-        other:
+        one: Давлат статистик маълумотлар эълони
+        other: Давлат статистик маълумотлар эълонлари
       news_article:
-        one: Yangi maqola
-        other: Yangi maqolalar
+        one: Янгилик мақоласи
+        other: Янгилик мақолалари
       news_story:
-        one: Yangilik
-        other: Yangiliklar
+        one: Янгилик сюжети
+        other: Янгилик сюжетлари
       notice:
-        one:
-        other:
+        one: Хабарнома
+        other: Хабарномалар
+        overview:
       official:
-        one:
-        other:
+        one: Расмий статистик маълумотлар эълони
+        other: Расмий статистик маълумотлар эълонлари
       official_statistics:
-        one: Statistika
-        other: Statistika
+        one: Расмий статистик маълумотлар
+        other: Расмий статистик маълумотлар
+        overview:
       official_statistics_announcement:
-        one:
-        other:
+        one: Расмий статистик маълумотлар эълони
+        other: Расмий статистик маълумотлар эълонлари
       open_consultation:
-        one: Ochiq fikr almashish
-        other: Ochiq fikr almashishlar
+        one: Очиқ маслаҳат
+        other: Очиқ маслаҳатлар
+        overview:
       oral_statement:
-        one: Parlament uchun og'zaki bayonot
-        other: Parlament uchun og'zaki bayonotlar
+        one: Парламентга оғзаки баёнот
+        other: Парламентга оғзаки баёнотлар
       policy:
-        one: Dastur
-        other: Dasturlar
+        one: Сиёсат
+        other: Сиёсатлар
       policy_paper:
-        one: Dasturga oid hujjat
-        other: Dasturga oid hujjatlar
+        one: Сиёсат масалалари бўйича ҳужжат
+        other: Сиёсат масалалари бўйича ҳужжатлари
+        overview:
       press_release:
-        one: Press reliz
-        other: Press relizlar
+        one: Матбуот-релизи
+        other: Матбуот-релизлари
       promotional:
-        one: Reklama uchun manbalar
-        other: Reklama uchun manbalar
+        one: Реклама материаллари
+        other: Реклама материаллари
+        overview:
       publication:
-        one: Nashr
-        other: Nashrlar
+        one: Нашр қилиш
+        other: Нашр қилишлар
       raib_report:
-        one:
-        other:
+        one: Темир йўлда ҳодисаларни тергов қилиш бўлими ҳисоботи
+        other: Темир йўлда ҳодисаларни тергов қилиш бўлими ҳисоботлари
       regulation:
-        one:
-        other:
+        one: Низом
+        other: Низомлар
+        overview:
       research:
-        one: Tadqiqot va tahlilllar
-        other: Tadqiqot va tahlilllar
+        one: Тадқиқот ва таҳлил
+        other: Тадқиқот ва таҳлил
+        overview:
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: Турар-жой объектига нисбатан трибунал қарори
+        other: Турар-жой объектига нисбатан трибунал қарорлари
       service_sign_in:
-        one:
-        other:
+        one: Хизматни рўйхатдан ўтказиш
+        other: Хизматни рўйхатдан ўтказиш
       service_standard_report:
-        one:
-        other:
+        one: Хизмат кўрсатиш стандарти бўйича ҳисобот
+        other: Хизмат кўрсатиш стандарти бўйича ҳисоботлар
       speaking_notes:
-        one: Nutq qaydlari
-        other: Nutq qaydlari
+        one: Оғзаки танбеҳлар
+        other: Оғзаки танбеҳлар
       speech:
-        one: Nutq
-        other: Nutqlar
+        one: Нутқ
+        other: Нутқлар
       standard:
-        one:
-        other:
+        one: Стандарт
+        other: Стандартлар
+        overview:
       statement_to_parliament:
-        one: Parlament uchun hisobot
-        other: Parlament uchun hisobotlar
+        one: Парламентга баёнот
+        other: Парламентга баёнотлар
       statistical_data_set:
-        one: Statistika ma'lumot to'plami
-        other: Statistika ma'lumot to'plamlari
+        one: Статистик маълумотлар жамланмаси
+        other: Статистик маълумотларнинг жамланмалари
       statistics_announcement:
-        one:
-        other:
+        one: Статистик маълумотларни чиқариш ҳақида эълон
+        other: Статистик маълумотларни чиқариш ҳақида эълонлар
       statutory_guidance:
-        one:
-        other:
+        one: Норматив қўлланма
+        other: Норматив қўлланма
+        overview:
       take_part:
-        one:
-        other:
+        one: Иштирок этиш
+        other: Иштирок этиш
       tax_tribunal_decision:
-        one:
-        other:
+        one: Солиқ масалалари ва адолатлилик трибунали қарори
+        other: Солиқ масалалари ва адолатлилик трибунали қарорлари
       transcript:
-        one: Matn
-        other: Matnlar
+        one: Расшифровка
+        other: Расшифровкалар
       transparency:
-        one: Ochiqlikka oid ma'lumotlar
-        other: Ochiqlikka oid ma'lumotlar
+        one: Шаффоф маълумотлар
+        other: Шаффоф маълумотлар
+        overview:
       utaac_decision:
-        one:
-        other:
+        one: Маъмурий апелляция трибуналининг қарори
+        other: Маъмурий апелляция трибуналининг қарорлари
       world_location_news_article:
-        one: Yangi maqola
-        other: Yangi maqolalar
+        one: Янгилик мақоласи
+        other: Янгилик мақолалари
       world_news_story:
-        one:
-        other:
+        one: Янгилик сюжетлари
+        other: Халқаро янги тарихлар
       written_statement:
-        one: Parlament uchun yozma hisobot
-        other: Parlament uchun yozma hisobotlar
+        one: Парламентга ёзма баёнот
+        other: Парламентга ёзма баёнотлар
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: Korporativ ma'lumot
-    personal_information_charter_html: Bizning %{link} qanday qilib shaxsiy ma'lumot bilan ishlashimiz haqida sizga ma'lumot beradi 
-    publication_scheme_html: "%{link} Biz doimiy tarzda nashr etayotgan ma'lumot haqida o'qing"
-    social_media_use_html: "%{link} Bizning dasturimiz haqida batafsil ma'lumot"
-    welsh_language_scheme_html: "%{link} Nashr etish uchun biz olib borayotgan faoliyatimiz haqida o'qing"
+    about_our_services_html: Билиб олиш %{link}.
+    corporate_information: Корпоратив маълумотлар
+    personal_information_charter_html: Бизнинг %{link} биз сизнинг шахсий маълумотларингизга қандай тарзда ишлов беришни бажараётганимизни тушунтириб беради.
+    publication_scheme_html: Биз мунтазам нашр қилаётган маълумотларнинг турлари ҳақида, бизнинг %{link} да ўқинг.
+    social_media_use_html: "%{link} да бизнинг сиёсатимиз билан танишинг."
+    welsh_language_scheme_html: "%{link} да бизнинг содиқлилигимиз ҳақида билиб олинг ."
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Мудофаа вазирлигининг эмблемаси
+    field_of_operation: Фаолият соҳаси
+    operations_in: "%{location} да ишлаш"
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -338,25 +361,24 @@ uz:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Бундан буён йўқ
+    published_in_error: Ушбу саҳифадаги маълумот ўчириб юборилган, чунки у хато бўлган.
+    title: Сиз излаётган саҳифа бундан буён йўқ.
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Ушбу қўлланмадаги саҳифалар
+    skip_to_contents: Қўлланманинг мундарижасига ўтиш
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Ушбу нашр этиш %{url} манзилда эришимли
+      copyright: "© Британия миллатлар ҳамдўстлигининг Муаллифлик ҳуқуқи %{year}"
+      isbn: 'Китобнинг халқаро стандарт рақами:'
+      licence_html: 'Ушбу нашр этиш 3.0 версиядаги Очиқ давлат лицензияси доирасида лицензияланган, агар бошқа шарт кўрсатилмаган бўлса. Лицензия билан танишиш учун <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> сайтларига ташриф буюринг ёки Ахборот сиёсати билан ишлаш бўйича гуруҳга, Миллий архив, Кью, Лондон TW9 4DU, ёки улар билан қуйидаги электрон почта бўйича боғланинг: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Агар учинчи шахсларнинг муаллифлик ҳуқуқлари ҳақида бирон бир маълумот аниқланадиган бўлса, сизга мувофиқ ҳуқуқий ворислардан рухсатнома олишингиз зарур бўлади.
   i18n:
     direction:
   language_names:
@@ -420,65 +442,65 @@ uz:
     tr:
     uk:
     ur:
-    uz: O'zbekcha
+    uz: Ўзбеклар
     vi:
     yi:
     zh:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Кейинги
+    previous_page: Олдинги
+    print_entire_guide: Бутун қўлланмани чоп этишга чиқариш
   publication:
-    details:
+    details: Батафсил маълумотлар
     documents:
-      one: Hujjat
-      other: Hujjatlar
+      one: Ҳужжат
+      other: Ҳужжатлар
   service_sign_in:
-    continue:
+    continue: Давом эттириш
     error:
-      option:
-      title:
+      option: Опцияни танланг
+      title: Сиз опцияни танламадингиз
   shared:
-    historically_political:
+    historically_political: Бу %{government} номидан бўлган
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Маслаҳатчилар чатга киришди.
+      busy: Ҳозирги вақтда веб-чатнинг барча маслаҳатчилари банд.
+      closed: Веб-чат ҳозирги пайтда ёпиқ.
+      speak_to_adviser: Ҳозироқ маслаҳатчи билан суҳбатлашиш
+      technical_problem: Веб-чат ҳозирги пайтда техник сабаблар бўйича эришимли эмас.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Схема логотипи ўзи билан “Махсус мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
+    pgi_alt_text: Схема логотипи ўзи билан “Географик мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
+    tsg_alt_text: Схема логотипи ўзи билан “Анъанавий мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Етказиб берилди
+    location: Жойлашиш жойи
+    written_on: Ёзилган
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Бекор қилиш санаси
+    cancelled: Статистик маълумотларнинг чиқарилиши бекор қилинган
+    changed_date: Нашр санаси ўзгартирилган
+    forthcoming: Ушбу статистик маълумотлар чиқарилган бўлади
+    previous_date: Олдинги сана
+    proposed_date: Режалаштирилган нашр
+    reason_for_change: Ўзгариш киритилиш сабаблари
+    release_date: Нашр санаси
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> ўта заруратсиз мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> ўта заруратсиз бутун мамлакатнинг ҳудуди бўйлаб сақарларни амалга оширишни тавсия этмайди.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> бутун мамлакат ҳудуди бўйлаб сафарларни амалга оширишни тавсия этмайди.
+    context: Хорижга сафарларга нисбатан маслаҳат бериш
+    still_current_at: Ҳанузгача кучда
+    summary: Жамланма маълумот
+    updated: Янгиланган
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Бундан буён йўқ
+    summary: Ушбу саҳифадаги маълумот ўчириб юборилган, чунки у хато бўлган.
+    title: Сиз излаётган саҳифа бундан буён йўқ.
   working_group:
-    contact_details:
-    policies:
+    contact_details: Батафсил маълумотлар
+    policies: Сиёсатлар

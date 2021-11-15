@@ -9,7 +9,6 @@ ur:
       text:
     heading_prefix:
   common:
-    last_updated:
     visit:
   components:
     figure:
@@ -21,8 +20,6 @@ ur:
       see_all_updates:
       show_all_updates:
     publisher_metadata:
-      collections:
-      from:
       hide_all:
       show_all:
     share_links:
@@ -49,7 +46,6 @@ ur:
     original_consultation:
     ran_from:
     respond_online:
-    'true':
     visit_soon:
     was:
     ways_to_respond:
@@ -88,6 +84,7 @@ ur:
       closed_consultation:
         one: مشاورت ختم
         other: " مشاورت ختم"
+        overview:
       cma_case:
         one:
         other:
@@ -100,21 +97,25 @@ ur:
       consultation_outcome:
         one: مشاورت کا نتیجہ
         other: مشاورت کے نتائج
+        overview:
       corporate_information_page:
         one:
         other:
       corporate_report:
         one: کارپوریٹ رپورٹ
         other: کارپوریٹ رپورٹس
+        overview:
       correspondence:
         one: مراسلت
         other: مراسلات
+        overview:
       countryside_stewardship_grant:
         one:
         other:
       decision:
         one:
         other:
+        overview:
       detailed_guide:
         one: مفصل رہنمائی
         other: مفصل رہنمائی
@@ -145,36 +146,43 @@ ur:
       foi_release:
         one: آزادئی معلومات کی اشاعت
         other: آزادئی معلومات کی اشاعت
+        overview:
       form:
         one: فارم
         other: فارمز
+        overview:
       government_response:
         one: حکومتی جوابی اقدام
         other: حکومتی جوابی اقدامات
       guidance:
         one: رہنمائی
         other: رہنمائی
+        overview:
       impact_assessment:
         one: اثرات کا تجزیہ
         other: اثرات کے تجزیے
+        overview:
       imported:
         one: امپورٹڈ- نوع کا انتظار
         other: امپورٹڈ- نوع کا انتظار
       independent_report:
         one: غیر جانبدار رپورٹ
         other: غیر جانبداررپورٹس
+        overview:
       international_development_fund:
         one:
         other:
       international_treaty:
         one:
         other:
+        overview:
       maib_report:
         one:
         other:
       map:
         one: نقشہ
         other: نقشے
+        overview:
       medical_safety_alert:
         one:
         other:
@@ -184,6 +192,7 @@ ur:
       national_statistics:
         one: شماریات- قومی اعدادوشمار
         other: شماریات- قومی اعدادوشمار
+        overview:
       national_statistics_announcement:
         one:
         other:
@@ -196,18 +205,21 @@ ur:
       notice:
         one:
         other:
+        overview:
       official:
         one:
         other:
       official_statistics:
         one: اعدادوشمار
         other: اعدادو شمار
+        overview:
       official_statistics_announcement:
         one:
         other:
       open_consultation:
         one: جاری مشاورت
         other: جاری مشاورت
+        overview:
       oral_statement:
         one: پارلیمنٹ میں زبانی بیان
         other: پارلیمنٹ میں زبانی بیانات
@@ -217,12 +229,14 @@ ur:
       policy_paper:
         one: پالیسی پیپر
         other: پالیسی پیپرز
+        overview:
       press_release:
         one: پریس ریلیز
         other: پریس ریلیزز
       promotional:
         one: تشہیری مواد
         other: تشہیری مواد
+        overview:
       publication:
         one: مطبوعہ
         other: مطبوعات
@@ -232,9 +246,11 @@ ur:
       regulation:
         one:
         other:
+        overview:
       research:
         one: تحقیق وتجزیہ
         other: تحقیق وتجزیہ
+        overview:
       residential_property_tribunal_decision:
         one:
         other:
@@ -253,6 +269,7 @@ ur:
       standard:
         one:
         other:
+        overview:
       statement_to_parliament:
         one: پارلیمنٹ میں بیان
         other: پارلیمنٹ میں بیانات
@@ -265,6 +282,7 @@ ur:
       statutory_guidance:
         one:
         other:
+        overview:
       take_part:
         one:
         other:
@@ -277,6 +295,7 @@ ur:
       transparency:
         one: ٹرانسپیرنسی ڈیٹا
         other: ٹرانسپیرنسی ڈیٹا
+        overview:
       utaac_decision:
         one:
         other:
@@ -296,14 +315,18 @@ ur:
     publication_scheme_html: 'ہماری معمول کے مطابق  شائع کردہ معلومات کی نوعیت  %{link} پرملاحظہ کیجئیے '
     social_media_use_html: ہماری پالیسی  %{link} پر ملاحظہ کیجئیے
     welsh_language_scheme_html: اشاعت کے باب میں ہمارے کمٹ منٹ %{link} میں ملاحظہ کیجئیے
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text:
     field_of_operation:
     operations_in:
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -338,7 +361,6 @@ ur:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
@@ -467,10 +489,10 @@ ur:
     release_date:
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
+      avoid_all_but_essential_travel_to_parts_html:
+      avoid_all_but_essential_travel_to_whole_country_html:
+      avoid_all_travel_to_parts_html:
+      avoid_all_travel_to_whole_country_html:
     context:
     still_current_at:
     summary:

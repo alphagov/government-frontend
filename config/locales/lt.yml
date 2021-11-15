@@ -2,91 +2,87 @@
 lt:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: 'Informacija verslui apie „Brexitą“ '
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: 'Informacija fiziniams asmenims ir šeimoms apie „Brexitą“ '
+    heading_prefix: Yra kitokių
   common:
-    last_updated:
-    visit:
+    visit: 'Apsilankykite:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Nuotrauka: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: slėpti visą naują informacij
+      last_updated: Paskutinį kartą naujinta %{date}
+      published: Publikuota %{date}
+      see_all_updates: matyti visą naują informaciją
+      show_all_updates: rodyti visą naują informaciją
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: slėpti visus
+      show_all: rodyti visus
     share_links:
-      share_this_page:
+      share_this_page: Bendrinti šį puslapį
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: ir
+    another_website_html: Ši konsultacija %{closed} teikiama <a href="%{url}">kitoje interneto svetainėje</a>
+    at: laiku
+    closes: Ji baigiasi
+    closes_at: Ši konsultacija baigiasi
+    complete_a: Užpildyti
+    description: Konsultacijos aprašas
+    detail_of_feedback_received: Informacija apie gautus atsiliepimus
+    detail_of_outcome: Informaciją apie rezultatą
+    documents: Dokumentai
+    download_outcome: Atsisiųsti visus rezultatus
+    either: arba
+    email_to: 'Kreiptis el. paštu:'
+    feedback_received: Atsiliepimas gautas
+    is_being: yra
+    not_open_yet: Ši konsultacija dar neprasidėjo
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Ši konsultacija prasideda
+    original_consultation: Pirminė konsultacija
+    ran_from: Ši konsultacija tęsėsi nuo
+    respond_online: Atsakyti internetu
+    visit_soon: Netrukus vėl apsilankykite šiame puslapyje ir atsisiųskite šio viešo&nbsp;atsiliepimo rezultatą.
+    was: buvo
+    ways_to_respond: Kaip pateikti atsakymą
+    write_to: 'Parašyti:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: El. paštas
+    find_call_charges: Sužinokite visą informaciją apie skambučiams taikomus mokesčius
+    online: Internete
+    phone: Telefonas
+    webchat: Internetinis pokalbis
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Šis dokumentas bus publikuotas
+    contents: Turinys
     metadata:
       published: publikuota
       updated: atnaujinta
     schema_name:
       aaib_report:
         few:
-        one:
-        other:
+        one: Orlaivių avarijų tyrimo skyriaus ataskaita
+        other: Orlaivių avarijų tyrimo skyriaus ataskaitos
       announcement:
         few:
         one: Pranešimas
         other: Pranešimai
       asylum_support_decision:
         few:
-        one:
-        other:
+        one: Tribunolo sprendimas dėl prieglobsčio
+        other: Tribunolo sprendimai dėl prieglobsčio
       authored_article:
         few:
         one: Autoriaus straipsnis
         other: Autorių straipsniai
       business_finance_support_scheme:
         few:
-        one:
-        other:
+        one: Verslo finansų paramos planas
+        other: Verslo finansų paramos planas
       case_study:
         few:
         one: Atvejo analizė
@@ -95,14 +91,15 @@ lt:
         few:
         one: Pasibaigusi konsultacija
         other: Pasibaigusios konsultacijos
+        overview:
       cma_case:
         few:
-        one:
-        other:
+        one: Konkurencijos ir rinkos institucijos byla
+        other: Konkurencijos ir rinkos institucijos bylos
       coming_soon:
         few:
-        one:
-        other:
+        one: Jau greitai
+        other: Jau greitai
       consultation:
         few:
         one: Konsultacija
@@ -111,58 +108,62 @@ lt:
         few:
         one: Konsultacijos rezultatas
         other: Konsultacijos rezultatai
+        overview:
       corporate_information_page:
         few:
-        one:
-        other:
+        one: Informacinis puslapis
+        other: Informaciniai puslapiai
       corporate_report:
         few:
         one: Bendra ataskaita
         other: Bendros ataskaitos
+        overview:
       correspondence:
         few:
         one: Korespondencija
         other: Korespondencija
+        overview:
       countryside_stewardship_grant:
         few:
-        one:
-        other:
+        one: Kaimo priežiūros dotacija
+        other: Kaimo priežiūros dotacijos
       decision:
         few:
-        one:
-        other:
+        one: Sprendimas
+        other: Sprendimai
+        overview:
       detailed_guide:
         few:
         one: Detalesnė informacija
         other: Detalesnė informacija
       dfid_research_output:
         few:
-        one:
-        other:
+        one: Plėtros rezultato tyrimas
+        other: Plėtros rezultatų tyrimas
       document_collection:
         few:
         one: Serijos
-        other:
+        other: Serijos
       draft_text:
         few:
         one: Pirminis teksto variantas
         other: Pirminiai teksto variantai
       drug_safety_update:
         few:
-        one:
-        other:
+        one: Nauja informacija apie vaistų saugumą
+        other: Nauja informacija apie vaistų saugumą
       employment_appeal_tribunal_decision:
         few:
-        one:
-        other:
+        one: Darbo bylų apeliacijų tribunolo sprendimas
+        other: Darbo bylų apeliacijų tribunolo sprendimai
       employment_tribunal_decision:
         few:
-        one:
-        other:
+        one: Darbo teisės tribunolo sprendimas
+        other: Darbo teisės tribunolo sprendimai
       esi_fund:
         few:
-        one:
-        other:
+        one: Europos struktūrinis ir investicijų fondas
+        other: Europos struktūriniai ir investicijų fondai
       fatality_notice:
         few:
         one: Pranešimas apie nelaimę
@@ -171,10 +172,12 @@ lt:
         few:
         one: 'Informacijos laisvė: pranešimas'
         other: 'Informacijos laisvė: pranešimai'
+        overview:
       form:
         few:
         one: Forma
         other: Formos
+        overview:
       government_response:
         few:
         one: Vyriausybės atsakas
@@ -183,10 +186,12 @@ lt:
         few:
         one: Informacija
         other: Informacija
+        overview:
       impact_assessment:
         few:
         one: Poveikio įvertinimas
         other: Poveikio įvertinimai
+        overview:
       imported:
         few:
         one: Patalpinta - laukiama publikavimo
@@ -195,38 +200,42 @@ lt:
         few:
         one: Nepriklausoma ataskaita
         other: Nepriklausomos ataskaitos
+        overview:
       international_development_fund:
         few:
-        one:
-        other:
+        one: Tarptautinis plėtros finansavimas
+        other: Tarptautinis plėtros finansavimas
       international_treaty:
         few:
-        one:
-        other:
+        one: Tarptautinė sutartis
+        other: Tarptautinės sutartys
+        overview:
       maib_report:
         few:
-        one:
-        other:
+        one: Jūrų laivų avarijų tyrimo skyriaus ataskaita
+        other: Jūrų laivų avarijų tyrimo skyriaus ataskaitos
       map:
         few:
         one: Žemėlapis
         other: Žemėlapiai
+        overview:
       medical_safety_alert:
         few:
-        one:
-        other:
+        one: Įspėjimai dėl vaistų ir medicininių prietaisų, jų atšaukimas
+        other: Įspėjimai dėl vaistų ir medicininių prietaisų, jų atšaukimas
       national:
         few:
-        one:
-        other:
+        one: Nacionalinės statistikos pranešimas
+        other: Nacionalinės statistikos pranešimai
       national_statistics:
         few:
-        one: 'Statistika - nacionalinė statistika '
-        other: 'Statistika - nacionalinė statistika '
+        one: Statistika - nacionalinė statistika
+        other: Statistika - nacionalinė statistika
+        overview:
       national_statistics_announcement:
         few:
-        one:
-        other:
+        one: Nacionalinės statistikos pranešimas
+        other: Nacionalinės statistikos pranešimai
       news_article:
         few:
         one: Straipsnis
@@ -237,24 +246,27 @@ lt:
         other: Naujienos
       notice:
         few:
-        one:
-        other:
+        one: Pranešimas
+        other: Pranešimai
+        overview:
       official:
         few:
-        one:
-        other:
+        one: Oficialios statistikos pranešimas
+        other: Oficialios statistikos pranešimai
       official_statistics:
         few:
         one: Statistika
         other: Statistika
+        overview:
       official_statistics_announcement:
         few:
-        one:
-        other:
+        one: Oficialios statistikos pranešimas
+        other: Oficialios statistikos pranešimai
       open_consultation:
         few:
         one: Atvira konsultacija
-        other: 'Atviros konsultacijos '
+        other: Atviros konsultacijos
+        overview:
       oral_statement:
         few:
         one: Žodinis kreipimasis į parlamentą
@@ -267,6 +279,7 @@ lt:
         few:
         one: Strategijos dokumentas
         other: Strategijų dokumentai
+        overview:
       press_release:
         few:
         one: Pranešimas spaudai
@@ -275,34 +288,37 @@ lt:
         few:
         one: Reklaminė medžiaga
         other: Reklaminė medžiaga
+        overview:
       publication:
         few:
         one: Leidinys
         other: Leidiniai
       raib_report:
         few:
-        one:
-        other:
+        one: Traukinių avarijų tyrimo skyriaus ataskaita
+        other: Traukinių avarijų tyrimo skyriaus ataskaitos
       regulation:
         few:
-        one:
-        other:
+        one: Reglamentas
+        other: Reglamentai
+        overview:
       research:
         few:
         one: Tyrimas ir analizė
         other: Tyrimai ir analizės
+        overview:
       residential_property_tribunal_decision:
         few:
-        one:
-        other:
+        one: Gyvenamosios nuosavybės tribunolo sprendimas
+        other: Gyvenamosios nuosavybės tribunolo sprendimai
       service_sign_in:
         few:
-        one:
-        other:
+        one: Prisijungti prie paslaugos
+        other: Prisijungti prie paslaugos
       service_standard_report:
         few:
-        one:
-        other:
+        one: Standartinė paslaugos ataskaita
+        other: Standartinės paslaugų ataskaitos
       speaking_notes:
         few:
         one: Kalbos santrauka
@@ -313,8 +329,9 @@ lt:
         other: Kalbos
       standard:
         few:
-        one:
-        other:
+        one: Standartas
+        other: Standartai
+        overview:
       statement_to_parliament:
         few:
         one: Kreipimasis į parlamentą
@@ -325,20 +342,21 @@ lt:
         other: Statistiniai duomenys
       statistics_announcement:
         few:
-        one:
-        other:
+        one: Statistinių duomenų pranešimas
+        other: Statistinių duomenų pranešimai
       statutory_guidance:
         few:
-        one:
-        other:
+        one: Įstatyminė informacija
+        other: Įstatyminė informacija
+        overview:
       take_part:
         few:
-        one:
-        other:
+        one: Dalyvauti
+        other: Dalyvauti
       tax_tribunal_decision:
         few:
-        one:
-        other:
+        one: Mokesčių ir kanceliarijos tribunolo sprendimas
+        other: Mokesčių ir kanceliarijos tribunolo sprendimai
       transcript:
         few:
         one: Kalbos tekstas
@@ -347,37 +365,42 @@ lt:
         few:
         one: Skaidrumo informacija
         other: Skaidrumo informacija
+        overview:
       utaac_decision:
         few:
-        one:
-        other:
+        one: Administracinių bylų apeliacijų tribunolo sprendimas
+        other: Administracinių bylų apeliacijų tribunolo sprendimai
       world_location_news_article:
         few:
         one: Straipsnis
         other: Straipsniai
       world_news_story:
         few:
-        one:
-        other:
+        one: Pasaulio naujienos
+        other: Pasaulio naujienos
       written_statement:
         few:
         one: Rašytinis kreipimasis į parlamentą
         other: Rašytiniai kreipimaisi į parlamentą
   corporate_information_page:
-    about_our_services_html:
+    about_our_services_html: Sužinokite %{link}.
     corporate_information: Korporatyvinė informacija
-    personal_information_charter_html: Čia %{link} rasite paaiškinimą, kaip tvarkoma Jūsų asmeninė informacija
+    personal_information_charter_html: Čia %{link} rasite paaiškinimą, kaip tvarkoma Jūsų asmeninė informacija.
     publication_scheme_html: Sužinokite, kokią informaciją mes pastoviai pateikiame puslapyje %{link}.
     social_media_use_html: Perskaitykite mūsų strategiją %{link}.
     welsh_language_scheme_html: Sužinokite apie mūsų įsipareigojimą skelbti %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Apsaugos ministerijos herbas
+    field_of_operation: Veiklos sritis
+    operations_in: Veikla vykdoma %{location}
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -412,25 +435,24 @@ lt:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Nebepasiekiama
+    published_in_error: Šio puslapio informacija buvo pašalinta, kadangi ji buvo publikuota per klaidą.
+    title: Jūsų ieškomas puslapis nebepasiekiamas
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Puslapiai šiame vadove
+    skip_to_contents: Pereiti prie vadovo puslapių
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Šis leidinys prieinamas %{url}
+      copyright: "© Karūnos autorių teisės %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Šis leidinys licencijuojamas laikantis atviros vyriausybės licencijos v3.0, nebent nurodyta kitaip. Norėdami peržiūrėti šią licenciją, apsilankykite <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> arba kreipkitės raštu į mūsų informacijos strategijos komandą adresu The National Archives, Kew, London TW9 4DU arba el. paštu: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: ei nustatėme trečiosios šalies autorių teisių informaciją, turėsite gauti atitinkamų autorių teisių savininkų leidimą.
   i18n:
     direction:
   language_names:
@@ -501,59 +523,59 @@ lt:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Kitas
+    previous_page: Ankstesnis
+    print_entire_guide: Atsispausdinti visą vadovą
   publication:
-    details:
+    details: Informacija
     documents:
       few:
       one: Dokumentas
       other: Dokumentai
   service_sign_in:
-    continue:
+    continue: Tęsti
     error:
-      option:
-      title:
+      option: Pasirinkite variantą
+      title: Jūs nepasirinkote varianto
   shared:
-    historically_political:
+    historically_political: Tai buvo publikuota pagal %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Konsultantai pasirengę bendrauti.
+      busy: Visis internetinių pokalbių konsultantai šiuo metu užimti.
+      closed: Internetinis pokalbis šiuo metu neprieinamas.
+      speak_to_adviser: Kalbėti su konsultantu dabar
+      technical_problem: Internetinis pokalbis šiuo metu neprieinamas dėl techninių problemų.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma kilmės vietos nuoroda“ '
+    pgi_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma geografinė kilmės vieta“ '
+    tsg_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugomas tradicinis gaminys“ '
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Pateikta
+    location: Vieta
+    written_on: Parašymo data
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Atšaukimo data
+    cancelled: Statistikos pranešimas atšauktas
+    changed_date: Pranešimo data buvo pakeista
+    forthcoming: Ši statistika bus paskelbta
+    previous_date: Ankstesnė data
+    proposed_date: Siūloma paskelbimo data
+    reason_for_change: Pakeitimo priežastis
+    release_date: Paskelbimo data
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> pataria keliauti į skirtingas šalies vietas tik būtinais tikslais.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> pataria keliauti po šalį tik būtinais tikslais.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nepataria keliauti į skirtingas šalies veitas.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nepataria keliauti po šalį.
+    context: Patarimai dėl keliavimo po užsienį
+    still_current_at: Vis dar
+    summary: Santrauka
+    updated: Atnaujinta
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Nebepasiekiama
+    summary: Šio puslapio informacija buvo pašalinta, kadangi ji buvo publikuota per klaidą.
+    title: Jūsų ieškomas puslapis nebepasiekiamas
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktiniai duomenys
+    policies: Strategijos

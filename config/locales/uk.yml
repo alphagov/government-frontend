@@ -2,76 +2,72 @@
 uk:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Поради щодо Brexit для бізнесу
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Поради щодо Brexit для окремих осіб та сімей
+    heading_prefix: Є різні
   common:
-    last_updated:
-    visit:
+    visit: 'Відвідайте:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Зображення: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: приховати всі оновлення
+      last_updated: Останнє оновлення %{date}
+      published: Опубліковано %{date}
+      see_all_updates: переглянути всі оновлення
+      show_all_updates: показати всі оновлення
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: приховати всі
+      show_all: показати всі
     share_links:
-      share_this_page:
+      share_this_page: Поділіться цією сторінкою
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: та
+    another_website_html: Ця консультація %{closed} проведена на <a href="%{url}">іншому вебсайті</a>
+    at: о
+    closes: Вона завершиться о
+    closes_at: Ця консультація завершиться о
+    complete_a: Заповніть
+    description: Опис консультації
+    detail_of_feedback_received: Деталі отриманого відгуку
+    detail_of_outcome: Деталі результату
+    documents: Документи
+    download_outcome: Завантажити повний результат
+    either: або
+    email_to: 'Надіслати електронною поштою:'
+    feedback_received: Відгук отримано
+    is_being: зараз
+    not_open_yet: Ця консультація ще не розпочалася
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Ця консультація розпочинається
+    original_consultation: Первісна консультація
+    ran_from: Ця консультація розпочалася з
+    respond_online: Відповідати онлайн
+    visit_soon: Відвідайте цю сторінку незабаром, щоб завантажити результат до цього загальнодоступного public&nbsp;відгуку.
+    was: був
+    ways_to_respond: Способи реагування
+    write_to: 'Написати:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: Електронна пошта
+    find_call_charges: Дізнатися про тарифи на дзвінки
+    online: Онлайн
+    phone: Телефон
+    webchat: Вебчат
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Цей документ буде опубліковано
+    contents: Зміст
     metadata:
-      published: опубліковано
-      updated: оновлено
+      published: Опубліковано
+      updated: Оновлено
     schema_name:
       aaib_report:
         few:
         many:
-        one:
-        other:
+        one: Звіт відділу розслідування авіакатастроф
+        other: Звіти відділу розслідування авіакатастроф
       announcement:
         few:
         many:
@@ -80,233 +76,249 @@ uk:
       asylum_support_decision:
         few:
         many:
-        one:
-        other:
+        one: Рішення трибуналу про надання притулку
+        other: Рішення трибуналу про надання притулку
       authored_article:
         few:
         many:
-        one: Стаття
-        other: Статті
+        one: Авторська стаття
+        other: Авторські статті
       business_finance_support_scheme:
         few:
         many:
-        one:
-        other:
+        one: Схема підтримки фінансування бізнесу
+        other: Схеми підтримки фінансування бізнесу
       case_study:
         few:
         many:
-        one: Тематичне дослідження
-        other: Тематичні дослідження
+        one: Аналіз ситуації
+        other: Аналізи ситуації
       closed_consultation:
         few:
         many:
-        one: Закрите обговорення
-        other: Закриті обговорення
+        one: Закрита консультація
+        other: Закриті консультації
+        overview:
       cma_case:
         few:
         many:
-        one:
-        other:
+        one: Справа Управління із захисту конкуренції та ринків
+        other: Справи Управління із захисту конкуренції та ринків
       coming_soon:
         few:
         many:
-        one:
-        other:
+        one: Незабаром
+        other: Незабаром
       consultation:
         few:
         many:
-        one: Обговорення
-        other: Обговорення
+        one: Консультація
+        other: Консультації
       consultation_outcome:
         few:
         many:
-        one: Результат обговорення
-        other: Результати обговорення
+        one: Результат консультації
+        other: Результати консультації
+        overview:
       corporate_information_page:
         few:
         many:
-        one:
-        other:
+        one: Інформаційна сторінка
+        other: Інформаційні сторінки
       corporate_report:
         few:
         many:
-        one: Корпоративний звіт
-        other: Корпоративні звіти
+        one: Звіт про діяльність корпорації
+        other: Звіти про діяльність корпорації
+        overview:
       correspondence:
         few:
         many:
         one: Кореспонденція
         other: Кореспонденція
+        overview:
       countryside_stewardship_grant:
         few:
         many:
-        one:
-        other:
+        one: Субсидія в рамках управління в сільській місцевості
+        other: Субсидії в рамках управління в сільській місцевості
       decision:
         few:
         many:
-        one:
-        other:
+        one: Рішення
+        other: Рішення
+        overview:
       detailed_guide:
         few:
         many:
-        one: Детальні інструкції
-        other: Детальні інструкції
+        one: Керівництво
+        other: Керівництво
       dfid_research_output:
         few:
         many:
-        one:
-        other:
+        one: Дослідження результату розвитку
+        other: Дослідження результатів розвитку
       document_collection:
         few:
         many:
-        one: Серія
-        other:
+        one: Збір
+        other: Збір
       draft_text:
         few:
         many:
-        one: Проект документу
-        other: Проекти документів
+        one: Проєкт тексту
+        other: Проєкт текстів
       drug_safety_update:
         few:
         many:
-        one:
-        other:
+        one: Оновлення даних про безпечність лікарського засобу
+        other: Оновлення даних про безпечність лікарського засобу
       employment_appeal_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Рішення арбітражного суду по апеляції щодо працевлаштування
+        other: Рішення арбітражного суду по апеляції щодо працевлаштування
       employment_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Рішення арбітражного суду щодо працевлаштування
+        other: Рішення арбітражного суду щодо працевлаштування
       esi_fund:
         few:
         many:
-        one:
-        other:
+        one: Європейський структурний і інвестиційний фонд Європейського союзу
+        other: Європейські структурні і інвестиційні фонди Європейського союзу
       fatality_notice:
         few:
         many:
-        one: Повідомлення про смерть
-        other: Повідомлення про смерть
+        one: Повідомлення про нещасний випадок зі смертельним наслідком
+        other: Повідомлення про нещасний випадок зі смертельним наслідком
       foi_release:
         few:
         many:
-        one: Відповідь на інформаційний запит
-        other: 'Відповіді на інформаційні запити '
+        one: Випуск закону про свободу інформації
+        other: Випуски закону про свободу інформації
+        overview:
       form:
         few:
         many:
         one: Форма
         other: Форми
+        overview:
       government_response:
         few:
         many:
-        one: Реакція уряду
-        other: Реакція уряду
+        one: Відповідь уряду
+        other: Відповіді уряду
       guidance:
         few:
         many:
-        one: Інструкції
-        other: Інструкції
+        one: Керівництво
+        other: Керівництво
+        overview:
       impact_assessment:
         few:
         many:
         one: Оцінка впливу
         other: Оцінки впливу
+        overview:
       imported:
         few:
         many:
-        one: імпортовано - в очікуванні
-        other: імпортовано - в очікуванні
+        one: імпортовано - тип в очікуванні
+        other: імпортовано - тип в очікуванні
       independent_report:
         few:
         many:
         one: Незалежний звіт
         other: Незалежні звіти
+        overview:
       international_development_fund:
         few:
         many:
-        one:
-        other:
+        one: Міжнародний фонд розвитку
+        other: Міжнародний фонд розвитку
       international_treaty:
         few:
         many:
-        one:
-        other:
+        one: Міжнародний договір
+        other: Міжнародні договори
+        overview:
       maib_report:
         few:
         many:
-        one:
-        other:
+        one: Звіт відділу розслідування морських катастроф
+        other: Звіти відділу розслідування морських катастроф
       map:
         few:
         many:
-        one: Мапа
-        other: Мапи
+        one: Карта
+        other: Карти
+        overview:
       medical_safety_alert:
         few:
         many:
-        one:
-        other:
+        one: Оповіщення та відкликання лікарських засобів та виробів медичного призначення
+        other: Оповіщення та відкликання лікарських засобів та виробів медичного призначення
       national:
         few:
         many:
-        one:
-        other:
+        one: Оголошення даних державної статистики
+        other: Оголошення даних державної статистики
       national_statistics:
         few:
         many:
-        one: Статистика - національна статистика
-        other: Статистика - національна статистика
+        one: Національна статистика
+        other: Національна статистика
+        overview:
       national_statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Оголошення даних державної статистики
+        other: Оголошення даних державної статистики
       news_article:
         few:
         many:
-        one: Стаття
-        other: Статті
+        one: Новини
+        other: Новини
       news_story:
         few:
         many:
-        one: Новина
-        other: Новини
+        one: Сюжет новин
+        other: Сюжети новин
       notice:
         few:
         many:
-        one:
-        other:
+        one: Повідомлення
+        other: Повідомлення
+        overview:
       official:
         few:
         many:
-        one:
-        other:
+        one: Оголошення даних офіційної статистики
+        other: Оголошення даних офіційної статистики
       official_statistics:
         few:
         many:
-        one: Статистика
-        other: Статистика
+        one: Офіційна статистика
+        other: Офіційна статистика
+        overview:
       official_statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Оголошення даних офіційної статистики
+        other: Оголошення даних офіційної статистики
       open_consultation:
         few:
         many:
-        one: Відкрите обговорення
-        other: Відкриті обговорення
+        one: Відкрита консультація
+        other: Відкриті консультації
+        overview:
       oral_statement:
         few:
         many:
-        one: Усна заява у парламенті
-        other: Усні заяви у парламенті
+        one: Усна заява до Парламенту
+        other: Усні заяви до Парламенту
       policy:
         few:
         many:
@@ -317,16 +329,18 @@ uk:
         many:
         one: Програмний документ
         other: Програмні документи
+        overview:
       press_release:
         few:
         many:
-        one: Прес-реліз
-        other: Прес-релізи
+        one: Пресреліз
+        other: Пресрелізи
       promotional:
         few:
         many:
-        one: Інформаційний матеріал
-        other: Інформаційний матеріал
+        one: Рекламний матеріал
+        other: Рекламний матеріал
+        overview:
       publication:
         few:
         many:
@@ -335,53 +349,56 @@ uk:
       raib_report:
         few:
         many:
-        one:
-        other:
+        one: Звіт відділу розслідування залізнодорожніх катастроф
+        other: Звіти відділу розслідування залізнодорожніх катастроф
       regulation:
         few:
         many:
-        one:
-        other:
+        one: Норма
+        other: Норми
+        overview:
       research:
         few:
         many:
         one: Дослідження та аналіз
         other: Дослідження та аналіз
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Рішення арбітражного суду щодо житлової нерухомості
+        other: Рішення арбітражного суду щодо житлової нерухомості
       service_sign_in:
         few:
         many:
-        one:
-        other:
+        one: Знак обслуговування в
+        other: Знак обслуговування в
       service_standard_report:
         few:
         many:
-        one:
-        other:
+        one: Стандартний звіт з обслуговування
+        other: Стандартні звіти з обслуговування
       speaking_notes:
         few:
         many:
-        one: Тези для промови
-        other: Тези для промови
+        one: Тези виступу
+        other: Тези виступу
       speech:
         few:
         many:
-        one: Промова
-        other: Промови
+        one: Виступ
+        other: Виступи
       standard:
         few:
         many:
-        one:
-        other:
+        one: Стандарт
+        other: Стандарти
+        overview:
       statement_to_parliament:
         few:
         many:
-        one: Заява у парламенті
-        other: Заяви у парламенті
+        one: Заява до Парламенту
+        other: Заяви до Парламенту
       statistical_data_set:
         few:
         many:
@@ -390,68 +407,74 @@ uk:
       statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Оголошення про випуск статистичних даних
+        other: Оголошення про випуск статистичних даних
       statutory_guidance:
         few:
         many:
-        one:
-        other:
+        one: Нормативне керівництво
+        other: Нормативне керівництво
+        overview:
       take_part:
         few:
         many:
-        one:
-        other:
+        one: Взяти участь
+        other: Взяти участь
       tax_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Рішення арбітражного суду щодо податків та канцелярії
+        other: Рішення арбітражного суду щодо податків та канцелярії
       transcript:
         few:
         many:
-        one: Транскрипт
-        other: Транскрипти
+        one: Стенограма
+        other: Стенограми
       transparency:
         few:
         many:
-        one: Прозорість інформації
-        other: Прозорість інформації
+        one: Дані прозорості
+        other: Дані прозорості
+        overview:
       utaac_decision:
         few:
         many:
-        one:
-        other:
+        one: Рішення арбітражного суду по адміністративній апеляції
+        other: Рішення арбітражного суду по адміністративній апеляції
       world_location_news_article:
         few:
         many:
-        one: Стаття
-        other: Статті
+        one: Новини
+        other: Новини
       world_news_story:
         few:
         many:
-        one:
-        other:
+        one: Сюжет міжнародних новин
+        other: Сюжети міжнародних новин
       written_statement:
         few:
         many:
-        one: Письмова заява у парламенті
-        other: Письмові заяви у парламенті
+        one: Письмова заява до Парламенту
+        other: Письмові заяви до Парламенту
   corporate_information_page:
-    about_our_services_html:
+    about_our_services_html: Дізнатися %{link}.
     corporate_information: Корпоративна інформація
-    personal_information_charter_html: 'Це %{link} пояснює наші принципи роботи з персональними даними. '
-    publication_scheme_html: Прочитайти, яку інформацію ми регулярно публікуємо у %{link}.
-    social_media_use_html: Прочитайне про наші принципи роботи щодо %{link}.
-    welsh_language_scheme_html: 'Дізнайтеся про наші зобов''язання щодо публікації інформації у %{link}. '
+    personal_information_charter_html: Наш %{link} пояснює, як ми обробляємо ваші персональні дані.
+    publication_scheme_html: Про те, які типи інформації ми регулярно публікуємо, читайте у нашому %{link}.
+    social_media_use_html: Ознайомтеся із нашою політикою на %{link}.
+    welsh_language_scheme_html: Дізнайтесь про дотримання нами %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Герб Міністерства оборони
+    field_of_operation: Сфера діяльності
+    operations_in: Операції в %{location}
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -486,25 +509,24 @@ uk:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Більше не доступно
+    published_in_error: Інформацію на цій сторінці видалено, оскільки вона була опублікована помилково.
+    title: Сторінка, яку ви шукаєте, більше не доступна
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Сторінки цього посібника
+    skip_to_contents: Перейти до змісту посібника
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Ця публікація доступна за адресою %{url}
+      copyright: "© Авторське право належить короні %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Ця публікація ліцензована на умовах Відкритої державної ліцензії v3.0, якщо не зазначено інше. Щоб переглянути цю ліцензію, відвідайте <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> або надішліть запит Команді з політики роботи з інформацією, Національний архів, Кью, Лондон TW9 4DU, або надішліть електронною поштою: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Якщо ми виявимо будь-яку інформацію про авторські права третіх сторін, вам необхідно буде отримати дозвіл від відповідних правовласників.
   i18n:
     direction:
   language_names:
@@ -575,60 +597,60 @@ uk:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Далі
+    previous_page: Назад
+    print_entire_guide: Роздрукувати весь посібник
   publication:
-    details:
+    details: Деталі
     documents:
       few:
       many:
       one: Документ
       other: Документи
   service_sign_in:
-    continue:
+    continue: Продовжити
     error:
-      option:
-      title:
+      option: Виберіть варіант
+      title: Ви не вибрали варіант
   shared:
-    historically_political:
+    historically_political: Це було опубліковано при %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Доступні консультанти для спілкування.
+      busy: Наразі всі консультанти вебчату зайняті.
+      closed: На даний момент вебчат закритий.
+      speak_to_adviser: Поговорити з консультантом зараз
+      technical_problem: Вебчат наразі не доступний через технічні проблеми.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Логотип схеми –– це чорний штамп зі словами Designated Origin UK Protected
+    pgi_alt_text: Логотип схеми –– це чорний штамп зі словами Designated Origin UK Protected
+    tsg_alt_text: Логотип схеми –– це чорний штамп зі словами Traditional Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Доставлено
+    location: Розташування
+    written_on: Написано
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Дата скасування
+    cancelled: Випуск даних статистики скасовано
+    changed_date: Дата випуску змінена
+    forthcoming: Ці дані статистики будуть оприлюднені
+    previous_date: Попередня дата
+    proposed_date: Пропонований випуск
+    reason_for_change: Причина змін
+    release_date: Дата виходу
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: Міністерство закордонних справ<abbr title="Foreign and Commonwealth Office">(FCO)</abbr> забороняє будь-які поїздки, крім необхідних, до певних областей країни.
+      avoid_all_but_essential_travel_to_whole_country_html: Міністерство закордонних справ<abbr title="Foreign and Commonwealth Office">(FCO)</abbr> забороняє будь-які поїздки, крім необхідних, по країні.
+      avoid_all_travel_to_parts_html: Міністерство закордонних справ<abbr title="Foreign and Commonwealth Office">(FCO)</abbr> забороняє будь-які поїздки до певних областей країни.
+      avoid_all_travel_to_whole_country_html: Міністерство закордонних справ<abbr title="Foreign and Commonwealth Office">(FCO)</abbr> забороняє будь-які поїздки по країні.
+    context: Поради щодо подорожей за кордон
+    still_current_at: Досі актуально на
+    summary: Резюме
+    updated: Оновлено
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Більше не доступно
+    summary: Інформацію на цій сторінці видалено, оскільки вона була опублікована помилково.
+    title: Сторінка, яку ви шукаєте, більше не доступна
   working_group:
-    contact_details:
-    policies:
+    contact_details: Контактні дані
+    policies: Політики

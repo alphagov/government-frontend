@@ -2,234 +2,331 @@
 fa:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: راهنمای برگزیت برای کسب‌و‌کارها
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: راهنمای برگزیت برای کسب‌و‌کارها و خانواده‌ها
+    heading_prefix: مختلف وجود دارد
   common:
-    last_updated:
-    visit:
+    visit: 'بازدید کنید:'
   components:
     figure:
-      image_credit:
+      image_credit: 'اعتبار تصویر: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: مخفی کردن تمام بروزرسانی‌ها
+      last_updated: آخرین بروزرسانی %{date}
+      published: منشتر شده %{date}
+      see_all_updates: مشاهده تمام بروزرسانی‌ها
+      show_all_updates: نمایش تمام بروزرسانی‌ها
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: مخفی کردن همه
+      show_all: نمایش همه
     share_links:
-      share_this_page:
+      share_this_page: اشتراک‌گذاری این صفحه
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: و
+    another_website_html: این مشاوره %{closed} در <a href="%{url}">وب‌سات دیگر برگزار شد</a>
+    at: در
+    closes: بسته می‌شود در
+    closes_at: این مشاوره بسته می‌شود در
+    complete_a: تکمیل کنید یک
+    description: توضیحات مشاوره
+    detail_of_feedback_received: جزئیات بازخورد دریافت‌شده
+    detail_of_outcome: جزئیات نتیجه
+    documents: اسناد
+    download_outcome: دانلود نتیجه کامل
+    either: یا
+    email_to: 'ایمیل به:'
+    feedback_received: بازخورد دریافت شد
+    is_being: در حال
+    not_open_yet: این مشاوره هنوز باز نشده است
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: این مشاوره باز می‌شود
+    original_consultation: مشاوره اصلی
+    ran_from: این مشاوره در حال اجرا است از
+    respond_online: آنلاین پاسخ دهید
+    visit_soon: برای دانلود نتیجه این بازخورد عمومی، خیلی زود دوباره از این صفحه بازدید کنید.
+    was: بود
+    ways_to_respond: راه‌های پاسخ
+    write_to: 'پیام دهید به:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: ایمیل
+    find_call_charges: از هزینه‌های تماس مطلع شوید
+    online: آنلاین
+    phone: تلفن
+    webchat: وب‌چت
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: این سند منتشر خواهد شد در
+    contents: محتوا
     metadata:
       published: منتشر شده
-      updated: به روز رسانی شده
+      updated: بروز شده
     schema_name:
       aaib_report:
-        other:
+        one: گزارش شعبه تحقیقات حوادث هوایی
+        other: گزارشات شعبه تحقیقات حوادث هوایی
       announcement:
-        other: اعلامیه ها
+        one: اطلاعیه
+        other: اطلاعیه‌ها
       asylum_support_decision:
-        other:
+        one: حکم دادگاه حمایت از پناهجویان
+        other: احکام دادگاه حمایت از پناهجویان
       authored_article:
-        other: مقالات
+        one: مقاله تألیف شده
+        other: مقالات تألیف شده
       business_finance_support_scheme:
-        other:
+        one: طرح حمایت مالی از کسب‌و‌کار
+        other: طرح‌های حمایت مالی از کسب‌و‌کار
       case_study:
-        other: مطالعه های موردی
+        one: مطالعه موردی
+        other: مطالعات موردی
       closed_consultation:
-        other: رایزنی های بسته
+        one: مشاوره بسته
+        other: مشاوره‌های بسته
+        overview:
       cma_case:
-        other:
+        one: پرونده نهاد ناظر بر رقابت و بازارها
+        other: پرونده‌های نهاد ناظر بر رقابت و بازارها
       coming_soon:
-        other:
+        one: به زودی
+        other: به زودی
       consultation:
-        other: رایزنی ها
+        one: مشاوره
+        other: مشاوره‌ها
       consultation_outcome:
-        other: نتایج رایزنی
+        one: نتیجه مشاوره
+        other: نتایج مشاوره
+        overview:
       corporate_information_page:
-        other:
+        one: صفحه اطلاعاتی
+        other: صفحات اطلاعاتی
       corporate_report:
-        other: گزارش های سازمانی
+        one: گزارش شرکتی
+        other: گزارشات شرکتی
+        overview:
       correspondence:
+        one: مکاتبه
         other: مکاتبات
+        overview:
       countryside_stewardship_grant:
-        other:
+        one: کمک‌هزینه حفاظت از مناطق خارج از شهر
+        other: کمک‌هزینه‌های حفاظت از مناطق خارج از شهر
       decision:
-        other:
+        one: تصمیم
+        other: تصمیمات
+        overview:
       detailed_guide:
-        other: راهنمای تفصیلی
-      dfid_research_output:
-        other:
-      document_collection:
-        other:
-      draft_text:
-        other: متون پیش نویس
-      drug_safety_update:
-        other:
-      employment_appeal_tribunal_decision:
-        other:
-      employment_tribunal_decision:
-        other:
-      esi_fund:
-        other:
-      fatality_notice:
-        other: اطلاعیه تلفات
-      foi_release:
-        other: انتشار آزاد اطلاعات
-      form:
-        other: فرم ها
-      government_response:
-        other: جوابیه های دولت
-      guidance:
+        one: راهنمایی
         other: راهنمایی
+      dfid_research_output:
+        one: نتیجه تحقیق برای توسعه
+        other: نتایج تحقیق برای توسعه
+      document_collection:
+        one: مجموعه
+        other: مجموعه‌ها
+      draft_text:
+        one: متن پیش‌نویس
+        other: متون پیش‌نویس
+      drug_safety_update:
+        one: بروزرسانی ایمنی دارو
+        other: بروزرسانی‌های ایمنی دارو
+      employment_appeal_tribunal_decision:
+        one: حکم دادگاه تجدید نظر کار
+        other: احکام دادگاه تجدید نظر کار
+      employment_tribunal_decision:
+        one: حکم دادگاه کار
+        other: احکام دادگاه کار
+      esi_fund:
+        one: صندوق ساختاری سرمایه گذاری اروپا (ESIF)
+        other: صندوق‌های ساختاری سرمایه گذاری اروپا (ESIF)
+      fatality_notice:
+        one: اطلاعیه مرگ‌و‌میر
+        other: اطلاعیه‌های مرگ‌و‌میر
+      foi_release:
+        one: موارد انتشار آزادی اطلاعات
+        other: موارد انتشار آزادی اطلاعات
+        overview:
+      form:
+        one: فرم
+        other: فرم‌ها
+        overview:
+      government_response:
+        one: پاسخ دولتی
+        other: پاسخ‌های دولتی
+      guidance:
+        one: راهنمایی
+        other: راهنمایی
+        overview:
       impact_assessment:
-        other: ارزیابی های تاثیرات
+        one: ارزیابی تأثیر
+        other: ارزیابی‌های تأثیر
+        overview:
       imported:
-        other: منتقل شده - در انتظار دسته بندی
+        one: وارد شده - در انتظار نوع
+        other: وارد شده - در انتظار نوع
       independent_report:
-        other: گزارش های مستقل
+        one: گزارش مستقل
+        other: گزارشات مستقل
+        overview:
       international_development_fund:
-        other:
+        one: منابع مالی توسعه بین‌المللی
+        other: منابع مالی توسعه بین‌المللی
       international_treaty:
-        other:
+        one: معاهده بین‌المللی
+        other: معاهدات بین‌المللی
+        overview:
       maib_report:
-        other:
+        one: گزارش شعبه تحقیقات حوادث دریایی
+        other: گزارشات شعبه تحقیقات حوادث دریایی
       map:
-        other: نقشه ها
+        one: نقشه
+        other: نقشه‌ها
+        overview:
       medical_safety_alert:
-        other:
+        one: هشدارها و یادآوری‌ها برای داروها و دستگاه‌های پزشکی
+        other: هشدارها و یادآوری‌ها برای داروها و دستگاه‌های پزشکی
       national:
-        other:
+        one: اطلاعیه آمار ملی
+        other: اطلاعیه‌های آمار ملی
       national_statistics:
-        other: آمار - آمار ملی
+        one: آمار ملی
+        other: آمار ملی
+        overview:
       national_statistics_announcement:
-        other:
+        one: اطلاعیه آمار ملی
+        other: اطلاعیه‌های آمار ملی
       news_article:
+        one: مقاله خبری
         other: مقالات خبری
       news_story:
-        other: اخبار
+        one: گزارش خبری
+        other: گزارشات خبری
       notice:
-        other:
+        one: اطلاعیه
+        other: اطلاعیه‌ها
+        overview:
       official:
-        other:
+        one: اطلاعیه آمار رسمی
+        other: اطلاعیه‌های آمار رسمی
       official_statistics:
-        other: آمار
+        one: آمار رسمی
+        other: آمار رسمی
+        overview:
       official_statistics_announcement:
-        other:
+        one: اطلاعیه آمار رسمی
+        other: اطلاعیه‌های آمار رسمی
       open_consultation:
-        other: رایزنی های باز
+        one: مشاوره باز
+        other: مشاوره‌های باز
+        overview:
       oral_statement:
-        other: گزارش های شفاهی به پارلمان
+        one: بیانیه شفاهی به پارلمان
+        other: بیانیه‌های شفاهی به پارلمان
       policy:
+        one: سیاست
         other: سیاست ها
       policy_paper:
-        other: مقاله های سیاسی
+        one: سند سیاست
+        other: اسناد سیاست
+        overview:
       press_release:
-        other: بیانیه ها
+        one: بیانیه مطبوعاتی
+        other: بیانیه‌های مطبوعاتی
       promotional:
-        other: مطالب تبلیغاتی
+        one: محتوای تبلیغاتی
+        other: محتوای تبلیغاتی
+        overview:
       publication:
-        other: نشریات
+        one: مورد منتشر شده
+        other: موارد منتشر شده
       raib_report:
-        other:
+        one: گزارش شعبه تحقیقات حوادث ریلی
+        other: گزارشات شعبه تحقیقات حوادث ریلی
       regulation:
-        other:
+        one: قانون
+        other: قوانین
+        overview:
       research:
-        other: پژوهش و تحلیل
+        one: تحقیق و تحلیل
+        other: تحقیق و تحلیل
+        overview:
       residential_property_tribunal_decision:
-        other:
+        one: حکم دادگاه املاک مسکونی
+        other: احکام دادگاه املاک مسکونی
       service_sign_in:
-        other:
+        one: ورود به سرویس
+        other: ورود به سرویس
       service_standard_report:
-        other:
+        one: گزارش استاندارد خدمات
+        other: گزارش‌های استاندارد خدمات
       speaking_notes:
-        other: موضوعات سخنرانی
+        one: نکات گفتاری
+        other: نکات گفتاری
       speech:
-        other: سخنرانی ها
+        one: سخنرانی
+        other: سخنرانی‌ها
       standard:
-        other:
+        one: استاندارد
+        other: استانداردها
+        overview:
       statement_to_parliament:
-        other: گزارش ها به پارلمان
+        one: بیانیه به پارلمان
+        other: بیانیه‌ها به پارلمان
       statistical_data_set:
-        other: بسته های داده های آماری
+        one: مجموعه داده آماری
+        other: مجموعه داده‌های آماری
       statistics_announcement:
-        other:
+        one: اطلاعیه انتشار آمار
+        other: اطلاعیه‌های انتشار آمار
       statutory_guidance:
-        other:
+        one: راهنمای قانونی
+        other: راهنمای قانونی
+        overview:
       take_part:
-        other:
+        one: مشارکت
+        other: مشارکت
       tax_tribunal_decision:
-        other:
+        one: حکم دادگاه مالیات و دارایی
+        other: احکام دادگاه مالیات و دارایی
       transcript:
-        other: رونوشت ها
+        one: متن
+        other: متون
       transparency:
-        other: داده های شفاف سازی
+        one: داده‌های شفافیت
+        other: داده‌های شفافیت
+        overview:
       utaac_decision:
-        other:
+        one: حکم دادگاه تجدید نظر اداری
+        other: احکام دادگاه تجدید نظر اداری
       world_location_news_article:
+        one: مقاله خبری
         other: مقالات خبری
       world_news_story:
-        other:
+        one: گزارش خبری جهانی
+        other: گزارشات خبری جهانی
       written_statement:
-        other: گزارش های کتبی به پارلمان
+        one: بیانیه کتبی به پارلمان
+        other: بیانیه‌های کتبی به پارلمان
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: اطلاعات سازمانی
-    personal_information_charter_html: "%{link} چگونگی نگهداری از اطلاعات شخصی شما را توضیح می دهد"
-    publication_scheme_html: 'درباره نوع اطلاعاتی که ما به طور روال در %{link} منتشر می کنیم بخوانید '
-    social_media_use_html: سیاست ما را درباره  %{link} بخوانید
-    welsh_language_scheme_html: درباره تعهد ما به انتشار مطالب به %{link} بخوانید
+    about_our_services_html: اطلاعات کسب کنید %{link}.
+    corporate_information: اطلاعات شرکت
+    personal_information_charter_html: "%{link} نحوه رفتار ما با اطلاعات شخصی شما را توضیح می‌دهد."
+    publication_scheme_html: درباره انواع اطلاعاتی که معمولاً در %{link} خود منتشر می‌کنیم، اطلاعات بیشتری کسب کنید.
+    social_media_use_html: سیاست ما را درباره %{link} مطالعه کنید.
+    welsh_language_scheme_html: درباره تعهد ما نسبت به %{link} اطلاعات کسب کنید.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: تاج وزارت دفاع
+    field_of_operation: زمینه فعالیت
+    operations_in: فعالیت در %{location}
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -264,25 +361,24 @@ fa:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: دیگر در دسترس نیست
+    published_in_error: اطلاعات این صفحه حذف شده است زیرا به اشتباه منتشر شده بود.
+    title: صفحه‌ای که به دنبال آن هستید، دیگر در دسترس نیست
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: صفحات موجود در این راهنما
+    skip_to_contents: رفتن به محتوای راهنما
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: این مورد منتشر شده در %{url} در دسترس است
+      copyright: "© کپی‌رایت Crown %{year}"
+      isbn: 'شابک:'
+      licence_html: 'این مورد منتشر شده تحت شرایط مجوز دولت باز نسخه 3.0 قرار دارد، مگر در مواردی که خلاف آن بیان شده باشد. برای مشاهده این مجوز، از <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> بازدید کرده یا به تیم سیاست اطلاع‌رسانی، آرشیوهای ملی به آدرس Kew, London TW9 4DU نامه بنویسید یا ایمیل بزنید: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: در مواقعی که ما هر گونه اطلاعات کپی‌رایت شخص ثالث شناسایی کنیم، شما باید از صاحبان کپی‌رایت مربوطه، مجوز کسب کنید.
   i18n:
     direction: rtl
   language_names:
@@ -353,57 +449,58 @@ fa:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: بعدی
+    previous_page: قبلی
+    print_entire_guide: چاپ کل راهنما
   publication:
-    details:
+    details: جزئیات
     documents:
-      other: مدارک
+      one: سند
+      other: اسناد
   service_sign_in:
-    continue:
+    continue: ادامه
     error:
-      option:
-      title:
+      option: لطفاً یک گزینه را انتخاب کنید
+      title: شما یک گزینه را انتخاب نکرده‌اید
   shared:
-    historically_political:
+    historically_political: این مورد تحت %{government} منتشر شده است
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: مشاوران برای چت در دسترس هستند.
+      busy: تمام مشاوران وب‌چت در حال حاضر مشغول هستند.
+      closed: وب‌چت در این لحظه بسته می‌شود.
+      speak_to_adviser: اکنون با یک مشاور صحبت کنید
+      technical_problem: به دلیل مشکلات فنی، وب‌چت در حال حاضر در دسترس نیست.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: آرم طرح یک مهر سیاه با این کلمات است Designated Origin UK Protected
+    pgi_alt_text: آرم طرح یک مهر سیاه با این کلمات است Geographic Origin UK Protected
+    tsg_alt_text: آرم طرح یک مهر سیاه با این کلمات است Traditional Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: تخویل شده در
+    location: موقعیت مکانی
+    written_on: نوشته شده در
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: تاریخ لغو
+    cancelled: انتشار آمار لغو شد
+    changed_date: تاریخ انتشار تغییر کرده است
+    forthcoming: این آمارها منتشر خواهد شد
+    previous_date: تاریخ قبلی
+    proposed_date: انتاشر پیشنهادی
+    reason_for_change: دلیل تغییر
+    release_date: تاریخ انتشار
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای غیر ضروری به بخش‌هایی از این کشور خودداری کنید.
+      avoid_all_but_essential_travel_to_whole_country_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای غیر ضروری به تمام نقاط این کشور خودداری کنید.
+      avoid_all_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به بخش‌هایی از این کشور خودداری کنید.
+      avoid_all_travel_to_whole_country_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفر به تمام نقاط این کشور خودداری کنید.
+    context: توصیه‌های مربوط به سفر خارجی
+    still_current_at: همچنان جاری است در
+    summary: خلاصه
+    updated: بروز شده
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: دیگر در دسترس نیست
+    summary: اطلاعات این صفحه حذف شده است زیرا به اشتباه منتشر شده بود.
+    title: صفحه‌ای که به دنبال آن هستید، دیگر در دسترس نیست
   working_group:
-    contact_details:
-    policies:
+    contact_details: جزئیات اطلاعات تماس
+    policies: سیاست ها

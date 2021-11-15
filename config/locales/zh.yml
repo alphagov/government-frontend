@@ -2,233 +2,331 @@
 zh:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: 企业的英国脱欧指南
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: 企业和家庭的英国脱欧指南
+    heading_prefix: 区别
   common:
-    last_updated:
-    visit:
+    visit: 访问：
   components:
     figure:
-      image_credit:
+      image_credit: 图片提供：%{credit}
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: 隐藏全部更新
+      last_updated: 上次更新 %{date}
+      published: 发布 %{date}
+      see_all_updates: 查看全部更新
+      show_all_updates: 显示全部更新
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: 隐藏全部
+      show_all: 显示全部
     share_links:
-      share_this_page:
+      share_this_page: 分享本页面
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: 和
+    another_website_html: 本咨询 %{closed} 位于 <a href="%{url}">另一个网站</a>
+    at: 在
+    closes: 它的结束时间
+    closes_at: 本咨询的结束时间
+    complete_a: 完成
+    description: 咨询描述
+    detail_of_feedback_received: 收到的反馈详情
+    detail_of_outcome: 结果详情
+    documents: 文件
+    download_outcome: 下载全部结果
+    either: 二选一
+    email_to: 电子邮箱：
+    feedback_received: 收到反馈
+    is_being: 正在进行
+    not_open_yet: 本咨询尚未开始
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: 本咨询开始
+    original_consultation: 最初咨询
+    ran_from: 本咨询的时间
+    respond_online: 在线回复
+    visit_soon: 请尽快再次访问此页面，将结果下载给公众&nbsp;反馈。
+    was: 是
+    ways_to_respond: 回复方法
+    write_to: 收件人：
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: 电子邮箱
+    find_call_charges: 查看电话费
+    online: 在线
+    phone: 电话
+    webchat: 在线聊天
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: 本文件发布日期
+    contents: 目录
     metadata:
       published: 已发布
       updated: 已更新
     schema_name:
       aaib_report:
-        other:
+        one: 航空事故调查局报告
+        other: 航空事故调查局报告
       announcement:
+        one: 公告
         other: 公告
       asylum_support_decision:
-        other:
+        one: 庇护支持法庭裁决
+        other: 庇护支持法庭裁决
       authored_article:
-        other: 撰写的文章
+        one: 撰写文章
+        other: 撰写文章
       business_finance_support_scheme:
-        other:
+        one: 商业财务支持计划
+        other: 商业财务支持计划
       case_study:
-        other: 实例研究
+        one: 案例研究
+        other: 案例研究
       closed_consultation:
-        other: 已办结的咨询
+        one: 封闭咨询
+        other: 封闭咨询
+        overview:
       cma_case:
-        other:
+        one: 竞争和市场管理局案例
+        other: 竞争和市场管理局案例
       coming_soon:
-        other:
+        one: 即将推出
+        other: 即将推出
       consultation:
+        one: 咨询
         other: 咨询
       consultation_outcome:
+        one: 咨询结果
         other: 咨询结果
+        overview:
       corporate_information_page:
-        other:
+        one: 信息页
+        other: 信息页
       corporate_report:
-        other: 政府报告
+        one: 公司报告
+        other: 公司报告
+        overview:
       correspondence:
-        other: 交流
+        one: 通信
+        other: 通信
+        overview:
       countryside_stewardship_grant:
-        other:
+        one: 乡村管理计划拨款
+        other: 乡村管理计划拨款
       decision:
-        other:
+        one: 决策
+        other: 决策
+        overview:
       detailed_guide:
-        other: 详细指导
+        one: 指南
+        other: 指南
       dfid_research_output:
-        other:
+        one: 发展产出研究
+        other: 发展产出研究
       document_collection:
-        other:
+        one: 待整理
+        other: 待整理
       draft_text:
-        other: 草拟稿件
+        one: 草拟文本
+        other: 草拟文本
       drug_safety_update:
-        other:
+        one: 药物安全更新
+        other: 药物安全更新
       employment_appeal_tribunal_decision:
-        other:
+        one: 劳资上诉法庭判决
+        other: 劳资上诉法庭判决
       employment_tribunal_decision:
-        other:
+        one: 劳资法庭判决
+        other: 劳资法庭判决
       esi_fund:
-        other:
+        one: 欧洲结构与投资基金(ESIF)
+        other: 欧洲结构与投资基金(ESIF)
       fatality_notice:
-        other: 死亡通告
+        one: 死亡通知
+        other: 死亡通知
       foi_release:
-        other: 资讯自由(FOI)信息发布
+        one: FOI 发布
+        other: FOI 发布
+        overview:
       form:
+        one: 表格
         other: 表格
+        overview:
       government_response:
-        other: 政府反应
+        one: 政府回应
+        other: 政府回应
       guidance:
-        other: 指导
+        one: 指南
+        other: 指南
+        overview:
       impact_assessment:
+        one: 影响评估
         other: 影响评估
+        overview:
       imported:
-        other: 导入 - 正在等待的类型
+        one: 进口-等待型
+        other: 进口-等待型
       independent_report:
+        one: 独立报告
         other: 独立报告
+        overview:
       international_development_fund:
-        other:
+        one: 国际发展资金
+        other: 国际发展资金
       international_treaty:
-        other:
+        one: 国际条约
+        other: 国际条约
+        overview:
       maib_report:
-        other:
+        one: 海事事故调查局报告
+        other: 海事事故调查局报告
       map:
+        one: 地图
         other: 地图
+        overview:
       medical_safety_alert:
-        other:
+        one: 药品和医疗设备的警报和召回
+        other: 药品和医疗设备的警报和召回
       national:
-        other:
+        one: 国家统计局公告
+        other: 国家统计局公告
       national_statistics:
-        other: 统计数据 - 国家数据
+        one: 国家统计局
+        other: 国家统计局
+        overview:
       national_statistics_announcement:
-        other:
+        one: 国家统计局公告
+        other: 国家统计局公告
       news_article:
-        other: 新闻文章
-      news_story:
+        one: 新闻报道
         other: 新闻报道
+      news_story:
+        one: 新闻故事
+        other: 新闻故事
       notice:
-        other:
+        one: 通知
+        other: 通知
+        overview:
       official:
-        other:
+        one: 官方统计公告
+        other: 官方统计公告
       official_statistics:
-        other: 统计数据
+        one: 官方统计
+        other: 官方统计
+        overview:
       official_statistics_announcement:
-        other:
+        one: 官方统计公告
+        other: 官方统计公告
       open_consultation:
-        other: 公开咨询
+        one: 公开协商
+        other: 公开协商
+        overview:
       oral_statement:
-        other: 对议会的口头声明
+        one: 议会口头声明
+        other: 议会口头声明
       policy:
-        other: 政策
+        one: 策略
+        other: 策略
       policy_paper:
+        one: 政策文件
         other: 政策文件
+        overview:
       press_release:
+        one: 新闻稿
         other: 新闻稿
       promotional:
-        other: 宣传材料
+        one: 宣传资料
+        other: 宣传资料
+        overview:
       publication:
-        other: 发布的报告
+        one: 公布
+        other: 公布
       raib_report:
-        other:
+        one: 铁路事故调查局报告
+        other: 铁路事故调查局报告
       regulation:
-        other:
+        one: 条例
+        other: 条例
+        overview:
       research:
-        other: 研究及分析
+        one: 研究和分析
+        other: 研究和分析
+        overview:
       residential_property_tribunal_decision:
-        other:
+        one: 住宅物业法庭判决
+        other: 住宅物业法庭判决
       service_sign_in:
-        other:
+        one: 服务登记
+        other: 服务登记
       service_standard_report:
-        other:
+        one: 服务标准报告
+        other: 服务标准报告
       speaking_notes:
-        other: 演讲稿
+        one: 发言讲稿
+        other: 发言讲稿
       speech:
+        one: 演讲
         other: 演讲
       standard:
-        other:
+        one: 标准
+        other: 标准
+        overview:
       statement_to_parliament:
-        other: 对议会的声明
+        one: 议会声明
+        other: 议会声明
       statistical_data_set:
+        one: 统计数据集
         other: 统计数据集
       statistics_announcement:
-        other:
+        one: 统计数据发布公告
+        other: 统计数据发布公告
       statutory_guidance:
-        other:
+        one: 法定指南
+        other: 法定指南
+        overview:
       take_part:
-        other:
+        one: 参加
+        other: 参加
       tax_tribunal_decision:
-        other:
+        one: 税务和衡平法法庭裁决
+        other: 税务和衡平法法庭裁决
       transcript:
-        other: 副本
+        one: 文字记录
+        other: 文字记录
       transparency:
-        other: 透明化数据
+        one: 透明度数据
+        other: 透明度数据
+        overview:
       utaac_decision:
-        other:
+        one: 行政上诉法庭裁决
+        other: 行政上诉法庭裁决
       world_location_news_article:
-        other: 新闻文章
+        one: 新闻报道
+        other: 新闻报道
       world_news_story:
-        other:
+        one: 世界新闻故事
+        other: 世界新闻故事
       written_statement:
-        other: 对议会的书面声明
+        one: 议会口头声明
+        other: 议会口头声明
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: 政府信息
-    personal_information_charter_html: 我们的%{link}解释了我们如何对待您的个人信息。
-    publication_scheme_html: 阅读我们在%{link}定期发布的信息。
-    social_media_use_html: 阅读我们在%{link}的政策
-    welsh_language_scheme_html: 查阅我们在%{link}发布的信息。
+    about_our_services_html: 查找 %{link}。
+    corporate_information: 公司信息
+    personal_information_charter_html: 我们的 %{link} 解释我们如何处理您的个人信息。
+    publication_scheme_html: 阅读我们在 %{link} 中例行发布的信息类型。
+    social_media_use_html: 阅读我们在 %{link} 的政策。
+    welsh_language_scheme_html: 查看我们对 %{link} 的承诺。
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: 国防部徽章
+    field_of_operation: 经营领域
+    operations_in: 在 %{location} 经营
   get_involved:
     active_blogs:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -263,27 +361,26 @@ zh:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: 不再可用
+    published_in_error: 本页上的信息已被删除，因为它的发布出现了错误。
+    title: 您正在查找的页面不再可用
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: 本指南的页面
+    skip_to_contents: 跳到指南的内容
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: 本发表内容可在 %{url} 获取。
+      copyright: "© Crown 版权所有 %{year}"
+      isbn: ISBN：
+      licence_html: 除非另有说明，本发表内容根据开放政府许可证3.0版的条款授权。  要浏览此许可证，请访问 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> 或写信给资讯政策组，The National Archives, Kew, London TW9 4DU，或发送电子邮件：<a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
+      third_party: '如果我们发现任何第三者的版权资料，您需要获得有关版权持有人的许可。  '
   i18n:
-    direction: ltr
+    direction:
   language_names:
     ar:
     az:
@@ -352,57 +449,58 @@ zh:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: 下一步
+    previous_page: 上一步
+    print_entire_guide: 打印全部指南
   publication:
-    details:
+    details: 详细信息
     documents:
+      one: 文件
       other: 文件
   service_sign_in:
-    continue:
+    continue: 继续
     error:
-      option:
-      title:
+      option: 请选择一个选项
+      title: 您尚未选择一个选项
   shared:
-    historically_political:
+    historically_political: 这是由 %{government} 发布的。
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: 顾问有空聊天。
+      busy: 所有的在线聊天顾问现在都很忙。
+      closed: 在线聊天暂时关闭。
+      speak_to_adviser: 立即与顾问谈谈
+      technical_problem: 由于技术问题，目前无法使用在线聊天。
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: 该计划的标志是一个黑色的印章，上面写着“受特定来源国英国保护”
+    pgi_alt_text: 该计划的标志是一个黑色的印章，上面写着“受地理来源国英国保护”
+    tsg_alt_text: 该计划的标志是一个黑色的印章，上面写着“受传统专业英国保护”
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: 提交日期
+    location: 位置
+    written_on: 书写日期
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: 取消日期
+    cancelled: 统计数据发布已取消
+    changed_date: 发布日期已更改
+    forthcoming: 这些统计数据将会公布
+    previous_date: 上一个日期
+    proposed_date: 拟议发布
+    reason_for_change: 变更原因
+    release_date: 发布日期
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国部分地区。  '
+      avoid_all_but_essential_travel_to_whole_country_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。  '
+      avoid_all_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国家的某些地区。  '
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。
+    context: 国外差旅建议
+    still_current_at: 有效范围
+    summary: 总结
+    updated: 已更新
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: 不再可用
+    summary: 本页上的信息已被删除，因为它的发布出现了错误。
+    title: 您正在查找的页面不再可用
   working_group:
-    contact_details:
-    policies:
+    contact_details: 联系方式
+    policies: 策略

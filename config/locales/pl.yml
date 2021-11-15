@@ -2,76 +2,72 @@
 pl:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Wskazówki dotyczące Brexitu dla przedsiębiorstw
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Wskazówki dotyczące Brexitu dla osób indywidualnych i rodzin
+    heading_prefix: Są różne
   common:
-    last_updated:
-    visit:
+    visit: 'Odwiedź:'
   components:
     figure:
-      image_credit:
+      image_credit: Obrazek:%{credit}
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: ukryj wszystkie aktualizacje
+      last_updated: Ostatnio zaktualizowano %{date}
+      published: Opublikowano %{date}
+      see_all_updates: zobacz wszystkie aktualizacje
+      show_all_updates: pokaż wszystkie aktualizacje
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: ukryj wszystkie
+      show_all: pokaż wszystkie
     share_links:
-      share_this_page:
+      share_this_page: Udostępnij tę stronę
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: i
+    another_website_html: Te konsultacje %{closed} odbyły się na <a href="%{url}">innej stronie internetowej</a>
+    at: o
+    closes: Kończy się o
+    closes_at: Te konsultacje kończą się o
+    complete_a: Wypełnij
+    description: Opis konsultacji
+    detail_of_feedback_received: Szczegóły dotyczące otrzymanych informacji zwrotnych
+    detail_of_outcome: Szczegóły dotyczące wyniku
+    documents: Dokumenty
+    download_outcome: Pobierz cały wynik
+    either: lub
+    email_to: 'Wyślij e-mail do:'
+    feedback_received: Otrzymane informacje zwrotne
+    is_being: są
+    not_open_yet: Te konsultacje jeszcze się nie rozpoczęły
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Konsultacje rozpoczynają się
+    original_consultation: Pierwotne konsultacje
+    ran_from: Te konsultacje trwały od
+    respond_online: Odpowiedz online
+    visit_soon: Odwiedź tę stronę ponownie, aby pobrać informacje zwrotne.
+    was: był
+    ways_to_respond: Sposoby wysłania odpowiedzi
+    write_to: 'Napisz do:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: Wiadomość e-mail
+    find_call_charges: Dowiedz się o opłatach za połączenia
+    online: Online
+    phone: Telefon
+    webchat: Czat
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Dokument ten zostanie opublikowany o
+    contents: Zawartość
     metadata:
-      published: opublikowano
-      updated: Zaktualizowany
+      published: Opublikowano
+      updated: Zaktualizowano
     schema_name:
       aaib_report:
         few:
         many:
-        one:
-        other:
+        one: Sprawozdanie Wydziału Badania Wypadków Lotniczych
+        other: Sprawozdania Wydziału Badania Wypadków Lotniczych
       announcement:
         few:
         many:
@@ -80,8 +76,8 @@ pl:
       asylum_support_decision:
         few:
         many:
-        one:
-        other:
+        one: Decyzja trybunału ds. wsparcia w zakresie polityki azylowej
+        other: Decyzje trybunału ds. wsparcia w zakresie polityki azylowej
       authored_article:
         few:
         many:
@@ -90,8 +86,8 @@ pl:
       business_finance_support_scheme:
         few:
         many:
-        one:
-        other:
+        one: Program wsparcia finansowego przedsiębiorstw
+        other: Programy wsparcia finansowego przedsiębiorstw
       case_study:
         few:
         many:
@@ -102,16 +98,17 @@ pl:
         many:
         one: Konsultacja zamknięta
         other: Konsultacje zamknięte
+        overview:
       cma_case:
         few:
         many:
-        one:
-        other:
+        one: Sprawa Urzędu ds. Konkurencji i Rynków
+        other: Sprawy Urzędu ds. Konkurencji i Rynków
       coming_soon:
         few:
         many:
-        one:
-        other:
+        one: Już niedługo
+        other: Już niedługo
       consultation:
         few:
         many:
@@ -122,31 +119,35 @@ pl:
         many:
         one: Wynik konsultacji
         other: Wyniki konsultacji
+        overview:
       corporate_information_page:
         few:
         many:
-        one:
-        other:
+        one: Strona informacyjna
+        other: Strony informacyjne
       corporate_report:
         few:
         many:
         one: Raport korporacyjny
         other: Raporty korporacyjne
+        overview:
       correspondence:
         few:
         many:
         one: Korespondencja
         other: Korespondencje
+        overview:
       countryside_stewardship_grant:
         few:
         many:
-        one:
-        other:
+        one: Dotacja w ramach Programu Zarządzania Obszarami Wiejskimi
+        other: Dotacje w ramach Programu Zarządzania Obszarami Wiejskimi
       decision:
         few:
         many:
-        one:
-        other:
+        one: Decyzja
+        other: Decyzje
+        overview:
       detailed_guide:
         few:
         many:
@@ -155,13 +156,13 @@ pl:
       dfid_research_output:
         few:
         many:
-        one:
-        other:
+        one: Wynik badań na rzecz rozwoju
+        other: Wyniki badań na rzecz rozwoju
       document_collection:
         few:
         many:
         one: Seria
-        other:
+        other: Serie
       draft_text:
         few:
         many:
@@ -170,23 +171,23 @@ pl:
       drug_safety_update:
         few:
         many:
-        one:
-        other:
+        one: Aktualne informacje na temat bezpieczeństwa leków
+        other: Aktualne informacje na temat bezpieczeństwa leków
       employment_appeal_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Decyzja trybunału apelacyjnego ds. zatrudnienia
+        other: Decyzje trybunału apelacyjnego ds. zatrudnienia
       employment_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Decyzja trybunału ds. zatrudnienia
+        other: Decyzje trybunału ds. zatrudnienia
       esi_fund:
         few:
         many:
-        one:
-        other:
+        one: Europejski Fundusz Strukturalny i Inwestycyjny (EFSI)
+        other: Europejskie Fundusze Strukturalne i Inwestycyjne (EFSI)
       fatality_notice:
         few:
         many:
@@ -197,11 +198,13 @@ pl:
         many:
         one: Informacja zgodnie z ustawą o wolnosci informacji
         other: Informacje zgodnie z ustawą o wolności informacji
+        overview:
       form:
         few:
         many:
         one: Formularz
         other: Formularze
+        overview:
       government_response:
         few:
         many:
@@ -212,11 +215,13 @@ pl:
         many:
         one: Wskazówki
         other: Wskazówki
+        overview:
       impact_assessment:
         few:
         many:
         one: Ocena oddziaływania
         other: Oceny oddziaływania
+        overview:
       imported:
         few:
         many:
@@ -227,46 +232,50 @@ pl:
         many:
         one: Niezależny raport
         other: Niezależne raporty
+        overview:
       international_development_fund:
         few:
         many:
-        one:
-        other:
+        one: Międzynarodowe finansowanie rozwoju
+        other: Międzynarodowe finansowanie rozwoju
       international_treaty:
         few:
         many:
-        one:
-        other:
+        one: Traktat międzynarodowy
+        other: Traktaty międzynarodowe
+        overview:
       maib_report:
         few:
         many:
-        one:
-        other:
+        one: Sprawozdanie Wydziału Badania Wypadków Morskich
+        other: Sprawozdania Wydziału Badania Wypadków Morskich
       map:
         few:
         many:
         one: Mapa
         other: Mapy
+        overview:
       medical_safety_alert:
         few:
         many:
-        one:
-        other:
+        one: Informacje o wycofaniu i ostrzeżenia dot. leków i urządzeń medycznych
+        other: Informacje o wycofaniu i ostrzeżenia dot. leków i urządzeń medycznych
       national:
         few:
         many:
-        one:
-        other:
+        one: Komunikat dot. statystyk krajowych
+        other: Komunikaty dot. statystyk krajowych
       national_statistics:
         few:
         many:
         one: Statystyki - statystyki narodowe
         other: Statystyki - statystyki narodowe
+        overview:
       national_statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Komunikat dot. statystyk krajowych
+        other: Komunikaty dot. statystyk krajowych
       news_article:
         few:
         many:
@@ -280,28 +289,31 @@ pl:
       notice:
         few:
         many:
-        one:
-        other:
+        one: Powiadomienie
+        other: Powiadomienia
+        overview:
       official:
         few:
         many:
-        one:
-        other:
+        one: Komunikat dot. oficjalnych statystyk
+        other: Komunikaty dot. oficjalnych statystyk
       official_statistics:
         few:
         many:
         one: Statystyki
         other: Statystyki
+        overview:
       official_statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Komunikat dot. oficjalnych statystyk
+        other: Komunikaty dot. oficjalnych statystyk
       open_consultation:
         few:
         many:
         one: Konsultacje otwarte
         other: Konsultacje otwarte
+        overview:
       oral_statement:
         few:
         many:
@@ -317,6 +329,7 @@ pl:
         many:
         one: Dokument programowy
         other: Dokumenty programowe
+        overview:
       press_release:
         few:
         many:
@@ -327,6 +340,7 @@ pl:
         many:
         one: Materiał promocyjny
         other: Materiał promocyjny
+        overview:
       publication:
         few:
         many:
@@ -335,33 +349,35 @@ pl:
       raib_report:
         few:
         many:
-        one:
-        other:
+        one: Sprawozdanie Wydziału Badania Wypadków Kolejowych
+        other: Sprawozdania Wydziału Badania Wypadków Kolejowych
       regulation:
         few:
         many:
-        one:
-        other:
+        one: Rozporządzenie
+        other: Rozporządzenia
+        overview:
       research:
         few:
         many:
         one: Badania i analiza
         other: Badania i analiza
+        overview:
       residential_property_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Decyzja trybunału ds. nieruchomości mieszkalnych
+        other: Decyzje trybunału ds. nieruchomości mieszkalnych
       service_sign_in:
         few:
         many:
-        one:
-        other:
+        one: Logowanie do serwisu
+        other: Logowanie do serwisu
       service_standard_report:
         few:
         many:
-        one:
-        other:
+        one: Sprawozdanie dot. standardów usług
+        other: Sprawozdania dot. standardów usług
       speaking_notes:
         few:
         many:
@@ -375,8 +391,9 @@ pl:
       standard:
         few:
         many:
-        one:
-        other:
+        one: Standard
+        other: Standardy
+        overview:
       statement_to_parliament:
         few:
         many:
@@ -390,23 +407,24 @@ pl:
       statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Komunikat o publikacji statystyk
+        other: Komunikaty o publikacji statystyk
       statutory_guidance:
         few:
         many:
-        one:
-        other:
+        one: Wytyczne ustawowe
+        other: Wytyczne ustawowe
+        overview:
       take_part:
         few:
         many:
-        one:
-        other:
+        one: Weź udział
+        other: Weź udział
       tax_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Decyzja Trybunału Podatkowego i Kanclerskiego
+        other: Decyzje Trybunału Podatkowego i Kanclerskiego
       transcript:
         few:
         many:
@@ -417,11 +435,12 @@ pl:
         many:
         one: Dane o transparentności
         other: Dane o transparentności
+        overview:
       utaac_decision:
         few:
         many:
-        one:
-        other:
+        one: Decyzja administracyjnego trybunału odwoławczego
+        other: Decyzje administracyjnego trybunału odwoławczego
       world_location_news_article:
         few:
         many:
@@ -430,28 +449,32 @@ pl:
       world_news_story:
         few:
         many:
-        one:
-        other:
+        one: Artykuł prasowy ze świata
+        other: Artykuły prasowe ze świata
       written_statement:
         few:
         many:
         one: Pisemne oświadczenie przed parlamentem
         other: Pisemne oświadczenia przed parlamentem
   corporate_information_page:
-    about_our_services_html:
+    about_our_services_html: Dowiedz się %{link}.
     corporate_information: Informacje korporacyjne
-    personal_information_charter_html: Nasz %{link} pokazuje, w jaki sposób traktujemy Państwa informacje osobiste
-    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle w naszym %{link}
-    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}
-    welsh_language_scheme_html: Poznaj nasze zobowiązania związane z publikowaniem w %{link}
+    personal_information_charter_html: Nasz %{link} pokazuje, w jaki sposób traktujemy Państwa informacje osobiste.
+    publication_scheme_html: Przeczytaj, jakiego rodzaju wiadomości publikujemy zwykle w naszym %{link}.
+    social_media_use_html: Przeczytaj naszą politykę dotyczącą %{link}.
+    welsh_language_scheme_html: Poznaj nasze zobowiązania związane z publikowaniem w %{link}.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Herb Ministerstwa Obrony
+    field_of_operation: Zakres działania
+    operations_in: Działania w %{location}
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -486,25 +509,24 @@ pl:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Już niedostępne
+    published_in_error: Informacje na tej stronie zostały usunięte, ponieważ zostały błędnie opublikowane.
+    title: Strona, której szukasz, nie jest już dostępna
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Strony w tym przewodniku
+    skip_to_contents: Przejdź do treści przewodnika
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Ta publikacja jest dostępna pod adresem %{url}
+      copyright: "© Właścicielem praw autorskich jest Korona %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Niniejsza publikacja jest objęta licencją Open Government Licence v3.0, chyba że zaznaczono inaczej. Aby zapoznać się z tą licencją, odwiedź <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> lub napisz do Zespołu ds. Polityki Informacyjnej, Archiwum Narodowe, Kew, Londyn TW9 4DU, lub wyślij wiadomość e-mail: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: W przypadku, gdy podano jakiekolwiek informacje o prawach autorskich stron trzecich, musisz uzyskać pozwolenie od stosownych właścicieli praw autorskich.
   i18n:
     direction:
   language_names:
@@ -575,60 +597,60 @@ pl:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Następny
+    previous_page: Poprzedni
+    print_entire_guide: Wydrukuj cały przewodnik
   publication:
-    details:
+    details: Szczegóły
     documents:
       few:
       many:
       one: Dokument
       other: Dokumenty
   service_sign_in:
-    continue:
+    continue: Kontynuuj
     error:
-      option:
-      title:
+      option: Proszę wybrać jedną z opcji
+      title: Nie wybrano żadnej opcji
   shared:
-    historically_political:
+    historically_political: Zostało to opublikowane w ramach %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Doradcy są dostępni na czacie.
+      busy: Wszyscy doradcy na czacie są w tej chwili zajęci.
+      closed: Czat jest obecnie zamknięty.
+      speak_to_adviser: Porozmawiaj z doradcą
+      technical_problem: Z powodu problemów technicznych, czat jest chwilowo niedostępny.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Logo programu to czarna pieczęć z napisem „Designated Origin UK Protected”
+    pgi_alt_text: Logo programu to czarna pieczęć z napisem „Geographic Origin UK Protected”
+    tsg_alt_text: Logo programu to czarna pieczęć z napisem „Traditional Specialty UK Protected”
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Dostarczono o
+    location: Lokalizacja
+    written_on: Napisano o
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Data anulowania
+    cancelled: Publikacja statystyk anulowana
+    changed_date: Data publikacji została zmieniona
+    forthcoming: Te statystyki zostaną opublikowane
+    previous_date: Poprzednia data
+    proposed_date: Proponowana publikacja
+    reason_for_change: Powód zmiany
+    release_date: Data publikacji
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odradza wszelkie podróże do niektórych części kraju, z wyjątkiem tych niezbędnych.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odradza wszelkie podróże do kraju, z wyjątkiem tych niezbędnych.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odradza wszelkie podróże do niektórych części kraju.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odradza wszelkie podróże do kraju.
+    context: Porady dotyczące podróży zagranicznych
+    still_current_at: Aktualne na dzień
+    summary: Podsumowanie
+    updated: Zaktualizowano
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Już niedostępne
+    summary: Informacje na tej stronie zostały usunięte, ponieważ zostały błędnie opublikowane.
+    title: Strona, której szukasz, nie jest już dostępna
   working_group:
-    contact_details:
-    policies:
+    contact_details: Dane kontaktowe
+    policies: Polityka

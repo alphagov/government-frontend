@@ -9,7 +9,6 @@ gu:
       text:
     heading_prefix:
   common:
-    last_updated:
     visit:
   components:
     figure:
@@ -21,8 +20,6 @@ gu:
       see_all_updates:
       show_all_updates:
     publisher_metadata:
-      collections:
-      from:
       hide_all:
       show_all:
     share_links:
@@ -49,7 +46,6 @@ gu:
     original_consultation:
     ran_from:
     respond_online:
-    'true':
     visit_soon:
     was:
     ways_to_respond:
@@ -88,6 +84,7 @@ gu:
       closed_consultation:
         one:
         other:
+        overview:
       cma_case:
         one:
         other:
@@ -100,21 +97,25 @@ gu:
       consultation_outcome:
         one:
         other:
+        overview:
       corporate_information_page:
         one:
         other:
       corporate_report:
         one:
         other:
+        overview:
       correspondence:
         one:
         other:
+        overview:
       countryside_stewardship_grant:
         one:
         other:
       decision:
         one:
         other:
+        overview:
       detailed_guide:
         one:
         other:
@@ -145,36 +146,43 @@ gu:
       foi_release:
         one:
         other:
+        overview:
       form:
         one:
         other:
+        overview:
       government_response:
         one:
         other:
       guidance:
         one:
         other:
+        overview:
       impact_assessment:
         one:
         other:
+        overview:
       imported:
         one:
         other:
       independent_report:
         one:
         other:
+        overview:
       international_development_fund:
         one:
         other:
       international_treaty:
         one:
         other:
+        overview:
       maib_report:
         one:
         other:
       map:
         one:
         other:
+        overview:
       medical_safety_alert:
         one:
         other:
@@ -184,6 +192,7 @@ gu:
       national_statistics:
         one:
         other:
+        overview:
       national_statistics_announcement:
         one:
         other:
@@ -196,18 +205,21 @@ gu:
       notice:
         one:
         other:
+        overview:
       official:
         one:
         other:
       official_statistics:
         one:
         other:
+        overview:
       official_statistics_announcement:
         one:
         other:
       open_consultation:
         one:
         other:
+        overview:
       oral_statement:
         one:
         other:
@@ -217,12 +229,14 @@ gu:
       policy_paper:
         one:
         other:
+        overview:
       press_release:
         one:
         other:
       promotional:
         one:
         other:
+        overview:
       publication:
         one:
         other:
@@ -232,9 +246,11 @@ gu:
       regulation:
         one:
         other:
+        overview:
       research:
         one:
         other:
+        overview:
       residential_property_tribunal_decision:
         one:
         other:
@@ -253,6 +269,7 @@ gu:
       standard:
         one:
         other:
+        overview:
       statement_to_parliament:
         one:
         other:
@@ -265,6 +282,7 @@ gu:
       statutory_guidance:
         one:
         other:
+        overview:
       take_part:
         one:
         other:
@@ -277,6 +295,7 @@ gu:
       transparency:
         one:
         other:
+        overview:
       utaac_decision:
         one:
         other:
@@ -296,14 +315,18 @@ gu:
     publication_scheme_html:
     social_media_use_html:
     welsh_language_scheme_html:
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text:
     field_of_operation:
     operations_in:
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -338,7 +361,6 @@ gu:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
@@ -467,10 +489,10 @@ gu:
     release_date:
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
+      avoid_all_but_essential_travel_to_parts_html:
+      avoid_all_but_essential_travel_to_whole_country_html:
+      avoid_all_travel_to_parts_html:
+      avoid_all_travel_to_whole_country_html:
     context:
     still_current_at:
     summary:

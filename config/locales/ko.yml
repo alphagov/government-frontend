@@ -2,234 +2,331 @@
 ko:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: 비즈니스에 대한 브렉시트 지침
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: 개인 및 가족에 대한 브렉시트 지침
+    heading_prefix: 차이가 있습니다
   common:
-    last_updated:
-    visit:
+    visit: '방문:'
   components:
     figure:
-      image_credit:
+      image_credit: '이미지 저작권: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: 모든 업데이트 숨기기
+      last_updated: 최근 업데이트일 %{date}
+      published: 발행일 %{date}
+      see_all_updates: 모든 업데이트 보기
+      show_all_updates: 모든 업데이트 보기
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: 모두 숨기기
+      show_all: 모두 보기
     share_links:
-      share_this_page:
+      share_this_page: 이 페이지 공유하기
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: 그리고
+    another_website_html: 이 상담 %{closed} 은 <a href="%{url}">다른 웹사이트</a>에서 진행되었습니다
+    at: 때
+    closes: 종결 시점
+    closes_at: 이 상담은 다음 시점에 종결됩니다
+    complete_a: 완료 시점
+    description: 상담 설명
+    detail_of_feedback_received: 받은 피드백의 세부 내용
+    detail_of_outcome: 결과의 세부 내용
+    documents: 문서
+    download_outcome: 전체 결과 다운로드하기
+    either: 또는
+    email_to: '다음으로 이메일 전송하기:'
+    feedback_received: 받은 피드백
+    is_being: 존재함
+    not_open_yet: 이 상담이 아직 공개되지 않았습니다
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: 이 상담이 공개되었습니다
+    original_consultation: 기존 상담
+    ran_from: 상담 실행 장소
+    respond_online: 온라인으로 응답하기
+    visit_soon: 이 페이지에 다시 방문하여 이 공공 피드백의 결과를 다운로드하십시오.
+    was: 그랬음
+    ways_to_respond: 응답 방법
+    write_to: '다음에 작성:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: 이메일
+    find_call_charges: 통화비에 대해 알아보기
+    online: 온라인
+    phone: 전화번호
+    webchat: 웹챗
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: 이 문서는 다음 날짜에 발행됩니다
+    contents: 콘텐츠
     metadata:
       published: 발행
       updated: 업데이트
     schema_name:
       aaib_report:
-        other:
+        one: 영국 항공사고조사위원회 보고서
+        other: 영국 항공사고조사위원회 보고서
       announcement:
-        other: 공지
+        one: 발표
+        other: 발표
       asylum_support_decision:
-        other:
+        one: 망명 지원 법원 판결
+        other: 망명 지원 법원 판결
       authored_article:
-        other: 기사
+        one: 저작물
+        other: 저작물
       business_finance_support_scheme:
-        other:
+        one: 비즈니스 재무 지원 계획
+        other: 비즈니스 재무 지원 계획
       case_study:
-        other: 케이스 스터디
+        one: 사례 연구
+        other: 사례 연구
       closed_consultation:
-        other: 비공개 협의
+        one: 종결된 상담
+        other: 종결된 상담
+        overview:
       cma_case:
-        other:
+        one: 경쟁 및 시장 감독 사례
+        other: 경쟁 및 시장 감독 사례
       coming_soon:
-        other:
+        one: 곧 공개됩니다
+        other: 곧 공개됩니다
       consultation:
-        other: 협의
+        one: 상담
+        other: 상담
       consultation_outcome:
-        other: 협의 결과
+        one: 상담 결과
+        other: 상담 결과
+        overview:
       corporate_information_page:
-        other:
+        one: 정보 페이지
+        other: 정보 페이지
       corporate_report:
-        other: 기업 레포트
+        one: 기업 보고서
+        other: 기업 보고서
+        overview:
       correspondence:
-        other: 서신
+        one: 통신
+        other: 통신
+        overview:
       countryside_stewardship_grant:
-        other:
+        one: 농촌환경관리 보조금
+        other: 농촌환경관리 보조금
       decision:
-        other:
+        one: 판결
+        other: 판결
+        overview:
       detailed_guide:
-        other: 상세 안내
+        one: 지침
+        other: 지침
       dfid_research_output:
-        other:
+        one: 발전 결과에 대한 연구
+        other: 발전 결과에 대한 연구
       document_collection:
-        other:
+        one: 컬렉션
+        other: 컬렉션
       draft_text:
-        other: 드래프트 택스트
+        one: 초안 텍스트
+        other: 초안 텍스트
       drug_safety_update:
-        other:
+        one: 의약품 안전 업데이트
+        other: 의약품 안전 업데이트
       employment_appeal_tribunal_decision:
-        other:
+        one: 고용 항소 법원 판결
+        other: 고용 항소 법원 판결
       employment_tribunal_decision:
-        other:
+        one: 고용 법원 판결
+        other: 고용 법원 결정
       esi_fund:
-        other:
+        one: 유럽구조투자기금(ESIF)
+        other: 유럽구조투자기금(ESIF)
       fatality_notice:
+        one: 사상자 공지
         other: 사상자 공지
       foi_release:
-        other: FOI 보도자료
+        one: FOI 발표
+        other: FOI 발표
+        overview:
       form:
-        other: 문서
+        one: 양식
+        other: 양식
+        overview:
       government_response:
-        other: 정부 대책
+        one: 정부 대응
+        other: 정부 대응
       guidance:
-        other: 안내
+        one: 지침
+        other: 지침
+        overview:
       impact_assessment:
-        other: 임팩트 평가
+        one: 영향 평가
+        other: 영향 평가
+        overview:
       imported:
-        other: 수입 - 대기
+        one: 수입 - 대기 유형
+        other: 수입 - 대기 유형
       independent_report:
-        other: 독립 레포트
+        one: 독립적 보고서
+        other: 독립적 보고서
+        overview:
       international_development_fund:
-        other:
+        one: 국제 개발 자금
+        other: 국제 개발 자금
       international_treaty:
-        other:
+        one: 국제 조약
+        other: 국제 조약
+        overview:
       maib_report:
-        other:
+        one: 영국 해상사고조사위원회 보고서
+        other: 영국 해상사고조사위원회 보고서
       map:
+        one: 지도
         other: 지도
+        overview:
       medical_safety_alert:
-        other:
+        one: 의약품 및 의료기기에 대한 경고 및 리콜
+        other: 의약품 및 의료기기에 대한 경고 및 리콜
       national:
-        other:
+        one: 국내 통계 공지사항
+        other: 국내 통계 공지사항
       national_statistics:
-        other: 통계 - 국가 통계
+        one: 국내 통계
+        other: 국내 통계
+        overview:
       national_statistics_announcement:
-        other:
+        one: 국내 통계 공지사항
+        other: 국내 통계 공지사항
       news_article:
-        other: 뉴스
+        one: 뉴스 기사
+        other: 뉴스 기사
       news_story:
+        one: 뉴스 스토리
         other: 뉴스 스토리
       notice:
-        other:
+        one: 공지
+        other: 공지
+        overview:
       official:
-        other:
+        one: 공식 통계 공지사항
+        other: 공식 통계 공지사항
       official_statistics:
-        other: 통계
+        one: 공식 통계
+        other: 공식 통계
+        overview:
       official_statistics_announcement:
-        other:
+        one: 공식 통계 공지사항
+        other: 공식 통계 공지사항
       open_consultation:
-        other: 오픈 컨설테이션
+        one: 공개 상담
+        other: 공개 상담
+        overview:
       oral_statement:
+        one: 의회로 구두 성명
         other: 의회로 구두 성명
       policy:
+        one: 정책
         other: 정책
       policy_paper:
-        other: 정책 논문
+        one: 정책 문서
+        other: 정책 문서
+        overview:
       press_release:
+        one: 보도자료
         other: 보도자료
       promotional:
-        other: 홍보물
+        one: 홍보 자료
+        other: 홍보 자료
+        overview:
       publication:
-        other: 간행물
+        one: 발행물
+        other: 발행물
       raib_report:
-        other:
+        one: 영국 철도사고조사위원회 보고서
+        other: 영국 철도사고조사위원회 보고서
       regulation:
-        other:
+        one: 규제
+        other: 규제
+        overview:
       research:
-        other: 리써치 및 분석
+        one: 조사 및 분석
+        other: 조사 및 분석
+        overview:
       residential_property_tribunal_decision:
-        other:
+        one: 주거재산법원 판결
+        other: 주거재산법원 판결
       service_sign_in:
-        other:
+        one: 서비스 로그인
+        other: 서비스 로그인
       service_standard_report:
-        other:
+        one: 서비스 표준 보고서
+        other: 서비스 표준 보고서
       speaking_notes:
-        other: 요점사항
+        one: 연설문 메모
+        other: 연설문 메모
       speech:
+        one: 연설문
         other: 연설문
       standard:
-        other:
+        one: 표준
+        other: 표준
+        overview:
       statement_to_parliament:
+        one: 의회로 성명
         other: 의회로 성명
       statistical_data_set:
+        one: 통계 데이터 세트
         other: 통계 데이터 세트
       statistics_announcement:
-        other:
+        one: 통계 공개 발표
+        other: 통계 공개 발표
       statutory_guidance:
-        other:
+        one: 법정지도
+        other: 법정지도
+        overview:
       take_part:
-        other:
+        one: 참여하기
+        other: 참여하기
       tax_tribunal_decision:
-        other:
+        one: 조세 및 형평법 법원 판결
+        other: 조세 및 형평법 법원 판결
       transcript:
-        other: 트랜스크립트
+        one: 녹취록
+        other: 녹취록
       transparency:
-        other: 투명성 데이타
+        one: 투명성 데이터
+        other: 투명성 데이터
+        overview:
       utaac_decision:
-        other:
+        one: 행정 항소심판 법원 판결
+        other: 행정 항소심판 법원 판결
       world_location_news_article:
-        other: 뉴스
+        one: 뉴스 기사
+        other: 뉴스 기사
       world_news_story:
-        other:
+        one: 세계 뉴스 스토리
+        other: 세계 뉴스 스토리
       written_statement:
+        one: 의회로 서면 성명
         other: 의회로 서면 성명
   corporate_information_page:
-    about_our_services_html:
+    about_our_services_html: "%{link} 를 찾아보십시오."
     corporate_information: 대사관 정보
-    personal_information_charter_html: "%{link} 에서 개인정보 처리에 대한 안내"
-    publication_scheme_html: 정기적으로 공개되는 %{link} 정보에 대한 안내
+    personal_information_charter_html: "%{link} 에서 개인정보 처리에 대한 안내."
+    publication_scheme_html: 정기적으로 공개되는 %{link} 정보에 대한 안내.
     social_media_use_html: "%{link} 에서 정책 정보 확인"
-    welsh_language_scheme_html: "%{link} 에서 정보 공개에 대한 내용"
+    welsh_language_scheme_html: "%{link} 에서 정보 공개에 대한 내용."
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: 국방부 문장
+    field_of_operation: 운영 현장
+    operations_in: "%{Location} 내 운영"
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -264,25 +361,24 @@ ko:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: 더 이상 이용할 수 없음
+    published_in_error: 이 페이지의 정보는 잘못된 내용이 발행되어서 삭제되었습니다.
+    title: 지금 보고있는 페이지를 더 이상 이용할 수 없습니다
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: 이 지침 내 페이지
+    skip_to_contents: 지침 콘텐츠로 건너뛰기
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: 이 발행물은 %{url}에서 이용할 수 있습니다
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 본 출판물은 달리 명시된 경우를 제외하고 정부 공개 라이선스 v3.0의 조항에 따라 라이선스됩니다. 이 라이선스를 보려면 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> 에 방문하거나, 정보 정책 팀(Information Policy Team), 국립 아카이브(The National Archives), Kew, London TW9 4DU에 문의를 남기거나 다음 주소로 이메일을 보내십시오. <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>
+      third_party: 서드파티 저작권 정보를 확인한 경우, 해당 저작권자의 허가를 받아야 합니다.
   i18n:
     direction:
   language_names:
@@ -353,57 +449,58 @@ ko:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: 다음
+    previous_page: 이전
+    print_entire_guide: 전체 지침 출력하기
   publication:
-    details:
+    details: 세부 정보
     documents:
+      one: 문서
       other: 문서
   service_sign_in:
-    continue:
+    continue: 계속
     error:
-      option:
-      title:
+      option: 옵션을 선택하십시오
+      title: 옵션을 선택하지 않았습니다
   shared:
-    historically_political:
+    historically_political: 이 문서는 %{government} 산하에 출판되었습니다
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: 자문이 대화를 나눌 수 있습니다.
+      busy: 모든 웹챗 자문이 지금 바쁩니다.
+      closed: 현재 웹챗이 닫혔습니다.
+      speak_to_adviser: 지금 자문에게 말하기
+      technical_problem: 기술 문제로 현재 웹챗을 이용할 수 없습니다.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: 정책 로고는 Designated Origin UK Protected라는 글자가 담긴 검정색 도장입니다
+    pgi_alt_text: 계획 로고는 Geographic Origin UK Protected라는 글자가 담긴 검정색 도장입니다
+    tsg_alt_text: 정책 로고는 Traditional Speciality UK Protected라는 글자가 담긴 검정색 도장입니다
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: 행사 일시
+    location: 위치
+    written_on: 작성 날짜
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: 취소 날짜
+    cancelled: 통계 공개가 취소되었습니다
+    changed_date: 공개 날짜가 변경되었습니다
+    forthcoming: 이 통계는 공개될 것입니다
+    previous_date: 이전 날짜
+    proposed_date: 제안 공개
+    reason_for_change: 변경 이유
+    release_date: 공개 날짜
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가의 각지를 여행하지 말라고 권고합니다.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가의 전역을 여행하지 말라고 권고합니다.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가 각지로의 모든 여행을 삼가라고 권고합니다.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가 전역으로의 모든 여행을 삼가라고 권고합니다.
+    context: 외국 여행 권고
+    still_current_at: 최신 상태
+    summary: 요약
+    updated: 업데이트
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: 더 이상 이용할 수 없음
+    summary: 이 페이지의 정보는 잘못된 내용이 발행되어서 삭제되었습니다.
+    title: 지금 보고있는 페이지를 더 이상 이용할 수 없습니다
   working_group:
-    contact_details:
-    policies:
+    contact_details: 콘택트 세부 정보
+    policies: 정책

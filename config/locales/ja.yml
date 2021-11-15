@@ -2,234 +2,331 @@
 ja:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: 企業向けBrexitガイダンス
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: 個人および家族向けBrexitガイダンス
+    heading_prefix: 違いがあります
   common:
-    last_updated:
-    visit:
+    visit: 訪問：
   components:
     figure:
-      image_credit:
+      image_credit: 画像著作権：％{credit}
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: すべての更新を非表示
+      last_updated: 最終更新日：%{date}
+      published: 公開日：％{date}
+      see_all_updates: すべての更新を見る
+      show_all_updates: すべての更新を表示
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: すべて非表示
+      show_all: すべて表示
     share_links:
-      share_this_page:
+      share_this_page: このページを共有
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: および
+    another_website_html: この審議％{closed}は、<ahref = "％{url}">別のウェブサイト</a>で行われました
+    at: 時間：
+    closes: 終了時間：
+    closes_at: 審議終了時間：
+    complete_a: 次を完成させる：
+    description: 審議内容
+    detail_of_feedback_received: 受け取ったフィードバックの詳細
+    detail_of_outcome: 結果の詳細
+    documents: ドキュメント
+    download_outcome: 完全な結果をダウンロードする
+    either: どちらか
+    email_to: Eメール送信先：
+    feedback_received: フィードバックを受信しました
+    is_being: 継続中
+    not_open_yet: この審議はまだ開かれていません
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: この審議が始まります
+    original_consultation: 当初の審議
+    ran_from: この審議が始まった時間：
+    respond_online: オンラインで返信する
+    visit_soon: この一般向けフィードバックの結果をダウンロードするには、すぐにこのページにアクセスしてください。
+    was: 終了
+    ways_to_respond: 対応方法
+    write_to: 書き込み先：
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: Eメール
+    find_call_charges: 通話料金について調べる
+    online: オンライン
+    phone: 電話
+    webchat: ウェブチャット
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: '本ドキュメントの公開日:'
+    contents: コンテンツ
     metadata:
       published: 掲載日
-      updated: 更新
+      updated: 更新済み
     schema_name:
       aaib_report:
-        other:
+        one: 航空事故調査局報告書
+        other: 航空事故調査局報告書
       announcement:
-        other: ニュース
+        one: お知らせ
+        other: お知らせ
       asylum_support_decision:
-        other:
+        one: 難民支援審判所（Asylum support tribunal）の決定
+        other: 難民支援審判所（Asylum support tribunal）の決定
       authored_article:
-        other:
+        one: 執筆記事
+        other: 執筆記事
       business_finance_support_scheme:
-        other:
+        one: 企業金融支援制度
+        other: 企業金融支援制度
       case_study:
+        one: ケーススタディ
         other: ケーススタディ
       closed_consultation:
-        other: 非公開協議
+        one: 非公開審議
+        other: 非公開審議
+        overview:
       cma_case:
-        other:
+        one: 競争市場庁の事例
+        other: 競争市場庁の事例
       coming_soon:
-        other:
+        one: 近日公開
+        other: 近日公開
       consultation:
-        other: 協議
+        one: 審議
+        other: 審議
       consultation_outcome:
-        other: 協議結果
+        one: 審議結果
+        other: 審議結果
+        overview:
       corporate_information_page:
-        other:
+        one: 情報ページ
+        other: 情報ページ
       corporate_report:
-        other: 事業報告
+        one: 企業報告書
+        other: 企業報告書
+        overview:
       correspondence:
-        other: 通信文書
+        one: 対応
+        other: 対応
+        overview:
       countryside_stewardship_grant:
-        other:
+        one: カントリーサイドスチュワードシップ助成金
+        other: カントリーサイドスチュワードシップ助成金
       decision:
-        other:
+        one: 決定
+        other: 決定
+        overview:
       detailed_guide:
-        other: 詳細説明
-      dfid_research_output:
-        other:
-      document_collection:
-        other:
-      draft_text:
-        other: 草稿
-      drug_safety_update:
-        other:
-      employment_appeal_tribunal_decision:
-        other:
-      employment_tribunal_decision:
-        other:
-      esi_fund:
-        other:
-      fatality_notice:
-        other: 死亡告示
-      foi_release:
-        other: 情報公開に関するニュース
-      form:
-        other: フォーム
-      government_response:
-        other: レスポンス
-      guidance:
+        one: ガイダンス
         other: ガイダンス
+      dfid_research_output:
+        one: 開発成果の研究
+        other: 開発成果の研究
+      document_collection:
+        one: コレクション
+        other: コレクション
+      draft_text:
+        one: 下書きテキスト
+        other: 下書きテキスト
+      drug_safety_update:
+        one: 医薬品安全性の最新情報
+        other: 医薬品安全性の最新情報
+      employment_appeal_tribunal_decision:
+        one: 雇用上訴審判所（Employment appeal tribunal）の決定
+        other: 雇用上訴審判所（Employment appeal tribunal）の決定
+      employment_tribunal_decision:
+        one: 雇用審判所（Employment tribunal decision）の決定
+        other: 雇用審判所（Employment tribunal decision）の決定
+      esi_fund:
+        one: 欧州構造投資基金 (ESIF)
+        other: 欧州構造投資基金 (ESIF)
+      fatality_notice:
+        one: 死亡通知
+        other: 死亡通知
+      foi_release:
+        one: FOI（情報公開）発表
+        other: FOI（情報公開）発表
+        overview:
+      form:
+        one: フォーム
+        other: フォーム
+        overview:
+      government_response:
+        one: 政府の対応
+        other: 政府の対応
+      guidance:
+        one: ガイダンス
+        other: ガイダンス
+        overview:
       impact_assessment:
+        one: 影響評価
         other: 影響評価
+        overview:
       imported:
-        other: 確認中
+        one: インポート済み - 待機中の種別
+        other: インポート済み - 待機中の種別
       independent_report:
-        other: 第三者機関によるレポート
+        one: 第三者による報告
+        other: 第三者による報告
+        overview:
       international_development_fund:
-        other:
+        one: 国際開発資金
+        other: 国際開発資金
       international_treaty:
-        other:
+        one: 国際条約
+        other: 国際条約
+        overview:
       maib_report:
-        other:
+        one: 海難調査支部報告書
+        other: 海難調査支部報告書
       map:
+        one: 地図
         other: 地図
+        overview:
       medical_safety_alert:
-        other:
+        one: 医薬品・医療機器の注意喚起及び回収
+        other: 医薬品・医療機器の注意喚起及び回収
       national:
-        other:
+        one: 全国統計発表
+        other: 全国統計発表
       national_statistics:
+        one: 国家統計
         other: 国家統計
+        overview:
       national_statistics_announcement:
-        other:
+        one: 全国統計発表
+        other: 全国統計発表
       news_article:
-        other: ニュース
+        one: ニュース記事
+        other: ニュース記事
       news_story:
-        other: ニュース
+        one: ニュースストーリー
+        other: ニュースストーリー
       notice:
-        other:
+        one: お知らせ
+        other: お知らせ
+        overview:
       official:
-        other:
+        one: 公式統計発表
+        other: 公式統計発表
       official_statistics:
-        other: 統計
+        one: 公式統計
+        other: 公式統計
+        overview:
       official_statistics_announcement:
-        other:
+        one: 公式統計発表
+        other: 公式統計発表
       open_consultation:
-        other: 公開協議
+        one: 公開審議
+        other: 公開審議
+        overview:
       oral_statement:
-        other: 議会に対する口頭陳述
+        one: 議会への口頭声明
+        other: 議会への口頭声明
       policy:
-        other: 政策
+        one: 方針
+        other: 方針
       policy_paper:
-        other: 政策文書
+        one: 方針書
+        other: 方針書
+        overview:
       press_release:
-        other: 新聞発表
+        one: プレスリリース
+        other: プレスリリース
       promotional:
-        other: 宣伝資料
+        one: 販促資料
+        other: 販促資料
+        overview:
       publication:
+        one: 出版物
         other: 出版物
       raib_report:
-        other:
+        one: 鉄道事故調査委員会報告書
+        other: 鉄道事故調査委員会報告書
       regulation:
-        other:
+        one: 規制
+        other: 規則
+        overview:
       research:
+        one: 調査と分析
         other: 調査と分析
+        overview:
       residential_property_tribunal_decision:
-        other:
+        one: 居住用財産審判所（Residential property tribunal）の決定
+        other: 居住用財産審判所（Residential property tribunal）の決定
       service_sign_in:
-        other:
+        one: サービスサインイン
+        other: サービスサインイン
       service_standard_report:
-        other:
+        one: サービス標準報告書
+        other: サービス標準報告書
       speaking_notes:
-        other: キーポイント
+        one: 発言ノート
+        other: 発言ノート
       speech:
+        one: スピーチ
         other: スピーチ
       standard:
-        other:
+        one: 標準
+        other: 標準
+        overview:
       statement_to_parliament:
-        other: 閣僚声明
+        one: 議会への声明
+        other: 議会への声明
       statistical_data_set:
+        one: 統計データセット
         other: 統計データセット
       statistics_announcement:
-        other:
+        one: 統計リリース発表
+        other: 統計リリースの発表
       statutory_guidance:
-        other:
+        one: 法定ガイダンス
+        other: 法定ガイダンス
+        overview:
       take_part:
-        other:
+        one: 参加する
+        other: 参加する
       tax_tribunal_decision:
-        other:
+        one: 租税及び衡平審判所（Tax and Chancery tribunal）の決定
+        other: 租税及び衡平審判所（Tax and Chancery tribunal）の決定
       transcript:
-        other: スピーチ全文
+        one: 口述記録
+        other: 口述記録
       transparency:
+        one: 透明性データ
         other: 透明性データ
+        overview:
       utaac_decision:
-        other:
+        one: 行政控訴審判所（Administrative appeals tribunal decision）の決定
+        other: 行政控訴審判所（Administrative appeals tribunal decision）の決定
       world_location_news_article:
-        other: ニュース
+        one: ニュース記事
+        other: ニュース記事
       world_news_story:
-        other:
+        one: 世界のニュース記事
+        other: 世界のニュース記事
       written_statement:
-        other: 閣僚声明文
+        one: 議会への書面による声明
+        other: 議会への書面による声明
   corporate_information_page:
-    about_our_services_html:
+    about_our_services_html: "％{link} をご覧ください。"
     corporate_information: 各種情報
-    personal_information_charter_html: 個人情報の取り扱いについては %{link} をご覧下さい
-    publication_scheme_html: 情報公開の種類については %{link} をご覧下さい
-    social_media_use_html: "%{link}に関する政策を読む"
-    welsh_language_scheme_html: 情報公開の詳細については %{link} をご覧下さい
+    personal_information_charter_html: 個人情報の取り扱いについては %{link} をご覧下さい。
+    publication_scheme_html: 情報公開の種類については %{link} をご覧下さい。
+    social_media_use_html: "%{link} に関する政策をご覧下さい。"
+    welsh_language_scheme_html: 情報公開の詳細については %{link} をご覧下さい。
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: 国防省の紋章
+    field_of_operation: 運用分野
+    operations_in: "％{location} での操作"
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -264,25 +361,24 @@ ja:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: ご利用いただけません
+    published_in_error: このページの情報は、誤って公開されたため削除されました。
+    title: お探しのページはご利用いただけなくなりました
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: このガイドのページ
+    skip_to_contents: ガイドのコンテンツに移動
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: この出版物は％{url}で入手できます
+      copyright: "© Crown copyright %{year}"
+      isbn: ISBN：
+      licence_html: 本書は、特に明記されていない限り、Open Government License v 3.0の条件に基づいてライセンスされています。このライセンスを確認するには、<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> にアクセスするか、Information Policy Team、The National Archives、Kew、London TW 9 4 DU、またはEメールにて <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>までお問い合わせください。
+      third_party: 第三者の著作権情報を特定した場合は、関係する著作権所有者から許可を得る必要があります。
   i18n:
     direction:
   language_names:
@@ -314,7 +410,7 @@ ja:
     id:
     is:
     it:
-    ja: 日本語
+    ja: 日本
     ka:
     kk:
     ko:
@@ -353,57 +449,58 @@ ja:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: 次へ
+    previous_page: 前へ
+    print_entire_guide: ガイド全体を印刷する
   publication:
-    details:
+    details: 詳細
     documents:
-      other: お知らせ
+      one: ドキュメント
+      other: ドキュメント
   service_sign_in:
-    continue:
+    continue: 続ける
     error:
-      option:
-      title:
+      option: オプションを択してください
+      title: オプションを選択していません
   shared:
-    historically_political:
+    historically_political: 本件は、％{government}で公開されました
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: アドバイザーのチャットがご利用いただけます。
+      busy: 現在、すべてのウェブチャットアドバイザーはビジーです。
+      closed: ウェブチャットは現在ご利用いただけません。
+      speak_to_adviser: 今すぐアドバイザーにご相談ください
+      technical_problem: 技術的な問題により、現在ウェブチャットはご利用いただけません。
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
+    pgi_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
+    tsg_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: 配信日：
+    location: 場所
+    written_on: 記述日：
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: キャンセル日
+    cancelled: 統計発表がキャンセルされました
+    changed_date: 発表日程が変更されました
+    forthcoming: これらの統計は公開されます
+    previous_date: 以前の日程
+    proposed_date: 予定されている発表
+    reason_for_change: 変更理由
+    release_date: 発表日程
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内一部地域への必要不可欠ものを除くすべての移動を控えるよう勧告しています。
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内での必要不可欠ものを除くすべての移動を控えるよう勧告しています。
+      avoid_all_travel_to_parts_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内一部地域へのすべての移動を控えるよう勧告しています。
+      avoid_all_travel_to_whole_country_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内すべての移動を控えるよう勧告しています。
+    context: 海外旅行のアドバイス
+    still_current_at: 現状：
+    summary: 概要
+    updated: 更新済み
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: 利用できません
+    summary: このページの情報は、誤って公開されたため削除されました。
+    title: お探しのページはご利用いただけなくなりました
   working_group:
-    contact_details:
-    policies:
+    contact_details: 連絡先の詳細
+    policies: 方針

@@ -2,308 +2,331 @@
 pa-pk:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: کاروباراں لئی Brexitواسطے رہنمائی
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: بندیاں تے خانداں لئیBrexit واسطے رہنمائی
+    heading_prefix: ایہ فرق اے
   common:
-    last_updated:
-    visit:
+    visit: 'ویکھو:'
   components:
     figure:
-      image_credit:
+      image_credit: 'امیج کریڈٹ: {credit} %'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: سارے تازہ ترین حالات نوں لُکا لوؤ
+      last_updated: اخری وار تازہ ترین بنایا {date} %
+      published: شائع ہویا {date} %
+      see_all_updates: ساری تازہ ترین صورتِ حال
+      show_all_updates: ساری تازہ ترین صورتِ حال وکھاؤ
     publisher_metadata:
-      collections:
-      from:
-      hide_all:
-      show_all:
+      hide_all: سارا لُکاؤ
+      show_all: سارا وکھاؤ
     share_links:
-      share_this_page:
+      share_this_page: ایہ ورقہ تقسیم کرو
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: ہور
+    another_website_html: ایہ مشورہ  {closed} %ایندے تے وقوعہ ہویا <a href="%{url}">دُوسری ویب سائٹ</a>
+    at: ایندے تے
+    closes: ایہ ایندے تے بند ہوندا اے
+    closes_at: ایہ مشاورت ایندے تے بند ہوندی اے
+    complete_a: اک پُورا کرو
+    description: مشاورت دی وضاحت
+    detail_of_feedback_received: موصول شُدہ جواب دی تفصیل
+    detail_of_outcome: نتیجے دی تفصیل
+    documents: دستاویزات
+    download_outcome: سارے نتائج ڈاؤن لوڈ کرو
+    either: کوئی اک
+    email_to: اینوں ای میل کرو
+    feedback_received: جواب مل گیا
+    is_being: ایہ وی
+    not_open_yet: ایہ مشاورت ہلے نئیں کُھلی
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    'true':
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: ایہ مشاورت کُھل گئی اے
+    original_consultation: اصلی مشاورت
+    ran_from: ایہ مشاورت داچلایا ہویا فارم اے
+    respond_online: آن لائن جاب دیوؤ
+    visit_soon: ایس ورقے تے چھیتی واپس آؤ عوام ولوں دتے گئے جواب نوں ڈاؤن لوڈ کرو&nbsp;جواب۔
+    was: او سی
+    ways_to_respond: جواب دین دے طریقے
+    write_to: اینوں لکھو
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: ای میل
+    find_call_charges: سارے خرچے دے بارے جانو
+    online: آن لائن جاب دیوؤ
+    phone: فون
+    webchat: ویب چیٹ
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: ایہ دستاویز ایس دن شائع ہوؤئے گی
+    contents: مواد
     metadata:
-      published:
-      updated:
+      published: شائع ہویا
+      updated: تازہ ترین حال
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: ہوائی حادثیاں دی تفتیشی برانچ دی رپورٹ
+        other: ہوائی حادثیاں دی تفتیشی برانچ دیاں رپورٹاں
       announcement:
         one: اعلان
         other: اعلانات
       asylum_support_decision:
-        one:
-        other:
+        one: پناہ دی مدد لئی عدالت دا فیصلہ
+        other: پناہ دی مدد لئی عدالت دےفیصلے
       authored_article:
-        one: تصنیف شدہ مضمون
-        other: تصنیف شدہ مضامین
+        one: لکھاری دا مضمون
+        other: لکھاری دے مضمون
       business_finance_support_scheme:
-        one:
-        other:
+        one: کاروبار دی مالی مدد دا منصوبہ
+        other: کاروبار دی مالی مدد دے منصوبے
       case_study:
-        one: کیس سٹڈی
-        other: کیس سٹڈیز
+        one: کیس دی پڑھائی
+        other: کیس دی پڑھائی
       closed_consultation:
-        one: بند مشورہ
-        other: بند مشورے
+        one: مشاورت بند ہوئی
+        other: مشاورت بند ہوئی
+        overview:
       cma_case:
-        one:
-        other:
+        one: مقابلہ تے منڈی دے اختیار دا مقدمہ
+        other: مقابلہ تے منڈی دے اختیار دے مقدمے
       coming_soon:
-        one:
-        other:
+        one: چھیتی آ رہیا اے
+        other: چھیتی آ رہیا اے
       consultation:
         one: مشورہ
-        other: مشورے
+        other: 'مشورے '
       consultation_outcome:
         one: مشورے دا نتیجہ
-        other: مشورے دے نتیجے
+        other: مشورے دے نتائج
+        overview:
       corporate_information_page:
-        one:
-        other:
+        one: خبراں دا ورقہ
+        other: خبراں دا ورقے
       corporate_report:
-        one: کاروباری روپوٹ
-        other: کاروباری روپوٹاں
+        one: کاروبار دی رپورٹ
+        other: کاروبار دیاں رپورٹاں
+        overview:
       correspondence:
-        one: خط و کتابت
-        other: خط و کتابت
+        one: خط وکتابت
+        other: خط وکتابت
+        overview:
       countryside_stewardship_grant:
-        one:
-        other:
+        one: پنڈ دی چوکیداری لئی مدد
+        other: پند دی چوکیداری لئی امداد
       decision:
         one: فیصلہ
         other: فیصلے
+        overview:
       detailed_guide:
-        one: گائڈنس
-        other: گائڈنس
+        one: 'رہنمائی '
+        other: 'رہنمائی '
       dfid_research_output:
-        one:
-        other:
+        one: ترقی دے نتیجے لئی کھوج
+        other: ترقی دے نتیجے لئی کھوج
       document_collection:
         one: مجموعہ
         other: مجموعے
       draft_text:
-        one: متن دا مسودہ
-        other: متن دے مسودے
+        one: لکھیا ہویا مواد
+        other: لکھیا ہویا مواد
       drug_safety_update:
-        one:
-        other:
+        one: منشیات توں حفاظت دی تازہ ترین صورتِ حال
+        other: منشیات توں حفاظت دی تازہ ترین صورتِ حال
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: ملازمت دی درخواست تے عدالت دا فیصلہ
+        other: ملازمت دی درخواست تے عدالت دے فیصلے
       employment_tribunal_decision:
-        one:
-        other:
+        one: ملازمت دی عدالت دا فیصلہ
+        other: ملازمت دی عدالت دے فیصلے
       esi_fund:
-        one:
-        other:
+        one: یورپئین سڑکچکرل انوسٹمینٹ فنڈ (ESIF)
+        other: یورپئین سڑکچکرل انوسٹمینٹ فنڈ (ESIF)
       fatality_notice:
-        one:
-        other:
+        one: موت بارے نوٹس
+        other: موت بارے نوٹسز
       foi_release:
-        one: FOI اجراء
-        other: FOI اجراء
+        one: فریڈم آف انفارمیشن جاری کرنا
+        other: فریڈم آف انفارمیشن جاری کرنا
+        overview:
       form:
-        one: فارم
-        other: فارم
+        one: 'فارم '
+        other: فارمز
+        overview:
       government_response:
-        one: سرکاری جواب
-        other: سرکاری جواب
+        one: حکومت دا جواب
+        other: حکومت دے جوابات
       guidance:
-        one: گائڈنس
-        other: گائڈنس
+        one: رہنمائی
+        other: 'رہنمائی '
+        overview:
       impact_assessment:
-        one: اثر دا اندازہ
-        other: اثر دے اندازے
+        one: اثر دی جانچ
+        other: اثر دی جانچ
+        overview:
       imported:
-        one: درآمد شدہ- منتظر قسم
-        other: درآمد شدہ- منتظر قسم
+        one: درآمد شُدہ- انتظار کرن دی قسم
+        other: درآمد شُدہ- انتظار کرن دی قسم
       independent_report:
-        one: آزاد رپورٹ
-        other: آزاد رپورٹاں
+        one: خودمُختار رپورٹ
+        other: خودمُختار رپورٹس
+        overview:
       international_development_fund:
-        one:
-        other:
+        one: بین الاقوامی ترقی دا فنڈنگ
+        other: بین الاقوامی ترقی دا فنڈنگ
       international_treaty:
         one: بین الاقوامی معاہدہ
-        other: بین الاقوامی معاہدے
+        other: بین الاقوامی معایدے
+        overview:
       maib_report:
-        one:
-        other:
+        one: بحری حادثے دی تفتیش دی برانچ دی رپورٹ
+        other: بحری حادثے دی تفتیش دی برانچ دیاں رپورٹاں
       map:
         one: نقشہ
         other: نقشے
+        overview:
       medical_safety_alert:
-        one:
-        other:
+        one: طبی آلات تے ادویات بارے ہُشیاری تے واپسی
+        other: طبی آلات تے ادویات بارے ہُشیاری تے واپسی
       national:
-        one:
-        other:
+        one: قومی اعدادو شمار دا اعلان
+        other: قومی اعدادو شمار دے اعلانات
       national_statistics:
-        one: قومی شماریات
-        other: قومی شماریات
+        one: قومی اعدادوشمار
+        other: قومی اعدادوشمار
+        overview:
       national_statistics_announcement:
-        one:
-        other:
+        one: قومی اعدادوشمار دا اعلان
+        other: قومی اعدادوشمار دے اعلانات
       news_article:
-        one: خبر دا مضمون
-        other: خبر دے مضمون
+        one: خبراں دا مضمون
+        other: خبراں دے مضمون
       news_story:
-        one: خبر دی کہانی
-        other: خبر دی کہانیاں
+        one: خبراں دی کہانی
+        other: خبراں دیاں کہانیاں
       notice:
         one: نوٹس
-        other: نوٹس
+        other: ںوٹسز
+        overview:
       official:
-        one:
-        other:
+        one: سرکاری اعدادوشمار دا اعلان
+        other: سرکاری اعدادوشمار دے اعلانات
       official_statistics:
-        one: دفتری شماریات
-        other: دفتری شماریات
+        one: سرکاری اعدادوشمار
+        other: سرکاری اعدادوشمار
+        overview:
       official_statistics_announcement:
-        one:
-        other:
+        one: سرکاری اعدادوشمار دا اعلان
+        other: سرکاری اعدادوشمار دے اعلانات
       open_consultation:
-        one: آزاد مشورہ
-        other: آزاد مشورے
+        one: 'کُھلی مشاورت '
+        other: 'کُھلی مشاورت '
+        overview:
       oral_statement:
-        one: پارلیمنٹ نوں زبانی بیان
-        other: پارلیمنٹ نوں زبانی بیانات
+        one: قومی مجلس دے سامنے زبانی بیان
+        other: قومی مجلس دے سامنے زبانی بیانات
       policy:
-        one:
-        other:
+        one: حکمتِ عملی
+        other: حکمتِ عملی
       policy_paper:
-        one: پالیسی دا کاغذ
-        other: پالیسی دے کاغذات
+        one: حکمت عملی دا کاغذ
+        other: حکمتِ عملی دے کاغذات
+        overview:
       press_release:
-        one: پریس ریلیز
-        other: پریس ریلیزاں
+        one: خبراں دینا
+        other: خبراں دینا
       promotional:
-        one: تشہیری مواد
-        other: تشہیری مواد
+        one: اشتہاری مواد
+        other: اشتہاری مواد
+        overview:
       publication:
-        one: اشاعت
-        other: اشاعتاں
+        one: مطبوعہ
+        other: مطبوعات
       raib_report:
-        one:
-        other:
+        one: ریل دے حادثے دی تفتیشی برانچ دی رپورٹ
+        other: ریل دے حادثے دی تفتیشی برانچ دی رپورٹاں
       regulation:
-        one: ضابطہ
-        other: ضابطے
+        one: قانون
+        other: قوانین
+        overview:
       research:
-        one: تحقیق و تجزیہ
-        other: تحقیق و تجزیہ
+        one: 'کھوج تے تجزیہ '
+        other: 'کھوج تے تجزیہ '
+        overview:
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: رہائشی جائیداد دی عدالت دا فیصلہ
+        other: رہائشی جائیداد دی عدالت دے فیصلے
       service_sign_in:
-        one:
-        other:
+        one: سروس سائن اِن
+        other: سروس سائن اِن
       service_standard_report:
-        one:
-        other:
+        one: سروس سٹینڈرڈ رپورٹ
+        other: سروس سٹینڈرڈ رپورٹس
       speaking_notes:
-        one: بولن دے نوٹس
-        other: بولن دے نوٹس
+        one: گل بات دے نوٹس
+        other: گل بات دے نوٹس
       speech:
         one: تقریر
         other: تقریراں
       standard:
-        one:
-        other:
+        one: سٹینڈرڈ
+        other: سٹینڈرڈز
+        overview:
       statement_to_parliament:
-        one: پارلیمنٹ نوں بیان
-        other: پارلیمنٹ نوں بیانات
+        one: قومی مجلس دے سامنے بیان
+        other: قومی مجلس دے سامنے بیانات
       statistical_data_set:
-        one: شماریاتی ڈیٹا سیٹ
-        other: شماریاتی ڈیٹا سیٹ
+        one: اعدادو شمار دی معلومات دا سیٹ
+        other: اعدادو شمار دی معلومات دے سیٹ
       statistics_announcement:
-        one:
-        other:
+        one: اعدادو شمار جاری کرن دا اعلان
+        other: اعدادوشمار جاری کرن دے اعلانات
       statutory_guidance:
         one: قانونی رہنمائی
         other: قانونی رہنمائی
+        overview:
       take_part:
-        one:
-        other:
+        one: حصہ لوؤ
+        other: حصہ لوؤ
       tax_tribunal_decision:
-        one:
-        other:
+        one: ٹیکس تے عدالتِ عالیہ دا فیصلہ
+        other: ٹیکس تے عدالتِ عالیہ دے فیصلے
       transcript:
-        one: نقل
-        other: نقلاں
+        one: بیان
+        other: بیانات
       transparency:
-        one: شفافیت دا مواد
-        other: شفافیت دا مواد
+        one: شفافیت دے اعدادوشمار
+        other: شفافیت دے اعدادوشمار
+        overview:
       utaac_decision:
-        one:
-        other:
+        one: انتظامی درخواست دی عدالت دا فیصلہ
+        other: انتظامی درخواست دی عدالت دے فیصلے
       world_location_news_article:
-        one:
-        other:
+        one: خبراں دا مضمون
+        other: خبراں دے مضمون
       world_news_story:
-        one:
-        other:
+        one: دُنیا دیاں خبراں دی کہانی
+        other: دُنیا دیاں خبراں دیاں کہانیاں
       written_statement:
-        one: پارلیمنٹ نوں لکھیا ہویا بیان
-        other: پارلیمنٹ نوں لکھے ہوئے بیان
+        one: قومی مجلس دے سامنے تحریری بیان
+        other: قومی مجلس دے سامنے تحریری بیانات
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: اینوں لبھو {link}%.
+    corporate_information: کاروبار دی معلومات
+    personal_information_charter_html: ساڈا {link}% ایہ وضاحت کر دا اے کہ اسی ذاتی معلومات نال کی سلوک کرنے آں۔
+    publication_scheme_html: ایس تے ایہ پڑھو کہ اسی رضاکارانہ طور تے کیس طراں دی معلومات شائع کرنے آں {link}%.
+    social_media_use_html: ایندے تے ساڈی حکمتِ عملی بارے پڑھو {link}%.
+    welsh_language_scheme_html: ساڈی وابستگی دے بارے جانو {link}%.
+  email:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: وزارتِ دفاع کریسٹ
+    field_of_operation: عمل کرن دا حلقہ
+    operations_in: ایندے بارے عمل {location}%
   get_involved:
     active_blogs:
-    civil_service_quarterly:
     civil_service:
+    civil_service_quarterly:
     closed:
     closed_consultations:
     closed_with_date:
@@ -338,25 +361,24 @@ pa-pk:
     school_overseas:
     search_all:
     see_all_dept:
-    see_the_outcome:
     start_a_petition:
     take_part:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: ہون دستیاب نئیں
+    published_in_error: ایس ورقے تے موجود خبراں ہٹا دتیاں  گیا نیں کیو جے او غلطی نال چھپ گئے سن۔
+    title: جہیڑا ورقہ تُسی لبھ رئے او ہُن او موجود نئیں
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: ایس ہدایت نامے وچ ورقے
+    skip_to_contents: رہنمائی دے مواد نوں چھڈ دیوؤ
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: ایہ اشاعت ایتھے موجود اے {url}%
+      copyright: "%{year}© کراؤن کاپی رائٹ"
+      isbn: 'ISBN:'
+      licence_html: 'ایہ اشاعت نوں حکومت دے لائسنس  وی 3۔0 دی شرائط دے تحت لائسنس ملیا اے سوائے اُس تھاں جتھے ایس توں علاوہ ہور کُج لکھیا اے۔ ایس لائسنس نوں ویکھن لئی ایہ ملاحظہ کرو۔ , visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: "جتھے اسی تیجے بندے دی کاپی رائٹ دی معلومات دی شناخت کراں گے تے تہانوں اُس  کاپی رائٹ دے مالک توں اجازت لینا \nہوؤئے گی۔"
   i18n:
     direction: rtl
   language_names:
@@ -400,7 +422,7 @@ pa-pk:
     nl:
     'no':
     pa:
-    pa-pk: پن٘جابی
+    pa-pk: پنجابی شاہ مُکھی
     pl:
     ps:
     pt:
@@ -427,58 +449,58 @@ pa-pk:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: اگلا
+    previous_page: پچھلا
+    print_entire_guide: سارا ورقہ چھاپو
   publication:
-    details:
+    details: تفصیلات
     documents:
-      one:
-      other:
+      one: دستاویز
+      other: دستاویزات
   service_sign_in:
-    continue:
+    continue: جاری رکھو
     error:
-      option:
-      title:
+      option: برائے مہربانی اک نوں چُنو
+      title: تُسی کسے دا چناؤ نئیں کیتا
   shared:
-    historically_political:
+    historically_political: اینوں ایس دے تحت شائع کیتا گیا {government}%
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: مشیر گل بات کرن لئی موجود نیں۔
+      busy: ویب چیٹ دے سارے مشیر ایس ویلے مصروف نیں۔
+      closed: ویب چیٹ ایس ویلے بند اے
+      speak_to_adviser: ہُن اک مشیر نال گل کرو
+      technical_problem: ویب چیٹ ٹیکنیکل مُشکلاں دی وجہ توں ایس ویلے نئیں مل سکدی۔
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Designated Origin UK Protected
+    pgi_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Geographic Origin UK Protected
+    tsg_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Traditional Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: حوالے کیتا گیا
+    location: تھاں
+    written_on: ایس  تے لکھیا گیا
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: منسوخ کرن دی تاریخ
+    cancelled: اعدادوشمار جاری کرنا منسوخ ہویا
+    changed_date: جاری کرن دی تاریخ بدل دتی گئی
+    forthcoming: اعدادو شمار جاری کیتے جان گے
+    previous_date: پچھلی تاریخ
+    proposed_date: تجویز کر کے جاری کیتا گیا
+    reason_for_change: بدلن دی وجہ
+    release_date: جاری کرن دی تاریخ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts:
-      avoid_all_but_essential_travel_to_whole_country:
-      avoid_all_travel_to_parts:
-      avoid_all_travel_to_whole_country:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دے سارے علاقیاں وچ  ضروری سفر کرن  لئی کیتی گئی نصحیت۔
+      avoid_all_but_essential_travel_to_whole_country_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> سارے مُلک دے وچ  ضروری سفر کرن لئی کیتی گئی نصحیت۔
+      avoid_all_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دے ساریاں علاقیاں وچ سفر کرن لئی نصحیت۔
+      avoid_all_travel_to_whole_country_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دےسارےعلاقے وچ ہر طراں دا سفر کرن لئی کیتی گئی نصحیت۔
+    context: غیر مُلکی سفر لئی نصحیت
+    still_current_at: ہون ایس ویلے وی اوتھے ای اے
+    summary: خلاصہ
+    updated: تازہ ترین حال
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: ہون موجود نئیں
+    summary: ایس ورقے تے موجود خبراں ہٹا دتیاں  گیا نیں کیو جے او غلطی نال چھپ گیاں سن۔
+    title: جس ورقے نوں تُسی لبھ رئے او ہُن او نئیں ملے گا
   working_group:
-    contact_details:
-    policies:
+    contact_details: رابطہ تی تفصیلات
+    policies: حکمت عملی دا کاغذ
