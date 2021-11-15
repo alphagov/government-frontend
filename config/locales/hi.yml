@@ -236,8 +236,12 @@ hi:
       other: दस्तावेज़
     details: विवरण
   brexit:
-    business_link: व्यवसायों के लिए ब्रेक्सिट मार्गदर्शन
-    citizen_link: लोगों और परिवारों के लिए ब्रेक्सिट मार्गदर्शन
+    business_link:
+      text: व्यवसायों के लिए ब्रेक्सिट मार्गदर्शन
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: लोगों और परिवारों के लिए ब्रेक्सिट मार्गदर्शन
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: इसमें अंतर है
   common:
     last_updated:

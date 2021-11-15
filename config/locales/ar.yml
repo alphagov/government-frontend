@@ -534,8 +534,12 @@ ar:
       other: المستندات
     details: التفاصيل
   brexit:
-    business_link: توجيهات للمشروعات بخصوص برِيكْسِت
-    citizen_link: توجيهات للأفراد والعائلات بخصوص برِيكْسِت
+    business_link:
+      text: توجيهات للمشروعات بخصوص برِيكْسِت
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: توجيهات للأفراد والعائلات بخصوص برِيكْسِت
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: هناك نسخة مختلفة من
   common:
     last_updated:

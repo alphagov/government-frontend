@@ -384,8 +384,12 @@ pl:
       other: Dokumenty
     details: Szczegóły
   brexit:
-    business_link: Wskazówki dotyczące Brexitu dla przedsiębiorstw
-    citizen_link: Wskazówki dotyczące Brexitu dla osób indywidualnych i rodzin
+    business_link:
+      text: Wskazówki dotyczące Brexitu dla przedsiębiorstw
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Wskazówki dotyczące Brexitu dla osób indywidualnych i rodzin
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Są różne
   common:
     last_updated:

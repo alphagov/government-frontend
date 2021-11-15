@@ -1,7 +1,11 @@
 tr:
   brexit:
-    business_link: İşletmeler için Brexit rehberi
-    citizen_link: Kişiler ve aileler için Brexit rehberi
+    business_link:
+      text: İşletmeler için Brexit rehberi
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Kişiler ve aileler için Brexit rehberi
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Farklılık var
   common:
     last_updated:

@@ -234,8 +234,12 @@ pa:
       other: ਦਸਤਾਵੇਜ਼
     details: ਵੇਰਵੇ
   brexit:
-    business_link: ਕਾਰੋਬਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
-    citizen_link: ਵਿਅਕਤੀਆਂ ਅਤੇ ਪਰਿਵਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
+    business_link:
+      text: ਕਾਰੋਬਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: ਵਿਅਕਤੀਆਂ ਅਤੇ ਪਰਿਵਾਰਾਂ ਲਈ ਬ੍ਰੈਕਸਿਟ ਮਾਰਗਦਰਸ਼ਨ
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: ਵੱਖਰਾ ਹੈ
   common:
     last_updated:

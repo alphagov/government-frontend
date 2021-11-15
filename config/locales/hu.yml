@@ -236,8 +236,12 @@ hu:
       other: Dokumentumok
     details: Részletek
   brexit:
-    business_link: Brexit-útmutató vállalkozások részére
-    citizen_link: Brexit-útmutató egyének és családok részére
+    business_link:
+      text: Brexit-útmutató vállalkozások részére
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit-útmutató egyének és családok részére
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Van különbség
   common:
     last_updated:

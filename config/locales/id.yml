@@ -1,7 +1,11 @@
 id:
   brexit:
-    business_link: Panduan Brexit untuk bisnis
-    citizen_link: Panduan Brexit untuk individu dan keluarga
+    business_link:
+      text: Panduan Brexit untuk bisnis
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Panduan Brexit untuk individu dan keluarga
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Ada perbedaan
   common:
     last_updated:

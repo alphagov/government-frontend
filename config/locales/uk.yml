@@ -384,8 +384,12 @@ uk:
       other: Документи
     details: Деталі
   brexit:
-    business_link: Поради щодо Brexit для бізнесу
-    citizen_link: Поради щодо Brexit для окремих осіб та сімей
+    business_link:
+      text: Поради щодо Brexit для бізнесу
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Поради щодо Brexit для окремих осіб та сімей
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Є різні
   common:
     last_updated:

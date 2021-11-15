@@ -234,8 +234,12 @@ dr:
       other: اسناد
     details: جزیٔیات
   brexit:
-    business_link: راهنمایی برکست برای کسب و کار
-    citizen_link: راهنمایی برکست برای افراد و فامیل ها
+    business_link:
+      text: راهنمایی برکست برای کسب و کار
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: راهنمایی برکست برای افراد و فامیل ها
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: تفاوت وجود دارد
   common:
     last_updated:

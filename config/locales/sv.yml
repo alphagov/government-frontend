@@ -234,8 +234,12 @@ sv:
       other: Dokument
     details: Detaljer
   brexit:
-    business_link: Brexitvägledning för företag
-    citizen_link: Brexitvägledning för privatpersoner och familjer
+    business_link:
+      text: Brexitvägledning för företag
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexitvägledning för privatpersoner och familjer
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Det finns olika
   common:
     last_updated:

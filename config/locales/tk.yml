@@ -234,8 +234,12 @@ tk:
       other: Resminamalar
     details: Içgin maglumatlar
   brexit:
-    business_link: Telekeçilik üçin Brexit görkezmesi
-    citizen_link: Raýatlara we maşgalalara Brexit görkezmesi
+    business_link:
+      text: Telekeçilik üçin Brexit görkezmesi
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Raýatlara we maşgalalara Brexit görkezmesi
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Tapawut bar
   common:
     last_updated:

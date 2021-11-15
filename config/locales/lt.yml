@@ -309,8 +309,12 @@ lt:
       other: Dokumentai
     details: Informacija
   brexit:
-    business_link: 'Informacija verslui apie „Brexitą“ '
-    citizen_link: 'Informacija fiziniams asmenims ir šeimoms apie „Brexitą“ '
+    business_link:
+      text: 'Informacija verslui apie „Brexitą“ '
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: 'Informacija fiziniams asmenims ir šeimoms apie „Brexitą“ '
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Yra kitokių
   common:
     last_updated:

@@ -234,8 +234,12 @@ kk:
       other: Құжаттар
     details: Толық мәліметтер
   brexit:
-    business_link: Компанияларға арналған Brexit нұсқаулығы
-    citizen_link: Жеке тұлғалар мен отбасыларға арналған Brexit нұсқаулығы
+    business_link:
+      text: Компанияларға арналған Brexit нұсқаулығы
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Жеке тұлғалар мен отбасыларға арналған Brexit нұсқаулығы
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Әртүрлісі бар
   common:
     last_updated:

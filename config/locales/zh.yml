@@ -1,7 +1,11 @@
 zh:
   brexit:
-    business_link: 企业的英国脱欧指南
-    citizen_link: 企业和家庭的英国脱欧指南
+    business_link:
+      text: 企业的英国脱欧指南
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: 企业和家庭的英国脱欧指南
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: 区别
   common:
     last_updated:

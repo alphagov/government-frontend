@@ -384,8 +384,12 @@ sr:
       other: Dokumenti
     details: Detalji
   brexit:
-    business_link: Uputstva za Bregzit za preduzeća
-    citizen_link: Uputstva za Bregzit za fizička lica i porodice
+    business_link:
+      text: Uputstva za Bregzit za preduzeća
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Uputstva za Bregzit za fizička lica i porodice
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Postoje razlike
   common:
     last_updated:

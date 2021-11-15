@@ -234,8 +234,12 @@ ne:
       other: कागजातहरु
     details: विवरण
   brexit:
-    business_link: व्यवसायको लागी ब्रेक्सिट मार्गदर्शन
-    citizen_link: व्यक्ति र परिवारहरूका लागी ब्रेक्सिट मार्गदर्शन
+    business_link:
+      text: व्यवसायको लागी ब्रेक्सिट मार्गदर्शन
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: व्यक्ति र परिवारहरूका लागी ब्रेक्सिट मार्गदर्शन
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: त्यहाँ फरक छ
   common:
     last_updated:

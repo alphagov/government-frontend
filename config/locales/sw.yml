@@ -234,8 +234,12 @@ sw:
       other: Hati
     details: Maelezo
   brexit:
-    business_link: Mwongozo wa Brexit kuhusu biashara
-    citizen_link: Mwongozo wa Brexit kuhusu watu na familia
+    business_link:
+      text: Mwongozo wa Brexit kuhusu biashara
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Mwongozo wa Brexit kuhusu watu na familia
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Kuna utofauti
   common:
     last_updated:

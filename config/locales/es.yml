@@ -234,8 +234,12 @@ es:
       other: Documentos
     details: Detalles
   brexit:
-    business_link: Orientación del Brexit para las empresas
-    citizen_link: Guía del Brexit para personas y familias
+    business_link:
+      text: Orientación del Brexit para las empresas
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Guía del Brexit para personas y familias
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Algo diferente
   common:
     last_updated:

@@ -234,8 +234,12 @@ ps:
       other: اسناد
     details: جزیات
   brexit:
-    business_link: د سوداګرۍ لپاره د بریکسیت لارښود
-    citizen_link: د افرادو او کورنیو لپاره د بریکسیت لارښود
+    business_link:
+      text: د سوداګرۍ لپاره د بریکسیت لارښود
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: د افرادو او کورنیو لپاره د بریکسیت لارښود
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: توپیر لري
   common:
     last_updated:

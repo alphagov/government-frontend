@@ -234,8 +234,12 @@ bn:
       other: নথিপত্র
     details: বিস্তারিত
   brexit:
-    business_link: ব্যবসার জন্য ব্রেক্সিটের নির্দেশনা
-    citizen_link: ব্যক্তি ও পরিবারবর্গের জন্য ব্রেক্সিটের নির্দেশনা
+    business_link:
+      text: ব্যবসার জন্য ব্রেক্সিটের নির্দেশনা
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: ব্যক্তি ও পরিবারবর্গের জন্য ব্রেক্সিটের নির্দেশনা
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: পার্থক্য আছে
   common:
     last_updated:

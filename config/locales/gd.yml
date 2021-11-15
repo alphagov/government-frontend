@@ -384,8 +384,12 @@ gd:
       other: Doiciméid
     details: Sonraí
   brexit:
-    business_link: Moltaí Brexit do ghnólachtaí
-    citizen_link: Moltaí Brexit do dhaoine aonair agus do theaghlaigh
+    business_link:
+      text: Moltaí Brexit do ghnólachtaí
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Moltaí Brexit do dhaoine aonair agus do theaghlaigh
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Tá difríochtaí ann
   common:
     last_updated:

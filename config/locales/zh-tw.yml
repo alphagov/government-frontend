@@ -234,8 +234,12 @@ zh-tw:
       other: 文檔
     details: 細節
   brexit:
-    business_link: 針對生意往來的英國脫歐指南
-    citizen_link: 針對個人和家庭的英國脫歐指南
+    business_link:
+      text: 針對生意往來的英國脫歐指南
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: 針對個人和家庭的英國脫歐指南
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: 不同之處
   common:
     last_updated:

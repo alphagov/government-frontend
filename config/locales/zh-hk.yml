@@ -234,8 +234,12 @@ zh-hk:
       other: 其他文件
     details: 詳情
   brexit:
-    business_link: 英國脫歐商業指引
-    citizen_link: 英國脫歐個人及家庭指引
+    business_link:
+      text: 英國脫歐商業指引
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: 英國脫歐個人及家庭指引
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: 與別不同
   common:
     last_updated:

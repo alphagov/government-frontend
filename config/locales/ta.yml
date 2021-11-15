@@ -234,8 +234,12 @@ ta:
       other: ஆவணங்கள்
     details: விபரங்கள்
   brexit:
-    business_link: வணிகங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
-    citizen_link: தனிநபர்கள் மற்றும் குடும்பங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
+    business_link:
+      text: வணிகங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: தனிநபர்கள் மற்றும் குடும்பங்களுக்கான பிரெக்சிட் வழிகாட்டுதல்
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: இதில் வித்தியாசம் உள்ளது
   common:
     last_updated:

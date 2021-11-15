@@ -384,8 +384,12 @@ mt:
       other: Dokumenti tal-Politika
     details: Dettalji
   brexit:
-    business_link: Gwida għan-negozji dwar Brexit
-    citizen_link: Gwida għal individwi u familji dwar Brexit
+    business_link:
+      text: Gwida għan-negozji dwar Brexit
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Gwida għal individwi u familji dwar Brexit
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Hawn differenti
   common:
     last_updated:

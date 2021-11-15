@@ -234,8 +234,12 @@ sq:
       other: Dokumente
     details: Detajet
   brexit:
-    business_link: Udhëzime për Brexit për bizneset
-    citizen_link: Udhëzime për Brexit për individët dhe familjet
+    business_link:
+      text: Udhëzime për Brexit për bizneset
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Udhëzime për Brexit për individët dhe familjet
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Ka të ndryshme
   common:
     last_updated:

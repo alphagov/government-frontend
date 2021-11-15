@@ -1,7 +1,11 @@
 az:
   brexit:
-    business_link: Bizneslər üçün Brexit ilə bağlı göstərişlər
-    citizen_link: Fərdlər və ailələr üçün Brexit ilə bağlı göstərişlər
+    business_link:
+      text: Bizneslər üçün Brexit ilə bağlı göstərişlər
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Fərdlər və ailələr üçün Brexit ilə bağlı göstərişlər
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Fərqliliklər mövcuddur
   common:
     last_updated:

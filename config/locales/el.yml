@@ -234,8 +234,12 @@ el:
       other: Έγγραφα
     details: Λεπτομέρειες
   brexit:
-    business_link: Οδηγίες Brexit για τις επιχειρήσεις
-    citizen_link: Οδηγίες Brexit για άτομα και οικογένειες
+    business_link:
+      text: Οδηγίες Brexit για τις επιχειρήσεις
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Οδηγίες Brexit για άτομα και οικογένειες
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Υπάρχουν διαφορετικά
   common:
     last_updated:

@@ -1,7 +1,11 @@
 th:
   brexit:
-    business_link: คำแนะนำ Brexit สำหรับธุรกิจ
-    citizen_link: คำแนะนำ Brexit สำหรับบุคคลและครอบครัว
+    business_link:
+      text: คำแนะนำ Brexit สำหรับธุรกิจ
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: คำแนะนำ Brexit สำหรับบุคคลและครอบครัว
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: มีความแตกต่างกัน
   common:
     last_updated:

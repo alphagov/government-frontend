@@ -234,8 +234,12 @@ hy:
       other: Փաստաթղթեր
     details: Մանրամասներ
   brexit:
-    business_link: Brexit-ի ուղեցույց բիզնեսների համար
-    citizen_link: Brexit-ի ուղեցույց անհատների և ընտանիքների համար
+    business_link:
+      text: Brexit-ի ուղեցույց բիզնեսների համար
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit-ի ուղեցույց անհատների և ընտանիքների համար
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Կա տարբեր
   common:
     last_updated:

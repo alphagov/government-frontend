@@ -236,8 +236,12 @@ uz:
       other: Ҳужжатлар
     details: Батафсил маълумотлар
   brexit:
-    business_link: Брексит шароитларида бизнес-доираларнинг вакиллари учун қўлланма
-    citizen_link: Брексит шароитларида жисмоний ва юридик шахслар учун қўлланма
+    business_link:
+      text: Брексит шароитларида бизнес-доираларнинг вакиллари учун қўлланма
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Брексит шароитларида жисмоний ва юридик шахслар учун қўлланма
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Фарқ мавжуд
   common:
     last_updated:

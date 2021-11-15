@@ -235,8 +235,12 @@ de:
       other: Dokumente
     details: Einzelheiten
   brexit:
-    business_link: Brexit-Leitfaden für Unternehmen
-    citizen_link: Brexit-Leitfaden für Einzelpersonen und Familien
+    business_link:
+      text: Brexit-Leitfaden für Unternehmen
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit-Leitfaden für Einzelpersonen und Familien
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Es gibt verschiedene
   common:
     last_updated:

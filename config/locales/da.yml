@@ -246,8 +246,12 @@ da:
       other: Dokumenter
     details: Detaljer
   brexit:
-    business_link: Brexit-vejledning for virksomheder
-    citizen_link: Brexit-vejledning for enkeltpersoner og familier
+    business_link:
+      text: Brexit-vejledning for virksomheder
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit-vejledning for enkeltpersoner og familier
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Der er forskellige
   common:
     last_updated:

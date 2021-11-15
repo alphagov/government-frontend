@@ -534,8 +534,12 @@ cy:
       other: Dogfennau
     details: Manylion
   brexit:
-    business_link: Canllawiau Brexit i fusnesau
-    citizen_link: Canllawiau Brexit i unigolion a theuluoedd
+    business_link:
+      text: Canllawiau Brexit i fusnesau
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Canllawiau Brexit i unigolion a theuluoedd
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Dyna wahaniaeth
   common:
     last_updated:

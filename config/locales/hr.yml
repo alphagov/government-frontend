@@ -384,8 +384,12 @@ hr:
       other: Dokumenti
     details: Detalji
   brexit:
-    business_link: Upute za Brexit za tvrtke
-    citizen_link: Upute za Brexit za pojedince i obitelji
+    business_link:
+      text: Upute za Brexit za tvrtke
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Upute za Brexit za pojedince i obitelji
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Ima različitih
   common:
     last_updated:

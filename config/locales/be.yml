@@ -384,8 +384,12 @@ be:
       other: Дакументы
     details: Дэталi
   brexit:
-    business_link: Кіраўніцтва па Брэкзiт для прадпрыемстваў
-    citizen_link: Кіраўніцтва па Брэкзiт для асобных асоб і сем'яў
+    business_link:
+      text: Кіраўніцтва па Брэкзiт для прадпрыемстваў
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Кіраўніцтва па Брэкзiт для асобных асоб і сем'яў
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Ёсць розныя
   common:
     last_updated:

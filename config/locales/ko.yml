@@ -1,7 +1,11 @@
 ko:
   brexit:
-    business_link: 비즈니스에 대한 브렉시트 지침
-    citizen_link: 개인 및 가족에 대한 브렉시트 지침
+    business_link:
+      text: 비즈니스에 대한 브렉시트 지침
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: 개인 및 가족에 대한 브렉시트 지침
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: 차이가 있습니다
   common:
     last_updated:

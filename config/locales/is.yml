@@ -234,8 +234,12 @@ is:
       other: Skjöl
     details: Nánari upplýsingar
   brexit:
-    business_link: Brexit leiðbeiningar fyrir fyrirtæki
-    citizen_link: Brexit leiðbeiningar fyrir einstaklinga og fjölskyldur
+    business_link:
+      text: Brexit leiðbeiningar fyrir fyrirtæki
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit leiðbeiningar fyrir einstaklinga og fjölskyldur
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Það eru mismunandi
   common:
     last_updated:

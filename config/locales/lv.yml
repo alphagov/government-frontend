@@ -234,8 +234,12 @@ lv:
       other: Dokumenti
     details: Detalizēta informācija
   brexit:
-    business_link: Brexit vadlīnijas uzņēmumiem
-    citizen_link: Brexit vadlīnijas privātpersonām un ģimenēm
+    business_link:
+      text: Brexit vadlīnijas uzņēmumiem
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit vadlīnijas privātpersonām un ģimenēm
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Pastāv atšķirības
   common:
     last_updated:

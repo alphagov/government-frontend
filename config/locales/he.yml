@@ -234,8 +234,12 @@ he:
       other: מסמכים
     details: פרטים
   brexit:
-    business_link: הדרכה ברקזיט לעסקים
-    citizen_link: 'הדרכת ברקזיט לאנשים ומשפחות '
+    business_link:
+      text: הדרכה ברקזיט לעסקים
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: 'הדרכת ברקזיט לאנשים ומשפחות '
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: 'יש הבדל '
   common:
     last_updated:

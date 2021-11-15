@@ -1,7 +1,11 @@
 fa:
   brexit:
-    business_link: راهنمای برگزیت برای کسب‌و‌کارها
-    citizen_link: راهنمای برگزیت برای کسب‌و‌کارها و خانواده‌ها
+    business_link:
+      text: راهنمای برگزیت برای کسب‌و‌کارها
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: راهنمای برگزیت برای کسب‌و‌کارها و خانواده‌ها
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: مختلف وجود دارد
   common:
     last_updated:

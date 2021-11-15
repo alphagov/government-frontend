@@ -234,8 +234,12 @@ et:
       other: Dokumendid
     details: Üksikasjad
   brexit:
-    business_link: Brexiti juhised ettevõtetele
-    citizen_link: Brexiti juhised üksikisikutele ja peredele
+    business_link:
+      text: Brexiti juhised ettevõtetele
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexiti juhised üksikisikutele ja peredele
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: On erinev
   common:
     last_updated:

@@ -234,8 +234,12 @@ pa-pk:
       other: دستاویزات
     details: تفصیلات
   brexit:
-    business_link: کاروباراں لئی Brexitواسطے رہنمائی
-    citizen_link: بندیاں تے خانداں لئیBrexit واسطے رہنمائی
+    business_link:
+      text: کاروباراں لئی Brexitواسطے رہنمائی
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: بندیاں تے خانداں لئیBrexit واسطے رہنمائی
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: ایہ فرق اے
   common:
     last_updated:

@@ -234,8 +234,12 @@ nl:
       other: Documenten
     details: Details
   brexit:
-    business_link: Brexit-leidraad voor bedrijven
-    citizen_link: Brexit-leidraad voor particulieren en gezinnen
+    business_link:
+      text: Brexit-leidraad voor bedrijven
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit-leidraad voor particulieren en gezinnen
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Er zijn verschillende
   common:
     last_updated:

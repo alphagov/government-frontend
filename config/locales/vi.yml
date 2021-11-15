@@ -1,7 +1,11 @@
 vi:
   brexit:
-    business_link: Hướng dẫn Brexit cho các doanh nghiệp
-    citizen_link: Hướng dẫn Brexit cho các cá nhân và gia đình
+    business_link:
+      text: Hướng dẫn Brexit cho các doanh nghiệp
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Hướng dẫn Brexit cho các cá nhân và gia đình
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Có sự khác nhau
   common:
     last_updated:

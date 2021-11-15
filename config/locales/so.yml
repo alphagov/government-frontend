@@ -234,8 +234,12 @@ so:
       other: Dukumentiyada
     details: Faah-faahin
   brexit:
-    business_link: Tilmaamaha Brexit ee ganacsiyada
-    citizen_link: Tilmaamaha Brexit ee qoysaska iyo shaqsiyaadka
+    business_link:
+      text: Tilmaamaha Brexit ee ganacsiyada
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Tilmaamaha Brexit ee qoysaska iyo shaqsiyaadka
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Waxa jira kala duwanaansho
   common:
     last_updated:

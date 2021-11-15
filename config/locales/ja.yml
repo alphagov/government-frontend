@@ -1,7 +1,11 @@
 ja:
   brexit:
-    business_link: 企業向けBrexitガイダンス
-    citizen_link: 個人および家族向けBrexitガイダンス
+    business_link:
+      text: 企業向けBrexitガイダンス
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: 個人および家族向けBrexitガイダンス
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: 違いがあります
   common:
     last_updated:

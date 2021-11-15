@@ -234,8 +234,12 @@ bg:
       other: Документи
     details: Подробности
   brexit:
-    business_link: Брекзит насока за предприятията
-    citizen_link: Брекзит насока за лица и семейства
+    business_link:
+      text: Брекзит насока за предприятията
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Брекзит насока за лица и семейства
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Има различен
   common:
     last_updated:

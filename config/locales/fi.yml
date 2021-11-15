@@ -234,8 +234,12 @@ fi:
       other: Asiakirjat
     details: Yksityiskohdat
   brexit:
-    business_link: Brexit -opas yrityksille
-    citizen_link: Brexit -opastus yksilöille ja perheille
+    business_link:
+      text: Brexit -opas yrityksille
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Brexit -opastus yksilöille ja perheille
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: On erilaisia
   common:
     last_updated:

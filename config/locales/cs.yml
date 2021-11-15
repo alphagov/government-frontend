@@ -309,8 +309,12 @@ cs:
       other: Dokumenty
     details: Podrobnosti
   brexit:
-    business_link: Pokyny pro podniky k brexitu
-    citizen_link: Pokyny k brexitu pro jednotlivce a rodiny
+    business_link:
+      text: Pokyny pro podniky k brexitu
+      path: "/guidance/brexit-guidance-for-businesses"
+    citizen_link:
+      text: Pokyny k brexitu pro jednotlivce a rodiny
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
     heading_prefix: Existují různé
   common:
     last_updated:
