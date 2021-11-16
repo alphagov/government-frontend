@@ -1,7 +1,11 @@
+<%
+  metadata_component_options = @content_item.publisher_metadata
+  metadata_component_options[:margin_bottom] = 3 if @notification_button_visible
+%>
 <div class="govuk-grid-row">
   <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
     <div class="govuk-grid-column-two-thirds metadata-column">
-      <%= render 'govuk_publishing_components/components/metadata', @content_item.publisher_metadata %>
+      <%= render 'govuk_publishing_components/components/metadata', metadata_component_options %>
     </div>
     <div class="govuk-grid-column-one-third">
       <% if @content_item.try(:logo) %>
