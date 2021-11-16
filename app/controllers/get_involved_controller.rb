@@ -5,6 +5,8 @@ class GetInvolvedController < ContentItemsController
     load_content_item
     load_get_involved_data
     @do_not_show_breadcrumbs = true
+    @recently_opened = filtered_links(@recently_opened_consultations, t("get_involved.closes"))
+    @recent_outcomes = filtered_links(@recent_consultation_outcomes, t("get_involved.closed"))
     render template: "content_items/get_involved"
   end
 
@@ -87,5 +89,53 @@ class GetInvolvedController < ContentItemsController
     }
 
     Services.search_api.search(query)["results"]
+  end
+
+  def time_until_closure(consultation)
+    days_left = (consultation["end_date"].to_date - Time.zone.now.to_date).to_i
+    case days_left
+    when :negative?.to_proc
+      t("get_involved.closed")
+    when :zero?.to_proc
+      t("get_involved.closing_today")
+    when 1
+      t("get_involved.closing_tomorrow")
+    else
+      t("get_involved.days_left", number_of_days: days_left)
+    end
+  end
+
+  def date_microformat(attribute_name)
+    attribute_name.to_date.strftime("%d %B %Y")
+  end
+
+  def filtered_links(array, close_status)
+    array.map do |item|
+      {
+        link: {
+          text: item["title"],
+          path: item["link"],
+          description: "#{close_status} #{date_microformat(item['end_date'])}",
+        },
+        metadata: {
+          public_updated_at: Time.zone.parse(org_acronym(item)),
+          document_type: org_acronym(item),
+        },
+      }
+    end
+  end
+
+private
+
+  def org_acronym(item)
+    item["organisations"].map { |org|
+      org["public_timestamp"]
+    }.join(", ")
+  end
+
+  def org_time(item)
+    item["organisations"].map { |org|
+      org["acronym"]
+    }.join(", ")
   end
 end
