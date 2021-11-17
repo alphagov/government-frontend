@@ -60,5 +60,6 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
     )
 
     assert_includes rendered, "Correspondence overview:"
+    assert_select "h1 span"
   end
 end
