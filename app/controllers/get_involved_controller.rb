@@ -118,7 +118,7 @@ class GetInvolvedController < ContentItemsController
           description: "#{close_status} #{date_microformat(item['end_date'])}",
         },
         metadata: {
-          public_updated_at: Time.zone.parse(org_acronym(item)),
+          public_updated_at: Time.zone.parse(org_time(item)),
           document_type: org_acronym(item),
         },
       }
@@ -127,13 +127,13 @@ class GetInvolvedController < ContentItemsController
 
 private
 
-  def org_acronym(item)
+  def org_time(item)
     item["organisations"].map { |org|
       org["public_timestamp"]
     }.join(", ")
   end
 
-  def org_time(item)
+  def org_acronym(item)
     item["organisations"].map { |org|
       org["acronym"]
     }.join(", ")
