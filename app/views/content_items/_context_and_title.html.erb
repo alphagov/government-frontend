@@ -1,4 +1,7 @@
-<% context_string =  t("content_item.schema_name.#{@content_item.document_type}", count: 1) %>
+<%
+  context_string =  t("content_item.schema_name.#{@content_item.document_type}", count: 1);
+  context_inside = false;
+ %>
 
 <% @content_item&.featured_attachments.each do |fa| %>
   <% return if !@content_item.attachment_details(fa).present? %>
@@ -17,7 +20,7 @@
 <%= render 'govuk_publishing_components/components/title',
    context: context_string,
    context_locale: t_locale_fallback("content_item.schema_name.#{@content_item.document_type}", count: 1),
-   context_inside: context_inside ||= false,
+   context_inside: context_inside,
    title: @content_item.title,
    average_title_length: "long"
  %>
