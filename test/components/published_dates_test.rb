@@ -86,4 +86,9 @@ class PublishedDatesTest < ComponentTestCase
     assert_select ".app-c-published-dates--history a[href=\"#full-history\"][data-controls=\"full-history\"]"
     assert_select ".app-c-published-dates--history a[href=\"#full-history\"][data-expanded=\"false\"]"
   end
+
+  test "applies a custom margin-bottom class if margin_bottom is specified" do
+    render_component(published: "1st November 2000", margin_bottom: 5)
+    assert_select '.app-c-published-dates.govuk-\!-margin-bottom-5'
+  end
 end
