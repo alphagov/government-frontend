@@ -26,8 +26,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   StickyElementContainer.prototype.init = function () {
     if (!this.stickyElement) return
 
-    window.onresize = this.onResize
-    window.onscroll = this.onScroll
+    window.onresize = this.onResize.bind(this)
+    window.onscroll = this.onScroll.bind(this)
     setInterval(this.checkResize.bind(this), this.interval)
     setInterval(this.checkScroll.bind(this), this.interval)
     this.checkResize()
@@ -71,7 +71,6 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   StickyElementContainer.prototype.checkScroll = function () {
     if (this.hasScrolled) {
       this.hasScrolled = false
-      this.hasResized = true
 
       this.windowVerticalPosition = this.getWindowPositions().scrollTop
 
