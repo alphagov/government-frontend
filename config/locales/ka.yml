@@ -1,3 +1,4 @@
+---
 ka:
   brexit:
     business_link:
@@ -34,10 +35,8 @@ ka:
       page_not_saved_heading: შეინახეთ ეს გვერდი, რათა დაუბრუნდეთ მოგვიანებით
       page_was_saved_heading: თქვენ შეინახეთ ეს გვერდი
       remove_page_button: თქვენი შენახული გვერდებიდან ამოღება
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">თქვენი
-        შენახული გვერდების ნახვა</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">შესვლა</a>
-        თქვენი შენახული გვერდების სანახავად.
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">თქვენი შენახული გვერდების ნახვა</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">შესვლა</a> თქვენი შენახული გვერდების სანახავად.
     share_links:
       share_this_page: ამ გვერდის გაზიარება
   consultation:
@@ -305,10 +304,8 @@ ka:
   corporate_information_page:
     about_our_services_html: შეიტყვეთ %{link}.
     corporate_information: კორპორატიული ინფორმაცია
-    personal_information_charter_html: ჩვენი %{link} განმარტავს, თუ როგორ ვამუშავებთ
-      ჩვენ თქვენს პირად ინფორმაციას.
-    publication_scheme_html: წაიკითხეთ ინფორმაციის ტიპების შესახებ, რომელსაც ჩვენ
-      რეგულარულად ვაქვეყნებთ ჩვენს %{link}-ზე.
+    personal_information_charter_html: ჩვენი %{link} განმარტავს, თუ როგორ ვამუშავებთ ჩვენ თქვენს პირად ინფორმაციას.
+    publication_scheme_html: წაიკითხეთ ინფორმაციის ტიპების შესახებ, რომელსაც ჩვენ რეგულარულად ვაქვეყნებთ ჩვენს %{link}-ზე.
     social_media_use_html: წაიკითხეთ ჩვენი პოლიტიკის შესახებ %{link}.
     welsh_language_scheme_html: გაეცანით ჩვენს ვალდებულებას %{link}.
   fatality_notice:
@@ -317,8 +314,7 @@ ka:
     operations_in: ოპერაციები %{location}-ში
   gone:
     page_title: აღარ არის ხელმისაწვდომი
-    published_in_error: ამ გვერდზე არსებული ინფორმაცია ამოღებულია, რადგან ის გამოქვეყნდა
-      შეცდომით.
+    published_in_error: ამ გვერდზე არსებული ინფორმაცია ამოღებულია, რადგან ის გამოქვეყნდა შეცდომით.
     title: გვერდი, რომელსაც თქვენ ეძებთ, აღარ არის ხელმისაწვდომი
   guide:
     pages_in_guide: გვერდები ამ სახელმძღვანელოში
@@ -328,13 +324,8 @@ ka:
       available_at: ეს პუბლიკაცია ხელმისაწვდომია %{url}-ზე
       copyright: "© გვირგვინის საავტორო უფლებ ა%{year}"
       isbn: 'ISBN:'
-      licence_html: 'ეს პუბლიკაცია ლიცენზირებულია ღია მმართველობის ლიცენზიის v3.0
-        პირობებით, გარდა სხვა შემთხვევებისა. ამ ლიცენზიის სანახავად ეწვიეთ <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>  ან
-        მოგვწერეთ საინფორმაციო პოლიტიკის ჯგუფში, ეროვნულ არქივში, Kew, London TW9
-        4DU, ან ელ.ფოსტაზე: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: სადაც ჩვენ გამოვავლინეთ მესამე მხარის საავტორო უფლებების შესახებ
-        ინფორმაცია, თქვენ დაგჭირდებათ ნებართვის მიღება შესაბამისი საავტორო უფლებების
-        მფლობელებისგან.
+      licence_html: 'ეს პუბლიკაცია ლიცენზირებულია ღია მმართველობის ლიცენზიის v3.0 პირობებით, გარდა სხვა შემთხვევებისა. ამ ლიცენზიის სანახავად ეწვიეთ <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>  ან მოგვწერეთ საინფორმაციო პოლიტიკის ჯგუფში, ეროვნულ არქივში, Kew, London TW9 4DU, ან ელ.ფოსტაზე: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: სადაც ჩვენ გამოვავლინეთ მესამე მხარის საავტორო უფლებების შესახებ ინფორმაცია, თქვენ დაგჭირდებათ ნებართვის მიღება შესაბამისი საავტორო უფლებების მფლობელებისგან.
   i18n:
     direction:
   language_names:
@@ -362,12 +353,9 @@ ka:
       speak_to_adviser: მრჩეველთან ახლა დალაპარაკება
       technical_problem: ამჟამად ვებ ჩეთი მიუწვდომელია ტექნიკური პრობლემების გამო.
   specialist_document:
-    pdo_alt_text: 'სქემის ლოგო არის შავი შტამპი სიტყვებით: გაერთიანებული სამეფოს დაცული
-      დანიშნულების ადგილი'
-    pgi_alt_text: 'სქემის ლოგო არის შავი შტამპი სიტყვებით: გაერთიანებული სამეფოს დაცული
-      დანიშნულების ადგილი'
-    tsg_alt_text: სქემის ლოგო არის შავი ბეჭედი, რომელზეც წერია ტრადიციული სპეციალობა
-      დაცულია გაერთიანებული სამეფოს მიერ
+    pdo_alt_text: 'სქემის ლოგო არის შავი შტამპი სიტყვებით: გაერთიანებული სამეფოს დაცული დანიშნულების ადგილი'
+    pgi_alt_text: 'სქემის ლოგო არის შავი შტამპი სიტყვებით: გაერთიანებული სამეფოს დაცული დანიშნულების ადგილი'
+    tsg_alt_text: სქემის ლოგო არის შავი ბეჭედი, რომელზეც წერია ტრადიციული სპეციალობა დაცულია გაერთიანებული სამეფოს მიერ
   speech:
     delivered_on: გადაეცა
     location: მდებარეობა
@@ -383,16 +371,10 @@ ka:
     release_date: გამოშვების თარიღი
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> რჩევა ყველას წინააღმდეგ, გარდა ესენციური მოგზაურობებისა
-        ქვეყნის ზოგიერთ ნაწილებში.
-      avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> რჩევა ყველას წინააღმდეგ, გარდა ესენციური მოგზაურობებისა
-        მთელს ქვეყანაში.
-      avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        რჩევა ყველა მოგზაურობების წინააღმდეგ ქვეყნის ზოგიერთ ნაწილებში.
-      avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> რჩევა ყველა მოგზაურობების წინააღმდეგ მთელ ქვეყანაში.
+      avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველას წინააღმდეგ, გარდა ესენციური მოგზაურობებისა ქვეყნის ზოგიერთ ნაწილებში.
+      avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველას წინააღმდეგ, გარდა ესენციური მოგზაურობებისა მთელს ქვეყანაში.
+      avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველა მოგზაურობების წინააღმდეგ ქვეყნის ზოგიერთ ნაწილებში.
+      avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველა მოგზაურობების წინააღმდეგ მთელ ქვეყანაში.
     context: უცხოეთში მოგზაურობის რჩევა
     coronavirus_warning:
       content_html: |

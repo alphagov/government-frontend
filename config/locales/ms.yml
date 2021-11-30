@@ -1,3 +1,4 @@
+---
 ms:
   brexit:
     business_link:
@@ -31,20 +32,16 @@ ms:
           message: Anda telah mengeluarkan ini daripada laman simpanan anda
         page_saved:
           message: Anda telah menambah ini ke laman simpanan anda
-      page_not_saved_heading: Simpan laman ini supaya anda boleh melawatnya semula
-        kemudian
+      page_not_saved_heading: Simpan laman ini supaya anda boleh melawatnya semula kemudian
       page_was_saved_heading: Anda telah menyimpan laman ini
       remove_page_button: Keluarkan daripada laman simpanan anda
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Lihat
-        laman simpanan anda</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Daftar
-        masuk</a> untuk melihat laman simpanan anda.
+      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Lihat laman simpanan anda</a>
+      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Daftar masuk</a> untuk melihat laman simpanan anda.
     share_links:
       share_this_page: Kongsi laman ini
   consultation:
     and: dan
-    another_website_html: Perundingan ini %{closed} telah diadakan di <a href="%{url}">laman
-      web lain</a>
+    another_website_html: Perundingan ini %{closed} telah diadakan di <a href="%{url}">laman web lain</a>
     at: di
     closes: Ditutup pada
     closes_at: Perundingan ini ditutup pada
@@ -65,8 +62,7 @@ ms:
     ran_from: Perundingan ini berjalan dari
     respond_online: Jawab dalam talian
     'true': betul
-    visit_soon: Lawati laman ini semula untuk muat turun hasil maklum balas&nbsp;awam
-      ini.
+    visit_soon: Lawati laman ini semula untuk muat turun hasil maklum balas&nbsp;awam ini.
     was: adalah
     ways_to_respond: Cara untuk menjawab
     write_to: 'Tulis kepada:'
@@ -308,10 +304,8 @@ ms:
   corporate_information_page:
     about_our_services_html: Ketahui %{link}.
     corporate_information: Maklumat korporat
-    personal_information_charter_html: "%{link} kami menerangkan bagaimana kami menggunakan
-      maklumat peribadi anda."
-    publication_scheme_html: Baca tentang jenis maklumat yang kami biasa terbitkan
-      dalam %{link} kami.
+    personal_information_charter_html: "%{link} kami menerangkan bagaimana kami menggunakan maklumat peribadi anda."
+    publication_scheme_html: Baca tentang jenis maklumat yang kami biasa terbitkan dalam %{link} kami.
     social_media_use_html: Baca dasar kami di %{link}.
     welsh_language_scheme_html: Ketahui tentang komitmen kami kepada %{link}.
   fatality_notice:
@@ -320,8 +314,7 @@ ms:
     operations_in: Operasi di %{location}
   gone:
     page_title: Sudah tiada
-    published_in_error: Maklumat dalam laman ini telah dikeluarkan kerana ia telah
-      diterbitkan secara salah.
+    published_in_error: Maklumat dalam laman ini telah dikeluarkan kerana ia telah diterbitkan secara salah.
     title: Laman yang anda cari sudah tiada
   guide:
     pages_in_guide: Laman dalam panduan ini
@@ -331,13 +324,8 @@ ms:
       available_at: Penerbitan ini tersedia di %{url}
       copyright: "© Crown copyright %{year}"
       isbn: 'Nombor Buku Standard Antarabangsa (ISBN):'
-      licence_html: 'Penerbitan ini dilesenkan di bawah terma Lesen Kerajaan Terbuka
-        v3.0 kecuali dinyatakan sebaliknya. Untuk melihat lesen ini, lawati <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>
-        atau tulis kepada Pasukan Dasar Maklumat, Arkib Negara, Kew, London TW9 4DU,
-        atau e-mel: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
-      third_party: Di mana kami telah mengenal pasti mana-mana maklumat hak cipta
-        pihak ketiga, anda perlu mendapatkan kebenaran daripada pemegang hak cipta
-        tersebut.
+      licence_html: 'Penerbitan ini dilesenkan di bawah terma Lesen Kerajaan Terbuka v3.0 kecuali dinyatakan sebaliknya. Untuk melihat lesen ini, lawati <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> atau tulis kepada Pasukan Dasar Maklumat, Arkib Negara, Kew, London TW9 4DU, atau e-mel: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Di mana kami telah mengenal pasti mana-mana maklumat hak cipta pihak ketiga, anda perlu mendapatkan kebenaran daripada pemegang hak cipta tersebut.
   i18n:
     direction:
   language_names:
@@ -365,12 +353,9 @@ ms:
       speak_to_adviser: Bercakap dengan seorang penasihat sekarang
       technical_problem: Sembang web tidak tersedia ketika ini kerana masalah teknikal.
   specialist_document:
-    pdo_alt_text: Logo skema adalah cap hitam dengan perkataan Designated Origin UK
-      Protected
-    pgi_alt_text: Logo skema adalah cap hitam dengan perkataan Geographic Origin UK
-      Protected
-    tsg_alt_text: Logo skema adalah cap hitam dengan perkataan Traditional Speciality
-      UK Protected
+    pdo_alt_text: Logo skema adalah cap hitam dengan perkataan Designated Origin UK Protected
+    pgi_alt_text: Logo skema adalah cap hitam dengan perkataan Geographic Origin UK Protected
+    tsg_alt_text: Logo skema adalah cap hitam dengan perkataan Traditional Speciality UK Protected
   speech:
     delivered_on: Dihantar pada
     location: Lokasi
@@ -386,18 +371,10 @@ ms:
     release_date: Tarikh hebahan
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> menasihati supaya tidak membuat perjalanan kecuali yang
-        perlu sahaja ke bahagian-bahagian tertentu negara ini.
-      avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and
-        Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat perjalanan
-        kecuali yang perlu sahaja ke seluruh negara.
-      avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr>
-        menasihati supaya tidak membuat sebarang perjalanan ke bahagian-bahagian tertentu
-        negara ini.
-      avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth
-        Office">FCO</abbr> menasihati supaya tidak membuat sebarang perjalanan ke
-        seluruh negara..
+      avoid_all_but_essential_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat perjalanan kecuali yang perlu sahaja ke bahagian-bahagian tertentu negara ini.
+      avoid_all_but_essential_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat perjalanan kecuali yang perlu sahaja ke seluruh negara.
+      avoid_all_travel_to_parts: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat sebarang perjalanan ke bahagian-bahagian tertentu negara ini.
+      avoid_all_travel_to_whole_country: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat sebarang perjalanan ke seluruh negara..
     context: Nasihat perjalanan ke negara luar
     coronavirus_warning:
       content_html: |
@@ -420,8 +397,7 @@ ms:
     updated: Dikemas kini
   unpublishing:
     page_title: Sudah tiada
-    summary: Maklumat dalam laman ini telah dikeluarkan kerana ia telah diterbitkan
-      secara salah.
+    summary: Maklumat dalam laman ini telah dikeluarkan kerana ia telah diterbitkan secara salah.
     title: Laman yang anda cari sudah tiada
   working_group:
     contact_details: Butiran hubungan
