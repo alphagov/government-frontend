@@ -371,10 +371,10 @@ ur:
     release_date: اجراء کی تاریخ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr> سوائے ملک کے کچھ حصوں میں ضروری سفر کرنے کے ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
-      avoid_all_but_essential_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr> سوائے پورے ملک میں ضروری سفر کرنے کے ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
-      avoid_all_travel_to_parts: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ملک کے کچھ حصوں میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
-      avoid_all_travel_to_whole_country: <abbr title="Foreign and Commonwealth Office">FCO</abbr> پورے ملک میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> سوائے ملک کے کچھ حصوں میں ضروری سفر کرنے کے ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> سوائے پورے ملک میں ضروری سفر کرنے کے ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ملک کے کچھ حصوں میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> پورے ملک میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
     context: غیر ملکی سفر کی مشاورت
     coronavirus_warning:
       content_html: "<p class=\"govuk-body\">\n اپنے رہائشی علاقے کے موجودہ COVID-19 اصولوں پر عمل کریں: <a href=\"/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do\">England</a>, <a href=\"https://www.gov.scot/coronavirus-covid-19/\">Scotland</a>, <a href=\"https://gov.wales/coronavirus-travel\">Wales</a> اور <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">Northern Ireland</a>.\n</p>\n<p class=\"govuk-body\">/\n    COVID کی نئے تغیرات کے برطانیہ میں داخلے کو روکنے کے لیے، آپ کو <a href=\"/guidance/red-amber-and-green-list-rules-for-entering-england\">زرد یا سرخ فہرست میں شامل کردہ ممالک</a> کا سفر نہیں کرنا چاہیئے \n</p>\n<p class=\"govuk-body\">\n  کاؤنٹی میں خطرات کو سمجھنے کے لیے <a href=\"/guidance/travel-advice-novel-coronavirus\">ایف سی کی ڈگری۔ کی سروس مشاورت</a> پر عمل کریں۔\n</p>\n<p class=\"govuk-body\">\nجب آپ واپس آئیں، <a href=\"/uk-border-control\">بیرون ملک سے UK میں داخل ہوں</a> کے اصولوں پر عمال کریں (سوائے آئرلینڈ کے)\n</p>\n"
