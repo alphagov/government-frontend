@@ -9,7 +9,6 @@ ro:
       text: Îndrumări pentru persoane și familii privind Brexit
     heading_prefix: Diferit
   common:
-    last_updated:
     visit: 'Accesați:'
   components:
     figure:
@@ -21,22 +20,8 @@ ro:
       see_all_updates: vedeți toate actualizările
       show_all_updates: afișați toate actualizările
     publisher_metadata:
-      collections:
-      from:
       hide_all: ascundeți tot
       show_all: afișați tot
-    save_this_page:
-      add_page_button: Adăugați la paginile salvate
-      confirmations:
-        page_removed:
-          message: Ați eliminat din paginile salvate
-        page_saved:
-          message: Ați adăugat la paginile salvate
-      page_not_saved_heading: Salvați această pagină pentru a reveni la ea mai târziu
-      page_was_saved_heading: Ați salvat această pagină
-      remove_page_button: Eliminați din paginile salvate
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Vedeți paginile salvate</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Conectați-vă</a> pentru a vedea paginile salvate.
     share_links:
       share_this_page: Distribuiți această pagină
   consultation:
@@ -61,7 +46,6 @@ ro:
     original_consultation: Consultație originală
     ran_from: Această consultație a început la
     respond_online: Răspundeți online
-    'true': adevărat
     visit_soon: Accesați din această pagină în curând pentru a descărca rezultatul acestui feedback&nbsp;public.
     was: a fost
     ways_to_respond: Modalități de a răspunde
@@ -451,22 +435,6 @@ ro:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în anumite părți ale țării.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în întreaga țară.
     context: Sfaturi pentru călătoriile în străinătate
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Respectați reglementările actuale cu privire la COVID-19 acolo unde locuiți: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglia</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scoția</a>, <a href="https://gov.wales/coronavirus-travel">Țara Galilor</a> și <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Irlanda de Nord</a>.
-        </p>
-        <p class="govuk-body">
-          Pentru a preveni noile variante de COVID să intre în Marea Britanie, nu trebuie să călătoriți <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">în țările de pe lista roșie sau portocalie</a>.
-        </p>
-        <p class="govuk-body">
-          Pentru a înțelege riscurile dintr-o țară, urmați <a href="/guidance/travel-advice-novel-coronavirus">sfaturile cu privire la călătorie ale FCDO</a>.
-        </p>
-        <p class="govuk-body">
-          Când reveniți, urmați regulile pentru a <a href="/uk-border-control">intra în Marea Britanie din străinătate</a> (cu excepția Irlandei).
-        </p>
-      text_assistive: Important
-      title: Călătoriile în pandemia cauzată de Coronavirus (COVID-19)
     still_current_at: În acest moment la
     summary: Rezumat
     updated: Actualizat

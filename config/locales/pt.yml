@@ -9,7 +9,6 @@ pt:
       text: Orientação Brexit para pessoas e famílias
     heading_prefix: Há diferentes
   common:
-    last_updated:
     visit: 'Visite:'
   components:
     figure:
@@ -21,22 +20,8 @@ pt:
       see_all_updates: ver todas as atualizações
       show_all_updates: mostrar todas as atualizações
     publisher_metadata:
-      collections:
-      from:
       hide_all: ocultar tudo
       show_all: mostrar tudo
-    save_this_page:
-      add_page_button: Adicione às suas páginas guardadas
-      confirmations:
-        page_removed:
-          message: Removeu esta das suas páginas guardadas
-        page_saved:
-          message: Adicionou esta às suas páginas guardadas
-      page_not_saved_heading: Guarde esta página para que possa voltar a ela mais tarde
-      page_was_saved_heading: Guardou esta página
-      remove_page_button: Removida das suas páginas guardadas
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Veja as suas páginas guardadas</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Registe-se</a> para ver as suas páginas guardadas.
     share_links:
       share_this_page: Partilhar esta página
   consultation:
@@ -61,7 +46,6 @@ pt:
     original_consultation: Consulta original
     ran_from: Esta consulta decorreu de
     respond_online: Responder online
-    'true': verdadeiro
     visit_soon: Visite esta página novamente em breve para transferir o resultado para este feedback público.
     was: foi
     ways_to_respond: Formas de resposta
@@ -376,22 +360,6 @@ pt:
       avoid_all_travel_to_parts_html: O <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconselha todas as viagens a algumas zonas do país.
       avoid_all_travel_to_whole_country_html: O <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconselha todas as viagens a todo o país.
     context: Aconselhamento sobre viagens ao estrangeiro
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Siga as regras atuais para a COVID-19 na zona onde vive: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Inglaterra</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Escócia</a>, <a href="https://gov.wales/coronavirus-travel">País de Gales</a> e <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Irlanda do Norte</a>.
-        </p>
-        <p class="govuk-body">
-          Para evitar que novas variantes da COVID-19 entrem no Reino Unido, não deve viajar para <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">países da lista amarela ou da lista vermelha</a>.
-        </p>
-        <p class="govuk-body">
-          Para compreender os riscos num país, siga os <a href="/guidance/travel-advice-novel-coronavirus">Conselhos de Viagem do Ministério dos Negócios Estrangeiros, Commonwealth e Desenvolvimento</a>.
-        </p>
-        <p class="govuk-body">
-          Quando regressar, siga as regras para <a href="/uk-border-control">entrar no Reino Unido quando se vem do estrangeiro</a> (exceto da Irlanda).
-        </p>
-      text_assistive: Importante
-      title: Viajar durante o Coronavírus (COVID-19)
     still_current_at: Continua atual às
     summary: Resumo
     updated: Atualizado em

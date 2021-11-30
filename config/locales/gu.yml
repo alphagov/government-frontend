@@ -9,7 +9,6 @@ gu:
       text: વ્યક્તિઓ અને પરિવારો માટે બ્રેક્ઝિટ માર્ગદર્શન
     heading_prefix: અલગ
   common:
-    last_updated:
     visit: 'મુલાકાત લો:'
   components:
     figure:
@@ -21,22 +20,8 @@ gu:
       see_all_updates: બધા અપડેટ્સ જુઓ
       show_all_updates: બધા અપડેટ્સ બતાવો
     publisher_metadata:
-      collections:
-      from:
       hide_all: બધા હાઈડ કરો
       show_all: બધા બતાવો
-    save_this_page:
-      add_page_button: તમારા સેવ કરેલ પેજિસમાં ઉમેરો
-      confirmations:
-        page_removed:
-          message: 'તમારા સેવ કરેલ પેજિસ માંથી તમે આને હટાવી દીધું છે '
-        page_saved:
-          message: 'તમારા સેવ કરેલ પેજિસ માંથી તમે આને ઉમેરી દીધું છે '
-      page_not_saved_heading: આ પેજને સેવ કરો, જેથી તમે અહીં પાછા આવી શકો
-      page_was_saved_heading: તમે આ પેજ સેવ કરેલ છે
-      remove_page_button: તમારા સેવ કરેલ પેજિસ માંથી હટાવો
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">તમે સેવ કરેલ પેજિસ જુઓ</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">સાઇન ઇન કરો</a> તમારા સેવ કરેલ પેજિસને જોવા માટે.
     share_links:
       share_this_page: આ પેજ શેર કરો
   consultation:
@@ -61,7 +46,6 @@ gu:
     original_consultation: મૂળ પરામર્શ
     ran_from: આ પરામર્શ થી ચાલુ
     respond_online: ઓનલાઇન પ્રતિભાવ આપો
-    'true': સાચું
     visit_soon: આ public&nbspના પરિણામો ડાઉનલોડ કરવા માટે આ પેજની જલ્દી મુલાકાત લો;ફીડબૅક.
     was: હતું
     ways_to_respond: પ્રતિભાવ આપવાની રીતો
@@ -376,22 +360,6 @@ gu:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> દેશના કેટલાક ભાગોમાં કોઈ પણ પ્રકારનો પ્રવાસ ન કરવાની સલાહ આપે છે.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> સંપૂર્ણ દેશમાં કોઈ પણ પ્રકારનો પ્રવાસ ન કરવાની સલાહ આપે છે.
     context: વિદેશ પ્રવાસ અંગે સલાહ
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">, <a href="https://www.gov.scot/coronavirus-covid-19/">સ્કોટલેંડ</a>, <a href="https://gov.wales/coronavirus-travel">વેલ્સ</a> અને <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">ઉત્તરી આયર્લેન્ડ</a>.
-        </p>
-        <p class="govuk-body">
-          COVID ના નવા વેરિયન્ટને UKમાં પ્રવેશ કરવાથી રોકવા માટે, તમારે <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">અંબર અથવા લાલ રંગની યાદીમાના દેશો</a>માં પ્રવાસ કરવો જોઈએ નહીં.</a>.
-        </p>
-        <p class="govuk-body">
-          કોઈ પણ દેશમાં રહેલ જોખમો સમજવા માટે <a href="/guidance/travel-advice-novel-coronavirus">વિદેશ, કોમનવેલ્થ અને વિકાસ કાર્યાલય મુસાફરી સલાહ</a>નું પાલન કરો.
-        </p>
-        <p class="govuk-body">
-          જ્યારે તમે પાછા ફરો ત્યારે, <a href="/uk-border-control">વિદેશથી UKમાં પ્રવેશ</a> કરવા અંગેના નિયમોનું પાલન કરો. (આયર્લેંડ સિવાય).
-        </p>
-      text_assistive: મહત્ત્વનું
-      title: કોરોનાવાઇરસ (COVID-19) પ્રવાસ
     still_current_at: પર હજુ પણ ચાલુ
     summary: સારાંશ
     updated: અપડેટ કરેલ

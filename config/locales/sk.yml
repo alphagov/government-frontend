@@ -9,7 +9,6 @@ sk:
       text: Usmernenie k brexitu pre jednotlivcov a rodiny
     heading_prefix: Existujú rôzne
   common:
-    last_updated:
     visit: 'Navštívte:'
   components:
     figure:
@@ -21,22 +20,8 @@ sk:
       see_all_updates: pozrite si všetky aktualizácie
       show_all_updates: zobraziť všetky aktualizácie
     publisher_metadata:
-      collections:
-      from:
       hide_all: skryť všetko
       show_all: zobraziť všetko
-    save_this_page:
-      add_page_button: Pridanie do uložených stránok
-      confirmations:
-        page_removed:
-          message: Odstránili ste ju z uložených stránok
-        page_saved:
-          message: Toto ste pridali do svojich uložených stránok
-      page_not_saved_heading: Uložte si túto stránku, aby ste sa k nej mohli neskôr vrátiť
-      page_was_saved_heading: Uložili ste túto stránku
-      remove_page_button: Odstrániť z uložených stránok
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">Pozrite si svoje uložené stránky</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">Prihláste sa</a>, aby ste videli svoje uložené stránky.
     share_links:
       share_this_page: Zdieľať túto stránku
   consultation:
@@ -61,7 +46,6 @@ sk:
     original_consultation: Pôvodná konzultácia
     ran_from: Táto konzultácia prebiehala od
     respond_online: Odpovedať online
-    'true': pravda
     visit_soon: Čoskoro opäť navštívte túto stránku a stiahnite si výsledok tejto verejnej spätnej väzby.
     was: bola
     ways_to_respond: Spôsoby reakcie
@@ -451,22 +435,6 @@ sk:
       avoid_all_travel_to_parts_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do niektorých častí krajiny.
       avoid_all_travel_to_whole_country_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do všetkých častí krajiny.
     context: Poradenstvo pri cestovaní do zahraničia
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          Dodržiavajte platné pravidlá COVID-19 v mieste svojho bydliska: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">Anglicko</a>, <a href="https://www.gov.scot/coronavirus-covid-19/" >Škótsko</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> a <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">Severné Írsko</a>.
-        </p>
-        <p class="govuk-body">
-          Aby ste zabránili preniknutiu nových variantov COVID do Spojeného kráľovstva, nemali by ste cestovať do krajín <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">z oranžového alebo červeného zoznamu</a>.
-        </p>
-        <p class="govuk-body">
-          Ak chcete pochopiť riziká v danej krajine, <a href="/guidance/travel-advice-novel-coronavirus">postupujte podľa cestovných odporúčaní FCDO</a>.
-        </p>
-        <p class="govuk-body">
-          Po návrate postupujte podľa pravidiel pre <a href="/uk-border-control">vstup do Spojeného kráľovstva zo zahraničia</a> (okrem Írska).
-        </p>
-      text_assistive: Dôležité
-      title: Cestovanie počas koronavírusu (COVID-19)
     still_current_at: Stále aktuálne na
     summary: Zhrnutie
     updated: Aktualizované

@@ -9,7 +9,6 @@ ka:
       text: ბრექსიტის სახელმძღვანელო ინდივიდუალებისთვის და ოჯახებისთვის
     heading_prefix: არსებობს სხვადასხვა
   common:
-    last_updated:
     visit: 'ეწვიეთ:'
   components:
     figure:
@@ -21,22 +20,8 @@ ka:
       see_all_updates: ყველა ცვლილების ნახვა
       show_all_updates: ყველა ცვლილების ჩვენება
     publisher_metadata:
-      collections:
-      from:
       hide_all: ყველას დაფარვა
       show_all: ყველას ჩვენება
-    save_this_page:
-      add_page_button: თქვენს შენახულ გვერდებში დამატება
-      confirmations:
-        page_removed:
-          message: თქვენ ეს ამოიღეთ თქვენი შენახული გვერდებიდან
-        page_saved:
-          message: თქვენ დაამატეთ ეს თქვენს შენახულ გვერდებს
-      page_not_saved_heading: შეინახეთ ეს გვერდი, რათა დაუბრუნდეთ მოგვიანებით
-      page_was_saved_heading: თქვენ შეინახეთ ეს გვერდი
-      remove_page_button: თქვენი შენახული გვერდებიდან ამოღება
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">თქვენი შენახული გვერდების ნახვა</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">შესვლა</a> თქვენი შენახული გვერდების სანახავად.
     share_links:
       share_this_page: ამ გვერდის გაზიარება
   consultation:
@@ -61,7 +46,6 @@ ka:
     original_consultation: ორიგინალი კონსულტაცია
     ran_from: ეს კონსულტაცია ამოიწურა
     respond_online: ონლაინ პასუხი
-    'true': სიმართლე
     visit_soon: ეწვიეთ გვერდს ისევ მალე, რათა გადმოწეროთ შედეგი ამ public&nbsp;ფიდბექისთვის.
     was: იყო
     ways_to_respond: პასუხის გზები
@@ -376,22 +360,6 @@ ka:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველა მოგზაურობების წინააღმდეგ ქვეყნის ზოგიერთ ნაწილებში.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველა მოგზაურობების წინააღმდეგ მთელ ქვეყანაში.
     context: უცხოეთში მოგზაურობის რჩევა
-    coronavirus_warning:
-      content_html: |
-        <p class="govuk-body">
-          დაიცავით მიმდინარე COVID-19 რეგულაციები იქ, სადაც ხართ: <a href="/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do">England</a>, <a href="https://www.gov.scot/coronavirus-covid-19/">Scotland</a>, <a href="https://gov.wales/coronavirus-travel">Wales</a> და <a href="https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you">ჩრდილოეთ ირლანდია</a>.
-        </p>
-        <p class="govuk-body">
-          ახალი COVID შტამების გაერთიანებულ სამეფოში შემოსვლის შესაფერხებლად, თქვენ არ უნდა იმოგზაუროთ <a href="/guidance/red-amber-and-green-list-rules-for-entering-england">მუქი წითელი ან წითელი ზონის ქვეყნების სია</a>.
-        </p>
-        <p class="govuk-body">
-          ქვეყანაში რისკების შესახებ ინფორმაციის მისაღებად <a href="/guidance/travel-advice-novel-coronavirus">FCDO მოგზაურობის რჩევა</a>.
-        </p>
-        <p class="govuk-body">
-          უკან დაბრუნებისას დაიცავით წესების <a href="/uk-border-control">გაერთიანებულ სამეფოში შესვლა უცხოეთიდან</a> (გარდა ჩრდილოეთ ირლანდიისა).
-        </p>
-      text_assistive: მნიშვნელოვანი
-      title: კორონავირუსი (COVID-19) მოგზაურობა
     still_current_at: ჯერ კიდევ აქტუალურია
     summary: შეჯამება
     updated: განახლებული

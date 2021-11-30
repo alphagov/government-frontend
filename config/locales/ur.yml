@@ -9,7 +9,6 @@ ur:
       text: افراد اور اہل خانہ کے لیے Brexit کی رہنمائی
     heading_prefix: یہاں فرق ہے
   common:
-    last_updated:
     visit: 'ملاحظہ کریں:'
   components:
     figure:
@@ -21,22 +20,8 @@ ur:
       see_all_updates: تمام اپ ڈیٹس دیکھیں
       show_all_updates: تمام اپ ڈیٹس دکھائیں
     publisher_metadata:
-      collections:
-      from:
       hide_all: تمام کو پوشیدہ کریں
       show_all: تمام دکھائیں
-    save_this_page:
-      add_page_button: اپنے محفوظ کردہ صفحات پر شامل کریں
-      confirmations:
-        page_removed:
-          message: آپ کو اپنے محفوظ کردہ صفحات سے ہٹا دیا گیا ہے
-        page_saved:
-          message: آپ نے اپنے محفوظ کردہ صفحات شامل کر لیے ہیں
-      page_not_saved_heading: اس صفحے کو محفوظ کر لیں تاکہ بعد میں آپ اس پر واپس آ سکیں
-      page_was_saved_heading: آپ نے یہ صفحہ محفوظ کر لیا ہے
-      remove_page_button: اپنے محفوظ کردہ صفحات سے ہٹائیں
-      see_saved_pages_signed_in: <a href="%{link}" class="govuk-link %{additional_class}">اپنے محفوظ کردہ صفحات دیکھیں۔</a>
-      see_saved_pages_signed_out: <a href="%{link}" class="govuk-link %{additional_class}">سائن ان</a> اپنے محفوظ کردہ صفحات دیکھنے کے لیے.
     share_links:
       share_this_page: اس صفحے کو شیئر کریں
   consultation:
@@ -61,7 +46,6 @@ ur:
     original_consultation: اصل مشاورت
     ran_from: اس مشاورت میں درج ذیل ختم ہو گیا
     respond_online: آن لائن جواب دیں
-    'true': درست
     visit_soon: اس عوامی&nbsp;فیڈ بیک کا نتیجہ ڈاؤن لوڈ کرنے کے لیے اس صفحے کا دوبارہ جلد دورہ کریں۔
     was: تھا
     ways_to_respond: جواب دینے کے طریقے
@@ -376,10 +360,6 @@ ur:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ملک کے کچھ حصوں میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> پورے ملک میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
     context: غیر ملکی سفر کی مشاورت
-    coronavirus_warning:
-      content_html: "<p class=\"govuk-body\">\n اپنے رہائشی علاقے کے موجودہ COVID-19 اصولوں پر عمل کریں: <a href=\"/guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do\">England</a>, <a href=\"https://www.gov.scot/coronavirus-covid-19/\">Scotland</a>, <a href=\"https://gov.wales/coronavirus-travel\">Wales</a> اور <a href=\"https://www.nidirect.gov.uk/articles/coronavirus-covid-19-regulations-guidance-what-restrictions-mean-you\">Northern Ireland</a>.\n</p>\n<p class=\"govuk-body\">/\n    COVID کی نئے تغیرات کے برطانیہ میں داخلے کو روکنے کے لیے، آپ کو <a href=\"/guidance/red-amber-and-green-list-rules-for-entering-england\">زرد یا سرخ فہرست میں شامل کردہ ممالک</a> کا سفر نہیں کرنا چاہیئے \n</p>\n<p class=\"govuk-body\">\n  کاؤنٹی میں خطرات کو سمجھنے کے لیے <a href=\"/guidance/travel-advice-novel-coronavirus\">ایف سی کی ڈگری۔ کی سروس مشاورت</a> پر عمل کریں۔\n</p>\n<p class=\"govuk-body\">\nجب آپ واپس آئیں، <a href=\"/uk-border-control\">بیرون ملک سے UK میں داخل ہوں</a> کے اصولوں پر عمال کریں (سوائے آئرلینڈ کے)\n</p>\n"
-      text_assistive: اہم
-      title: کورونا وائرس (COVID-19) سفر
     still_current_at: ابھی تک حالیہ ہے از
     summary: خلاصہ
     updated: اپ ڈیٹ کردہ
