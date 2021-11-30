@@ -310,8 +310,12 @@ ro:
       other: Documente
     details: Detalii
   brexit:
-    business_link: Îndrumări pentru companii privind Brexit
-    citizen_link: Îndrumări pentru persoane și familii privind Brexit
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Îndrumări pentru companii privind Brexit
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Îndrumări pentru persoane și familii privind Brexit
     heading_prefix: Diferit
   common:
     last_updated:

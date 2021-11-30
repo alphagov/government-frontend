@@ -309,8 +309,12 @@ sk:
       other: Dokumenty
     details: Podrobnosti na
   brexit:
-    business_link: Usmernenia pre podniky týkajúce sa brexitu
-    citizen_link: Usmernenie k brexitu pre jednotlivcov a rodiny
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Usmernenia pre podniky týkajúce sa brexitu
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Usmernenie k brexitu pre jednotlivcov a rodiny
     heading_prefix: Existujú rôzne
   common:
     last_updated:

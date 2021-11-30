@@ -234,8 +234,12 @@ ur:
       other: دستاویزات
     details: تفصیلات
   brexit:
-    business_link: بزنسز کے لیے Brexit کی رہنمائی
-    citizen_link: افراد اور اہل خانہ کے لیے Brexit کی رہنمائی
+    business_link:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: بزنسز کے لیے Brexit کی رہنمائی
+    citizen_link:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: افراد اور اہل خانہ کے لیے Brexit کی رہنمائی
     heading_prefix: یہاں فرق ہے
   common:
     last_updated:
