@@ -33,17 +33,26 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
         content_item["title"]
       end
 
+      def schema_name
+        content_item["schema_name"]
+      end
+
+      def document_type
+        content_item["document_type"]
+      end
+
       def content_item
         {
           "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
           "withdrawn_notice" => {
             "withdrawn_at" => "2016-07-12T09:47:15Z",
           },
+          "document_type" => "statistical_data_set",
         }
       end
     end
 
-    assert_equal @withdrawable.page_title, "[Withdrawn] Proportion of residents who do any walking or cycling (at local authority level) (CW010)"
+    assert_equal @withdrawable.page_title, "[Withdrawn] Statistical data set: Proportion of residents who do any walking or cycling (at local authority level) (CW010)"
   end
 
   test "notice title and description are generated correctly" do

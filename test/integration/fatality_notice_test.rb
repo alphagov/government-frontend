@@ -69,7 +69,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("withdrawn_fatality_notice")
 
     assert page.has_title?(
-      "[Withdrawn] Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK",
+      "[Withdrawn] Fatality notice: Sir George Pomeroy Colley killed in Boer War - Fatality notice - GOV.UK",
     )
 
     within ".gem-c-notice" do

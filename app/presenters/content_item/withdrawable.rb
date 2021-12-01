@@ -5,7 +5,15 @@ module ContentItem
     end
 
     def page_title
-      withdrawn? ? "[Withdrawn] #{title}" : title
+      if withdrawn? && context_title? && publication_overview?
+        "[Withdrawn] #{context_title}: #{title}"
+      elsif withdrawn?
+        "[Withdrawn] #{title}"
+      elsif context_title? && publication_overview?
+        "#{context_title}: #{title}"
+      else
+        title
+      end
     end
 
     def withdrawal_notice_component
@@ -21,12 +29,31 @@ module ContentItem
 
   private
 
+    def context_title?
+      context_title.present?
+    end
+
+    def publication_overview?
+      publication_overview.present?
+    end
+
+    def publication_overview
+      overview = (I18n.exists?("content_item.#{schema_name}") == "publication" || "statistical_data_set")
+      overview.presence
+    end
+
     def withdrawal_notice
       content_item["withdrawn_notice"]
     end
 
     def withdrawal_notice_title
       "This #{withdrawal_notice_context.downcase} was withdrawn on #{withdrawal_notice_time}".html_safe
+    end
+
+    def context_title
+      if I18n.exists?("content_item.schema_name.#{document_type}", count: 1, locale: :en)
+        I18n.t("content_item.schema_name.#{document_type}", count: 1, locale: :en)
+      end
     end
 
     def withdrawal_notice_context
