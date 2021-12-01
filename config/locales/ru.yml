@@ -2,63 +2,63 @@
 ru:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Руководство Брексит для бизнеса
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Руководство Брексит для физических лиц и семей
+    heading_prefix: Здесь не так
   common:
-    visit:
+    visit: 'Посетите:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Графические материалы предоставлены: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: Скрыть всю последнюю информацию
+      last_updated: Последние изменения %{date}
+      published: Опубликовано %{date}
+      see_all_updates: Посмотреть всю поледнюю информацию
+      show_all_updates: Показать всю поледнюю информацию
     publisher_metadata:
-      hide_all:
-      show_all:
+      hide_all: Скрыть всё
+      show_all: Показать всё
     share_links:
-      share_this_page:
+      share_this_page: 'Поделиться данной страницей '
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: и
+    another_website_html: Консультация %{closed} проведенная на <a href="%{url}">другой Веб-сайт</a>
+    at: на
+    closes: Она закрывается на
+    closes_at: Данная консультация закрывается на
+    complete_a: Заполните
+    description: Описание консультации
+    detail_of_feedback_received: Детали, полученного отзыва
+    detail_of_outcome: Детали результата
+    documents: Документы
+    download_outcome: Скачать результат полностью
+    either: другое
+    email_to: 'Напишите на:'
+    feedback_received: Отзыв получен
+    is_being: сейчас
+    not_open_yet: Консультация еще не открыта
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Консультация открывается
+    original_consultation: Оригинальная консультация
+    ran_from: Обычная консультация
+    respond_online: Он-лайн ответ
+    visit_soon: Посетите эту страницу снова, чтобы скачать результат данного общественного &nbsp;отзыв.
+    was: был
+    ways_to_respond: Как получить ответ
+    write_to: 'Пишите на:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: Электронная почта
+    find_call_charges: Узнайте о стоимости звонков
+    online: Он-лайн
+    phone: Телефон
+    webchat: Веб-чат
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Данный документ будет опубликован на
+    contents: Содержание
     metadata:
       published: Опубликовано
       updated: обновлено
@@ -66,8 +66,8 @@ ru:
       aaib_report:
         few:
         many:
-        one:
-        other:
+        one: Отчет Отдела по Расследованию Авиационных Происшествий
+        other: Отчеты Отдела по Расследованию Авиационных Происшествий
       announcement:
         few:
         many:
@@ -76,8 +76,8 @@ ru:
       asylum_support_decision:
         few:
         many:
-        one:
-        other:
+        one: Решение суда по вопросам предоставления убежища
+        other: Решения суда по вопросам предоставления убежища
       authored_article:
         few:
         many:
@@ -86,29 +86,28 @@ ru:
       business_finance_support_scheme:
         few:
         many:
-        one:
-        other:
+        one: План поддержки финансирования бизнеса
+        other: Планы поддержки финансирования бизнеса
       case_study:
         few:
         many:
-        one: Ситуационный анализ
-        other: Ситуационные анализы
+        one: Причинный анализ
+        other: Причинные анализы
       closed_consultation:
         few:
         many:
         one: Закрытая консультация
         other: Закрытые консультации
-        overview:
       cma_case:
         few:
         many:
-        one:
-        other:
+        one: Дело Управления по Защите Конкуренции и Рынкам
+        other: Дела Управления по Защите Конкуренции и Рынкам
       coming_soon:
         few:
         many:
-        one:
-        other:
+        one: Скоро на Экранах
+        other: Скоро на Экранах
       consultation:
         few:
         many:
@@ -119,50 +118,46 @@ ru:
         many:
         one: Результат консультации
         other: Результаты консультаций
-        overview:
       corporate_information_page:
         few:
         many:
-        one:
-        other:
+        one: Информационная страница
+        other: Информационные страницы
       corporate_report:
         few:
         many:
         one: Корпоративный отчет
         other: Корпоративные отчеты
-        overview:
       correspondence:
         few:
         many:
         one: Корреспонденция
         other: Корреспонденция
-        overview:
       countryside_stewardship_grant:
         few:
         many:
-        one:
-        other:
+        one: Грант Управлений Сельской местности
+        other: Гранты Управлений Сельской местности
       decision:
         few:
         many:
-        one:
-        other:
-        overview:
+        one: Решение
+        other: Решения
       detailed_guide:
         few:
         many:
         one: Подробное руководство
-        other: Подробное руководство
+        other: Руководство
       dfid_research_output:
         few:
         many:
-        one:
-        other:
+        one: Результат Исследования по развитию
+        other: Результаты Исследования по развитию
       document_collection:
         few:
         many:
-        one: Серии
-        other:
+        one: Коллекция
+        other: Коллекции
       draft_text:
         few:
         many:
@@ -171,23 +166,23 @@ ru:
       drug_safety_update:
         few:
         many:
-        one:
-        other:
+        one: Обновлённые данные по Безопасности Лекарственного Средства
+        other: Обновлённые данные по Безопасности Лекарственного Средства
       employment_appeal_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Решение Апелляционного Суда по Трудовым Делам
+        other: Решения Апелляционного Суда по Трудовым Делам
       employment_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Решение органа по рассмотрению индивидуальных трудовых споров
+        other: Решения органа по рассмотрению индивидуальных трудовых споров
       esi_fund:
         few:
         many:
-        one:
-        other:
+        one: Европейский Структурный и Инвестиционный Фонд (ЕСИФ)
+        other: Европейские Структурные и Инвестиционные Фонды (ЕСИФ)
       fatality_notice:
         few:
         many:
@@ -196,15 +191,13 @@ ru:
       foi_release:
         few:
         many:
-        one: 'Свобода распространения информации '
-        other: 'Свобода распространения информации '
-        overview:
+        one: Новая редакция Закона о Свободе Распространения Информации
+        other: Новые редакции Закона о Свободе Распространения Информации
       form:
         few:
         many:
         one: Форма
         other: Формы
-        overview:
       government_response:
         few:
         many:
@@ -215,13 +208,11 @@ ru:
         many:
         one: Руководство
         other: Руководство
-        overview:
       impact_assessment:
         few:
         many:
         one: Оценка воздействия
         other: Оценки воздействия
-        overview:
       imported:
         few:
         many:
@@ -232,50 +223,46 @@ ru:
         many:
         one: Независимый отчет
         other: Независимые отчеты
-        overview:
       international_development_fund:
         few:
         many:
-        one:
-        other:
+        one: Международное финансирование развития
+        other: Международное финансирование развития
       international_treaty:
         few:
         many:
-        one:
-        other:
-        overview:
+        one: Международное соглашение
+        other: Международные соглашения
       maib_report:
         few:
         many:
-        one:
-        other:
+        one: Отчет Отдела по Расследованию Несчастных Случаев на Море
+        other: Отчеты Отдела по Расследованию Несчастных Случаев на Море
       map:
         few:
         many:
         one: Карта
         other: Карты
-        overview:
       medical_safety_alert:
         few:
         many:
-        one:
-        other:
+        one: Уведомления и отзывы о лекарственных препаратах и медицинских устройствах
+        other: Уведомления и отзывы о лекарственных препаратах и медицинских устройствах
       national:
         few:
         many:
-        one:
-        other:
+        one: Объявление национального статистического комитета
+        other: Объявления национального статистического комитета
       national_statistics:
         few:
         many:
-        one: Статистика - национальная статистика
-        other: Статистика - национальная статистика
-        overview:
+        one: Национальная статистика
+        other: Национальная статистика
       national_statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Объявление национального статистического комитета
+        other: Объявления национального статистического комитета
       news_article:
         few:
         many:
@@ -284,36 +271,33 @@ ru:
       news_story:
         few:
         many:
-        one: Новостная заметка
-        other: Новостные заметки
+        one: Новостной сюжет
+        other: Новостные сюжеты
       notice:
         few:
         many:
-        one:
-        other:
-        overview:
+        one: Заметка
+        other: Заметки
       official:
         few:
         many:
-        one:
-        other:
+        one: Доклад по официальным статистическим данным
+        other: Доклады по официальным статистическим данным
       official_statistics:
         few:
         many:
-        one: Статистика
-        other: Статистика
-        overview:
+        one: Официальная Статистика
+        other: Официальная Статистика
       official_statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Доклад по официальным статистическим данным
+        other: Доклады по официальным статистическим данным
       open_consultation:
         few:
         many:
         one: Открытая консультация
         other: Открытые консультации
-        overview:
       oral_statement:
         few:
         many:
@@ -329,7 +313,6 @@ ru:
         many:
         one: Директивный документ
         other: Директивные документы
-        overview:
       press_release:
         few:
         many:
@@ -340,7 +323,6 @@ ru:
         many:
         one: Рекламный материал
         other: Рекламные материалы
-        overview:
       publication:
         few:
         many:
@@ -349,35 +331,33 @@ ru:
       raib_report:
         few:
         many:
-        one:
-        other:
+        one: Отчет Отдела по Расследованию Несчастных Случаев на Железнодорожном Транспорте
+        other: Отчеты Отдела по Расследованию Несчастных Случаев на Железнодорожном Транспорте
       regulation:
         few:
         many:
-        one:
-        other:
-        overview:
+        one: Требование
+        other: Требования
       research:
         few:
         many:
         one: Исследования и аналитика
         other: Исследования и аналитика
-        overview:
       residential_property_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Решение арбитражного суда по жилищной собственности
+        other: Решения арбитражного суда по жилищной собственности
       service_sign_in:
         few:
         many:
-        one:
-        other:
+        one: Сервис по регистрации
+        other: Сервис по регистрации
       service_standard_report:
         few:
         many:
-        one:
-        other:
+        one: Отчет оп Стандарту Обслуживания
+        other: Отчеты оп Стандарту Обслуживания
       speaking_notes:
         few:
         many:
@@ -391,9 +371,8 @@ ru:
       standard:
         few:
         many:
-        one:
-        other:
-        overview:
+        one: Стандарт
+        other: Стандарты
       statement_to_parliament:
         few:
         many:
@@ -402,45 +381,43 @@ ru:
       statistical_data_set:
         few:
         many:
-        one: Статистика
-        other: Статистические данные
+        one: Совокупность статистических данных
+        other: Совокупность статистических данных
       statistics_announcement:
         few:
         many:
-        one:
-        other:
+        one: Объявление о публикации статистических данных
+        other: Объявления о публикации статистических данных
       statutory_guidance:
         few:
         many:
-        one:
-        other:
-        overview:
+        one: Официальные рекомендации
+        other: Официальные рекомендации
       take_part:
         few:
         many:
-        one:
-        other:
+        one: Принять участие
+        other: Принять участие
       tax_tribunal_decision:
         few:
         many:
-        one:
-        other:
+        one: Решение суда по Налоговым и Канцелярским вопросам
+        other: Решения суда по Налоговым и Канцелярским вопросам
       transcript:
         few:
         many:
-        one: Текст
-        other: Тексты
+        one: Транскрипт
+        other: Транскрипты
       transparency:
         few:
         many:
         one: Прозрачность данных
         other: Прозрачность данных
-        overview:
       utaac_decision:
         few:
         many:
-        one:
-        other:
+        one: Решение суда по апелляции на решение административного органа
+        other: Решения суда по апелляции на решение административного органа
       world_location_news_article:
         few:
         many:
@@ -449,35 +426,33 @@ ru:
       world_news_story:
         few:
         many:
-        one:
-        other:
+        one: Международные новости
+        other: Международные новости
       written_statement:
         few:
         many:
         one: Письменное заявление парламенту
         other: Письменные заявления парламенту
   corporate_information_page:
-    about_our_services_html:
+    about_our_services_html: Узнайте %{link}.
     corporate_information: Корпоративная информация
-    personal_information_charter_html: По %{link} объяснение о том, как мы обращаемся с вашей личной информацией
-    publication_scheme_html: Прочитать информацию, которая обычно публикуется,  по указанной %{link}.
-    social_media_use_html: Ознакомиться с нашей политикой по %{link}.
-    welsh_language_scheme_html: Выяснить о наших обязательствах по публикации можно по %{link}.
+    personal_information_charter_html: Наше %{link} с объяснением о том, как мы обращаемся с вашей личной информацией
+    publication_scheme_html: Прочитайте о информации, которая обычно публикуется нами на %{link}.
+    social_media_use_html: Ознакомьтесь с нашей политикой по %{link}.
+    welsh_language_scheme_html: Узнайте о наших обязательствах по %{link}.
   email:
     description_html:
     subscribe_title:
     unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Герб Министерства Обороны
+    field_of_operation: Сфера деятельности
+    operations_in: Деятельность в  %{location}
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -485,6 +460,7 @@ ru:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:
@@ -514,19 +490,19 @@ ru:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Более не доступен
+    published_in_error: Информация на данной странице была удалена так как была опубликована по ошибке.
+    title: Страница, которую Вы ищите более не доступна
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Страница в руководстве
+    skip_to_contents: Перейти к содержанию руководства
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Данная публикация доступна на %{url}
+      copyright: "© Авторское право короны %{year}"
+      isbn: 'Международный Стандартный Книжный Номер:'
+      licence_html: 'Данная публикация лицензирована по условиям Открытой государственной лицензии  v3.0, за исключением тех случаев, где указано иное. для просмотра лицензии, посетите <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> либо обратитесь к Команде по Информационной политике, в Национальный Архив, по адресу Кью, Лондон   TW9 4DU, либо по электронной почте: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: 'В случае обнаружения нами информации авторского права третьей стороны, Вам будет необходимо получить разрешение владельцев авторского права, имеющих к ней отношение. '
   i18n:
     direction:
   language_names:
@@ -575,7 +551,7 @@ ru:
     ps:
     pt:
     ro:
-    ru: Русский
+    ru: Русский язык
     si:
     sk:
     sl:
@@ -597,60 +573,60 @@ ru:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Следующий
+    previous_page: Предыдущий
+    print_entire_guide: Распечатать всё руководство
   publication:
-    details:
+    details: Детали
     documents:
       few:
       many:
       one: Документ
       other: Документы
   service_sign_in:
-    continue:
+    continue: Продолжить
     error:
-      option:
-      title:
+      option: Поджалуйста, выберите вариант
+      title: Вы не выбрали вариант
   shared:
-    historically_political:
+    historically_political: Данный документ был опубликован в соответствии %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Консультанты доступны в чате.
+      busy: В настоящий момент все консультанты заняты.
+      closed: В настоящий момент Веб-чат не работает.
+      speak_to_adviser: Поговорите с консультантом
+      technical_problem: В настоящий момент Веб-чат не доступен по техническим причинам.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Схема логотипа это черная печать со словами - Защищённое Соединённым Королевством Обозначение Происхождения
+    pgi_alt_text: Схема логотипа это черная печать со словами - Защищённое Соединённым Королевством Обозначение Географического Происхождения
+    tsg_alt_text: Схема логотипа это черная печать со словами - Защищённая Соединённым Королевством Традиционная особенность
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Доставлено на
+    location: Место
+    written_on: Написано на
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Дата отмены
+    cancelled: Выпуск статистических данных отменен
+    changed_date: Дата выпуска была изменена
+    forthcoming: Данные статистические данные будут опубликованы
+    previous_date: Предыдущая дата
+    proposed_date: Предложенный выпуск
+    reason_for_change: Причина изменения
+    release_date: Дата выпуска
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html:
-      avoid_all_but_essential_travel_to_whole_country_html:
-      avoid_all_travel_to_parts_html:
-      avoid_all_travel_to_whole_country_html:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> Все поездки не реккомендуются, за исключением необходимых в части страны.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> Все поездки не реккомендуются, за исключением необходимых по всей стране.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> Все поездки не реккомендуются, за исключением необходимых в части страны.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> Все поездки не реккомендуются, за исключением необходимых по всей стране.
+    context: Консультации по зарубежным поездкам
+    still_current_at: Все еще на
+    summary: Резюме
+    updated: Обновлено
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Более не доступен
+    summary: Информация на данной странице была удалена так как была опубликована по ошибке.
+    title: Страница, которую Вы ищите более не доступна
   working_group:
-    contact_details:
-    policies:
+    contact_details: Контактная информация
+    policies: Политика

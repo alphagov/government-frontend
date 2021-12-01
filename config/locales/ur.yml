@@ -2,334 +2,309 @@
 ur:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: بزنسز کے لیے Brexit کی رہنمائی
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: افراد اور اہل خانہ کے لیے Brexit کی رہنمائی
+    heading_prefix: یہاں فرق ہے
   common:
-    visit:
+    visit: 'ملاحظہ کریں:'
   components:
     figure:
-      image_credit:
+      image_credit: 'تصویری کریڈٹ: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: تمام اپ ڈیٹس کو پوشیدہ کریں
+      last_updated: آخری اپ ڈیٹ کردہ %{date}
+      published: شائع کردہ %{date}
+      see_all_updates: تمام اپ ڈیٹس دیکھیں
+      show_all_updates: تمام اپ ڈیٹس دکھائیں
     publisher_metadata:
-      hide_all:
-      show_all:
+      hide_all: تمام کو پوشیدہ کریں
+      show_all: تمام دکھائیں
     share_links:
-      share_this_page:
+      share_this_page: اس صفحے کو شیئر کریں
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: اور
+    another_website_html: یہ مشاورت %{closed} <a href="%{url}">ایک اور ویب سائٹ پر ہوئی تھی</a>
+    at: پر
+    closes: یہ درج ذیل پر بند ہوتی ہے
+    closes_at: یہ مشاورت درج ذیل پر بند ہوتی ہے
+    complete_a: مکمل کریں
+    description: مشاورت کی تفصیل
+    detail_of_feedback_received: وصول کردہ فیڈ بیک کی تفصیل
+    detail_of_outcome: نتیجے کی تفصیل
+    documents: دستاویزات
+    download_outcome: مکمل نتیجہ ڈاؤن لوڈ کریں
+    either: کوئی بھی ایک
+    email_to: 'ای میل کریں از:'
+    feedback_received: فیڈ بیک موصول ہو گیا
+    is_being: ہو رہا ہے
+    not_open_yet: یہ مشاورت ابھی تک کھلی نہیں ہے
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: یہ مشاورت درج ذیل پر کھلتی ہے
+    original_consultation: اصل مشاورت
+    ran_from: اس مشاورت میں درج ذیل ختم ہو گیا
+    respond_online: آن لائن جواب دیں
+    visit_soon: اس عوامی&nbsp;فیڈ بیک کا نتیجہ ڈاؤن لوڈ کرنے کے لیے اس صفحے کا دوبارہ جلد دورہ کریں۔
+    was: تھا
+    ways_to_respond: جواب دینے کے طریقے
+    write_to: 'لکھیں بنام:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: ای میل
+    find_call_charges: کال کے چارجز کے بارے میں جانیں
+    online: آن لائن
+    phone: فون
+    webchat: Webchat
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: یہ دستاویز درج ذیل کو شائع کی جائے گی
+    contents: مشمولات
     metadata:
-      published: شائع شدہ
-      updated: تجدید شدہ
+      published: شائع کردہ
+      updated: اپ ڈیٹ کردہ
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: فضائی حادثات کی تفتیشی برانچ رپورٹ
+        other: فضائی حادثات کی تفتیشی برانچ رپورٹس
       announcement:
         one: اعلان
         other: اعلانات
       asylum_support_decision:
-        one:
-        other:
+        one: پناہ گزین کی معاونتی عدالت کا فیصلہ
+        other: پناہ گزین کی معاونتی عدالت کے فیصلے
       authored_article:
-        one: تحریر کردہ مضمون
-        other: تحریر کردہ مضامین
+        one: مصنف کے نام کے ساتھ لکھا مضمون
+        other: مصنف کے نام کے ساتھ لکھے مضامین
       business_finance_support_scheme:
-        one:
-        other:
+        one: بزنس فائنانس معاونتی اسکیم
+        other: بزنس فائنانس معاونتی اسکیمز
       case_study:
         one: کیس اسٹڈی
         other: کیس اسٹڈیز
       closed_consultation:
-        one: مشاورت ختم
-        other: " مشاورت ختم"
-        overview:
+        one: محدود مشاورت
+        other: محدود مشاورتیں
       cma_case:
-        one:
-        other:
+        one: مقابلے اور مارکیٹس کی اتھارٹی کا کیس
+        other: مقابلے اور مارکیٹس کی اتھارٹی کے کیسز
       coming_soon:
-        one:
-        other:
+        one: جلد آ رہا ہے
+        other: جلد آ رہا ہے
       consultation:
         one: مشاورت
-        other: مشاورت
+        other: مشاورتیں
       consultation_outcome:
         one: مشاورت کا نتیجہ
         other: مشاورت کے نتائج
-        overview:
       corporate_information_page:
-        one:
-        other:
+        one: معلومات کا صفحہ
+        other: معلومات کے صفحات
       corporate_report:
         one: کارپوریٹ رپورٹ
         other: کارپوریٹ رپورٹس
-        overview:
       correspondence:
-        one: مراسلت
-        other: مراسلات
-        overview:
+        one: خط و کتابت
+        other: خط و کتابت
       countryside_stewardship_grant:
-        one:
-        other:
+        one: Countryside Stewardship گرانٹ
+        other: Countryside Stewardship گرانٹس
       decision:
-        one:
-        other:
-        overview:
+        one: فیصلہ
+        other: فیصلے
       detailed_guide:
-        one: مفصل رہنمائی
-        other: مفصل رہنمائی
+        one: رہنمائی
+        other: رہنمائی
       dfid_research_output:
-        one:
-        other:
+        one: ترقی کے نتیجے پر تحقیق
+        other: ترقی کے نتائج پر تحقیق
       document_collection:
-        one: سلسلہ
-        other:
+        one: مجموعہ
+        other: مجموعے
       draft_text:
-        one: ڈرافٹ متن
-        other: ڈرافٹ متن
+        one: ڈرافٹ کا متن
+        other: ڈرافٹ کے متن
       drug_safety_update:
-        one:
-        other:
+        one: دوا کی حفاظتی اپ ڈیٹ
+        other: دوا کی حفاظتی اپ ڈیٹس
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: ملازمت کی اپیل کا عدالتی فیصلہ
+        other: ملازمت کی اپیل کے عدالتی فیصلے
       employment_tribunal_decision:
-        one:
-        other:
+        one: ملازمت کی اپیل کا فیصلہ
+        other: ملازمت کی اپیل کے فیصلے
       esi_fund:
-        one:
-        other:
+        one: یورپی بناوٹی اور سرمایہ کاری کا فنڈ (ESIF)
+        other: یورپی بناوٹی اور سرمایہ کاری کے فنڈز (ESIF)
       fatality_notice:
-        one: وفات کی اطلاع
-        other: وفات کی اطلاعات
+        one: موت کا نوٹس
+        other: موت کے نوٹسز
       foi_release:
-        one: آزادئی معلومات کی اشاعت
-        other: آزادئی معلومات کی اشاعت
-        overview:
+        one: رہائی تھی۔
+        other: رہائی تھی۔
       form:
         one: فارم
         other: فارمز
-        overview:
       government_response:
-        one: حکومتی جوابی اقدام
-        other: حکومتی جوابی اقدامات
+        one: حکومت کا جواب
+        other: حکومت کے جوابات
       guidance:
         one: رہنمائی
         other: رہنمائی
-        overview:
       impact_assessment:
-        one: اثرات کا تجزیہ
-        other: اثرات کے تجزیے
-        overview:
+        one: اثر کی جانچ
+        other: اثر کی جانچیں
       imported:
-        one: امپورٹڈ- نوع کا انتظار
-        other: امپورٹڈ- نوع کا انتظار
+        one: درآمد شدہ - قسم کا انتظار
+        other: درآمد شدہ - قسم کا انتظار
       independent_report:
-        one: غیر جانبدار رپورٹ
-        other: غیر جانبداررپورٹس
-        overview:
+        one: خودمختار رپورٹ
+        other: خودمختار رپورٹس
       international_development_fund:
-        one:
-        other:
+        one: عالمی ترقیاتی فنڈنگ
+        other: عالمی ترقیاتی فنڈنگ
       international_treaty:
-        one:
-        other:
-        overview:
+        one: عالمی معاہدہ
+        other: عالمی معاہدے
       maib_report:
-        one:
-        other:
+        one: میرین حادثے کی تفتیشی برانچ رپورٹ
+        other: میرین حادثے کی تفتیشی برانچ رپورٹس
       map:
         one: نقشہ
         other: نقشے
-        overview:
       medical_safety_alert:
-        one:
-        other:
+        one: ادویات اور طبی ڈیوائسز کے لیے انتباہات اور ری کالز
+        other: ادویات اور طبی ڈیوائسز کے لیے انتباہات اور ری کالز
       national:
-        one:
-        other:
+        one: قومی شماریاتی اعلان
+        other: قومی شماریاتی اعلانات
       national_statistics:
-        one: شماریات- قومی اعدادوشمار
-        other: شماریات- قومی اعدادوشمار
-        overview:
+        one: قومی شماریات
+        other: قومی شماریات
       national_statistics_announcement:
-        one:
-        other:
+        one: قومی شماریاتی اعلان
+        other: قومی شماریاتی اعلانات
       news_article:
-        one: نیوزآرٹیکل
-        other: نیوزآرٹیکلز
+        one: خبروں کا مضمون
+        other: خبروں کے مضامین
       news_story:
-        one: نیوز اسٹوری
-        other: نیوزاسٹوریز
+        one: خبروں کی کہانی
+        other: خبروں کی کہانیاں
       notice:
-        one:
-        other:
-        overview:
+        one: نوٹس
+        other: نوٹسز
       official:
-        one:
-        other:
+        one: سرکاری شماریات کا اعلان
+        other: سرکاری شماریات کے اعلانات
       official_statistics:
-        one: اعدادوشمار
-        other: اعدادو شمار
-        overview:
+        one: سرکاری شماریات
+        other: سرکاری شماریات
       official_statistics_announcement:
-        one:
-        other:
+        one: سرکاری شماریات کا اعلان
+        other: سرکاری شماریات کے اعلانات
       open_consultation:
-        one: جاری مشاورت
-        other: جاری مشاورت
-        overview:
+        one: آزاد مشاورت
+        other: آزاد مشاورت
       oral_statement:
-        one: پارلیمنٹ میں زبانی بیان
-        other: پارلیمنٹ میں زبانی بیانات
+        one: پارلیمان کے لیے زبانی بیان
+        other: پارلیمان کے لیے زبانی بیانات
       policy:
         one: پالیسی
         other: پالیسیاں
       policy_paper:
-        one: پالیسی پیپر
-        other: پالیسی پیپرز
-        overview:
+        one: پالیسی کا کاغذ
+        other: پالیسی کے کاغذات
       press_release:
         one: پریس ریلیز
         other: پریس ریلیزز
       promotional:
         one: تشہیری مواد
         other: تشہیری مواد
-        overview:
       publication:
-        one: مطبوعہ
-        other: مطبوعات
+        one: پبلیکیشن
+        other: پبلیکیشنز
       raib_report:
-        one:
-        other:
+        one: ریل حادثے کی تفتیشی برانچ رپورٹ
+        other: ریل حادثے کی تفتیشی برانچ رپورٹس
       regulation:
-        one:
-        other:
-        overview:
+        one: ضابطہ
+        other: ضابطے
       research:
-        one: تحقیق وتجزیہ
-        other: تحقیق وتجزیہ
-        overview:
+        one: تحقیق اور تجزیہ
+        other: تحقیق اور تجزیہ
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: رہائشی پراپرٹی کے لیے عدالتی فیصلہ
+        other: رہائشی پراپرٹی کے لیے عدالتی فیصلے
       service_sign_in:
-        one:
-        other:
+        one: سروس سائن ان
+        other: سروس سائن ان
       service_standard_report:
-        one:
-        other:
+        one: سروس کے معیار کی رپورٹ
+        other: سروس کے معیار کی رپورٹس
       speaking_notes:
-        one: تقریری نوٹ
-        other: تقریری نوٹ
+        one: صوتی نوٹس
+        other: صوتی نوٹس
       speech:
         one: تقریر
         other: تقاریر
       standard:
-        one:
-        other:
-        overview:
+        one: معیار
+        other: معیارات
       statement_to_parliament:
-        one: پارلیمنٹ میں بیان
-        other: پارلیمنٹ میں بیانات
+        one: پارلیمان میں دیا گیا بیان
+        other: پارلیمان میں دیے گئے بیانات
       statistical_data_set:
         one: شماریاتی ڈیٹا سیٹ
-        other: " شماریاتی ڈیٹا سیٹس"
+        other: شماریاتی ڈیٹا سیٹس
       statistics_announcement:
-        one:
-        other:
+        one: شماریات کے اجراء کا اعلان
+        other: شماریات کے اجراء کا اعلانات
       statutory_guidance:
-        one:
-        other:
-        overview:
+        one: قانونی رہنمائی
+        other: قانونی رہنمائی
       take_part:
-        one:
-        other:
+        one: شرکت کریں
+        other: شرکت کریں
       tax_tribunal_decision:
-        one:
-        other:
+        one: ٹیکس اینڈ چانسری عدالتی فیصلہ
+        other: ٹیکس اینڈ چانسری عدالتی فیصلے
       transcript:
         one: ٹرانسکرپٹ
-        other: ٹرانسکرپٹس
+        other: ٹرنسکرپٹس
       transparency:
-        one: ٹرانسپیرنسی ڈیٹا
-        other: ٹرانسپیرنسی ڈیٹا
-        overview:
+        one: شفافیت کا ڈیٹا
+        other: شفافیت کا ڈیٹا
       utaac_decision:
-        one:
-        other:
+        one: انتظامی اپیلز کا عدالتی فیصلہ
+        other: انتظامی اپیلز کے عدالتی فیصلے
       world_location_news_article:
-        one: نیوزآرٹیکل
-        other: نیوزآرٹیکلز
+        one: خبروں کا مضمون
+        other: خبروں کے مضامین
       world_news_story:
-        one:
-        other:
+        one: دنیا کی خبروں کی کہانی
+        other: دنیا کی خبروں کی کہانیاں
       written_statement:
-        one: پارلیمنٹ میں تحریری بیان
-        other: پارلیمنٹ میں تحریری بیانات
+        one: پالیمان کے لیے تحریری بیان
+        other: پالیمان کے لیے تحریری بیانات
   corporate_information_page:
-    about_our_services_html:
+    about_our_services_html: "%{link} کو جانیے۔"
     corporate_information: کارپوریٹ معلومات
-    personal_information_charter_html: ہمارے %{link} واضح کرتے ہیں کہ ہم آپکی ذاتی معلومات کو کیسے استعمال کرتے ہیں
-    publication_scheme_html: 'ہماری معمول کے مطابق  شائع کردہ معلومات کی نوعیت  %{link} پرملاحظہ کیجئیے '
-    social_media_use_html: ہماری پالیسی  %{link} پر ملاحظہ کیجئیے
-    welsh_language_scheme_html: اشاعت کے باب میں ہمارے کمٹ منٹ %{link} میں ملاحظہ کیجئیے
+    personal_information_charter_html: ہماری %{link} بیان کرتی ہے کہ ہم آپ کی ذاتی معلومات سے کیسے نمٹتے ہیں۔
+    publication_scheme_html: ہماری %{link} میں ہماری جانب سے معمول کے حساب سے شائع کی جانے والی معلومات کی اقسام کے بارے میں پڑھیں۔
+    social_media_use_html: "%{link} پر ہماری پالیسی کو پڑھیں۔"
+    welsh_language_scheme_html: "%{link} کے ساتھ ہماری وابستگی کے بارے میں جانیں۔"
   email:
     description_html:
     subscribe_title:
     unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: وزارت دفاع کا کریسنٹ
+    field_of_operation: کارروائی کی فیلڈ
+    operations_in: "%{location} میں کارروائیاں"
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -337,6 +312,7 @@ ur:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:
@@ -366,21 +342,21 @@ ur:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: مزید دستیاب نہیں
+    published_in_error: اس صفحے سے معلومات ہٹا دی گئی ہیں کیونکہ اسے نقص کے ساتھ شائع کیا گیا تھا۔
+    title: جس صفحے کی آپ کو تلاش ہے وہ مزید دستیاب نہیں ہے
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: اس رہنما میں موجود صفحات
+    skip_to_contents: چھوڑ کر رہنما کے مشمولات پر جائیں
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: یہ پبلیکیشن %{url} پر دستیاب ہے
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'یہ پبلیکیشن اوپن گورنمنٹ لائسنس v3.0 کے تحت لائسنس یافتہ ہے سوائے اس کے جو بصورت دیگر بیان کردہ ہے۔ لائسنس دیکھنے کے لیے، <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> کو ملاحظہ کریں یا معلوماتی پالیسی کی ٹیم، قومی آرکائیوز، کیو، لندن TW9 4DUپر پیغام بھیجیں، یا یہاں ای میل کریں: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: جہاں ہم کسی فریق ثالث کی کاپی رائٹ معلومات کی شناخت کی ہو آپ کو متعلقہ کاپی رائٹ ہولڈرز سے اجازت لینے کی ضرورت ہو گی۔
   i18n:
-    direction: rtl
+    direction:
   language_names:
     ar:
     az:
@@ -449,58 +425,58 @@ ur:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: اگلا
+    previous_page: گزشتہ
+    print_entire_guide: پوری رہنمائی کا پرنٹ لیں
   publication:
-    details:
+    details: تفصیلات
     documents:
       one: دستاویز
       other: دستاویزات
   service_sign_in:
-    continue:
+    continue: جاری رکھیں
     error:
-      option:
-      title:
+      option: براہ کرم کوئی اختیار منتخب کریں
+      title: آپ نے کوئی اختیار منتخب نہیں کیا
   shared:
-    historically_political:
+    historically_political: اسے %{government} کے تحت شائع کیا گیا تھا
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: مشاورت کار چیٹ کے لیے دستیاب ہیں۔
+      busy: webchat کے تمام مشاورت کار فی الوقت مصروف ہیں۔
+      closed: Webchat فی الوقت بند ہے۔
+      speak_to_adviser: ابھی کسی مشاورت کار سے بات کریں
+      technical_problem: تکنیکی مسائل کی وجہ سے Webchat فی الوقت دستیاب نہیں ہے۔
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: سکیم کا لوگو متعین کردہ اصل UK سے محفوظ شدہ (Designated Origin UK Protected) کے ساتھ سیاہ اسٹام پر مشتمل ہے
+    pgi_alt_text: سکیم کا لوگو جغرافیائی اصل UK سے محفوظ شدہ (Geographic Origin UK Protected) کے ساتھ سیاہ اسٹام پر مشتمل ہے
+    tsg_alt_text: سکیم کا لوگو روایتی خصوصیت UK سے محفوظ شدہ (Traditional Speciality UK Protected) کے ساتھ سیاہ اسٹام پر مشتمل ہے
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: ترسیل کردہ بتاریخ
+    location: مقام
+    written_on: تحریر کردہ بتاریخ
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: منسوخی کی تاریخ
+    cancelled: شماریات کے اجراء کو منسوخ کر دیا گیا
+    changed_date: اجراء کی تاریخ تبدیل ہو گئی ہے
+    forthcoming: یہ شماریات جاری کی جائیں گے
+    previous_date: گزشتہ تاریخ
+    proposed_date: تجویز کردہ اجراء
+    reason_for_change: تبدیلی کی وجہ
+    release_date: اجراء کی تاریخ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html:
-      avoid_all_but_essential_travel_to_whole_country_html:
-      avoid_all_travel_to_parts_html:
-      avoid_all_travel_to_whole_country_html:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> سوائے ملک کے کچھ حصوں میں ضروری سفر کرنے کے ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> سوائے پورے ملک میں ضروری سفر کرنے کے ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ملک کے کچھ حصوں میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> پورے ملک میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
+    context: غیر ملکی سفر کی مشاورت
+    still_current_at: ابھی تک حالیہ ہے از
+    summary: خلاصہ
+    updated: اپ ڈیٹ کردہ
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: مزید دستیاب نہیں
+    summary: اس صفحے سے معلومات ہٹا دی گئی ہیں کیونکہ اسے نقص کے ساتھ شائع کیا گیا تھا۔
+    title: جس صفحے کی آپ کو تلاش ہے وہ مزید دستیاب نہیں ہے
   working_group:
-    contact_details:
-    policies:
+    contact_details: رابطے کی تفصیلات
+    policies: پالیسیاں

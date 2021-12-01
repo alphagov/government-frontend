@@ -2,482 +2,457 @@
 sl:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Vodnik po brexitu za podjetja
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Vodnik po brexitu za posameznike in družine
+    heading_prefix: Drugače je
   common:
-    visit:
+    visit: 'Obiščite:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Avtor slike: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: Skrij vse posodobitve
+      last_updated: Zadnjič posodobljeno %{date}
+      published: Objavljeno %{date}
+      see_all_updates: poglej vse posodobitve
+      show_all_updates: prikaži vse posodobitve
     publisher_metadata:
-      hide_all:
-      show_all:
+      hide_all: skrij vse
+      show_all: prikaži vse
     share_links:
-      share_this_page:
+      share_this_page: Deli to stran
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: in
+    another_website_html: To posvetovanje %{closed} poteka na <a href="%{url}">drugi spletni strani</a>
+    at: na
+    closes: Zapre se ob
+    closes_at: To posvetovanje se zapre ob
+    complete_a: 'Izpolnite '
+    description: Opis posvetovanja
+    detail_of_feedback_received: Podrobnosti o povratnih informacijah
+    detail_of_outcome: Podrobnosti o rezultatu
+    documents: Dokumenti
+    download_outcome: Prenesi končni rezultat
+    either: ali
+    email_to: 'Pošlji elektronsko sporočilo:'
+    feedback_received: Prejeli smo povratne informacije
+    is_being: se
+    not_open_yet: To posvetovanje še ni začeto
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Posvetovanje se začne
+    original_consultation: Izvirno posvetovanje
+    ran_from: To posvetovanje je trajalo od
+    respond_online: Odgovori na spletu
+    visit_soon: Kmalu znova obiščite to stran in naložite rezultat v te javne& nbsp;povratne informacije.
+    was: je bilo
+    ways_to_respond: Načini odziva
+    write_to: 'Pišite na:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: E-pošta
+    find_call_charges: Izvedite več o cenah klicev
+    online: Na spletu
+    phone: Telefon
+    webchat: Spletni klepet
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Ta dokument bo objavljen
+    contents: Vsebina
     metadata:
-      published:
-      updated:
+      published: Objavljeno
+      updated: Posodobljeno
     schema_name:
       aaib_report:
         few:
-        one:
-        other:
+        one: Poročilo podružnice za preiskave letalskih nesreč
+        other: Poročila podružnice za preiskovanje letalskih nesreč
         two:
       announcement:
         few:
-        one:
-        other:
+        one: Razglas
+        other: Razglasi
         two:
       asylum_support_decision:
         few:
-        one:
-        other:
+        one: Odločitev sodišča o podpori azilu
+        other: Odločitve sodišča o podpori azilu
         two:
       authored_article:
         few:
-        one:
-        other:
+        one: Avtorski članek
+        other: Avtorski članki
         two:
       business_finance_support_scheme:
         few:
-        one:
-        other:
+        one: Program podpore za poslovne finance
+        other: Programi podpore za poslovne finance
         two:
       case_study:
         few:
-        one:
-        other:
+        one: Študija primera
+        other: Študije primera
         two:
       closed_consultation:
         few:
-        one:
-        other:
-        overview:
+        one: Tesno posvetovanje
+        other: Tesna posvetovanja
         two:
       cma_case:
         few:
-        one:
-        other:
+        one: Primer organa za konkurenco in trge
+        other: Primeri organa za konkurenco in trge
         two:
       coming_soon:
         few:
-        one:
-        other:
+        one: Kmalu na voljo
+        other: Kmalu na voljo
         two:
       consultation:
         few:
-        one:
-        other:
+        one: Posvetovanje
+        other: Posvetovanja
         two:
       consultation_outcome:
         few:
-        one:
-        other:
-        overview:
+        one: Rezultat posvetovanja
+        other: Rezultati posvetovanja
         two:
       corporate_information_page:
         few:
-        one:
-        other:
+        one: Stran z informacijami
+        other: Strani z informacijami
         two:
       corporate_report:
         few:
-        one:
-        other:
-        overview:
+        one: Poročilo podjetja
+        other: Poročila podjetja
         two:
       correspondence:
         few:
-        one:
-        other:
-        overview:
+        one: Korespondenca
+        other: Korespondenca
         two:
       countryside_stewardship_grant:
         few:
-        one:
-        other:
+        one: Nepovratna sredstva za ohranjanje podeželja
+        other: Nepovratna sredstva za ohranjanje podeželja
         two:
       decision:
         few:
-        one:
-        other:
-        overview:
+        one: Odločitev
+        other: Odločitve
         two:
       detailed_guide:
         few:
-        one:
-        other:
+        one: Smernice
+        other: Smernice
         two:
       dfid_research_output:
         few:
-        one:
-        other:
+        one: Raziskave za razvojni rezultat
+        other: Raziskave za razvojne rezultate
         two:
       document_collection:
         few:
-        one:
-        other:
+        one: Zbirka
+        other: Zbirke
         two:
       draft_text:
         few:
-        one:
-        other:
+        one: Osnutek besedila
+        other: Osnutki besedila
         two:
       drug_safety_update:
         few:
-        one:
-        other:
+        one: Posodobitev o varnosti zdravil
+        other: Posodobitve o varnosti zdravil
         two:
       employment_appeal_tribunal_decision:
         few:
-        one:
-        other:
+        one: Odločitev pritožbenega delovnega sodišča
+        other: Odločitve pritožbenega delovnega sodišča
         two:
       employment_tribunal_decision:
         few:
-        one:
-        other:
+        one: Odločitev delovnega sodišča
+        other: Odločitve delovnega sodišča
         two:
       esi_fund:
         few:
-        one:
-        other:
+        one: Evropski strukturni in investicijski sklad (ESI)
+        other: Evropski strukturni in investicijski skladi (ESI)
         two:
       fatality_notice:
         few:
-        one:
-        other:
+        one: Obvestilo o smrti
+        other: Obvestila o smrti
         two:
       foi_release:
         few:
-        one:
-        other:
-        overview:
+        one: Izjava o svobodi informacij
+        other: Izjave o svobodi informacij
         two:
       form:
         few:
-        one:
-        other:
-        overview:
+        one: Oblika
+        other: Oblike
         two:
       government_response:
         few:
-        one:
-        other:
+        one: Odziv vlade
+        other: Odzivi vlade
         two:
       guidance:
         few:
-        one:
-        other:
-        overview:
+        one: Smernice
+        other: Smernice
         two:
       impact_assessment:
         few:
-        one:
-        other:
-        overview:
+        one: Presoja vpliva
+        other: Presoje vpliva
         two:
       imported:
         few:
-        one:
-        other:
+        one: uvoženo − vrsta čakanja
+        other: uvoženo − vrsta čakanja
         two:
       independent_report:
         few:
-        one:
-        other:
-        overview:
+        one: neodvisno poročilo
+        other: neodvisna poročila
         two:
       international_development_fund:
         few:
-        one:
-        other:
+        one: Financiranje mednarodnega razvoja
+        other: Financiranje mednarodnega razvoja
         two:
       international_treaty:
         few:
-        one:
-        other:
-        overview:
+        one: Mednarodni sporazum
+        other: Mednarodni sporazumi
         two:
       maib_report:
         few:
-        one:
-        other:
+        one: Poročilo podružnice za preiskave pomorskih nesreč
+        other: Poročila podružnice za preiskave pomorskih nesreč
         two:
       map:
         few:
-        one:
-        other:
-        overview:
+        one: Zemljevid
+        other: Zemljevidi
         two:
       medical_safety_alert:
         few:
-        one:
-        other:
+        one: Opozorila glede zdravil in medicinskih pripomočkih in odpoklici le-teh
+        other: Opozorila glede zdravil in medicinskih pripomočkih in odpoklici le-teh
         two:
       national:
         few:
-        one:
-        other:
+        one: Objava državne statistike
+        other: Objave državne statistike
         two:
       national_statistics:
         few:
-        one:
-        other:
-        overview:
+        one: Državna statistika
+        other: Državna statistika
         two:
       national_statistics_announcement:
         few:
-        one:
-        other:
+        one: Objava državne statistike
+        other: Objave državne statistike
         two:
       news_article:
         few:
-        one:
-        other:
+        one: Časopisni članek
+        other: Časopisni članki
         two:
       news_story:
         few:
-        one:
-        other:
+        one: Časopisna zgodba
+        other: Časopisne zgodbe
         two:
       notice:
         few:
-        one:
-        other:
-        overview:
+        one: Obvestilo
+        other: Obvestila
         two:
       official:
         few:
-        one:
-        other:
+        one: Objava uradne statistike
+        other: Objave uradne statistike
         two:
       official_statistics:
         few:
-        one:
-        other:
-        overview:
+        one: Uradna statistika
+        other: Uradna statistika
         two:
       official_statistics_announcement:
         few:
-        one:
-        other:
+        one: Objava uradne statistike
+        other: Objave uradne statistike
         two:
       open_consultation:
         few:
-        one:
-        other:
-        overview:
+        one: Odprto posvetovanje
+        other: Odprto posvetovanje
         two:
       oral_statement:
         few:
-        one:
-        other:
+        one: Ustna izjava za parlament
+        other: Ustne izjave za parlament
         two:
       policy:
         few:
-        one:
-        other:
+        one: Politika
+        other: Politike
         two:
       policy_paper:
         few:
-        one:
-        other:
-        overview:
+        one: Politični dokument
+        other: Politični dokumenti
         two:
       press_release:
         few:
-        one:
-        other:
+        one: Sporočilo za javnost
+        other: Sporočila za javnost
         two:
       promotional:
         few:
-        one:
-        other:
-        overview:
+        one: Promocijski material
+        other: Promocijski material
         two:
       publication:
         few:
-        one:
-        other:
+        one: Publikacija
+        other: Publikacije
         two:
       raib_report:
         few:
-        one:
-        other:
+        one: Poročilo podružnice za preiskave železniških nesreč
+        other: Poročila podružnice za preiskave železniških nesreč
         two:
       regulation:
         few:
-        one:
-        other:
-        overview:
+        one: Uredba
+        other: Uredbe
         two:
       research:
         few:
-        one:
-        other:
-        overview:
+        one: Raziskovanje in analiza
+        other: Raziskovanje in analiza
         two:
       residential_property_tribunal_decision:
         few:
-        one:
-        other:
+        one: Odločitev sodišča za stanovanjske nepremičnine
+        other: Odločitve sodišča za stanovanjske nepremičnine
         two:
       service_sign_in:
         few:
-        one:
-        other:
+        one: Prijava v storitev
+        other: Prijava v storitev
         two:
       service_standard_report:
         few:
-        one:
-        other:
+        one: Standardno poročilo o storitvah
+        other: Standardna poročila o storitvah
         two:
       speaking_notes:
         few:
-        one:
-        other:
+        one: Točke za govor
+        other: Točke za govor
         two:
       speech:
         few:
-        one:
-        other:
+        one: Govor
+        other: Govori
         two:
       standard:
         few:
-        one:
-        other:
-        overview:
+        one: Standard
+        other: Standardi
         two:
       statement_to_parliament:
         few:
-        one:
-        other:
+        one: Izjava parlamentu
+        other: Izjave parlamentu
         two:
       statistical_data_set:
         few:
-        one:
-        other:
+        one: Statistični podatkovni niz
+        other: Statistični podatkovni nizi
         two:
       statistics_announcement:
         few:
-        one:
-        other:
+        one: Statistična objava
+        other: Statistične objave
         two:
       statutory_guidance:
         few:
-        one:
-        other:
-        overview:
+        one: Zakonski napotki
+        other: Zakonski napotki
         two:
       take_part:
         few:
-        one:
-        other:
+        one: Sodelujte
+        other: Sodelujte
         two:
       tax_tribunal_decision:
         few:
-        one:
-        other:
+        one: Odločitev Sodišča za davčne in gospodarske spore
+        other: Odločitve Sodišča za davčne in gospodarske spore
         two:
       transcript:
         few:
-        one:
-        other:
+        one: Prepis
+        other: Prepisi
         two:
       transparency:
         few:
-        one:
-        other:
-        overview:
+        one: Podatki o preglednosti
+        other: Podatki o preglednosti
         two:
       utaac_decision:
         few:
-        one:
-        other:
+        one: Odločitev Pritožbenega delovnega sodišča
+        other: Odločitve Pritožbenega delovnega sodišča
         two:
       world_location_news_article:
         few:
-        one:
-        other:
+        one: Časopisni članek
+        other: Časopisni članki
         two:
       world_news_story:
         few:
-        one:
-        other:
+        one: Novica s sveta
+        other: Novice s celega sveta
         two:
       written_statement:
         few:
-        one:
-        other:
+        one: Pisna izjava za parlament
+        other: Pisne izjave za parlament
         two:
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Izvedite več %{link}.
+    corporate_information: Informacije o podjetju
+    personal_information_charter_html: Na povezavi %{link} je razloženo, kako ravnamo z vašimi osebnimi podatki.
+    publication_scheme_html: Več o vrstah informacij, ki jih redno objavljamo, preberite v naši %{link}.
+    social_media_use_html: Preberite si našo politiko na %{link}.
+    welsh_language_scheme_html: Izvedite več o naši zavezanosti %{link}.
   email:
     description_html:
     subscribe_title:
     unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Grb Ministrstva za obrambo
+    field_of_operation: Področje delovanja
+    operations_in: Dejavni v %{location}
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -485,6 +460,7 @@ sl:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:
@@ -514,19 +490,19 @@ sl:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Ni več na voljo
+    published_in_error: Informacije na tej strani so bile odstranjene, ker so bile objavljene po pomoti.
+    title: Stran, ki ste jo iskali, ni več na voljo
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Strani v tem vodiču
+    skip_to_contents: Skočite na vsebino vodiča
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Ta publikacija je na voljo na %{url}
+      copyright: Avtorske pravice © Crown %{year}
+      isbn: 'ISBN:'
+      licence_html: 'Ta publikacija ima licenco pod pogoji licence Open Government License v3.0, razen kjer je navedeno drugače. Za ogled licence obiščite <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ali pišite  skupini za informacijsko politiko Information Policy Team, The National Archives, Kew, London TW9 4DU ali napišite e-sporočilo: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Če ugotovimo kakršne koli podatke o avtorskih pravicah tretjih oseb, boste morali pridobiti dovoljenje zadevnih imetnikov avtorskih pravic.
   i18n:
     direction:
   language_names:
@@ -578,7 +554,7 @@ sl:
     ru:
     si:
     sk:
-    sl: Slovenščina
+    sl: slovenščina
     so:
     sq:
     sr:
@@ -597,60 +573,60 @@ sl:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Naslednji
+    previous_page: Prejšnji
+    print_entire_guide: Natisni cel vodič
   publication:
-    details:
+    details: Podrobnosti
     documents:
       few:
-      one:
-      other:
+      one: Dokument
+      other: Dokumenti
       two:
   service_sign_in:
-    continue:
+    continue: Nadaljuj
     error:
-      option:
-      title:
+      option: Prosimo, izberite možnost
+      title: Niste izbrali možnosti
   shared:
-    historically_political:
+    historically_political: To je bilo objavljeno pod %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Svetovalci so na voljo za klepet.
+      busy: Trenutno so vsi svetovalci spletnega klepeta zasedeni.
+      closed: Spletni klepet trenutno ne deluje.
+      speak_to_adviser: Govorite s svetovalcem zdaj
+      technical_problem: Spletni klepet trenutno ni na voljo zaradi tehničnih težav.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Logotip sheme je črni žig z besedami Designated Origin UK Protected
+    pgi_alt_text: Logotip sheme je črni žig z besedami Geographic Origin UK Protected
+    tsg_alt_text: Logotip sheme je črni žig z besedami Traditional Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: 'Podano dne:'
+    location: Lokacija
+    written_on: Napisano dne
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Datum preklica
+    cancelled: Statistična objava je bila preklicana
+    changed_date: Datum objave seje spremenil
+    forthcoming: Ta statistika bo objavljena
+    previous_date: Prejšnji datum
+    proposed_date: Predlagana objava
+    reason_for_change: Razlog za spremembo
+    release_date: Datum objave
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html:
-      avoid_all_but_essential_travel_to_whole_country_html:
-      avoid_all_travel_to_parts_html:
-      avoid_all_travel_to_whole_country_html:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa nenujna potovanja v dele države.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa nenujna potovanja v državo.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa potovanja v dele države.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa potovanja v državo.
+    context: Nasveti za potovanja v tujino
+    still_current_at: Še vedno aktualno ob
+    summary: Povzetek
+    updated: Posodobljeno
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Ni več na voljo
+    summary: Informacije na tej strani so bile odstranjene, ker so bile objavljene po pomoti.
+    title: Stran, ki ste jo iskali, ni več na voljo
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktni podatki
+    policies: Politike

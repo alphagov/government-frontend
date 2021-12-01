@@ -2,334 +2,309 @@
 gu:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: વ્યવસાયો માટે બ્રેક્ઝિટ માર્ગદર્શન
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: વ્યક્તિઓ અને પરિવારો માટે બ્રેક્ઝિટ માર્ગદર્શન
+    heading_prefix: અલગ
   common:
-    visit:
+    visit: 'મુલાકાત લો:'
   components:
     figure:
-      image_credit:
+      image_credit: ઇમેજ ક્રેડિટ:%{credit}
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: બધા અપડેટ્સને હાઈડ કરો
+      last_updated: છેલ્લો અપડેટ %{date}
+      published: પ્રકાશિત થયો %{date}
+      see_all_updates: બધા અપડેટ્સ જુઓ
+      show_all_updates: બધા અપડેટ્સ બતાવો
     publisher_metadata:
-      hide_all:
-      show_all:
+      hide_all: બધા હાઈડ કરો
+      show_all: બધા બતાવો
     share_links:
-      share_this_page:
+      share_this_page: આ પેજ શેર કરો
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: અને
+    another_website_html: આ પરામર્શ %{closed} ના રોજ <a href="%{url}">અન્ય વેબસાઇટ</a> પર આયોજિત કરેલ છે
+    at: ખાતે
+    closes: તે સમાપ્ત થાય છે
+    closes_at: આ પરામર્શ ના રોજ સમાપ્ત થાય છે
+    complete_a: પૂર્ણ કરો
+    description: પરામર્શ વર્ણન
+    detail_of_feedback_received: પ્રાપ્ત ફીડબૅકની વિગતો
+    detail_of_outcome: પરિણામોની વિગતો
+    documents: દસ્તાવેજો
+    download_outcome: સંપૂર્ણ પરિણામ ડાઉનલોડ કરો
+    either: અથવા
+    email_to: 'અહીં ઈમેલ કરો:'
+    feedback_received: 'પ્રાપ્ત ફીડબૅક '
+    is_being: છે
+    not_open_yet: આ પરામર્શ હજુ સુધી શરૂ થયેલ નથી
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: આ પરામર્શ શરૂ થાય છે
+    original_consultation: મૂળ પરામર્શ
+    ran_from: આ પરામર્શ થી ચાલુ
+    respond_online: ઓનલાઇન પ્રતિભાવ આપો
+    visit_soon: આ public&nbspના પરિણામો ડાઉનલોડ કરવા માટે આ પેજની જલ્દી મુલાકાત લો;ફીડબૅક.
+    was: હતું
+    ways_to_respond: પ્રતિભાવ આપવાની રીતો
+    write_to: 'ને લખો:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: ઈમેલ
+    find_call_charges: કૉલ ચાર્જિસ અંગે શોધો
+    online: ઓનલાઇન
+    phone: ફોન
+    webchat: વેબચેટ
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: આ દસ્તાવેજ ના રોજ પ્રકાશિત થશે
+    contents: વિષયવસ્તુ
     metadata:
-      published:
-      updated:
+      published: પ્રકાશિત
+      updated: અપડેટ થયેલ
     schema_name:
       aaib_report:
-        one:
-        other:
+        one: હવાઈ અકસ્માતોની તપાસનો શાખા અહેવાલ
+        other: હવાઈ અકસ્માતોની તપાસનો શાખા અહેવાલ
       announcement:
-        one:
-        other:
+        one: જાહેરાત
+        other: જાહેરાતો
       asylum_support_decision:
-        one:
-        other:
+        one: અસાયલમ સપોર્ટ ટ્રિબ્યુનલ નિર્ણય
+        other: અસાયલમ સપોર્ટ ટ્રિબ્યુનલ નિર્ણયો
       authored_article:
-        one:
-        other:
+        one: લેખિત લેખ
+        other: લેખિત લેખો
       business_finance_support_scheme:
-        one:
-        other:
+        one: વ્યાપાર નાણાંકીય સહાય યોજના
+        other: વ્યાપાર નાણાંકીય સહાય યોજનાઓ
       case_study:
-        one:
-        other:
+        one: કેસ સ્ટડી
+        other: કેસ સ્ટડીઝ
       closed_consultation:
-        one:
-        other:
-        overview:
+        one: બંધ થયેલ પરામર્શ
+        other: બંધ થયેલા પરામર્શ
       cma_case:
-        one:
-        other:
+        one: સ્પર્ધા અને માર્કેટ ઓથોરીટી કેસ
+        other: સ્પર્ધા અને માર્કેટ ઓથોરીટી કેસો
       coming_soon:
-        one:
-        other:
+        one: જલ્દી આવી રહ્યું છે
+        other: જલ્દી આવી રહ્યું છે
       consultation:
-        one:
-        other:
+        one: પરામર્શ
+        other: પરામર્શ
       consultation_outcome:
-        one:
-        other:
-        overview:
+        one: પરામર્શનો પરિણામ
+        other: પરમર્શના પરિણામો
       corporate_information_page:
-        one:
-        other:
+        one: માહિતી પૃષ્ઠ
+        other: માહિતી પૃષ્ઠો
       corporate_report:
-        one:
-        other:
-        overview:
+        one: કોર્પોરેટ અહેવાલ
+        other: કોર્પોરેટ અહેવાલો
       correspondence:
-        one:
-        other:
-        overview:
+        one: પત્રવ્યવહાર
+        other: પત્રવ્યવહાર
       countryside_stewardship_grant:
-        one:
-        other:
+        one: 'કન્ટ્રીસાઇડ સ્ટુઅર્ડશિપ ગ્રાન્ટ '
+        other: કન્ટ્રીસાઇડ સ્ટુઅર્ડશિપ ગ્રાન્ટ્સ
       decision:
-        one:
-        other:
-        overview:
+        one: નિર્ણય
+        other: નિર્ણયો
       detailed_guide:
-        one:
-        other:
+        one: માર્ગદર્શન
+        other: માર્ગદર્શન
       dfid_research_output:
-        one:
-        other:
+        one: વિકાસ આઉટપુટ માટે સંશોધન
+        other: વિકાસ આઉટપુટ્સ માટે સંશોધન
       document_collection:
-        one:
-        other:
+        one: સંગ્રહ
+        other: સંગ્રહો
       draft_text:
-        one:
-        other:
+        one: ડ્રાફ્ટ ટેક્સ્ટ
+        other: ડ્રાફ્ટ ટેક્સ્ટ્સ
       drug_safety_update:
-        one:
-        other:
+        one: ડ્રગ સુરક્ષા અપડેટ
+        other: ડ્રગ સુરક્ષા અપડેટ્સ
       employment_appeal_tribunal_decision:
-        one:
-        other:
+        one: રોજગાર અપીલ ટ્રિબ્યુનલ નિર્ણય
+        other: રોજગાર અપીલ ટ્રિબ્યુનલ નિર્ણયો
       employment_tribunal_decision:
-        one:
-        other:
+        one: રોજગાર ટ્રિબ્યુનલ નિર્ણય
+        other: રોજગાર ટ્રિબ્યુનલ નિર્ણયો
       esi_fund:
-        one:
-        other:
+        one: યુરોપીયન સ્ટ્રક્ચરલ એંડ ઈન્વેસ્ટમેન્ટ ફંડ (ESIF)
+        other: યુરોપીયન સ્ટ્રક્ચરલ એંડ ઈન્વેસ્ટમેન્ટ ફંડ્સ (ESIF)
       fatality_notice:
-        one:
-        other:
+        one: મૃત્યુ અંગેની સૂચના
+        other: મૃત્યુ અંગેની સૂચનાઓ
       foi_release:
-        one:
-        other:
-        overview:
+        one: માહિતીની સ્વતંત્રતા રીલીઝ
+        other: માહિતીની સ્વતંત્રતા રીલીઝ
       form:
-        one:
-        other:
-        overview:
+        one: પત્રક
+        other: પત્રકો
       government_response:
-        one:
-        other:
+        one: સરકારનો પ્રતિભાવ
+        other: સરકારના પ્રતિભાવો
       guidance:
-        one:
-        other:
-        overview:
+        one: માર્ગદર્શન
+        other: માર્ગદર્શન
       impact_assessment:
-        one:
-        other:
-        overview:
+        one: અસરનું મૂલ્યાંકન
+        other: અસરના મૂલ્યાંકનો
       imported:
-        one:
-        other:
+        one: આયાત કરેલ – પ્રતિક્ષા પ્રકાર
+        other: આયાત કરેલ – પ્રતિક્ષા પ્રકાર
       independent_report:
-        one:
-        other:
-        overview:
+        one: સ્વતંત્ર અહેવાલ
+        other: સ્વતંત્ર અહેવાલો
       international_development_fund:
-        one:
-        other:
+        one: આંતરરાષ્ટ્રીય વિકાસ ફંડિંગ
+        other: આંતરરાષ્ટ્રીય વિકાસ ફંડિંગ
       international_treaty:
-        one:
-        other:
-        overview:
+        one: આંતરરાષ્ટ્રીય સંધિ
+        other: આંતરરાષ્ટ્રીય સંધિઓ
       maib_report:
-        one:
-        other:
+        one: દરિયાઈ અકસ્માતની તપાસનો શાખા અહેવાલ
+        other: દરિયાઈ અકસ્માતની તપાસના શાખા અહેવાલો
       map:
-        one:
-        other:
-        overview:
+        one: નકશો
+        other: નકશાઓ
       medical_safety_alert:
-        one:
-        other:
+        one: દવાઓ અને તબીબી ઉપકરણો માટે ચેતવણીઓ અને રીકોલ
+        other: 'દવાઓ અને તબીબી ઉપકરણો માટે ચેતવણીઓ અને રીકોલ '
       national:
-        one:
-        other:
+        one: રાષ્ટ્રીય આંકડાની જાહેરાત
+        other: રાષ્ટ્રીય આંકડાની જાહેરાતો
       national_statistics:
-        one:
-        other:
-        overview:
+        one: રાષ્ટ્રીય આંકડા
+        other: રાષ્ટ્રીય આંકડા
       national_statistics_announcement:
-        one:
-        other:
+        one: રાષ્ટ્રીય આંકડાની જાહેરાત
+        other: રાષ્ટ્રીય આંકડાની જાહેરાતો
       news_article:
-        one:
-        other:
+        one: ન્યૂઝ આર્ટિકલ
+        other: ન્યૂઝ આર્ટિકલ્સ
       news_story:
-        one:
-        other:
+        one: ન્યૂઝ સ્ટોરી
+        other: ન્યૂઝ સ્ટોરીઝ
       notice:
-        one:
-        other:
-        overview:
+        one: સૂચના
+        other: સૂચનાઓ
       official:
-        one:
-        other:
+        one: અધિકૃત આંકડાની જાહેરાત
+        other: અધિકૃત આંકડાની જાહેરાતો
       official_statistics:
-        one:
-        other:
-        overview:
+        one: અધિકૃત આંકડા
+        other: અધિકૃત આંકડા
       official_statistics_announcement:
-        one:
-        other:
+        one: અધિકૃત આંકડાની જાહેરાત
+        other: અધિકૃત આંકડાની જાહેરાતો
       open_consultation:
-        one:
-        other:
-        overview:
+        one: ખુલ્લો પરામર્શ
+        other: ખુલ્લા પરામર્શ
       oral_statement:
-        one:
-        other:
+        one: સંસદમાં મૌખિક નિવેદન
+        other: સંસદમાં મૌખિક નિવેદનો
       policy:
-        one:
-        other:
+        one: નીતિ
+        other: નીતિઓ
       policy_paper:
-        one:
-        other:
-        overview:
+        one: પોલિસી પેપર
+        other: પોલિસી પેપર્સ
       press_release:
-        one:
-        other:
+        one: પ્રેસ રીલીઝ
+        other: પ્રેસ રીલીઝ
       promotional:
-        one:
-        other:
-        overview:
+        one: પ્રચાર સામગ્રી
+        other: પ્રચાર સામગ્રી
       publication:
-        one:
-        other:
+        one: પ્રકાશન
+        other: પ્રકાશનો
       raib_report:
-        one:
-        other:
+        one: રેલ અકસ્માતની તપાસનો શાખા અહેવાલ
+        other: રેલ અકસ્માતની તપાસના શાખા અહેવાલો
       regulation:
-        one:
-        other:
-        overview:
+        one: નિયમન
+        other: નિયમનો
       research:
-        one:
-        other:
-        overview:
+        one: સંશોધન અને વિશ્લેષણ
+        other: સંશોધન અને વિશ્લેષણ
       residential_property_tribunal_decision:
-        one:
-        other:
+        one: રહેઠાણ મિલકત ટ્રિબ્યુનલનો નિર્ણય
+        other: રહેઠાણ મિલકત ટ્રિબ્યુનલના નિર્ણયો
       service_sign_in:
-        one:
-        other:
+        one: 'સર્વિસ સાઇન ઇન '
+        other: સર્વિસ સાઇન ઇન
       service_standard_report:
-        one:
-        other:
+        one: સર્વિસ સ્ટાન્ડર્ડ રિપોર્ટ
+        other: સર્વિસ સ્ટાન્ડર્ડ રિપોર્ટ્સ
       speaking_notes:
-        one:
-        other:
+        one: સ્પીકિંગ નોટ્સ
+        other: સ્પીકિંગ નોટ્સ
       speech:
-        one:
-        other:
+        one: ભાષણ
+        other: ભાષણો
       standard:
-        one:
-        other:
-        overview:
+        one: સ્ટાન્ડર્ડ
+        other: સ્ટાન્ડર્ડ્સ
       statement_to_parliament:
-        one:
-        other:
+        one: સંસદમાં નિવેદન
+        other: સંસદમાં નિવેદનો
       statistical_data_set:
-        one:
-        other:
+        one: આંકડાકીય ડેટા સેટ
+        other: આંકડાકીય ડેટા સેટ્સ
       statistics_announcement:
-        one:
-        other:
+        one: આંકડા જારી કરવાની જાહેરાત
+        other: આંકડા જારી કરવાની જાહેરાતો
       statutory_guidance:
-        one:
-        other:
-        overview:
+        one: વૈધાનિક માર્ગદર્શન
+        other: વૈધાનિક માર્ગદર્શન
       take_part:
-        one:
-        other:
+        one: ભાગ લો
+        other: ભાગ લો
       tax_tribunal_decision:
-        one:
-        other:
+        one: ટૅક્સ અને ચાન્સરી ટ્રિબ્યુનલનો નિર્ણય
+        other: ટૅક્સ અને ચાન્સરી ટ્રિબ્યુનલના નિર્ણયો
       transcript:
-        one:
-        other:
+        one: ટ્રાન્સસ્ક્રિપ્ટ
+        other: ટ્રાન્સસ્ક્રિપ્ટ્સ
       transparency:
-        one:
-        other:
-        overview:
+        one: પારદર્શિતા ડેટા
+        other: પારદર્શિતા ડેટા
       utaac_decision:
-        one:
-        other:
+        one: વહીવટી અપીલ્સ ટ્રિબ્યુનલનો નિર્ણય
+        other: વહીવટી અપીલ્સ ટ્રિબ્યુનલના નિર્ણયો
       world_location_news_article:
-        one:
-        other:
+        one: ન્યૂઝ આર્ટિકલ
+        other: ન્યૂઝ આર્ટિકલ્સ
       world_news_story:
-        one:
-        other:
+        one: વૈશ્વિક ન્યૂઝ સ્ટોરી
+        other: વૈશ્વિક ન્યૂઝ સ્ટોરીઝ
       written_statement:
-        one:
-        other:
+        one: સંસદમાં લેખિત નિવેદન
+        other: સંસદમાં લેખિત નિવેદનો
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: "%{link} શોધી કાઢો."
+    corporate_information: કોર્પોરેટ માહિતી
+    personal_information_charter_html: અમારી %{link} માં સમજાવ્યું છે કે અમે તમારી વ્યક્તિગત માહિતી સાથે કેવી રીતે વર્તીએ છીએ.
+    publication_scheme_html: અમે અમારી %{link} માં સામાન્ય રીતે કઈ પ્રકારની માહિતી પ્રકાશિત કરીએ છીએ તે વાંચો.
+    social_media_use_html: "%{link} માં અમારી નીતિ વાંચો."
+    welsh_language_scheme_html: "%{link} પ્રત્યે અમારી પ્રતિબદ્ધતા અંગે જાણો."
   email:
     description_html:
     subscribe_title:
     unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: સંરક્ષણ મંત્રાલય ક્રેસ્ટ
+    field_of_operation: કામગીરીનું ક્ષેત્ર
+    operations_in: "%{location} માં સંચાલનો"
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -337,6 +312,7 @@ gu:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:
@@ -366,19 +342,19 @@ gu:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: હવે ઉપલબ્ધ નથી
+    published_in_error: આ પેજ ઉપરની માહિતી હટાવી દેવામાં આવી છે, કારણ કે તે ભૂલથી પ્રકાશિત કરાઇ હતી.
+    title: તમે જે પેજ શોધો છો, તે હવે ઉપલબ્ધ નથી
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: આ માર્ગદર્શિકામાંના પૃષ્ઠો
+    skip_to_contents: માર્ગદર્શિકાની સામગ્રી પર જાઓ
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: આ પ્રકાશન %{url} પર ઉપલબ્ધ છે
+      copyright: "© ક્રાઉન કૉપીરાઇટ %{year}"
+      isbn: 'ISBN:'
+      licence_html: આ પ્રકાશન ઓપન ગવર્નમેંટ લાઇસન્સ v3.0ની શરતો હેઠળ લાઇસન્સ પ્રાપ્ત છે, સિવાય કે અન્યથા જણાવેલ હોય.લાઇસન્સ જોવા માટે, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a>ની મુલાકાત લો અથવા ઇન્ફોર્મેશન પોલિસી ટીમ, ધ નેશનલ આર્કાઇવ્સ, કિઉ, લંડન TW- 4DU ને લખો અથવા ઈમેલ કરો:<a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
+      third_party: જ્યાં અમે કોઈ તૃતીય પક્ષની કૉપીરાઇટ માહિતી આપી છે, ત્યાં તમારે સંબંધિત કૉપીરાઇટ ધારકોની પરવાનગી મેળવવી આવશ્યક રહેશે.
   i18n:
     direction:
   language_names:
@@ -401,7 +377,7 @@ gu:
     fi:
     fr:
     gd:
-    gu: ગુજરાતી
+    gu: જોર્જિયન
     he:
     hi:
     hr:
@@ -449,58 +425,58 @@ gu:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: આગળનું
+    previous_page: પહેલાનું
+    print_entire_guide: સંપૂર્ણ માર્ગદર્શિકા પ્રિન્ટ કરો
   publication:
-    details:
+    details: વિગતો
     documents:
-      one:
-      other:
+      one: દસ્તાવેજ
+      other: દસ્તાવેજો
   service_sign_in:
-    continue:
+    continue: જારી રાખો
     error:
-      option:
-      title:
+      option: કૃપા કરીને એક વિકલ્પ પસંદ કરો
+      title: તમે કોઈ વિકલ્પ પસંદ કરેલ નથી
   shared:
-    historically_political:
+    historically_political: આ %{government} હેઠળ પ્રકાશિત કરવામાં આવ્યું હતું.
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: ચેટ કરવા માટે સલાહકારો ઉપસ્થિત છે.
+      busy: તમામ વેબચેટ સલાહકારો અત્યારે વ્યસ્ત છે.
+      closed: વેબચેટ અત્યારે બંધ છે.
+      speak_to_adviser: હવે સલાહકાર સાથે વાત કરો
+      technical_problem: ટેક્નિકલ સમસ્યાને લીધે અત્યારે વેબચેટ ઉપલબ્ધ નથી.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: આ યોજનાનો લોગો એક કાળા રંગનો સ્ટેમ્પ છે, જેમાં ડેઝીગ્નેટેડ ઓરિજિન UK પ્રોટેક્ટેડ શબ્દો છે
+    pgi_alt_text: આ યોજનાનો લોગો એક કાળા રંગનો સ્ટેમ્પ છે, જેમાં જ્યોગ્રાફિક ઓરિજિન UK પ્રોટેક્ટેડ શબ્દો છે
+    tsg_alt_text: આ યોજનાનો લોગો એક કાળા રંગનો સ્ટેમ્પ છે, જેમાં ટ્રેડિશનલ સ્પેશિયાલિટી UK પ્રોટેક્ટેડ શબ્દો છે
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: ના રોજ ડિલિવર થયું
+    location: સ્થાન
+    written_on: પર લખેલ
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: રદ કર્યાની તારીખ
+    cancelled: આંકડાનું પ્રકશન રદ થયું
+    changed_date: રીલીઝ તારીખ બદલવામાં આવી છે
+    forthcoming: આ આંકડાઓ રીલીઝ કરાશે
+    previous_date: પાછલી તારીખ
+    proposed_date: પ્રસ્તાવિત રીલીઝ
+    reason_for_change: પરીવર્તન માટેનું કારણ
+    release_date: રીલીઝ તારીખ
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html:
-      avoid_all_but_essential_travel_to_whole_country_html:
-      avoid_all_travel_to_parts_html:
-      avoid_all_travel_to_whole_country_html:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> જરૂરી મુસાફરી સિવાય દેશના કેટલાક ભાગોમાં પ્રવાસ ન કરવાની સલાહ આપે છે.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> જરૂરી મુસાફરી સિવાય, સંપૂર્ણ દેશમાં પ્રવાસ ન કરવાની સલાહ આપે છે.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> દેશના કેટલાક ભાગોમાં કોઈ પણ પ્રકારનો પ્રવાસ ન કરવાની સલાહ આપે છે.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> સંપૂર્ણ દેશમાં કોઈ પણ પ્રકારનો પ્રવાસ ન કરવાની સલાહ આપે છે.
+    context: વિદેશ પ્રવાસ અંગે સલાહ
+    still_current_at: પર હજુ પણ ચાલુ
+    summary: સારાંશ
+    updated: અપડેટ કરેલ
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: હવે ઉપલબ્ધ નથી
+    summary: આ પેજ ઉપરની માહિતી હટાવી દેવામાં આવી છે, કારણ કે તે ભૂલથી પ્રકાશિત કરાઇ હતી.
+    title: તમે જે પેજ શોધો છો, તે હવે ઉપલબ્ધ નથી
   working_group:
-    contact_details:
-    policies:
+    contact_details: સંપર્ક વિગતો
+    policies: નીતિઓ

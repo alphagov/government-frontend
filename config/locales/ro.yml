@@ -2,408 +2,383 @@
 ro:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Îndrumări pentru companii privind Brexit
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Îndrumări pentru persoane și familii privind Brexit
+    heading_prefix: Diferit
   common:
-    visit:
+    visit: 'Accesați:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Autor imagine: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: ascundeți toate actualizările
+      last_updated: Ultima actualizare %{date}
+      published: Publicat pe %{date}
+      see_all_updates: vedeți toate actualizările
+      show_all_updates: afișați toate actualizările
     publisher_metadata:
-      hide_all:
-      show_all:
+      hide_all: ascundeți tot
+      show_all: afișați tot
     share_links:
-      share_this_page:
+      share_this_page: Distribuiți această pagină
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: și
+    another_website_html: Această consultație %{closed} s-a ținut pe <a href="%{url}">un alt website</a>
+    at: la
+    closes: Se închide la
+    closes_at: Această consultație se închide la
+    complete_a: Finalizați o
+    description: Descrierea consultației
+    detail_of_feedback_received: Detaliile feedbackului primit
+    detail_of_outcome: Detaliile rezultatului
+    documents: Documente
+    download_outcome: Descărcați rezultatul complet
+    either: sau
+    email_to: 'E-mail la:'
+    feedback_received: Feedback primit
+    is_being: este
+    not_open_yet: Această consultație nu este deschisă încă
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Această consultație se deschide
+    original_consultation: Consultație originală
+    ran_from: Această consultație a început la
+    respond_online: Răspundeți online
+    visit_soon: Accesați din această pagină în curând pentru a descărca rezultatul acestui feedback&nbsp;public.
+    was: a fost
+    ways_to_respond: Modalități de a răspunde
+    write_to: 'Scrieți la:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: E-mail
+    find_call_charges: Aflați mai multe despre taxele apelurilor
+    online: Online
+    phone: Telefon
+    webchat: Webchat
   content_item:
-    coming_soon:
+    coming_soon: Acest document va fi publicat pe
     contents: Conținut
     metadata:
-      published: Data publicării
+      published: Publicat
       updated: Actualizat
     schema_name:
       aaib_report:
         few:
-        one:
-        other:
+        one: Raportul agenției pentru investigații privind accidentele aviatice
+        other: Rapoartele agenției pentru investigații privind accidentele aviatice
       announcement:
         few:
-        one: Știre
-        other: Știri
+        one: Anunț
+        other: Anunțuri
       asylum_support_decision:
         few:
-        one:
-        other:
+        one: Decizia tribunalului cu privire la sprijinul pentru azil
+        other: Deciziile tribunalului cu privire la sprijinul pentru azil
       authored_article:
         few:
-        one: 'Articol '
-        other: 'Articol '
+        one: Articol publicat
+        other: Articole publicate
       business_finance_support_scheme:
         few:
-        one:
-        other:
+        one: Schema de sprijin pentru finanțarea întreprinderilor
+        other: Scheme de sprijin pentru finanțarea întreprinderilor
       case_study:
         few:
         one: Studiu de caz
         other: Studii de caz
       closed_consultation:
         few:
-        one: Dezbatere
-        other: Dezbateri
-        overview:
+        one: Consultație închisă
+        other: Consultații închise
       cma_case:
         few:
-        one:
-        other:
+        one: Caz Autoritatea pentru concurență și piețe
+        other: Cazuri Autoritatea pentru concurență și piețe
       coming_soon:
         few:
-        one:
-        other:
+        one: În curând
+        other: În curând
       consultation:
         few:
-        one: Dezbatere
-        other: Dezbateri
+        one: Consultație
+        other: Consultații
       consultation_outcome:
         few:
-        one: Concluzia dezbaterii
-        other: Concluziile dezbaterii
-        overview:
+        one: Rezultatul consultației
+        other: Rezultatele consultației
       corporate_information_page:
         few:
-        one:
-        other:
+        one: Pagina de informații
+        other: Pagini de informații
       corporate_report:
         few:
-        one: Raport
-        other: Rapoarte
-        overview:
+        one: Raport de companie
+        other: Rapoarte de companie
       correspondence:
         few:
-        one: Similaritate
-        other: Similarităţi
-        overview:
+        one: Corespondență
+        other: Corespondențe
       countryside_stewardship_grant:
         few:
-        one:
-        other:
+        one: Finanțare pentru gestionarea zonelor rurale
+        other: Finanțări pentru gestionarea zonelor rurale
       decision:
         few:
-        one:
-        other:
-        overview:
+        one: Decizie
+        other: Decizii
       detailed_guide:
         few:
-        one: Mai multe detalii
-        other: Mai multe detalii
+        one: Orientări
+        other: Orientări
       dfid_research_output:
         few:
-        one:
-        other:
+        one: Cercetare pentru rezultatul dezvoltării
+        other: Cercetare pentru rezultatele dezvoltării
       document_collection:
         few:
-        one: Seria
-        other:
+        one: Colecție
+        other: Colecții
       draft_text:
         few:
-        one: Versiune preliminară
-        other: Versiuni preliminare
+        one: Proiect de text
+        other: Proiecte de text
       drug_safety_update:
         few:
-        one:
-        other:
+        one: Actualizare cu privire la siguranța medicamentelor
+        other: Actualizări cu privire la siguranța medicamentelor
       employment_appeal_tribunal_decision:
         few:
-        one:
-        other:
+        one: Decizie a tribunalului de recurs cu privire la dreptul muncii
+        other: Decizii ale tribunalului de recurs cu privire la dreptul muncii
       employment_tribunal_decision:
         few:
-        one:
-        other:
+        one: Decizie a tribunalului pentru dreptul muncii
+        other: Decizii ale tribunalului pentru dreptul muncii
       esi_fund:
         few:
-        one:
-        other:
+        one: Fondul European Structural și de Investiții (ESIF)
+        other: Fonduri Europene Structurale și de Investiții (ESIF)
       fatality_notice:
         few:
-        one: Anunț privind decesul
-        other: Anunțuri privind decese
+        one: Notificare accident mortal
+        other: Notificări accident mortal
       foi_release:
         few:
-        one: 'Acces la informații publice '
-        other: 'Acces la informații publice '
-        overview:
+        one: Document eliberat privind libertatea informației
+        other: Documente eliberate privind libertatea informației
       form:
         few:
         one: Formular
         other: Formulare
-        overview:
       government_response:
         few:
-        one: 'Document de poziție '
-        other: 'Documente de poziție '
+        one: Răspunsul guvernului
+        other: Răspunsurile guvernului
       guidance:
         few:
-        one: Mai multe detalii
-        other: Mai multe detalii
-        overview:
+        one: Orientări
+        other: Orientări
       impact_assessment:
         few:
-        one: 'Evaluarea impactului '
-        other: 'Evaluarea impactului '
-        overview:
+        one: Evaluarea impactului
+        other: Evaluările impactului
       imported:
         few:
-        one:
-        other:
+        one: importat - se așteaptă tipul
+        other: importat - se așteaptă tipul
       independent_report:
         few:
         one: Raport independent
         other: Rapoarte independente
-        overview:
       international_development_fund:
         few:
-        one:
-        other:
+        one: Finanțare dezvoltare internațională
+        other: Finanțare dezvoltare internațională
       international_treaty:
         few:
-        one:
-        other:
-        overview:
+        one: Tratat internațional
+        other: Tratate internaționale
       maib_report:
         few:
-        one:
-        other:
+        one: Raportul agenției pentru investigații privind accidentele maritime
+        other: Rapoartele agenției pentru investigații privind accidentele maritime
       map:
         few:
         one: Hartă
-        other: Hărţi
-        overview:
+        other: Hărți
       medical_safety_alert:
         few:
-        one:
-        other:
+        one: Alerte și retragerea produselor pentru medicamente și dispozitive medicale
+        other: Alerte și retragerea produselor pentru medicamente și dispozitive medicale
       national:
         few:
-        one:
-        other:
+        one: Anunț de statistică națională
+        other: Anunțuri de statistică națională
       national_statistics:
         few:
-        one: Statistici - statistici naționale
-        other: Statistici - statistici naționale
-        overview:
+        one: Statistică națională
+        other: Statistică națională
       national_statistics_announcement:
         few:
-        one:
-        other:
+        one: Anunț de statistică națională
+        other: Anunțuri de statistică națională
       news_article:
         few:
-        one: Știre
-        other: Știri
+        one: Articol de știri
+        other: Articole de știri
       news_story:
         few:
-        one: Știre
-        other: Știri
+        one: Reportaj de știri
+        other: Reportaje de știri
       notice:
         few:
-        one:
-        other:
-        overview:
+        one: Notificare
+        other: Notificări
       official:
         few:
-        one:
-        other:
+        one: Anunț oficial de statistică
+        other: Anunțuri oficiale de statistică
       official_statistics:
         few:
-        one: Statistici
-        other: Statistici
-        overview:
+        one: Statistică oficială
+        other: Statistică oficială
       official_statistics_announcement:
         few:
-        one:
-        other:
+        one: Anunț oficial de statistică
+        other: Anunțuri oficiale de statistică
       open_consultation:
         few:
-        one: Dezbatere
-        other: Dezbateri
-        overview:
+        one: Consultație deschisă
+        other: Consultație deschise
       oral_statement:
         few:
-        one: 'Declarație verbală în fața Parlamentului '
-        other: 'Declarații verbale în fața Parlamentului '
+        one: Expunere orală către Parlament
+        other: Expuneri orale către Parlament
       policy:
         few:
-        one: Obiectiv strategic
-        other: Obiective strategic
+        one: Politică
+        other: Politici
       policy_paper:
         few:
-        one:
-        other:
-        overview:
+        one: Document de politică
+        other: Documente de politică
       press_release:
         few:
-        one: Știre
-        other: Știri
+        one: Comunicat de presă
+        other: Comunicate de presă
       promotional:
         few:
         one: Material promoțional
-        other: Materiale promoționale
-        overview:
+        other: Material promoțional
       publication:
         few:
         one: Publicație
         other: Publicații
       raib_report:
         few:
-        one:
-        other:
+        one: Raportul agenției pentru investigații privind accidentele pe căile ferate
+        other: Rapoartele agenției pentru investigații privind accidentele pe căile ferate
       regulation:
         few:
-        one:
-        other:
-        overview:
+        one: Reglementare
+        other: Reglementări
       research:
         few:
-        one: Analiză și cercetare
-        other: Analiză și cercetare
-        overview:
+        one: Cercetare și analiză
+        other: Cercetare și analiză
       residential_property_tribunal_decision:
         few:
-        one:
-        other:
+        one: Decizia tribunalului pentru proprietatea rezidențială
+        other: Deciziile tribunalului pentru proprietatea rezidențială
       service_sign_in:
         few:
-        one:
-        other:
+        one: Conectare la serviciu
+        other: Conectare la serviciu
       service_standard_report:
         few:
-        one:
-        other:
+        one: Raport standard pentru serviciu
+        other: Rapoarte standard pentru serviciu
       speaking_notes:
         few:
-        one: 'Note '
-        other: 'Note '
+        one: Note de discuție
+        other: Note de discuție
       speech:
         few:
         one: Discurs
         other: Discursuri
       standard:
         few:
-        one:
-        other:
-        overview:
+        one: Standard
+        other: Standarde
       statement_to_parliament:
         few:
-        one: Declarație în Parlament
-        other: Declarații în Parlament
+        one: Declarație către Parlament
+        other: Declarații către Parlament
       statistical_data_set:
         few:
-        one: Date statistice
-        other: Date statistice
+        one: Set de date statistice
+        other: Seturi de date statistice
       statistics_announcement:
         few:
-        one:
-        other:
+        one: Anunț eliberare documente statistice
+        other: Anunțuri eliberare documente statistice
       statutory_guidance:
         few:
-        one:
-        other:
-        overview:
+        one: Orientări privind dispozițiile legale
+        other: Orientări privind dispozițiile legale
       take_part:
         few:
-        one:
-        other:
+        one: Participă
+        other: Participă
       tax_tribunal_decision:
         few:
-        one:
-        other:
+        one: Decizia tribunalului pentru Tax and Chancery
+        other: Deciziile tribunalului pentru Tax and Chancery
       transcript:
         few:
         one: Transcriere
         other: Transcrieri
       transparency:
         few:
-        one:
-        other:
-        overview:
+        one: Date privind transparența
+        other: Date privind transparența
       utaac_decision:
         few:
-        one:
-        other:
+        one: Decizie a tribunalului de recurs cu privire dreptul administrativ
+        other: Decizii ale tribunalului de recurs cu privire la dreptul administrativ
       world_location_news_article:
         few:
-        one: Știre
-        other: Știri
+        one: Articol de știri
+        other: Articole de știri
       world_news_story:
         few:
-        one:
-        other:
+        one: Reportaj de știri global
+        other: Reportaje de știri globale
       written_statement:
         few:
-        one: 'Declarație scrisă către Parlament '
-        other: 'Declarații scrise către Parlament '
+        one: Declarație scrisă către Parlament
+        other: Declarații scrise către Parlament
   corporate_information_page:
-    about_our_services_html:
-    corporate_information: Informaţii despre ambasadă
-    personal_information_charter_html: Mai multe despre cum folosim informațiile cu caracter personal pe %{link}
-    publication_scheme_html: Citește mai multe despre informațiile pe care le publigăm în mod regulat pe  %{link}.
-    social_media_use_html: 'Citește mai multe despre strategia noastră pe '
-    welsh_language_scheme_html: Află mai multe despre angajamentul nostru față de accesul la informații publice pe %{link}.
+    about_our_services_html: Aflați %{link}.
+    corporate_information: Informații despre corporație
+    personal_information_charter_html: "%{link} explică cum tratăm informațiile dvs. cu caracter personal."
+    publication_scheme_html: Citiți despre tipurile de informații pe care le publicăm de obicei în %{link}.
+    social_media_use_html: Citiți politica noastră pe %{link}.
+    welsh_language_scheme_html: Aflați mai multe despre angajamentul nostru pentru %{link}.
   email:
     description_html:
     subscribe_title:
     unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Emblema Ministerului Apărării
+    field_of_operation: Domeniul de activitate
+    operations_in: Operațiuni în %{location}
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -411,6 +386,7 @@ ro:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:
@@ -440,19 +416,19 @@ ro:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Nu mai este disponibil
+    published_in_error: Informațiile de pe această pagină au fost șterse deoarece au fost publicate din greșeală.
+    title: Pagina pe care o căutați nu mai este disponibilă.
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Paginile din acest ghid
+    skip_to_contents: Accesați direct conținutul ghidului
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Această publicație este disponibilă la %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Această publicație este licență conform condițiilor Open Government Licence v3.0, cu excepția cazurilor în care se specifică contrariul. Pentru a vedea licența, accesați <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> sau scrieți echipei Information Policy, The National Archives, Kew, Londra TW9 4DU, sau trimiteți e-mail la: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Acolo unde am identificat informații de terță parte cu drept de autor, va trebui să obțineți permisiunea de la deținătorii drepturilor de autor în cauză.
   i18n:
     direction:
   language_names:
@@ -523,59 +499,59 @@ ro:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Continuare
+    previous_page: Înapoi
+    print_entire_guide: Imprimați întreg ghidul
   publication:
-    details:
+    details: Detalii
     documents:
       few:
       one: Document
       other: Documente
   service_sign_in:
-    continue:
+    continue: Continuați
     error:
-      option:
-      title:
+      option: Selectați o opțiune
+      title: Nu ați selectat o opțiune
   shared:
-    historically_political:
+    historically_political: Acesta a fost publicat sub %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Consultanții sunt disponibili pentru a discuta pe chat.
+      busy: Toți consultanții de pe webchat sunt ocupați în acest moment.
+      closed: Webchatul este închis în acest moment.
+      speak_to_adviser: Vorbiți cu un consultant acum
+      technical_problem: Webchatul este disponibil momentan din cauza problemelor tehnice.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Logoul schemei este un timbru negru cu cuvintele Designated Origin UK Protected
+    pgi_alt_text: Logoul schemei este un timbru negru cu cuvintele Geographic Origin UK Protected
+    tsg_alt_text: Logoul schemei este un timbru negru cu cuvintele Traditional Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Livrat pe
+    location: Locație
+    written_on: Scris pe
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Data anulării
+    cancelled: Eliberarea documentelor statistice a fost anulată
+    changed_date: Data eliberării a fost schimbată
+    forthcoming: Aceste statistici vor fi eliberate
+    previous_date: Data anterioară
+    proposed_date: Data propusă
+    reason_for_change: Motivul schimbării
+    release_date: Data publicării
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html:
-      avoid_all_but_essential_travel_to_whole_country_html:
-      avoid_all_travel_to_parts_html:
-      avoid_all_travel_to_whole_country_html:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile neesențiale în anumite părți ale țării.
+      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile neesențiale în întreaga țară.
+      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în anumite părți ale țării.
+      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în întreaga țară.
+    context: Sfaturi pentru călătoriile în străinătate
+    still_current_at: În acest moment la
+    summary: Rezumat
+    updated: Actualizat
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Nu mai este disponibil
+    summary: Informațiile de pe această pagină au fost șterse deoarece au fost publicate din greșeală.
+    title: Pagina pe care o căutați nu mai este disponibilă
   working_group:
-    contact_details:
-    policies:
+    contact_details: Detalii de contact
+    policies: Politici

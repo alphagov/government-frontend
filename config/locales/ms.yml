@@ -2,283 +2,309 @@
 ms:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Panduan Brexit untuk perniagaan
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Panduan Brexit untuk individu dan keluarga
+    heading_prefix: Ada perbezaan
   common:
-    visit:
+    visit: 'Lawati:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Imej kredit: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: sorok semua kemas kini
+      last_updated: Kali terakhir dikemas kini %{date}
+      published: Diterbitkan %{date}
+      see_all_updates: lihat semua kemas kini
+      show_all_updates: tunjuk semua kemas kini
     publisher_metadata:
-      hide_all:
-      show_all:
+      hide_all: sorok semua
+      show_all: tunjuk semua
     share_links:
-      share_this_page:
+      share_this_page: Kongsi laman ini
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: dan
+    another_website_html: Perundingan ini %{closed} telah diadakan di <a href="%{url}">laman web lain</a>
+    at: di
+    closes: Ditutup pada
+    closes_at: Perundingan ini ditutup pada
+    complete_a: Lengkapkan
+    description: Huraian perundingan
+    detail_of_feedback_received: Butiran maklum balas diterima
+    detail_of_outcome: Butiran hasil
+    documents: Dokumen
+    download_outcome: Muat turun hasil penuh
+    either: sama ada
+    email_to: 'E-mel kepada:'
+    feedback_received: Maklum balas diterima
+    is_being: sedang
+    not_open_yet: Perundingan ini masih belum dibuka
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Perundingan ini dibuka
+    original_consultation: Perundingan asal
+    ran_from: Perundingan ini berjalan dari
+    respond_online: Jawab dalam talian
+    visit_soon: Lawati laman ini semula untuk muat turun hasil maklum balas&nbsp;awam ini.
+    was: adalah
+    ways_to_respond: Cara untuk menjawab
+    write_to: 'Tulis kepada:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: E-mel
+    find_call_charges: Ketahui tentang caj panggilan
+    online: Dalam talian
+    phone: Telefon
+    webchat: Sembang web
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Dokumen ini akan diterbitkan pada
+    contents: Kandungan
     metadata:
-      published:
-      updated:
+      published: Diterbitkan
+      updated: Dikemas kini
     schema_name:
       aaib_report:
-        other:
+        one: Laporan Cawangan Penyiasatan Kemalangan Udara
+        other: Laporan Cawangan Penyiasatan Kemalangan Udara
       announcement:
-        other:
+        one: Pengumuman
+        other: Pengumuman
       asylum_support_decision:
-        other:
+        one: Suaka menyokong keputusan tribunal
+        other: Suaka menyokong keputusan tribunal
       authored_article:
-        other:
+        one: Artikel ditulis penulis
+        other: Artikel ditulis penulis
       business_finance_support_scheme:
-        other:
+        one: Skim sokongan kewangan perniagaan
+        other: Skim sokongan kewangan perniagaan
       case_study:
-        other:
+        one: Kajian kes
+        other: Kajian kes
       closed_consultation:
-        one:
-        other:
-        overview:
+        one: Rundingan tertutup
+        other: Rundingan tertutup
       cma_case:
-        other:
+        one: Kes Persaingan dan Pihak Berkuasa Pasaran
+        other: Kes Persaingan dan Pihak Berkuasa Pasaran
       coming_soon:
-        other:
+        one: Akan Datang
+        other: Akan Datang
       consultation:
-        other:
+        one: Rundingan
+        other: Rundingan
       consultation_outcome:
-        one:
-        other:
-        overview:
+        one: Hasil rundingan
+        other: Hasil rundingan
       corporate_information_page:
-        other:
+        one: Halaman maklumat
+        other: Halaman maklumat
       corporate_report:
-        one:
-        other:
-        overview:
+        one: Laporan korporat
+        other: Laporan korporat
       correspondence:
-        one:
-        other:
-        overview:
+        one: Perwakilan
+        other: Perwakilan
       countryside_stewardship_grant:
-        other:
+        one: Geran Pengawasan Desa
+        other: Geran Pengawasan Desa
       decision:
-        one:
-        other:
-        overview:
+        one: Keputusan
+        other: Keputusan
       detailed_guide:
-        other:
+        one: Panduan
+        other: Panduan
       dfid_research_output:
-        other:
+        one: Output Penyelidikan untuk Pembangunan
+        other: Output Penyelidikan untuk Pembangunan
       document_collection:
-        other:
+        one: Koleksi
+        other: Koleksi
       draft_text:
-        other:
+        one: Teks draf
+        other: Teks draf
       drug_safety_update:
-        other:
+        one: Kemas Kini Keselamatan Ubat-ubatan
+        other: Kemas Kini Keselamatan Ubat-ubatan
       employment_appeal_tribunal_decision:
-        other:
+        one: Keputusan tribunal rayuan pekerjaan
+        other: Keputusan tribunal rayuan pekerjaan
       employment_tribunal_decision:
-        other:
+        one: Keputusan tribunal pekerjaan
+        other: Keputusan tribunal pekerjaan
       esi_fund:
-        other:
+        one: Dana Struktur dan Pelaburan Eropah (ESIF)
+        other: Dana Struktur dan Pelaburan Eropah (ESIF)
       fatality_notice:
-        other:
+        one: Notis kematian
+        other: Notis kematian
       foi_release:
-        one:
-        other:
-        overview:
+        one: Hebahan Kebebasan Maklumat (FOI)
+        other: Hebahan Kebebasan Maklumat (FOI)
       form:
-        one:
-        other:
-        overview:
+        one: Borang
+        other: Borang
       government_response:
-        other:
+        one: Respons kerajaan
+        other: Respons kerajaan
       guidance:
-        one:
-        other:
-        overview:
+        one: Panduan
+        other: Panduan
       impact_assessment:
-        one:
-        other:
-        overview:
+        one: Penilaian impak
+        other: Penilaian impak
       imported:
-        other:
+        one: diimport - menunggu jenis
+        other: diimport - menunggu jenis
       independent_report:
-        one:
-        other:
-        overview:
+        one: Laporan bebas
+        other: Laporan bebas
       international_development_fund:
-        other:
+        one: Pembiayaan pembangunan antarabangsa
+        other: Pembiayaan pembangunan antarabangsa
       international_treaty:
-        one:
-        other:
-        overview:
+        one: Perjanjian antarabangsa
+        other: Perjanjian antarabangsa
       maib_report:
-        other:
+        one: Laporan Cawangan Penyiasatan Kemalangan Marin
+        other: Laporan Cawangan Penyiasatan Kemalangan Marin
       map:
-        one:
-        other:
-        overview:
+        one: Peta
+        other: Peta
       medical_safety_alert:
-        other:
+        one: Amaran dan penarikan balik untuk ubat-ubatan dan peranti perubatan
+        other: Amaran dan penarikan balik untuk ubat-ubatan dan peranti perubatan
       national:
-        other:
+        one: Pengumuman statistik nasional
+        other: Pengumuman statistik nasional
       national_statistics:
-        one:
-        other:
-        overview:
+        one: Statistik Nasional
+        other: Statistik Nasional
       national_statistics_announcement:
-        other:
+        one: Pengumuman statistik nasional
+        other: Pengumuman statistik nasional
       news_article:
-        other:
+        one: Artikel berita
+        other: Artikel berita
       news_story:
-        other:
+        one: Berita
+        other: Berita
       notice:
-        one:
-        other:
-        overview:
+        one: Notis
+        other: Notis
       official:
-        other:
+        one: Pengumuman statistik rasmi
+        other: Pengumuman statistik rasmi
       official_statistics:
-        one:
-        other:
-        overview:
+        one: Statistik Rasmi
+        other: Statistik Rasmi
       official_statistics_announcement:
-        other:
+        one: Pengumuman statistik rasmi
+        other: Pengumuman statistik rasmi
       open_consultation:
-        one:
-        other:
-        overview:
+        one: Rundingan terbuka
+        other: Rundingan terbuka
       oral_statement:
-        other:
+        one: Kenyataan lisan kepada Parlimen
+        other: Kenyataan lisan kepada Parlimen
       policy:
-        other:
+        one: Dasar
+        other: Dasar
       policy_paper:
-        one:
-        other:
-        overview:
+        one: Kertas dasar
+        other: Kertas dasar
       press_release:
-        other:
+        one: Siaran akhbar
+        other: Siaran akhbar
       promotional:
-        one:
-        other:
-        overview:
+        one: Bahan promosi
+        other: Bahan promosi
       publication:
-        other:
+        one: Penerbitan
+        other: Penerbitan
       raib_report:
-        other:
+        one: Laporan Cawangan Penyiasatan Kemalangan Kereta Api
+        other: Laporan Cawangan Penyiasatan Kemalangan Kereta Api
       regulation:
-        one:
-        other:
-        overview:
+        one: Peraturan
+        other: Peraturan
       research:
-        one:
-        other:
-        overview:
+        one: Penyelidikan dan analisis
+        other: Penyelidikan dan analisis
       residential_property_tribunal_decision:
-        other:
+        one: Keputusan tribunal harta tanah kediaman
+        other: Keputusan tribunal harta tanah kediaman
       service_sign_in:
-        other:
+        one: Daftar masuk perkhidmatan
+        other: Daftar masuk perkhidmatan
       service_standard_report:
-        other:
+        one: Laporan Standard Perkhidmatan
+        other: Laporan Standard Perkhidmatan
       speaking_notes:
-        other:
+        one: Nota perbincangan
+        other: Nota perbincangan
       speech:
-        other:
+        one: Ucapan
+        other: Ucapan
       standard:
-        one:
-        other:
-        overview:
+        one: Standard
+        other: Standard
       statement_to_parliament:
-        other:
+        one: Kenyataan kepada Parlimen
+        other: Kenyataan kepada Parlimen
       statistical_data_set:
-        other:
+        one: Set data statistik
+        other: Set data statistik
       statistics_announcement:
-        other:
+        one: Pengumuman hebahan statistik
+        other: Pengumuman hebahan statistik
       statutory_guidance:
-        one:
-        other:
-        overview:
+        one: Panduan berkanun
+        other: Panduan berkanun
       take_part:
-        other:
+        one: Ambil bahagian
+        other: Ambil bahagian
       tax_tribunal_decision:
-        other:
+        one: Keputusan tribunal Cukai dan Canseri
+        other: Keputusan tribunal Cukai dan Canseri
       transcript:
-        other:
+        one: Transkrip
+        other: Transkrip
       transparency:
-        one:
-        other:
-        overview:
+        one: Data ketelusan
+        other: Data ketelusan
       utaac_decision:
-        other:
+        one: Keputusan tribunal rayuan pentadbiran
+        other: Keputusan tribunal rayuan pentadbiran
       world_location_news_article:
-        other:
+        one: Artikel berita
+        other: Artikel berita
       world_news_story:
-        other:
+        one: Berita dunia
+        other: Berita dunia
       written_statement:
-        other:
+        one: Kenyataan bertulis kepada Parlimen
+        other: Kenyataan bertulis kepada Parlimen
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Ketahui %{link}.
+    corporate_information: Maklumat korporat
+    personal_information_charter_html: "%{link} kami menerangkan bagaimana kami menggunakan maklumat peribadi anda."
+    publication_scheme_html: Baca tentang jenis maklumat yang kami biasa terbitkan dalam %{link} kami.
+    social_media_use_html: Baca dasar kami di %{link}.
+    welsh_language_scheme_html: Ketahui tentang komitmen kami kepada %{link}.
   email:
     description_html:
     subscribe_title:
     unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Lambang Kementerian Pertahanan
+    field_of_operation: Medan operasi
+    operations_in: Operasi di %{location}
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -286,6 +312,7 @@ ms:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:
@@ -315,19 +342,19 @@ ms:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Sudah tiada
+    published_in_error: Maklumat dalam laman ini telah dikeluarkan kerana ia telah diterbitkan secara salah.
+    title: Laman yang anda cari sudah tiada
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Laman dalam panduan ini
+    skip_to_contents: Langkau ke kandungan panduan
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Penerbitan ini tersedia di %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'Nombor Buku Standard Antarabangsa (ISBN):'
+      licence_html: 'Penerbitan ini dilesenkan di bawah terma Lesen Kerajaan Terbuka v3.0 kecuali dinyatakan sebaliknya. Untuk melihat lesen ini, lawati <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> atau tulis kepada Pasukan Dasar Maklumat, Arkib Negara, Kew, London TW9 4DU, atau e-mel: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Di mana kami telah mengenal pasti mana-mana maklumat hak cipta pihak ketiga, anda perlu mendapatkan kebenaran daripada pemegang hak cipta tersebut.
   i18n:
     direction:
   language_names:
@@ -398,58 +425,58 @@ ms:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Seterusnya
+    previous_page: Sebelumnya
+    print_entire_guide: Cetak keseluruhan panduan
   publication:
-    details:
+    details: Butiran
     documents:
-      one:
-      other:
+      one: Dokumen
+      other: Dokumen
   service_sign_in:
-    continue:
+    continue: Teruskan
     error:
-      option:
-      title:
+      option: Sila buat satu pilihan
+      title: Anda telah membuat satu pilihan
   shared:
-    historically_political:
+    historically_political: Ini telah diterbitkan di bawah %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Tidak ada penasihat sedia untuk bersembang.
+      busy: Semua penasihat sembang web sedang sibuk ketika ini.
+      closed: Sembang web ditutup ketika ini.
+      speak_to_adviser: Bercakap dengan seorang penasihat sekarang
+      technical_problem: Sembang web tidak tersedia ketika ini kerana masalah teknikal.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Logo skema adalah cap hitam dengan perkataan Designated Origin UK Protected
+    pgi_alt_text: Logo skema adalah cap hitam dengan perkataan Geographic Origin UK Protected
+    tsg_alt_text: Logo skema adalah cap hitam dengan perkataan Traditional Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Dihantar pada
+    location: Lokasi
+    written_on: Ditulis pada
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Tarikh pembatalan
+    cancelled: Hebahan statistik dibatalkan
+    changed_date: Tarikh hebahan telah ditukar
+    forthcoming: Statistik ini akan dihebahkan
+    previous_date: Tarikh sebelumnya
+    proposed_date: Tarikh yang dicadangkan
+    reason_for_change: Sebab bagi penukaran
+    release_date: Tarikh hebahan
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html:
-      avoid_all_but_essential_travel_to_whole_country_html:
-      avoid_all_travel_to_parts_html:
-      avoid_all_travel_to_whole_country_html:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat perjalanan kecuali yang perlu sahaja ke bahagian-bahagian tertentu negara ini.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat perjalanan kecuali yang perlu sahaja ke seluruh negara.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat sebarang perjalanan ke bahagian-bahagian tertentu negara ini.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat sebarang perjalanan ke seluruh negara..
+    context: Nasihat perjalanan ke negara luar
+    still_current_at: Masih semasa di
+    summary: Ringkasan
+    updated: Dikemas kini
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Sudah tiada
+    summary: Maklumat dalam laman ini telah dikeluarkan kerana ia telah diterbitkan secara salah.
+    title: Laman yang anda cari sudah tiada
   working_group:
-    contact_details:
-    policies:
+    contact_details: Butiran hubungan
+    policies: Dasar

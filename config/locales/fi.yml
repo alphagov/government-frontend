@@ -324,12 +324,10 @@ fi:
     field_of_operation: Toiminta -alue
     operations_in: Toiminnot paikassa %{location}
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -337,6 +335,7 @@ fi:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:

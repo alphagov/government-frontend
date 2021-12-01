@@ -2,408 +2,383 @@
 sk:
   brexit:
     business_link:
-      path:
-      text:
+      path: "/guidance/brexit-guidance-for-businesses"
+      text: Usmernenia pre podniky týkajúce sa brexitu
     citizen_link:
-      path:
-      text:
-    heading_prefix:
+      path: "/guidance/brexit-guidance-for-individuals-and-families"
+      text: Usmernenie k brexitu pre jednotlivcov a rodiny
+    heading_prefix: Existujú rôzne
   common:
-    visit:
+    visit: 'Navštívte:'
   components:
     figure:
-      image_credit:
+      image_credit: 'Obrázok: %{credit}'
     published_dates:
-      hide_all_updates:
-      last_updated:
-      published:
-      see_all_updates:
-      show_all_updates:
+      hide_all_updates: skryť všetky aktualizácie
+      last_updated: Posledná aktualizácia %{date}
+      published: Zverejnené %{date}
+      see_all_updates: pozrite si všetky aktualizácie
+      show_all_updates: zobraziť všetky aktualizácie
     publisher_metadata:
-      hide_all:
-      show_all:
+      hide_all: skryť všetko
+      show_all: zobraziť všetko
     share_links:
-      share_this_page:
+      share_this_page: Zdieľať túto stránku
   consultation:
-    and:
-    another_website_html:
-    at:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_feedback_received:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    feedback_received:
-    is_being:
-    not_open_yet:
+    and: a
+    another_website_html: Táto konzultácia %{closed} sa konala na <a href="%{url}">inej webovej stránke</a>
+    at: na
+    closes: Zatvára sa o
+    closes_at: Táto konzultácia sa končí o
+    complete_a: Dokončite
+    description: Popis konzultácie
+    detail_of_feedback_received: Podrobnosti o prijatej spätnej väzbe
+    detail_of_outcome: Podrobnosti o výsledku
+    documents: Dokumenty
+    download_outcome: Stiahnite si celý výsledok
+    either: buď
+    email_to: 'E-mailom na adresu:'
+    feedback_received: Prijatá spätná väzba
+    is_being: sa
+    not_open_yet: Táto konzultácia ešte nie je otvorená
     'on':
-    opens:
-    original_consultation:
-    ran_from:
-    respond_online:
-    visit_soon:
-    was:
-    ways_to_respond:
-    write_to:
+    opens: Táto konzultácia sa začína
+    original_consultation: Pôvodná konzultácia
+    ran_from: Táto konzultácia prebiehala od
+    respond_online: Odpovedať online
+    visit_soon: Čoskoro opäť navštívte túto stránku a stiahnite si výsledok tejto verejnej spätnej väzby.
+    was: bola
+    ways_to_respond: Spôsoby reakcie
+    write_to: 'Napíšte na adresu:'
   contact:
-    email:
-    find_call_charges:
-    online:
-    phone:
-    webchat:
+    email: E-mail
+    find_call_charges: Zistite informácie o poplatkoch za hovory
+    online: Online
+    phone: Telefón
+    webchat: Webový chat
   content_item:
-    coming_soon:
-    contents:
+    coming_soon: Tento dokument bude uverejnený na
+    contents: Obsah
     metadata:
-      published:
-      updated:
+      published: Zverejnené na
+      updated: Aktualizované
     schema_name:
       aaib_report:
         few:
-        one:
-        other:
+        one: Správa Oddelenia pre vyšetrovanie leteckých nehôd
+        other: Správy Oddelenia pre vyšetrovanie leteckých nehôd
       announcement:
         few:
-        one:
-        other:
+        one: Oznámenie
+        other: Oznámenia
       asylum_support_decision:
         few:
-        one:
-        other:
+        one: Rozhodnutie tribunálu pre azylovú podporu
+        other: Rozhodnutia tribunálu pre azylovú podporu
       authored_article:
         few:
-        one:
-        other:
+        one: Autor článku
+        other: Autorské články
       business_finance_support_scheme:
         few:
-        one:
-        other:
+        one: Schéma podpory financovania podnikov
+        other: Systémy podpory financovania podnikov
       case_study:
         few:
-        one:
-        other:
+        one: Prípadová štúdia
+        other: Prípadové štúdie
       closed_consultation:
         few:
-        one:
-        other:
-        overview:
+        one: Uzavretá konzultácia
+        other: Uzavreté konzultácie
       cma_case:
         few:
-        one:
-        other:
+        one: Prípad Úradu pre hospodársku súťaž a trhy
+        other: Prípady Úradu pre hospodársku súťaž a trhy
       coming_soon:
         few:
-        one:
-        other:
+        one: Už čoskoro
+        other: Už čoskoro
       consultation:
         few:
-        one:
-        other:
+        one: Konzultácia
+        other: Konzultácie
       consultation_outcome:
         few:
-        one:
-        other:
-        overview:
+        one: Výsledok konzultácie
+        other: Výsledky konzultácie
       corporate_information_page:
         few:
-        one:
-        other:
+        one: Informačná stránka
+        other: Informačné stránky
       corporate_report:
         few:
-        one:
-        other:
-        overview:
+        one: Podniková správa
+        other: Podnikové správy
       correspondence:
         few:
-        one:
-        other:
-        overview:
+        one: Korešpondencia
+        other: Korešpondencie
       countryside_stewardship_grant:
         few:
-        one:
-        other:
+        one: Grant na správu krajiny
+        other: Granty na správu vidieka
       decision:
         few:
-        one:
-        other:
-        overview:
+        one: Rozhodnutie
+        other: Rozhodnutia
       detailed_guide:
         few:
-        one:
-        other:
+        one: Poradenstvo
+        other: Poradenstvo
       dfid_research_output:
         few:
-        one:
-        other:
+        one: Výstupy výskumu pre rozvoj
+        other: Výstupy výskumu pre rozvoj
       document_collection:
         few:
-        one:
-        other:
+        one: Zbierka
+        other: Zbierky
       draft_text:
         few:
-        one:
-        other:
+        one: Návrh textu
+        other: Návrhy textov
       drug_safety_update:
         few:
-        one:
-        other:
+        one: Aktualizácia bezpečnosti liekov
+        other: Aktualizácie bezpečnosti liekov
       employment_appeal_tribunal_decision:
         few:
-        one:
-        other:
+        one: Rozhodnutie odvolacieho pracovného súdu
+        other: Rozhodnutia odvolacieho pracovného súdu
       employment_tribunal_decision:
         few:
-        one:
-        other:
+        one: Rozhodnutie pracovného súdu
+        other: Rozhodnutia pracovného súdu
       esi_fund:
         few:
-        one:
-        other:
+        one: Európsky štrukturálny a investičný fond (EŠIF)
+        other: Európske štrukturálne a investičné fondy (EŠIF)
       fatality_notice:
         few:
-        one:
-        other:
+        one: Oznámenie o úmrtí
+        other: Oznámenia o úmrtí
       foi_release:
         few:
-        one:
-        other:
-        overview:
+        one: Zverejnenie slobody informácií
+        other: Zverejnenia slobody informácií
       form:
         few:
-        one:
-        other:
-        overview:
+        one: Formulár
+        other: Formuláre
       government_response:
         few:
-        one:
-        other:
+        one: Odpoveď vlády
+        other: Odpovede vlády
       guidance:
         few:
-        one:
-        other:
-        overview:
+        one: Poradenstvo
+        other: Poradenstvo
       impact_assessment:
         few:
-        one:
-        other:
-        overview:
+        one: Posúdenie vplyvu
+        other: Posúdenia vplyvu
       imported:
         few:
-        one:
-        other:
+        one: importované - čaká sa na typ
+        other: importované - čaká sa na typ
       independent_report:
         few:
-        one:
-        other:
-        overview:
+        one: Nezávislá správa
+        other: Nezávislé správy
       international_development_fund:
         few:
-        one:
-        other:
+        one: Medzinárodné financovanie rozvoja
+        other: Medzinárodné financovanie rozvoja
       international_treaty:
         few:
-        one:
-        other:
-        overview:
+        one: Medzinárodná zmluva
+        other: Medzinárodné zmluvy
       maib_report:
         few:
-        one:
-        other:
+        one: Správa oddelenia pre vyšetrovanie námorných nehôd
+        other: Správy oddelenia pre vyšetrovanie námorných nehôd
       map:
         few:
-        one:
-        other:
-        overview:
+        one: Mapa
+        other: Mapy
       medical_safety_alert:
         few:
-        one:
-        other:
+        one: Upozornenia a stiahnutia liekov a zdravotníckych pomôcok
+        other: Upozornenia a stiahnutia liekov a zdravotníckych pomôcok
       national:
         few:
-        one:
-        other:
+        one: Oznámenie o národných štatistikách
+        other: Oznámenia o národných štatistikách
       national_statistics:
         few:
-        one:
-        other:
-        overview:
+        one: Národné štatistiky
+        other: Národné štatistiky
       national_statistics_announcement:
         few:
-        one:
-        other:
+        one: Oznámenie o národných štatistikách
+        other: Oznámenia o národných štatistikách
       news_article:
         few:
-        one:
-        other:
+        one: Spravodajský článok
+        other: Spravodajské články
       news_story:
         few:
-        one:
-        other:
+        one: Spravodajský príbeh
+        other: Spravodajské príbehy
       notice:
         few:
-        one:
-        other:
-        overview:
+        one: Oznámenie
+        other: Oznámenia
       official:
         few:
-        one:
-        other:
+        one: Oficiálne štatistické oznámenie
+        other: Oficiálne štatistické oznámenia
       official_statistics:
         few:
-        one:
-        other:
-        overview:
+        one: Oficiálne štatistiky
+        other: Oficiálne štatistiky
       official_statistics_announcement:
         few:
-        one:
-        other:
+        one: Oficiálne štatistické oznámenie
+        other: Oficiálne štatistické oznámenia
       open_consultation:
         few:
-        one:
-        other:
-        overview:
+        one: Otvorená konzultácia
+        other: Otvorené konzultácie
       oral_statement:
         few:
-        one:
-        other:
+        one: Ústne vyhlásenie pred Parlamentom
+        other: Ústne vyhlásenia pred Parlamentom
       policy:
         few:
-        one:
-        other:
+        one: Politika
+        other: Politiky
       policy_paper:
         few:
-        one:
-        other:
-        overview:
+        one: Strategický dokument
+        other: Strategické dokumenty
       press_release:
         few:
-        one:
-        other:
+        one: Tlačová správa
+        other: Tlačové správy
       promotional:
         few:
-        one:
-        other:
-        overview:
+        one: Propagačné materiály
+        other: Propagačné materiály
       publication:
         few:
-        one:
-        other:
+        one: Publikácia
+        other: Publikácie
       raib_report:
         few:
-        one:
-        other:
+        one: Správa Oddelenia vyšetrovania železničných nehôd
+        other: Správa Oddelenia pre vyšetrovanie železničných nehôd
       regulation:
         few:
-        one:
-        other:
-        overview:
+        one: Nariadenie
+        other: Nariadenia
       research:
         few:
-        one:
-        other:
-        overview:
+        one: Výskum a analýza
+        other: Výskum a analýza
       residential_property_tribunal_decision:
         few:
-        one:
-        other:
+        one: Rozhodnutie tribunálu pre obytné nehnuteľnosti
+        other: Rozhodnutia tribunálu pre obytné nehnuteľnosti
       service_sign_in:
         few:
-        one:
-        other:
+        one: Prihlásiť sa do služby
+        other: Prihlásiť sa do služby
       service_standard_report:
         few:
-        one:
-        other:
+        one: Správa o štandardných službách
+        other: Správy o štandardných službách
       speaking_notes:
         few:
-        one:
-        other:
+        one: Poznámky k prejavu
+        other: Poznámky k prejavu
       speech:
         few:
-        one:
-        other:
+        one: Prejav
+        other: Prejay
       standard:
         few:
-        one:
-        other:
-        overview:
+        one: Štandard
+        other: Štandardy
       statement_to_parliament:
         few:
-        one:
-        other:
+        one: Vyhlásenie pre Parlament
+        other: Vyhlásenia pre Parlament
       statistical_data_set:
         few:
-        one:
-        other:
+        one: Súbor štatistických údajov
+        other: Súbory štatistických údajov
       statistics_announcement:
         few:
-        one:
-        other:
+        one: Oznámenie o vydaní štatistík
+        other: Oznámenia o vydaní štatistík
       statutory_guidance:
         few:
-        one:
-        other:
-        overview:
+        one: Zákonné usmernenia
+        other: Zákonné usmernenia
       take_part:
         few:
-        one:
-        other:
+        one: Zúčastniť sa
+        other: Zúčastniť sa
       tax_tribunal_decision:
         few:
-        one:
-        other:
+        one: Rozhodnutie daňového a kancelárskeho súdu
+        other: Rozhodnutia daňového a kancelárskeho súdu
       transcript:
         few:
-        one:
-        other:
+        one: Prepis
+        other: Prepisy
       transparency:
         few:
-        one:
-        other:
-        overview:
+        one: Údaje o transparentnosti
+        other: Údaje o transparentnosti
       utaac_decision:
         few:
-        one:
-        other:
+        one: Rozhodnutie správneho odvolacieho súdu
+        other: Rozhodnutia správneho odvolacieho súdu
       world_location_news_article:
         few:
-        one:
-        other:
+        one: Spravodajský článok
+        other: Spravodajské články
       world_news_story:
         few:
-        one:
-        other:
+        one: Svetové spravodajstvo
+        other: Svetové spravodajstvá
       written_statement:
         few:
-        one:
-        other:
+        one: Písomné vyhlásenie pre Parlament
+        other: Písomné vyhlásenia pre Parlament
   corporate_information_page:
-    about_our_services_html:
-    corporate_information:
-    personal_information_charter_html:
-    publication_scheme_html:
-    social_media_use_html:
-    welsh_language_scheme_html:
+    about_our_services_html: Zistite %{link}.
+    corporate_information: Firemné informácie
+    personal_information_charter_html: Náš %{link} vysvetľuje, ako zaobchádzame s vašimi osobnými údajmi.
+    publication_scheme_html: Prečítajte si o typoch informácií, ktoré bežne zverejňujeme v našom %{link}.
+    social_media_use_html: Prečítajte si naše zásady na %{link}.
+    welsh_language_scheme_html: Prečítajte si o našom záväzku voči %{link}.
   email:
     description_html:
     subscribe_title:
     unsubscribe_title:
   fatality_notice:
-    alt_text:
-    field_of_operation:
-    operations_in:
+    alt_text: Erb ministerstva obrany
+    field_of_operation: Oblasť činnosti
+    operations_in: Operácie v %{location}
   get_involved:
-    active_blogs:
     civil_service:
     civil_service_quarterly:
     closed:
     closed_consultations:
-    closed_with_date:
     closes:
     closing_today:
     closing_tomorrow:
@@ -411,6 +386,7 @@ sk:
     engage_with_gov:
     fcdo_bloggers:
     follow:
+    follow_links:
     follow_paragraph:
     gds_blog:
     gov_past:
@@ -440,19 +416,19 @@ sk:
     take_part_suggestions:
     your_views:
   gone:
-    page_title:
-    published_in_error:
-    title:
+    page_title: Už nie je k dispozícii
+    published_in_error: Informácie na tejto stránke boli odstránené, pretože boli uverejnené omylom.
+    title: Stránka, ktorú hľadáte, už nie je k dispozícii
   guide:
-    pages_in_guide:
-    skip_to_contents:
+    pages_in_guide: Stránky v tejto príručke
+    skip_to_contents: Prejsť na obsah príručky
   html_publication:
     print_meta_data:
-      available_at:
-      copyright:
-      isbn:
-      licence_html:
-      third_party:
+      available_at: Táto publikácia je k dispozícii na %{url}
+      copyright: Korunné autorské právo %{year}
+      isbn: 'ISBN:'
+      licence_html: 'Táto publikácia je licencovaná podľa podmienok Open Government Licence v3.0, pokiaľ nie je uvedené inak. Ak si chcete pozrieť túto licenciu, navštívte <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> alebo napíšte na adresu: Information Policy Team, The National Archives, Kew, London TW9 4DU, alebo pošlite e-mail: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Ak sme identifikovali akékoľvek informácie o autorských právach tretích strán, budete musieť získať povolenie od príslušných držiteľov autorských práv.
   i18n:
     direction:
   language_names:
@@ -503,7 +479,7 @@ sk:
     ro:
     ru:
     si:
-    sk: Slovenčina
+    sk: Slovensky
     sl:
     so:
     sq:
@@ -523,59 +499,59 @@ sk:
     zh-hk:
     zh-tw:
   multi_page:
-    next_page:
-    previous_page:
-    print_entire_guide:
+    next_page: Ďalšie
+    previous_page: Predchádzajúce
+    print_entire_guide: Vytlačiť celú príručku
   publication:
-    details:
+    details: Podrobnosti na
     documents:
       few:
-      one:
-      other:
+      one: Dokument
+      other: Dokumenty
   service_sign_in:
-    continue:
+    continue: Pokračovať
     error:
-      option:
-      title:
+      option: Vyberte možnosť
+      title: Nevybrali ste žiadnu možnosť
   shared:
-    historically_political:
+    historically_political: Táto správa bola uverejnená pod hlavičkou %{government}
     webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
+      available: Poradcovia sú k dispozícii na rozhovor.
+      busy: Všetci poradcovia na webovom chate sú momentálne zaneprázdnení.
+      closed: Webový chat je momentálne zatvorený.
+      speak_to_adviser: Obráťte sa na poradcu
+      technical_problem: Webchat je momentálne nedostupný z dôvodu technických problémov.
   specialist_document:
-    pdo_alt_text:
-    pgi_alt_text:
-    tsg_alt_text:
+    pdo_alt_text: Logo schémy je čierna pečiatka s nápisom Designated Origin UK Protected
+    pgi_alt_text: Logo schémy je čierna pečiatka s nápisom Geographic Origin UK Protected
+    tsg_alt_text: Logo schémy je čierna pečiatka s nápisom Traditional Speciality UK Protected
   speech:
-    delivered_on:
-    location:
-    written_on:
+    delivered_on: Doručené dňa
+    location: Umiestnenie
+    written_on: Napísané dňa
   statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
+    cancellation_date: Dátum zrušenia
+    cancelled: Zrušené vydávanie štatistík
+    changed_date: Dátum vydania bol zmenený
+    forthcoming: Tieto štatistiky budú zverejnené
+    previous_date: Predchádzajúci dátum
+    proposed_date: Navrhované vydanie
+    reason_for_change: Dôvod zmeny
+    release_date: Dátum vydania
   travel_advice:
     alert_status:
-      avoid_all_but_essential_travel_to_parts_html:
-      avoid_all_but_essential_travel_to_whole_country_html:
-      avoid_all_travel_to_parts_html:
-      avoid_all_travel_to_whole_country_html:
-    context:
-    still_current_at:
-    summary:
-    updated:
+      avoid_all_but_essential_travel_to_parts_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do niektorých častí krajiny okrem nevyhnutných prípadov.
+      avoid_all_but_essential_travel_to_whole_country_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do všetkých častí krajiny okrem nevyhnutných prípadov.
+      avoid_all_travel_to_parts_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do niektorých častí krajiny.
+      avoid_all_travel_to_whole_country_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do všetkých častí krajiny.
+    context: Poradenstvo pri cestovaní do zahraničia
+    still_current_at: Stále aktuálne na
+    summary: Zhrnutie
+    updated: Aktualizované
   unpublishing:
-    page_title:
-    summary:
-    title:
+    page_title: Už nie je k dispozícii
+    summary: Informácie na tejto stránke boli odstránené, pretože boli uverejnené omylom.
+    title: Stránka, ktorú hľadáte, už nie je k dispozícii
   working_group:
-    contact_details:
-    policies:
+    contact_details: Kontaktné údaje
+    policies: Politiky
