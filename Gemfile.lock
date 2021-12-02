@@ -130,7 +130,7 @@ GEM
       null_logger
       plek (>= 1.9.0)
       rest-client (~> 2.0)
-    globalid (0.6.0)
+    globalid (1.0.0)
       activesupport (>= 5.0)
     govuk_ab_testing (2.4.2)
     govuk_app_config (4.1.0)
@@ -143,7 +143,7 @@ GEM
     govuk_personalisation (0.10.1)
       plek (>= 1.9.0)
       rails (~> 6)
-    govuk_publishing_components (27.14.2)
+    govuk_publishing_components (27.15.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
