@@ -135,7 +135,7 @@ private
     end
 
     # use these and `@content_item.base_path` in the template
-    @notification_button_visible = in_single_page_notifications_trial?
+    @notification_button_visible = in_single_page_notifications_trial? && !@content_item.brexit_child_taxon
     @include_single_page_notification_button_js = account_session_header.present?
 
     request.variant = :print if params[:variant] == "print"
@@ -216,6 +216,9 @@ private
     %w[
       /government/publications/open-standards-for-government
       /government/publications/identity-proofing-and-verification-of-an-individual
+      /guidance/travel-to-england-from-another-country-during-coronavirus-covid-19
+      /guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do
+      /government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own
     ].include? @content_item.base_path
   end
 end
