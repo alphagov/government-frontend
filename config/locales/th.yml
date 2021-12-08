@@ -41,7 +41,7 @@ th:
     feedback_received: ข้อเสนอแนะที่ได้รับ
     is_being: กำลังถูก
     not_open_yet: ยังไม่เปิดการให้คำปรึกษา
-    'on':
+    'on': 
     opens: การให้คำปรึกษานี้เปิดแล้ว
     original_consultation: การให้คำปรึกษาดั้งเดิม
     ran_from: การให้คำปรึกษานี้เริ่มจาก
@@ -84,7 +84,6 @@ th:
       closed_consultation:
         one: การให้คำปรึกษาที่ปิดแล้ว
         other: การให้คำปรึกษาที่ปิดแล้ว
-        overview:
       cma_case:
         one: กรณีของหน่วยงานที่มีอำนาจดูแลการแข่งขันและตลาด
         other: กรณีของหน่วยงานที่มีอำนาจดูแลการแข่งขันและตลาด
@@ -97,25 +96,21 @@ th:
       consultation_outcome:
         one: ผลลัพธ์จากการให้คำปรึกษา
         other: ผลลัพธ์จากการให้คำปรึกษา
-        overview:
       corporate_information_page:
         one: หน้าข้อมูล
         other: หน้าข้อมูล
       corporate_report:
         one: รายงานของบริษัท
         other: รายงานของบริษัท
-        overview:
       correspondence:
         one: จดหมายโต้ตอบ
         other: จดหมายโต้ตอบ
-        overview:
       countryside_stewardship_grant:
         one: เงินทุนเพื่อชนบท
         other: เงินทุนเพื่อชนบท
       decision:
         one: การตัดสินใจ
         other: การตัดสินใจ
-        overview:
       detailed_guide:
         one: คำแนะนำ
         other: คำแนะนำ
@@ -146,43 +141,36 @@ th:
       foi_release:
         one: การออก FOI
         other: การออก FOI
-        overview:
       form:
         one: แบบฟอร์ม
         other: แบบฟอร์ม
-        overview:
       government_response:
         one: คำตอบของรัฐบาล
         other: คำตอบของรัฐบาล
       guidance:
         one: คำแนะนำ
         other: คำแนะนำ
-        overview:
       impact_assessment:
         one: การประเมินผลกระทบ
         other: การประเมินผลกระทบ
-        overview:
       imported:
         one: นำเข้าแล้ว - รอการพิมพ์
         other: นำเข้าแล้ว - รอการพิมพ์
       independent_report:
         one: รายงานอิสระ
         other: รายงานอิสระ
-        overview:
       international_development_fund:
         one: ทุนพัฒนาระหว่างประเทศ
         other: ทุนพัฒนาระหว่างประเทศ
       international_treaty:
         one: สนธิสัญญาระหว่างประเทศ
         other: สนธิสัญญาระหว่างประเทศ
-        overview:
       maib_report:
         one: รายงานสาขาการสืบสวนอุบัติเหตุทางทะเล
         other: รายงานสาขาการสืบสวนอุบัติเหตุทางอากาศ
       map:
         one: แผนที่
         other: แผนที่
-        overview:
       medical_safety_alert:
         one: การแจ้งเตือนและการเรียกคืนยาและเครื่องมือแพทย์
         other: การแจ้งเตือนและการเรียกคืนยาและเครื่องมือแพทย์
@@ -192,7 +180,6 @@ th:
       national_statistics:
         one: สถิติแห่งชาติ
         other: สถิติแห่งชาติ
-        overview:
       national_statistics_announcement:
         one: ประกาศสถิติแห่งชาติ
         other: ประกาศสถิติแห่งชาติ
@@ -205,21 +192,18 @@ th:
       notice:
         one: ประกาศ
         other: ประกาศ
-        overview:
       official:
         one: ประกาศสถิติของราชการ
         other: ประกาศสถิติของราชการ
       official_statistics:
         one: สถิติของราชการ
         other: สถิติของราชการ
-        overview:
       official_statistics_announcement:
         one: ประกาศสถิติของราชการ
         other: ประกาศสถิติของราชการ
       open_consultation:
         one: การให้คำปรึกษาที่เปิดอยู่
         other: การให้คำปรึกษาที่เปิดอยู่
-        overview:
       oral_statement:
         one: แถลงการณ์ด้วยวาจาต่อรัฐสภา
         other: แถลงการณ์ด้วยวาจาต่อรัฐสภา
@@ -229,14 +213,12 @@ th:
       policy_paper:
         one: เอกสารนโยบาย
         other: เอกสารนโยบาย
-        overview:
       press_release:
         one: ข่าวประชาสัมพันธ์
         other: ข่าวประชาสัมพันธ์
       promotional:
         one: สื่อวัสดุส่งเสริมการขาย
         other: สื่อวัสดุส่งเสริมการขาย
-        overview:
       publication:
         one: สิ่งพิมพ์
         other: สิ่งพิมพ์
@@ -246,11 +228,9 @@ th:
       regulation:
         one: ระเบียบข้อบังคับ
         other: ระเบียบข้อบังคับ
-        overview:
       research:
         one: การวิจัยและการวิเคราะห์
         other: การวิจัยและการวิเคราะห์
-        overview:
       residential_property_tribunal_decision:
         one: คำพิพากษาของศาลเกี่ยวกับที่อยู่อาศัย
         other: คำพิพากษาของศาลเกี่ยวกับที่อยู่อาศัย
@@ -269,7 +249,6 @@ th:
       standard:
         one: มาตรฐาน
         other: มาตรฐาน
-        overview:
       statement_to_parliament:
         one: แถลงการณ์ต่อรัฐสภา
         other: แถลงการณ์ต่อรัฐสภา
@@ -282,7 +261,6 @@ th:
       statutory_guidance:
         one: คำแนะนำทางกฎหมาย
         other: คำแนะนำทางกฎหมาย
-        overview:
       take_part:
         one: มีส่วนร่วม
         other: มีส่วนร่วม
@@ -295,7 +273,6 @@ th:
       transparency:
         one: ข้อมูลความโปร่งใส
         other: ข้อมูลความโปร่งใส
-        overview:
       utaac_decision:
         one: คำพิพากษาของศาลปกครองขั้นอุทธรณ์
         other: คำพิพากษาของศาลแรงงานขั้นอุทธรณ์
@@ -316,54 +293,54 @@ th:
     social_media_use_html: อ่านนโยบายของเราที่ %{link}
     welsh_language_scheme_html: ดูข้อมูลเพิ่มเติมเกี่ยวกับพันธกิจของเราสำหรับ %{link}
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: ตรากระทรวงกลาโหม
     field_of_operation: พื้นที่ปฏิบัติการ
     operations_in: การดำเนินงานใน %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: ไม่มีแล้ว
     published_in_error: ข้อมูลในหน้านี้ถูกนำออกเนื่องจากมีการเผยแพร่โดยความผิดพลาด
@@ -379,74 +356,74 @@ th:
       licence_html: 'สิ่งพิมพ์นี้ได้รับอนุญาตภายใต้ข้อกำหนดของ Open Government License v3.0 เว้นแต่จะระบุไว้เป็นอย่างอื่น เพื่อดูใบอนุญาตนี้ โปรดไปที่ <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> หรือส่งจดหมายถึงInformation Policy Team, The National Archives, Kew, London TW9 4DU หรือส่งอีเมลไปที่: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>'
       third_party: ในกรณีที่เราพบข้อมูลลิขสิทธิ์ของบุคคลที่สามใดๆ คุณจะต้องขอรับการอนุญาตจากผู้ถือลิขสิทธิ์ที่เกี่ยวข้องนั้นๆ
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
     th: ไทย
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: ถัดไป
     previous_page: ก่อนหน้า

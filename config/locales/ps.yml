@@ -41,7 +41,7 @@ ps:
     feedback_received: نظر ترلاسه شو
     is_being: کېږي
     not_open_yet: دا مشوره لاهم خلاص نده
-    'on':
+    'on': 
     opens: دا مشوره خلاصیږي
     original_consultation: اصلي مشوره
     ran_from: دا مشوره له دې ځایه روانه وه
@@ -84,7 +84,6 @@ ps:
       closed_consultation:
         one: له نيژدې مشوره
         other: له نيژدې مشورې
-        overview:
       cma_case:
         one: د سیالۍ او بازارونو ادارې قضیه
         other: د سیالۍ او بازارونو ادارې قضیې
@@ -97,25 +96,21 @@ ps:
       consultation_outcome:
         one: د مشورې پایله
         other: د مشورې پایلې
-        overview:
       corporate_information_page:
         one: د معلوماتو پاڼه
         other: د معلوماتو پاڼې
       corporate_report:
         one: د کارپوریټ راپور
         other: د شرکت راپورونه
-        overview:
       correspondence:
         one: لیکنه
         other: لیکنې
-        overview:
       countryside_stewardship_grant:
         one: د کلیوالي چارو سرپرستي مرسته
         other: د کلیو د ساتنې بورسونه
       decision:
         one: پریکړه
         other: پریکړې
-        overview:
       detailed_guide:
         one: لارښود
         other: لارښود
@@ -146,43 +141,36 @@ ps:
       foi_release:
         one: د د معلوماتو د آزادۍ قانون خوشې کول
         other: د معلوماتو د آزادۍ قانون خپروي
-        overview:
       form:
         one: فورمه
         other: فورمې
-        overview:
       government_response:
         one: د حکومت غبرګون
         other: د حکومت غبرګون
       guidance:
         one: لارښود
         other: لارښود
-        overview:
       impact_assessment:
         one: د اغیز ارزونه
         other: د اغیزو ارزونه
-        overview:
       imported:
         one: وارد شوی - په تمه ډول
         other: وارد شوی - په تمه ډول
       independent_report:
         one: خپلواک راپور
         other: خپلواک راپورونه
-        overview:
       international_development_fund:
         one: د نړیوالې پراختیا تمویل
         other: د نړیوالې پراختیا تمویل
       international_treaty:
         one: نړیوال تړون
         other: نړیوال تړونونه
-        overview:
       maib_report:
         one: د سمندري پیښو د تحقیقاتو د څانګې راپور
         other: د سمندري پېښو د تحقیقاتو څانګې راپورونه
       map:
         one: نقشه
         other: نقشې
-        overview:
       medical_safety_alert:
         one: د درملو او طبي وسایلو لپاره خبرتیا او بیا بلنه
         other: د درملو او طبي وسایلو لپاره خبرتیا او بیل بلنې
@@ -192,7 +180,6 @@ ps:
       national_statistics:
         one: ملي احصایې
         other: ملي احصایې
-        overview:
       national_statistics_announcement:
         one: د ملي احصایې اعلان
         other: د ملي احصایې اعلانونه
@@ -205,21 +192,18 @@ ps:
       notice:
         one: خبرتیا
         other: خبرتیاوې
-        overview:
       official:
         one: د رسمي احصایې اعلان
         other: د رسمي احصایې اعلانونه
       official_statistics:
         one: رسمي احصایې
         other: رسمي احصایې
-        overview:
       official_statistics_announcement:
         one: د رسمي احصایې اعلان
         other: د رسمي احصایې اعلانونه
       open_consultation:
         one: خلاص مشوره
         other: مشورې خلاص کړئ
-        overview:
       oral_statement:
         one: پارلماني غونډې ته وینا
         other: پارلمان ته شفاهي څرګندونې
@@ -229,14 +213,12 @@ ps:
       policy_paper:
         one: د پالیسۍ پاڼه
         other: د پالیسۍ ڼې
-        overview:
       press_release:
         one: مطبوعاتي اعلامیه
         other: مطبوعاتي اعلامیې
       promotional:
         one: تشویقي مواد
         other: تشویقي مواد
-        overview:
       publication:
         one: خپرونه
         other: خپرونې
@@ -246,11 +228,9 @@ ps:
       regulation:
         one: مقررات
         other: مقررات
-        overview:
       research:
         one: څیړنه او تحلیل
         other: څیړنه او تحلیل
-        overview:
       residential_property_tribunal_decision:
         one: د استوګنې د ملکیت د محکمې پریکړه
         other: د استوګنې د ملکیت د محکمې پریکړې
@@ -269,7 +249,6 @@ ps:
       standard:
         one: معیاري
         other: معیارونه
-        overview:
       statement_to_parliament:
         one: پارلمان ته وینا
         other: پارلمان ته وینا
@@ -282,7 +261,6 @@ ps:
       statutory_guidance:
         one: قانوني لارښود
         other: قانوني لارښود
-        overview:
       take_part:
         one: برخه واخلئ
         other: برخه واخلئ
@@ -295,7 +273,6 @@ ps:
       transparency:
         one: د شفافیت معلومات
         other: د شفافیت معلومات
-        overview:
       utaac_decision:
         one: اداري استیناف د محکمې پریکړه
         other: د اداري استیناف د محکمې پریکړې
@@ -316,54 +293,54 @@ ps:
     social_media_use_html: زموږ پالیسي په%{link} ولولئ.
     welsh_language_scheme_html: "%{link} ته زموږ د ژمنتیا په اړه معلومات ترلاسه کړئ."
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: د دفاع وزارت کریسټ
     field_of_operation: د عملیاتو ساحه
     operations_in: په%{location} کې عملیات
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: نور شتون نلري
     published_in_error: پدې پاڼه کې معلومات حذف شوي ځکه چې دا په غلطۍ کې خپور شوی.
@@ -381,72 +358,72 @@ ps:
   i18n:
     direction: rtl
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
     ps: جرمني
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: بل
     previous_page: مخکینی

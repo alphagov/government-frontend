@@ -41,7 +41,7 @@ hy:
     feedback_received: Ստացված արձագանքը
     is_being: ենթարկվում է
     not_open_yet: Այս խորհրդակցությունը դեռևս չի սկսվել
-    'on':
+    'on': 
     opens: Այս խորհրդակցությունը կսկսվի
     original_consultation: Սկզբնական խորհրդակցություն
     ran_from: Այս խորհրդակցությունն իրականացվել է
@@ -84,7 +84,6 @@ hy:
       closed_consultation:
         one: Փակ խորհրդակցություն
         other: Փակ խորհրդակցություններ
-        overview:
       cma_case:
         one: Մրցակցության և շուկայի կառավարման բաժնի դեպք
         other: Մրցակցության և շուկայի կառավարման բաժնի դեպքեր
@@ -97,25 +96,21 @@ hy:
       consultation_outcome:
         one: Խորհրդակցության արդյունք
         other: Խորհրդակցության արդյունքներ
-        overview:
       corporate_information_page:
         one: Տեղեկատվական էջ
         other: Տեղեկատվական էջեր
       corporate_report:
         one: Կորպորատիվ զեկույց
         other: Կորպորատիվ զեկույցներ
-        overview:
       correspondence:
         one: Նամակագրություն
         other: Նամակագրություններ
-        overview:
       countryside_stewardship_grant:
         one: Գյուղատնտեսության կառավարման դրամաշնորհ
         other: Գյուղատնտեսության կառավարման դրամաշնորհներ
       decision:
         one: Որոշում
         other: Որոշումներ
-        overview:
       detailed_guide:
         one: Ուղեցույց
         other: Ուղեցույց
@@ -146,43 +141,36 @@ hy:
       foi_release:
         one: Տեղեկատվության ազատության հրապարակում
         other: Տեղեկատվության ազատության հրապարակումներ
-        overview:
       form:
         one: Ձևաթուղթ
         other: Ձևաթղթեր
-        overview:
       government_response:
         one: Կառավարության արձագանք
         other: Կառավարության արձագանքներ
       guidance:
         one: Ուղեցույց
         other: Ուղեցույց
-        overview:
       impact_assessment:
         one: Ազդեցության գնահատում
         other: Ազդեցության գնահատումներ
-        overview:
       imported:
         one: ներմուծված - սպասման տեսակ
         other: ներմուծված - սպասման տեսակ
       independent_report:
         one: Անկախ զեկույց
         other: Անկախ զեկույցներ
-        overview:
       international_development_fund:
         one: Միջազգային զարգացման ֆինանսավորում
         other: Միջազգային զարգացման ֆինանսավորում
       international_treaty:
         one: Միջազգային պայմանագիր
         other: Միջազգային պայմանագրեր
-        overview:
       maib_report:
         one: Ծովային վթարների հետաքննության բաժանմունքի զեկույց
         other: Ծովային վթարների հետաքննության բաժանմունքի զեկույցներ
       map:
         one: Քարտեզ
         other: Քարտեզներ
-        overview:
       medical_safety_alert:
         one: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների համար
         other: Նախազգուշացումներ և հիշեցումներ դեղերի և բժշկական սարքավորումների համար
@@ -192,7 +180,6 @@ hy:
       national_statistics:
         one: Ազգային վիճակագրություն
         other: Ազգային վիճակագրություն
-        overview:
       national_statistics_announcement:
         one: Ազգային վիճակագրական հայտարարություն
         other: Ազգային վիճակագրական հայտարարություններ
@@ -205,21 +192,18 @@ hy:
       notice:
         one: Ծանուցում
         other: Ծանուցումներ
-        overview:
       official:
         one: Պաշտոնական վիճակագրական հայտարարություն
         other: Պաշտոնական վիճակագրական հայտարարություններ
       official_statistics:
         one: Պաշտոնական վիճակագրություն
         other: Պաշտոնական վիճակագրություն
-        overview:
       official_statistics_announcement:
         one: Պաշտոնական վիճակագրական հայտարարություն
         other: Պաշտոնական վիճակագրական հայտարարություններ
       open_consultation:
         one: Բաց խորհրդակցություն
         other: Բաց խորհրդակցություններ
-        overview:
       oral_statement:
         one: Խորհրդարանին ուղղված բանավոր հայտարարություն
         other: Խորհրդարանին ուղղված բանավոր հայտարարություններ
@@ -229,14 +213,12 @@ hy:
       policy_paper:
         one: Քաղաքականության փաստաթուղթ
         other: Քաղաքականության փաստաթղթեր
-        overview:
       press_release:
         one: Կոմյունիկե
         other: Կոմյունիկեներ
       promotional:
         one: Գովազդային նյութ
         other: Գովազդային նյութ
-        overview:
       publication:
         one: Հրապարակում
         other: Հրապարակումներ
@@ -246,11 +228,9 @@ hy:
       regulation:
         one: Կանոնադրություն
         other: Կանոնադրություններ
-        overview:
       research:
         one: Հետազոտություն և վերլուծություն
         other: Հետազոտություն և վերլուծություն
-        overview:
       residential_property_tribunal_decision:
         one: Անշարժ գույքի վերաբերյալ տրիբունալի որոշում
         other: Անշարժ գույքի վերաբերյալ տրիբունալի որոշումներ
@@ -269,7 +249,6 @@ hy:
       standard:
         one: Ստանդարտ
         other: Ստանդարտներ
-        overview:
       statement_to_parliament:
         one: Հայտարարություն ուղղված խորհրդարանին
         other: Հայտարարություններ ուղղված խորհրդարանին
@@ -282,7 +261,6 @@ hy:
       statutory_guidance:
         one: Կանոնադրական ուղեցույց
         other: Կանոնադրական ուղեցույց
-        overview:
       take_part:
         one: Մասնակցություն
         other: Մասնակցություն
@@ -295,7 +273,6 @@ hy:
       transparency:
         one: Թափանցիկության տվյալներ
         other: Թափանցիկության տվյալներ
-        overview:
       utaac_decision:
         one: Վարչական բողոքների համար տրիբունալի որոշում
         other: Վարչական բողոքների համար տրիբունալի որոշումներ
@@ -316,54 +293,54 @@ hy:
     social_media_use_html: 'Կարդալ մեր քաղաքականությունը %{link} հղումով:'
     welsh_language_scheme_html: 'Տեղեկանալ մեր աշխատանքի մասին %{link} հղումով:'
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Պաշտպանության նախարարության զինանշան
     field_of_operation: Գործունեության ոլորտ
     operations_in: Գործունեություն % {location}-ում
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Այլևս հասանելի չէ
     published_in_error: 'Այս էջի տեղեկությունը հեռացվել է, քանի որ սխալմամբ էր հրապարակվել:'
@@ -379,74 +356,74 @@ hy:
       licence_html: 'Այս հրապարակումը լիցենզավորված է Open Government Licence v3.0 հրապարակման սերվերի դրույթների ներքո, բացառությամբ այլ դեպքերի: Այս լիցենզիան դիտելու համար այցելեք <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> կամ գրեք Տեղեկատվական քաղաքականության թիմին, Ազգային արխիվին, Kew, London TW9 4DU կամ ուղարկեք էլ. Նամակ հետևյալ հասցեին՝ <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>։'
       third_party: Եթե բացահայտենք երրորդ կողմի հեղինակային իրավունքի որևէ տեղեկություն, ձեզնից կպահանջվի ստանալ թույլտվություն հեղինակային իրավունքի համապատասխան սեփականատերերից։
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
     hy: Հայերեն
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Հաջորդ
     previous_page: Նախորդ

@@ -41,7 +41,7 @@ ko:
     feedback_received: 받은 피드백
     is_being: 존재함
     not_open_yet: 이 상담이 아직 공개되지 않았습니다
-    'on':
+    'on': 
     opens: 이 상담이 공개되었습니다
     original_consultation: 기존 상담
     ran_from: 상담 실행 장소
@@ -84,7 +84,6 @@ ko:
       closed_consultation:
         one: 종결된 상담
         other: 종결된 상담
-        overview:
       cma_case:
         one: 경쟁 및 시장 감독 사례
         other: 경쟁 및 시장 감독 사례
@@ -97,25 +96,21 @@ ko:
       consultation_outcome:
         one: 상담 결과
         other: 상담 결과
-        overview:
       corporate_information_page:
         one: 정보 페이지
         other: 정보 페이지
       corporate_report:
         one: 기업 보고서
         other: 기업 보고서
-        overview:
       correspondence:
         one: 통신
         other: 통신
-        overview:
       countryside_stewardship_grant:
         one: 농촌환경관리 보조금
         other: 농촌환경관리 보조금
       decision:
         one: 판결
         other: 판결
-        overview:
       detailed_guide:
         one: 지침
         other: 지침
@@ -146,43 +141,36 @@ ko:
       foi_release:
         one: FOI 발표
         other: FOI 발표
-        overview:
       form:
         one: 양식
         other: 양식
-        overview:
       government_response:
         one: 정부 대응
         other: 정부 대응
       guidance:
         one: 지침
         other: 지침
-        overview:
       impact_assessment:
         one: 영향 평가
         other: 영향 평가
-        overview:
       imported:
         one: 수입 - 대기 유형
         other: 수입 - 대기 유형
       independent_report:
         one: 독립적 보고서
         other: 독립적 보고서
-        overview:
       international_development_fund:
         one: 국제 개발 자금
         other: 국제 개발 자금
       international_treaty:
         one: 국제 조약
         other: 국제 조약
-        overview:
       maib_report:
         one: 영국 해상사고조사위원회 보고서
         other: 영국 해상사고조사위원회 보고서
       map:
         one: 지도
         other: 지도
-        overview:
       medical_safety_alert:
         one: 의약품 및 의료기기에 대한 경고 및 리콜
         other: 의약품 및 의료기기에 대한 경고 및 리콜
@@ -192,7 +180,6 @@ ko:
       national_statistics:
         one: 국내 통계
         other: 국내 통계
-        overview:
       national_statistics_announcement:
         one: 국내 통계 공지사항
         other: 국내 통계 공지사항
@@ -205,21 +192,18 @@ ko:
       notice:
         one: 공지
         other: 공지
-        overview:
       official:
         one: 공식 통계 공지사항
         other: 공식 통계 공지사항
       official_statistics:
         one: 공식 통계
         other: 공식 통계
-        overview:
       official_statistics_announcement:
         one: 공식 통계 공지사항
         other: 공식 통계 공지사항
       open_consultation:
         one: 공개 상담
         other: 공개 상담
-        overview:
       oral_statement:
         one: 의회로 구두 성명
         other: 의회로 구두 성명
@@ -229,14 +213,12 @@ ko:
       policy_paper:
         one: 정책 문서
         other: 정책 문서
-        overview:
       press_release:
         one: 보도자료
         other: 보도자료
       promotional:
         one: 홍보 자료
         other: 홍보 자료
-        overview:
       publication:
         one: 발행물
         other: 발행물
@@ -246,11 +228,9 @@ ko:
       regulation:
         one: 규제
         other: 규제
-        overview:
       research:
         one: 조사 및 분석
         other: 조사 및 분석
-        overview:
       residential_property_tribunal_decision:
         one: 주거재산법원 판결
         other: 주거재산법원 판결
@@ -269,7 +249,6 @@ ko:
       standard:
         one: 표준
         other: 표준
-        overview:
       statement_to_parliament:
         one: 의회로 성명
         other: 의회로 성명
@@ -282,7 +261,6 @@ ko:
       statutory_guidance:
         one: 법정지도
         other: 법정지도
-        overview:
       take_part:
         one: 참여하기
         other: 참여하기
@@ -295,7 +273,6 @@ ko:
       transparency:
         one: 투명성 데이터
         other: 투명성 데이터
-        overview:
       utaac_decision:
         one: 행정 항소심판 법원 판결
         other: 행정 항소심판 법원 판결
@@ -316,54 +293,54 @@ ko:
     social_media_use_html: "%{link} 에서 정책 정보 확인"
     welsh_language_scheme_html: "%{link} 에서 정보 공개에 대한 내용."
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: 국방부 문장
     field_of_operation: 운영 현장
     operations_in: "%{Location} 내 운영"
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: 더 이상 이용할 수 없음
     published_in_error: 이 페이지의 정보는 잘못된 내용이 발행되어서 삭제되었습니다.
@@ -379,74 +356,74 @@ ko:
       licence_html: 본 출판물은 달리 명시된 경우를 제외하고 정부 공개 라이선스 v3.0의 조항에 따라 라이선스됩니다. 이 라이선스를 보려면 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> 에 방문하거나, 정보 정책 팀(Information Policy Team), 국립 아카이브(The National Archives), Kew, London TW9 4DU에 문의를 남기거나 다음 주소로 이메일을 보내십시오. <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>
       third_party: 서드파티 저작권 정보를 확인한 경우, 해당 저작권자의 허가를 받아야 합니다.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
     ko: 한국어
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: 다음
     previous_page: 이전

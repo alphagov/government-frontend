@@ -41,7 +41,7 @@ fr:
     feedback_received: Commentaire reçu
     is_being: est en train de
     not_open_yet: Cette consultation n'a pas encore débuté.
-    'on':
+    'on': 
     opens: Cette consultation a débuté.
     original_consultation: Consultation originale
     ran_from: Cette consultation s'est tenue du
@@ -84,7 +84,6 @@ fr:
       closed_consultation:
         one: Consultation fermée
         other: Consultations fermées
-        overview:
       cma_case:
         one: Affaire relative à l'autorité de la concurrence et des marchés
         other: Affaires relatives à l'autorité de la concurrence et des marchés
@@ -97,25 +96,21 @@ fr:
       consultation_outcome:
         one: Résultat de la consultation
         other: Résultats de la consultation
-        overview:
       corporate_information_page:
         one: Page d'information
         other: Pages d'information
       corporate_report:
         one: Rapport de l'entreprise
         other: Rapports de l'entreprise
-        overview:
       correspondence:
         one: Correspondance
         other: Correspondances
-        overview:
       countryside_stewardship_grant:
         one: Subvention pour la gestion des zones rurales
         other: Subventions pour la gestion des zones rurales
       decision:
         one: Décision
         other: Décisions
-        overview:
       detailed_guide:
         one: Orientations
         other: Orientations
@@ -146,43 +141,36 @@ fr:
       foi_release:
         one: Communiqué d'accès à l'information
         other: Communiqués d'accès à l'information
-        overview:
       form:
         one: Formulaire
         other: Formulaires
-        overview:
       government_response:
         one: Réponse du gouvernement
         other: Réponses du gouvernement
       guidance:
         one: Orientation
         other: Orientation
-        overview:
       impact_assessment:
         one: Évaluation de l'impact
         other: Évaluations de l'impact
-        overview:
       imported:
         one: importé - en attente du type
         other: importé - en attente du type
       independent_report:
         one: Rapport indépendant
         other: Rapports indépendants
-        overview:
       international_development_fund:
         one: Financement du développement international
         other: Financement du développement international
       international_treaty:
         one: Traité international
         other: Traités internationaux
-        overview:
       maib_report:
         one: Rapport de la division des enquêtes sur les accidents maritimes
         other: Rapports de la division des enquêtes sur les accidents maritimes
       map:
         one: Carte
         other: Cartes
-        overview:
       medical_safety_alert:
         one: Alertes et rappels de médicaments et de dispositifs médicaux
         other: Alertes et rappels de médicaments et de dispositifs médicaux
@@ -192,7 +180,6 @@ fr:
       national_statistics:
         one: Statistiques nationales
         other: Statistiques nationales
-        overview:
       national_statistics_announcement:
         one: Annonce des statistiques nationales
         other: Annonces des statistiques nationales
@@ -205,21 +192,18 @@ fr:
       notice:
         one: Notification
         other: Notifications
-        overview:
       official:
         one: Annonce des statistiques officielles
         other: Annonces des statistiques officielles
       official_statistics:
         one: Statistiques officielles
         other: Statistiques officielles
-        overview:
       official_statistics_announcement:
         one: Annonce des statistiques officielles
         other: Annonces des statistiques officielles
       open_consultation:
         one: Consultation ouverte
         other: Consultations ouvertes
-        overview:
       oral_statement:
         one: Déclaration orale au Parlement
         other: Déclarations orales au Parlement
@@ -229,14 +213,12 @@ fr:
       policy_paper:
         one: Document de politique générale
         other: Documents de politique générale
-        overview:
       press_release:
         one: Communiqué de presse
         other: Communiqués de presse
       promotional:
         one: Matériel promotionnel
         other: Matériel promotionnel
-        overview:
       publication:
         one: Publication
         other: Publications
@@ -246,11 +228,9 @@ fr:
       regulation:
         one: Règlement
         other: Règlements
-        overview:
       research:
         one: Recherche et analyse
         other: Recherche et analyse
-        overview:
       residential_property_tribunal_decision:
         one: Décision du tribunal chargé du logement résidentiel
         other: Décisions du tribunal chargé du logement résidentiel
@@ -269,7 +249,6 @@ fr:
       standard:
         one: norme
         other: normes
-        overview:
       statement_to_parliament:
         one: Déclaration au parlement
         other: Déclarations au parlement
@@ -282,7 +261,6 @@ fr:
       statutory_guidance:
         one: Orientation statutaire
         other: Orientation statutaire
-        overview:
       take_part:
         one: Participer
         other: Participer
@@ -295,7 +273,6 @@ fr:
       transparency:
         one: Transparence des données
         other: Transparence des données
-        overview:
       utaac_decision:
         one: Décision du tribunal administratif d'appel
         other: Décisions du tribunal administratif d'appel
@@ -316,54 +293,54 @@ fr:
     social_media_use_html: Lisez notre politique générale sur %{link}.
     welsh_language_scheme_html: Découvrez comment nous nous engageons sur %{link}.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Emblème du ministère de la défense
     field_of_operation: Champ d'opération
     operations_in: Opérations à %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: N'est plus disponible
     published_in_error: Les informations présentées sur cette page ont été supprimées car elles ont été publiées par erreur.
@@ -379,74 +356,74 @@ fr:
       licence_html: 'Cette publication est sous licence selon les termes de la Open Government Licence v3.0, sauf indication contraire. Pour consulter cette licence, visitez le site <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ou écrivez à l''équipe chargée de la politique d''information, The National Archives, Kew, London TW9 4DU, ou par courriel : <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Dans le cas où nous avons identifié des informations relatives à des droits d'auteur de tiers, vous devrez obtenir l'autorisation des détenteurs de droits d'auteur concernés.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
     fr: français
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Suivant
     previous_page: Précédent

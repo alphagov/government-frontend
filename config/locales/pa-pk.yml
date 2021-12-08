@@ -41,7 +41,7 @@ pa-pk:
     feedback_received: جواب مل گیا
     is_being: ایہ وی
     not_open_yet: ایہ مشاورت ہلے نئیں کُھلی
-    'on':
+    'on': 
     opens: ایہ مشاورت کُھل گئی اے
     original_consultation: اصلی مشاورت
     ran_from: ایہ مشاورت داچلایا ہویا فارم اے
@@ -84,7 +84,6 @@ pa-pk:
       closed_consultation:
         one: مشاورت بند ہوئی
         other: مشاورت بند ہوئی
-        overview:
       cma_case:
         one: مقابلہ تے منڈی دے اختیار دا مقدمہ
         other: مقابلہ تے منڈی دے اختیار دے مقدمے
@@ -97,25 +96,21 @@ pa-pk:
       consultation_outcome:
         one: مشورے دا نتیجہ
         other: مشورے دے نتائج
-        overview:
       corporate_information_page:
         one: خبراں دا ورقہ
         other: خبراں دا ورقے
       corporate_report:
         one: کاروبار دی رپورٹ
         other: کاروبار دیاں رپورٹاں
-        overview:
       correspondence:
         one: خط وکتابت
         other: خط وکتابت
-        overview:
       countryside_stewardship_grant:
         one: پنڈ دی چوکیداری لئی مدد
         other: پند دی چوکیداری لئی امداد
       decision:
         one: فیصلہ
         other: فیصلے
-        overview:
       detailed_guide:
         one: 'رہنمائی '
         other: 'رہنمائی '
@@ -146,43 +141,36 @@ pa-pk:
       foi_release:
         one: فریڈم آف انفارمیشن جاری کرنا
         other: فریڈم آف انفارمیشن جاری کرنا
-        overview:
       form:
         one: 'فارم '
         other: فارمز
-        overview:
       government_response:
         one: حکومت دا جواب
         other: حکومت دے جوابات
       guidance:
         one: رہنمائی
         other: 'رہنمائی '
-        overview:
       impact_assessment:
         one: اثر دی جانچ
         other: اثر دی جانچ
-        overview:
       imported:
         one: درآمد شُدہ- انتظار کرن دی قسم
         other: درآمد شُدہ- انتظار کرن دی قسم
       independent_report:
         one: خودمُختار رپورٹ
         other: خودمُختار رپورٹس
-        overview:
       international_development_fund:
         one: بین الاقوامی ترقی دا فنڈنگ
         other: بین الاقوامی ترقی دا فنڈنگ
       international_treaty:
         one: بین الاقوامی معاہدہ
         other: بین الاقوامی معایدے
-        overview:
       maib_report:
         one: بحری حادثے دی تفتیش دی برانچ دی رپورٹ
         other: بحری حادثے دی تفتیش دی برانچ دیاں رپورٹاں
       map:
         one: نقشہ
         other: نقشے
-        overview:
       medical_safety_alert:
         one: طبی آلات تے ادویات بارے ہُشیاری تے واپسی
         other: طبی آلات تے ادویات بارے ہُشیاری تے واپسی
@@ -192,7 +180,6 @@ pa-pk:
       national_statistics:
         one: قومی اعدادوشمار
         other: قومی اعدادوشمار
-        overview:
       national_statistics_announcement:
         one: قومی اعدادوشمار دا اعلان
         other: قومی اعدادوشمار دے اعلانات
@@ -205,21 +192,18 @@ pa-pk:
       notice:
         one: نوٹس
         other: ںوٹسز
-        overview:
       official:
         one: سرکاری اعدادوشمار دا اعلان
         other: سرکاری اعدادوشمار دے اعلانات
       official_statistics:
         one: سرکاری اعدادوشمار
         other: سرکاری اعدادوشمار
-        overview:
       official_statistics_announcement:
         one: سرکاری اعدادوشمار دا اعلان
         other: سرکاری اعدادوشمار دے اعلانات
       open_consultation:
         one: 'کُھلی مشاورت '
         other: 'کُھلی مشاورت '
-        overview:
       oral_statement:
         one: قومی مجلس دے سامنے زبانی بیان
         other: قومی مجلس دے سامنے زبانی بیانات
@@ -229,14 +213,12 @@ pa-pk:
       policy_paper:
         one: حکمت عملی دا کاغذ
         other: حکمتِ عملی دے کاغذات
-        overview:
       press_release:
         one: خبراں دینا
         other: خبراں دینا
       promotional:
         one: اشتہاری مواد
         other: اشتہاری مواد
-        overview:
       publication:
         one: مطبوعہ
         other: مطبوعات
@@ -246,11 +228,9 @@ pa-pk:
       regulation:
         one: قانون
         other: قوانین
-        overview:
       research:
         one: 'کھوج تے تجزیہ '
         other: 'کھوج تے تجزیہ '
-        overview:
       residential_property_tribunal_decision:
         one: رہائشی جائیداد دی عدالت دا فیصلہ
         other: رہائشی جائیداد دی عدالت دے فیصلے
@@ -269,7 +249,6 @@ pa-pk:
       standard:
         one: سٹینڈرڈ
         other: سٹینڈرڈز
-        overview:
       statement_to_parliament:
         one: قومی مجلس دے سامنے بیان
         other: قومی مجلس دے سامنے بیانات
@@ -282,7 +261,6 @@ pa-pk:
       statutory_guidance:
         one: قانونی رہنمائی
         other: قانونی رہنمائی
-        overview:
       take_part:
         one: حصہ لوؤ
         other: حصہ لوؤ
@@ -295,7 +273,6 @@ pa-pk:
       transparency:
         one: شفافیت دے اعدادوشمار
         other: شفافیت دے اعدادوشمار
-        overview:
       utaac_decision:
         one: انتظامی درخواست دی عدالت دا فیصلہ
         other: انتظامی درخواست دی عدالت دے فیصلے
@@ -316,54 +293,54 @@ pa-pk:
     social_media_use_html: ایندے تے ساڈی حکمتِ عملی بارے پڑھو {link}%.
     welsh_language_scheme_html: ساڈی وابستگی دے بارے جانو {link}%.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: وزارتِ دفاع کریسٹ
     field_of_operation: عمل کرن دا حلقہ
     operations_in: ایندے بارے عمل {location}%
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: ہون دستیاب نئیں
     published_in_error: ایس ورقے تے موجود خبراں ہٹا دتیاں  گیا نیں کیو جے او غلطی نال چھپ گئے سن۔
@@ -381,72 +358,72 @@ pa-pk:
   i18n:
     direction: rtl
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
     pa-pk: پنجابی شاہ مُکھی
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: اگلا
     previous_page: پچھلا

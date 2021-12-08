@@ -41,7 +41,7 @@ el:
     feedback_received: Λήφθηκαν σχόλια
     is_being: είναι
     not_open_yet: Αυτή η διαβούλευση δεν είναι ακόμη ανοιχτή
-    'on':
+    'on': 
     opens: Αυτή η διαβούλευση ανοίγει
     original_consultation: Αρχική διαβούλευση
     ran_from: Αυτή η διαβούλευση ξεκίνησε από
@@ -84,7 +84,6 @@ el:
       closed_consultation:
         one: Κλειστή διαβούλευση
         other: Κλειστές διαβουλεύσεις
-        overview:
       cma_case:
         one: Υπόθεση Αρχής Ανταγωνισμού και Αγορών
         other: Υποθέσεις Αρχής Ανταγωνισμού και Αγορών
@@ -97,25 +96,21 @@ el:
       consultation_outcome:
         one: Αποτέλεσμα διαβούλευσης
         other: Αποτελέσματα διαβούλευσης
-        overview:
       corporate_information_page:
         one: Σελίδα πληροφοριών
         other: Σελίδες πληροφοριών
       corporate_report:
         one: Εταιρική έκθεση
         other: Εταιρικές εκθέσεις
-        overview:
       correspondence:
         one: Αλληλογραφία
         other: Αλληλογραφίες
-        overview:
       countryside_stewardship_grant:
         one: Οικονομικό κίνητρο Countryside Stewardship grant
         other: Οικονομικά κίνητρα Countryside Stewardship grants
       decision:
         one: Απόφαση
         other: Αποφάσεις
-        overview:
       detailed_guide:
         one: Οδηγία
         other: Οδηγία
@@ -146,43 +141,36 @@ el:
       foi_release:
         one: Κυκλοφορία ελευθερία της πληροφόρησης
         other: Κυκλοφορίες ελευθερία της πληροφόρησης
-        overview:
       form:
         one: Φόρμα
         other: Φόρμες
-        overview:
       government_response:
         one: Κυβερνητική απάντηση
         other: Κυβερνητικές απαντήσεις
       guidance:
         one: Οδηγία
         other: Οδηγία
-        overview:
       impact_assessment:
         one: Εκτίμηση επίπτωσης
         other: Εκτιμήσεις επιπτώσεων
-        overview:
       imported:
         one: εισήχθη - σε αναμονή για τύπο
         other: εισήχθη - σε αναμονή για τύπο
       independent_report:
         one: Ανεξάρτητη έκθεση
         other: Ανεξάρτητες εκθέσεις
-        overview:
       international_development_fund:
         one: Διεθνής χρηματοδότηση ανάπτυξης
         other: Διεθνής χρηματοδότηση ανάπτυξης
       international_treaty:
         one: Διεθνής συνθήκη
         other: Διεθνείς συνθήκες
-        overview:
       maib_report:
         one: Έκθεση του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
         other: Εκθέσεις του τμήματος διερεύνησης θαλάσσιων ατυχημάτων
       map:
         one: Χάρτης
         other: Χάρτες
-        overview:
       medical_safety_alert:
         one: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
         other: Ειδοποιήσεις και ανακλήσεις για φάρμακα και ιατρικές συσκευές
@@ -192,7 +180,6 @@ el:
       national_statistics:
         one: Εθνική Στατιστική Υπηρεσία
         other: Εθνική Στατιστική Υπηρεσία
-        overview:
       national_statistics_announcement:
         one: Ανακοίνωση εθνικής στατιστικής υπηρεσίας
         other: Ανακοινώσεις εθνικής στατιστικής υπηρεσίας
@@ -205,21 +192,18 @@ el:
       notice:
         one: Σημείωση
         other: Σημειώσεις
-        overview:
       official:
         one: Επίσημη ανακοίνωση στατιστικών
         other: Επίσημες ανακοινώσεις στατιστικών
       official_statistics:
         one: Επίσημη Στατιστικά Στοιχεία
         other: Επίσημη Στατιστικά Στοιχεία
-        overview:
       official_statistics_announcement:
         one: Επίσημη ανακοίνωση στατιστικών
         other: Επίσημες ανακοινώσεις στατιστικών
       open_consultation:
         one: Ανοιχτή διαβούλευση
         other: Ανοιχτές διαβουλεύσεις
-        overview:
       oral_statement:
         one: Προφορική δήλωση στη Βουλή
         other: Προφορικές δηλώσεις στη Βουλή
@@ -229,14 +213,12 @@ el:
       policy_paper:
         one: Έγγραφο πολιτικής
         other: Έγγραφα πολιτικής
-        overview:
       press_release:
         one: Δελτίο τύπου
         other: Δελτία Τύπου
       promotional:
         one: Προωθητικό υλικό
         other: Προωθητικό υλικό
-        overview:
       publication:
         one: Δημοσίευση
         other: Δημοσιεύσεις
@@ -246,11 +228,9 @@ el:
       regulation:
         one: Κανονισμός λειτουργίας
         other: Κανονισμοί λειτουργίας
-        overview:
       research:
         one: Έρευνα και ανάλυση
         other: Έρευνα και ανάλυση
-        overview:
       residential_property_tribunal_decision:
         one: Απόφαση δικαστηρίου διαφορών ιδιοκτησίας
         other: Αποφάσεις δικαστηρίου διαφορών ιδιοκτησίας
@@ -269,7 +249,6 @@ el:
       standard:
         one: Πρότυπο
         other: Πρότυπα
-        overview:
       statement_to_parliament:
         one: Δήλωση στη Βουλή
         other: Δηλώσεις στη Βουλή
@@ -282,7 +261,6 @@ el:
       statutory_guidance:
         one: Νομικές οδηγίες
         other: Νομικές οδηγίες
-        overview:
       take_part:
         one: Συμμετοχή
         other: Συμμετοχή
@@ -295,7 +273,6 @@ el:
       transparency:
         one: Δεδομένα διαφάνειας
         other: Δεδομένα διαφάνειας
-        overview:
       utaac_decision:
         one: Απόφαση του δικαστηρίου διοικητικών προσφυγών
         other: Αποφάσεις του δικαστηρίου διοικητικών προσφυγών
@@ -316,54 +293,54 @@ el:
     social_media_use_html: Διαβάστε την πολιτική μας στο %{link}.
     welsh_language_scheme_html: Μάθετε για τη δέσμευσή μας στο %{link}.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Οικόσημο Υπουργείου Άμυνας
     field_of_operation: Πεδίο λειτουργίας
     operations_in: Λειτουργίες στην τοποθεσία %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Δεν είναι πλέον διαθέσιμο
     published_in_error: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή δημοσιεύθηκαν κατά λάθος.
@@ -379,74 +356,74 @@ el:
       licence_html: 'Αυτή η δημοσίευση έχει άδεια σύμφωνα με τους όρους της Άδειας Ανοικτής Κυβέρνησης v3.0, εκτός εάν αναφέρεται διαφορετικά. Για να δείτε αυτήν την άδεια, επισκεφτείτε την διεύθυνση <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ή γράψτε στην Information Policy Team, The National Archives, Kew, London TW9 4DU, ή στείλτε email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Όπου έχουμε εντοπίσει οποιαδήποτε στοιχεία πνευματικών δικαιωμάτων τρίτου μέρους, θα χρειαστεί να λάβετε άδεια από τους ενδιαφερόμενους κατόχους πνευματικών δικαιωμάτων.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
     el: Ελληνικά
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Επόμενο
     previous_page: Προηγούμενο

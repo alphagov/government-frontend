@@ -41,7 +41,7 @@ bg:
     feedback_received: Получената обратна връзка
     is_being: е
     not_open_yet: Тази консултация все още не е открита
-    'on':
+    'on': 
     opens: Тази консултация се отваря
     original_consultation: Първоначална консултация
     ran_from: Тази консултация се управлява от
@@ -84,7 +84,6 @@ bg:
       closed_consultation:
         one: Закрита консултация
         other: Закрити консултации
-        overview:
       cma_case:
         one: Дело на Органа за защита на конкуренцията и пазарите
         other: Дела на Органа за защита на конкуренцията и пазарите
@@ -97,25 +96,21 @@ bg:
       consultation_outcome:
         one: Резултат от консултацията
         other: Резултати от консултацията
-        overview:
       corporate_information_page:
         one: Информационна страница
         other: Информационни страници
       corporate_report:
         one: Фирмен доклад
         other: Фирмени доклади
-        overview:
       correspondence:
         one: Кореспонденция
         other: Кореспонденции
-        overview:
       countryside_stewardship_grant:
         one: Безвъзмездна финансова помощ за управление на селските райони
         other: Безвъзмездни финансови помощи за управление на селските райони
       decision:
         one: Решение
         other: Решения
-        overview:
       detailed_guide:
         one: Насока
         other: Насока
@@ -146,43 +141,36 @@ bg:
       foi_release:
         one: Свобода на информацията издание
         other: Свобода на информацията издания
-        overview:
       form:
         one: Формуляр
         other: Формуляри
-        overview:
       government_response:
         one: Отговор на правителството
         other: Отговори на правителството
       guidance:
         one: Насока
         other: Насока
-        overview:
       impact_assessment:
         one: Оценка на въздействието
         other: Оценки на въздействието
-        overview:
       imported:
         one: импортиран - очакващ тип
         other: импортиран - очакващ тип
       independent_report:
         one: Независим доклад
         other: Независими доклади
-        overview:
       international_development_fund:
         one: Финансиране за международно развитие
         other: Финансиране за международно развитие
       international_treaty:
         one: Международен договор
         other: Международни договори
-        overview:
       maib_report:
         one: Доклад на Отдела за разследване на морски произшествия
         other: Доклади на Отдела за разследване на морски произшествия
       map:
         one: Карта
         other: Карти
-        overview:
       medical_safety_alert:
         one: Предупреждения и изтегляния на лекарства и медицински изделия
         other: Предупреждения и изтегляния на лекарства и медицински изделия
@@ -192,7 +180,6 @@ bg:
       national_statistics:
         one: Национална статистика
         other: Национална статистика
-        overview:
       national_statistics_announcement:
         one: Съобщение от националната статистика
         other: Съобщения от националните статистики
@@ -205,21 +192,18 @@ bg:
       notice:
         one: Известие
         other: Известия
-        overview:
       official:
         one: Съобщение от официалната статистика
         other: Съобщения от официалните статистики
       official_statistics:
         one: Официална статистика
         other: Официална статистика
-        overview:
       official_statistics_announcement:
         one: Съобщение от официалната статистика
         other: Съобщения от официалните статистики
       open_consultation:
         one: Открита консултация
         other: Открити консултации
-        overview:
       oral_statement:
         one: Устно изявление в Парламента
         other: Устни изявления в Парламента
@@ -229,14 +213,12 @@ bg:
       policy_paper:
         one: Политически документ
         other: Политически документи
-        overview:
       press_release:
         one: Съобщение за пресата
         other: Съобщения за пресата
       promotional:
         one: Рекламен материал
         other: Рекламен материал
-        overview:
       publication:
         one: Публикация
         other: Публикации
@@ -246,11 +228,9 @@ bg:
       regulation:
         one: Наредба
         other: Наредби
-        overview:
       research:
         one: Проучване и анализ
         other: Проучване и анализ
-        overview:
       residential_property_tribunal_decision:
         one: Съдебно решение за жилищни имоти
         other: Съдебни решения за жилищни имоти
@@ -269,7 +249,6 @@ bg:
       standard:
         one: Стандарт
         other: Стандарти
-        overview:
       statement_to_parliament:
         one: Изявление пред Парламента
         other: Изявления пред Парламента
@@ -282,7 +261,6 @@ bg:
       statutory_guidance:
         one: Законови указания
         other: Законови указания
-        overview:
       take_part:
         one: Вземете участие
         other: Вземете участие
@@ -295,7 +273,6 @@ bg:
       transparency:
         one: Данни за прозрачност
         other: Данни за прозрачност
-        overview:
       utaac_decision:
         one: Решение на административния апелативен съд
         other: Решения на апелативния съд по трудови спорове
@@ -316,54 +293,54 @@ bg:
     social_media_use_html: Прочетете нашите правила на %{link}.
     welsh_language_scheme_html: Научете повече за нашия ангажимент към %{link}.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Герб на Министерството на отбраната
     field_of_operation: Област на действие
     operations_in: Операции в %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Вече не е налична
     published_in_error: Информацията е премахната от тази страница, тъй като е била погрешно публикувана.
@@ -379,74 +356,74 @@ bg:
       licence_html: 'Тази публикация е лицензирана съгласно условията на Open Government Licence v3.0, освен ако не е посочено друго. За да разгледате този лиценз, посетете <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> или пишете до екипа за информационна политика, The National Archives, Kew, Лондон TW9 4DU, или изпратете имейл до: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Когато идентифицираме информация за авторски права на трети страни, ще трябва да получите разрешение от съответните носители на авторските права.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
+    ar: 
+    az: 
+    be: 
     bg: Bulgarian
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Следваща
     previous_page: Предишна

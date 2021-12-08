@@ -41,7 +41,7 @@ nl:
     feedback_received: Ontvangen feedback
     is_being: wordt
     not_open_yet: Deze raadpleging is nog niet geopend
-    'on':
+    'on': 
     opens: Deze raadpleging wordt geopend
     original_consultation: Oorspronkelijke raadpleging
     ran_from: Deze raadpleging liep van
@@ -84,7 +84,6 @@ nl:
       closed_consultation:
         one: Gesloten overleg
         other: Gesloten raadplegingen
-        overview:
       cma_case:
         one: Mededingings- en marktautoriteit zaak
         other: Mededinging en Markten Autoriteit zaken
@@ -97,25 +96,21 @@ nl:
       consultation_outcome:
         one: Uitkomsten raadpleging
         other: Overleg uitkomsten
-        overview:
       corporate_information_page:
         one: Informatie pagina
         other: Informatie pagina's
       corporate_report:
         one: Ondernemingsverslag
         other: Bedrijfsverslagen
-        overview:
       correspondence:
         one: Correspondentie
         other: Correspondentie
-        overview:
       countryside_stewardship_grant:
         one: Subsidie voor Countryside Stewardship
         other: Subsidies in het kader van het Countryside Stewardship
       decision:
         one: Besluit
         other: Besluiten
-        overview:
       detailed_guide:
         one: Richtsnoer
         other: Begeleiding
@@ -146,43 +141,36 @@ nl:
       foi_release:
         one: Vrijheid van informatie-vrijgave
         other: Vrijheid van informatie-vrijgaven
-        overview:
       form:
         one: Formulier
         other: Formulieren
-        overview:
       government_response:
         one: Overheidsantwoord
         other: Overheidsantwoorden
       guidance:
         one: Richtlijn
         other: Richtlijn
-        overview:
       impact_assessment:
         one: Effectbeoordeling
         other: Effectbeoordelingen
-        overview:
       imported:
         one: ingevoerd - in afwachting van type
         other: ingevoerd - in afwachting van type
       independent_report:
         one: Onafhankelijk rapport
         other: Onafhankelijke rapporten
-        overview:
       international_development_fund:
         one: Internationale ontwikkelingsfinanciering
         other: Internationale ontwikkelingsfinanciering
       international_treaty:
         one: Internationaal verdrag
         other: Internationale verdragen
-        overview:
       maib_report:
         one: Marine ongevallen onderzoek branch rapport
         other: Marine ongevallen onderzoek branch rapporten
       map:
         one: Kaart
         other: Kaarten
-        overview:
       medical_safety_alert:
         one: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
         other: Waarschuwingen en terugroepingen voor geneesmiddelen en medische hulpmiddelen
@@ -192,7 +180,6 @@ nl:
       national_statistics:
         one: Nationale statistieken
         other: Nationale statistieken
-        overview:
       national_statistics_announcement:
         one: Aankondigingen nationale statistieken
         other: Aankondigingen nationale statistieken
@@ -205,21 +192,18 @@ nl:
       notice:
         one: Mededeling
         other: Mededelingen
-        overview:
       official:
         one: Officiële statistieken aankondiging
         other: Officiële statistieken aankondigingen
       official_statistics:
         one: Officiële statistieken
         other: Officiële statistieken
-        overview:
       official_statistics_announcement:
         one: Aankondiging van officiële statistieken
         other: Aankondigingen van officiële statistieken
       open_consultation:
         one: Open raadpleging
         other: Open raadplegingen
-        overview:
       oral_statement:
         one: Mondelinge verklaring voor het Parlement
         other: Mondelinge verklaringen aan het Parlement
@@ -229,14 +213,12 @@ nl:
       policy_paper:
         one: Beleidsnota
         other: Beleidsnota's
-        overview:
       press_release:
         one: Persbericht
         other: Persberichten
       promotional:
         one: Promotiemateriaal
         other: Promotiemateriaal
-        overview:
       publication:
         one: Publicatie
         other: Publicaties
@@ -246,11 +228,9 @@ nl:
       regulation:
         one: Regelgeving
         other: Regelgeving
-        overview:
       research:
         one: Onderzoek en analyse
         other: Onderzoek en analyse
-        overview:
       residential_property_tribunal_decision:
         one: Beslissing van de rechtbank voor woningen
         other: Beslissingen van de rechtbank voor woningen
@@ -269,7 +249,6 @@ nl:
       standard:
         one: Standaard
         other: Standaarden
-        overview:
       statement_to_parliament:
         one: Verklaring voor het Parlement
         other: Verklaringen voor het Parlement
@@ -282,7 +261,6 @@ nl:
       statutory_guidance:
         one: Statutaire richtsnoeren
         other: Statutaire richtsnoeren
-        overview:
       take_part:
         one: Neem deel
         other: Deelnemen
@@ -295,7 +273,6 @@ nl:
       transparency:
         one: Transparantiegegevens
         other: Transparantiegegevens
-        overview:
       utaac_decision:
         one: Beslissing van de rechtbank voor administratief beroep
         other: Beslissingen van de rechtbank voor administratief beroep
@@ -316,54 +293,54 @@ nl:
     social_media_use_html: Lees ons beleid inzake %{link}.
     welsh_language_scheme_html: Lees meer over onze inzet voor %{link}.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Wapen van het ministerie van Defensie
     field_of_operation: Gebied van operatie
     operations_in: Operaties in %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Niet langer beschikbaar
     published_in_error: De informatie op deze pagina is verwijderd omdat deze abusievelijk is gepubliceerd.
@@ -379,74 +356,74 @@ nl:
       licence_html: 'Voor deze publicatie is een licentie verleend onder de voorwaarden van de Open Overheidslicentie v3.0, tenzij anders vermeld. Om deze licentie te bekijken, ga naar <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> of schrijf naar het Informatiebeleidsteam, The National Archives, Kew, Londen TW9 4DU, of stuur een e-mail: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Als we auteursrechtinformatie van derden hebben geïdentificeerd, moet u toestemming vragen aan de betrokken auteursrechthebbenden.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
     nl: Nederlands
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Volgende
     previous_page: Vorige

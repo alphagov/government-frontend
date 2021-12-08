@@ -41,7 +41,7 @@ et:
     feedback_received: Tagasiside saadud
     is_being: 'on'
     not_open_yet: See konsultatsioon pole veel alanud
-    'on':
+    'on': 
     opens: See konsultatsioon algab
     original_consultation: Algne konsultatsioon
     ran_from: See konsultatsioon kestis
@@ -84,7 +84,6 @@ et:
       closed_consultation:
         one: Suletud konsultatsioon
         other: Suletud konsultatsioonid
-        overview:
       cma_case:
         one: Konkurentsi- ja turuameti juhtum
         other: Konkurentsi- ja turuameti juhtumid
@@ -97,25 +96,21 @@ et:
       consultation_outcome:
         one: Konsultatsiooni tulemus
         other: Konsultatsiooni tulemused
-        overview:
       corporate_information_page:
         one: Teabeleht
         other: Teabelehed
       corporate_report:
         one: Ettevõtte aruanne
         other: Ettevõtte aruanded
-        overview:
       correspondence:
         one: Korrespondents
         other: Korrespondentsid
-        overview:
       countryside_stewardship_grant:
         one: Paikkondade alalhoidmise toetus
         other: Paikkondade alalhoidmise toetused
       decision:
         one: Otsus
         other: Otsused
-        overview:
       detailed_guide:
         one: Juhised
         other: Juhised
@@ -146,43 +141,36 @@ et:
       foi_release:
         one: FOI väljaanne
         other: FOI väljaanded
-        overview:
       form:
         one: Vorm
         other: Vormid
-        overview:
       government_response:
         one: Valitsuse vastus
         other: Valitsuse vastused
       guidance:
         one: Juhised
         other: Juhised
-        overview:
       impact_assessment:
         one: Mõju hindamine
         other: Mõju hindamised
-        overview:
       imported:
         one: imporditud - ootel tüüp
         other: imporditud - ootel tüüp
       independent_report:
         one: Sõltumatu aruanne
         other: Sõltumatud aruanded
-        overview:
       international_development_fund:
         one: Rahvusvaheline arengu rahastamine
         other: Rahvusvaheline arengu rahastamine
       international_treaty:
         one: Rahvusvaheline leping
         other: Rahvusvahelised lepingud
-        overview:
       maib_report:
         one: Mereõnnetuste uurimise haru aruanne
         other: Mereõnnetuste uurimise haru aruanded
       map:
         one: Kaart
         other: Kaardid
-        overview:
       medical_safety_alert:
         one: Uimastite ja meditsiiniseadmete hoiatused ja tagasikutsumised
         other: Uimastite ja meditsiiniseadmete hoiatused ja tagasikutsumised
@@ -192,7 +180,6 @@ et:
       national_statistics:
         one: Riiklik statistika
         other: Riiklik statistika
-        overview:
       national_statistics_announcement:
         one: Riiklik statistikateade
         other: Riiklikud statistikateated
@@ -205,21 +192,18 @@ et:
       notice:
         one: Märkus
         other: Märkused
-        overview:
       official:
         one: Ametlik statistikateade
         other: Ametlikud statistikateated
       official_statistics:
         one: Ametlik statistika
         other: Ametlik statistika
-        overview:
       official_statistics_announcement:
         one: Ametlik statistikateade
         other: Ametlikud statistikateated
       open_consultation:
         one: Avatud konsultatsioon
         other: Avatud konsultatsioonid
-        overview:
       oral_statement:
         one: Suuline avaldus parlamendile
         other: Suulised avaldused parlamendile
@@ -229,14 +213,12 @@ et:
       policy_paper:
         one: Eeskirjade dokument
         other: Eeskirjade dokumendid
-        overview:
       press_release:
         one: Pressiteade
         other: Pressiteated
       promotional:
         one: Reklaammaterjal
         other: Reklaammaterjal
-        overview:
       publication:
         one: Publikatsioon
         other: Publikatsioonid
@@ -246,11 +228,9 @@ et:
       regulation:
         one: Määrus
         other: Määrused
-        overview:
       research:
         one: Uurimine ja analüüs
         other: Uurimine ja analüüs
-        overview:
       residential_property_tribunal_decision:
         one: Elamukinnisvara kohtuotsus
         other: Elamukinnisvara kohtuotsused
@@ -269,7 +249,6 @@ et:
       standard:
         one: Standard
         other: Standardid
-        overview:
       statement_to_parliament:
         one: Avaldus parlamendile
         other: Avaldused parlamendile
@@ -282,7 +261,6 @@ et:
       statutory_guidance:
         one: Seadusjärgsed juhised
         other: Seadusjärgsed juhised
-        overview:
       take_part:
         one: Osa võtma
         other: Osa võtma
@@ -295,7 +273,6 @@ et:
       transparency:
         one: Läbipaistvuse andmed
         other: Läbipaistvuse andmed
-        overview:
       utaac_decision:
         one: Halduskaebuste kohtuotsus
         other: Halduskaebuste kohtuotsus
@@ -316,54 +293,54 @@ et:
     social_media_use_html: Lugege meie eeskirju saidil %{link}.
     welsh_language_scheme_html: Lisateave meie pühendumuse kohta %{link}.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Kaitseministeeriumi teadus- ja tehnikauuringute komitee
     field_of_operation: Tegevusvaldkond
     operations_in: Toimingud asukohas %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Ei ole enam saadaval
     published_in_error: Sellel lehel olev teave on eemaldatud, kuna see avaldati ekslikult.
@@ -379,74 +356,74 @@ et:
       licence_html: 'See publikatsioon on litsentsitud valitsuse avatud litsentsi v3.0 kohaselt, kui pole märgitud teisiti. Selle litsentsi vaatamiseks külastage saiti <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> või kirjutage aadressil Information Policy Team, The National Archives, Kew, London TW9 4DU või saatke e-kiri: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Kui oleme tuvastanud kolmanda osapoole autoriõiguse teabe, peate hankima loa vastavalt autoriõiguse hoidjalt.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
     et: Eesti
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Edasi
     previous_page: Eelmine
