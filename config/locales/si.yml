@@ -41,7 +41,7 @@ si:
     feedback_received: ලැබුණු ප්රතිපෝෂණය
     is_being: වෙමින් පවතී
     not_open_yet: මෙම උපදේශනය තවමත් විවෘත කර නැත
-    'on':
+    'on': 
     opens: මෙම උපදේශනය විවෘත වේ
     original_consultation: මුල් උපදේශනය
     ran_from: මෙම උපදේශනය ක්‍රියාත්මක වුනේ
@@ -84,7 +84,6 @@ si:
       closed_consultation:
         one: සංවෘත උපදේශනය
         other: සංවෘත උපදේශන
-        overview:
       cma_case:
         one: තරඟ සහ වෙළඳපළ අධිකාරිය නඩුව
         other: තරඟ සහ වෙළඳපළ අධිකාරිය නඩු
@@ -97,25 +96,21 @@ si:
       consultation_outcome:
         one: උපදේශන ප්රතිඵලය
         other: උපදේශන ප්රතිඵල
-        overview:
       corporate_information_page:
         one: තොරතුරු පිටුව
         other: තොරතුරු පිටු
       corporate_report:
         one: ආයතනික වාර්තාව
         other: ආයතනික වාර්තා
-        overview:
       correspondence:
         one: ලිපි හුවමාරුව
         other: ලිපි හුවමාරු
-        overview:
       countryside_stewardship_grant:
         one: ගම්බද භාරකාරත්ව ප්රදානය
         other: ගම්බද භාරකාරත්ව ප්රදාන
       decision:
         one: තීරණය
         other: තීරණ
-        overview:
       detailed_guide:
         one: මාර්ගෝපදේශය
         other: මාර්ගෝපදේශය
@@ -146,43 +141,36 @@ si:
       foi_release:
         one: FOI නිකුත් කිරීම
         other: FOI නිකුත් කිරීම්
-        overview:
       form:
         one: ආකෘති පත්‍රය
         other: ආකෘති පත්‍ර
-        overview:
       government_response:
         one: රජයේ ප්රතිචාරය
         other: රජයේ ප්රතිචාර
       guidance:
         one: මාර්ගෝපදේශය
         other: මාර්ගෝපදේශය
-        overview:
       impact_assessment:
         one: බලපෑම තක්සේරුව
         other: බලපෑම තක්සේරු
-        overview:
       imported:
         one: ආනයනය කරන ලද - අපේක්ෂිත වර්ගය
         other: ආනයනය කරන ලද - අපේක්ෂිත වර්ගය
       independent_report:
         one: ස්වාධීන වාර්තාව
         other: ස්වාධීන වාර්තා
-        overview:
       international_development_fund:
         one: ජාත්යන්තර සංවර්ධන මුදල් සැපයීම
         other: ජාත්යන්තර සංවර්ධන මුදල් සැපයීම
       international_treaty:
         one: ජාත්යන්තර ගිවිසුම
         other: ජාත්යන්තර ගිවිසුම්
-        overview:
       maib_report:
         one: නාවික අනතුරු විමර්ශන ශාඛා වාර්තාව
         other: නාවික අනතුරු විමර්ශන ශාඛා වාර්තා
       map:
         one: සිතියම
         other: සිතියම්
-        overview:
       medical_safety_alert:
         one: ඖෂධ සහ වෛද්ය උපකරණ සඳහා ඇඟවීම් සහ සිහිපත් කිරීම්
         other: ඖෂධ සහ වෛද්ය උපකරණ සඳහා ඇඟවීම් සහ සිහිපත් කිරීම්
@@ -192,7 +180,6 @@ si:
       national_statistics:
         one: ජාතික සංඛ්යාලේඛන
         other: ජාතික සංඛ්යාලේඛන
-        overview:
       national_statistics_announcement:
         one: ජාතික සංඛ්යාලේඛන නිවේදනය
         other: ජාතික සංඛ්යාලේඛන නිවේදන
@@ -205,21 +192,18 @@ si:
       notice:
         one: දැන්වීම
         other: දැන්වීම්
-        overview:
       official:
         one: නිල සංඛ්යාලේඛන නිවේදනය
         other: නිල සංඛ්යාලේඛන නිවේදන
       official_statistics:
         one: නිල සංඛ්යාලේඛන
         other: නිල සංඛ්යාලේඛන
-        overview:
       official_statistics_announcement:
         one: නිල සංඛ්යාලේඛන නිවේදනය
         other: නිල සංඛ්යාලේඛන නිවේදන
       open_consultation:
         one: විවෘත උපදේශනය
         other: විවෘත උපදේශන
-        overview:
       oral_statement:
         one: පාර්ලිමේන්තුව වෙත වාචික ප්රකාශයක්
         other: පාර්ලිමේන්තුව වෙත වාචික ප්රකාශ
@@ -229,14 +213,12 @@ si:
       policy_paper:
         one: ප්රතිපත්ති පත්‍රිකාව
         other: ප්රතිපත්ති පත්‍රිකා
-        overview:
       press_release:
         one: මාධ්ය නිවේදනය
         other: මාධ්ය නිවේදන
       promotional:
         one: ප්රවර්ධන ද්රව්ය
         other: ප්රවර්ධන ද්රව්ය
-        overview:
       publication:
         one: ප්රකාශනය
         other: ප්රකාශන
@@ -246,11 +228,9 @@ si:
       regulation:
         one: නියාමනය
         other: නියාමන
-        overview:
       research:
         one: පර්යේෂණය සහ විශ්ලේෂණය
         other: පර්යේෂණය සහ විශ්ලේෂණය
-        overview:
       residential_property_tribunal_decision:
         one: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණය
         other: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණ
@@ -269,7 +249,6 @@ si:
       standard:
         one: ප්‍රමිතිය
         other: ප්‍රමිති
-        overview:
       statement_to_parliament:
         one: පාර්ලිමේන්තුව වෙත ප්රකාශය
         other: පාර්ලිමේන්තුව වෙත ප්රකාශ
@@ -282,7 +261,6 @@ si:
       statutory_guidance:
         one: ව්යවස්ථාපිත මඟ පෙන්වීම
         other: ව්යවස්ථාපිත මඟ පෙන්වීම
-        overview:
       take_part:
         one: සහභාගී වන්න
         other: සහභාගී වන්න
@@ -295,7 +273,6 @@ si:
       transparency:
         one: විනිවිදභාව දත්ත
         other: විනිවිදභාව දත්ත
-        overview:
       utaac_decision:
         one: පරිපාලන අභියාචනා විනිශ්චය මණ්ඩල තීරණය
         other: පරිපාලන අභියාචනා විනිශ්චය මණ්ඩල තීරණ
@@ -316,54 +293,54 @@ si:
     social_media_use_html: අපේ ප්රතිපත්තිය කියවන්න %{link}.
     welsh_language_scheme_html: "%{link} සඳහා අපේ කැපවීම ගැන සොයා බලන්න."
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: ආරක්ෂක අමාත්යාංශ ලාංඡනය
     field_of_operation: මෙහෙයුම් ක්ෂේත්රය
     operations_in: "%{location} තුළ මෙහෙයුම්"
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: තව දුරටත් ලද නොහැක
     published_in_error: මෙම පිටුවේ ඇති තොරතුරු ඉවත් කර ඇත්තේ එය වැරදීමකින් ප්රකාශයට පත් කර ඇති බැවිනි.
@@ -379,74 +356,74 @@ si:
       licence_html: මෙම ප්රකාශනයට වෙනත් ආකාරයකින් සඳහන් කර ඇති අවස්ථාවන්හි හැර විවෘත රාජ්ය බලපත්ර v3.0 හි නියමයන් යටතේ බලපත්ර ලබා දී ඇත. මෙම බලපත්‍රය බැලීමට, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> වෙත පිවිසෙන්න නැතහොත් The Information Policy Team, The National Archives, Kew, London TW9 4DU වෙත ලියන්න නැතහොත් <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk </a> වෙත විද්‍යුත් තැපෑලක් එවන්න.
       third_party: අපි යම් තෙවන පාර්ශවීය ප්රකාශන හිමිකම් තොරතුරු හඳුනාගෙන ඇති අවස්ථාවක ඔබ අදාළ ප්රකාශන හිමිකම් හිමියන්ගෙන් අවසර ලබා ගත යුතුය.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
     si: සිංහල
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: ඊළඟ
     previous_page: පෙර

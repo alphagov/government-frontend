@@ -41,7 +41,7 @@ tr:
     feedback_received: Geri bildirim alındı
     is_being: alınıyor
     not_open_yet: Bu danışma henüz açık değil
-    'on':
+    'on': 
     opens: Bu danışma açılıyor
     original_consultation: Orijinal danışma
     ran_from: Bu danışma şuradan başladı
@@ -84,7 +84,6 @@ tr:
       closed_consultation:
         one: Kapalı danışma
         other: Kapalı danışmalar
-        overview:
       cma_case:
         one: Rekabet ve Piyasalar Kurumu dosyası
         other: Rekabet ve Piyasalar Kurumu dosyaları
@@ -97,25 +96,21 @@ tr:
       consultation_outcome:
         one: Danışma sonucu
         other: Danışma sonuçları
-        overview:
       corporate_information_page:
         one: Bilgi sayfası
         other: Bilgi sayfaları
       corporate_report:
         one: Kurumsal rapor
         other: Kurumsal raporlar
-        overview:
       correspondence:
         one: Yazışma
         other: Yazışmalar
-        overview:
       countryside_stewardship_grant:
         one: Kırsal Koruma harcırahı
         other: Kırsal Koruma harcırahları
       decision:
         one: Karar
         other: Kararlar
-        overview:
       detailed_guide:
         one: Rehberlik
         other: Rehberlik
@@ -146,43 +141,36 @@ tr:
       foi_release:
         one: Bilgi Özgürlüğü duyurusu
         other: Bilgi Özgürlüğü duyuruları
-        overview:
       form:
         one: Form
         other: Formlar
-        overview:
       government_response:
         one: Devletin yanıtı
         other: Devletin yanıtları
       guidance:
         one: Rehberlik
         other: Rehberlik
-        overview:
       impact_assessment:
         one: Etki değerlendirmesi
         other: Etki değerlendirmeleri
-        overview:
       imported:
         one: İçe aktarıldı - tür bekleniyor
         other: İçe aktarıldı - tür bekleniyor
       independent_report:
         one: Bağımsız rapor
         other: Bağımsız raporlar
-        overview:
       international_development_fund:
         one: Uluslararası kalkınma fonu
         other: Uluslararası kalkınma fonu
       international_treaty:
         one: Uluslararası anlaşma
         other: Uluslararası anlaşmalar
-        overview:
       maib_report:
         one: Deniz Kazası Soruşturma Şube raporu
         other: Deniz Kazası Soruşturma Şube raporları
       map:
         one: Harita
         other: Haritalar
-        overview:
       medical_safety_alert:
         one: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
         other: İlaçlar ve tıbbi cihazlar için uyarılar ve geri çağırmalar
@@ -192,7 +180,6 @@ tr:
       national_statistics:
         one: Ulusal İstatistikler
         other: Ulusal İstatistikler
-        overview:
       national_statistics_announcement:
         one: Ulusal İstatistik duyurusu
         other: Ulusal İstatistik duyuruları
@@ -205,21 +192,18 @@ tr:
       notice:
         one: Bildirim
         other: Bildirimler
-        overview:
       official:
         one: Ulusal İstatistik duyurusu
         other: Ulusal İstatistik duyuruları
       official_statistics:
         one: Resmi İstatistikler
         other: Resmi İstatistikler
-        overview:
       official_statistics_announcement:
         one: Ulusal İstatistik duyurusu
         other: Ulusal İstatistik duyuruları
       open_consultation:
         one: Açık danışma
         other: Açık danışmalar
-        overview:
       oral_statement:
         one: Parlamentoya sözlü açıklama
         other: Parlamentoya sözlü açıklamalar
@@ -229,14 +213,12 @@ tr:
       policy_paper:
         one: Politika belgesi
         other: Politika belgeleri
-        overview:
       press_release:
         one: Basın duyurusu
         other: Basın duyuruları
       promotional:
         one: Promosyon malzemesi
         other: Promosyon malzemesi
-        overview:
       publication:
         one: Yayın
         other: Yayınlar
@@ -246,11 +228,9 @@ tr:
       regulation:
         one: Düzenleme
         other: Düzenlemeler
-        overview:
       research:
         one: Arama ve analiz
         other: Arama ve analiz
-        overview:
       residential_property_tribunal_decision:
         one: Meskun mahaldeki emlak mahkeme kararı
         other: Meskun mahaldeki emlak mahkeme kararları
@@ -269,7 +249,6 @@ tr:
       standard:
         one: Standart
         other: Standartlar
-        overview:
       statement_to_parliament:
         one: Parlamentoya Açıklama
         other: Parlamentoya Açıklamalar
@@ -282,7 +261,6 @@ tr:
       statutory_guidance:
         one: Mevzuat rehberi
         other: Mevzuat rehberi
-        overview:
       take_part:
         one: Katıl
         other: Katıl
@@ -295,7 +273,6 @@ tr:
       transparency:
         one: Şeffaflık verileri
         other: Şeffaflık verileri
-        overview:
       utaac_decision:
         one: İdari temyiz mahkemesi kararı
         other: İdari temyiz mahkemesi kararları
@@ -316,54 +293,54 @@ tr:
     social_media_use_html: "%{link} bağlantısındaki politikamızı okuyun."
     welsh_language_scheme_html: "%{link} bağlantısına taahhüdümüzü okuyun."
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Savunma Bakanlığı arması
     field_of_operation: Faaliyet alanı
     operations_in: "%{location} konumundaki faaliyetler"
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Artık mevcut değil
     published_in_error: Bu sayfadaki bilgiler hatalı yayınlandığından kaldırıldı.
@@ -379,74 +356,74 @@ tr:
       licence_html: 'Aksi ifade edilmedikçe, bu yayın Açık Hükümet Lisansı v3.0 hükümleri kapsamında lisanslıdır. Bu lisansı görüntülemek için, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> adresini ziyaret edin veya The National Archives, Kew, London TW9 4DU adresindeki Bilgi Politikası Ekibine yazın ya da şuraya e-posta gönderin: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Üçüncü taraf telif hakkı bilgilerini tespit etmemiz halinde, ilgili telif hakkı sahiplerinden izin almanız gerekir.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
     tr: Türkçe
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Sonraki
     previous_page: Önceki

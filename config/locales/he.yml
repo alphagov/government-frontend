@@ -41,7 +41,7 @@ he:
     feedback_received: המשוב התקבל
     is_being: להיות
     not_open_yet: הדיון הזה עדיין לא פתוח
-    'on':
+    'on': 
     opens: דיון זה נפתח
     original_consultation: דיון מקורי
     ran_from: דיון זו נערך מ-
@@ -84,7 +84,6 @@ he:
       closed_consultation:
         one: דיון סגור
         other: דיונים סגורים
-        overview:
       cma_case:
         one: תיק רשות התחרות והשווקים
         other: תיקי רשות התחרות והשווקים
@@ -97,25 +96,21 @@ he:
       consultation_outcome:
         one: תוצאות דיון
         other: תוצאות דיונים
-        overview:
       corporate_information_page:
         one: דף מידע
         other: דפי מידע
       corporate_report:
         one: דו"ח משותף
         other: דו"חות משותפים
-        overview:
       correspondence:
         one: תכתובת
         other: תכתובות
-        overview:
       countryside_stewardship_grant:
         one: מענק החזקה כפרית
         other: מענקי החזקה כפרית
       decision:
         one: החלטה
         other: החלטות
-        overview:
       detailed_guide:
         one: הדרכה
         other: הדרכה
@@ -146,43 +141,36 @@ he:
       foi_release:
         one: פרסום חופש מידע
         other: פרסומי חופש מידע
-        overview:
       form:
         one: טופס
         other: טפסים
-        overview:
       government_response:
         one: תגובה ממשלתית
         other: תגובות ממשלתיות
       guidance:
         one: הדרכה
         other: הדרכה
-        overview:
       impact_assessment:
         one: הערכת השפעה
         other: הערכת השפעות
-        overview:
       imported:
         one: יבוא- המתנה לסוג
         other: יבוא- המתנה לסוג
       independent_report:
         one: דו"ח עצמאי
         other: דו"ות עצמאיים
-        overview:
       international_development_fund:
         one: מימון פיתוח בינלאומי
         other: מימון פיתוח בינלאומי
       international_treaty:
         one: אמנה בינלאומית
         other: אמנות בינלאומיות
-        overview:
       maib_report:
         one: דו"ח ענף חקירות תאונות ימיות
         other: דיווחים ענף חקירות תאונות ימיות
       map:
         one: מפה
         other: מפות
-        overview:
       medical_safety_alert:
         one: אזהרות וביקורות על תרופות ומכשירים רפואיים
         other: אזהרות וביקורות על תרופות ומכשירים רפואיים
@@ -192,7 +180,6 @@ he:
       national_statistics:
         one: סטטיסטיקה לאומית
         other: סטטסטיקה לאומית
-        overview:
       national_statistics_announcement:
         one: הודעת סטטיסטיקה לאומית
         other: הודעות סטטיסטיות לאומיות
@@ -205,21 +192,18 @@ he:
       notice:
         one: הודעה
         other: הודעות
-        overview:
       official:
         one: הודעה סטטיסטית רשמית
         other: הודעות סטטיסטיות רשמיות
       official_statistics:
         one: סטטיסטיקה רשמית
         other: סטטיסטיקה רשמית
-        overview:
       official_statistics_announcement:
         one: הודעה סטטיסטית רשמית
         other: הודעות סטטיסטיות רשמיות
       open_consultation:
         one: דיון פתוח
         other: דיונים  פתוחים
-        overview:
       oral_statement:
         one: הצהרה בעל פה לפרלמנט
         other: הצהרות בעל פה לפרלמנט
@@ -229,14 +213,12 @@ he:
       policy_paper:
         one: נייר מדיניות
         other: ניירות מדיניות
-        overview:
       press_release:
         one: הודעה לעיתונות
         other: הודעות לעיתונות
       promotional:
         one: חומר פרסומי
         other: חומר פרסומי
-        overview:
       publication:
         one: פרסום
         other: פרסומים
@@ -246,11 +228,9 @@ he:
       regulation:
         one: תקנה
         other: תקנות
-        overview:
       research:
         one: מחקר וניתוח
         other: מחקר וניתוח
-        overview:
       residential_property_tribunal_decision:
         one: החלטת בית הדין לנכסים למגורים
         other: החלטות בית הדין לנכסים למגורים
@@ -269,7 +249,6 @@ he:
       standard:
         one: תקן
         other: תקנים
-        overview:
       statement_to_parliament:
         one: הצהרה לפרלמנט
         other: הצהרות לפרלמנט
@@ -282,7 +261,6 @@ he:
       statutory_guidance:
         one: הדרכה סטטוטורית
         other: הדרכה סטטוטורית
-        overview:
       take_part:
         one: קח חלק
         other: קח חלק
@@ -295,7 +273,6 @@ he:
       transparency:
         one: שקיפות מידע
         other: שקיפות מידע
-        overview:
       utaac_decision:
         one: החלטת בית הדין לעררים מנהלית
         other: החלטות בית הדין לעררים מנהלית
@@ -316,54 +293,54 @@ he:
     social_media_use_html: קרא/י אודות המדיניות שלנו %{link}
     welsh_language_scheme_html: מידע נוסף על המחויבות שלנו לפרסום %{link}
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: סמל משרד הביטחון
     field_of_operation: תחום הפעולה
     operations_in: פעולות ב- %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: כבר לא זמין
     published_in_error: המידע בדף זה הוסר מכיוון שהוא פורסם בטעות.
@@ -381,72 +358,72 @@ he:
   i18n:
     direction: rtl
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
     he: עברית
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: הבא
     previous_page: הקודם

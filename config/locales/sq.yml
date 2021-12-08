@@ -41,7 +41,7 @@ sq:
     feedback_received: Reagimi i marrë
     is_being: është duke u
     not_open_yet: Ky konsultim nuk është hapur ende
-    'on':
+    'on': 
     opens: Ky konsultim hapet
     original_consultation: Konsultimi origjinal
     ran_from: Ky konsultim filloi nga
@@ -84,7 +84,6 @@ sq:
       closed_consultation:
         one: Konsultim i mbyllur
         other: Konsultime të mbyllura
-        overview:
       cma_case:
         one: Rasti i Autoritetit të Konkurrencës dhe Tregjeve
         other: Raste të Autoritetit të Konkurrencës dhe Tregjeve
@@ -97,25 +96,21 @@ sq:
       consultation_outcome:
         one: Rezultati i konsultimit
         other: Rezultatet e konsultimit
-        overview:
       corporate_information_page:
         one: Faqja e informacionit
         other: Faqet e informacionit
       corporate_report:
         one: Raport i organizatës
         other: Raporte te organizatës
-        overview:
       correspondence:
         one: Korrespondencë
         other: Korrespondencat
-        overview:
       countryside_stewardship_grant:
         one: Granti i administrimit të fshatit
         other: Grantet e administrimit të fshatit
       decision:
         one: Vendimi
         other: Vendimet
-        overview:
       detailed_guide:
         one: Udhëzim
         other: Udhëzim
@@ -146,43 +141,36 @@ sq:
       foi_release:
         one: Njoftim mbi Lirinë e Informacionit
         other: Njoftime mbi Lirinë e Informacionit
-        overview:
       form:
         one: Formular
         other: Formularë
-        overview:
       government_response:
         one: Reagim qeveritar
         other: Reagime qeveritare
       guidance:
         one: Udhëzime
         other: Udhëzime
-        overview:
       impact_assessment:
         one: Vlerësim i ndikimit
         other: Vlerësime te ndikimit
-        overview:
       imported:
         one: importuar - tipi pritje
         other: importuar - tipi pritje
       independent_report:
         one: Raport i pavarur
         other: Raporte të pavarur
-        overview:
       international_development_fund:
         one: Financimi i zhvillimit ndërkombëtar
         other: Financime të zhvillimit ndërkombëtar
       international_treaty:
         one: Traktat ndërkombëtar
         other: Traktate ndërkombëtare
-        overview:
       maib_report:
         one: Raporti i Degës së Hetimit të Aksidenteve Detare
         other: Raportet e Degës së Hetimit të Aksidenteve Detare
       map:
         one: Hartë
         other: Harta
-        overview:
       medical_safety_alert:
         one: Njoftime dhe kujtesa për ilaçe dhe pajisje mjekësore
         other: Njoftime dhe kujtesa për ilaçe dhe pajisje mjekësore
@@ -192,7 +180,6 @@ sq:
       national_statistics:
         one: Statistikat Kombëtare
         other: Statistikat Kombëtare
-        overview:
       national_statistics_announcement:
         one: Njoftimi i statistikave kombëtare
         other: Njoftime të statistikave kombëtare
@@ -205,21 +192,18 @@ sq:
       notice:
         one: Njoftim
         other: Njoftime
-        overview:
       official:
         one: Njoftimi i statistikave zyrtare
         other: Njoftimet e statistikave zyrtare
       official_statistics:
         one: Statistikat Zyrtare
         other: Statistikat Zyrtare
-        overview:
       official_statistics_announcement:
         one: Njoftimi i statistikave zyrtare
         other: Njoftime të statistikave zyrtare
       open_consultation:
         one: Konsultim i hapur
         other: Konsultime te hapura
-        overview:
       oral_statement:
         one: Deklarata gojore në Parlament
         other: Deklarata gojore në Parlament
@@ -229,14 +213,12 @@ sq:
       policy_paper:
         one: Dokument politikash
         other: Dokumente politikash
-        overview:
       press_release:
         one: Njoftimi shtypi
         other: Njoftime shtypi
       promotional:
         one: Material promovues
         other: Material promovues
-        overview:
       publication:
         one: Publikim
         other: Publikime
@@ -246,11 +228,9 @@ sq:
       regulation:
         one: Rregullore
         other: Rregulloret
-        overview:
       research:
         one: Kërkime dhe analiza
         other: Kërkime dhe analiza
-        overview:
       residential_property_tribunal_decision:
         one: Vendimi i gjykatës së pronës së banimit
         other: Vendimet e gjykatës së pronës së banimit
@@ -269,7 +249,6 @@ sq:
       standard:
         one: Standardi
         other: Standarde
-        overview:
       statement_to_parliament:
         one: Deklaratë në Parlament
         other: Deklarata në Parlament
@@ -282,7 +261,6 @@ sq:
       statutory_guidance:
         one: Udhëzim ligjor
         other: Udhëzim ligjor
-        overview:
       take_part:
         one: Merr pjesë
         other: Merr pjesë
@@ -295,7 +273,6 @@ sq:
       transparency:
         one: Të dhëna për transparencën
         other: Të dhëna për transparencën
-        overview:
       utaac_decision:
         one: Vendimi i gjykatës së apelit administrativ
         other: Vendime të gjykatës së apelit administrativ
@@ -316,54 +293,54 @@ sq:
     social_media_use_html: Lexoni politikën tonë në %{link}.
     welsh_language_scheme_html: Mësoni rreth angazhimit tonë ndaj %{link}.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Stema e Ministrisë së Mbrojtjes
     field_of_operation: Fusha e operimit
     operations_in: Operacione në %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Nuk është më e disponueshme
     published_in_error: Informacioni në këtë faqe është hequr sepse është publikuar gabimisht.
@@ -379,74 +356,74 @@ sq:
       licence_html: 'Ky publikim është i licencuar sipas kushteve të Licencës së Qeverisë së Hapur v3.0, përveç rasteve kur përcaktohet ndryshe. Për të parë këtë licencë, vizitoni <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ose i shkruani Ekipit të Politikave të Informacionit, Arkivave Kombëtare, Kew, London TW9 4DU, ose email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Aty ku kemi identifikuar ndonjë informacion të palës së tretë për të drejtën e autorit, do t'ju duhet të merrni leje nga mbajtësit e të drejtave të autorit në fjalë.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
     sq: Shqip
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Tjetër
     previous_page: I mëparshëm

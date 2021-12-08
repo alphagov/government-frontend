@@ -41,7 +41,7 @@ pa:
     feedback_received: ਫੀਡਬੈਕ ਪ੍ਰਾਪਤ ਹੋਇਆ
     is_being: ਹੋ ਰਿਹਾ ਹੈ
     not_open_yet: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਅਜੇ ਖੁੱਲ੍ਹਾ ਨਹੀਂ ਹੈ
-    'on':
+    'on': 
     opens: ਇਹ ਸਲਾਹ ਮਸ਼ਵਰਾ ਖੁੱਲਦਾ ਹੈ
     original_consultation: ਮੂਲ ਸਲਾਹ
     ran_from: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇਸ ਤੋਂ ਚੱਲਿਆ
@@ -84,7 +84,6 @@ pa:
       closed_consultation:
         one: ਬੰਦ ਸਲਾਹ -ਮਸ਼ਵਰਾ
         other: ਬੰਦ ਸਲਾਹ ਮਸ਼ਵਰੇ
-        overview:
       cma_case:
         one: ਮੁਕਾਬਲਾ ਅਤੇ ਮਾਰਕੇਟ ਅਥਾਰਟੀ ਕੇਸ
         other: ਮੁਕਾਬਲਾ ਅਤੇ ਮਾਰਕੇਟ ਅਥਾਰਟੀ ਕੇਸ
@@ -97,25 +96,21 @@ pa:
       consultation_outcome:
         one: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦਾ ਨਤੀਜਾ
         other: ਸਲਾਹ-ਮਸ਼ਵਰੇ ਦੇ ਨਤੀਜੇ
-        overview:
       corporate_information_page:
         one: ਜਾਣਕਾਰੀ ਪੰਨਾ
         other: ਜਾਣਕਾਰੀ ਪੰਨੇ
       corporate_report:
         one: ਕਾਰਪੋਰੇਟ ਰਿਪੋਰਟ
         other: ਕਾਰਪੋਰੇਟ ਰਿਪੋਰਟਾਂ
-        overview:
       correspondence:
         one: ਪੱਤਰ -ਵਿਹਾਰ
         other: ਪੱਤਰ -ਵਿਹਾਰ
-        overview:
       countryside_stewardship_grant:
         one: ਦੇਸੀ ਇਲਾਕਿਆਂ ਦੀ ਨਿਗਰਾਨੀ ਗ੍ਰਾਂਟ
         other: ਦੇਸੀ ਇਲਾਕਿਆਂ ਦੀ ਨਿਗਰਾਨੀ ਗ੍ਰਾਂਟਾਂ
       decision:
         one: ਫੈਸਲਾ
         other: ਫੈਸਲੇ
-        overview:
       detailed_guide:
         one: ਸੇਧ
         other: ਸੇਧ
@@ -146,43 +141,36 @@ pa:
       foi_release:
         one: FOI ਰਿਲੀਜ਼
         other: FOI ਰਿਲੀਜ਼
-        overview:
       form:
         one: ਫਾਰਮ
         other: ਫਾਰਮ
-        overview:
       government_response:
         one: ਸਰਕਾਰ ਦਾ ਜਵਾਬ
         other: ਸਰਕਾਰ ਦੇ ਜਵਾਬ
       guidance:
         one: ਸੇਧ
         other: ਸੇਧ
-        overview:
       impact_assessment:
         one: ਪ੍ਰਭਾਵ ਮੁਲਾਂਕਣ
         other: ਪ੍ਰਭਾਵ ਮੁਲਾਂਕਣ
-        overview:
       imported:
         one: ਆਯਾਤ - ਉਡੀਕ ਕੀਤੀ ਕਿਸਮ
         other: ਆਯਾਤ - ਉਡੀਕ ਕੀਤੀ ਕਿਸਮ
       independent_report:
         one: ਸੁਤੰਤਰ ਰਿਪੋਰਟ
         other: ਸੁਤੰਤਰ ਰਿਪੋਰਟਾਂ
-        overview:
       international_development_fund:
         one: ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਿਕਾਸ ਫੰਡਿੰਗ
         other: ਅੰਤਰਰਾਸ਼ਟਰੀ ਵਿਕਾਸ ਫੰਡਿੰਗ
       international_treaty:
         one: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀ
         other: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਧੀਆਂ
-        overview:
       maib_report:
         one: ਸਮੁੰਦਰੀ ਹਾਦਸੇ ਦੀ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀ ਰਿਪੋਰਟ
         other: ਸਮੁੰਦਰੀ ਦੁਰਘਟਨਾ ਜਾਂਚ ਸ਼ਾਖਾ ਦੀਆਂ ਰਿਪੋਰਟਾਂ
       map:
         one: ਨਕਸ਼ਾ
         other: ਨਕਸ਼ੇ
-        overview:
       medical_safety_alert:
         one: ਦਵਾਈਆਂ ਅਤੇ ਮੈਡੀਕਲ ਉਪਕਰਣਾਂ ਲਈ ਚੇਤਾਵਨੀ ਅਤੇ ਰੀਕਾਲ
         other: ਦਵਾਈਆਂ ਅਤੇ ਮੈਡੀਕਲ ਉਪਕਰਣਾਂ ਲਈ ਚੇਤਾਵਨੀ ਅਤੇ ਰੀਕਾਲ
@@ -192,7 +180,6 @@ pa:
       national_statistics:
         one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
         other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ
-        overview:
       national_statistics_announcement:
         one: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾ
         other: ਰਾਸ਼ਟਰੀ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
@@ -205,21 +192,18 @@ pa:
       notice:
         one: ਨੋਟਿਸ
         other: ਨੋਟਿਸ
-        overview:
       official:
         one: ਅਧਿਕਾਰਤ ਅੰਕੜਿਆਂ ਦਾ ਐਲਾਨ
         other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
       official_statistics:
         one: ਅਧਿਕਾਰਤ ਅੰਕੜੇ
         other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ
-        overview:
       official_statistics_announcement:
         one: ਅਧਿਕਾਰਤ ਅੰਕੜਿਆਂ ਦਾ ਐਲਾਨ
         other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
       open_consultation:
         one: ਖੁੱਲ੍ਹਾ ਸਲਾਹ-ਮਸ਼ਵਰਾ
         other: ਖੁੱਲ੍ਹੇ ਸਲਾਹ-ਮਸ਼ਵਰੇ
-        overview:
       oral_statement:
         one: ਸੰਸਦ ਨੂੰ ਜ਼ਬਾਨੀ ਬਿਆਨ
         other: ਸੰਸਦ ਨੂੰ ਜ਼ਬਾਨੀ ਬਿਆਨ
@@ -229,14 +213,12 @@ pa:
       policy_paper:
         one: ਨੀਤੀ ਪੇਪਰ
         other: ਨੀਤੀ ਦੇ ਕਾਗਜ਼
-        overview:
       press_release:
         one: ਪੱਤਰਕਾਰਾਂ ਨੂੰ ਦਿੱਤੀ ਗਈ ਅਧਕਾਰਿਤ ਰਿਪੋਰਟ
         other: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
       promotional:
         one: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
         other: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
-        overview:
       publication:
         one: ਪ੍ਰਕਾਸ਼ਨ
         other: ਪ੍ਰਕਾਸ਼ਨ
@@ -246,11 +228,9 @@ pa:
       regulation:
         one: ਨਿਯਮ
         other: ਨਿਯਮ
-        overview:
       research:
         one: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
         other: ਖੋਜ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ
-        overview:
       residential_property_tribunal_decision:
         one: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
@@ -269,7 +249,6 @@ pa:
       standard:
         one: ਮਿਆਰੀ
         other: ਮਿਆਰ
-        overview:
       statement_to_parliament:
         one: ਸੰਸਦ ਨੂੰ ਬਿਆਨ
         other: ਸੰਸਦ ਨੂੰ ਬਿਆਨ
@@ -282,7 +261,6 @@ pa:
       statutory_guidance:
         one: ਕਨੂੰਨੀ ਸੇਧ
         other: ਕਨੂੰਨੀ ਸੇਧ
-        overview:
       take_part:
         one: ਹਿੱਸਾ ਲੈਣਾ
         other: ਹਿੱਸਾ ਲੈਣਾ
@@ -295,7 +273,6 @@ pa:
       transparency:
         one: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
         other: ਪਾਰਦਰਸ਼ਤਾ ਡਾਟਾ
-        overview:
       utaac_decision:
         one: ਪ੍ਰਬੰਧਕੀ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਪ੍ਰਬੰਧਕੀ ਅਪੀਲ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
@@ -316,54 +293,54 @@ pa:
     social_media_use_html: "%{link} 'ਤੇ ਸਾਡੀ ਨੀਤੀ ਪੜ੍ਹੋ।"
     welsh_language_scheme_html: "%{link} ਪ੍ਰਤੀ ਸਾਡੀ ਵਚਨਬੱਧਤਾ ਬਾਰੇ ਜਾਣੋ।"
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: ਰੱਖਿਆ ਮੰਤਰਾਲਾ ਸਿਖਰ
     field_of_operation: ਕਾਰਜ ਖੇਤਰ
     operations_in: "%{location} ਵਿੱਚ ਕਾਰਜ"
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
     published_in_error: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ ਪ੍ਰਕਾਸ਼ਤ ਕੀਤਾ ਗਿਆ ਸੀ।
@@ -379,74 +356,74 @@ pa:
       licence_html: 'ਇਹ ਪ੍ਰਕਾਸ਼ਨ ਓਪਨ ਗਵਰਨਮੈਂਟ ਲਾਇਸੈਂਸ v3.0 ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੇ ਅਧੀਨ ਲਾਇਸੈਂਸਸ਼ੁਦਾ ਹੈ, ਸਿਵਾਏ ਜਿੱਥੇ ਹੋਰ ਨਹੀਂ ਕਿਹਾ ਗਿਆ ਹੈ। ਇਸ ਲਾਇਸੈਂਸ ਨੂੰ ਦੇਖਣ ਲਈ, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3"> nationalarchives.gov.uk/doc/open-government-licence/version/3 </a> ਜਾਂ ਸੂਚਨਾ ਨੀਤੀ ਟੀਮ, ਦਿ ਨੈਸ਼ਨਲ ਆਰਕਾਈਵਜ਼, ਕੇਵ, ਲੰਡਨ TW9 4DU, ਜਾਂ ਈਮੇਲ ਨੂੰ ਲਿਖੋ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
       third_party: ਜਿੱਥੇ ਅਸੀਂ ਕਿਸੇ ਤੀਜੀ ਧਿਰ ਦੀ ਕਾਪੀਰਾਈਟ ਜਾਣਕਾਰੀ ਦੀ ਪਛਾਣ ਕੀਤੀ ਹੈ ਤੁਹਾਨੂੰ ਸਬੰਧਤ ਕਾਪੀਰਾਈਟ ਧਾਰਕਾਂ ਤੋਂ ਇਜਾਜ਼ਤ ਲੈਣ ਦੀ ਜ਼ਰੂਰਤ ਹੋਏਗੀ।
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
     pa: ਪੰਜਾਬੀ ਗੁਰਮੁਖੀ
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: ਅਗਲਾ
     previous_page: ਪਿਛਲਾ

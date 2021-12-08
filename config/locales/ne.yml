@@ -41,7 +41,7 @@ ne:
     feedback_received: प्रतिक्रिया प्राप्त भयो
     is_being: हुँदैछ
     not_open_yet: यो परामर्श अझै खुलेको छैन
-    'on':
+    'on': 
     opens: यो परामर्श खुल्छ
     original_consultation: मूल परामर्श
     ran_from: यो परामर्श बाट चलेको हो
@@ -84,7 +84,6 @@ ne:
       closed_consultation:
         one: बन्द परामर्श
         other: बन्द परामर्शहरू
-        overview:
       cma_case:
         one: प्रतिस्पर्धा र बजार प्राधिकरण मामिला
         other: प्रतिस्पर्धा र बजार प्राधिकरण मामिलाहरु
@@ -97,25 +96,21 @@ ne:
       consultation_outcome:
         one: परामर्श परिणाम
         other: परामर्श परिणामहरू
-        overview:
       corporate_information_page:
         one: जानकारी पृष्ठ
         other: जानकारी पृष्ठहरू
       corporate_report:
         one: निगम प्रतिवेदन
         other: निगम प्रतिवेदनहरू
-        overview:
       correspondence:
         one: पत्राचार
         other: पत्राचारहरू
-        overview:
       countryside_stewardship_grant:
         one: ग्रामीण क्षेत्र संचालन अनुदान
         other: ग्रामीण क्षेत्र संचालन अनुदानहरू
       decision:
         one: निर्णय
         other: निर्णयहरु
-        overview:
       detailed_guide:
         one: मार्गदर्शन
         other: मार्गदर्शन
@@ -146,43 +141,36 @@ ne:
       foi_release:
         one: जानकारीको स्वतन्त्रता विज्ञप्ति
         other: जानकारीको स्वतन्त्रता विज्ञप्तिहरू
-        overview:
       form:
         one: फारम
         other: फारमहरु
-        overview:
       government_response:
         one: सरकारको प्रतिक्रिया
         other: सरकारको प्रतिक्रियाहरू
       guidance:
         one: मार्गदर्शन
         other: मार्गदर्शन
-        overview:
       impact_assessment:
         one: प्रभाव मूल्यांकन
         other: प्रभाव मूल्यांकनहरू
-        overview:
       imported:
         one: आयातित - प्रतीक्षा प्रकार
         other: आयातित - प्रतीक्षा प्रकार
       independent_report:
         one: स्वतन्त्र प्रतिवेदन
         other: स्वतन्त्र प्रतिवेदनहरू
-        overview:
       international_development_fund:
         one: अन्तर्राष्ट्रिय विकास कोष
         other: अन्तर्राष्ट्रिय विकास कोष
       international_treaty:
         one: अन्तर्राष्ट्रिय सन्धि
         other: अन्तर्राष्ट्रिय सन्धिहरु
-        overview:
       maib_report:
         one: समुद्री दुर्घटना अनुसन्धान शाखा प्रतिवेदन
         other: समुद्री दुर्घटना अनुसन्धान शाखा प्रतिवेदनहरू
       map:
         one: नक्शा
         other: नक्साहरू
-        overview:
       medical_safety_alert:
         one: औषधि र चिकित्सा उपकरणहरुको लागी चेतावनी र फिर्तीहरू
         other: औषधि र चिकित्सा उपकरणहरुको लागी चेतावनी र फिर्तीहरू
@@ -192,7 +180,6 @@ ne:
       national_statistics:
         one: राष्ट्रिय तथ्याङ्क
         other: राष्ट्रिय तथ्याङ्क
-        overview:
       national_statistics_announcement:
         one: राष्ट्रिय तथ्याङ्क घोषणा
         other: राष्ट्रिय तथ्याङ्क घोषणाहरू
@@ -205,21 +192,18 @@ ne:
       notice:
         one: सूचना
         other: सूचनाहरु
-        overview:
       official:
         one: आधिकारिक तथ्याङ्क घोषणा
         other: आधिकारिक तथ्याङ्क घोषणाहरु
       official_statistics:
         one: आधिकारिक तथ्याङ्क
         other: आधिकारिक तथ्याङ्क
-        overview:
       official_statistics_announcement:
         one: आधिकारिक तथ्याङ्क घोषणा
         other: आधिकारिक तथ्याङ्क घोषणाहरु
       open_consultation:
         one: खुला परामर्श
         other: खुला परामर्शहरू
-        overview:
       oral_statement:
         one: संसदमा मौखिक वक्तव्य
         other: 'संसदमा मौखिक वक्तव्यहरू '
@@ -229,14 +213,12 @@ ne:
       policy_paper:
         one: नीति पत्र
         other: नीति पत्रहरू
-        overview:
       press_release:
         one: प्रेस विज्ञप्ति
         other: प्रेस विज्ञप्तिहरू
       promotional:
         one: प्रचार सामग्री
         other: प्रचार सामग्री
-        overview:
       publication:
         one: प्रकाशन
         other: प्रकाशनहरु
@@ -246,11 +228,9 @@ ne:
       regulation:
         one: नियम
         other: नियमहरु
-        overview:
       research:
         one: अनुसन्धान र विश्लेषण
         other: अनुसन्धान र विश्लेषण
-        overview:
       residential_property_tribunal_decision:
         one: आवासीय सम्पत्ति न्यायाधिकरण निर्णय
         other: आवासीय सम्पत्ति न्यायाधिकरण निर्णयहरू
@@ -269,7 +249,6 @@ ne:
       standard:
         one: मानक
         other: मानकहरू
-        overview:
       statement_to_parliament:
         one: संसदको वक्तव्य
         other: संसदमा वक्तव्यहरू
@@ -282,7 +261,6 @@ ne:
       statutory_guidance:
         one: वैधानिक मार्गदर्शन
         other: वैधानिक मार्गदर्शन
-        overview:
       take_part:
         one: सहभागी हुनु
         other: सहभागी हुनु
@@ -295,7 +273,6 @@ ne:
       transparency:
         one: पारदर्शिता जानकारी
         other: पारदर्शिता जानकारी
-        overview:
       utaac_decision:
         one: प्रशासनिक अपील न्यायाधिकरण निर्णय
         other: प्रशासनिक अपील न्यायाधिकरण निर्णयहरू
@@ -316,54 +293,54 @@ ne:
     social_media_use_html: "%{link} मा हाम्रो नीति पढ्नुहोस्।"
     welsh_language_scheme_html: "%{link} को हाम्रो प्रतिबद्धताको बारेमा जानकारी पाउनुहोस्।"
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: रक्षा मन्त्रालय क्रेस्ट
     field_of_operation: सञ्चालन क्षेत्र
     operations_in: "%{location} मा सञ्चालन"
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: अब उपलब्ध छैन
     published_in_error: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित भएको थियो।
@@ -379,74 +356,74 @@ ne:
       licence_html: 'यो प्रकाशन कुनै ठाउँमा तोकिएको बाहेक खुला सरकार इजाजतपत्र v3.0 को शर्तहरु अन्तर्गत इजाजतपत्र प्राप्त छ। यो इजाजतपत्र हेर्नको लागी <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> मा जानुहोस् वा सूचना नीति टोलि, राष्ट्रिय अभिलेखालय, किउ, लन्डन TW9 4DU मा पत्र लेख्नुहोस् वा ईमेल पठाउनुहोस्: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: यदि हामीले कुनै तेस्रो पक्ष प्रतिलिपि अधिकार जानकारीको पहिचान गरेका छौं भने तपाईंले सम्बन्धित प्रतिलिपि अधिकार धारकहरु बाट अनुमति प्राप्त गर्न आवश्यक छ।
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
     ne: नेपाली
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: अर्को
     previous_page: अघिल्लो

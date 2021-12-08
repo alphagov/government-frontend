@@ -41,7 +41,7 @@ so:
     feedback_received: Falcelinta la helay
     is_being: waa
     not_open_yet: Latalinta aan wali furnayn
-    'on':
+    'on': 
     opens: Latalintan waxay furantahay
     original_consultation: Latalinta asalka ah
     ran_from: Latalinta waxay ka timid
@@ -84,7 +84,6 @@ so:
       closed_consultation:
         one: Latalin xidhan
         other: Latalino xidhan
-        overview:
       cma_case:
         one: Tartanka iyo kiiska Masuuliyada Suuqyada
         other: Tartanka iyo kiisas ka Masuuliyada Suuqyada
@@ -97,25 +96,21 @@ so:
       consultation_outcome:
         one: Natiijada latalinta
         other: Natiijooyinka latalinta
-        overview:
       corporate_information_page:
         one: Boga macluumaadka
         other: Bogaga macluumaadka
       corporate_report:
         one: Warbixinta shirkada
         other: Warbixinaha shirkada
-        overview:
       correspondence:
         one: Xidhiidhka
         other: Xidhiidhada
-        overview:
       countryside_stewardship_grant:
         one: Maalgalinta Maamulka Miyiga
         other: Maalgalinaha Maamulka Miyiga
       decision:
         one: Go'aan
         other: Go'aamo
-        overview:
       detailed_guide:
         one: Tilmaam
         other: Tilmaam
@@ -146,43 +141,36 @@ so:
       foi_release:
         one: Baahinta FOI
         other: Warbixinaha FOI
-        overview:
       form:
         one: Foomka
         other: Foomamka
-        overview:
       government_response:
         one: Jawaabta dawlada
         other: Jawaabaha dawlada
       guidance:
         one: Tilmaam
         other: Tilmaam
-        overview:
       impact_assessment:
         one: Qiimeynta Saamenta
         other: Qiimeynta Saamaynaha
-        overview:
       imported:
         one: lasoo-dajiyey - nooca sugitaanka
         other: lasoo-dajiyey - nooca sugitaanka
       independent_report:
         one: Warbixin madax banaan
         other: Warbixino madax banaan
-        overview:
       international_development_fund:
         one: Maalgalinta horumarinta calaamiga ah
         other: Maalgalinta horumarinta calaamiga ah
       international_treaty:
         one: Heshiis caalamiya
         other: Heshiisyo caalamiya
-        overview:
       maib_report:
         one: Warbixinta Qeybta Baadhitaanada Shilka Bada
         other: Warbixinaha Qeybta Baadhitaanada Shilalka Bada
       map:
         one: Maab
         other: Maabab
-        overview:
       medical_safety_alert:
         one: Wargelinaha iyo xasuusiyayaasha daroogooyinka iyo agabka caafimaad
         other: Wargelinaha iyo xasuusiyayaasha daroogooyinka iyo agabka caafimaad
@@ -192,7 +180,6 @@ so:
       national_statistics:
         one: Tirokoobka qaranka
         other: Tirokoobka qaranka
-        overview:
       national_statistics_announcement:
         one: Ogeysiiska tirokoobka qaranka
         other: Ogeysiisyada tirokoobka qaranka
@@ -205,21 +192,18 @@ so:
       notice:
         one: Ogeysiis
         other: Ogeysiisyo
-        overview:
       official:
         one: Ogeysiiska tirokoobka rasmiga ah
         other: Ogeysiisyada tirokoobka rasmiga ah
       official_statistics:
         one: Tirokoobka rasmiga ah
         other: Tirokoobka rasmiga ah
-        overview:
       official_statistics_announcement:
         one: Ogeysiiska tirokoobka rasmiga ah
         other: Ogeysiisyada tirokoobka rasmiga ah
       open_consultation:
         one: Latalin furan
         other: Latalino furan
-        overview:
       oral_statement:
         one: Bayaanka loogu talogalay Baarlamaanka
         other: Bayaanada loogu talogalay Baarlamaanka
@@ -229,14 +213,12 @@ so:
       policy_paper:
         one: Warqada siyaasada
         other: Waraaqaha siyaasada
-        overview:
       press_release:
         one: War-saxaafadeed
         other: War-saxaafadeedyo
       promotional:
         one: Agab xayeysiis
         other: Agab xayeysiis
-        overview:
       publication:
         one: Daabacaad
         other: Daabacaado
@@ -246,11 +228,9 @@ so:
       regulation:
         one: Sharci
         other: Shuruuc
-        overview:
       research:
         one: Cilmi-baadhis iyo falanqeyn
         other: Cilmi-baadhis iyo falanqeyn
-        overview:
       residential_property_tribunal_decision:
         one: Go'aanka maxkamada ee hantida guriga
         other: Go'aamada maxkamada ee hantida guriga
@@ -269,7 +249,6 @@ so:
       standard:
         one: Heerka
         other: Heerarka
-        overview:
       statement_to_parliament:
         one: Bayaanka loogu talogalay Baarlamaanka
         other: Bayaanada loogu talogalay Baarlamaanka
@@ -282,7 +261,6 @@ so:
       statutory_guidance:
         one: Tilmaamta sharciga
         other: Tilmaamta sharciga
-        overview:
       take_part:
         one: Ka qeybgal
         other: Ka qeybgal
@@ -295,7 +273,6 @@ so:
       transparency:
         one: Xog daah furan
         other: Xog daah furan
-        overview:
       utaac_decision:
         one: Go'aanka rafcaanka maxkamada ee maamulka
         other: Go'aamada rafcaanka maxkamada ee maamulka
@@ -316,54 +293,54 @@ so:
     social_media_use_html: Ka akhri siyaasadayahaga %{link}.
     welsh_language_scheme_html: Raadi waxyaabaha ku saabsan ka go'naanshahayaga %{link}.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: Calaamada Wasaarada Difaaca
     field_of_operation: Hawalaha dibadaa
     operations_in: Hawalaha %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: Lama hali karo
     published_in_error: Macluumaadka kujiray bogan waa laga saaray waayo waxa loo daabacay si qaldan.
@@ -379,74 +356,74 @@ so:
       licence_html: 'Daabacaadani waxay ku diwaangashantahay xeerarka kujira Liisanka Furan ee Dawlada v3.0 marka laga reebo halka kuwo kale lagu xusay. Si aad dib ugu dheehato, booqo <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ama qor Macluumaadka Kooxda Siyaasada, The National Archives, Kew, London TW9 4DU, ama iimayl u dir: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Halkaas oo aan aqoonsanay macluumaad kasta oo gacan sadexaad xaq u leedahay waxaad u baahan doontaa inaad hesho ogolaansho la xidhiidha qofka xuquuqda iska leh.
   i18n:
-    direction:
+    direction: 
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
-    fa:
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
+    fa: 
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
     so: Soomaali
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: Ku xiga
     previous_page: Hore

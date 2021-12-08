@@ -41,7 +41,7 @@ fa:
     feedback_received: بازخورد دریافت شد
     is_being: در حال
     not_open_yet: این مشاوره هنوز باز نشده است
-    'on':
+    'on': 
     opens: این مشاوره باز می‌شود
     original_consultation: مشاوره اصلی
     ran_from: این مشاوره در حال اجرا است از
@@ -84,7 +84,6 @@ fa:
       closed_consultation:
         one: مشاوره بسته
         other: مشاوره‌های بسته
-        overview:
       cma_case:
         one: پرونده نهاد ناظر بر رقابت و بازارها
         other: پرونده‌های نهاد ناظر بر رقابت و بازارها
@@ -97,25 +96,21 @@ fa:
       consultation_outcome:
         one: نتیجه مشاوره
         other: نتایج مشاوره
-        overview:
       corporate_information_page:
         one: صفحه اطلاعاتی
         other: صفحات اطلاعاتی
       corporate_report:
         one: گزارش شرکتی
         other: گزارشات شرکتی
-        overview:
       correspondence:
         one: مکاتبه
         other: مکاتبات
-        overview:
       countryside_stewardship_grant:
         one: کمک‌هزینه حفاظت از مناطق خارج از شهر
         other: کمک‌هزینه‌های حفاظت از مناطق خارج از شهر
       decision:
         one: تصمیم
         other: تصمیمات
-        overview:
       detailed_guide:
         one: راهنمایی
         other: راهنمایی
@@ -146,43 +141,36 @@ fa:
       foi_release:
         one: موارد انتشار آزادی اطلاعات
         other: موارد انتشار آزادی اطلاعات
-        overview:
       form:
         one: فرم
         other: فرم‌ها
-        overview:
       government_response:
         one: پاسخ دولتی
         other: پاسخ‌های دولتی
       guidance:
         one: راهنمایی
         other: راهنمایی
-        overview:
       impact_assessment:
         one: ارزیابی تأثیر
         other: ارزیابی‌های تأثیر
-        overview:
       imported:
         one: وارد شده - در انتظار نوع
         other: وارد شده - در انتظار نوع
       independent_report:
         one: گزارش مستقل
         other: گزارشات مستقل
-        overview:
       international_development_fund:
         one: منابع مالی توسعه بین‌المللی
         other: منابع مالی توسعه بین‌المللی
       international_treaty:
         one: معاهده بین‌المللی
         other: معاهدات بین‌المللی
-        overview:
       maib_report:
         one: گزارش شعبه تحقیقات حوادث دریایی
         other: گزارشات شعبه تحقیقات حوادث دریایی
       map:
         one: نقشه
         other: نقشه‌ها
-        overview:
       medical_safety_alert:
         one: هشدارها و یادآوری‌ها برای داروها و دستگاه‌های پزشکی
         other: هشدارها و یادآوری‌ها برای داروها و دستگاه‌های پزشکی
@@ -192,7 +180,6 @@ fa:
       national_statistics:
         one: آمار ملی
         other: آمار ملی
-        overview:
       national_statistics_announcement:
         one: اطلاعیه آمار ملی
         other: اطلاعیه‌های آمار ملی
@@ -205,21 +192,18 @@ fa:
       notice:
         one: اطلاعیه
         other: اطلاعیه‌ها
-        overview:
       official:
         one: اطلاعیه آمار رسمی
         other: اطلاعیه‌های آمار رسمی
       official_statistics:
         one: آمار رسمی
         other: آمار رسمی
-        overview:
       official_statistics_announcement:
         one: اطلاعیه آمار رسمی
         other: اطلاعیه‌های آمار رسمی
       open_consultation:
         one: مشاوره باز
         other: مشاوره‌های باز
-        overview:
       oral_statement:
         one: بیانیه شفاهی به پارلمان
         other: بیانیه‌های شفاهی به پارلمان
@@ -229,14 +213,12 @@ fa:
       policy_paper:
         one: سند سیاست
         other: اسناد سیاست
-        overview:
       press_release:
         one: بیانیه مطبوعاتی
         other: بیانیه‌های مطبوعاتی
       promotional:
         one: محتوای تبلیغاتی
         other: محتوای تبلیغاتی
-        overview:
       publication:
         one: مورد منتشر شده
         other: موارد منتشر شده
@@ -246,11 +228,9 @@ fa:
       regulation:
         one: قانون
         other: قوانین
-        overview:
       research:
         one: تحقیق و تحلیل
         other: تحقیق و تحلیل
-        overview:
       residential_property_tribunal_decision:
         one: حکم دادگاه املاک مسکونی
         other: احکام دادگاه املاک مسکونی
@@ -269,7 +249,6 @@ fa:
       standard:
         one: استاندارد
         other: استانداردها
-        overview:
       statement_to_parliament:
         one: بیانیه به پارلمان
         other: بیانیه‌ها به پارلمان
@@ -282,7 +261,6 @@ fa:
       statutory_guidance:
         one: راهنمای قانونی
         other: راهنمای قانونی
-        overview:
       take_part:
         one: مشارکت
         other: مشارکت
@@ -295,7 +273,6 @@ fa:
       transparency:
         one: داده‌های شفافیت
         other: داده‌های شفافیت
-        overview:
       utaac_decision:
         one: حکم دادگاه تجدید نظر اداری
         other: احکام دادگاه تجدید نظر اداری
@@ -316,54 +293,54 @@ fa:
     social_media_use_html: سیاست ما را درباره %{link} مطالعه کنید.
     welsh_language_scheme_html: درباره تعهد ما نسبت به %{link} اطلاعات کسب کنید.
   email:
-    description_html:
-    subscribe_title:
-    unsubscribe_title:
+    description_html: 
+    subscribe_title: 
+    unsubscribe_title: 
   fatality_notice:
     alt_text: تاج وزارت دفاع
     field_of_operation: زمینه فعالیت
     operations_in: فعالیت در %{location}
   get_involved:
-    civil_service:
-    civil_service_quarterly:
-    closed:
-    closed_consultations:
-    closes:
-    closing_today:
-    closing_tomorrow:
-    days_left:
-    engage_with_gov:
-    fcdo_bloggers:
-    follow:
-    follow_links:
-    follow_paragraph:
-    gds_blog:
-    gov_past:
+    civil_service: 
+    civil_service_quarterly: 
+    closed: 
+    closed_consultations: 
+    closes: 
+    closing_today: 
+    closing_tomorrow: 
+    days_left: 
+    engage_with_gov: 
+    fcdo_bloggers: 
+    follow: 
+    follow_links: 
+    follow_paragraph: 
+    gds_blog: 
+    gov_past: 
     intro_paragraph:
-      body_html:
-      engage_with_government:
-      take_part:
-    join_ics:
-    make_donation:
-    more_ways:
-    neighbourhood_watch:
-    open_consultations:
-    page_heading:
-    page_title:
+      body_html: 
+      engage_with_government: 
+      take_part: 
+    join_ics: 
+    make_donation: 
+    more_ways: 
+    neighbourhood_watch: 
+    open_consultations: 
+    page_heading: 
+    page_title: 
     petition_paragraph:
-      body_html:
-      create_a_petition:
-    read_respond:
-    recent_outcomes:
-    recently_opened:
-    respond_to_consultations:
-    school_overseas:
-    search_all:
-    see_all_dept:
-    start_a_petition:
-    take_part:
-    take_part_suggestions:
-    your_views:
+      body_html: 
+      create_a_petition: 
+    read_respond: 
+    recent_outcomes: 
+    recently_opened: 
+    respond_to_consultations: 
+    school_overseas: 
+    search_all: 
+    see_all_dept: 
+    start_a_petition: 
+    take_part: 
+    take_part_suggestions: 
+    your_views: 
   gone:
     page_title: دیگر در دسترس نیست
     published_in_error: اطلاعات این صفحه حذف شده است زیرا به اشتباه منتشر شده بود.
@@ -381,72 +358,72 @@ fa:
   i18n:
     direction: rtl
   language_names:
-    ar:
-    az:
-    be:
-    bg:
-    bn:
-    cs:
-    cy:
-    da:
-    de:
-    dr:
-    el:
-    en:
-    es:
-    es-419:
-    et:
+    ar: 
+    az: 
+    be: 
+    bg: 
+    bn: 
+    cs: 
+    cy: 
+    da: 
+    de: 
+    dr: 
+    el: 
+    en: 
+    es: 
+    es-419: 
+    et: 
     fa: فارسی
-    fi:
-    fr:
-    gd:
-    gu:
-    he:
-    hi:
-    hr:
-    hu:
-    hy:
-    id:
-    is:
-    it:
-    ja:
-    ka:
-    kk:
-    ko:
-    lt:
-    lv:
-    ms:
-    mt:
-    ne:
-    nl:
-    'no':
-    pa:
-    pa-pk:
-    pl:
-    ps:
-    pt:
-    ro:
-    ru:
-    si:
-    sk:
-    sl:
-    so:
-    sq:
-    sr:
-    sv:
-    sw:
-    ta:
-    th:
-    tk:
-    tr:
-    uk:
-    ur:
-    uz:
-    vi:
-    yi:
-    zh:
-    zh-hk:
-    zh-tw:
+    fi: 
+    fr: 
+    gd: 
+    gu: 
+    he: 
+    hi: 
+    hr: 
+    hu: 
+    hy: 
+    id: 
+    is: 
+    it: 
+    ja: 
+    ka: 
+    kk: 
+    ko: 
+    lt: 
+    lv: 
+    ms: 
+    mt: 
+    ne: 
+    nl: 
+    'no': 
+    pa: 
+    pa-pk: 
+    pl: 
+    ps: 
+    pt: 
+    ro: 
+    ru: 
+    si: 
+    sk: 
+    sl: 
+    so: 
+    sq: 
+    sr: 
+    sv: 
+    sw: 
+    ta: 
+    th: 
+    tk: 
+    tr: 
+    uk: 
+    ur: 
+    uz: 
+    vi: 
+    yi: 
+    zh: 
+    zh-hk: 
+    zh-tw: 
   multi_page:
     next_page: بعدی
     previous_page: قبلی
