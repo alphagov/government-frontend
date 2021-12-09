@@ -16,3 +16,10 @@
     </div>
   </div>
 </div>
+
+<%= render 'govuk_publishing_components/components/single_page_notification_button', {
+  base_path: @content_item.base_path,
+  js_enhancement: @include_single_page_notification_button_js,
+  margin_bottom: 6,
+  button_location: "top",
+} if @notification_button_visible %>

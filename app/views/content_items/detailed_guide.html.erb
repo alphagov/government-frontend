@@ -37,6 +37,7 @@
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo' unless brexit_child_taxon %>
+
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
@@ -65,8 +66,16 @@
         <%= render 'components/published-dates', {
             published: @content_item.published,
             last_updated: @content_item.updated,
-            history: @content_item.history
+            history: @content_item.history,
+            margin_bottom: 3,
           } unless brexit_child_taxon %>
+
+          <%= render 'govuk_publishing_components/components/single_page_notification_button', {
+            base_path: @content_item.base_path,
+            js_enhancement: @include_single_page_notification_button_js,
+            button_location: "bottom",
+            margin_bottom: 0,
+          } if @notification_button_visible %>
       </div>
     <% end %>
     <%= render "govuk_publishing_components/components/print_link", {
