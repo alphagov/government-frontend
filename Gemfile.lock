@@ -143,7 +143,7 @@ GEM
     govuk_personalisation (0.11.0)
       plek (>= 1.9.0)
       rails (~> 6)
-    govuk_publishing_components (27.16.0)
+    govuk_publishing_components (27.17.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -200,7 +200,7 @@ GEM
     logstasher (2.1.5)
       activesupport (>= 5.2)
       request_store
-    loofah (2.12.0)
+    loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -213,7 +213,7 @@ GEM
     mini_magick (4.10.1)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
-    minitest (5.14.4)
+    minitest (5.15.0)
     minitest-reporters (1.4.2)
       ansi
       builder
@@ -282,7 +282,7 @@ GEM
       rake (>= 0.13)
       thor (~> 1.0)
     rainbow (3.0.0)
-    raindrops (0.19.2)
+    raindrops (0.20.0)
     rake (13.0.6)
     regexp_parser (1.8.2)
     request_store (1.5.0)
@@ -360,7 +360,7 @@ GEM
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.4.1)
+    sprockets-rails (3.4.2)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
