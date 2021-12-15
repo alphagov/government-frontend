@@ -80,7 +80,7 @@ module ServiceSignIn
       setup_and_visit_choose_sign_in_page("welsh", "/dewiswch-lofnodi")
 
       assert page.has_css?("title", text: "Profwch pwy ydych chi i fwrw ymlaen - GOV.UK", visible: false)
-      assert page.has_css?(".gem-c-back-link", text: "Yn ôl")
+      assert page.has_css?(".gem-c-back-link", text: "Nôl")
 
       within "#content form" do
         within ".gem-c-fieldset" do
