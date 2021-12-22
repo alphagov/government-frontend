@@ -389,6 +389,14 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert response.body.include?("unsubscribed from emails about this page")
   end
 
+  test "displays the already subscribed success banner when the 'email-subscribe-already-subscribed' flash is present" do
+    content_item = content_store_has_schema_example("publication", "publication")
+
+    request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-subscribe-already-subscribed])
+    get :show, params: { path: path_for(content_item) }
+    assert response.body.include?("already getting emails about this page")
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale
