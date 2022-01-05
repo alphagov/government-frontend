@@ -2,6 +2,30 @@
   <%= machine_readable_metadata(
     schema: :faq
   ) %>
+
+  <%
+    scroll_track_headings_paths = [
+      "/guidance/universal-credit-how-it-helps-you-into-work",
+      "/guidance/returning-to-the-uk",
+      "/guidance/foreign-travel-insurance",
+      "/guidance/living-in-france",
+      "/guidance/healthcare-for-eu-and-efta-citizens-visiting-the-uk",
+      "/guidance/guidance-for-suppliers-of-cattle-sheep-and-goat-ear-tags",
+      "/guidance/ecmt-international-road-haulage-permits",
+      "/guidance/travel-abroad-from-england-during-coronavirus-covid-19",
+      "/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19",
+    ]
+    scroll_track_percent_paths = [
+      "/guidance/brexit-guidance-for-businesses",
+      "/guidance/brexit-guidance-for-individuals-and-families",
+      "/guidance/import-and-export-goods-using-preference-agreements",
+    ]
+  %>
+  <% if scroll_track_headings_paths.include?(@content_item.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker" data-track-type="headings"/>
+  <% elsif scroll_track_percent_paths.include?(@content_item.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
+  <% end %>
 <% end %>
 
 <%= render 'shared/email_subscribe_unsubscribe_flash' %>

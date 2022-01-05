@@ -2,6 +2,20 @@
   <%= machine_readable_metadata(
     schema: :faq
   ) %>
+
+  <%
+    scroll_track_headings_paths = [
+      "/wood-packaging-import-export",
+    ]
+    scroll_track_percent_paths = [
+      "/get-coronavirus-test",
+    ]
+  %>
+  <% if scroll_track_headings_paths.include?(@content_item.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker" data-track-type="headings"/>
+  <% elsif scroll_track_percent_paths.include?(@content_item.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
+  <% end %>
 <% end %>
 
 <%= render 'content_items/body_with_related_links' %>
