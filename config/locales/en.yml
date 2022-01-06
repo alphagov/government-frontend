@@ -24,6 +24,8 @@ en:
       show_all: show all
     share_links:
       share_this_page: Share this page
+    print_link:
+      text: "Print this page"
   consultation:
     and: and
     another_website_html: This consultation %{closed} held on <a href="%{url}">another website</a>
@@ -427,7 +429,8 @@ en:
   multi_page:
     next_page: Next
     previous_page: Previous
-    print_entire_guide: Print entire guide
+    print_entire_guide: View a printable version of the whole guide
+    printable_version: Printable version
   publication:
     details: Details
     documents:
@@ -470,6 +473,7 @@ en:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advise against all travel to parts of the country.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advise against all travel to the whole country.
     context: Foreign travel advice
+    pages: Travel advice pages
     still_current_at: Still current at
     summary: Summary
     updated: Updated

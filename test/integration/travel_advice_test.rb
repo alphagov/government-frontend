@@ -14,16 +14,16 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
     assert page.has_css?("a[href=\"#{@content_item['base_path']}.atom\"]", text: "Subscribe to feed")
 
-    assert page.has_css?(".part-navigation li", count: @content_item["details"]["parts"].size + 1)
-    assert page.has_css?(".part-navigation li", text: "Summary")
+    assert page.has_css?(".part-navigation-container nav li", count: @content_item["details"]["parts"].size + 1)
+    assert page.has_css?(".part-navigation-container nav li", text: "Summary")
     assert_not page.has_css?(".part-navigation li a", text: "Summary")
 
     @content_item["details"]["parts"].each do |part|
-      assert page.has_css?(".part-navigation li a[href*=\"#{part['slug']}\"]", text: part["title"])
+      assert page.has_css?(".part-navigation-container nav li a[href*=\"#{part['slug']}\"]", text: part["title"])
     end
 
     assert page.has_css?(".gem-c-pagination")
-    assert page.has_css?('.gem-c-print-link a[href$="/print"]')
+    assert page.has_css?('.govuk-link.govuk-link--no-visited-state[href$="/print"]', text: "View a printable version of the whole guide")
   end
 
   test "travel advice summary has latest updates and map" do
@@ -55,8 +55,8 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".map")
     assert_not page.has_css?(".gem-c-metadata")
 
-    assert page.has_css?(".part-navigation li", text: first_part["title"])
-    assert_not page.has_css?(".part-navigation li a", text: first_part["title"])
+    assert page.has_css?(".part-navigation-container nav li", text: first_part["title"])
+    assert_not page.has_css?(".part-navigation-container nav li a", text: first_part["title"])
   end
 
   test "travel advice includes a discoverable atom feed link" do
