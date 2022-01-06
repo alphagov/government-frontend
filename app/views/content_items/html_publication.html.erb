@@ -2,6 +2,16 @@
   <%= machine_readable_metadata(
     schema: :html_publication
   ) %>
+
+  <%
+    scroll_track_headings_paths = [
+      "/government/publications/the-essential-trustee-what-you-need-to-know-cc3/the-essential-trustee-what-you-need-to-know-what-you-need-to-do",
+      "/government/publications/spring-budget-2017-documents/spring-budget-2017",
+    ]
+  %>
+  <% if scroll_track_headings_paths.include?(@content_item.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker" data-track-type="headings"/>
+  <% end %>
 <% end %>
 
 <%
