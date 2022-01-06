@@ -3,22 +3,54 @@
   content_for :simple_header, true
   content_for :extra_head_content do %>
   <meta name="robots" content="noindex, nofollow">
-  <script>window.onload = function() { window.print(); }</script>
 <% end %>
 
 <div class="govuk-grid-row" id="guide-print">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
+    <%= render 'govuk_publishing_components/components/title', { 
+      margin_bottom: 6,
+      title: @content_item.title,
+    } %>
+
+    <div class="govuk-!-display-none-print">
+      <%= render 'govuk_publishing_components/components/lead_paragraph', {
+        margin_bottom: 6,
+        text: t("multi_page.printable_version"),
+      } %>
+    </div>
+
+    <%= render 'govuk_publishing_components/components/print_link', {
+      data_attributes: {
+        "track-category": "printButton",
+        "track-action": "clicked",
+        "track-label": t("components.print_link.text"),
+        module: "print-link"
+      },
+      margin_bottom: 8,
+      text: t("components.print_link.text"),
+    } %>
+
     <% @content_item.parts.each_with_index do |part, index| %>
       <section>
         <h1 class="part-title">
           <%= "#{index + 1}. #{part['title']}" %>
         </h1>
+
         <%= render 'govuk_publishing_components/components/govspeak',
-            content: part['body'].html_safe,
-            direction: page_text_direction,
-            disable_youtube_expansions: true %>
+          content: part['body'].html_safe,
+          direction: page_text_direction,
+          disable_youtube_expansions: true %>
       </section>
     <% end %>
+
+    <%= render 'govuk_publishing_components/components/print_link', {
+      data_attributes: {
+        "track-category": "printButton",
+        "track-action": "clicked",
+        "track-label": t("components.print_link.text"),
+        module: "print-link"
+      },
+      text: t("components.print_link.text")
+    } %>
   </div>
 </div>

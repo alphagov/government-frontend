@@ -13,7 +13,7 @@ class GuideTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?("h1", text: @content_item["details"]["parts"].first["title"])
     assert page.has_css?(".gem-c-pagination")
-    assert page.has_css?('.gem-c-print-link a[href$="/print"]')
+    assert page.has_css?(".govuk-link.govuk-link--no-visited-state[href$='/print']", text: "View a printable version of the whole guide")
   end
 
   test "draft access tokens are appended to part links within navigation" do
@@ -60,14 +60,14 @@ class GuideTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("guide-with-step-navs-and-hide-navigation")
 
     assert_not page.has_css?(".gem-c-pagination")
-    assert_not page.has_css?(".gem-c-print-link")
+    assert_not page.has_css?(".govuk-link.govuk-link--no-visited-state[href$='/print']")
   end
 
   test "shows guide navigation and print link if not in a step by step and hide_chapter_navigation is true" do
     setup_and_visit_content_item("guide-with-hide-navigation")
 
     assert page.has_css?(".gem-c-pagination")
-    assert page.has_css?(".gem-c-print-link")
+    assert page.has_css?(".govuk-link.govuk-link--no-visited-state[href$='/print']", text: "View a printable version of the whole guide")
   end
 
   test "guides with no parts in a step by step with hide_chapter_navigation do not error" do
