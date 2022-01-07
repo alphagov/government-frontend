@@ -12,8 +12,6 @@
       "/guidance/healthcare-for-eu-and-efta-citizens-visiting-the-uk",
       "/guidance/guidance-for-suppliers-of-cattle-sheep-and-goat-ear-tags",
       "/guidance/ecmt-international-road-haulage-permits",
-      "/guidance/travel-abroad-from-england-during-coronavirus-covid-19",
-      "/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19",
     ]
     scroll_track_percent_paths = [
       "/guidance/brexit-guidance-for-businesses",
@@ -23,6 +21,36 @@
   %>
   <% if scroll_track_headings_paths.include?(@content_item.base_path) %>
     <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker" data-track-type="headings"/>
+  <% elsif @content_item.base_path == "/guidance/travel-to-england-from-another-country-during-coronavirus-covid-19" %>
+    <%
+      headings = [
+        "Applies to England",
+        "If you are fully vaccinated",
+        "Check if you qualify as fully vaccinated",
+        "Travelling with children",
+        "Ireland, the UK, the Channel Islands and the Isle of Man",
+        "If you are not fully vaccinated",
+        "Travel abroad from England",
+        "Red list countries and territories",
+        "Transiting through England",
+      ]
+    %>
+    <%= tag.meta name: "govuk-scroll-tracker", content: "", data: { module: "auto-scroll-tracker", "track-type": "headings", "track-headings": headings.to_json } %>
+  <% elsif @content_item.base_path == "/guidance/travel-abroad-from-england-during-coronavirus-covid-19" %>
+    <%
+      headings = [
+        "Applies to England",
+        "Travelling with children",
+        "1. Check foreign travel advice for the countries you want to go to",
+        "Ireland, the UK, the Channel Islands and the Isle of Man",
+        "2. Arrange any COVID-19 tests you will need to enter the countries that you will travel to",
+        "3. Find out how you can use the NHS COVID Pass to prove your vaccination status abroad",
+        "Exemptions for work, medical or compassionate reasons",
+        "4. Check what you will need to do when you return to England",
+        "Travel to England guidance",
+      ]
+    %>
+    <%= tag.meta name: "govuk-scroll-tracker", content: "", data: { module: "auto-scroll-tracker", "track-type": "headings", "track-headings": headings.to_json } %>
   <% elsif scroll_track_percent_paths.include?(@content_item.base_path) %>
     <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
   <% end %>
