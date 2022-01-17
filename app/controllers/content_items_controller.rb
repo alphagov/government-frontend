@@ -219,6 +219,28 @@ private
       /guidance/travel-to-england-from-another-country-during-coronavirus-covid-19
       /guidance/covid-19-coronavirus-restrictions-what-you-can-and-cannot-do
       /government/publications/face-coverings-when-to-wear-one-and-how-to-make-your-own
+      /guidance/commercial-court-hearing-and-trial-dates
+      /guidance/london-circuit-commercial-court-hearing-and-trial-dates
+      /guidance/united-kingdom-single-issuing-authority-uksia
+      /government/publications/current-catch-limits-over-10-metre-non-sector-pool
+      /government/publications/current-catch-limits-10-metres-and-under-pool
+      /government/publications/fishing-vessel-licence-variations
+      /guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax
+      /guidance/check-when-to-sign-up-for-making-tax-digital-for-income-tax
+      /guidance/find-software-thats-compatible-with-making-tax-digital-for-income-tax
+      /guidance/using-making-tax-digital-for-income-tax
+      /guidance/sign-up-your-business-for-making-tax-digital-for-income-tax
+      /guidance/list-of-customs-agents-and-fast-parcel-operators
+      /guidance/check-if-you-need-to-register-for-plastic-packaging-tax
+      /guidance/work-out-which-packaging-is-subject-to-plastic-packaging-tax
+      /guidance/check-which-plastic-packaging-is-exempt-from-plastic-packaging-tax
+      /guidance/examples-of-tests-and-calculations-for-plastic-packaging-tax
+      /guidance/register-for-plastic-packaging-tax
+      /guidance/claim-a-credit-or-defer-paying-plastic-packaging-tax
+      /guidance/completing-your-plastic-packaging-tax-return
+      /guidance/register-a-group-of-companies-for-plastic-packaging-tax
+      /guidance/decide-if-you-need-to-register-for-plastic-packaging-tax
+      /guidance/uk-trade-agreements-with-non-eu-countries
     ].include? @content_item.base_path
   end
 end
