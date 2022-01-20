@@ -13,6 +13,8 @@ es:
   components:
     figure:
       image_credit: 'Crédito de la imagen: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ocultar todas las actualizaciones
       last_updated: Última actualización de %{date}
@@ -41,7 +43,7 @@ es:
     feedback_received: Comentarios recibidos
     is_being: es ser
     not_open_yet: Esta consulta no está abierta todavía
-    'on': 
+    'on':
     opens: Se abre esta consulta
     original_consultation: Consulta original
     ran_from: Esta consulta fue de
@@ -216,6 +218,9 @@ es:
       press_release:
         one: Nota de prensa
         other: Notas de prensa
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Material de promoción
         other: Material de promoción
@@ -293,54 +298,55 @@ es:
     social_media_use_html: Lea nuestra política en %{link}
     welsh_language_scheme_html: Encuentre más sobre nuestro compromiso de publicar en %{link}.
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Escudo del Ministerio de Defensa
     field_of_operation: Campo de operación
     operations_in: Operaciones en %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ya no está disponible
     published_in_error: La información de esta página se ha eliminado porque se publicó por error.
@@ -356,78 +362,79 @@ es:
       licence_html: 'Esta publicación tiene licencia según lo estipulado en la Licencia de Gobierno Abierto v3,0 excepto donde se indique lo contrario. Para ver esta licencia, visite <a href=''https://www.nationalarchives.gov.uk/doc/open-government-license/version/3">nationalarchives.gov.uk/doc/open-government-license/version/3</a> o escriba al equipo de políticas de información, he National Archives, Kew, Londres TW9 4DU, o envíe un correo electrónico a: <a href=''mailto:psi@nationalarchives.gov.uk''>psi@nationalarchives.gov.uk</a>.'
       third_party: Cuando hayamos identificado cualquier información de copyright de terceros, deberá obtener permiso de los titulares de los derechos de autor correspondientes.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
     es: Español
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Siguiente
     previous_page: Anterior
     print_entire_guide: Imprima toda la guía
+    printable_version:
   publication:
     details: Detalles
     documents:
@@ -470,6 +477,7 @@ es:
       avoid_all_travel_to_parts_html: La <abbr title="Foreign and Commonwealth Office">FCO</abbr> aconseja que no se viaje a partes del país.
       avoid_all_travel_to_whole_country_html: La <abbr title="Foreign and Commonwealth Office">FCO</abbr> aconseja que no se viaje a todo el país.
     context: Consejos de viajes al extranjero
+    pages:
     still_current_at: Sigue siendo actual en
     summary: Resumen
     updated: Actualizado

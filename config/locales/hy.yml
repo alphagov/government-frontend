@@ -13,6 +13,8 @@ hy:
   components:
     figure:
       image_credit: Նկարը՝ %{credit}
+    print_link:
+      text:
     published_dates:
       hide_all_updates: թաքցնել բոլոր թարմացումները
       last_updated: Վերջին թարմացումը՝ %{date}
@@ -41,7 +43,7 @@ hy:
     feedback_received: Ստացված արձագանքը
     is_being: ենթարկվում է
     not_open_yet: Այս խորհրդակցությունը դեռևս չի սկսվել
-    'on': 
+    'on':
     opens: Այս խորհրդակցությունը կսկսվի
     original_consultation: Սկզբնական խորհրդակցություն
     ran_from: Այս խորհրդակցությունն իրականացվել է
@@ -216,6 +218,9 @@ hy:
       press_release:
         one: Կոմյունիկե
         other: Կոմյունիկեներ
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Գովազդային նյութ
         other: Գովազդային նյութ
@@ -293,54 +298,55 @@ hy:
     social_media_use_html: 'Կարդալ մեր քաղաքականությունը %{link} հղումով:'
     welsh_language_scheme_html: 'Տեղեկանալ մեր աշխատանքի մասին %{link} հղումով:'
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Պաշտպանության նախարարության զինանշան
     field_of_operation: Գործունեության ոլորտ
     operations_in: Գործունեություն % {location}-ում
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Այլևս հասանելի չէ
     published_in_error: 'Այս էջի տեղեկությունը հեռացվել է, քանի որ սխալմամբ էր հրապարակվել:'
@@ -356,78 +362,79 @@ hy:
       licence_html: 'Այս հրապարակումը լիցենզավորված է Open Government Licence v3.0 հրապարակման սերվերի դրույթների ներքո, բացառությամբ այլ դեպքերի: Այս լիցենզիան դիտելու համար այցելեք <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> կամ գրեք Տեղեկատվական քաղաքականության թիմին, Ազգային արխիվին, Kew, London TW9 4DU կամ ուղարկեք էլ. Նամակ հետևյալ հասցեին՝ <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>։'
       third_party: Եթե բացահայտենք երրորդ կողմի հեղինակային իրավունքի որևէ տեղեկություն, ձեզնից կպահանջվի ստանալ թույլտվություն հեղինակային իրավունքի համապատասխան սեփականատերերից։
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
     hy: Հայերեն
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Հաջորդ
     previous_page: Նախորդ
     print_entire_guide: Տպել ամբողջ ուղեցույցը
+    printable_version:
   publication:
     details: Մանրամասներ
     documents:
@@ -470,6 +477,7 @@ hy:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի որոշ հատվածներ։
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր։
     context: Օտար երկիր ճամփորդելու վերաբերյալ օգտակար խորհուրդներ
+    pages:
     still_current_at: Դեռևս ընթացիկ
     summary: Ամփոփ
     updated: Թարմացված

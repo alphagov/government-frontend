@@ -13,6 +13,8 @@
   components:
     figure:
       image_credit: 'Bildekreditt: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: skjul alle oppdateringer
       last_updated: Sist oppdatert %{date}
@@ -41,7 +43,7 @@
     feedback_received: Tilbakemelding mottatt
     is_being: blir
     not_open_yet: Denne konsultasjonen er ikke åpen ennå
-    'on': 
+    'on':
     opens: Denne konsultasjonen åpner
     original_consultation: Opprinnelig konsultasjon
     ran_from: Denne konsultasjonen varte fra
@@ -216,6 +218,9 @@
       press_release:
         one: Pressemelding
         other: Pressemeldinger
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Reklamemateriell
         other: Reklamemateriell
@@ -293,54 +298,55 @@
     social_media_use_html: Les retningslinjene våre på %{link}.
     welsh_language_scheme_html: Finn ut mer om vårt engasjement for %{link}.
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Forsvarsdepartementets crest
     field_of_operation: Operasjonsfelt
     operations_in: Operasjoner i %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ikke lenger tilgjengelig
     published_in_error: Informasjonen på denne siden er fjernet fordi den ble publisert ved en feil.
@@ -356,78 +362,79 @@
       licence_html: 'Denne publikasjonen er lisensiert under vilkårene i Open Government License v3.0 med mindre annet er angitt. For å se denne lisensen, besøk <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> eller skriv til Information Policy Team, National Archives, Kew, London TW9 4DU, eller e-post: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Der vi har identifisert opphavsrettsinformasjon fra tredjepart, må du få tillatelse fra berørte opphavsrettsinnehavere.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
     'no': norsk
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Neste
     previous_page: Forrige
     print_entire_guide: Skriv ut hele guiden
+    printable_version:
   publication:
     details: Detaljer
     documents:
@@ -470,6 +477,7 @@
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser til deler av landet.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser til hele landet.
     context: Råd om utenlandsreiser
+    pages:
     still_current_at: Fortsatt aktuell
     summary: Sammendrag
     updated: Oppdatert

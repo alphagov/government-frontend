@@ -13,6 +13,8 @@ pt:
   components:
     figure:
       image_credit: 'Crédito da imagem: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ocultar todas as atualizações
       last_updated: Última atualização a %{date}
@@ -216,6 +218,9 @@ pt:
       press_release:
         one: Comunicado de imprensa
         other: Comunicados de imprensa
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Material promocional
         other: Material promocional
@@ -293,6 +298,7 @@ pt:
     social_media_use_html: Leia a nossa política em %{link}.
     welsh_language_scheme_html: Saiba mais sobre o nosso compromisso para com %{link}.
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -428,6 +434,7 @@ pt:
     next_page: Seguinte
     previous_page: Anterior
     print_entire_guide: Imprimir guia completo
+    printable_version:
   publication:
     details: Detalhes
     documents:
@@ -470,6 +477,7 @@ pt:
       avoid_all_travel_to_parts_html: O <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconselha todas as viagens a algumas zonas do país.
       avoid_all_travel_to_whole_country_html: O <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconselha todas as viagens a todo o país.
     context: Aconselhamento sobre viagens ao estrangeiro
+    pages:
     still_current_at: Continua atual às
     summary: Resumo
     updated: Atualizado em

@@ -13,6 +13,8 @@ ms:
   components:
     figure:
       image_credit: 'Imej kredit: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: sorok semua kemas kini
       last_updated: Kali terakhir dikemas kini %{date}
@@ -64,226 +66,154 @@ ms:
       updated: Dikemas kini
     schema_name:
       aaib_report:
-        one: Laporan Cawangan Penyiasatan Kemalangan Udara
         other: Laporan Cawangan Penyiasatan Kemalangan Udara
       announcement:
-        one: Pengumuman
         other: Pengumuman
       asylum_support_decision:
-        one: Suaka menyokong keputusan tribunal
         other: Suaka menyokong keputusan tribunal
       authored_article:
-        one: Artikel ditulis penulis
         other: Artikel ditulis penulis
       business_finance_support_scheme:
-        one: Skim sokongan kewangan perniagaan
         other: Skim sokongan kewangan perniagaan
       case_study:
-        one: Kajian kes
         other: Kajian kes
       closed_consultation:
-        one: Rundingan tertutup
         other: Rundingan tertutup
       cma_case:
-        one: Kes Persaingan dan Pihak Berkuasa Pasaran
         other: Kes Persaingan dan Pihak Berkuasa Pasaran
       coming_soon:
-        one: Akan Datang
         other: Akan Datang
       consultation:
-        one: Rundingan
         other: Rundingan
       consultation_outcome:
-        one: Hasil rundingan
         other: Hasil rundingan
       corporate_information_page:
-        one: Halaman maklumat
         other: Halaman maklumat
       corporate_report:
-        one: Laporan korporat
         other: Laporan korporat
       correspondence:
-        one: Perwakilan
         other: Perwakilan
       countryside_stewardship_grant:
-        one: Geran Pengawasan Desa
         other: Geran Pengawasan Desa
       decision:
-        one: Keputusan
         other: Keputusan
       detailed_guide:
-        one: Panduan
         other: Panduan
       dfid_research_output:
-        one: Output Penyelidikan untuk Pembangunan
         other: Output Penyelidikan untuk Pembangunan
       document_collection:
-        one: Koleksi
         other: Koleksi
       draft_text:
-        one: Teks draf
         other: Teks draf
       drug_safety_update:
-        one: Kemas Kini Keselamatan Ubat-ubatan
         other: Kemas Kini Keselamatan Ubat-ubatan
       employment_appeal_tribunal_decision:
-        one: Keputusan tribunal rayuan pekerjaan
         other: Keputusan tribunal rayuan pekerjaan
       employment_tribunal_decision:
-        one: Keputusan tribunal pekerjaan
         other: Keputusan tribunal pekerjaan
       esi_fund:
-        one: Dana Struktur dan Pelaburan Eropah (ESIF)
         other: Dana Struktur dan Pelaburan Eropah (ESIF)
       fatality_notice:
-        one: Notis kematian
         other: Notis kematian
       foi_release:
-        one: Hebahan Kebebasan Maklumat (FOI)
         other: Hebahan Kebebasan Maklumat (FOI)
       form:
-        one: Borang
         other: Borang
       government_response:
-        one: Respons kerajaan
         other: Respons kerajaan
       guidance:
-        one: Panduan
         other: Panduan
       impact_assessment:
-        one: Penilaian impak
         other: Penilaian impak
       imported:
-        one: diimport - menunggu jenis
         other: diimport - menunggu jenis
       independent_report:
-        one: Laporan bebas
         other: Laporan bebas
       international_development_fund:
-        one: Pembiayaan pembangunan antarabangsa
         other: Pembiayaan pembangunan antarabangsa
       international_treaty:
-        one: Perjanjian antarabangsa
         other: Perjanjian antarabangsa
       maib_report:
-        one: Laporan Cawangan Penyiasatan Kemalangan Marin
         other: Laporan Cawangan Penyiasatan Kemalangan Marin
       map:
-        one: Peta
         other: Peta
       medical_safety_alert:
-        one: Amaran dan penarikan balik untuk ubat-ubatan dan peranti perubatan
         other: Amaran dan penarikan balik untuk ubat-ubatan dan peranti perubatan
       national:
-        one: Pengumuman statistik nasional
         other: Pengumuman statistik nasional
       national_statistics:
-        one: Statistik Nasional
         other: Statistik Nasional
       national_statistics_announcement:
-        one: Pengumuman statistik nasional
         other: Pengumuman statistik nasional
       news_article:
-        one: Artikel berita
         other: Artikel berita
       news_story:
-        one: Berita
         other: Berita
       notice:
-        one: Notis
         other: Notis
       official:
-        one: Pengumuman statistik rasmi
         other: Pengumuman statistik rasmi
       official_statistics:
-        one: Statistik Rasmi
         other: Statistik Rasmi
       official_statistics_announcement:
-        one: Pengumuman statistik rasmi
         other: Pengumuman statistik rasmi
       open_consultation:
-        one: Rundingan terbuka
         other: Rundingan terbuka
       oral_statement:
-        one: Kenyataan lisan kepada Parlimen
         other: Kenyataan lisan kepada Parlimen
       policy:
-        one: Dasar
         other: Dasar
       policy_paper:
-        one: Kertas dasar
         other: Kertas dasar
       press_release:
-        one: Siaran akhbar
         other: Siaran akhbar
+      product-safety-alert-report-recall:
+        other:
       promotional:
-        one: Bahan promosi
         other: Bahan promosi
       publication:
-        one: Penerbitan
         other: Penerbitan
       raib_report:
-        one: Laporan Cawangan Penyiasatan Kemalangan Kereta Api
         other: Laporan Cawangan Penyiasatan Kemalangan Kereta Api
       regulation:
-        one: Peraturan
         other: Peraturan
       research:
-        one: Penyelidikan dan analisis
         other: Penyelidikan dan analisis
       residential_property_tribunal_decision:
-        one: Keputusan tribunal harta tanah kediaman
         other: Keputusan tribunal harta tanah kediaman
       service_sign_in:
-        one: Daftar masuk perkhidmatan
         other: Daftar masuk perkhidmatan
       service_standard_report:
-        one: Laporan Standard Perkhidmatan
         other: Laporan Standard Perkhidmatan
       speaking_notes:
-        one: Nota perbincangan
         other: Nota perbincangan
       speech:
-        one: Ucapan
         other: Ucapan
       standard:
-        one: Standard
         other: Standard
       statement_to_parliament:
-        one: Kenyataan kepada Parlimen
         other: Kenyataan kepada Parlimen
       statistical_data_set:
-        one: Set data statistik
         other: Set data statistik
       statistics_announcement:
-        one: Pengumuman hebahan statistik
         other: Pengumuman hebahan statistik
       statutory_guidance:
-        one: Panduan berkanun
         other: Panduan berkanun
       take_part:
-        one: Ambil bahagian
         other: Ambil bahagian
       tax_tribunal_decision:
-        one: Keputusan tribunal Cukai dan Canseri
         other: Keputusan tribunal Cukai dan Canseri
       transcript:
-        one: Transkrip
         other: Transkrip
       transparency:
-        one: Data ketelusan
         other: Data ketelusan
       utaac_decision:
-        one: Keputusan tribunal rayuan pentadbiran
         other: Keputusan tribunal rayuan pentadbiran
       world_location_news_article:
-        one: Artikel berita
         other: Artikel berita
       world_news_story:
-        one: Berita dunia
         other: Berita dunia
       written_statement:
-        one: Kenyataan bertulis kepada Parlimen
         other: Kenyataan bertulis kepada Parlimen
   corporate_information_page:
     about_our_services_html: Ketahui %{link}.
@@ -293,6 +223,7 @@ ms:
     social_media_use_html: Baca dasar kami di %{link}.
     welsh_language_scheme_html: Ketahui tentang komitmen kami kepada %{link}.
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -428,10 +359,10 @@ ms:
     next_page: Seterusnya
     previous_page: Sebelumnya
     print_entire_guide: Cetak keseluruhan panduan
+    printable_version:
   publication:
     details: Butiran
     documents:
-      one: Dokumen
       other: Dokumen
   service_sign_in:
     continue: Teruskan
@@ -470,6 +401,7 @@ ms:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat sebarang perjalanan ke bahagian-bahagian tertentu negara ini.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat sebarang perjalanan ke seluruh negara..
     context: Nasihat perjalanan ke negara luar
+    pages:
     still_current_at: Masih semasa di
     summary: Ringkasan
     updated: Dikemas kini

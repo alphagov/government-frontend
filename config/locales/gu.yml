@@ -13,6 +13,8 @@ gu:
   components:
     figure:
       image_credit: ઇમેજ ક્રેડિટ:%{credit}
+    print_link:
+      text:
     published_dates:
       hide_all_updates: બધા અપડેટ્સને હાઈડ કરો
       last_updated: છેલ્લો અપડેટ %{date}
@@ -216,6 +218,9 @@ gu:
       press_release:
         one: પ્રેસ રીલીઝ
         other: પ્રેસ રીલીઝ
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: પ્રચાર સામગ્રી
         other: પ્રચાર સામગ્રી
@@ -293,6 +298,7 @@ gu:
     social_media_use_html: "%{link} માં અમારી નીતિ વાંચો."
     welsh_language_scheme_html: "%{link} પ્રત્યે અમારી પ્રતિબદ્ધતા અંગે જાણો."
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -428,6 +434,7 @@ gu:
     next_page: આગળનું
     previous_page: પહેલાનું
     print_entire_guide: સંપૂર્ણ માર્ગદર્શિકા પ્રિન્ટ કરો
+    printable_version:
   publication:
     details: વિગતો
     documents:
@@ -470,6 +477,7 @@ gu:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> દેશના કેટલાક ભાગોમાં કોઈ પણ પ્રકારનો પ્રવાસ ન કરવાની સલાહ આપે છે.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> સંપૂર્ણ દેશમાં કોઈ પણ પ્રકારનો પ્રવાસ ન કરવાની સલાહ આપે છે.
     context: વિદેશ પ્રવાસ અંગે સલાહ
+    pages:
     still_current_at: પર હજુ પણ ચાલુ
     summary: સારાંશ
     updated: અપડેટ કરેલ

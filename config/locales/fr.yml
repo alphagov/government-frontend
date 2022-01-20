@@ -13,6 +13,8 @@ fr:
   components:
     figure:
       image_credit: Crédit d'image : %{credit}
+    print_link:
+      text:
     published_dates:
       hide_all_updates: masquer toutes les mises à jour
       last_updated: Dernière mise à jour le %{date}
@@ -216,6 +218,9 @@ fr:
       press_release:
         one: Communiqué de presse
         other: Communiqués de presse
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Matériel promotionnel
         other: Matériel promotionnel
@@ -293,6 +298,7 @@ fr:
     social_media_use_html: Lisez notre politique générale sur %{link}.
     welsh_language_scheme_html: Découvrez comment nous nous engageons sur %{link}.
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -428,6 +434,7 @@ fr:
     next_page: Suivant
     previous_page: Précédent
     print_entire_guide: Imprimer le guide complet
+    printable_version:
   publication:
     details: Détails
     documents:
@@ -470,6 +477,7 @@ fr:
       avoid_all_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth Office">Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans certaines parties du pays.
       avoid_all_travel_to_whole_country_html: Le <abbr title="Foreign and Commonwealth Office">Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans l'ensemble du pays.
     context: Conseils concernant les voyages à l'étranger
+    pages:
     still_current_at: Toujours d'actualité à
     summary: Sommaire
     updated: Mis à jour

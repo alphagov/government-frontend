@@ -13,6 +13,8 @@ en:
   components:
     figure:
       image_credit: 'Image credit: %{credit}'
+    print_link:
+      text: Print this page
     published_dates:
       hide_all_updates: hide all updates
       last_updated: Last updated %{date}
@@ -24,8 +26,6 @@ en:
       show_all: show all
     share_links:
       share_this_page: Share this page
-    print_link:
-      text: "Print this page"
   consultation:
     and: and
     another_website_html: This consultation %{closed} held on <a href="%{url}">another website</a>
@@ -218,15 +218,15 @@ en:
       press_release:
         one: Press release
         other: Press releases
+      product-safety-alert-report-recall:
+        one: Product Safety Alerts, Reports and Recalls
+        other: Product Safety Alerts, Reports and Recalls
       promotional:
         one: Promotional material
         other: Promotional material
       publication:
         one: Publication
         other: Publications
-      product-safety-alert-report-recall:
-        one: Product Safety Alerts, Reports and Recalls
-        other: Product Safety Alerts, Reports and Recalls
       raib_report:
         one: Rail Accident Investigation Branch report
         other: Rail Accident Investigation Branch reports
@@ -298,10 +298,10 @@ en:
     social_media_use_html: Read our policy on %{link}.
     welsh_language_scheme_html: Find out about our commitment to %{link}.
   email:
+    already_subscribed_title: You’re already getting emails about this page
     description_html: <p class="govuk-body">Go to your GOV.UK account to <a class="govuk-link govuk-notification-banner__link" href="/email/manage">see and manage all your GOV.UK email subscriptions</a>.</p>
     subscribe_title: You’ve subscribed to emails about this page
     unsubscribe_title: You’ve unsubscribed from emails about this page
-    already_subscribed_title: You’re already getting emails about this page
   fatality_notice:
     alt_text: Ministry of Defence crest
     field_of_operation: Field of operation

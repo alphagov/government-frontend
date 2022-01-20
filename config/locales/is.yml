@@ -13,6 +13,8 @@ is:
   components:
     figure:
       image_credit: Uppruni myndar %{credit}
+    print_link:
+      text:
     published_dates:
       hide_all_updates: fela allar uppfærslur
       last_updated: Síðast uppfært %{date}
@@ -41,7 +43,7 @@ is:
     feedback_received: Endurgjöf móttekin
     is_being: er
     not_open_yet: Þessi ráðgjöf er ekki enn opin
-    'on': 
+    'on':
     opens: Þessi ráðgjöf opnar
     original_consultation: Upprunaleg ráðgjöf
     ran_from: Þessi ráðgjöf stóð yfir frá
@@ -216,6 +218,9 @@ is:
       press_release:
         one: Fréttatilkynning
         other: Fréttatilkynningar
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Kynningarefni
         other: Kynningarefni
@@ -293,54 +298,55 @@ is:
     social_media_use_html: Lestu stefnuna okkar varðandi %{link}.
     welsh_language_scheme_html: Kynntu þér skuldbindingu okkar við %{link}.
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Skjaldarmerki Varnarmálaráðuneytisins
     field_of_operation: Starfsvið
     operations_in: Starfsemi á %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ekki lengur aðgengileg
     published_in_error: Upplýsingarnar á þessari síðu hafa verið fjarlægðar vegna þess að þær voru birtar fyrir mistök.
@@ -356,78 +362,79 @@ is:
       licence_html: 'Þessi útgáfa fellur undir skilmála Open Government Licence v3.0 nema annað sé tekið fram. Heimsæku til að skoða þessa skilmála <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> eða skrifaðu til Information Policy Team, The National Archives, Kew, London TW9 4DU, eða sendu tölvupóst: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Þar sem við höfum auðkennt að eitthvað fellur undir höfundarrétt þriðja aðila munt þú þurfa leyfi frá þeim höfundarrétthafa.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
     is: Íslenska
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Næsta
     previous_page: Fyrri
     print_entire_guide: Prenta allar leiðbeiningarnar
+    printable_version:
   publication:
     details: Nánari upplýsingar
     documents:
@@ -470,6 +477,7 @@ is:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins.
     context: Ráðleggingar um ferðalög erlendis
+    pages:
     still_current_at: Enn uppfært þann
     summary: Samantekt
     updated: Uppfært

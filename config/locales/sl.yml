@@ -13,6 +13,8 @@ sl:
   components:
     figure:
       image_credit: 'Avtor slike: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: Skrij vse posodobitve
       last_updated: Zadnjič posodobljeno %{date}
@@ -318,6 +320,11 @@ sl:
         one: Sporočilo za javnost
         other: Sporočila za javnost
         two:
+      product-safety-alert-report-recall:
+        two:
+        few:
+        one:
+        other:
       promotional:
         few:
         one: Promocijski material
@@ -441,6 +448,7 @@ sl:
     social_media_use_html: Preberite si našo politiko na %{link}.
     welsh_language_scheme_html: Izvedite več o naši zavezanosti %{link}.
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -576,6 +584,7 @@ sl:
     next_page: Naslednji
     previous_page: Prejšnji
     print_entire_guide: Natisni cel vodič
+    printable_version:
   publication:
     details: Podrobnosti
     documents:
@@ -620,6 +629,7 @@ sl:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa potovanja v dele države.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa potovanja v državo.
     context: Nasveti za potovanja v tujino
+    pages:
     still_current_at: Še vedno aktualno ob
     summary: Povzetek
     updated: Posodobljeno

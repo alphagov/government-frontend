@@ -13,6 +13,8 @@ ur:
   components:
     figure:
       image_credit: 'تصویری کریڈٹ: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: تمام اپ ڈیٹس کو پوشیدہ کریں
       last_updated: آخری اپ ڈیٹ کردہ %{date}
@@ -216,6 +218,9 @@ ur:
       press_release:
         one: پریس ریلیز
         other: پریس ریلیزز
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: تشہیری مواد
         other: تشہیری مواد
@@ -293,6 +298,7 @@ ur:
     social_media_use_html: "%{link} پر ہماری پالیسی کو پڑھیں۔"
     welsh_language_scheme_html: "%{link} کے ساتھ ہماری وابستگی کے بارے میں جانیں۔"
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -428,6 +434,7 @@ ur:
     next_page: اگلا
     previous_page: گزشتہ
     print_entire_guide: پوری رہنمائی کا پرنٹ لیں
+    printable_version:
   publication:
     details: تفصیلات
     documents:
@@ -470,6 +477,7 @@ ur:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ملک کے کچھ حصوں میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> پورے ملک میں ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
     context: غیر ملکی سفر کی مشاورت
+    pages:
     still_current_at: ابھی تک حالیہ ہے از
     summary: خلاصہ
     updated: اپ ڈیٹ کردہ
