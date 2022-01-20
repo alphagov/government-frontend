@@ -13,6 +13,8 @@ kk:
   components:
     figure:
       image_credit: 'Суретті түсірген: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: барлық жаңартуларды жасыру
       last_updated: Соңғы рет %{date} жаңартылды
@@ -41,7 +43,7 @@ kk:
     feedback_received: Алынған пікір
     is_being: жіберілуде
     not_open_yet: Бұл кеңес әлі ашылмаған
-    'on': 
+    'on':
     opens: Бұл кеңес ашылды
     original_consultation: Бастапқы кеңес
     ran_from: Бұл кеңес мына жерден басталады
@@ -216,6 +218,9 @@ kk:
       press_release:
         one: Пресс-релиз
         other: Пресс-релиздер
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Жарнамалық материал
         other: Жарнамалық материал
@@ -293,54 +298,55 @@ kk:
     social_media_use_html: "%{link} мекенжайындағы саясатымызды оқыңыз."
     welsh_language_scheme_html: "%{link} қосқан үлесіміз туралы оқыңыз."
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Қорғаныс министрлігінің елтаңбасы
     field_of_operation: Жұмыс аймағы
     operations_in: "%{location} орнындағы жұмыстар"
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Енді қолжетімді емес
     published_in_error: Осы беттегі ақпарат қате жарияланғандықтан алынып тасталды.
@@ -356,78 +362,79 @@ kk:
       licence_html: 'Бұл жарияланым басқаша көрсетілмеген жағдайларды қоспағанда, v3.0 Ашық Үкімет лицензиясының шарттары бойынша лицензияланған. Осы лицензияны көру үшін, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> веб-сайтына өтіңіз немесе немесе Ақпараттық саясат тобына, Ұлттық мұрағаттарға, Kew, London TW9 4DU жазыңыз немесе төмендегі мекенжайға электрондық хат жазыңыз: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Егер біз авторлық құқық туралы кез келген үшінші тарап ақпаратын анықтаған болсақ, сізге тиісті авторлық құқық иелерінен рұқсат алу қажет болады.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
     kk: Қазақ
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Келесі
     previous_page: Алдыңғы
     print_entire_guide: Нұсқаулықты толығымен басып шығару
+    printable_version:
   publication:
     details: Толық мәліметтер
     documents:
@@ -470,6 +477,7 @@ kk:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> елдің барлық аймақтарына барудан бас тартуға кеңес береді.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> бүкіл елге баруға тыйым салады.
     context: Шетелге саяхат туралы кеңес
+    pages:
     still_current_at: Әлі де ағымдағы
     summary: Қысқаша мазмұны
     updated: Жаңартылды

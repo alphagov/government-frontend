@@ -13,6 +13,8 @@ ka:
   components:
     figure:
       image_credit: 'სურათ: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ყველა ცვლილების დაფარვა
       last_updated: ბოლოს განახლდა %{date}
@@ -216,6 +218,9 @@ ka:
       press_release:
         one: პრეს რელიზი
         other: პრეს რელიზები
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: პრომო მასალა
         other: პრომო მასალები
@@ -293,6 +298,7 @@ ka:
     social_media_use_html: წაიკითხეთ ჩვენი პოლიტიკის შესახებ %{link}.
     welsh_language_scheme_html: გაეცანით ჩვენს ვალდებულებას %{link}.
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -428,6 +434,7 @@ ka:
     next_page: შემდეგი
     previous_page: წინა
     print_entire_guide: მთელი სახელმძღვანელოს ბეჭდვა
+    printable_version:
   publication:
     details: დეტალები
     documents:
@@ -470,6 +477,7 @@ ka:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველა მოგზაურობების წინააღმდეგ ქვეყნის ზოგიერთ ნაწილებში.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველა მოგზაურობების წინააღმდეგ მთელ ქვეყანაში.
     context: უცხოეთში მოგზაურობის რჩევა
+    pages:
     still_current_at: ჯერ კიდევ აქტუალურია
     summary: შეჯამება
     updated: განახლებული

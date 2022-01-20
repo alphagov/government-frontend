@@ -13,6 +13,8 @@ tk:
   components:
     figure:
       image_credit: 'Surat krediti: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ähli täzelenmeleri gizle
       last_updated: Soňky gezek täzelenme %{date}
@@ -41,7 +43,7 @@ tk:
     feedback_received: Alnan seslenme
     is_being: bolýar
     not_open_yet: Bu maslahat beriş heniz açylmady
-    'on': 
+    'on':
     opens: Maslahat beriş açyldy
     original_consultation: Hakyky maslahat beriş
     ran_from: Bu maslahat beriş dowam edýär
@@ -216,6 +218,9 @@ tk:
       press_release:
         one: Goýberiliş neşiri
         other: Goýberiliş neşirleri
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Mahabat materialy
         other: Mahabat materialy
@@ -293,54 +298,55 @@ tk:
     social_media_use_html: Biziň syýasatymyz barada %{link} baglanyşygymyzda okaň.
     welsh_language_scheme_html: Niýetimiz barada %{link}-da okaň.
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Goranmak ministrliginiň nyşany
     field_of_operation: Iş meýdany
     operations_in: "%{location} ýerindäki işler"
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Indi elýeter däl
     published_in_error: Bu sahypadaky maglumatlar ýalňyş çap edilendigi üçin aýryldy.
@@ -356,78 +362,79 @@ tk:
       licence_html: 'Bu neşir başgaça bellenilip geçilmese açyk hökümet ygtyýarnamasy v3.0 şertlerinde ygtyýarlandyrylýar. Bu ygtyýarnamany görmek üçin <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3 girip görüň</a> ýa-da Maglumat syýasaty toparyna, Milli arhiw, Kew, London TW9 4DU ýa-da e-poçta ýazyň: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Haýsydyr bir üçünji tarapyň awtorlyk hukugy baradaky maglumatlary kesgitlän ýerimizde, degişli awtorlyk hukugynyň eýelerinden rugsat almaly bolarsyňyz.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
     tk: Türkmen
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Indiki
     previous_page: Öňki
     print_entire_guide: Bütin gollanmany çap et
+    printable_version:
   publication:
     details: Içgin maglumatlar
     documents:
@@ -470,6 +477,7 @@ tk:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ýurduň dürli künjeklerine syýahat etmegiň öňüni alýar.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> tutuş ýurda syýahat etmegiň öňüni alýar.
     context: Daşary ýurda syýahat maslahaty
+    pages:
     still_current_at: Häzir hem bar
     summary: Gysgaça
     updated: Täzelenen

@@ -13,6 +13,8 @@ ro:
   components:
     figure:
       image_credit: 'Autor imagine: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ascundeți toate actualizările
       last_updated: Ultima actualizare %{date}
@@ -267,6 +269,10 @@ ro:
         few:
         one: Comunicat de presă
         other: Comunicate de presă
+      product-safety-alert-report-recall:
+        few:
+        one:
+        other:
       promotional:
         few:
         one: Material promoțional
@@ -367,6 +373,7 @@ ro:
     social_media_use_html: Citiți politica noastră pe %{link}.
     welsh_language_scheme_html: Aflați mai multe despre angajamentul nostru pentru %{link}.
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -502,6 +509,7 @@ ro:
     next_page: Continuare
     previous_page: Înapoi
     print_entire_guide: Imprimați întreg ghidul
+    printable_version:
   publication:
     details: Detalii
     documents:
@@ -545,6 +553,7 @@ ro:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în anumite părți ale țării.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în întreaga țară.
     context: Sfaturi pentru călătoriile în străinătate
+    pages:
     still_current_at: În acest moment la
     summary: Rezumat
     updated: Actualizat

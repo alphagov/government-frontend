@@ -13,6 +13,8 @@ pa:
   components:
     figure:
       image_credit: 'ਚਿੱਤਰ ਕ੍ਰੈਡਿਟ: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ਸਾਰੇ ਅਪਡੇਟਾਂ ਨੂੰ ਲੁਕਾਓ
       last_updated: ਪਿਛਲੀ ਵਾਰ ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ %{date}
@@ -41,7 +43,7 @@ pa:
     feedback_received: ਫੀਡਬੈਕ ਪ੍ਰਾਪਤ ਹੋਇਆ
     is_being: ਹੋ ਰਿਹਾ ਹੈ
     not_open_yet: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਅਜੇ ਖੁੱਲ੍ਹਾ ਨਹੀਂ ਹੈ
-    'on': 
+    'on':
     opens: ਇਹ ਸਲਾਹ ਮਸ਼ਵਰਾ ਖੁੱਲਦਾ ਹੈ
     original_consultation: ਮੂਲ ਸਲਾਹ
     ran_from: ਇਹ ਸਲਾਹ -ਮਸ਼ਵਰਾ ਇਸ ਤੋਂ ਚੱਲਿਆ
@@ -216,6 +218,9 @@ pa:
       press_release:
         one: ਪੱਤਰਕਾਰਾਂ ਨੂੰ ਦਿੱਤੀ ਗਈ ਅਧਕਾਰਿਤ ਰਿਪੋਰਟ
         other: ਪ੍ਰੈਸ ਰਿਲੀਜ਼
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
         other: ਪ੍ਰਚਾਰ ਸਮੱਗਰੀ
@@ -293,54 +298,55 @@ pa:
     social_media_use_html: "%{link} 'ਤੇ ਸਾਡੀ ਨੀਤੀ ਪੜ੍ਹੋ।"
     welsh_language_scheme_html: "%{link} ਪ੍ਰਤੀ ਸਾਡੀ ਵਚਨਬੱਧਤਾ ਬਾਰੇ ਜਾਣੋ।"
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: ਰੱਖਿਆ ਮੰਤਰਾਲਾ ਸਿਖਰ
     field_of_operation: ਕਾਰਜ ਖੇਤਰ
     operations_in: "%{location} ਵਿੱਚ ਕਾਰਜ"
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
     published_in_error: ਇਸ ਪੰਨੇ 'ਤੇ ਜਾਣਕਾਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਗਲਤੀ ਨਾਲ ਪ੍ਰਕਾਸ਼ਤ ਕੀਤਾ ਗਿਆ ਸੀ।
@@ -356,78 +362,79 @@ pa:
       licence_html: 'ਇਹ ਪ੍ਰਕਾਸ਼ਨ ਓਪਨ ਗਵਰਨਮੈਂਟ ਲਾਇਸੈਂਸ v3.0 ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੇ ਅਧੀਨ ਲਾਇਸੈਂਸਸ਼ੁਦਾ ਹੈ, ਸਿਵਾਏ ਜਿੱਥੇ ਹੋਰ ਨਹੀਂ ਕਿਹਾ ਗਿਆ ਹੈ। ਇਸ ਲਾਇਸੈਂਸ ਨੂੰ ਦੇਖਣ ਲਈ, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3"> nationalarchives.gov.uk/doc/open-government-licence/version/3 </a> ਜਾਂ ਸੂਚਨਾ ਨੀਤੀ ਟੀਮ, ਦਿ ਨੈਸ਼ਨਲ ਆਰਕਾਈਵਜ਼, ਕੇਵ, ਲੰਡਨ TW9 4DU, ਜਾਂ ਈਮੇਲ ਨੂੰ ਲਿਖੋ: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
       third_party: ਜਿੱਥੇ ਅਸੀਂ ਕਿਸੇ ਤੀਜੀ ਧਿਰ ਦੀ ਕਾਪੀਰਾਈਟ ਜਾਣਕਾਰੀ ਦੀ ਪਛਾਣ ਕੀਤੀ ਹੈ ਤੁਹਾਨੂੰ ਸਬੰਧਤ ਕਾਪੀਰਾਈਟ ਧਾਰਕਾਂ ਤੋਂ ਇਜਾਜ਼ਤ ਲੈਣ ਦੀ ਜ਼ਰੂਰਤ ਹੋਏਗੀ।
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
     pa: ਪੰਜਾਬੀ ਗੁਰਮੁਖੀ
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: ਅਗਲਾ
     previous_page: ਪਿਛਲਾ
     print_entire_guide: ਸਾਰੀ ਗਾਈਡ ਛਾਪੋ
+    printable_version:
   publication:
     details: ਵੇਰਵੇ
     documents:
@@ -470,6 +477,7 @@ pa:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਦੇਸ਼ ਦੇ ਹਿੱਸਿਆਂ ਦੀ ਹਰ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਸਾਰੇ ਦੇਸ਼ ਦੀ ਸਾਰੀ ਯਾਤਰਾ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।
     context: ਵਿਦੇਸ਼ੀ ਯਾਤਰਾ ਸਲਾਹ
+    pages:
     still_current_at: "'ਤੇ ਅਜੇ ਵੀ ਮੌਜੂਦਾ"
     summary: ਸੰਖੇਪ
     updated: ਅੱਪਡੇਟ ਕੀਤਾ

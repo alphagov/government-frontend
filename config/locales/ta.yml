@@ -13,6 +13,8 @@ ta:
   components:
     figure:
       image_credit: 'பட உதவி: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: அனைத்து புதுப்பித்தல்களையும் மறை
       last_updated: கடைசியாக புதுப்பிக்கப்பட்டது %{date}
@@ -41,7 +43,7 @@ ta:
     feedback_received: மதிப்புரை பெறப்பட்டது
     is_being: இருக்கிறது
     not_open_yet: இந்தக் கலந்தாலோசனை இன்னும் திறக்கப்படவில்லை
-    'on': 
+    'on':
     opens: இந்தக் கலந்தாலோசனை திறக்கிறது
     original_consultation: மூலக் கலந்தாலோசனை
     ran_from: "-லிருந்து இந்தக் கலந்தாலோசனை நடந்தது"
@@ -216,6 +218,9 @@ ta:
       press_release:
         one: செய்திக் குறிப்பு
         other: செய்திக் குறிப்புகள்
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: விளம்பரப் பொருள்
         other: விளம்பரப் பொருள்
@@ -293,54 +298,55 @@ ta:
     social_media_use_html: "%{link}-ல் எங்கள் கொள்கை குறித்து வாசியுங்கள்."
     welsh_language_scheme_html: "%{link}-க்கு எங்கள் கடப்பாடு குறித்துக் கண்டறியுங்கள்."
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: பாதுகாப்பு காவல்துறை அமைச்சர்
     field_of_operation: இயங்குதளம்
     operations_in: "%{location}-ல் செயல்பாடுகள்"
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: இனி கிடைக்காது
     published_in_error: இந்தப் பக்கத்திலிருந்த தகவல்கள் நீக்கப்பட்டுள்ளன. காரணம் அது பிழையாக வெளியிடப்பட்டது.
@@ -356,78 +362,79 @@ ta:
       licence_html: 'வேறு வகையில் குறிப்பிடப்படாதவரையில் இந்த வெளியீடானது திறந்த அரசு உரிமம் v3.0-வின் விதிமுறைகளின்கீழ் உரிமம் பெற்றது. இந்த உரிமத்தைப் பார்வையிட <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> பக்கத்துக்கு வருகைதாருங்கள் அல்லது தகவல் கொள்கைக் குழுவுக்கு The National Archives, Kew, London TW9 4DU என்ற முகவரிக்கு எழுதுங்கள் அல்லது பின்வரும் முகவரிக்கு மின்னஞ்சல் செய்யுங்கள்: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: தொடர்புடைய காப்புரிமைதாரர்களிடமிருந்து அனுமதி பெறுவதற்கு உங்களுக்குத் தேவையான ஏதேனும் மூன்றாம் நபர் காப்புரிமைத் தகவல்கள் நாங்கள் அடையாளம் காணுமிடத்தில்.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
     ta: தமிழ்
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: அடுத்து
     previous_page: முந்தையது
     print_entire_guide: முழு வழிகாட்டுதலையும் அச்செடுக்க
+    printable_version:
   publication:
     details: விபரங்கள்
     documents:
@@ -470,6 +477,7 @@ ta:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
     context: அயல்நாட்டுப் பயண அறிவுரை
+    pages:
     still_current_at: தற்போதும் உள்ளது
     summary: சுருக்கம்
     updated: புதுப்பிக்கப்பட்டது

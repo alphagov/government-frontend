@@ -13,6 +13,8 @@ hi:
   components:
     figure:
       image_credit: 'इमेज क्रेडिट: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: सारे अपडेट छिपाएं
       last_updated: पिछली बार अपडेट किया गया %{date}
@@ -41,7 +43,7 @@ hi:
     feedback_received: फीडबैक प्राप्त हुआ
     is_being: हो रहा है
     not_open_yet: यह परामर्श अभी तक खोला नहीं गया है
-    'on': 
+    'on':
     opens: यह परामर्श खुलता है
     original_consultation: असली परामर्श
     ran_from: यह परामर्श चला था
@@ -216,6 +218,9 @@ hi:
       press_release:
         one: प्रेस विज्ञप्ति
         other: प्रेस विज्ञप्तियां
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: प्रचार सामग्री
         other: प्रचार सामग्री
@@ -293,54 +298,55 @@ hi:
     social_media_use_html: इस बारे में हमारी नीतियां पढ़ें %{link}
     welsh_language_scheme_html: हमारी प्रकाशन के प्रति वचनबद्धता के बारे में जानें %(link)।
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: रक्षा मंत्रालय का क्रेस्ट
     field_of_operation: संचालन का क्षेत्र
     operations_in: "%{location} में संचालन"
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: अब उपलब्ध नहीं है
     published_in_error: इस पेज की जानकारी गलती से प्रकाशित होने की वज़ह से हटा दी गई है।
@@ -356,78 +362,79 @@ hi:
       licence_html: 'यह प्रकाशन ओपन गवर्नमेंट लाइसेंस v3.0 के नियमों के तहत लाइसेंस प्राप्त है, जहां अन्यथा कहा गया है उसे छोड़कर। यह लाइसेंस देखने के लिए, <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> पर जाएं, या Information Policy Team, The National Archives, Kew, London TW9 4DU को लिखें, या ईमेल करें: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>।'
       third_party: जहां हमने किसी तीसरे पक्ष की कॉपीराइट जानकारी को मान्य किया हो, वहां आपको संबंधित कॉपीराइट धारकों से अनुमति लेनी होगी।
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
     hi: हिंदी
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: अगला
     previous_page: पिछला
     print_entire_guide: पूरी गाइड प्रिंट करें
+    printable_version:
   publication:
     details: विवरण
     documents:
@@ -470,6 +477,7 @@ hi:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> देश के कुछ हिस्सों में सभी यात्राओं के विरुद्ध सलाह देता है।
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> देश के पूरे हिस्से में सभी यात्राओं के विरुद्ध सलाह देता है।
     context: विदेश यात्रा का सुझाव
+    pages:
     still_current_at: अभी भी चालू है
     summary: सारांश
     updated: अपडेट किया गया

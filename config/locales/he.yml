@@ -13,6 +13,8 @@ he:
   components:
     figure:
       image_credit: 'קרדיט תמונה: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: להסתיר כל עדכונים
       last_updated: עדכון אחרון %{date}
@@ -41,7 +43,7 @@ he:
     feedback_received: המשוב התקבל
     is_being: להיות
     not_open_yet: הדיון הזה עדיין לא פתוח
-    'on': 
+    'on':
     opens: דיון זה נפתח
     original_consultation: דיון מקורי
     ran_from: דיון זו נערך מ-
@@ -216,6 +218,9 @@ he:
       press_release:
         one: הודעה לעיתונות
         other: הודעות לעיתונות
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: חומר פרסומי
         other: חומר פרסומי
@@ -293,54 +298,55 @@ he:
     social_media_use_html: קרא/י אודות המדיניות שלנו %{link}
     welsh_language_scheme_html: מידע נוסף על המחויבות שלנו לפרסום %{link}
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: סמל משרד הביטחון
     field_of_operation: תחום הפעולה
     operations_in: פעולות ב- %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: כבר לא זמין
     published_in_error: המידע בדף זה הוסר מכיוון שהוא פורסם בטעות.
@@ -358,76 +364,77 @@ he:
   i18n:
     direction: rtl
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
     he: עברית
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: הבא
     previous_page: הקודם
     print_entire_guide: הדפס את כל המדריך
+    printable_version:
   publication:
     details: פרטים
     documents:
@@ -470,6 +477,7 @@ he:
       avoid_all_travel_to_parts_html: ' <abbr title="Foreign and Commonwealth Office">FCO</abbr> ממליץ לא לנסוע לאזורים שונים בארץ.'
       avoid_all_travel_to_whole_country_html: ' <abbr title="Foreign and Commonwealth Office">FCO</abbr> ממליץ לא לטייל בכל רחבי הארץ.'
     context: ייעוץ לטיולי חוץ
+    pages:
     still_current_at: עדיין עדכני ב
     summary: סיכום
     updated: מעודכן

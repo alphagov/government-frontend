@@ -13,6 +13,8 @@ sw:
   components:
     figure:
       image_credit: 'Mpiga picha: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ficha masasisho yote
       last_updated: Ulisasishwa mara ya mwisho tarehe %{date}
@@ -41,7 +43,7 @@ sw:
     feedback_received: Maoni yamepokewa
     is_being: yana
     not_open_yet: Bado mashauriano haya hayajafunguliwa
-    'on': 
+    'on':
     opens: Mashauriano haya yatafunguliwa
     original_consultation: Mashauriano halisi
     ran_from: Mashauriano haya yalifanywa kuanzia
@@ -216,6 +218,9 @@ sw:
       press_release:
         one: Taarifa kwa vyombo vya habari
         other: Taarifa kwa vyombo vya habari
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Nyenzo ya matangazo
         other: Nyenzo ya matangazo
@@ -293,54 +298,55 @@ sw:
     social_media_use_html: Soma sera yetu kwenye %{link}.
     welsh_language_scheme_html: Pata maelezo kuhusu wajibu wetu wa %{link}.
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Eneo la Wizara ya Ulinzi
     field_of_operation: Sehemu ya kazi
     operations_in: Shughuli zinazofanywa katika %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Hayapatikani tena
     published_in_error: Maelezo yaliyo kwenye ukurasa huu yameondolewa kwa sababu yalichapishwa kimakosa.
@@ -356,78 +362,79 @@ sw:
       licence_html: 'Chapisho hili limepewa leseni chini ya sheria na masharti ya Open Government Licence v3.0 isipokuwa ibainishwe vinginevyo. Ili uone leseni, tembelea <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> au andika barua kwa Information Policy Team, The National Archives, Kew, London TW9 4DU au tuma barua pepe: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Tukitambua maelezo yoyote ya hakimiliki ya watu wengine, utahitaji kupata ruhusa kutoka kwa wamiliki wa hakimiliki husika.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
     sw: Kiswahili
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Unaofuata
     previous_page: Uliotangulia
     print_entire_guide: Chapisha mwongozo wote
+    printable_version:
   publication:
     details: Maelezo
     documents:
@@ -470,6 +477,7 @@ sw:
       avoid_all_travel_to_parts_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote katika sehemu fulani za nchi.
       avoid_all_travel_to_whole_country_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote nchini kote.
     context: Ushauri wa safari za nje ya nchi
+    pages:
     still_current_at: Bado unapatikana katika
     summary: Muhtasari
     updated: Ulisasishwa

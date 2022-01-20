@@ -13,6 +13,8 @@ th:
   components:
     figure:
       image_credit: 'เครดิตภาพ: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: ซ่อนอัปเดตทั้งหมด
       last_updated: อัปเดตล่าสุดเมื่อ %{date}
@@ -41,7 +43,7 @@ th:
     feedback_received: ข้อเสนอแนะที่ได้รับ
     is_being: กำลังถูก
     not_open_yet: ยังไม่เปิดการให้คำปรึกษา
-    'on': 
+    'on':
     opens: การให้คำปรึกษานี้เปิดแล้ว
     original_consultation: การให้คำปรึกษาดั้งเดิม
     ran_from: การให้คำปรึกษานี้เริ่มจาก
@@ -64,226 +66,154 @@ th:
       updated: ปรับปรุงแล้ว
     schema_name:
       aaib_report:
-        one: รายงานสาขาการสืบสวนอุบัติเหตุทางอากาศ
         other: รายงานสาขาการสืบสวนอุบัติเหตุทางอากาศ
       announcement:
-        one: ประกาศ
         other: ประกาศ
       asylum_support_decision:
-        one: คำตัดสินของศาลเกี่ยวกับการสนับสนุนผู้ลี้ภัย
         other: คำตัดสินของศาลในการสนับสนุนผู้ลี้ภัย
       authored_article:
-        one: บทความที่มีผู้เขียน
         other: บทความที่มีผู้เขียน
       business_finance_support_scheme:
-        one: โครงการสนับสนุนการเงินแก่ธุรกิจ
         other: โครงการสนับสนุนการเงินแก่ธุรกิจ
       case_study:
-        one: กรณีศึกษา
         other: กรณีศึกษา
       closed_consultation:
-        one: การให้คำปรึกษาที่ปิดแล้ว
         other: การให้คำปรึกษาที่ปิดแล้ว
       cma_case:
-        one: กรณีของหน่วยงานที่มีอำนาจดูแลการแข่งขันและตลาด
         other: กรณีของหน่วยงานที่มีอำนาจดูแลการแข่งขันและตลาด
       coming_soon:
-        one: เร็ว ๆ นี้
         other: เร็ว ๆ นี้
       consultation:
-        one: การให้คำปรึกษา
         other: การให้คำปรึกษา
       consultation_outcome:
-        one: ผลลัพธ์จากการให้คำปรึกษา
         other: ผลลัพธ์จากการให้คำปรึกษา
       corporate_information_page:
-        one: หน้าข้อมูล
         other: หน้าข้อมูล
       corporate_report:
-        one: รายงานของบริษัท
         other: รายงานของบริษัท
       correspondence:
-        one: จดหมายโต้ตอบ
         other: จดหมายโต้ตอบ
       countryside_stewardship_grant:
-        one: เงินทุนเพื่อชนบท
         other: เงินทุนเพื่อชนบท
       decision:
-        one: การตัดสินใจ
         other: การตัดสินใจ
       detailed_guide:
-        one: คำแนะนำ
         other: คำแนะนำ
       dfid_research_output:
-        one: การวิจัยเพื่อผลการพัฒนา
         other: การวิจัยเพื่อผลการพัฒนา
       document_collection:
-        one: คอลเล็กชั่น
         other: คอลเล็กชั่น
       draft_text:
-        one: ข้อความร่าง
         other: ข้อความร่าง
       drug_safety_update:
-        one: ข่าวสารความปลอดภัยของยา
         other: ข่าวสารความปลอดภัยของยา
       employment_appeal_tribunal_decision:
-        one: คำพิพากษาของศาลแรงงานขั้นอุทธรณ์
         other: คำพิพากษาของศาลแรงงานขั้นอุทธรณ์
       employment_tribunal_decision:
-        one: คำพิพากษาของศาลแรงงาน
         other: คำพิพากษาของศาลแรงงาน
       esi_fund:
-        one: กองทุนโครงสร้างและการลงทุนแห่งยุโรป (ESIF)
         other: กองทุนโครงสร้างและการลงทุนแห่งยุโรป (ESIF)
       fatality_notice:
-        one: การแจ้งตาย
         other: การแจ้งตาย
       foi_release:
-        one: การออก FOI
         other: การออก FOI
       form:
-        one: แบบฟอร์ม
         other: แบบฟอร์ม
       government_response:
-        one: คำตอบของรัฐบาล
         other: คำตอบของรัฐบาล
       guidance:
-        one: คำแนะนำ
         other: คำแนะนำ
       impact_assessment:
-        one: การประเมินผลกระทบ
         other: การประเมินผลกระทบ
       imported:
-        one: นำเข้าแล้ว - รอการพิมพ์
         other: นำเข้าแล้ว - รอการพิมพ์
       independent_report:
-        one: รายงานอิสระ
         other: รายงานอิสระ
       international_development_fund:
-        one: ทุนพัฒนาระหว่างประเทศ
         other: ทุนพัฒนาระหว่างประเทศ
       international_treaty:
-        one: สนธิสัญญาระหว่างประเทศ
         other: สนธิสัญญาระหว่างประเทศ
       maib_report:
-        one: รายงานสาขาการสืบสวนอุบัติเหตุทางทะเล
-        other: รายงานสาขาการสืบสวนอุบัติเหตุทางอากาศ
+        other: รายงานสาขาการสืบสวนอุบัติเหตุทางทะเล
       map:
-        one: แผนที่
         other: แผนที่
       medical_safety_alert:
-        one: การแจ้งเตือนและการเรียกคืนยาและเครื่องมือแพทย์
         other: การแจ้งเตือนและการเรียกคืนยาและเครื่องมือแพทย์
       national:
-        one: ประกาศสถิติแห่งชาติ
         other: ประกาศสถิติแห่งชาติ
       national_statistics:
-        one: สถิติแห่งชาติ
         other: สถิติแห่งชาติ
       national_statistics_announcement:
-        one: ประกาศสถิติแห่งชาติ
         other: ประกาศสถิติแห่งชาติ
       news_article:
-        one: บทความข่าว
         other: บทความข่าว
       news_story:
-        one: เนื้อหาข่าว
         other: เนื้อหาข่าว
       notice:
-        one: ประกาศ
         other: ประกาศ
       official:
-        one: ประกาศสถิติของราชการ
         other: ประกาศสถิติของราชการ
       official_statistics:
-        one: สถิติของราชการ
         other: สถิติของราชการ
       official_statistics_announcement:
-        one: ประกาศสถิติของราชการ
         other: ประกาศสถิติของราชการ
       open_consultation:
-        one: การให้คำปรึกษาที่เปิดอยู่
         other: การให้คำปรึกษาที่เปิดอยู่
       oral_statement:
-        one: แถลงการณ์ด้วยวาจาต่อรัฐสภา
         other: แถลงการณ์ด้วยวาจาต่อรัฐสภา
       policy:
-        one: นโยบาย
         other: นโยบาย
       policy_paper:
-        one: เอกสารนโยบาย
         other: เอกสารนโยบาย
       press_release:
-        one: ข่าวประชาสัมพันธ์
         other: ข่าวประชาสัมพันธ์
+      product-safety-alert-report-recall:
+        other:
       promotional:
-        one: สื่อวัสดุส่งเสริมการขาย
         other: สื่อวัสดุส่งเสริมการขาย
       publication:
-        one: สิ่งพิมพ์
         other: สิ่งพิมพ์
       raib_report:
-        one: รายงานสาขาการสืบสวนอุบัติเหตุทางรถไฟ
         other: รายงานสาขาการสืบสวนอุบัติเหตุทางรถไฟ
       regulation:
-        one: ระเบียบข้อบังคับ
         other: ระเบียบข้อบังคับ
       research:
-        one: การวิจัยและการวิเคราะห์
         other: การวิจัยและการวิเคราะห์
       residential_property_tribunal_decision:
-        one: คำพิพากษาของศาลเกี่ยวกับที่อยู่อาศัย
         other: คำพิพากษาของศาลเกี่ยวกับที่อยู่อาศัย
       service_sign_in:
-        one: ลงชื่อเข้าใช้บริการ
         other: ลงชื่อเข้าใช้บริการ
       service_standard_report:
-        one: รายงานมาตรฐานบริการ
         other: รายงานมาตรฐานบริการ
       speaking_notes:
-        one: บันทึกสุนทรพจน์
         other: บันทึกสุนทรพจน์
       speech:
-        one: สุนทรพจน์
         other: สุนทรพจน์
       standard:
-        one: มาตรฐาน
         other: มาตรฐาน
       statement_to_parliament:
-        one: แถลงการณ์ต่อรัฐสภา
         other: แถลงการณ์ต่อรัฐสภา
       statistical_data_set:
-        one: ชุดข้อมูลสถิติ
         other: ชุดข้อมูลสถิติ
       statistics_announcement:
-        one: ประกาศออกข้อมูลสถิติ
         other: ประกาศออกข้อมูลสถิติ
       statutory_guidance:
-        one: คำแนะนำทางกฎหมาย
         other: คำแนะนำทางกฎหมาย
       take_part:
-        one: มีส่วนร่วม
         other: มีส่วนร่วม
       tax_tribunal_decision:
-        one: คำพิพากษาของศาลเกี่ยวกับภาษีอากร
         other: คำพิพากษาของศาลเกี่ยวกับภาษีอากร
       transcript:
-        one: การถอดเสียง
         other: การถอดเสียง
       transparency:
-        one: ข้อมูลความโปร่งใส
         other: ข้อมูลความโปร่งใส
       utaac_decision:
-        one: คำพิพากษาของศาลปกครองขั้นอุทธรณ์
-        other: คำพิพากษาของศาลแรงงานขั้นอุทธรณ์
+        other: คำพิพากษาของศาลปกครองขั้นอุทธรณ์
       world_location_news_article:
-        one: บทความข่าว
         other: บทความข่าว
       world_news_story:
-        one: ข่าวสารรอบโลก
         other: ข่าวสารรอบโลก
       written_statement:
-        one: แถลงการณ์เป็นลายลักษณ์อักษรต่อรัฐสภา
         other: แถลงการณ์เป็นลายลักษณ์อักษรต่อรัฐสภา
   corporate_information_page:
     about_our_services_html: ดูข้อมูลเพิ่มเติมที่ %{link}
@@ -293,54 +223,55 @@ th:
     social_media_use_html: อ่านนโยบายของเราที่ %{link}
     welsh_language_scheme_html: ดูข้อมูลเพิ่มเติมเกี่ยวกับพันธกิจของเราสำหรับ %{link}
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: ตรากระทรวงกลาโหม
     field_of_operation: พื้นที่ปฏิบัติการ
     operations_in: การดำเนินงานใน %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: ไม่มีแล้ว
     published_in_error: ข้อมูลในหน้านี้ถูกนำออกเนื่องจากมีการเผยแพร่โดยความผิดพลาด
@@ -356,82 +287,82 @@ th:
       licence_html: 'สิ่งพิมพ์นี้ได้รับอนุญาตภายใต้ข้อกำหนดของ Open Government License v3.0 เว้นแต่จะระบุไว้เป็นอย่างอื่น เพื่อดูใบอนุญาตนี้ โปรดไปที่ <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> หรือส่งจดหมายถึงInformation Policy Team, The National Archives, Kew, London TW9 4DU หรือส่งอีเมลไปที่: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>'
       third_party: ในกรณีที่เราพบข้อมูลลิขสิทธิ์ของบุคคลที่สามใดๆ คุณจะต้องขอรับการอนุญาตจากผู้ถือลิขสิทธิ์ที่เกี่ยวข้องนั้นๆ
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
     th: ไทย
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: ถัดไป
     previous_page: ก่อนหน้า
     print_entire_guide: พิมพ์คู่มือทั้งฉบับ
+    printable_version:
   publication:
     details: รายละเอียด
     documents:
-      one: เอกสาร
       other: เอกสาร
   service_sign_in:
     continue: ดำเนินการต่อ
@@ -470,6 +401,7 @@ th:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ไม่แนะนำให้เดินทางไปยังบางส่วนของประเทศในทุกกรณี
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ไม่แนะนำให้เดินทางไปทุกส่วนของประเทศในทุกกรณี
     context: คำแนะนำการเดินทางไปต่างประเทศ
+    pages:
     still_current_at: ยังคงเป็นปัจจุบันเมื่อ
     summary: สรุป
     updated: ปรับปรุงแล้ว

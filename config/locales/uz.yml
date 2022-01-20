@@ -13,6 +13,8 @@ uz:
   components:
     figure:
       image_credit: 'График материаллар тақдим этилган: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: Барча янгиланишларни яшириш
       last_updated: Сўнгги янгиланиш %{date}
@@ -41,7 +43,7 @@ uz:
     feedback_received: Шарҳ олинди
     is_being: ҳисобланади
     not_open_yet: Маслаҳат ҳали бошланмади
-    'on': 
+    'on':
     opens: Маслаҳат бошланмоқда
     original_consultation: Дастлабки маслаҳат
     ran_from: Ушбу маслаҳат дан ўтказилган
@@ -216,6 +218,9 @@ uz:
       press_release:
         one: Матбуот-релизи
         other: Матбуот-релизлари
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Реклама материаллари
         other: Реклама материаллари
@@ -293,54 +298,55 @@ uz:
     social_media_use_html: "%{link} да бизнинг сиёсатимиз билан танишинг."
     welsh_language_scheme_html: "%{link} да бизнинг содиқлилигимиз ҳақида билиб олинг ."
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Мудофаа вазирлигининг эмблемаси
     field_of_operation: Фаолият соҳаси
     operations_in: "%{location} да ишлаш"
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Бундан буён йўқ
     published_in_error: Ушбу саҳифадаги маълумот ўчириб юборилган, чунки у хато бўлган.
@@ -356,78 +362,79 @@ uz:
       licence_html: 'Ушбу нашр этиш 3.0 версиядаги Очиқ давлат лицензияси доирасида лицензияланган, агар бошқа шарт кўрсатилмаган бўлса. Лицензия билан танишиш учун <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> сайтларига ташриф буюринг ёки Ахборот сиёсати билан ишлаш бўйича гуруҳга, Миллий архив, Кью, Лондон TW9 4DU, ёки улар билан қуйидаги электрон почта бўйича боғланинг: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Агар учинчи шахсларнинг муаллифлик ҳуқуқлари ҳақида бирон бир маълумот аниқланадиган бўлса, сизга мувофиқ ҳуқуқий ворислардан рухсатнома олишингиз зарур бўлади.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
     uz: Ўзбеклар
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Кейинги
     previous_page: Олдинги
     print_entire_guide: Бутун қўлланмани чоп этишга чиқариш
+    printable_version:
   publication:
     details: Батафсил маълумотлар
     documents:
@@ -470,6 +477,7 @@ uz:
       avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.
       avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> бутун мамлакат ҳудуди бўйлаб сафарларни амалга оширишни тавсия этмайди.
     context: Хорижга сафарларга нисбатан маслаҳат бериш
+    pages:
     still_current_at: Ҳанузгача кучда
     summary: Жамланма маълумот
     updated: Янгиланган

@@ -13,6 +13,8 @@ ne:
   components:
     figure:
       image_credit: 'छवि श्रेय: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: सबै अद्यावधिक लुकाउनुहोस्
       last_updated: पछिल्लो अद्यावधिक %{date}
@@ -41,7 +43,7 @@ ne:
     feedback_received: प्रतिक्रिया प्राप्त भयो
     is_being: हुँदैछ
     not_open_yet: यो परामर्श अझै खुलेको छैन
-    'on': 
+    'on':
     opens: यो परामर्श खुल्छ
     original_consultation: मूल परामर्श
     ran_from: यो परामर्श बाट चलेको हो
@@ -216,6 +218,9 @@ ne:
       press_release:
         one: प्रेस विज्ञप्ति
         other: प्रेस विज्ञप्तिहरू
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: प्रचार सामग्री
         other: प्रचार सामग्री
@@ -293,54 +298,55 @@ ne:
     social_media_use_html: "%{link} मा हाम्रो नीति पढ्नुहोस्।"
     welsh_language_scheme_html: "%{link} को हाम्रो प्रतिबद्धताको बारेमा जानकारी पाउनुहोस्।"
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: रक्षा मन्त्रालय क्रेस्ट
     field_of_operation: सञ्चालन क्षेत्र
     operations_in: "%{location} मा सञ्चालन"
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: अब उपलब्ध छैन
     published_in_error: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित भएको थियो।
@@ -356,78 +362,79 @@ ne:
       licence_html: 'यो प्रकाशन कुनै ठाउँमा तोकिएको बाहेक खुला सरकार इजाजतपत्र v3.0 को शर्तहरु अन्तर्गत इजाजतपत्र प्राप्त छ। यो इजाजतपत्र हेर्नको लागी <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> मा जानुहोस् वा सूचना नीति टोलि, राष्ट्रिय अभिलेखालय, किउ, लन्डन TW9 4DU मा पत्र लेख्नुहोस् वा ईमेल पठाउनुहोस्: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: यदि हामीले कुनै तेस्रो पक्ष प्रतिलिपि अधिकार जानकारीको पहिचान गरेका छौं भने तपाईंले सम्बन्धित प्रतिलिपि अधिकार धारकहरु बाट अनुमति प्राप्त गर्न आवश्यक छ।
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
     ne: नेपाली
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: अर्को
     previous_page: अघिल्लो
     print_entire_guide: सम्पूर्ण गाइड छाप्नुहोस्
+    printable_version:
   publication:
     details: विवरण
     documents:
@@ -470,6 +477,7 @@ ne:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले देशको केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले पुरै देशमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।
     context: विदेश यात्रा सल्लाह
+    pages:
     still_current_at: अहिले सम्म वर्तमानमा
     summary: सारांश
     updated: अद्यावधिक गरियो

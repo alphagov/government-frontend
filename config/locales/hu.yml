@@ -13,6 +13,8 @@ hu:
   components:
     figure:
       image_credit: 'Képaláírás: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: minden frissítés elrejtése
       last_updated: 'Utolsó frissítés: %{date}'
@@ -41,7 +43,7 @@ hu:
     feedback_received: Visszajelzés kézbesítve
     is_being: folyamatban
     not_open_yet: A konzultáció még nem nyitott
-    'on': 
+    'on':
     opens: A konzultáció megnyílik
     original_consultation: Eredeti konzultáció
     ran_from: 'A konzultáció kezdőidőpontja:'
@@ -216,6 +218,9 @@ hu:
       press_release:
         one: Sajtóközlemény
         other: Sajtóközlemények
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Promóciós anyag
         other: Promóciós anyagok
@@ -293,54 +298,55 @@ hu:
     social_media_use_html: 'Bővebb információk az alábbi témával kapcsolatban: %{link}'
     welsh_language_scheme_html: 'Tájékozódjon az információk közzétételével kapcsolatos elkötelezettségünkről: %{link}'
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: A Védelmi Minisztérium címere
     field_of_operation: Működési terület
     operations_in: 'Tevékenységek itt: %{location}'
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Már nem elérhető
     published_in_error: Az ezen az oldalon található információ eltávolításra került, mivel közzététele hiba volt.
@@ -356,78 +362,79 @@ hu:
       licence_html: 'A jelen kiadvány licenceit a Nyílt Közigazgatási Engedélyek 3.0 biztosítja, kivéve, ha másként van jelölve. A licenc megtekintéséhez látogassa meg a(z)  <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> vagy írjon az Információkezeléssel foglalkozó Csapatnak, The National Archives, Kew, London TW9 4DU, vagy e-mailt a következő címre: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Enegdélyt kell kérnie az érintett szerzői jogok tulajdonosaitól abban az esetben, ha harmadik fél szerzői jogi információkat közöltünk.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
     hu: Magyar
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Következő
     previous_page: Előző
     print_entire_guide: Teljes útmutató nyomtatása
+    printable_version:
   publication:
     details: Részletek
     documents:
@@ -470,6 +477,7 @@ hu:
       avoid_all_travel_to_parts_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az ország bizonyos részeire semmilyen körülmények között ne utazzanak.
       avoid_all_travel_to_whole_country_html: A <abbr title="Foreign and Commonwealth Office">FCO</abbr> azt javasolja, hogy az országba semmilyen körülmények között ne utazzanak.
     context: Külföldi utazásra vonatkozó tanácsok
+    pages:
     still_current_at: 'Még érvényben itt:'
     summary: Összefoglalás
     updated: Frissítve

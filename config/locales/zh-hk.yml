@@ -13,6 +13,8 @@ zh-hk:
   components:
     figure:
       image_credit: 圖片來源： %{credit}
+    print_link:
+      text:
     published_dates:
       hide_all_updates: 隱藏所有更新
       last_updated: 最近更新 %{date}
@@ -41,7 +43,7 @@ zh-hk:
     feedback_received: 已收到之回饋意見
     is_being: 正在進行
     not_open_yet: 諮詢仍未開始
-    'on': 
+    'on':
     opens: 本次諮詢開始
     original_consultation: 原有諮詢
     ran_from: 本次諮詢開始於
@@ -216,6 +218,9 @@ zh-hk:
       press_release:
         one: 新聞稿
         other: 其他新聞稿
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: 宣傳資料
         other: 其他宣傳資料
@@ -293,54 +298,55 @@ zh-hk:
     social_media_use_html: 查閱我們在 %{link} 的政策。
     welsh_language_scheme_html: 查閱我們在 %{link} 的發佈承諾。
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: 國防部徽章
     field_of_operation: 行動領域
     operations_in: 行動位置 %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: 不再提供
     published_in_error: 本頁面之資訊可移除，因其發佈錯誤。
@@ -356,78 +362,79 @@ zh-hk:
       licence_html: 本出版品依據 Open Government Licence v3.0 之條款授權，但另有說明者除外。要查閱此一許可證，請訪問 <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> 或致函 Information Policy Team, The National Archives, Kew, London TW9 4DU，或寄電郵至： <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>。
       third_party: 如我們發現任何第三方之版權資訊，您將需獲得有關版權人之許可。
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
-    fi: 
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
     zh-hk: 中文
-    zh-tw: 
+    zh-tw:
   multi_page:
     next_page: 下一項
     previous_page: 上一項
     print_entire_guide: 列印完整指引
+    printable_version:
   publication:
     details: 詳情
     documents:
@@ -470,6 +477,7 @@ zh-hk:
       avoid_all_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國部份地區。
       avoid_all_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國全部地區。
     context: 海外旅行建議
+    pages:
     still_current_at: 目前仍在
     summary: 摘要
     updated: 已更新

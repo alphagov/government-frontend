@@ -13,6 +13,8 @@ sk:
   components:
     figure:
       image_credit: 'Obrázok: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: skryť všetky aktualizácie
       last_updated: Posledná aktualizácia %{date}
@@ -267,6 +269,10 @@ sk:
         few:
         one: Tlačová správa
         other: Tlačové správy
+      product-safety-alert-report-recall:
+        few:
+        one:
+        other:
       promotional:
         few:
         one: Propagačné materiály
@@ -367,6 +373,7 @@ sk:
     social_media_use_html: Prečítajte si naše zásady na %{link}.
     welsh_language_scheme_html: Prečítajte si o našom záväzku voči %{link}.
   email:
+    already_subscribed_title:
     description_html:
     subscribe_title:
     unsubscribe_title:
@@ -502,6 +509,7 @@ sk:
     next_page: Ďalšie
     previous_page: Predchádzajúce
     print_entire_guide: Vytlačiť celú príručku
+    printable_version:
   publication:
     details: Podrobnosti na
     documents:
@@ -545,6 +553,7 @@ sk:
       avoid_all_travel_to_parts_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do niektorých častí krajiny.
       avoid_all_travel_to_whole_country_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do všetkých častí krajiny.
     context: Poradenstvo pri cestovaní do zahraničia
+    pages:
     still_current_at: Stále aktuálne na
     summary: Zhrnutie
     updated: Aktualizované

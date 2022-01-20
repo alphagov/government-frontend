@@ -13,6 +13,8 @@ fi:
   components:
     figure:
       image_credit: 'Kuvaluotto: %{credit}'
+    print_link:
+      text:
     published_dates:
       hide_all_updates: piilota kaikki päivitykset
       last_updated: Viimeksi päivitetty %{date}
@@ -41,7 +43,7 @@ fi:
     feedback_received: Palaute Vastaanotettu
     is_being: osoitteessa
     not_open_yet: Tämä kuuleminen ei ole vielä auki
-    'on': 
+    'on':
     opens: Tämä kuuleminen avautuu
     original_consultation: Alkuperäinen kuuleminen
     ran_from: Tämä kuuleminen kesti
@@ -216,6 +218,9 @@ fi:
       press_release:
         one: Lehdistötiedote
         other: Lehdistötiedotteet
+      product-safety-alert-report-recall:
+        one:
+        other:
       promotional:
         one: Myynninedistämismateriaali
         other: Myynninedistämismateriaali
@@ -293,54 +298,55 @@ fi:
     social_media_use_html: Lue käytäntömme osoitteesta %{link}.
     welsh_language_scheme_html: Tutustu sitoumukseemme %{link}.
   email:
-    description_html: 
-    subscribe_title: 
-    unsubscribe_title: 
+    already_subscribed_title:
+    description_html:
+    subscribe_title:
+    unsubscribe_title:
   fatality_notice:
     alt_text: Puolustusministeriön vaakuna
     field_of_operation: Toiminta -alue
     operations_in: Toiminnot paikassa %{location}
   get_involved:
-    civil_service: 
-    civil_service_quarterly: 
-    closed: 
-    closed_consultations: 
-    closes: 
-    closing_today: 
-    closing_tomorrow: 
-    days_left: 
-    engage_with_gov: 
-    fcdo_bloggers: 
-    follow: 
-    follow_links: 
-    follow_paragraph: 
-    gds_blog: 
-    gov_past: 
+    civil_service:
+    civil_service_quarterly:
+    closed:
+    closed_consultations:
+    closes:
+    closing_today:
+    closing_tomorrow:
+    days_left:
+    engage_with_gov:
+    fcdo_bloggers:
+    follow:
+    follow_links:
+    follow_paragraph:
+    gds_blog:
+    gov_past:
     intro_paragraph:
-      body_html: 
-      engage_with_government: 
-      take_part: 
-    join_ics: 
-    make_donation: 
-    more_ways: 
-    neighbourhood_watch: 
-    open_consultations: 
-    page_heading: 
-    page_title: 
+      body_html:
+      engage_with_government:
+      take_part:
+    join_ics:
+    make_donation:
+    more_ways:
+    neighbourhood_watch:
+    open_consultations:
+    page_heading:
+    page_title:
     petition_paragraph:
-      body_html: 
-      create_a_petition: 
-    read_respond: 
-    recent_outcomes: 
-    recently_opened: 
-    respond_to_consultations: 
-    school_overseas: 
-    search_all: 
-    see_all_dept: 
-    start_a_petition: 
-    take_part: 
-    take_part_suggestions: 
-    your_views: 
+      body_html:
+      create_a_petition:
+    read_respond:
+    recent_outcomes:
+    recently_opened:
+    respond_to_consultations:
+    school_overseas:
+    search_all:
+    see_all_dept:
+    start_a_petition:
+    take_part:
+    take_part_suggestions:
+    your_views:
   gone:
     page_title: Ei ole enää käytettävissä
     published_in_error: Tämän sivun tiedot on poistettu, koska ne on julkaistu virheellisesti.
@@ -356,78 +362,79 @@ fi:
       licence_html: 'Tämä julkaisu on lisensoitu Open Government Licence v3.0 lisenssin ehdoilla, ellei toisin mainita. Voit tutustua tähän lisenssiin osoitteessa <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> tai kirjallisesti osoitteeseen Information Policy Team, Kansallisarkisto, Kew, Lontoo TW9 4DU, tai sähköpostitse: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
       third_party: Jos olemme tunnistaneet kolmannen osapuolen tekijänoikeustietoja, sinun on hankittava lupa tekijänoikeuksien haltijoilta huolestunut.
   i18n:
-    direction: 
+    direction:
   language_names:
-    ar: 
-    az: 
-    be: 
-    bg: 
-    bn: 
-    cs: 
-    cy: 
-    da: 
-    de: 
-    dr: 
-    el: 
-    en: 
-    es: 
-    es-419: 
-    et: 
-    fa: 
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
     fi: Viimeiste
-    fr: 
-    gd: 
-    gu: 
-    he: 
-    hi: 
-    hr: 
-    hu: 
-    hy: 
-    id: 
-    is: 
-    it: 
-    ja: 
-    ka: 
-    kk: 
-    ko: 
-    lt: 
-    lv: 
-    ms: 
-    mt: 
-    ne: 
-    nl: 
-    'no': 
-    pa: 
-    pa-pk: 
-    pl: 
-    ps: 
-    pt: 
-    ro: 
-    ru: 
-    si: 
-    sk: 
-    sl: 
-    so: 
-    sq: 
-    sr: 
-    sv: 
-    sw: 
-    ta: 
-    th: 
-    tk: 
-    tr: 
-    uk: 
-    ur: 
-    uz: 
-    vi: 
-    yi: 
-    zh: 
-    zh-hk: 
-    zh-tw: 
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
   multi_page:
     next_page: Seuraava
     previous_page: Edellinen
     print_entire_guide: Tulosta koko opas
+    printable_version:
   publication:
     details: Yksityiskohdat
     documents:
@@ -470,6 +477,7 @@ fi:
       avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja osissa maata.
       avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja koko maahan.
     context: Ulkomaan matkustusneuvonta
+    pages:
     still_current_at: Vielä ajankohtainen klo
     summary: Yhteenveto
     updated: Päivitetty
