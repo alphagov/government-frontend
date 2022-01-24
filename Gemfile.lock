@@ -174,7 +174,7 @@ GEM
     jasmine_selenium_runner (3.0.0)
       jasmine (~> 3.0)
       selenium-webdriver (~> 3.8)
-    json (2.5.1)
+    json (2.6.1)
     json-schema (2.8.1)
       addressable (>= 2.4)
     kgio (2.11.4)
@@ -194,7 +194,7 @@ GEM
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2021.1115)
+    mime-types-data (3.2022.0105)
     mini_magick (4.10.1)
     mini_mime (1.1.2)
     mini_portile2 (2.7.1)
@@ -333,7 +333,7 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
     simplecov-html (0.12.3)
-    slimmer (15.6.1)
+    slimmer (16.0.0)
       activesupport
       json
       nokogiri (~> 1.7)
