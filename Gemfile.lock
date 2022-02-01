@@ -333,7 +333,7 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
     simplecov-html (0.12.3)
-    slimmer (16.0.0)
+    slimmer (16.0.1)
       activesupport
       json
       nokogiri (~> 1.7)
@@ -389,7 +389,7 @@ GEM
       thor
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.5.3)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   ruby
