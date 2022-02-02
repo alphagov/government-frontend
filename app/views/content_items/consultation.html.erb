@@ -196,11 +196,7 @@
         %>
       </div>
 
-    <%= render 'components/published-dates', {
-        published: @content_item.published,
-        last_updated: @content_item.updated,
-        history: @content_item.history
-      } %>
+      <%= render 'shared/published_dates_with_notification_button' %>
     </div>
   </div>
   <%= render 'shared/sidebar_navigation' %>
