@@ -1,4 +1,7 @@
-<% brexit_child_taxon ||= nil %>
+<%
+  brexit_child_taxon ||= nil
+  history = @content_item.history || nil
+%>
 
 <%= render 'components/published-dates', {
     published: @content_item.published,
@@ -6,7 +9,7 @@
     history: @content_item.history,
     margin_bottom: 3,
   } unless brexit_child_taxon %>
-<%= render 'govuk_publishing_components/components/single_page_notification_button', {
+<%= render 'components/single_page_notification_button', {
     base_path: @content_item.base_path,
     js_enhancement: @include_single_page_notification_button_js,
     button_location: "bottom",

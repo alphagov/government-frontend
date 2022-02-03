@@ -26,6 +26,9 @@ th:
       show_all: แสดงทั้งหมด
     share_links:
       share_this_page: แชร์หน้านี้
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: และ
     another_website_html: การให้คำปรึกษา %{closed} นี้จัดขึ้นใน <a href="%{url}">เว็บไซต์อื่น</a>

@@ -26,6 +26,9 @@ pl:
       show_all: pokaż wszystkie
     share_links:
       share_this_page: Udostępnij tę stronę
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: i
     another_website_html: Te konsultacje %{closed} odbyły się na <a href="%{url}">innej stronie internetowej</a>

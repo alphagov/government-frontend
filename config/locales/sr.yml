@@ -26,6 +26,9 @@ sr:
       show_all: prikaži sve
     share_links:
       share_this_page: Podeli ovu stranicu
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: i
     another_website_html: Ove konsultacije %{closed} se održavaju na <a href="%{url}">drugom veb-sajtu</a>

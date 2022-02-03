@@ -26,6 +26,9 @@ cs:
       show_all: zobrazit vše
     share_links:
       share_this_page: Sdílet tuto stránku
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: a
     another_website_html: Tato konzultace %{closed} se konala na <a href="%{url}">jiné webové stránce</a>

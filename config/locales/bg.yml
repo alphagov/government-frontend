@@ -26,6 +26,9 @@ bg:
       show_all: показване на всички
     share_links:
       share_this_page: Споделяне на тази страница
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: и
     another_website_html: Тази консултация %{closed} се намира на <a href="%{url}">друг уебсайт</a>

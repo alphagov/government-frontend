@@ -26,6 +26,9 @@ et:
       show_all: kuva kõik
     share_links:
       share_this_page: Jaga seda lehte
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: ja
     another_website_html: See konsultatsioon %{closed} toimus <a href="%{url}">teisel veebisaidil</a>

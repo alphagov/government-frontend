@@ -26,6 +26,9 @@ fi:
       show_all: näytä kaikki
     share_links:
       share_this_page: Jaa tämä sivu
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: ja
     another_website_html: Tämä kuuleminen %{closed} järjestettiin toisella <a href="%{url}">averkkosivustolla</a>

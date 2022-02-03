@@ -26,6 +26,9 @@ es:
       show_all: mostrar todo
     share_links:
       share_this_page: Compartir esta página
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: y
     another_website_html: Esta consulta %{closed} se realizó en <a href='%{url}'>otro sitio web</a>

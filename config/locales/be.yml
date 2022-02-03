@@ -26,6 +26,9 @@ be:
       show_all: 'паказаць усе '
     share_links:
       share_this_page: Падзяліцца гэтай старонкай
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: і
     another_website_html: Гэта кансультацыя %{closed}  праводзілася на <a href="%{url}">іншым сайце</a>

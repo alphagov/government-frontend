@@ -26,6 +26,9 @@ en:
       show_all: show all
     share_links:
       share_this_page: Share this page
+    single_page_notification_button:
+      subscribe_text: Get emails about this page
+      unsubscribe_text: Stop getting emails about this page
   consultation:
     and: and
     another_website_html: This consultation %{closed} held on <a href="%{url}">another website</a>

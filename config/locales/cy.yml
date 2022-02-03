@@ -26,6 +26,9 @@ cy:
       show_all: dangos popeth
     share_links:
       share_this_page: Rhannu'r dudalen hon
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: a
     another_website_html: Cynhaliwyd yr ymgynghoriad hwn %{closed} ar <a href="%{url}">wefan arall</a>

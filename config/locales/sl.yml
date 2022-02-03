@@ -26,6 +26,9 @@ sl:
       show_all: prikaži vse
     share_links:
       share_this_page: Deli to stran
+    single_page_notification_button:
+      subscribe_text:
+      unsubscribe_text:
   consultation:
     and: in
     another_website_html: To posvetovanje %{closed} poteka na <a href="%{url}">drugi spletni strani</a>
