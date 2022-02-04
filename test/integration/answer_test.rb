@@ -28,4 +28,9 @@ class AnswerTest < ActionDispatch::IntegrationTest
     assert_equal faq_schema["name"], @content_item["title"]
     assert_not_equal faq_schema["mainEntity"], []
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("answer")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

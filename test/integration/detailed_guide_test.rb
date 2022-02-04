@@ -131,4 +131,14 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_equal "brexit-citizen-page", track_category
     assert_equal "Guidance nav link", track_label
   end
+
+  test "renders with the single page notification button" do
+    setup_and_visit_content_item("detailed_guide")
+    assert page.has_css?(".gem-c-single-page-notification-button")
+  end
+
+  test "does not render the single page notification button on exempt pages" do
+    setup_and_visit_notification_exempt_page("detailed_guide")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

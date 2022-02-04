@@ -38,4 +38,9 @@ class SpeechTest < ActionDispatch::IntegrationTest
 
     assert_footer_has_published_dates("Published 8 March 2016")
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("speech")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

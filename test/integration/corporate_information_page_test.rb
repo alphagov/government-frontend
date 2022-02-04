@@ -86,4 +86,9 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-notice__title", text: "This information page was withdrawn on 9 August 2014")
     assert page.has_css?(".gem-c-notice", text: "This is out of date")
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("corporate_information_page")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

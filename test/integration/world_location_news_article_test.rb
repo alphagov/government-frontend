@@ -47,4 +47,9 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
       assert page.has_text?("This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
     end
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("world_location_news_article")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

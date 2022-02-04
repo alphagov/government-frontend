@@ -26,4 +26,9 @@ class CaseStudyTest < ActionDispatch::IntegrationTest
       assert page.has_css?("time[datetime='#{@content_item['withdrawn_notice']['withdrawn_at']}']")
     end
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("translated")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end
