@@ -1,9 +1,9 @@
-ARG base_image=ruby:2.7.2
+ARG base_image=ruby:2.7.2-slim
 
 FROM $base_image AS builder
 
 ENV RAILS_ENV=production
-
+# TODO: have a separate build image which already contains the build-only deps.
 RUN apt-get update -qy && \
     apt-get upgrade -y && \
     apt-get install -y build-essential nodejs && \
@@ -22,7 +22,7 @@ RUN bundle config set deployment 'true' && \
     bundle install --jobs 4 --retry=2
 
 COPY . /app
-
+# TODO: We probably don't want assets in the image; remove this once we have a proper deployment process which uploads to (e.g.) S3.
 RUN GOVUK_APP_DOMAIN=www.gov.uk \
     GOVUK_WEBSITE_ROOT=https://www.gov.uk \
     bundle exec rails assets:precompile
