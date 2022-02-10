@@ -38,8 +38,6 @@ RUN apt-get update -qy && \
 
 WORKDIR /app
 
-HEALTHCHECK CMD curl --silent --fail localhost:$PORT/healthcheck/ready || exit 1
-
 COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
 COPY --from=builder /app ./
 
