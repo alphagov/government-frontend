@@ -1,8 +1,5 @@
 (function (global) {
-  'use strict'
-  var $ = global.jQuery
-  if (typeof global.GOVUK === 'undefined') { global.GOVUK = {} }
-  var GOVUK = global.GOVUK
+  var GOVUK = global.GOVUK || {}
 
   function Webchat (options) {
     var POLL_INTERVAL = 5 * 1000
@@ -15,10 +12,10 @@
       'OFFLINE',
       'ONLINE'
     ]
-    var $el = $(options.$el)
-    var openUrl = $el.attr('data-open-url')
-    var availabilityUrl = $el.attr('data-availability-url')
-    var $openButton = $el.find('.js-webchat-open-button')
+    var el = options.$el[0]
+    var openUrl = el.getAttribute('data-open-url')
+    var availabilityUrl = el.getAttribute('data-availability-url')
+    var redirectUrl = el.getAttribute('data-redirect')
     var webchatStateClass = 'js-webchat-advisers-'
     var intervalID = null
     var lastRecordedState = null
@@ -27,26 +24,38 @@
       if (!availabilityUrl || !openUrl) {
         throw Error.new('urls for webchat not defined')
       }
-      $openButton.on('click', handleOpenChat)
+
+      if (redirectUrl === true) {
+        var openButton = document.getElementsByClassName('.js-webchat-open-button')[0]
+        openButton.addEventListener('click', handleOpenChat)
+      }
       intervalID = setInterval(checkAvailability, POLL_INTERVAL)
       checkAvailability()
     }
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      this.dataset.redirect === 'true' ? window.location.href = openUrl : global.open(openUrl, 'newwin', 'width=366,height=516')
+      var redirect = this.getAttribute('data-redirect')
+      redirect === 'true' ? window.location.href = openUrl : window.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
     function checkAvailability () {
-      var ajaxConfig = {
-        url: availabilityUrl,
-        type: 'GET',
-        timeout: AJAX_TIMEOUT,
-        success: apiSuccess,
-        error: apiError
+      var request = new XMLHttpRequest()
+      request.open('GET', availabilityUrl, true)
+      request.setRequestHeader('Access-Control-Allow-Header', '*')
+      request.timeout = AJAX_TIMEOUT
+      request.send()
+
+      request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+          if (request.status === 0 || (request.status > 200 && request.status < 400)) {
+            apiSuccess(request.response.json)
+          } else {
+            apiError()
+          }
+        }
       }
-      $.ajax(ajaxConfig)
     }
 
     function apiSuccess (result) {
@@ -90,9 +99,13 @@
 
     function advisorStateChange (state) {
       state = state.toLowerCase()
-      var currentState = $el.find('.' + webchatStateClass + state)
-      $el.find('[class^="' + webchatStateClass + '"]').addClass('govuk-!-display-none')
-      currentState.removeClass('govuk-!-display-none')
+      var currentState = el.querySelectorAll('[class^="' + webchatStateClass + state + '"]')[0]
+      var allStates = el.querySelectorAll('[class^="' + webchatStateClass + '"]')
+
+      for (var index = 0; index < allStates.length; index++) {
+        allStates[index].classList.add('govuk-!-display-none')
+      }
+      currentState.classList.remove('govuk-!-display-none')
       trackEvent(state)
     }
 

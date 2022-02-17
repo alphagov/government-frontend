@@ -57,17 +57,17 @@ describe('Webchat', function () {
     }
 
     it('should poll for availability', function () {
-      spyOn($, 'ajax')
+      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
+      spyOn(XMLHttpRequest.prototype, 'send').and.callThrough()
       mount()
       expect(
-        $.ajax
-      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
+        XMLHttpRequest.prototype.open
+      ).toHaveBeenCalledWith('GET', CHILD_BENEFIT_API_URL, true)
     })
 
     it('should inform user whether advisors are available', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedAvailable)
-      })
+      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
+      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedAvailable)
       mount()
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
 
@@ -77,9 +77,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether advisors are unavailable', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedUnavailable)
-      })
+      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
+      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedUnavailable)
       mount()
       expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(false)
 
@@ -89,9 +88,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether advisors are busy', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedBusy)
-      })
+      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
+      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedBusy)
       mount()
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(false)
 
@@ -101,9 +99,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether there was an error', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedError)
-      })
+      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
+      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedError)
       mount()
       expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
 
@@ -113,22 +110,12 @@ describe('Webchat', function () {
     })
 
     it('should only track once per state change', function () {
-      var returns = [
-        jsonNormalisedAvailable,
-        jsonNormalisedError,
-        jsonNormalisedError,
-        jsonNormalisedError,
-        jsonNormalisedError
-      ]
       var analyticsExpects = ['available', 'error']
       var analyticsReceived = []
-      var returnsNumber = 0
       var analyticsCalled = 0
       var clock = lolex.install()
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(returns[returnsNumber])
-        returnsNumber++
-      })
+      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
+      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedAvailable)
 
       spyOn(GOVUK.analytics, 'trackEvent').and.callFake(function (webchatKey, webchatValue) {
         analyticsReceived.push(webchatValue)
