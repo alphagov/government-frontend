@@ -26,7 +26,13 @@
   <% if @content_item.description %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
-
+  <% if ENV["GOOGLE_TAG_MANAGER_ID"] %>
+     <%= render "govuk_publishing_components/components/google_tag_manager_script", {
+       gtm_id: ENV["GOOGLE_TAG_MANAGER_ID"],
+       gtm_auth: ENV["GOOGLE_TAG_MANAGER_AUTH"],
+       gtm_preview: ENV["GOOGLE_TAG_MANAGER_PREVIEW"]
+     } %>
+  <% end %>
   <%= yield :extra_head_content %>
 </head>
 <body>
