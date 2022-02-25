@@ -55,7 +55,6 @@ Components specific to government-frontend are [within the application](https://
 
 ### Further documentation
 
-- [Visual regression tests](docs/visual-regression-tests.md)
 - [Webchat](docs/webchat.md)
 
 ## Licence
