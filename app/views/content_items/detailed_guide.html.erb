@@ -73,12 +73,16 @@
           <%= link_to(
               brexit_child_taxon[:nav_link][:text],
               brexit_child_taxon[:nav_link][:path],
-              class: "govuk-link",
+              class: "govuk-link gtm-tracking-link",
               data: {
                 track_action: brexit_child_taxon[:nav_link][:path],
                 track_category: brexit_child_taxon[:nav_link][:track_category],
                 track_label: brexit_child_taxon[:nav_link][:track_label],
-                module: 'gem-track-click',
+                gtmevent: "nav-link-clicked",
+                gtmtext: brexit_child_taxon[:nav_link][:text],
+                gtmurl: brexit_child_taxon[:nav_link][:path],
+                gtmlabel: brexit_child_taxon[:nav_link][:track_label],
+                module: 'gem-track-click gtm-tracking',
               }) %>.
         </p>
       </div>
