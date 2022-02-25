@@ -14,9 +14,17 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
 
   test "can render attachments using their metadata" do
     @content_item = PublicationPresenter.new(
-      { "details" => { "attachments" => [{ "id" => "attachment_id",
-                                           "title" => "Some title",
-                                           "url" => "some/url" }] } },
+      {
+        "content_id" => "doc_content_id",
+        "details" => {
+          "attachments" => [
+            { "id" => "attachment_id",
+              "title" => "Some title",
+              "url" => "some/url",
+              "alternative_format_contact_email" => "alternative.formats@education.gov.uk" },
+          ],
+        },
+      },
       "/publication",
       ApplicationController.new.view_context,
     )
@@ -30,6 +38,7 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
 
     assert_includes rendered, "gem-c-attachment"
     assert_includes rendered, "Some title"
+    assert_includes rendered, "href=\"/contact/govuk/request-accessible-format?content_id=doc_content_id&amp;attachment_id=attachment_id"
   end
 
   test "it prioritises pre-rendered attachments" do
