@@ -28,7 +28,7 @@ class DevelopmentController < ApplicationController
                        working_group
                        world_location_news_article]
 
-    @paths = YAML.load_file("test/wraith/config.yaml")["paths"]
+    @paths = YAML.load_file(Rails.root.join("config/govuk_examples.yml"))
   end
 
 private
