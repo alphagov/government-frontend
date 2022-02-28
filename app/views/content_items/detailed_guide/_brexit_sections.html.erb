@@ -14,7 +14,11 @@
           track_action: link[:path],
           track_category: brexit_child_taxon[:sections][:track_category],
           track_label: section[:title][:text] || "",
-          module: 'gem-track-click',
+          gtmevent: "section-link-clicked",
+          gtmtext: section[:title][:text] || "",
+          gtmurl: link[:path],
+          gtmlabel: brexit_child_taxon[:sections][:track_category],
+          module: 'gem-track-click gtm-tracking',
         })
       end
     %>
