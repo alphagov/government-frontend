@@ -47,13 +47,10 @@ describe('Webchat', function () {
 
   describe('on valid application locations', function () {
     function mount () {
-      $webchat.map(function () {
-        return new GOVUK.Webchat({
-          $el: $(this),
-          location: '/government/organisations/hm-revenue-customs/contact/child-benefit',
-          pollingEnabled: true
-        })
-      })
+      var webchats = document.querySelectorAll('.js-webchat')
+      for (var i = 0; i < webchats.length; i++) {
+        new GOVUK.Webchat(webchats[i])
+      }
     }
 
     it('should poll for availability', function () {

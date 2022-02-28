@@ -1,7 +1,7 @@
 (function (global) {
   var GOVUK = global.GOVUK || {}
 
-  function Webchat (options) {
+  function Webchat (el) {
     var POLL_INTERVAL = 5 * 1000
     var AJAX_TIMEOUT = 5 * 1000
     var API_STATES = [
@@ -12,7 +12,6 @@
       'OFFLINE',
       'ONLINE'
     ]
-    var el = options.$el[0]
     var openUrl = el.getAttribute('data-open-url')
     var availabilityUrl = el.getAttribute('data-availability-url')
     var redirectUrl = el.getAttribute('data-redirect')
