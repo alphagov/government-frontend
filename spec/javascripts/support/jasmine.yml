@@ -14,6 +14,7 @@ src_files:
   - "spec/javascripts/vendor/jquery-1.12.4.js"
   - "spec/javascripts/vendor/jasmine-jquery-2.0.5.js"
   - "spec/javascripts/vendor/lolex.js"
+  - "spec/javascripts/vendor/jasmine-ajax-3.4.0.js"
   - "assets/application.js"
   - "assets/webchat.js"
 
