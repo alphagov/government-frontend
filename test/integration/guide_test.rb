@@ -164,6 +164,11 @@ class GuideTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("guide")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
+
   def once_voting_has_closed
     Timecop.freeze(Time.zone.local(2021, 5, 6, 22, 0, 0))
     yield

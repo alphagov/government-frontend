@@ -48,4 +48,9 @@ class ContactTest < ActionDispatch::IntegrationTest
     assert page.has_css?("h2#post-title")
     assert page.has_css?(".street-address")
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("contact")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

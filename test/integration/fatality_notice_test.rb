@@ -78,4 +78,9 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       assert page.has_text?("This content is not factually correct. For current information please go to")
     end
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("fatality_notice")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

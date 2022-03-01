@@ -64,6 +64,11 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("link[type*='atom'][href='#{@content_item['base_path']}.atom']", visible: false)
   end
 
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("full-country")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
+
   def setup_and_visit_travel_advice_part(name, part)
     @content_item = get_content_example(name).tap do |item|
       stub_content_store_has_item("#{item['base_path']}/#{part}", item.to_json)

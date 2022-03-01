@@ -67,4 +67,9 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_not page.has_text?(StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE)
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("official_statistics")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

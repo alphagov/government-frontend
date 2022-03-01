@@ -54,4 +54,9 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
 
     assert_not page.has_css?(".gem-c-contents-list")
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("long")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

@@ -178,4 +178,9 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       text: "See all EU Withdrawal Act 2018 statutory instruments",
     )
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("aaib-reports")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

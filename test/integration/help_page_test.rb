@@ -18,4 +18,9 @@ class HelpPageTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?('meta[name="robots"][content="noindex"]', visible: false)
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_content_item("help_page")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

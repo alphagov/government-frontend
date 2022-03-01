@@ -103,4 +103,9 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?(".gem-c-notice__title", text: "This publication was withdrawn on 9 August 2014")
   end
+
+  test "does not render with the single page notification button" do
+    setup_and_visit_html_publication("published")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end

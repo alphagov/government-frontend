@@ -91,4 +91,14 @@ class PublicationTest < ActionDispatch::IntegrationTest
       },
     ])
   end
+
+  test "renders with the single page notification button" do
+    setup_and_visit_content_item("publication")
+    assert page.has_css?(".gem-c-single-page-notification-button")
+  end
+
+  test "does not render the single page notification button on exempt pages" do
+    setup_and_visit_notification_exempt_page("publication")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
 end
