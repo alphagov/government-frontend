@@ -40,11 +40,9 @@
     }
 
     function checkAvailability () {
-      var done = function (e) {
-        if (request.readyState === 4 && request.status === 200) {
-          var data = JSON.parse(e.target.response)
-          console.log(data)
-          apiSuccess(request.response.json)    
+      var done = function () {
+        if (request.readyState === 4 && request.status === 'success') {
+          apiSuccess(request)    
         } else {
           apiError()
         }
@@ -54,23 +52,9 @@
       request.open('GET', availabilityUrl, true)
       request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
       request.addEventListener('load', done.bind(this))
+      request.timeout = AJAX_TIMEOUT
 
       request.send()
-
-      // request.open('GET', availabilityUrl, true)
-      // request.setRequestHeader('Access-Control-Allow-Header', '*')
-      // request.timeout = AJAX_TIMEOUT
-      // request.send()
-
-      request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-          if (request.status === 0 || (request.status > 200 && request.status < 400)) {
-            apiSuccess(request.response.json)
-          } else {
-            apiError()
-          }
-        }
-      }
     }
 
     function apiSuccess (result) {

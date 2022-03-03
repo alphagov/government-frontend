@@ -34,15 +34,20 @@ describe('Webchat', function () {
   var jsonNormalisedAvailable = jsonNormalised('success', 'AVAILABLE')
   var jsonNormalisedUnavailable = jsonNormalised('success', 'UNAVAILABLE')
   var jsonNormalisedBusy = jsonNormalised('success', 'BUSY')
-  var jsonNormalisedError = '404 not found'
+  var jsonNormalisedError = [404, {}, "404 not found"]
 
   beforeEach(function () {
+    jasmine.Ajax.install()
     setFixtures(INSERTION_HOOK)
     $webchat = $('.js-webchat')
     $advisersUnavailable = $webchat.find('.js-webchat-advisers-unavailable')
     $advisersBusy = $webchat.find('.js-webchat-advisers-busy')
     $advisersAvailable = $webchat.find('.js-webchat-advisers-available')
     $advisersError = $webchat.find('.js-webchat-advisers-error')
+  })
+
+  afterEach(function () {
+    jasmine.Ajax.uninstall()
   })
 
   describe('on valid application locations', function () {
@@ -63,9 +68,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether advisors are available', function () {
-      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
-      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedAvailable)
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedAvailable)
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
@@ -74,9 +78,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether advisors are unavailable', function () {
-      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
-      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedUnavailable)
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedUnavailable)
       expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
@@ -85,9 +88,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether advisors are busy', function () {
-      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
-      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedBusy)
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedBusy)
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
@@ -96,9 +98,9 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether there was an error', function () {
-      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
-      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedError)
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedError)
+
       expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
@@ -111,8 +113,6 @@ describe('Webchat', function () {
       var analyticsReceived = []
       var analyticsCalled = 0
       var clock = lolex.install()
-      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
-      spyOn(XMLHttpRequest.prototype, 'send').and.returnValue(jsonNormalisedAvailable)
 
       spyOn(GOVUK.analytics, 'trackEvent').and.callFake(function (webchatKey, webchatValue) {
         analyticsReceived.push(webchatValue)
@@ -120,6 +120,8 @@ describe('Webchat', function () {
       })
 
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedAvailable)
+
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
@@ -127,6 +129,7 @@ describe('Webchat', function () {
       expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
 
       clock.tick(POLL_INTERVAL)
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedError)
 
       expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
