@@ -42,7 +42,7 @@
     function checkAvailability () {
       var done = function () {
         if (request.readyState === 4 && request.status === 'success') {
-          apiSuccess(request)    
+          apiSuccess(request)
         } else {
           apiError()
         }

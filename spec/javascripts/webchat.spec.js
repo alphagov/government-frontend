@@ -34,7 +34,7 @@ describe('Webchat', function () {
   var jsonNormalisedAvailable = jsonNormalised('success', 'AVAILABLE')
   var jsonNormalisedUnavailable = jsonNormalised('success', 'UNAVAILABLE')
   var jsonNormalisedBusy = jsonNormalised('success', 'BUSY')
-  var jsonNormalisedError = [404, {}, "404 not found"]
+  var jsonNormalisedError = [404, {}, '404 not found']
 
   beforeEach(function () {
     jasmine.Ajax.install()
@@ -54,7 +54,7 @@ describe('Webchat', function () {
     function mount () {
       var webchats = document.querySelectorAll('.js-webchat')
       for (var i = 0; i < webchats.length; i++) {
-        new GOVUK.Webchat(webchats[i])
+        GOVUK.Webchat(webchats[i])
       }
     }
 
