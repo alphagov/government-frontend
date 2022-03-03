@@ -1,8 +1,6 @@
 //= require ./webchat/library.js
 
-var $ = window.$
-
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
   var GOVUK = window.GOVUK
   if (GOVUK.Webchat) {
     var webchats = document.querySelectorAll('.js-webchat')
