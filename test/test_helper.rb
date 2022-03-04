@@ -201,6 +201,15 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def setup_and_visit_a_page_with_specific_base_path(name, base_path, content_id = nil)
+    @content_item = get_content_example(name).tap do |item|
+      item["content_id"] = content_id if content_id.present?
+      item["base_path"] = base_path
+      stub_content_store_has_item(item["base_path"], item.to_json)
+      visit_with_cachebust(item["base_path"])
+    end
+  end
+
   def brexit_citizen_id
     ContentItem::BrexitTaxons::BREXIT_CITIZEN_PAGE_CONTENT_ID
   end
