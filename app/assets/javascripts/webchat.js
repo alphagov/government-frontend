@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (GOVUK.Webchat) {
     var webchats = document.querySelectorAll('.js-webchat')
     for (var i = 0; i < webchats.length; i++) {
-      GOVUK.Webchat(webchats[i])
+      /* eslint-disable no-new */
+      new GOVUK.Webchat(webchats[i])
     }
   }
 })
