@@ -41,15 +41,9 @@
 
     function checkAvailability () {
       var done = function () {
-        console.log('request', request)
-        console.log('request.response', request.response)
         if (request.readyState === 4 && request.status === 200) {
-          console.log('done, apiSuccess')
-          console.log('done, request.response', request.response)
-          console.log('done, request.response json parse', JSON.parse(request.response))
           apiSuccess(JSON.parse(request.response))
         } else {
-          console.log('done, apiError')
           apiError()
         }
       }
@@ -66,50 +60,33 @@
     function apiSuccess (result) {
       var validState, state
 
-      console.log('result', result)
       if (Object.prototype.hasOwnProperty.call(result, 'inHOP')) {
-        console.log('Has inHOP property')
         validState = API_STATES.indexOf(result.status.toUpperCase()) !== -1
-        console.log('validState in inHOP check', validState)
         state = validState ? result.status : 'ERROR'
-        console.log('state in inHOP check', state)
         if (result.inHOP === 'true') {
-          console.log('result.inHOP is true')
           if (result.availability === 'true') {
-            console.log('result.availability is true')
             if (result.status === 'online') {
-              console.log('result.status is online')
               state = 'AVAILABLE'
             }
             if (result.status === 'busy') {
-              console.log('result.status is busy')
               state = 'AVAILABLE'
             }
             if (result.status === 'offline') {
-              console.log('result.status is offline')
               state = 'UNAVAILABLE'
             }
           } else {
-            console.log('result.availability is false')
             if (result.status === 'busy') {
-              console.log('result.status is busy')
               state = 'BUSY'
             } else {
-              console.log('else result.status is set to unavailable')
               state = 'UNAVAILABLE'
             }
           }
         } else {
-          console.log('result.inHOP is false')
           state = 'UNAVAILABLE'
         }
       } else {
-        console.log('No inHOP property')
-        console.log('result.response', result.response)
         validState = API_STATES.indexOf(result.response) !== -1
-        console.log('validState', validState)
         state = validState ? result.response : 'ERROR'
-        console.log('state', state)
       }
       advisorStateChange(state)
     }
