@@ -1,10 +1,7 @@
 (function (global) {
-  'use strict'
-  var $ = global.jQuery
-  if (typeof global.GOVUK === 'undefined') { global.GOVUK = {} }
-  var GOVUK = global.GOVUK
+  var GOVUK = global.GOVUK || {}
 
-  function Webchat (options) {
+  function Webchat (el) {
     var POLL_INTERVAL = 5 * 1000
     var AJAX_TIMEOUT = 5 * 1000
     var API_STATES = [
@@ -15,10 +12,9 @@
       'OFFLINE',
       'ONLINE'
     ]
-    var $el = $(options.$el)
-    var openUrl = $el.attr('data-open-url')
-    var availabilityUrl = $el.attr('data-availability-url')
-    var $openButton = $el.find('.js-webchat-open-button')
+    var openUrl = el.getAttribute('data-open-url')
+    var availabilityUrl = el.getAttribute('data-availability-url')
+    var openButton = document.querySelector('.js-webchat-open-button')
     var webchatStateClass = 'js-webchat-advisers-'
     var intervalID = null
     var lastRecordedState = null
@@ -27,14 +23,18 @@
       if (!availabilityUrl || !openUrl) {
         throw Error.new('urls for webchat not defined')
       }
-      $openButton.on('click', handleOpenChat)
+
+      if (openButton) {
+        openButton.addEventListener('click', handleOpenChat)
+      }
       intervalID = setInterval(checkAvailability, POLL_INTERVAL)
       checkAvailability()
     }
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      this.dataset.redirect === 'true' ? window.location.href = openUrl : global.open(openUrl, 'newwin', 'width=366,height=516')
+      var redirect = this.getAttribute('data-redirect')
+      redirect === 'true' ? window.location.href = openUrl : window.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
