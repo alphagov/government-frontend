@@ -20,6 +20,8 @@ class ContentItemPresenter
 
   attr_accessor :include_collections_in_other_publisher_metadata
 
+  USER_RESEARCH_PAGES = %w[register-for-self-assessment self-employed-records income-tax-rates].freeze
+
   def initialize(content_item, requested_path, view_context)
     @content_item = content_item
     @requested_path = requested_path
@@ -85,6 +87,10 @@ class ContentItemPresenter
 
   def show_phase_banner?
     phase.in?(%w[alpha beta])
+  end
+
+  def show_study_banner?
+    USER_RESEARCH_PAGES.include?(slug)
   end
 
   def render_guide_as_single_page?
