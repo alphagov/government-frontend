@@ -90,9 +90,13 @@
 
     function advisorStateChange (state) {
       state = state.toLowerCase()
-      var currentState = $el.find('.' + webchatStateClass + state)
-      $el.find('[class^="' + webchatStateClass + '"]').addClass('govuk-!-display-none')
-      currentState.removeClass('govuk-!-display-none')
+      var currentState = el.querySelector('[class^="' + webchatStateClass + state + '"]')
+      var allStates = el.querySelectorAll('[class^="' + webchatStateClass + '"]')
+
+      for (var index = 0; index < allStates.length; index++) {
+        allStates[index].classList.add('govuk-!-display-none')
+      }
+      currentState.classList.remove('govuk-!-display-none')
       trackEvent(state)
     }
 
