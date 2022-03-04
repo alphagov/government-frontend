@@ -41,8 +41,13 @@
 
     function checkAvailability () {
       var done = function () {
-        if (request.readyState === 4 && request.status === 'success') {
-          apiSuccess(request)
+        console.log('request', request)
+        console.log('request.response', request.response)
+        if (request.readyState === 4 && request.status === 200) {
+          console.log('done, apiSuccess')
+          console.log('done, request.response', request.response)
+          console.log('done, request.response json parse', JSON.parse(request.response))
+          apiSuccess(JSON.parse(request.response))
         } else {
           console.log('done, apiError')
           apiError()

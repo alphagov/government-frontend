@@ -26,8 +26,8 @@ describe('Webchat', function () {
 
   var jsonNormalised = function (status, response) {
     return {
-      status: status,
-      response: response
+      status: 200,
+      response: '{"status":"' + status + '","response":"' + response + '"}'
     }
   }
 
