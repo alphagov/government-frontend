@@ -39,14 +39,21 @@
     }
 
     function checkAvailability () {
-      var ajaxConfig = {
-        url: availabilityUrl,
-        type: 'GET',
-        timeout: AJAX_TIMEOUT,
-        success: apiSuccess,
-        error: apiError
+      var done = function () {
+        if (request.readyState === 4 && request.status === 200) {
+          apiSuccess(JSON.parse(request.response))
+        } else {
+          apiError()
+        }
       }
-      $.ajax(ajaxConfig)
+
+      var request = new XMLHttpRequest()
+      request.open('GET', availabilityUrl, true)
+      request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+      request.addEventListener('load', done.bind(this))
+      request.timeout = AJAX_TIMEOUT
+
+      request.send()
     }
 
     function apiSuccess (result) {
