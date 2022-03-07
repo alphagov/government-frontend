@@ -169,6 +169,22 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 
+  test "does not render intervention banner by default" do
+    setup_and_visit_content_item("guide")
+
+    assert_not page.has_css?(".gem-c-intervention")
+  end
+
+  test "renders intervention banner on specific page" do
+    user_research_pages = %w[register-for-self-assessment self-employed-records income-tax-rates]
+
+    user_research_pages.each do |banner_page|
+      setup_and_visit_a_page_with_specific_base_path("guide", "/#{banner_page}")
+    end
+
+    assert page.has_css?(".gem-c-intervention")
+  end
+
   def once_voting_has_closed
     Timecop.freeze(Time.zone.local(2021, 5, 6, 22, 0, 0))
     yield
