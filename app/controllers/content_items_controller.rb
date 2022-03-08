@@ -13,6 +13,8 @@ class ContentItemsController < ApplicationController
 
   attr_accessor :content_item, :taxonomy_navigation
 
+  helper_method :show_email_subscription_success_banner?
+
   def show
     load_content_item
 
@@ -44,6 +46,10 @@ class ContentItemsController < ApplicationController
 
       redirect_to service_url(selected[:url])
     end
+  end
+
+  def show_email_subscription_success_banner?
+    @account_flash.include?("email-subscription-success") || @account_flash.include?("email-unsubscribe-success") || @account_flash.include?("email-subscription-already-subscribed")
   end
 
 private
