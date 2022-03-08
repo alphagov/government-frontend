@@ -21,7 +21,7 @@
 
     function init () {
       if (!availabilityUrl || !openUrl) {
-        throw Error.new('urls for webchat not defined')
+        throw Error.new('urls for webchat not defined', window.location.href)
       }
 
       if (openButton) {
