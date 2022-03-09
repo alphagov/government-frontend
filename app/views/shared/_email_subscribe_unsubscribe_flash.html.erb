@@ -1,24 +1,12 @@
-<% banner_heading = capture do %>
-  <%
-    if @account_flash.include?("email-subscription-success")
-      sanitize(t("email.subscribe_title"))
-    elsif @account_flash.include?("email-unsubscribe-success")
-      sanitize(t("email.unsubscribe_title"))
-    elsif @account_flash.include?("email-subscription-already-subscribed")
-      sanitize(t("email.already_subscribed_title"))
-    end
-  %>
-<% end %>
-
 <% banner_description = capture do %>
   <a class="govuk-link govuk-notification-banner__link" href="/email/manage"><%= t("email.description") %></a>
 <% end %>
 
-<% if show_email_subscription_success_banner? %>
+<% if show_email_subscription_success_banner?(@account_flash) %>
   <div class="govuk-grid-row govuk-!-margin-top-3">
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/success_alert", {
-        message: banner_heading,
+        message: email_subscription_success_banner_heading(@account_flash),
         description: banner_description,
         margin_bottom: 0,
       } %>
