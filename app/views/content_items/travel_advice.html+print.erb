@@ -31,10 +31,10 @@
 
     <% @content_item.parts.each_with_index do |part, i| %>
       <section>
-        <h1 class="part-title">
-          <%= part['title'] %>
-        </h1>
-
+        <%= render "govuk_publishing_components/components/heading", {
+          text: part['title'],
+          margin_bottom: 3
+        } %>
         <%= render 'shared/travel_advice_summary', content_item: @content_item if i == 0 %>
 
         <%= render 'govuk_publishing_components/components/govspeak',
