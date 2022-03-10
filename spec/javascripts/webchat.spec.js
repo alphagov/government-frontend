@@ -26,17 +26,18 @@ describe('Webchat', function () {
 
   var jsonNormalised = function (status, response) {
     return {
-      status: status,
-      response: response
+      status: 200,
+      response: '{"status":"' + status + '","response":"' + response + '"}'
     }
   }
 
   var jsonNormalisedAvailable = jsonNormalised('success', 'AVAILABLE')
   var jsonNormalisedUnavailable = jsonNormalised('success', 'UNAVAILABLE')
   var jsonNormalisedBusy = jsonNormalised('success', 'BUSY')
-  var jsonNormalisedError = '404 not found'
+  var jsonNormalisedError = [404, {}, '404 not found']
 
   beforeEach(function () {
+    jasmine.Ajax.install()
     setFixtures(INSERTION_HOOK)
     $webchat = $('.js-webchat')
     $advisersUnavailable = $webchat.find('.js-webchat-advisers-unavailable')
@@ -45,30 +46,31 @@ describe('Webchat', function () {
     $advisersError = $webchat.find('.js-webchat-advisers-error')
   })
 
+  afterEach(function () {
+    jasmine.Ajax.uninstall()
+  })
+
   describe('on valid application locations', function () {
     function mount () {
-      $webchat.map(function () {
-        return new GOVUK.Webchat({
-          $el: $(this),
-          location: '/government/organisations/hm-revenue-customs/contact/child-benefit',
-          pollingEnabled: true
-        })
-      })
+      var webchats = document.querySelectorAll('.js-webchat')
+      for (var i = 0; i < webchats.length; i++) {
+        /* eslint-disable no-new */
+        new GOVUK.Webchat(webchats[i])
+      }
     }
 
     it('should poll for availability', function () {
-      spyOn($, 'ajax')
+      spyOn(XMLHttpRequest.prototype, 'open').and.callThrough()
+      spyOn(XMLHttpRequest.prototype, 'send').and.callThrough()
       mount()
       expect(
-        $.ajax
-      ).toHaveBeenCalledWith({ url: CHILD_BENEFIT_API_URL, type: 'GET', timeout: jasmine.any(Number), success: jasmine.any(Function), error: jasmine.any(Function) })
+        XMLHttpRequest.prototype.open
+      ).toHaveBeenCalledWith('GET', CHILD_BENEFIT_API_URL, true)
     })
 
     it('should inform user whether advisors are available', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedAvailable)
-      })
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedAvailable)
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
@@ -77,10 +79,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether advisors are unavailable', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedUnavailable)
-      })
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedUnavailable)
       expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
@@ -89,10 +89,8 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether advisors are busy', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedBusy)
-      })
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedBusy)
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
@@ -101,10 +99,9 @@ describe('Webchat', function () {
     })
 
     it('should inform user whether there was an error', function () {
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(jsonNormalisedError)
-      })
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedError)
+
       expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
@@ -113,22 +110,10 @@ describe('Webchat', function () {
     })
 
     it('should only track once per state change', function () {
-      var returns = [
-        jsonNormalisedAvailable,
-        jsonNormalisedError,
-        jsonNormalisedError,
-        jsonNormalisedError,
-        jsonNormalisedError
-      ]
       var analyticsExpects = ['available', 'error']
       var analyticsReceived = []
-      var returnsNumber = 0
       var analyticsCalled = 0
       var clock = lolex.install()
-      spyOn($, 'ajax').and.callFake(function (options) {
-        options.success(returns[returnsNumber])
-        returnsNumber++
-      })
 
       spyOn(GOVUK.analytics, 'trackEvent').and.callFake(function (webchatKey, webchatValue) {
         analyticsReceived.push(webchatValue)
@@ -136,6 +121,8 @@ describe('Webchat', function () {
       })
 
       mount()
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedAvailable)
+
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
 
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
@@ -143,6 +130,7 @@ describe('Webchat', function () {
       expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
 
       clock.tick(POLL_INTERVAL)
+      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedError)
 
       expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)

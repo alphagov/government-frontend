@@ -1,10 +1,7 @@
 (function (global) {
-  'use strict'
-  var $ = global.jQuery
-  if (typeof global.GOVUK === 'undefined') { global.GOVUK = {} }
-  var GOVUK = global.GOVUK
+  var GOVUK = global.GOVUK || {}
 
-  function Webchat (options) {
+  function Webchat (el) {
     var POLL_INTERVAL = 5 * 1000
     var AJAX_TIMEOUT = 5 * 1000
     var API_STATES = [
@@ -15,38 +12,48 @@
       'OFFLINE',
       'ONLINE'
     ]
-    var $el = $(options.$el)
-    var openUrl = $el.attr('data-open-url')
-    var availabilityUrl = $el.attr('data-availability-url')
-    var $openButton = $el.find('.js-webchat-open-button')
+    var openUrl = el.getAttribute('data-open-url')
+    var availabilityUrl = el.getAttribute('data-availability-url')
+    var openButton = document.querySelector('.js-webchat-open-button')
     var webchatStateClass = 'js-webchat-advisers-'
     var intervalID = null
     var lastRecordedState = null
 
     function init () {
       if (!availabilityUrl || !openUrl) {
-        throw Error.new('urls for webchat not defined')
+        throw Error.new('urls for webchat not defined', window.location.href)
       }
-      $openButton.on('click', handleOpenChat)
+
+      if (openButton) {
+        openButton.addEventListener('click', handleOpenChat)
+      }
       intervalID = setInterval(checkAvailability, POLL_INTERVAL)
       checkAvailability()
     }
 
     function handleOpenChat (evt) {
       evt.preventDefault()
-      this.dataset.redirect === 'true' ? window.location.href = openUrl : global.open(openUrl, 'newwin', 'width=366,height=516')
+      var redirect = this.getAttribute('data-redirect')
+      redirect === 'true' ? window.location.href = openUrl : window.open(openUrl, 'newwin', 'width=366,height=516')
       trackEvent('opened')
     }
 
     function checkAvailability () {
-      var ajaxConfig = {
-        url: availabilityUrl,
-        type: 'GET',
-        timeout: AJAX_TIMEOUT,
-        success: apiSuccess,
-        error: apiError
+      var done = function () {
+        if (request.readyState === 4 && request.status === 200) {
+          apiSuccess(JSON.parse(request.response))
+        } else {
+          apiError()
+        }
       }
-      $.ajax(ajaxConfig)
+
+      var request = new XMLHttpRequest()
+      request.open('GET', availabilityUrl, true)
+      request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+      request.addEventListener('load', done.bind(this))
+      request.timeout = AJAX_TIMEOUT
+
+      request.send()
     }
 
     function apiSuccess (result) {
@@ -90,9 +97,13 @@
 
     function advisorStateChange (state) {
       state = state.toLowerCase()
-      var currentState = $el.find('.' + webchatStateClass + state)
-      $el.find('[class^="' + webchatStateClass + '"]').addClass('govuk-!-display-none')
-      currentState.removeClass('govuk-!-display-none')
+      var currentState = el.querySelector('[class^="' + webchatStateClass + state + '"]')
+      var allStates = el.querySelectorAll('[class^="' + webchatStateClass + '"]')
+
+      for (var index = 0; index < allStates.length; index++) {
+        allStates[index].classList.add('govuk-!-display-none')
+      }
+      currentState.classList.remove('govuk-!-display-none')
       trackEvent(state)
     }
 
