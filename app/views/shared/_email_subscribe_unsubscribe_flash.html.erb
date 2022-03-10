@@ -1,29 +1,13 @@
-<% if @account_flash.include?("email-subscription-success") %>
+<% banner_description = capture do %>
+  <a class="govuk-link govuk-notification-banner__link" href="/email/manage"><%= t("email.description") %></a>
+<% end %>
+
+<% if show_email_subscription_success_banner?(@account_flash) %>
   <div class="govuk-grid-row govuk-!-margin-top-3">
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/success_alert", {
-        message: sanitize(t("email.subscribe_title")),
-        description: sanitize(t("email.description_html")),
-        margin_bottom: 0,
-      } %>
-    </div>
-  </div>
-<% elsif @account_flash.include?("email-unsubscribe-success") %>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-3">
-      <%= render "govuk_publishing_components/components/success_alert", {
-        message: sanitize(t("email.unsubscribe_title")),
-        description: sanitize(t("email.description_html")),
-        margin_bottom: 0,
-      } %>
-    </div>
-  </div>
-<% elsif @account_flash.include?("email-subscription-already-subscribed") %>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-3">
-      <%= render "govuk_publishing_components/components/success_alert", {
-        message: sanitize(t("email.already_subscribed_title")),
-        description: sanitize(t("email.description_html")),
+        message: email_subscription_success_banner_heading(@account_flash),
+        description: banner_description,
         margin_bottom: 0,
       } %>
     </div>
