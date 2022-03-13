@@ -7,6 +7,11 @@ module ContentItem
       a457220c-915c-4cb1-8e41-9191fba42540
       5f9c6c15-7631-11e4-a3cb-005056011aef
       c72228d4-e277-4ad8-a7b3-e58c32a249d0
+      0ea26b38-7858-46f3-8774-72aaffbdf9be
+      912cb994-4ed6-448d-9632-af3910491fc0
+      3aa39dfe-642c-47df-bb86-39a64f9c1d58
+      cd539d2b-aade-4495-bcad-7b8ab963270b
+      29d4e5c4-cc10-4e69-837a-2e2622acf074
     ].freeze
 
     ALLOWED_DOCUMENT_TYPES = %w[
