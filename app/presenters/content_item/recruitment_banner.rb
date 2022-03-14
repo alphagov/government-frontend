@@ -1,9 +1,23 @@
 module ContentItem
   module RecruitmentBanner
-    USER_RESEARCH_PAGES = %w[register-for-self-assessment self-employed-records income-tax-rates].freeze
+    SURVEY_URLS = { "/browse/tax" => "https://GDSUserResearch.optimalworkshop.com/treejack/724268fr-1" }.freeze
 
-    def show_study_banner?
-      USER_RESEARCH_PAGES.include?(slug)
+    def recruitment_survey_url
+      key = SURVEY_URLS.keys.find{ |k| content_tagged_to(k).present? }
+      SURVEY_URLS[key]
+    end
+
+  private
+
+    def mainstream_browse_pages
+      content_item["links"]["mainstream_browse_pages"] if content_item["links"]
+    end
+
+    def content_tagged_to(browse_base_path)
+      return [] unless mainstream_browse_pages
+      mainstream_browse_pages.find do |mainstream_browse_page|
+        mainstream_browse_page["base_path"].starts_with? browse_base_path
+      end
     end
   end
 end

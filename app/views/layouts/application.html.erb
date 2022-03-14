@@ -31,11 +31,11 @@
 </head>
 <body>
   <div id="wrapper" class="<%= wrapper_class %>">
-    <% if @content_item.show_study_banner? %>
+    <% if @content_item.recruitment_survey_url %>
       <%= render "govuk_publishing_components/components/intervention", {
         suggestion_text: "Help improve GOV.UK",
         suggestion_link_text: "Take part in user research",
-        suggestion_link_url: "https://GDSUserResearch.optimalworkshop.com/treejack/lb5eu75l",
+        suggestion_link_url: @content_item.recruitment_survey_url,
         new_tab: true,
       } %>
     <% elsif @content_item.show_phase_banner? %>
