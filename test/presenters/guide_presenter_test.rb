@@ -11,7 +11,6 @@ class GuidePresenterTest
     end
 
     test "presents unique page titles for each part" do
-      assert_equal presented_item.page_title, schema_item["title"]
       schema_item["details"]["parts"].each do |part|
         assert_equal presented_item("guide", part["slug"]).page_title, "#{schema_item['title']}: #{part['title']}"
       end
@@ -19,7 +18,7 @@ class GuidePresenterTest
 
     test "presents withdrawn in the title for withdrawn content" do
       presented_item = presented_item(schema_name, nil, "withdrawn_notice" => { "explanation": "Withdrawn", "withdrawn_at": "2014-08-22T10:29:02+01:00" })
-      assert_equal "[Withdrawn] The national curriculum", presented_item.page_title
+      assert_equal "[Withdrawn] The national curriculum: Overview", presented_item.page_title
     end
 
     test "presents a print link" do

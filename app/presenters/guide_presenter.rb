@@ -4,7 +4,7 @@ class GuidePresenter < ContentItemPresenter
   attr_accessor :draft_access_token
 
   def page_title
-    if @part_slug
+    if parts.any?
       "#{super}: #{current_part_title}"
     else
       super
