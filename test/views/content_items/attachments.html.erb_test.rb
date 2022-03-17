@@ -21,7 +21,7 @@ class ContentItemsAttachmentsTest < ActionView::TestCase
             { "id" => "attachment_id",
               "title" => "Some title",
               "url" => "some/url",
-              "alternative_format_contact_email" => "alternative.formats@education.gov.uk" },
+              "alternative_format_contact_email" => "govuk_publishing_components@example.com" },
           ],
         },
       },
