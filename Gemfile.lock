@@ -110,7 +110,7 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     govuk_ab_testing (2.4.2)
-    govuk_app_config (4.4.2)
+    govuk_app_config (4.4.3)
       logstasher (>= 1.2.2, < 2.2.0)
       prometheus_exporter (~> 2.0.2)
       puma (~> 5.0)
