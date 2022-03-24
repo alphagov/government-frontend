@@ -70,7 +70,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
-    brakeman (5.0.4)
+    brakeman (5.2.1)
     builder (3.2.4)
     capybara (3.33.0)
       addressable
@@ -131,12 +131,11 @@ GEM
       sprockets (< 4)
     govuk_schemas (4.3.0)
       json-schema (~> 2.8.0)
-    govuk_test (2.3.0)
+    govuk_test (3.0.0)
       brakeman (>= 5.0.2)
       capybara
       puma
       selenium-webdriver (>= 3.142)
-      webdrivers (>= 4)
     hashdiff (1.0.1)
     highline (2.0.3)
     htmlentities (4.3.4)
@@ -296,7 +295,7 @@ GEM
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
-    rubyzip (2.3.0)
+    rubyzip (2.3.2)
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
