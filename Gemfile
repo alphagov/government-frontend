@@ -40,6 +40,5 @@ group :test do
   gem "mocha"
   gem "simplecov"
   gem "timecop"
-  gem "webdrivers"
   gem "webmock", require: false
 end

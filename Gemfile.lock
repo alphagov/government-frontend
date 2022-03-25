@@ -82,7 +82,7 @@ GEM
       xpath (~> 3.2)
     childprocess (3.0.0)
     coderay (1.1.3)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
@@ -121,14 +121,14 @@ GEM
     govuk_personalisation (0.11.2)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (28.9.2)
+    govuk_publishing_components (29.0.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
       plek
       rails (>= 6)
       rouge
-      sprockets (< 4)
+      sprockets (>= 3)
     govuk_schemas (4.3.0)
       json-schema (~> 2.8.0)
     govuk_test (3.0.0)
@@ -168,7 +168,7 @@ GEM
     json-schema (2.8.1)
       addressable (>= 2.4)
     kgio (2.11.4)
-    kramdown (2.3.1)
+    kramdown (2.3.2)
       rexml
     link_header (0.0.8)
     logstasher (2.1.5)
@@ -330,7 +330,7 @@ GEM
       plek (>= 1.1.0)
       rack
       rest-client
-    sprockets (3.7.2)
+    sprockets (4.0.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.4.2)
@@ -354,10 +354,6 @@ GEM
     unicorn (5.8.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    webdrivers (4.4.1)
-      nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
-      selenium-webdriver (>= 3.0, < 4.0)
     webmock (3.8.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -405,7 +401,6 @@ DEPENDENCIES
   slimmer
   timecop
   uglifier
-  webdrivers
   webmock
 
 BUNDLED WITH
