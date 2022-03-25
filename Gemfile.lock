@@ -354,10 +354,6 @@ GEM
     unicorn (5.8.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    webdrivers (4.4.1)
-      nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
-      selenium-webdriver (>= 3.0, < 4.0)
     webmock (3.8.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -405,7 +401,6 @@ DEPENDENCIES
   slimmer
   timecop
   uglifier
-  webdrivers
   webmock
 
 BUNDLED WITH
