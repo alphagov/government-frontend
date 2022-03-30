@@ -57,6 +57,6 @@ Components specific to government-frontend are [within the application](https://
 
 - [Webchat](docs/webchat.md)
 
-## Licence
+## License
 
-[MIT License](LICENCE)
+[MIT License](LICENSE)
