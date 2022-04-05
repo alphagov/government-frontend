@@ -6,9 +6,9 @@ ENV RAILS_ENV=production
 # TODO: have a separate build image which already contains the build-only deps.
 RUN apt-get update -qy && \
     apt-get upgrade -y && \
-    apt-get install -y build-essential nodejs && \
-    apt-get clean 
-    
+    apt-get install -y build-essential nodejs git && \
+    apt-get clean
+
 RUN bundle config set force_ruby_platform true
 
 RUN mkdir /app

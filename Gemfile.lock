@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/alphagov/govuk_app_config.git
+  revision: 4c7198b26acdb096be318c7aa343d46f02b7728d
+  branch: main
+  specs:
+    govuk_app_config (4.4.3)
+      logstasher (~> 2.1)
+      prometheus_exporter (~> 2.0)
+      puma (~> 5.6)
+      sentry-rails (~> 5.2)
+      sentry-ruby (~> 5.2)
+      statsd-ruby (~> 1.5)
+      unicorn (~> 6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -96,10 +110,6 @@ GEM
     execjs (2.7.0)
     faker (2.13.0)
       i18n (>= 1.6, < 2)
-    faraday (2.2.0)
-      faraday-net_http (~> 2.0)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.1)
     ffi (1.15.5)
     gds-api-adapters (79.1.0)
       addressable
@@ -110,14 +120,6 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     govuk_ab_testing (2.4.2)
-    govuk_app_config (4.4.3)
-      logstasher (>= 1.2.2, < 2.2.0)
-      prometheus_exporter (~> 2.0.2)
-      puma (~> 5.0)
-      sentry-rails (~> 4.5.0)
-      sentry-ruby (~> 4.5.0)
-      statsd-ruby (~> 1.5.0)
-      unicorn (>= 5.4, < 5.9)
     govuk_personalisation (0.11.2)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
@@ -174,7 +176,7 @@ GEM
     logstasher (2.1.5)
       activesupport (>= 5.2)
       request_store
-    loofah (2.15.0)
+    loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -294,7 +296,6 @@ GEM
     rubocop-rspec (2.7.0)
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safe_yaml (1.0.5)
     sassc (2.4.0)
@@ -308,16 +309,14 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    sentry-rails (4.5.2)
+    sentry-rails (5.2.1)
       railties (>= 5.0)
-      sentry-ruby-core (~> 4.5.0)
-    sentry-ruby (4.5.2)
+      sentry-ruby-core (~> 5.2.1)
+    sentry-ruby (5.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      faraday (>= 1.0)
-      sentry-ruby-core (= 4.5.2)
-    sentry-ruby-core (4.5.2)
+      sentry-ruby-core (= 5.2.1)
+    sentry-ruby-core (5.2.1)
       concurrent-ruby
-      faraday
     simplecov (0.19.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -351,7 +350,7 @@ GEM
       unf_ext
     unf_ext (0.0.8)
     unicode-display_width (2.1.0)
-    unicorn (5.8.0)
+    unicorn (6.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
     webmock (3.8.3)
@@ -377,7 +376,7 @@ DEPENDENCIES
   faker
   gds-api-adapters
   govuk_ab_testing
-  govuk_app_config
+  govuk_app_config!
   govuk_personalisation
   govuk_publishing_components
   govuk_schemas
