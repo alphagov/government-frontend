@@ -1,0 +1,28 @@
+<div id="manuals-frontend" class="manuals-frontend-body">
+
+<%= machine_readable_metadata(schema: :article) %>
+
+<%= render "content_items/manuals/hmrc_header", {
+  content_item: @content_item, heading_level: 1, margin_bottom: 3
+} %>
+
+<div class="manual-body">
+  <% if @content_item.description.present? %>
+    <%= render "govuk_publishing_components/components/lead_paragraph", {
+      text: @content_item.description
+    } %>
+  <% end %>
+  <% if @content_item.body.present? %>
+    <%= render "govuk_publishing_components/components/govspeak", {} do %>
+      <%= raw(@content_item.body) %>
+    <% end %>
+  <% end %>
+
+  <% @content_item.section_groups.each do |group| %>
+    <div class="subsection-collection">
+      <%= render "content_items/manuals/hmrc_sections", group: group %>
+    </div>
+  <% end %>
+
+  <%= render "govuk_publishing_components/components/print_link" %>
+</div>
