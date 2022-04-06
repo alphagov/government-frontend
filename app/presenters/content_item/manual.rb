@@ -29,6 +29,7 @@ module ContentItem
         })
       end
     end
+    alias_method :manual_breadcrumbs, :breadcrumbs
 
     def section_groups
       content_item.dig("details", "child_section_groups") || []
