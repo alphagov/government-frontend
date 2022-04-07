@@ -430,6 +430,20 @@ en:
     zh: Chinese
     zh-hk: Cantonese
     zh-tw: Traditional Chinese
+  manuals:
+    title: "%{title}Guidance"
+    hmrc_manual_type: "HMRC internal manual"
+    hmrc_title: "%{title}HMRC internal manual"
+    search_this_manual: Search this manual
+    updates_title: "Updates: %{title}"
+    updates_description: "List of updates to '%{title}'."
+    updates_page_title: "Updates - %{title}"
+    updates_amendments: published amendments
+    previous_page: Previous page
+    next_page: Next page
+    breadcrumb_contents: Contents
+    updated: Updated
+    see_all_updates: see all updates
   multi_page:
     next_page: Next
     previous_page: Previous
