@@ -1,0 +1,82 @@
+require "test_helper"
+
+class HmrcManualTest < ActionDispatch::IntegrationTest
+  test "page renders correctly" do
+    setup_and_visit_content_item("vat-government-public-bodies")
+
+    assert_has_component_title(@content_item["title"])
+    assert page.has_text?(@content_item["description"])
+
+    within ".manual-type" do
+      assert page.has_text?(I18n.t("manuals.hmrc_manual_type"))
+    end
+  end
+
+  test "renders metadata" do
+    setup_and_visit_content_item("vat-government-public-bodies")
+
+    assert_has_metadata(
+      {
+        from: { "HM Revenue & Customs": "/government/organisations/hm-revenue-customs" },
+        first_published: "11 February 2015",
+        other: {
+          I18n.t("manuals.see_all_updates") => "#{@content_item['base_path']}/updates",
+        },
+      },
+      extra_metadata_classes: ".gem-c-metadata--inverse",
+    )
+  end
+
+  test "renders search box" do
+    setup_and_visit_content_item("vat-government-public-bodies")
+
+    within ".gem-c-search" do
+      assert page.has_text?(I18n.t("manuals.search_this_manual"))
+    end
+  end
+
+  test "renders manual specific breadcrumbs" do
+    setup_and_visit_content_item("vat-government-public-bodies")
+
+    manual_specific_breadcrumbs = page.all(".gem-c-breadcrumbs")[1]
+    within manual_specific_breadcrumbs do
+      assert page.has_text?(I18n.t("manuals.breadcrumb_contents"))
+    end
+  end
+
+  test "renders section groups" do
+    setup_and_visit_content_item("vat-government-public-bodies")
+
+    child_section_groups = page.all(".subsection-collection .section-list")
+
+    assert_equal 2, child_section_groups.count
+
+    within child_section_groups[0] do
+      first_group_children = page.all("li")
+
+      assert_equal 9, first_group_children.count
+
+      within first_group_children[0] do
+        assert page.has_link?(
+          "Introduction: contents",
+          href: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
+        )
+        assert page.has_text?("VATGPB1000")
+      end
+    end
+
+    within child_section_groups[1] do
+      section_group_children = page.all("li")
+
+      assert_equal 1, section_group_children.count
+
+      within section_group_children[0] do
+        assert page.has_link?(
+          "VAT Government and public bodies: update index",
+          href: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpbupdate001",
+        )
+        assert page.has_text?("VATGPBUPDATE001")
+      end
+    end
+  end
+end
