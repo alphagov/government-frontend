@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby File.read(".ruby-version").chomp
+
 gem "rails", "6.1.4.7"
 
 gem "dalli"
@@ -7,7 +9,7 @@ gem "gds-api-adapters"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_personalisation"
-gem "govuk_publishing_components"
+gem "govuk_publishing_components", git: "https://github.com/alphagov/govuk_publishing_components.git", branch: "feedback-insights-abtest"
 gem "htmlentities"
 gem "plek"
 gem "rack_strip_client_ip"
