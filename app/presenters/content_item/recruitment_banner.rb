@@ -4,6 +4,9 @@ module ContentItem
     SURVEY_URLS = {
       "/browse/tax" => SURVEY_URL_ONE,
       "/browse/business" => SURVEY_URL_ONE,
+      "/apply-for-a-patent" => SURVEY_URL_ONE,
+      "/how-to-register-a-trade-mark" => SURVEY_URL_ONE,
+      "/apply-register-design" => SURVEY_URL_ONE,
     }.freeze
 
     def recruitment_survey_url
