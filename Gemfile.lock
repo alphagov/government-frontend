@@ -99,7 +99,7 @@ GEM
     faraday (2.2.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.1)
+    faraday-net_http (2.0.2)
     ffi (1.15.5)
     gds-api-adapters (79.1.0)
       addressable
@@ -121,7 +121,7 @@ GEM
     govuk_personalisation (0.11.2)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (29.2.0)
+    govuk_publishing_components (29.4.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -174,7 +174,7 @@ GEM
     logstasher (2.1.5)
       activesupport (>= 5.2)
       request_store
-    loofah (2.15.0)
+    loofah (2.16.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -195,7 +195,7 @@ GEM
     mocha (1.11.2)
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.3)
+    nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     null_logger (0.0.1)
