@@ -24,7 +24,7 @@ class PresenterTestCase < ActiveSupport::TestCase
     )
   end
 
-  def schema_item(type = schema_name)
-    govuk_content_schema_example(schema_name, type)
+  def schema_item(type = schema_name, schema = schema_name)
+    govuk_content_schema_example(schema, type)
   end
 end
