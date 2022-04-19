@@ -13,6 +13,7 @@ module ContentItem
         I18n.t("manuals.title", title: title)
       end
     end
+    alias_method :manual_page_title, :page_title
 
     def breadcrumbs
       crumbs = []
