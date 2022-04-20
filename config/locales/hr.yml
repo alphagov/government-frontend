@@ -321,8 +321,8 @@ hr:
         one: Saopćenje za javnost
         other: Saopćenja za javnost
       product-safety-alert-report-recall:
-        many:
         few:
+        many:
         one:
         other:
       promotional:
@@ -580,6 +580,20 @@ hr:
     zh:
     zh-hk:
     zh-tw:
+  manuals:
+    breadcrumb_contents:
+    hmrc_manual_type:
+    hmrc_title:
+    next_page:
+    previous_page:
+    search_this_manual:
+    see_all_updates:
+    title:
+    updated:
+    updates_amendments:
+    updates_description:
+    updates_page_title:
+    updates_title:
   multi_page:
     next_page: Sljedeće
     previous_page: Prethodno
