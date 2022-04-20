@@ -4,8 +4,8 @@
 
 <ol class="section-list hmrc">
   <% group["child_sections"].each do |section| %>
-    <li>
-      <%= link_to section["base_path"], class: "govuk-link" do %>
+    <li class="section-list-item">
+      <%= link_to section["base_path"], class: "govuk-link section-link" do %>
       <div class="title-wrap">
         <% if section["section_id"] %>
           <div class="subsection-id"><%= section["section_id"] %></div>
