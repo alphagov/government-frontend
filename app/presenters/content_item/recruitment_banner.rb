@@ -1,6 +1,6 @@
 module ContentItem
   module RecruitmentBanner
-    SURVEY_URL_ONE = "https://surveys.publishing.service.gov.uk/s/GY8Q11".freeze
+    SURVEY_URL_ONE = "https://GDSUserResearch.optimalworkshop.com/treejack/724268fr-1-0-0-0".freeze
     SURVEY_URLS = {
       "/browse/tax" => SURVEY_URL_ONE,
       "/browse/business" => SURVEY_URL_ONE,
