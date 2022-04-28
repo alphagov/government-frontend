@@ -146,7 +146,7 @@
     </div>
 
     <% if @content_item.ways_to_respond? %>
-      <div class="consultation-ways-to-respond">
+      <div id="ways-to-respond" class="consultation-ways-to-respond">
         <%= render 'govuk_publishing_components/components/heading', text: t("consultation.ways_to_respond"), mobile_top_margin: true %>
           <% @ways_to_respond_body = capture do %>
             <% if @content_item.respond_online_url %>
