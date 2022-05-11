@@ -29,7 +29,7 @@ RUN GOVUK_APP_DOMAIN=www.gov.uk \
 
 FROM $base_image
 
-ENV RAILS_ENV=production GOVUK_APP_NAME=government-frontend GOVUK_APP_DOMAIN=www.gov.uk GOVUK_WEBSITE_ROOT=https://www.gov.uk PORT=3090
+ENV GOVUK_PROMETHEUS_EXPORTER=true RAILS_ENV=production GOVUK_APP_NAME=government-frontend GOVUK_APP_DOMAIN=www.gov.uk GOVUK_WEBSITE_ROOT=https://www.gov.uk PORT=3090
 
 RUN apt-get update -qy && \
     apt-get upgrade -y && \
