@@ -92,6 +92,14 @@ class ContentItemPresenter
     content_id == "9315bc67-33e7-42e9-8dea-e022f56dabfa" && voting_is_open?
   end
 
+  def manual_updates?
+    view_context.request.path =~ /^\/guidance\/.*\/updates$/ && content_item["schema_name"] == "manual"
+  end
+
+  def hmrc_manual_updates?
+    view_context.request.path =~ /^\/hmrc-internal-manuals\/.*\/updates$/ && content_item["schema_name"] == "hmrc_manual"
+  end
+
 private
 
   def voting_is_open?

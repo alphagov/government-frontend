@@ -34,11 +34,19 @@ private
   end
 
   def presenter_name
-    if service_sign_in_format?
-      return service_sign_in_presenter_name
-    end
+    return service_sign_in_presenter_name if service_sign_in_format?
+    return "ManualUpdatesPresenter" if manual_updates?
+    return "HmrcManualUpdatesPresenter" if hmrc_manual_updates?
 
     "#{content_item['schema_name'].classify}Presenter"
+  end
+
+  def manual_updates?
+    view_context.request.path =~ /^\/guidance\/.*\/updates$/ && content_item["schema_name"] == "manual"
+  end
+
+  def hmrc_manual_updates?
+    view_context.request.path =~ /^\/hmrc-internal-manuals\/.*\/updates$/ && content_item["schema_name"] == "hmrc_manual"
   end
 
   def service_sign_in_format?

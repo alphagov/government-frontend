@@ -119,6 +119,8 @@ private
 
   def content_item_template
     return "guide_single" if @content_item.render_guide_as_single_page?
+    return "manual_updates" if @content_item.manual_updates?
+    return "hmrc_manual_updates" if @content_item.hmrc_manual_updates?
 
     @content_item.schema_name
   end

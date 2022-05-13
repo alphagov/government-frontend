@@ -423,12 +423,12 @@ cy:
         two:
         zero:
       product-safety-alert-report-recall:
-        zero:
-        two:
-        many:
         few:
+        many:
         one:
         other:
+        two:
+        zero:
       promotional:
         few:
         many:
@@ -730,6 +730,20 @@ cy:
     zh:
     zh-hk:
     zh-tw:
+  manuals:
+    breadcrumb_contents:
+    hmrc_manual_type:
+    hmrc_title:
+    next_page:
+    previous_page:
+    search_this_manual:
+    see_all_updates:
+    title:
+    updated:
+    updates_amendments:
+    updates_description:
+    updates_page_title:
+    updates_title:
   multi_page:
     next_page: Nesaf
     previous_page: Blaenorol
