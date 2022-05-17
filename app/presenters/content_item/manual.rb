@@ -51,8 +51,12 @@ module ContentItem
   private
 
     def other_metadata
+      updated_metadata(public_updated_at)
+    end
+
+    def updated_metadata(updated_at)
       updates_link = view_context.link_to(I18n.t("manuals.see_all_updates"), "#{base_path}/updates")
-      { I18n.t("manuals.updated") => "#{display_date(public_updated_at)}, #{updates_link}" }
+      { I18n.t("manuals.updated") => "#{display_date(updated_at)}, #{updates_link}" }
     end
 
     def details
