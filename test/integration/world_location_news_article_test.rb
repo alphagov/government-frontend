@@ -43,7 +43,7 @@ class WorldLocationNewsArticleTest < ActionDispatch::IntegrationTest
 
   test "renders history notice" do
     setup_and_visit_content_item("world_location_news_article_history_mode")
-    within ".app-c-banner" do
+    within ".govuk-notification-banner__content" do
       assert page.has_text?("This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
     end
   end

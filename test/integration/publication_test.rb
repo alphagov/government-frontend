@@ -59,7 +59,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
   test "historically political publication" do
     setup_and_visit_content_item("political_publication")
 
-    within ".app-c-banner" do
+    within ".govuk-notification-banner__content" do
       assert page.has_text?("This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
     end
   end

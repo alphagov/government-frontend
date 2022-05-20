@@ -1,3 +1,5 @@
 <% if content_item.historically_political? %>
-  <%= render 'components/banner', text: t("shared.historically_political", government: content_item.publishing_government) %>
+  <%= render "govuk_publishing_components/components/notice", {
+    title: t("shared.historically_political", government: content_item.publishing_government),
+  } %>
 <% end %>
