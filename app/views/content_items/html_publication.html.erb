@@ -42,6 +42,7 @@
   <p class="publication-header__last-changed"><%= @content_item.last_changed %></p>
 <% end %>
 
+<%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
 
 <div

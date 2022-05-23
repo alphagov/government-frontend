@@ -74,6 +74,14 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "historically political html publication" do
+    setup_and_visit_html_publication("published_with_history_mode")
+
+    within ".govuk-notification-banner__content" do
+      assert page.has_text?("This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government")
+    end
+  end
+
   test "withdrawn html publication" do
     content_item = GovukSchemas::Example.find("html_publication", example_name: "prime_ministers_office")
     content_item["withdrawn_notice"] = {
