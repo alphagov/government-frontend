@@ -17,6 +17,29 @@ class ManualSectionTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "renders metadata" do
+    setup_and_visit_manual_section
+
+    assert_has_metadata(
+      {
+        from: { "Government Digital Service": "/government/organisations/government-digital-service" },
+        first_published: "27 April 2015",
+        other: {
+          I18n.t("manuals.see_all_updates") => "#{@manual['base_path']}/updates",
+        },
+      },
+      extra_metadata_classes: ".gem-c-metadata--inverse",
+    )
+  end
+
+  test "renders search box" do
+    setup_and_visit_manual_section
+
+    within ".gem-c-search" do
+      assert page.has_text?(I18n.t("manuals.search_this_manual"))
+    end
+  end
+
   test "renders document heading" do
     setup_and_visit_manual_section
 

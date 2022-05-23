@@ -18,7 +18,7 @@ class HmrcManualSectionTest < ActionDispatch::IntegrationTest
     assert_has_metadata(
       {
         from: { "HM Revenue & Customs": "/government/organisations/hm-revenue-customs" },
-        first_published: "10 February 2015",
+        first_published: "11 February 2015",
         other: {
           I18n.t("manuals.see_all_updates") => "#{@manual['base_path']}/updates",
         },
