@@ -50,15 +50,8 @@ class ContentItemManualSectionTest < ActiveSupport::TestCase
 
   test "returns manual_content_item" do
     stub_request(:get, "https://content-store.test.gov.uk/content/a/base/path")
-    .with(
-      headers: {
-        "Accept" => "application/json",
-        "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
-        "Host" => "content-store.test.gov.uk",
-        "User-Agent" => "gds-api-adapters/79.1.2 ()",
-      },
-    )
-    .to_return(status: 200, body: "{}", headers: {})
+      .to_return(status: 200, body: "{}", headers: {})
+
     item = DummyContentItem.new
 
     assert_equal({}, item.manual_content_item.parsed_content)
