@@ -14,10 +14,18 @@
       "/taking-goods-out-uk-temporarily/get-an-ata-carnet",
     ]
 
+    scroll_track_percent_paths = [
+      "/skilled-worker-visa",
+      "/skilled-worker-visa/documents-you-must-provide",
+      "/apply-to-come-to-the-uk",
+    ]
+
     full_url = [@content_item.base_path, @content_item.part_slug].compact.join('/')
   %>
   <% if scroll_track_headings_paths.include?(full_url) %>
     <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker" data-track-type="headings"/>
+  <% elsif scroll_track_percent_paths.include?(@content_item.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
   <% end %>
 <% end %>
 
