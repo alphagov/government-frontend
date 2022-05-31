@@ -5,6 +5,10 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     "html_publication"
   end
 
+  test "includes political" do
+    assert presented_item("published").is_a?(ContentItem::Political)
+  end
+
   test "presents the basic details of a content item" do
     assert_equal schema_item("published")["schema_name"], presented_item("published").schema_name
     assert_equal schema_item("published")["links"]["parent"][0]["document_type"], presented_item("published").format_sub_type
