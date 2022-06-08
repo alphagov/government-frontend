@@ -8,6 +8,15 @@ on:
         required: true
         type: string
         default: 'main'
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        type: choice
+        options:
+        - integration
+        - staging
+        - production
+        default: 'integration'
   push:
     branches:
       - main
