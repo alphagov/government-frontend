@@ -3,6 +3,7 @@ class HtmlPublicationPresenter < ContentItemPresenter
   include ContentItem::OrganisationBranding
   include ContentItem::ContentsList
   include ContentItem::Political
+  include ContentItem::NationalApplicability
 
   def isbn
     content_item["details"]["isbn"]
