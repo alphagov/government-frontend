@@ -118,7 +118,7 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
   end
 
   test "HTML publication that only applies to a set of nations, with alternative urls" do
-    setup_and_visit_content_item("national_applicability_alternative_url_html_publication")
+    setup_and_visit_html_publication("national_applicability_alternative_url_html_publication")
     assert_has_devolved_nations_component("Applies to England, Scotland and Wales", [
       {
         text: "Publication for Northern Ireland",
