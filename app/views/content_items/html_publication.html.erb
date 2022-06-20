@@ -44,15 +44,10 @@
 
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/devolved_nations", {
-      national_applicability: @content_item.national_applicability || {},
-      type: @content_item.schema_name
-    } %>
-  </div>
-</div>
+<%= render "govuk_publishing_components/components/devolved_nations", {
+  national_applicability: @content_item.national_applicability || {},
+  type: @content_item.schema_name
+} %>
 
 <div
   class="govuk-grid-row sidebar-with-body"
