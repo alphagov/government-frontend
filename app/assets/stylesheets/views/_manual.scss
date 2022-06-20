@@ -7,7 +7,7 @@
   @include govuk-clearfix;
 
   background: $govuk-brand-colour;
-  color: govuk-colour('white');
+  color: govuk-colour("white");
   margin: 0;
   padding-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(6);
@@ -30,7 +30,7 @@
   }
 
   a {
-    color: govuk-colour('white');
+    color: govuk-colour("white");
 
     &:focus {
       @include govuk-focused-text;
@@ -38,7 +38,7 @@
   }
 
   &.hmrc {
-    background: govuk-organisation-colour('hm-revenue-customs');
+    background: govuk-organisation-colour("hm-revenue-customs");
   }
 }
 
@@ -59,7 +59,7 @@
   list-style: none;
 
   &:hover {
-    background-color: govuk-colour("light-grey", $legacy: 'grey-4');
+    background-color: govuk-colour("light-grey", $legacy: "grey-4");
   }
 
   &:last-child {
@@ -106,7 +106,7 @@
   .section-title {
     @include govuk-text-colour;
     @include govuk-font($size: 24, $weight: bold);
-    @include govuk-responsive-margin(4, 'bottom');
+    @include govuk-responsive-margin(4, "bottom");
   }
 }
 
