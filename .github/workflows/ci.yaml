@@ -9,4 +9,6 @@ on:
 jobs:
   test:
     name: Test
-    uses: alphagov/govuk-infrastructure/.github/workflows/ci.yaml@add-ci-workflow
+    uses: alphagov/govuk-infrastructure/.github/workflows/test-rails.yaml@main
+    with:
+      requiresJavaScript: true
