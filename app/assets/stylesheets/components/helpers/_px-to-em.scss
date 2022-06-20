@@ -1,9 +1,9 @@
 // Convert pixels to em
 @function em($value, $app-context-font-size) {
-  @if (unitless($value)) {
+  @if unitless($value) {
     $value: $value * 1px;
   }
-  @if (unitless($app-context-font-size)) {
+  @if unitless($app-context-font-size) {
     $app-context-font-size: $app-context-font-size * 1px;
   }
   @return $value / $app-context-font-size * 1em;
