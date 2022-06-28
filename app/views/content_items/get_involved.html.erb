@@ -53,14 +53,14 @@
         <%= render "govuk_publishing_components/components/big_number", {
           number: @open_consultation_count,
           label: t('get_involved.open_consultations'),
-          href: "/government/organisations#ministerial_departments"
+          href: "/search/policy-papers-and-consultations?content_store_document_type=open_consultations"
         } %>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/big_number", {
           number: @closed_consultation_count,
           label: t('get_involved.closed_consultations'),
-          href: "/government/organisations#ministerial_departments"
+          href: "/search/policy-papers-and-consultations?content_store_document_type=closed_consultations"
         } %>
       </div>
     </div>
