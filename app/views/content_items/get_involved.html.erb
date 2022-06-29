@@ -1,8 +1,3 @@
-<%# 
-Changes to this page impacts smokey tests that may need to be updated in parallel.
-https://github.com/alphagov/smokey/blob/main/features/step_definitions/get_involved_page_steps.rb 
-%>
-
 <% page_title %>
 <% page_class "govuk-main-wrapper" %>
   <%= render "govuk_publishing_components/components/breadcrumbs", {
@@ -58,29 +53,31 @@ https://github.com/alphagov/smokey/blob/main/features/step_definitions/get_invol
         <%= render "govuk_publishing_components/components/big_number", {
           number: @open_consultation_count,
           label: t('get_involved.open_consultations'),
-          href: "/government/organisations#ministerial_departments"
+          href: "/search/policy-papers-and-consultations?content_store_document_type=open_consultations"
         } %>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/big_number", {
           number: @closed_consultation_count,
           label: t('get_involved.closed_consultations'),
-          href: "/government/organisations#ministerial_departments"
+          href: "/search/policy-papers-and-consultations?content_store_document_type=closed_consultations"
         } %>
       </div>
     </div>
 
-    <%# Attention to closing consultation  %>
-    <%= render "govuk_publishing_components/components/inset_text", {
-    } do %>
-      <%= render "govuk_publishing_components/components/heading", {
-        text: time_until_closure(@next_closing_consultation),
-        heading_level: 3
-      } %>
-      <p class="govuk-body">
-        <%= @next_closing_consultation['title'] %>
-      </p>
-      <%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link" %>
+    <% if @next_closing_consultation %>
+      <%# Attention to closing consultation  %>
+      <%= render "govuk_publishing_components/components/inset_text", {
+      } do %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: time_until_closure(@next_closing_consultation),
+          heading_level: 3
+        } %>
+        <p class="govuk-body">
+          <%= @next_closing_consultation['title'] %>
+        </p>
+        <%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link" %>
+      <% end %>
     <% end %>
   </div>
 </div>
