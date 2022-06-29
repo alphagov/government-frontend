@@ -3,7 +3,7 @@ require_relative "boot"
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
-# require "active_job/railtie"
+require "active_job/railtie"
 # require "active_record/railtie"
 # require "active_storage/engine"
 require "action_controller/railtie"
@@ -12,7 +12,6 @@ require "action_controller/railtie"
 # require "action_text/engine"
 require "action_view/railtie"
 # require "action_cable/engine"
-require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -24,113 +23,12 @@ module GovernmentFrontend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
-
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    config.time_zone = "London"
-
-    # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += %W[#{config.root}/lib]
-
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :en
-
-    # Explicitly set available locales
-    config.i18n.available_locales = %i[
-      en
-      ar
-      az
-      be
-      bg
-      bn
-      cs
-      cy
-      da
-      de
-      dr
-      el
-      es
-      es-419
-      et
-      fa
-      fi
-      fr
-      gd
-      gu
-      he
-      hi
-      hr
-      hu
-      hy
-      id
-      is
-      it
-      ja
-      ka
-      kk
-      ko
-      lt
-      lv
-      ms
-      mt
-      ne
-      no
-      nl
-      pa
-      pa-pk
-      pl
-      ps
-      pt
-      ro
-      ru
-      si
-      sk
-      sl
-      so
-      sq
-      sr
-      sv
-      sw
-      ta
-      th
-      tk
-      tr
-      uk
-      ur
-      uz
-      vi
-      yi
-      zh
-      zh-hk
-      zh-tw
-    ]
-
-    # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-    # the I18n.default_locale when a translation can not be found).
-    config.i18n.fallbacks = true
-
-    # Disable rack::cache
-    config.action_dispatch.rack_cache = nil
-
-    # Path within public/ where assets are compiled to
-    config.assets.prefix = "/assets/government-frontend"
-
-    # Using a sass css compressor causes a scss file to be processed twice
-    # (once to build, once to compress) which breaks the usage of "unquote"
-    # to use CSS that has same function names as SCSS such as max.
-    # https://github.com/alphagov/govuk-frontend/issues/1350
-    config.assets.css_compressor = nil
-
-    # allow overriding the asset host with an enironment variable, useful for
-    # when router is proxying to this app but asset proxying isn't set up.
-    config.asset_host = ENV["ASSET_HOST"]
-
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    # config.active_record.raise_in_transactional_callbacks = true
+    # Configuration for the application, engines, and railties goes here.
+    #
+    # These settings can be overridden in specific environments using the files
+    # in config/environments, which are processed later.
+    #
+    # config.time_zone = "Central Time (US & Canada)"
+    # config.eager_load_paths << Rails.root.join("extras")
   end
 end
