@@ -15,6 +15,7 @@ gem "rails-controller-testing"
 gem "rails-i18n"
 gem "sassc-rails"
 gem "slimmer"
+gem "sprockets-rails"
 gem "uglifier"
 
 group :development, :test do
