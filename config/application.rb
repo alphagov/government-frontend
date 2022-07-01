@@ -29,5 +29,6 @@ module GovernmentFrontend
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
+    config.autoload_paths << "#{config.root}/lib"
   end
 end
