@@ -30,5 +30,6 @@ module GovernmentFrontend
     #
     # config.time_zone = "Central Time (US & Canada)"
     config.autoload_paths << "#{config.root}/lib"
+    config.assets.css_compressor = nil
   end
 end
