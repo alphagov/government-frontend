@@ -77,6 +77,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-notice", text: "This consultation has concluded")
     assert page.has_css?("h2", text: "Original consultation")
     assert page.has_text?("ran from")
+    byebug
     assert page.has_text?("4pm on 20 April 2016 to 10:45pm on 13 July 2016")
 
     within ".consultation-outcome-detail" do

@@ -23,7 +23,7 @@ group :development, :test do
   gem "govuk_test"
   gem "jasmine"
   gem "jasmine_selenium_runner"
-  gem "rails_translation_manager"
+  gem "rails_translation_manager", path: "../rails_translation_manager"
   gem "rubocop-govuk"
 end
 
