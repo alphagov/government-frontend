@@ -23,6 +23,9 @@ module GovernmentFrontend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # Disable redirect protection. This is turned on by default in Rails 7.0.
+    config.action_controller.raise_on_open_redirects = false
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
