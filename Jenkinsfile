@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-library("govuk")
+library("govuk@use-docker-enterprise-acc")
 
 REPOSITORY = 'government-frontend'
 
