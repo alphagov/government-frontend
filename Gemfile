@@ -20,8 +20,6 @@ gem "uglifier"
 group :development, :test do
   gem "govuk_schemas"
   gem "govuk_test"
-  gem "jasmine"
-  gem "jasmine_selenium_runner"
   gem "rails_translation_manager"
   gem "rubocop-govuk"
 end

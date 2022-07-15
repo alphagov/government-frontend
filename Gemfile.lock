@@ -162,15 +162,6 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    jasmine (3.6.0)
-      jasmine-core (~> 3.6.0)
-      phantomjs
-      rack (>= 1.2.1)
-      rake
-    jasmine-core (3.6.0)
-    jasmine_selenium_runner (3.0.0)
-      jasmine (~> 3.0)
-      selenium-webdriver (~> 3.8)
     json (2.6.1)
     json-schema (2.8.1)
       addressable (>= 2.4)
@@ -209,7 +200,6 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
-    phantomjs (2.1.1.0)
     plek (4.0.0)
     prometheus_exporter (2.0.3)
       webrick
@@ -390,8 +380,6 @@ DEPENDENCIES
   govuk_test
   htmlentities
   i18n-coverage
-  jasmine
-  jasmine_selenium_runner
   minitest-reporters
   mocha
   plek
