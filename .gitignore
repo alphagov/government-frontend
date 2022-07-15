@@ -20,6 +20,9 @@
 shots/*
 /coverage
 
-# Yarn
+# Ignore JS dependencies
 /node_modules
 /yarn-error.log
+
+# Ignore compiled assets
+/public/assets
