@@ -4,4 +4,6 @@ module FeatureFlagNames
   end
 end
 
-HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, "true")
+Rails.application.reloader.to_prepare do
+  HttpFeatureFlags.instance.add_http_feature_flag(FeatureFlagNames.recommended_related_links, "true")
+end
