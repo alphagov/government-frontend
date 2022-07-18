@@ -33,6 +33,11 @@ class HmrcManualSectionPresenterTest
       assert_equal manual["base_path"], presented_manual_section.base_path
     end
 
+    test "presents manual title" do
+      manual = schema_item("vatgpb2000")["details"]["manual"]
+      assert_equal manual["title"], presented_manual_section.title
+    end
+
     test "presents basic breadcrumbs" do
       presented_section = presented_manual_section
       presented_section.view_context.stubs(:request)
