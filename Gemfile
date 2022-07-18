@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "6.1.6.1"
+gem "rails", "7.0.3.1"
 
 gem "dalli"
 gem "gds-api-adapters"
