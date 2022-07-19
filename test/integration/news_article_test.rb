@@ -11,14 +11,13 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
   test "renders first published and from in metadata and document footer" do
     setup_and_visit_content_item("news_article")
 
-    assert_has_metadata(
+    assert_has_metadata({
       published: "25 December 2016",
       from: {
         "Prime Minister's Office, 10 Downing Street":
         "/government/organisations/prime-ministers-office-10-downing-street",
       },
-    )
-
+    })
     assert_footer_has_published_dates("Published 25 December 2016")
   end
 

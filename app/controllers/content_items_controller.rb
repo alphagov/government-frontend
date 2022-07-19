@@ -42,7 +42,7 @@ class ContentItemsController < ApplicationController
         return
       end
 
-      redirect_to service_url(selected[:url])
+      redirect_to service_url(selected[:url]), allow_other_host: true
     end
   end
 
@@ -205,7 +205,7 @@ private
     destination, status_code = GdsApi::ContentStore.redirect_for_path(
       exception.content_item, request.path, request.query_string
     )
-    redirect_to destination, status: status_code
+    redirect_to destination, status: status_code, allow_other_host: true
   end
 
   def set_account_vary_header

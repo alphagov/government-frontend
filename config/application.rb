@@ -12,7 +12,6 @@ require "action_controller/railtie"
 # require "action_text/engine"
 require "action_view/railtie"
 # require "action_cable/engine"
-require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -22,7 +21,7 @@ Bundler.require(*Rails.groups)
 module GovernmentFrontend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 7.0
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -132,5 +131,22 @@ module GovernmentFrontend
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+
+    # Rotate SHA1 cookies to SHA256 (the new Rails 7 default)
+    # TODO: Remove this after existing user sessions have been rotated
+    # https://guides.rubyonrails.org/v7.0/upgrading_ruby_on_rails.html#key-generator-digest-class-changing-to-use-sha256
+    Rails.application.config.action_dispatch.cookies_rotations.tap do |cookies|
+      salt = Rails.application.config.action_dispatch.authenticated_encrypted_cookie_salt
+      secret_key_base = Rails.application.secrets.secret_key_base
+      next if secret_key_base.blank?
+
+      key_generator = ActiveSupport::KeyGenerator.new(
+        secret_key_base, iterations: 1000, hash_digest_class: OpenSSL::Digest::SHA1
+      )
+      key_len = ActiveSupport::MessageEncryptor.key_len
+      secret = key_generator.generate_key(salt, key_len)
+
+      cookies.rotate :encrypted, secret
+    end
   end
 end
