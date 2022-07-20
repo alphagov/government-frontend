@@ -22,6 +22,11 @@
   }
 
   .contents-list-container {
+    @include govuk-media-query($from: desktop) {
+      position: sticky;
+      top: govuk-spacing(2);
+    }
+
     .direction-rtl & {
       float: right;
     }

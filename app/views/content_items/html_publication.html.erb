@@ -49,11 +49,7 @@
   type: @content_item.schema_name
 } %>
 
-<div
-  class="govuk-grid-row sidebar-with-body"
-  data-module="sticky-element-container"
-  id="contents"
->
+<div class="govuk-grid-row sidebar-with-body" id="contents">
   <% if @content_item.contents.any? %>
     <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
       <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
@@ -75,14 +71,8 @@
       <%= raw(@content_item.govspeak_body[:content]) %>
     <% end %>
   </div>
+</div>
 
-  <div data-sticky-element class="sticky-element">
-    <%= render 'components/back-to-top', href: "#contents" %>
-    <div class="sticky-element__print-link">
-      <%= render "govuk_publishing_components/components/print_link", {
-          margin_top: 0,
-          margin_bottom: 6,
-        } %>
-    </div>
-  </div>
+<div class="govuk-grid-row">
+  <%= render 'components/back-to-top', href: "#contents" %>
 </div>
