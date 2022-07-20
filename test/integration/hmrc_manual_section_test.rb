@@ -65,7 +65,7 @@ class HmrcManualSectionTest < ActionDispatch::IntegrationTest
   test "renders previous and next navigation" do
     setup_and_visit_manual_section
 
-    within ".gem-c-pagination" do
+    within ".govuk-pagination" do
       assert page.has_link?(
         I18n.t("manuals.previous_page"),
         href: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
