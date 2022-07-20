@@ -22,7 +22,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
       assert page.has_css?(".part-navigation-container nav li a[href*=\"#{part['slug']}\"]", text: part["title"])
     end
 
-    assert page.has_css?(".gem-c-pagination")
+    assert page.has_css?(".govuk-pagination")
     assert page.has_css?('.govuk-link.govuk-link--no-visited-state[href$="/print"]', text: "View a printable version of the whole guide")
   end
 
