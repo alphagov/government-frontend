@@ -42,9 +42,7 @@
         <%= render 'govuk_publishing_components/components/breadcrumbs',
                    breadcrumbs: [ { url: "/", title: "Home" } , { url: "/brexit", title: "Brexit" } ] %>
       <% else %>
-        <!-- TODO: Remove manual_content_item after adding the same tagging to manual and hmrc manual section as the parent manual --!>
-        <%= render 'govuk_publishing_components/components/contextual_breadcrumbs',
-                   content_item: @content_item.try(:manual_content_item) || @content_item.content_item.parsed_content %>
+        <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item %>
       <% end %>
     <% end %>
 

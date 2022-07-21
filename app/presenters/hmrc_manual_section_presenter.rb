@@ -7,10 +7,6 @@ class HmrcManualSectionPresenter < ContentItemPresenter
     details["manual"]["base_path"]
   end
 
-  def title
-    details["manual"]["title"]
-  end
-
   def breadcrumbs
     crumbs = manual_breadcrumbs.dup
 
@@ -83,6 +79,10 @@ private
     end
 
     [before.try(:last), after.try(:first)]
+  end
+
+  def manual
+    parent_base_path == base_path ? parent_for_section : manual_content_item
   end
 
   def parent_base_path

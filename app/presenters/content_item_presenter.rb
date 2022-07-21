@@ -36,6 +36,10 @@ class ContentItemPresenter
     @part_slug = requesting_a_part? ? requested_path.split("/").last : nil
   end
 
+  def parsed_content_item
+    content_item.parsed_content
+  end
+
   def requesting_a_part?
     false
   end
