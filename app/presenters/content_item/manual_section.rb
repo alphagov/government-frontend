@@ -20,8 +20,6 @@ module ContentItem
     end
 
     def manual_content_item
-      # TODO: Add the same tagging to a normal section as a manual for contextual breadcrumbs
-      # TODO: Add the manual published / public updated at to both manual sections (normal and HMRC)
       @manual_content_item ||= Services.content_store.content_item(base_path)
     end
 
