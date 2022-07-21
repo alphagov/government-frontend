@@ -23,6 +23,10 @@ module ContentItem
       @manual_content_item ||= Services.content_store.content_item(base_path)
     end
 
+    def parsed_content_item
+      manual_content_item.parsed_content
+    end
+
     def published
       display_date(manual_content_item["first_published_at"])
     end
