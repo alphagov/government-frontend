@@ -34,7 +34,10 @@ class HmrcManualSectionPresenterTest
     end
 
     test "presents manual title" do
-      manual = schema_item("vatgpb2000")["details"]["manual"]
+      manual_base_path = schema_item("vatgpb2000")["details"]["manual"]["base_path"]
+      manual = schema_item("vat-government-public-bodies", "hmrc_manual")
+      stub_content_store_has_item(manual_base_path, manual.to_json)
+
       assert_equal manual["title"], presented_manual_section.title
     end
 
