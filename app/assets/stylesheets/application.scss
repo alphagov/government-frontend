@@ -4,6 +4,11 @@ $govuk-typography-use-rem: false;
 $govuk-use-legacy-palette: false;
 $govuk-new-link-styles: true;
 
+// This flag stops the font from being included in this application's
+// stylesheet - the font is being served by Static across all of GOV.UK, so is
+// not needed here.
+$govuk-include-default-font-face: false;
+
 // Components from govuk_publishing_components gem
 @import "govuk_publishing_components/govuk_frontend_support";
 
