@@ -2,6 +2,7 @@ class ContentItemPresenter
   include ContentItem::Withdrawable
   include ContentItem::BrexitTaxons
   include ContentItem::SinglePageNotificationButton
+  include ContentItem::RecruitmentBanner
   attr_reader :content_item,
               :requested_path,
               :view_context,
