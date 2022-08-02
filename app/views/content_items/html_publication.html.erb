@@ -49,40 +49,32 @@
   type: @content_item.schema_name
 } %>
 
-<div
-  class="govuk-grid-row sidebar-with-body"
-  data-module="sticky-element-container"
-  id="contents"
->
-  <% if @content_item.contents.any? %>
-    <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
-      <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
-      <%= render "govuk_publishing_components/components/print_link", {
-        margin_top: 0,
-        margin_bottom: 6,
-      } %>
-    </div>
-  <% end %>
-
-  <div class="print-wrapper">
-    <div class="print-meta-data">
-      <%= render partial: "content_items/html_publication/print_meta_data" %>
-    </div>
-  </div>
-
-  <div class="main-content-container<% unless @content_item.contents.any? %> offset-empty-contents-list<% end %>">
-    <%= render "govuk_publishing_components/components/govspeak_html_publication", {} do %>
-      <%= raw(@content_item.govspeak_body[:content]) %>
-    <% end %>
-  </div>
-
-  <div data-sticky-element class="sticky-element">
-    <%= render 'components/back-to-top', href: "#contents" %>
-    <div class="sticky-element__print-link">
-      <%= render "govuk_publishing_components/components/print_link", {
+<div class="sidebar-with-body" id="contents">
+  <div class="govuk-grid-row">
+    <% if @content_item.contents.any? %>
+      <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
+        <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
+        <%= render "govuk_publishing_components/components/print_link", {
           margin_top: 0,
           margin_bottom: 6,
         } %>
+      </div>
+    <% end %>
+
+    <div class="print-wrapper">
+      <div class="print-meta-data">
+        <%= render partial: "content_items/html_publication/print_meta_data" %>
+      </div>
     </div>
+
+    <div class="main-content-container<% unless @content_item.contents.any? %> offset-empty-contents-list<% end %>">
+      <%= render "govuk_publishing_components/components/govspeak_html_publication", {} do %>
+        <%= raw(@content_item.govspeak_body[:content]) %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <%= render 'components/back-to-top', href: "#contents", text: "Back to top" %>
   </div>
 </div>
