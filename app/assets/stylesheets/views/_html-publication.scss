@@ -25,6 +25,9 @@
     @include govuk-media-query($from: desktop) {
       position: sticky;
       top: govuk-spacing(2);
+      max-height: 100vh;
+      overflow-y: auto;
+      margin-bottom: govuk-spacing(4);
     }
 
     .direction-rtl & {
