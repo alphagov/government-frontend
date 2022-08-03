@@ -1,7 +1,7 @@
 require "test_helper"
 
 class RecruitmentBannerTest < ActionDispatch::IntegrationTest
-  test "Recruitment Banner is displayed for any page tagged to Working, jobs and pensions" do
+  test "Tree test recruitment banner is displayed for any page tagged to Working, jobs and pensions" do
     @working_browse_page = {
       "content_id" => "123",
       "title" => "Self Assessment",
@@ -19,7 +19,7 @@ class RecruitmentBannerTest < ActionDispatch::IntegrationTest
     assert page.has_link?("Take part in user research (opens in a new tab)", href: "https://GDSUserResearch.optimalworkshop.com/treejack/834dm2s6")
   end
 
-  test "Recruitment Banner is not displayed unless page is tagged to a topic of interest" do
+  test "Tree test recruitment banner is not displayed unless page is tagged to a topic of interest" do
     @not_of_interest = {
       "content_id" => "123",
       "title" => "I am not interesting",

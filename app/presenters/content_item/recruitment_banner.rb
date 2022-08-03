@@ -1,13 +1,16 @@
 module ContentItem
   module RecruitmentBanner
-    SURVEY_URL_ONE = "https://GDSUserResearch.optimalworkshop.com/treejack/834dm2s6".freeze
-    SURVEY_URLS = {
-      "/browse/working" => SURVEY_URL_ONE,
-    }.freeze
+    TREE_TEST_URL = "https://GDSUserResearch.optimalworkshop.com/treejack/834dm2s6".freeze
+    TREE_TEST_PAGE = "/browse/working".freeze
+    TREE_TEST_MAPPINGS = { TREE_TEST_PAGE => TREE_TEST_URL }.freeze
 
     def recruitment_survey_url
-      key = SURVEY_URLS.keys.find { |k| content_tagged_to(k).present? }
-      SURVEY_URLS[key]
+      tree_test_url
+    end
+
+    def tree_test_url
+      key = TREE_TEST_MAPPINGS.keys.find { |k| content_tagged_to(k).present? }
+      TREE_TEST_MAPPINGS[key]
     end
 
   private
