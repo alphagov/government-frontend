@@ -1,6 +1,6 @@
 module ContentItem
   module RecruitmentBanner
-    TREE_TEST_URL = "https://GDSUserResearch.optimalworkshop.com/treejack/834dm2s6".freeze
+    TREE_TEST_URL = "https://GDSUserResearch.optimalworkshop.com/treejack/b3cu012d".freeze
     TREE_TEST_PAGE = "/browse/working".freeze
     TREE_TEST_MAPPINGS = { TREE_TEST_PAGE => TREE_TEST_URL }.freeze
 
