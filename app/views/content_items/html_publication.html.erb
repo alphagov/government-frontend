@@ -54,9 +54,20 @@
     <% if @content_item.contents.any? %>
       <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
         <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
-        <%= render "govuk_publishing_components/components/print_link", {
+
+        <%= render 'govuk_publishing_components/components/print_link', {
           margin_top: 0,
           margin_bottom: 6,
+          data_attributes: {
+            module: "ga4-event-tracker",
+            ga4: {
+              event_name: 'print_page',
+              type: 'Print this page',
+              index: 1,
+              index_total: 1,
+              section: 'Contents',
+            },
+          },
         } %>
       </div>
     <% end %>
