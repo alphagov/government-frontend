@@ -105,6 +105,16 @@
       <%= render "govuk_publishing_components/components/print_link", {
         margin_top: 0,
         margin_bottom: 6,
+        data_attributes: {
+          module: "ga4-event-tracker",
+          ga4: {
+            event_name: 'print_page',
+            type: 'Print this page',
+            index: 1,
+            index_total: 2,
+            section: 'Contents',
+          },
+        },
       } unless brexit_child_taxon %>
 
       <% if brexit_child_taxon %>
@@ -122,6 +132,16 @@
     <%= render "govuk_publishing_components/components/print_link", {
         margin_top: 0,
         margin_bottom: 6,
+        data_attributes: {
+          module: "ga4-event-tracker",
+          ga4: {
+            event_name: 'print_page',
+            type: 'Print this page',
+            index: 2,
+            index_total: 2,
+            section: 'Footer',
+          },
+        },
       } unless brexit_child_taxon %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
