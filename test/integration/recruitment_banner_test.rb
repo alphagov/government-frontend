@@ -16,7 +16,7 @@ class RecruitmentBannerTest < ActionDispatch::IntegrationTest
     visit guide["base_path"]
 
     assert page.has_css?(".gem-c-intervention")
-    assert page.has_link?("Take part in user research (opens in a new tab)", href: "https://GDSUserResearch.optimalworkshop.com/treejack/b3cu012d")
+    assert page.has_link?("Take part in user research (opens in a new tab)", href: "https://GDSUserResearch.optimalworkshop.com/treejack/8f1yr1fj")
   end
 
   test "Tree test recruitment banner is not displayed unless page is tagged to a topic of interest" do
@@ -33,7 +33,7 @@ class RecruitmentBannerTest < ActionDispatch::IntegrationTest
     visit_with_cachebust guide["base_path"]
 
     assert_not page.has_css?(".gem-c-intervention")
-    assert_not page.has_link?("Take part in user research", href: "https://GDSUserResearch.optimalworkshop.com/treejack/b3cu012d")
+    assert_not page.has_link?("Take part in user research", href: "https://GDSUserResearch.optimalworkshop.com/treejack/8f1yr1fj")
   end
 
   test "Visa test recruitment banner is displayed on pages of interest" do
