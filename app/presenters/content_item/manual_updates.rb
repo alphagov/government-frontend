@@ -4,6 +4,15 @@ module ContentItem
       I18n.t("manuals.updates_page_title", title: manual_page_title)
     end
 
+    def breadcrumbs
+      [
+        {
+          title: I18n.t("manuals.breadcrumb_contents"),
+          url: base_path,
+        },
+      ]
+    end
+
     def description
       I18n.t("manuals.updates_description", title: manual_page_title)
     end

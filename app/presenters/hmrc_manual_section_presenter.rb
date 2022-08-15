@@ -8,7 +8,12 @@ class HmrcManualSectionPresenter < ContentItemPresenter
   end
 
   def breadcrumbs
-    crumbs = manual_breadcrumbs.dup
+    crumbs = [
+      {
+        title: I18n.t("manuals.breadcrumb_contents"),
+        url: base_path,
+      },
+    ]
 
     return crumbs if content_item_breadcrumbs.blank?
 

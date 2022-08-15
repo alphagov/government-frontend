@@ -16,20 +16,8 @@ module ContentItem
     alias_method :manual_page_title, :page_title
 
     def breadcrumbs
-      crumbs = []
-
-      if view_context.request.path == base_path
-        crumbs.push({
-          title: I18n.t("manuals.breadcrumb_contents"),
-        })
-      else
-        crumbs.push({
-          title: I18n.t("manuals.breadcrumb_contents"),
-          url: base_path,
-        })
-      end
+      [{ title: I18n.t("manuals.breadcrumb_contents") }]
     end
-    alias_method :manual_breadcrumbs, :breadcrumbs
 
     def section_groups
       content_item.dig("details", "child_section_groups") || []

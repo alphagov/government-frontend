@@ -3,6 +3,10 @@
     content_item: @content_item, heading_level: 1, margin_bottom: 6,
   } %>
 
+  <%= render "govuk_publishing_components/components/contents_list", {
+    aria_label: t("manuals.pages_in_manual_section"), contents: @content_item.contents, underline_links: true
+  } %>
+
   <div class="govuk-grid-row">
     <div class="manual-body" id="content">
       <article aria-labelledby="section-title">
