@@ -18,7 +18,7 @@ RUN bundle exec rails assets:precompile && rm -rf /app/log
 
 FROM $base_image
 
-ENV GOVUK_APP_NAME=government-frontend PORT=3090
+ENV GOVUK_APP_NAME=government-frontend
 
 COPY --from=builder /usr/local/bundle/ /usr/local/bundle/
 COPY --from=builder /app /app/
