@@ -49,20 +49,45 @@
                 </div>
               <% end %>
             <% else %>
-              <%= render "govuk_publishing_components/components/accordion", {
-                anchor_navigation: true,
-                items: @content_item.main.map do |item|
+              <%
+                items = @content_item.main.each.with_index(1).map do |item, index|
                   rendered_content = render "govuk_publishing_components/components/govspeak", {} do
                     raw(item[:content])
                   end
 
                   {
+                    data_attributes: {
+                      module: "gtm-track-click",
+                      ga4: {
+                        event_name: "select_content",
+                        type: "accordion",
+                        text: item[:heading],
+                        index: index,
+                        index_total: @content_item.main.length,
+                      }
+                    },
                     heading: item[:heading],
                     content: {
                       html: rendered_content,
                     },
                   }
                 end
+              %>
+
+              <%
+                ga4_attributes = {
+                  event_name: "select_content",
+                  type: "accordion",
+                  index: 0,
+                  index_total: @content_item.main.length,
+                }
+              %>
+              <%= render "govuk_publishing_components/components/accordion", {
+                data_attributes_show_all: {
+                  "ga4": ga4_attributes.to_json
+                },
+                anchor_navigation: true,
+                items: items,
               } %>
             <% end %>
           <% end %>

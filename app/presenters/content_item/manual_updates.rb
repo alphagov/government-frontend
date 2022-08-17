@@ -42,7 +42,7 @@ module ContentItem
       formatted_date = I18n.l(date, format: "%-d %B %Y") if date
       updates_span = view_context.content_tag("span",
                                               I18n.t("manuals.updates_amendments"),
-                                              class: "visuallyhidden")
+                                              class: "govuk-visually-hidden")
 
       formatted_date = "#{formatted_date} #{updates_span}"
       view_context.sanitize(formatted_date)
