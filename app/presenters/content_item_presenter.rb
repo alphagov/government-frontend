@@ -77,6 +77,18 @@ class ContentItemPresenter
     end
   end
 
+  def links
+    @links ||= content_item["links"] || {}
+  end
+
+  def details
+    @details ||= content_item["details"] || {}
+  end
+
+  def include_search_in_header?
+    true
+  end
+
   # The default behaviour to is honour the max_age
   # from the content-store response.
   def cache_control_max_age(_format)
