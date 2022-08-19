@@ -7,7 +7,7 @@
 
 <div class="govuk-grid-row" id="guide-print">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', { 
+    <%= render 'govuk_publishing_components/components/title', {
       margin_bottom: 6,
       title: @content_item.title,
     } %>
@@ -21,10 +21,17 @@
 
     <%= render 'govuk_publishing_components/components/print_link', {
       data_attributes: {
+        module: "ga4-event-tracker",
         "track-category": "printButton",
         "track-action": "clicked",
         "track-label": t("components.print_link.text"),
-        module: "print-link"
+        ga4: {
+          event_name: 'print_page',
+          type: 'Print this page',
+          index: 1,
+          index_total: 2,
+          section: 'Contents',
+        },
       },
       margin_bottom: 8,
       text: t("components.print_link.text"),
@@ -45,10 +52,17 @@
 
     <%= render 'govuk_publishing_components/components/print_link', {
       data_attributes: {
+        module: "ga4-event-tracker",
         "track-category": "printButton",
         "track-action": "clicked",
         "track-label": t("components.print_link.text"),
-        module: "print-link"
+        ga4: {
+          event_name: 'print_page',
+          type: 'Print this page',
+          index: 2,
+          index_total: 2,
+          section: 'Footer',
+        },
       },
       text: t("components.print_link.text")
     } %>
