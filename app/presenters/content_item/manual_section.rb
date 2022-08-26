@@ -15,6 +15,24 @@ module ContentItem
       document_heading << content_item["title"] if content_item["title"]
     end
 
+    def breadcrumbs
+      if show_contents_list?
+        [
+          {
+            title: I18n.t("manuals.contents_list_breadcrumb_contents"),
+            url: base_path,
+          },
+        ]
+      else
+        [
+          {
+            title: I18n.t("manuals.breadcrumb_contents"),
+            url: base_path,
+          },
+        ]
+      end
+    end
+
     def breadcrumb
       details["section_id"] || title
     end

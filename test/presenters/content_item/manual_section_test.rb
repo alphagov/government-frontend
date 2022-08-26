@@ -34,6 +34,34 @@ class ContentItemManualSectionTest < ActiveSupport::TestCase
     assert_equal(%w[ADML1000 manualsectiontest], item.document_heading)
   end
 
+  test "returns breadcrumbs when showing contents list" do
+    item = DummyContentItem.new
+    item.stubs(:show_contents_list?).returns(true)
+
+    breadcrumbs = [
+      {
+        title: I18n.t("manuals.contents_list_breadcrumb_contents"),
+        url: item.base_path,
+      },
+    ]
+
+    assert_equal(breadcrumbs, item.breadcrumbs)
+  end
+
+  test "returns breadcrumbs when not showing contents list" do
+    item = DummyContentItem.new
+    item.stubs(:show_contents_list?).returns(false)
+
+    breadcrumbs = [
+      {
+        title: I18n.t("manuals.breadcrumb_contents"),
+        url: item.base_path,
+      },
+    ]
+
+    assert_equal(breadcrumbs, item.breadcrumbs)
+  end
+
   test "returns breadcrumb when section_id is present" do
     item = DummyContentItem.new
 

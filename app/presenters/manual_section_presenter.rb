@@ -1,6 +1,7 @@
 class ManualSectionPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::Manual
+  include ContentItem::ContentsList
   include ContentItem::ManualSection
 
   def base_path

@@ -41,20 +41,10 @@ class ContentItemManualTest < ActiveSupport::TestCase
     assert_equal "#{item.title} - HMRC internal manual", item.page_title
   end
 
-  test "returns breadcrumbs when the base_path is equal to the request path" do
+  test "returns breadcrumbs" do
     item = DummyContentItem.new
-    item.view_context.stubs(:request)
-      .returns(ActionDispatch::TestRequest.create("PATH_INFO" => item.base_path))
 
     assert_equal [{ title: I18n.t("manuals.breadcrumb_contents") }], item.breadcrumbs
-  end
-
-  test "returns breadcrumbs when the base_path is not equal to the request path" do
-    item = DummyContentItem.new
-    item.view_context.stubs(:request)
-      .returns(ActionDispatch::TestRequest.create("PATH_INFO" => "/some/other/base_path"))
-
-    assert_equal [{ title: I18n.t("manuals.breadcrumb_contents"), url: item.base_path }], item.breadcrumbs
   end
 
   test "returns section groups" do

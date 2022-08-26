@@ -19,6 +19,7 @@ module ContentItem
     end
 
     def show_contents_list?
+      return false if exclude_contents_list_for_manual_section?
       return false if contents_items.count < 2
       return true if contents_items.count > 2
       return false if no_first_item?
@@ -109,6 +110,13 @@ module ContentItem
 
     def no_first_item?
       first_item.nil?
+    end
+
+    def exclude_contents_list_for_manual_section?
+      # MOJ require contents lists for manual section pages.
+
+      moj_content = content_item.dig("links", "organisations", 0, "content_id") == "dcc907d6-433c-42df-9ffb-d9c68be5dc4d"
+      document_type == "manual_section" && !moj_content
     end
   end
 end

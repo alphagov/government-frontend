@@ -84,6 +84,19 @@ class ManualSectionTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "renders content lists if published by MOJ" do
+    content_item = get_content_example("what-is-content-design")
+    organisations = { "organisations" => [{ "content_id" => "dcc907d6-433c-42df-9ffb-d9c68be5dc4d" }] }
+    content_item["links"] = content_item["links"].merge(organisations)
+
+    setup_and_visit_manual_section(content_item)
+
+    assert_has_contents_list([
+      { text: "Designing content, not creating copy", id: "designing-content-not-creating-copy" },
+      { text: "Content design always starts with user needs", id: "content-design-always-starts-with-user-needs" },
+    ])
+  end
+
   def setup_and_visit_manual_section(content_item = get_content_example("what-is-content-design"))
     @manual = get_content_example_by_schema_and_name("manual", "content-design")
     @content_item = content_item
