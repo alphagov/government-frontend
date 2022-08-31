@@ -4,6 +4,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::TitleAndContext
   include ContentItem::ContentsList
+  include ContentItem::SinglePageNotificationButton
 
   def contents_items
     groups.map do |group|
