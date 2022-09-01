@@ -8,6 +8,9 @@
     "GOVUK_WEBSITE_ROOT": {
       "value": "https://www.gov.uk"
     },
+    "GOVUK_PROXY_STATIC_ENABLED": {
+      "value": "true"
+    },
     "PLEK_SERVICE_CONTENT_STORE_URI": {
       "value": "https://govuk-content-store-examples.herokuapp.com/api"
     },
