@@ -76,7 +76,7 @@ class ActionDispatch::IntegrationTest
         selector = "a[href=\"##{heading[:id]}\"]"
         text = heading.fetch(:text)
         assert page.has_css?(selector), "Failed to find an element matching: #{selector}"
-        assert page.has_css?(selector, text: text), "Failed to find an element matching #{selector} with text: #{text}"
+        assert page.has_css?(selector, text:), "Failed to find an element matching #{selector} with text: #{text}"
       end
     end
   end
@@ -105,7 +105,7 @@ class ActionDispatch::IntegrationTest
         value = { value => nil } if value.is_a?(String)
         value.each do |text, href|
           if href
-            assert page.has_link?(text, href: href), "Metadata text '#{text} with link of #{href}' not found"
+            assert page.has_link?(text, href:), "Metadata text '#{text} with link of #{href}' not found"
           else
             assert page.has_text?(text), "Metadata value '#{text}' not found"
           end
@@ -120,9 +120,9 @@ class ActionDispatch::IntegrationTest
              "Metadata term '#{key}' not found"
       value = { value => nil } if value.is_a?(String)
       value.each do |text, href|
-        within(definition_selector, text: text) do
+        within(definition_selector, text:) do
           if href
-            assert page.has_link?(text, href: href), "Metadata link '#{text}' not found"
+            assert page.has_link?(text, href:), "Metadata link '#{text}' not found"
           else
             assert page.has_text?(text), "Metadata value '#{text}' not found"
           end
@@ -156,7 +156,7 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_footer_has_published_dates(first_published = nil, last_updated = nil, history_link: false)
-    assert_has_published_dates(first_published, last_updated, history_link: history_link)
+    assert_has_published_dates(first_published, last_updated, history_link:)
   end
 
   def setup_and_visit_content_item(name, parameter_string = "")

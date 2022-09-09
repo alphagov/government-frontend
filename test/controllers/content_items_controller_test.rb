@@ -255,9 +255,9 @@ class ContentItemsControllerTest < ActionController::TestCase
   test "renders translated content items in their locale" do
     content_item = content_store_has_schema_example("case_study", "translated")
     locale = content_item["locale"]
-    translated_schema_name = I18n.t("content_item.schema_name.case_study", count: 1, locale: locale)
+    translated_schema_name = I18n.t("content_item.schema_name.case_study", count: 1, locale:)
 
-    get :show, params: { path: path_for(content_item, locale), locale: locale }
+    get :show, params: { path: path_for(content_item, locale), locale: }
 
     assert_response :success
     assert_select "title", %r{#{translated_schema_name}}
@@ -296,7 +296,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_does_not_have_item("/#{path}")
 
-    get :show, params: { path: path }
+    get :show, params: { path: }
     assert_response :not_found
   end
 
@@ -305,7 +305,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_does_not_have_item("/#{path}")
 
-    get :show, params: { path: path }
+    get :show, params: { path: }
     assert_response :not_found
   end
 
@@ -317,7 +317,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item("/#{path}", content_item)
 
-    get :show, params: { path: path }
+    get :show, params: { path: }
     assert_response :not_found
   end
 
@@ -326,7 +326,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     url = "#{content_store_endpoint}/content/#{path}"
     stub_request(:get, url).to_return(status: 403, headers: {})
 
-    get :show, params: { path: path }
+    get :show, params: { path: }
     assert_response :forbidden
   end
 

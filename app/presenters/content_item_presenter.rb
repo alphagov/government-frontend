@@ -111,7 +111,7 @@ private
   end
 
   def display_date(timestamp, format = "%-d %B %Y")
-    I18n.l(Time.zone.parse(timestamp), format: format, locale: "en") if timestamp
+    I18n.l(Time.zone.parse(timestamp), format:, locale: "en") if timestamp
   end
 
   def sorted_locales(translations)
@@ -135,6 +135,6 @@ private
   end
 
   def native_language_name_for(locale)
-    I18n.t("language_names.#{locale}", locale: locale)
+    I18n.t("language_names.#{locale}", locale:)
   end
 end

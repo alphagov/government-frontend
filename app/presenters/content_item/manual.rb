@@ -8,9 +8,9 @@ module ContentItem
       title += " - " if title.present?
 
       if hmrc?
-        I18n.t("manuals.hmrc_title", title: title)
+        I18n.t("manuals.hmrc_title", title:)
       else
-        I18n.t("manuals.title", title: title)
+        I18n.t("manuals.title", title:)
       end
     end
     alias_method :manual_page_title, :page_title
@@ -29,7 +29,7 @@ module ContentItem
 
     def manual_metadata
       {
-        from: from,
+        from:,
         first_published: published,
         other: other_metadata,
         inverse: true,

@@ -118,7 +118,7 @@ private
 
   def v_card_part(v_card_class, value)
     {
-      v_card_class: v_card_class,
+      v_card_class:,
       value: value.try(:strip).try(:html_safe),
     }
   end

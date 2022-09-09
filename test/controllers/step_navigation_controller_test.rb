@@ -13,7 +13,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
       @controller.stubs(:page_in_scope?).returns(false)
 
-      get :show, params: { path: path }
+      get :show, params: { path: }
 
       assert_response 200
       assert response.body.include?("Learn to drive a car: step by step")
@@ -28,7 +28,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
       @controller.stubs(:page_in_scope?).returns(false)
 
-      get :show, params: { path: path }
+      get :show, params: { path: }
 
       assert_response 200
       assert_not response.body.include?("Learn to drive a car: step by step")

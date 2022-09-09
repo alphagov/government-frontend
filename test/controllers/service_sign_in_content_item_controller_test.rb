@@ -35,7 +35,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
-    get :show, params: { path: path }
+    get :show, params: { path: }
 
     assert_template :service_sign_in
   end
@@ -46,14 +46,14 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
-    get :show, params: { path: path }
+    get :show, params: { path: }
 
     assert_template :service_sign_in
   end
 
   test "raises a 404 for a content item which isn't a service_sign_in page" do
     path = "this/is/not/a/sign/in/page"
-    post :service_sign_in_options, params: { path: path }
+    post :service_sign_in_options, params: { path: }
     assert_response :not_found
   end
 
@@ -67,7 +67,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
-    post :service_sign_in_options, params: { path: path, option: value }
+    post :service_sign_in_options, params: { path:, option: value }
 
     assert_response :redirect
     assert_redirected_to link
@@ -79,7 +79,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
-    post :service_sign_in_options, params: { path: path }
+    post :service_sign_in_options, params: { path: }
 
     assert_not_nil @controller.instance_variable_get(:@error)
     assert_template :service_sign_in
@@ -93,7 +93,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
-    post :service_sign_in_options, params: { path: path, option: option }
+    post :service_sign_in_options, params: { path:, option: }
 
     assert_not_nil @controller.instance_variable_get(:@error)
     assert_template :service_sign_in
@@ -112,7 +112,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_request(:get, %r{#{path}}).to_return(status: 200, body: content_item.to_json, headers: {})
 
-    post :service_sign_in_options, params: { path: path, _ga: "1.1111111.1111111.111111111", option: value }
+    post :service_sign_in_options, params: { path:, _ga: "1.1111111.1111111.111111111", option: value }
 
     assert_response :redirect
     assert_redirected_to "https://www.horse.service.gov.uk/account?horse=brown&_ga=1.1111111.1111111.111111111"

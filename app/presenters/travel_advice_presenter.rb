@@ -23,7 +23,7 @@ class TravelAdvicePresenter < ContentItemPresenter
     other["Latest update"] = view_context.simple_format(latest_update, { class: "metadata__update" }, wrapper_tag: "span") if latest_update.present?
 
     {
-      other: other,
+      other:,
     }
   end
 

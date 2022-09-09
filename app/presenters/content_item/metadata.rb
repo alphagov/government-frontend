@@ -5,11 +5,11 @@ module ContentItem
 
     def metadata
       {
-        from: from,
+        from:,
         first_published: published,
         last_updated: updated,
         see_updates_link: true,
-        part_of: part_of,
+        part_of:,
         direction: text_direction,
         other: {},
       }
@@ -21,7 +21,7 @@ module ContentItem
 
     def publisher_metadata
       {
-        from: from,
+        from:,
         first_published: published,
         last_updated: updated,
         see_updates_link: true,
