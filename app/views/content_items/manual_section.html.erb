@@ -61,7 +61,6 @@
 
                   {
                     data_attributes: {
-                      module: "ga4-event-tracker",
                       ga4: {
                         event_name: "select_content",
                         type: "accordion",
@@ -89,6 +88,9 @@
               <%= render "govuk_publishing_components/components/accordion", {
                 data_attributes_show_all: {
                   "ga4": ga4_attributes.to_json
+                },
+                data_attributes: {
+                  module: "ga4-event-tracker",
                 },
                 anchor_navigation: true,
                 items: items,
