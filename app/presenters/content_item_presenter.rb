@@ -65,7 +65,7 @@ class ContentItemPresenter
   end
 
   def web_url
-    Plek.current.website_root + content_item["base_path"]
+    Plek.new.website_root + content_item["base_path"]
   end
 
   def canonical_url
