@@ -15,7 +15,7 @@ class ContentItemShareableTest < ActiveSupport::TestCase
   end
 
   def expected_path
-    url_encode("#{Plek.current.website_root}/a/base/path")
+    url_encode("#{Plek.new.website_root}/a/base/path")
   end
 
   test "presents the twitter share url" do

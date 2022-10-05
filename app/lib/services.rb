@@ -4,7 +4,7 @@ require "gds_api/publishing_api"
 module Services
   def self.content_store
     @content_store ||= GdsApi::ContentStore.new(
-      Plek.current.find("content-store"),
+      Plek.new.find("content-store"),
       # Disable caching to avoid caching a stale max-age in the cache control
       # headers, which would cause this app to set the wrong max-age on its
       # own responses

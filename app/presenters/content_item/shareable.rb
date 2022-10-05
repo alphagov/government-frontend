@@ -28,7 +28,7 @@ module ContentItem
     end
 
     def share_url
-      url_encode(Plek.current.website_root + content_item["base_path"])
+      url_encode(Plek.new.website_root + content_item["base_path"])
     end
   end
 end
