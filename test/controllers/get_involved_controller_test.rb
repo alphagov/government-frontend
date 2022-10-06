@@ -96,7 +96,7 @@ class GetInvolvedControllerTest < ActionController::TestCase
 private
 
   def stub_search_query(query:, response:)
-    stub_request(:get, /\A#{Plek.current.find('search')}\/search.json/)
+    stub_request(:get, /\A#{Plek.new.find('search')}\/search.json/)
       .with(query: query)
       .to_return(body: response.to_json)
   end
