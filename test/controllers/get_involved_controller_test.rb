@@ -62,7 +62,7 @@ class GetInvolvedControllerTest < ActionController::TestCase
       title = "Next closing consultation on time zones"
       stub_search_query(query: hash_including(filter_content_store_document_type: "open_consultation",
                                               filter_end_date: "from: #{Time.zone.now.to_date}"),
-                        response: { "results" => [consultation_result(title: title)] })
+                        response: { "results" => [consultation_result(title:)] })
 
       get :show
       assert_select ".gem-c-inset-text", /#{title}/
@@ -72,7 +72,7 @@ class GetInvolvedControllerTest < ActionController::TestCase
   test "showing recently opened consultations" do
     title = "Open consultation on time zones"
     stub_search_query(query: hash_including(filter_content_store_document_type: "open_consultation"),
-                      response: { "results" => [consultation_result(title: title)] })
+                      response: { "results" => [consultation_result(title:)] })
 
     get :show
     assert response.body.include?(title)
@@ -81,7 +81,7 @@ class GetInvolvedControllerTest < ActionController::TestCase
   test "showing recent consultation outcomes" do
     title = "Consultation outcome on time zones"
     stub_search_query(query: hash_including(filter_content_store_document_type: "consultation_outcome"),
-                      response: { "results" => [consultation_result(title: title)] })
+                      response: { "results" => [consultation_result(title:)] })
 
     get :show
     assert response.body.include?(title)
@@ -97,7 +97,7 @@ private
 
   def stub_search_query(query:, response:)
     stub_request(:get, /\A#{Plek.new.find('search')}\/search.json/)
-      .with(query: query)
+      .with(query:)
       .to_return(body: response.to_json)
   end
 

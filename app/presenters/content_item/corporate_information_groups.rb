@@ -44,7 +44,7 @@ module ContentItem
 
     def further_information_about(type)
       link = further_information_link(type)
-      I18n.t("corporate_information_page.#{type}_html", link: link) if link
+      I18n.t("corporate_information_page.#{type}_html", link:) if link
     end
 
     def corporate_information_heading

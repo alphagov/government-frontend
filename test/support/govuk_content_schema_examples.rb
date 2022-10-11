@@ -26,7 +26,7 @@ module GovukContentSchemaExamples
   end
 
   def govuk_content_schema_example(schema_name, example_name)
-    GovukSchemas::Example.find(schema_name, example_name: example_name)
+    GovukSchemas::Example.find(schema_name, example_name:)
   end
 
   module ClassMethods

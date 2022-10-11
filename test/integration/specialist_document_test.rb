@@ -139,7 +139,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
     if heading_level < 4
       assert page.has_css?(selector), "Failed to find an element matching: #{selector}"
-      assert page.has_css?(selector, text: text), "Failed to find an element matching #{selector} with text: #{text}"
+      assert page.has_css?(selector, text:), "Failed to find an element matching #{selector} with text: #{text}"
     else
       assert_not page.has_css?(selector), "Found a nested heading too deep, there should be no element matching: #{selector}"
     end

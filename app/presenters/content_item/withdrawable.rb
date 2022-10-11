@@ -41,7 +41,7 @@ module ContentItem
     end
 
     def english_display_date(timestamp, format = "%-d %B %Y")
-      I18n.l(Time.zone.parse(timestamp), format: format, locale: :en) if timestamp
+      I18n.l(Time.zone.parse(timestamp), format:, locale: :en) if timestamp
     end
   end
 end
