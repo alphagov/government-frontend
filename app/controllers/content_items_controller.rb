@@ -137,7 +137,7 @@ private
     end
 
     # use these and `@content_item.base_path` in the template
-    @notification_button_visible = @content_item.has_single_page_notifications? && !@content_item.brexit_child_taxon
+    @notification_button_visible = @content_item.has_single_page_notifications?
     @include_single_page_notification_button_js = account_session_header.present?
 
     request.variant = :print if params[:variant] == "print"

@@ -38,9 +38,6 @@
     <% unless @do_not_show_breadcrumbs %>
       <% if @content_item.try(:back_link) %>
         <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
-      <% elsif @content_item.brexit_child_taxon %>
-        <%= render 'govuk_publishing_components/components/breadcrumbs',
-                   breadcrumbs: [ { url: "/", title: "Home" } , { url: "/brexit", title: "Brexit" } ] %>
       <% else %>
         <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item %>
       <% end %>
