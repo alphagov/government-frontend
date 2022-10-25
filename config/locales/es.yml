@@ -1,13 +1,5 @@
 ---
 es:
-  brexit:
-    business_link:
-      path: "/guidance/brexit-guidance-for-businesses"
-      text: Orientación del Brexit para las empresas
-    citizen_link:
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-      text: Guía del Brexit para personas y familias
-    heading_prefix: Algo diferente
   common:
     visit: 'Visite:'
   components:
@@ -27,7 +19,7 @@ es:
     share_links:
       share_this_page: Compartir esta página
   consultation:
-    and: y
+    and: "y"
     another_website_html: Esta consulta %{closed} se realizó en <a href='%{url}'>otro sitio web</a>
     at: en
     closes: Cierra a las
