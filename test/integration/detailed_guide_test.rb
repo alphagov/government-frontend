@@ -87,46 +87,6 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_not_equal faq_schema["mainEntity"], []
   end
 
-  test "renders brexit child taxon pages in special ways" do
-    setup_and_visit_brexit_child_taxon("business")
-
-    # hides the print links
-    assert_not page.has_css?(".gem-c-print-link")
-    assert_not page.has_content?("Print this page")
-
-    # hides published by metadata
-    assert_not page.has_css?(".gem-c-metadata")
-
-    # renders description field as a custom link
-    assert_not page.has_text?(@content_item["description"])
-    link_text = "Brexit guidance for individuals and families"
-    assert page.has_link?(link_text, href: ContentItem::BrexitTaxons::BREXIT_CITIZEN_PAGE_PATH)
-
-    setup_and_visit_brexit_child_taxon("citizen")
-
-    assert_not page.has_text?(@content_item["description"])
-    link_text = "Brexit guidance for businesses"
-    assert page.has_link?(link_text, href: ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_PATH)
-
-    # adds GA tracking to the li links
-    track_action = find_link("Foreign travel advice")["data-track-action"]
-    track_category = find_link("Foreign travel advice")["data-track-category"]
-    track_label = find_link("Foreign travel advice")["data-track-label"]
-
-    assert_equal "/foreign-travel-advice", track_action
-    assert_equal "Child taxon section links - citizen", track_category
-    assert_equal "Travel to the EU", track_label
-
-    # adds GA tracking to the description field links
-    track_action = find_link("Brexit guidance for businesses")["data-track-action"]
-    track_category = find_link("Brexit guidance for businesses")["data-track-category"]
-    track_label = find_link("Brexit guidance for businesses")["data-track-label"]
-
-    assert_equal ContentItem::BrexitTaxons::BREXIT_BUSINESS_PAGE_PATH, track_action
-    assert_equal "brexit-citizen-page", track_category
-    assert_equal "Guidance nav link", track_label
-  end
-
   test "renders with the single page notification button" do
     setup_and_visit_content_item("detailed_guide")
     assert page.has_css?(".gem-c-single-page-notification-button")

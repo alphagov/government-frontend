@@ -1,13 +1,5 @@
 ---
 th:
-  brexit:
-    business_link:
-      path: "/guidance/brexit-guidance-for-businesses"
-      text: คำแนะนำ Brexit สำหรับธุรกิจ
-    citizen_link:
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-      text: คำแนะนำ Brexit สำหรับบุคคลและครอบครัว
-    heading_prefix: มีความแตกต่างกัน
   common:
     visit: 'เยี่ยมชม:'
   components:

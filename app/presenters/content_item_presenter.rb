@@ -1,6 +1,5 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
-  include ContentItem::BrexitTaxons
   include ContentItem::SinglePageNotificationButton
   attr_reader :content_item,
               :requested_path,

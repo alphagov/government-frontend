@@ -1,11 +1,9 @@
-<% brexit_child_taxon ||= nil %>
-
 <%= render 'components/published-dates', {
     published: @content_item.published,
     last_updated: @content_item.updated,
     history: @content_item.history,
     margin_bottom: 3,
-  } unless brexit_child_taxon %>
+  } %>
 <%= render 'govuk_publishing_components/components/single_page_notification_button', {
     base_path: @content_item.base_path,
     js_enhancement: @include_single_page_notification_button_js,

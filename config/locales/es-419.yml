@@ -1,13 +1,5 @@
 ---
 es-419:
-  brexit:
-    business_link:
-      path: "/guidance/brexit-guidance-for-businesses"
-      text: Orientación sobre el Brexit para las empresas
-    citizen_link:
-      path: "/guidance/brexit-guidance-for-individuals-and-families"
-      text: Orientación sobre el Brexit para familias y particulares
-    heading_prefix: Hay distintos
   common:
     visit: 'Visite:'
   components:
@@ -27,7 +19,7 @@ es-419:
     share_links:
       share_this_page: Compartir esta página
   consultation:
-    and: y
+    and: "y"
     another_website_html: Esta consulta %{closed} realizada en <a href="%{url}">otro sitio web</a>
     at: en
     closes: Se cierra a
