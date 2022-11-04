@@ -1,6 +1,5 @@
 class ContentItemPresenter
   include ContentItem::Withdrawable
-  include ContentItem::SinglePageNotificationButton
   attr_reader :content_item,
               :requested_path,
               :view_context,
@@ -44,6 +43,10 @@ class ContentItemPresenter
   end
 
   def requesting_a_service_sign_in_page?
+    false
+  end
+
+  def has_single_page_notifications?
     false
   end
 
