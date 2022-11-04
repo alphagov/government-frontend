@@ -42,36 +42,6 @@
           </tr>
         </table>
 
-        <h2>Examples</h2>
-
-        <p>
-          The content schemas contain <%= link_to 'handmade examples', 'https://github.com/alphagov/govuk-content-schemas/tree/master/examples' %>
-          for each schema rendered by this app. These are used in tests.
-        </p>
-
-        <p>
-          If this application is pointed at the <%= link_to 'dummy content store', 'https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md' %>
-          you can use the links below to view pages using the examples. For a
-          full list of examples, see <%= link_to 'govspeak-examples guide', 'https://govuk-content-store-examples.herokuapp.com' %>.
-        </p>
-        <table>
-          <% @schema_names.each do |schema_name| %>
-            <tr>
-              <td>
-                <%= schema_name %>
-              </td>
-              <td>
-                <%= link_to "Canonical example", "/examples/#{schema_name}/#{schema_name}" %>*
-              </td>
-              <td>
-                <%= link_to "Random example", "/examples/#{schema_name}/random" %>*
-              </td>
-            </tr>
-          <% end %>
-        </table>
-
-        * Will only work if this app is pointed at the <%= link_to 'dummy content store', 'https://github.com/alphagov/govuk-content-schemas/blob/master/docs/running-frontend-against-examples.md' %>.
-
         <h2>Examples from GOV.UK</h2>
 
         <p>These pages are good examples of the types of pages rendered by this application.</p>
