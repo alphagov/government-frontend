@@ -5,6 +5,7 @@ class DetailedGuidePresenter < ContentItemPresenter
   include ContentItem::NationalApplicability
   include ContentItem::Political
   include ContentItem::TitleAndContext
+  include ContentItem::SinglePageNotificationButton
 
   def title_and_context
     super.tap do |t|

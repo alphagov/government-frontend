@@ -3,4 +3,4 @@
   js_enhancement: @has_govuk_account,
   margin_bottom: 6,
   button_location: "top",
-} if @notification_button_visible %>
+} if @content_item.has_single_page_notifications? %>

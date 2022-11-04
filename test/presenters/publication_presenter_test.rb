@@ -74,4 +74,9 @@ class PublicationPresenterTest < PresenterTestCase
     assert_equal(presented.national_applicability[:wales][:applicable], false)
     assert_equal(presented.national_applicability[:wales][:alternative_url], "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en")
   end
+
+  test "presents the single page notification button" do
+    presented = presented_item("statistics_publication")
+    assert presented.has_single_page_notifications?
+  end
 end
