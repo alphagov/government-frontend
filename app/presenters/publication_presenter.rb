@@ -4,6 +4,7 @@ class PublicationPresenter < ContentItemPresenter
   include ContentItem::NationalStatisticsLogo
   include ContentItem::Political
   include ContentItem::Attachments
+  include ContentItem::SinglePageNotificationButton
 
   def details
     content_item["details"]["body"]

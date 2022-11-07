@@ -149,5 +149,12 @@ class ConsultationPresenterTest
       assert_equal "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fconsultations%2Fpostgraduate-doctoral-loans", presented_item("open_consultation").share_links[0][:href]
       assert_equal "https://twitter.com/share?url=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fconsultations%2Fpostgraduate-doctoral-loans&text=Postgraduate%20doctoral%20loans", presented_item("open_consultation").share_links[1][:href]
     end
+
+    test "presents the single page notification button" do
+      schema = schema_item("open_consultation")
+      presented = presented_item("open_consultation", schema)
+
+      assert presented.has_single_page_notifications?
+    end
   end
 end

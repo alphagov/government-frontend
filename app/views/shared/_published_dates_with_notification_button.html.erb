@@ -6,7 +6,7 @@
   } %>
 <%= render 'govuk_publishing_components/components/single_page_notification_button', {
     base_path: @content_item.base_path,
-    js_enhancement: @include_single_page_notification_button_js,
+    js_enhancement: @has_govuk_account,
     button_location: "bottom",
     margin_bottom: 0,
-} if @notification_button_visible %>
+} if @content_item.has_single_page_notifications? %>

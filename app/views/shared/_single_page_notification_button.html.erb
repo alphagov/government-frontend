@@ -1,0 +1,6 @@
+<%= render 'govuk_publishing_components/components/single_page_notification_button', {
+  base_path: @content_item.base_path,
+  js_enhancement: @has_govuk_account,
+  margin_bottom: 6,
+  button_location: "top",
+} if @content_item.has_single_page_notifications? %>

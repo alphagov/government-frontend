@@ -14,6 +14,7 @@
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo', content_item: @content_item %>
+<%= render 'shared/single_page_notification_button', content_item: @content_item %>
 <%= render 'shared/history_notice', content_item: @content_item %>
 <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component %>
 

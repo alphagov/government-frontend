@@ -8,14 +8,8 @@ module ContentItem
       5f9c6c15-7631-11e4-a3cb-005056011aef
     ].freeze
 
-    ALLOWED_DOCUMENT_TYPES = %w[
-      publication
-      detailed_guide
-      consultation
-    ].freeze
-
     def has_single_page_notifications?
-      (!EXEMPTION_LIST.include? content_item["content_id"]) && (ALLOWED_DOCUMENT_TYPES.include? content_item["schema_name"])
+      !EXEMPTION_LIST.include? content_item["content_id"]
     end
   end
 end
