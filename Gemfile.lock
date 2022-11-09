@@ -200,7 +200,8 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    mocha (1.16.0)
+    mocha (2.0.2)
+      ruby2_keywords (>= 0.0.5)
     net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
@@ -314,6 +315,7 @@ GEM
     rubocop-rspec (2.14.1)
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
