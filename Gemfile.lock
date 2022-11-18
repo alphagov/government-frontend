@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/alphagov/govuk_publishing_components.git
+  revision: 5a16f0d821c94d394281dcd8d881dfb6a3fad059
+  branch: simplify_button_component
+  specs:
+    govuk_publishing_components (32.1.0)
+      govuk_app_config
+      govuk_personalisation (>= 0.7.0)
+      kramdown
+      plek
+      rails (>= 6)
+      rouge
+      sprockets (>= 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -135,14 +149,6 @@ GEM
     govuk_personalisation (0.12.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (32.1.0)
-      govuk_app_config
-      govuk_personalisation (>= 0.7.0)
-      kramdown
-      plek
-      rails (>= 6)
-      rouge
-      sprockets (>= 3)
     govuk_schemas (4.4.1)
       json-schema (~> 2.8.0)
     govuk_test (3.0.1)
@@ -401,7 +407,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_personalisation
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   htmlentities
