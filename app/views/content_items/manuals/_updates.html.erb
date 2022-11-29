@@ -18,22 +18,9 @@
             font_size: "l"
           } %>
 
-          <%
-            show_all_attributes = {
-              event_name: "select_content",
-              type: "accordion",
-              index: 0,
-              index_total: updates_by_year.length,
-            }
-          %>
           <%= render "govuk_publishing_components/components/accordion", {
             heading_level: 3,
-            data_attributes: {
-              module: "ga4-event-tracker",
-            },
-            data_attributes_show_all: {
-              "ga4": show_all_attributes.to_json
-            },
+            ga4_tracking: true,
             items: updates_by_year.each.with_index(1).map do |updated_documents, index|
               accordion_content = capture do %>
                 <% change_notes = updated_documents.last %>
@@ -49,7 +36,7 @@
               <% end
               {
                 data_attributes: {
-                  ga4: {
+                  ga4_event: {
                     event_name: 'select_content',
                     type: 'accordion',
                     text: sanitize_manual_update_title(updated_documents.first),
@@ -75,9 +62,9 @@
 <%= render 'govuk_publishing_components/components/print_link', {
   data_attributes: {
     module: "ga4-event-tracker",
-    ga4: {
+    ga4_event: {
       event_name: 'print_page',
-      type: 'Print this page',
+      type: 'print page',
       index: 1,
       index_total: 1,
       section: 'Footer',
