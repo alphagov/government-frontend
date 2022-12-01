@@ -1,0 +1,10 @@
+.worldwide-organisation-header {
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  .logo {
+    @include govuk-media-query($from: tablet) {
+      margin-top: 12px;
+    }
+  }
+}
