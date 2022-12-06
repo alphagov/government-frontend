@@ -32,8 +32,35 @@
             </p>
             <%= link[:description] %>
           <% end %>
-          <%= @content_item.online_form_body %>
+          <% @content_item.online_form_body %>
         <% end %>
+
+        <%= render "govuk_publishing_components/components/heading", {
+          text: "Twitter",
+          id: "twitter",
+          margin_bottom: 2
+        } %>
+        <%= render "govuk_publishing_components/components/details", {
+          title: "Copy link to section"
+        } do %>
+          <div class="heading-anchor-links-group">
+            <%= render "govuk_publishing_components/components/copy_to_clipboard", {
+              label: "Copy link to share",
+              copyable_content: base_path + "#twitter",
+              button_text: "Copy link"
+            } %>
+          </div>
+        <% end %>
+
+        <p>You can use Twitter to get general help from HMRC. We cannot discuss specific cases or an individual’s tax affairs, so please do not give any personal details.</p>
+        <p>Start your tweet with @HMRCcustomers</p>
+        <h3 id="twitter-opening-times-br">Twitter opening times: <br>
+        </h3>
+        <p>Monday to Saturday: 8am to 8pm <br>
+        <br>
+        Closed on Sundays and bank holidays.
+        <br>
+        </p>
 
         <% if @content_item.show_webchat? %>
           <h2 id="webchat-title"><%= t("contact.webchat") %></h2>
