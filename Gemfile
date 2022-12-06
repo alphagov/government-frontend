@@ -13,6 +13,7 @@ gem "plek"
 gem "rack_strip_client_ip"
 gem "rails-controller-testing"
 gem "rails-i18n"
+gem "rails_translation_manager"
 gem "rss"
 gem "sassc-rails"
 gem "slimmer"
@@ -22,7 +23,6 @@ gem "uglifier"
 group :development, :test do
   gem "govuk_schemas"
   gem "govuk_test"
-  gem "rails_translation_manager"
   gem "rubocop-govuk"
 end
 
