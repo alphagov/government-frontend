@@ -4,8 +4,9 @@
   ) %>
 <% end %>
 
-<% content_for :simple_header, true %>
+<% base_path = @content_item.base_path %>
 
+<% content_for :simple_header, true %>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
@@ -17,7 +18,14 @@
     <div class="content-bottom-margin">
       <% body = capture do %>
         <% if @content_item.online_form_links.any? %>
-          <h2 id="online-forms-title"><%= t("contact.online") %></h2>
+          <h2 id="online-forms-title" class="anchored-heading">
+            <%= link_to "", 
+              base_path + "#online-forms-title", 
+              class: "anchored-heading__icon", 
+              aria: { hidden: true }, 
+              tabindex: -1 %>
+            <%= t("contact.online") %>
+          </h2>
           <% @content_item.online_form_links.each do |link| %>
             <p>
               <%= link_to(link[:title], link[:url]) %>

@@ -1,0 +1,49 @@
+.anchored-heading {
+  position: relative;
+}
+
+.anchored-heading__icon {
+  position: absolute;
+  width: 23px;
+  left: -29px;
+  padding: 0 3px;
+  margin-top: -1px;
+  opacity: 0;
+  display: none;
+  text-decoration: none;
+  text-indent: -9999em;
+  background-image: url("anchored-heading-icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .anchored-heading__icon {
+    background-image: url("anchored-heading-icon-2x.png");
+    background-size: 23px 14px;
+  }
+}
+
+@include govuk-media-query($from: tablet) {
+  .anchored-heading__icon {
+    display: block;
+  }
+}
+
+.anchored-heading__icon:before {
+  content: "\200b";
+}
+
+@include govuk-media-query($from: tablet) {
+  .anchored-heading:hover .anchored-heading__icon {
+    opacity: 1;
+  }
+}
+
+@include govuk-media-query($from: tablet) {
+  .anchored-heading__icon:focus {
+    opacity: 1;
+    outline-width: 1px;
+    padding: 0 2px;
+  }
+}
