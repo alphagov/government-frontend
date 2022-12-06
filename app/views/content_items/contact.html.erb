@@ -4,7 +4,7 @@
   ) %>
 <% end %>
 
-<% base_path = @content_item.base_path %>
+<% request_url = request.url %>
 
 <% content_for :simple_header, true %>
 <div class="govuk-grid-row">
@@ -20,7 +20,7 @@
         <% if @content_item.online_form_links.any? %>
           <h2 id="online-forms-title" class="anchored-heading">
             <%= link_to "", 
-              base_path + "#online-forms-title", 
+              request_url + "#online-forms-title", 
               class: "anchored-heading__icon", 
               aria: { hidden: true }, 
               tabindex: -1 %>
@@ -46,7 +46,7 @@
           <div class="heading-anchor-links-group">
             <%= render "govuk_publishing_components/components/copy_to_clipboard", {
               label: "Copy link to share",
-              copyable_content: base_path + "#twitter",
+              copyable_content: request_url + "#twitter",
               button_text: "Copy link"
             } %>
           </div>
