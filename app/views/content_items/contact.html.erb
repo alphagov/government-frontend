@@ -85,7 +85,7 @@
         <% end %>
 
         <% if @content_item.phone.any? %>
-          <h2 id="phone-title"><%= t("contact.phone") %></h2>
+          <h2 id="phone-title" data-module="dropdown-share-link"><%= t("contact.phone") %></h2>
           <% @content_item.phone.each do |phone_group| %>
             <% if @content_item.phone.size > 1 %>
               <h3><%= phone_group[:title] %></h3>

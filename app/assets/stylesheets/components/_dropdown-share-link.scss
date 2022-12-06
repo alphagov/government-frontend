@@ -1,0 +1,28 @@
+[data-module="dropdown-share-link"] {
+  display: inline-block;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    margin: 0 0 0 0.5rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 12.124px 7px 0 7px ;
+    border-top-color: inherit;
+  }
+
+  & + .share-section {
+    margin: 1rem 0 0;
+
+    &--hidden {
+      display: none;
+    }
+  }
+}
+
+.share-section__content {
+  border: solid 1px;
+  padding: 0.5rem;
+}
