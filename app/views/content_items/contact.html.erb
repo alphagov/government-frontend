@@ -117,7 +117,7 @@
         <% end %>
 
         <% if @content_item.post.any? %>
-          <h2 id="post-title">Post</h2>
+          <h2 id="post-title" data-module="copy-button">Post</h2>
           <% @content_item.post.each do |post_group| %>
             <%= post_group[:description] %>
             <div class="contact vcard">
