@@ -11,10 +11,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     // Add necessary markup to DOM
     shareSection.className = 'share-section share-section--hidden'
-    shareSection.innerHTML = `
-      <a href="#" class="share-section__content">Copy the link to this section</a>
-      <input class="share-section__copySection govuk-visually-hidden"/>
-    `
+    shareSection.innerHTML =
+      '<a href="#" class="share-section__content">Copy the link to this section</a>' +
+      '<input class="share-section__copySection govuk-visually-hidden"/>'
+
     this.$module.after(shareSection)
     this.share = this.$module.nextElementSibling
     this.copySection = this.share.querySelector('.share-section__copySection')
