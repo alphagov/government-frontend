@@ -22,7 +22,8 @@
       "GOVUK"
     ],
     "ignore": [
-      "spec/javascripts/vendor"
+      "spec/javascripts/vendor",
+      "app/assets/javascripts/vendor"
     ]
   },
   "eslintConfig": {

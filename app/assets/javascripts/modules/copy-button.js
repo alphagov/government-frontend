@@ -23,9 +23,11 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   CopyButton.prototype.copyAction = function () {
     // Copy to clipboard
     try {
+      /* eslint-disable */
       new ClipboardJS('.js-copy-button', {
+      /* eslint-enable */
         text: function (trigger) {
-          return window.location.href + "#" + trigger.previousElementSibling.id
+          return window.location.href + '#' + trigger.previousElementSibling.id
         }
       }).on('success', function (e) {
         e.trigger.textContent = 'Link copied'

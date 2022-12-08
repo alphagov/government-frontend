@@ -20,12 +20,12 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.copySection = this.share.querySelector('.share-section__copySection')
 
     // Add event listener for show/hide function
-    this.$module.addEventListener('click', function() {
+    this.$module.addEventListener('click', function () {
       this.showHideCopyLink()
     }.bind(this))
 
     // Add event listener for the copy function
-    this.share.querySelector('a').addEventListener('click', function(e) {
+    this.share.querySelector('a').addEventListener('click', function (e) {
       e.preventDefault()
       this.copyLink()
     }.bind(this))
