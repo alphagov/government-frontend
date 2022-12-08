@@ -83,6 +83,8 @@ GEM
       smart_properties
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
+    bootsnap (1.15.0)
+      msgpack (~> 1.2)
     brakeman (5.3.1)
     builder (3.2.4)
     capybara (3.38.0)
@@ -206,6 +208,8 @@ GEM
       ruby2_keywords (>= 0.0.5)
     net-imap (0.3.2)
       date
+    msgpack (1.6.0)
+    net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
       net-protocol
@@ -395,6 +399,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bootsnap
   capybara
   climate_control
   dalli
