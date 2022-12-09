@@ -11,9 +11,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     // Add necessary markup to DOM
     shareSection.className = 'share-section share-section--hidden'
-    shareSection.innerHTML =
-      '<a href="#" class="share-section__content">Copy the link to this section</a>' +
-      '<input class="share-section__copySection govuk-visually-hidden"/>'
+    shareSection.innerHTML = '<div class="share-section__content"><a href="#">Copy the link to this section</a></div>'
 
     this.$module.after(shareSection)
     this.share = this.$module.nextElementSibling
@@ -43,17 +41,24 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     var address = location.href
     var url
 
-    // copy the URL to a hidden field
+    // get the URL to be copied
     if (location.href.split('#').length > 1) {
       address = location.href.split('#')[0]
     }
 
     url = address + '#' + this.$module.id
-    this.copySection.value = url
 
-    // Select the URL and make a copy of it
-    this.copySection.select()
-    document.execCommand('copy')
+    // Copy the URL to the clipboard
+    navigator.clipboard.writeText(url).then(
+      () => {
+        // clipboard successfully set
+        this.$module.nextElementSibling.innerHTML = '<p>Link copied</p>'
+      },
+      (err) => {
+        // clipboard write failed
+        console.log('clipboard not set: ', err)
+      }
+    )
   }
 
   Modules.DropdownShareLink = DropdownShareLink
