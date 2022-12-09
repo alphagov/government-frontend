@@ -43,7 +43,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
         e.clearSelection()
         setTimeout(function () {
           e.trigger.querySelector('.copy-button_text').textContent = 'Copy link'
-        }, 5000)
+        }, 2000)
       })
     } catch (err) {
       if (err) {
