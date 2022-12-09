@@ -12,11 +12,20 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     if (!this.element) return
 
     var $button = document.createElement('button')
-    $button.className = 'gem-c-button govuk-button govuk-button--secondary js-copy-button'
+    var $buttonTextContainer = document.createElement('span')
+    var $buttonIcon = document.querySelector('.copy-button_svg')
+
+    $button.className = 'copy-button js-copy-button'
     $button.setAttribute('aria-live', 'assertive')
-    $button.textContent = 'Copy link'
+    $buttonTextContainer.className = 'copy-button_text'
+    $buttonTextContainer.textContent = 'Copy link'
 
     this.element.insertAdjacentElement('afterend', $button)
+    $button.append($buttonIcon)
+    $button.append($buttonTextContainer)
+
+    $buttonIcon.removeAttribute('hidden')
+
     this.copyAction()
   }
 
@@ -30,10 +39,10 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
           return window.location.href + '#' + trigger.previousElementSibling.id
         }
       }).on('success', function (e) {
-        e.trigger.textContent = 'Link copied'
+        e.trigger.querySelector('.copy-button_text').textContent = 'Link copied'
         e.clearSelection()
         setTimeout(function () {
-          e.trigger.textContent = 'Copy link'
+          e.trigger.querySelector('.copy-button_text').textContent = 'Copy link'
         }, 5000)
       })
     } catch (err) {
