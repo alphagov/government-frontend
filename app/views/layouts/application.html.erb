@@ -13,7 +13,7 @@
     <meta name="robots" content="noindex, nofollow">
   <% end %>
 
-  <%= stylesheet_link_tag "application", integrity: false %>
+  <%= stylesheet_link_tag "application", :media => "all", integrity: false %>
   <% if Rails.env.test? && params[:medium] == 'print' %>
     <%= stylesheet_link_tag "print.css", :media => "screen", integrity: false %>
   <% else %>
