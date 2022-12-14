@@ -185,11 +185,8 @@ GEM
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.8.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
-      net-imap
-      net-pop
-      net-smtp
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -206,10 +203,9 @@ GEM
       ruby-progressbar
     mocha (2.0.2)
       ruby2_keywords (>= 0.0.5)
+    msgpack (1.6.0)
     net-imap (0.3.2)
       date
-    msgpack (1.6.0)
-    net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
       net-protocol
@@ -413,6 +409,7 @@ DEPENDENCIES
   govuk_test
   htmlentities
   i18n-coverage
+  mail (~> 2.7.1)
   minitest-reporters
   mocha
   plek
