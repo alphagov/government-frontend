@@ -1,3 +1,19 @@
+GIT
+  remote: https://github.com/alphagov/govuk_app_config.git
+  revision: c722de030ba3719a96a220f805d2c03a368004b8
+  branch: csp-modernisation
+  specs:
+    govuk_app_config (4.11.1)
+      logstasher (~> 2.1)
+      plek (>= 4, < 6)
+      prometheus_exporter (~> 2.0)
+      puma (>= 5.6, < 7.0)
+      rack-proxy (~> 0.7)
+      sentry-rails (~> 5.3)
+      sentry-ruby (~> 5.3)
+      statsd-ruby (~> 1.5)
+      unicorn (~> 6.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -124,16 +140,6 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     govuk_ab_testing (2.4.2)
-    govuk_app_config (4.11.1)
-      logstasher (~> 2.1)
-      plek (>= 4, < 6)
-      prometheus_exporter (~> 2.0)
-      puma (>= 5.6, < 7.0)
-      rack-proxy (~> 0.7)
-      sentry-rails (~> 5.3)
-      sentry-ruby (~> 5.3)
-      statsd-ruby (~> 1.5)
-      unicorn (~> 6.1)
     govuk_personalisation (0.12.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
@@ -402,7 +408,7 @@ DEPENDENCIES
   faker
   gds-api-adapters
   govuk_ab_testing
-  govuk_app_config
+  govuk_app_config!
   govuk_personalisation
   govuk_publishing_components
   govuk_schemas
