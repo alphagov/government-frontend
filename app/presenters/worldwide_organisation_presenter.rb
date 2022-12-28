@@ -1,0 +1,2 @@
+class WorldwideOrganisationPresenter < ContentItemPresenter
+end
