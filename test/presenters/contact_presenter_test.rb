@@ -99,5 +99,23 @@ class ContactPresenterTest
       assert_equal presented.webchat.availability_url, availability_url
       assert_equal presented.webchat.open_url, open_url
     end
+
+    test "returns csp_connect_src if a webchat is configured" do
+      webchat = Webchat.new({
+        "base_path" => "/content",
+        "open_url" => "https://webchat.host/open",
+        "availability_url" => "https://webchat.host/avaiable",
+        "csp_connect_src" => "https://webchat.host",
+      })
+
+      Webchat.stubs(:find).returns(webchat)
+      assert_equal "https://webchat.host", presented_item.csp_connect_src
+    end
+
+    test "returns a csp_connect_src of nil if webchat isn't configured" do
+      Webchat.stubs(:find).returns(nil)
+
+      assert_nil presented_item.csp_connect_src
+    end
   end
 end

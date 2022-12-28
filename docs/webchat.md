@@ -39,14 +39,18 @@ Once this shim is removed we can move this component into Static as a GOV.UK Pub
 - base_path: /government/contact/my-amazing-service
   open_url: https://www.my-amazing-webchat.com/007/open-chat
   availability_url: https://www.my-amazing-webchat.com/007/check-availability
+  csp_connect_src: https://www.my-amazing-webchat.com
 ```
 
 3. Deploy changes
 4. Go to https://www.gov.uk/government/contact/my-amazing-service
 5. Finished
 
-## CORS considerations
-To avoid CORS and CSP issues a new provider would need to be added to the [Content Security Policy](https://docs.publishing.service.gov.uk/manual/content-security-policy.html)
+## Content Security Policy considerations
+
+For a webchat provider to integrate with GOV.UK it needs permissions from the [Content Security Policy](https://docs.publishing.service.gov.uk/manual/content-security-policy.html).
+
+This will be set-up for a provider by the `csp_connect_src` option which configures the `connect-src` directive, however other providers may need additional configuration, such as `script-src`. This configuration should be done in the same manner as `csp_connect_src` to only affect resources that embed webchat.
 
 ## Required configuration
 
@@ -83,4 +87,12 @@ By default the chat session would open in an a separate browser window. An addit
 The default response from the api as used by HMRC webchat provider is JSONP. To add a provider that responds using JSON the following entry needs to be added.
 ```yaml
   availability_payload_format: json
+```
+
+### CSP connect-src
+
+Updates the Content Security Policy for pages that embed webchat to grant permission to make requests to the host specified. This should be in the form of a hostname, ideally with a scheme. For more information see, [connect-src](https://content-security-policy.com/connect-src/).
+
+```yaml
+  csp_connect_src: https://webchat.host
 ```

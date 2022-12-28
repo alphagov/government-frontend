@@ -53,4 +53,32 @@ class ContactTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("contact")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
+
+  # Ideally this would be tested at the Controller level however the
+  # ActionController::TestCase does not integrate with CSP, so tested at a level
+  # which does.
+  test "the content security policy is updated for webchat hosts" do
+    # Need to use Rack as Selenium, the default driver, doesn't provide header access
+    Capybara.current_driver = :rack_test
+
+    webchat = Webchat.new({
+      "base_path" => "/content",
+      "open_url" => "https://webchat.host/open",
+      "availability_url" => "https://webchat.host/avaiable",
+      "csp_connect_src" => "https://webchat.host",
+    })
+
+    Webchat.stubs(:find).returns(webchat)
+
+    setup_and_visit_content_item("contact")
+    parsed_csp = page.response_headers["Content-Security-Policy"]
+                     .split(";")
+                     .map { |directive| directive.strip.split(" ") }
+                     .each_with_object({}) { |directive, memo| memo[directive.first] = directive[1..] }
+
+    assert_includes parsed_csp["connect-src"], "https://webchat.host"
+
+    # reset back to default driver
+    Capybara.use_default_driver
+  end
 end
