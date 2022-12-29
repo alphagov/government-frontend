@@ -6,6 +6,7 @@ class WebchatTest < ActiveSupport::TestCase
     "base_path" => "/government/contact/my-amazing-service",
     "open_url" => "https://www.tax.service.gov.uk/csp-partials/open/1023",
     "availability_url" => "https://www.tax.service.gov.uk/csp-partials/availability/1023",
+    "csp_connect_src" => "https://www.tax.service.gov.uk",
   }
 
   test "should create instance correctly" do
@@ -14,6 +15,7 @@ class WebchatTest < ActiveSupport::TestCase
     assert_equal(instance.base_path, webchat_config["base_path"])
     assert_equal(instance.open_url, webchat_config["open_url"])
     assert_equal(instance.availability_url, webchat_config["availability_url"])
+    assert_equal(instance.csp_connect_src, webchat_config["csp_connect_src"])
   end
 
   test "should return error if config is invalid" do

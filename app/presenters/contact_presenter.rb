@@ -93,6 +93,10 @@ class ContactPresenter < ContentItemPresenter
     content_item.dig("details", "more_info_webchat").try(:html_safe)
   end
 
+  def csp_connect_src
+    webchat&.csp_connect_src
+  end
+
 private
 
   def phone_numbers_in_group(group)
