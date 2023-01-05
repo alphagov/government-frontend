@@ -124,7 +124,7 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     govuk_ab_testing (2.4.2)
-    govuk_app_config (4.11.1)
+    govuk_app_config (4.12.0)
       logstasher (~> 2.1)
       plek (>= 4, < 6)
       prometheus_exporter (~> 2.0)
@@ -194,8 +194,8 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
-    minitest (5.16.3)
+    mini_portile2 (2.8.1)
+    minitest (5.17.0)
     minitest-reporters (1.5.0)
       ansi
       builder
@@ -229,10 +229,10 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (5.0.0)
-    puma (6.0.1)
+    puma (6.0.2)
       nio4r (~> 2.0)
     racc (1.6.2)
-    rack (2.2.4)
+    rack (2.2.5)
     rack-proxy (0.7.4)
       rack
     rack-test (2.0.2)
