@@ -2,6 +2,7 @@
   <%= machine_readable_metadata(
     schema: :article
   ) %>
+  <%= tag.meta(name: "robots", content: "noindex") if @content_item.no_index? %>
 <% end %>
 
 <% content_for :simple_header, true %>

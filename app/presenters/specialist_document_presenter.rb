@@ -24,6 +24,10 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     end
   end
 
+  def no_index?
+    finder && finder.dig("details", "no_index") == true
+  end
+
   def important_metadata
     super.tap do |m|
       facets_with_friendly_values.each do |facet|
