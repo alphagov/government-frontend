@@ -8,7 +8,7 @@ gem "gds-api-adapters"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_personalisation"
-gem "govuk_publishing_components"
+gem "govuk_publishing_components", git: "https://github.com/alphagov/govuk_publishing_components.git", branch: "fix-world-location-bug"
 gem "htmlentities"
 gem "mail", "~> 2.7.1"  # TODO: remove once https://github.com/mikel/mail/issues/1489 is fixed.
 gem "plek"
