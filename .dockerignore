@@ -1,6 +1,7 @@
 .dockerignore
 .git
 .gitignore
+.github
 Dockerfile
 Jenkinsfile
 Procfile
@@ -9,6 +10,10 @@ coverage
 docs
 features
 log
+node_modules
+package.json
+script
 spec
 test
 tmp
+yarn.lock
