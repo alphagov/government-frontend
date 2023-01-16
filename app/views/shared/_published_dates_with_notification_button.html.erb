@@ -2,11 +2,29 @@
     published: @content_item.published,
     last_updated: @content_item.updated,
     history: @content_item.history,
-    margin_bottom: 3,
+    margin_bottom: 5,
   } %>
-<%= render 'govuk_publishing_components/components/single_page_notification_button', {
+
+<div class="detailed-guide-bottom-button-container">
+  <%= render 'govuk_publishing_components/components/single_page_notification_button', {
     base_path: @content_item.base_path,
     js_enhancement: @has_govuk_account,
     button_location: "bottom",
-    margin_bottom: 0,
-} if @content_item.has_single_page_notifications? %>
+    margin_bottom: 3,
+  } if @content_item.has_single_page_notifications? %>
+  <%= render "govuk_publishing_components/components/print_link", {
+    margin_top: 0,
+    margin_bottom: 8,
+    data_attributes: {
+      module: "ga4-event-tracker",
+      ga4_event: {
+        event_name: 'print_page',
+        type: 'print page',
+        index: 2,
+        index_total: 2,
+        section: 'Footer',
+      },
+    },
+  } %>
+</div>
+

@@ -100,24 +100,8 @@
         <%= raw(@content_item.govspeak_body[:content]) %>
       <% end %>
 
-      <div class="responsive-bottom-margin">
-        <%= render 'shared/published_dates_with_notification_button' %>
-      </div>
+      <%= render 'shared/published_dates_with_notification_button' %>
     <% end %>
-    <%= render "govuk_publishing_components/components/print_link", {
-        margin_top: 0,
-        margin_bottom: 6,
-        data_attributes: {
-          module: "ga4-event-tracker",
-          ga4_event: {
-            event_name: 'print_page',
-            type: 'print page',
-            index: 2,
-            index_total: 2,
-            section: 'Footer',
-          },
-        },
-      } %>
   </div>
   <%= render 'shared/sidebar_navigation' %>
 </div>
