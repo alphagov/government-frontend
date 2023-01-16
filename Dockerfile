@@ -1,14 +1,16 @@
-ARG base_image=ghcr.io/alphagov/govuk-ruby-base:3.1.2
-ARG builder_image=ghcr.io/alphagov/govuk-ruby-builder:3.1.2
+ARG ruby_version=3.1.2
+ARG base_image=ghcr.io/alphagov/govuk-ruby-base:$ruby_version
+ARG builder_image=ghcr.io/alphagov/govuk-ruby-builder:$ruby_version
+
 
 FROM $builder_image AS builder
 
 WORKDIR $APP_HOME
 COPY Gemfile* .ruby-version ./
 RUN bundle install
-COPY . ./
-RUN bundle exec bootsnap precompile --gemfile .
-RUN bundle exec rails assets:precompile && rm -rf log
+COPY . .
+RUN bootsnap precompile --gemfile .
+RUN rails assets:precompile && rm -fr log
 
 
 FROM $base_image
@@ -16,9 +18,9 @@ FROM $base_image
 ENV GOVUK_APP_NAME=government-frontend
 
 WORKDIR $APP_HOME
-COPY --from=builder $BUNDLE_PATH/ $BUNDLE_PATH/
-COPY --from=builder $BOOTSNAP_CACHE_DIR/ $BOOTSNAP_CACHE_DIR/
-COPY --from=builder $APP_HOME ./
+COPY --from=builder $BUNDLE_PATH $BUNDLE_PATH
+COPY --from=builder $BOOTSNAP_CACHE_DIR $BOOTSNAP_CACHE_DIR
+COPY --from=builder $APP_HOME .
 
 USER app
 CMD ["puma"]
