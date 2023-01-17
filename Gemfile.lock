@@ -412,7 +412,6 @@ DEPENDENCIES
   govuk_test
   htmlentities
   i18n-coverage
-  mail (~> 2.8.0)
   minitest-reporters
   mocha
   plek

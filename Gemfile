@@ -10,7 +10,6 @@ gem "govuk_app_config"
 gem "govuk_personalisation"
 gem "govuk_publishing_components"
 gem "htmlentities"
-gem "mail", "~> 2.8.0"  # TODO: remove once https://github.com/mikel/mail/issues/1489 is fixed.
 gem "plek"
 gem "rails-controller-testing"
 gem "rails-i18n"
