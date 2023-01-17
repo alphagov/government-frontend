@@ -29,9 +29,16 @@ module GovukContentSchemaExamples
     GovukSchemas::Example.find(schema_name, example_name:)
   end
 
+  def stub_parent_breadcrumbs(document, schema)
+    parents = document.dig("links", "parent")
+    return if parents.nil?
+
+    stub_content_store_has_item(parents.first["base_path"], document) if schema == "html_publication"
+  end
+
   module ClassMethods
     def all_examples_for_supported_schemas
-      GovukSchemas::Example.find_all(supported_schemas)
+      supported_schemas.flat_map { |format| GovukSchemas::Example.find_all(format) }
     end
 
     def supported_schemas
@@ -39,7 +46,6 @@ module GovukContentSchemaExamples
         case_study
         coming_soon
         html_publication
-        redirect
         statistics_announcement
         take_part
         topical_event_about_page
