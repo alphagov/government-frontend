@@ -62,7 +62,6 @@ $govuk-include-default-font-face: false;
 @import "helpers/attachments";
 @import "helpers/sticky-element-container";
 @import "helpers/full-width";
-@import "helpers/js-hidden";
 
 // modules for service-manual pages
 @import "modules/change-history";
@@ -102,6 +101,7 @@ $govuk-include-default-font-face: false;
 @import "views/corporate-information-page";
 @import "views/travel-advice";
 @import "views/contact";
+@import "views/service_manual_guide";
 @import "views/specialist-document";
 @import "views/answer";
 @import "views/help-page";
