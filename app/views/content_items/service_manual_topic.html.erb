@@ -1,0 +1,93 @@
+<%= content_for :title, "#{@content_item.title} - Service Manual" %>
+<% content_for :meta_description, @content_item.description %>
+
+<% content_for :phase_message do %>
+  <%= render 'shared/custom_phase_message', phase: @content_item.phase %>
+<% end %>
+<div class="govuk-width-container">
+
+  <%= render "govuk_publishing_components/components/breadcrumbs", {
+    breadcrumbs: @content_item.breadcrumbs,
+    collapse_on_mobile: true
+  } %>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/title", {
+        title: @content_item.title,
+        margin_bottom: 7
+      } %>
+      <p class="govuk-body-l">
+        <%= @content_item.description %>
+      </p>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <% if @content_item.display_as_accordion? %>
+        <% items = @content_item.accordion_content %>
+        <%= render "govuk_publishing_components/components/accordion", {
+          ga4_tracking: true,
+          items: items,
+        } %>
+      <% else %>
+        <% @content_item.groups.each_with_index do |link_group| %>
+          <% if link_group.name.present? %>
+            <div class="subsection__header govuk-!-margin-bottom-3">
+              <%= render "govuk_publishing_components/components/heading", {
+                text: link_group.name,
+                font_size: "m",
+                margin_bottom: 1,
+                id: link_group.name.parameterize,
+              } %>
+              <% if link_group.description.present? %>
+                <p class="govuk-body govuk-!-margin-bottom-1 subsection__description"><%= link_group.description %></p>
+              <% end %>
+            </div>
+          <% end %>
+          <%
+            link_items = []
+
+            link_group.linked_items.each do |linked_item|
+              link_items << sanitize(link_to linked_item.label, linked_item.href, class: 'govuk-link')
+            end
+          %>
+          <%= render "govuk_publishing_components/components/list", {
+            items: link_items
+          } %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <aside class="related govuk-!-margin-top-3">
+      <% if @content_item.content_owners.any? %>
+        <div class="related-item govuk-!-padding-top-4 govuk-!-margin-bottom-5">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: topic_related_communities_title(@content_item.content_owners),
+            font_size: "s",
+            margin_bottom: 2,
+            id: "related-communities",
+          } %>
+          <p class="related-item__description govuk-body">
+            Find out what the cross-government community does and how to get involved.
+          </p>
+          <nav role="navigation" aria-labelledby="related-communities" class="related-communities">
+            <%
+              related_items = @content_item.content_owners.map do |content_owner|
+                sanitize(link_to content_owner.title, content_owner.href, class: 'govuk-link')
+              end
+            %>
+            <%= render "govuk_publishing_components/components/list", {
+              items: related_items
+            } %>
+          </nav>
+        </div>
+      <% end %>
+      <%= render partial: 'shared/email_signup' %>
+      </aside>
+    </div>
+
+  </div>
+</div>

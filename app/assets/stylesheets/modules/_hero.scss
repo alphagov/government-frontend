@@ -1,0 +1,25 @@
+.app-hero {
+  background-color: $govuk-brand-colour;
+  color: govuk-colour("white");
+  margin-bottom: govuk-spacing(3);
+  position: relative;
+  top: -1px;
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-spacing(6);
+  }
+
+  a:link,
+  a:visited {
+    @include govuk-typography-weight-bold;
+  }
+}
+
+.app-hero-lead {
+  line-height: 1.35;
+}
+
+.app-hero__heading--inverse,
+.app-hero__body--inverse {
+  color: govuk-colour("white");
+}

@@ -22,3 +22,25 @@
 .responsive-bottom-margin {
   @include responsive-bottom-margin;
 }
+
+// Service Manuals
+@mixin gutter-bottom-margin {
+  margin-bottom: govuk-spacing(6);
+}
+
+@mixin gutter-top-margin {
+  margin-top: govuk-spacing(6);
+}
+
+@mixin gutter-vertical-margins {
+  @include gutter-bottom-margin;
+  @include gutter-top-margin;
+}
+
+@mixin gutter-bottom-margin-to-double {
+  margin-bottom: govuk-spacing(3);
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-spacing(9);
+  }
+}

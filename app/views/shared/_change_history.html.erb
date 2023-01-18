@@ -1,0 +1,12 @@
+<%
+  time = change.public_timestamp
+  compressed |= false
+  time_class = compressed ? 'govuk-heading-s' : 'govuk-heading-m'
+  time_class << ' govuk-!-margin-bottom-1'
+%>
+<time datetime="<%= time.iso8601 %>" class="<%= time_class %>">
+  <%= l time, format: :short_ordinal %>
+</time>
+<p class="govuk-body-s app-change-history__change-note govuk-!-width-two-thirds">
+  <%= change.note.strip %>
+</p>

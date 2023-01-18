@@ -1,0 +1,19 @@
+.app-collection {
+  border-bottom: 1px solid $govuk-border-colour;
+  margin-bottom: govuk-spacing(3);
+  padding-bottom: govuk-spacing(3);
+
+  @include govuk-media-query($from: tablet) {
+    margin-bottom: govuk-spacing(9);
+    padding-bottom: govuk-spacing(6);
+  }
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    color: $govuk-secondary-text-colour;
+  }
+}

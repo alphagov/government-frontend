@@ -1,0 +1,11 @@
+<div class="related-item govuk-!-padding-top-4">
+  <%= render "govuk_publishing_components/components/heading", {
+    text: "Get notifications",
+    font_size: "s",
+    margin_bottom: 2,
+    id: "related-subscriptions",
+  } %>
+  <p class="govuk-body">When any guidance within this topic is updated
+    <%= link_to "email", @content_item.email_alert_signup_link, class: 'govuk-link related-item__email-link' %>
+  </p>
+</div>
