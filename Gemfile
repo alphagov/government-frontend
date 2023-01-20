@@ -6,7 +6,7 @@ gem "bootsnap", require: false
 gem "dalli"
 gem "gds-api-adapters"
 gem "govuk_ab_testing"
-gem "govuk_app_config"
+gem "govuk_app_config", github: "alphagov/govuk_app_config", branch: "aspirational-csp"
 gem "govuk_personalisation"
 gem "govuk_publishing_components"
 gem "htmlentities"
