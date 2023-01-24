@@ -2,6 +2,15 @@
   <%= machine_readable_metadata(
     schema: (@content_item.dataset? ? :dataset : :article)
   ) %>
+
+  <%
+    # As per request https://govuk.zendesk.com/agent/tickets/5176602
+    scroll_track_paths = %w[/government/publications/form-pa14-medical-certificate-probate /government/publications/find-a-will-or-probate-document-form-pa1s /government/publications/report-a-will-is-lost-to-support-a-probate-application]
+  %>
+
+  <% if scroll_track_paths.include?(@content_item.base_path) %>
+    <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
+  <% end %>
 <% end %>
 
 <%= render 'shared/email_subscribe_unsubscribe_flash' %>
