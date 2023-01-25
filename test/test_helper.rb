@@ -50,6 +50,8 @@ end
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
+  include ActionView::Helpers::DateHelper
+  include I18n
 
   def teardown
     Capybara.reset_sessions!
@@ -159,11 +161,18 @@ class ActionDispatch::IntegrationTest
     assert_has_published_dates(first_published, last_updated, history_link:)
   end
 
-  def setup_and_visit_content_item(name, parameter_string = "")
+  def setup_and_visit_content_item(name, overrides = {}, parameter_string = "")
     @content_item = get_content_example(name).tap do |item|
-      stub_content_store_has_item(item["base_path"], item.to_json)
-      visit_with_cachebust("#{item['base_path']}#{parameter_string}")
+      content_item = item.deep_merge(overrides)
+      stub_content_store_has_item(content_item["base_path"], content_item.to_json)
+      visit_with_cachebust("#{content_item['base_path']}#{parameter_string}")
     end
+  end
+
+  def setup_and_visit_content_item_with_params(name, parameter_string = "")
+    @content_item = get_content_example(name)
+    stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
+    visit_with_cachebust("#{@content_item['base_path']}#{parameter_string}")
   end
 
   def setup_and_visit_html_publication(name, parameter_string = "")

@@ -22,8 +22,8 @@
   <%= javascript_include_tag "application", integrity: false %>
   <%= csrf_meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
-
-  <% if @content_item.description %>
+  
+  <% if @content_item.description.present? %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
 

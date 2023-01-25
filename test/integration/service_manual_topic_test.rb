@@ -1,31 +1,31 @@
 require "test_helper"
 
 class ServiceManualTopicTest < ActionDispatch::IntegrationTest
-  setup do
-    @topic_example = GovukSchemas::Example.find("service_manual_topic", example_name: "service_manual_topic")
+  def topic_example
+    @topic_example ||= govuk_content_schema_example("service_manual_topic", "service_manual_topic")
   end
 
   test "it uses topic description as meta description" do
-    stub_content_store_has_item("/service-manual/test-topic", @topic_example.to_json)
+    stub_content_store_has_item("/service-manual/test-topic", topic_example.to_json)
 
     visit "/service-manual/test-topic"
 
     assert page.has_css?('meta[name="description"]', visible: false)
     tag = page.find 'meta[name="description"]', visible: false
-    assert_equal @topic_example["description"], tag["content"]
+    assert_equal topic_example["description"], tag["content"]
   end
 
   test "it doesn't write a meta description if there is none" do
-    @topic_example.delete("description")
-    stub_content_store_has_item("/service-manual/test-topic", @topic_example.to_json)
+    topic_example[:description] = ""
+    stub_content_store_has_item("/service-manual/test-topic-no-description", topic_example.to_json)
 
-    visit "/service-manual/test-topic"
+    visit "/service-manual/test-topic-no-description"
 
     assert_not page.has_css?('meta[name="description"]', visible: false)
   end
 
   test "it lists communities in the sidebar" do
-    setup_and_visit_example("service_manual_topic", "service_manual_topic")
+    setup_and_visit_content_item("service_manual_topic")
 
     within(".related-communities") do
       assert page.has_link?(
@@ -40,7 +40,7 @@ class ServiceManualTopicTest < ActionDispatch::IntegrationTest
   end
 
   test "it doesn't display content in accordian if not eligible" do
-    setup_and_visit_example("service_manual_topic", "service_manual_topic")
+    setup_and_visit_content_item("service_manual_topic")
 
     assert_not page.has_css?(".gem-c-accordion")
   end
@@ -61,7 +61,7 @@ class ServiceManualTopicTest < ActionDispatch::IntegrationTest
   end
 
   test "it includes a link to subscribe for email alerts" do
-    setup_and_visit_example("service_manual_topic", "service_manual_topic")
+    setup_and_visit_content_item("service_manual_topic")
 
     assert page.has_link?(
       "email",
