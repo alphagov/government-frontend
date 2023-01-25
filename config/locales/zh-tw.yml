@@ -400,6 +400,9 @@ zh-tw:
     proposed_date: 建議發佈
     reason_for_change: 變更理由
     release_date: 發佈日期
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議非必要的旅行，不要前往該國部分地區。

@@ -475,6 +475,9 @@ bg:
     proposed_date: Предложено издание
     reason_for_change: Причина за промяната
     release_date: Дата на издаване
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> препоръчва да не се пътува до някои части на страната, освен ако това не е необходимо.

@@ -475,6 +475,9 @@ tr:
     proposed_date: Önerilen açıklama
     reason_for_change: Değişiklik gerekçesi
     release_date: Açıklama tarihi
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülkenin bazı bölgelerine zorunlu seyahatler haricinde seyahat edilmemesini tavsiye etmektedir.

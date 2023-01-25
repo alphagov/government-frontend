@@ -775,6 +775,9 @@ cy:
     proposed_date: Rhyddhau arfaethedig
     reason_for_change: Rheswm dros y newid
     release_date: Dyddiad rhyddhau
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Mae'r <abbr title="Foreign and Commonwealth Office">Swyddfa Dramor, y Gymanwlad a Datblygu</abbr> yn cynghori yn erbyn pob taith, oni fo'n hanfodol, i rannau o'r wlad.

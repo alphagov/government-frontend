@@ -475,6 +475,9 @@ ta:
     proposed_date: முன்மொழியப்பட்ட வெளியீடு
     reason_for_change: மாற்றத்துக்கான காரணம்
     release_date: வெளியீட்டுத் தேதி
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு அத்தியாவசிய பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.

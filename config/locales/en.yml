@@ -486,6 +486,9 @@ en:
     still_current_at: Still current at
     summary: Summary
     updated: Updated
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   unpublishing:
     page_title: No longer available
     summary: The information on this page has been removed because it was published in error.

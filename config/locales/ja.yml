@@ -400,6 +400,9 @@ ja:
     proposed_date: 予定されている発表
     reason_for_change: 変更理由
     release_date: 発表日程
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title = "Foreign and Commonwealth Office">FCO</abbr> は、国内一部地域への必要不可欠ものを除くすべての移動を控えるよう勧告しています。

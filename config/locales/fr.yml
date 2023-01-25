@@ -475,6 +475,9 @@ fr:
     proposed_date: Version proposée
     reason_for_change: Raison du changement
     release_date: Date de sortie
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth Office" >Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans certaines parties du pays, à l'exception de ceux qui sont indispensables.

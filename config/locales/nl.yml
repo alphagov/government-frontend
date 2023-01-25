@@ -475,6 +475,9 @@ nl:
     proposed_date: Voorgestelde vrijgave
     reason_for_change: Reden voor wijziging
     release_date: Publicatiedatum
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Het <abbr title="Foreign and Commonwealth Office">FCO</abbr> raadt alle, behalve essentiële, reizen naar delen van het land af.

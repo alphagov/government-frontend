@@ -550,6 +550,9 @@ hr:
     proposed_date: Predloženo puštanje na slobodu
     reason_for_change: Razlog za promjenu
     release_date: Datum izlaska
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> savjetuje protiv svih, osim bitnih putovanja u dijelova zemlje.

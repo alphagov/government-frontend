@@ -475,6 +475,9 @@ sw:
     proposed_date: Tarehe ya kutangazwa inayopendekezwa
     reason_for_change: Sababu ya kubadilishwa
     release_date: Tarehe ya kutangazwa
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Ushauri wa <abbr title="Foreign and Commonwealth Office">FCO</abbr> dhidi ya usafiri wote isipokuwa usafiri muhimu katika sehemu fulani za nchi.

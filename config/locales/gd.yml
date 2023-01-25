@@ -625,6 +625,9 @@ gd:
     proposed_date: Scaipeadh beartaithe
     reason_for_change: Cúis leis an athrú
     release_date: Dáta foilsithe
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr> gach taisteal ach an taisteal is riachtanaí chuig áiteanna áirithe sa tír a sheachaint.

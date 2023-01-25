@@ -475,6 +475,9 @@ fa:
     proposed_date: انتاشر پیشنهادی
     reason_for_change: دلیل تغییر
     release_date: تاریخ انتشار
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای غیر ضروری به بخش‌هایی از این کشور خودداری کنید.

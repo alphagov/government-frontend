@@ -400,6 +400,9 @@ ko:
     proposed_date: 제안 공개
     reason_for_change: 변경 이유
     release_date: 공개 날짜
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가의 각지를 여행하지 말라고 권고합니다.

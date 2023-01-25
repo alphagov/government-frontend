@@ -550,6 +550,9 @@ ro:
     proposed_date: Data propusă
     reason_for_change: Motivul schimbării
     release_date: Data publicării
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile neesențiale în anumite părți ale țării.

@@ -475,6 +475,9 @@ it:
     proposed_date: Rilascio proposto
     reason_for_change: Motivo della modifica
     release_date: Data di rilascio
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: L’<abbr title="Foreign and Commonwealth Office">FCO</abbr> sconsiglia tutti i viaggi tranne quelli essenziali in alcune parti del paese.
