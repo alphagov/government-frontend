@@ -1,8 +1,9 @@
 <%= content_for :title, "#{@content_item.title} - Service Manual" %>
-<% content_for :meta_description, @content_item.description %>
 
 <% content_for :extra_head do %>
-  <%= render "govuk_publishing_components/components/machine_readable_metadata", content_item: @content_item.content_item, schema: :article %>
+    <%= machine_readable_metadata(
+    schema: :article
+  ) %>
 <% end %>
 
 <% content_for :phase_message do %>

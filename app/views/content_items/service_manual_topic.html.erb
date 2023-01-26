@@ -1,5 +1,4 @@
 <%= content_for :title, "#{@content_item.title} - Service Manual" %>
-<% content_for :meta_description, @content_item.description %>
 
 <% content_for :phase_message do %>
   <%= render 'shared/custom_phase_message', phase: @content_item.phase %>
