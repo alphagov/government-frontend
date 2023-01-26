@@ -90,6 +90,16 @@ private
     slimmer_template(service_manual_layout)
     configure_header_search
 
+    has_custom_breadcrumbs = %w[
+      service_manual_guide
+      service_manual_service_standard
+      service_manual_topic
+      service_manual_homepage
+    ]
+
+    @do_not_show_breadcrumbs =
+      has_custom_breadcrumbs.include?(@content_item.document_type)
+
     with_locale do
       render content_item_template
     end
