@@ -10,4 +10,12 @@ class ServiceManualPresenter < ContentItemPresenter
   def include_search_in_header?
     true
   end
+
+  def show_service_manual_phase_banner?
+    true
+  end
+
+  def show_phase_banner?
+    false
+  end
 end

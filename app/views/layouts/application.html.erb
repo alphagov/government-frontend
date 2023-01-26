@@ -34,6 +34,9 @@
     <% if @content_item.show_phase_banner? %>
       <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
     <% end %>
+    <% if @content_item.show_service_manual_phase_banner? %>
+      <%= render_phase_label @content_item, content_for(:phase_message) %>
+    <% end %>
 
     <% unless @do_not_show_breadcrumbs %>
       <% if @content_item.try(:back_link) %>
