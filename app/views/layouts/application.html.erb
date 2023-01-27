@@ -39,7 +39,14 @@
         new_tab: true,
       } %>
     <% elsif @content_item.show_phase_banner? %>
-      <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase, message: yield(:phase_message) %>
+          </div>
+        </div>
+      </div>
+
     <% end %>
 
     <% unless @do_not_show_breadcrumbs %>
