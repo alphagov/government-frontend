@@ -115,7 +115,7 @@ GEM
     faker (3.1.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
-    gds-api-adapters (85.0.0)
+    gds-api-adapters (85.0.1)
       addressable
       link_header
       null_logger
@@ -231,7 +231,7 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    public_suffix (5.0.0)
+    public_suffix (5.0.1)
     puma (6.0.2)
       nio4r (~> 2.0)
     racc (1.6.2)
