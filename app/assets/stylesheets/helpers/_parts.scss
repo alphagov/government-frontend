@@ -20,15 +20,4 @@
       margin-left: govuk-spacing(1);
     }
   }
-
-  .part-title {
-    @include govuk-font(27, $weight: bold);
-    margin-bottom: govuk-spacing(3);
-    margin-top: govuk-spacing(3);
-
-    @include govuk-media-query($from: tablet) {
-      margin-bottom: govuk-spacing(4);
-      margin-top: govuk-spacing(4);
-    }
-  }
 }
