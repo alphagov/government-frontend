@@ -8,7 +8,7 @@ gem "gds-api-adapters"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_personalisation"
-gem "govuk_publishing_components"
+gem "govuk_publishing_components", git: 'https://github.com/alphagov/govuk_publishing_components.git', branch: 'no_account_single_page_notification_button'
 gem "htmlentities"
 gem "plek"
 gem "rails-controller-testing"
