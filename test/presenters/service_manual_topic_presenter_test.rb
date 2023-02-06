@@ -1,16 +1,20 @@
-require "test_helper"
+require "presenter_test_helper"
 
-class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
+class ServiceManualTopicPresenterTest < PresenterTestCase
+  def schema_name
+    "service_manual_topic"
+  end
+
   test "presents the basic details required to display a Service Manual Topic" do
-    topic = presented_topic(title: "Agile", description: "Agile Test Description")
+    topic = presented_item(schema_name, "title" => "Agile", "description" => "Agile Test Description")
     assert_equal "Agile", topic.title
     assert_equal "Agile Test Description", topic.description
-    assert topic.format.present?
+    assert topic.document_type.present?
     assert topic.locale.present?
   end
 
   test "loads link groups" do
-    topic = presented_topic
+    topic = presented_item
 
     assert_equal 2, topic.groups.size
     assert_equal ["Group 1", "Group 2"], topic.groups.map(&:name)
@@ -18,7 +22,7 @@ class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
   end
 
   test 'loads linked items within link groups and populates them with data from "links" based on content_id' do
-    groups = presented_topic.groups
+    groups = presented_item.groups
     assert_equal [2, 1], groups.map(&:linked_items).map(&:size)
 
     group_items = groups.find { |li| li.name == "Group 1" }.linked_items
@@ -27,7 +31,7 @@ class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
   end
 
   test "returns accordion content data" do
-    accordion_content = presented_topic.accordion_content
+    accordion_content = presented_item.accordion_content
     first_accordion_section = {
       data_attributes: {
         ga4: {
@@ -49,20 +53,20 @@ class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
   end
 
   test "does not fail if there are no linked_groups" do
-    topic = presented_topic(details: { groups: nil })
+    topic = presented_item(schema_name, "details" => { "groups" => nil })
 
     assert_equal [], topic.groups
   end
 
   test "omits groups that have no published linked items" do
-    topic = presented_topic(links: { linked_items: [] }) # unpublished content_ids are filtered out from content-store responses
+    topic = presented_item(schema_name, "links" => { "linked_items" => [] }) # unpublished content_ids are filtered out from content-store responses
     assert_equal 0, topic.groups.size
   end
 
   test "#content_owners loads the data into objects" do
-    topic = presented_topic(links: { content_owners: [
-      { title: "Design Community", base_path: "/service-manual/design-community" },
-      { title: "Agile Community", base_path: "/service-manual/agile-community" },
+    topic = presented_item(schema_name, "links" => { "content_owners" => [
+      { "title" => "Design Community", "base_path" => "/service-manual/design-community" },
+      { "title" => "Agile Community", "base_path" => "/service-manual/agile-community" },
     ] })
     assert_equal 2, topic.content_owners.size
     design_community = topic.content_owners.first
@@ -74,7 +78,7 @@ class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
   end
 
   test "#breadcrumbs links to the root path" do
-    topic = presented_topic
+    topic = presented_item
 
     expected_breadcrumbs = [
       { title: "Service manual", url: "/service-manual" },

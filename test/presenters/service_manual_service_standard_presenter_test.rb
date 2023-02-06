@@ -1,8 +1,12 @@
-require "test_helper"
+require "presenter_test_helper"
 
-class ServiceManualServiceStandardPresenterTest < ActiveSupport::TestCase
+class ServiceManualServiceStandardPresenterTest < PresenterTestCase
+  def schema_name
+    "service_manual_service_standard"
+  end
+
   test "#points gets points from the details" do
-    points = presented_standard.points
+    points = presented_item.points
 
     assert(points.any? { |point_hash| point_hash.title == "1. Understand user needs" })
     assert(points.any? { |point_hash| point_hash.title == "2. Do ongoing user research" })
@@ -28,7 +32,7 @@ class ServiceManualServiceStandardPresenterTest < ActiveSupport::TestCase
     }
 
     points_titles =
-      ServiceStandardPresenter.new(content_item_hash).points.map(&:title)
+      presented_item(schema_name, content_item_hash).points.map(&:title)
 
     assert_equal points_titles,
                  [
@@ -47,7 +51,8 @@ class ServiceManualServiceStandardPresenterTest < ActiveSupport::TestCase
   end
 
   test "#points is empty if there aren't any points in the content item" do
-    assert ServiceStandardPresenter.new({}).points.empty?
+    content_item_hash = { "links" => {} }
+    assert presented_item(schema_name, content_item_hash).points.empty?
   end
 
   test "#breadcrumbs contains a link to the service manual root" do
@@ -55,7 +60,7 @@ class ServiceManualServiceStandardPresenterTest < ActiveSupport::TestCase
       "title" => "Service Standard",
     }
 
-    assert ServiceStandardPresenter.new(content_item_hash).breadcrumbs,
+    assert presented_item(schema_name, content_item_hash).breadcrumbs,
            [
              { title: "Service manual", url: "/service-manual" },
            ]
@@ -63,7 +68,7 @@ class ServiceManualServiceStandardPresenterTest < ActiveSupport::TestCase
 
   test "#email_alert_signup returns a link to the email alert signup" do
     assert_equal "/email-signup?link=/service-manual/service-standard",
-                 presented_standard.email_alert_signup_link
+                 presented_item.email_alert_signup_link
   end
 
   test "#poster_url returns a link to the service standard poster" do

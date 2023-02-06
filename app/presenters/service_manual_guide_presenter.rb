@@ -2,13 +2,13 @@ class ServiceManualGuidePresenter < ServiceManualPresenter
   ContentOwner = Struct.new(:title, :href)
   Change = Struct.new(:public_timestamp, :note)
 
-  attr_reader :body, :publish_time, :header_links
+  def body
+    @body ||= details.fetch("body", {})
+  end
 
-  def initialize(content_item, *args)
-    super
-    @body = details["body"]
-    @header_links = Array(details["header_links"])
-      .map { |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
+  def header_links
+    header_links = details.fetch("header_links", {})
+    Array(header_links).map { |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
   end
 
   def content_owners

@@ -1,16 +1,18 @@
-require "test_helper"
+require "presenter_test_helper"
 
-class ServiceManualHomepagePresenterTest < ActiveSupport::TestCase
+class ServiceManualHomepagePresenterTest < PresenterTestCase
+  def schema_name
+    "service_manual_homepage"
+  end
   test "#topics returns the children in the links, ordered alphabetically" do
-    homepage = presented_homepage(
-      "links" => {
-        "children" => [
-          { "title" => "Agile Delivery" },
-          { "title" => "Helping people to use your service" },
-          { "title" => "Funding and procurement" },
-        ],
-      },
-    )
+    homepage = presented_item(schema_name,
+                              "links" => {
+                                "children" => [
+                                  { "title" => "Agile Delivery" },
+                                  { "title" => "Helping people to use your service" },
+                                  { "title" => "Funding and procurement" },
+                                ],
+                              })
 
     assert_equal(
       [
