@@ -67,16 +67,6 @@ class ServiceManualServiceStandardPresenterTest < ActiveSupport::TestCase
   end
 
   test "#poster_url returns a link to the service standard poster" do
-    assert_equal "http://example.com/service-standard-poster.pdf", presented_standard.poster_url
-  end
-
-private
-
-  def presented_standard(overriden_attributes = {})
-    example = GovukSchemas::Example.find("service_manual_service_standard", example_name: "service_manual_service_standard")
-
-    example_with_overrides = example.merge(overriden_attributes.with_indifferent_access)
-
-    ServiceManualServiceStandardPresenter.new(example_with_overrides)
+    assert_equal "http://example.com/service-standard-poster.pdf", presented_item.poster_url
   end
 end

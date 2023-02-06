@@ -144,14 +144,6 @@ class ServiceManualGuidePresenterTest < ActiveSupport::TestCase
       ),
     ]
 
-    assert_equal expected_history, presented_guide.previous_changes
-  end
-
-private
-
-  def presented_guide(overriden_attributes = {}, example = "service_manual_guide")
-    ServiceManualGuidePresenter.new(
-      GovukSchemas::Example.find("service_manual_guide", example_name: example).merge(overriden_attributes),
-    )
+    assert_equal expected_history, presented_item.previous_changes
   end
 end

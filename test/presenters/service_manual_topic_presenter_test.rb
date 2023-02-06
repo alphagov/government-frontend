@@ -84,14 +84,6 @@ class ServiceManualTopicPresenterTest < ActiveSupport::TestCase
 
   test "#email_alert_signup returns a link to the email alert signup" do
     assert_equal "/email-signup?link=/service-manual/test-expanded-topic",
-                 presented_topic.email_alert_signup_link
-  end
-
-private
-
-  def presented_topic(overriden_attributes = {})
-    ServiceManualTopicPresenter.new(
-      GovukSchemas::Example.find("service_manual_topic", example_name: "service_manual_topic").merge(overriden_attributes.with_indifferent_access),
-    )
+                 presented_item.email_alert_signup_link
   end
 end

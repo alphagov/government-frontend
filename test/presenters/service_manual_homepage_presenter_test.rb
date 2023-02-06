@@ -21,12 +21,4 @@ class ServiceManualHomepagePresenterTest < ActiveSupport::TestCase
       homepage.topics,
     )
   end
-
-private
-
-  def presented_homepage(overriden_attributes = {})
-    ServiceManualHomepagePresenter.new(
-      GovukSchemas::Example.find("service_manual_homepage", example_name: "service_manual_homepage").merge(overriden_attributes),
-    )
-  end
 end
