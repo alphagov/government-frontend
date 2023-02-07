@@ -77,5 +77,15 @@ class CorporateInformationPagePresenterTest
       assert presented_item.further_information.include?(information_charter["base_path"])
       assert presented_item.further_information.include?(information_charter["title"])
     end
+
+    test "returns true for about pages that require a banner" do
+      presented_item = presented_item(schema_name, "base_path" => "/government/organisations/department-for-business-energy-and-industrial-strategy/about")
+      assert presented_item.show_organisation_changing_banner?
+    end
+
+    test "returns false for about pages that don't require a banner" do
+      presented_item = presented_item(schema_name, "base_path" => "/government/organisations/a-random-org/about")
+      assert_not presented_item.show_organisation_changing_banner?
+    end
   end
 end
