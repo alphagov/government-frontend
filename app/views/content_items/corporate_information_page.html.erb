@@ -4,6 +4,15 @@
   ) %>
 <% end %>
 
+<% if @content_item.show_organisation_changing_banner? %>
+  <div class="govuk-width-container govuk-!-margin-top-8">
+    <%= render "govuk_publishing_components/components/notice", {
+      title: sanitize('This organisation is changing. Read <a href="https://www.gov.uk/government/news/making-government-deliver-for-the-british-people">the latest updates on government departments</a> or visit the <a href="https://twitter.com/10DowningStreet">10 Downing Street Twitter feed</a>.'),
+      margin_bottom: 3,
+    } %>
+  </div>
+<% end %>
+
 <% @additional_body = capture do %>
   <% if @content_item.corporate_information? %>
     <%= @content_item.corporate_information_heading_tag %>
