@@ -11,7 +11,7 @@ class ServiceManualPresenter < ContentItemPresenter
     true
   end
 
-  def show_service_manual_phase_banner?
+  def service_manual?
     true
   end
 

@@ -95,6 +95,7 @@ private
       service_manual_service_standard
       service_manual_topic
       service_manual_homepage
+      service_manual_service_toolkit
     ]
 
     @do_not_show_breadcrumbs =
