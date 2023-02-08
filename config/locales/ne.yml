@@ -475,6 +475,9 @@ ne:
     proposed_date: प्रस्तावित बिज्ञप्ति
     reason_for_change: परिवर्तनको कारण
     release_date: बिज्ञप्ति मिति
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक देशको केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।

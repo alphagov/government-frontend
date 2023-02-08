@@ -475,6 +475,9 @@ is:
     proposed_date: Fyrirhuguð útgáfa
     reason_for_change: Ástæða fyrir breytingu
     release_date: Útgáfudagsetning
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins nema þeim allra nauðsynlegustu.

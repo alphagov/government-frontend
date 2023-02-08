@@ -475,6 +475,9 @@ pa:
     proposed_date: ਪ੍ਰਸਤਾਵਿਤ ਰਿਹਾਈ
     reason_for_change: ਤਬਦੀਲੀ ਦਾ ਕਾਰਨ
     release_date: ਰਿਹਾਈ ਤਾਰੀਖ
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਦੇਸ਼ ਦੇ ਕੁਝ ਹਿੱਸਿਆਂ ਦੀ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।

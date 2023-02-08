@@ -400,6 +400,9 @@ id:
     proposed_date: Rilis yang diusulkan
     reason_for_change: Alasan perubahan
     release_date: Tanggal rilis
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan yang tidak esensial ke bagian-bagian dari negara itu.

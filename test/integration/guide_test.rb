@@ -17,7 +17,7 @@ class GuideTest < ActionDispatch::IntegrationTest
   end
 
   test "draft access tokens are appended to part links within navigation" do
-    setup_and_visit_content_item("guide", "?token=some_token")
+    setup_and_visit_content_item_with_params("guide", "?token=some_token")
 
     assert page.has_css?('.gem-c-contents-list a[href$="?token=some_token"]')
   end

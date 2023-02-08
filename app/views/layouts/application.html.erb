@@ -23,7 +23,7 @@
   <%= csrf_meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
 
-  <% if @content_item.description %>
+  <% if @content_item.description.present? %>
     <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
   <% end %>
 
@@ -31,8 +31,20 @@
 </head>
 <body>
   <div id="wrapper" class="<%= wrapper_class %>">
-    <% if @content_item.show_phase_banner? %>
-      <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
+
+    <% if @content_item.show_phase_banner? || @content_item.show_service_manual_phase_banner? %>
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <% if @content_item.show_phase_banner? %>
+              <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
+            <% end %>
+            <% if @content_item.show_service_manual_phase_banner? %>
+              <%= render_phase_label @content_item, content_for(:phase_message) %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     <% end %>
 
     <% unless @do_not_show_breadcrumbs %>

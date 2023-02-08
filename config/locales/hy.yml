@@ -475,6 +475,9 @@ hy:
     proposed_date: Առաջարկվող հրապարակում
     reason_for_change: Փոփոխության պատճառը
     release_date: Հրապարակման ամսաթիվ
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի ամբողջ տարածք, բացառությամբ էական նշանակություն ունեցող հատվածների։

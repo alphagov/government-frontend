@@ -1,0 +1,6 @@
+.app-community-contact {
+  @include govuk-media-query($from: tablet) {
+    text-align: right;
+    padding-top: govuk-spacing(8);
+  }
+}

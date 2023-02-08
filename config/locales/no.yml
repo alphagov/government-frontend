@@ -475,6 +475,9 @@
     proposed_date: Foreslått utgivelse
     reason_for_change: Årsak til endring
     release_date: Utgivelsesdato
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler av landet.

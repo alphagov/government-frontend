@@ -400,6 +400,9 @@ ms:
     proposed_date: Tarikh yang dicadangkan
     reason_for_change: Sebab bagi penukaran
     release_date: Tarikh hebahan
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> menasihati supaya tidak membuat perjalanan kecuali yang perlu sahaja ke bahagian-bahagian tertentu negara ini.

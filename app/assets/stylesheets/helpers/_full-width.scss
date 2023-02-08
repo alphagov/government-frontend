@@ -1,0 +1,11 @@
+.app-full-width {
+  #global-header-bar { // stylelint-disable-line selector-max-id
+    display: none;
+  }
+}
+
+// stylelint-disable declaration-no-important
+.app-\!-full-width-override {
+  margin: auto !important;
+  max-width: none !important;
+}

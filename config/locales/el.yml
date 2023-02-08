@@ -475,6 +475,9 @@ el:
     proposed_date: Προτεινόμενη κυκλοφορία
     reason_for_change: Λόγος για την αλλαγή
     release_date: Ημερομηνία κυκλοφορίας
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην των απαραίτητων, σε μέρη της χώρας.

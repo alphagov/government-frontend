@@ -475,6 +475,9 @@ tk:
     proposed_date: Teklip edilen goýberiliş
     reason_for_change: Üýtgedilmeginiň sebäbi
     release_date: Goýberiliş senesi
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ýurduň käbir ýerlerine zerur syýahatdan başga-da maslahat berýär.

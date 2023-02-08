@@ -402,6 +402,31 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
+  test "renders service_manual_guides" do
+    content_item = content_store_has_schema_example("service_manual_guide", "service_manual_guide")
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_equal content_item["title"], assigns[:content_item].title
+  end
+
+  test "guides should tell slimmer to scope search results to the manual" do
+    content_item = content_store_has_schema_example("service_manual_guide", "service_manual_guide")
+
+    get :show, params: { path: path_for(content_item) }
+    assert_equal(
+      { filter_manual: "/service-manual" }.to_json,
+      @response.headers[Slimmer::Headers::SEARCH_PARAMETERS_HEADER],
+    )
+  end
+
+  test "the homepage should tell slimmer not to include a search box in the header" do
+    content_item = content_store_has_schema_example("service_manual_homepage", "service_manual_homepage")
+
+    get :show, params: { path: path_for(content_item) }
+    assert_equal "true", @response.headers[Slimmer::Headers::REMOVE_SEARCH_HEADER]
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale

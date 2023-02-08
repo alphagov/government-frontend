@@ -1,0 +1,11 @@
+.app-change-history__latest-change {
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.app-change-history__change-note {
+  color: $govuk-secondary-text-colour;
+  white-space: pre-line;
+}

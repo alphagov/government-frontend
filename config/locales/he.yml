@@ -475,6 +475,9 @@ he:
     proposed_date: הצעה לפרסם
     reason_for_change: סיבה לשינוי
     release_date: תאריך פרסם
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: ' <abbr title="Foreign and Commonwealth Office">FCO</abbr> להמליץ על כל נסיעות מלבד חיוניות לחלקי הארץ.'

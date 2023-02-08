@@ -475,6 +475,9 @@ ps:
     proposed_date: وړاندیز شوی خوشې کول
     reason_for_change: د بدلون لپاره دلیل
     release_date: دخپریدو نیټه
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د لازمي سفر پرته ټولو ته مشوره ورکوي.

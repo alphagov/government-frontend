@@ -1,0 +1,23 @@
+.app-page-header {
+  &__intro {
+    p {
+      @include govuk-text-colour;
+      @include govuk-font($size: 19);
+      @include govuk-responsive-margin(4, "bottom");
+    }
+
+    a {
+      @include govuk-link-common;
+      @include govuk-link-style-default;
+    }
+  }
+
+  &__heading {
+    margin-bottom: govuk-spacing(3);
+
+    @include govuk-media-query($from: tablet) {
+      margin-bottom: govuk-spacing(7) + govuk-spacing(1);
+      margin-top: govuk-spacing(7) + govuk-spacing(1);
+    }
+  }
+}

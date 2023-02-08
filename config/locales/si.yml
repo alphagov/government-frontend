@@ -475,6 +475,9 @@ si:
     proposed_date: යෝජිත නිකුතුව
     reason_for_change: වෙනස් වීමට හේතුව
     release_date: නිකුත් කිරීමේ දිනය
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.

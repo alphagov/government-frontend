@@ -775,6 +775,9 @@ ar:
     proposed_date: الإصدار المقترح
     reason_for_change: سبب التغيير
     release_date: تاريخ الإصدار
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعدم السفر إلى بعض أجزاء البلد إلا للضرورة.

@@ -11,7 +11,6 @@ $govuk-include-default-font-face: false;
 
 // Components from govuk_publishing_components gem
 @import "govuk_publishing_components/govuk_frontend_support";
-
 @import "govuk_publishing_components/components/accordion";
 @import "govuk_publishing_components/components/attachment";
 @import "govuk_publishing_components/components/back-link";
@@ -62,6 +61,22 @@ $govuk-include-default-font-face: false;
 @import "helpers/publisher-metadata-with-logo";
 @import "helpers/attachments";
 @import "helpers/sticky-element-container";
+@import "helpers/full-width";
+
+// modules for service-manual pages
+@import "modules/change-history";
+@import "modules/collection";
+@import "modules/community-contact";
+@import "modules/govspeak-wrapper";
+@import "modules/hero";
+@import "modules/notice";
+@import "modules/page-contents";
+@import "modules/page-header";
+@import "modules/panel";
+@import "modules/related-content";
+@import "modules/service-standard-point";
+@import "modules/sticky";
+@import "modules/typography";
 
 // Components from this application
 @import "components/*";
@@ -86,6 +101,7 @@ $govuk-include-default-font-face: false;
 @import "views/corporate-information-page";
 @import "views/travel-advice";
 @import "views/contact";
+@import "views/service_manual_guide";
 @import "views/specialist-document";
 @import "views/answer";
 @import "views/help-page";

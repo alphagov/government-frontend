@@ -475,6 +475,9 @@ sv:
     proposed_date: Föreslagna offentliggöranden
     reason_for_change: Skäl till ändringen
     release_date: Datum för offentliggörandet
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla utom nödvändiga resor till delar av landet.

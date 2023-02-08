@@ -1,5 +1,9 @@
+require "slimmer/headers"
+
 class ContentItemsController < ApplicationController
   include GovukPersonalisation::ControllerConcern
+  include Slimmer::Headers
+  include Slimmer::Template
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -22,7 +26,9 @@ class ContentItemsController < ApplicationController
 
     set_expiry
 
-    if is_history_page?
+    if is_service_manual?
+      show_service_manual_page
+    elsif is_history_page?
       show_history_page
     else
       set_use_recommended_related_links_header
@@ -74,6 +80,58 @@ private
     else
       render plain: "Not found", status: :not_found
     end
+  end
+
+  def is_service_manual?
+    @content_item.document_type.include?("service_manual")
+  end
+
+  def show_service_manual_page
+    slimmer_template(service_manual_layout)
+    configure_header_search
+
+    has_custom_breadcrumbs = %w[
+      service_manual_guide
+      service_manual_service_standard
+      service_manual_topic
+      service_manual_homepage
+    ]
+
+    @do_not_show_breadcrumbs =
+      has_custom_breadcrumbs.include?(@content_item.document_type)
+
+    with_locale do
+      render content_item_template
+    end
+  end
+
+  def service_manual_layout
+    types = %w[service_manual_homepage service_manual_service_toolkit]
+    types.include?(@content_item.document_type) ? "gem_layout_full_width_no_footer_navigation" : "gem_layout_no_footer_navigation"
+  end
+
+  def configure_header_search
+    if @content_item.present? && !@content_item.include_search_in_header?
+      remove_header_search
+    else
+      scope_header_search_to_service_manual
+    end
+  end
+
+  def scope_header_search_to_service_manual
+    # Slimmer is middleware which wraps the service manual in the GOV.UK header
+    # and footer. We set a response header so that Slimmer adds a hidden field
+    # to the header search to scope the search results to just the service
+    # manual.
+    set_slimmer_headers(
+      search_parameters: {
+        "filter_manual" => "/service-manual",
+      }.to_json,
+    )
+  end
+
+  def remove_header_search
+    set_slimmer_headers(remove_search: true)
   end
 
   def show_error_message

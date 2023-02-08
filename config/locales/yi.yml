@@ -475,6 +475,9 @@ yi:
     proposed_date:
     reason_for_change:
     release_date:
+  time:
+    formats:
+      short_ordinal: '%e %B %Y'
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html:

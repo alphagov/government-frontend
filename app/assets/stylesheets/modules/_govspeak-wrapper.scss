@@ -1,0 +1,7 @@
+.govspeak-wrapper {
+  padding-top: .9375em;
+
+  @include govuk-media-query($from: tablet) {
+    padding-top: 1.875em;
+  }
+}
