@@ -32,14 +32,14 @@
 <body>
   <div id="wrapper" class="<%= wrapper_class %>">
 
-    <% if @content_item.show_phase_banner? || @content_item.show_service_manual_phase_banner? %>
+    <% if @content_item.show_phase_banner? || @content_item.service_manual? %>
       <div class="govuk-width-container">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <% if @content_item.show_phase_banner? %>
               <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
             <% end %>
-            <% if @content_item.show_service_manual_phase_banner? %>
+            <% if @content_item.service_manual? %>
               <%= render_phase_label @content_item, content_for(:phase_message) %>
             <% end %>
           </div>
