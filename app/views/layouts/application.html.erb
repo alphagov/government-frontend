@@ -30,6 +30,13 @@
   <%= yield :extra_head_content %>
 </head>
 <body>
+  <% if @content_item.service_manual? %>
+    <div class="slimmer-inside-header">
+      <span class="govuk-header__product-name gem-c-header__product-name">
+        <%= "Service Manual" %>
+      </span>
+    </div>
+  <% end %>
   <div id="wrapper" class="<%= wrapper_class %>">
 
     <% if @content_item.show_phase_banner? || @content_item.service_manual? %>
