@@ -37,7 +37,8 @@
         title: @content_item.title,
         context: I18n.t("content_item.schema_name.#{@content_item.format_sub_type}", count: 1),
         inverse: true,
-        margin_bottom: 0
+        margin_bottom: 0,
+        margin_top: 3
   %>
   <p class="publication-header__last-changed"><%= @content_item.last_changed %></p>
 <% end %>
