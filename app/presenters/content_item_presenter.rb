@@ -1,5 +1,7 @@
 class ContentItemPresenter
+  include ContentItem::CostOfLivingBanner
   include ContentItem::Withdrawable
+
   attr_reader :content_item,
               :requested_path,
               :view_context,
