@@ -27,7 +27,7 @@ class RecruitmentBannerTest < ActionDispatch::IntegrationTest
       visit guide["base_path"]
 
       assert page.has_css?(".gem-c-intervention")
-      assert page.has_link?("Take part in user research (opens in a new tab)", href: "https://surveys.publishing.service.gov.uk/s/XS2YWV/")
+      assert page.has_link?("Take part in user research (opens in a new tab)", href: "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg")
     end
   end
 
@@ -38,6 +38,6 @@ class RecruitmentBannerTest < ActionDispatch::IntegrationTest
     visit guide["base_path"]
 
     assert_not page.has_css?(".gem-c-intervention")
-    assert_not page.has_link?("Take part in user research (opens in a new tab)", href: "https://surveys.publishing.service.gov.uk/s/XS2YWV/")
+    assert_not page.has_link?("Take part in user research (opens in a new tab)", href: "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg")
   end
 end

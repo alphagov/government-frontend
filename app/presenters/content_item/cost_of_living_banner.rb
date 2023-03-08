@@ -1,6 +1,6 @@
 module ContentItem
   module CostOfLivingBanner
-    COST_OF_LIVING_SURVEY_URL = "https://surveys.publishing.service.gov.uk/s/XS2YWV/".freeze
+    COST_OF_LIVING_SURVEY_URL = "https://s.userzoom.com/m/MSBDMTQ3MVM0NCAg".freeze
 
     SURVEY_URL_MAPPINGS = {
       "/guidance/cost-of-living-payment" => COST_OF_LIVING_SURVEY_URL,
