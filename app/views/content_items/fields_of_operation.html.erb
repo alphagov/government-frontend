@@ -1,0 +1,17 @@
+<div class="govuk-width-container">
+  <%= render "govuk_publishing_components/components/title", {
+    context: t("fields_of_operation.index.context"),
+    title: @content_item.page_title,
+  } %>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="govuk-list">
+        <!-- TODO: write a link method in the content item presenter, can refactor a few pages >
+        <% @content_item.content_item.dig("links", "fields_of_operation").each do |field| %>
+            <%= link_to field["title"], field["base_path"], class: "govuk-link" %>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2 govuk-!-margin-bottom-2">
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

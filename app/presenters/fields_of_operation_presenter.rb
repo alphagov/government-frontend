@@ -1,0 +1,2 @@
+class FieldsOfOperationPresenter < ContentItemPresenter
+end
