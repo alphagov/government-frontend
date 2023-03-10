@@ -295,6 +295,8 @@ ka:
     alt_text: თავდაცვის სამინისტრო
     field_of_operation: ოპერაციის სფერო
     operations_in: ოპერაციები %{location}-ში
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

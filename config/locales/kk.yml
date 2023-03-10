@@ -295,6 +295,8 @@ kk:
     alt_text: Қорғаныс министрлігінің елтаңбасы
     field_of_operation: Жұмыс аймағы
     operations_in: "%{location} орнындағы жұмыстар"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

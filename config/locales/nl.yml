@@ -295,6 +295,8 @@ nl:
     alt_text: Wapen van het ministerie van Defensie
     field_of_operation: Gebied van operatie
     operations_in: Operaties in %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

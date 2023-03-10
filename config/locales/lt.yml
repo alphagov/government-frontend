@@ -369,6 +369,8 @@ lt:
     alt_text: Apsaugos ministerijos herbas
     field_of_operation: Veiklos sritis
     operations_in: Veikla vykdoma %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

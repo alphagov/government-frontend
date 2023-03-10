@@ -221,6 +221,8 @@ vi:
     alt_text: Huy hiệu Bộ trưởng Quốc phòng
     field_of_operation: Lĩnh vực hoạt động
     operations_in: Hoạt động ở %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

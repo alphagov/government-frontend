@@ -295,6 +295,8 @@ it:
     alt_text: Stemma del Ministero della Difesa
     field_of_operation: Campo operativo
     operations_in: Operazioni in %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

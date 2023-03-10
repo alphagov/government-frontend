@@ -221,6 +221,8 @@ th:
     alt_text: ตรากระทรวงกลาโหม
     field_of_operation: พื้นที่ปฏิบัติการ
     operations_in: การดำเนินงานใน %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

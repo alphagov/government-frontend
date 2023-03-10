@@ -295,6 +295,8 @@ es-419:
     alt_text: Escudo del Ministerio de Defensa
     field_of_operation: Campo de operación
     operations_in: Operaciones en %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

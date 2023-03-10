@@ -443,6 +443,8 @@ ru:
     alt_text: Герб Министерства Обороны
     field_of_operation: Сфера деятельности
     operations_in: Деятельность в  %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

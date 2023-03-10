@@ -591,6 +591,8 @@ cy:
     alt_text: Arwyddlun y Weinyddiaeth Amddiffyn
     field_of_operation: Maes gweithredu
     operations_in: Gweithrediadau yn %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

@@ -295,6 +295,8 @@ dr:
     alt_text: وزارت دفاع
     field_of_operation: ساحهء عملیات
     operations_in: عملیات در%{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

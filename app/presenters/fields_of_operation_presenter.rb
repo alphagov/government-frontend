@@ -7,7 +7,7 @@ class FieldsOfOperationPresenter < ContentItemPresenter
 
   def title_and_context
     super.tap do |t|
-      t[:context] = "British fatalities"
+      t[:context] = I18n.t("fields_of_operation.context")
       t.delete(:average_title_length)
     end
   end

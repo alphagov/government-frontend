@@ -221,6 +221,8 @@ ko:
     alt_text: 국방부 문장
     field_of_operation: 운영 현장
     operations_in: "%{Location} 내 운영"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

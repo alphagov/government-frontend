@@ -295,6 +295,8 @@ is:
     alt_text: Skjaldarmerki Varnarmálaráðuneytisins
     field_of_operation: Starfsvið
     operations_in: Starfsemi á %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

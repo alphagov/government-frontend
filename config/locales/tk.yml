@@ -295,6 +295,8 @@ tk:
     alt_text: Goranmak ministrliginiň nyşany
     field_of_operation: Iş meýdany
     operations_in: "%{location} ýerindäki işler"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

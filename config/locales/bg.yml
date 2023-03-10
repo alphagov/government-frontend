@@ -295,6 +295,8 @@ bg:
     alt_text: Герб на Министерството на отбраната
     field_of_operation: Област на действие
     operations_in: Операции в %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

@@ -295,6 +295,8 @@ sv:
     alt_text: Försvarsministeriets vapensköld
     field_of_operation: Verksamhetsområde
     operations_in: Verksamhet på %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

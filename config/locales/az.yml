@@ -295,6 +295,8 @@ az:
     alt_text: Müdafiə nazirliyinin emblemi
     field_of_operation: Əməliyyat sahəsi
     operations_in: "%{location}-də olan əməliyyatlar"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

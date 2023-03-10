@@ -295,6 +295,8 @@ ne:
     alt_text: रक्षा मन्त्रालय क्रेस्ट
     field_of_operation: सञ्चालन क्षेत्र
     operations_in: "%{location} मा सञ्चालन"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

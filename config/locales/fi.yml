@@ -295,6 +295,8 @@ fi:
     alt_text: Puolustusministeriön vaakuna
     field_of_operation: Toiminta -alue
     operations_in: Toiminnot paikassa %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

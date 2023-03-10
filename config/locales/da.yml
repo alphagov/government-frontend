@@ -307,6 +307,8 @@ da:
     alt_text: Forsvarsministeriets kam
     field_of_operation: Operationsområde
     operations_in: Handlinger i %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

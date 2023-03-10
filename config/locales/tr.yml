@@ -295,6 +295,8 @@ tr:
     alt_text: Savunma Bakanlığı arması
     field_of_operation: Faaliyet alanı
     operations_in: "%{location} konumundaki faaliyetler"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:
