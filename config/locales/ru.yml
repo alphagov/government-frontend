@@ -442,7 +442,11 @@ ru:
   fatality_notice:
     alt_text: Герб Министерства Обороны
     field_of_operation: Сфера деятельности
+    none_added:
     operations_in: Деятельность в  %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -629,7 +633,7 @@ ru:
     release_date: Дата выпуска
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> Все поездки не реккомендуются, за исключением необходимых в части страны.

@@ -220,7 +220,11 @@ vi:
   fatality_notice:
     alt_text: Huy hiệu Bộ trưởng Quốc phòng
     field_of_operation: Lĩnh vực hoạt động
+    none_added:
     operations_in: Hoạt động ở %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -404,7 +408,7 @@ vi:
     release_date: Ngày phát hành
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo chỉ nên đi đến một số nơi ở quốc gia này khi thật cần thiết.

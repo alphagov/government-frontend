@@ -294,7 +294,11 @@
   fatality_notice:
     alt_text: Forsvarsdepartementets crest
     field_of_operation: Operasjonsfelt
+    none_added:
     operations_in: Operasjoner i %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@
     release_date: Utgivelsesdato
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråder alle reiser, unntatt viktige reiser, til deler av landet.

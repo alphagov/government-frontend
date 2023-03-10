@@ -294,7 +294,11 @@ sq:
   fatality_notice:
     alt_text: Stema e Ministrisë së Mbrojtjes
     field_of_operation: Fusha e operimit
+    none_added:
     operations_in: Operacione në %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ sq:
     release_date: Data e publikimit
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> këshillon kundër të gjitha udhëtimeve përveçse thelbësore në pjesë të vendit.

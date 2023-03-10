@@ -368,7 +368,11 @@ lt:
   fatality_notice:
     alt_text: Apsaugos ministerijos herbas
     field_of_operation: Veiklos sritis
+    none_added:
     operations_in: Veikla vykdoma %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -554,7 +558,7 @@ lt:
     release_date: Paskelbimo data
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> pataria keliauti į skirtingas šalies vietas tik būtinais tikslais.

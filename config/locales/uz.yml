@@ -294,7 +294,11 @@ uz:
   fatality_notice:
     alt_text: Мудофаа вазирлигининг эмблемаси
     field_of_operation: Фаолият соҳаси
+    none_added:
     operations_in: "%{location} да ишлаш"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ uz:
     release_date: Нашр санаси
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">Ташқи ишлар ва Ҳамдўстлик ишлари бўйича вазирлиги</abbr> ўта заруратсиз мамлакатнинг муайян минтақаларига сафарларни амалга оширишни тавсия этмайди.

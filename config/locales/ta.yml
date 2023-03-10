@@ -294,7 +294,11 @@ ta:
   fatality_notice:
     alt_text: பாதுகாப்பு காவல்துறை அமைச்சர்
     field_of_operation: இயங்குதளம்
+    none_added:
     operations_in: "%{location}-ல் செயல்பாடுகள்"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ ta:
     release_date: வெளியீட்டுத் தேதி
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு அத்தியாவசிய பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.

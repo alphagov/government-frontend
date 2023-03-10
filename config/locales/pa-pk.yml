@@ -294,7 +294,11 @@ pa-pk:
   fatality_notice:
     alt_text: وزارتِ دفاع کریسٹ
     field_of_operation: عمل کرن دا حلقہ
+    none_added:
     operations_in: ایندے بارے عمل {location}%
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ pa-pk:
     release_date: جاری کرن دی تاریخ
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: ایہ<abbr title="Foreign and Commonwealth Office">FCO</abbr> مُلک دے سارے علاقیاں وچ  ضروری سفر کرن  لئی کیتی گئی نصحیت۔

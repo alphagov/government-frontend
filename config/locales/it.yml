@@ -294,7 +294,11 @@ it:
   fatality_notice:
     alt_text: Stemma del Ministero della Difesa
     field_of_operation: Campo operativo
+    none_added:
     operations_in: Operazioni in %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ it:
     release_date: Data di rilascio
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: L’<abbr title="Foreign and Commonwealth Office">FCO</abbr> sconsiglia tutti i viaggi tranne quelli essenziali in alcune parti del paese.

@@ -368,7 +368,11 @@ sr:
   fatality_notice:
     alt_text: Grb Ministarstva odbrane
     field_of_operation: Oblast delovanja
+    none_added:
     operations_in: Delovanje na lokaciji %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -554,7 +558,7 @@ sr:
     release_date: Datum objavljivanja
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ne preporučuje putovanja koja nisu esencijalna za delove zemlje.

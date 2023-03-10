@@ -294,7 +294,11 @@ gu:
   fatality_notice:
     alt_text: સંરક્ષણ મંત્રાલય ક્રેસ્ટ
     field_of_operation: કામગીરીનું ક્ષેત્ર
+    none_added:
     operations_in: "%{location} માં સંચાલનો"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ gu:
     release_date: રીલીઝ તારીખ
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">વિદેશી - કોમનવેલ્થ અને વિકાસ કચેરી</abbr> જરૂરી મુસાફરી સિવાય દેશના કેટલાક ભાગોમાં પ્રવાસ ન કરવાની સલાહ આપે છે.

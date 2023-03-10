@@ -294,7 +294,11 @@ lv:
   fatality_notice:
     alt_text: Aizsardzības ministrijas ģerbonis
     field_of_operation: Darbības joma
+    none_added:
     operations_in: 'Darbības šeit: %{location}'
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ lv:
     release_date: Publiskošanas datums
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> iesaka izvairīties no jebkādas ceļošanas, izņemot neatliekamus braucienus uz noteiktām valsts daļām.

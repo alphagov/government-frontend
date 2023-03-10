@@ -306,7 +306,11 @@ da:
   fatality_notice:
     alt_text: Forsvarsministeriets kam
     field_of_operation: Operationsområde
+    none_added:
     operations_in: Handlinger i %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -491,7 +495,7 @@ da:
     release_date: Udgivelsesdato
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Den <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråde alle, men væsentlige rejser til dele af landet.

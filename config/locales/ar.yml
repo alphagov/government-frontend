@@ -590,7 +590,11 @@ ar:
   fatality_notice:
     alt_text: شعار وزارة الدفاع
     field_of_operation: ساحة العمليات
+    none_added:
     operations_in: العمليات الدائرة في %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -779,7 +783,7 @@ ar:
     release_date: تاريخ الإصدار
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعدم السفر إلى بعض أجزاء البلد إلا للضرورة.

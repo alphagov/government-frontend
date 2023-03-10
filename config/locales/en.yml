@@ -294,7 +294,11 @@ en:
   fatality_notice:
     alt_text: Ministry of Defence crest
     field_of_operation: Field of operation
+    none_added:
     operations_in: Operations in %{location}
+  field_of_operation:
+    context: British fatalities
+    title: Operations in
   fields_of_operation:
     context: British fatalities
   get_involved:
@@ -477,6 +481,9 @@ en:
     proposed_date: Proposed release
     reason_for_change: Reason for change
     release_date: Release date
+  time:
+    formats:
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advise against all but essential travel to parts of the country.
@@ -488,9 +495,6 @@ en:
     still_current_at: Still current at
     summary: Summary
     updated: Updated
-  time:
-    formats:
-      short_ordinal: '%e %B %Y'
   unpublishing:
     page_title: No longer available
     summary: The information on this page has been removed because it was published in error.

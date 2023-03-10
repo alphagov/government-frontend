@@ -294,7 +294,11 @@ so:
   fatality_notice:
     alt_text: Calaamada Wasaarada Difaaca
     field_of_operation: Hawalaha dibadaa
+    none_added:
     operations_in: Hawalaha %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ so:
     release_date: Taariikhda sii daynta
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> talo dhamaan kasoo wada horjeeda lakin socdaal muhiim ah oo qaybaha dalka oo dhan ah.

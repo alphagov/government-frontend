@@ -442,7 +442,11 @@ uk:
   fatality_notice:
     alt_text: Герб Міністерства оборони
     field_of_operation: Сфера діяльності
+    none_added:
     operations_in: Операції в %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -629,7 +633,7 @@ uk:
     release_date: Дата виходу
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Міністерство закордонних справ<abbr title="Foreign and Commonwealth Office">(FCO)</abbr> забороняє будь-які поїздки, крім необхідних, до певних областей країни.

@@ -294,7 +294,11 @@ et:
   fatality_notice:
     alt_text: Kaitseministeeriumi teadus- ja tehnikauuringute komitee
     field_of_operation: Tegevusvaldkond
+    none_added:
     operations_in: Toimingud asukohas %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ et:
     release_date: Väljaande kuupäev
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida riigi osadesse muidu kui hädavajadusel.

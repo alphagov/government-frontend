@@ -590,7 +590,11 @@ cy:
   fatality_notice:
     alt_text: Arwyddlun y Weinyddiaeth Amddiffyn
     field_of_operation: Maes gweithredu
+    none_added:
     operations_in: Gweithrediadau yn %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -779,7 +783,7 @@ cy:
     release_date: Dyddiad rhyddhau
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Mae'r <abbr title="Foreign and Commonwealth Office">Swyddfa Dramor, y Gymanwlad a Datblygu</abbr> yn cynghori yn erbyn pob taith, oni fo'n hanfodol, i rannau o'r wlad.
