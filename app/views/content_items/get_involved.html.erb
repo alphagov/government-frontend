@@ -1,15 +1,3 @@
-<% page_title %>
-<% page_class "govuk-main-wrapper" %>
-  <%= render "govuk_publishing_components/components/breadcrumbs", {
-    collapse_on_mobile: true,
-    breadcrumbs: [
-      {
-        title: "Home",
-        url: "/"
-      }
-    ]
-  } %>
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/title", {
@@ -51,32 +39,32 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
         <%= render "govuk_publishing_components/components/big_number", {
-          number: @open_consultation_count,
+          number: @content_item.open_consultation_count,
           label: t('get_involved.open_consultations'),
           href: "/search/policy-papers-and-consultations?content_store_document_type=open_consultations"
         } %>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/big_number", {
-          number: @closed_consultation_count,
+          number: @content_item.closed_consultation_count,
           label: t('get_involved.closed_consultations'),
           href: "/search/policy-papers-and-consultations?content_store_document_type=closed_consultations"
         } %>
       </div>
     </div>
 
-    <% if @next_closing_consultation %>
+    <% if @content_item.next_closing_consultation %>
       <%# Attention to closing consultation  %>
       <%= render "govuk_publishing_components/components/inset_text", {
       } do %>
         <%= render "govuk_publishing_components/components/heading", {
-          text: time_until_closure(@next_closing_consultation),
+          text: @content_item.time_until_closure(@content_item.next_closing_consultation),
           heading_level: 3
         } %>
         <p class="govuk-body">
-          <%= @next_closing_consultation['title'] %>
+          <%= @content_item.next_closing_consultation['title'] %>
         </p>
-        <%= link_to t('get_involved.read_respond'), @next_closing_consultation['link'], class: "govuk-link" %>
+        <%= link_to t('get_involved.read_respond'), @content_item.next_closing_consultation['link'], class: "govuk-link" %>
       <% end %>
     <% end %>
   </div>
@@ -93,9 +81,9 @@
       margin_bottom: 4
     } %>
     <%= render "govuk_publishing_components/components/document_list", {
-      items: @recently_opened
+      items: @content_item.recently_opened
     } %>
-    <%= link_to(t('get_involved.search_all'), get_consultations_link, class: "govuk-link" ) %>
+    <%= link_to(t('get_involved.search_all'), @content_item.consultations_link, class: "govuk-link" ) %>
   </div>
 </div>
 
@@ -111,10 +99,10 @@
     } %>
 
     <%= render "govuk_publishing_components/components/document_list", {
-      items: @recent_outcomes
+      items: @content_item.recent_outcomes
     } %>
 
-    <%= link_to(t('get_involved.search_all'), get_consultations_link, class: "govuk-link" ) %>
+    <%= link_to(t('get_involved.search_all'), @content_item.consultations_link, class: "govuk-link" ) %>
   </div>
 </div>
 
@@ -177,7 +165,7 @@
       id: "take-part"
     } %>
     <div role="list">
-    <% @take_part_pages.each_with_index do |take_part_page, index| %>
+    <% @content_item.take_part_pages.each_with_index do |take_part_page, index| %>
       <% if index % 3 == 0 && index != 0 %> </div> <% end %>
       <% if index % 3 == 0 %>
         <div class="govuk-grid-row">
@@ -193,7 +181,7 @@
               image_loading: "lazy",
             } %>
           </div>
-        <% if index == @take_part_pages.size-1 %>
+        <% if index == @content_item.take_part_pages.size-1 %>
         </div>
       <% end %>
     <% end %>
