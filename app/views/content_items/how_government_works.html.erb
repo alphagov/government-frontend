@@ -141,65 +141,37 @@
         <% unless @content_item.reshuffle_in_progress? %>
           <div class="govuk-grid-row feature-ministers">
             <div class="govuk-grid-column-one-half">
-              <p class="govuk-!-margin-bottom-1 govuk-heading-s">Prime Minister</p>
-
-              <a class="govuk-link gem-c-big-number__link" href="/government/ministers/prime-minister">
-                <%= render "govuk_publishing_components/components/big_number", {
-                  number: @content_item.ministerial_role_counts["prime_minister"],
-                } %>
-
-                <span class="govuk-visually-hidden">&nbsp;</span>
-                <span class="govuk-visually-hidden">
-                  Prime Minister
-                </span>
-              </a>
+              <%= render "govuk_publishing_components/components/big_number", {
+                number: @content_item.ministerial_role_counts["prime_minister"],
+                label: "Prime Minister",
+                href: "/government/ministers/prime-minister"
+              } %>
             </div>
 
             <div class="govuk-grid-column-one-half">
-              <p class="govuk-!-margin-bottom-1 govuk-heading-s">Cabinet ministers</p>
-
-              <a class="govuk-link gem-c-big-number__link cabinet-ministers" href="/government/ministers#cabinet-ministers">
-                <%= render "govuk_publishing_components/components/big_number", {
-                  number: @content_item.ministerial_role_counts["cabinet_ministers"],
-                } %>
-
-                <span class="govuk-visually-hidden">&nbsp;</span>
-                <span class="govuk-visually-hidden">
-                  Cabinet ministers
-                </span>
-              </a>
+              <%= render "govuk_publishing_components/components/big_number", {
+                number: @content_item.ministerial_role_counts["cabinet_ministers"],
+                label: "Cabinet ministers",
+                href: "/government/ministers#cabinet-ministers"
+              } %>
             </div>
           </div>
 
-          <div class="govuk-grid-row">
+          <div class="govuk-grid-row feature-ministers">
             <div class="govuk-grid-column-one-half">
-              <p class="govuk-!-margin-bottom-1 govuk-heading-s">Other ministers</p>
-
-              <a class="govuk-link gem-c-big-number__link other-ministers" href="/government/ministers#ministers-by-department">
-                <%= render "govuk_publishing_components/components/big_number", {
-                  number: @content_item.ministerial_role_counts["other_ministers"],
-                } %>
-
-                <span class="govuk-visually-hidden">&nbsp;</span>
-                <span class="govuk-visually-hidden">
-                  Other ministers
-                </span>
-              </a>
+              <%= render "govuk_publishing_components/components/big_number", {
+                number: @content_item.ministerial_role_counts["other_ministers"],
+                label: "Other ministers",
+                href: "/government/ministers#ministers-by-department"
+              } %>
             </div>
 
-            <div class="govuk-grid-column-one-half all-ministers">
-              <p class="govuk-!-margin-bottom-1 govuk-heading-s">Total ministers</p>
-
-              <a class="govuk-link gem-c-big-number__link all-ministers" href="/government/ministers">
-                <%= render "govuk_publishing_components/components/big_number", {
-                  number: @content_item.ministerial_role_counts["total_ministers"],
-                } %>
-
-                <span class="govuk-visually-hidden">&nbsp;</span>
-                <span class="govuk-visually-hidden">
-                  Total ministers
-                </span>
-              </a>
+            <div class="govuk-grid-column-one-half">
+              <%= render "govuk_publishing_components/components/big_number", {
+                number: @content_item.ministerial_role_counts["total_ministers"],
+                label: "Total ministers",
+                href: "/government/ministers"
+              } %>
             </div>
           </div>
         <% end %>
