@@ -295,6 +295,8 @@ pt:
     alt_text: Brasão do Ministério da Defesa
     field_of_operation: Campo de operação
     operations_in: Operações em %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

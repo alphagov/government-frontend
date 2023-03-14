@@ -221,6 +221,8 @@ zh-tw:
     alt_text: 國防部紋章
     field_of_operation: 經營領域
     operations_in: 在 %{location} 的領域
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

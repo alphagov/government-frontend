@@ -295,6 +295,8 @@ et:
     alt_text: Kaitseministeeriumi teadus- ja tehnikauuringute komitee
     field_of_operation: Tegevusvaldkond
     operations_in: Toimingud asukohas %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

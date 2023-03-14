@@ -591,6 +591,8 @@ ar:
     alt_text: شعار وزارة الدفاع
     field_of_operation: ساحة العمليات
     operations_in: العمليات الدائرة في %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

@@ -295,6 +295,8 @@ el:
     alt_text: Οικόσημο Υπουργείου Άμυνας
     field_of_operation: Πεδίο λειτουργίας
     operations_in: Λειτουργίες στην τοποθεσία %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

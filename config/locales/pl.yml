@@ -443,6 +443,8 @@ pl:
     alt_text: Herb Ministerstwa Obrony
     field_of_operation: Zakres działania
     operations_in: Działania w %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

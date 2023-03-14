@@ -295,6 +295,8 @@ hu:
     alt_text: A Védelmi Minisztérium címere
     field_of_operation: Működési terület
     operations_in: 'Tevékenységek itt: %{location}'
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

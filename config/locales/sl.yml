@@ -443,6 +443,8 @@ sl:
     alt_text: Grb Ministrstva za obrambo
     field_of_operation: Področje delovanja
     operations_in: Dejavni v %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

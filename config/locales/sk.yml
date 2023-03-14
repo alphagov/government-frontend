@@ -369,6 +369,8 @@ sk:
     alt_text: Erb ministerstva obrany
     field_of_operation: Oblasť činnosti
     operations_in: Operácie v %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

@@ -295,6 +295,8 @@ ta:
     alt_text: பாதுகாப்பு காவல்துறை அமைச்சர்
     field_of_operation: இயங்குதளம்
     operations_in: "%{location}-ல் செயல்பாடுகள்"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

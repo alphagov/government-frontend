@@ -369,6 +369,8 @@ ro:
     alt_text: Emblema Ministerului Apărării
     field_of_operation: Domeniul de activitate
     operations_in: Operațiuni în %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

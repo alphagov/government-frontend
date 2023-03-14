@@ -369,6 +369,8 @@ cs:
     alt_text: Ministerstvo obrany
     field_of_operation: Oblast provozu
     operations_in: Operace v %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

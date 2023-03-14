@@ -369,6 +369,8 @@ hr:
     alt_text: Grb Ministarstva obrane
     field_of_operation: Područje djelovanja
     operations_in: Operacije u %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

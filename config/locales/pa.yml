@@ -295,6 +295,8 @@ pa:
     alt_text: ਰੱਖਿਆ ਮੰਤਰਾਲਾ ਸਿਖਰ
     field_of_operation: ਕਾਰਜ ਖੇਤਰ
     operations_in: "%{location} ਵਿੱਚ ਕਾਰਜ"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

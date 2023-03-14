@@ -221,6 +221,8 @@ ja:
     alt_text: 国防省の紋章
     field_of_operation: 運用分野
     operations_in: "％{location} での操作"
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

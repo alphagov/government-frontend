@@ -443,6 +443,8 @@ be:
     alt_text: Герб Міністэрства абароны
     field_of_operation: Сфера дзейнасці
     operations_in: Дзейнасць у %{location}
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:

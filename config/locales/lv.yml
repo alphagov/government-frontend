@@ -295,6 +295,8 @@ lv:
     alt_text: Aizsardzības ministrijas ģerbonis
     field_of_operation: Darbības joma
     operations_in: 'Darbības šeit: %{location}'
+  fields_of_operation:
+    context:
   get_involved:
     civil_service:
     civil_service_quarterly:
