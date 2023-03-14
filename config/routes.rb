@@ -16,8 +16,6 @@ Rails.application.routes.draw do
 
   get "/government/uploads/*path" => "asset_manager_redirect#show", format: false
 
-  get "/government/get-involved" => "get_involved#show"
-
   get "/service-manual/search",
       to: redirect { |_, request|
             query = request.query_parameters.merge(filter_manual: "/service-manual").to_query
