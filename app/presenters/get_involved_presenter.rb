@@ -87,7 +87,7 @@ private
         link: {
           text: item["title"],
           path: item["link"],
-          description: "#{close_status} #{item['end_date'].to_date.strftime('%d %B %z')}",
+          description: "#{close_status} #{item['end_date'].to_date.strftime('%d %B %Y')}",
         },
         metadata: {
           public_updated_at: Time.zone.parse(org_time(item)),
