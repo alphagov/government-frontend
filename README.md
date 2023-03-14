@@ -17,6 +17,7 @@ Not all schemas that this app can handle are rendered by it in production.
 | Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
 | Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated |
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
+| Fields of operation | [View on Gov.UK](https://www.gov.uk/government/fields-of-operation) | Migrated |
 | Help page | [View on GOV.UK](https://www.gov.uk/help/about-govuk) | Migrated |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)| Migrated |
 | Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)| Migrated |
