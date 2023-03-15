@@ -4,7 +4,7 @@
   } %>
 
   <%= render "govuk_publishing_components/components/contents_list", {
-    aria_label: t("manuals.pages_in_manual_section"), contents: @content_item.contents, underline_links: true
+    aria: { label: t("manuals.pages_in_manual_section") }, contents: @content_item.contents, underline_links: true
   } %>
 
   <div class="govuk-grid-row">
