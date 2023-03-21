@@ -1,7 +1,16 @@
-<div id="manuals-frontend" class="manuals-frontend-body">
-  <%= render "content_items/manuals/hmrc_header", {
-    content_item: @content_item, heading_level: 2, margin_bottom: 6,
+ <div id="manuals-frontend" class="manuals-frontend-body">
+  <%= render "content_items/manuals/header", {
+    content_item: @content_item,
+    heading_level: 2,
+    margin_bottom: 6,
+    green_background: true,
+    supertitle: I18n.t("manuals.hmrc_manual_type"),
   } %>
+
+  <%= render "govuk_publishing_components/components/breadcrumbs", {
+             border: "bottom",
+             breadcrumbs: @content_item.breadcrumbs,
+             collapse_on_mobile: false } %>
 
   <%= render "content_items/manuals/updates", content_item: @content_item %>
 </div>

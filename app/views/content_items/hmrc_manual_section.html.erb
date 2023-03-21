@@ -1,7 +1,17 @@
 <div id="manuals-frontend" class="manuals-frontend-body">
-  <%= render "content_items/manuals/hmrc_header", {
-    content_item: @content_item, heading_level: 1, margin_bottom: 6,
+  <%= render "content_items/manuals/header", {
+    content_item: @content_item,
+    heading_level: 1,
+    margin_bottom: 6,
+    green_background: true,
+    supertitle: I18n.t("manuals.hmrc_manual_type"),
   } %>
+
+  <%= render "govuk_publishing_components/components/breadcrumbs", {
+             border: "bottom",
+             breadcrumbs: @content_item.breadcrumbs,
+             collapse_on_mobile: false } %>
+
 
   <div class="govuk-grid-row">
     <div class="manual-body" id="content">
