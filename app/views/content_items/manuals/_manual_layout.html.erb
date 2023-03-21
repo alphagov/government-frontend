@@ -1,13 +1,23 @@
-<% content_for :header %>
+<% content_for :header do %>
+    <%= yield :manual_header %>
+    <%= render "content_items/manuals/header", {
+      content_item: @content_item, heading_level: 1, margin_bottom: 6,
+    } %> 
+<% end %>
+
+<% content_for :main do %>
+  <div id="manuals-frontend" class="manuals-frontend-body">
+
+  <%= render "govuk_publishing_components/components/breadcrumbs", {
+             border: "bottom",
+             breadcrumbs: @content_item.breadcrumbs,
+             collapse_on_mobile: false } %>
+
+  <%= machine_readable_metadata(schema: :article) %>
+
   <%= render "content_items/manuals/header", {
     content_item: @content_item, heading_level: 1, margin_bottom: 3
   } %>
-<% end %>
-
-<% content_for :main %>
-  <div id="manuals-frontend" class="manuals-frontend-body">
-
-  <%= machine_readable_metadata(schema: :article) %>
 
   <div class="manual-body">
     <% if @content_item.description.present? %>
@@ -19,6 +29,10 @@
       <%= render "govuk_publishing_components/components/govspeak", {} do %>
         <%= raw(@content_item.body) %>
       <% end %>
+    <% end %>
+
+    <% if content_for?(:section_groups) %>
+      <%= yield :section_groups) %>
     <% end %>
 
     <% @content_item.section_groups.each do |group| %>
