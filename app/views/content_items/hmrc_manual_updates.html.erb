@@ -1,4 +1,4 @@
-<div id="manuals-frontend" class="manuals-frontend-body">
+<% content_for :header do %>
   <%= render "content_items/manuals/header", {
     content_item: @content_item,
     heading_level: 2,
@@ -6,6 +6,8 @@
     green_background: true,
     type: I18n.t("manuals.hmrc_manual_type"),
   } %>
+<% end %>
 
+<div id="manuals-frontend" class="manuals-frontend-body">
   <%= render "content_items/manuals/updates", content_item: @content_item %>
 </div>

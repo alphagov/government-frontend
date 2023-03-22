@@ -1,10 +1,15 @@
+<% content_for :header do %>
+  <%= render "content_items/manuals/header", {
+    content_item: @content_item,
+    heading_level: 1,
+    margin_bottom: 3
+  } %>
+<% end %>
+
 <div id="manuals-frontend" class="manuals-frontend-body">
 
 <%= machine_readable_metadata(schema: :article) %>
 
-<%= render "content_items/manuals/header", {
-  content_item: @content_item, heading_level: 1, margin_bottom: 3
-} %>
 
 <div class="manual-body">
   <% if @content_item.description.present? %>
