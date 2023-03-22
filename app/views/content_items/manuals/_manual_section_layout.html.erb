@@ -1,0 +1,52 @@
+<% show_contents ||= false %>
+
+<% content_for :main do %>
+  <div id="manuals-frontend" class="manuals-frontend-body">
+    <% if show_contents %>
+      <%= render "govuk_publishing_components/components/contents_list", {
+        aria: { label: t("manuals.pages_in_manual_section") }, contents: @content_item.contents, underline_links: true
+      } %>
+    <% end %>
+
+    <div class="govuk-grid-row">
+      <div class="manual-body" id="content">
+        <article aria-labelledby="section-title">
+          <div class="govuk-grid-column-full">
+            <%= render "govuk_publishing_components/components/heading", {
+              text: @content_item.document_heading.join(" - "),
+              font_size: "m",
+              id: "section-title",
+              heading_level: 1,
+              margin_bottom: 4,
+            } %>
+          </div>
+
+          <% if @content_item.description.present? %>
+            <div class="govuk-grid-column-two-thirds">
+              <%= render "govuk_publishing_components/components/lead_paragraph", {
+                text: @content_item.description
+              } %>
+            </div>
+          <% end %>
+
+          <%= yield %>
+        </article>
+      </div>
+    </div>
+
+    <%= render 'govuk_publishing_components/components/print_link', {
+      data_attributes: {
+        module: "ga4-event-tracker",
+        ga4_event: {
+          event_name: 'print_page',
+          type: 'print page',
+          index: {
+            index_link: 1,
+          },
+          index_total: 1,
+          section: 'Footer',
+        },
+      },
+    } %>
+  </div>
+<% end %>
