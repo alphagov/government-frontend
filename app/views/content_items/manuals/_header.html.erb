@@ -1,5 +1,17 @@
-<header aria-labelledby="manual-title" class="govuk-grid-row manuals-header">
+<%
+  green_background ||= false
+  type ||= nil
+
+  classes = %w[govuk-grid-row manuals-header]
+  classes << "hmrc" if green_background
+%>
+
+<%= content_tag(:header, aria: { "labelledby": "manual-title" }, class: classes) do %>
   <div class='govuk-grid-column-two-thirds'>
+
+    <% if type %>
+      <span class="manual-type"><%= type %></span>
+    <% end %>
 
     <%= render "govuk_publishing_components/components/heading", {
       text: content_item.title,
@@ -24,10 +36,9 @@
       </form>
     </div>
   </div>
-</header>
+<% end %>
 
 <%= render "govuk_publishing_components/components/breadcrumbs", {
            border: "bottom",
            breadcrumbs: @content_item.breadcrumbs,
            collapse_on_mobile: false } %>
-

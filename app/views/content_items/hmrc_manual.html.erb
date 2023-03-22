@@ -2,8 +2,12 @@
 
 <%= machine_readable_metadata(schema: :article) %>
 
-<%= render "content_items/manuals/hmrc_header", {
-  content_item: @content_item, heading_level: 1, margin_bottom: 3
+<%= render "content_items/manuals/header", {
+  content_item: @content_item,
+  heading_level: 1,
+  margin_bottom: 3,
+  green_background: true,
+  type: I18n.t("manuals.hmrc_manual_type"),
 } %>
 
 <div class="manual-body">
