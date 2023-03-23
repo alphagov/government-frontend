@@ -8,6 +8,12 @@ class ManualSectionTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
   end
 
+  test "partial has no content id" do
+    content_ids = page.all('[id="content"]')
+
+    assert_equal 0, content_ids.count
+  end
+
   test "renders contextual breadcrumbs from parent manuals tagging" do
     setup_and_visit_manual_section
     manual_topic = @manual["links"]["topics"].first

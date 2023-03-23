@@ -7,6 +7,12 @@ class ManualUpdatesTest < ActionDispatch::IntegrationTest
     assert_has_component_title(I18n.t("manuals.updates_title", title: @content_item["title"]))
   end
 
+  test "partial has no content id" do
+    content_ids = page.all('[id="content"]')
+
+    assert_equal 0, content_ids.count
+  end
+
   test "renders metadata" do
     setup_and_visit_manual_updates
 

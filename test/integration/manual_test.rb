@@ -8,6 +8,12 @@ class ManualTest < ActionDispatch::IntegrationTest
     assert page.has_text?(@content_item["description"])
   end
 
+  test "partial has no content id" do
+    content_ids = page.all('[id="content"]')
+
+    assert_equal 0, content_ids.count
+  end
+
   test "renders metadata" do
     setup_and_visit_content_item("content-design")
 
