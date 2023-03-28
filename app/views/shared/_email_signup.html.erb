@@ -5,7 +5,12 @@
     margin_bottom: 2,
     id: "related-subscriptions",
   } %>
-  <p class="govuk-body">When any guidance within this topic is updated
-    <%= link_to "email", @content_item.email_alert_signup_link, class: 'govuk-link related-item__email-link' %>
-  </p>
+
+  <div class="related-item__subscription-link">
+    <%= render "govuk_publishing_components/components/subscription_links", {
+      hide_heading: true,
+      email_signup_link_text: "Get emails when any guidance within this topic is updated",
+      email_signup_link: @content_item.email_alert_signup_link
+    } %>
+  </div>
 </div>
