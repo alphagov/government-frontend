@@ -8,7 +8,6 @@ class CorporateInformationPagePresenter < ContentItemPresenter
   ORG_CHANGING_BANNER_BASE_PATHS = %w[
     /government/organisations/department-for-business-energy-and-industrial-strategy/about
     /government/organisations/department-for-international-trade/about
-    /government/organisations/department-for-digital-culture-media-sport/about
   ].freeze
 
   def page_title
