@@ -1,5 +1,4 @@
 //= link_tree ../images
 //= link application.js
 //= link webchat.js
-//= link application.css
-//= link print.css
+//= link_tree ../builds

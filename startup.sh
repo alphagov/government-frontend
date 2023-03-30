@@ -20,4 +20,5 @@ else
   exit 1
 fi
 
+# This would need to utilise the procfile so we can get CSS changes without recompiling assets
 bundle exec rails s -p 3090

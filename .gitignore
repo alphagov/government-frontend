@@ -26,3 +26,5 @@ shots/*
 
 # Ignore compiled assets
 /public/assets
+/app/assets/builds/*
+!/app/assets/builds/.keep

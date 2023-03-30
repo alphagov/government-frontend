@@ -10,3 +10,11 @@ Rails.application.config.assets.version = "1.0"
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w[webchat/library.js webchat.js]
+
+# This manifest from govuk_publishing_components references css files which
+# means it is not compatible with dartsass-rails
+#
+# By removing this it means we lose images and fonts from govuk_publishing_components
+#
+# https://github.com/rails/dartsass-rails#troubleshooting
+Rails.application.config.assets.precompile -= %w[govuk_publishing_components_manifest.js]

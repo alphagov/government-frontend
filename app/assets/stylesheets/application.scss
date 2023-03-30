@@ -78,7 +78,16 @@ $govuk-include-default-font-face: false;
 @import "modules/typography";
 
 // Components from this application
-@import "components/*";
+// Wildcard doesn't work for dartsass
+@import "components/back-to-top";
+@import "components/banner";
+@import "components/contents-list-with-body";
+@import "components/download-link";
+@import "components/error-message";
+@import "components/figure";
+@import "components/important-metadata";
+@import "components/published-dates";
+@import "components/publisher-metadata";
 
 // pages specific view imports
 @import "views/case-studies";
