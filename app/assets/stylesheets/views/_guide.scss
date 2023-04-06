@@ -1,3 +1,7 @@
+@import "govuk_publishing_components/individual_component_support";
+@import "../helpers/parts";
+@import "../mixins/margins";
+
 .guide {
   @include parts;
 

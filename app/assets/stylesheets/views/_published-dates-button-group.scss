@@ -1,3 +1,5 @@
+@import "govuk_publishing_components/individual_component_support";
+
 .published-dates-button-group {
   @include govuk-media-query($from: tablet) {
     display: flex;

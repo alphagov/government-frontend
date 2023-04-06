@@ -2,3 +2,10 @@
 //= link application.js
 //= link webchat.js
 //= link application.css
+//= link views/_guide.css
+//= link views/_html-publication.css
+//= link views/_manual.css
+//= link views/_published-dates-button-group.css
+//= link views/_service_manual_guide.css
+//= link views/_specialist-document.css
+//= link views/_travel-advice.css
