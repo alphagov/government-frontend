@@ -25,7 +25,8 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item("/some-page", case_study.to_json)
 
     visit_with_cachebust "/some-page"
-
+    puts "correct meta tags are displayed for pages without images".upcase!
+    puts page.html.inspect
     assert page.has_css?("meta[name='twitter:card'][content='summary']", visible: false)
   end
 
@@ -40,11 +41,10 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
 
       random
     end
-
     stub_content_store_has_item("/some-page", case_study.to_json)
-
     visit_with_cachebust "/some-page"
-
+    puts "correct meta tags are displayed for pages with images".upcase!
+    puts page.html.inspect
     assert page.has_css?("meta[name='twitter:card'][content='summary_large_image']", visible: false)
     assert page.has_css?("meta[name='twitter:image'][content='https://example.org/image.jpg']", visible: false)
     assert page.has_css?("meta[property='og:image'][content='https://example.org/image.jpg']", visible: false)
