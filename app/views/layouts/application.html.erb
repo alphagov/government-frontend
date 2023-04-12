@@ -1,30 +1,39 @@
 <% content_for :body do %>
-  <% if @content_item.show_phase_banner? || @content_item.service_manual? %>
-    <div class="govuk-width-container">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <% if @content_item.show_phase_banner? %>
-            <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
-          <% end %>
-          <% if @content_item.service_manual? %>
-            <%= render_phase_label @content_item, content_for(:phase_message) %>
-          <% end %>
-        </div>
-      </div>
+  <% if @content_item.service_manual? %>
+    <div class="slimmer-inside-header">
+      <span class="govuk-header__product-name gem-c-header__product-name">
+        <%= "Service Manual" %>
+      </span>
     </div>
   <% end %>
-
-  <% unless @do_not_show_breadcrumbs %>
-    <% if @content_item.try(:back_link) %>
-      <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
-    <% else %>
-      <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item, ga4_tracking: true %>
+  <div id="wrapper" class="<%= wrapper_class %>">
+    <% if @content_item.show_phase_banner? || @content_item.service_manual? %>
+      <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <% if @content_item.show_phase_banner? %>
+              <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
+            <% end %>
+            <% if @content_item.service_manual? %>
+              <%= render_phase_label @content_item, content_for(:phase_message) %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  <% end %>
 
-  <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
-    <%= yield %>
-  </main>
+    <% unless @do_not_show_breadcrumbs %>
+      <% if @content_item.try(:back_link) %>
+        <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
+      <% else %>
+        <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item, ga4_tracking: true %>
+      <% end %>
+    <% end %>
+
+    <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
+      <%= yield %>
+    </main>
+  </div>
 <% end %>
 
 <!DOCTYPE html>
@@ -43,6 +52,9 @@
   <% end %>
 
   <%= stylesheet_link_tag "application", :media => "all", integrity: false %>
+  <%=
+    render_component_stylesheets
+  %>
   <% if Rails.env.test? && params[:medium] == 'print' %>
     <%= stylesheet_link_tag "print.css", :media => "screen", integrity: false %>
   <% else %>
@@ -57,20 +69,8 @@
   <% end %>
 
   <%= yield :extra_head_content %>
-  <%=
-    render_component_stylesheets
-  %>
 </head>
 <body>
-  <% if @content_item.service_manual? %>
-    <div class="slimmer-inside-header">
-      <span class="govuk-header__product-name gem-c-header__product-name">
-        <%= "Service Manual" %>
-      </span>
-    </div>
-  <% end %>
-  <div id="wrapper" class="<%= wrapper_class %>">
-    <%= yield :body %>
-  </div>
+  <%= yield :body %>
 </body>
 </html>
