@@ -294,7 +294,11 @@ fr:
   fatality_notice:
     alt_text: Emblème du ministère de la défense
     field_of_operation: Champ d'opération
+    none_added: Aucun avis de décès n'a encore été ajouté pour ce domaine d'activité.
     operations_in: Opérations à %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ fr:
     release_date: Date de sortie
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Le <abbr title="Foreign and Commonwealth Office" >Bureau des affaires étrangères et du Commonwealth (FCO)</abbr> déconseille tout voyage dans certaines parties du pays, à l'exception de ceux qui sont indispensables.

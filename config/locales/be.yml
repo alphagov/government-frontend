@@ -442,7 +442,11 @@ be:
   fatality_notice:
     alt_text: Герб Міністэрства абароны
     field_of_operation: Сфера дзейнасці
+    none_added: Для гэтага аперацыйнага поля яшчэ не было дададзена ніякіх паведамленняў аб смерцi.
     operations_in: Дзейнасць у %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -629,7 +633,7 @@ be:
     release_date: Дата рэлізу
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Міністэрства замежных спраў і па справах Садружнасці <abbr title="Foreign and Commonwealth Office">FCO</abbr> раяць устрымацца ад усіх падарожжаў, апроч самых патрэбных, у некаторыя раёны краіны.

@@ -220,7 +220,11 @@ th:
   fatality_notice:
     alt_text: ตรากระทรวงกลาโหม
     field_of_operation: พื้นที่ปฏิบัติการ
+    none_added: ยังไม่มีการแจ้งการเสียชีวิตเพิ่มเติมสำหรับพื้นที่ปฏิบัติการนี้
     operations_in: การดำเนินงานใน %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -404,7 +408,7 @@ th:
     release_date: วันเผยแพร่
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ไม่แนะนำให้เดินทางไปยังบางส่วนของประเทศ นอกจากมีเหตุจำเป็น

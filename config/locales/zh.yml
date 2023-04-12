@@ -220,7 +220,11 @@ zh:
   fatality_notice:
     alt_text: 国防部徽章
     field_of_operation: 经营领域
+    none_added: 目前还没有关于这一经营领域的死亡通知。
     operations_in: 在 %{location} 经营
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -404,7 +408,7 @@ zh:
     release_date: 发布日期
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国部分地区。  '

@@ -220,7 +220,11 @@ id:
   fatality_notice:
     alt_text: Lambang Kementerian Pertahanan
     field_of_operation: Bidang operasi
+    none_added: Belum ada pemberitahuan fatalitas yang ditambahkan untuk bidang operasi ini.
     operations_in: Operasi di %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -404,7 +408,7 @@ id:
     release_date: Tanggal rilis
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan yang tidak esensial ke bagian-bagian dari negara itu.

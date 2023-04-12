@@ -294,7 +294,11 @@ es-419:
   fatality_notice:
     alt_text: Escudo del Ministerio de Defensa
     field_of_operation: Campo de operación
+    none_added: Todavía no se han añadido avisos de víctimas fatales para esta área de operaciones.
     operations_in: Operaciones en %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ es-419:
     release_date: Fecha de publicación
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todos los viajes que no sean imprescindibles a algunas zonas del país.

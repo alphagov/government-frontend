@@ -220,7 +220,11 @@ zh-tw:
   fatality_notice:
     alt_text: 國防部紋章
     field_of_operation: 經營領域
+    none_added: 尚未為該操作領域新增死亡通知。
     operations_in: 在 %{location} 的領域
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -404,7 +408,7 @@ zh-tw:
     release_date: 發佈日期
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議非必要的旅行，不要前往該國部分地區。

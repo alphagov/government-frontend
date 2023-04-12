@@ -294,7 +294,11 @@ hy:
   fatality_notice:
     alt_text: Պաշտպանության նախարարության զինանշան
     field_of_operation: Գործունեության ոլորտ
+    none_added: 'Գործունեության այս ոլորտի համար դժբախտ պատահարի ծանուցումներ դեռևս չեն ավելացվել:'
     operations_in: Գործունեություն % {location}-ում
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ hy:
     release_date: Հրապարակման ամսաթիվ
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի ամբողջ տարածք, բացառությամբ էական նշանակություն ունեցող հատվածների։

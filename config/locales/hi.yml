@@ -294,7 +294,11 @@ hi:
   fatality_notice:
     alt_text: रक्षा मंत्रालय का क्रेस्ट
     field_of_operation: संचालन का क्षेत्र
+    none_added: संचालन के इस क्षेत्र में अभी तक कोई घातक नोटिस नहीं जोड़ा गया है।
     operations_in: "%{location} में संचालन"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ hi:
     release_date: जारी करने की तारीख
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> देश के कुछ हिस्सों में अनिवार्य यात्रा को छोड़कर बाकी सबके विरुद्ध सलाह देता है।

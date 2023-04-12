@@ -368,7 +368,11 @@ cs:
   fatality_notice:
     alt_text: Ministerstvo obrany
     field_of_operation: Oblast provozu
+    none_added: Pro tuto oblast činnosti zatím nebyla přidána žádná oznámení o úmrtí.
     operations_in: Operace v %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -554,7 +558,7 @@ cs:
     release_date: Datum vydání
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">Úřad pro zahraniční věci, společenství národů a rozvoj</abbr> nedoporučuje cestovat do některých částí země, s výjimkou nezbytných.

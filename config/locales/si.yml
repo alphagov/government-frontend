@@ -294,7 +294,11 @@ si:
   fatality_notice:
     alt_text: ආරක්ෂක අමාත්යාංශ ලාංඡනය
     field_of_operation: මෙහෙයුම් ක්ෂේත්රය
+    none_added: මෙම මෙහෙයුම් ක්ෂේත්රයට තවමත් මරණ දැන්වීම් එකතු කර නොමැත.
     operations_in: "%{location} තුළ මෙහෙයුම්"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ si:
     release_date: නිකුත් කිරීමේ දිනය
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.

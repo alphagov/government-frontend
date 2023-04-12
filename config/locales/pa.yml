@@ -294,7 +294,11 @@ pa:
   fatality_notice:
     alt_text: ਰੱਖਿਆ ਮੰਤਰਾਲਾ ਸਿਖਰ
     field_of_operation: ਕਾਰਜ ਖੇਤਰ
+    none_added: ਇਸ ਕਾਰਜ ਦੇ ਖੇਤਰ ਵਿੱਚ ਅਜੇ ਤੱਕ ਕੋਈ ਘਾਤਕ ਸੂਚਨਾ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤੀ ਗਈ ਹੈ।
     operations_in: "%{location} ਵਿੱਚ ਕਾਰਜ"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ pa:
     release_date: ਰਿਹਾਈ ਤਾਰੀਖ
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ਦੇਸ਼ ਦੇ ਕੁਝ ਹਿੱਸਿਆਂ ਦੀ ਜ਼ਰੂਰੀ ਯਾਤਰਾ ਨੂੰ ਛੱਡ ਕੇ ਬਾਕੀ ਦੇ ਵਿਰੁੱਧ ਸਲਾਹ ਦਿੰਦਾ ਹੈ।

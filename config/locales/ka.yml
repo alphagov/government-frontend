@@ -294,7 +294,11 @@ ka:
   fatality_notice:
     alt_text: თავდაცვის სამინისტრო
     field_of_operation: ოპერაციის სფერო
+    none_added: ფატალურობის შეტყობინება ჯერ არ დამატებულა ოპერაციის ამ სფეროში.
     operations_in: ოპერაციები %{location}-ში
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ ka:
     release_date: გამოშვების თარიღი
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> რჩევა ყველას წინააღმდეგ, გარდა ესენციური მოგზაურობებისა ქვეყნის ზოგიერთ ნაწილებში.

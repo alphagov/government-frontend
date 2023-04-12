@@ -294,7 +294,11 @@ kk:
   fatality_notice:
     alt_text: Қорғаныс министрлігінің елтаңбасы
     field_of_operation: Жұмыс аймағы
+    none_added: Бұл жұмыс саласы үшін өлім туралы хабарламалар әлі қосылмады.
     operations_in: "%{location} орнындағы жұмыстар"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ kk:
     release_date: Шығарылым күні
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> маңыздысынан басқа елдің барлық аймақтарына барудан бас тартуға кеңес береді.

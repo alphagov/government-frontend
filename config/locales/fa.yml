@@ -294,7 +294,11 @@ fa:
   fatality_notice:
     alt_text: تاج وزارت دفاع
     field_of_operation: زمینه فعالیت
+    none_added: هنوز هیچ اعلامیه مرگ‌و‌میری برای این زمینه فعالیت اضافه نشده است.
     operations_in: فعالیت در %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ fa:
     release_date: تاریخ انتشار
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: وزارت امور خارجه بریتانیا <abbr title="Foreign and Commonwealth Office">(FCO)</abbr> توصیه می‌کند از سفرهای غیر ضروری به بخش‌هایی از این کشور خودداری کنید.

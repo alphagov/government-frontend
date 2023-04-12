@@ -294,7 +294,11 @@ el:
   fatality_notice:
     alt_text: Οικόσημο Υπουργείου Άμυνας
     field_of_operation: Πεδίο λειτουργίας
+    none_added: Δεν έχουν προστεθεί ακόμη ανακοινώσεις θανάτου για αυτό το πεδίο λειτουργίας.
     operations_in: Λειτουργίες στην τοποθεσία %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ el:
     release_date: Ημερομηνία κυκλοφορίας
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Το <abbr title="Foreign and Commonwealth Office">FCO</abbr> σας συμβουλεύει να αποφύγετε τα ταξίδια, πλην των απαραίτητων, σε μέρη της χώρας.

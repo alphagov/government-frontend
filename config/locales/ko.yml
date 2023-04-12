@@ -220,7 +220,11 @@ ko:
   fatality_notice:
     alt_text: 국방부 문장
     field_of_operation: 운영 현장
+    none_added: 이 운영 분야의 사망 통지는 아직 추가되지 않았습니다.
     operations_in: "%{Location} 내 운영"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -404,7 +408,7 @@ ko:
     release_date: 공개 날짜
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가의 각지를 여행하지 말라고 권고합니다.

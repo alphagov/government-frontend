@@ -294,7 +294,11 @@ bn:
   fatality_notice:
     alt_text: প্রতিরক্ষা মন্ত্রণালয়ের ক্রেস্ট
     field_of_operation: কার্যক্রমের ক্ষেত্র
+    none_added: এখনও এই পরিচালনার ফিল্ডের জন্য কোনো বিপর্যয়ের বিজ্ঞপ্তি যোগ করা হয়নি।
     operations_in: "%{location}-এ পরিচালনা"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ bn:
     release_date: প্রকাশের তারিখ
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> দেশের কিছু অংশে শুধু প্রয়োজনীয় ভ্রমণ ছাড়া সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।

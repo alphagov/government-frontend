@@ -1,0 +1,65 @@
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <%= render "govuk_publishing_components/components/title", @content_item.title_and_context %>
+    </div>
+    <div class="govuk-grid-column-one-third govuk-!-padding-top-8 govuk-!-padding-left-0 govuk-!-padding-bottom-8">
+      <%= render "govuk_publishing_components/components/organisation_logo", {
+        organisation: @content_item.organisation
+      } %>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <% if @content_item.contents.present? %>
+      <div class="govuk-grid-column-one-third">
+        <%= render "govuk_publishing_components/components/contents_list", {
+          contents: @content_item.contents
+        } %>
+      </div>
+    <% end %>
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-bottom-7">
+      <section id="field-of-operation">
+        <% unless @content_item.description.blank? %>
+          <%= render "govuk_publishing_components/components/heading", {
+            text: t("fatality_notice.field_of_operation"),
+            margin_bottom: 2,
+          } %>
+          <%= @content_item.description %>
+        <% end %>
+        <div class="govuk-!-margin-top-7 govuk-!-padding-bottom-3">
+          <% if @content_item.fatality_notices.any? %>
+            <%= render "govuk_publishing_components/components/heading", {
+              text: "Fatalities",
+              id: "fatalities",
+              margin_bottom: 4,
+            } %>
+            <ul class="govuk-list">
+              <% @content_item.fatality_notices.each do |fatality_notice| %>
+                <li class="fatality-notice govuk-!-padding-top-2 govuk-!-padding-bottom-3">
+                  <% unless fatality_notice.roll_call_introduction.blank? %>
+                  <p class="govuk-body">
+                    <%= fatality_notice.roll_call_introduction %>
+                  </p>
+                  <% end %>
+                  <ul class="govuk-list govuk-list--spaced govuk-!-padding-left-4">
+                    <% if fatality_notice.casualties.present? %>
+                      <% fatality_notice.casualties.each do |casualty| %>
+                        <li class="govuk-list--bullet"><%= link_to casualty, fatality_notice.base_path, class: "govuk-link" %></li>
+                      <% end %>
+                    <% else %>
+                      <li class="govuk-list--bullet"><%= link_to fatality_notice.title, fatality_notice.base_path, class: "govuk-link" %></li>
+                    <% end %>
+                  </ul>
+                  <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2">
+                </li>
+              <% end %>
+            </ul>
+          <% else %>
+            <p class="govuk-body"><%= t("fatality_notice.none_added") %></p>
+          <% end %>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

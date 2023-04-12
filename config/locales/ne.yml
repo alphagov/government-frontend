@@ -294,7 +294,11 @@ ne:
   fatality_notice:
     alt_text: रक्षा मन्त्रालय क्रेस्ट
     field_of_operation: सञ्चालन क्षेत्र
+    none_added: त्यहाँ सञ्चालन क्षेत्रको लागी अझै सम्म कुनै मृत्यु सूचनाहरु थपिएका छैनन्।
     operations_in: "%{location} मा सञ्चालन"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ ne:
     release_date: बिज्ञप्ति मिति
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">विदेश, राष्ट्रमंडल र विकास कार्यालय</abbr> ले जरूरी यात्रा बाहेक देशको केहि भागमा सबै यात्रा बिरूद्ध सल्लाह दिएको छ।

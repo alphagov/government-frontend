@@ -294,7 +294,11 @@ nl:
   fatality_notice:
     alt_text: Wapen van het ministerie van Defensie
     field_of_operation: Gebied van operatie
+    none_added: Er zijn nog geen meldingen van sterfgevallen toegevoegd voor dit werkgebied.
     operations_in: Operaties in %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ nl:
     release_date: Publicatiedatum
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Het <abbr title="Foreign and Commonwealth Office">FCO</abbr> raadt alle, behalve essentiële, reizen naar delen van het land af.

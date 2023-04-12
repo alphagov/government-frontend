@@ -220,7 +220,11 @@ zh-hk:
   fatality_notice:
     alt_text: 國防部徽章
     field_of_operation: 行動領域
+    none_added: 此運作領域仍未加入任何死亡通知。
     operations_in: 行動位置 %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -404,7 +408,7 @@ zh-hk:
     release_date: 發佈日期
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，如非必要，請勿前往該國部份地區。

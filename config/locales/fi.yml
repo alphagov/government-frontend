@@ -294,7 +294,11 @@ fi:
   fatality_notice:
     alt_text: Puolustusministeriön vaakuna
     field_of_operation: Toiminta -alue
+    none_added: Kuolemantapauksia ei ole ilmoitettu lisätty tälle toiminta-alueelle.
     operations_in: Toiminnot paikassa %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ fi:
     release_date: Julkaisupäivä
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja osissa maata.

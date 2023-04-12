@@ -294,7 +294,11 @@ is:
   fatality_notice:
     alt_text: Skjaldarmerki Varnarmálaráðuneytisins
     field_of_operation: Starfsvið
+    none_added: Engum tilkynningum um dauðsföll hefur verið bætt við fyrir þetta starfsvið.
     operations_in: Starfsemi á %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ is:
     release_date: Útgáfudagsetning
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins nema þeim allra nauðsynlegustu.

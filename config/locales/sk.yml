@@ -368,7 +368,11 @@ sk:
   fatality_notice:
     alt_text: Erb ministerstva obrany
     field_of_operation: Oblasť činnosti
+    none_added: Pre túto oblasť činnosti zatiaľ neboli pridané žiadne oznámenia o úmrtí.
     operations_in: Operácie v %{location}
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -554,7 +558,7 @@ sk:
     release_date: Dátum vydania
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: Ministerstvo zahraničných vecí a Commonwealthu <abbr title="Foreign and Commonwealth Office">FCO</abbr> neodporúča cestovať do niektorých častí krajiny okrem nevyhnutných prípadov.

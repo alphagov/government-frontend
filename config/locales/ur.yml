@@ -294,7 +294,11 @@ ur:
   fatality_notice:
     alt_text: وزارت دفاع کا کریسنٹ
     field_of_operation: کارروائی کی فیلڈ
+    none_added: اس کارروائی کی فیلڈ کے لیے ابھی تک کوئی موت کے نوٹسز شامل نہیں کیے گئے۔
     operations_in: "%{location} میں کارروائیاں"
+  field_of_operation:
+    context:
+    title:
   fields_of_operation:
     context:
   get_involved:
@@ -479,7 +483,7 @@ ur:
     release_date: اجراء کی تاریخ
   time:
     formats:
-      short_ordinal: '%e %B %Y'
+      short_ordinal: "%e %B %Y"
   travel_advice:
     alert_status:
       avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> سوائے ملک کے کچھ حصوں میں ضروری سفر کرنے کے ہر قسم کے سفر کے خلاف مشاورت فراہم کرتا ہے۔
