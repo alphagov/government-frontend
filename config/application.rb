@@ -20,6 +20,8 @@ Bundler.require(*Rails.groups)
 
 module GovernmentFrontend
   class Application < Rails::Application
+    include GovukPublishingComponents::AppHelpers::AssetHelper
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
@@ -117,7 +119,7 @@ module GovernmentFrontend
     config.action_dispatch.rack_cache = nil
 
     # Path within public/ where assets are compiled to
-    config.assets.prefix = "/assets/government-frontend"
+    config.assets.prefix = "/assets/government-frontend/"
 
     # Using a sass css compressor causes a scss file to be processed twice
     # (once to build, once to compress) which breaks the usage of "unquote"
@@ -127,5 +129,6 @@ module GovernmentFrontend
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+    config.assets.precompile << get_component_css_paths
   end
 end
