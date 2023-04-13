@@ -23,9 +23,6 @@ $govuk-include-default-font-face: false;
 @import "helpers/publisher-metadata-with-logo";
 @import "helpers/sticky-element-container";
 
-// Components from this application
-@import "components/*";
-
 // pages specific view imports
 @import "views/worldwide-organisation";
 

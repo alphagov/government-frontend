@@ -1,3 +1,6 @@
+@import "govuk_publishing_components/individual_component_support";
+@import "../mixins/margins";
+
 .app-c-figure {
   @include govuk-clearfix;
   @include responsive-bottom-margin;
