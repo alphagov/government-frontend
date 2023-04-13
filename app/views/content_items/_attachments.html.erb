@@ -10,6 +10,7 @@
       <%= render 'govuk_publishing_components/components/govspeak', {
         direction: page_text_direction,
       } do %>
+        <% add_gem_component_stylesheet("details") if legacy_pre_rendered_documents.include? "govuk\-details" %>
         <%= raw(legacy_pre_rendered_documents) %>
       <% end %>
     <% else %>
