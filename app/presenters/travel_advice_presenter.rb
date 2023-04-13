@@ -42,7 +42,7 @@ class TravelAdvicePresenter < ContentItemPresenter
     country_name == "Ireland"
   end
 
-  def is_summary?
+  def is_first_part?
     @part_slug.nil?
   end
 
@@ -105,17 +105,17 @@ class TravelAdvicePresenter < ContentItemPresenter
 private
 
   # Treat summary as the first part
-  def raw_parts
-    [summary_part].concat(super)
-  end
+  # def raw_parts
+  #   [first_part].concat(super)
+  # end
 
-  def summary_part
-    {
-      "title" => I18n.t("travel_advice.summary"),
-      "slug" => "",
-      "body" => content_item["details"]["summary"],
-    }
-  end
+  # def first_part
+  #   {
+  #     "title" => I18n.t("travel_advice.summary"),
+  #     "slug" => "",
+  #     "body" => content_item["details"]["summary"],
+  #   }
+  # end
 
   def change_description
     content_item["details"]["change_description"]
