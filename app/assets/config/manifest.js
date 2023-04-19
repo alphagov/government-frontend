@@ -2,4 +2,3 @@
 //= link application.js
 //= link webchat.js
 //= link application.css
-//= link print.css

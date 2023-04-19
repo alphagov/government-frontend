@@ -27,21 +27,8 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
     setup_and_visit_html_publication("print_with_meta_data")
 
     within "#contents" do
-      assert page.find(".print-meta-data", visible: false)
-
-      assert page.has_no_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
-      assert page.has_no_text?("ISBN: #{@content_item['details']['isbn']}")
-    end
-  end
-
-  test "html publications with meta data - print version" do
-    setup_and_visit_html_publication("print_with_meta_data", "?medium=print")
-
-    within "#contents" do
-      assert page.find(".print-meta-data", visible: true)
-
-      assert page.has_text?("© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
-      assert page.has_text?("ISBN: #{@content_item['details']['isbn']}")
+      assert page.find(".meta-data.meta-data--display-print", visible: false, text: "© Crown copyright #{@content_item['details']['public_timestamp'].to_date.year}")
+      assert page.find(".meta-data.meta-data--display-print", visible: false, text: "ISBN: #{@content_item['details']['isbn']}")
     end
   end
 
