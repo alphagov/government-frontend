@@ -4,7 +4,7 @@
       title: t("gone.title"),
     } %>
 
-    <p class="summary">
+    <p class="summary govuk-!-font-size-19 govuk-!-margin-bottom-3">
       <%= t("gone.published_in_error") %>
     </p>
 
@@ -13,7 +13,7 @@
     <% end %>
 
     <% if @content_item.alternative_path.present? %>
-      <p class="alternative">
+      <p class="alternative govuk-!-font-size-19 govuk-!-margin-bottom-3">
         <%= t("common.visit") %> <%= alternative_path_link(request, @content_item.alternative_path)%>
       </p>
     <% end %>

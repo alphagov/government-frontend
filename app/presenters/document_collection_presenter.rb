@@ -57,7 +57,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
     view_context.content_tag(
       heading_level,
       title,
-      class: "group-title",
+      class: "govuk-heading-m govuk-!-font-size-27",
       id: group_title_id(title),
     )
   end

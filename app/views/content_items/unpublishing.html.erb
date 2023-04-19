@@ -2,7 +2,7 @@
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', title: t("unpublishing.title") %>
 
-    <p class="summary">
+    <p class="summary govuk-!-font-size-19 govuk-!-margin-bottom-3">
       <%= t("unpublishing.summary") %>
     </p>
 
@@ -11,7 +11,7 @@
     <% end %>
 
     <% if @content_item.alternative_url.present? %>
-      <p class="alternative">
+      <p class="alternative govuk-!-font-size-19 govuk-!-margin-bottom-3">
         <%= t("common.visit") %> <%= link_to(@content_item.alternative_url, @content_item.alternative_url, class: "govuk-link") %>
       </p>
     <% end %>

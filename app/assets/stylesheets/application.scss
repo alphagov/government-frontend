@@ -82,12 +82,9 @@ $govuk-include-default-font-face: false;
 
 // pages specific view imports
 @import "views/case-studies";
-@import "views/coming-soon";
 @import "views/html-publication";
-@import "views/unpublishing";
 @import "views/detailed-guide";
 @import "views/publication";
-@import "views/document-collection";
 @import "views/consultation";
 @import "views/speech";
 @import "views/news-article";

@@ -1,5 +1,7 @@
 <% if @content_item.body.present? %>
+  <div class="govuk-!-margin-bottom-8">
   <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
+  </div>
 <% end %>
 
 <% @content_item.groups.each_with_index do |group, group_index| %>
@@ -13,7 +15,7 @@
     <% end %>
   <% end %>
 
-  <div data-module="gem-track-click">
+  <div data-module="gem-track-click" class="govuk-!-margin-bottom-8">
     <%= render 'govuk_publishing_components/components/document_list', items: @content_item.group_document_links(group, group_index) %>
   </div>
 <% end %>
