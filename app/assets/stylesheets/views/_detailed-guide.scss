@@ -21,19 +21,3 @@
     }
   }
 }
-
-.detailed-guide-bottom-button-container {
-  @include govuk-media-query($from: tablet) {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.detailed-guide-bottom-button-container form {
-  @include govuk-media-query($until: tablet) {
-    margin-bottom: govuk-spacing(3);
-  }
-  @include govuk-media-query($from: tablet) {
-    margin-right: govuk-spacing(4);
-  }
-}
