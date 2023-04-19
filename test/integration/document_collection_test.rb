@@ -62,7 +62,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     group_count = groups.count
 
     groups.each do |group|
-      assert page.has_css?(".group-title", text: group["title"])
+      assert page.has_css?(".govuk-heading-m.govuk-\\!-font-size-27", text: group["title"])
     end
 
     within ".app-c-contents-list-with-body" do

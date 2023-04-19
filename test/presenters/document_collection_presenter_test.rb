@@ -42,7 +42,7 @@ class DocumentCollectionPresenterTest
     end
 
     test "presents a group heading with generated ID" do
-      heading = '<h3 class="group-title" id="heading-with-spaces">Heading with Spaces</h3>'
+      heading = '<h3 class="govuk-heading-m govuk-!-font-size-27" id="heading-with-spaces">Heading with Spaces</h3>'
 
       assert_equal heading, presented_item.group_heading("title" => "Heading with Spaces")
     end
