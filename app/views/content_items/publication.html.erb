@@ -31,7 +31,13 @@
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo' %>
-<%= render 'shared/single_page_notification_button', content_item: @content_item %>
+<%= render 'govuk_publishing_components/components/single_page_notification_button', {
+  base_path: @content_item.base_path,
+  js_enhancement: @has_govuk_account,
+  margin_bottom: 6,
+  button_location: "top",
+  skip_account: true,
+} %>
 
 <%= render 'shared/history_notice', content_item: @content_item %>
 
