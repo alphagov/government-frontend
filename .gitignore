@@ -26,7 +26,3 @@ shots/*
 
 # Ignore compiled assets
 /public/assets
-
-# See https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-.yarn/cache/
-.yarn/install-state.gz
