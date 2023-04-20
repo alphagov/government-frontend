@@ -48,19 +48,14 @@ $govuk-include-default-font-face: false;
 // government-frontend mixins
 @import "mixins/margins";
 @import "mixins/white-links";
-@import "mixins/typography";
 
 // helpers for common page elements
-@import "helpers/sidebar-with-body";
 @import "helpers/organisation-links";
 @import "helpers/organisation-logos";
 @import "helpers/parts";
-@import "helpers/add-title-margin";
 @import "helpers/content-bottom-margin";
 @import "helpers/publisher-metadata-with-logo";
-@import "helpers/attachments";
 @import "helpers/sticky-element-container";
-@import "helpers/full-width";
 
 // modules for service-manual pages
 @import "modules/change-history";

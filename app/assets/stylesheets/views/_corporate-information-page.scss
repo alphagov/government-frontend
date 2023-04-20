@@ -1,5 +1,4 @@
 .corporate-information-page {
-  @include sidebar-with-body;
   @include organisation-links;
 
   .direction-rtl & {

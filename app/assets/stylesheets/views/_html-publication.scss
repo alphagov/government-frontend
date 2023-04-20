@@ -1,6 +1,4 @@
 .html-publication {
-  @include sidebar-with-body;
-
   .direction-rtl & {
     direction: rtl;
     text-align: start;
