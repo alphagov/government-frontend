@@ -20,6 +20,13 @@
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo' %>
+<%= render 'govuk_publishing_components/components/single_page_notification_button', {
+  base_path: @content_item.base_path,
+  js_enhancement: @has_govuk_account,
+  margin_bottom: 6,
+  button_location: "top",
+  skip_account: true,
+} %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
