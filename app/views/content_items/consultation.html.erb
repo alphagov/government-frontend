@@ -83,7 +83,8 @@
     <% end %>
 
     <% if @content_item.final_outcome? %>
-      <section class="original-consultation">
+      <hr class="govuk-section-break govuk-section-break--visible">
+      <section class="govuk-!-margin-top-6">
         <header>
           <%= render 'govuk_publishing_components/components/heading', {
             heading_level: 2,
@@ -96,16 +97,16 @@
 
     <% consultation_date = capture do %>
       <% if @content_item.closed? %>
-        <%= t("consultation.ran_from") %><br /><span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
-        <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+        <%= t("consultation.ran_from") %><br /><strong class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time> to
+        <time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></strong>
       <% elsif @content_item.open? %>
         <%= t("consultation.closes_at") %><br />
-        <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+        <strong class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></strong>
       <% elsif @content_item.unopened? %>
         <%= t("consultation.opens") %> <%= @content_item.opening_date_midnight? ? t("consultation.on") : t("consultation.at") %><br />
-        <span class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></span><br />
+        <strong class="consultation-date"><time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time></strong><br />
         <%= t("consultation.closes") %><br />
-        <span class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></span>
+        <strong class="consultation-date"><time datetime="<%= @content_item.closing_date_time %>"><%= @content_item.closing_date %></time></strong>
       <% end %>
     <% end %>
 
