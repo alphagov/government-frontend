@@ -32,8 +32,8 @@
       <%= @content_item.current_part_title %>
     </h1>
 
-    <% if @content_item.is_summary? %>
-      <%= render 'shared/travel_advice_summary', content_item: @content_item %>
+    <% if @content_item.no_part_slug_provided? %>
+      <%= render 'shared/travel_advice_first_part', content_item: @content_item %>
     <% end %>
 
     <div data-module="gem-track-click"

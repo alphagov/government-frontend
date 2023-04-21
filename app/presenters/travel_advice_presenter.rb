@@ -4,7 +4,7 @@ class TravelAdvicePresenter < ContentItemPresenter
   ATOM_CACHE_CONTROL_MAX_AGE = 300
 
   def page_title
-    if is_summary?
+    if no_part_slug_provided?
       super
     else
       "#{current_part_title} - #{super}"
@@ -42,7 +42,7 @@ class TravelAdvicePresenter < ContentItemPresenter
     country_name == "Ireland"
   end
 
-  def is_summary?
+  def no_part_slug_provided?
     @part_slug.nil?
   end
 
@@ -104,9 +104,13 @@ class TravelAdvicePresenter < ContentItemPresenter
 
 private
 
-  # Treat summary as the first part
+  # Treat summary as the first part if it exists
   def raw_parts
-    [summary_part].concat(super)
+    if content_item["details"]["summary"].present?
+      [summary_part].concat(super)
+    else
+      super
+    end
   end
 
   def summary_part
