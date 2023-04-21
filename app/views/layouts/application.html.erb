@@ -1,3 +1,9 @@
+<% unless content_for?(:main) %>
+  <% content_for :main do %>
+    <%= yield %>
+  <% end %>
+<% end %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,8 +68,10 @@
       <% end %>
     <% end %>
 
+    <%= yield :header %>
+
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
-      <%= yield %>
+      <%= yield :main %>
     </main>
   </div>
 </body>

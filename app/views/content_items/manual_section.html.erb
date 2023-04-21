@@ -1,14 +1,16 @@
-<div id="manuals-frontend" class="manuals-frontend-body">
+<% content_for :header do %>
   <%= render "content_items/manuals/header", {
     content_item: @content_item, heading_level: 1, margin_bottom: 6,
   } %>
+<% end %>
 
+<div id="manuals-frontend" class="manuals-frontend-body">
   <%= render "govuk_publishing_components/components/contents_list", {
     aria: { label: t("manuals.pages_in_manual_section") }, contents: @content_item.contents, underline_links: true
   } %>
 
   <div class="govuk-grid-row">
-    <div class="manual-body" id="content">
+    <div class="manual-body">
       <article aria-labelledby="section-title">
         <div class="govuk-grid-column-full">
           <%= render "govuk_publishing_components/components/heading", {

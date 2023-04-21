@@ -1,7 +1,9 @@
-<div id="manuals-frontend" class="manuals-frontend-body">
+<% content_for :header do %>
   <%= render "content_items/manuals/header", {
     content_item: @content_item, heading_level: 2, margin_bottom: 6,
   } %>
+<% end %>
 
+<div id="manuals-frontend" class="manuals-frontend-body">
   <%= render "content_items/manuals/updates", content_item: @content_item %>
 </div>

@@ -11,6 +11,13 @@ class HmrcManualUpdatesTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "partial has 1 content id" do
+    setup_and_visit_manual_updates
+    content_ids = page.all('[id="content"]')
+
+    assert_equal 1, content_ids.count
+  end
+
   test "renders metadata" do
     setup_and_visit_manual_updates
 

@@ -1,4 +1,4 @@
-<div id="manuals-frontend" class="manuals-frontend-body">
+<% content_for :header do %>
   <%= render "content_items/manuals/header", {
     content_item: @content_item,
     heading_level: 1,
@@ -6,9 +6,11 @@
     green_background: true,
     type: I18n.t("manuals.hmrc_manual_type"),    
   } %>
+<% end %>
 
+<div id="manuals-frontend" class="manuals-frontend-body">
   <div class="govuk-grid-row">
-    <div class="manual-body" id="content">
+    <div class="manual-body">
       <article aria-labelledby="section-title">
         <div class="govuk-grid-column-full">
           <%= render "govuk_publishing_components/components/heading", {
