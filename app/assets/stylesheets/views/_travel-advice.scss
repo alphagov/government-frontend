@@ -1,6 +1,5 @@
 .travel-advice {
   @include parts;
-  @include add-title-margin;
 
   .part-navigation {
     margin-bottom: govuk-spacing(8);

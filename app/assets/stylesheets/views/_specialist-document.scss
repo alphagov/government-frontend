@@ -1,10 +1,8 @@
 .specialist-document {
-  @include sidebar-with-body;
-}
-
-.protected-food-drink-name-logo {
-  float: right;
-  width: 150px;
-  padding-left: 2em;
-  padding-bottom: 2em;
+  .protected-food-drink-name-logo {
+    float: right;
+    width: 150px;
+    padding-left: 2em;
+    padding-bottom: 2em;
+  }
 }

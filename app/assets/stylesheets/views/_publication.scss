@@ -1,7 +1,4 @@
 .publication {
-  @include sidebar-with-body;
-  @include add-title-margin;
-
   .direction-rtl & {
     direction: rtl;
     text-align: start;
