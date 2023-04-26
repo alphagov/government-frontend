@@ -1,7 +1,6 @@
 .app-c-banner {
   @include responsive-bottom-margin;
   @include govuk-font(19);
-  @include white-links;
   direction: ltr;
   background: $govuk-brand-colour;
   color: govuk-colour("white");
@@ -10,6 +9,11 @@
 
   @include govuk-media-query($from: tablet) {
     padding: govuk-spacing(4) govuk-spacing(6);
+  }
+
+  a {
+    @include govuk-link-common;
+    @include govuk-link-style-inverse;
   }
 }
 
