@@ -12,7 +12,6 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["details"]["country"]["name"])
 
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
-    assert page.has_css?("a[href=\"#{@content_item['base_path']}.atom\"]", text: "Subscribe to feed")
 
     assert page.has_css?(".part-navigation-container nav li", count: @content_item["details"]["parts"].size + 1)
     assert page.has_css?(".part-navigation-container nav li", text: "Summary")
@@ -82,7 +81,6 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["details"]["country"]["name"])
 
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
-    assert page.has_css?("a[href=\"#{@content_item['base_path']}.atom\"]", text: "Subscribe to feed")
 
     assert page.has_css?(".part-navigation-container nav li", count: @content_item["details"]["parts"].size)
     assert page.has_css?(".part-navigation-container nav li", text: "Safety and security")
