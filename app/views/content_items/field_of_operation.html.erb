@@ -25,6 +25,9 @@
             text: t("fatality_notice.field_of_operation"),
             margin_bottom: 2,
           } %>
+        <% end %>
+        <%= render 'govuk_publishing_components/components/govspeak', {
+        } do %>
           <%= @content_item.description %>
         <% end %>
         <div class="govuk-!-margin-top-7 govuk-!-padding-bottom-3">
