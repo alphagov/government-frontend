@@ -15,13 +15,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "components/important-metadata",
+    <%= render "components/important_metadata",
         items: @content_item.important_metadata,
         margin_bottom: true %>
 
     <% if @content_item.release_date_changed? %>
       <div class="release-date-changed">
-        <%= render "components/important-metadata",
+        <%= render "components/important_metadata",
         title: t("statistics_announcement.changed_date"),
         items: {
           t("statistics_announcement.previous_date") => @content_item.previous_release_date,

@@ -30,7 +30,7 @@
           <%= raw(@content_item.description) %>
         <% end %>
         <% if @error %>
-          <%= render "components/error-message", text: t('service_sign_in.error.option') %>
+          <%= render "components/error_message", text: t('service_sign_in.error.option') %>
         <% end %>
         <%= render "govuk_publishing_components/components/radio", id_prefix: @content_item.options_id, name: "option", items: @content_item.options %>
       </div>

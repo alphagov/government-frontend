@@ -20,10 +20,10 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'components/important-metadata',
+    <%= render 'components/important_metadata',
         items: @content_item.important_metadata %>
 
-    <%= render "components/contents-list-with-body", contents: @content_item.contents do %>
+    <%= render "components/contents_list_with_body", contents: @content_item.contents do %>
 
       <% if @content_item.protected_food_drink_name? %>
         <img
@@ -49,7 +49,7 @@
       </div>
 
       <div class="responsive-bottom-margin">
-        <%= render 'components/published-dates', {
+        <%= render 'components/published_dates', {
             published: @content_item.published,
             last_updated: @content_item.updated,
             history: @content_item.history

@@ -2,7 +2,7 @@ require "component_test_helper"
 
 class ErrorMessageTest < ComponentTestCase
   def component_name
-    "error-message"
+    "error_message"
   end
 
   test "fails to render no data is given" do

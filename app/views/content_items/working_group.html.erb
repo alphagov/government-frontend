@@ -27,7 +27,7 @@
   <%= render 'shared/translations' %>
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
-    <%= render 'components/contents-list-with-body', contents: @content_item.contents do %>
+    <%= render 'components/contents_list_with_body', contents: @content_item.contents do %>
       <%= render 'govuk_publishing_components/components/govspeak', {
         direction: page_text_direction,
       } do %>

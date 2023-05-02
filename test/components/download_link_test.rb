@@ -2,7 +2,7 @@ require "component_test_helper"
 
 class DownloadLinkTest < ComponentTestCase
   def component_name
-    "download-link"
+    "download_link"
   end
 
   test "fails to render a download link when no href is given" do

@@ -2,7 +2,7 @@ require "component_test_helper"
 
 class ContentsListWithBodyTest < ComponentTestCase
   def component_path
-    "components/contents-list-with-body"
+    "components/contents_list_with_body"
   end
 
   def contents_list

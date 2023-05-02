@@ -2,7 +2,7 @@ require "component_test_helper"
 
 class ImportantMetadataTest < ComponentTestCase
   def component_name
-    "important-metadata"
+    "important_metadata"
   end
 
   test "does not render metadata when no data is given" do

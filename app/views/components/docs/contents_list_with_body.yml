@@ -11,8 +11,8 @@ accessibility_criteria: |
   - The component must have a text contrast ratio higher than 4.5:1 against the background colour to meet WCAG AA.
   - The component embeds contents-list and back-to-top components. Please see the relevant accessibility criteria:
 
-    * [back-to-top](/component-guide/back-to-top)
-    * [contents-list](/component-guide/contents-list)
+    * [back-to-top](/component-guide/back_to_top)
+    * [contents-list](/component-guide/contents_list)
 shared_accessibility_criteria:
   - link
 examples:

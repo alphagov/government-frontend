@@ -2,7 +2,7 @@ require "component_test_helper"
 
 class PublisherMetadataTest < ComponentTestCase
   def component_name
-    "publisher-metadata"
+    "publisher_metadata"
   end
 
   test "does not render metadata when no data is given" do
