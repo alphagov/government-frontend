@@ -3,7 +3,7 @@
     <div class="govuk-grid-column-two-thirds">
       <%= render "govuk_publishing_components/components/title", @content_item.title_and_context %>
     </div>
-    <div class="govuk-grid-column-one-third govuk-!-padding-top-8 govuk-!-padding-left-0 govuk-!-padding-bottom-8">
+    <div class="govuk-grid-column-one-third govuk-!-margin-top-8 govuk-!-margin-bottom-8">
       <%= render "govuk_publishing_components/components/organisation_logo", {
         organisation: @content_item.organisation
       } %>
@@ -23,8 +23,11 @@
         <% unless @content_item.description.blank? %>
           <%= render "govuk_publishing_components/components/heading", {
             text: t("fatality_notice.field_of_operation"),
-            margin_bottom: 2,
+            margin_bottom: 4,
           } %>
+        <% end %>
+        <%= render 'govuk_publishing_components/components/govspeak', {
+        } do %>
           <%= @content_item.description %>
         <% end %>
         <div class="govuk-!-margin-top-7 govuk-!-padding-bottom-3">
@@ -36,7 +39,7 @@
             } %>
             <ul class="govuk-list">
               <% @content_item.fatality_notices.each do |fatality_notice| %>
-                <li class="fatality-notice govuk-!-padding-top-2 govuk-!-padding-bottom-3">
+                <li class="fatality-notice govuk-!-padding-bottom-3">
                   <% unless fatality_notice.roll_call_introduction.blank? %>
                   <p class="govuk-body">
                     <%= fatality_notice.roll_call_introduction %>
