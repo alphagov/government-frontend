@@ -56,7 +56,7 @@
     }
   }
 
-  .print-meta-data {
+  .meta-data {
     display: none;
   }
 
@@ -69,6 +69,24 @@
   @include govuk-media-query($until: desktop) {
     .sticky-element--enabled {
       position: static;
+    }
+  }
+}
+
+// Required to display a separate meta data page when printing
+@include govuk-media-query($media-type: print) {
+  .html-publication .print-wrapper {
+    .meta-data--display-print {
+      page-break-before: always;
+      page-break-after: always;
+      display: block;
+
+      .meta-data-licence {
+        width: 78px;
+        height: auto;
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
     }
   }
 }

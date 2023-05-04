@@ -89,3 +89,13 @@ $govuk-include-default-font-face: false;
 @import "views/manual";
 @import "views/published-dates-button-group";
 @import "views/worldwide-organisation";
+
+@include govuk-media-query($media-type: print) {
+  // Targeting (right to left) rtl languages
+  main[lang="ar"], // Arabic
+  main[lang="he"], // Hebrew
+  main[lang="ur"] { // Urdu
+    direction: rtl;
+    text-align: start;
+  }
+}
