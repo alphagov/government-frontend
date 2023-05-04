@@ -21,7 +21,7 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="content-bottom-margin">
       <div class="responsive-bottom-margin">
-        <%= render 'components/important-metadata',
+        <%= render 'components/important_metadata',
           items: @content_item.important_metadata %>
         <%= render 'components/figure',
           src: @content_item.image["url"],
@@ -34,7 +34,7 @@
           <%= raw(@content_item.body) %>
         <% end %>
       </div>
-      <%= render 'components/published-dates', {
+      <%= render 'components/published_dates', {
         published: @content_item.published,
         last_updated: @content_item.updated,
         history: @content_item.history

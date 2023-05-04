@@ -2,7 +2,7 @@ require "component_test_helper"
 
 class PublishedDatesTest < ComponentTestCase
   def component_name
-    "published-dates"
+    "published_dates"
   end
 
   test "renders nothing when no dates are provided" do

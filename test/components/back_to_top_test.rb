@@ -2,7 +2,7 @@ require "component_test_helper"
 
 class BackToTopTest < ComponentTestCase
   def component_name
-    "back-to-top"
+    "back_to_top"
   end
 
   test "fails to render a back to top link when no parameters given" do
