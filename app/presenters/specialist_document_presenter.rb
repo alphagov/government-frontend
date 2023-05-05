@@ -48,7 +48,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def finder_link
     if finder && statutory_instrument?
-      view_context.link_to("See all #{finder['title']}", finder["base_path"])
+      view_context.link_to("See all #{finder['title']}", finder["base_path"], class: "govuk-link")
     end
   end
 
