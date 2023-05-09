@@ -66,7 +66,7 @@
     <%= yield :header %>
     <% if @content_item.survey_url %>
       <%= render "govuk_publishing_components/components/intervention", {
-        suggestion_text: "Help make GOV.UK better",
+        suggestion_text: "Help improve GOV.UK",
         suggestion_link_text: "Take part in user research",
         suggestion_link_url: @content_item.survey_url,
         new_tab: true,
