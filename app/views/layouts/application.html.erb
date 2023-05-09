@@ -63,7 +63,6 @@
       <% end %>
     <% end %>
 
-    <%= yield :header %>
     <% if @content_item.survey_url %>
       <%= render "govuk_publishing_components/components/intervention", {
         suggestion_text: "Help improve GOV.UK",
@@ -72,6 +71,7 @@
         new_tab: true,
       } %>
     <% end %>
+    <%= yield :header %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <%= yield :main %>
