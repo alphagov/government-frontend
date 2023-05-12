@@ -4,15 +4,6 @@
   ) %>
 <% end %>
 
-<% if @content_item.show_organisation_changing_banner? %>
-  <div class="govuk-width-container govuk-!-margin-top-8">
-    <%= render "govuk_publishing_components/components/notice", {
-      title: sanitize('This organisation is changing. Read about <a href="https://www.gov.uk/government/publications/making-government-deliver-for-the-british-people/making-government-deliver-for-the-british-people-html">recent government updates</a>.'),
-      margin_bottom: 3,
-    } %>
-  </div>
-<% end %>
-
 <% @additional_body = capture do %>
   <% if @content_item.corporate_information? %>
     <%= @content_item.corporate_information_heading_tag %>

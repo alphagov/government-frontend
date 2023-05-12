@@ -5,11 +5,6 @@ class CorporateInformationPagePresenter < ContentItemPresenter
   include ContentItem::OrganisationBranding
   include ContentItem::CorporateInformationGroups
 
-  ORG_CHANGING_BANNER_BASE_PATHS = %w[
-    /government/organisations/department-for-business-energy-and-industrial-strategy/about
-    /government/organisations/department-for-international-trade/about
-  ].freeze
-
   def page_title
     page_title = super
     page_title += " - #{default_organisation['title']}" if default_organisation
@@ -25,10 +20,6 @@ class CorporateInformationPagePresenter < ContentItemPresenter
 
   def contents_items
     super + extra_headings
-  end
-
-  def show_organisation_changing_banner?
-    ORG_CHANGING_BANNER_BASE_PATHS.include?(base_path)
   end
 
 private
