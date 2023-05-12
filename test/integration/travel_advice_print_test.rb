@@ -22,7 +22,7 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
       assert page.has_content?(@content_item["details"]["change_description"].gsub("Latest update: ", "").strip)
     end
 
-    assert page.has_css?("h1", text: "Summary")
+    assert page.has_css?(".part-title", text: "Summary")
     parts.each do |part|
       assert page.has_css?("h1", text: part["title"])
     end
