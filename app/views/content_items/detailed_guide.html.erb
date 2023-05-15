@@ -75,10 +75,12 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/devolved_nations", {
-      national_applicability: @content_item.national_applicability || {},
-      type: @content_item.schema_name
-    } %>
+    <% if @content_item.national_applicability.present? %>
+      <%= render "govuk_publishing_components/components/devolved_nations", {
+        national_applicability: @content_item.national_applicability,
+        type: @content_item.schema_name
+      } %>
+    <% end %>
 
     <%= render "components/contents_list_with_body", contents: @content_item.contents do %>
       <%= render "govuk_publishing_components/components/print_link", {

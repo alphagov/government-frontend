@@ -20,10 +20,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "govuk_publishing_components/components/devolved_nations", {
-      national_applicability: @content_item.national_applicability || {},
-      type: @content_item.schema_name
-    } %>
+    <% if @content_item.national_applicability.present? %>
+      <%= render "govuk_publishing_components/components/devolved_nations", {
+        national_applicability: @content_item.national_applicability,
+        type: @content_item.schema_name
+      } %>
+    <% end %>
+
     <% if @content_item.unopened? %>
       <% content_item_unopened = capture do %>
         <%= raw(t("consultation.opens")) %>
