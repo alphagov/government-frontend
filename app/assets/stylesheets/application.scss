@@ -53,6 +53,7 @@ $govuk-include-default-font-face: false;
 @import "helpers/organisation-logos";
 @import "helpers/parts";
 @import "helpers/content-bottom-margin";
+@import "helpers/organisation-links";
 @import "helpers/publisher-metadata-with-logo";
 @import "helpers/sticky-element-container";
 
@@ -60,13 +61,7 @@ $govuk-include-default-font-face: false;
 @import "components/*";
 
 // pages specific view imports
-@import "views/case-studies";
 @import "views/html-publication";
-@import "views/detailed-guide";
-@import "views/publication";
-@import "views/speech";
-@import "views/news-article";
-@import "views/corporate-information-page";
 @import "views/travel-advice";
 @import "views/service_manual_guide";
 @import "views/specialist-document";
@@ -75,10 +70,23 @@ $govuk-include-default-font-face: false;
 @import "views/published-dates-button-group";
 @import "views/worldwide-organisation";
 
+.case-study,
+.corporate-information-page,
+.detailed-guide,
+.html-publication,
+.news-article,
+.publication,
+.speech {
+  .direction-rtl & {
+    direction: rtl;
+    text-align: start;
+  }
+}
+
 @include govuk-media-query($media-type: print) {
   // Targeting (right to left) rtl languages
-  main[lang="ar"], // Arabic
-  main[lang="he"], // Hebrew
+  main[lang="ar"],  // Arabic
+  main[lang="he"],  // Hebrew
   main[lang="ur"] { // Urdu
     direction: rtl;
     text-align: start;
