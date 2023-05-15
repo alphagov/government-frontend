@@ -1,7 +1,7 @@
 module ContentItem
   module ResearchBanner
     END_OF_LIFE_SURVEY_URL = "https://forms.office.com/e/a0WvT73tCV".freeze
-    USER_RESEARCH_SURVEY_URL = "https://gdsuserresearch.optimalworkshop.com/treejack/ct80d1d6".freeze
+    USER_RESEARCH_SURVEY_URL = "https://gdsuserresearch.optimalworkshop.com/treejack/f49b8c01521bf45bd0a519fe02f5f913".freeze
 
     SURVEY_URL_MAPPINGS = {
       "/benefits-end-of-life" => END_OF_LIFE_SURVEY_URL,

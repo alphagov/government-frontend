@@ -28,7 +28,7 @@ class ResearchBannerTest < ActionDispatch::IntegrationTest
       visit path
 
       assert page.has_css?(".gem-c-intervention")
-      assert page.has_link?("Take part in user research (opens in a new tab)", href: "https://gdsuserresearch.optimalworkshop.com/treejack/ct80d1d6")
+      assert page.has_link?("Take part in user research (opens in a new tab)", href: "https://gdsuserresearch.optimalworkshop.com/treejack/f49b8c01521bf45bd0a519fe02f5f913")
     end
   end
 
