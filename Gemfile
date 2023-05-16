@@ -23,13 +23,13 @@ gem "uglifier"
 group :development, :test do
   gem "govuk_schemas"
   gem "govuk_test"
+  gem "pry-byebug"
   gem "rubocop-govuk"
 end
 
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "pry"
 end
 
 group :test do
