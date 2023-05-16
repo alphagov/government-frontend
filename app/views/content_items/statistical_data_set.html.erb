@@ -14,7 +14,9 @@
   <%= render 'shared/translations', content_item: @content_item %>
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
-    <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
+    <% if @content_item.withdrawn? %>
+      <%= render 'govuk_publishing_components/components/notice', @content_item.withdrawal_notice_component  %>
+    <% end %>
     <%= render 'shared/history_notice', content_item: @content_item %>
   </div>
 </div>
