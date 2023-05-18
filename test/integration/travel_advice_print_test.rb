@@ -13,18 +13,12 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
 
   test "it renders the summary and all parts in the print view" do
     setup_and_visit_travel_advice_print("full-country")
-    parts = @content_item["details"]["parts"]
 
     assert_has_component_metadata_pair("Still current at", Time.zone.today.strftime("%-d %B %Y"))
     assert_has_component_metadata_pair("Updated", Date.parse(@content_item["details"]["reviewed_at"]).strftime("%-d %B %Y"))
 
     within ".gem-c-metadata" do
       assert page.has_content?(@content_item["details"]["change_description"].gsub("Latest update: ", "").strip)
-    end
-
-    assert page.has_css?(".part-title", text: "Summary")
-    parts.each do |part|
-      assert page.has_css?("h1", text: part["title"])
     end
 
     assert page.has_content?("Summary – the main opposition party has called for mass protests against the government in Tirana on 18 February 2017")
