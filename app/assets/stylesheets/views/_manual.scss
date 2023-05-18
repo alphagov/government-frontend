@@ -40,6 +40,15 @@
   &.hmrc {
     background: govuk-organisation-colour("hm-revenue-customs");
   }
+
+  .gem-c-metadata--inverse {
+    background: none;
+    padding: 0;
+
+    .gem-c-metadata__list {
+      margin: 0;
+    }
+  }
 }
 
 .section-list {
