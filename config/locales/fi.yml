@@ -51,7 +51,6 @@ fi:
     phone: Puhelin
     webchat: Webchat
   content_item:
-    coming_soon: Tämä asiakirja julkaistaan
     contents: Sisällys
     metadata:
       published: Julkaistu
@@ -81,9 +80,6 @@ fi:
       cma_case:
         one: Kilpailu- ja markkinaviranomaisen tapaus
         other: Kilpailu- ja markkinaviranomaisen tapaukset
-      coming_soon:
-        one: Tulossa pian
-        other: Tulossa pian
       consultation:
         one: Konsultaatio
         other: Konsultaatiot

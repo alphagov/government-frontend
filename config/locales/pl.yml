@@ -51,7 +51,6 @@ pl:
     phone: Telefon
     webchat: Czat
   content_item:
-    coming_soon: Dokument ten zostanie opublikowany o
     contents: Zawartość
     metadata:
       published: Opublikowano
@@ -97,11 +96,6 @@ pl:
         many:
         one: Sprawa Urzędu ds. Konkurencji i Rynków
         other: Sprawy Urzędu ds. Konkurencji i Rynków
-      coming_soon:
-        few:
-        many:
-        one: Już niedługo
-        other: Już niedługo
       consultation:
         few:
         many:

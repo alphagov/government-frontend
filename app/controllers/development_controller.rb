@@ -4,7 +4,6 @@ class DevelopmentController < ApplicationController
   def index
     @schema_names = %w[answer
                        case_study
-                       coming_soon
                        consultation
                        contact
                        corporate_information_page

@@ -227,7 +227,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets the expiry as sent by content-store" do
-    content_item = content_store_has_schema_example("coming_soon", "coming_soon")
+    content_item = content_store_has_schema_example("case_study", "case_study")
     stub_content_store_has_item(content_item["base_path"], content_item, max_age: 20)
 
     get :show, params: { path: path_for(content_item) }
@@ -244,7 +244,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "honours cache-control private items" do
-    content_item = content_store_has_schema_example("coming_soon", "coming_soon")
+    content_item = content_store_has_schema_example("case_study", "case_study")
     stub_content_store_has_item(content_item["base_path"], content_item, private: true)
 
     get :show, params: { path: path_for(content_item) }
