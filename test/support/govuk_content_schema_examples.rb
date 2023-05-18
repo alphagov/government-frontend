@@ -44,7 +44,6 @@ module GovukContentSchemaExamples
     def supported_schemas
       %w[
         case_study
-        coming_soon
         html_publication
         service_manual_guide
         service_manual_homepage
