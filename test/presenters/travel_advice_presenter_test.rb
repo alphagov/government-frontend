@@ -16,14 +16,12 @@ class TravelAdvicePresenterTest
     end
 
     test "part slug set to last segment of requested content item path when content item has parts" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
       example = schema_item("full-country")
-      first_part = example["details"]["parts"].first
-      presented = presented_item("full-country", first_part["slug"])
+      second_part = example["details"]["parts"][1]
+      presented = presented_item("full-country", second_part["slug"])
 
       assert presented.requesting_a_part?
-      assert_equal presented.part_slug, first_part["slug"]
+      assert_equal presented.part_slug, second_part["slug"]
       assert presented.has_valid_part?
     end
 
@@ -50,26 +48,23 @@ class TravelAdvicePresenterTest
       assert_equal "[Withdrawn] Albania travel advice", presented_item.page_title
     end
 
-    test "presents summary as the current part when no part slug provided" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
-      example = schema_item("full-country")
-      presented = presented_item("full-country")
+    test "presents the current part when a part slug is provided for country" do
+      example_parts = schema_item("full-country")["details"]["parts"]
+      second_part = example_parts[1]
+      presented = presented_item("full-country", second_part["slug"])
 
-      assert presented.no_part_slug_provided?
-      assert_equal "Summary", presented.current_part_title
-      assert_equal example["details"]["summary"], presented.current_part_body
+      assert_not presented.no_part_slug_provided?
+      assert presented.has_valid_part?
+      assert_equal second_part["title"], presented.current_part_title
+      assert_equal second_part["body"], presented.current_part_body
     end
 
-    test "presents the current part when a part slug is provided" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
+    test "presents first part when part slug is provided for country" do
       example_parts = schema_item("full-country")["details"]["parts"]
       first_part = example_parts.first
       presented = presented_item("full-country", first_part["slug"])
 
       assert_not presented.no_part_slug_provided?
-      assert presented.has_valid_part?
       assert_equal first_part["title"], presented.current_part_title
       assert_equal first_part["body"], presented.current_part_body
     end
@@ -82,25 +77,23 @@ class TravelAdvicePresenterTest
       assert_not presented.has_valid_part?
     end
 
-    test "the summary is included as the first navigation item" do
+    test "the first part is included as the first navigation item" do
       first_nav_item = presented_item("full-country").parts_navigation.first.first
       assert_equal "Summary", first_nav_item
     end
 
     test "navigation items are presented as trackable links unless they are the current part" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
       example = schema_item("full-country")
-      current_part = example["details"]["parts"].first
+      current_part = example["details"]["parts"][1]
 
       first_part_presented = presented_item("full-country", current_part["slug"])
       navigation_items = first_part_presented.parts_navigation
 
-      summary_nav_item = navigation_items[0][0]
+      first_part_nav_item = navigation_items[0][0]
       current_part_nav_item = navigation_items[0][1]
       another_part_nav_item = navigation_items[0][2]
 
-      assert_equal summary_nav_item,
+      assert_equal first_part_nav_item,
                    "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 1\" "\
                    "data-track-label=\"/foreign-travel-advice/albania\" "\
                    "data-track-options=\"{&quot;dimension29&quot;:&quot;Summary&quot;}\" "\
@@ -114,29 +107,25 @@ class TravelAdvicePresenterTest
     end
 
     test "navigation items link to all parts" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
       parts = schema_item("full-country")["details"]["parts"]
       part_links = presented_item("full-country").parts_navigation.flatten
 
-      assert_equal parts.size + 1, part_links.size
-      assert part_links[1].include?(parts[0]["title"])
-      assert part_links[1].include?(parts[0]["slug"])
+      assert_equal parts.size, part_links.size
+      assert part_links[1].include?(parts[1]["title"])
+      assert part_links[1].include?(parts[1]["slug"])
     end
 
-    test "part navigation is in one group when 3 or fewer navigation items (2 parts + summary)" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
+    test "part navigation is in one group when 3 or fewer navigation items" do
       example = schema_item("full-country")
 
-      example["details"]["parts"] = example["details"]["parts"].first(3)
+      example["details"]["parts"] = example["details"]["parts"].first(4)
       assert_equal 2, presented_item("full-country", nil, example).parts_navigation.size
 
-      example["details"]["parts"] = example["details"]["parts"].first(2)
+      example["details"]["parts"] = example["details"]["parts"].first(3)
       assert_equal 1, presented_item("full-country", nil, example).parts_navigation.size
 
       example["details"]["parts"] = []
-      assert_equal 1, presented_item("full-country", nil, example).parts_navigation.size
+      assert_equal 0, presented_item("full-country", nil, example).parts_navigation.size
     end
 
     test "part navigation is split into two groups" do
@@ -172,16 +161,14 @@ class TravelAdvicePresenterTest
     end
 
     test "presents only next navigation when on the summary" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
       example = schema_item("full-country")
       parts = example["details"]["parts"]
       nav = presented_item("full-country").previous_and_next_navigation
       expected_nav = {
         next_page: {
-          url: "#{example['base_path']}/#{parts[0]['slug']}",
+          url: "#{example['base_path']}/#{parts[1]['slug']}",
           title: "Next",
-          label: parts[0]["title"],
+          label: parts[1]["title"],
         },
       }
 
@@ -189,16 +176,14 @@ class TravelAdvicePresenterTest
     end
 
     test "presents previous and next navigation" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
       example = schema_item("full-country")
       parts = example["details"]["parts"]
-      nav = presented_item("full-country", parts[0]["slug"]).previous_and_next_navigation
+      nav = presented_item("full-country", parts[1]["slug"]).previous_and_next_navigation
       expected_nav = {
         next_page: {
-          url: "#{example['base_path']}/#{parts[1]['slug']}",
+          url: "#{example['base_path']}/#{parts[2]['slug']}",
           title: "Next",
-          label: parts[1]["title"],
+          label: parts[2]["title"],
         },
         previous_page: {
           url: example["base_path"],
@@ -299,18 +284,16 @@ class TravelAdvicePresenterTest
     end
 
     test "presents all parts including summary for the print view" do
-      skip("Temporarily skipping this test out while we remove the optional summary from the travel advice schema in
-      publishing-api")
       example_parts = schema_item("full-country")["details"]["parts"]
       parts = presented_item("full-country").parts.clone
-      summary = parts.shift
+      first_part = parts.first
 
       parts.each_with_index do |part, i|
         assert_equal example_parts[i]["body"], part["body"]
         assert_equal example_parts[i]["slug"], part["slug"]
       end
-      assert_equal "Summary", summary["title"]
-      assert_equal schema_item("full-country")["details"]["summary"], summary["body"]
+      assert_equal "Summary", first_part["title"]
+      assert_equal schema_item("full-country")["details"]["parts"].first["body"], first_part["body"]
     end
 
   private

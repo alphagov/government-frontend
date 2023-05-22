@@ -2,17 +2,17 @@ require "test_helper"
 
 class TravelAdvicePrint < ActionDispatch::IntegrationTest
   test "it renders the print view" do
-    setup_and_visit_travel_advice_print("full-country-without-summary")
+    setup_and_visit_travel_advice_print("full-country")
     assert page.has_css?("#travel-advice-print")
   end
 
   test "it is not indexable by search engines" do
-    setup_and_visit_travel_advice_print("full-country-without-summary")
+    setup_and_visit_travel_advice_print("full-country")
     assert page.has_css?("meta[name='robots'][content='noindex, nofollow']", visible: false)
   end
 
-  test "(without summary) it renders all other parts in the print view" do
-    setup_and_visit_travel_advice_print("full-country-without-summary")
+  test "it renders all other parts in the print view" do
+    setup_and_visit_travel_advice_print("full-country")
     parts = @content_item["details"]["parts"]
 
     assert_has_component_metadata_pair("Still current at", Time.zone.today.strftime("%-d %B %Y"))
@@ -22,12 +22,12 @@ class TravelAdvicePrint < ActionDispatch::IntegrationTest
       assert page.has_content?(@content_item["details"]["change_description"].gsub("Latest update: ", "").strip)
     end
 
-    assert page.has_css?("h1", text: "Safety and security")
+    assert page.has_css?("h1", text: "Summary")
     parts.each do |part|
       assert page.has_css?("h1", text: part["title"])
     end
 
-    assert page.has_content?("There is an underlying threat from terrorism. Attacks, although unlikely, could be indiscriminate, including places frequented by expatriates and foreign travellers.")
+    assert page.has_content?("Public security is generally good, particularly in Tirana, and Albanians are very hospitable to visitors.")
   end
 
   def setup_and_visit_travel_advice_print(name)

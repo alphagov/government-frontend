@@ -104,23 +104,6 @@ class TravelAdvicePresenter < ContentItemPresenter
 
 private
 
-  # Treat summary as the first part if it exists
-  def raw_parts
-    if content_item["details"]["summary"].present?
-      [summary_part].concat(super)
-    else
-      super
-    end
-  end
-
-  def summary_part
-    {
-      "title" => I18n.t("travel_advice.summary"),
-      "slug" => "",
-      "body" => content_item["details"]["summary"],
-    }
-  end
-
   def change_description
     content_item["details"]["change_description"]
   end
