@@ -52,7 +52,6 @@ module GovukContentSchemaExamples
         statistics_announcement
         take_part
         topical_event_about_page
-        unpublishing
         working_group
       ]
     end
