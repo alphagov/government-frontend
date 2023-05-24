@@ -7,6 +7,12 @@ class WorldwideOfficeTest < ActionDispatch::IntegrationTest
     assert page.has_title?("British Embassy Manila")
   end
 
+  test "includes the title of the office contact" do
+    setup_and_visit_content_item("worldwide_office")
+
+    assert page.has_selector?("h2", text: "Consular section")
+  end
+
   test "includes access details and contents" do
     setup_and_visit_content_item("worldwide_office")
 
@@ -26,6 +32,7 @@ class WorldwideOfficeTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item(content_item["base_path"], content_item.to_json)
     visit_with_cachebust(content_item["base_path"])
 
+    assert page.has_selector?("h2", text: "Consular section")
     assert_not page.has_content? "Contents"
   end
 
