@@ -14,5 +14,7 @@
 <section class="govuk-grid-row" id="about-us">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
+
+    <%= @content_item.body.html_safe %>
   </div>
 </section>
