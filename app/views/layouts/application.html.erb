@@ -63,11 +63,11 @@
       <% end %>
     <% end %>
 
-    <% if @content_item.survey_url %>
+    <% if @content_item.show_research_banner? %>
       <%= render "govuk_publishing_components/components/intervention", {
-        suggestion_text: "Help improve GOV.UK",
+        suggestion_text: @content_item.survey_details["text"],
         suggestion_link_text: "Take part in user research",
-        suggestion_link_url: @content_item.survey_url,
+        suggestion_link_url: @content_item.survey_details["url"],
         new_tab: true,
       } %>
     <% end %>
