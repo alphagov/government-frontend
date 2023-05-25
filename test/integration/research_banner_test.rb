@@ -8,6 +8,7 @@ class ResearchBannerTest < ActionDispatch::IntegrationTest
     visit answer["base_path"]
 
     assert page.has_css?(".gem-c-intervention")
+    assert page.has_text?("Help improve this GOV.UK page")
   end
 
   test "EOL banner is on the Personal Independence Payment (PIP) page" do
