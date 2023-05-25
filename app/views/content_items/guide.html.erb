@@ -69,7 +69,11 @@
       <% end %>
 
       <% if @content_item.show_guide_navigation? %>
-        <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
+        <%
+          previous_and_next_with_ga4_tracking = { ga4_tracking: true }
+          previous_and_next_with_ga4_tracking.merge!(@content_item.previous_and_next_navigation) # @content_item is frozen so we make a new hash
+        %>
+        <%= render 'govuk_publishing_components/components/previous_and_next_navigation', previous_and_next_with_ga4_tracking %>
 
         <div class="responsive-bottom-margin">
           <a href="<%= @content_item.print_link %>" class="govuk-link govuk-link--no-visited-state govuk-body"><%= t("multi_page.print_entire_guide") %></a>

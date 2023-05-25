@@ -25,6 +25,10 @@
   <% end %>
 
   <div class="govuk-grid-column-full">
-    <%= render "govuk_publishing_components/components/previous_and_next_navigation", @content_item.previous_and_next_links %>
+        <%
+          previous_and_next_with_ga4_tracking = { ga4_tracking: true }
+          previous_and_next_with_ga4_tracking.merge!(@content_item.previous_and_next_links) # @content_item is frozen so we make a new hash
+        %>
+    <%= render "govuk_publishing_components/components/previous_and_next_navigation", previous_and_next_with_ga4_tracking %>
   </div>
 <% end %>
