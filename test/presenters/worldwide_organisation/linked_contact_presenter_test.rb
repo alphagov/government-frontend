@@ -56,17 +56,6 @@ class WorldwideOrganisation::LinkedContactPresenterTest < ActiveSupport::TestCas
     assert_equal "http://www.gov.uk/contact-consulate-manila", presented_item.contact_form_link
   end
 
-  test "#phone_numbers returns an array of phone numbers" do
-    expected_phone_number = {
-      "title" => "Telephone",
-      "number" => "+63 (02) 8 858 2200 / +44 20 7136 6857 (line open 24/7)"
-    }
-
-    presented_item = WorldwideOrganisation::LinkedContactPresenter.new(@contact_content_item)
-
-    assert_equal expected_phone_number, presented_item.phone_numbers.first
-  end
-
   test "#comments returns the contact description" do
     expected_comments =
       "<p class=\"govuk-body\">24/7 consular support is available by telephone for all routine enquiries and emergencies. "\

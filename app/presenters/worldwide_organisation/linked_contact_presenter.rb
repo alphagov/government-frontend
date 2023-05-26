@@ -1,15 +1,20 @@
 module WorldwideOrganisation
   class LinkedContactPresenter
     include ActionView::Helpers::TagHelper
+    include ContentItem::ContactDetails
 
-    attr_reader :details
+    attr_reader :content_item
 
     def initialize(content_item)
-      @details = content_item.with_indifferent_access["details"]
+      @content_item = content_item
+    end
+
+    def title
+      content_item["details"]["title"]
     end
 
     def post_address
-      address = details["post_addresses"]&.first
+      address = post_address_groups&.first
       return if address.nil?
 
       formatted_address = Govspeak::HCardPresenter.new(address.symbolize_keys).render
@@ -18,23 +23,18 @@ module WorldwideOrganisation
     end
 
     def email
-      email_address = details["email_addresses"]&.first
-
-      email_address&.dig("email")
+      email_address_groups.first&.dig("email")
     end
 
     def contact_form_link
-      contact_form_link = details["contact_form_links"]&.first
-
-      contact_form_link&.dig("link")
-    end
-
-    def phone_numbers
-      details["phone_numbers"]
+      online_form_links.first&.dig("url")
     end
 
     def comments
-      tag.p(details["description"].gsub("\r\n", "<br/>").html_safe, class: %w[govuk-body]) if details["description"].present?
+      comments = content_item["details"]["description"]
+      return if comments.nil?
+
+      tag.p(comments.gsub("\r\n", "<br/>").html_safe, class: %w[govuk-body])
     end
   end
 end

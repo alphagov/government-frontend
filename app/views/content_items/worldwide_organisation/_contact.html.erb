@@ -15,7 +15,7 @@
       </div>
     <% end %>
 
-    <% if contact.email.present? || contact.contact_form_link.present? || contact.phone_numbers&.any? %>
+    <% if contact.email.present? || contact.contact_form_link.present? || contact.phone_number_groups&.any? %>
       <div class="govuk-grid-column-one-third">
 
         <% if contact.email.present? %>
@@ -32,7 +32,7 @@
           </p>
         <% end %>
 
-        <% contact.phone_numbers&.each do |number| %>
+        <% contact.phone_number_groups&.each do |number| %>
           <p class="govuk-body govuk-!-margin-bottom-4">
             <%= number["title"] %> <br />
             <span dir="ltr"><%= number["number"] %></span>
