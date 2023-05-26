@@ -24,7 +24,11 @@
       class="app-c-published-dates__toggle govuk-link"
       data-controls="full-history"
       data-expanded="false"
-      data-toggled-text="&#45;&nbsp;<%= t('components.published_dates.hide_all_updates', locale: :en) %>">&#43;&nbsp;<%= t('components.published_dates.show_all_updates', locale: :en) %></a>
+      data-toggled-text="&#45;&nbsp;<%= t('components.published_dates.hide_all_updates', locale: :en) %>"
+      data-module="ga4-event-tracker"
+      data-ga4-event="<%= {event_name: "select_content", type: "content", section: "Footer"}.to_json %>"
+      data-ga4-expandable
+      >&#43;&nbsp;<%= t('components.published_dates.show_all_updates', locale: :en) %></a>
       <div class="app-c-published-dates__change-history js-hidden" id="full-history">
         <ol class="app-c-published-dates__list">
           <% history.each do |change| %>
