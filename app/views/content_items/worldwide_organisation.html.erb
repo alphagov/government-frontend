@@ -40,3 +40,44 @@
     </aside>
   <% end %>
 </section>
+
+<% if @content_item.show_our_people_section? %>
+  <section class="govuk-grid-row" id="people">
+    <div class="govuk-grid-column-full">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t("worldwide_organisation.headings.our_people"),
+        border_top: 5,
+        padding: true,
+      } %>
+    </div>
+
+    <% if @content_item.person_in_primary_role %>
+      <div class="govuk-grid-column-one-quarter">
+        <%= render "govuk_publishing_components/components/image_card", {
+          href: @content_item.person_in_primary_role[:href],
+          image_src: @content_item.person_in_primary_role[:image_url],
+          image_alt: @content_item.person_in_primary_role[:image_alt],
+          heading_text: @content_item.person_in_primary_role[:name],
+          heading_level: 3,
+          description: @content_item.person_in_primary_role[:description]
+        } %>
+      </div>
+    <% end %>
+
+    <div class="govuk-grid-column-three-quarters">
+      <ul class="govuk-list govuk-grid-row">
+        <% @content_item.people_in_non_primary_roles.each.with_index do |person, i| %>
+          <% extra_class = (i + 1) % 4 == 0 ? " clear-column" : "" %>
+          <li class="govuk-grid-column-one-third<%= extra_class %>">
+            <%= render "govuk_publishing_components/components/image_card", {
+              href: person[:href],
+              heading_text: person[:name],
+              heading_level: 3,
+              description: person[:description]
+            } %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </section>
+<% end %>
