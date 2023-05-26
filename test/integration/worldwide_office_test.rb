@@ -67,4 +67,22 @@ class WorldwideOfficeTest < ActionDispatch::IntegrationTest
 
     assert page.has_content? "24/7 consular support is available by telephone for all routine enquiries and emergencies."
   end
+
+  test "includes the logo and name of the worldwide organisation as a link" do
+    setup_and_visit_content_item("worldwide_office")
+
+    assert_has_component_organisation_logo
+    assert page.has_link? "British Embassy Manila", href: "/world/organisations/british-embassy-manila"
+  end
+
+  test "includes the world locations and sponsoring organisations" do
+    setup_and_visit_content_item("worldwide_office")
+
+    within find(".metadata", match: :first) do
+      assert page.has_link? "Philippines", href: "/world/philippines/news"
+      assert page.has_link? "Palau", href: "/world/palau/news"
+
+      assert page.has_link? "Foreign, Commonwealth & Development Office", href: "/government/organisations/foreign-commonwealth-development-office"
+    end
+  end
 end

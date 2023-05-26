@@ -1,0 +1,24 @@
+<header class="worldwide-organisation-header govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds logo">
+    <%= render "govuk_publishing_components/components/organisation_logo", {
+      organisation: @content_item.organisation_logo,
+      heading_level: 1,
+      inline: true,
+    } %>
+  </div>
+
+  <div class="govuk-grid-column-one-third govuk-!-padding-top-2">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full metadata">
+        <dl>
+          <% if @content_item.world_location_links.present? %>
+            <dt><%= t('worldwide_organisation.location') %>:</dt>
+            <dd><%= @content_item.world_location_links %></dd>
+          <% end %>
+          <dt><%= t('worldwide_organisation.part_of') %>:</dt>
+          <dd lang="en"><%= @content_item.sponsoring_organisation_links %></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</header>
