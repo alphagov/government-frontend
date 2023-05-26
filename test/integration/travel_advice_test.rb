@@ -70,6 +70,19 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 
+  test "print link has GA4 tracking" do
+    setup_and_visit_content_item("full-country-without-summary")
+
+    expected_ga4_json = {
+      event_name: "navigation",
+      type: "content",
+      section: "Footer",
+      text: "View a printable version of the whole guide",
+    }.to_json
+
+    assert page.has_css?("a[data-ga4-link='#{expected_ga4_json}']")
+  end
+
   def setup_and_visit_travel_advice_part(name, part)
     @content_item = get_content_example(name).tap do |item|
       stub_content_store_has_item("#{item['base_path']}/#{part}", item.to_json)

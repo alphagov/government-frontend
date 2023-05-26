@@ -62,12 +62,17 @@
       %>
       <%= render 'govuk_publishing_components/components/previous_and_next_navigation', previous_and_next_with_ga4_tracking %>
 
-
-
       <div class="responsive-bottom-margin">
-        <a href="<%= @content_item.print_link %>" class="govuk-link govuk-link--no-visited-state govuk-body"><%= t("multi_page.print_entire_guide") %></a>
+        <a href="<%= @content_item.print_link %>"
+          class="govuk-link govuk-link--no-visited-state govuk-body"
+          data-module="ga4-link-tracker"
+          data-ga4-link="<%= {
+            event_name: "navigation",
+            type: "content",
+            section: "Footer",
+            text: t("multi_page.print_entire_guide", locale: :en)
+          }.to_json %>"><%= t("multi_page.print_entire_guide") %></a>
       </div>
-    </div>
   <% end %>
   <%= render 'shared/sidebar_navigation' %>
 </div>

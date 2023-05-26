@@ -169,6 +169,19 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 
+  test "print link has GA4 tracking" do
+    setup_and_visit_content_item("guide")
+
+    expected_ga4_json = {
+      event_name: "navigation",
+      type: "content",
+      section: "Footer",
+      text: "View a printable version of the whole guide",
+    }.to_json
+
+    assert page.has_css?("a[data-ga4-link='#{expected_ga4_json}']")
+  end
+
   def once_voting_has_closed
     Timecop.freeze(Time.zone.local(2021, 5, 6, 22, 0, 0))
     yield
