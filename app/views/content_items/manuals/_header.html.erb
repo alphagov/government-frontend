@@ -22,7 +22,12 @@
       margin_bottom: margin_bottom,
     } %>
 
-    <%= render 'govuk_publishing_components/components/metadata', content_item.manual_metadata %>
+
+    <%
+      metadata_with_ga4_tracking = { ga4_tracking: true }
+      metadata_with_ga4_tracking.merge!(content_item.manual_metadata) # @content_item is frozen so we make a new hash
+    %>
+    <%= render 'govuk_publishing_components/components/metadata', metadata_with_ga4_tracking %>
 
     <div class="in-manual-search">
       <form action="/search/all" >
