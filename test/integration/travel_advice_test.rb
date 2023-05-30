@@ -5,8 +5,8 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     setup_and_visit_random_content_item
   end
 
-  test "travel advice header and navigation (without summary)" do
-    setup_and_visit_content_item("full-country-without-summary")
+  test "travel advice header and navigation" do
+    setup_and_visit_content_item("full-country")
 
     assert page.has_css?("title", visible: false, text: @content_item["title"])
     assert_has_component_title(@content_item["details"]["country"]["name"])
@@ -14,8 +14,8 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
 
     assert page.has_css?(".part-navigation-container nav li", count: @content_item["details"]["parts"].size)
-    assert page.has_css?(".part-navigation-container nav li", text: "Safety and security")
-    assert_not page.has_css?(".part-navigation li a", text: "Safety and security")
+    assert page.has_css?(".part-navigation-container nav li", text: "Summary")
+    assert_not page.has_css?(".part-navigation li a", text: "Summary")
 
     parts_size = @content_item["details"]["parts"].size
     (@content_item["details"]["parts"][1..parts_size]).each do |part|
@@ -26,10 +26,10 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.govuk-link.govuk-link--no-visited-state[href$="/print"]', text: "View a printable version of the whole guide")
   end
 
-  test "travel advice first part has latest updates and map (without summary)" do
-    setup_and_visit_content_item("full-country-without-summary")
-    assert page.has_css?("h1", text: "Safety and security")
-    assert page.has_text?("Public security is generally good, particularly in Tirana, and Albanians are very hospitable to visitors.")
+  test "travel advice first part has latest updates and map" do
+    setup_and_visit_content_item("full-country")
+    assert page.has_css?("h1", text: "Summary")
+    assert page.has_text?("The main opposition party has called for mass protests against the government in Tirana on 18 February 2017.")
     assert_has_component_metadata_pair("Still current at", Time.zone.today.strftime("%-d %B %Y"))
     assert_has_component_metadata_pair("Updated", Date.parse(@content_item["details"]["reviewed_at"]).strftime("%-d %B %Y"))
 
@@ -41,14 +41,14 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".map figcaption a[href=\"#{@content_item['details']['document']['url']}\"]", text: "Download map (PDF)")
   end
 
-  test "travel advice part renders just that part (without summary)" do
-    example = get_content_example("full-country-without-summary")
+  test "travel advice part renders just that part" do
+    example = get_content_example("full-country")
     first_part = example["details"]["parts"][1]
-    setup_and_visit_travel_advice_part("full-country-without-summary", first_part["slug"])
+    setup_and_visit_travel_advice_part("full-country", first_part["slug"])
 
     assert page.has_css?("title", visible: false, text: "#{first_part['title']} - #{@content_item['title']}")
     assert page.has_css?("h1", text: first_part["title"])
-    assert page.has_text?("There is an underlying threat from terrorism. Attacks, although unlikely, could be indiscriminate, including places frequented by expatriates and foreign travellers.")
+    assert page.has_text?("Public security is generally good, particularly in Tirana, and Albanians are very hospitable to visitors.")
 
     assert_not page.has_css?(".map")
     assert_not page.has_css?(".gem-c-metadata")
@@ -57,13 +57,13 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".part-navigation-container nav li a", text: first_part["title"])
   end
 
-  test "travel advice includes a discoverable atom feed link (without summary)" do
-    setup_and_visit_content_item("full-country-without-summary")
+  test "travel advice includes a discoverable atom feed link" do
+    setup_and_visit_content_item("full-country")
     assert page.has_css?("link[type*='atom'][href='#{@content_item['base_path']}.atom']", visible: false)
   end
 
-  test "travel advice does not render with the single page notification button (without summary)" do
-    setup_and_visit_content_item("full-country-without-summary")
+  test "travel advice does not render with the single page notification button" do
+    setup_and_visit_content_item("full-country")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 
