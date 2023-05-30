@@ -5,6 +5,7 @@ gem "rails", "7.0.4.3"
 gem "bootsnap", require: false
 gem "dalli"
 gem "gds-api-adapters"
+gem "govspeak"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_personalisation"
