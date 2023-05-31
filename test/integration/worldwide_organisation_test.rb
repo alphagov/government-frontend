@@ -63,4 +63,34 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     )
     assert_not page.has_text?("Corporate information")
   end
+
+  test "does not render the translations when there are no translations" do
+    setup_and_visit_content_item("worldwide_organisation")
+
+    assert_not page.has_text?("English")
+  end
+
+  test "renders the translations when there are translations" do
+    setup_and_visit_content_item(
+      "worldwide_organisation",
+      {
+        "links" => {
+          "available_translations" =>
+            [
+              {
+                "locale": "en",
+                "base_path": "/world/uk-embassy-in-country",
+              },
+              {
+                "locale": "de",
+                "base_path": "/world/uk-embassy-in-country.de",
+              },
+            ],
+        },
+      },
+    )
+
+    assert page.has_text?("English")
+    assert page.has_link?("Deutsch", href: "/world/uk-embassy-in-country.de")
+  end
 end
