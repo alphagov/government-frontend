@@ -13,7 +13,7 @@
         <dl>
           <% if @content_item.world_location_links.present? %>
             <dt><%= t('worldwide_organisation.location') %>:</dt>
-            <dd><%= @content_item.world_location_links %></dd>
+            <dd data-module="hide-other-links"><%= @content_item.world_location_links %></dd>
           <% end %>
           <dt><%= t('worldwide_organisation.part_of') %>:</dt>
           <dd lang="en"><%= @content_item.sponsoring_organisation_links %></dd>

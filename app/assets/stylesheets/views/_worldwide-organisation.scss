@@ -3,6 +3,12 @@
   margin-top: $govuk-gutter-half;
   margin-bottom: $govuk-gutter-half;
 
+  .show-other-content {
+    @include govuk-font(14);
+    margin-left: .3em;
+    white-space: nowrap;
+  }
+
   .logo {
     @include govuk-media-query($from: tablet) {
       margin-top: $govuk-gutter-half;
