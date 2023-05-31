@@ -78,7 +78,7 @@ class WorldwideOfficeTest < ActionDispatch::IntegrationTest
   test "includes the world locations and sponsoring organisations" do
     setup_and_visit_content_item("worldwide_office")
 
-    within find(".metadata", match: :first) do
+    within find(".worldwide-organisation-header__metadata", match: :first) do
       assert page.has_link? "Philippines", href: "/world/philippines/news"
       assert page.has_link? "Palau", href: "/world/palau/news"
 
