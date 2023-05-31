@@ -1,0 +1,35 @@
+<%= render partial: "content_items/worldwide_organisation/header", locals: {
+  link_to_organisation: true,
+} %>
+
+<article class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <%= render "govuk_publishing_components/components/contents_list",
+               contents: @content_item.contents,
+               underline_links: true
+    %>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <div class="body">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: sanitize("<span class='govuk-visually-hidden'>About </span>#{@content_item.contact.title}"),
+        heading_level: 2,
+        font_size: "xl",
+        margin_bottom: 4,
+      } %>
+
+      <hr class="govuk-section-break govuk-section-break--visible">
+      <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6 govuk-clearfix">
+        <%= render partial: "content_items/worldwide_organisation/contact", locals: {
+          contact: @content_item.contact,
+          hide_title: true,
+        } %>
+      </div>
+
+      <%= render "govuk_publishing_components/components/govspeak", {} do
+        raw(@content_item.body)
+      end %>
+    </div>
+  </div>
+</article>

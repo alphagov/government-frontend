@@ -31,6 +31,8 @@ Not all schemas that this app can handle are rendered by it in production.
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
 | Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) | Migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) | Migrated |
+| Worldwide Office | | Rendered by Whitehall |
+| Worldwide Organisation | | Rendered by Whitehall |
 
 ## Technical documentation
 

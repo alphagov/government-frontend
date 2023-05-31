@@ -1,10 +1,54 @@
 .worldwide-organisation-header {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: $govuk-gutter-half;
+  margin-bottom: $govuk-gutter-half;
+}
 
-  .logo {
-    @include govuk-media-query($from: tablet) {
-      margin-top: 12px;
+.js-enabled {
+  .worldwide-organisation-header {
+    .show-other-content {
+      @include govuk-font(14);
+      margin-left: .3em;
+      white-space: nowrap;
+    }
+  }
+}
+
+.worldwide-organisation-header__logo {
+  @include govuk-media-query($from: tablet) {
+    margin-top: $govuk-gutter-half;
+  }
+}
+
+.worldwide-organisation-header__metadata {
+  margin-top: $govuk-gutter / 3;
+
+  dl {
+    @include govuk-text-colour;
+    @include govuk-font($size: 16);
+    @include govuk-responsive-margin(4, "bottom");
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: govuk-spacing(2);
+    }
+
+    margin: 0;
+
+    dt,
+    dd {
+      display: block;
+      line-height: 1.5em;
+    }
+  }
+}
+
+.worldwide-organisation-contact-section {
+  address {
+    font-style: normal;
+
+    .adr {
+      margin-block: 0;
     }
   }
 }
