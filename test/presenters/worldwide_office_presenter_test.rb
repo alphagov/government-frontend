@@ -12,4 +12,8 @@ class WorldwideOfficePresenterTest < PresenterTestCase
   test "#body returns the access and opening times of the schema item" do
     assert_equal schema_item["details"]["access_and_opening_times"], presented_item.body
   end
+
+  test "#contact returns the contact as an instance of #{WorldwideOrganisation::LinkedContactPresenter}" do
+    assert presented_item.contact.is_a?(WorldwideOrganisation::LinkedContactPresenter)
+  end
 end

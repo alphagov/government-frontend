@@ -28,4 +28,36 @@ class WorldwideOfficeTest < ActionDispatch::IntegrationTest
 
     assert_not page.has_content? "Contents"
   end
+
+  test "includes the address" do
+    setup_and_visit_content_item("worldwide_office")
+
+    within find("address", match: :first) do
+      assert page.has_content? "British Embassy Manila"
+      assert page.has_content? "120 Upper McKinley Road, McKinley Hill"
+      assert page.has_content? "Taguig City"
+      assert page.has_content? "Manila"
+      assert page.has_content? "1634"
+      assert page.has_content? "Philippines"
+    end
+  end
+
+  test "includes the contact details" do
+    setup_and_visit_content_item("worldwide_office")
+
+    assert page.has_content? "Email"
+    assert page.has_link? "ukinthephilippines@fco.gov.uk"
+
+    assert page.has_content? "Contact form"
+    assert page.has_link? "http://www.gov.uk/cont...", href: "http://www.gov.uk/contact-consulate-manila"
+
+    assert page.has_content? "Telephone"
+    assert page.has_content? "+63 (02) 8 858 2200 / +44 20 7136 6857 (line open 24/7)"
+  end
+
+  test "includes the contact comments" do
+    setup_and_visit_content_item("worldwide_office")
+
+    assert page.has_content? "24/7 consular support is available by telephone for all routine enquiries and emergencies."
+  end
 end
