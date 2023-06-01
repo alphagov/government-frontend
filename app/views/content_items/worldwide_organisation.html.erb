@@ -81,3 +81,29 @@
     </div>
   </section>
 <% end %>
+
+<% if @content_item.show_corporate_info_section? %>
+  <section class="corporate-information" id="corporate-info">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('worldwide_organisation.headings.corporate_information'),
+      border_top: 5,
+      padding: true
+    } %>
+
+    <% if @content_item.corporate_information_pages.any? %>
+      <nav class="group corporate-information__sub-navigation" role="navigation">
+        <ul class="govuk-list">
+          <% @content_item.corporate_information_pages.each do |cip| %>
+            <li lang="<%= @content_item.locale %>"><%= link_to cip[:text], cip[:url], class: "govuk-link" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    <% end %>
+
+    <% if @content_item.secondary_corporate_information.present? %>
+      <p class="govuk-body">
+        <%= @content_item.secondary_corporate_information.html_safe %>
+      </p>
+    <% end %>
+  </section>
+<% end %>

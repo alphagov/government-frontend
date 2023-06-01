@@ -42,4 +42,25 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     )
     assert_not page.has_text?("Our people")
   end
+
+  test "renders the navigational corporate information pages" do
+    setup_and_visit_content_item("worldwide_organisation")
+    assert page.has_link?("Complaints procedure", href: "https://www.integration.publishing.service.gov.uk/world/organisations/british-deputy-high-commission-hyderabad/about/complaints-procedure")
+  end
+
+  test "renders the secondary corporate information pages" do
+    setup_and_visit_content_item("worldwide_organisation")
+    assert page.has_link?("Personal information charter", href: "https://www.integration.publishing.service.gov.uk/world/organisations/british-deputy-high-commission-hyderabad/about/personal-information-charter")
+  end
+
+  test "doesn't render the corporate pages section if there are no pages to show" do
+    setup_and_visit_content_item(
+      "worldwide_organisation",
+      {
+        "links" => { "corporate_information_pages" => nil },
+        "details" => { "secondary_corporate_information_pages" => "" },
+      },
+    )
+    assert_not page.has_text?("Corporate information")
+  end
 end
