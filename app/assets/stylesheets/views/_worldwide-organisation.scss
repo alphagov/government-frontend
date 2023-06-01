@@ -49,6 +49,11 @@
 }
 
 .worldwide-organisation-contact-section {
+  a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
   address {
     font-style: normal;
 
