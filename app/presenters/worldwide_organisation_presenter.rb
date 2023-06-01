@@ -1,4 +1,6 @@
 class WorldwideOrganisationPresenter < ContentItemPresenter
+  include ContentItem::Body
+
   def show_default_breadcrumbs?
     false
   end

@@ -12,4 +12,10 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
 
     assert page.has_no_selector?(".govuk-breadcrumbs")
   end
+
+  test "renders the body content" do
+    setup_and_visit_content_item("worldwide_organisation")
+    assert page.has_selector?("#about-us")
+    assert page.has_text?("Find out more on our UK and India")
+  end
 end

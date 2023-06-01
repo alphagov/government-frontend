@@ -14,6 +14,12 @@
 <section class="govuk-grid-row" id="about-us">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
+
+    <div class="body">
+      <%= render "govuk_publishing_components/components/govspeak", {} do
+        raw(@content_item.body)
+      end %>
+    </div>
   </div>
 
   <% if @content_item.social_media_accounts.any? %>
