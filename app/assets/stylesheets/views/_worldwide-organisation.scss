@@ -1,6 +1,10 @@
 .worldwide-organisation-header {
   margin-top: $govuk-gutter-half;
   margin-bottom: $govuk-gutter-half;
+
+  @include govuk-media-query($from: tablet) {
+    margin-top: govuk-spacing(8);
+  }
 }
 
 .js-enabled {
@@ -39,6 +43,7 @@
     dd {
       display: block;
       line-height: 1.5em;
+      margin: 0;
     }
   }
 }
