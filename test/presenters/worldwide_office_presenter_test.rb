@@ -73,6 +73,16 @@ class WorldwideOfficePresenterTest < PresenterTestCase
     assert_equal expected, presented.organisation_logo
   end
 
+  test "#sponsoring_organisation_logo returns default values when the sponsoring organisations are nil" do
+    without_sponsoring_organisations = schema_item
+    without_sponsoring_organisations["links"]["worldwide_organisation"][0]["links"].delete("sponsoring_organisations")
+
+    presented = create_presenter(WorldwideOfficePresenter, content_item: without_sponsoring_organisations)
+
+    expected = { name: "British Embassy Manila", url: "/world/organisations/british-embassy-manila", crest: "single-identity", brand: "single-identity" }
+    assert_equal expected, presented.organisation_logo
+  end
+
 private
 
   def first_sponsoring_organisation(item)
