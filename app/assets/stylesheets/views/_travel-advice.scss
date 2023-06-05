@@ -1,3 +1,6 @@
+@import "govuk_publishing_components/individual_component_support";
+@import "../helpers/parts";
+
 .travel-advice {
   @include parts;
 

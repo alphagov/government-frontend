@@ -11,40 +11,6 @@ $govuk-include-default-font-face: false;
 
 // Components from govuk_publishing_components gem
 @import "govuk_publishing_components/govuk_frontend_support";
-@import "govuk_publishing_components/components/accordion";
-@import "govuk_publishing_components/components/attachment";
-@import "govuk_publishing_components/components/back-link";
-@import "govuk_publishing_components/components/big-number";
-@import "govuk_publishing_components/components/contents-list";
-@import "govuk_publishing_components/components/contextual-sidebar";
-@import "govuk_publishing_components/components/details";
-@import "govuk_publishing_components/components/devolved-nations";
-@import "govuk_publishing_components/components/document-list";
-@import "govuk_publishing_components/components/error-summary";
-@import "govuk_publishing_components/components/fieldset";
-@import "govuk_publishing_components/components/govspeak";
-@import "govuk_publishing_components/components/govspeak-html-publication";
-@import "govuk_publishing_components/components/image-card";
-@import "govuk_publishing_components/components/inset-text";
-@import "govuk_publishing_components/components/intervention";
-@import "govuk_publishing_components/components/inverse-header";
-@import "govuk_publishing_components/components/lead-paragraph";
-@import "govuk_publishing_components/components/metadata";
-@import "govuk_publishing_components/components/notice";
-@import "govuk_publishing_components/components/organisation-logo";
-@import "govuk_publishing_components/components/phase-banner";
-@import "govuk_publishing_components/components/previous-and-next-navigation";
-@import "govuk_publishing_components/components/print-link";
-@import "govuk_publishing_components/components/radio";
-@import "govuk_publishing_components/components/related-navigation";
-@import "govuk_publishing_components/components/share-links";
-@import "govuk_publishing_components/components/single-page-notification-button";
-@import "govuk_publishing_components/components/step-by-step-nav";
-@import "govuk_publishing_components/components/step-by-step-nav-header";
-@import "govuk_publishing_components/components/step-by-step-nav-related";
-@import "govuk_publishing_components/components/subscription-links";
-@import "govuk_publishing_components/components/success-alert";
-@import "govuk_publishing_components/components/translation-nav";
 
 // government-frontend mixins
 @import "mixins/margins";
@@ -57,17 +23,7 @@ $govuk-include-default-font-face: false;
 @import "helpers/publisher-metadata-with-logo";
 @import "helpers/sticky-element-container";
 
-// Components from this application
-@import "components/*";
-
 // pages specific view imports
-@import "views/html-publication";
-@import "views/travel-advice";
-@import "views/service_manual_guide";
-@import "views/specialist-document";
-@import "views/guide";
-@import "views/manual";
-@import "views/published-dates-button-group";
 @import "views/worldwide-organisation";
 
 .case-study,

@@ -1,3 +1,5 @@
+@import "govuk_publishing_components/individual_component_support";
+
 .app-c-banner {
   @include responsive-bottom-margin;
   @include govuk-font(19);
