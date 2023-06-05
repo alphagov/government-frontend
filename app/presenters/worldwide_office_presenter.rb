@@ -14,10 +14,6 @@ class WorldwideOfficePresenter < ContentItemPresenter
     WorldwideOrganisation::LinkedContactPresenter.new(contact)
   end
 
-  def worldwide_organisation
-    content_item.dig("links", "worldwide_organisation")&.first
-  end
-
   def world_location_links
     return if world_locations.empty?
 
@@ -44,12 +40,16 @@ class WorldwideOfficePresenter < ContentItemPresenter
     {
       name: title,
       url: worldwide_organisation["base_path"],
-      crest: first_sponsoring_organisation.dig("details", "logo", "crest") || DEFAULT_ORGANISATION_LOGO,
-      brand: first_sponsoring_organisation.dig("details", "brand") || DEFAULT_ORGANISATION_LOGO,
+      crest: first_sponsoring_organisation&.dig("details", "logo", "crest") || DEFAULT_ORGANISATION_LOGO,
+      brand: first_sponsoring_organisation&.dig("details", "brand") || DEFAULT_ORGANISATION_LOGO,
     }
   end
 
 private
+
+  def worldwide_organisation
+    content_item.dig("links", "worldwide_organisation")&.first
+  end
 
   def sponsoring_organisations
     worldwide_organisation&.dig("links", "sponsoring_organisations") || []
