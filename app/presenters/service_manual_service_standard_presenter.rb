@@ -20,6 +20,10 @@ class ServiceManualServiceStandardPresenter < ServiceManualPresenter
     "/email-signup?link=#{content_item['base_path']}"
   end
 
+  def show_default_breadcrumbs?
+    false
+  end
+
 private
 
   def points_attributes

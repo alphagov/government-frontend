@@ -74,8 +74,6 @@ private
     ]
 
     if valid_page_ids.include?(page_id)
-      @do_not_show_breadcrumbs = true
-
       render template: "histories/#{page_id}"
     else
       render plain: "Not found", status: :not_found
@@ -89,17 +87,6 @@ private
   def show_service_manual_page
     slimmer_template(service_manual_layout)
     configure_header_search
-
-    has_custom_breadcrumbs = %w[
-      service_manual_guide
-      service_manual_service_standard
-      service_manual_topic
-      service_manual_homepage
-      service_manual_service_toolkit
-    ]
-
-    @do_not_show_breadcrumbs =
-      has_custom_breadcrumbs.include?(@content_item.document_type)
 
     with_locale do
       render content_item_template

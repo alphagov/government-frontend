@@ -18,4 +18,8 @@ class ServiceManualPresenter < ContentItemPresenter
   def show_phase_banner?
     false
   end
+
+  def show_default_breadcrumbs?
+    false
+  end
 end

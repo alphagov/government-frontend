@@ -75,6 +75,10 @@ class ServiceManualTopicPresenter < ServiceManualPresenter
     end
   end
 
+  def show_default_breadcrumbs?
+    false
+  end
+
 private
 
   def accordion_section_links(links)

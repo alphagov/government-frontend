@@ -111,6 +111,10 @@ class ContentItemPresenter
     view_context.request.path =~ /^\/hmrc-internal-manuals\/.*\/updates$/ && content_item["schema_name"] == "hmrc_manual"
   end
 
+  def show_default_breadcrumbs?
+    true
+  end
+
 private
 
   def voting_is_open?
