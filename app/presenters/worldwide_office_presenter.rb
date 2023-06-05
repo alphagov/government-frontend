@@ -45,6 +45,10 @@ class WorldwideOfficePresenter < ContentItemPresenter
     }
   end
 
+  def show_default_breadcrumbs?
+    false
+  end
+
 private
 
   def worldwide_organisation

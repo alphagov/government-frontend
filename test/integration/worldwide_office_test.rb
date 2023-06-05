@@ -13,6 +13,12 @@ class WorldwideOfficeTest < ActionDispatch::IntegrationTest
     assert page.has_selector?("h2", text: "Consular section")
   end
 
+  test "omits breadcrumbs" do
+    setup_and_visit_content_item("worldwide_office")
+
+    assert page.has_no_selector?(".govuk-breadcrumbs")
+  end
+
   test "includes access details and contents" do
     setup_and_visit_content_item("worldwide_office")
 

@@ -6,4 +6,10 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
   end
+
+  test "omits breadcrumbs" do
+    setup_and_visit_content_item("worldwide_organisation")
+
+    assert page.has_no_selector?(".govuk-breadcrumbs")
+  end
 end

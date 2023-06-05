@@ -1,10 +1,6 @@
 .worldwide-organisation-header {
   margin-top: $govuk-gutter-half;
   margin-bottom: $govuk-gutter-half;
-
-  @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(8);
-  }
 }
 
 .js-enabled {
