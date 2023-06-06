@@ -6,4 +6,8 @@ class ServiceManualServiceToolkitPresenter < ServiceManualPresenter
   def collections
     details.fetch("collections", [])
   end
+
+  def show_default_breadcrumbs?
+    false
+  end
 end

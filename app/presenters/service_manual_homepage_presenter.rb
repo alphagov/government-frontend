@@ -11,6 +11,10 @@ class ServiceManualHomepagePresenter < ServiceManualPresenter
     "beta"
   end
 
+  def show_default_breadcrumbs?
+    false
+  end
+
 private
 
   def unsorted_topics
