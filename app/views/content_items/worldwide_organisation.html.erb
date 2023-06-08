@@ -1,15 +1,4 @@
-<header class="worldwide-organisation-header govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds worldwide-organisation-header__logo">
-    <%= render 'govuk_publishing_components/components/organisation_logo', {
-      organisation: {
-        name: @content_item.title,
-        crest: "single-identity",
-      },
-      heading_level: 1,
-      inline: true,
-    } %>
-  </div>
-</header>
+<%= render partial: "content_items/worldwide_organisation/header", locals: { worldwide_organisation: @content_item } %>
 
 <section class="govuk-grid-row" id="about-us">
   <div class="govuk-grid-column-two-thirds">

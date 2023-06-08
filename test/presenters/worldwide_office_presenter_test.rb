@@ -17,39 +17,6 @@ class WorldwideOfficePresenterTest < PresenterTestCase
     assert presented_item.contact.is_a?(WorldwideOrganisation::LinkedContactPresenter)
   end
 
-  test "#world_location_links returns the world locations as a joined sentence of links" do
-    expected_links =
-      "<a class=\"govuk-link\" href=\"/world/philippines/news\">Philippines</a> and "\
-      "<a class=\"govuk-link\" href=\"/world/palau/news\">Palau</a>"
-
-    assert_equal expected_links, presented_item.world_location_links
-  end
-
-  test "#world_location_links returns nil when world locations are empty" do
-    without_world_locations = schema_item
-    without_world_locations["links"]["worldwide_organisation"][0]["links"].delete("world_locations")
-
-    presented = create_presenter(WorldwideOfficePresenter, content_item: without_world_locations)
-
-    assert_nil presented.world_location_links
-  end
-
-  test "#sponsoring_organisation_links returns the sponsoring organisations as sentence of links" do
-    expected_links =
-      "<a class=\"sponsoring-organisation govuk-link\" href=\"/government/organisations/foreign-commonwealth-development-office\">Foreign, Commonwealth &amp; Development Office</a>"
-
-    assert_equal expected_links, presented_item.sponsoring_organisation_links
-  end
-
-  test "#sponsoring_organisation_links returns nil when sponsoring organisations are empty" do
-    without_sponsoring_organisations = schema_item
-    without_sponsoring_organisations["links"]["worldwide_organisation"][0]["links"].delete("sponsoring_organisations")
-
-    presented = create_presenter(WorldwideOfficePresenter, content_item: without_sponsoring_organisations)
-
-    assert_nil presented.sponsoring_organisation_links
-  end
-
   test "#sponsoring_organisation_logo returns the logo details of the item" do
     with_non_default_crest = schema_item
     sponsoring_organisation = first_sponsoring_organisation(with_non_default_crest)

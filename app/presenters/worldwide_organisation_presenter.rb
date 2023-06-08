@@ -1,5 +1,27 @@
 class WorldwideOrganisationPresenter < ContentItemPresenter
   include ContentItem::Body
+  include WorldwideOrganisation::Branding
+  include ActionView::Helpers::UrlHelper
+
+  def sponsoring_organisation_links
+    return if sponsoring_organisations.empty?
+
+    links = sponsoring_organisations.map do |organisation|
+      link_to(organisation["title"], organisation["base_path"], class: "sponsoring-organisation govuk-link")
+    end
+
+    links.to_sentence.html_safe
+  end
+
+  def world_location_links
+    return if world_locations.empty?
+
+    links = world_locations.map do |location|
+      link_to(location["title"], WorldLocationBasePath.for(location), class: "govuk-link")
+    end
+
+    links.to_sentence.html_safe
+  end
 
   def show_default_breadcrumbs?
     false
@@ -66,5 +88,15 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
 
   def secondary_corporate_information
     content_item.dig("details", "secondary_corporate_information_pages").to_s
+  end
+
+  def sponsoring_organisations
+    content_item.dig("links", "sponsoring_organisations") || []
+  end
+
+private
+
+  def world_locations
+    content_item.dig("links", "world_locations") || []
   end
 end
