@@ -67,6 +67,29 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     end
   end
 
+  def main_office
+    return unless (office_item = content_item.dig("links", "main_office")&.first)
+    return unless (office_contact_item = office_item.dig("links", "contact")&.first)
+
+    WorldwideOffice.new(
+      contact: WorldwideOrganisation::LinkedContactPresenter.new(office_contact_item),
+      has_access_and_opening_times?: office_item.dig("details", "access_and_opening_times").present?,
+      public_url: office_item.fetch("web_url"),
+    )
+  end
+
+  WorldwideOffice = Struct.new(:contact, :has_access_and_opening_times?, :public_url, keyword_init: true)
+
+  def home_page_offices
+    return [] unless content_item.dig("links", "home_page_offices")
+
+    content_item.dig("links", "home_page_offices").map { |office|
+      next unless (contact = office.dig("links", "contact")&.first)
+
+      WorldwideOrganisation::LinkedContactPresenter.new(contact)
+    }.compact
+  end
+
   def show_corporate_info_section?
     corporate_information_pages.any? || secondary_corporate_information.present?
   end

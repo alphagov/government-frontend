@@ -93,4 +93,33 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     assert page.has_text?("English")
     assert page.has_link?("Deutsch", href: "/world/uk-embassy-in-country.de")
   end
+
+  test "renders the main office contact with a link to the office page" do
+    setup_and_visit_content_item("worldwide_organisation")
+
+    within("#contact-us") do
+      assert page.has_text?("Contact us")
+      assert page.has_content?("Torre Emperador Castellana")
+      assert page.has_link?("Access and opening times", href: "https://www.integration.publishing.service.gov.uk/world/organisations/british-embassy-madrid/office/british-embassy")
+    end
+  end
+
+  test "renders the home page offices without a link to the office page" do
+    setup_and_visit_content_item("worldwide_organisation")
+
+    within("#contact-us") do
+      assert page.has_content?("Department for Business and Trade Dusseldorf")
+      assert_not page.has_link?("Access and opening times", href: "https://www.integration.publishing.service.gov.uk/world/organisations/department-for-business-and-trade-germany/office/uk-trade-investment-duesseldorf")
+    end
+  end
+
+  test "does not render the contacts section if there is no main office" do
+    setup_and_visit_content_item(
+      "worldwide_organisation",
+      {
+        "links" => { "main_office" => nil },
+      },
+    )
+    assert_not page.has_text?("Contact us")
+  end
 end

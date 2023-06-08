@@ -50,4 +50,22 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
   test "#social_media_links returns the social media accounts" do
     assert_equal schema_item["details"]["social_media_links"], presented_item.social_media_accounts
   end
+
+  test "#main_office returns nil when there is no main office" do
+    without_main_office = schema_item
+    without_main_office["links"].delete("main_office")
+
+    presented = create_presenter(WorldwideOrganisationPresenter, content_item: without_main_office)
+
+    assert_nil presented.main_office
+  end
+
+  test "#home_page_offices returns an empty array when there are no home page offices" do
+    without_home_page_offices = schema_item
+    without_home_page_offices["links"].delete("home_page_offices")
+
+    presented = create_presenter(WorldwideOrganisationPresenter, content_item: without_home_page_offices)
+
+    assert_equal [], presented.home_page_offices
+  end
 end

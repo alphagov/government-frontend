@@ -71,6 +71,38 @@
   </section>
 <% end %>
 
+<% if @content_item.main_office %>
+  <section id="contact-us">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t("worldwide_organisation.headings.contact_us"),
+      border_top: 5,
+      padding: true,
+    } %>
+
+    <hr class="govuk-section-break govuk-section-break--visible">
+
+    <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6 govuk-clearfix">
+      <%= render partial: "content_items/worldwide_organisation/contact", locals: {
+        contact: @content_item.main_office.contact,
+      } %>
+
+      <% if @content_item.main_office.has_access_and_opening_times? %>
+        <%= link_to "Access and opening times", @content_item.main_office.public_url, class: "govuk-link", lang: "en" %>
+      <% end %>
+    </div>
+
+    <% @content_item.home_page_offices.each do |contact| %>
+      <hr class="govuk-section-break govuk-section-break--visible">
+
+      <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6 govuk-clearfix">
+        <%= render partial: "content_items/worldwide_organisation/contact", locals: {
+          contact: contact,
+        } %>
+      </div>
+    <% end %>
+  </section>
+<% end %>
+
 <% if @content_item.show_corporate_info_section? %>
   <section class="corporate-information" id="corporate-info">
     <%= render "govuk_publishing_components/components/heading", {
