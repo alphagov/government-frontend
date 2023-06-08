@@ -5,7 +5,11 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
     "worldwide_organisation"
   end
 
-  test "presents the title" do
+  test "#title returns the title" do
     assert_equal schema_item["title"], presented_item.title
+  end
+
+  test "#social_media_links returns the social media accounts" do
+    assert_equal schema_item["details"]["social_media_links"], presented_item.social_media_accounts
   end
 end
