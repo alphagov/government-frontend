@@ -1,14 +1,17 @@
 require "test_helper"
 
 class TravelAdviceTest < ActionDispatch::IntegrationTest
-  test "random but valid items do not error" do
-    setup_and_visit_random_content_item
+  test "can render all valid examples" do
+    GovukSchemas::Example.find_all("travel_advice").each do |content_item|
+      setup_and_visit_content_item_by_example(content_item)
+
+      assert page.has_css?("title", visible: false, text: content_item["title"])
+    end
   end
 
   test "travel advice header and navigation" do
     setup_and_visit_content_item("full-country")
 
-    assert page.has_css?("title", visible: false, text: @content_item["title"])
     assert_has_component_title(@content_item["details"]["country"]["name"])
 
     assert page.has_css?("a[href=\"#{@content_item['details']['email_signup_link']}\"]", text: "Get email alerts")
