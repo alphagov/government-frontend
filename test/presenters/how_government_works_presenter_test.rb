@@ -12,7 +12,7 @@ class HowGovernmentWorksPresenterTest < PresenterTestCase
 
   test "presents the current prime minister" do
     assert_equal(
-      schema_item("reshuffle-mode-off").dig("links", "current_prime_minister", 0, "title"),
+      schema_item("reshuffle-mode-off").dig("links", "current_prime_minister", 0),
       presented_item("reshuffle-mode-off").prime_minister,
     )
   end
