@@ -8,7 +8,7 @@
     schema: :article,
     canonical_url: @content_item.canonical_url,
     title: @content_item.page_title,
-    body: @content_item.current_part_body
+    body: @content_item.body_for_metadata
   ) %>
 <% end %>
 
@@ -27,33 +27,35 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="part-title">
-      <%= @content_item.current_part_title %>
-    </h1>
+  <% unless @content_item.parts.empty? %>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="part-title">
+        <%= @content_item.current_part_title %>
+      </h1>
 
-    <% if @content_item.no_part_slug_provided? %>
-      <%= render 'shared/travel_advice_first_part', content_item: @content_item %>
-    <% end %>
-
-    <div data-module="gem-track-click"
-      data-track-category="SummaryTravelAdviceWarning"
-      data-track-action="callOutBoxClicked"
-      data-track-links-only
-      data-limit-to-element-class="call-to-action">
-      <%= render 'govuk_publishing_components/components/govspeak', {
-        direction: page_text_direction,
-      } do %>
-        <%= raw(@content_item.current_part_body) %>
+      <% if @content_item.no_part_slug_provided? %>
+        <%= render 'shared/travel_advice_first_part', content_item: @content_item %>
       <% end %>
-    </div>
 
-    <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
+      <div data-module="gem-track-click"
+        data-track-category="SummaryTravelAdviceWarning"
+        data-track-action="callOutBoxClicked"
+        data-track-links-only
+        data-limit-to-element-class="call-to-action">
+        <%= render 'govuk_publishing_components/components/govspeak', {
+          direction: page_text_direction,
+        } do %>
+          <%= raw(@content_item.current_part_body) %>
+        <% end %>
+      </div>
 
-    <div class="responsive-bottom-margin">
-      <a href="<%= @content_item.print_link %>" class="govuk-link govuk-link--no-visited-state govuk-body"><%= t("multi_page.print_entire_guide") %></a>
+      <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
+
+      <div class="responsive-bottom-margin">
+        <a href="<%= @content_item.print_link %>" class="govuk-link govuk-link--no-visited-state govuk-body"><%= t("multi_page.print_entire_guide") %></a>
+      </div>
     </div>
-  </div>
+  <% end %>
   <%= render 'shared/sidebar_navigation' %>
 </div>
 
