@@ -31,6 +31,7 @@ Not all schemas that this app can handle are rendered by it in production.
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
 | Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) | Migrated |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) | Migrated |
+| Worldwide corporate information page | | Rendered by Whitehall |
 | Worldwide office | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-paris/office/british-embassy) | Migrated |
 | Worldwide organisation | | Rendered by Whitehall |
 
