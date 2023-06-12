@@ -27,6 +27,10 @@ class TravelAdvicePresenter < ContentItemPresenter
     }
   end
 
+  def body_for_metadata
+    current_part || ""
+  end
+
   def title_and_context
     {
       context: I18n.t("travel_advice.context"),

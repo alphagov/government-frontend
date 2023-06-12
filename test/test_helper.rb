@@ -164,15 +164,18 @@ class ActionDispatch::IntegrationTest
   def setup_and_visit_content_item(name, overrides = {}, parameter_string = "")
     @content_item = get_content_example(name).tap do |item|
       content_item = item.deep_merge(overrides)
-      stub_content_store_has_item(content_item["base_path"], content_item.to_json)
-      visit_with_cachebust("#{content_item['base_path']}#{parameter_string}")
+      setup_and_visit_content_item_by_example(content_item, parameter_string)
     end
   end
 
   def setup_and_visit_content_item_with_params(name, parameter_string = "")
     @content_item = get_content_example(name)
-    stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
-    visit_with_cachebust("#{@content_item['base_path']}#{parameter_string}")
+    setup_and_visit_content_item_by_example(@content_item, parameter_string)
+  end
+
+  def setup_and_visit_content_item_by_example(content_item, parameter_string = "")
+    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
+    visit_with_cachebust("#{content_item['base_path']}#{parameter_string}")
   end
 
   def setup_and_visit_html_publication(name, parameter_string = "")
