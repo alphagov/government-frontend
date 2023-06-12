@@ -16,8 +16,13 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   def world_location_links
     return if world_locations.empty?
 
+    world_location_name_translations = content_item.dig("details", "world_location_names")
+
     links = world_locations.map do |location|
-      link_to(location["title"], WorldLocationBasePath.for(location), class: "govuk-link")
+      world_location_translation = world_location_name_translations.find do |translation|
+        translation["content_id"] == location["content_id"]
+      end
+      link_to(world_location_translation["name"], WorldLocationBasePath.for(location), class: "govuk-link")
     end
 
     links.to_sentence.html_safe
