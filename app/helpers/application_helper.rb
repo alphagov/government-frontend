@@ -8,7 +8,7 @@ module ApplicationHelper
     options[:fallback] = nil
     translation = I18n.t(key, **options)
 
-    if translation.nil? || translation.include?("translation missing")
+    if translation.nil? || translation.downcase.include?("translation missing")
       I18n.default_locale
     end
   end
