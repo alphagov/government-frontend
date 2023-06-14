@@ -19,9 +19,16 @@
     <aside class="part-navigation-container" role="complementary">
       <%= render "govuk_publishing_components/components/contents_list", aria: { label: t("travel_advice.pages") }, contents: @content_item.part_link_elements, underline_links: true %>
 
-      <%= render 'govuk_publishing_components/components/subscription_links',
-        email_signup_link: @content_item.email_signup_link,
-        email_signup_link_text: "Get email alerts" %>
+      <div 
+        data-module="ga4-link-tracker"
+        data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+        data-ga4-track-links-only
+      >
+        <%= render 'govuk_publishing_components/components/subscription_links',
+          email_signup_link: @content_item.email_signup_link,
+          email_signup_link_text: "Get email alerts"
+        %>
+      </div>
     </aside>
   </div>
 </div>
