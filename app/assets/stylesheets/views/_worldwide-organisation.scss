@@ -58,3 +58,20 @@
     }
   }
 }
+
+.corporate-information__sub-navigation {
+  li {
+    @media (min-width: 1px) { // target modern browsers
+      list-style: none;
+      padding-left: $govuk-gutter-half;
+
+      &:before {
+        content: "-";
+        position: relative;
+        float: left;
+        width: $govuk-gutter-half;
+        margin-left: $govuk-gutter-half * -1;
+      }
+    }
+  }
+}

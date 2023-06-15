@@ -1,18 +1,130 @@
-<header class="worldwide-organisation-header govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds worldwide-organisation-header__logo">
-    <%= render 'govuk_publishing_components/components/organisation_logo', {
-      organisation: {
-        name: @content_item.title,
-        crest: "single-identity",
-      },
-      heading_level: 1,
-      inline: true,
-    } %>
-  </div>
-</header>
+<%= render partial: "content_items/worldwide_organisation/header", locals: { worldwide_organisation: @content_item } %>
 
 <section class="govuk-grid-row" id="about-us">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
+
+    <div class="body">
+      <%= render "govuk_publishing_components/components/govspeak", {} do
+        raw(@content_item.body)
+      end %>
+    </div>
   </div>
+
+  <% if @content_item.social_media_accounts.any? %>
+    <aside class="social-media-links govuk-grid-column-one-third">
+      <div class="content">
+        <h2 class="govuk-heading-s"><%= t("worldwide_organisation.headings.follow_us") %></h2>
+        <%= render "govuk_publishing_components/components/share_links", {
+          track_as_follow: true,
+          links: @content_item.social_media_accounts.map do |account|
+            {
+              href: account["href"],
+              text: account["title"],
+              icon: account["service_type"],
+            }
+          end
+        } %>
+      </div>
+    </aside>
+  <% end %>
 </section>
+
+<% if @content_item.show_our_people_section? %>
+  <section class="govuk-grid-row" id="people">
+    <div class="govuk-grid-column-full">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: t("worldwide_organisation.headings.our_people"),
+        border_top: 5,
+        padding: true,
+      } %>
+    </div>
+
+    <% if @content_item.person_in_primary_role %>
+      <div class="govuk-grid-column-one-quarter">
+        <%= render "govuk_publishing_components/components/image_card", {
+          href: @content_item.person_in_primary_role[:href],
+          image_src: @content_item.person_in_primary_role[:image_url],
+          image_alt: @content_item.person_in_primary_role[:image_alt],
+          heading_text: @content_item.person_in_primary_role[:name],
+          heading_level: 3,
+          description: @content_item.person_in_primary_role[:description]
+        } %>
+      </div>
+    <% end %>
+
+    <div class="govuk-grid-column-three-quarters">
+      <ul class="govuk-list govuk-grid-row">
+        <% @content_item.people_in_non_primary_roles.each.with_index do |person, i| %>
+          <% extra_class = (i + 1) % 4 == 0 ? " clear-column" : "" %>
+          <li class="govuk-grid-column-one-third<%= extra_class %>">
+            <%= render "govuk_publishing_components/components/image_card", {
+              href: person[:href],
+              heading_text: person[:name],
+              heading_level: 3,
+              description: person[:description]
+            } %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </section>
+<% end %>
+
+<% if @content_item.main_office %>
+  <section id="contact-us">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t("worldwide_organisation.headings.contact_us"),
+      border_top: 5,
+      padding: true,
+    } %>
+
+    <hr class="govuk-section-break govuk-section-break--visible">
+
+    <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6 govuk-clearfix">
+      <%= render partial: "content_items/worldwide_organisation/contact", locals: {
+        contact: @content_item.main_office.contact,
+      } %>
+
+      <% if @content_item.main_office.has_access_and_opening_times? %>
+        <%= link_to t("contact.access_and_opening_times"), @content_item.main_office.public_url, class: "govuk-link", lang: @content_item.locale %>
+      <% end %>
+    </div>
+
+    <% @content_item.home_page_offices.each do |contact| %>
+      <hr class="govuk-section-break govuk-section-break--visible">
+
+      <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6 govuk-clearfix">
+        <%= render partial: "content_items/worldwide_organisation/contact", locals: {
+          contact: contact,
+        } %>
+      </div>
+    <% end %>
+  </section>
+<% end %>
+
+<% if @content_item.show_corporate_info_section? %>
+  <section class="corporate-information" id="corporate-info">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t('worldwide_organisation.headings.corporate_information'),
+      border_top: 5,
+      padding: true
+    } %>
+
+    <% if @content_item.corporate_information_pages.any? %>
+      <nav class="group corporate-information__sub-navigation" role="navigation">
+        <ul class="govuk-list">
+          <% @content_item.corporate_information_pages.each do |cip| %>
+            <li lang="<%= @content_item.locale %>"><%= link_to cip[:text], cip[:url], class: "govuk-link" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    <% end %>
+
+    <% if @content_item.secondary_corporate_information.present? %>
+      <p class="govuk-body">
+        <%= @content_item.secondary_corporate_information.html_safe %>
+      </p>
+    <% end %>
+  </section>
+<% end %>
