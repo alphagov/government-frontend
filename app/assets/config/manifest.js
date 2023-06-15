@@ -2,15 +2,6 @@
 //= link application.js
 //= link webchat.js
 //= link application.css
-//= link components/_back-to-top.css
-//= link components/_banner.css
-//= link components/_contents-list-with-body.css
-//= link components/_download-link.css
-//= link components/_error-message.css
-//= link components/_figure.css
-//= link components/_important-metadata.css
-//= link components/_published-dates.css
-//= link components/_publisher-metadata.css
 //= link views/_guide.css
 //= link views/_html-publication.css
 //= link views/_manual.css

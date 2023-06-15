@@ -1,6 +1,3 @@
-@import "govuk_publishing_components/individual_component_support";
-@import "../mixins/margins";
-
 .app-c-publisher-metadata {
   @include responsive-bottom-margin;
   direction: ltr;
