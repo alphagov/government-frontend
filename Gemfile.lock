@@ -135,7 +135,7 @@ GEM
       rinku (~> 2.0)
       sanitize (~> 6)
     govuk_ab_testing (2.4.3)
-    govuk_app_config (8.0.1)
+    govuk_app_config (8.0.2)
       logstasher (~> 2.1)
       plek (>= 4, < 6)
       prometheus_exporter (~> 2.0)
