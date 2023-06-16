@@ -60,10 +60,16 @@
           <%= @content_item.current_part_title %>
         </h1>
       <% end %>
-
+      <%
+        disable_youtube_expansions = true
+        # This is for the /child-benefit/how-to-claim page
+        if @content_item.content_id == "aed2cee3-7ca8-4f00-ab17-9193fff516ae"
+          disable_youtube_expansions = false
+        end
+      %>
       <%= render "govuk_publishing_components/components/govspeak", {
         direction: page_text_direction,
-        disable_youtube_expansions: true
+        disable_youtube_expansions: disable_youtube_expansions
       } do %>
         <%= raw(@content_item.current_part_body) %>
       <% end %>
