@@ -28,15 +28,7 @@
         <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item, ga4_tracking: true %>
       <% end %>
     <% end %>
-
-    <% if @content_item.show_research_banner? %>
-      <%= render "govuk_publishing_components/components/intervention", {
-        suggestion_text: @content_item.survey_details["text"],
-        suggestion_link_text: "Take part in user research",
-        suggestion_link_url: @content_item.survey_details["url"],
-        new_tab: true,
-      } %>
-    <% end %>
+    
     <%= yield :header %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
