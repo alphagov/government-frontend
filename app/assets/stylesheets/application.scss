@@ -36,6 +36,10 @@ $govuk-include-default-font-face: false;
   .direction-rtl & {
     direction: rtl;
     text-align: start;
+
+    table th {
+      text-align: start;
+    }
   }
 }
 
