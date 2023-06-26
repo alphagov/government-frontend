@@ -6,7 +6,6 @@
 
     @include govuk-media-query($from: tablet) {
       margin-top: 0;
-      margin-bottom: 0;
       padding-bottom: govuk-spacing(3);
     }
 
