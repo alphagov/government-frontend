@@ -27,5 +27,13 @@ module ContentItem
         see_updates_link: true,
       }
     end
+
+    def publisher_metadata_nodates
+      {
+        from:,
+        see_updates_link: true,
+      }
+    end
+
   end
 end
