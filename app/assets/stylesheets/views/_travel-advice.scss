@@ -4,6 +4,10 @@
 .travel-advice {
   @include parts;
 
+  .part-navigation-container {
+    margin-bottom: 0;
+  }
+
   .part-navigation {
     margin-bottom: govuk-spacing(8);
   }
