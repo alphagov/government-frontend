@@ -60,6 +60,10 @@
 }
 
 .corporate-information__sub-navigation {
+  ul {
+    padding-inline-start: 0;
+  }
+
   li {
     @media (min-width: 1px) { // target modern browsers
       list-style: none;

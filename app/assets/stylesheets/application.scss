@@ -32,7 +32,8 @@ $govuk-include-default-font-face: false;
 .html-publication,
 .news-article,
 .publication,
-.speech {
+.speech,
+.worldwide-organisation {
   .direction-rtl & {
     direction: rtl;
     text-align: start;
