@@ -68,6 +68,7 @@
     @media (min-width: 1px) { // target modern browsers
       list-style: none;
       padding-left: $govuk-gutter-half;
+      @include govuk-responsive-padding(1, "top");
 
       &:before {
         content: "-";
