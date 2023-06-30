@@ -13,6 +13,13 @@ class WorldwideCorporateInformationPageTest < ActionDispatch::IntegrationTest
     assert page.has_no_selector?(".govuk-breadcrumbs")
   end
 
+  test "renders rtl text direction when the locale is a rtl language" do
+    I18n.stubs(:locale).returns(:ar)
+    setup_and_visit_content_item("worldwide_corporate_information_page")
+
+    assert page.has_css?("#wrapper.direction-rtl"), "has .direction-rtl class on #wrapper element"
+  end
+
   test "includes the body and contents" do
     setup_and_visit_content_item("worldwide_corporate_information_page")
 
