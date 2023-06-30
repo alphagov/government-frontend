@@ -85,10 +85,26 @@ class WorldwideOfficeTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("worldwide_office")
 
     within find(".worldwide-organisation-header__metadata", match: :first) do
+      assert page.has_content? "Location:"
       assert page.has_link? "Philippines", href: "/world/philippines/news"
       assert page.has_link? "Palau", href: "/world/palau/news"
 
+      assert page.has_content? "Part of:"
       assert page.has_link? "Foreign, Commonwealth & Development Office", href: "/government/organisations/foreign-commonwealth-development-office"
+    end
+  end
+
+  test "omits the world locations and sponsoring organisations when they are absent" do
+    content_item = get_content_example("worldwide_office")
+    content_item["links"]["worldwide_organisation"][0]["links"]["sponsoring_organisations"] = nil
+    content_item["links"]["worldwide_organisation"][0]["links"]["world_locations"] = nil
+
+    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
+    visit_with_cachebust(content_item["base_path"])
+
+    within find(".worldwide-organisation-header__metadata", match: :first) do
+      assert_not page.has_content? "Location:"
+      assert_not page.has_content? "Part of:"
     end
   end
 end
