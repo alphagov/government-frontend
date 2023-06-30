@@ -1,5 +1,31 @@
 ---
 uk:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Відвідайте:'
   components:
@@ -86,11 +112,26 @@ uk:
         many:
         one: Схема підтримки фінансування бізнесу
         other: Схеми підтримки фінансування бізнесу
+      call_for_evidence:
+        few:
+        many:
+        one:
+        other:
+      call_for_evidence_outcome:
+        few:
+        many:
+        one:
+        other:
       case_study:
         few:
         many:
         one: Аналіз ситуації
         other: Аналізи ситуації
+      closed_call_for_evidence:
+        few:
+        many:
+        one:
+        other:
       closed_consultation:
         few:
         many:
@@ -286,6 +327,11 @@ uk:
         many:
         one: Оголошення даних офіційної статистики
         other: Оголошення даних офіційної статистики
+      open_call_for_evidence:
+        few:
+        many:
+        one:
+        other:
       open_consultation:
         few:
         many:

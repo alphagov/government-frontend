@@ -1,5 +1,31 @@
 ---
 fi:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Vierailla:'
   components:
@@ -76,9 +102,18 @@ fi:
       business_finance_support_scheme:
         one: Yritysrahoituksen tukijärjestelmä
         other: Yritysrahoituksen tukijärjestelmät
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Tapaustutkimus
         other: Tapaustutkimuksia
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Suljettu kuuleminen
         other: Suljetut neuvottelut
@@ -196,6 +231,9 @@ fi:
       official_statistics_announcement:
         one: Virallinen tilastoilmoitus
         other: Viralliset tilastotiedot
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Avoin kuuleminen
         other: Avoimet kuulemiset

@@ -1,5 +1,31 @@
 ---
 lt:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Apsilankykite:'
   components:
@@ -81,10 +107,22 @@ lt:
         few:
         one: Verslo finansų paramos planas
         other: Verslo finansų paramos planas
+      call_for_evidence:
+        few:
+        one:
+        other:
+      call_for_evidence_outcome:
+        few:
+        one:
+        other:
       case_study:
         few:
         one: Atvejo analizė
         other: Atvejų analizės
+      closed_call_for_evidence:
+        few:
+        one:
+        other:
       closed_consultation:
         few:
         one: Pasibaigusi konsultacija
@@ -241,6 +279,10 @@ lt:
         few:
         one: Oficialios statistikos pranešimas
         other: Oficialios statistikos pranešimai
+      open_call_for_evidence:
+        few:
+        one:
+        other:
       open_consultation:
         few:
         one: Atvira konsultacija

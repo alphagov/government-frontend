@@ -1,5 +1,31 @@
 ---
 lv:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Apmeklējiet:'
   components:
@@ -76,9 +102,18 @@ lv:
       business_finance_support_scheme:
         one: Biznesa finanšu atbalsta shēma
         other: Biznesa finanšu atbalsta shēmas
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Piemērs
         other: Piemēri
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Slēgta tipa konsultācija
         other: Slēgta tipa konsultācijas
@@ -196,6 +231,9 @@ lv:
       official_statistics_announcement:
         one: Paziņojums par oficiālo statistiku
         other: Paziņojumi par oficiālo statistiku
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Atklāta konsultācija
         other: Atklātas konsultācijas

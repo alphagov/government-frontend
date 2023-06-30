@@ -1,5 +1,31 @@
 ---
 gd:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Cuairt:'
   components:
@@ -86,10 +112,25 @@ gd:
         one: Scéim tacaíochta maoinithe gnó
         other: Meicníochtaí tacaíochta do mhaoiniú gnó
         two:
+      call_for_evidence:
+        few:
+        one:
+        other:
+        two:
+      call_for_evidence_outcome:
+        few:
+        one:
+        other:
+        two:
       case_study:
         few:
         one: Cás-staidéir
         other: Tuarascálacha staidéir
+        two:
+      closed_call_for_evidence:
+        few:
+        one:
+        other:
         two:
       closed_consultation:
         few:
@@ -285,6 +326,11 @@ gd:
         few:
         one: Fógra staitisticí oifigiúla
         other: Fógraí staitisticí oifigiúla
+        two:
+      open_call_for_evidence:
+        few:
+        one:
+        other:
         two:
       open_consultation:
         few:

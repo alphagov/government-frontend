@@ -1,5 +1,31 @@
 ---
 hi:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'इस पर जाएं:'
   components:
@@ -76,9 +102,18 @@ hi:
       business_finance_support_scheme:
         one: व्यावसायिक वित्त सहायता योजना
         other: व्यावसायिक वित्त सहायता योजनाएं
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: विषय अध्ययन
         other: विषय अध्ययन
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: बंद कमरे में परामर्श
         other: बंद कमरे में परामर्श
@@ -196,6 +231,9 @@ hi:
       official_statistics_announcement:
         one: आधिकारिक सांख्यिकी की घोषणा
         other: आधिकारिक सांख्यिकी की घोषणाएं
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: खुला परामर्श
         other: खुले परामर्श

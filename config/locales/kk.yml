@@ -1,5 +1,31 @@
 ---
 kk:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Мұнда өтіңіз:'
   components:
@@ -76,9 +102,18 @@ kk:
       business_finance_support_scheme:
         one: Кәсіпкерлікті қаржыландыру схемасы
         other: Кәсіпкерлікті қаржыландыру схемалары
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Тақырыптық зерттеу
         other: Тақырыптық зерттеулер
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Жабық кеңес
         other: Жабық кеңестер
@@ -196,6 +231,9 @@ kk:
       official_statistics_announcement:
         one: Ресми статистика хабарландыруы
         other: Ресми статистика хабарландырулары
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Ашық кеңес
         other: Ашық кеңестер

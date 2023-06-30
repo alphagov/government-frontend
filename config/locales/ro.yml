@@ -1,5 +1,31 @@
 ---
 ro:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Accesați:'
   components:
@@ -81,10 +107,22 @@ ro:
         few:
         one: Schema de sprijin pentru finanțarea întreprinderilor
         other: Scheme de sprijin pentru finanțarea întreprinderilor
+      call_for_evidence:
+        few:
+        one:
+        other:
+      call_for_evidence_outcome:
+        few:
+        one:
+        other:
       case_study:
         few:
         one: Studiu de caz
         other: Studii de caz
+      closed_call_for_evidence:
+        few:
+        one:
+        other:
       closed_consultation:
         few:
         one: Consultație închisă
@@ -241,6 +279,10 @@ ro:
         few:
         one: Anunț oficial de statistică
         other: Anunțuri oficiale de statistică
+      open_call_for_evidence:
+        few:
+        one:
+        other:
       open_consultation:
         few:
         one: Consultație deschisă
