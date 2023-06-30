@@ -20,8 +20,11 @@
             <dt><%= t('worldwide_organisation.location') %>:</dt>
             <dd data-module="hide-other-links"><%= worldwide_organisation.world_location_links %></dd>
           <% end %>
-          <dt><%= t('worldwide_organisation.part_of') %>:</dt>
-          <dd lang="en"><%= worldwide_organisation&.sponsoring_organisation_links %></dd>
+
+          <% if worldwide_organisation&.sponsoring_organisation_links.present? %>
+            <dt><%= t('worldwide_organisation.part_of') %>:</dt>
+            <dd lang="en"><%= worldwide_organisation&.sponsoring_organisation_links %></dd>
+          <% end %>
         </dl>
       </div>
     </div>
