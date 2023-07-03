@@ -1493,7 +1493,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "government-frontend@workspace:."
   dependencies:
-    jasmine-browser-runner: ^2.0.0
+    jasmine-browser-runner: ^2.1.0
     jasmine-core: ^5.0.1
     standardx: ^7.0.0
     stylelint: ^15.9.0
@@ -1845,9 +1845,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-browser-runner@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "jasmine-browser-runner@npm:2.0.0"
+"jasmine-browser-runner@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "jasmine-browser-runner@npm:2.1.0"
   dependencies:
     ejs: ^3.1.6
     express: ^4.16.4
@@ -1857,7 +1857,7 @@ __metadata:
     jasmine-core: ^5.0.0
   bin:
     jasmine-browser-runner: bin/jasmine-browser-runner
-  checksum: 53228b479fb078ea001860e42d03dae4abac4e740c471a7ab94474f05daa477431a89e2ffbb01b7ebb602b0d41ec66851e54ad2d6f700bfa867d9ea588edc1d8
+  checksum: 88170b0908f204af79913094614942800d58870d52b39f68d524688b3ed45ae214f7696d16f406f363b8376a73b727a28ba002bc88b6bdc4dee473e3402d79c7
   languageName: node
   linkType: hard
 
