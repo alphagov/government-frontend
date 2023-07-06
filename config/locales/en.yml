@@ -1,5 +1,28 @@
 ---
 en:
+  call_for_evidence:
+    and: and
+    another_website_html: This call for evidence %{closed} held on <a href="%{url}">another website</a>
+    at: at
+    closes: It closes at
+    closes_at: This call for evidence closes at
+    complete_a: Complete a
+    description: Call for evidence description
+    detail_of_outcome: Detail of outcome
+    documents: Documents
+    download_outcome: Download the full outcome
+    either: either
+    email_to: 'Email to:'
+    is_being: is being
+    not_open_yet: This call for evidence isn't open yet
+    'on': 'on'
+    opens: This call for evidence opens
+    original_call_for_evidence: Original call for evidence
+    ran_from: This call for evidence ran from
+    respond_online: Respond online
+    was: was
+    ways_to_respond: Ways to respond
+    write_to: 'Write to:'
   common:
     visit: 'Visit:'
   components:
@@ -76,9 +99,18 @@ en:
       business_finance_support_scheme:
         one: Business finance support scheme
         other: Business finance support schemes
+      call_for_evidence:
+        one: Call for evidence
+        other: Calls for evidence
+      call_for_evidence_outcome:
+        one: Call for evidence outcome
+        other: Call for evidence outcomes
       case_study:
         one: Case study
         other: Case studies
+      closed_call_for_evidence:
+        one: Closed call for evidence
+        other: Closed calls for evidence
       closed_consultation:
         one: Closed consultation
         other: Closed consultations
@@ -196,6 +228,9 @@ en:
       official_statistics_announcement:
         one: Official statistics announcement
         other: Official statistics announcements
+      open_call_for_evidence:
+        one: Open call for evidence
+        other: Open calls for evidence
       open_consultation:
         one: Open consultation
         other: Open consultations
