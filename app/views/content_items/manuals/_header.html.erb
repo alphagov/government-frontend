@@ -24,6 +24,7 @@
 
 
     <%
+      # The metadata component on this page receives ga4_tracking: true as it has a 'See all updates' link.
       metadata_with_ga4_tracking = { ga4_tracking: true }
       metadata_with_ga4_tracking.merge!(content_item.manual_metadata) # @content_item is frozen so we make a new hash
     %>
