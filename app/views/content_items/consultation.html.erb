@@ -41,16 +41,16 @@
 
     <% elsif @content_item.pending_final_outcome? %>
       <% content_item_final_outcome = capture do %>
-        <%= raw(t("consultation.visit_soon")) %>
+        <%= t("consultation.visit_soon") %>
       <% end %>
       <%= render 'govuk_publishing_components/components/notice',
-        title: 'We are analysing your feedback',
+        title: t("consultation.analysing_feedback"),
         description_text: content_item_final_outcome,
         margin_bottom:(0 unless @content_item.add_margin?)
       %>
 
     <% elsif @content_item.final_outcome? %>
-      <%= render 'govuk_publishing_components/components/notice', title: 'This consultation has concluded' %>
+      <%= render 'govuk_publishing_components/components/notice', title: t("consultation.concluded") %>
 
       <%= render "attachments",
           title: t("consultation.download_outcome"),
