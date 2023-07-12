@@ -63,24 +63,27 @@ class ConsultationPresenterTest
     end
 
     test "presents consultation documents" do
-      presented = presented_item("closed_consultation")
       schema = schema_item("closed_consultation")
+      schema["details"]["documents"] = %W[<section>\n<p>a</p>\n</section> <section>\n<p>b</p>\n</section> <section>\n<p>c</p>\n</section>]
+      presented = presented_item("closed_consultation", schema)
 
-      assert_equal schema["details"]["documents"].join(""), presented.documents
+      assert_equal "<section>\n<p>a</p>\n</section><section>\n<p>b</p>\n</section><section>\n<p>c</p>\n</section>", presented.documents
     end
 
     test "presents final outcome documents" do
-      presented = presented_item("consultation_outcome")
       schema = schema_item("consultation_outcome")
+      schema["details"]["final_outcome_documents"] = %W[<section>\n<p>a</p>\n</section> <section>\n<p>b</p>\n</section> <section>\n<p>c</p>\n</section>]
+      presented = presented_item("consultation_outcome", schema)
 
-      assert_equal schema["details"]["final_outcome_documents"].join(""), presented.final_outcome_documents
+      assert_equal "<section>\n<p>a</p>\n</section><section>\n<p>b</p>\n</section><section>\n<p>c</p>\n</section>", presented.final_outcome_documents
     end
 
     test "presents public feedback documents" do
-      presented = presented_item("consultation_outcome_with_feedback")
       schema = schema_item("consultation_outcome_with_feedback")
+      schema["details"]["public_feedback_documents"] = %W[<section>\n<p>a</p>\n</section> <section>\n<p>b</p>\n</section> <section>\n<p>c</p>\n</section>]
+      presented = presented_item("consultation_outcome_with_feedback", schema)
 
-      assert_equal schema["details"]["public_feedback_documents"].join(""), presented.public_feedback_documents
+      assert_equal "<section>\n<p>a</p>\n</section><section>\n<p>b</p>\n</section><section>\n<p>c</p>\n</section>", presented.public_feedback_documents
     end
 
     test "presents URL for consultations held on another website" do
