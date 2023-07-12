@@ -53,19 +53,19 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def final_outcome_documents
-    content_item["details"]["final_outcome_documents"].to_a.join("")
+    content_item["details"]["final_outcome_documents"]&.join("")
   end
 
   def final_outcome_attachments
-    content_item["details"]["final_outcome_attachments"].to_a
+    content_item["details"]["final_outcome_attachments"]
   end
 
   def public_feedback_documents
-    content_item["details"]["public_feedback_documents"].to_a.join("")
+    content_item["details"]["public_feedback_documents"]&.join("")
   end
 
   def public_feedback_attachments
-    content_item["details"]["public_feedback_attachments"].to_a
+    content_item["details"]["public_feedback_attachments"] || []
   end
 
   def public_feedback_detail
@@ -73,7 +73,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def held_on_another_website?
-    content_item["details"].include?("held_on_another_website_url")
+    held_on_another_website_url.present?
   end
 
   def held_on_another_website_url
@@ -81,11 +81,11 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def documents
-    content_item["details"]["documents"].to_a.join("")
+    content_item["details"]["documents"]&.join("")
   end
 
   def featured_attachments
-    content_item["details"]["featured_attachments"].to_a
+    content_item["details"]["featured_attachments"]
   end
 
   def ways_to_respond?
