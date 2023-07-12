@@ -19,12 +19,14 @@ ko:
     share_links:
       share_this_page: 이 페이지 공유하기
   consultation:
+    analysing_feedback:
     and: 그리고
     another_website_html: 이 상담 %{closed} 은 <a href="%{url}">다른 웹사이트</a>에서 진행되었습니다
     at: 때
     closes: 종결 시점
     closes_at: 이 상담은 다음 시점에 종결됩니다
     complete_a: 완료 시점
+    concluded:
     description: 상담 설명
     detail_of_feedback_received: 받은 피드백의 세부 내용
     detail_of_outcome: 결과의 세부 내용
@@ -37,6 +39,7 @@ ko:
     not_open_yet: 이 상담이 아직 공개되지 않았습니다
     'on':
     opens: 이 상담이 공개되었습니다
+    or:
     original_consultation: 기존 상담
     ran_from: 상담 실행 장소
     respond_online: 온라인으로 응답하기

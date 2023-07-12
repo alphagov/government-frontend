@@ -19,12 +19,14 @@ et:
     share_links:
       share_this_page: Jaga seda lehte
   consultation:
+    analysing_feedback:
     and: ja
     another_website_html: See konsultatsioon %{closed} toimus <a href="%{url}">teisel veebisaidil</a>
     at: kl
     closes: See lõpeb kl
     closes_at: See konsultatsioon lõpeb kell
     complete_a: Täitke
+    concluded:
     description: Konsultatsiooni kirjeldus
     detail_of_feedback_received: Tagasiside üksikasjad saadud
     detail_of_outcome: Tulemuse üksikasjad
@@ -37,6 +39,7 @@ et:
     not_open_yet: See konsultatsioon pole veel alanud
     'on':
     opens: See konsultatsioon algab
+    or:
     original_consultation: Algne konsultatsioon
     ran_from: See konsultatsioon kestis
     respond_online: Vastake võrgus

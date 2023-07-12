@@ -19,12 +19,14 @@ zh-tw:
     share_links:
       share_this_page: 分享此頁面
   consultation:
+    analysing_feedback:
     and: 以及
     another_website_html: 此諮詢 %{closed} 在 <a href="%{url}">另一個網站進</a>
     at: 在
     closes: 截止於
     closes_at: 此諮詢截止於
     complete_a: 完成
+    concluded:
     description: 諮詢說明
     detail_of_feedback_received: 收到的反饋詳情
     detail_of_outcome: 結果詳情
@@ -37,6 +39,7 @@ zh-tw:
     not_open_yet: 諮詢尚未開始
     'on':
     opens: 諮詢開始
+    or:
     original_consultation: 最初諮詢
     ran_from: 此諮詢從
     respond_online: 線上回覆

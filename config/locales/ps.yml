@@ -19,12 +19,14 @@ ps:
     share_links:
       share_this_page: دا پاه شریکه کړئ
   consultation:
+    analysing_feedback:
     and: او
     another_website_html: دا مشوره <a href="%{url}">په بله ویبپا ڼه  کې %{closed}ترسره شوه</a>
     at: په
     closes: په کې بندیږي
     closes_at: دا مشوره په پای کې پای ته رسیږي
     complete_a: بشپړ کړئ
+    concluded:
     description: د مشورې توضیحات
     detail_of_feedback_received: د ترلاسه شوي نظریاتو تفصیل
     detail_of_outcome: د پایلې تفصیل
@@ -37,6 +39,7 @@ ps:
     not_open_yet: دا مشوره لاهم خلاص نده
     'on':
     opens: دا مشوره خلاصیږي
+    or:
     original_consultation: اصلي مشوره
     ran_from: دا مشوره له دې ځایه روانه وه
     respond_online: آنلاین ځواب ورکړئ

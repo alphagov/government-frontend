@@ -19,12 +19,14 @@ el:
     share_links:
       share_this_page: Κοινοποιήστε αυτή τη σελίδα
   consultation:
+    analysing_feedback:
     and: και
     another_website_html: Αυτή η διαβούλευση %{closed} πραγματοποιήθηκε σε <a href="%{url}">άλλο ιστότοπο</a>
     at: στο
     closes: Κλείνει στο
     closes_at: Αυτή η διαβούλευση κλείνει στις
     complete_a: Συμπληρώστε ένα
+    concluded:
     description: Περιγραφή διαβούλευσης
     detail_of_feedback_received: Λεπτομέρειες για τα σχόλια που ελήφθησαν
     detail_of_outcome: Λεπτομέρεια του αποτελέσματος
@@ -37,6 +39,7 @@ el:
     not_open_yet: Αυτή η διαβούλευση δεν είναι ακόμη ανοιχτή
     'on':
     opens: Αυτή η διαβούλευση ανοίγει
+    or:
     original_consultation: Αρχική διαβούλευση
     ran_from: Αυτή η διαβούλευση ξεκίνησε από
     respond_online: Απαντήστε online

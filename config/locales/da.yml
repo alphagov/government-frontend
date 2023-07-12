@@ -19,12 +19,14 @@ da:
     share_links:
       share_this_page: Del denne side
   consultation:
+    analysing_feedback:
     and: og
     another_website_html: Denne konsultation %{closed} blev afholdt på <a href="%{url}">en anden hjemmeside</a>
     at: på
     closes: Den lukker kl.
     closes_at: Denne konsultation lukker kl.
     complete_a: Fuldfør en
+    concluded:
     description: Konsultationsbeskrivelse
     detail_of_feedback_received: Nærmere oplysninger om modtaget feedback
     detail_of_outcome: Nærmere oplysninger om resultatet
@@ -37,6 +39,7 @@ da:
     not_open_yet: Denne høring er ikke åben endnu
     'on':
     opens: Denne konsultation åbner
+    or:
     original_consultation: original konsultation
     ran_from: Denne konsultation løb fra
     respond_online: Svar online

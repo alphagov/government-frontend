@@ -19,12 +19,14 @@ lv:
     share_links:
       share_this_page: Kopīgot šo lapu
   consultation:
+    analysing_feedback:
     and: un
     another_website_html: Šī konsultācija %{closed} notika <a href="%{url}">citā tīmekļa vietnē</a>
     at: 'šajā laikā:'
     closes: Slēgšanas laiks ir
     closes_at: Šīs konsultācijas slēgšanas laiks ir
     complete_a: Pabeigt
+    concluded:
     description: Konsultācijas apraksts
     detail_of_feedback_received: Atsauksmes informācija saņemta
     detail_of_outcome: Rezultāta informācija
@@ -37,6 +39,7 @@ lv:
     not_open_yet: Šī konsultācija vēl nav atvērta
     'on':
     opens: Šī konsultācija tiek atvērta
+    or:
     original_consultation: Oriģinālā konsultācija
     ran_from: Šī konsultācija
     respond_online: Atbildēt tiešsaistē

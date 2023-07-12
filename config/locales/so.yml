@@ -19,12 +19,14 @@ so:
     share_links:
       share_this_page: Lawadaag bogan
   consultation:
+    analysing_feedback:
     and: iyo
     another_website_html: Latalintan %{closed} held on <a href="%{url}">websaayt kale</a>
     at: ee
     closes: U dhaw goobta
     closes_at: Latalintan waxay aad ugu dhawdahay meesha
     complete_a: Dhamaystirka
+    concluded:
     description: Qoraalada latalinta
     detail_of_feedback_received: Faah-faahinta falcelinta la helay
     detail_of_outcome: Faah-faahinta maxsuulka
@@ -37,6 +39,7 @@ so:
     not_open_yet: Latalinta aan wali furnayn
     'on':
     opens: Latalintan waxay furantahay
+    or:
     original_consultation: Latalinta asalka ah
     ran_from: Latalinta waxay ka timid
     respond_online: Jawaab onlaayn ah

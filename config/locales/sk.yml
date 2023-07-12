@@ -19,12 +19,14 @@ sk:
     share_links:
       share_this_page: Zdieľať túto stránku
   consultation:
+    analysing_feedback:
     and: a
     another_website_html: Táto konzultácia %{closed} sa konala na <a href="%{url}">inej webovej stránke</a>
     at: na
     closes: Zatvára sa o
     closes_at: Táto konzultácia sa končí o
     complete_a: Dokončite
+    concluded:
     description: Popis konzultácie
     detail_of_feedback_received: Podrobnosti o prijatej spätnej väzbe
     detail_of_outcome: Podrobnosti o výsledku
@@ -37,6 +39,7 @@ sk:
     not_open_yet: Táto konzultácia ešte nie je otvorená
     'on':
     opens: Táto konzultácia sa začína
+    or:
     original_consultation: Pôvodná konzultácia
     ran_from: Táto konzultácia prebiehala od
     respond_online: Odpovedať online

@@ -19,12 +19,14 @@ ja:
     share_links:
       share_this_page: このページを共有
   consultation:
+    analysing_feedback:
     and: および
     another_website_html: この審議％{closed}は、<ahref = "％{url}">別のウェブサイト</a>で行われました
     at: 時間：
     closes: 終了時間：
     closes_at: 審議終了時間：
     complete_a: 次を完成させる：
+    concluded:
     description: 審議内容
     detail_of_feedback_received: 受け取ったフィードバックの詳細
     detail_of_outcome: 結果の詳細
@@ -37,6 +39,7 @@ ja:
     not_open_yet: この審議はまだ開かれていません
     'on':
     opens: この審議が始まります
+    or:
     original_consultation: 当初の審議
     ran_from: この審議が始まった時間：
     respond_online: オンラインで返信する

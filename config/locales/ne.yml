@@ -19,12 +19,14 @@ ne:
     share_links:
       share_this_page: यो पृष्ठ साझा गर्नुहोस्
   consultation:
+    analysing_feedback:
     and: र
     another_website_html: यो परामर्श %{बन्द} <a href="%{url}">अर्को वेबसाइट</a> मा आयोजित
     at: मा
     closes: मा बन्द हुन्छ
     closes_at: यो परामर्श मा बन्द हुन्छ
     complete_a: एउटा पूरा गर्नु
+    concluded:
     description: परामर्श विवरण
     detail_of_feedback_received: प्रतिक्रियाको विवरण प्राप्त भयो
     detail_of_outcome: परिणामको विवरण
@@ -37,6 +39,7 @@ ne:
     not_open_yet: यो परामर्श अझै खुलेको छैन
     'on':
     opens: यो परामर्श खुल्छ
+    or:
     original_consultation: मूल परामर्श
     ran_from: यो परामर्श बाट चलेको हो
     respond_online: अनलाइन प्रतिक्रिया

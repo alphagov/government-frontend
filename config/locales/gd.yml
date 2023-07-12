@@ -19,12 +19,14 @@ gd:
     share_links:
       share_this_page: Comhroinn an leathanach seo
   consultation:
+    analysing_feedback:
     and: agus
     another_website_html: Tionóladh an comhairliúchán %{closed} seo ar <a href="%{url}">suíomh Gréasáin eile</a>
     at: ag an seoladh
     closes: Críochnaíonn sé ag
     closes_at: Críochnaíonn an suirbhé seo ag
     complete_a: Comhlánaigh a
+    concluded:
     description: Cur síos ar an bpróiseas comhairliúcháin
     detail_of_feedback_received: Sonraí faoi na breathnuithe a fuarthas
     detail_of_outcome: Sonraigh an toradh
@@ -37,6 +39,7 @@ gd:
     not_open_yet: Níl an teaglaim seo oscailte fós
     'on':
     opens: Tá an chuid seo den chomhairliúchán oscailte
+    or:
     original_consultation: Comhairliúchán bunaidh
     ran_from: Rinneadh an comhairliúchán seo ó
     respond_online: Tabhair freagra ar líne

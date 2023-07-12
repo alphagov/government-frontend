@@ -19,12 +19,14 @@ ar:
     share_links:
       share_this_page: شارك هذه الصفحة
   consultation:
+    analysing_feedback:
     and: و
     another_website_html: عُقدت هذه الاستشارة %{closed} على <a href="%{url}">موقع ويب آخر</a>
     at: في
     closes: موعد الإغلاق
     closes_at: تُغلق هذه الاستشارة تغلق في
     complete_a: إكمال
+    concluded:
     description: وصف الاستشارة
     detail_of_feedback_received: تفاصيل التعليق المستلم
     detail_of_outcome: تفاصيل النتيجة
@@ -37,6 +39,7 @@ ar:
     not_open_yet: هذه الاستشارة لم تُفتح بعد
     'on':
     opens: تفتح هذه الاستشارة
+    or:
     original_consultation: الاستشارة الأصلية
     ran_from: أجريت هذه الاستشارة من
     respond_online: الرد عبر الإنترنت
