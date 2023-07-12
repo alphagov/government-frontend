@@ -154,43 +154,40 @@
     <% if @content_item.ways_to_respond? %>
       <div id="ways-to-respond" class="consultation-ways-to-respond">
         <%= render 'govuk_publishing_components/components/heading', text: t("consultation.ways_to_respond"), mobile_top_margin: true %>
-          <% @ways_to_respond_body = capture do %>
-            <% if @content_item.respond_online_url %>
-              <div class="call-to-action">
-                <p><%= link_to t("consultation.respond_online"), @content_item.respond_online_url %></p>
-              </div>
-
-              <% if @content_item.email || @content_item.postal_address %>
-                <p>or</p>
-              <% end %>
-            <% end %>
-
-            <% if @content_item.response_form? %>
-              <p>
-                <%= t("consultation.complete_a") %> <%= link_to 'response form', @content_item.attachment_url %> <%= t("consultation.and") %>
-                <%= t("consultation.either") if @content_item.email && @content_item.postal_address %>
-              </p>
-            <% end %>
-
-            <% if @content_item.email %>
-              <h3><%= t("consultation.email_to") %></h3>
-              <p><%= mail_to @content_item.email, @content_item.email %></p>
-            <% end %>
-
-            <% if @content_item.postal_address %>
-              <h3><%= t("consultation.write_to") %></h3>
-              <div class="contact">
-                <div class="content">
-                  <%= simple_format(@content_item.postal_address) %>
-                </div>
-              </div>
-            <% end %>
-          <% end %>
 
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>
-          <%= raw(@ways_to_respond_body) %>
+          <% if @content_item.respond_online_url %>
+            <div class="call-to-action">
+              <p><%= link_to t("consultation.respond_online"), @content_item.respond_online_url %></p>
+            </div>
+
+            <% if @content_item.email || @content_item.postal_address %>
+              <p><%= t("consultation.or") %></p>
+            <% end %>
+          <% end %>
+
+          <% if @content_item.response_form? %>
+            <p>
+              <%= t("consultation.complete_a") %> <%= link_to 'response form', @content_item.attachment_url %> <%= t("consultation.and") %>
+              <%= t("consultation.either") if @content_item.email && @content_item.postal_address %>
+            </p>
+          <% end %>
+
+          <% if @content_item.email %>
+            <h3><%= t("consultation.email_to") %></h3>
+            <p><%= mail_to @content_item.email, @content_item.email %></p>
+          <% end %>
+
+          <% if @content_item.postal_address %>
+            <h3><%= t("consultation.write_to") %></h3>
+            <div class="contact">
+              <div class="content">
+                <%= simple_format(@content_item.postal_address) %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
     <% end %>
