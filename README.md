@@ -4,36 +4,34 @@ Government Frontend is a public-facing app to display the majority of documents 
 
 ## Schemas
 
-Not all schemas that this app can handle are rendered by it in production.
-
-| Schema | Live example | Production status |
-|---|---|---|
-| Answer | [View on GOV.UK](https://www.gov.uk/national-minimum-wage-rates) | Migrated |
-| Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) | Migrated |
-| Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) | Migrated |
-| Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) | Migrated |
-| Corporate information page | [View on GOV.UK](https://www.gov.uk/government/organisations/government-digital-service/about) | Migrated |
-| Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) | Migrated |
-| Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) | Migrated |
-| Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) | Migrated |
-| Fields of operation | [View on Gov.UK](https://www.gov.uk/government/fields-of-operation) | Migrated |
-| Field of operation | [View on GOV.UK](https://www.gov.uk/government/fields-of-operation/iraq) | Migrated |
-| Help page | [View on GOV.UK](https://www.gov.uk/help/about-govuk) | Migrated |
-| HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)| Migrated |
-| Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)| Migrated |
-| News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) | Migrated |
-| Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) | Migrated |
-| Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/access-to-finance-advice-north-west-england) | Migrated
-| Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) | Migrated |
-| Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) | Migrated |
-| Speech | [View on GOV.UK](https://www.gov.uk/government/speeches/government-at-your-service-ben-gummer-speech) | Migrated |
-| Take part | [View on GOV.UK](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) | Migrated |
-| Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) | Migrated |
-| Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) | Migrated |
-| Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) | Migrated |
-| Worldwide corporate information page | | Rendered by Whitehall |
-| Worldwide office | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-paris/office/british-embassy) | Migrated |
-| Worldwide organisation | | Rendered by Whitehall |
+| Schema | Live example |
+|---|---|
+| Answer | [View on GOV.UK](https://www.gov.uk/national-minimum-wage-rates) |
+| Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) |
+| Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) |
+| Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) |
+| Corporate information page | [View on GOV.UK](https://www.gov.uk/government/organisations/government-digital-service/about) |
+| Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) |
+| Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) |
+| Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) |
+| Fields of operation | [View on Gov.UK](https://www.gov.uk/government/fields-of-operation) |
+| Field of operation | [View on GOV.UK](https://www.gov.uk/government/fields-of-operation/iraq) |
+| Help page | [View on GOV.UK](https://www.gov.uk/help/about-govuk) |
+| HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
+| Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)|
+| News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) |
+| Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) |
+| Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/access-to-finance-advice-north-west-england) |
+| Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) |
+| Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) |
+| Speech | [View on GOV.UK](https://www.gov.uk/government/speeches/government-at-your-service-ben-gummer-speech) |
+| Take part | [View on GOV.UK](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) |
+| Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) |
+| Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) |
+| Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) |
+| Worldwide corporate information page | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-madrid/about/complaints-procedure) |
+| Worldwide office | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-paris/office/british-embassy) |
+| Worldwide organisation | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-madrid) |
 
 ## Technical documentation
 
