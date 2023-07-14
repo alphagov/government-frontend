@@ -19,12 +19,14 @@ hu:
     share_links:
       share_this_page: Oldal megosztása
   consultation:
+    analysing_feedback:
     and: és
     another_website_html: A konzultáció %{closed} egy <a href="%{url}">másik weboldalon kerül megrendezésre</a>
     at: 'itt:'
     closes: 'Lezárul ekkor:'
     closes_at: 'A konzultáció lezárul ekkor:'
     complete_a: 'A következő befejezése:'
+    concluded:
     description: Konzultáció leírása
     detail_of_feedback_received: A kapott visszajelzés részletei
     detail_of_outcome: Kimenetel részletei
@@ -37,6 +39,7 @@ hu:
     not_open_yet: A konzultáció még nem nyitott
     'on':
     opens: A konzultáció megnyílik
+    or:
     original_consultation: Eredeti konzultáció
     ran_from: 'A konzultáció kezdőidőpontja:'
     respond_online: Válasz online

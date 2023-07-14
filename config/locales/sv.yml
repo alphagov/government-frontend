@@ -19,12 +19,14 @@ sv:
     share_links:
       share_this_page: Dela den här sidan
   consultation:
+    analysing_feedback:
     and: och
     another_website_html: Detta samråd %{closed} hölls på <a href="%{url}">en annan webbplats</a>
     at: kl
     closes: Det avslutas kl
     closes_at: Detta samråd avslutas på
     complete_a: Fyll i ett
+    concluded:
     description: Beskrivning av samrådet
     detail_of_feedback_received: Detaljerad information om den mottagna feedbacken
     detail_of_outcome: Detaljerad information om resultatet
@@ -37,6 +39,7 @@ sv:
     not_open_yet: Detta samråd är inte öppet ännu
     'on':
     opens: Detta samråd öppnas
+    or:
     original_consultation: Ursprungligt samråd
     ran_from: Detta samråd pågick från och med
     respond_online: Svara online

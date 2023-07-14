@@ -19,12 +19,14 @@ pa-pk:
     share_links:
       share_this_page: ایہ ورقہ تقسیم کرو
   consultation:
+    analysing_feedback:
     and: ہور
     another_website_html: ایہ مشورہ  {closed} %ایندے تے وقوعہ ہویا <a href="%{url}">دُوسری ویب سائٹ</a>
     at: ایندے تے
     closes: ایہ ایندے تے بند ہوندا اے
     closes_at: ایہ مشاورت ایندے تے بند ہوندی اے
     complete_a: اک پُورا کرو
+    concluded:
     description: مشاورت دی وضاحت
     detail_of_feedback_received: موصول شُدہ جواب دی تفصیل
     detail_of_outcome: نتیجے دی تفصیل
@@ -37,6 +39,7 @@ pa-pk:
     not_open_yet: ایہ مشاورت ہلے نئیں کُھلی
     'on':
     opens: ایہ مشاورت کُھل گئی اے
+    or:
     original_consultation: اصلی مشاورت
     ran_from: ایہ مشاورت داچلایا ہویا فارم اے
     respond_online: آن لائن جاب دیوؤ

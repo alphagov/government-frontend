@@ -19,12 +19,14 @@ sr:
     share_links:
       share_this_page: Podeli ovu stranicu
   consultation:
+    analysing_feedback:
     and: i
     another_website_html: Ove konsultacije %{closed} se održavaju na <a href="%{url}">drugom veb-sajtu</a>
     at: u
     closes: Zatvara se u
     closes_at: Ove konsultacije se zatvaraju u
     complete_a: Popunite
+    concluded:
     description: Opis konsultacija
     detail_of_feedback_received: Detalj dobijenih povratnih informacija
     detail_of_outcome: Detalj ishoda
@@ -37,6 +39,7 @@ sr:
     not_open_yet: Ove konsultacije još nisu otvorene
     'on':
     opens: Ove konsultacije se otvaraju
+    or:
     original_consultation: Prvobitne konsultacije
     ran_from: Ove konsultacije se održavaju od
     respond_online: Odgovori onlajn

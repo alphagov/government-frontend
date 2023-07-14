@@ -19,12 +19,14 @@ dr:
     share_links:
       share_this_page: این صفحه را به اشتراک بگذارید
   consultation:
+    analysing_feedback:
     and: و
     another_website_html: این مشاوره%{closed}برگزار میشود در<a href="%{url}">ویبسایت دیگر</a>
     at: در
     closes: این بسته میشود در
     closes_at: این مشاوره بسته میشود در
     complete_a: تکمیل نمایید یک
+    concluded:
     description: شرح مشاوره
     detail_of_feedback_received: جزیٔیات فیدبک دریافت شده
     detail_of_outcome: جزیٔیات نتیجه
@@ -37,6 +39,7 @@ dr:
     not_open_yet: مشاوره تا هنوز شروع نشده است
     'on':
     opens: مشاوره شروع میشود
+    or:
     original_consultation: مشاورهء اصلی
     ran_from: این مشاوره اجرا میشود از
     respond_online: بصورت آنلاین پاسخ دهید

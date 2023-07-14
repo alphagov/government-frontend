@@ -19,12 +19,14 @@ hy:
     share_links:
       share_this_page: Կիսվել այս էջով
   consultation:
+    analysing_feedback:
     and: և
     another_website_html: Այս խորհրդակցությունը %{closed} անցկացվել է <a href="%{url}">մեկ այլ</a>
     at: վեբ կայքում՝
     closes: Այն ավարտվում է
     closes_at: Այս խորհրդակցությունն ավարտվում է
     complete_a: Իրականացնել
+    concluded:
     description: Խորհրդակցության նկարագրություն
     detail_of_feedback_received: Ստացված արձագանքի մանրամասներ
     detail_of_outcome: Արդյունքի վերաբերյալ մանրամասներ
@@ -37,6 +39,7 @@ hy:
     not_open_yet: Այս խորհրդակցությունը դեռևս չի սկսվել
     'on':
     opens: Այս խորհրդակցությունը կսկսվի
+    or:
     original_consultation: Սկզբնական խորհրդակցություն
     ran_from: Այս խորհրդակցությունն իրականացվել է
     respond_online: Պատասխանել առցանց

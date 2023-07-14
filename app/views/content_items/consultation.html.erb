@@ -45,7 +45,7 @@
 
     <% if @content_item.unopened? %>
       <% content_item_unopened = capture do %>
-        <%= raw(t("consultation.opens")) %>
+        <%= t("consultation.opens") %>
         <%= @content_item.opening_date_midnight? ? t("consultation.on") : t("consultation.at") %>
         <time datetime="<%= @content_item.opening_date_time %>"><%= @content_item.opening_date %></time>
       <% end %>
@@ -56,16 +56,16 @@
 
     <% elsif @content_item.pending_final_outcome? %>
       <% content_item_final_outcome = capture do %>
-        <%= raw(t("consultation.visit_soon")) %>
+        <%= t("consultation.visit_soon") %>
       <% end %>
       <%= render 'govuk_publishing_components/components/notice',
-        title: 'We are analysing your feedback',
+        title: t("consultation.analysing_feedback"),
         description_text: content_item_final_outcome,
         margin_bottom:(0 unless @content_item.add_margin?)
       %>
 
     <% elsif @content_item.final_outcome? %>
-      <%= render 'govuk_publishing_components/components/notice', title: 'This consultation has concluded' %>
+      <%= render 'govuk_publishing_components/components/notice', title: t("consultation.concluded") %>
 
       <%= render "attachments",
           title: t("consultation.download_outcome"),
@@ -169,43 +169,40 @@
     <% if @content_item.ways_to_respond? %>
       <div id="ways-to-respond" class="consultation-ways-to-respond">
         <%= render 'govuk_publishing_components/components/heading', text: t("consultation.ways_to_respond"), mobile_top_margin: true %>
-          <% @ways_to_respond_body = capture do %>
-            <% if @content_item.respond_online_url %>
-              <div class="call-to-action">
-                <p><%= link_to t("consultation.respond_online"), @content_item.respond_online_url %></p>
-              </div>
-
-              <% if @content_item.email || @content_item.postal_address %>
-                <p>or</p>
-              <% end %>
-            <% end %>
-
-            <% if @content_item.response_form? %>
-              <p>
-                <%= t("consultation.complete_a") %> <%= link_to 'response form', @content_item.attachment_url %> <%= t("consultation.and") %>
-                <%= t("consultation.either") if @content_item.email && @content_item.postal_address %>
-              </p>
-            <% end %>
-
-            <% if @content_item.email %>
-              <h3><%= t("consultation.email_to") %></h3>
-              <p><%= mail_to @content_item.email, @content_item.email %></p>
-            <% end %>
-
-            <% if @content_item.postal_address %>
-              <h3><%= t("consultation.write_to") %></h3>
-              <div class="contact">
-                <div class="content">
-                  <%= simple_format(@content_item.postal_address) %>
-                </div>
-              </div>
-            <% end %>
-          <% end %>
 
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>
-          <%= raw(@ways_to_respond_body) %>
+          <% if @content_item.respond_online_url %>
+            <div class="call-to-action">
+              <p><%= link_to t("consultation.respond_online"), @content_item.respond_online_url %></p>
+            </div>
+
+            <% if @content_item.email || @content_item.postal_address %>
+              <p><%= t("consultation.or") %></p>
+            <% end %>
+          <% end %>
+
+          <% if @content_item.response_form? %>
+            <p>
+              <%= t("consultation.complete_a") %> <%= link_to 'response form', @content_item.attachment_url %> <%= t("consultation.and") %>
+              <%= t("consultation.either") if @content_item.email && @content_item.postal_address %>
+            </p>
+          <% end %>
+
+          <% if @content_item.email %>
+            <h3><%= t("consultation.email_to") %></h3>
+            <p><%= mail_to @content_item.email, @content_item.email %></p>
+          <% end %>
+
+          <% if @content_item.postal_address %>
+            <h3><%= t("consultation.write_to") %></h3>
+            <div class="contact">
+              <div class="content">
+                <%= simple_format(@content_item.postal_address) %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
     <% end %>

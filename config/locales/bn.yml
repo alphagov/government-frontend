@@ -19,12 +19,14 @@ bn:
     share_links:
       share_this_page: এই পেজটি শেয়ার করুন
   consultation:
+    analysing_feedback:
     and: এবং
     another_website_html: এই পরামর্শটি %{closed} <a href="%{url}">আরেকটি ওয়েবসাইটে</a> অনুষ্ঠিত হয়
     at: এ
     closes: এটি বন্ধ হচ্ছে
     closes_at: এই পরামর্শটি বন্ধ হচ্ছে
     complete_a: একটি সম্পন্ন করুন
+    concluded:
     description: পরামর্শের বর্ণনা
     detail_of_feedback_received: ফিডব্যাকের বিস্তারিত গৃহীত হয়েছে
     detail_of_outcome: ফলাফলের বিস্তারিত
@@ -37,6 +39,7 @@ bn:
     not_open_yet: এই পরামর্শটি এখনও চালু হয়নি
     'on':
     opens: এই পরামর্শটি চালু হচ্ছে
+    or:
     original_consultation: মূল পরামর্শ
     ran_from: এই পরামর্শটি যেখান থেকে চলেছে
     respond_online: অনলাইনে উত্তর দিন

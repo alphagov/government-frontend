@@ -19,12 +19,14 @@ sq:
     share_links:
       share_this_page: Shpërdaj këtë faqe
   consultation:
+    analysing_feedback:
     and: dhe
     another_website_html: Ky konsultim %{closed} u mbajt <a href="%{url}">uebfaqe tjetër</a>
     at: në
     closes: Mbyllet në
     closes_at: Ky konsultim mbyllet në
     complete_a: Kompleto një
+    concluded:
     description: Përshkrimi i konsultimit
     detail_of_feedback_received: Detajet e reagimit të marrë
     detail_of_outcome: Detajet e rezultatit
@@ -37,6 +39,7 @@ sq:
     not_open_yet: Ky konsultim nuk është hapur ende
     'on':
     opens: Ky konsultim hapet
+    or:
     original_consultation: Konsultimi origjinal
     ran_from: Ky konsultim filloi nga
     respond_online: Përgjigju online

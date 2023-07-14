@@ -19,12 +19,14 @@ es:
     share_links:
       share_this_page: Compartir esta página
   consultation:
+    analysing_feedback:
     and: "y"
     another_website_html: Esta consulta %{closed} se realizó en <a href='%{url}'>otro sitio web</a>
     at: en
     closes: Cierra a las
     closes_at: Esta consulta se cierra a las
     complete_a: Complete un/a
+    concluded:
     description: Descripción de la consulta
     detail_of_feedback_received: Detalle de los comentarios recibidos
     detail_of_outcome: Detalle del resultado
@@ -37,6 +39,7 @@ es:
     not_open_yet: Esta consulta no está abierta todavía
     'on':
     opens: Se abre esta consulta
+    or:
     original_consultation: Consulta original
     ran_from: Esta consulta fue de
     respond_online: Responda en línea

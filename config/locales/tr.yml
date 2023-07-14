@@ -19,12 +19,14 @@ tr:
     share_links:
       share_this_page: Bu sayfayı paylaş
   consultation:
+    analysing_feedback:
     and: ve
     another_website_html: Bu danışma %{closed} başka bir websitesinde<a href="%{url}">gerçekleşti</a>
     at: şurada
     closes: şurada kapanıyor
     closes_at: Bu danışma şurada kapanıyor
     complete_a: Bir danışma
+    concluded:
     description: Açıklaması tamamlayın
     detail_of_feedback_received: Alınan geri bildirimin ayrıntısı
     detail_of_outcome: Sonuç ayrıntısı
@@ -37,6 +39,7 @@ tr:
     not_open_yet: Bu danışma henüz açık değil
     'on':
     opens: Bu danışma açılıyor
+    or:
     original_consultation: Orijinal danışma
     ran_from: Bu danışma şuradan başladı
     respond_online: Çevrimiçi yanıtla

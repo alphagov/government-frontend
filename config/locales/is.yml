@@ -19,12 +19,14 @@ is:
     share_links:
       share_this_page: Deila þessari síðu
   consultation:
+    analysing_feedback:
     and: og
     another_website_html: Þessi ráðgjöf %{closed} var haldin á <a href="%{url}">annarri vefsíðu</a>
     at: þann
     closes: Henni lýkur
     closes_at: Þessari ráðgjöf lýkur
     complete_a: Ljúka
+    concluded:
     description: Lýsing á ráðgjöf
     detail_of_feedback_received: Nánari upplýsingar um fengna endurgjöf
     detail_of_outcome: Nánari upplýsingar um útkomu
@@ -37,6 +39,7 @@ is:
     not_open_yet: Þessi ráðgjöf er ekki enn opin
     'on':
     opens: Þessi ráðgjöf opnar
+    or:
     original_consultation: Upprunaleg ráðgjöf
     ran_from: Þessi ráðgjöf stóð yfir frá
     respond_online: Svara á netinu

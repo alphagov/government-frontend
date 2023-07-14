@@ -19,12 +19,14 @@ id:
     share_links:
       share_this_page: Bagikan halaman ini
   consultation:
+    analysing_feedback:
     and: dan
     another_website_html: Konsultasi ini %{closed} diadakan di <a href="%{url}">situs web lain</a>
     at: pada
     closes: Tutup pada
     closes_at: Konsultasi ini ditutup pada
     complete_a: Selesaikan
+    concluded:
     description: Deskripsi konsultasi
     detail_of_feedback_received: Detail umpan balik yang diterima
     detail_of_outcome: Detail hasil
@@ -37,6 +39,7 @@ id:
     not_open_yet: Konsultasi ini belum dibuka
     'on':
     opens: Konsultasi ini sudah dibuka
+    or:
     original_consultation: Konsultasi asli
     ran_from: Konsultasi ini berlangsung dari
     respond_online: Respons online

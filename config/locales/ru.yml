@@ -19,12 +19,14 @@ ru:
     share_links:
       share_this_page: 'Поделиться данной страницей '
   consultation:
+    analysing_feedback:
     and: и
     another_website_html: Консультация %{closed} проведенная на <a href="%{url}">другой Веб-сайт</a>
     at: на
     closes: Она закрывается на
     closes_at: Данная консультация закрывается на
     complete_a: Заполните
+    concluded:
     description: Описание консультации
     detail_of_feedback_received: Детали, полученного отзыва
     detail_of_outcome: Детали результата
@@ -37,6 +39,7 @@ ru:
     not_open_yet: Консультация еще не открыта
     'on':
     opens: Консультация открывается
+    or:
     original_consultation: Оригинальная консультация
     ran_from: Обычная консультация
     respond_online: Он-лайн ответ

@@ -19,12 +19,14 @@ th:
     share_links:
       share_this_page: แชร์หน้านี้
   consultation:
+    analysing_feedback:
     and: และ
     another_website_html: การให้คำปรึกษา %{closed} นี้จัดขึ้นใน <a href="%{url}">เว็บไซต์อื่น</a>
     at: เมื่อ
     closes: ปิดเมื่อ
     closes_at: การให้คำปรึกษานี้ปิดเมื่อ
     complete_a: เสร็จสิ้น
+    concluded:
     description: คำอธิบายการให้คำปรึกษา
     detail_of_feedback_received: รายละเอียดของข้อเสนอแนะที่ได้รับ
     detail_of_outcome: รายละเอียดของผลลัพธ์
@@ -37,6 +39,7 @@ th:
     not_open_yet: ยังไม่เปิดการให้คำปรึกษา
     'on':
     opens: การให้คำปรึกษานี้เปิดแล้ว
+    or:
     original_consultation: การให้คำปรึกษาดั้งเดิม
     ran_from: การให้คำปรึกษานี้เริ่มจาก
     respond_online: ตอบกลับทางออนไลน์

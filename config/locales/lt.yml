@@ -19,12 +19,14 @@ lt:
     share_links:
       share_this_page: Bendrinti šį puslapį
   consultation:
+    analysing_feedback:
     and: ir
     another_website_html: Ši konsultacija %{closed} teikiama <a href="%{url}">kitoje interneto svetainėje</a>
     at: laiku
     closes: Ji baigiasi
     closes_at: Ši konsultacija baigiasi
     complete_a: Užpildyti
+    concluded:
     description: Konsultacijos aprašas
     detail_of_feedback_received: Informacija apie gautus atsiliepimus
     detail_of_outcome: Informaciją apie rezultatą
@@ -37,6 +39,7 @@ lt:
     not_open_yet: Ši konsultacija dar neprasidėjo
     'on':
     opens: Ši konsultacija prasideda
+    or:
     original_consultation: Pirminė konsultacija
     ran_from: Ši konsultacija tęsėsi nuo
     respond_online: Atsakyti internetu

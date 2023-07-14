@@ -111,14 +111,16 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders public feedback attachments (as-is and directly)" do
+  test "shows pre-rendered public feedback documents" do
     setup_and_visit_content_item("consultation_outcome_with_feedback")
 
     assert page.has_text?("Feedback received")
     within "#feedback-received" do
       assert page.has_text?("Analysis of responses to our consultation on setting the grade standards of new GCSEs in England – part 2")
     end
+  end
 
+  test "renders public feedback document attachments" do
     setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
 
     assert page.has_text?("Feedback received")

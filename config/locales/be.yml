@@ -19,12 +19,14 @@ be:
     share_links:
       share_this_page: Падзяліцца гэтай старонкай
   consultation:
+    analysing_feedback:
     and: і
     another_website_html: Гэта кансультацыя %{closed}  праводзілася на <a href="%{url}">іншым сайце</a>
     at: на
     closes: Ён зачыняецца ў
     closes_at: Кансультацыі завяршаюцца ў
     complete_a: Скончыць
+    concluded:
     description: Апісанне кансультацыі
     detail_of_feedback_received: Падрабязная інфармацыя аб атрыманых водгуках
     detail_of_outcome: Дэталізацыя вынікаў
@@ -37,6 +39,7 @@ be:
     not_open_yet: Гэта кансультацыя яшчэ не адкрыта
     'on':
     opens: Гэта кансультацыя адкрываецца
+    or:
     original_consultation: Арыгінальная кансультацыя
     ran_from: Кансультацыя доўжылася з
     respond_online: Адказаць анлайн

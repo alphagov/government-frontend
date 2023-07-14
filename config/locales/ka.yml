@@ -19,12 +19,14 @@ ka:
     share_links:
       share_this_page: ამ გვერდის გაზიარება
   consultation:
+    analysing_feedback:
     and: და
     another_website_html: ეს კონსულტაცია %{closed} ჩატარდა <a href="%{url}">სხვა ვებგვერდზე</a>
     at: ზე
     closes: იხურება
     closes_at: ეს კონსულტაცია იხურება
     complete_a: დასრულება
+    concluded:
     description: კონსულტაციის აღწერილობა
     detail_of_feedback_received: ფიდბეკის დეტალი მიღებულია
     detail_of_outcome: შედეგის დეტალი
@@ -37,6 +39,7 @@ ka:
     not_open_yet: ეს კონსულტაცია ჯერ არ გახსნილა
     'on':
     opens: ეს კონსულტაცია იხსნება
+    or:
     original_consultation: ორიგინალი კონსულტაცია
     ran_from: ეს კონსულტაცია ამოიწურა
     respond_online: ონლაინ პასუხი

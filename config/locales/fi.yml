@@ -19,12 +19,14 @@ fi:
     share_links:
       share_this_page: Jaa tämä sivu
   consultation:
+    analysing_feedback:
     and: ja
     another_website_html: Tämä kuuleminen %{closed} järjestettiin toisella <a href="%{url}">averkkosivustolla</a>
     at: klo
     closes: Se sulkeutuu klo
     closes_at: Tämä kuuleminen päättyy klo
     complete_a: Täytä
+    concluded:
     description: Konsultaation kuvaus
     detail_of_feedback_received: Yksityiskohta saadusta palautteesta
     detail_of_outcome: Yksityiskohta lopputuloksesta
@@ -37,6 +39,7 @@ fi:
     not_open_yet: Tämä kuuleminen ei ole vielä auki
     'on':
     opens: Tämä kuuleminen avautuu
+    or:
     original_consultation: Alkuperäinen kuuleminen
     ran_from: Tämä kuuleminen kesti
     respond_online: Vastaa verkossa

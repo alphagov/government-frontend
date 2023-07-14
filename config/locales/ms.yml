@@ -19,12 +19,14 @@ ms:
     share_links:
       share_this_page: Kongsi laman ini
   consultation:
+    analysing_feedback:
     and: dan
     another_website_html: Perundingan ini %{closed} telah diadakan di <a href="%{url}">laman web lain</a>
     at: di
     closes: Ditutup pada
     closes_at: Perundingan ini ditutup pada
     complete_a: Lengkapkan
+    concluded:
     description: Huraian perundingan
     detail_of_feedback_received: Butiran maklum balas diterima
     detail_of_outcome: Butiran hasil
@@ -37,6 +39,7 @@ ms:
     not_open_yet: Perundingan ini masih belum dibuka
     'on':
     opens: Perundingan ini dibuka
+    or:
     original_consultation: Perundingan asal
     ran_from: Perundingan ini berjalan dari
     respond_online: Jawab dalam talian

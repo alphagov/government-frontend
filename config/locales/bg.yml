@@ -19,12 +19,14 @@ bg:
     share_links:
       share_this_page: Споделяне на тази страница
   consultation:
+    analysing_feedback:
     and: и
     another_website_html: Тази консултация %{closed} се намира на <a href="%{url}">друг уебсайт</a>
     at: на
     closes: Закрива се в
     closes_at: Тази консултация се закрива в
     complete_a: Попълнете
+    concluded:
     description: Решение за консултация
     detail_of_feedback_received: Подробности за получената обратна връзка
     detail_of_outcome: Подробности за резултата
@@ -37,6 +39,7 @@ bg:
     not_open_yet: Тази консултация все още не е открита
     'on':
     opens: Тази консултация се отваря
+    or:
     original_consultation: Първоначална консултация
     ran_from: Тази консултация се управлява от
     respond_online: Отговор онлайн

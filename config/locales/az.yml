@@ -19,12 +19,14 @@ az:
     share_links:
       share_this_page: Bu səhifəni paylaşın
   consultation:
+    analysing_feedback:
     and: və
     another_website_html: Bu məsləhətləşmə %{closed} başqa <a href="%{url}">vebsaytda həyata keçirilir</a>
     at: "(vaxtı göstərir)"
     closes: O, saat ...də (da) bağlanır
     closes_at: Məsləhətləşmə saat ...də (da) bağlanır
     complete_a: "...tamamlayın"
+    concluded:
     description: Məsləhətləşmənin təsviri
     detail_of_feedback_received: Alınmış rəyin təfərrüatları
     detail_of_outcome: Nəticənin təfərrüatları
@@ -37,6 +39,7 @@ az:
     not_open_yet: Bu məsləhətləşmə hələ açıq deyildir
     'on':
     opens: Bu məsləhətləşmə açılır
+    or:
     original_consultation: İlkin məsləhətləşmə
     ran_from: Bu məsləhətləşmə başlayır
     respond_online: Onlayn cavab verin

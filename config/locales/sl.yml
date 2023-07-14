@@ -19,12 +19,14 @@ sl:
     share_links:
       share_this_page: Deli to stran
   consultation:
+    analysing_feedback:
     and: in
     another_website_html: To posvetovanje %{closed} poteka na <a href="%{url}">drugi spletni strani</a>
     at: na
     closes: Zapre se ob
     closes_at: To posvetovanje se zapre ob
     complete_a: 'Izpolnite '
+    concluded:
     description: Opis posvetovanja
     detail_of_feedback_received: Podrobnosti o povratnih informacijah
     detail_of_outcome: Podrobnosti o rezultatu
@@ -37,6 +39,7 @@ sl:
     not_open_yet: To posvetovanje še ni začeto
     'on':
     opens: Posvetovanje se začne
+    or:
     original_consultation: Izvirno posvetovanje
     ran_from: To posvetovanje je trajalo od
     respond_online: Odgovori na spletu
