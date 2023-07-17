@@ -54,3 +54,11 @@ $govuk-include-default-font-face: false;
     text-align: start;
   }
 }
+
+// TEMP: Fix metadata styling issue for attachments with external links
+.gem-c-attachment__metadata {
+  span.gem-c-attachment__attribute {
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}
