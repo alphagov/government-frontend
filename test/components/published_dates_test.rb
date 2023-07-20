@@ -91,4 +91,22 @@ class PublishedDatesTest < ComponentTestCase
     render_component(published: "1st November 2000", margin_bottom: 5)
     assert_select '.app-c-published-dates.govuk-\!-margin-bottom-5'
   end
+
+  test "accordion has GA4 tracking" do
+    render_component(
+      published: "1st November 2000",
+      last_updated: "15th July 2015",
+      history: [display_time: "23 August 2013", note: "Updated with new data"],
+    )
+
+    expected_ga4_json = {
+      "event_name": "select_content",
+      "type": "content",
+      "section": "Footer",
+    }.to_json
+
+    assert_select "a[data-module='ga4-event-tracker']"
+    assert_select "a[data-ga4-expandable='']"
+    assert_select "a[data-ga4-event='#{expected_ga4_json}']"
+  end
 end

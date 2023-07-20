@@ -63,7 +63,15 @@
             margin_bottom: 1,
           } %>
         </div>
-        <ul class="govuk-list app-page-contents__list">
+        <ul class="govuk-list app-page-contents__list"
+            data-module="ga4-link-tracker"
+            data-ga4-track-links-only
+            data-ga4-set-indexes
+            data-ga4-link="<%= {
+              event_name: "navigation",
+              type: "content",
+              section: "Page contents:"
+            }.to_json %>">
           <% @content_item.header_links.each do |header_link| %>
             <li class="govuk-body-s">
               <%= link_to(header_link[:title], header_link[:href], class: 'govuk-link') %>

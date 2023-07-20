@@ -1,6 +1,8 @@
 <%
   metadata_component_options = @content_item.publisher_metadata
   metadata_component_options[:margin_bottom] = 3 if @notification_button_visible
+  # The metadata component on this page receives ga4_tracking: true as it has a 'See all updates' link.
+  metadata_component_options[:ga4_tracking] = true
 %>
 <div class="govuk-grid-row">
   <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
