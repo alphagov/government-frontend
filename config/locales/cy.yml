@@ -1,5 +1,31 @@
 ---
 cy:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Ymweld:'
   components:
@@ -96,11 +122,32 @@ cy:
         other: Cynlluniau cymorth cyllid busnes
         two:
         zero:
+      call_for_evidence:
+        few:
+        many:
+        one:
+        other:
+        two:
+        zero:
+      call_for_evidence_outcome:
+        few:
+        many:
+        one:
+        other:
+        two:
+        zero:
       case_study:
         few:
         many:
         one: Astudiaeth achos
         other: Astudiaethau achos
+        two:
+        zero:
+      closed_call_for_evidence:
+        few:
+        many:
+        one:
+        other:
         two:
         zero:
       closed_consultation:
@@ -374,6 +421,13 @@ cy:
         many:
         one: Cyhoeddiad o ystadegau swyddogol
         other: Cyhoeddiadau o ystadegau swyddogol
+        two:
+        zero:
+      open_call_for_evidence:
+        few:
+        many:
+        one:
+        other:
         two:
         zero:
       open_consultation:

@@ -1,5 +1,31 @@
 ---
 et:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Külastus:'
   components:
@@ -76,9 +102,18 @@ et:
       business_finance_support_scheme:
         one: Ettevõtte rahastamise toetusskeem
         other: Ettevõtte rahastamise toetusskeemid
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Juhtumiuuring
         other: Juhtumiuuringud
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Suletud konsultatsioon
         other: Suletud konsultatsioonid
@@ -196,6 +231,9 @@ et:
       official_statistics_announcement:
         one: Ametlik statistikateade
         other: Ametlikud statistikateated
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Avatud konsultatsioon
         other: Avatud konsultatsioonid

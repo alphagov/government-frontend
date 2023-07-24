@@ -1,5 +1,31 @@
 ---
 bn:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'ভিজিট করুন:'
   components:
@@ -76,9 +102,18 @@ bn:
       business_finance_support_scheme:
         one: ব্যবসায়িক অর্থায়ন সহায়তা স্কিম
         other: ব্যবসায়িক অর্থায়ন সহায়তা স্কিমসমূহ
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: কেস স্টাডি
         other: কেস স্টাডিসমূহ
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: ক্লোজড কনসাল্টেশন
         other: ক্লোজড কনসাল্টেশন
@@ -196,6 +231,9 @@ bn:
       official_statistics_announcement:
         one: দাপ্তরিক পরিসংখ্যানের ঘোষণা
         other: দাপ্তরিক পরিসংখ্যানের ঘোষণাসমূহ
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: উম্মুক্ত পরামর্শ
         other: উম্মুক্ত পরামর্শসমূহ

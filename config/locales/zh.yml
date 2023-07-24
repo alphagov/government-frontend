@@ -1,5 +1,31 @@
 ---
 zh:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 访问：
   components:
@@ -71,8 +97,14 @@ zh:
         other: 撰写文章
       business_finance_support_scheme:
         other: 商业财务支持计划
+      call_for_evidence:
+        other:
+      call_for_evidence_outcome:
+        other:
       case_study:
         other: 案例研究
+      closed_call_for_evidence:
+        other:
       closed_consultation:
         other: 封闭咨询
       cma_case:
@@ -151,6 +183,8 @@ zh:
         other: 官方统计
       official_statistics_announcement:
         other: 官方统计公告
+      open_call_for_evidence:
+        other:
       open_consultation:
         other: 公开协商
       oral_statement:

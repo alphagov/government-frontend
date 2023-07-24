@@ -1,5 +1,31 @@
 ---
 pa:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'ਮੁਲਾਕਾਤ:'
   components:
@@ -76,9 +102,18 @@ pa:
       business_finance_support_scheme:
         one: ਵਪਾਰ ਵਿੱਤ ਸਹਾਇਤਾ ਯੋਜਨਾ
         other: ਵਪਾਰ ਵਿੱਤ ਸਹਾਇਤਾ ਯੋਜਨਾਵਾਂ
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: ਕੇਸ ਅਧਿਐਨ
         other: ਕੇਸ ਅਧਿਐਨ
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: ਬੰਦ ਸਲਾਹ -ਮਸ਼ਵਰਾ
         other: ਬੰਦ ਸਲਾਹ ਮਸ਼ਵਰੇ
@@ -196,6 +231,9 @@ pa:
       official_statistics_announcement:
         one: ਅਧਿਕਾਰਤ ਅੰਕੜਿਆਂ ਦਾ ਐਲਾਨ
         other: ਅਧਿਕਾਰਤ ਅੰਕੜੇ ਘੋਸ਼ਣਾਵਾਂ
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: ਖੁੱਲ੍ਹਾ ਸਲਾਹ-ਮਸ਼ਵਰਾ
         other: ਖੁੱਲ੍ਹੇ ਸਲਾਹ-ਮਸ਼ਵਰੇ

@@ -1,5 +1,31 @@
 ---
 tr:
+  call_for_evidence:
+    and:
+    another_website_html:
+    at:
+    closed:
+    closes:
+    closes_at:
+    complete_a:
+    description:
+    detail_of_outcome:
+    documents:
+    download_outcome:
+    either:
+    email_to:
+    is_being:
+    not_open_yet:
+    'on':
+    opens:
+    or:
+    original_call_for_evidence:
+    ran_from:
+    respond_online:
+    response_form:
+    was:
+    ways_to_respond:
+    write_to:
   common:
     visit: 'Ziyaret et:'
   components:
@@ -76,9 +102,18 @@ tr:
       business_finance_support_scheme:
         one: İşletme finans desteği planı
         other: İşletme finans desteği planları
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Vaka incelemesi
         other: Vaka incelemeleri
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Kapalı danışma
         other: Kapalı danışmalar
@@ -196,6 +231,9 @@ tr:
       official_statistics_announcement:
         one: Ulusal İstatistik duyurusu
         other: Ulusal İstatistik duyuruları
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Açık danışma
         other: Açık danışmalar
