@@ -14,21 +14,7 @@
 </div>
 
 <%= render 'shared/publisher_metadata_with_logo', content_item: @content_item %>
-<%= render 'shared/single_page_notification_button',
-  content_item: @content_item,
-  ga4_data_attributes: {
-    module: "ga4-link-tracker",
-    ga4_link: {
-      event_name: "navigation",
-      type: "subscribe",
-      index: {
-        index_link: 1
-      },
-      index_total: 2,
-      section: "Top"
-    }
-  }
-%>
+<%= render 'shared/single_page_notification_button', content_item: @content_item %>
 
 <%= render 'shared/history_notice', content_item: @content_item %>
 <% if @content_item.withdrawn? %>
