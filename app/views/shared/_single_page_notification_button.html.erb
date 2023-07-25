@@ -1,7 +1,24 @@
+<%
+  default_ga4_data_attributes = {
+    module: "ga4-link-tracker",
+    ga4_link: {
+      event_name: "navigation",
+      type: "subscribe",
+      index: {
+        index_link: 1
+      },
+      index_total: 2,
+      section: "Top"
+    }
+  }
+%>
+
+<% ga4_data_attributes = ga4_data_attributes || default_ga4_data_attributes %>
+
 <%= render 'govuk_publishing_components/components/single_page_notification_button', {
   base_path: @content_item.base_path,
   js_enhancement: @has_govuk_account,
-  ga4_data_attributes: ga4_data_attributes ||= nil,
+  ga4_data_attributes: ga4_data_attributes,
   margin_bottom: 6,
   button_location: "top",
 } if @content_item.has_single_page_notifications? %>
