@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     GovukHealthcheck::RailsCache,
   )
 
+  get '/world/organisations/*org/about/about', to: redirect('/world/organisations/*org')
+
   get "/government/uploads/*path" => "asset_manager_redirect#show", format: false
 
   get "/service-manual/search",
