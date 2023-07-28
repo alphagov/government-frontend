@@ -110,6 +110,9 @@
               data-controls="full-history"
               data-toggled-text="- Hide all page updates (<%= @content_item.previous_changes.length %>)"
               data-expanded="false"
+              data-module="ga4-event-tracker"
+              data-ga4-event="<%= {event_name: "select_content", type: "content", section: "Footer"}.to_json %>"
+              data-ga4-expandable
               role="button"
               aria-controls="full-history"
               aria-expanded="false"
