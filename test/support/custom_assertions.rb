@@ -1,4 +1,4 @@
-module MiniTest::Assertions
+module Minitest::Assertions
   # Behaves a bit like `hash_including`.
   # Given a slice of the original hash, it verifies that the original hash
   # includes the sub-hash given. Useful when testing partial arguments/params to
