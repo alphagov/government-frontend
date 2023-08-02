@@ -98,7 +98,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     groups = page.all(".gem-c-document-list")
     assert page.has_css?('[data-module="gem-track-click"]'), count: groups.length
 
-    first_section_links = groups.first.all(".gem-c-document-list__item-title")
+    first_section_links = groups.first.all(:link)
     first_link = first_section_links.first
 
     assert_equal(
