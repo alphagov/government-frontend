@@ -1,4 +1,5 @@
 <% add_view_stylesheet("published-dates-button-group") %>
+<% skip_account = skip_account || "false" %>
 
 <%= render 'components/published_dates', {
     published: @content_item.published,
@@ -13,6 +14,7 @@
     js_enhancement: @has_govuk_account,
     button_location: "bottom",
     margin_bottom: 3,
+    skip_account: skip_account,
     ga4_data_attributes: {
       module: "ga4-link-tracker",
       ga4_link: {
@@ -24,7 +26,7 @@
         index_total: 2,
         section: "Footer"
       }
-  }
+    }
   } if @content_item.has_single_page_notifications? %>
   <%= render "govuk_publishing_components/components/print_link", {
     margin_top: 0,

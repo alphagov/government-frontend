@@ -154,8 +154,8 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "does not render with the single page notification button" do
+  test "renders with the single page notification button" do
     setup_and_visit_content_item("document_collection")
-    assert_not page.has_css?(".gem-c-single-page-notification-button")
+    assert page.has_css?(".gem-c-single-page-notification-button")
   end
 end
