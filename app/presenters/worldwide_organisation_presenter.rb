@@ -51,7 +51,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
       href: person["web_url"],
       image_url: person["details"]["image"]["url"],
       image_alt: person["details"]["image"]["alt_text"],
-      description: current_roles.map { |role_app| role_app.dig("links", "role").first["title"] }.join,
+      description: current_roles.map { |role_app| role_app.dig("links", "role").first["title"] }.join(", "),
     }
   end
 
@@ -67,7 +67,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
       {
         name: person["title"],
         href: person["web_url"],
-        description: current_roles.map { |role_app| role_app.dig("links", "role").first["title"] }.join,
+        description: current_roles.map { |role_app| role_app.dig("links", "role").first["title"] }.join(", "),
       }
     end
   end

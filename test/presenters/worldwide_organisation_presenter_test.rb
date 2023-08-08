@@ -5,6 +5,16 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
     "worldwide_organisation"
   end
 
+  test "description of primary_role_person should have spaces between roles" do
+    presenter = create_presenter(WorldwideOrganisationPresenter, content_item: { "links" => { "primary_role_person" => [{ "details" => { "image" => {} }, "links" => { "role_appointments" => [{ "details" => { "current" => true }, "links" => { "role" => [{ "title" => "Example Role 1" }] } }, { "details" => { "current" => true }, "links" => { "role" => [{ "title" => "Example Role 2" }] } }] } }] } })
+    assert_equal "Example Role 1, Example Role 2", presenter.person_in_primary_role[:description]
+  end
+
+  test "description of people_in_non_primary_roles should have spaces between roles" do
+    presenter = create_presenter(WorldwideOrganisationPresenter, content_item: { "links" => { "secondary_role_person" => [{ "details" => { "image" => {} }, "links" => { "role_appointments" => [{ "details" => { "current" => true }, "links" => { "role" => [{ "title" => "Example Role 1" }] } }, { "details" => { "current" => true }, "links" => { "role" => [{ "title" => "Example Role 2" }] } }] } }] } })
+    assert_equal "Example Role 1, Example Role 2", presenter.people_in_non_primary_roles.first[:description]
+  end
+
   test "#title returns the title" do
     assert_equal schema_item["title"], presented_item.title
   end
