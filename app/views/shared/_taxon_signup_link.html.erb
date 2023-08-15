@@ -1,0 +1,17 @@
+<div
+  data-module="ga4-link-tracker"
+  data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+  data-ga4-track-links-only
+>
+  <%= render "govuk_publishing_components/components/signup_link", {
+    link_text: "Get emails about this topic",
+    link_href: "/email-signup/?link=#{base_path}",
+    data: {
+      "module": "gem-track-click",
+      "track-category": "emailAlertLinkClicked",
+      "track-action": base_path,
+      "track-label": ""
+    },
+    margin_bottom: 6
+  } %>
+</div>
