@@ -63,7 +63,7 @@
     <% end %>
   </div>
 
-  <div class="govuk-grid-column-two-thirds" id="guide-contents">
+  <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6" id="guide-contents">
     <% if @content_item.has_parts? %>
       <% if @content_item.show_guide_navigation? %>
         <%= render 'govuk_publishing_components/components/heading', heading_level: 1, font_size: 'l', margin_bottom: 6, text: @content_item.current_part_title %>
