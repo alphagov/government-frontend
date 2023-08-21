@@ -5,11 +5,27 @@
 <% if show_email_subscription_success_banner?(@account_flash) %>
   <div class="govuk-grid-row govuk-!-margin-top-3">
     <div class="govuk-grid-column-two-thirds">
-      <%= render "govuk_publishing_components/components/success_alert", {
-        message: email_subscription_success_banner_heading(@account_flash),
-        description: banner_description,
-        margin_bottom: 0,
-      } %>
+      <%
+        ga4_data = {
+          event_name: "form_complete",
+          type: "email subscription",
+          text: email_subscription_success_banner_heading(@account_flash, :en),
+          section: local_assigns[:title],
+          action: "complete",
+          tool_name: "Get emails from GOV.UK"
+        }.to_json
+      %>
+      <%= content_tag(:div,
+        data: {
+          module: "ga4-auto-tracker",
+          ga4_auto: ga4_data
+        }) do %>
+        <%= render "govuk_publishing_components/components/success_alert", {
+          message: email_subscription_success_banner_heading(@account_flash),
+          description: banner_description,
+          margin_bottom: 0,
+        } %>
+      <% end %>
     </div>
   </div>
 <% end %>
