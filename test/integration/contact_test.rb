@@ -65,7 +65,7 @@ class ContactTest < ActionDispatch::IntegrationTest
       "base_path" => "/content",
       "open_url" => "https://webchat.host/open",
       "availability_url" => "https://webchat.host/avaiable",
-      "csp_connect_src" => ["https://webchat.host", "https://webchat2.host"],
+      "csp_connect_src" => "https://webchat.host,https://webchat2.host",
     })
 
     Webchat.stubs(:find).returns(webchat)

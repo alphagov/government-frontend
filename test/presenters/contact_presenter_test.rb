@@ -109,7 +109,7 @@ class ContactPresenterTest
       })
 
       Webchat.stubs(:find).returns(webchat)
-      assert_equal "https://webchat.host", presented_item.csp_connect_src
+      assert_equal ["https://webchat.host"], presented_item.csp_connect_src
     end
 
     test "returns a csp_connect_src of nil if webchat isn't configured" do
