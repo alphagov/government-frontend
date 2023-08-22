@@ -12,7 +12,7 @@ class Webchat
     @open_url = attrs["open_url"]
     @availability_url = attrs["availability_url"]
     @open_url_redirect = attrs["open_url_redirect"]
-    @csp_connect_src = attrs["csp_connect_src"]
+    @csp_connect_src = attrs["csp_connect_src"].split(",")
     validate!
   end
 

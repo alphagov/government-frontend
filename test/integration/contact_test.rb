@@ -65,7 +65,7 @@ class ContactTest < ActionDispatch::IntegrationTest
       "base_path" => "/content",
       "open_url" => "https://webchat.host/open",
       "availability_url" => "https://webchat.host/avaiable",
-      "csp_connect_src" => "https://webchat.host",
+      "csp_connect_src" => ["https://webchat.host", "https://webchat2.host"],
     })
 
     Webchat.stubs(:find).returns(webchat)
@@ -77,6 +77,7 @@ class ContactTest < ActionDispatch::IntegrationTest
                      .each_with_object({}) { |directive, memo| memo[directive.first] = directive[1..] }
 
     assert_includes parsed_csp["connect-src"], "https://webchat.host"
+    assert_includes parsed_csp["connect-src"], "https://webchat2.host"
 
     # reset back to default driver
     Capybara.use_default_driver

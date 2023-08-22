@@ -1,5 +1,5 @@
 - base_path: /government/organisations/hm-passport-office/contact/hm-passport-office-webchat
   open_url: https://d111an2s3izxxc.cloudfront.net/open/index.html
   availability_url: https://3mtmlaplvb.execute-api.eu-west-2.amazonaws.com/uat/availability/18529796
-  csp_connect_src: https://d111an2s3izxxc.cloudfront.net
+  csp_connect_src: https://d111an2s3izxxc.cloudfront.net,https://3mtmlaplvb.execute-api.eu-west-2.amazonaws.com
   open_url_redirect: false
