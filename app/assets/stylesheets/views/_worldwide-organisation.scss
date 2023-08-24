@@ -65,12 +65,12 @@
   }
 
   li {
-    @media (min-width: 1px) { // target modern browsers
+    @media (min-width: 1px) { // stylelint-disable-line media-feature-range-notation
       list-style: none;
       padding-left: $govuk-gutter-half;
       @include govuk-responsive-padding(1, "top");
 
-      &:before {
+      &:before { // stylelint-disable-line selector-pseudo-element-colon-notation
         content: "-";
         position: relative;
         float: left;
