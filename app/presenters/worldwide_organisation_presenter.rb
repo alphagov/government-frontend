@@ -51,7 +51,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
       href: person["web_url"],
       image_url: person["details"]["image"]["url"],
       image_alt: person["details"]["image"]["alt_text"],
-      description: current_roles.map { |role_app| role_app.dig("links", "role").first["title"] }.join(", "),
+      description: organisation_roles_for(current_roles),
     }
   end
 
@@ -67,7 +67,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
       {
         name: person["title"],
         href: person["web_url"],
-        description: current_roles.map { |role_app| role_app.dig("links", "role").first["title"] }.join(", "),
+        description: organisation_roles_for(current_roles),
       }
     end
   end
@@ -123,6 +123,18 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   end
 
 private
+
+  def organisation_roles_for(current_appointments)
+    current_appointments
+      .map { |role_appointment| role_appointment.dig("links", "role").first }
+      .select { |role| organisation_role_ids.include?(role["content_id"]) }
+      .map { |role| role["title"] }
+      .compact.join(", ")
+  end
+
+  def organisation_role_ids
+    content_item.dig("links", "roles")&.map { |role| role["content_id"] } || []
+  end
 
   def world_locations
     content_item.dig("links", "world_locations") || []
