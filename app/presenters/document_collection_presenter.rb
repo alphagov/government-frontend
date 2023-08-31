@@ -63,6 +63,10 @@ class DocumentCollectionPresenter < ContentItemPresenter
     )
   end
 
+  def taxonomy_topic_email_override_base_path
+    content_item.dig("links", "taxonomy_topic_email_override", 0, "base_path")
+  end
+
 private
 
   def group_documents(group)

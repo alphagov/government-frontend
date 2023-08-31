@@ -195,6 +195,16 @@ class ActionDispatch::IntegrationTest
     end
   end
 
+  def setup_and_visit_content_item_with_taxonomy_topic_email_override(name)
+    @content_item = get_content_example(name).tap do |item|
+      item["links"]["taxonomy_topic_email_override"] = [{
+        "base_path": "test",
+      }]
+      stub_content_store_has_item(item["base_path"], item.to_json)
+      visit_with_cachebust(item["base_path"])
+    end
+  end
+
   def setup_and_visit_notification_exempt_page(name)
     @content_item = get_content_example(name).tap do |item|
       item["content_id"] = ContentItem::SinglePageNotificationButton::EXEMPTION_LIST[0]
