@@ -11,7 +11,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <% if @content_item.show_phase_banner? %>
-              <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
+              <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase, ga4_tracking: true %>
             <% end %>
             <% if @content_item.service_manual? %>
               <%= render_phase_label @content_item, content_for(:phase_message) %>
