@@ -44,7 +44,8 @@
       <% if @content_item.national_applicability.present? %>
         <%= render "govuk_publishing_components/components/devolved_nations", {
           national_applicability: @content_item.national_applicability,
-          type: @content_item.schema_name
+          type: @content_item.schema_name,
+          ga4_tracking: true,
         } %>
       <% end %>
 
