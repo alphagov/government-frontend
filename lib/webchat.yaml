@@ -1,5 +1,5 @@
 - base_path: /government/organisations/hm-passport-office/contact/hm-passport-office-webchat
-  open_url: https://omni.eckoh.uk/v03.5/launcherV3.php?p=HMPO&d=717&ch=CH&psk=chat_a1&iid=STC&srbp=0&fcl=0&r=Chat&s=https://omni.eckoh.uk/v03.5&u=&wo=&uh=&pid=2&iif=0
-  availability_url: https://omni.eckoh.uk/v03.5/providers/HMPO/api/availability.php
-  csp_connect_src: https://omni.eckoh.uk
+  open_url: https://d1y02qp19gjy8q.cloudfront.net/open/index.html
+  availability_url: https://d1y02qp19gjy8q.cloudfront.net/availability/18555309
+  csp_connect_src: https://d1y02qp19gjy8q.cloudfront.net
   open_url_redirect: false
