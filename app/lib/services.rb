@@ -12,12 +12,6 @@ module Services
     )
   end
 
-  def self.feature_toggler
-    @feature_toggler ||= FeatureToggler.new(
-      HttpFeatureFlags.instance,
-    )
-  end
-
   def self.publishing_api
     @publishing_api ||= GdsApi::PublishingApi.new(
       Plek.find("publishing-api"),
