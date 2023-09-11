@@ -213,8 +213,11 @@ class TravelAdvicePresenterTest
     test "presents alert statuses" do
       example = schema_item("full-country")
       example["details"]["alert_status"] = %w[avoid_all_but_essential_travel_to_parts avoid_all_travel_to_parts]
-      assert present_example(example).alert_status.include?("advise against all but essential travel")
-      assert present_example(example).alert_status.include?("advise against all travel to parts")
+
+      presented = present_example(example)
+
+      assert presented.alert_status.first.include?("advises against all but essential travel to parts of #{presented.country_name}")
+      assert presented.alert_status.last.include?("advises against all travel to parts of #{presented.country_name}")
     end
 
     test "metadata uses today for 'Still current at'" do
