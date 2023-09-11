@@ -1,13 +1,3 @@
-<% if content_item.alert_status.present? %>
-  <%= render 'govuk_publishing_components/components/govspeak', {
-    direction: page_text_direction,
-  } do %>
-    <div class="help-notice">
-      <%= raw(content_item.alert_status) %>
-    </div>
-  <% end %>
-<% end %>
-
 <%= render 'govuk_publishing_components/components/metadata', content_item.metadata %>
 <% if content_item.map %>
   <figure class="map">
