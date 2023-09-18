@@ -1514,7 +1514,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "government-frontend@workspace:."
   dependencies:
-    jasmine-browser-runner: ^2.2.0
+    jasmine-browser-runner: ^2.3.0
     jasmine-core: ^5.1.1
     standardx: ^7.0.0
     stylelint: ^15.10.3
@@ -1875,19 +1875,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-browser-runner@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "jasmine-browser-runner@npm:2.2.0"
+"jasmine-browser-runner@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "jasmine-browser-runner@npm:2.3.0"
   dependencies:
     ejs: ^3.1.6
     express: ^4.16.4
     glob: ^10.0.0
-    selenium-webdriver: ^4.8.2
+    selenium-webdriver: ^4.12.0
   peerDependencies:
     jasmine-core: ^5.0.0
   bin:
     jasmine-browser-runner: bin/jasmine-browser-runner
-  checksum: dfc9d575f2cb0c28727107d0a19f378225404876812cd0311e770fec25d1770292daac069791425f040a4b1248cbfc459b6719821f7b982bd90aa48d11752f56
+  checksum: d09e93f24e364e1b121160875c8b6b374ec9d142e418e0bd511913abdfbad3cd300bd019f51ae479baf66bcbc2eb74536307259a5917b7a616fd73b8b0f6127d
   languageName: node
   linkType: hard
 
@@ -3072,14 +3072,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"selenium-webdriver@npm:^4.8.2":
-  version: 4.9.2
-  resolution: "selenium-webdriver@npm:4.9.2"
+"selenium-webdriver@npm:^4.12.0":
+  version: 4.12.0
+  resolution: "selenium-webdriver@npm:4.12.0"
   dependencies:
     jszip: ^3.10.1
     tmp: ^0.2.1
     ws: ">=8.13.0"
-  checksum: 35a28f322539d61b40564b472ced48b0a96c926745cd95b8b8d3e3f5d5708a3d282e0c066b418b441a5fbbd6c60c7eec382cba0fef5518e198eb3ae958d79bf5
+  checksum: e02f131359fb5575f757fa5389f5e6bad145cdf4f5a8e066d73793d806041bdbdd1c8422ef3d7658ef33e52597b85561df397a3e58ee355215c9e32bce588b3e
   languageName: node
   linkType: hard
 
