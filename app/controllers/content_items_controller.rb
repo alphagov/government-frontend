@@ -31,7 +31,6 @@ class ContentItemsController < ApplicationController
     elsif is_history_page?
       show_history_page
     else
-      set_use_recommended_related_links_header
       set_access_control_allow_origin_header if request.format.atom?
       set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
       render_template
@@ -139,15 +138,22 @@ private
 
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
-    if Services.feature_toggler.use_recommended_related_links?(content_item["links"], request.headers)
-      content_item["links"]["ordered_related_items"] = content_item["links"].fetch("suggested_ordered_related_items", [])
-    end
+
+    content_item["links"]["ordered_related_items"] = ordered_related_items(content_item["links"]) if content_item["links"]
 
     @content_item = PresenterBuilder.new(
       content_item,
       content_item_path,
       view_context,
     ).presenter
+  end
+
+  def ordered_related_items(links)
+    return [] if links["ordered_related_items_overrides"].present?
+
+    links["ordered_related_items"].presence || links.fetch(
+      "suggested_ordered_related_items", []
+    )
   end
 
   def format_banner_links(links, type)
@@ -203,14 +209,6 @@ private
 
   def set_access_control_allow_origin_header
     response.headers["Access-Control-Allow-Origin"] = "*"
-  end
-
-  def set_use_recommended_related_links_header
-    response.headers["Vary"] = [response.headers["Vary"], FeatureFlagNames.recommended_related_links].compact.join(", ")
-
-    related_links_request_header = RequestHelper.get_header(FeatureFlagNames.recommended_related_links, request.headers)
-    required_header_value = Services.feature_toggler.feature_flags.get_feature_flag(FeatureFlagNames.recommended_related_links)
-    response.headers[FeatureFlagNames.recommended_related_links] = (related_links_request_header == required_header_value).to_s
   end
 
   def set_expiry
