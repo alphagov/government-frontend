@@ -84,7 +84,7 @@ class TravelAdvicePresenter < ContentItemPresenter
     alert_statuses = content_item["details"]["alert_status"] || []
     alert_statuses.map do |alert|
       if allowed_statuses.include?(alert)
-        I18n.t("travel_advice.alert_status.#{alert}_html").html_safe
+        I18n.t("travel_advice.alert_status.#{alert}_html", country: country_name).html_safe
       end
     end
   end
