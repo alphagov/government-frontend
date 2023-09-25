@@ -6,14 +6,7 @@
 
 <% content_for :body do %>
   <div id="wrapper" class="<%= wrapper_class %>">
-    <% if @content_item.recruitment_survey_url %>
-      <%= render "govuk_publishing_components/components/intervention", {
-        suggestion_text: "Help improve GOV.UK",
-        suggestion_link_text: "Take part in user research",
-        suggestion_link_url: @content_item.recruitment_survey_url,
-        new_tab: true,
-      } %>
-    <% elsif @content_item.show_phase_banner? || @content_item.service_manual? %>
+    <% if @content_item.show_phase_banner? || @content_item.service_manual? %>
       <div class="govuk-width-container">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
@@ -35,7 +28,7 @@
         <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item, ga4_tracking: true %>
       <% end %>
     <% end %>
-
+    
     <%= yield :header %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
