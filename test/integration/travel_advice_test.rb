@@ -75,7 +75,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
 
     expected_ga4_json = {
       event_name: "navigation",
-      type: "content",
+      type: "print page",
       section: "Footer",
       text: "View a printable version of the whole guide",
     }.to_json
