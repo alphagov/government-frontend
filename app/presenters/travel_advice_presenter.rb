@@ -82,14 +82,11 @@ class TravelAdvicePresenter < ContentItemPresenter
       avoid_all_travel_to_whole_country
     ]
     alert_statuses = content_item["details"]["alert_status"] || []
-    alert_statuses = alert_statuses.map do |alert|
+    alert_statuses.map do |alert|
       if allowed_statuses.include?(alert)
-        copy = I18n.t("travel_advice.alert_status.#{alert}_html").html_safe
-        view_context.tag.p(copy)
+        I18n.t("travel_advice.alert_status.#{alert}_html", country: country_name).html_safe
       end
     end
-
-    alert_statuses.join("").html_safe
   end
 
   def atom_change_description

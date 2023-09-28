@@ -16,6 +16,15 @@
   <div class="govuk-grid-column-two-thirds travel-advice__header">
     <%= render 'govuk_publishing_components/components/title', @content_item.title_and_context %>
 
+   <%= render "govuk_publishing_components/components/govspeak", {
+    } do %>
+       <% @content_item.alert_status.each do |text| %>
+        <%= render "govuk_publishing_components/components/warning_text", 
+          text: text 
+        %> 
+      <% end %>
+    <% end %>
+
     <aside class="part-navigation-container" role="complementary">
       <%= render "govuk_publishing_components/components/contents_list", aria: { label: t("travel_advice.pages") }, contents: @content_item.part_link_elements, underline_links: true, ga4_tracking: true %>
 
