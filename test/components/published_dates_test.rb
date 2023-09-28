@@ -101,7 +101,7 @@ class PublishedDatesTest < ComponentTestCase
 
     expected_ga4_json = {
       "event_name": "select_content",
-      "type": "content",
+      "type": "content history",
       "section": "Footer",
     }.to_json
 
