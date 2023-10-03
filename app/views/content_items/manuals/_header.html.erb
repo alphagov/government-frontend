@@ -8,7 +8,6 @@
 
 <%= content_tag(:header, aria: { "labelledby": "manual-title" }, class: classes) do %>
   <div class='govuk-grid-column-two-thirds'>
-
     <% if type %>
       <span class="manual-type"><%= type %></span>
     <% end %>
@@ -22,7 +21,6 @@
       margin_bottom: margin_bottom,
     } %>
 
-
     <%
       # The metadata component on this page receives ga4_tracking: true as it has a 'See all updates' link.
       metadata_with_ga4_tracking = { ga4_tracking: true }
@@ -31,15 +29,24 @@
     <%= render 'govuk_publishing_components/components/metadata', metadata_with_ga4_tracking %>
 
     <div class="in-manual-search">
-      <form action="/search/all" >
-
+      <%
+        form_data = {
+          module: "ga4-form-tracker",
+          ga4_form: {
+            event_name: "search",
+            type: "content",
+            section: content_item.title,
+            action: "search"
+          }
+        }
+      %>
+      <%= content_tag('form', action: "/search/all", data: form_data) do %>
         <input type='hidden' name="manual[]" value="<%= content_item.base_path %>">
-
         <%= render "govuk_publishing_components/components/search", {
           on_govuk_blue: true,
           label_text: t("manuals.search_this_manual"),
         } %>
-      </form>
+      <% end %>
     </div>
   </div>
 <% end %>
