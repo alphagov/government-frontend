@@ -364,6 +364,21 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "true", @response.headers[Slimmer::Headers::REMOVE_SEARCH_HEADER]
   end
 
+  test "AB test replaces content on the find-utr-number page" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/find-utr-number"
+    content_item["details"]["body"] = '<li>in the <a href=""><abbr title="HM Revenue and Customs">HMRC</abbr> app</a>'
+    content_item["locale"] = "en"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = "VideoLink"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_match 'watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a>', response.body
+  end
+
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale
