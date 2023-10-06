@@ -47,7 +47,7 @@ class ContentItemsController < ApplicationController
         # future.
         @content_item.body.sub!(
           /<li>\s*in\ the\s+<a\ href="[^"]*"><abbr\ title="[^"]+">HMRC<\/abbr>\s+app<\/a>\s*<\/li>/,
-          '<li>in the <a href="https://www.gov.uk/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> - watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a>',
+          '<li>in the <a href="https://www.gov.uk/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> - watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a></li>',
         )
       end
     end
