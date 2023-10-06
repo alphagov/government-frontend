@@ -46,7 +46,7 @@ class ContentItemsController < ApplicationController
         # situation. This is not a sustainable way of doing AB tests in the
         # future.
         @content_item.body.sub!(
-          /<li>\s*in\ the\s+<a\ href="[^"]*"><abbr\ title="[^"]+">HMRC<\/abbr>\s+app<\/a>/,
+          /<li>\s*in\ the\s+<a\ href="[^"]*"><abbr\ title="[^"]+">HMRC<\/abbr>\s+app<\/a>\s*<\/li>/,
           '<li>in the <a href="https://www.gov.uk/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> - watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a>',
         )
       end

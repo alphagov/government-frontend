@@ -367,7 +367,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   test "AB test replaces content on the find-utr-number page" do
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = "/find-utr-number"
-    content_item["details"]["body"] = '<li>in the <a href=""><abbr title="HM Revenue and Customs">HMRC</abbr> app</a>'
+    content_item["details"]["body"] = "<li>in the <a href=\"\"><abbr title=\"HM Revenue and Customs\">HMRC</abbr> app</a>\n</li>"
     content_item["locale"] = "en"
 
     stub_content_store_has_item(content_item["base_path"], content_item)
