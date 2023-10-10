@@ -1,5 +1,15 @@
 class AssetManagerRedirectController < ApplicationController
-  def show
+  def redirect_government_uploads_path
+    redirect
+  end
+
+  def redirect_media_path
+    redirect
+  end
+
+private
+
+  def redirect
     asset_url = Plek.new.external_url_for("assets")
     expires_in 1.day, public: true
     redirect_to(

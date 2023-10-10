@@ -14,7 +14,8 @@ Rails.application.routes.draw do
     GovukHealthcheck::RailsCache,
   )
 
-  get "/government/uploads/*path" => "asset_manager_redirect#show", format: false
+  get "/government/uploads/*path" => "asset_manager_redirect#redirect_government_uploads_path", format: false
+  get "/media/*path" => "asset_manager_redirect#redirect_media_path", format: false
 
   get "/service-manual/search",
       to: redirect { |_, request|
