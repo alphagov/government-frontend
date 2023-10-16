@@ -28,7 +28,7 @@ module ContentItem
     end
 
     def updated_at(published_at)
-      Date.parse(published_at)
+      Time.zone.parse(published_at).to_date
     end
 
     def group_updates_by_year(updates)
