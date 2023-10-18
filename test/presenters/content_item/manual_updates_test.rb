@@ -22,7 +22,7 @@ class ContentItemManualUpdatesTest < ActiveSupport::TestCase
               "base_path" => "/guidance/content-design/content-policy",
               "title" => "Content policy",
               "change_note" => "New section added.",
-              "published_at" => "2014-10-06T23:49:25Z",
+              "published_at" => "2014-10-06T22:49:25Z",
             },
             {
               "base_path" => "/guidance/content-design/user-needs",
@@ -34,7 +34,7 @@ class ContentItemManualUpdatesTest < ActiveSupport::TestCase
               "base_path" => "/guidance/content-design/random-section",
               "title" => "Random section",
               "change_note" => "New section added.",
-              "published_at" => "2013-11-06T10:49:25Z",
+              "published_at" => "2013-09-06T23:49:25Z",
             },
           ],
         },
@@ -88,7 +88,7 @@ class ContentItemManualUpdatesTest < ActiveSupport::TestCase
         2013,
         [
           [
-            "6 November 2013 <span class=\"govuk-visually-hidden\">#{I18n.t('manuals.updates_amendments')}</span>",
+            "7 September 2013 <span class=\"govuk-visually-hidden\">#{I18n.t('manuals.updates_amendments')}</span>",
             {
               (fourth_note["base_path"]).to_s => [fourth_note],
             },
