@@ -364,19 +364,36 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "true", @response.headers[Slimmer::Headers::REMOVE_SEARCH_HEADER]
   end
 
-  test "AB test replaces content on the find-utr-number page" do
+  test "AB test replaces content on the find-utr-number page with default" do
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = "/find-utr-number"
-    content_item["details"]["body"] = "<li>in the <a href=\"\"><abbr title=\"HM Revenue and Customs\">HMRC</abbr> app</a>\n</li>"
+    content_item["details"]["body"] = "<li>{{ab_test_find_utr_number_video_links}}</li>"
     content_item["locale"] = "en"
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = "VideoLink"
+    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = nil
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
-    assert_match 'watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a>', response.body
+    assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
+    assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.Z')}</li>", response.body
+  end
+
+  test "AB test replaces content on the find-utr-number page with variant B" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/find-utr-number"
+    content_item["details"]["body"] = "<li>{{ab_test_find_utr_number_video_links}}</li>"
+    content_item["locale"] = "en"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = "B"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
+    assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.B')}</li>", response.body
   end
 
   def path_for(content_item, locale = nil)

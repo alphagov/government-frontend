@@ -30,26 +30,21 @@ class ContentItemsController < ApplicationController
       ab_test = GovukAbTesting::AbTest.new(
         "find_utr_number_video_links",
         dimension: 300, # TODO: which dimension should we use?
-        allowed_variants: %w[HelpText VideoLink],
-        control_variant: "HelpText",
+        allowed_variants: %w[A B Z],
+        control_variant: "Z",
       )
       @requested_variant = ab_test.requested_variant(request.headers)
       @requested_variant.configure_response(response)
 
-      if @requested_variant.variant? "VideoLink"
-        # NOTE: this is a fragile way of doing an AB test on content.
-        #
-        # Any change to the base content, or to the way the content is rendered
-        # could potentially break the B variant of the test, and result in both
-        # variants being the same.
-        # We're aware of this risk, and we're going to be careful in this one off
-        # situation. This is not a sustainable way of doing AB tests in the
-        # future.
-        @content_item.body.sub!(
-          /<li>\s*in\ the\s+<a\ href="[^"]*"><abbr\ title="[^"]+">HMRC<\/abbr>\s+app<\/a>\s*<\/li>/,
-          '<li>in the <a href="https://www.gov.uk/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> - watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a></li>',
-        )
-      end
+      replacement = case @requested_variant.variant_name
+                    when "A"
+                      I18n.t("ab_tests.find_utr_number_video_links.A")
+                    when "B"
+                      I18n.t("ab_tests.find_utr_number_video_links.B")
+                    else
+                      I18n.t("ab_tests.find_utr_number_video_links.Z")
+                    end
+      @content_item.body.sub!("{{ab_test_find_utr_number_video_links}}", replacement)
     end
     # /TEMPORARY
 
