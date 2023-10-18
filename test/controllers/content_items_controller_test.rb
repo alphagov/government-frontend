@@ -368,7 +368,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = "/find-utr-number"
     content_item["details"]["body"] = "<li>{{ab_test_find_utr_number_video_links}}</li>"
-    content_item["locale"] = "en"
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
@@ -380,11 +379,25 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.Z')}</li>", response.body
   end
 
+  test "AB test replaces content on the find-utr-number page with variant A" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/find-utr-number"
+    content_item["details"]["body"] = "<li>{{ab_test_find_utr_number_video_links}}</li>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = "A"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
+    assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.A')}</li>", response.body
+  end
+
   test "AB test replaces content on the find-utr-number page with variant B" do
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = "/find-utr-number"
     content_item["details"]["body"] = "<li>{{ab_test_find_utr_number_video_links}}</li>"
-    content_item["locale"] = "en"
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
