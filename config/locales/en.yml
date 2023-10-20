@@ -2,9 +2,9 @@
 en:
   ab_tests:
     find_utr_number_video_links:
-      A: 'in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a>'
-      B: 'in the <abbr title="HM Revenue and Customs">HMRC</abbr> app - watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a>'
-      Z: 'in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a>'
+      A: in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> under 'Your details' or in the 'Self Assessment' section
+      B: in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> - watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a>
+      Z: in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> under 'Your details' or in the 'Self Assessment' section
   call_for_evidence:
     and: and
     another_website_html: This call for evidence %{closed} held on <a href="%{url}">another website</a>
