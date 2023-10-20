@@ -371,7 +371,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = nil
+    request.headers["HTTP_GOVUK_ABTEST_FINDUTRNUMBERVIDEOLINKS"] = nil
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -386,7 +386,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = "A"
+    request.headers["HTTP_GOVUK_ABTEST_FINDUTRNUMBERVIDEOLINKS"] = "A"
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -401,7 +401,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    request.headers["HTTP_GOVUK_ABTEST_FIND_UTR_NUMBER_VIDEO_LINKS"] = "B"
+    request.headers["HTTP_GOVUK_ABTEST_FINDUTRNUMBERVIDEOLINKS"] = "B"
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success

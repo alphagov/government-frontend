@@ -274,7 +274,7 @@ private
     placeholder = "{{ab_test_find_utr_number_video_links}}"
     if @content_item.base_path == "/find-utr-number" && @content_item.body.include?(placeholder)
       ab_test = GovukAbTesting::AbTest.new(
-        "find_utr_number_video_links",
+        "FindUtrNumberVideoLinks",
         dimension: 61, # https://docs.google.com/spreadsheets/d/1h4vGXzIbhOWwUzourPLIc8WM-iU1b6WYOVDOZxmU1Uo/edit#gid=254065189&range=69:69
         allowed_variants: %w[A B Z],
         control_variant: "Z",
