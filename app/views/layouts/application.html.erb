@@ -29,12 +29,12 @@
       <% end %>
     <% end %>
 
-    <% if @content_item.recruitment_survey_url %>
+    <% if @content_item.recruitment_survey_details %>
       <div class="govuk-!-static-margin-top-4">
         <%= render "govuk_publishing_components/components/intervention", {
-          suggestion_text: "Help improve GOV.UK",
-          suggestion_link_text: "Take part in user research",
-          suggestion_link_url: @content_item.recruitment_survey_url,
+          suggestion_text: @content_item.recruitment_survey_details["suggestion_text"],
+          suggestion_link_text: @content_item.recruitment_survey_details["suggestion_link_text"],
+          suggestion_link_url: @content_item.recruitment_survey_details["suggestion_link_url"],
           new_tab: true,
         } %>
       </div>
