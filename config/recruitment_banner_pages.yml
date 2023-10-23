@@ -1,0 +1,38 @@
+# Add bellow the pages we want to show a user research banner on and the survey link for each page
+
+-
+  name: Benefits banner
+  suggestion_text: "Help improve GOV.UK"
+  suggestion_link_text: "Take part in user research"
+  suggestion_link_url: "https://signup.take-part-in-research.service.gov.uk/home?utm_campaign=Content_History&utm_source=Hold_gov_to_account&utm_medium=gov.uk&t=GDS&id=16"
+  pages:
+    - "/disability-living-allowance-children"
+    - "/help-with-childcare-costs"
+    - "/financial-help-disabled"
+    - "/pip"
+    - "/blind-persons-allowance"
+    - "/dla-disability-living-allowance-benefit"
+    - "/carers-allowance"
+    - "/carers-credit"
+    - "/maternity-pay-leave"
+    - "/paternity-pay-leave"
+    - "/child-benefit"
+    - "/jobseekers-allowance"
+    - "/universal-credit"
+    - "/employment-support-allowance"
+    - "/benefits-calculators"
+
+-
+  name: Research banner
+  suggestion_text: "Help improve a new GOV.UK tool"
+  suggestion_link_text: "Sign up to take part in user research"
+  suggestion_link_url: "https://surveys.publishing.service.gov.uk/s/SNFVW1/"
+  pages:
+    - "/log-in-register-hmrc-online-services"
+    - "/log-in-file-self-assessment-tax-return"
+    - "/self-assessment-tax-returns"
+    - "/pay-self-assessment-tax-bill"
+    - "/contact-hmrc"
+    - "/log-in-register-hmrc-online-services/register"
+    - "/dbs-update-service"
+    - "/government/organisations/hm-revenue-customs/contact/self-assessment"
