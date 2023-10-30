@@ -21,22 +21,12 @@
       "/apply-to-come-to-the-uk",
     ]
 
-    ga4_scroll_track_headings_paths = [
-      "/skilled-worker-visa/your-partner-and-children",
-      "/penalty-points-endorsements/endorsement-codes-and-penalty-points",
-      "/universal-credit/other-financial-support",
-    ]
-
     full_url = [@content_item.base_path, @content_item.part_slug].compact.join('/')
   %>
   <% if scroll_track_headings_paths.include?(full_url) %>
     <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker" data-track-type="headings"/>
   <% elsif scroll_track_percent_paths.include?(@content_item.base_path) %>
     <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
-  <% end %>
-
-  <% if ga4_scroll_track_headings_paths.include?(full_url) %>
-    <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker" data-ga4-track-type="headings"/>
   <% end %>
 <% end %>
 
