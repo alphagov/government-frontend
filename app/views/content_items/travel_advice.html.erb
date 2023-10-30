@@ -19,18 +19,18 @@
    <%= render "govuk_publishing_components/components/govspeak", {
     } do %>
        <% @content_item.alert_status.each do |text| %>
-        <%= render "govuk_publishing_components/components/warning_text", 
-          text: text 
-        %> 
+        <%= render "govuk_publishing_components/components/warning_text",
+          text: text
+        %>
       <% end %>
     <% end %>
 
     <aside class="part-navigation-container" role="complementary">
       <%= render "govuk_publishing_components/components/contents_list", aria: { label: t("travel_advice.pages") }, contents: @content_item.part_link_elements, underline_links: true, ga4_tracking: true %>
 
-      <div 
+      <div
         data-module="ga4-link-tracker"
-        data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index": { "index_link": 1 }, "index_total": 1, "section": "Top" }'
+        data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index_link": 1, "index_total": 1, "section": "Top" }'
         data-ga4-track-links-only
       >
         <%= render 'govuk_publishing_components/components/subscription_links',
@@ -46,7 +46,7 @@
   <% unless @content_item.parts.empty? %>
     <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6">
       <%= render 'govuk_publishing_components/components/heading', heading_level: 1, font_size: 'l', margin_bottom: 6, text: @content_item.current_part_title %>
-      
+
       <% if @content_item.no_part_slug_provided? %>
         <%= render 'shared/travel_advice_first_part', content_item: @content_item %>
       <% end %>
