@@ -157,11 +157,13 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
   test "renders with the single page notification button" do
     setup_and_visit_content_item("document_collection")
     assert page.has_css?(".gem-c-single-page-notification-button")
+    assert_not page.has_css?(".gem-c-signup-link")
   end
 
   test "renders with the taxonomy subscription button" do
     setup_and_visit_content_item_with_taxonomy_topic_email_override("document_collection")
     assert page.has_css?(".gem-c-signup-link")
+    assert page.has_link?(href: "/email-signup/confirm?topic=/testpath")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 end

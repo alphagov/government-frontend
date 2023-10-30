@@ -198,7 +198,7 @@ class ActionDispatch::IntegrationTest
   def setup_and_visit_content_item_with_taxonomy_topic_email_override(name)
     @content_item = get_content_example(name).tap do |item|
       item["links"]["taxonomy_topic_email_override"] = [{
-        "base_path": "test",
+        "base_path": "/testpath",
       }]
       stub_content_store_has_item(item["base_path"], item.to_json)
       visit_with_cachebust(item["base_path"])
