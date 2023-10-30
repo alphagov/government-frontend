@@ -33,6 +33,7 @@ module ContentItem
         first_published: published,
         other: other_metadata,
         inverse: true,
+        inverse_compress: true,
       }
     end
 
