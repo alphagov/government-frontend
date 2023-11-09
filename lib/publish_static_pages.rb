@@ -17,7 +17,7 @@ module PublishStaticPages
     {
       content_id: "7be62825-1538-4ff5-aa29-cd09350349f2",
       title: "History of 1 Horse Guards Road",
-      descriotion: "The history of 1 Horse Guards Road.",
+      description: "The history of 1 Horse Guards Road.",
       template: "histories/1_horse_guards_road",
       base_path: "/government/history/1-horse-guards-road",
     },
