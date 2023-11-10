@@ -20,7 +20,14 @@
           <p class="govuk-body-lead app-hero-lead app-hero__body--inverse govuk-!-padding-bottom-1">
             Helping teams to create and run great public services that meet the <%= link_to 'Service Standard', '/service-manual/service-standard', class: 'govuk-link govuk-link--inverse' %>.
           </p>
-          <form action="/search" method="get" role="search">
+          <form
+            action="/search"
+            method="get"
+            role="search"
+            data-module="ga4-form-tracker"
+            data-ga4-form-include-text
+            data-ga4-form-no-answer-undefined
+            data-ga4-form='{"event_name": "search", "type": "content", "url": "/search/all", "section": "Service Manual", "action": "search"}' >
             <input type="hidden" name="filter_manual" value="/service-manual">
             <%= render "govuk_publishing_components/components/search", {
               label_text: "Search the service manual",

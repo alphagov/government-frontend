@@ -50,4 +50,13 @@ class ServiceManualHomepageTest < ActionDispatch::IntegrationTest
 
     assert page.has_link? "communities of practice", href: "/service-manual/communities"
   end
+
+  test "the homepage includes GA4 form tracking on the search form" do
+    setup_and_visit_content_item("service_manual_homepage")
+
+    assert page.has_selector?("[data-module='ga4-form-tracker']")
+    assert page.has_selector?("[data-ga4-form='{\"event_name\": \"search\", \"type\": \"content\", \"url\": \"/search/all\", \"section\": \"Service Manual\", \"action\": \"search\"}']")
+    assert page.has_selector?("[data-ga4-form-include-text]")
+    assert page.has_selector?("[data-ga4-form-no-answer-undefined]")
+  end
 end
