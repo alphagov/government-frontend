@@ -21,6 +21,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.windowVerticalPosition = 1
     this.startPosition = 0
     this.stopPosition = 0
+    this.init()
   }
 
   StickyElementContainer.prototype.init = function () {

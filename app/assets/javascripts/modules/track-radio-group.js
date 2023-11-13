@@ -4,6 +4,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   function TrackRadioGroup (element) {
     this.element = element
+    this.init()
   }
 
   TrackRadioGroup.prototype.init = function () {
