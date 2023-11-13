@@ -22,7 +22,7 @@ gem "rinku", require: "rails_rinku"
 gem "rss"
 gem "slimmer"
 gem "sprockets-rails"
-gem "uglifier"
+gem "terser"
 
 group :development, :test do
   gem "govuk_schemas"
