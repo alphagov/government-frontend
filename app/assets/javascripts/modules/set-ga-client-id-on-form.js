@@ -4,6 +4,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 (function (Modules) {
   function SetGaClientIdOnForm ($module) {
     this.$module = $module
+    this.init()
   }
 
   SetGaClientIdOnForm.prototype.init = function () {

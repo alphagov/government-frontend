@@ -10,6 +10,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.shownElements = []
     this.hiddenElements = []
     this.showLink = document.createElement('a')
+    this.init()
   }
 
   HideOtherLinks.prototype.init = function () {
