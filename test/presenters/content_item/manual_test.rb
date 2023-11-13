@@ -66,10 +66,11 @@ class ContentItemManualTest < ActiveSupport::TestCase
     expected_metadata = {
       from: ["<a class=\"govuk-link\" href=\"/blah\">blah</a>"],
       first_published: "23 March 2022",
-      inverse: true,
       other: {
         I18n.t("manuals.updated") => "23 March 2022, <a href=\"/a/base/path/updates\">#{I18n.t('manuals.see_all_updates')}</a>",
       },
+      inverse: true,
+      inverse_compress: true,
     }
     assert_equal expected_metadata, item.manual_metadata
   end
