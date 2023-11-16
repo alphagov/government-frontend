@@ -49,6 +49,7 @@
 
   <%= stylesheet_link_tag "application", :media => "all", integrity: false %>
   <%= javascript_include_tag "application", integrity: false %>
+  <%= javascript_include_tag 'es6-components', type: "module" %>
   <%= csrf_meta_tags %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
 
