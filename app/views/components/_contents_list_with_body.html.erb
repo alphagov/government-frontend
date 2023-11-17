@@ -8,7 +8,7 @@
   <div id="contents" class="app-c-contents-list-with-body"<%= sticky_attr %>>
     <% if contents.any? %>
       <div class="responsive-bottom-margin">
-        <%= render 'govuk_publishing_components/components/contents_list', contents: contents, ga4_tracking: true %>
+        <%= render 'govuk_publishing_components/components/contents_list', contents: contents %>
       </div>
     <% end %>
     <%= block %>

@@ -11,7 +11,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-full">
             <% if @content_item.show_phase_banner? %>
-              <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase, ga4_tracking: true %>
+              <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
             <% end %>
             <% if @content_item.service_manual? %>
               <%= render_phase_label @content_item, content_for(:phase_message) %>
@@ -25,7 +25,7 @@
       <% if @content_item.try(:back_link) %>
         <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
       <% else %>
-        <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item, ga4_tracking: true %>
+        <%= render 'govuk_publishing_components/components/contextual_breadcrumbs', content_item: @content_item.parsed_content_item %>
       <% end %>
     <% end %>
 
