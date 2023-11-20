@@ -28,7 +28,6 @@
       <% if @content_item.display_as_accordion? %>
         <% items = @content_item.accordion_content %>
         <%= render "govuk_publishing_components/components/accordion", {
-          ga4_tracking: true,
           items: items,
         } %>
       <% else %>

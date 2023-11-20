@@ -4,7 +4,7 @@
   <div id="manuals-frontend" class="manuals-frontend-body">
     <% if show_contents %>
       <%= render "govuk_publishing_components/components/contents_list", {
-        aria: { label: t("manuals.pages_in_manual_section") }, contents: @content_item.contents, underline_links: true, ga4_tracking: true
+        aria: { label: t("manuals.pages_in_manual_section") }, contents: @content_item.contents, underline_links: true
       } %>
     <% end %>
 

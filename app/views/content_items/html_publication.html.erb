@@ -52,7 +52,6 @@
   <%= render "govuk_publishing_components/components/devolved_nations", {
     national_applicability: @content_item.national_applicability,
     type: @content_item.schema_name,
-    ga4_tracking: true,
   } %>
 <% end %>
 
@@ -60,7 +59,7 @@
   <div class="govuk-grid-row">
     <% if @content_item.contents.any? %>
       <div class="govuk-grid-column-one-quarter-from-desktop contents-list-container">
-        <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true, ga4_tracking: true %>
+        <%= render 'govuk_publishing_components/components/contents_list', contents: @content_item.contents, format_numbers: true %>
 
         <%= render 'govuk_publishing_components/components/print_link', {
           margin_top: 0,

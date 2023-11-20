@@ -5,7 +5,7 @@
     heading_level: 1,
     margin_bottom: 6,
     green_background: true,
-    type: I18n.t("manuals.hmrc_manual_type"),    
+    type: I18n.t("manuals.hmrc_manual_type"),
   } %>
 <% end %>
 
@@ -25,10 +25,6 @@
   <% end %>
 
   <div class="govuk-grid-column-full">
-        <%
-          previous_and_next_with_ga4_tracking = { ga4_tracking: true }
-          previous_and_next_with_ga4_tracking.merge!(@content_item.previous_and_next_links) # @content_item is frozen so we make a new hash
-        %>
-    <%= render "govuk_publishing_components/components/previous_and_next_navigation", previous_and_next_with_ga4_tracking %>
+    <%= render "govuk_publishing_components/components/previous_and_next_navigation", @content_item.previous_and_next_links %>
   </div>
 <% end %>
