@@ -50,17 +50,8 @@ class ServiceManualTopicPresenter < ServiceManualPresenter
     # This method returns the content in the required shape from the hash
     # supplied by the `groups` method.
 
-    groups.each.with_index(1).map do |section, index|
+    groups.each.map do |section|
       {
-        data_attributes: {
-          ga4: {
-            event_name: "select_content",
-            type: "accordion",
-            text: section.name,
-            index:,
-            index_total: groups.length,
-          },
-        },
         heading: {
           text: section.name,
         },
