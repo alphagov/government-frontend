@@ -18,6 +18,24 @@ class ContentItemPresenter
 
   attr_accessor :include_collections_in_other_publisher_metadata
 
+  COLD_SURVEY_URL = "https://forms.office.com/pages/responsepage.aspx?id=lY2s6r7DX0av4Th52NzAlAT5pt_hKLdInpMo5L74aZNUMzgzVUhaSDRSNVg0UVpVOTNLWFFZUlcyRy4u".freeze
+  COLD_SURVEY_URL_MAPPINGS = {
+    "/cold-weather-payment" => COLD_SURVEY_URL,
+    "/cold-weather-payment/eligibility" => COLD_SURVEY_URL,
+    "/cold-weather-payment/what-you-need-to-do" => COLD_SURVEY_URL,
+    "/cold-weather-payment/when-youll-get-paid" => COLD_SURVEY_URL,
+    "/cold-weather-payment/further-information" => COLD_SURVEY_URL,
+  }.freeze
+
+  def recruitment_survey_url
+    user_research_test_url
+  end
+
+  def user_research_test_url
+    key = content_item["base_path"]
+    COLD_SURVEY_URL_MAPPINGS[key]
+  end
+
   def initialize(content_item, requested_path, view_context)
     @content_item = content_item
     @requested_path = requested_path
