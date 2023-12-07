@@ -137,7 +137,7 @@ GEM
       rinku (~> 2.0)
       sanitize (~> 6)
     govuk_ab_testing (2.4.3)
-    govuk_app_config (9.6.0)
+    govuk_app_config (9.7.0)
       logstasher (~> 2.1)
       opentelemetry-exporter-otlp (>= 0.25, < 0.27)
       opentelemetry-instrumentation-all (>= 0.39.1, < 0.52.0)
@@ -152,7 +152,7 @@ GEM
     govuk_personalisation (0.15.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (36.0.2)
+    govuk_publishing_components (36.1.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -559,10 +559,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sentry-rails (5.14.0)
+    sentry-rails (5.15.0)
       railties (>= 5.0)
-      sentry-ruby (~> 5.14.0)
-    sentry-ruby (5.14.0)
+      sentry-ruby (~> 5.15.0)
+    sentry-ruby (5.15.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     simplecov (0.22.0)
       docile (~> 1.1)
@@ -629,7 +629,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_personalisation
-  govuk_publishing_components
+  govuk_publishing_components (>= 36.0.3)
   govuk_schemas
   govuk_test
   htmlentities
@@ -657,4 +657,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.3.22
+   2.4.6
