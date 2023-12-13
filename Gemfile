@@ -7,7 +7,7 @@ gem "rails", "7.0.8"
 gem "bootsnap", require: false
 gem "dalli"
 gem "gds-api-adapters"
-gem "govspeak"
+gem "govspeak", ">= 8.3.2"
 gem "govuk_ab_testing"
 gem "govuk_app_config"
 gem "govuk_personalisation"
