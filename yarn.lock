@@ -1519,7 +1519,7 @@ __metadata:
     jasmine-core: ^5.1.1
     standardx: ^7.0.0
     stylelint: ^15.11.0
-    stylelint-config-gds: ^1.1.0
+    stylelint-config-gds: ^1.1.1
   languageName: unknown
   linkType: soft
 
@@ -3488,15 +3488,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-gds@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "stylelint-config-gds@npm:1.1.0"
+"stylelint-config-gds@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "stylelint-config-gds@npm:1.1.1"
   dependencies:
     stylelint-config-standard: ^34.0.0
     stylelint-config-standard-scss: ^11.1.0
   peerDependencies:
     stylelint: ^15.11.0
-  checksum: ad649306f1ab9350621d7648b49e5af0e638c9ce4f19a7b3eaffe45eaa9ca41109876de65a0f241411854f2e166475fd7f862102d0790775884a949a3450cf71
+  checksum: 5922f19842e31b0bffb4db31f376321eeb0fdd0702ba0d022bb8510ed5d2b82dcf35638a76e5a6cb43df80c044a8078079f386039c86c107b042aeb494befff6
   languageName: node
   linkType: hard
 
