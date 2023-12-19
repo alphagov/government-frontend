@@ -364,6 +364,51 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "true", @response.headers[Slimmer::Headers::REMOVE_SEARCH_HEADER]
   end
 
+  test "AB test replaces content on the stop-being-self-employed page with default" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/stop-being-self-employed"
+    content_item["details"]["body"] = "{{ab_test_sa_video_stop_self_employed}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOSTOPSELFEMPLOYED"] = nil
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_stop_self_employed.Z')}", response.body
+  end
+
+  test "AB test replaces content on the stop-being-self-employed page with variant A" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/stop-being-self-employed"
+    content_item["details"]["body"] = "{{ab_test_sa_video_stop_self_employed}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOSTOPSELFEMPLOYED"] = "A"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_stop_self_employed.A')}", response.body
+  end
+
+  test "AB test replaces content on the stop-being-self-employed page with variant B" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/stop-being-self-employed"
+    content_item["details"]["body"] = "{{ab_test_sa_video_stop_self_employed}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOSTOPSELFEMPLOYED"] = "B"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_stop_self_employed.B')}", response.body
+  end
+
   test "AB test replaces content on the find-utr-number page with default" do
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = "/find-utr-number"
