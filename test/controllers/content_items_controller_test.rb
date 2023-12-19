@@ -364,6 +364,51 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "true", @response.headers[Slimmer::Headers::REMOVE_SEARCH_HEADER]
   end
 
+  test "AB test replaces content on the log-in-file-self-assessment-tax-return page with default" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/log-in-file-self-assessment-tax-return"
+    content_item["details"]["body"] = "<li>{{ab_test_sa_video_return_1}}</li>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEORETURN1"] = nil
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_return_1}}", response.body
+    assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.Z')}</li>", response.body
+  end
+
+  test "AB test replaces content on the log-in-file-self-assessment-tax-return page with variant A" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/log-in-file-self-assessment-tax-return"
+    content_item["details"]["body"] = "<li>{{ab_test_sa_video_return_1}}</li>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEORETURN1"] = "A"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_return_1}}", response.body
+    assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.A')}</li>", response.body
+  end
+
+  test "AB test replaces content on the log-in-file-self-assessment-tax-return page with variant B" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/log-in-file-self-assessment-tax-return"
+    content_item["details"]["body"] = "<li>{{ab_test_sa_video_return_1}}</li>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEORETURN1"] = "B"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_return_1}}", response.body
+    assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.B')}</li>", response.body
+  end
+
   test "AB test replaces content on the find-utr-number page with default" do
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = "/find-utr-number"
