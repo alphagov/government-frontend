@@ -25,6 +25,9 @@ class ContentItemsController < ApplicationController
     load_content_item
 
     temporary_ab_test_find_utr_page
+    temporary_ab_test_stop_self_employed
+    temporary_ab_test_sa_video_return_1
+    temporary_ab_test_sa_video_pay_bill
     set_expiry
 
     if is_service_manual?
@@ -291,6 +294,78 @@ private
                       I18n.t("ab_tests.find_utr_number_video_links.Z")
                     end
       @content_item.body.sub!(placeholder, replacement)
+    end
+  end
+
+  def temporary_ab_test_stop_self_employed
+    placeholder = "{{ab_test_sa_video_stop_self_employed}}"
+    if @content_item.base_path == "/stop-being-self-employed" && @content_item.body.include?(placeholder)
+      ab_test = GovukAbTesting::AbTest.new(
+        "SAVideoStopSelfEmployed",
+        dimension: 47, # https://docs.google.com/spreadsheets/d/1h4vGXzIbhOWwUzourPLIc8WM-iU1b6WYOVDOZxmU1Uo/edit#gid=254065189&range=69:69
+        allowed_variants: %w[A B Z],
+        control_variant: "Z",
+      )
+      @requested_variant = ab_test.requested_variant(request.headers)
+      @requested_variant.configure_response(response)
+
+      replacement = case @requested_variant.variant_name
+                    when "A"
+                      I18n.t("ab_tests.sa_video_stop_self_employed.A")
+                    when "B"
+                      I18n.t("ab_tests.sa_video_stop_self_employed.B")
+                    else
+                      I18n.t("ab_tests.sa_video_stop_self_employed.Z")
+                    end
+      @content_item.body.sub!(placeholder, replacement)
+    end
+  end
+
+  def temporary_ab_test_sa_video_return_1
+    placeholder = "{{ab_test_sa_video_return_1}}"
+    if @content_item.base_path == "/log-in-file-self-assessment-tax-return" && @content_item.body.include?(placeholder)
+      ab_test = GovukAbTesting::AbTest.new(
+        "SAVideoReturn1",
+        dimension: 47,
+        allowed_variants: %w[A B Z],
+        control_variant: "Z",
+      )
+      @requested_variant = ab_test.requested_variant(request.headers)
+      @requested_variant.configure_response(response)
+
+      replacement = case @requested_variant.variant_name
+                    when "A"
+                      I18n.t("ab_tests.sa_video_return_1.A")
+                    when "B"
+                      I18n.t("ab_tests.sa_video_return_1.B")
+                    else
+                      I18n.t("ab_tests.sa_video_return_1.Z")
+                    end
+      @content_item.body.sub!(placeholder, replacement)
+    end
+  end
+
+  def temporary_ab_test_sa_video_pay_bill
+    placeholder = "{{ab_test_sa_video_pay_bill}}"
+    if @content_item.base_path == "/pay-self-assessment-tax-bill" && @content_item.current_part_body.include?(placeholder)
+      ab_test = GovukAbTesting::AbTest.new(
+        "SAVideoPayBill",
+        dimension: 47,
+        allowed_variants: %w[A B Z],
+        control_variant: "Z",
+      )
+      @requested_variant = ab_test.requested_variant(request.headers)
+      @requested_variant.configure_response(response)
+
+      replacement = case @requested_variant.variant_name
+                    when "A"
+                      I18n.t("ab_tests.sa_video_pay_bill.A")
+                    when "B"
+                      I18n.t("ab_tests.sa_video_pay_bill.B")
+                    else
+                      I18n.t("ab_tests.sa_video_pay_bill.Z")
+                    end
+      @content_item.current_part_body.sub!(placeholder, replacement)
     end
   end
   # /TEMPORARY
