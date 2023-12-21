@@ -414,4 +414,49 @@ class ContentItemsControllerTest < ActionController::TestCase
     base_path.gsub!(/\.#{locale}$/, "") if locale
     base_path
   end
+
+  test "AB test replaces content on the self-assessment-ready-reckoner page with default" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/self-assessment-ready-reckoner"
+    content_item["details"]["body"] = "{{ab_test_sa_video_ready_reckoner}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOREADYRECKONER"] = nil
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_ready_reckoner}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_ready_reckoner.Z')}", response.body
+  end
+
+  test "AB test replaces content on the self-assessment-ready-reckoner page with Variant A" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/self-assessment-ready-reckoner"
+    content_item["details"]["body"] = "{{ab_test_sa_video_ready_reckoner}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOREADYRECKONER"] = "A"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_ready_reckoner}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_ready_reckoner.A')}", response.body
+  end
+
+  test "AB test replaces content on the self-assessment-ready-reckoner page with Variant B" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/self-assessment-ready-reckoner"
+    content_item["details"]["body"] = "{{ab_test_sa_video_ready_reckoner}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOREADYRECKONER"] = "B"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_ready_reckoner}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_ready_reckoner.B')}", response.body
+  end
 end

@@ -25,6 +25,7 @@ class ContentItemsController < ApplicationController
     load_content_item
 
     temporary_ab_test_find_utr_page
+    temporary_ab_test_sa_video_ready_reckoner
     set_expiry
 
     if is_service_manual?
@@ -292,6 +293,31 @@ private
                     end
       @content_item.body.sub!(placeholder, replacement)
     end
+  end
+
+  def temporary_ab_test_sa_video_ready_reckoner
+    placeholder = "{{ab_test_sa_video_ready_reckoner}}"
+    if @content_item.base_path == "/self-assessment-ready-reckoner" && @content_item.body.include?(placeholder)
+      ab_test = GovukAbTesting::AbTest.new(
+        "SAVideoReadyReckoner",
+        dimension: 47,
+        allowed_variants: %w[A B Z],
+        control_variant: "Z",
+      )
+      @requested_variant = ab_test.requested_variant(request.headers)
+      @requested_variant.configure_response(response)
+
+      replacement = case @requested_variant.variant_name
+                    when "A"
+                      I18n.t("ab_tests.sa_video_ready_reckoner.A")
+                    when "B"
+                      I18n.t("ab_tests.sa_video_ready_reckoner.B")
+                    else
+                      I18n.t("ab_tests.sa_video_ready_reckoner.Z")
+                    end
+      @content_item.body.sub!(placeholder, replacement)
+    end
+
   end
   # /TEMPORARY
 end
