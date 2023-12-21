@@ -23,6 +23,17 @@
       <% end %>
     <% end %>
 
+    <% if @content_item.recruitment_survey_url %>
+      <div class="govuk-!-static-margin-top-4">
+        <%= render "govuk_publishing_components/components/intervention", {
+          suggestion_text: "Help improve GOV.UK",
+          suggestion_link_text: "Sign up to take part in user research (opens in a new tab)",
+          suggestion_link_url: @content_item.recruitment_survey_url,
+          new_tab: true,
+        } %>
+      </div>
+    <% end %>
+
     <%= yield :header %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
