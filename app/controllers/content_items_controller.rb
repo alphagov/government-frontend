@@ -25,6 +25,7 @@ class ContentItemsController < ApplicationController
     load_content_item
 
     temporary_ab_test_find_utr_page
+    temporary_ab_test_sa_video_pay_bill
     set_expiry
 
     if is_service_manual?
@@ -289,6 +290,30 @@ private
                       I18n.t("ab_tests.find_utr_number_video_links.B")
                     else
                       I18n.t("ab_tests.find_utr_number_video_links.Z")
+                    end
+      @content_item.body.sub!(placeholder, replacement)
+    end
+  end
+
+  def temporary_ab_test_sa_video_pay_bill
+    placeholder = "{{ab_test_sa_video_pay_bill}}"
+    if @content_item.base_path == "/pay-self-assessment-tax-bill/pay-weekly-monthly" && @content_item.body.include?(placeholder)
+      ab_test = GovukAbTesting::AbTest.new(
+        "SAVideoPayBill",
+        dimension: 47,
+        allowed_variants: %w[A B Z],
+        control_variant: "Z",
+      )
+      @requested_variant = ab_test.requested_variant(request.headers)
+      @requested_variant.configure_response(response)
+
+      replacement = case @requested_variant.variant_name
+                    when "A"
+                      I18n.t("ab_tests.sa_video_pay_bill.A")
+                    when "B"
+                      I18n.t("ab_tests.sa_video_pay_bill.B")
+                    else
+                      I18n.t("ab_tests.sa_video_pay_bill.Z")
                     end
       @content_item.body.sub!(placeholder, replacement)
     end

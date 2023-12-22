@@ -414,4 +414,49 @@ class ContentItemsControllerTest < ActionController::TestCase
     base_path.gsub!(/\.#{locale}$/, "") if locale
     base_path
   end
+
+  test "AB test replaces content on the pay-weekly-monthly page with default" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/pay-self-assessment-tax-bill/pay-weekly-monthly"
+    content_item["details"]["body"] = "{{ab_test_sa_video_pay_bill}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOPAYBILL"] = nil
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_pay_bill.Z')}", response.body
+  end
+
+  test "AB test replaces content on the pay-weekly-monthly page with Variant A" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/pay-self-assessment-tax-bill/pay-weekly-monthly"
+    content_item["details"]["body"] = "{{ab_test_sa_video_pay_bill}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOPAYBILL"] = "A"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_pay_bill.A')}", response.body
+  end
+
+  test "AB test replaces content on the pay-weekly-monthly page with Variant B" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/pay-self-assessment-tax-bill/pay-weekly-monthly"
+    content_item["details"]["body"] = "{{ab_test_sa_video_pay_bill}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    request.headers["HTTP_GOVUK_ABTEST_SAVIDEOPAYBILL"] = "B"
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
+    assert_match "#{I18n.t('ab_tests.sa_video_pay_bill.B')}", response.body
+  end
 end
