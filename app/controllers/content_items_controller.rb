@@ -4,6 +4,7 @@ class ContentItemsController < ApplicationController
   include GovukPersonalisation::ControllerConcern
   include Slimmer::Headers
   include Slimmer::Template
+  include RecruitmentBannerHelper
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
