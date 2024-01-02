@@ -364,6 +364,50 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "true", @response.headers[Slimmer::Headers::REMOVE_SEARCH_HEADER]
   end
 
+  test "AB test replaces content on the stop-being-self-employed page with default" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/stop-being-self-employed"
+    content_item["details"]["body"] = "{{ab_test_sa_video_stop_self_employed}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+    with_variant SAVideoStopSelfEmployed: "Z" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
+      assert_match I18n.t("ab_tests.sa_video_stop_self_employed.Z").to_s, response.body
+    end
+  end
+
+  test "AB test replaces content on the stop-being-self-employed page with variant A" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/stop-being-self-employed"
+    content_item["details"]["body"] = "{{ab_test_sa_video_stop_self_employed}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    with_variant SAVideoStopSelfEmployed: "A" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
+      assert_match I18n.t("ab_tests.sa_video_stop_self_employed.A").to_s, response.body
+    end
+  end
+
+  test "AB test replaces content on the stop-being-self-employed page with variant B" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/stop-being-self-employed"
+    content_item["details"]["body"] = "{{ab_test_sa_video_stop_self_employed}}"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    with_variant SAVideoStopSelfEmployed: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
+      assert_match I18n.t("ab_tests.sa_video_stop_self_employed.B").to_s, response.body
+    end
+  end
+
   test "AB test replaces content on the find-utr-number page with default" do
     content_item = content_store_has_schema_example("answer", "answer")
     content_item["base_path"] = "/find-utr-number"
@@ -371,12 +415,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    request.headers["HTTP_GOVUK_ABTEST_FINDUTRNUMBERVIDEOLINKS"] = nil
-
-    get :show, params: { path: path_for(content_item) }
-    assert_response :success
-    assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
-    assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.Z')}</li>", response.body
+    with_variant FindUtrNumberVideoLinks: "Z" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
+      assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.Z')}</li>", response.body
+    end
   end
 
   test "AB test replaces content on the find-utr-number page with variant A" do
@@ -386,12 +430,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    request.headers["HTTP_GOVUK_ABTEST_FINDUTRNUMBERVIDEOLINKS"] = "A"
-
-    get :show, params: { path: path_for(content_item) }
-    assert_response :success
-    assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
-    assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.A')}</li>", response.body
+    with_variant FindUtrNumberVideoLinks: "A" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
+      assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.A')}</li>", response.body
+    end
   end
 
   test "AB test replaces content on the find-utr-number page with variant B" do
@@ -401,12 +445,116 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
-    request.headers["HTTP_GOVUK_ABTEST_FINDUTRNUMBERVIDEOLINKS"] = "B"
+    with_variant FindUtrNumberVideoLinks: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
+      assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.B')}</li>", response.body
+    end
+  end
 
-    get :show, params: { path: path_for(content_item) }
-    assert_response :success
-    assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
-    assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.B')}</li>", response.body
+  test "AB test replaces content on the log-in-file-self-assessment-tax-return page with default" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/log-in-file-self-assessment-tax-return"
+    content_item["details"]["body"] = "<li>{{ab_test_sa_video_return_1}}</li>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    with_variant SAVideoReturn1: "Z" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_return_1}}", response.body
+      assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.Z')}</li>", response.body
+    end
+  end
+
+  test "AB test replaces content on the log-in-file-self-assessment-tax-return page with variant A" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/log-in-file-self-assessment-tax-return"
+    content_item["details"]["body"] = "<li>{{ab_test_sa_video_return_1}}</li>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    with_variant SAVideoReturn1: "A" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_return_1}}", response.body
+      assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.A')}</li>", response.body
+    end
+  end
+
+  test "AB test replaces content on the log-in-file-self-assessment-tax-return page with variant B" do
+    content_item = content_store_has_schema_example("answer", "answer")
+    content_item["base_path"] = "/log-in-file-self-assessment-tax-return"
+    content_item["details"]["body"] = "<li>{{ab_test_sa_video_return_1}}</li>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    with_variant SAVideoReturn1: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_return_1}}", response.body
+      assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.B')}</li>", response.body
+    end
+  end
+
+  test "AB test replaces content on the pay-weekly-monthly page with default" do
+    content_item = govuk_content_schema_example("guide", "guide")
+    content_item["base_path"] = "/pay-self-assessment-tax-bill"
+    content_item["details"]["parts"] = []
+    parts = {
+      "body" => "{{ab_test_sa_video_pay_bill}}",
+      "slug" => "pay-weekly-monthly",
+    }
+    content_item["details"]["parts"] << parts
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    with_variant SAVideoPayBill: "Z" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
+      assert_match I18n.t("ab_tests.sa_video_pay_bill.Z").to_s, response.body
+    end
+  end
+
+  test "AB test replaces content on the pay-weekly-monthly page with Variant A" do
+    content_item = govuk_content_schema_example("guide", "guide")
+    content_item["base_path"] = "/pay-self-assessment-tax-bill"
+    content_item["details"]["parts"] = []
+    parts = {
+      "body" => "{{ab_test_sa_video_pay_bill}}",
+      "slug" => "pay-weekly-monthly",
+    }
+    content_item["details"]["parts"] << parts
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+
+    with_variant SAVideoPayBill: "A" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
+      assert_match I18n.t("ab_tests.sa_video_pay_bill.A").to_s, response.body
+    end
+  end
+
+  test "AB test replaces content on the pay-weekly-monthly page with Variant B" do
+    content_item = govuk_content_schema_example("guide", "guide")
+    content_item["base_path"] = "/pay-self-assessment-tax-bill"
+    content_item["details"]["parts"] = []
+    parts = {
+      "body" => "{{ab_test_sa_video_pay_bill}}",
+      "slug" => "pay-weekly-monthly",
+    }
+    content_item["details"]["parts"] << parts
+
+    stub_content_store_has_item(content_item["base_path"], content_item)
+    with_variant SAVideoPayBill: "B" do
+      get :show, params: { path: path_for(content_item) }
+      assert_response :success
+      assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
+      assert_match I18n.t("ab_tests.sa_video_pay_bill.B").to_s, response.body
+    end
   end
 
   def path_for(content_item, locale = nil)
