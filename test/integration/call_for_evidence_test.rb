@@ -71,7 +71,6 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
         "closing_date" => "2023-02-02T13:00:00.000+00:00",
       },
     })
-    p page.html
     assert page.has_text?("Open call for evidence")
     assert page.has_text?(:all, "closes at 1pm on 2 February 2023")
   end
