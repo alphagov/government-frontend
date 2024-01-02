@@ -3,6 +3,10 @@ class WorldwideCorporateInformationPagePresenter < ContentItemPresenter
   include ContentItem::ContentsList
   include WorldwideOrganisation::Branding
 
+  def formatted_title
+    worldwide_organisation&.formatted_title
+  end
+
   def show_default_breadcrumbs?
     false
   end
@@ -15,10 +19,6 @@ class WorldwideCorporateInformationPagePresenter < ContentItemPresenter
 
   def sponsoring_organisations
     worldwide_organisation&.sponsoring_organisations
-  end
-
-  def organisation_logo
-    super.merge!(name: worldwide_organisation&.title)
   end
 
 private
