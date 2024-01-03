@@ -41,7 +41,7 @@ class TravelAdviceTest < ActionDispatch::IntegrationTest
     end
 
     assert page.has_css?(".map img[src=\"#{@content_item['details']['image']['url']}\"]")
-    assert page.has_css?(".map figcaption a[href=\"#{@content_item['details']['document']['url']}\"]", text: "Download map (PDF)")
+    assert page.has_css?(".map figcaption a[href=\"#{@content_item['details']['document']['url']}\"]", text: "Download a more detailed map (PDF)")
   end
 
   test "travel advice part renders just that part" do
