@@ -20,7 +20,7 @@ class WorldwideCorporateInformationPagePresenterTest < PresenterTestCase
 
     presented = create_presenter(WorldwideCorporateInformationPagePresenter, content_item: with_non_default_crest)
 
-    expected = { name: "British Embassy Manila", url: "/world/organisations/british-embassy-manila", crest: "dbt", brand: "foreign-commonwealth-development-office" }
+    expected = { name: "British Embassy<br/>Manila", url: "/world/organisations/british-embassy-manila", crest: "dbt", brand: "foreign-commonwealth-development-office" }
     assert_equal expected, presented.organisation_logo
   end
 
@@ -32,7 +32,7 @@ class WorldwideCorporateInformationPagePresenterTest < PresenterTestCase
 
     presented = create_presenter(WorldwideCorporateInformationPagePresenter, content_item: with_empty_logo)
 
-    expected = { name: "British Embassy Manila", url: "/world/organisations/british-embassy-manila", crest: "single-identity", brand: "single-identity" }
+    expected = { name: "British Embassy<br/>Manila", url: "/world/organisations/british-embassy-manila", crest: "single-identity", brand: "single-identity" }
     assert_equal expected, presented.organisation_logo
   end
 
@@ -42,7 +42,7 @@ class WorldwideCorporateInformationPagePresenterTest < PresenterTestCase
 
     presented = create_presenter(WorldwideCorporateInformationPagePresenter, content_item: without_sponsoring_organisations)
 
-    expected = { name: "British Embassy Manila", url: "/world/organisations/british-embassy-manila", crest: "single-identity", brand: "single-identity" }
+    expected = { name: "British Embassy<br/>Manila", url: "/world/organisations/british-embassy-manila", crest: "single-identity", brand: "single-identity" }
     assert_equal expected, presented.organisation_logo
   end
 

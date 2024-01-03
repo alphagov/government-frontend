@@ -3,6 +3,10 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   include WorldwideOrganisation::Branding
   include ActionView::Helpers::UrlHelper
 
+  def formatted_title
+    content_item.dig("details", "logo", "formatted_title")
+  end
+
   def sponsoring_organisation_links
     return if sponsoring_organisations.empty?
 

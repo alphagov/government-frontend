@@ -2,6 +2,10 @@ class WorldwideOfficePresenter < ContentItemPresenter
   include ContentItem::ContentsList
   include WorldwideOrganisation::Branding
 
+  def formatted_title
+    worldwide_organisation&.formatted_title
+  end
+
   def body
     content_item.dig("details", "access_and_opening_times")
   end
