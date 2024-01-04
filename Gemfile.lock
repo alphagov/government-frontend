@@ -66,7 +66,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     ansi (1.5.0)
     ast (2.4.2)
@@ -126,7 +126,7 @@ GEM
     google-protobuf (3.25.1)
     googleapis-common-protos-types (1.11.0)
       google-protobuf (~> 3.18)
-    govspeak (8.3.1)
+    govspeak (8.3.2)
       actionview (>= 6)
       addressable (>= 2.3.8, < 3)
       govuk_publishing_components (>= 35.1)
@@ -137,7 +137,7 @@ GEM
       rinku (~> 2.0)
       sanitize (~> 6)
     govuk_ab_testing (2.4.3)
-    govuk_app_config (9.6.0)
+    govuk_app_config (9.7.0)
       logstasher (~> 2.1)
       opentelemetry-exporter-otlp (>= 0.25, < 0.27)
       opentelemetry-instrumentation-all (>= 0.39.1, < 0.52.0)
@@ -152,7 +152,7 @@ GEM
     govuk_personalisation (0.15.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (36.0.2)
+    govuk_publishing_components (37.0.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -160,6 +160,7 @@ GEM
       rails (>= 6)
       rouge
       sprockets (>= 3)
+      sprockets-rails
     govuk_schemas (4.7.0)
       json-schema (>= 2.8, < 4.2)
     govuk_test (4.0.1)
@@ -222,7 +223,7 @@ GEM
     mocha (2.1.0)
       ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
-    net-imap (0.4.7)
+    net-imap (0.4.8)
       date
       net-protocol
     net-pop (0.1.2)
@@ -444,7 +445,7 @@ GEM
     pry-byebug (3.10.1)
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
-    public_suffix (5.0.3)
+    public_suffix (5.0.4)
     puma (6.4.0)
       nio4r (~> 2.0)
     racc (1.7.3)
@@ -559,10 +560,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sentry-rails (5.14.0)
+    sentry-rails (5.15.0)
       railties (>= 5.0)
-      sentry-ruby (~> 5.14.0)
-    sentry-ruby (5.14.0)
+      sentry-ruby (~> 5.15.0)
+    sentry-ruby (5.15.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     simplecov (0.22.0)
       docile (~> 1.1)
@@ -625,7 +626,7 @@ DEPENDENCIES
   dalli
   faker
   gds-api-adapters
-  govspeak
+  govspeak (>= 8.3.2)
   govuk_ab_testing
   govuk_app_config
   govuk_personalisation
@@ -657,4 +658,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.3.22
+   2.4.6
