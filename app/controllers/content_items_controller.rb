@@ -4,6 +4,7 @@ class ContentItemsController < ApplicationController
   include GovukPersonalisation::ControllerConcern
   include Slimmer::Headers
   include Slimmer::Template
+  include AbTests
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -17,17 +18,18 @@ class ContentItemsController < ApplicationController
 
   attr_accessor :content_item, :taxonomy_navigation
 
+  # TODO: This is a `prepend_before_action` because the AbTests module
+  # wants to do a before_action that refers to @content_item
+  # (specifically it needs to do a .sub!() on @content_item.body)
+  #
+  # Is there a nicer way of managing this dependency?
+  prepend_before_action :load_content_item, only: [:show]
+
   content_security_policy do |p|
     p.connect_src(*p.connect_src, -> { csp_connect_src })
   end
 
   def show
-    load_content_item
-
-    temporary_ab_test_find_utr_page
-    temporary_ab_test_stop_self_employed
-    temporary_ab_test_sa_video_return_1
-    temporary_ab_test_sa_video_pay_bill
     set_expiry
 
     if is_service_manual?
@@ -270,103 +272,4 @@ private
 
     @content_item.csp_connect_src
   end
-
-  # TEMPORARY (author: richard.towers, expected end date: February 2024)
-  # Content specific AB test for the Find your UTR number page
-  def temporary_ab_test_find_utr_page
-    placeholder = "{{ab_test_find_utr_number_video_links}}"
-    if @content_item.base_path == "/find-utr-number" && @content_item.body.include?(placeholder)
-      ab_test = GovukAbTesting::AbTest.new(
-        "FindUtrNumberVideoLinks",
-        dimension: 61, # https://docs.google.com/spreadsheets/d/1h4vGXzIbhOWwUzourPLIc8WM-iU1b6WYOVDOZxmU1Uo/edit#gid=254065189&range=69:69
-        allowed_variants: %w[A B Z],
-        control_variant: "Z",
-      )
-      @requested_variant = ab_test.requested_variant(request.headers)
-      @requested_variant.configure_response(response)
-
-      replacement = case @requested_variant.variant_name
-                    when "A"
-                      I18n.t("ab_tests.find_utr_number_video_links.A")
-                    when "B"
-                      I18n.t("ab_tests.find_utr_number_video_links.B")
-                    else
-                      I18n.t("ab_tests.find_utr_number_video_links.Z")
-                    end
-      @content_item.body.sub!(placeholder, replacement)
-    end
-  end
-
-  def temporary_ab_test_stop_self_employed
-    placeholder = "{{ab_test_sa_video_stop_self_employed}}"
-    if @content_item.base_path == "/stop-being-self-employed" && @content_item.body.include?(placeholder)
-      ab_test = GovukAbTesting::AbTest.new(
-        "SAVideoStopSelfEmployed",
-        dimension: 47, # https://docs.google.com/spreadsheets/d/1h4vGXzIbhOWwUzourPLIc8WM-iU1b6WYOVDOZxmU1Uo/edit#gid=254065189&range=69:69
-        allowed_variants: %w[A B Z],
-        control_variant: "Z",
-      )
-      @requested_variant = ab_test.requested_variant(request.headers)
-      @requested_variant.configure_response(response)
-
-      replacement = case @requested_variant.variant_name
-                    when "A"
-                      I18n.t("ab_tests.sa_video_stop_self_employed.A")
-                    when "B"
-                      I18n.t("ab_tests.sa_video_stop_self_employed.B")
-                    else
-                      I18n.t("ab_tests.sa_video_stop_self_employed.Z")
-                    end
-      @content_item.body.sub!(placeholder, replacement)
-    end
-  end
-
-  def temporary_ab_test_sa_video_return_1
-    placeholder = "{{ab_test_sa_video_return_1}}"
-    if @content_item.base_path == "/log-in-file-self-assessment-tax-return" && @content_item.body.include?(placeholder)
-      ab_test = GovukAbTesting::AbTest.new(
-        "SAVideoReturn1",
-        dimension: 47,
-        allowed_variants: %w[A B Z],
-        control_variant: "Z",
-      )
-      @requested_variant = ab_test.requested_variant(request.headers)
-      @requested_variant.configure_response(response)
-
-      replacement = case @requested_variant.variant_name
-                    when "A"
-                      I18n.t("ab_tests.sa_video_return_1.A")
-                    when "B"
-                      I18n.t("ab_tests.sa_video_return_1.B")
-                    else
-                      I18n.t("ab_tests.sa_video_return_1.Z")
-                    end
-      @content_item.body.sub!(placeholder, replacement)
-    end
-  end
-
-  def temporary_ab_test_sa_video_pay_bill
-    placeholder = "{{ab_test_sa_video_pay_bill}}"
-    if @content_item.base_path == "/pay-self-assessment-tax-bill" && @content_item.current_part_body.include?(placeholder)
-      ab_test = GovukAbTesting::AbTest.new(
-        "SAVideoPayBill",
-        dimension: 47,
-        allowed_variants: %w[A B Z],
-        control_variant: "Z",
-      )
-      @requested_variant = ab_test.requested_variant(request.headers)
-      @requested_variant.configure_response(response)
-
-      replacement = case @requested_variant.variant_name
-                    when "A"
-                      I18n.t("ab_tests.sa_video_pay_bill.A")
-                    when "B"
-                      I18n.t("ab_tests.sa_video_pay_bill.B")
-                    else
-                      I18n.t("ab_tests.sa_video_pay_bill.Z")
-                    end
-      @content_item.current_part_body.sub!(placeholder, replacement)
-    end
-  end
-  # /TEMPORARY
 end

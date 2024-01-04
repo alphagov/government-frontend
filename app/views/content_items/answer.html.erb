@@ -36,7 +36,7 @@
     <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker"/>
   <% end %>
 
-  <%= @requested_variant.analytics_meta_tag.html_safe if @requested_variant.present? %>
+  <%= ab_test_variant.analytics_meta_tag.html_safe if ab_test_page? %>
 <% end %>
 
 <%= render 'content_items/body_with_related_links' %>

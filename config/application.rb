@@ -127,5 +127,13 @@ module GovernmentFrontend
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+
+    AbTestConfig = Data.define(:name, :placeholder, :dimension, :base_paths, :variants, :default_variant) do
+      def initialize(variants:, **rest)
+        super(variants: variants.with_indifferent_access, **rest)
+      end
+    end
+
+    config.x.ab_tests = config_for(:ab_tests).map { |c| AbTestConfig.new(**c) }
   end
 end
