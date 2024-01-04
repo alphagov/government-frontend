@@ -26,7 +26,7 @@ gem "uglifier"
 
 group :development, :test do
   gem "govuk_schemas"
-  gem "govuk_test"
+  gem "govuk_test", ">= 4.0.2"
   gem "pry-byebug"
   gem "rubocop-govuk"
 end
