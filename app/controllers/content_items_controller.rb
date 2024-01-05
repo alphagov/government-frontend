@@ -18,18 +18,15 @@ class ContentItemsController < ApplicationController
 
   attr_accessor :content_item, :taxonomy_navigation
 
-  # TODO: This is a `prepend_before_action` because the AbTests module
-  # wants to do a before_action that refers to @content_item
-  # (specifically it needs to do a .sub!() on @content_item.body)
-  #
-  # Is there a nicer way of managing this dependency?
-  prepend_before_action :load_content_item, only: [:show]
-
   content_security_policy do |p|
     p.connect_src(*p.connect_src, -> { csp_connect_src })
   end
 
   def show
+    load_content_item
+
+    ab_test_replace_placeholder!
+
     set_expiry
 
     if is_service_manual?

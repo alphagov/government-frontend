@@ -1,7 +1,6 @@
 module AbTests
   def self.included(base)
     base.helper_method :ab_test_variant, :ab_test_page?
-    base.before_action :replace_placeholder!
     base.after_action :set_ab_test_response_header
   end
 
@@ -54,7 +53,7 @@ module AbTests
     end
   end
 
-  def replace_placeholder!
+  def ab_test_replace_placeholder!
     return unless ab_test_page?
 
     replacement = ab_test_config.variants.fetch(
