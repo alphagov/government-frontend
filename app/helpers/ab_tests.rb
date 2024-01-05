@@ -8,13 +8,9 @@ module AbTests
     # TODO - put all the stuff that's currently in config/ab_tests.yml in @content_item as a link,
     # then we could do all the configuration of the AB tests in the publishing apps, and not need
     # to hardcode andy of the config ✨
+    # We also wouldn't need the base_paths config, as we could tell if a content item was supposed
+    # to be AB tested simply based on whether it was linked to AB test config.
     @ab_test_config ||= Rails.configuration.x.ab_tests.find do |config|
-      # TODO - would this be nicer if config.base_paths was a regex we could check?
-      # something like:
-      # 
-      # config.base_path_pattern =~ @content_item.base_path
-      # 
-      # ?
       config.base_paths.any? { |base_path| @content_item.base_path == base_path } && body.include?(config.placeholder)
     end
   end
