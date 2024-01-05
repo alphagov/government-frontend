@@ -370,11 +370,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item["details"]["body"] = "{{ab_test_sa_video_stop_self_employed}}"
 
     stub_content_store_has_item(content_item["base_path"], content_item)
+
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoStopSelfEmployed"}
     with_variant SAVideoStopSelfEmployed: "Z" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
-      assert_match I18n.t("ab_tests.sa_video_stop_self_employed.Z").to_s, response.body
+      assert_match config.variants["Z"], response.body
     end
   end
 
@@ -385,11 +387,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoStopSelfEmployed"}
     with_variant SAVideoStopSelfEmployed: "A" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
-      assert_match I18n.t("ab_tests.sa_video_stop_self_employed.A").to_s, response.body
+      assert_match config.variants["A"].to_s, response.body
     end
   end
 
@@ -400,11 +403,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoStopSelfEmployed"}
     with_variant SAVideoStopSelfEmployed: "B" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_stop_self_employed}}", response.body
-      assert_match I18n.t("ab_tests.sa_video_stop_self_employed.B").to_s, response.body
+      assert_match config.variants["B"].to_s, response.body
     end
   end
 
@@ -415,11 +419,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "FindUtrNumberVideoLinks"}
     with_variant FindUtrNumberVideoLinks: "Z" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
-      assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.Z')}</li>", response.body
+      assert_match "<li>#{config.variants["Z"]}</li>", response.body
     end
   end
 
@@ -430,11 +435,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "FindUtrNumberVideoLinks"}
     with_variant FindUtrNumberVideoLinks: "A" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
-      assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.A')}</li>", response.body
+      assert_match "<li>#{config.variants["A"]}</li>", response.body
     end
   end
 
@@ -445,11 +451,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "FindUtrNumberVideoLinks"}
     with_variant FindUtrNumberVideoLinks: "B" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_find_utr_number_video_links}}", response.body
-      assert_match "<li>#{I18n.t('ab_tests.find_utr_number_video_links.B')}</li>", response.body
+      assert_match "<li>#{config.variants["B"]}</li>", response.body
     end
   end
 
@@ -460,11 +467,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoReturn1"}
     with_variant SAVideoReturn1: "Z" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_return_1}}", response.body
-      assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.Z')}</li>", response.body
+      assert_match "<li>#{config.variants["Z"]}</li>", response.body
     end
   end
 
@@ -475,11 +483,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoReturn1"}
     with_variant SAVideoReturn1: "A" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_return_1}}", response.body
-      assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.A')}</li>", response.body
+      assert_match "<li>#{config.variants["A"]}</li>", response.body
     end
   end
 
@@ -490,11 +499,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoReturn1"}
     with_variant SAVideoReturn1: "B" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_return_1}}", response.body
-      assert_match "<li>#{I18n.t('ab_tests.sa_video_return_1.B')}</li>", response.body
+      assert_match "<li>#{config.variants["B"]}</li>", response.body
     end
   end
 
@@ -510,11 +520,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoPayBill"}
     with_variant SAVideoPayBill: "Z" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
-      assert_match I18n.t("ab_tests.sa_video_pay_bill.Z").to_s, response.body
+      assert_match config.variants["Z"], response.body
     end
   end
 
@@ -530,11 +541,12 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     stub_content_store_has_item(content_item["base_path"], content_item)
 
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoPayBill"}
     with_variant SAVideoPayBill: "A" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
-      assert_match I18n.t("ab_tests.sa_video_pay_bill.A").to_s, response.body
+      assert_match config.variants["A"], response.body
     end
   end
 
@@ -549,11 +561,12 @@ class ContentItemsControllerTest < ActionController::TestCase
     content_item["details"]["parts"] << parts
 
     stub_content_store_has_item(content_item["base_path"], content_item)
+    config = Rails.configuration.x.ab_tests.find{|config| config.name == "SAVideoPayBill"}
     with_variant SAVideoPayBill: "B" do
       get :show, params: { path: path_for(content_item) }
       assert_response :success
       assert_no_match "{{ab_test_sa_video_pay_bill}}", response.body
-      assert_match I18n.t("ab_tests.sa_video_pay_bill.B").to_s, response.body
+      assert_match config.variants["B"], response.body
     end
   end
 
