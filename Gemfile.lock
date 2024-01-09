@@ -152,7 +152,7 @@ GEM
     govuk_personalisation (0.15.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (37.1.1)
+    govuk_publishing_components (37.2.1)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -223,14 +223,14 @@ GEM
     mocha (2.1.0)
       ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
-    net-imap (0.4.9)
+    net-imap (0.4.9.1)
       date
       net-protocol
     net-pop (0.1.2)
       net-protocol
     net-protocol (0.2.2)
       timeout
-    net-smtp (0.4.0)
+    net-smtp (0.4.0.1)
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.0)
@@ -437,7 +437,7 @@ GEM
       ast (~> 2.4.1)
       racc
     plek (5.0.0)
-    prometheus_exporter (2.0.8)
+    prometheus_exporter (2.1.0)
       webrick
     pry (0.14.2)
       coderay (~> 1.1)
@@ -446,7 +446,7 @@ GEM
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
     public_suffix (5.0.4)
-    puma (6.4.1)
+    puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (2.2.8)
@@ -560,11 +560,13 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sentry-rails (5.15.2)
+    sentry-rails (5.3.1)
       railties (>= 5.0)
-      sentry-ruby (~> 5.15.2)
-    sentry-ruby (5.15.2)
+      sentry-ruby-core (~> 5.3.1)
+    sentry-ruby (5.16.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
+    sentry-ruby-core (5.3.1)
+      concurrent-ruby
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
