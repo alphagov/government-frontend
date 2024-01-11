@@ -43,6 +43,7 @@ group :test do
   gem "i18n-coverage"
   gem "minitest-reporters"
   gem "mocha"
+  gem "shoulda-context"
   gem "simplecov"
   gem "timecop"
   gem "webmock", require: false
