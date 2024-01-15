@@ -11,7 +11,11 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def documents
-    content_item["details"]["documents"].to_a.join("")
+    docs = content_item["details"]["attachments"].select { |a| a["locale"] == locale }
+    docs.each do |doc|
+      doc.delete("alternative_format_contact_email") if doc["accessible"] == true
+    end
+    docs
   end
 
   def featured_attachments

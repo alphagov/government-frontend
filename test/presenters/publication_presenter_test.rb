@@ -10,7 +10,7 @@ class PublicationPresenterTest < PresenterTestCase
     assert_equal schema_item["schema_name"], presented_item.schema_name
     assert_equal schema_item["title"], presented_item.title
     assert_equal schema_item["details"]["body"], presented_item.details
-    assert_equal schema_item["details"]["documents"].join(""), presented_item.documents
+    assert_equal schema_item["details"]["documents"], presented_item.documents_attachments
   end
 
   test "#published returns a formatted date of the day the content item became public" do

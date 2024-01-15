@@ -1,26 +1,37 @@
-<% attachments ||= [] %>
-<% attachment_details = attachments.filter_map { |id| @content_item&.attachment_details(id) } %>
-<% if legacy_pre_rendered_documents.present? || attachment_details.any? %>
+<%
+  attachments ||= nil
+  attachments_html ||= nil
+  featured_attachments ||= []
+  attachment_details = featured_attachments.filter_map { |id| @content_item&.attachment_details(id) }
+%>
+<% if attachments || attachments_html %>
   <section id="<%= title.parameterize %>">
     <%= render 'govuk_publishing_components/components/heading',
         text: title,
         mobile_top_margin: true %>
 
-    <% if legacy_pre_rendered_documents.present? %>
+    <% add_gem_component_stylesheet("details") %>
+    <% if attachments %>
+      <% attachments.each do |details| %>
+        <%= render 'govuk_publishing_components/components/attachment', {
+          heading_level: 3,
+          attachment: details,
+          margin_bottom: 6
+        } %>
+      <% end %>
+    <% elsif attachments_html %>
       <%= render 'govuk_publishing_components/components/govspeak', {
         direction: page_text_direction,
       } do %>
-        <% add_gem_component_stylesheet("details") if legacy_pre_rendered_documents.include? "govuk\-details" %>
-        <%= raw(legacy_pre_rendered_documents) %>
+        <%= raw(attachments_html) %>
       <% end %>
     <% else %>
       <% attachment_details.each do |details| %>
-        <div class="govuk-!-static-margin-bottom-6">
-          <%= render 'govuk_publishing_components/components/attachment', {
-            heading_level: 3,
-            attachment: details
-          } %>
-        </div>
+        <%= render 'govuk_publishing_components/components/attachment', {
+          heading_level: 3,
+          attachment: details,
+          margin_bottom: 6
+        } %>
       <% end %>
     <% end %>
   </section>

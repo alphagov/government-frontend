@@ -44,8 +44,8 @@
 
       <%= render "attachments",
           title: t("call_for_evidence.download_outcome"),
-          legacy_pre_rendered_documents: @content_item.outcome_documents,
-          attachments: @content_item.outcome_attachments %>
+          attachments_html: @content_item.outcome_documents,
+          featured_attachments: @content_item.outcome_attachments %>
 
       <%= render 'govuk_publishing_components/components/heading', text: t("call_for_evidence.detail_of_outcome"), mobile_top_margin: true %>
       <div class="call-for-evidence-outcome-detail">
@@ -118,8 +118,8 @@
 
       <%= render "attachments",
           title: t("call_for_evidence.documents"),
-          legacy_pre_rendered_documents: @content_item.documents,
-          attachments: @content_item.featured_attachments %>
+          attachments_html: @content_item.documents,
+          featured_attachments: @content_item.featured_attachments %>
     </div>
 
     <% if @content_item.ways_to_respond? %>

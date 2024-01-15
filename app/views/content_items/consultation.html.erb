@@ -55,8 +55,8 @@
 
       <%= render "attachments",
           title: t("consultation.download_outcome"),
-          legacy_pre_rendered_documents: @content_item.final_outcome_documents,
-          attachments: @content_item.final_outcome_attachments %>
+          attachments_html: @content_item.final_outcome_documents,
+          featured_attachments: @content_item.final_outcome_attachments %>
 
       <%= render 'govuk_publishing_components/components/heading', text: t("consultation.detail_of_outcome"), mobile_top_margin: true %>
       <div class="consultation-outcome-detail">
@@ -70,8 +70,8 @@
 
     <%= render "attachments",
         title: t("consultation.feedback_received"),
-        legacy_pre_rendered_documents: @content_item.public_feedback_documents,
-        attachments: @content_item.public_feedback_attachments %>
+        attachments_html: @content_item.public_feedback_documents,
+        featured_attachments: @content_item.public_feedback_attachments %>
 
     <% if @content_item.public_feedback_detail %>
       <%= render 'govuk_publishing_components/components/heading', {
@@ -148,8 +148,8 @@
 
       <%= render "attachments",
           title: t("consultation.documents"),
-          legacy_pre_rendered_documents: @content_item.documents,
-          attachments: @content_item.featured_attachments %>
+          attachments_html: @content_item.documents,
+          featured_attachments: @content_item.featured_attachments %>
     </div>
 
     <% if @content_item.ways_to_respond? %>
