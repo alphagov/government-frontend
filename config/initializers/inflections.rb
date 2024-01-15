@@ -14,7 +14,3 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym "RESTful"
 # end
-
-ActiveSupport::Inflector.inflections(:en) do |inflect|
-  inflect.singular "how_government_works", "how_government_works"
-end
