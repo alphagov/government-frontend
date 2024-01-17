@@ -103,7 +103,7 @@ class ActionDispatch::IntegrationTest
 
   def assert_has_metadata(any_args, extra_metadata_classes: nil)
     within ".gem-c-metadata#{extra_metadata_classes}" do
-      any_args.each do |_key, value|
+      any_args.each_value do |value|
         value = { value => nil } if value.is_a?(String)
         value.each do |text, href|
           if href
