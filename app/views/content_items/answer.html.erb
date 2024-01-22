@@ -10,30 +10,11 @@
     scroll_track_percent_paths = [
       "/get-coronavirus-test",
     ]
-    ga4_scroll_track_headings_paths = [
-      "/personal-tax-account",
-      "/log-in-file-self-assessment-tax-return",
-      "/benefits-calculators",
-      "/national-minimum-wage-rates",
-      "/order-coronavirus-rapid-lateral-flow-tests",
-      "/contact-hmrc",
-      "/dbs-update-service",
-      "/tax-free-childcare",
-      "/check-income-tax-current-year",
-      "/apply-apprenticeship",
-      "/report-covid19-result",
-      "/order-copy-birth-death-marriage-certificate",
-      "/global-health-insurance-card"
-    ]
   %>
   <% if scroll_track_headings_paths.include?(@content_item.base_path) %>
     <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker" data-track-type="headings"/>
   <% elsif scroll_track_percent_paths.include?(@content_item.base_path) %>
     <meta name="govuk:scroll-tracker" content="" data-module="auto-scroll-tracker"/>
-  <% end %>
-
-  <% if ga4_scroll_track_headings_paths.include?(@content_item.base_path) %>
-    <meta name="govuk:scroll-tracker" content="" data-module="ga4-scroll-tracker"/>
   <% end %>
 
   <%= @requested_variant.analytics_meta_tag.html_safe if @requested_variant.present? %>
