@@ -1,5 +1,17 @@
 @import "govuk_publishing_components/individual_component_support";
-@import "../modules/*";
+@import "../modules/change-history";
+@import "../modules/collection";
+@import "../modules/community-contact";
+@import "../modules/govspeak-wrapper";
+@import "../modules/hero";
+@import "../modules/notice";
+@import "../modules/page-contents";
+@import "../modules/page-header";
+@import "../modules/panel";
+@import "../modules/related-content";
+@import "../modules/service-standard-point";
+@import "../modules/sticky";
+@import "../modules/typography";
 
 .js-enabled {
   .app-change-history__past {

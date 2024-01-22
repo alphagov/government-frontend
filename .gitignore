@@ -16,6 +16,8 @@
 /tmp
 
 /public/assets
+/app/assets/builds/*
+!/app/assets/builds/.keep
 /test/wraith/wip*
 shots/*
 /coverage
