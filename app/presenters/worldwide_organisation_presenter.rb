@@ -86,7 +86,13 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
 
   def main_office
     return unless (office_item = content_item.dig("links", "main_office")&.first)
-    return unless (office_contact_item = office_item.dig("links", "contact")&.first)
+
+    office_contact_item = if office_item.dig("links", "contact")
+                            office_item.dig("links", "contact")&.first # To be removed once switched to edition links
+                          else
+                            contact_for_office(office_item["content_id"])
+                          end
+    return unless office_contact_item
 
     WorldwideOffice.new(
       contact: WorldwideOrganisation::LinkedContactPresenter.new(office_contact_item),
@@ -101,7 +107,12 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     return [] unless content_item.dig("links", "home_page_offices")
 
     content_item.dig("links", "home_page_offices").map { |office|
-      next unless (contact = office.dig("links", "contact")&.first)
+      contact = if office.dig("links", "contact")
+                  office.dig("links", "contact")&.first # To be removed once switched to edition links
+                else
+                  contact_for_office(office["content_id"])
+                end
+      next unless contact
 
       WorldwideOrganisation::LinkedContactPresenter.new(contact)
     }.compact
@@ -135,6 +146,18 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   end
 
 private
+
+  def contact_for_office(office_content_id)
+    contact_mapping = content_item.dig("details", "office_contact_associations").select { |office_contact_association|
+      office_contact_association["office_content_id"] == office_content_id
+    }.first
+
+    return unless contact_mapping
+
+    content_item.dig("links", "contacts").select { |contact|
+      contact["content_id"] == contact_mapping["contact_content_id"]
+    }.first
+  end
 
   def presented_title_for_roles(roles)
     roles
