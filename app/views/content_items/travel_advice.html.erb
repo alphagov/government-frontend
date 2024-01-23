@@ -51,11 +51,15 @@
         <%= render 'shared/travel_advice_first_part', content_item: @content_item %>
       <% end %>
 
-      <div data-module="gem-track-click"
+      <div data-module="gem-track-click ga4-link-tracker"
         data-track-category="SummaryTravelAdviceWarning"
         data-track-action="callOutBoxClicked"
         data-track-links-only
-        data-limit-to-element-class="call-to-action">
+        data-limit-to-element-class="call-to-action"
+        data-ga4-link= "<%= { "event_name": "navigation", "type": "callout" }.to_json %>"
+        data-ga4-track-links-only
+        data-ga4-limit-to-element-class="call-to-action"
+        >
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>

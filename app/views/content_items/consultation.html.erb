@@ -160,7 +160,10 @@
           direction: page_text_direction,
         } do %>
           <% if @content_item.respond_online_url %>
-            <div class="call-to-action">
+              <div class="call-to-action"
+                data-module="ga4-link-tracker"
+                data-ga4-link= "<%= { "event_name": "navigation", "type": "callout" }.to_json %>"
+                data-ga4-track-links-only>
               <p><%= link_to t("consultation.respond_online"), @content_item.respond_online_url %></p>
             </div>
 
