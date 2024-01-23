@@ -49,7 +49,7 @@
       <% end %>
 
       <div class="responsive-bottom-margin">
-        <%= render "attachments",
+        <%= render "attachments_list",
           title: t("publication.documents", count: 5), # This should always be pluralised.
           legacy_pre_rendered_documents: @content_item.documents,
           attachments: @content_item.featured_attachments
