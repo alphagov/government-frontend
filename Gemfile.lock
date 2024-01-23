@@ -208,7 +208,7 @@ GEM
     irb (1.11.1)
       rdoc
       reline (>= 0.4.2)
-    json (2.6.3)
+    json (2.7.1)
     json-schema (4.1.1)
       addressable (>= 2.8)
     kramdown (2.4.0)
@@ -600,12 +600,12 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    slimmer (18.1.0)
+    slimmer (18.3.0)
       json
       nokogiri (~> 1.7)
       null_logger
       plek (>= 1.1.0)
-      rack
+      rack (>= 3.0)
       rest-client
     smart_properties (1.17.0)
     sprockets (4.2.1)
