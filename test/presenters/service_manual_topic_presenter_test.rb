@@ -35,7 +35,7 @@ class ServiceManualTopicPresenterTest < PresenterTestCase
     first_accordion_section = {
       heading: { text: "Group 1" },
       summary: { text: "The first group" },
-      content: { html: "<ul class=\"govuk-list\">\n<li><a class=\"govuk-link\" href=\"/service-manual/user-centred-design/accessibility\">Accessibility</a></li>\n<li><a class=\"govuk-link\" href=\"/service-manual/user-centred-design/resources/patterns/addresses\">Addresses</a></li>\n</ul>" },
+      content: { html: "<ul class=\"govuk-list\"><li><a class=\"govuk-link\" href=\"/service-manual/user-centred-design/accessibility\">Accessibility</a></li><li><a class=\"govuk-link\" href=\"/service-manual/user-centred-design/resources/patterns/addresses\">Addresses</a></li></ul>" },
       expanded: true,
     }
 
