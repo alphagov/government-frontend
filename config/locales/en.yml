@@ -5,17 +5,13 @@ en:
       A: in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> under 'Your details' or in the 'Self Assessment' section
       B: in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> - watch a <a href="https://www.youtube.com/watch?v=LXw9ily9rTo">video about finding your UTR number in the app</a>
       Z: in the <a href="/guidance/download-the-hmrc-app"><abbr title="HM Revenue and Customs">HMRC</abbr> app</a> under 'Your details' or in the 'Self Assessment' section
-    sa_video_pay_bill:
-      A: <p>Go to your <a rel="external" href="https://www.tax.service.gov.uk/gg/sign-in?continue=/self-assessment/&amp;origin=SA-frontend">HM Revenue and Customs (<abbr title="HM Revenue and Customs">HMRC</abbr>) online account</a> and set up a Direct Debit. Choose the Budget Payment Plan option and follow the instructions to set up your plan.</p>
-      B: <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak"><p>Go to your <a rel="external" href="https://www.tax.service.gov.uk/gg/sign-in?continue=/self-assessment/&amp;origin=SA-frontend">HM Revenue and Customs (<abbr title="HM Revenue and Customs">HMRC</abbr>) online account</a> and set up a Direct Debit. Choose the Budget Payment Plan option and follow the instructions to set up your plan.</p><p>Watch this video to find out how a budget payment plan can help you pay your tax bill on time.</p><p><a href="https://www.youtube.com/watch?v=xHn31myAkio">How do I budget for my Self Assessment tax bill?</a></p></div>
-      Z: <p>Go to your <a rel="external" href="https://www.tax.service.gov.uk/gg/sign-in?continue=/self-assessment/&amp;origin=SA-frontend">HM Revenue and Customs (<abbr title="HM Revenue and Customs">HMRC</abbr>) online account</a> and set up a Direct Debit. Choose the Budget Payment Plan option and follow the instructions to set up your plan.</p>
-    sa_video_return_1:
-      A: "<p>You do not have to complete your return in one go. You can save your entry and go back to it later if you need to.</p>"
-      B: <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak"><p>You do not have to complete your return in one go. You can save your entry and go back to it later if you need to.</p><p>Watch this video to find out more about how to file your tax return.</p><p><a href="https://www.youtube.com/watch?v=_N0ekIOnURM">My first Self Assessment tax return</a></p></div>
-      Z: "<p>You do not have to complete your return in one go. You can save your entry and go back to it later if you need to.</p>"
-    sa_video_stop_self_employed:
+    sa_video_return_2:
+      A: <h2 id="if-you-do-not-have-a-government-gateway-account">If you do not have a Government Gateway account</h2>
+      B: <div class="gem-c-govspeak govuk-govspeak " data-module="govspeak"><p>Watch this video to find out more about how to file your tax return.</p><p><a href="https://www.youtube.com/watch?v=_N0ekIOnURM">My first Self Assessment tax return</a></p></div><h2 id="if-you-do-not-have-a-government-gateway-account">If you do not have a Government Gateway account</h2>
+      Z: <h2 id="if-you-do-not-have-a-government-gateway-account">If you do not have a Government Gateway account</h2>
+    sa_video_stop_self_employed_2:
       A: <p>You’ll need to provide your <a href="/national-insurance/your-national-insurance-number">National Insurance number</a> and <a href="/find-utr-number">your UTR number</a>.</p>
-      B: <p>You’ll need to provide your <a href="/national-insurance/your-national-insurance-number">National Insurance number</a> and <a href="/find-utr-number">your UTR number</a>.</p><p><a href="https://www.youtube.com/watch?v=g-CkQRLGb0Q">Watch this video to find out how to tell HMRC you're stopping self-employment</a></p>
+      B: <p>You’ll need to provide your <a href="/national-insurance/your-national-insurance-number">National Insurance number</a> and <a href="/find-utr-number">your UTR number</a>.</p><div class="gem-c-govspeak govuk-govspeak" data-module="govspeak"><p>Watch this video to find out how to tell HMRC you're stopping self-employment.</p><p><a href="https://www.youtube.com/watch?v=g-CkQRLGb0Q">How to stop Self Assessment online if you’re self-employed</a></p></div>
       Z: <p>You’ll need to provide your <a href="/national-insurance/your-national-insurance-number">National Insurance number</a> and <a href="/find-utr-number">your UTR number</a>.</p>
   call_for_evidence:
     and: and
