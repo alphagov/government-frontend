@@ -25,7 +25,6 @@ class ContentItemsController < ApplicationController
   def show
     load_content_item
 
-    temporary_ab_test_find_utr_page
     temporary_ab_test_stop_self_employed_2
     temporary_ab_test_sa_video_return_2
     set_expiry
@@ -272,30 +271,6 @@ private
   end
 
   # TEMPORARY (author: richard.towers, expected end date: February 2024)
-  # Content specific AB test for the Find your UTR number page
-  def temporary_ab_test_find_utr_page
-    placeholder = "{{ab_test_find_utr_number_video_links}}"
-    if @content_item.base_path == "/find-utr-number" && @content_item.body.include?(placeholder)
-      ab_test = GovukAbTesting::AbTest.new(
-        "FindUtrNumberVideoLinks",
-        dimension: 61, # https://docs.google.com/spreadsheets/d/1h4vGXzIbhOWwUzourPLIc8WM-iU1b6WYOVDOZxmU1Uo/edit#gid=254065189&range=69:69
-        allowed_variants: %w[A B Z],
-        control_variant: "Z",
-      )
-      @requested_variant = ab_test.requested_variant(request.headers)
-      @requested_variant.configure_response(response)
-
-      replacement = case @requested_variant.variant_name
-                    when "A"
-                      I18n.t("ab_tests.find_utr_number_video_links.A")
-                    when "B"
-                      I18n.t("ab_tests.find_utr_number_video_links.B")
-                    else
-                      I18n.t("ab_tests.find_utr_number_video_links.Z")
-                    end
-      @content_item.body.sub!(placeholder, replacement)
-    end
-  end
 
   def temporary_ab_test_stop_self_employed_2
     placeholder = "{{ab_test_sa_video_stop_self_employed_2}}"
