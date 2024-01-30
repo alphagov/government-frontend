@@ -48,18 +48,14 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     return unless content_item["links"]["primary_role_person"]
 
     person = content_item.dig("links", "primary_role_person").first
-    current_roles = if person.dig("links", "role_appointments")
-                      person.dig("links", "role_appointments").select { |role_app| role_app.dig("details", "current") } # To be removed once switched to edition links
-                    else
-                      roles_for_person(person["content_id"])
-                    end
+    current_roles = roles_for_person(person["content_id"])
 
     {
       name: person["title"],
       href: person["web_url"],
       image_url: person["details"]["image"]["url"],
       image_alt: person["details"]["image"]["alt_text"],
-      description: person.dig("links", "role_appointments") ? organisation_roles_for(current_roles) : presented_title_for_roles(current_roles), # Call to `organisation_roles_for` to be removed once switched to edition links
+      description: presented_title_for_roles(current_roles),
     }
   end
 
@@ -70,16 +66,12 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     return [] unless people.any?
 
     people.map do |person|
-      current_roles = if person.dig("links", "role_appointments")
-                        person.dig("links", "role_appointments").select { |role_app| role_app.dig("details", "current") } # To be removed once switched to edition links
-                      else
-                        roles_for_person(person["content_id"])
-                      end
+      current_roles = roles_for_person(person["content_id"])
 
       {
         name: person["title"],
         href: person["web_url"],
-        description: person.dig("links", "role_appointments") ? organisation_roles_for(current_roles) : presented_title_for_roles(current_roles), # Call to `organisation_roles_for` to be removed once switched to edition links
+        description: presented_title_for_roles(current_roles),
       }
     end
   end
@@ -87,11 +79,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   def main_office
     return unless (office_item = content_item.dig("links", "main_office")&.first)
 
-    office_contact_item = if office_item.dig("links", "contact")
-                            office_item.dig("links", "contact")&.first # To be removed once switched to edition links
-                          else
-                            contact_for_office(office_item["content_id"])
-                          end
+    office_contact_item = contact_for_office(office_item["content_id"])
     return unless office_contact_item
 
     WorldwideOffice.new(
@@ -107,11 +95,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     return [] unless content_item.dig("links", "home_page_offices")
 
     content_item.dig("links", "home_page_offices").map { |office|
-      contact = if office.dig("links", "contact")
-                  office.dig("links", "contact")&.first # To be removed once switched to edition links
-                else
-                  contact_for_office(office["content_id"])
-                end
+      contact = contact_for_office(office["content_id"])
       next unless contact
 
       WorldwideOrganisation::LinkedContactPresenter.new(contact)
@@ -163,18 +147,6 @@ private
     roles
       .map { |role| role["title"] }
       .compact.join(", ")
-  end
-
-  def organisation_roles_for(current_appointments)
-    current_appointments
-      .map { |role_appointment| role_appointment.dig("links", "role").first }
-      .select { |role| organisation_role_ids.include?(role["content_id"]) }
-      .map { |role| role["title"] }
-      .compact.join(", ")
-  end
-
-  def organisation_role_ids
-    content_item.dig("links", "roles")&.map { |role| role["content_id"] } || []
   end
 
   def roles_for_person(person_content_id)
