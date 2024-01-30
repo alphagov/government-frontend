@@ -5,8 +5,60 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
     "worldwide_organisation"
   end
 
-  test "description of primary_role_person should have spaces between roles" do
+  test "description of primary_role_person should have spaces between roles with non-edition links" do
     presenter = create_presenter(WorldwideOrganisationPresenter, content_item: { "links" => { "primary_role_person" => [{ "details" => { "image" => {} }, "links" => { "role_appointments" => [{ "details" => { "current" => true }, "links" => { "role" => [{ "content_id" => "1", "title" => "Example Role 1" }] } }, { "details" => { "current" => true }, "links" => { "role" => [{ "content_id" => "2", "title" => "Example Role 2" }] } }] } }], "roles" => [{ "content_id" => "1" }, { "content_id" => "2" }] } })
+    assert_equal "Example Role 1, Example Role 2", presenter.person_in_primary_role[:description]
+  end
+
+  test "description of primary_role_person should have spaces between roles with edition links" do
+    presenter = create_presenter(WorldwideOrganisationPresenter, content_item: {
+      "details" => { "people_role_associations" => [
+        {
+          "person_content_id" => "person_1",
+          "role_appointments" => [
+            {
+              "role_appointment_content_id" => "role_apppointment_1",
+              "role_content_id" => "role_1",
+            },
+            {
+              "role_appointment_content_id" => "role_apppointment_2",
+              "role_content_id" => "role_2",
+            },
+          ],
+        },
+      ] },
+      "links" => {
+        "primary_role_person" => [
+          {
+            "content_id" => "person_1",
+            "details" => { "image" => {} },
+            "links" => {},
+          },
+        ],
+        "role_appointments" => [
+          {
+            "content_id" => "role_apppointment_1",
+            "details" => { "current" => true },
+            "links" => {},
+          },
+          {
+            "content_id" => "role_apppointment_2",
+            "details" => { "current" => true },
+            "links" => {},
+          },
+        ],
+        "roles" => [
+          {
+            "content_id" => "role_1",
+            "title" => "Example Role 1",
+          },
+          {
+            "content_id" => "role_2",
+            "title" => "Example Role 2",
+          },
+        ],
+      },
+    })
     assert_equal "Example Role 1, Example Role 2", presenter.person_in_primary_role[:description]
   end
 
@@ -15,8 +67,60 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
     assert_equal "Example Role 1", presenter.person_in_primary_role[:description]
   end
 
-  test "description of people_in_non_primary_roles should have spaces between roles" do
+  test "description of people_in_non_primary_roles should have spaces between roles with non-edition links" do
     presenter = create_presenter(WorldwideOrganisationPresenter, content_item: { "links" => { "secondary_role_person" => [{ "details" => { "image" => {} }, "links" => { "role_appointments" => [{ "details" => { "current" => true }, "links" => { "role" => [{ "content_id" => "1", "title" => "Example Role 1" }] } }, { "details" => { "current" => true }, "links" => { "role" => [{ "content_id" => "2", "title" => "Example Role 2" }] } }] } }], "roles" => [{ "content_id" => "1" }, { "content_id" => "2" }] } })
+    assert_equal "Example Role 1, Example Role 2", presenter.people_in_non_primary_roles.first[:description]
+  end
+
+  test "description of people_in_non_primary_roles should have spaces between roles with edition links" do
+    presenter = create_presenter(WorldwideOrganisationPresenter, content_item: {
+      "details" => { "people_role_associations" => [
+        {
+          "person_content_id" => "person_1",
+          "role_appointments" => [
+            {
+              "role_appointment_content_id" => "role_apppointment_1",
+              "role_content_id" => "role_1",
+            },
+            {
+              "role_appointment_content_id" => "role_apppointment_2",
+              "role_content_id" => "role_2",
+            },
+          ],
+        },
+      ] },
+      "links" => {
+        "secondary_role_person" => [
+          {
+            "content_id" => "person_1",
+            "details" => { "image" => {} },
+            "links" => {},
+          },
+        ],
+        "role_appointments" => [
+          {
+            "content_id" => "role_apppointment_1",
+            "details" => { "current" => true },
+            "links" => {},
+          },
+          {
+            "content_id" => "role_apppointment_2",
+            "details" => { "current" => true },
+            "links" => {},
+          },
+        ],
+        "roles" => [
+          {
+            "content_id" => "role_1",
+            "title" => "Example Role 1",
+          },
+          {
+            "content_id" => "role_2",
+            "title" => "Example Role 2",
+          },
+        ],
+      },
+    })
     assert_equal "Example Role 1, Example Role 2", presenter.people_in_non_primary_roles.first[:description]
   end
 
