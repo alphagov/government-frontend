@@ -141,7 +141,7 @@ private
   end
 
   def load_content_item
-    content_item = Services.content_store.content_item(content_item_path)
+    content_item = JSON.parse(File.read('./example.json'))
 
     content_item["links"]["ordered_related_items"] = ordered_related_items(content_item["links"]) if content_item["links"]
 
@@ -181,6 +181,7 @@ private
     return "guide_single" if @content_item.render_guide_as_single_page?
     return "manual_updates" if @content_item.manual_updates?
     return "hmrc_manual_updates" if @content_item.hmrc_manual_updates?
+    return "worldwide_corporate_information_page" if @content_item.worldwide_corporate_information_page?
 
     @content_item.schema_name
   end
@@ -216,10 +217,10 @@ private
   end
 
   def set_expiry
-    expires_in(
-      @content_item.cache_control_max_age(request.format),
-      public: @content_item.cache_control_public?,
-    )
+    # expires_in(
+    #   @content_item.cache_control_max_age(request.format),
+    #   public: @content_item.cache_control_public?,
+    # )
   end
 
   def service_url(original_url)

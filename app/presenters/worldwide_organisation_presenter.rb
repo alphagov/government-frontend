@@ -1,7 +1,16 @@
 class WorldwideOrganisationPresenter < ContentItemPresenter
-  include ContentItem::Body
+  include ContentItem::Parts
   include WorldwideOrganisation::Branding
   include ActionView::Helpers::UrlHelper
+  include ContentItem::ContentsList
+
+  def worldwide_corporate_information_page?
+    !first_part?
+  end
+
+  def body
+    current_part_body
+  end
 
   def formatted_title
     content_item.dig("details", "logo", "formatted_title")
@@ -41,6 +50,8 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   end
 
   def show_our_people_section?
+    return false if first_part?
+
     person_in_primary_role || people_in_non_primary_roles.any?
   end
 

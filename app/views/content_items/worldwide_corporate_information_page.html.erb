@@ -1,5 +1,5 @@
 <%= render partial: "content_items/worldwide_organisation/header", locals: {
-  worldwide_organisation: @content_item.worldwide_organisation,
+  worldwide_organisation: @content_item,
 } %>
 
 <article class="govuk-grid-row">
@@ -12,13 +12,13 @@
 
   <div class="govuk-grid-column-two-thirds">
     <%= render "govuk_publishing_components/components/heading", {
-      text: @content_item.title,
+      text: @content_item.current_part_title,
       heading_level: 2,
       font_size: "xl",
       margin_bottom: 4,
     } %>
 
-    <p class="govuk-body-l"><%= @content_item.description %></p>
+    <p class="govuk-body-l"><%= @content_item.current_part_summary %></p>
 
     <div class="body">
       <%= render "govuk_publishing_components/components/govspeak", {} do
