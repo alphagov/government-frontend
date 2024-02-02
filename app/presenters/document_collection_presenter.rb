@@ -41,7 +41,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
           },
         },
         metadata: {
-          public_updated_at: link["public_updated_at"]&.then { |time| Time.zone.parse(time) },
+          public_updated_at: group_document_link_public_updated_at(link),
           document_type: I18n.t(
             "content_item.schema_name.#{link['document_type']}",
             count: 1,
@@ -68,6 +68,22 @@ class DocumentCollectionPresenter < ContentItemPresenter
   end
 
 private
+
+  def group_document_link_public_updated_at(link)
+    disallowed_document_types = %w[answer
+                                   completed_transaction
+                                   guide
+                                   help_page
+                                   local_transaction
+                                   place
+                                   simple_smart_answer
+                                   transaction
+                                   smart_answer]
+
+    return nil if disallowed_document_types.include?(link["document_type"])
+
+    link["public_updated_at"]&.then { |time| Time.zone.parse(time) }
+  end
 
   def group_documents(group)
     group["documents"].map { |id| documents_hash[id] }.compact

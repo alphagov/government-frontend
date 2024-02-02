@@ -103,6 +103,34 @@ class DocumentCollectionPresenterTest
 
       assert_nil grouped.first[:metadata][:public_updated_at]
     end
+
+    test "it returns nil if specfic document_type is in the disallowed_document_types list" do
+      schema_data = schema_item
+
+      disallowed_document_types = %w[answer
+                                     completed_transaction
+                                     guide
+                                     help_page
+                                     local_transaction
+                                     place
+                                     simple_smart_answer
+                                     transaction
+                                     smart_answer]
+
+      disallowed_document_types.each do |document_type|
+        document = schema_data["links"]["documents"].first
+        document["document_type"] = document_type
+
+        grouped = present_example(schema_data).group_document_links(
+          { "documents" => [document["content_id"]] },
+          0,
+        )
+
+        public_updated_at = grouped[0][:metadata][:public_updated_at]
+
+        assert_equal nil, public_updated_at
+      end
+    end
   end
 
   class GroupWithMissingDocument < TestCase
