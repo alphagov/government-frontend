@@ -3,7 +3,11 @@ module PublishStaticPages
     {
       content_id: "14aa298f-03a8-4e76-96de-483efa3d001f",
       title: "History of 10 Downing Street",
-      description: "10 Downing Street, the locale of British prime ministers since 1735, vies with the White House as being the most important political building anywhere in the world in the modern era.",
+      description: "10 Downing Street, the locale of British "\
+                   "prime ministers since 1735, vies with the "\
+                   "White House as being the most important "\
+                   "political building anywhere in the world "\
+                   "in the modern era.",
       template: "histories/10_downing_street",
       base_path: "/government/history/10-downing-street",
     },
@@ -38,7 +42,12 @@ module PublishStaticPages
     {
       content_id: "db95a864-874f-4f50-a483-352a5bc7ba18",
       title: "History of the UK government",
-      description: "In this section you can read short biographies of notable people and explore the history of government buildings. You can also search our online records and read articles and blog posts by historians.",
+      description: "In this section you can read short "\
+                   "biographies of notable people and "\
+                   "explore the history of government "\
+                   "buildings. You can also search our "\
+                   "online records and read articles "\
+                   "and blog posts by historians.",
       template: "histories/history",
       base_path: "/government/history",
     },
