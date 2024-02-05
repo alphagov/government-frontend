@@ -28,6 +28,7 @@
     <%= yield :header %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
+      <span id="Top"></span>
       <%= yield :main %>
     </main>
   </div>
