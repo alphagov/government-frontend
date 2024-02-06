@@ -4,7 +4,6 @@ APP_STYLESHEETS = {
   "components/_banner.scss" => "components/_banner.css",
   "components/_contents-list-with-body.scss" => "components/_contents-list-with-body.css",
   "components/_download-link.scss" => "components/_download-link.css",
-  "components/_error-message.scss" => "components/_error-message.css",
   "components/_figure.scss" => "components/_figure.css",
   "components/_important-metadata.scss" => "components/_important-metadata.css",
   "components/_published-dates.scss" => "components/_published-dates.css",
