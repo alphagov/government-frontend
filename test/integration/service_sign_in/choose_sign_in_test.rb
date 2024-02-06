@@ -61,7 +61,7 @@ module ServiceSignIn
       # Make sure the id is the same as the link href so that they'll link together properly.
       assert page.has_css?(".gem-c-radio input[id='option-0'][value='use-government-gateway']", visible: false)
 
-      assert page.has_css?(".app-c-error-message", text: "Please select an option")
+      assert page.has_css?(".gem-c-error-message", text: "Please select an option")
     end
 
     test "page less options without an or divider" do
