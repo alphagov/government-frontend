@@ -44,8 +44,16 @@ module ContentItem
     end
 
     def updated_metadata(updated_at)
-      updates_link = view_context.link_to(I18n.t("manuals.see_all_updates"), "#{base_path}/updates")
-      { I18n.t("manuals.updated") => "#{display_date(updated_at)}, #{updates_link}" }
+      current_path = view_context.request.path
+
+      if (hmrc? || manual?) && current_path == "#{base_path}/updates"
+        update_at_text = display_date(updated_at).to_s
+      else
+        updates_link = view_context.link_to(I18n.t("manuals.see_all_updates"), "#{base_path}/updates")
+        update_at_text = "#{display_date(updated_at)} - #{updates_link}"
+      end
+
+      { I18n.t("manuals.updated") => update_at_text }
     end
 
     def details
@@ -54,6 +62,10 @@ module ContentItem
 
     def hmrc?
       %w[hmrc_manual hmrc_manual_section].include?(schema_name)
+    end
+
+    def manual?
+      %w[manual manual_section].include?(schema_name)
     end
   end
 end

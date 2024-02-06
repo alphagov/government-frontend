@@ -25,9 +25,7 @@ class HmrcManualUpdatesTest < ActionDispatch::IntegrationTest
       {
         from: { "HM Revenue & Customs": "/government/organisations/hm-revenue-customs" },
         first_published: "11 February 2015",
-        other: {
-          I18n.t("manuals.see_all_updates") => "#{@content_item['base_path']}/updates",
-        },
+        other: {},
       },
       extra_metadata_classes: ".gem-c-metadata--inverse",
     )
