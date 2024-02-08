@@ -50,7 +50,7 @@ class ManualSectionTest < ActionDispatch::IntegrationTest
   test "renders document heading" do
     setup_and_visit_manual_section
 
-    within ".govuk-heading-l" do
+    within "#manual-title.govuk-heading-l" do
       assert page.has_text?(@manual["title"])
     end
   end
