@@ -20,12 +20,25 @@ module ContentItem
     end
 
     def publisher_metadata
-      {
+      metadata = {
         from:,
         first_published: published,
         last_updated: updated,
-        see_updates_link: true,
       }
+
+      unless pending_stats_announcement?
+        metadata[:see_updates_link] = true
+      end
+
+      metadata
+    end
+
+    def pending_stats_announcement?
+      details_display_date.present? && Time.zone.parse(details_display_date).future?
+    end
+
+    def details_display_date
+      content_item["details"]["display_date"]
     end
   end
 end
