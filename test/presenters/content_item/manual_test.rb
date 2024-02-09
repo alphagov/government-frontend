@@ -63,11 +63,18 @@ class ContentItemManualTest < ActiveSupport::TestCase
     item = DummyContentItem.new
     item.stubs(:display_date).returns("23 March 2022")
 
+    view_context = mock
+    view_context.stubs(:request).returns(ActionDispatch::TestRequest.create)
+    view_context.stubs(:link_to).with("blah", "/blah", class: "govuk-link").returns("<a class=\"govuk-link\" href=\"/blah\">blah</a>")
+    view_context.stubs(:link_to).with("See all updates", "/a/base/path/updates").returns("<a href=\"/a/base/path/updates\">See all updates</a>")
+
+    item.stubs(:view_context).returns(view_context)
+
     expected_metadata = {
       from: ["<a class=\"govuk-link\" href=\"/blah\">blah</a>"],
       first_published: "23 March 2022",
       other: {
-        I18n.t("manuals.updated") => "23 March 2022, <a href=\"/a/base/path/updates\">#{I18n.t('manuals.see_all_updates')}</a>",
+        I18n.t("manuals.updated") => "23 March 2022 - <a href=\"/a/base/path/updates\">#{I18n.t('manuals.see_all_updates')}</a>",
       },
       inverse: true,
       inverse_compress: true,
