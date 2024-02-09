@@ -21,9 +21,7 @@ class ManualUpdatesTest < ActionDispatch::IntegrationTest
       {
         from: { "Government Digital Service": "/government/organisations/government-digital-service" },
         first_published: "27 April 2015",
-        other: {
-          I18n.t("manuals.see_all_updates") => "#{@content_item['base_path']}/updates",
-        },
+        other: {},
       },
       extra_metadata_classes: ".gem-c-metadata--inverse",
     )
