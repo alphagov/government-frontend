@@ -25,8 +25,6 @@ class ContentItemsController < ApplicationController
   def show
     load_content_item
 
-    temporary_ab_test_stop_self_employed_2
-    temporary_ab_test_sa_video_return_2
     set_expiry
 
     if is_service_manual?
@@ -269,55 +267,4 @@ private
 
     @content_item.csp_connect_src
   end
-
-  # TEMPORARY (author: richard.towers, expected end date: February 2024)
-
-  def temporary_ab_test_stop_self_employed_2
-    placeholder = "{{ab_test_sa_video_stop_self_employed_2}}"
-    if @content_item.base_path == "/stop-being-self-employed" && @content_item.body.include?(placeholder)
-      ab_test = GovukAbTesting::AbTest.new(
-        "SAVideoStopSelfEmployed2",
-        dimension: 47, # https://docs.google.com/spreadsheets/d/1h4vGXzIbhOWwUzourPLIc8WM-iU1b6WYOVDOZxmU1Uo/edit#gid=254065189&range=69:69
-        allowed_variants: %w[A B Z],
-        control_variant: "Z",
-      )
-      @requested_variant = ab_test.requested_variant(request.headers)
-      @requested_variant.configure_response(response)
-
-      replacement = case @requested_variant.variant_name
-                    when "A"
-                      I18n.t("ab_tests.sa_video_stop_self_employed_2.A")
-                    when "B"
-                      I18n.t("ab_tests.sa_video_stop_self_employed_2.B")
-                    else
-                      I18n.t("ab_tests.sa_video_stop_self_employed_2.Z")
-                    end
-      @content_item.body.sub!(placeholder, replacement)
-    end
-  end
-
-  def temporary_ab_test_sa_video_return_2
-    placeholder = "{{ab_test_sa_video_return_2}}"
-    if @content_item.base_path == "/log-in-file-self-assessment-tax-return" && @content_item.body.include?(placeholder)
-      ab_test = GovukAbTesting::AbTest.new(
-        "SAVideoReturn2",
-        dimension: 47,
-        allowed_variants: %w[A B Z],
-        control_variant: "Z",
-      )
-      @requested_variant = ab_test.requested_variant(request.headers)
-      @requested_variant.configure_response(response)
-
-      replacement = case @requested_variant.variant_name
-                    when "A"
-                      I18n.t("ab_tests.sa_video_return_2.A")
-                    when "B"
-                      I18n.t("ab_tests.sa_video_return_2.B")
-                    else
-                      I18n.t("ab_tests.sa_video_return_2.Z")
-                    end
-      @content_item.body.sub!(placeholder, replacement)
-    end
-  end
-  # /TEMPORARY
 end
