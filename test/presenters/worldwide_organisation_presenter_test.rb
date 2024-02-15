@@ -157,7 +157,7 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
 
   test "#main_office returns nil when there is no main office" do
     without_main_office = schema_item
-    without_main_office["links"].delete("main_office")
+    without_main_office["details"].delete("main_office_parts")
 
     presented = create_presenter(WorldwideOrganisationPresenter, content_item: without_main_office)
 
@@ -166,7 +166,7 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
 
   test "#home_page_offices returns an empty array when there are no home page offices" do
     without_home_page_offices = schema_item
-    without_home_page_offices["links"].delete("home_page_offices")
+    without_home_page_offices["details"].delete("home_page_office_parts")
 
     presented = create_presenter(WorldwideOrganisationPresenter, content_item: without_home_page_offices)
 
