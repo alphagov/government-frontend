@@ -7,8 +7,11 @@ module ContentItem
   private
 
     def default_news_image
-      organisation = content_item.dig("links", "primary_publishing_organisation")
-      organisation[0].dig("details", "default_news_image") if organisation.present?
+      if content_item["document_type"].eql? "world_news_story"
+        return first_worldwide_organisation_default_news_image
+      end
+
+      first_primary_publishing_organisation_default_news_image
     end
 
     def placeholder_image
@@ -18,6 +21,16 @@ module ContentItem
       else
         { "url" => "https://assets.publishing.service.gov.uk/media/5e59279b86650c53b2cefbfe/placeholder.jpg" }
       end
+    end
+
+    def first_worldwide_organisation_default_news_image
+      worldwide_organisation = content_item.dig("links", "worldwide_organisations")
+      worldwide_organisation[0].dig("details", "default_news_image") if worldwide_organisation.present?
+    end
+
+    def first_primary_publishing_organisation_default_news_image
+      organisation = content_item.dig("links", "primary_publishing_organisation")
+      organisation[0].dig("details", "default_news_image") if organisation.present?
     end
   end
 end
