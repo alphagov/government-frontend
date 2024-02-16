@@ -23,7 +23,6 @@ auto_merge:
   - dependency: govuk_publishing_components
     allowed_semver_bumps:
       - patch
-      - minor
   - dependency: plek
     allowed_semver_bumps:
       - patch
