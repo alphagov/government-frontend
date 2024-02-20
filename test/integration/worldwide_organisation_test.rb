@@ -57,7 +57,8 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
 
   test "renders the secondary corporate information pages" do
     setup_and_visit_content_item("worldwide_organisation")
-    assert page.has_link?("Personal information charter", href: "https://www.integration.publishing.service.gov.uk/world/organisations/british-deputy-high-commission-hyderabad/about/personal-information-charter")
+    assert page.has_text?("Our Personal information charter explains how we treat your personal information.")
+    assert page.has_link?("Personal information charter", href: "/world/organisations/british-deputy-high-commission-hyderabad/about/personal-information-charter")
   end
 
   test "doesn't render the corporate pages section if there are no pages to show" do
