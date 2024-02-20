@@ -20,7 +20,15 @@
       </span>
       <span class="js-webchat-advisers-available govuk-!-display-none">
         <%= t("shared.webchat.available") %>
-        <a href="#" data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true' : 'false' %>" rel="external" class="js-webchat-open-button"><%= t("shared.webchat.speak_to_adviser") %></a>.
+        <a
+          href="#"
+          data-redirect="<%=  @content_item.webchat.open_url_redirect.present? ? 'true' : 'false' %>"
+          rel="external"
+          class="js-webchat-open-button"
+          data-module="ga4-link-tracker"
+          data-ga4-link="<%= { event_name: "navigation", type: "webchat", text: t("shared.webchat.speak_to_adviser", lang: :en) }.to_json %>">
+            <%= t("shared.webchat.speak_to_adviser") %>
+        </a>.
       </span>
     <% end %>
   </span>
