@@ -77,25 +77,25 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   end
 
   def main_office
-    return unless (office_item = content_item.dig("links", "main_office")&.first)
+    return unless (office_item = content_item.dig("details", "main_office_parts")&.first)
 
-    office_contact_item = contact_for_office(office_item["content_id"])
+    office_contact_item = linked_contact(office_item["contact_content_id"])
     return unless office_contact_item
 
     WorldwideOffice.new(
       contact: WorldwideOrganisation::LinkedContactPresenter.new(office_contact_item),
-      has_access_and_opening_times?: office_item.dig("details", "access_and_opening_times").present?,
-      public_url: office_item.fetch("web_url"),
+      has_access_and_opening_times?: office_item["access_and_opening_times"].present?,
+      public_url: "#{content_item['base_path']}/#{office_item['slug']}",
     )
   end
 
   WorldwideOffice = Struct.new(:contact, :has_access_and_opening_times?, :public_url, keyword_init: true)
 
   def home_page_offices
-    return [] unless content_item.dig("links", "home_page_offices")
+    return [] unless content_item.dig("details", "home_page_office_parts")
 
-    content_item.dig("links", "home_page_offices").map { |office|
-      contact = contact_for_office(office["content_id"])
+    content_item.dig("details", "home_page_office_parts").map { |office|
+      contact = linked_contact(office["contact_content_id"])
       next unless contact
 
       WorldwideOrganisation::LinkedContactPresenter.new(contact)
@@ -131,15 +131,9 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
 
 private
 
-  def contact_for_office(office_content_id)
-    contact_mapping = content_item.dig("details", "office_contact_associations").select { |office_contact_association|
-      office_contact_association["office_content_id"] == office_content_id
-    }.first
-
-    return unless contact_mapping
-
+  def linked_contact(contact_content_id)
     content_item.dig("links", "contacts").select { |contact|
-      contact["content_id"] == contact_mapping["contact_content_id"]
+      contact["content_id"] == contact_content_id
     }.first
   end
 

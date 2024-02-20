@@ -110,6 +110,10 @@ class ContentItemPresenter
     view_context.request.path =~ /^\/hmrc-internal-manuals\/.*\/updates$/ && content_item["schema_name"] == "hmrc_manual"
   end
 
+  def worldwide_organisation_office?
+    view_context.request.path =~ /^\/world\/.*\/office\/.*$/ && content_item["schema_name"] == "worldwide_organisation"
+  end
+
   def show_default_breadcrumbs?
     true
   end
