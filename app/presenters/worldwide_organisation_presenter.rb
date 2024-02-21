@@ -85,7 +85,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     WorldwideOffice.new(
       contact: WorldwideOrganisation::LinkedContactPresenter.new(office_contact_item),
       has_access_and_opening_times?: office_item["access_and_opening_times"].present?,
-      public_url: "#{content_item['base_path']}/#{office_item['slug']}",
+      public_url: "#{content_item['base_path'].gsub(/\..*?$/, '')}/#{office_item['slug']}",
     )
   end
 
