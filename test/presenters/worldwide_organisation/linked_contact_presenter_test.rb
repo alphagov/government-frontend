@@ -2,7 +2,7 @@ require "test_helper"
 
 class WorldwideOrganisation::LinkedContactPresenterTest < ActiveSupport::TestCase
   setup do
-    content_item = govuk_content_schema_example("worldwide_office", "worldwide_office")
+    content_item = govuk_content_schema_example("worldwide_organisation", "worldwide_organisation")
 
     @contact_content_item = content_item.dig("links", "contact").first
   end
