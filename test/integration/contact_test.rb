@@ -81,4 +81,11 @@ class ContactTest < ActionDispatch::IntegrationTest
     # reset back to default driver
     Capybara.use_default_driver
   end
+
+  test "has GA4 tracking on the webchat available link" do
+    setup_and_visit_content_item("contact", { base_path: "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", details: { "more_info_webchat": "<p>Some HTML</p>\n" } })
+
+    assert_selector ".js-webchat-advisers-available a[data-module=ga4-link-tracker]"
+    assert_selector ".js-webchat-advisers-available a[data-ga4-link='{\"event_name\":\"navigation\",\"type\":\"webchat\",\"text\":\"Speak to an adviser now\"}']"
+  end
 end
