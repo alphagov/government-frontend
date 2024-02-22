@@ -107,16 +107,13 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   end
 
   def corporate_information_pages
-    cips = content_item.dig("links", "corporate_information_pages")
-    return [] if cips.blank?
-
     ordered_cips = content_item.dig("details", "ordered_corporate_information_pages")
     return [] if ordered_cips.blank?
 
     ordered_cips.map do |cip|
       {
         text: cip["title"],
-        url: cips.find { |cp| cp["content_id"] == cip["content_id"] }["web_url"],
+        url: full_path_for_slug(cip["path"]),
       }
     end
   end
@@ -159,5 +156,9 @@ private
 
   def world_locations
     content_item.dig("links", "world_locations") || []
+  end
+
+  def full_path_for_slug(slug)
+    "#{content_item['base_path']}/#{slug}"
   end
 end
