@@ -112,8 +112,57 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders the home page offices without a link to the office page" do
+  test "renders the main office contact without a link to the office page when the office has no access details" do
+    setup_and_visit_content_item(
+      "worldwide_organisation",
+      {
+        "details" =>
+          { "main_office_parts" =>
+              [
+                {
+                  "access_and_opening_times": nil,
+                  "contact_content_id": "410c4c3b-5c1c-4617-b603-4356bedcc85e",
+                  "slug": "office/british-embassy",
+                  "title": "British Embassy",
+                  "type": "Embassy",
+                },
+              ] },
+      },
+    )
+
+    within("#contact-us") do
+      assert page.has_text?("Contact us")
+      assert page.has_content?("Torre Emperador Castellana")
+      assert_not page.has_link?(I18n.t("contact.access_and_opening_times"), href: "/world/uk-embassy-in-country/office/british-embassy")
+    end
+  end
+
+  test "renders the home page offices with a link to the office page" do
     setup_and_visit_content_item("worldwide_organisation")
+
+    within("#contact-us") do
+      assert page.has_content?("Department for Business and Trade Dusseldorf")
+      assert page.has_link?(I18n.t("contact.access_and_opening_times"), href: "/world/uk-embassy-in-country/office/uk-trade-investment-duesseldorf")
+    end
+  end
+
+  test "renders the home page offices without a link to the office page when the office has no access details" do
+    setup_and_visit_content_item(
+      "worldwide_organisation",
+      {
+        "details" =>
+          { "home_page_office_parts" =>
+            [
+              {
+                "access_and_opening_times": nil,
+                "contact_content_id": "53df7197-901c-48fc-b9b4-ed649903f1f0",
+                "slug": "office/uk-trade-investment-duesseldorf",
+                "title": "Department for Business and Trade Dusseldorf",
+                "type": "Department for Business and Trade Office",
+              },
+            ] },
+      },
+    )
 
     within("#contact-us") do
       assert page.has_content?("Department for Business and Trade Dusseldorf")
