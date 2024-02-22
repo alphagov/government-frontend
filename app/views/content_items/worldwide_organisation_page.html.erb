@@ -1,0 +1,29 @@
+<%= render partial: "content_items/worldwide_organisation/header", locals: {
+  worldwide_organisation: @content_item.worldwide_organisation,
+} %>
+
+<article class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <%= render "govuk_publishing_components/components/contents_list",
+               contents: @content_item.contents,
+               underline_links: true
+    %>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: @content_item.title,
+      heading_level: 2,
+      font_size: "xl",
+      margin_bottom: 4,
+    } %>
+
+    <p class="govuk-body-l"><%= @content_item.summary %></p>
+
+    <div class="body">
+      <%= render "govuk_publishing_components/components/govspeak", {} do
+        raw(@content_item.body)
+      end %>
+    </div>
+  </div>
+</article>

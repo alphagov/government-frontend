@@ -114,6 +114,10 @@ class ContentItemPresenter
     view_context.request.path =~ /^\/world\/.*\/office\/.*$/ && content_item["schema_name"] == "worldwide_organisation"
   end
 
+  def worldwide_organisation_page?
+    view_context.request.path =~ /^\/world\/.*\/about\/.*$/ && content_item["schema_name"] == "worldwide_organisation"
+  end
+
   def show_default_breadcrumbs?
     true
   end

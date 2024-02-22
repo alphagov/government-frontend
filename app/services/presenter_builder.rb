@@ -38,6 +38,7 @@ private
     return "ManualUpdatesPresenter" if manual_updates?
     return "HmrcManualUpdatesPresenter" if hmrc_manual_updates?
     return "WorldwideOrganisationOfficePresenter" if worldwide_organisation_office?
+    return "WorldwideOrganisationPagePresenter" if worldwide_organisation_page?
 
     "#{content_item['schema_name'].classify}Presenter"
   end
@@ -52,6 +53,10 @@ private
 
   def worldwide_organisation_office?
     view_context.request.path =~ /^\/world\/.*\/office\/.*$/ && content_item["schema_name"] == "worldwide_organisation"
+  end
+
+  def worldwide_organisation_page?
+    view_context.request.path =~ /^\/world\/.*\/about\/.*$/ && content_item["schema_name"] == "worldwide_organisation"
   end
 
   def service_sign_in_format?

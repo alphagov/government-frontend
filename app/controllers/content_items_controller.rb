@@ -178,6 +178,7 @@ private
     return "manual_updates" if @content_item.manual_updates?
     return "hmrc_manual_updates" if @content_item.hmrc_manual_updates?
     return "worldwide_organisation_office" if @content_item.worldwide_organisation_office?
+    return "worldwide_organisation_page" if @content_item.worldwide_organisation_page?
 
     @content_item.schema_name
   end
