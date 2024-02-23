@@ -3,6 +3,8 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   include WorldwideOrganisation::Branding
   include ActionView::Helpers::UrlHelper
 
+  WorldwideOffice = Struct.new(:contact, :has_access_and_opening_times?, :public_url, keyword_init: true)
+
   def formatted_title
     content_item.dig("details", "logo", "formatted_title")
   end
@@ -82,14 +84,8 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     office_contact_item = linked_contact(office_item["contact_content_id"])
     return unless office_contact_item
 
-    WorldwideOffice.new(
-      contact: WorldwideOrganisation::LinkedContactPresenter.new(office_contact_item),
-      has_access_and_opening_times?: office_item["access_and_opening_times"].present?,
-      public_url: "#{content_item['base_path'].gsub(/\..*?$/, '')}/#{office_item['slug']}",
-    )
+    office(office_item, office_contact_item)
   end
-
-  WorldwideOffice = Struct.new(:contact, :has_access_and_opening_times?, :public_url, keyword_init: true)
 
   def home_page_offices
     return [] unless content_item.dig("details", "home_page_office_parts")
@@ -98,7 +94,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
       contact = linked_contact(office["contact_content_id"])
       next unless contact
 
-      WorldwideOrganisation::LinkedContactPresenter.new(contact)
+      office(office, contact)
     }.compact
   end
 
@@ -130,6 +126,14 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   end
 
 private
+
+  def office(office, contact)
+    WorldwideOffice.new(
+      contact: WorldwideOrganisation::LinkedContactPresenter.new(contact),
+      has_access_and_opening_times?: office["access_and_opening_times"].present?,
+      public_url: "#{content_item['base_path'].gsub(/\..*?$/, '')}/#{office['slug']}",
+    )
+  end
 
   def linked_contact(contact_content_id)
     content_item.dig("links", "contacts").select { |contact|

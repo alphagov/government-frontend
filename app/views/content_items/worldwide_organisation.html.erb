@@ -91,13 +91,17 @@
       <% end %>
     </div>
 
-    <% @content_item.home_page_offices.each do |contact| %>
+    <% @content_item.home_page_offices.each do |office| %>
       <hr class="govuk-section-break govuk-section-break--visible">
 
       <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6 govuk-clearfix">
         <%= render partial: "content_items/worldwide_organisation/contact", locals: {
-          contact: contact,
+          contact: office.contact,
         } %>
+
+        <% if office.has_access_and_opening_times? %>
+          <%= link_to t("contact.access_and_opening_times"), office.public_url, class: "govuk-link", lang: @content_item.locale %>
+        <% end %>
       </div>
     <% end %>
   </section>
