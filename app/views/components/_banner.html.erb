@@ -12,7 +12,13 @@
     <%= text %>
   </p>
 <% end %>
-<section class="app-c-banner<% if aside %> app-c-banner--aside<% end %>" aria-label="Notice" lang="en">
+<section
+  class="app-c-banner<% if aside %> app-c-banner--aside<% end %>" 
+  aria-label="Notice"
+  lang="en"
+  data-module="ga4-link-tracker"
+  data-ga4-track-links-only
+  data-ga4-link="<%= { event_name: "navigation", type: "callout" }.to_json %>">
   <%= content_block %>
   <% if aside %>
     <p class="app-c-banner__desc"><%= aside %></p>
