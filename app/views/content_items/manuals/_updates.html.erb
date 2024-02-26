@@ -26,9 +26,11 @@
                 <div class="govuk-!-margin-top-3">
                   <% change_notes.each do |change_note_entry| %>
                     <% change_note = change_note_entry.flatten.last %>
-                    <p class="govuk-body">
-                      <%= link_to change_note["title"], change_note["base_path"], class: "govuk-link" %>
-                    </p>
+                    <% if change_note["title"].present? %>
+                      <p class="govuk-body">
+                        <%= link_to change_note["title"], change_note["base_path"], class: "govuk-link" %>
+                      </p>
+                    <% end %>
                     <%= simple_format(change_note["change_note"], class: "govuk-body") %>
                   <% end %>
                 </div>
