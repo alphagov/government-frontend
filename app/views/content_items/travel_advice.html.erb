@@ -57,6 +57,7 @@
         data-track-links-only
         data-limit-to-element-class="call-to-action">
         <%= render 'govuk_publishing_components/components/govspeak', {
+          disable_ga4: true,
           direction: page_text_direction,
         } do %>
           <%= raw(@content_item.current_part_body) %>

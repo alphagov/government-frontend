@@ -50,6 +50,7 @@
       <%= render 'govuk_publishing_components/components/heading', text: t("call_for_evidence.detail_of_outcome"), mobile_top_margin: true %>
       <div class="call-for-evidence-outcome-detail">
         <%= render 'govuk_publishing_components/components/govspeak', {
+          disable_ga4: true,
           direction: page_text_direction,
         } do %>
           <%= raw(@content_item.outcome_detail) %>
@@ -112,7 +113,7 @@
         text: t("call_for_evidence.description"),
       } %>
 
-      <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+      <%= render 'govuk_publishing_components/components/govspeak', { disable_ga4: true } do %>
         <%= raw(@content_item.govspeak_body[:content]) %>
       <% end %>
 
@@ -127,6 +128,7 @@
         <%= render 'govuk_publishing_components/components/heading', text: t("call_for_evidence.ways_to_respond"), mobile_top_margin: true %>
 
         <%= render 'govuk_publishing_components/components/govspeak', {
+          disable_ga4: true,
           direction: page_text_direction,
         } do %>
           <% if @content_item.respond_online_url %>

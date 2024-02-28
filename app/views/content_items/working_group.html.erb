@@ -29,6 +29,7 @@
     <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
     <%= render 'components/contents_list_with_body', contents: @content_item.contents do %>
       <%= render 'govuk_publishing_components/components/govspeak', {
+        disable_ga4: true,
         direction: page_text_direction,
       } do %>
         <%= raw(@content_item.body) %>

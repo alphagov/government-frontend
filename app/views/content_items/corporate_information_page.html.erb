@@ -49,7 +49,7 @@
 
       <%= render "components/contents_list_with_body", contents: @content_item.contents do %>
         <div class="responsive-bottom-margin">
-          <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+          <%= render 'govuk_publishing_components/components/govspeak', { disable_ga4: true } do %>
             <%= raw(@content_item.body) %>
             <%= raw(@additional_body) %>
           <% end %>

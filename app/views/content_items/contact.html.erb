@@ -99,7 +99,7 @@
         <% end %>
       <% end %>
 
-      <%= render 'govuk_publishing_components/components/govspeak' do %>
+      <%= render 'govuk_publishing_components/components/govspeak', { disable_ga4: true } do %>
         <%= body %>
       <% end %>
     </div>

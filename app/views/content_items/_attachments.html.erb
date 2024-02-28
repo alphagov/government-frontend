@@ -8,6 +8,7 @@
 
     <% if legacy_pre_rendered_documents.present? %>
       <%= render 'govuk_publishing_components/components/govspeak', {
+        disable_ga4: true,
         direction: page_text_direction,
       } do %>
         <% add_gem_component_stylesheet("details") if legacy_pre_rendered_documents.include? "govuk\-details" %>

@@ -38,6 +38,7 @@
         <%= render 'shared/travel_advice_first_part', content_item: @content_item if i == 0 %>
 
         <%= render 'govuk_publishing_components/components/govspeak',
+          disable_ga4: true,
           content: part['body'].html_safe,
           direction: page_text_direction %>
       </section>

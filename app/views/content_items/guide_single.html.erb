@@ -40,6 +40,7 @@
           } %>
 
         <%= render 'govuk_publishing_components/components/govspeak',
+          disable_ga4: true,
           content: part["body"].html_safe,
           direction: page_text_direction,
           disable_youtube_expansions: true %>

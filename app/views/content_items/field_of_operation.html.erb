@@ -27,6 +27,7 @@
           } %>
         <% end %>
         <%= render 'govuk_publishing_components/components/govspeak', {
+          disable_ga4: true,
         } do %>
           <%= @content_item.description %>
         <% end %>

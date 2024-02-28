@@ -30,6 +30,7 @@
           credit: @content_item.image["credit"],
           caption: @content_item.image["caption"] if @content_item.image %>
         <%= render 'govuk_publishing_components/components/govspeak', {
+          disable_ga4: true,
           direction: page_text_direction,
         } do %>
           <%= raw(@content_item.body) %>

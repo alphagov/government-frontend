@@ -1,6 +1,6 @@
 <% if @content_item.body.present? %>
   <div class="govuk-!-margin-bottom-8">
-  <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body %>
+  <%= render 'govuk_publishing_components/components/govspeak', @content_item.govspeak_body.merge({ disable_ga4: true }) %>
   </div>
 <% end %>
 
@@ -9,6 +9,7 @@
 
   <% if group["body"].present? %>
     <%= render 'govuk_publishing_components/components/govspeak', {
+        disable_ga4: true,
         direction: page_text_direction,
       } do %>
       <%= raw(group["body"]) %>
