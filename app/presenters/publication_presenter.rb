@@ -11,7 +11,7 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def documents
-    content_item["details"]["attachments"].select { |a| a["locale"] == locale }
+    content_item["details"]["attachments"].select { |a| a["locale"] == locale } if content_item["details"]["attachments"]
   end
 
   def featured_attachments
