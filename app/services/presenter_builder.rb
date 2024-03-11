@@ -37,7 +37,6 @@ private
     return service_sign_in_presenter_name if service_sign_in_format?
     return "ManualUpdatesPresenter" if manual_updates?
     return "HmrcManualUpdatesPresenter" if hmrc_manual_updates?
-    return "WorldwideOrganisationOfficePresenter" if worldwide_organisation_office?
 
     "#{content_item['schema_name'].classify}Presenter"
   end
@@ -48,10 +47,6 @@ private
 
   def hmrc_manual_updates?
     view_context.request.path =~ /^\/hmrc-internal-manuals\/.*\/updates$/ && content_item["schema_name"] == "hmrc_manual"
-  end
-
-  def worldwide_organisation_office?
-    view_context.request.path =~ /^\/world\/.*\/office\/.*$/ && content_item["schema_name"] == "worldwide_organisation"
   end
 
   def service_sign_in_format?

@@ -157,31 +157,16 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
 
   test "#main_office returns nil when there is no main office" do
     without_main_office = schema_item
-    without_main_office["details"].delete("main_office_parts")
+    without_main_office["links"].delete("main_office")
 
     presented = create_presenter(WorldwideOrganisationPresenter, content_item: without_main_office)
 
     assert_nil presented.main_office
   end
 
-  test "#main_office returns the correct link when the worldwide organisation is not a translation" do
-    presented = create_presenter(WorldwideOrganisationPresenter, content_item: schema_item)
-
-    assert_equal "/world/uk-embassy-in-country/office/british-embassy", presented.main_office.public_url
-  end
-
-  test "#main_office returns the correct link when the worldwide organisation is a translation" do
-    content_item = schema_item
-    content_item["base_path"] = "#{content_item['base_path']}.fr"
-
-    presented = create_presenter(WorldwideOrganisationPresenter, content_item:)
-
-    assert_equal "/world/uk-embassy-in-country/office/british-embassy", presented.main_office.public_url
-  end
-
   test "#home_page_offices returns an empty array when there are no home page offices" do
     without_home_page_offices = schema_item
-    without_home_page_offices["details"].delete("home_page_office_parts")
+    without_home_page_offices["links"].delete("home_page_offices")
 
     presented = create_presenter(WorldwideOrganisationPresenter, content_item: without_home_page_offices)
 
