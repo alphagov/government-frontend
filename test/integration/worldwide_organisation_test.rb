@@ -107,8 +107,8 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
 
     within("#contact-us") do
       assert page.has_text?("Contact us")
-      assert page.has_content?("Torre Emperador Castellana")
-      assert page.has_link?(I18n.t("contact.access_and_opening_times"), href: "/world/uk-embassy-in-country/office/british-embassy")
+      assert page.has_content?("British Embassy Madrid")
+      assert page.has_link?(I18n.t("contact.access_and_opening_times"), href: "/world/organisations/british-embassy-madrid/office/british-embassy")
     end
   end
 
@@ -142,7 +142,7 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
 
     within("#contact-us") do
       assert page.has_content?("Department for Business and Trade Dusseldorf")
-      assert page.has_link?(I18n.t("contact.access_and_opening_times"), href: "/world/uk-embassy-in-country/office/uk-trade-investment-duesseldorf")
+      assert page.has_link?(I18n.t("contact.access_and_opening_times"), href: "/world/organisations/department-for-business-and-trade-germany/office/uk-trade-investment-duesseldorf")
     end
   end
 
@@ -174,7 +174,7 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item(
       "worldwide_organisation",
       {
-        "details" => { "main_office_parts" => nil },
+        "links" => { "main_office" => nil },
       },
     )
     assert_not page.has_text?("Contact us")
