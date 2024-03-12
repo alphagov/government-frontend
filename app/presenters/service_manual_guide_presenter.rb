@@ -8,7 +8,7 @@ class ServiceManualGuidePresenter < ServiceManualPresenter
 
   def header_links
     header_links = details.fetch("header_links", {})
-    Array(header_links).map { |h| ActiveSupport::HashWithIndifferentAccess.new(h) }
+    Array(header_links).map { |h| ActiveSupport::HashWithIndifferentAccess.new(h.transform_keys { |k| k == "title" ? "text" : k }) }
   end
 
   def content_owners
