@@ -88,4 +88,11 @@ class ContactTest < ActionDispatch::IntegrationTest
     assert_selector ".js-webchat-advisers-available a[data-module=ga4-link-tracker]"
     assert_selector ".js-webchat-advisers-available a[data-ga4-link='{\"event_name\":\"navigation\",\"type\":\"webchat\",\"text\":\"Speak to an adviser now\"}']"
   end
+
+  test "has English text for GA4 on the webchat available link, even if the link is in another language" do
+    setup_and_visit_content_item("contact", { locale: "cy", base_path: "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", details: { "more_info_webchat": "<p>Some HTML</p>\n" } })
+    assert_selector ".js-webchat-advisers-available a[data-module=ga4-link-tracker]"
+    assert_selector ".js-webchat-advisers-available a[data-ga4-link='{\"event_name\":\"navigation\",\"type\":\"webchat\",\"text\":\"Speak to an adviser now\"}']"
+    assert_selector ".js-webchat-advisers-available a", text: "Siaradwch â chynghorydd nawr"
+  end
 end
