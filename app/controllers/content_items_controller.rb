@@ -2,6 +2,7 @@ require "slimmer/headers"
 
 class ContentItemsController < ApplicationController
   include GovukPersonalisation::ControllerConcern
+  include RecruitmentBannerHelper
   include Slimmer::Headers
   include Slimmer::Template
 
