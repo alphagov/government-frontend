@@ -29,7 +29,7 @@ class ServiceManualPhaseLabelTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item(guide["base_path"], guide)
     visit guide["base_path"]
 
-    assert_text("ALPHA")
+    assert_text("Alpha")
   end
 
   test "No phase label is displayed for a guide without a phase field" do
