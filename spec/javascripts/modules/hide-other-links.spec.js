@@ -4,8 +4,8 @@ describe('A hide-other-links module', function () {
 
   function subject () {
     $('body').append(list)
-    var instance = new GOVUK.Modules.HideOtherLinks(list[0])
-    instance.init()
+    /* eslint-disable no-new */
+    new GOVUK.Modules.HideOtherLinks(list[0])
   }
 
   afterEach(function () {

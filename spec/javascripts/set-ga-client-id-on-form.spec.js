@@ -9,8 +9,8 @@ describe('SetGaClientIdOnForm', function () {
 
   beforeEach(function () {
     form = $('<form action="/endpoint"></form>')
-    var setId = new GOVUK.Modules.SetGaClientIdOnForm(form[0])
-    setId.init()
+    /* eslint-disable no-new */
+    new GOVUK.Modules.SetGaClientIdOnForm(form[0])
   })
 
   it('sets the _ga client id as a query param on the form action', function () {
