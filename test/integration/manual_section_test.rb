@@ -17,10 +17,10 @@ class ManualSectionTest < ActionDispatch::IntegrationTest
 
   test "renders contextual breadcrumbs from parent manuals tagging" do
     setup_and_visit_manual_section
-    manual_topic = @manual["links"]["topics"].first
+    manual_taxonomy_topic = @manual["links"]["taxons"].first
 
     within ".gem-c-contextual-breadcrumbs" do
-      assert page.has_link?(manual_topic["title"], href: manual_topic["base_path"])
+      assert page.has_link?(manual_taxonomy_topic["title"], href: manual_taxonomy_topic["base_path"])
     end
   end
 
