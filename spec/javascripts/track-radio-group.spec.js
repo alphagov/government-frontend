@@ -2,7 +2,6 @@ var $ = window.jQuery
 
 describe('A radio group tracker', function () {
   var GOVUK = window.GOVUK
-  var tracker
   var element
 
   GOVUK.analytics = GOVUK.analytics || {}
@@ -23,8 +22,8 @@ describe('A radio group tracker', function () {
 
     $('body').append(element)
 
-    tracker = new GOVUK.Modules.TrackRadioGroup(element[0])
-    tracker.init()
+    /* eslint-disable no-new */
+    new GOVUK.Modules.TrackRadioGroup(element[0])
   })
 
   afterEach(function () {
@@ -65,8 +64,8 @@ describe('A radio group tracker', function () {
       element.attr('data-tracking-domain', 'test.service.gov.uk')
       element.attr('data-tracking-name', 'testTracker')
 
-      tracker = new GOVUK.Modules.TrackRadioGroup(element[0])
-      tracker.init()
+      /* eslint-disable no-new */
+      new GOVUK.Modules.TrackRadioGroup(element[0])
     })
 
     it('adds a linked tracker as the module is started', function () {

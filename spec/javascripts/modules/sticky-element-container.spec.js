@@ -29,42 +29,33 @@ describe('A sticky-element-container module', function () {
     })
 
     it('hides the element, when scrolled at the top', function () {
-      instance.getWindowPositions = function () {
-        return {
-          scrollTop: 0
-        }
-      }
-
       instance.checkResize()
-      instance.checkScroll()
+
+      instance.windowVerticalPosition = 0
+      instance.updateVisibility()
+      instance.updatePosition()
 
       expect($footer.hasClass('sticky-element--hidden')).toBe(true)
       expect($footer.hasClass('sticky-element--stuck-to-window')).toBe(true)
     })
 
     it('shows the element, stuck to the window, when scrolled in the middle', function () {
-      instance.getWindowPositions = function () {
-        return {
-          scrollTop: 5000
-        }
-      }
-
       instance.checkResize()
-      instance.checkScroll()
+
+      instance.windowVerticalPosition = 5000
+      instance.updateVisibility()
+      instance.updatePosition()
 
       expect($footer.hasClass('sticky-element--hidden')).toBe(false)
       expect($footer.hasClass('sticky-element--stuck-to-window')).toBe(true)
     })
 
     it('shows the element, stuck to the parent, when scrolled at the bottom', function () {
-      instance.getWindowPositions = function () {
-        return {
-          scrollTop: 9800
-        }
-      }
-
       instance.checkResize()
-      instance.checkScroll()
+
+      instance.windowVerticalPosition = 9800
+      instance.updateVisibility()
+      instance.updatePosition()
 
       expect($footer.hasClass('sticky-element--hidden')).toBe(false)
       expect($footer.hasClass('sticky-element--stuck-to-window')).toBe(false)

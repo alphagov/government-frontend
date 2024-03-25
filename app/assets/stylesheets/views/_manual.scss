@@ -61,7 +61,7 @@
   list-style: none;
 
   &:hover {
-    background-color: govuk-colour("light-grey", $legacy: "grey-4");
+    background-color: govuk-colour("light-grey");
   }
 
   &:last-child {

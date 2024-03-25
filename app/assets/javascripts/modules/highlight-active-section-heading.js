@@ -8,6 +8,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this._hasScrolled = true
     this._interval = 50
     this.anchorIDs = []
+    this.init()
   }
 
   HighlightActiveSectionHeading.prototype.init = function () {
