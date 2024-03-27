@@ -1,6 +1,0 @@
-.app-sticky-element {
-  @include govuk-media-query($from: tablet) {
-    position: sticky;
-    top: 0;
-  }
-}
