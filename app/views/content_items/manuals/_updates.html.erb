@@ -14,8 +14,7 @@
       <% content_item.presented_change_notes.each do |year, updates_by_year| %>
         <div class="govuk-grid-column-two-thirds">
           <%= render "govuk_publishing_components/components/heading", {
-            text: year,
-            font_size: "l"
+            text: year
           } %>
 
           <%= render "govuk_publishing_components/components/accordion", {
