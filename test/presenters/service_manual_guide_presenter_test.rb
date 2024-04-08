@@ -138,4 +138,8 @@ class ServiceManualGuidePresenterTest < PresenterTestCase
 
     assert_equal expected_history, presented_item.previous_changes
   end
+
+  test "#header_links returns a list of hrefs and text" do
+    assert_equal [{ "text" => "What is it, why it works and how to do it", "href" => "#what-is-it-why-it-works-and-how-to-do-it" }], presented_item.header_links
+  end
 end
