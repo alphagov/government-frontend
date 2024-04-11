@@ -11,7 +11,9 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def documents
-    docs = content_item["details"]["attachments"].select { |a| a["locale"] == locale } if content_item["details"]["attachments"]
+    return [] unless content_item["details"]["attachments"]
+
+    docs = content_item["details"]["attachments"].select { |a| a["locale"] == locale }
     docs.each { |t| t["type"] = "html" unless t["content_type"] }
   end
 
