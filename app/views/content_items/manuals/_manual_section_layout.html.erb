@@ -13,7 +13,7 @@
         <article aria-labelledby="section-title">
           <div class="govuk-grid-column-full">
             <%= render "govuk_publishing_components/components/heading", {
-              text: @content_item.document_heading.join(" - "),
+              text: "#{@content_item.title} - #{@content_item.document_heading.join(" - ")}",
               font_size: "l",
               id: "section-title",
               heading_level: 1,
