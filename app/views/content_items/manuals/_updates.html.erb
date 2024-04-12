@@ -1,3 +1,13 @@
+<%
+  manual_type ||= nil
+
+  if manual_type
+    text = "#{t("manuals.updates_title", title: content_item.title)} - #{manual_type}"
+  else
+    text = t("manuals.updates_title", title: content_item.title)
+  end
+%>
+
 <div class="govuk-grid-row">
   <div class="manual-body">
     <article aria-labelledby="section-title">
@@ -7,7 +17,7 @@
           heading_level: 1,
           id: "section-title",
           margin_bottom: 4,
-          text: t("manuals.updates_title", title: content_item.title),
+          text: text
         } %>
       </div>
 
