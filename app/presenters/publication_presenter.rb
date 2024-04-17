@@ -14,7 +14,10 @@ class PublicationPresenter < ContentItemPresenter
     return [] unless content_item["details"]["attachments"]
 
     docs = content_item["details"]["attachments"].select { |a| a["locale"] == locale }
-    docs.each { |t| t["type"] = "html" unless t["content_type"] }
+    docs.each do |doc|
+      doc["type"] = "html" unless doc["content_type"]
+      doc["alternative_format_contact_email"] = nil if doc["accessible"] == true
+    end
   end
 
   def featured_attachments
