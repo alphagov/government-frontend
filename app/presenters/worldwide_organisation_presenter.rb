@@ -112,7 +112,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     ordered_cips.map do |cip|
       {
         text: cip["title"],
-        url: cips.find { |cp| cp["content_id"] == cip["content_id"] }["web_url"],
+        href: cips.find { |cp| cp["content_id"] == cip["content_id"] }["web_url"],
       }
     end
   end
