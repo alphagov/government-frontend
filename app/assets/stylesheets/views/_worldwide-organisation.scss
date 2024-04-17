@@ -58,25 +58,3 @@
     }
   }
 }
-
-.corporate-information__sub-navigation {
-  ul {
-    padding-inline-start: 0;
-  }
-
-  li {
-    @media (min-width: 1px) { // stylelint-disable-line media-feature-range-notation
-      list-style: none;
-      padding-left: $govuk-gutter-half;
-      @include govuk-responsive-padding(1, "top");
-
-      &:before { // stylelint-disable-line selector-pseudo-element-colon-notation
-        content: "-";
-        position: relative;
-        float: left;
-        width: $govuk-gutter-half;
-        margin-left: $govuk-gutter-half * -1;
-      }
-    }
-  }
-}
