@@ -32,12 +32,38 @@ class PublicationTest < ActionDispatch::IntegrationTest
     assert_footer_has_published_dates("Published 3 May 2016")
   end
 
-  test "renders document attachments (as-is and directly)" do
-    setup_and_visit_content_item("publication")
-    within "#documents" do
-      assert page.has_text?("Permit: Veolia ES (UK) Limited")
-    end
+  test "does not render non-featured attachments" do
+    overrides = {
+      "details" => {
+        "attachments" => [{
+          "accessible" => false,
+          "alternative_format_contact_email" => "customerservices@publicguardian.gov.uk",
+          "attachment_type" => "file",
+          "command_paper_number" => "",
+          "content_type" => "application/pdf",
+          "file_size" => 123_456,
+          "filename" => "veolia-permit.pdf",
+          "hoc_paper_number" => "",
+          "id" => "violia-permit",
+          "isbn" => "",
+          "locale" => "en",
+          "title" => "Permit: Veolia ES (UK) Limited",
+          "unique_reference" => "",
+          "unnumbered_command_paper" => false,
+          "unnumbered_hoc_paper" => false,
+          "url" => "https://assets.publishing.service.gov.uk/media/123abc/veolia-permit.zip",
+        }],
+        "featured_attachments" => [],
+      },
+    }
 
+    setup_and_visit_content_item("publication", overrides)
+    within "#documents" do
+      assert page.has_no_text?("Permit: Veolia ES (UK) Limited")
+    end
+  end
+
+  test "renders featured document attachments using components" do
     setup_and_visit_content_item("publication-with-featured-attachments")
     within "#documents" do
       assert page.has_text?("Number of ex-regular service personnel now part of FR20")

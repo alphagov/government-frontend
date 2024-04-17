@@ -11,7 +11,10 @@ class PublicationPresenter < ContentItemPresenter
   end
 
   def documents
-    content_item["details"]["documents"].to_a.join("")
+    return [] unless content_item["details"]["attachments"]
+
+    docs = content_item["details"]["attachments"].select { |a| a["locale"] == locale }
+    docs.each { |t| t["type"] = "html" unless t["content_type"] }
   end
 
   def featured_attachments
