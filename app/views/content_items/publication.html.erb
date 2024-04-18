@@ -51,8 +51,7 @@
       <div class="responsive-bottom-margin">
         <%= render "attachments_list",
           title: t("publication.documents", count: 5), # This should always be pluralised.
-          attachments: @content_item.documents,
-          featured_attachments: @content_item.featured_attachments
+          attachments_for_components: @content_item.attachments_for_components
         %>
 
         <section id="details">

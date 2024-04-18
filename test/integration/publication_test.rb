@@ -58,9 +58,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
     }
 
     setup_and_visit_content_item("publication", overrides)
-    within "#documents" do
-      assert page.has_no_text?("Permit: Veolia ES (UK) Limited")
-    end
+    assert page.has_no_text?("Permit: Veolia ES (UK) Limited")
   end
 
   test "renders featured document attachments using components" do
@@ -69,6 +67,16 @@ class PublicationTest < ActionDispatch::IntegrationTest
       assert page.has_text?("Number of ex-regular service personnel now part of FR20")
       assert page.has_css?(".gem-c-attachment")
     end
+  end
+
+  test "doesn't render the documents section if no documents" do
+    overrides = {
+      "details" => {
+        "attachments" => [{}],
+      },
+    }
+    setup_and_visit_content_item("publication-with-featured-attachments", overrides)
+    assert page.has_no_text?("Documents")
   end
 
   test "renders accessible format option when accessible is false and email is supplied" do
