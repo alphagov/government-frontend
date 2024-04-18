@@ -168,6 +168,37 @@ class PublicationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "renders external links correctly" do
+    overrides = {
+      "details" => {
+        "attachments" => [{
+          "accessible" => true,
+          "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+          "attachment_type" => "external",
+          "id" => "PUBLIC_1392629965.pdf",
+          "title" => "Number of ex-regular service personnel now part of FR20",
+          "url" => "https://not-a-real-website-hopefully",
+          "command_paper_number" => "",
+          "hoc_paper_number" => "",
+          "isbn" => "",
+          "unique_reference" => "",
+          "unnumbered_command_paper" => false,
+          "unnumbered_hoc_paper" => false,
+          "content_type" => "application/pdf",
+          "file_size" => 932,
+          "filename" => "PUBLIC_1392629965.pdf",
+          "number_of_pages" => 2,
+          "locale" => "en",
+        }],
+      },
+    }
+    setup_and_visit_content_item("publication-with-featured-attachments", overrides)
+    within "#documents" do
+      assert page.has_text?("https://not-a-real-website-hopefully")
+      assert page.has_no_text?("HTML")
+    end
+  end
+
   test "withdrawn publication" do
     setup_and_visit_content_item("withdrawn_publication")
     assert page.has_css?("title", text: "[Withdrawn]", visible: false)
