@@ -21,6 +21,7 @@
 /test/wraith/wip*
 shots/*
 /coverage
+.byebug_history
 
 # Ignore JS dependencies
 /node_modules
