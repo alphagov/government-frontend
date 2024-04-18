@@ -1,21 +1,16 @@
-<%
-  attachments ||= nil
-  featured_attachments ||= []
-  attachment_details = featured_attachments.filter_map { |id| @content_item&.attachment_details(id) }
-%>
-<section id="<%= title.parameterize %>">
-  <%= render 'govuk_publishing_components/components/heading',
-    text: title,
-    mobile_top_margin: true
-  %>
-  <% if attachment_details.length > 0 %>
+<% if attachments_for_components.any? %>
+  <section id="<%= title.parameterize %>">
+    <%= render 'govuk_publishing_components/components/heading',
+      text: title,
+      mobile_top_margin: true
+    %>
     <% add_gem_component_stylesheet("details") %>
-    <% attachment_details.each do |details| %>
+    <% attachments_for_components.each do |details| %>
       <%= render 'govuk_publishing_components/components/attachment', {
         heading_level: 3,
         attachment: details,
         margin_bottom: 6
       } %>
     <% end %>
-  <% end %>
-</section>
+  </section>
+<% end %>
