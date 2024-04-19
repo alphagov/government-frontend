@@ -14,6 +14,10 @@ class PublicationPresenter < ContentItemPresenter
     documents.select { |doc| featured_attachments.include? doc["id"] }
   end
 
+  def attachments_with_details
+    attachments_for_components.select { |doc| doc["accessible"] == false && doc["alternative_format_contact_email"] }.count
+  end
+
   def documents
     return [] unless content_item["details"]["attachments"]
 
