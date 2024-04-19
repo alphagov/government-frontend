@@ -21,7 +21,7 @@ class PublicationPresenter < ContentItemPresenter
     docs.each do |doc|
       doc["type"] = "html" unless doc["content_type"]
       doc["type"] = "external" if doc["attachment_type"] == "external"
-      doc["preview_url"] = "#{doc['url']}/preview"
+      doc["preview_url"] = "#{doc['url']}/preview" if doc["preview_url"]
       doc["alternative_format_contact_email"] = nil if doc["accessible"] == true
     end
   end
