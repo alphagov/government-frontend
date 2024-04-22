@@ -39,18 +39,11 @@ class PublicationTest < ActionDispatch::IntegrationTest
           "accessible" => false,
           "alternative_format_contact_email" => "customerservices@publicguardian.gov.uk",
           "attachment_type" => "file",
-          "command_paper_number" => "",
           "content_type" => "application/pdf",
-          "file_size" => 123_456,
           "filename" => "veolia-permit.pdf",
-          "hoc_paper_number" => "",
           "id" => "violia-permit",
-          "isbn" => "",
           "locale" => "en",
           "title" => "Permit: Veolia ES (UK) Limited",
-          "unique_reference" => "",
-          "unnumbered_command_paper" => false,
-          "unnumbered_hoc_paper" => false,
           "url" => "https://assets.publishing.service.gov.uk/media/123abc/veolia-permit.zip",
         }],
         "featured_attachments" => [],
@@ -89,16 +82,8 @@ class PublicationTest < ActionDispatch::IntegrationTest
           "id" => "PUBLIC_1392629965.pdf",
           "title" => "Number of ex-regular service personnel now part of FR20",
           "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
-          "command_paper_number" => "",
-          "hoc_paper_number" => "",
-          "isbn" => "",
-          "unique_reference" => "",
-          "unnumbered_command_paper" => false,
-          "unnumbered_hoc_paper" => false,
           "content_type" => "application/pdf",
-          "file_size" => 932,
           "filename" => "PUBLIC_1392629965.pdf",
-          "number_of_pages" => 2,
           "locale" => "en",
         }],
       },
@@ -118,16 +103,8 @@ class PublicationTest < ActionDispatch::IntegrationTest
           "id" => "PUBLIC_1392629965.pdf",
           "title" => "Number of ex-regular service personnel now part of FR20",
           "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
-          "command_paper_number" => "",
-          "hoc_paper_number" => "",
-          "isbn" => "",
-          "unique_reference" => "",
-          "unnumbered_command_paper" => false,
-          "unnumbered_hoc_paper" => false,
           "content_type" => "application/pdf",
-          "file_size" => 932,
           "filename" => "PUBLIC_1392629965.pdf",
-          "number_of_pages" => 2,
           "locale" => "en",
         }],
       },
@@ -148,16 +125,8 @@ class PublicationTest < ActionDispatch::IntegrationTest
           "id" => "PUBLIC_1392629965.pdf",
           "title" => "Number of ex-regular service personnel now part of FR20",
           "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
-          "command_paper_number" => "",
-          "hoc_paper_number" => "",
-          "isbn" => "",
-          "unique_reference" => "",
-          "unnumbered_command_paper" => false,
-          "unnumbered_hoc_paper" => false,
           "content_type" => "application/pdf",
-          "file_size" => 932,
           "filename" => "PUBLIC_1392629965.pdf",
-          "number_of_pages" => 2,
           "locale" => "en",
         }],
       },
@@ -165,6 +134,68 @@ class PublicationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("publication-with-featured-attachments", overrides)
     within "#documents" do
       assert page.has_no_text?("Request an accessible format")
+    end
+  end
+
+  test "tracks details elements in attachments correctly" do
+    overrides = {
+      "details" => {
+        "attachments" => [
+          {
+            "accessible" => false,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "id" => "PUBLIC_1392629965.pdf",
+            "title" => "Attachment 1 - should have details element",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+          {
+            "accessible" => true,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "id" => "PUBLIC_1392629965.pdf",
+            "title" => "Attachment 2",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+          {
+            "accessible" => true,
+            "alternative_format_contact_email" => nil,
+            "id" => "PUBLIC_1392629965.pdf",
+            "title" => "Attachment 3",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+          {
+            "accessible" => false,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "id" => "PUBLIC_1392629965.pdf",
+            "title" => "Attachment 4 - should have details element",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+        ],
+      },
+    }
+    setup_and_visit_content_item("publication-with-featured-attachments", overrides)
+    within "#documents" do
+      attachments = page.find_all(".gem-c-attachment")
+      assert_equal attachments.length, overrides["details"]["attachments"].length
+
+      attachments.each do |attachment|
+        next unless attachment.has_css?(".govuk-details__summary")
+
+        details = attachment.find(".govuk-details__summary")["data-ga4-event"]
+        actual_tracking = JSON.parse(details)
+        assert_equal actual_tracking["index_section_count"], 2
+      end
     end
   end
 
@@ -178,16 +209,8 @@ class PublicationTest < ActionDispatch::IntegrationTest
           "id" => "PUBLIC_1392629965.pdf",
           "title" => "Number of ex-regular service personnel now part of FR20",
           "url" => "https://not-a-real-website-hopefully",
-          "command_paper_number" => "",
-          "hoc_paper_number" => "",
-          "isbn" => "",
-          "unique_reference" => "",
-          "unnumbered_command_paper" => false,
-          "unnumbered_hoc_paper" => false,
           "content_type" => "application/pdf",
-          "file_size" => 932,
           "filename" => "PUBLIC_1392629965.pdf",
-          "number_of_pages" => 2,
           "locale" => "en",
         }],
       },

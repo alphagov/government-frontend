@@ -9,7 +9,10 @@
       <%= render 'govuk_publishing_components/components/attachment', {
         heading_level: 3,
         attachment: details,
-        margin_bottom: 6
+        margin_bottom: 6,
+        details_ga4_attributes: {
+          index_section_count: @content_item.attachments_with_details
+        }
       } %>
     <% end %>
   </section>
