@@ -116,13 +116,10 @@
     } %>
 
     <% if @content_item.corporate_information_pages.any? %>
-      <nav class="group corporate-information__sub-navigation" role="navigation">
-        <ul class="govuk-list">
-          <% @content_item.corporate_information_pages.each do |cip| %>
-            <li lang="<%= @content_item.locale %>"><%= link_to cip[:text], cip[:url], class: "govuk-link" %></li>
-          <% end %>
-        </ul>
-      </nav>
+      <%= render "govuk_publishing_components/components/list", {
+        visible_counters: true,
+        items: @content_item.corporate_information_pages
+      } %>
     <% end %>
 
     <% if @content_item.secondary_corporate_information.present? %>
