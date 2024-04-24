@@ -128,7 +128,7 @@ class DocumentCollectionPresenterTest
 
         public_updated_at = grouped[0][:metadata][:public_updated_at]
 
-        assert_equal nil, public_updated_at
+        assert_nil nil, public_updated_at
       end
     end
   end
