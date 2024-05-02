@@ -207,14 +207,14 @@ en:
         one: Alerts and recalls for drugs and medical devices
         other: Alerts and recalls for drugs and medical devices
       national:
-        one: National statistics announcement
-        other: National statistics announcements
+        one: Accredited official statistics announcement
+        other: Accredited official statistics announcements
       national_statistics:
-        one: National statistics
-        other: National statistics
+        one: Accredited official statistics
+        other: Accredited official statistics
       national_statistics_announcement:
-        one: National statistics announcement
-        other: National statistics announcements
+        one: Accredited official statistics announcement
+        other: Accredited official statistics announcements
       news_article:
         one: News article
         other: News articles
@@ -487,6 +487,10 @@ en:
     previous_page: Previous
     print_entire_guide: View a printable version of the whole guide
     printable_version: Printable version
+  national_statistics:
+    logo_alt_text:
+  national_statistics:
+    logo_alt_text: Accredited official statistics
   publication:
     details: Details
     documents:

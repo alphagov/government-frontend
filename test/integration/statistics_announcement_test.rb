@@ -15,7 +15,7 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert page.has_css?('img[alt="National Statistics"]')
+    assert page.has_css?('img[alt="Accredited official statistics"]')
 
     within ".app-c-important-metadata" do
       assert page.has_text?(:all, "Release date: January 2016 (provisional)")

@@ -243,7 +243,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
 
   test "national statistics publication shows a logo" do
     setup_and_visit_content_item("statistics_publication")
-    assert page.has_css?('img[alt="National Statistics"]')
+    assert page.has_css?('img[alt="Accredited official statistics"]')
   end
 
   test "national statistics publication has correct structured data" do
