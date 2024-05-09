@@ -54,7 +54,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
 
     {
       name: person["title"],
-      href: person["web_url"],
+      href: person["base_path"],
       image_url: person["details"]["image"]["url"],
       image_alt: person["details"]["image"]["alt_text"],
       description: presented_title_for_roles(current_roles),
@@ -72,7 +72,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
 
       {
         name: person["title"],
-        href: person["web_url"],
+        href: person["base_path"],
         description: presented_title_for_roles(current_roles),
       }
     end
@@ -110,7 +110,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     return if ordered_cips.blank?
 
     ordered_cips.map do |cip|
-      link = cips.find { |cp| cp["content_id"] == cip["content_id"] }["web_url"]
+      link = cips.find { |cp| cp["content_id"] == cip["content_id"] }["base_path"]
       link_to(cip["title"], link, class: "govuk-link").html_safe
     end
   end

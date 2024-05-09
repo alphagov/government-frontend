@@ -28,14 +28,14 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
 
   test "renders the person in the primary role" do
     setup_and_visit_content_item("worldwide_organisation")
-    assert page.has_link?("Karen Pierce DCMG", href: "https://www.integration.publishing.service.gov.uk/government/people/karen-pierce")
+    assert page.has_link?("Karen Pierce DCMG", href: "/government/people/karen-pierce")
     assert page.has_css?("img[src=\"https://assets.publishing.service.gov.uk/government/uploads/system/uploads/person/image/583/s216_UKMissionGeneva__HMA_Karen_Pierce_-_uploaded.jpg\"]")
   end
 
   test "renders people in secondary and office roles" do
     setup_and_visit_content_item("worldwide_organisation")
-    assert page.has_link?("Justin Sosne", href: "https://www.integration.publishing.service.gov.uk/government/people/justin-sosne")
-    assert page.has_link?("Rachel Galloway", href: "https://www.integration.publishing.service.gov.uk/government/people/rachel-galloway")
+    assert page.has_link?("Justin Sosne", href: "/government/people/justin-sosne")
+    assert page.has_link?("Rachel Galloway", href: "/government/people/rachel-galloway")
   end
 
   test "doesn't render the people section if there are no appointed people" do
@@ -52,7 +52,7 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
 
   test "renders the navigational corporate information pages" do
     setup_and_visit_content_item("worldwide_organisation")
-    assert page.has_link?("Complaints procedure", href: "https://www.integration.publishing.service.gov.uk/world/organisations/british-deputy-high-commission-hyderabad/about/complaints-procedure")
+    assert page.has_link?("Complaints procedure", href: "/world/organisations/british-deputy-high-commission-hyderabad/about/complaints-procedure")
   end
 
   test "renders the secondary corporate information pages" do
