@@ -52,20 +52,50 @@ class ConsultationPresenter < ContentItemPresenter
     content_item["details"]["final_outcome_detail"]
   end
 
-  def final_outcome_documents
-    content_item["details"]["final_outcome_documents"]&.join("")
+  # Download the full outcome, top of page
+  def final_outcome_attachments_for_components
+    documents.select { |doc| final_outcome_attachments.include? doc["id"] }
+  end
+
+  # Feedback received, middle of page
+  def public_feedback_attachments_for_components
+    documents.select { |doc| public_feedback_attachments.include? doc["id"] }
+  end
+
+  # Documents, bottom of page
+  def documents_attachments_for_components
+    documents.select { |doc| featured_attachments.include? doc["id"] }
+  end
+
+  def attachments_with_details
+    items = [].push(*final_outcome_attachments_for_components)
+    items.push(*public_feedback_attachments_for_components)
+    items.push(*documents_attachments_for_components)
+    items.select { |doc| doc["accessible"] == false && doc["alternative_format_contact_email"] }.count
+  end
+
+  def documents
+    return [] unless content_item["details"]["attachments"]
+
+    docs = content_item["details"]["attachments"].select { |a| !a.key?("locale") || a["locale"] == locale }
+    docs.each do |doc|
+      doc["type"] = "html" unless doc["content_type"]
+      doc["type"] = "external" if doc["attachment_type"] == "external"
+      doc["preview_url"] = "#{doc['url']}/preview" if doc["preview_url"]
+      doc["alternative_format_contact_email"] = nil if doc["accessible"] == true
+    end
   end
 
   def final_outcome_attachments
-    content_item["details"]["final_outcome_attachments"]
-  end
-
-  def public_feedback_documents
-    content_item["details"]["public_feedback_documents"]&.join("")
+    content_item["details"]["final_outcome_attachments"] || []
   end
 
   def public_feedback_attachments
     content_item["details"]["public_feedback_attachments"] || []
+  end
+
+  def featured_attachments
+    content_item["details"]["featured_attachments"] || []
   end
 
   def public_feedback_detail
@@ -78,14 +108,6 @@ class ConsultationPresenter < ContentItemPresenter
 
   def held_on_another_website_url
     content_item["details"]["held_on_another_website_url"]
-  end
-
-  def documents
-    content_item["details"]["documents"]&.join("")
-  end
-
-  def featured_attachments
-    content_item["details"]["featured_attachments"]
   end
 
   def ways_to_respond?
@@ -113,8 +135,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def add_margin?
-    final_outcome? || public_feedback_detail ||
-      public_feedback_documents.present? || public_feedback_attachments.any?
+    final_outcome? || public_feedback_detail || public_feedback_attachments.any?
   end
 
 private
