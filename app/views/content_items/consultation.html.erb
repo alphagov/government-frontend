@@ -53,11 +53,10 @@
     <% elsif @content_item.final_outcome? %>
       <%= render 'govuk_publishing_components/components/notice', title: t("consultation.concluded") %>
 
-      <%= render "attachments",
-          title: t("consultation.download_outcome"),
-          legacy_pre_rendered_documents: @content_item.final_outcome_documents,
-          attachments: @content_item.final_outcome_attachments %>
-
+      <%= render "attachments_list",
+        title: t("consultation.download_outcome"),
+        attachments_for_components: @content_item.final_outcome_attachments_for_components
+      %>
       <%= render 'govuk_publishing_components/components/heading', text: t("consultation.detail_of_outcome"), mobile_top_margin: true %>
       <div class="consultation-outcome-detail">
         <%= render 'govuk_publishing_components/components/govspeak', {
@@ -68,11 +67,10 @@
       </div>
     <% end %>
 
-    <%= render "attachments",
-        title: t("consultation.feedback_received"),
-        legacy_pre_rendered_documents: @content_item.public_feedback_documents,
-        attachments: @content_item.public_feedback_attachments %>
-
+    <%= render "attachments_list",
+      title: t("consultation.feedback_received"),
+      attachments_for_components: @content_item.public_feedback_attachments_for_components
+    %>
     <% if @content_item.public_feedback_detail %>
       <%= render 'govuk_publishing_components/components/heading', {
         mobile_top_margin: true,
@@ -146,10 +144,16 @@
         <%= raw(@content_item.govspeak_body[:content]) %>
       <% end %>
 
+      <%= render "attachments_list",
+        title: t("consultation.documents"),
+        attachments_for_components: @content_item.documents_attachments_for_components
+      %>
+      <% if false %>
       <%= render "attachments",
           title: t("consultation.documents"),
           legacy_pre_rendered_documents: @content_item.documents,
           attachments: @content_item.featured_attachments %>
+      <% end %>
     </div>
 
     <% if @content_item.ways_to_respond? %>
