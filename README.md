@@ -44,6 +44,8 @@ If you are using GOV.UK Docker, remember to combine it with the commands that fo
 ### Running the test suite
 
 ```
+bundle install
+yarn install
 bundle exec rake
 ```
 
