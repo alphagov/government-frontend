@@ -7,7 +7,6 @@ APP_STYLESHEETS = {
   "components/_figure.scss" => "components/_figure.css",
   "components/_important-metadata.scss" => "components/_important-metadata.css",
   "components/_published-dates.scss" => "components/_published-dates.css",
-  "components/_publisher-metadata.scss" => "components/_publisher-metadata.css",
   "views/_guide.scss" => "views/_guide.css",
   "views/_html-publication.scss" => "views/_html-publication.css",
   "views/_manual.scss" => "views/_manual.css",
