@@ -15,7 +15,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
       get :show, params: { path: }
 
-      assert_response 200
+      assert_response :ok
       assert response.body.include?("Learn to drive a car: step by step")
     end
 
@@ -30,7 +30,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
       get :show, params: { path: }
 
-      assert_response 200
+      assert_response :ok
       assert_not response.body.include?("Learn to drive a car: step by step")
     end
   end
