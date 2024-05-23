@@ -9,7 +9,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     this.hiddenElementContainer = this.createHiddenElementContainer()
     this.shownElements = []
     this.hiddenElements = []
-    this.showLink = document.createElement('a')
+    this.showLink = document.createElement('button')
   }
 
   HideOtherLinks.prototype.init = function () {
@@ -51,7 +51,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
 
     this.showLink.classList.add('show-other-content', 'govuk-link')
     this.showLink.innerHTML = linkText
-    this.showLink.href = '#'
+    this.showLink.setAttribute('aria-expanded', 'false')
+    this.showLink.setAttribute('aria-controls', 'other-content')
 
     this.showLink.addEventListener('click', this.showHiddenLinks.bind(this))
 
@@ -71,6 +72,7 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   HideOtherLinks.prototype.createHiddenElementContainer = function () {
     var showHide = document.createElement('span')
     showHide.classList.add('other-content')
+    showHide.id = 'other-content'
 
     return showHide
   }
@@ -79,8 +81,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
     event.preventDefault()
 
     this.hiddenElementContainer.style.display = ''
+    this.hiddenElementContainer.querySelectorAll('a')[0].focus()
     this.showLink.remove()
-    this.hiddenElementContainer.focus()
   }
 
   Modules.HideOtherLinks = HideOtherLinks

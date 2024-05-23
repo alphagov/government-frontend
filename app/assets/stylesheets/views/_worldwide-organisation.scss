@@ -6,9 +6,14 @@
 .js-enabled {
   .worldwide-organisation-header {
     .show-other-content {
-      @include govuk-font(14);
+      all: inherit;
+      display: inline;
       margin-left: .3em;
       white-space: nowrap;
+      color: $govuk-link-colour;
+      cursor: pointer;
+      @include govuk-link-common;
+      @include govuk-font(16);
     }
   }
 }
