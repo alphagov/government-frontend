@@ -1,4 +1,8 @@
 <% content_for :main do %>
+  <%= render "govuk_publishing_components/components/heading", {
+    text: t("manuals.summary_title"),
+    margin_bottom: 4
+  } %>
   <div id="manuals-frontend" class="manuals-frontend-body">
 
   <%= machine_readable_metadata(schema: :article) %>
@@ -14,6 +18,11 @@
         <%= raw(@content_item.body) %>
       <% end %>
     <% end %>
+
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t("manuals.contents_title"),
+      margin_bottom: 4
+    } %>
 
     <%= yield %>
 

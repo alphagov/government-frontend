@@ -102,7 +102,7 @@
 
 .manual-body {
   @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(6);
+    margin-top: govuk-spacing(4);
   }
 
   .section-title {

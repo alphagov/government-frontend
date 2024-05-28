@@ -3,6 +3,7 @@
   type ||= nil
 
   classes = %w[govuk-grid-row manuals-header]
+  classes << %w[govuk-!-margin-bottom-4]
   classes << "hmrc" if green_background
 %>
 
@@ -47,8 +48,3 @@
     </div>
   </div>
 <% end %>
-
-<%= render "govuk_publishing_components/components/breadcrumbs", {
-           border: "bottom",
-           breadcrumbs: @content_item.breadcrumbs,
-           collapse_on_mobile: false } %>

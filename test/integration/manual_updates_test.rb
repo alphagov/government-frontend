@@ -35,13 +35,10 @@ class ManualUpdatesTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders manual specific breadcrumbs" do
+  test "renders back link" do
     setup_and_visit_manual_updates
 
-    manual_specific_breadcrumbs = page.all(".gem-c-breadcrumbs")[1]
-    within manual_specific_breadcrumbs do
-      assert page.has_link?(I18n.t("manuals.breadcrumb_contents"), href: @content_item["base_path"])
-    end
+    assert page.has_link?(I18n.t("manuals.breadcrumb_contents"), href: @content_item["base_path"])
   end
 
   test "renders change note updates" do

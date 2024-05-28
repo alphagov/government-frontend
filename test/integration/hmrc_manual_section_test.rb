@@ -42,13 +42,10 @@ class HmrcManualSectionTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders manual specific breadcrumbs" do
+  test "renders back link" do
     setup_and_visit_manual_section
 
-    manual_specific_breadcrumbs = page.all(".gem-c-breadcrumbs")[1]
-    within manual_specific_breadcrumbs do
-      assert page.has_text?(I18n.t("manuals.breadcrumb_contents"))
-    end
+    assert page.has_link?(I18n.t("manuals.breadcrumb_contents"), href: "/hmrc-internal-manuals/vat-government-and-public-bodies")
   end
 
   test "renders section group" do
