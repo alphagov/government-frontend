@@ -174,15 +174,15 @@ class ConsultationTest < ActionDispatch::IntegrationTest
   test "renders consultation outcome attachments (as-is and directly)" do
     setup_and_visit_content_item("consultation_outcome", general_overrides)
 
-    assert page.has_text?("Download the full outcome")
-    within "#download-the-full-outcome" do
+    assert page.has_text?("Read the full outcome")
+    within "#read-the-full-outcome" do
       assert page.has_text?("Setting the grade standards of new GCSEs in England – part 2")
     end
 
     setup_and_visit_content_item("consultation_outcome_with_featured_attachments")
 
-    assert page.has_text?("Download the full outcome")
-    within "#download-the-full-outcome" do
+    assert page.has_text?("Read the full outcome")
+    within "#read-the-full-outcome" do
       assert page.has_text?("Equalities impact assessment: setting the grade standards of new GCSEs in England – part 2")
     end
   end
