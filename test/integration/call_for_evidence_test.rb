@@ -120,8 +120,8 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("call_for_evidence_outcome")
 
     assert page.has_text?("This call for evidence has closed")
-    assert page.has_text?("Download the full outcome")
-    within "#download-the-full-outcome" do
+    assert page.has_text?("Read the full outcome")
+    within "#read-the-full-outcome" do
       assert page.has_text?("Employee Share Schemes: NIC elections - consulation response")
     end
   end
@@ -129,8 +129,8 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
   test "renders featured call for evidence outcome attachments" do
     setup_and_visit_content_item("call_for_evidence_outcome_with_featured_attachments")
 
-    assert page.has_text?("Download the full outcome")
-    within "#download-the-full-outcome" do
+    assert page.has_text?("Read the full outcome")
+    within "#read-the-full-outcome" do
       assert page.has_text?("Equalities impact assessment: setting the grade standards of new GCSEs in England – part 2")
     end
   end

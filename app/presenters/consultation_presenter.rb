@@ -52,7 +52,7 @@ class ConsultationPresenter < ContentItemPresenter
     content_item["details"]["final_outcome_detail"]
   end
 
-  # Download the full outcome, top of page
+  # Read the full outcome, top of page
   def final_outcome_attachments_for_components
     documents.select { |doc| final_outcome_attachments.include? doc["id"] }
   end
