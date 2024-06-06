@@ -1,4 +1,31 @@
 api_version: 2
 defaults:
   auto_merge: true
-  update_external_dependencies: false # TODO: enable after verifying that this repo meets the conditions
+  update_external_dependencies: true
+overrides:
+  - dependency: rails
+    auto_merge: false
+  - dependency: railties
+    auto_merge: false
+  - dependency: actioncable
+    auto_merge: false
+  - dependency: actionmailbox
+    auto_merge: false
+  - dependency: actionmailer
+    auto_merge: false
+  - dependency: actionpack
+    auto_merge: false
+  - dependency: actiontext
+    auto_merge: false
+  - dependency: actionview
+    auto_merge: false
+  - dependency: activejob
+    auto_merge: false
+  - dependency: activemodel
+    auto_merge: false
+  - dependency: activerecord
+    auto_merge: false
+  - dependency: activestorage
+    auto_merge: false
+  - dependency: activesupport
+    auto_merge: false
