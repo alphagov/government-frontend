@@ -6,6 +6,18 @@ class CallForEvidencePresenterTest
       "call_for_evidence"
     end
 
+    test_documents = [
+      {
+        "id" => "01",
+      },
+      {
+        "id" => "02",
+      },
+      {
+        "id" => "03",
+      },
+    ]
+
     test "presents the schema name" do
       assert_equal schema_item("open_call_for_evidence")["document_type"], presented_item("open_call_for_evidence").document_type
       assert_equal schema_item("open_call_for_evidence")["details"]["body"], presented_item("open_call_for_evidence").body
@@ -64,18 +76,24 @@ class CallForEvidencePresenterTest
 
     test "presents call for evidence documents" do
       schema = schema_item("closed_call_for_evidence")
-      schema["details"]["documents"] = %W[<section>\n<p>a</p>\n</section> <section>\n<p>b</p>\n</section> <section>\n<p>c</p>\n</section>]
+      schema["details"]["attachments"] = test_documents
+      schema["details"]["featured_attachments"] = %w[01 02]
       presented = presented_item("closed_call_for_evidence", schema)
 
-      assert_equal "<section>\n<p>a</p>\n</section><section>\n<p>b</p>\n</section><section>\n<p>c</p>\n</section>", presented.documents
+      assert_equal presented.general_documents.length, 2
+      assert_equal presented.general_documents[0]["id"], "01"
+      assert_equal presented.general_documents[1]["id"], "02"
     end
 
     test "presents outcome documents" do
       schema = schema_item("call_for_evidence_outcome")
-      schema["details"]["outcome_documents"] = %W[<section>\n<p>a</p>\n</section> <section>\n<p>b</p>\n</section> <section>\n<p>c</p>\n</section>]
+      schema["details"]["attachments"] = test_documents
+      schema["details"]["outcome_attachments"] = %w[02 03]
       presented = presented_item("call_for_evidence_outcome", schema)
 
-      assert_equal "<section>\n<p>a</p>\n</section><section>\n<p>b</p>\n</section><section>\n<p>c</p>\n</section>", presented.outcome_documents
+      assert_equal presented.outcome_documents.length, 2
+      assert_equal presented.outcome_documents[0]["id"], "02"
+      assert_equal presented.outcome_documents[1]["id"], "03"
     end
 
     test "presents URL for calls for evidence held on another website" do

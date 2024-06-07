@@ -11,6 +11,81 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
     Timecop.return
   end
 
+  general_overrides = {
+    "details" => {
+      "attachments" => [
+        {
+          "accessible" => false,
+          "alternative_format_contact_email" => "publications@ofqual.gov.uk",
+          "attachment_type" => "file",
+          "command_paper_number" => "",
+          "content_type" => "application/pdf",
+          "file_size" => 803,
+          "filename" => "Setting_grade_standards_part_2.pdf",
+          "hoc_paper_number" => "",
+          "id" => "01",
+          "isbn" => "",
+          "number_of_pages" => 33,
+          "title" => "Setting the grade standards of new GCSEs in England – part 2",
+          "unique_reference" => "Ofqual/16/5939",
+          "unnumbered_command_paper" => false,
+          "unnumbered_hoc_paper" => false,
+          "url" => "https://assets.publishing.service.gov.uk/media/5a7f7b63ed915d74e33f6b3d/Setting_grade_standards_part_2.pdf",
+        },
+        {
+          "accessible" => false,
+          "alternative_format_contact_email" => "publications@ofqual.gov.uk",
+          "attachment_type" => "file",
+          "command_paper_number" => "",
+          "content_type" => "application/pdf",
+          "file_size" => 365,
+          "filename" => "Decisions_-_setting_GCSE_grade_standards_-_part_2.pdf",
+          "hoc_paper_number" => "",
+          "id" => "02",
+          "isbn" => "",
+          "number_of_pages" => 10,
+          "title" => "Decisions on setting the grade standards of new GCSEs in England - part 2",
+          "unique_reference" => "Ofqual/16/6102",
+          "unnumbered_command_paper" => false,
+          "unnumbered_hoc_paper" => false,
+          "url" => "https://assets.publishing.service.gov.uk/media/5a817d87ed915d74e62328cf/Decisions_-_setting_GCSE_grade_standards_-_part_2.pdf",
+        },
+        {
+          "accessible" => false,
+          "alternative_format_contact_email" => "publications@ofqual.gov.uk",
+          "attachment_type" => "file",
+          "command_paper_number" => "",
+          "content_type" => "application/pdf",
+          "file_size" => 646,
+          "filename" => "Grading-consulation-Equalities-Impact-Assessment.pdf",
+          "hoc_paper_number" => "",
+          "id" => "03",
+          "isbn" => "",
+          "number_of_pages" => 5,
+          "title" => "Equalities impact assessment: setting the grade standards of new GCSEs in England – part 2",
+          "unique_reference" => "Ofqual/16/6104",
+          "unnumbered_command_paper" => false,
+          "unnumbered_hoc_paper" => false,
+          "url" => "https://assets.publishing.service.gov.uk/media/5a8014d6ed915d74e622c5af/Grading-consulation-Equalities-Impact-Assessment.pdf",
+        },
+        {
+          "accessible" => false,
+          "alternative_format_contact_email" => "publications@ofqual.gov.uk",
+          "attachment_type" => "file",
+          "content_type" => "application/pdf",
+          "file_size" => 175,
+          "filename" => "Grading-consultation-analysis-of-responses.pdf",
+          "id" => "04",
+          "number_of_pages" => 24,
+          "title" => "Analysis of responses to our consultation on setting the grade standards of new GCSEs in England – part 2",
+          "url" => "https://assets.publishing.service.gov.uk/media/5a819d85ed915d74e6233377/Grading-consultation-analysis-of-responses.pdf",
+        },
+      ],
+      "outcome_attachments" => %w[01],
+      "featured_attachments" => %w[02],
+    },
+  }
+
   test "call for evidence" do
     setup_and_visit_content_item("open_call_for_evidence", {
       "public_updated_at" => "2022-05-15T15:52:59.000+00:00",
@@ -41,11 +116,11 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
   end
 
   test "renders document attachments" do
-    setup_and_visit_content_item("closed_call_for_evidence")
+    setup_and_visit_content_item("closed_call_for_evidence", general_overrides)
 
     assert page.has_text?("Documents")
     within "#documents" do
-      assert page.has_text?("Net Zero Review: Call for evidence")
+      assert page.has_text?("Decisions on setting the grade standards of new GCSEs in England - part 2")
     end
   end
 
@@ -55,6 +130,142 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Documents")
     within "#documents" do
       assert page.has_text?("Setting the grade standards of new GCSEs in England – part 2")
+    end
+  end
+
+  test "renders accessible format option when accessible is false and email is supplied" do
+    overrides = {
+      "details" => {
+        "attachments" => [
+          {
+            "accessible" => false,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "attachment_type" => "file",
+            "id" => "01",
+            "title" => "Number of ex-regular service personnel now part of FR20",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+        ],
+        "featured_attachments" => %w[01],
+      },
+    }
+    setup_and_visit_content_item("call_for_evidence_outcome_with_featured_attachments", overrides)
+    within "#documents" do
+      assert page.has_text?("Request an accessible format")
+    end
+  end
+
+  test "doesn't render accessible format option when accessible is true and email is supplied" do
+    overrides = {
+      "details" => {
+        "attachments" => [
+          {
+            "accessible" => true,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "attachment_type" => "file",
+            "id" => "01",
+            "title" => "Number of ex-regular service personnel now part of FR20",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+        ],
+        "featured_attachments" => %w[01],
+      },
+    }
+    setup_and_visit_content_item("call_for_evidence_outcome_with_featured_attachments", overrides)
+    within "#documents" do
+      assert page.has_no_text?("Request an accessible format")
+    end
+  end
+
+  test "doesn't render accessible format option when accessible is false and email is not supplied" do
+    overrides = {
+      "details" => {
+        "attachments" => [
+          {
+            "accessible" => false,
+            "attachment_type" => "file",
+            "id" => "01",
+            "title" => "Number of ex-regular service personnel now part of FR20",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+        ],
+        "featured_attachments" => %w[01],
+      },
+    }
+    setup_and_visit_content_item("call_for_evidence_outcome_with_featured_attachments", overrides)
+    within "#documents" do
+      assert page.has_no_text?("Request an accessible format")
+    end
+  end
+
+  test "tracks details elements in attachments correctly" do
+    overrides = {
+      "details" => {
+        "attachments" => [
+          {
+            "accessible" => false,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "id" => "01",
+            "title" => "Attachment 1 - should have details element",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+          {
+            "accessible" => true,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "id" => "02",
+            "title" => "Attachment 2",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+          {
+            "accessible" => true,
+            "alternative_format_contact_email" => nil,
+            "id" => "03",
+            "title" => "Attachment 3",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+          {
+            "accessible" => false,
+            "alternative_format_contact_email" => "ddc-modinternet@mod.gov.uk",
+            "id" => "04",
+            "title" => "Attachment 4 - should have details element",
+            "url" => "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/315163/PUBLIC_1392629965.pdf",
+            "content_type" => "application/pdf",
+            "filename" => "PUBLIC_1392629965.pdf",
+            "locale" => "en",
+          },
+        ],
+        "outcome_attachments" => %w[01 02],
+        "featured_attachments" => %w[03 04],
+      },
+    }
+    setup_and_visit_content_item("call_for_evidence_outcome_with_featured_attachments", overrides)
+    attachments = page.find_all(".gem-c-attachment")
+    assert_equal attachments.length, overrides["details"]["attachments"].length
+
+    attachments.each do |attachment|
+      next unless attachment.has_css?(".govuk-details__summary")
+
+      details = attachment.find(".govuk-details__summary")["data-ga4-event"]
+      actual_tracking = JSON.parse(details)
+      assert_equal actual_tracking["index_section_count"], 2
     end
   end
 
@@ -117,12 +328,12 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
   end
 
   test "renders call for evidence outcome attachments" do
-    setup_and_visit_content_item("call_for_evidence_outcome")
+    setup_and_visit_content_item("call_for_evidence_outcome", general_overrides)
 
     assert page.has_text?("This call for evidence has closed")
     assert page.has_text?("Read the full outcome")
     within "#read-the-full-outcome" do
-      assert page.has_text?("Employee Share Schemes: NIC elections - consulation response")
+      assert page.has_text?("Setting the grade standards of new GCSEs in England – part 2")
     end
   end
 
