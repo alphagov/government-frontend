@@ -133,13 +133,6 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def assert_has_publisher_metadata(options)
-    within(".app-c-publisher-metadata") do
-      assert_has_published_dates(options[:first_published], options[:last_updated], history_link: options[:history_link])
-      assert_has_publisher_metadata_other(options[:metadata])
-    end
-  end
-
   def assert_has_important_metadata(metadata)
     within(".app-c-important-metadata") do
       assert_has_metadata_local(
