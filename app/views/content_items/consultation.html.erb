@@ -148,12 +148,6 @@
         title: t("consultation.documents"),
         attachments_for_components: @content_item.documents_attachments_for_components
       %>
-      <% if false %>
-      <%= render "attachments",
-          title: t("consultation.documents"),
-          legacy_pre_rendered_documents: @content_item.documents,
-          attachments: @content_item.featured_attachments %>
-      <% end %>
     </div>
 
     <% if @content_item.ways_to_respond? %>
