@@ -3,9 +3,15 @@
 <% unless block.empty? %>
   <%
     contents ||= []
-    sticky_attr = ' data-module="sticky-element-container"'.html_safe if contents.any?
+    sticky_attr = "sticky-element-container" if contents.any?
   %>
-  <div id="contents" class="app-c-contents-list-with-body"<%= sticky_attr %>>
+  <%= tag.div(
+    id: "contents",
+    class: "app-c-contents-list-with-body",
+    data: {
+      module: sticky_attr,
+    },
+  ) do %>
     <% if contents.any? %>
       <div class="responsive-bottom-margin">
         <%= render 'govuk_publishing_components/components/contents_list', contents: contents %>
@@ -19,5 +25,5 @@
         </div>
       </div>
     <% end %>
-  </div>
+  <% end %>
 <% end %>
