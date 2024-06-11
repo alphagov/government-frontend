@@ -1,3 +1,18 @@
+GIT
+  remote: https://github.com/alphagov/govuk_publishing_components.git
+  revision: 02d2ef7e6c9dcc6160ce818baed4c0c13e0052f3
+  branch: upgrade-to-govuk-frontend-5.1
+  specs:
+    govuk_publishing_components (38.4.1)
+      govuk_app_config
+      govuk_personalisation (>= 0.7.0)
+      kramdown
+      plek
+      rails (>= 6)
+      rouge
+      sprockets (>= 3)
+      sprockets-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -162,15 +177,6 @@ GEM
     govuk_personalisation (0.16.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (38.4.1)
-      govuk_app_config
-      govuk_personalisation (>= 0.7.0)
-      kramdown
-      plek
-      rails (>= 6)
-      rouge
-      sprockets (>= 3)
-      sprockets-rails
     govuk_schemas (5.0.2)
       json-schema (>= 2.8, < 4.4)
     govuk_test (4.1.0)
@@ -666,7 +672,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_personalisation
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   htmlentities
