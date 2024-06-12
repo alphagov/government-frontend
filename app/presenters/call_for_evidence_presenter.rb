@@ -48,12 +48,42 @@ class CallForEvidencePresenter < ContentItemPresenter
     content_item["details"]["outcome_detail"]
   end
 
+  # Read the full outcome, top of page
   def outcome_documents
-    content_item["details"]["outcome_documents"]&.join("")
+    # content_item["details"]["outcome_documents"]&.join("")
+    documents.select { |doc| outcome_attachments.include? doc["id"] }
+  end
+
+  # Documents, bottom of page
+  def general_documents
+    documents.select { |doc| featured_attachments.include? doc["id"] }
+  end
+
+  def attachments_with_details
+    items = [].push(*outcome_documents)
+    items.push(*general_documents)
+    items.select { |doc| doc["accessible"] == false && doc["alternative_format_contact_email"] }.count
   end
 
   def outcome_attachments
     content_item["details"]["outcome_attachments"]
+  end
+
+  def featured_attachments
+    content_item["details"]["featured_attachments"]
+  end
+
+  def documents
+    # content_item["details"]["documents"]&.join("")
+    return [] unless content_item["details"]["attachments"]
+
+    docs = content_item["details"]["attachments"].select { |a| !a.key?("locale") || a["locale"] == locale }
+    docs.each do |doc|
+      doc["type"] = "html" unless doc["content_type"]
+      doc["type"] = "external" if doc["attachment_type"] == "external"
+      doc["preview_url"] = "#{doc['url']}/preview" if doc["preview_url"]
+      doc["alternative_format_contact_email"] = nil if doc["accessible"] == true
+    end
   end
 
   def held_on_another_website?
@@ -62,14 +92,6 @@ class CallForEvidencePresenter < ContentItemPresenter
 
   def held_on_another_website_url
     content_item["details"]["held_on_another_website_url"]
-  end
-
-  def documents
-    content_item["details"]["documents"]&.join("")
-  end
-
-  def featured_attachments
-    content_item["details"]["featured_attachments"]
   end
 
   def ways_to_respond?

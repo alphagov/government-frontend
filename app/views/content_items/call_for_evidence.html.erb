@@ -42,10 +42,10 @@
     <% elsif @content_item.outcome? %>
       <%= render 'govuk_publishing_components/components/notice', title: t("call_for_evidence.closed") %>
 
-      <%= render "attachments",
-          title: t("call_for_evidence.download_outcome"),
-          legacy_pre_rendered_documents: @content_item.outcome_documents,
-          attachments: @content_item.outcome_attachments %>
+      <%= render "attachments_list",
+        title: t("call_for_evidence.download_outcome"),
+        attachments_for_components: @content_item.outcome_documents
+      %>
 
       <%= render 'govuk_publishing_components/components/heading', text: t("call_for_evidence.detail_of_outcome"), mobile_top_margin: true %>
       <div class="call-for-evidence-outcome-detail">
@@ -116,10 +116,10 @@
         <%= raw(@content_item.govspeak_body[:content]) %>
       <% end %>
 
-      <%= render "attachments",
-          title: t("call_for_evidence.documents"),
-          legacy_pre_rendered_documents: @content_item.documents,
-          attachments: @content_item.featured_attachments %>
+      <%= render "attachments_list",
+        title: t("call_for_evidence.documents"),
+        attachments_for_components: @content_item.general_documents
+      %>
     </div>
 
     <% if @content_item.ways_to_respond? %>
