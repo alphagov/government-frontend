@@ -24,9 +24,9 @@ examples:
     data:
       items:
         Many things:
-          - First thing
-          - Second thing
-          - Third thing
+          - <a href="#">First thing</a>
+          - <a href="#">Second thing</a>
+          - <a href="#">Third thing</a>
   with_title:
     description: Used on statistics announcements to display release date changed information, [see example](https://gov.uk/government/statistics/announcements/museums-and-galleries-monthly-visits--8)
     data:
