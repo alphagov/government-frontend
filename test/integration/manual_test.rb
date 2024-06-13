@@ -38,13 +38,16 @@ class ManualTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders manual specific breadcrumbs" do
+  test "renders about title" do
     setup_and_visit_content_item("content-design")
 
-    manual_specific_breadcrumbs = page.all(".gem-c-breadcrumbs")[1]
-    within manual_specific_breadcrumbs do
-      assert page.has_text?(I18n.t("manuals.breadcrumb_contents"))
-    end
+    assert page.has_text?(I18n.t("manuals.summary_title"))
+  end
+
+  test "renders contents title heading" do
+    setup_and_visit_content_item("content-design")
+
+    assert page.has_selector?("h2", text: I18n.t("manuals.contents_title"))
   end
 
   test "renders body govspeak" do
