@@ -1,12 +1,12 @@
 class ConsultationPresenter < ContentItemPresenter
+  include ContentItem::Attachments
   include ContentItem::Body
   include ContentItem::Metadata
   include ContentItem::NationalApplicability
   include ContentItem::Political
   include ContentItem::Shareable
-  include ContentItem::TitleAndContext
-  include ContentItem::Attachments
   include ContentItem::SinglePageNotificationButton
+  include ContentItem::TitleAndContext
 
   def opening_date_time
     content_item["details"]["opening_date"]
@@ -54,17 +54,17 @@ class ConsultationPresenter < ContentItemPresenter
 
   # Read the full outcome, top of page
   def final_outcome_attachments_for_components
-    documents.select { |doc| final_outcome_attachments.include? doc["id"] }
+    attachments_from(content_item["details"]["final_outcome_attachments"])
   end
 
   # Feedback received, middle of page
   def public_feedback_attachments_for_components
-    documents.select { |doc| public_feedback_attachments.include? doc["id"] }
+    attachments_from(content_item["details"]["public_feedback_attachments"])
   end
 
   # Documents, bottom of page
   def documents_attachments_for_components
-    documents.select { |doc| featured_attachments.include? doc["id"] }
+    attachments_from(content_item["details"]["featured_attachments"])
   end
 
   def attachments_with_details
@@ -72,30 +72,6 @@ class ConsultationPresenter < ContentItemPresenter
     items.push(*public_feedback_attachments_for_components)
     items.push(*documents_attachments_for_components)
     items.select { |doc| doc["accessible"] == false && doc["alternative_format_contact_email"] }.count
-  end
-
-  def documents
-    return [] unless content_item["details"]["attachments"]
-
-    docs = content_item["details"]["attachments"].select { |a| !a.key?("locale") || a["locale"] == locale }
-    docs.each do |doc|
-      doc["type"] = "html" unless doc["content_type"]
-      doc["type"] = "external" if doc["attachment_type"] == "external"
-      doc["preview_url"] = "#{doc['url']}/preview" if doc["preview_url"]
-      doc["alternative_format_contact_email"] = nil if doc["accessible"] == true
-    end
-  end
-
-  def final_outcome_attachments
-    content_item["details"]["final_outcome_attachments"] || []
-  end
-
-  def public_feedback_attachments
-    content_item["details"]["public_feedback_attachments"] || []
-  end
-
-  def featured_attachments
-    content_item["details"]["featured_attachments"] || []
   end
 
   def public_feedback_detail
@@ -135,7 +111,7 @@ class ConsultationPresenter < ContentItemPresenter
   end
 
   def add_margin?
-    final_outcome? || public_feedback_detail || public_feedback_attachments.any?
+    final_outcome? || public_feedback_detail || public_feedback_attachments_for_components.any?
   end
 
 private
