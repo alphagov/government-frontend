@@ -1105,7 +1105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:^4.16.4":
+"express@npm:^4.19.2":
   version: 4.19.2
   resolution: "express@npm:4.19.2"
   dependencies:
@@ -1466,7 +1466,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "government-frontend@workspace:."
   dependencies:
-    jasmine-browser-runner: ^2.4.0
+    jasmine-browser-runner: ^2.5.0
     jasmine-core: ^5.1.2
     standardx: ^7.0.0
     stylelint: ^16.6.1
@@ -1781,19 +1781,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-browser-runner@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "jasmine-browser-runner@npm:2.4.0"
+"jasmine-browser-runner@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "jasmine-browser-runner@npm:2.5.0"
   dependencies:
     ejs: ^3.1.6
-    express: ^4.16.4
+    express: ^4.19.2
     glob: ^10.0.0
     selenium-webdriver: ^4.12.0
   peerDependencies:
     jasmine-core: ^5.0.0
   bin:
     jasmine-browser-runner: bin/jasmine-browser-runner
-  checksum: 148ecbc186bb77dcd9cf0543e1ad702bc1c5bd31bac7baf94c1393a8452368da6e2c95a34aeeb8d81b24272f61fc1a7ce3fcfcb2925b996e0972fc2042d72009
+  checksum: e6ed14fb514ff8599c65e720ad91c1ee1edc940916aba73434a8ba7742edaa27d7044bf7bf7eea1667f91df82760c761f23ef64a96b6c914824be4c07695e67e
   languageName: node
   linkType: hard
 
