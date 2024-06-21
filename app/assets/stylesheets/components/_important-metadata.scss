@@ -10,6 +10,19 @@
     overflow: auto;
     padding: govuk-spacing(4) govuk-spacing(6);
   }
+
+  @include govuk-media-query($media-type: print) {
+    padding: 0;
+    color: $govuk-text-colour;
+
+    .govuk-link {
+      color: $govuk-text-colour;
+    }
+
+    .app-c-important-metadata__definition {
+      padding-bottom: govuk-spacing(2);
+    }
+  }
 }
 
 // this will be moved and extended into a model for general component spacing
