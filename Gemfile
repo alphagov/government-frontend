@@ -34,6 +34,7 @@ end
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "minitest_to_rspec"
 end
 
 group :test do
