@@ -4,7 +4,11 @@ ENV["GOVUK_ASSET_ROOT"] = "http://static.test.gov.uk"
 
 # Must go at top of file
 require "simplecov"
-SimpleCov.start
+
+SimpleCov.start "rails" do
+  enable_coverage :branch
+  minimum_coverage 95
+end
 
 require "i18n/coverage"
 require "i18n/coverage/printers/file_printer"
