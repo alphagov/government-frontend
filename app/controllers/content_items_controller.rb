@@ -156,19 +156,11 @@ private
     )
   end
 
-  def format_banner_links(links, type)
-    links.each.with_index(1).map do |(title, base_path), index|
+  def format_banner_links(links)
+    links.each.map do |(title, base_path)|
       view_context.link_to(
         title,
         base_path,
-        data: {
-          "track-category": "relatedTaxonomyLinkClicked",
-          "track-action": "1.#{index} #{type}",
-          "track-label": base_path,
-          "track-options": {
-            dimension29: title,
-          },
-        },
       )
     end
   end
