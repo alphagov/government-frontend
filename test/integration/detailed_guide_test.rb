@@ -93,11 +93,11 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
     buttons = page.find_all(:button)
 
-    expected_tracking_top = single_page_notification_button_ga_tracking(1, "Top")
+    expected_tracking_top = single_page_notification_button_ga4_tracking(1, "Top")
     actual_tracking_top = JSON.parse(buttons.first["data-ga4-link"])
     assert_equal expected_tracking_top, actual_tracking_top
 
-    expected_tracking_bottom = single_page_notification_button_ga_tracking(2, "Footer")
+    expected_tracking_bottom = single_page_notification_button_ga4_tracking(2, "Footer")
     actual_tracking_bottom = JSON.parse(buttons.last["data-ga4-link"])
     assert_equal expected_tracking_bottom, actual_tracking_bottom
   end
