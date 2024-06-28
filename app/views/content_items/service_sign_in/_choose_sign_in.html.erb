@@ -13,15 +13,8 @@
     </div>
   </div>
 <% end %>
-<%
-  data_attrs = { module: "track-radio-group" }
-  data_attrs["tracking-code"] = @content_item.tracking_code if @content_item.tracking_code
-  data_attrs["tracking-domain"] = @content_item.tracking_domain if @content_item.tracking_domain
-  data_attrs["tracking-name"] = @content_item.tracking_name if @content_item.tracking_name
-%>
 <%= form_tag({controller: 'content_items', action: 'service_sign_in_options'},
-             method: "post",
-             data: data_attrs) do %>
+             method: "post") do %>
   <% legend_text = render 'govuk_publishing_components/components/title', title: @content_item.title %>
   <% description_text = render 'govuk_publishing_components/components/govspeak' do %>
     <% raw(@content_item.description) %>
