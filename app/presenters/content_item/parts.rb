@@ -84,18 +84,12 @@ module ContentItem
     end
 
     def part_links
-      parts.map.with_index(1) do |part, position|
+      parts.map do |part|
         if part["slug"] != current_part["slug"]
           view_context.link_to(
             part["title"],
             part["full_path"],
             class: "govuk-link",
-            data: {
-              track_category: "contentsClicked",
-              track_action: "content_item #{position}",
-              track_label: part["full_path"],
-              track_options: { dimension29: part["title"] },
-            },
           )
         else
           part["title"]

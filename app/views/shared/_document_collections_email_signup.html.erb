@@ -7,12 +7,6 @@
     <%= render "govuk_publishing_components/components/signup_link", {
       link_text: "Get emails about this topic",
       link_href: "/email-signup/confirm?topic=#{@content_item.taxonomy_topic_email_override_base_path}",
-      data: {
-        "module": "gem-track-click",
-        "track-category": "emailAlertLinkClicked",
-        "track-action": @content_item.taxonomy_topic_email_override_base_path,
-        "track-label": ""
-      },
       margin_bottom: 6
     } %>
   </div>

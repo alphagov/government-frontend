@@ -4,7 +4,7 @@
   </div>
 <% end %>
 
-<% @content_item.groups.each_with_index do |group, group_index| %>
+<% @content_item.groups.each do |group| %>
   <%= @content_item.group_heading(group) %>
 
   <% if group["body"].present? %>
@@ -15,7 +15,7 @@
     <% end %>
   <% end %>
 
-  <div data-module="gem-track-click" class="govuk-!-margin-bottom-8">
-    <%= render 'govuk_publishing_components/components/document_list', items: @content_item.group_document_links(group, group_index) %>
+  <div class="govuk-!-margin-bottom-8">
+    <%= render 'govuk_publishing_components/components/document_list', items: @content_item.group_document_links(group) %>
   </div>
 <% end %>
