@@ -1,6 +1,4 @@
 (function (global) {
-  var GOVUK = global.GOVUK || {}
-
   function Webchat (el) {
     var POLL_INTERVAL = 5 * 1000
     var AJAX_TIMEOUT = 5 * 1000
@@ -17,7 +15,6 @@
     var openButton = document.querySelector('.js-webchat-open-button')
     var webchatStateClass = 'js-webchat-advisers-'
     var intervalID = null
-    var lastRecordedState = null
 
     function init () {
       if (!availabilityUrl || !openUrl) {
@@ -35,7 +32,6 @@
       evt.preventDefault()
       var redirect = this.getAttribute('data-redirect')
       redirect === 'true' ? window.location.href = openUrl : window.open(openUrl, 'newwin', 'width=366,height=516')
-      trackEvent('opened')
     }
 
     function checkAvailability () {
@@ -104,15 +100,6 @@
         allStates[index].classList.add('govuk-!-display-none')
       }
       currentState.classList.remove('govuk-!-display-none')
-      trackEvent(state)
-    }
-
-    function trackEvent (state) {
-      state = state.toLowerCase()
-      if (lastRecordedState === state) return
-
-      GOVUK.analytics.trackEvent('webchat', state)
-      lastRecordedState = state
     }
 
     init()
