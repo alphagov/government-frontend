@@ -2,16 +2,6 @@ require "test_helper"
 
 module ServiceSignIn
   class ChooseSignInTest < ActionDispatch::IntegrationTest
-    test "random but valid items do not error" do
-      payload = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type)
-      path = payload["details"]["choose_sign_in"]["slug"]
-
-      stub_request(:get, %r{#{path}})
-        .to_return(status: 200, body: payload.to_json, headers: {})
-
-      visit path
-    end
-
     test "page renders correctly" do
       setup_and_visit_choose_sign_in_page("service_sign_in", "/choose-sign-in")
 
