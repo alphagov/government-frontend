@@ -36,6 +36,12 @@ module GovukContentSchemaExamples
     stub_content_store_has_item(parents.first["base_path"], document) if schema == "html_publication"
   end
 
+  def path_for(content_item, locale = nil)
+    base_path = content_item["base_path"].sub(/^\//, "")
+    base_path.gsub!(/\.#{locale}$/, "") if locale
+    base_path
+  end
+
   module ClassMethods
     def all_examples_for_supported_schemas
       supported_schemas.flat_map { |format| GovukSchemas::Example.find_all(format) }
