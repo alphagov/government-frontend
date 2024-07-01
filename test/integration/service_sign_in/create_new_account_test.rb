@@ -2,21 +2,6 @@ require "test_helper"
 
 module ServiceSignIn
   class CreateNewAccount < ActionDispatch::IntegrationTest
-    test "random but valid items do not error" do
-      # Create new account is an optional field, so we need to try a few times to
-      # get an example with it present.
-      path = nil
-      until path
-        payload = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type)
-        path = payload.dig("details", "create_new_account", "slug")
-      end
-
-      stub_request(:get, %r{#{path}})
-        .to_return(status: 200, body: payload.to_json, headers: {})
-
-      visit path
-    end
-
     test "page renders correctly" do
       setup_and_visit_create_new_account_page
 

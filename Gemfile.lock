@@ -171,7 +171,8 @@ GEM
       rouge
       sprockets (>= 3)
       sprockets-rails
-    govuk_schemas (5.0.2)
+    govuk_schemas (5.0.4)
+      faker (~> 3.4.1)
       json-schema (>= 2.8, < 4.4)
     govuk_test (4.1.0)
       brakeman (>= 5.0.2)
