@@ -24,21 +24,12 @@ class DocumentCollectionPresenter < ContentItemPresenter
     end
   end
 
-  def group_document_links(group, group_index)
-    group_documents(group).each_with_index.map do |link, link_index|
+  def group_document_links(group)
+    group_documents(group).each.map do |link|
       {
         link: {
           text: link["title"],
           path: link["base_path"],
-          data_attributes: {
-            track_category: "navDocumentCollectionLinkClicked",
-            track_action: "#{group_index + 1}.#{link_index + 1}",
-            track_label: link["base_path"],
-            track_options: {
-              dimension28: group["documents"].count.to_s,
-              dimension29: link["title"],
-            },
-          },
         },
         metadata: {
           public_updated_at: group_document_link_public_updated_at(link),

@@ -82,30 +82,6 @@ class TravelAdvicePresenterTest
       assert_equal "Summary", first_nav_item
     end
 
-    test "navigation items are presented as trackable links unless they are the current part" do
-      example = schema_item("full-country")
-      current_part = example["details"]["parts"][1]
-
-      first_part_presented = presented_item("full-country", current_part["slug"])
-      navigation_items = first_part_presented.parts_navigation
-
-      first_part_nav_item = navigation_items[0][0]
-      current_part_nav_item = navigation_items[0][1]
-      another_part_nav_item = navigation_items[0][2]
-
-      assert_equal first_part_nav_item,
-                   "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 1\" "\
-                   "data-track-label=\"/foreign-travel-advice/albania\" "\
-                   "data-track-options=\"{&quot;dimension29&quot;:&quot;Summary&quot;}\" "\
-                   "href=\"/foreign-travel-advice/albania\">Summary</a>"
-      assert_equal current_part_nav_item, current_part["title"]
-      assert_equal another_part_nav_item,
-                   "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 3\" "\
-                   "data-track-label=\"/foreign-travel-advice/albania/terrorism\" "\
-                   "data-track-options=\"{&quot;dimension29&quot;:&quot;Terrorism&quot;}\" "\
-                   "href=\"/foreign-travel-advice/albania/terrorism\">Terrorism</a>"
-    end
-
     test "navigation items link to all parts" do
       parts = schema_item("full-country")["details"]["parts"]
       part_links = presented_item("full-country").parts_navigation.flatten

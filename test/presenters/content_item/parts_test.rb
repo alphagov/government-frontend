@@ -152,19 +152,6 @@ class ContentItemPartsTest < ActiveSupport::TestCase
     assert_equal @parts.current_part_title, "first-title"
   end
 
-  test "navigation items are presented as trackable links unless they are the current part" do
-    presenting_first_part_in_content_item
-    assert_equal @parts.current_part_title, "first-title"
-    assert_equal @parts.parts_navigation,
-                 [[
-                   "first-title",
-                   "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 2\" "\
-                   "data-track-label=\"/base-path/second-slug\" "\
-                   "data-track-options=\"{&quot;dimension29&quot;:&quot;second-title&quot;}\" "\
-                   "href=\"/base-path/second-slug\">second-title</a>",
-                 ]]
-  end
-
   test "links to the first part ignore the part's slug and use the base path" do
     presenting_second_part_in_content_item
     assert_equal @parts.current_part_title, "second-title"
@@ -218,19 +205,13 @@ class ContentItemPartsTest < ActiveSupport::TestCase
                  [
                    [
                      "first-title",
-                     "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" "\
-                         "data-track-action=\"content_item 2\" data-track-label=\"/base-path/second-slug\" "\
-                         "data-track-options=\"{&quot;dimension29&quot;:&quot;second-title&quot;}\" "\
+                     "<a class=\"govuk-link\" "\
                          "href=\"/base-path/second-slug\">second-title</a>",
                    ],
                    [
-                     "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 3\" "\
-                     "data-track-label=\"/base-path/third-slug\" "\
-                     "data-track-options=\"{&quot;dimension29&quot;:&quot;third-title&quot;}\" "\
+                     "<a class=\"govuk-link\" "\
                      "href=\"/base-path/third-slug\">third-title</a>",
-                     "<a class=\"govuk-link\" data-track-category=\"contentsClicked\" data-track-action=\"content_item 4\" "\
-                     "data-track-label=\"/base-path/fourth-slug\" "\
-                     "data-track-options=\"{&quot;dimension29&quot;:&quot;fourth-title&quot;}\" "\
+                     "<a class=\"govuk-link\" "\
                      "href=\"/base-path/fourth-slug\">fourth-title</a>",
                    ],
                  ]

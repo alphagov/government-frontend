@@ -272,7 +272,7 @@ class ActionDispatch::IntegrationTest
     schemas.detect { |schema| schema["@type"] == schema_name }
   end
 
-  def single_page_notification_button_ga_tracking(index_link, section)
+  def single_page_notification_button_ga4_tracking(index_link, section)
     {
       "event_name" => "navigation",
       "type" => "subscribe",

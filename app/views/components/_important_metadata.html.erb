@@ -11,7 +11,7 @@
     <% if title %>
       <h2 class="app-c-important-metadata__title"><%= sanitize title %></h2>
     <% end %>
-    <dl class="app-c-important-metadata__list" data-module="gem-track-click">
+    <dl class="app-c-important-metadata__list">
     <% items.each do |title, definition| %>
       <dt class="app-c-important-metadata__term"><%= sanitize title.to_s %>: </dt>
       <dd class="app-c-important-metadata__definition"><%= sanitize definition %></dd>

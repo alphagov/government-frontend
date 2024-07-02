@@ -53,15 +53,6 @@ class DocumentCollectionPresenterTest
           link: {
             text: "National standard for driving cars and light vans",
             path: "/government/publications/national-standard-for-driving-cars-and-light-vans",
-            data_attributes: {
-              track_category: "navDocumentCollectionLinkClicked",
-              track_action: "1.1",
-              track_label: "/government/publications/national-standard-for-driving-cars-and-light-vans",
-              track_options: {
-                dimension28: "1",
-                dimension29: "National standard for driving cars and light vans",
-              },
-            },
           },
           metadata: {
             public_updated_at: Time.zone.parse("2007-03-16 15:00:02 +0000"),
@@ -71,7 +62,7 @@ class DocumentCollectionPresenterTest
       ]
       document_ids = schema_item["details"]["collection_groups"].first["documents"]
 
-      assert_equal documents, presented_item.group_document_links({ "documents" => [document_ids.first] }, 0)
+      assert_equal documents, presented_item.group_document_links({ "documents" => [document_ids.first] })
     end
 
     test "it handles the document type lacking a translation" do
@@ -83,7 +74,6 @@ class DocumentCollectionPresenterTest
 
       grouped = present_example(schema_data).group_document_links(
         { "documents" => [document["content_id"]] },
-        0,
       )
 
       assert_nil grouped.first[:metadata][:document_type]
@@ -98,7 +88,6 @@ class DocumentCollectionPresenterTest
 
       grouped = present_example(schema_data).group_document_links(
         { "documents" => [document["content_id"]] },
-        0,
       )
 
       assert_nil grouped.first[:metadata][:public_updated_at]
@@ -123,7 +112,6 @@ class DocumentCollectionPresenterTest
 
         grouped = present_example(schema_data).group_document_links(
           { "documents" => [document["content_id"]] },
-          0,
         )
 
         public_updated_at = grouped[0][:metadata][:public_updated_at]
@@ -143,7 +131,7 @@ class DocumentCollectionPresenterTest
           .select { |g| g["title"] == "One document missing from links" }
           .first
 
-      presented_links = presenter.group_document_links(group_with_missing_document, 0)
+      presented_links = presenter.group_document_links(group_with_missing_document)
       presented_links_base_paths = presented_links.collect { |link| link[:link][:path] }
 
       assert_equal(

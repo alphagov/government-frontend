@@ -1,13 +1,10 @@
-/* globals lolex, setFixtures */
+/* globals setFixtures */
 
 var $ = window.jQuery
-var POLL_INTERVAL = '6' // Offset by one
 
 describe('Webchat', function () {
   var GOVUK = window.GOVUK
-  // Stub analytics.
-  GOVUK.analytics = GOVUK.analytics || {}
-  GOVUK.analytics.trackEvent = function () {}
+
   var CHILD_BENEFIT_API_URL = 'https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006859&siteID=10006719&businessUnitID=19001235'
 
   var INSERTION_HOOK = '<div class="js-webchat" data-availability-url="' + CHILD_BENEFIT_API_URL + '" data-open-url="' + CHILD_BENEFIT_API_URL + '" data-redirect="true">' +
@@ -107,41 +104,6 @@ describe('Webchat', function () {
       expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
       expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
       expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
-    })
-
-    it('should only track once per state change', function () {
-      var analyticsExpects = ['available', 'error']
-      var analyticsReceived = []
-      var analyticsCalled = 0
-      var clock = lolex.install()
-
-      spyOn(GOVUK.analytics, 'trackEvent').and.callFake(function (webchatKey, webchatValue) {
-        analyticsReceived.push(webchatValue)
-        analyticsCalled++
-      })
-
-      mount()
-      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedAvailable)
-
-      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(false)
-
-      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
-      expect($advisersError.hasClass('govuk-!-display-none')).toBe(true)
-      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
-
-      clock.tick(POLL_INTERVAL)
-      jasmine.Ajax.requests.mostRecent().respondWith(jsonNormalisedError)
-
-      expect($advisersError.hasClass('govuk-!-display-none')).toBe(false)
-      expect($advisersAvailable.hasClass('govuk-!-display-none')).toBe(true)
-      expect($advisersBusy.hasClass('govuk-!-display-none')).toBe(true)
-      expect($advisersUnavailable.hasClass('govuk-!-display-none')).toBe(true)
-      expect(analyticsCalled).toBe(2)
-      expect(analyticsReceived).toEqual(analyticsExpects)
-      clock.tick(POLL_INTERVAL)
-      expect(analyticsCalled).toBe(2)
-      expect(analyticsReceived).toEqual(analyticsExpects)
-      clock.uninstall()
     })
   })
 })
