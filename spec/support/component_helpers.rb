@@ -1,8 +1,4 @@
-require "test_helper"
-
-class ComponentTestCase < ActionView::TestCase
-  helper Rails.application.helpers
-
+module ComponentHelpers
   def component_name
     raise NotImplementedError, "Override this method in your test class"
   end

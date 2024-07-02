@@ -1,4 +1,4 @@
-name: Run Minitest
+name: Run RSpec
 
 on:
   workflow_call:
@@ -15,7 +15,7 @@ on:
 
 jobs:
   run-minitest:
-    name: Run Minitest
+    name: Run RSpec
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -42,8 +42,8 @@ jobs:
       - name: Precompile assets
         uses: alphagov/govuk-infrastructure/.github/actions/precompile-rails-assets@main
 
-      - name: Run Minitest
+      - name: Run RSpec
         env:
           RAILS_ENV: test
           GOVUK_CONTENT_SCHEMAS_PATH: vendor/publishing-api/content_schemas
-        run: bundle exec rake test
+        run: bundle exec rake spec
