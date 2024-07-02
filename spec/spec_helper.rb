@@ -22,5 +22,12 @@ RSpec.configure do |config|
 
   config.include GovukContentSchemaExamples, type: :request
 
+  config.include ContentItemSystemHelpers, type: :system
+  config.include GovukContentSchemaExamples, type: :system
+
   config.include ComponentHelpers, type: :view
+
+  config.before(:each, type: :system) do
+    driven_by :rack_test
+  end
 end

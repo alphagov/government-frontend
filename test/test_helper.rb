@@ -154,21 +154,9 @@ class ActionDispatch::IntegrationTest
     assert_has_published_dates(first_published, last_updated, history_link:)
   end
 
-  def setup_and_visit_content_item(name, overrides = {}, parameter_string = "")
-    @content_item = get_content_example(name).tap do |item|
-      content_item = item.deep_merge(overrides)
-      setup_and_visit_content_item_by_example(content_item, parameter_string)
-    end
-  end
-
   def setup_and_visit_content_item_with_params(name, parameter_string = "")
     @content_item = get_content_example(name)
     setup_and_visit_content_item_by_example(@content_item, parameter_string)
-  end
-
-  def setup_and_visit_content_item_by_example(content_item, parameter_string = "")
-    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
-    visit_with_cachebust("#{content_item['base_path']}#{parameter_string}")
   end
 
   def setup_and_visit_html_publication(name, parameter_string = "")
@@ -215,64 +203,11 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def setup_and_visit_random_content_item(document_type: nil)
-    content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
-      payload.merge!("document_type" => document_type) unless document_type.nil?
-      payload
-    end
-
-    content_id = content_item["content_id"]
-    path = content_item["base_path"]
-
-    if schema_type == "html_publication"
-      parent = content_item.dig("links", "parent")&.first
-      if parent
-        parent_path = parent["base_path"]
-        stub_request(:get, %r{#{parent_path}})
-          .to_return(status: 200, body: content_item.to_json, headers: {})
-      end
-    end
-
-    stub_request(:get, %r{#{path}})
-      .to_return(status: 200, body: content_item.to_json, headers: {})
-
-    visit path
-
-    assert_selector %(meta[name="govuk:content-id"][content="#{content_id}"]), visible: false
-  end
-
-  def get_content_example(name)
-    get_content_example_by_schema_and_name(schema_type, name)
-  end
-
-  def get_content_example_by_schema_and_name(schema_type, name)
-    GovukSchemas::Example.find(schema_type, example_name: name)
-  end
-
-  # Override this method if your test file doesn't match the convention
-  def schema_type
-    self.class.to_s.gsub("Test", "").underscore
-  end
-
-  def visit_with_cachebust(visit_uri)
-    uri = Addressable::URI.parse(visit_uri)
-    uri.query_values = uri.query_values.yield_self { |values| (values || {}).merge(cachebust: rand) }
-
-    visit(uri)
-  end
-
   def assert_has_structured_data(page, schema_name)
     assert find_structured_data(page, schema_name).present?
   end
 
-  def find_structured_data(page, schema_name)
-    schema_sections = page.find_all("script[type='application/ld+json']", visible: false)
-    schemas = schema_sections.map { |section| JSON.parse(section.text(:all)) }
-
-    schemas.detect { |schema| schema["@type"] == schema_name }
-  end
-
-  def single_page_notification_button_ga4_tracking(index_link, section)
+  def single_page_notification_button_ga_tracking(index_link, section)
     {
       "event_name" => "navigation",
       "type" => "subscribe",
