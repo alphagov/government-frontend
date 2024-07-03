@@ -34,6 +34,7 @@ end
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem "minitest_to_rspec"
 end
 
 group :test do
@@ -43,6 +44,7 @@ group :test do
   gem "i18n-coverage"
   gem "minitest-reporters"
   gem "mocha"
+  gem "rspec-rails"
   gem "shoulda-context"
   gem "simplecov"
   gem "timecop"
