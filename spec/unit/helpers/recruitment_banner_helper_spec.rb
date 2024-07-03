@@ -15,7 +15,7 @@ RSpec.describe(RecruitmentBannerHelper, type: :view) do
 
   it "returns banners that include the current url" do
     actual_banners = recruitment_banner
-    expected_banners = { "name" => "Banner 1", "suggestion_text" => "Help improve GOV.UK", "suggestion_link_text" => "Take part in user research", "survey_url" => "https://google.com", "page_paths" => (["/"]) }
+    expected_banners = { "name" => "Banner 1", "suggestion_text" => "Help improve GOV.UK", "suggestion_link_text" => "Take part in user research", "survey_url" => "https://google.com", "page_paths" => ["/"] }
 
     expect(actual_banners).to eq(expected_banners)
   end
