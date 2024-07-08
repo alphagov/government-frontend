@@ -65,7 +65,7 @@
     </div>
 
     <div class="main-content-container<% unless @content_item.contents.any? %> offset-empty-contents-list<% end %>">
-      <%= render "govuk_publishing_components/components/govspeak_html_publication", {} do %>
+      <%= render "govuk_publishing_components/components/govspeak_html_publication", { direction: page_text_direction } do %>
         <%= raw(@content_item.govspeak_body[:content]) %>
       <% end %>
     </div>
