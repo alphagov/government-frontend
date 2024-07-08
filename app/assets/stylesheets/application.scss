@@ -54,3 +54,7 @@ $govuk-include-default-font-face: false;
     text-align: start;
   }
 }
+
+.constrained-image {
+  max-width: 100%;
+}

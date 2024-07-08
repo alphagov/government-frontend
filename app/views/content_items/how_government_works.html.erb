@@ -103,9 +103,9 @@
           </p>
 
           <% if @content_item.prime_minister.present? && @content_item.prime_minister_image_url.present? %>
-            <%= image_tag @content_item.prime_minister_image_url, { alt:  @content_item.prime_minister_image_alt_text, width: '465', height: '310' } %>
+            <%= image_tag @content_item.prime_minister_image_url, { class: 'constrained-image', alt:  @content_item.prime_minister_image_alt_text } %>
           <% else %>
-            <%= image_tag 'how-gov-works/10_downing_street.jpg', alt: '10 Downing Street', width: '465', height: '310' %>
+            <%= image_tag 'how-gov-works/10_downing_street.jpg', class: 'constrained-image', alt: '10 Downing Street' %>
           <% end %>
         </section>
 
@@ -120,7 +120,7 @@
           <p class="govuk-body">The Cabinet is made up of the senior members of government. Every week during Parliament, members of the Cabinet (Secretaries of State from all departments and some other ministers) meet to discuss the most important issues for the government.</p>
           <p class="govuk-body govuk-!-margin-bottom-8"><%= link_to("See who is in the Cabinet", "/government/ministers", class: "govuk-link") %></p>
 
-          <%= image_tag 'how-gov-works/cabinet_01.jpg', alt: '', width: '465', height: '310' %>
+          <%= image_tag 'how-gov-works/cabinet_01.jpg', class: 'constrained-image', alt: '' %>
         </section>
       </section>
     </div>
@@ -517,7 +517,7 @@
         <p class="govuk-body">Read about past Prime Ministers, Chancellors and Foreign Secretaries in <%= link_to "notable people", "/government/history#notable-people", class: "govuk-link" %>. Learn more about historic <%= link_to "government buildings", "/government/history#government-buildings", class: "govuk-link" %> on Whitehall and around the UK.</p>
         <p class="govuk-body govuk-!-margin-bottom-8">You can also find links to <%= link_to "historical research", "/government/history#historical-research", class: "govuk-link" %>, documents and records.</p>
 
-        <%= image_tag 'how-gov-works/churchill_01.jpg', alt: '', width: '465', height: '310' %>
+        <%= image_tag 'how-gov-works/churchill_01.jpg', class: 'constrained-image', alt: '' %>
       </section>
     </div>
   </div>
