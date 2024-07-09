@@ -32,3 +32,12 @@ examples:
       caption: 'تأشيرات'
     context:
       right_to_left: true
+  figure_with_credit:
+    data:
+      src: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54374/s630_the_lords_chamber.jpg'
+      credit: Wallis Crankled
+  figure_with_caption_and_credit:
+    data:
+      src: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54374/s630_the_lords_chamber.jpg'
+      caption: The Lords Chamber
+      credit: Wallis Crankled
