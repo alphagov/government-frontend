@@ -1,13 +1,16 @@
 @import "govuk_publishing_components/individual_component_support";
-@import "../mixins/margins";
 
 .app-c-figure {
   @include govuk-clearfix;
-  @include responsive-bottom-margin;
 
   border-top: 1px solid $govuk-border-colour;
   padding-top: govuk-spacing(3);
   margin: 0;
+  margin-bottom: govuk-spacing(8);
+
+  @include govuk-media-query($until: tablet) {
+    margin-bottom: govuk-spacing(6);
+  }
 }
 
 .app-c-figure__image {
@@ -28,7 +31,6 @@
 
     display: block;
     vertical-align: top;
-
     box-sizing: border-box;
     float: left;
     padding-left: govuk-spacing(3);
@@ -41,9 +43,7 @@
 }
 
 .app-c-figure__figcaption-text {
+  @include govuk-font(16);
   margin: 0;
-
-  @include govuk-media-query($from: tablet) {
-    margin-bottom: govuk-spacing(2);
-  }
+  margin-bottom: govuk-spacing(2);
 }
