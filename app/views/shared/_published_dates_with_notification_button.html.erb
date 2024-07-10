@@ -9,6 +9,14 @@
   } %>
 
 <div class="published-dates-button-group">
+  <h2 class="govuk-visually-hidden">
+    <% if @content_item.has_single_page_notifications? %>
+      <%= I18n.t("common.email_and_print_link") %>
+    <% else %>
+      <%= I18n.t("common.print_link") %>
+    <% end %>
+  </h2>
+
   <%= render 'govuk_publishing_components/components/single_page_notification_button', {
     base_path: @content_item.base_path,
     js_enhancement: @has_govuk_account,
