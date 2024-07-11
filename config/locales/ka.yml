@@ -28,6 +28,8 @@ ka:
     ways_to_respond:
     write_to:
   common:
+    email_and_print_link:
+    print_link:
     visit: 'ეწვიეთ:'
   components:
     figure:
@@ -464,7 +466,6 @@ ka:
     zh-hk:
     zh-tw:
   manuals:
-    summary_title:
     breadcrumb_contents:
     contents_list_breadcrumb_contents:
     contents_title:
@@ -475,6 +476,7 @@ ka:
     previous_page:
     search_this_manual:
     see_all_updates:
+    summary_title:
     title:
     updated:
     updates_amendments:
