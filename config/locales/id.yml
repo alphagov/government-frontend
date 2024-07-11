@@ -37,6 +37,7 @@ id:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: sembunyikan semua pembaruan
       last_updated: Terakhir diperbarui %{date}
       published: Diterbitkan %{date}

@@ -37,6 +37,7 @@ pa-pk:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: سارے تازہ ترین حالات نوں لُکا لوؤ
       last_updated: اخری وار تازہ ترین بنایا {date} %
       published: شائع ہویا {date} %

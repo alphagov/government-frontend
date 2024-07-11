@@ -37,6 +37,7 @@ ro:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ascundeți toate actualizările
       last_updated: Ultima actualizare %{date}
       published: Publicat pe %{date}

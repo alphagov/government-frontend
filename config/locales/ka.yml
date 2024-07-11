@@ -37,6 +37,7 @@ ka:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ყველა ცვლილების დაფარვა
       last_updated: ბოლოს განახლდა %{date}
       published: გამოქვეყნდა %{date}

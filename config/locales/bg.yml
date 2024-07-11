@@ -37,6 +37,7 @@ bg:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: скриване на всички актуализации
       last_updated: Последна актуализация %{date}
       published: Публикувано на %{date}

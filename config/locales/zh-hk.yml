@@ -37,6 +37,7 @@ zh-hk:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: 隱藏所有更新
       last_updated: 最近更新 %{date}
       published: 已發佈 %{date}

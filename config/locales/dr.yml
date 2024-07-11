@@ -37,6 +37,7 @@ dr:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: مخفی کردن تمام آپدیت ها
       last_updated: آخرین آپدیت%{date}
       published: منتشر شده%{date}

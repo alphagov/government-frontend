@@ -37,6 +37,7 @@ ps:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ټول تازه معلومات پټ کړئ
       last_updated: وروستی تازه شوی%{date}
       published: خپور شوی%{date}

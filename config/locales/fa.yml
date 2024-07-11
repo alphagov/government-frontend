@@ -37,6 +37,7 @@ fa:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: مخفی کردن تمام بروزرسانی‌ها
       last_updated: آخرین بروزرسانی %{date}
       published: منشتر شده %{date}

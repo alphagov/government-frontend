@@ -37,6 +37,7 @@ he:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: להסתיר כל עדכונים
       last_updated: עדכון אחרון %{date}
       published: פורסם %{date}

@@ -37,6 +37,7 @@ ta:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: அனைத்து புதுப்பித்தல்களையும் மறை
       last_updated: கடைசியாக புதுப்பிக்கப்பட்டது %{date}
       published: வெளியிடப்பட்ட தேதி %{date}
