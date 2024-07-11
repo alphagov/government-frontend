@@ -11,6 +11,7 @@
   classes << shared_helper.get_margin_bottom if local_assigns[:margin_bottom]
 %>
 <% if published || last_updated %>
+  <h2 class="govuk-visually-hidden"><%= t('components.published_dates.hidden_heading') %></h2>
 <div class="<%= classes.join(' ') %>" <% if history.any? %>id="full-publication-update-history" data-module="gem-toggle"<% end %> lang="en">
   <% if published %>
     <%= t('components.published_dates.published', date: published) %>

@@ -37,6 +37,7 @@ sr:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: sakrij sva ažuriranja
       last_updated: Poslednje ažuriranje %{date}
       published: Objavljeno %{date}

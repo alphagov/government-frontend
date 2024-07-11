@@ -37,6 +37,7 @@ si:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: සියලු යාවත්කාලීන සඟවන්න
       last_updated: අවසන් වරට යාවත්කාලීන කළේ %{date}
       published: පළ කළේ %{date}

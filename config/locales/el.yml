@@ -37,6 +37,7 @@ el:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: απόκρυψη όλων των ενημερώσεων
       last_updated: Τελευταία ενημέρωση %{date}
       published: Δημοσιεύτηκε %{date}

@@ -37,6 +37,7 @@ az:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: bütün yenilmələri gizlət
       last_updated: 'Son yenilənmə: %{date}'
       published: 'Dərc edilib: %{date}'

@@ -37,6 +37,7 @@ ar:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: إخفاء كافة التحديثات
       last_updated: تاريخ آخر تحديث %{date}
       published: تاريخ النشر %{date}

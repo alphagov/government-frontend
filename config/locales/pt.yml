@@ -37,6 +37,7 @@ pt:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ocultar todas as atualizações
       last_updated: Última atualização a %{date}
       published: Publicado a %{date}

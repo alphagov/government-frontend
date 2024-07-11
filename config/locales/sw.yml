@@ -37,6 +37,7 @@ sw:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ficha masasisho yote
       last_updated: Ulisasishwa mara ya mwisho tarehe %{date}
       published: Ulichapishwa tarehe %{date}

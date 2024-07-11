@@ -37,6 +37,7 @@ es-419:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ocultar todas las novedades
       last_updated: Última actualización %{date}
       published: Publicado %{date}

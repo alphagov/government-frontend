@@ -37,6 +37,7 @@ ms:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: sorok semua kemas kini
       last_updated: Kali terakhir dikemas kini %{date}
       published: Diterbitkan %{date}

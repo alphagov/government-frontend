@@ -37,6 +37,7 @@ zh-tw:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: 隱藏所有更新
       last_updated: 最後更新於 %{date}
       published: 發布於 %{date}

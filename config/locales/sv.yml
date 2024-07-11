@@ -37,6 +37,7 @@ sv:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: dölj alla uppdateringar
       last_updated: Senast uppdaterad %{date}
       published: Publicerad %{date}

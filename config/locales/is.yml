@@ -37,6 +37,7 @@ is:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: fela allar uppfærslur
       last_updated: Síðast uppfært %{date}
       published: Birt %{date}

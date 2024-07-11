@@ -37,6 +37,7 @@ ko:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: 모든 업데이트 숨기기
       last_updated: 최근 업데이트일 %{date}
       published: 발행일 %{date}

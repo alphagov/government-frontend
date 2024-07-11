@@ -37,6 +37,7 @@ tk:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ähli täzelenmeleri gizle
       last_updated: Soňky gezek täzelenme %{date}
       published: Çap edilen %{date}

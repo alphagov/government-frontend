@@ -37,6 +37,7 @@ gd:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: gach nuashonrú a cheilt
       last_updated: Nuashonrú deireanach %{date}
       published: Arna chur suas ar %{date}

@@ -37,6 +37,7 @@ sk:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: skryť všetky aktualizácie
       last_updated: Posledná aktualizácia %{date}
       published: Zverejnené %{date}

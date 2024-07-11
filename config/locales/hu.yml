@@ -37,6 +37,7 @@ hu:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: minden frissítés elrejtése
       last_updated: 'Utolsó frissítés: %{date}'
       published: 'közzététel dátuma: %{date}'

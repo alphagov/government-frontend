@@ -37,6 +37,7 @@ vi:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: ẩn tất cả các cập nhật
       last_updated: Lần cập nhật gần đây nhất %{date}
       published: Ngày xuất bản %{date}

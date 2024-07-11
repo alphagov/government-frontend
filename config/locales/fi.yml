@@ -37,6 +37,7 @@ fi:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: piilota kaikki päivitykset
       last_updated: Viimeksi päivitetty %{date}
       published: Julkaistu %{date}

@@ -37,6 +37,7 @@ lt:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: slėpti visą naują informacij
       last_updated: Paskutinį kartą naujinta %{date}
       published: Publikuota %{date}

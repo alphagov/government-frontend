@@ -37,6 +37,7 @@ nl:
     print_link:
       text:
     published_dates:
+      hidden_heading:
       hide_all_updates: verberg alle updates
       last_updated: Laatst bijgewerkt %{date}
       published: Gepubliceerd %{date}
