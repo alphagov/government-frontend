@@ -1,8 +1,4 @@
 // The main application stylesheet
-$govuk-compatibility-govuktemplate: false;
-$govuk-typography-use-rem: false;
-$govuk-use-legacy-palette: false;
-$govuk-new-link-styles: true;
 
 // This flag stops the font from being included in this application's
 // stylesheet - the font is being served by Static across all of GOV.UK, so is
