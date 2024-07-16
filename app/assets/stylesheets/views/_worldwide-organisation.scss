@@ -1,6 +1,6 @@
 .worldwide-organisation-header {
-  margin-top: $govuk-gutter-half;
-  margin-bottom: $govuk-gutter-half;
+  margin-top: govuk-spacing(3);
+  margin-bottom: govuk-spacing(3);
 }
 
 .js-enabled {
@@ -20,12 +20,12 @@
 
 .worldwide-organisation-header__logo {
   @include govuk-media-query($from: tablet) {
-    margin-top: $govuk-gutter-half;
+    margin-top: govuk-spacing(3);
   }
 }
 
 .worldwide-organisation-header__metadata {
-  margin-top: $govuk-gutter / 3;
+  margin-top: govuk-spacing(2);
 
   dl {
     @include govuk-text-colour;
