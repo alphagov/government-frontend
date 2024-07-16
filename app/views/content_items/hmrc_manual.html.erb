@@ -11,6 +11,7 @@
 
 <%= render "content_items/manuals/manual_layout" do %>
   <% @content_item.section_groups.each do |group| %>
+    <% next unless group["child_sections"].present? %>
     <div class="subsection-collection">
       <%= render "content_items/manuals/hmrc_sections", group: group %>
     </div>

@@ -89,4 +89,32 @@ class HmrcManualTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  test "does not render section groups with no sections inside" do
+    content_item_override = {
+      "details" => {
+        "child_section_groups" => [
+          {
+            title: "Some section group title 1",
+            child_sections: [],
+          },
+          {
+            title: "Some section group title 2",
+            child_sections: [
+              {
+                "section_id" => "VATGPB1000",
+                "title" => "Introduction: contents",
+                "description" => "",
+                "base_path" => "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
+              },
+            ],
+          },
+        ],
+      },
+    }
+
+    setup_and_visit_content_item("vat-government-public-bodies", content_item_override)
+    assert page.has_no_text?("Some section group title 1")
+    assert page.has_text?("Some section group title 2")
+  end
 end
