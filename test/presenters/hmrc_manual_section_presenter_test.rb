@@ -146,6 +146,19 @@ class HmrcManualSectionPresenterTest
       assert_equal expected_previous_link, presented_manual_section.previous_and_next_links
     end
 
+    test "presents no previous or next links if there is no previous or next section" do
+      manual_base_path = schema_item("vatgpb2000")["details"]["manual"]["base_path"]
+      manual = schema_item("vat-government-public-bodies", "hmrc_manual")
+
+      manual["details"]["child_section_groups"] = []
+
+      stub_content_store_has_item(manual_base_path, manual.to_json)
+
+      expected_links = {}
+
+      assert_equal expected_links, presented_manual_section.previous_and_next_links
+    end
+
     def presented_manual_section(overrides = {})
       presented_item("vatgpb2000", overrides)
     end

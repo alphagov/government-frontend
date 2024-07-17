@@ -30,6 +30,8 @@ class HmrcManualSectionPresenter < ContentItemPresenter
   end
 
   def previous_and_next_links
+    return unless siblings
+
     siblings = {}
 
     if previous_sibling
@@ -67,6 +69,8 @@ private
     return unless parent_for_section
 
     child_section_groups = parent_for_section.dig("details", "child_section_groups")
+
+    return unless child_section_groups
 
     sibling_child_sections = child_section_groups.map do |group|
       included_section = group["child_sections"].find { |section| section["section_id"].include?(current_section_id) }
