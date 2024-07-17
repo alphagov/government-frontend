@@ -32,23 +32,23 @@ class HmrcManualSectionPresenter < ContentItemPresenter
   def previous_and_next_links
     return unless siblings
 
-    siblings = {}
+    section_siblings = {}
 
     if previous_sibling
-      siblings[:previous_page] = {
+      section_siblings[:previous_page] = {
         title: I18n.t("manuals.previous_page"),
         url: previous_sibling["base_path"],
       }
     end
 
     if next_sibling
-      siblings[:next_page] = {
+      section_siblings[:next_page] = {
         title: I18n.t("manuals.next_page"),
         url: next_sibling["base_path"],
       }
     end
 
-    siblings
+    section_siblings
   end
 
 private
