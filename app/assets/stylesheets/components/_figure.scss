@@ -27,8 +27,6 @@
   @include govuk-font(16);
 
   @include govuk-media-query($from: tablet) {
-    @include govuk-font(14);
-
     display: block;
     vertical-align: top;
     box-sizing: border-box;
