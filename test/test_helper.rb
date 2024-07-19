@@ -161,6 +161,7 @@ class ActionDispatch::IntegrationTest
   def setup_and_visit_content_item(name, overrides = {}, parameter_string = "")
     @content_item = get_content_example(name).tap do |item|
       content_item = item.deep_merge(overrides)
+      yield content_item if block_given?
       setup_and_visit_content_item_by_example(content_item, parameter_string)
     end
   end

@@ -112,6 +112,14 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "does not render the main office contact if the contact link is missing" do
+    setup_and_visit_content_item("worldwide_organisation") do |item|
+      item["links"].delete("contacts")
+    end
+
+    assert_not page.has_text?("Contact us")
+  end
+
   test "renders the main office contact without a link to the office page when the office has no access details" do
     setup_and_visit_content_item(
       "worldwide_organisation",
