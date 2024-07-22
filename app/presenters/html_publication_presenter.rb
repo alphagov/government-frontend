@@ -33,8 +33,7 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def organisations
-    orgs = content_item["links"]["organisations"] || []
-    orgs.sort_by { |o| o["title"] }
+    content_item["links"]["organisations"] || []
   end
 
   def organisation_logo(organisation)
