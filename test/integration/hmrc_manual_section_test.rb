@@ -42,10 +42,16 @@ class HmrcManualSectionTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders back link" do
+  test "renders back link if breadcrumbs are not set" do
     setup_and_visit_manual_section
 
     assert page.has_link?(I18n.t("manuals.breadcrumb_contents"), href: "/hmrc-internal-manuals/vat-government-and-public-bodies")
+  end
+
+  test "renders breadcrumbs if they are set in the content item" do
+    setup_and_visit_manual_section_with_breadcrumbs
+
+    assert page.has_link?("DMBM510000", href: "/hmrc-internal-manuals/debt-management-and-banking/dmbm510000")
   end
 
   test "renders section group" do
@@ -90,6 +96,22 @@ class HmrcManualSectionTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item(manual_base_path, @manual.to_json)
 
     stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
+    visit_with_cachebust((@content_item["base_path"]).to_s)
+  end
+
+  def setup_and_visit_manual_section_with_breadcrumbs(content_item = get_content_example("vatgpb2000"))
+    @manual = get_content_example_by_schema_and_name("hmrc_manual", "vat-government-public-bodies")
+    @content_item = content_item
+    first_crumb = { "base_path" => "/hmrc-internal-manuals/debt-management-and-banking/dmbm510000", "section_id" => "DMBM510000" }
+    last_crumb = { "base_path" => "/hmrc-internal-manuals/vat-government-public-bodiesg/dmbm510100", "section_id" => "DMBM510100" }
+
+    @content_item["details"]["breadcrumbs"].push(first_crumb, last_crumb)
+    manual_base_path = @content_item["details"]["manual"]["base_path"]
+
+    stub_content_store_has_item(manual_base_path, @manual.to_json)
+
+    stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
+    stub_content_store_has_item(@content_item["details"]["breadcrumbs"].last["base_path"], @content_item.to_json)
     visit_with_cachebust((@content_item["base_path"]).to_s)
   end
 end
