@@ -336,7 +336,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     attachments.each do |attachment|
       next unless attachment.has_css?(".govuk-details__summary")
 
-      details = attachment.find(".govuk-details__summary")["data-ga4-event"]
+      details = attachment.find("details")["data-ga4-event"]
       actual_tracking = JSON.parse(details)
       assert_equal actual_tracking["index_section_count"], 2
     end
