@@ -33,14 +33,14 @@ pa-pk:
     visit: 'ویکھو:'
   components:
     figure:
-      image_credit: 'امیج کریڈٹ: {credit} %'
+      image_credit: 'امیج کریڈٹ: %{credit}'
     print_link:
       text:
     published_dates:
       hidden_heading:
       hide_all_updates: سارے تازہ ترین حالات نوں لُکا لوؤ
-      last_updated: اخری وار تازہ ترین بنایا {date} %
-      published: شائع ہویا {date} %
+      last_updated: اخری وار تازہ ترین بنایا %{date}
+      published: شائع ہویا %{date}
       see_all_updates: ساری تازہ ترین صورتِ حال
       show_all_updates: ساری تازہ ترین صورتِ حال وکھاؤ
     share_links:
@@ -48,7 +48,7 @@ pa-pk:
   consultation:
     analysing_feedback:
     and: ہور
-    another_website_html: ایہ مشورہ  {closed} %ایندے تے وقوعہ ہویا <a href="%{url}">دُوسری ویب سائٹ</a>
+    another_website_html: ایہ مشورہ  %{closed}ایندے تے وقوعہ ہویا <a href="%{url}">دُوسری ویب سائٹ</a>
     at: ایندے تے
     closes: ایہ ایندے تے بند ہوندا اے
     closes_at: ایہ مشاورت ایندے تے بند ہوندی اے
@@ -321,12 +321,12 @@ pa-pk:
         one: قومی مجلس دے سامنے تحریری بیان
         other: قومی مجلس دے سامنے تحریری بیانات
   corporate_information_page:
-    about_our_services_html: اینوں لبھو {link}%.
+    about_our_services_html: اینوں لبھو %{link}.
     corporate_information: کاروبار دی معلومات
-    personal_information_charter_html: ساڈا {link}% ایہ وضاحت کر دا اے کہ اسی ذاتی معلومات نال کی سلوک کرنے آں۔
-    publication_scheme_html: ایس تے ایہ پڑھو کہ اسی رضاکارانہ طور تے کیس طراں دی معلومات شائع کرنے آں {link}%.
-    social_media_use_html: ایندے تے ساڈی حکمتِ عملی بارے پڑھو {link}%.
-    welsh_language_scheme_html: ساڈی وابستگی دے بارے جانو {link}%.
+    personal_information_charter_html: ساڈا %{link} ایہ وضاحت کر دا اے کہ اسی ذاتی معلومات نال کی سلوک کرنے آں۔
+    publication_scheme_html: ایس تے ایہ پڑھو کہ اسی رضاکارانہ طور تے کیس طراں دی معلومات شائع کرنے آں %{link}.
+    social_media_use_html: ایندے تے ساڈی حکمتِ عملی بارے پڑھو %{link}.
+    welsh_language_scheme_html: ساڈی وابستگی دے بارے جانو %{link}.
   email:
     already_subscribed_title:
     description:
@@ -336,7 +336,7 @@ pa-pk:
     alt_text: وزارتِ دفاع کریسٹ
     field_of_operation: عمل کرن دا حلقہ
     none_added: موت دی کوئی وی اطلاع شامل نئیں کیتی گئی ایس تھاں تے کم کرن لئی
-    operations_in: ایندے بارے عمل {location}%
+    operations_in: ایندے بارے عمل %{location}
   field_of_operation:
     context:
     title:
@@ -392,7 +392,7 @@ pa-pk:
     skip_contents:
   html_publication:
     print_meta_data:
-      available_at: ایہ اشاعت ایتھے موجود اے {url}%
+      available_at: ایہ اشاعت ایتھے موجود اے %{url}
       copyright: "%{year}© کراؤن کاپی رائٹ"
       isbn: 'ISBN:'
       licence_html: 'ایہ اشاعت نوں حکومت دے لائسنس  وی 3۔0 دی شرائط دے تحت لائسنس ملیا اے سوائے اُس تھاں جتھے ایس توں علاوہ ہور کُج لکھیا اے۔ ایس لائسنس نوں ویکھن لئی ایہ ملاحظہ کرو۔ , visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
@@ -502,7 +502,7 @@ pa-pk:
       option: برائے مہربانی اک نوں چُنو
       title: تُسی کسے دا چناؤ نئیں کیتا
   shared:
-    historically_political: اینوں ایس دے تحت شائع کیتا گیا {government}%
+    historically_political: اینوں ایس دے تحت شائع کیتا گیا %{government}
     webchat:
       available: مشیر گل بات کرن لئی موجود نیں۔
       busy: ویب چیٹ دے سارے مشیر ایس ویلے مصروف نیں۔
@@ -545,11 +545,11 @@ pa-pk:
     policies: حکمت عملی دا کاغذ
   worldwide_organisation:
     corporate_information:
-      about_our_services_html: ایندے وچوں لبھو {link}%.
-      personal_information_charter_html: ساڈا {link}%  ایہ وضاحت کردا اے کہ تہاڈی ذاتی معلومات نال کس طراں سلوک کردے آں
-      publication_scheme_html: ایہ پڑھو کہ کیس طراں دی معلومات عام طور پر  اسی شائع کرنے آں {link}%.
-      social_media_use_html: ایندے تے ساڈی پالیسی پڑھو {link}%.
-      welsh_language_scheme_html: ساڈی وابستگی دے بارے جانو {link}%.
+      about_our_services_html: ایندے وچوں لبھو %{link}.
+      personal_information_charter_html: ساڈا %{link}  ایہ وضاحت کردا اے کہ تہاڈی ذاتی معلومات نال کس طراں سلوک کردے آں
+      publication_scheme_html: ایہ پڑھو کہ کیس طراں دی معلومات عام طور پر  اسی شائع کرنے آں %{link}.
+      social_media_use_html: ایندے تے ساڈی پالیسی پڑھو %{link}.
+      welsh_language_scheme_html: ساڈی وابستگی دے بارے جانو %{link}.
     find_out_more: ساری تصویر تے رابطہ دی تفصیلات ویکھو
     headings:
       contact_us: ساڈے نال رابطہ کرو
