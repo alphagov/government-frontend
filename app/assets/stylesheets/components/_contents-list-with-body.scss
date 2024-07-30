@@ -40,7 +40,7 @@
   .app-c-back-to-top {
     margin-bottom: 0;
     padding: govuk-spacing(3);
-    width: percentage(2 / 3);
+    width: 66%;
 
     @include govuk-media-query($from: tablet) {
       padding: govuk-spacing(4);
