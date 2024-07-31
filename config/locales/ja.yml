@@ -33,14 +33,14 @@ ja:
     visit: 訪問：
   components:
     figure:
-      image_credit: 画像著作権：％{credit}
+      image_credit: 画像著作権：%{credit}
     print_link:
       text:
     published_dates:
       hidden_heading:
       hide_all_updates: すべての更新を非表示
       last_updated: 最終更新日：%{date}
-      published: 公開日：％{date}
+      published: 公開日：%{date}
       see_all_updates: すべての更新を見る
       show_all_updates: すべての更新を表示
     share_links:
@@ -48,7 +48,7 @@ ja:
   consultation:
     analysing_feedback:
     and: および
-    another_website_html: この審議％{closed}は、<ahref = "％{url}">別のウェブサイト</a>で行われました
+    another_website_html: この審議%{closed}は、<ahref = "%{url}">別のウェブサイト</a>で行われました
     at: 時間：
     closes: 終了時間：
     closes_at: 審議終了時間：
@@ -244,7 +244,7 @@ ja:
       written_statement:
         other: 議会への書面による声明
   corporate_information_page:
-    about_our_services_html: "％{link} をご覧ください。"
+    about_our_services_html: "%{link} をご覧ください。"
     corporate_information: 各種情報
     personal_information_charter_html: 個人情報の取り扱いについては %{link} をご覧下さい。
     publication_scheme_html: 情報公開の種類については %{link} をご覧下さい。
@@ -259,7 +259,7 @@ ja:
     alt_text: 国防省の紋章
     field_of_operation: 運用分野
     none_added: この活動分野での死亡通知はまだ追加されていません。
-    operations_in: "％{location} での操作"
+    operations_in: "%{location} での操作"
   field_of_operation:
     context:
     title:
@@ -315,7 +315,7 @@ ja:
     skip_contents:
   html_publication:
     print_meta_data:
-      available_at: この出版物は％{url}で入手できます
+      available_at: この出版物は%{url}で入手できます
       copyright: "© Crown copyright %{year}"
       isbn: ISBN：
       licence_html: 本書は、特に明記されていない限り、Open Government License v 3.0の条件に基づいてライセンスされています。このライセンスを確認するには、<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> にアクセスするか、Information Policy Team、The National Archives、Kew、London TW 9 4 DU、またはEメールにて <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>までお問い合わせください。
@@ -424,7 +424,7 @@ ja:
       option: オプションを択してください
       title: オプションを選択していません
   shared:
-    historically_political: 本件は、％{government}で公開されました
+    historically_political: 本件は、%{government}で公開されました
     webchat:
       available: アドバイザーのチャットがご利用いただけます。
       busy: 現在、すべてのウェブチャットアドバイザーはビジーです。
@@ -467,11 +467,11 @@ ja:
     policies: 方針
   worldwide_organisation:
     corporate_information:
-      about_our_services_html: "％{link} をご覧ください。"
-      personal_information_charter_html: "％{link} で、お客様の個人情報の取り扱いについて説明しています。"
-      publication_scheme_html: "％{link} で、定期的に公開している情報の種類についてご覧ください。"
-      social_media_use_html: "％{link} に関する方針をご覧ください。"
-      welsh_language_scheme_html: "％{link} への取り組みについてご覧ください。"
+      about_our_services_html: "%{link} をご覧ください。"
+      personal_information_charter_html: "%{link} で、お客様の個人情報の取り扱いについて説明しています。"
+      publication_scheme_html: "%{link} で、定期的に公開している情報の種類についてご覧ください。"
+      social_media_use_html: "%{link} に関する方針をご覧ください。"
+      welsh_language_scheme_html: "%{link} への取り組みについてご覧ください。"
     find_out_more: プロフィール全体とすべての連絡先の詳細を見る
     headings:
       contact_us: お問い合わせ
