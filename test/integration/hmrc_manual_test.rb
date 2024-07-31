@@ -42,7 +42,7 @@ class HmrcManualTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders about title" do
+  test "renders 'Summary' title if description field is present" do
     setup_and_visit_content_item("vat-government-public-bodies")
 
     assert page.has_text?(I18n.t("manuals.summary_title"))
