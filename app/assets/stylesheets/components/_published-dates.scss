@@ -9,7 +9,7 @@
 .app-c-published-dates__toggle {
   display: none;
 
-  .js-enabled & {
+  .govuk-frontend-supported & {
     display: inline-block;
   }
 }
@@ -41,7 +41,7 @@
   border-top: 1px solid $govuk-border-colour;
 }
 
-.js-enabled .app-c-published-dates .js-hidden {
+.govuk-frontend-supported .app-c-published-dates .js-hidden {
   display: none;
   visibility: hidden;
 }
