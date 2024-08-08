@@ -10,9 +10,7 @@
       <%= render 'govuk_publishing_components/components/phase_banner', phase: @content_item.phase %>
     <% end %>
     <% if @content_item.service_manual? %>
-      <div class="govuk-width-container">
         <%= render_phase_label @content_item, content_for(:phase_message) %>
-      </div>
     <% end %>
 
     <% if @content_item.show_default_breadcrumbs? %>

@@ -4,7 +4,6 @@
 <% content_for :phase_message do %>
   <%= render 'shared/custom_phase_message', phase: @content_item.phase %>
 <% end %>
-<div class="govuk-width-container">
 
   <%= render "govuk_publishing_components/components/breadcrumbs", {
     breadcrumbs: @content_item.breadcrumbs,
@@ -89,4 +88,3 @@
     </div>
 
   </div>
-</div>
