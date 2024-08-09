@@ -134,15 +134,17 @@ private
   end
 
   def contact_for_office(office_content_id)
-    contact_mapping = content_item.dig("details", "office_contact_associations").select { |office_contact_association|
-      office_contact_association["office_content_id"] == office_content_id
-    }.first
+    contact_mapping = content_item.to_hash
+      .fetch("details")
+      .fetch("office_contact_associations", [])
+      .find { |office_contact_association| office_contact_association["office_content_id"] == office_content_id }
 
-    return unless contact_mapping
+    return if contact_mapping.nil?
 
-    content_item.dig("links", "contacts").select { |contact|
-      contact["content_id"] == contact_mapping["contact_content_id"]
-    }.first
+    content_item.to_hash
+      .fetch("links")
+      .fetch("contacts", [])
+      .find { |contact| contact["content_id"] == contact_mapping["contact_content_id"] }
   end
 
   def presented_title_for_roles(roles)
