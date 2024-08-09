@@ -15,6 +15,10 @@ class ServiceManualPresenter < ContentItemPresenter
     true
   end
 
+  def service_manual_homepage?
+    content_item["document_type"] == "service_manual_homepage"
+  end
+
   def show_phase_banner?
     false
   end
