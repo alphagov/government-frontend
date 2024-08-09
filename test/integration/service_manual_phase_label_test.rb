@@ -29,7 +29,9 @@ class ServiceManualPhaseLabelTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item(guide["base_path"], guide)
     visit guide["base_path"]
 
-    assert_text("Alpha")
+    phase_label = find("strong.govuk-tag.govuk-phase-banner__content__tag").text
+
+    assert_match(/alpha/i, phase_label.strip)
   end
 
   test "No phase label is displayed for a guide without a phase field" do
