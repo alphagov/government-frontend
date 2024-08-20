@@ -4,8 +4,14 @@
   #   suggestion_text: "Help improve GOV.UK"
   #   suggestion_link_text: "Sign up to take part in user research (opens in a new tab)"
   #   survey_url: https://google.com
-  #   page_paths: 
+  #   page_paths:
   #     - /
   #     - /foreign-travel-advice
 
 banners:
+- name: MOD banner 20/08/2024
+  suggestion_text: "Help improve GOV.UK"
+  suggestion_link_text: "Take part in user research (opens in a new tab)"
+  survey_url: https://submit.forms.service.gov.uk/form/3874/give-feedback-on-medals-information-on-gov-uk/13188
+  page_paths:
+    - /guidance/medals-campaigns-descriptions-and-eligibility
