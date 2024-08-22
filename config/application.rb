@@ -23,13 +23,18 @@ module GovernmentFrontend
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
+    # Please, add to the `ignore` list any other `lib` subdirectories that do
+    # not contain `.rb` files, or that should not be reloaded or eager loaded.
+    # Common ones are `templates`, `generators`, or `middleware`, for example.
+    config.autoload_lib(ignore: %w[assets tasks])
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
     # Custom directories with classes and modules you want to be autoloadable.
-    config.autoload_paths += %W[#{config.root}/lib]
+    config.autoload_paths += %W[#{config.root}/lib/helpers]
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
