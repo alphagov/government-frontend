@@ -1,16 +1,12 @@
 .organisation-logos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   list-style-type: none;
   margin-top: govuk-spacing(2);
   padding: 0;
 }
 
 .organisation-logos__logo {
+  display: inline-block;
+  vertical-align: top;
   padding-bottom: govuk-spacing(3);
-  margin-right: govuk-spacing(3);
-  flex-basis: 25%;
-  min-width: 130px;
+  margin-right: govuk-spacing(6);
 }
