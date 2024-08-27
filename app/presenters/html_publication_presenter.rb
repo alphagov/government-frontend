@@ -4,6 +4,7 @@ class HtmlPublicationPresenter < ContentItemPresenter
   include ContentItem::ContentsList
   include ContentItem::Political
   include ContentItem::NationalApplicability
+  include ContentItem::Metadata
 
   def isbn
     content_item["details"]["isbn"]
@@ -21,17 +22,6 @@ class HtmlPublicationPresenter < ContentItemPresenter
     end
   end
 
-  def last_changed
-    timestamp = display_date(public_timestamp)
-
-    # This assumes that a translation doesn't need the date to come beforehand.
-    if content_item["details"]["first_published_version"]
-      "#{I18n.t('content_item.metadata.published')} #{timestamp}"
-    else
-      "#{I18n.t('content_item.metadata.updated')} #{timestamp}"
-    end
-  end
-
   def organisations
     content_item["links"]["organisations"] || []
   end
@@ -40,6 +30,20 @@ class HtmlPublicationPresenter < ContentItemPresenter
     super.tap do |logo|
       if logo && organisations.count > 1
         logo[:organisation].delete(:image)
+      end
+    end
+  end
+
+  def publisher_metadata
+    super.tap do |m|
+      orgs = organisations.map do |organisation|
+        view_context.link_to(organisation["title"], organisation["base_path"], class: "govuk-link govuk-link--inverse")
+      end
+      m.merge!(from: orgs)
+
+      if content_item["details"]["first_published_version"]
+        m.delete(:see_updates_link)
+        m.delete(:last_updated)
       end
     end
   end
