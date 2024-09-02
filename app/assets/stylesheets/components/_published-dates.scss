@@ -45,3 +45,9 @@
   display: none;
   visibility: hidden;
 }
+
+@include govuk-media-query($media-type: print) {
+  .app-c-published-dates {
+    margin-top: 10mm;
+  }
+}
