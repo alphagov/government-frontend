@@ -1,6 +1,6 @@
 module GovukChatPromoHelper
   GOVUK_CHAT_PROMO_BASE_PATHS = %w[
-    /business-support-helpline
+    /business-support-service
     /company-tax-returns
     /corporation-tax
     /pay-corporation-tax
