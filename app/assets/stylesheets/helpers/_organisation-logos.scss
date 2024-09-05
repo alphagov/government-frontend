@@ -9,4 +9,13 @@
   vertical-align: top;
   padding-bottom: govuk-spacing(3);
   margin-right: govuk-spacing(6);
+
+  & img {
+    @include govuk-media-query($until: desktop) {
+      width: 140px;
+    }
+    @include govuk-media-query($from: desktop) {
+      max-width: 240px;
+    }
+  }
 }
