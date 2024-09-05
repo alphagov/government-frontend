@@ -5,14 +5,13 @@
 }
 
 .manuals-header {
-  @include govuk-font(16);
-  @include govuk-clearfix;
-
   background: $govuk-brand-colour;
   color: govuk-colour("white");
   margin: 0;
   padding-bottom: govuk-spacing(6);
   padding-top: govuk-spacing(6);
+  @include govuk-font(16);
+  @include govuk-clearfix;
 
   @include govuk-media-query($from: tablet) {
     padding: govuk-spacing(6) govuk-spacing(3);
@@ -23,8 +22,8 @@
   }
 
   h1 {
-    @include govuk-font(36, $weight: bold);
     padding: 0 0 govuk-spacing(3);
+    @include govuk-font(36, $weight: bold);
 
     @include govuk-media-query($from: tablet) {
       padding: 0 0 govuk-spacing(6);
@@ -54,11 +53,10 @@
 }
 
 .section-list-item {
-  @include govuk-font(19);
-
   border-top: 1px solid $govuk-border-colour;
   cursor: pointer;
   list-style: none;
+  @include govuk-font(19);
 
   &:hover {
     background-color: govuk-colour("light-grey");
@@ -83,9 +81,9 @@
   }
 
   .subsection-title-text {
+    display: block;
     @include govuk-typography-weight-bold;
     @include govuk-link-decoration;
-    display: block;
   }
 
   .subsection-summary {

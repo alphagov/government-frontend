@@ -2,10 +2,10 @@
 // roll out the combination of metadata + logo across
 // formats so they may ultimately become component styles.
 .metadata-logo-wrapper {
-  @include govuk-clearfix;
   border-top: 1px solid $govuk-border-colour;
   margin-left: govuk-spacing(3);
   margin-right: govuk-spacing(3);
+  @include govuk-clearfix;
 
   .metadata-column {
     padding-left: 0;

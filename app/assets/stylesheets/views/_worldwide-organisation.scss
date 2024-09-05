@@ -28,6 +28,7 @@
   margin-top: govuk-spacing(2);
 
   dl {
+    margin: 0;
     @include govuk-text-colour;
     @include govuk-font($size: 16);
     @include govuk-responsive-margin(4, "bottom");
@@ -37,8 +38,6 @@
       grid-template-columns: auto 1fr;
       grid-gap: govuk-spacing(2);
     }
-
-    margin: 0;
 
     dt,
     dd {
