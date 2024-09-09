@@ -78,4 +78,18 @@ class PublicationPresenterTest < PresenterTestCase
     presented = presented_item("statistics_publication")
     assert presented.has_single_page_notifications?
   end
+
+  test "hide_from_search_engines? returns false" do
+    presented = presented_item("publication-with-featured-attachments")
+
+    assert_not(presented.hide_from_search_engines?)
+  end
+
+  test "hide_from_search_engines? returns true if the page is '/government/publications/pension-credit-claim-form--2'" do
+    schema_example = schema_item("publication-with-featured-attachments")
+    schema_example["base_path"] = "/government/publications/pension-credit-claim-form--2"
+    presented = presented_item("publication", schema_example)
+
+    assert presented.hide_from_search_engines?
+  end
 end

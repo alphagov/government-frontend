@@ -2,6 +2,10 @@
   <%= machine_readable_metadata(
     schema: (@content_item.dataset? ? :dataset : :article)
   ) %>
+
+  <% if @content_item.hide_from_search_engines? %>
+    <meta name="robots" content="noindex">
+  <% end %>
 <% end %>
 
 <%= render 'shared/email_subscribe_unsubscribe_flash', { title: @content_item.title } %>

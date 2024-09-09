@@ -288,4 +288,10 @@ class PublicationTest < ActionDispatch::IntegrationTest
     setup_and_visit_notification_exempt_page("publication")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
+
+  test "adds the noindex meta tag to '/government/publications/pension-credit-claim-form--2'" do
+    overrides = { "base_path" => "/government/publications/pension-credit-claim-form--2" }
+    setup_and_visit_content_item("publication-with-featured-attachments", overrides)
+    assert page.has_css?('meta[name="robots"][content="noindex"]', visible: false)
+  end
 end
