@@ -25,4 +25,9 @@ class PublicationPresenter < ContentItemPresenter
   def dataset?
     %(national_statistics official_statistics transparency).include? document_type
   end
+
+  # this is a temporary hack and should be removed in approx 3 months
+  def hide_from_search_engines?
+    content_item["base_path"] == "/government/publications/pension-credit-claim-form--2"
+  end
 end
