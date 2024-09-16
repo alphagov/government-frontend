@@ -1,3 +1,16 @@
+PATH
+  remote: ../govuk_publishing_components
+  specs:
+    govuk_publishing_components (43.1.1)
+      govuk_app_config
+      govuk_personalisation (>= 0.7.0)
+      kramdown
+      plek
+      rails (>= 6)
+      rouge
+      sprockets (>= 3)
+      sprockets-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -129,10 +142,10 @@ GEM
       rest-client (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.28.0)
+    google-protobuf (4.28.1)
       bigdecimal
       rake (>= 13)
-    googleapis-common-protos-types (1.15.0)
+    googleapis-common-protos-types (1.16.0)
       google-protobuf (>= 3.18, < 5.a)
     govspeak (8.3.4)
       actionview (>= 6)
@@ -160,15 +173,6 @@ GEM
     govuk_personalisation (1.0.0)
       plek (>= 1.9.0)
       rails (>= 6, < 8)
-    govuk_publishing_components (43.1.1)
-      govuk_app_config
-      govuk_personalisation (>= 0.7.0)
-      kramdown
-      plek
-      rails (>= 6)
-      rouge
-      sprockets (>= 3)
-      sprockets-rails
     govuk_schemas (5.0.4)
       faker (~> 3.4.1)
       json-schema (>= 2.8, < 4.4)
@@ -207,7 +211,7 @@ GEM
       rexml
     language_server-protocol (3.17.0.3)
     link_header (0.0.8)
-    logger (1.6.0)
+    logger (1.6.1)
     logstasher (2.1.5)
       activesupport (>= 5.2)
       request_store
@@ -236,7 +240,6 @@ GEM
     mocha (2.4.5)
       ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
-    mutex_m (0.2.0)
     net-imap (0.4.16)
       date
       net-protocol
@@ -265,7 +268,7 @@ GEM
     opentelemetry-helpers-mysql (0.1.1)
       opentelemetry-api (~> 1.0)
       opentelemetry-common (~> 0.21)
-    opentelemetry-helpers-sql-obfuscation (0.1.1)
+    opentelemetry-helpers-sql-obfuscation (0.2.0)
       opentelemetry-common (~> 0.21)
     opentelemetry-instrumentation-action_mailer (0.1.0)
       opentelemetry-api (~> 1.0)
@@ -657,7 +660,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_personalisation
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   htmlentities
