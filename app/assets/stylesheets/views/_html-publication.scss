@@ -30,16 +30,7 @@
     }
   }
 
-  .main-content-container {
-    width: 100%;
-    padding: 0 15px;
-    box-sizing: border-box;
-
-    @include govuk-media-query($from: desktop) {
-      width: 75%;
-      float: right;
-    }
-
+  .contents-container {
     .direction-rtl & {
       float: left;
     }
