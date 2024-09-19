@@ -3,6 +3,7 @@
   <%= render "content_items/manuals/header", {
     content_item: @content_item, heading_level: 1, margin_bottom: 6,
   } %>
+  <%= render partial: "content_items/manuals/breadcrumbs" %>
 <% end %>
 
 <%= render "content_items/manuals/manual_section_layout", { show_contents: true } do %>
