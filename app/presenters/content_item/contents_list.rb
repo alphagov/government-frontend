@@ -19,9 +19,24 @@ module ContentItem
     end
 
     def show_contents_list?
+      # puts "Number of content items: #{contents_items.count}"
+      # puts "Contents items: #{contents_items.inspect}"
+
+      puts "exclude_contents_list_for_manual_section? #{exclude_contents_list_for_manual_section?}"
+      puts "contents_items.count #{contents_items.count}"
+      puts "contents_items: #{contents_items}"
+      puts "no_first_item? #{no_first_item?}"
+      puts "first_item_has_long_content? #{first_item_has_long_content?}"
+      puts "first_item_has_long_table? #{first_item_has_long_table?}"
+      puts "first_item_has_image_and_long_content? #{first_item_has_image_and_long_content?}"
+      puts "first_item_has_image_and_long_table? #{first_item_has_image_and_long_table?}"
+
       return false if exclude_contents_list_for_manual_section?
-      return false if contents_items.count < 2
-      return true if contents_items.count > 2
+      # return false if contents_items.count < 1
+      # return true if contents_items.count >= 1
+      return false if contents_items.empty?
+      # return true if contents_items.any?
+      return true if contents_items.count > 1
       return false if no_first_item?
 
       first_item_has_long_content? ||
