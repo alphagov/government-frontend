@@ -1,0 +1,11 @@
+<% if @content_item.breadcrumbs.any? %>
+  <%= render "govuk_publishing_components/components/breadcrumbs", {
+          border: "bottom",
+          breadcrumbs: @content_item.breadcrumbs,
+          collapse_on_mobile: false } %>
+<% else %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    text: t("manuals.breadcrumb_contents"),
+    href: @content_item.base_path
+  } %>
+<% end %>

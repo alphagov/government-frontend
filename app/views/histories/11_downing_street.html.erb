@@ -1,20 +1,13 @@
+<% content_for :header do %>
+  <%= render partial: "histories/breadcrumbs" %>
+<% end %>
+
 <header class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <%= render "govuk_publishing_components/components/breadcrumbs", {
-      breadcrumbs: [
-        {
-          title: "Home",
-          url: "/",
-        },
-        {
-          title: "History of the UK Government",
-          url: "/government/history",
-        },
-      ]
-    } %>
     <%= render "govuk_publishing_components/components/title", {
       context: "History",
       title: "11 Downing Street",
+      margin_top: 0,
     } %>
   </div>
 </header>
