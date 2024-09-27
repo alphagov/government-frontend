@@ -172,6 +172,42 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert_not @contents_list.show_contents_list?
   end
 
+  test "#show_contents_list? returns true if the first item contains long content from nested elements" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+        <div>
+          <p>#{Faker::Lorem.characters(number: 200)}</p>
+          <ul>
+            <li>#{Faker::Lorem.characters(number: 150)}</li>
+            <li>#{Faker::Lorem.characters(number: 150)}</li>
+          </ul>
+        </div>
+        <h2 id='two'>Two</h2>
+        "
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
+
+  test "#show_contents_list? returns false if the first item does not contain long content from nested elements" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+      <div>
+        <p>#{Faker::Lorem.characters(number: 50)}</p>
+        <ul>
+          <li>#{Faker::Lorem.characters(number: 15)}</li>
+          <li>#{Faker::Lorem.characters(number: 15)}</li>
+        </ul>
+      </div>
+      <h2 id='two'>Two</h2>
+      "
+      end
+    end
+    assert_not @contents_list.show_contents_list?
+  end
+
   test "#show_contents_list? returns true if number of table rows in the first item is more than 13" do
     class << @contents_list
       def body
@@ -233,6 +269,51 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     @contents_list.stubs(:contents_items).returns(["item 1", "item2"])
     @contents_list.stubs(:first_item).returns(first_element)
     assert @contents_list.show_contents_list?
+  end
+
+  test "#first_item_content correctly extracts text from deeply nested divs" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+        <div>
+          <div>
+            <div>
+              <p>Deep nested text</p>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h2 id='two'>Two</h2>
+        "
+      end
+    end
+
+    expected_content = "Deep nested text\n                Item 1\n                Item 2"
+    assert_equal expected_content, @contents_list.send(:first_item_content)
+  end
+
+  test "#first_item_content ignores non-allowed elements inside nested divs" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+        <div>
+          <div>
+            <p>Allowed text</p>
+            <div>
+              <span>Ignored span content</span>
+              <p>More allowed text</p>
+            </div>
+          </div>
+        </div>
+        <h2 id='two'>Two</h2>"
+      end
+    end
+
+    expected_content = "Allowed textMore allowed text"
+    assert_equal expected_content, @contents_list.send(:first_item_content)
   end
 
   def first_element
