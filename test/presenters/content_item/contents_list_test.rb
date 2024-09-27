@@ -172,6 +172,42 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert_not @contents_list.show_contents_list?
   end
 
+  test "#show_contents_list? returns true if the first item contains long content from nested elements" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+        <div>
+          <p>#{Faker::Lorem.characters(number: 200)}</p>
+          <ul>
+            <li>#{Faker::Lorem.characters(number: 150)}</li>
+            <li>#{Faker::Lorem.characters(number: 150)}</li>
+          </ul>
+        </div>
+        <h2 id='two'>Two</h2>
+        "
+      end
+    end
+    assert @contents_list.show_contents_list?
+  end
+
+  test "#show_contents_list? returns false if the first item does not contain long content from nested elements" do
+    class << @contents_list
+      def body
+        "<h2 id='one'>One</h2>
+      <div>
+        <p>#{Faker::Lorem.characters(number: 50)}</p>
+        <ul>
+          <li>#{Faker::Lorem.characters(number: 15)}</li>
+          <li>#{Faker::Lorem.characters(number: 15)}</li>
+        </ul>
+      </div>
+      <h2 id='two'>Two</h2>
+      "
+      end
+    end
+    assert_not @contents_list.show_contents_list?
+  end
+
   test "#show_contents_list? returns true if number of table rows in the first item is more than 13" do
     class << @contents_list
       def body
