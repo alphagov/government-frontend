@@ -42,6 +42,14 @@ class NewsArticleTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "marks up government name correctly" do
+    setup_and_visit_content_item("news_article_history_mode_translated_arabic")
+
+    within ".govuk-notification-banner__content" do
+      assert page.has_css?("span[lang='en'][dir='ltr']", text: "2022 to 2024 Sunak Conservative government")
+    end
+  end
+
   test "does not render with the single page notification button" do
     setup_and_visit_content_item("news_article")
     assert_not page.has_css?(".gem-c-single-page-notification-button")

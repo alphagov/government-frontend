@@ -1,5 +1,8 @@
 <% if content_item.historically_political? %>
   <%= render "govuk_publishing_components/components/notice", {
-    title: t("shared.historically_political", government: content_item.publishing_government),
+    title: sanitize(
+      t("shared.historically_political", government: "<span lang='en' dir='ltr'>#{content_item.publishing_government}</span>"),
+      attributes: %w(lang dir),
+    ),
   } %>
 <% end %>
