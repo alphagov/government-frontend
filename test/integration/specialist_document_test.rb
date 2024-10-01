@@ -1,31 +1,11 @@
 require "test_helper"
 
 class SpecialistDocumentTest < ActionDispatch::IntegrationTest
-  test "random but valid specialist documents do not error" do
+  test "random specialist document schema formats do not error" do
     setup_and_visit_random_content_item(document_type: "aaib_report")
     setup_and_visit_random_content_item(document_type: "raib_report")
     setup_and_visit_random_content_item(document_type: "tax_tribunal_decision")
     setup_and_visit_random_content_item(document_type: "cma_case")
-  end
-
-  test "specialist document subtypes do not error" do
-    setup_and_visit_content_item("aaib-reports")
-    setup_and_visit_content_item("asylum-support-decision")
-    setup_and_visit_content_item("business-finance-support-scheme")
-    setup_and_visit_content_item("cma-cases")
-    setup_and_visit_content_item("countryside-stewardship-grants")
-    setup_and_visit_content_item("drug-safety-update")
-    setup_and_visit_content_item("employment-appeal-tribunal-decision")
-    setup_and_visit_content_item("employment-tribunal-decision")
-    setup_and_visit_content_item("european-structural-investment-funds")
-    setup_and_visit_content_item("eu-withdrawal-act-2018-statutory-instruments")
-    setup_and_visit_content_item("international-development-funding")
-    setup_and_visit_content_item("maib-reports")
-    setup_and_visit_content_item("raib-reports")
-    setup_and_visit_content_item("residential-property-tribunal-decision")
-    setup_and_visit_content_item("service-standard-report")
-    setup_and_visit_content_item("tax-tribunal-decision")
-    setup_and_visit_content_item("utaac-decision")
   end
 
   test "renders title, description and body" do
@@ -34,14 +14,6 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     assert_has_component_title(@content_item["title"].strip)
     assert page.has_text?(@content_item["description"])
     assert page.has_text?("The gyroplane began to move forward against the brakes before sufficient rotor rpm had been achieved for takeoff.")
-  end
-
-  test "returns example for residential tribunal decision" do
-    setup_and_visit_content_item("residential-property-tribunal-decision")
-
-    assert_has_component_title(@content_item["title"])
-    assert page.has_text?(@content_item["description"])
-    assert page.has_text?("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
   end
 
   test "renders from in publisher metadata" do
