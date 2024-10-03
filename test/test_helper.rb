@@ -184,14 +184,6 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def setup_and_visit_content_item_with_taxons(name, taxons)
-    @content_item = get_content_example(name).tap do |item|
-      item["links"]["taxons"] = taxons
-      stub_content_store_has_item(item["base_path"], item.to_json)
-      visit_with_cachebust(item["base_path"])
-    end
-  end
-
   def setup_and_visit_content_item_with_taxonomy_topic_email_override(name)
     @content_item = get_content_example(name).tap do |item|
       item["links"]["taxonomy_topic_email_override"] = [{
@@ -221,7 +213,7 @@ class ActionDispatch::IntegrationTest
 
   def setup_and_visit_random_content_item(document_type: nil)
     content_item = GovukSchemas::RandomExample.for_schema(frontend_schema: schema_type) do |payload|
-      payload.merge!("document_type" => document_type) unless document_type.nil?
+      payload.merge!("document_type" => document_type) if document_type
       payload
     end
 
