@@ -27,45 +27,49 @@
             text: year
           } %>
 
-          <%= render "govuk_publishing_components/components/accordion", {
-            heading_level: 3,
-            items: updates_by_year.each.with_index(1).map do |updated_documents, index|
-              accordion_content = capture do %>
-                <% change_notes = updated_documents.last %>
-                <div class="govuk-!-margin-top-3">
-                  <% change_notes.each do |change_note_entry| %>
-                    <% change_note_items = change_note_entry.last.collect { |i| i["change_note"] } %>
-                    <% change_note = change_note_entry.flatten.last %>
-                    <% if change_note["title"].present? %>
-                      <p class="govuk-body">
-                        <%= link_to change_note["title"], change_note["base_path"], class: "govuk-link" %>
-                      </p>
+          <div class="test-accordion-heading-s">
+            <%= render "govuk_publishing_components/components/accordion", {
+              heading_level: 3,
+              items: updates_by_year.each.with_index(1).map do |updated_documents, index|
+                accordion_content = capture do %>
+                  <% change_notes = updated_documents.last %>
+                  <div class="govuk-!-margin-top-3">
+                    <% change_notes.each do |change_note_entry| %>
+                      <% change_note_items = change_note_entry.last.collect { |i| i["change_note"] } %>
+                      <% change_note = change_note_entry.flatten.last %>
+                      <% if change_note["title"].present? %>
+                        <p class="govuk-body">
+                          <%= link_to change_note["title"], change_note["base_path"], class: "govuk-link" %>
+                        </p>
+                      <% end %>
+                      <% change_note_items.each do |change_note_item| %>
+                        <%= simple_format(change_note_item, class: "govuk-body") %>
+                      <% end %>
                     <% end %>
-                    <% change_note_items.each do |change_note_item| %>
-                      <%= simple_format(change_note_item, class: "govuk-body") %>
-                    <% end %>
-                  <% end %>
-                </div>
-              <% end
-              {
-                data_attributes: {
-                  ga4_event: {
-                    event_name: 'select_content',
-                    type: 'accordion',
-                    text: sanitize_manual_update_title(updated_documents.first),
-                    index: index,
-                    index_total: updates_by_year.length,
+                  </div>
+                <% end
+                {
+                  data_attributes: {
+                    ga4_event: {
+                      event_name: 'select_content',
+                      type: 'accordion',
+                      text: sanitize_manual_update_title(updated_documents.first),
+                      index: index,
+                      index_total: updates_by_year.length,
+                    }
+                  },
+                  heading: {
+                    text: updated_documents.first,
+                  },
+                  content: {
+                    html: accordion_content
                   }
-                },
-                heading: {
-                  text: updated_documents.first,
-                },
-                content: {
-                  html: accordion_content
                 }
-              }
-            end
-          } %>
+              end
+            } %>
+          </div>
+
+
         </div>
       <% end %>
     </article>
