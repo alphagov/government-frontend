@@ -46,15 +46,33 @@ module ContentItem
 
     def first_item_content
       element = first_item
-      first_item_text = ""
-      allowed_elements = %w[p ul ol]
+      return "" unless element
 
-      until element.name == "h2"
-        first_item_text += element.text if element.name.in?(allowed_elements)
+      content = ""
+
+      until element.nil? || element.name == "h2"
+        content += extract_content_from_element(element)
         element = element.next_element
-        break if element.nil?
       end
-      first_item_text
+
+      content.strip
+    end
+
+    def extract_content_from_element(element)
+      case element.name
+      when "div"
+        extract_nested_content(element)
+      when "p", "ul", "ol"
+        element.text
+      else
+        ""
+      end
+    end
+
+    def extract_nested_content(element)
+      element.children.each_with_object("") do |child, content|
+        content << extract_content_from_element(child)
+      end
     end
 
     def first_item_character_count
