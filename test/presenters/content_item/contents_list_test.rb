@@ -84,12 +84,11 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
                  @contents_list.contents_items
   end
 
-  test "#show_contents_list? returns true if number of contents items is less than 3 and the first item's character count is above 415" do
+  test "#show_contents_list? returns true if the first item's character count is above 415" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.characters(number: 220)}</p>
-         <p>#{Faker::Lorem.characters(number: 196)}</p>
+         <p>#{Faker::Lorem.characters(number: 416)}</p>
          <h2 id='two'>Two</h2>
          <p>#{Faker::Lorem.sentence}</p>"
       end
@@ -97,7 +96,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if number of contents items is 2 and the first item's character count is above 415 including a list" do
+  test "#show_contents_list? returns true if the first item's character count is above 415 including a list" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
@@ -115,22 +114,8 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if number of contents items is 3 or more" do
-    class << @contents_list
-      def body
-        "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.sentence}</p>
-         <h2 id='two'>Two</h2>
-         <p>#{Faker::Lorem.sentence}</p>
-         <h2 id='three'>Three</h2>
-         <h3>Pi</h3>
-         <h2 id='four'>#{Faker::Lorem.sentence}</h2>"
-      end
-    end
-    assert @contents_list.show_contents_list?
-  end
-
-  test "#show_contents_list? returns false if number of contents times is less than 3 and first item's character count is less than 415" do
+  # TODO: This test fails
+  test "#show_contents_list? returns false if first item's character count is less than 415" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
@@ -148,7 +133,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       def body
         base = "<h2 id='one'>One</h2><table>\n<tbody>\n"
         14.times do
-          base += "<tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n"
+          base += "<tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}</td>\n</tr>\n"
         end
         base += "</tbody>\n</table><h2 id='two'>Two</h2>"
       end
