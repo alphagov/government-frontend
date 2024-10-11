@@ -5,16 +5,6 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("document_collection")
     assert_has_component_title(@content_item["title"])
     assert page.has_text?(@content_item["description"])
-    assert page.has_css?(".gem-c-contents-list")
-  end
-
-  test "document collection with no body and 2 collection groups where 1st group has long body" do
-    content_item = get_content_example("document_collection")
-    content_item["details"]["collection_groups"][0]["body"] = Faker::Lorem.characters(number: 416)
-    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
-    visit(content_item["base_path"])
-
-    assert page.has_css?(".gem-c-contents-list")
   end
 
   test "renders metadata and document footer" do
@@ -34,25 +24,56 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Each regime page provides a current list of asset freeze targets designated by the United Nations (UN), European Union and United Kingdom, under legislation relating to current financial sanctions regimes.")
   end
 
-  test "renders contents with link to each collection group" do
+  test "adds a contents list, with one list item per document collection group, if the group contains documents" do
     setup_and_visit_content_item("document_collection")
+    assert_equal 6, @content_item["details"]["collection_groups"].size
+
     @content_item["details"]["collection_groups"].each do |group|
       assert page.has_css?("nav a", text: group["title"])
     end
   end
 
-  test "renders without contents list if it has fewer than 3 items" do
-    item = get_content_example("document_collection")
-    item["details"]["collection_groups"] = [
+  test "ignores document collection groups that have no documents when presenting the contents list" do
+    setup_and_visit_content_item("document_collection")
+    @content_item["details"]["collection_groups"] << { "title" => "Empty Group", "documents" => [] }
+    assert_equal 7, @content_item["details"]["collection_groups"].size
+
+    content_list_items = all("nav.gem-c-contents-list .gem-c-contents-list__list-item")
+    assert_equal 6, content_list_items.size
+
+    @content_item["details"]["collection_groups"].each do |group|
+      next if group["documents"].empty?
+
+      assert page.has_css?("nav a", text: group["title"])
+    end
+
+    assert page.has_css?(".gem-c-contents-list", text: "Contents")
+  end
+
+  test "renders no contents list if body has multiple h2s and is long, but collection groups are empty" do
+    content_item = get_content_example("document_collection")
+
+    content_item["details"]["body"] = <<~HTML
+      <div class="empty group">
+        <h2 id="one">One</h2>
+        <p>#{Faker::Lorem.characters(number: 200)}</p>
+        <h2 id="two">Two</h2>
+        <p>#{Faker::Lorem.characters(number: 200)}</p>
+        <h2 id="three">Three</h2>
+        <p>#{Faker::Lorem.characters(number: 200)}</p>
+      </div>
+    HTML
+
+    content_item["details"]["collection_groups"] = [
       {
-        "title" => "Item one",
-        "body" => "<p>Content about item one</p>",
-        "documents" => %w[a-content-id],
+        "body" => "<div class=\"empty group\">\n</div>",
+        "documents" => [],
+        "title" => "Empty Group",
       },
     ]
-    stub_content_store_has_item(item["base_path"], item.to_json)
-    visit_with_cachebust(item["base_path"])
 
+    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
+    visit(content_item["base_path"])
     assert_not page.has_css?(".gem-c-contents-list")
   end
 
