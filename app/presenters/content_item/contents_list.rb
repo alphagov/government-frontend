@@ -19,8 +19,7 @@ module ContentItem
     end
 
     def show_contents_list?
-      return false if contents_items.count < 2
-      return true if contents_items.count > 2
+      return true if contents_items.present?
       return false if no_first_item?
 
       first_item_size_requirements_met?(character_count, table_row_count)
