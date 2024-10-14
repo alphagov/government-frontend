@@ -1,9 +1,9 @@
 module ContentItem
   module ContentsList
-    CHARACTER_LIMIT = 415
-    CHARACTER_LIMIT_WITH_IMAGE = 224
-    TABLE_ROW_LIMIT = 13
-    TABLE_ROW_LIMIT_WITH_IMAGE = 6
+    MINIMUM_CHARACTER_COUNT = 415
+    MINIMUM_CHARACTER_COUNT_IF_IMAGE_PRESENT = 224
+    MINIMUM_TABLE_ROW_COUNT = 13
+    MINIMUM_TABLE_ROW_COUNT_IF_IMAGE_PRESENT = 6
 
     def contents
       @contents ||=
@@ -40,7 +40,7 @@ module ContentItem
     end
 
     def first_item_has_long_content?
-      first_item_character_count > CHARACTER_LIMIT
+      first_item_character_count > MINIMUM_CHARACTER_COUNT
     end
 
     def first_item_content
@@ -61,7 +61,7 @@ module ContentItem
     end
 
     def first_item_has_long_table?
-      first_item_table_rows > TABLE_ROW_LIMIT
+      first_item_table_rows > MINIMUM_TABLE_ROW_COUNT
     end
 
     def find_first_table
@@ -92,11 +92,11 @@ module ContentItem
     end
 
     def first_item_has_image_and_long_content?
-      first_item_has_image? && first_item_character_count > CHARACTER_LIMIT_WITH_IMAGE
+      first_item_has_image? && first_item_character_count > MINIMUM_CHARACTER_COUNT_IF_IMAGE_PRESENT
     end
 
     def first_item_has_image_and_long_table?
-      first_item_has_image? && first_item_table_rows > TABLE_ROW_LIMIT_WITH_IMAGE
+      first_item_has_image? && first_item_table_rows > MINIMUM_TABLE_ROW_COUNT_IF_IMAGE_PRESENT
     end
 
     def parsed_body
