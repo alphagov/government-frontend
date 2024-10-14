@@ -4,6 +4,8 @@ class ManualSectionPresenter < ContentItemPresenter
   include ContentItem::ContentsList
   include ContentItem::ManualSection
 
+  MOJ_ORGANISATION_CONTENT_ID = "dcc907d6-433c-42df-9ffb-d9c68be5dc4d".freeze
+
   def base_path
     manual["base_path"]
   end
@@ -50,6 +52,14 @@ class ManualSectionPresenter < ContentItemPresenter
         content: content.join,
       }
     end
+  end
+
+  def show_contents_list?
+    organisation_content_id == MOJ_ORGANISATION_CONTENT_ID
+  end
+
+  def organisation_content_id
+    content_item.dig("links", "organisations", 0, "content_id")
   end
 
 private
