@@ -76,6 +76,20 @@ class ManualSectionPresenterTest
       assert_match first_section_content_sample, presented_manual_section.main.first[:content]
     end
 
+    test "hides the contents list by default" do
+      manual_section = schema_item("what-is-content-design")
+      assert_equal false, present_example(manual_section).show_contents_list?
+    end
+
+    test "shows the contents list if organisation is MOJ" do
+      content_item = schema_item("what-is-content-design", "manual_section")
+      moj_content_id = ManualSectionPresenter::MOJ_ORGANISATION_CONTENT_ID
+      content_item["links"]["organisations"] = [{ "content_id" => moj_content_id }]
+      presented = present_example(content_item)
+
+      assert_equal true, presented.show_contents_list?
+    end
+
     def presented_manual_section(overrides = {})
       presented_item("what-is-content-design", overrides)
     end

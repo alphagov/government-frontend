@@ -2,20 +2,9 @@ require "test_helper"
 
 class ContentItemContentsListTest < ActiveSupport::TestCase
   def setup
-    content_item = {
-      "title" => "thing",
-      "document_type" => "manual_section",
-      "links" => {
-        "organisations" => [
-          {
-            "content_id" => "dcc907d6-433c-42df-9ffb-d9c68be5dc4d",
-          },
-        ],
-      },
-    }
+    content_item = { "title" => "thing" }
     @contents_list = Object.new
     @contents_list.stubs(:content_item).returns(content_item)
-    @contents_list.stubs(:document_type).returns(content_item["document_type"])
     @contents_list.stubs(:view_context)
                   .returns(ApplicationController.new.view_context)
     @contents_list.extend(ContentItem::ContentsList)
@@ -106,24 +95,6 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       end
     end
     assert @contents_list.show_contents_list?
-  end
-
-  test "#show_contents_list? returns false if the content item is a manual section but excluded from displaying content lists" do
-    content_item = {
-      "title" => "thing",
-      "document_type" => "manual_section",
-      "links" => {
-        "organisations" => [
-          {
-            "content_id" => "91cd6143-69d5-4f27-99ff-a52fb0d51c74",
-          },
-        ],
-      },
-    }
-
-    @contents_list.stubs(:content_item).returns(content_item)
-    @contents_list.stubs(:document_type).returns(content_item["document_type"])
-    assert_not @contents_list.show_contents_list?
   end
 
   test "#show_contents_list? returns true if number of contents items is 2 and the first item's character count is above 415 including a list" do
