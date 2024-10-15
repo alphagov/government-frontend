@@ -17,7 +17,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
       end
     end
 
-    @contents_list.expects(:contents_items).returns([{ text: "A heading", id: "custom" }]).once
+    @contents_list.expects(:show_contents_list?).returns(true).once
     @contents_list.contents
     @contents_list.contents
   end
