@@ -1,9 +1,9 @@
 module ContentItem
   module ContentsList
-    CHARACTER_LIMIT = 415
-    CHARACTER_LIMIT_WITH_IMAGE = 224
-    TABLE_ROW_LIMIT = 13
-    TABLE_ROW_LIMIT_WITH_IMAGE = 6
+    MINIMUM_CHARACTER_COUNT = 415
+    MINIMUM_CHARACTER_COUNT_IF_IMAGE_PRESENT = 224
+    MINIMUM_TABLE_ROW_COUNT = 13
+    MINIMUM_TABLE_ROW_COUNT_IF_IMAGE_PRESENT = 6
 
     def contents
       @contents ||=
@@ -23,13 +23,22 @@ module ContentItem
       return true if contents_items.count > 2
       return false if no_first_item?
 
-      first_item_has_long_content? ||
-        first_item_has_long_table? ||
-        first_item_has_image_and_long_content? ||
-        first_item_has_image_and_long_table?
+      first_item_size_requirements_met?(character_count, table_row_count)
     end
 
   private
+
+    def first_item_size_requirements_met?(char_count, table_row_count)
+      first_item_character_count > char_count || first_item_table_rows > table_row_count
+    end
+
+    def character_count
+      first_item_has_image? ? MINIMUM_CHARACTER_COUNT_IF_IMAGE_PRESENT : MINIMUM_CHARACTER_COUNT
+    end
+
+    def table_row_count
+      first_item_has_image? ? MINIMUM_TABLE_ROW_COUNT_IF_IMAGE_PRESENT : MINIMUM_TABLE_ROW_COUNT
+    end
 
     def extract_headings_with_ids
       headings = parsed_body.css("h2").map do |heading|
@@ -37,10 +46,6 @@ module ContentItem
         { text: view_context.strip_trailing_colons(heading.text), id: id.value } if id
       end
       headings.compact
-    end
-
-    def first_item_has_long_content?
-      first_item_character_count > CHARACTER_LIMIT
     end
 
     def first_item_content
@@ -58,10 +63,6 @@ module ContentItem
 
     def first_item_character_count
       @first_item_character_count ||= first_item_content.length
-    end
-
-    def first_item_has_long_table?
-      first_item_table_rows > TABLE_ROW_LIMIT
     end
 
     def find_first_table
@@ -89,14 +90,6 @@ module ContentItem
         element = element.next_element
         return false if element.nil?
       end
-    end
-
-    def first_item_has_image_and_long_content?
-      first_item_has_image? && first_item_character_count > CHARACTER_LIMIT_WITH_IMAGE
-    end
-
-    def first_item_has_image_and_long_table?
-      first_item_has_image? && first_item_table_rows > TABLE_ROW_LIMIT_WITH_IMAGE
     end
 
     def parsed_body
