@@ -136,10 +136,9 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     assert page.has_content?("on the Big Issue Invest website")
   end
 
-  test "does not render a contents list if there are fewer than three items in the contents list" do
+  test "renders a content list" do
     setup_and_visit_content_item("aaib-reports")
-
-    assert_not page.has_css?("#contents .gem-c-contents-list")
+    assert page.has_css?(".gem-c-contents-list", text: "Contents")
   end
 
   test "renders a link to statutory instruments finder" do
