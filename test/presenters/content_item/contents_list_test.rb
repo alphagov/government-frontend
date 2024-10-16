@@ -96,6 +96,24 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
+  test "#show_contents_list? returns false if the content item is a manual section but excluded from displaying content lists" do
+    content_item = {
+      "title" => "thing",
+      "document_type" => "manual_section",
+      "links" => {
+        "organisations" => [
+          {
+            "content_id" => "91cd6143-69d5-4f27-99ff-a52fb0d51c74",
+          },
+        ],
+      },
+    }
+
+    @contents_list.stubs(:content_item).returns(content_item)
+    @contents_list.stubs(:document_type).returns(content_item["document_type"])
+    assert_not @contents_list.show_contents_list?
+  end
+
   test "#show_contents_list? returns true if the first item's character count is above 415 including a list" do
     class << @contents_list
       def body
@@ -114,7 +132,6 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  # TODO: This test fails
   test "#show_contents_list? returns false if first item's character count is less than 415" do
     class << @contents_list
       def body
