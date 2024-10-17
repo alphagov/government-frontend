@@ -128,5 +128,15 @@ module GovernmentFrontend
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+
+    # Protect from "invalid byte sequence in UTF-8" errors,
+    # when a query or a cookie is a string with incorrect UTF-8 encoding.
+    config.middleware.insert_before(
+      0,
+      Rack::UTF8Sanitizer,
+      sanitizable_content_types: [],
+      only: %w[QUERY_STRING],
+      strategy: :exception,
+    )
   end
 end
