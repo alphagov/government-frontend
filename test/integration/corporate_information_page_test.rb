@@ -17,19 +17,6 @@ class CorporateInformationPageTest < ActionDispatch::IntegrationTest
     ])
   end
 
-  test "renders without contents list if it has fewer than 3 items" do
-    item = get_content_example("corporate_information_page")
-    item["details"]["body"] = "<div class='govspeak'>
-      <h2>Item one</h2><p>Content about item one</p>
-      <h2>Item two</h2><p>Content about item two</p>
-      </div>"
-
-    stub_content_store_has_item(item["base_path"], item.to_json)
-    visit_with_cachebust(item["base_path"])
-
-    assert_not page.has_css?(".gem-c-contents-list")
-  end
-
   test "renders corporate information with body when present" do
     setup_and_visit_content_item("corporate_information_page")
 

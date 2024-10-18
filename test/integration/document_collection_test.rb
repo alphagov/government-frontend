@@ -41,19 +41,9 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders without contents list if it has fewer than 3 items" do
-    item = get_content_example("document_collection")
-    item["details"]["collection_groups"] = [
-      {
-        "title" => "Item one",
-        "body" => "<p>Content about item one</p>",
-        "documents" => %w[a-content-id],
-      },
-    ]
-    stub_content_store_has_item(item["base_path"], item.to_json)
-    visit_with_cachebust(item["base_path"])
-
-    assert_not page.has_css?(".gem-c-contents-list")
+  test "renders a content list" do
+    setup_and_visit_content_item("document_collection")
+    assert page.has_css?(".gem-c-contents-list", text: "Contents")
   end
 
   test "renders each collection group" do
