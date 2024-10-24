@@ -16,11 +16,6 @@
       <%= raw(@content_item.body) %>
       <% end %>
 
-      <% if @content_item.last_updated && @content_item.schema_name == "help_page" %>
-      <%= render "components/published_dates", {
-        last_updated: @content_item.last_updated
-      } %>
-      <% end %>
     </div>
   </div>
   <%= render 'shared/sidebar_navigation' %>
