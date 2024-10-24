@@ -46,6 +46,19 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-contents-list", text: "Contents")
   end
 
+  test "renders contents list if no H2 but first item is greater than 415 characters" do
+    content_item = get_content_example("document_collection")
+    content_item["details"]["collection_groups"][0]["body"] =
+      "<div>
+        <p>#{Faker::Lorem.characters(number: 416)}</p>
+      </div>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
+    visit(content_item["base_path"])
+
+    assert page.has_css?(".gem-c-contents-list")
+  end
+
   test "renders each collection group" do
     setup_and_visit_content_item("document_collection")
     groups = @content_item["details"]["collection_groups"]

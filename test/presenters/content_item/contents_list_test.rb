@@ -93,17 +93,6 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  test "displays contents list if no H2 but first item is greater than 415" do
-    class << @contents_list
-      def body
-        "<div>
-          <p>#{Faker::Lorem.characters(number: 416)}</p>
-        </div>"
-      end
-    end
-    assert @contents_list.show_contents_list?
-  end
-
   test "displays no contents list if there is no H2 and first item is less than 415" do
     class << @contents_list
       def body
