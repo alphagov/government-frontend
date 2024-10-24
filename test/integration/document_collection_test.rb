@@ -41,19 +41,22 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "renders without contents list if it has fewer than 3 items" do
-    item = get_content_example("document_collection")
-    item["details"]["collection_groups"] = [
-      {
-        "title" => "Item one",
-        "body" => "<p>Content about item one</p>",
-        "documents" => %w[a-content-id],
-      },
-    ]
-    stub_content_store_has_item(item["base_path"], item.to_json)
-    visit_with_cachebust(item["base_path"])
+  test "renders a content list" do
+    setup_and_visit_content_item("document_collection")
+    assert page.has_css?(".gem-c-contents-list", text: "Contents")
+  end
 
-    assert_not page.has_css?(".gem-c-contents-list")
+  test "renders contents list if no H2 but first item is greater than 415 characters" do
+    content_item = get_content_example("document_collection")
+    content_item["details"]["collection_groups"][0]["body"] =
+      "<div>
+        <p>#{Faker::Lorem.characters(number: 416)}</p>
+      </div>"
+
+    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
+    visit(content_item["base_path"])
+
+    assert page.has_css?(".gem-c-contents-list")
   end
 
   test "renders each collection group" do
