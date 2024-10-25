@@ -135,7 +135,6 @@ module GovernmentFrontend
     config.middleware.insert_before(
       0,
       Rack::UTF8Sanitizer,
-      sanitizable_content_types: [],
       only: %w[QUERY_STRING],
       strategy: Sanitiser::Strategy,
     )
