@@ -11,7 +11,7 @@ module Sanitiser
           raise NullByteInString
         end
       rescue StandardError
-        raise SanitisingError, "Non-UTF-8 (or null) character in the query or in the cookie"
+        raise SanitisingError, "Non-UTF-8 (or null) character in the query, cookie or form data"
       end
     end
   end
