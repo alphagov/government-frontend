@@ -13,6 +13,7 @@ require "action_controller/railtie"
 require "action_view/railtie"
 # require "action_cable/engine"
 require "rails/test_unit/railtie"
+require_relative "../lib/sanitiser/strategy"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -26,7 +27,7 @@ module GovernmentFrontend
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
-    config.autoload_lib(ignore: %w[assets tasks])
+    config.autoload_lib(ignore: %w[assets tasks sanitiser])
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
@@ -128,5 +129,15 @@ module GovernmentFrontend
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+
+    # Protect from "invalid byte sequence in UTF-8" errors,
+    # when a query or a cookie is a string with incorrect UTF-8 encoding.
+    config.middleware.insert_before(
+      0,
+      Rack::UTF8Sanitizer,
+      sanitizable_content_types: [],
+      only: %w[QUERY_STRING],
+      strategy: Sanitiser::Strategy,
+    )
   end
 end
