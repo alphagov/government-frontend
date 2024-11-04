@@ -42,8 +42,8 @@
 }
 
 .app-c-important-metadata__term {
-  float: left;
-  padding-right: govuk-spacing(1);
+  float: inline-start;
+  padding-inline-end: govuk-spacing(1);
 }
 
 .app-c-important-metadata__definition {
