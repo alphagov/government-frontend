@@ -4,6 +4,10 @@
   direction: ltr;
   line-height: 1.45em;
   color: govuk-colour("black");
+
+  .direction-rtl & {
+    direction: rtl;
+  }
 }
 
 .app-c-published-dates__toggle {
