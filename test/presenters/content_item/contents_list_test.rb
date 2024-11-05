@@ -84,28 +84,36 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
                  @contents_list.contents_items
   end
 
-  test "#show_contents_list? returns true if number of contents items is less than 3 and the first item's character count is above 415" do
+  test "displays content list if there is an H2" do
     class << @contents_list
       def body
-        "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.characters(number: 220)}</p>
-         <p>#{Faker::Lorem.characters(number: 196)}</p>
-         <h2 id='two'>Two</h2>
-         <p>#{Faker::Lorem.sentence}</p>"
+        "<h2 id='one'>One</h2>"
       end
     end
     assert @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if number of contents items is 2 and the first item's character count is above 415 including a list" do
+  test "displays no contents list if there is no H2 and first item is less than 415" do
+    class << @contents_list
+      def body
+        "<div>
+          <p>#{Faker::Lorem.characters(number: 400)}</p>
+        </div>
+        "
+      end
+    end
+    assert_not @contents_list.show_contents_list?
+  end
+
+  test "displays contents list if the first item's character count is above 415, including a list" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
          <p>#{Faker::Lorem.characters(number: 40)}</p>
          <ul>
-          <li>#{Faker::Lorem.characters(number: 100)}</li>
-          <li>#{Faker::Lorem.characters(number: 100)}</li>
-          <li>#{Faker::Lorem.characters(number: 200)}</li>
+           <li>#{Faker::Lorem.characters(number: 100)}</li>
+           <li>#{Faker::Lorem.characters(number: 100)}</li>
+           <li>#{Faker::Lorem.characters(number: 200)}</li>
          </ul>
          <p>#{Faker::Lorem.characters(number: 40)}</p>
          <h2 id='two'>Two</h2>
@@ -115,40 +123,23 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if number of contents items is 3 or more" do
+  test "does not display contents list if the first item's character count is less than 415" do
     class << @contents_list
       def body
-        "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.sentence}</p>
-         <h2 id='two'>Two</h2>
-         <p>#{Faker::Lorem.sentence}</p>
-         <h2 id='three'>Three</h2>
-         <h3>Pi</h3>
-         <h2 id='four'>#{Faker::Lorem.sentence}</h2>"
-      end
-    end
-    assert @contents_list.show_contents_list?
-  end
-
-  test "#show_contents_list? returns false if number of contents times is less than 3 and first item's character count is less than 415" do
-    class << @contents_list
-      def body
-        "<h2 id='one'>One</h2>
-         <p>#{Faker::Lorem.characters(number: 10)}</p>
-         <p>#{Faker::Lorem.characters(number: 10)}</p>
-         <h2 id='two'>Two</h2>
+        "<p>#{Faker::Lorem.characters(number: 20)}</p>
+         <p>#{Faker::Lorem.characters(number: 20)}</p>
          <p>#{Faker::Lorem.sentence}</p>"
       end
     end
     assert_not @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if number of table rows in the first item is more than 13" do
+  test "displays contents list if number of table rows in the first item is more than 13" do
     class << @contents_list
       def body
         base = "<h2 id='one'>One</h2><table>\n<tbody>\n"
         14.times do
-          base += "<tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n"
+          base += "<tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}</td>\n</tr>\n"
         end
         base += "</tbody>\n</table><h2 id='two'>Two</h2>"
       end
@@ -156,19 +147,19 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns false if number of table rows in the first item is less than 13" do
+  test "does not display contents list if number of table rows in the first item is less than 13" do
     class << @contents_list
       def body
-        "<h2 id='one'>One</h2><table>\n<tbody>\n
+        "<table>\n<tbody>\n
         <tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n
         <tr>\n<td>#{Faker::Lorem.word}</td>\n<td>#{Faker::Lorem.word}/td>\n</tr>\n
-        </tbody>\n</table><h2 id='two'>Two</h2>"
+        </tbody>\n</table>"
       end
     end
     assert_not @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if image and over 224 characters are present in the first item" do
+  test "displays contents list if image is present and the first_item's character count is over 224" do
     class << @contents_list
       def body
         "<h2 id='one'>One</h2>
@@ -181,7 +172,7 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
     assert @contents_list.show_contents_list?
   end
 
-  test "#show_contents_list? returns true if image and table over 6 rows are present in the first item" do
+  test "displays contents list if an image and a table with more than 6 rows are present in the first item" do
     class << @contents_list
       def body
         base = "<h2 id='one'>One</h2><div class='img'>
@@ -192,17 +183,6 @@ class ContentItemContentsListTest < ActiveSupport::TestCase
         base += "</tbody>\n</table><h2 id='two'>Two</h2>"
       end
     end
-    assert @contents_list.show_contents_list?
-  end
-
-  test "#show_contents_list? returns true if body is over 415 characters and has no h2s present" do
-    class << @contents_list
-      def body
-        "<div><p>#{Faker::Lorem.characters(number: 416)}</p></div>"
-      end
-    end
-    @contents_list.stubs(:contents_items).returns(["item 1", "item2"])
-    @contents_list.stubs(:first_item).returns(first_element)
     assert @contents_list.show_contents_list?
   end
 

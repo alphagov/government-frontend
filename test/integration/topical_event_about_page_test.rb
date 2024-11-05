@@ -22,14 +22,9 @@ class TopicalEventAboutPageTest < ActionDispatch::IntegrationTest
     assert_not page.has_css?(".contents-list.contents-list-dashed")
   end
 
-  test "contents list not displayed when fewer than three items" do
-    @content_item = get_content_example("topical_event_about_page")
-    @content_item["details"]["body"] = body_with_two_contents_list_items
-
-    stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
-
-    visit_with_cachebust @content_item["base_path"]
-    assert_not page.has_css?(".gem-c-contents-list")
+  test "renders a content list" do
+    setup_and_visit_content_item("topical_event_about_page")
+    assert page.has_css?(".gem-c-contents-list", text: "Contents")
   end
 
   test "contents list displayed when fewer than three items and first item word count is greater than 100" do

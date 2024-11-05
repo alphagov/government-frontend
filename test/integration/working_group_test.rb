@@ -42,17 +42,9 @@ class WorkingGroupTest < ActionDispatch::IntegrationTest
     assert page.has_text?("Some content")
   end
 
-  test "renders without contents list if it has fewer than 3 items" do
-    item = get_content_example("short")
-    item["details"]["body"] = "<div class='govspeak'>
-      <h2>Item one</h2><p>Content about item one</p>
-      <h2>Item two</h2><p>Content about item two</p>
-      </div>"
-
-    stub_content_store_has_item(item["base_path"], item.to_json)
-    visit_with_cachebust(item["base_path"])
-
-    assert_not page.has_css?(".gem-c-contents-list")
+  test "renders a content list" do
+    setup_and_visit_content_item("with_policies")
+    assert page.has_css?(".gem-c-contents-list", text: "Contents")
   end
 
   test "does not render with the single page notification button" do
