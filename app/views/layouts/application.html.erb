@@ -31,6 +31,8 @@
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %>" lang="<%= I18n.locale %>">
       <span id="Top"></span>
+      <%= render partial: "govuk_web_banners/recruitment_banner" %>
+
       <%= yield :main %>
     </main>
   </div>
