@@ -15,20 +15,29 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render "components/important_metadata",
-        items: @content_item.important_metadata,
-        margin_bottom: true %>
+    <% if @content_item.important_metadata.any? %>
+      <%= content_tag :div, class: "inverse-background" do %>
+        <%= render "govuk_publishing_components/components/metadata", {
+          inverse: true, 
+          other: @content_item.important_metadata,
+          margin_bottom: 0,
+        } %>
+      <% end %>
+    <% end %>
 
     <% if @content_item.release_date_changed? %>
       <div class="release-date-changed">
-        <%= render "components/important_metadata",
-        title: t("statistics_announcement.changed_date"),
-        items: {
-          t("statistics_announcement.previous_date") => @content_item.previous_release_date,
-          t("statistics_announcement.reason_for_change") => @content_item.release_date_change_reason,
-        },
-        margin_bottom: true
-        %>
+        <%= content_tag :div, class: "inverse-background" do %>
+          <%= render "govuk_publishing_components/components/metadata", {
+            inverse: true, 
+            other: {
+              t("statistics_announcement.previous_date") => @content_item.previous_release_date,
+              t("statistics_announcement.reason_for_change") => @content_item.release_date_change_reason,
+            },
+            margin_bottom: 0,
+            title: t("statistics_announcement.changed_date"),
+          } %>
+        <% end %>
       </div>
     <% end %>
 

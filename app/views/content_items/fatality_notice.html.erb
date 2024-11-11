@@ -22,8 +22,16 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="content-bottom-margin">
       <div class="responsive-bottom-margin">
-        <%= render 'components/important_metadata',
-          items: @content_item.important_metadata %>
+        <% if @content_item.important_metadata.any? %>
+          <%= content_tag :div, class: "inverse-background responsive-bottom-margin" do %>
+            <%= render "govuk_publishing_components/components/metadata", {
+              inverse: true, 
+              other: @content_item.important_metadata,
+              margin_bottom: 0,
+            } %>
+          <% end %>
+        <% end %>
+
         <%= render 'components/figure',
           src: @content_item.image["url"],
           alt: @content_item.image["alt_text"],
