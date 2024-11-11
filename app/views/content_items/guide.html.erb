@@ -18,9 +18,9 @@
 <% content_for :simple_header, true %>
 
 <div class="govuk-grid-row gem-print-columns-none">
+  <%= render 'shared/intervention_banner' %>
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
-
     <% if @content_item.show_guide_navigation? %>
       <%= render "govuk_publishing_components/components/skip_link", {
         text: t("guide.skip_contents"),
