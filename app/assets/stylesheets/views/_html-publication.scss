@@ -37,11 +37,15 @@
   }
 
   .offset-empty-contents-list {
-    float: right;
+    // stylelint-disable max-nesting-depth
+    @include govuk-media-query($from: desktop) {
+      float: right;
 
-    .direction-rtl & {
-      float: left;
+      .direction-rtl & {
+        float: left;
+      }
     }
+    // stylelint-enable max-nesting-depth
   }
 
   .meta-data {
