@@ -27,7 +27,7 @@ class SpeechTest < ActionDispatch::IntegrationTest
         "The Rt Hon Andrea Leadsom MP": "/government/people/andrea-leadsom",
       },
       published: "8 March 2016",
-    })
+    }, context_selector: ".metadata-column")
 
     assert_has_important_metadata(
       "Delivered on":
