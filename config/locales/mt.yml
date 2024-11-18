@@ -685,17 +685,6 @@ mt:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Il- <abbr title="Foreign and Commonwealth Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi ħlief dawk essenzjali.
-      avoid_all_but_essential_travel_to_whole_country_html: Il- <abbr title="Foreign and Commonwealth Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi ħlief dawk essenzjali fil-pajjiż kollu.
-      avoid_all_travel_to_parts_html: Il- <abbr title="Foreign and Commonwealth Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi lejn xi partijiet tal-pajjiż.
-      avoid_all_travel_to_whole_country_html: Il- <abbr title="Foreign and Commonwealth Office">FCO</abbr> jirrakkomanda li ma jsiru l-ebda vjaġġi fil-pajjiż kollu.
-    context: Rakkomandazzjonijiet dwar ivvjaġġar barra mill-pajjiż
-    pages:
-    still_current_at: Għadu jeżisti fuq
-    summary: Sommarju
-    updated: Aġġornat
   working_group:
     contact_details: Dettalji tal-kuntatt
     policies: Politiki

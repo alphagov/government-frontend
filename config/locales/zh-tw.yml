@@ -451,17 +451,6 @@ zh-tw:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議非必要的旅行，不要前往該國部分地區。
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議非必要的旅行，不要前往該國。
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議不要前往該國部分地區。
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">外交和英聯邦事務部</abbr> 建議不要前往該國。
-    context: 國外旅行建議
-    pages:
-    still_current_at: 目前仍
-    summary: 概括
-    updated: 更新
   working_group:
     contact_details: 聯繫細節
     policies: 政策

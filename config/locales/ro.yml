@@ -607,17 +607,6 @@ ro:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile neesențiale în anumite părți ale țării.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile neesențiale în întreaga țară.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în anumite părți ale țării.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> nu recomandă călătoriile în întreaga țară.
-    context: Sfaturi pentru călătoriile în străinătate
-    pages:
-    still_current_at: În acest moment la
-    summary: Rezumat
-    updated: Actualizat
   working_group:
     contact_details: Detalii de contact
     policies: Politici

@@ -529,17 +529,6 @@ is:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins nema þeim allra nauðsynlegustu.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins nema þeim allra nauðsynlegustu.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til hluta landsins.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ráðleggur gegn öllum ferðalögum til alls landsins.
-    context: Ráðleggingar um ferðalög erlendis
-    pages:
-    still_current_at: Enn uppfært þann
-    summary: Samantekt
-    updated: Uppfært
   working_group:
     contact_details: Upplýsingar til að hafa samband
     policies: Stefnur

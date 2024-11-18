@@ -529,17 +529,6 @@ bn:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> দেশের কিছু অংশে শুধু প্রয়োজনীয় ভ্রমণ ছাড়া সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> সমগ্র দেশে শুধু প্রয়োজনীয় ভ্রমণ ছাড়া সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> দেশের কিছু অংশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> সমগ্র দেশে সকল ধরনের ভ্রমণের বিরুদ্ধে পরামর্শ দিয়েছে।
-    context: বিদেশ ভ্রমণ সম্পর্কিত পরামর্শ
-    pages:
-    still_current_at: এখানে এখনও চলমান
-    summary: সারসংক্ষেপ
-    updated: হালনাগাদ করা হয়েছে
   working_group:
     contact_details: যোগাযোগের বিস্তারিত তথ্য
     policies: নীতিমালা

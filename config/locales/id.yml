@@ -451,17 +451,6 @@ id:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan yang tidak esensial ke bagian-bagian dari negara itu.
-      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan yang tidak esensial ke seluruh negara itu.
-      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan ke bagian-bagian dari negara itu.
-      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> melarang semua perjalanan ke seluruh bagian dari negara itu.
-    context: Nasihat perjalanan luar negeri
-    pages:
-    still_current_at: Masih berlaku di
-    summary: Rangkuman
-    updated: Diperbarui
   working_group:
     contact_details: Detail kontak
     policies: Kebijakan

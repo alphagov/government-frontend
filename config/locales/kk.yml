@@ -529,17 +529,6 @@ kk:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> маңыздысынан басқа елдің барлық аймақтарына барудан бас тартуға кеңес береді.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> қажеттісінен басқа бүкіл елге барудан бас тартуға кеңес береді.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> елдің барлық аймақтарына барудан бас тартуға кеңес береді.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> бүкіл елге баруға тыйым салады.
-    context: Шетелге саяхат туралы кеңес
-    pages:
-    still_current_at: Әлі де ағымдағы
-    summary: Қысқаша мазмұны
-    updated: Жаңартылды
   working_group:
     contact_details: Байланысу мәліметтері
     policies: Саясаттар

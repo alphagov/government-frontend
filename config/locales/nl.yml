@@ -529,17 +529,6 @@ nl:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Het <abbr title="Foreign and Commonwealth Office">FCO</abbr> raadt alle, behalve essentiële, reizen naar delen van het land af.
-      avoid_all_but_essential_travel_to_whole_country_html: Het <abbr title="Foreign and Commonwealth Office">FCO</abbr> raadt alle, behalve essentiële, reizen naar het hele land af.
-      avoid_all_travel_to_parts_html: Het <abbr title="Foreign and Commonwealth Office">FCO</abbr> raadt alle reizen naar delen van het land af.
-      avoid_all_travel_to_whole_country_html: Het <abbr title="Foreign and Commonwealth Office">FCO</abbr> raadt alle reizen naar het hele land af.
-    context: Buitenlands reisadvies
-    pages:
-    still_current_at: Nog steeds actueel op
-    summary: Samenvatting
-    updated: Bijgewerkt op
   working_group:
     contact_details: Contact gegevens
     policies: Beleid

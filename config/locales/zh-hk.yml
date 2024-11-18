@@ -451,17 +451,6 @@ zh-hk:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，如非必要，請勿前往該國部份地區。
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，如非必要，請勿前往該國全部地區。
-      avoid_all_travel_to_parts_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國部份地區。
-      avoid_all_travel_to_whole_country_html: <abbr title="外交及聯邦事務部">FCO</abbr> 建議，切勿前往該國全部地區。
-    context: 海外旅行建議
-    pages:
-    still_current_at: 目前仍在
-    summary: 摘要
-    updated: 已更新
   working_group:
     contact_details: 聯絡詳情
     policies: 政策

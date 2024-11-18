@@ -607,17 +607,6 @@ cs:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">Úřad pro zahraniční věci, společenství národů a rozvoj</abbr> nedoporučuje cestovat do některých částí země, s výjimkou nezbytných.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">Úřad pro zahraniční věci, společenství národů a rozvoj</abbr> nedoporučuje cestovat do celé země, kromě nezbytných.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">Úřad pro zahraniční věci, společenství národů a rozvoj</abbr> nedoporučuje do některých částí země cestovat.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">Úřad pro zahraniční věci, společenství národů a rozvoj</abbr> nedoporučuje cestovat do celé země.
-    context: Rady pro cestování do zahraničí
-    pages:
-    still_current_at: Stále aktuální na
-    summary: Shrnutí
-    updated: Aktualizováno
   working_group:
     contact_details: Kontaktní údaje
     policies: Politik
