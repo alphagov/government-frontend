@@ -24,7 +24,6 @@ class DevelopmentController < ApplicationController
                        statistics_announcement
                        take_part
                        topical_event_about_page
-                       travel_advice
                        working_group]
 
     @paths = YAML.load_file(Rails.root.join("config/govuk_examples.yml"))
