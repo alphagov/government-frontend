@@ -529,17 +529,6 @@ et:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida riigi osadesse muidu kui hädavajadusel.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida kogu riigis muidu kui hädavajadusel.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida riigi osades.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> soovitab mitte reisida kogu riigis.
-    context: Välisreiside nõuanded
-    pages:
-    still_current_at: Ikka praegune
-    summary: Kokkuvõte
-    updated: Uuendatud
   working_group:
     contact_details: Kontaktandmed
     policies: Eeskirjad

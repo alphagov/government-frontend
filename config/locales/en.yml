@@ -531,17 +531,6 @@ en:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advises against all but essential travel to parts of %{country}.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advises against all but essential travel to %{country}.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advises against all travel to parts of %{country}.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advises against all travel to %{country}.
-    context: Foreign travel advice
-    pages: Travel advice pages
-    still_current_at: Still current at
-    summary: Summary
-    updated: Updated
   working_group:
     contact_details: Contact details
     policies: Policies

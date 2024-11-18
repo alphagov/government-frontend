@@ -529,17 +529,6 @@ es-419:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todos los viajes que no sean imprescindibles a algunas zonas del país.
-      avoid_all_but_essential_travel_to_whole_country_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todo viaje que no sea imprescindible a todo el país.
-      avoid_all_travel_to_parts_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todo viaje a partes del país.
-      avoid_all_travel_to_whole_country_html: El <abbr title="Foreign and Commonwealth Office">FCO</abbr> desaconseja todo viaje a todo el país.
-    context: Consejos para viajar al extranjero
-    pages:
-    still_current_at: Todavía vigente en
-    summary: Resumen
-    updated: Actualizado
   working_group:
     contact_details: Datos de contacto
     policies: Normativas

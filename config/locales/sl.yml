@@ -685,17 +685,6 @@ sl:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa nenujna potovanja v dele države.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa nenujna potovanja v državo.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa potovanja v dele države.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> odsvetuje vsa potovanja v državo.
-    context: Nasveti za potovanja v tujino
-    pages:
-    still_current_at: Še vedno aktualno ob
-    summary: Povzetek
-    updated: Posodobljeno
   working_group:
     contact_details: Kontaktni podatki
     policies: Politike

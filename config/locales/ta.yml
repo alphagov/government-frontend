@@ -529,17 +529,6 @@ ta:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு அத்தியாவசிய பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் அத்தியாவசிய பயணம் குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> நாட்டின் பகுதிகளுக்கு பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">அயல்நாடு, காமன்வெல்த் அலுவலகம்</abbr> மொத்த நாட்டுக்கும் பயணம் செய்வது குறித்து அனைவருக்குமான ஆலோசனை தருகிறது.
-    context: அயல்நாட்டுப் பயண அறிவுரை
-    pages:
-    still_current_at: தற்போதும் உள்ளது
-    summary: சுருக்கம்
-    updated: புதுப்பிக்கப்பட்டது
   working_group:
     contact_details: தொடர்பு விபரங்கள்
     policies: கொள்கைகள்

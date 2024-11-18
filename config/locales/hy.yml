@@ -529,17 +529,6 @@ hy:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի ամբողջ տարածք, բացառությամբ էական նշանակություն ունեցող հատվածների։
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր, բացառությամբ էական նշանակություն ունեցող դեպքերի։
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկրի որոշ հատվածներ։
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr>-ը խորհուրդ է տալիս չմեկնել տվյալ երկիր։
-    context: Օտար երկիր ճամփորդելու վերաբերյալ օգտակար խորհուրդներ
-    pages:
-    still_current_at: Դեռևս ընթացիկ
-    summary: Ամփոփ
-    updated: Թարմացված
   working_group:
     contact_details: Կոնտակտային տվյալներ
     policies: Քաղաքականություններ

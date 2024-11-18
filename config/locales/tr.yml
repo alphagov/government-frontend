@@ -529,17 +529,6 @@ tr:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülkenin bazı bölgelerine zorunlu seyahatler haricinde seyahat edilmemesini tavsiye etmektedir.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> zorunlu seyahatler haricinde ülke geneline seyahat edilmemesini tavsiye etmektedir.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülkeye bazı kısımlarına hiçbir seyahat yapılmamasını tavsiye etmektedir.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ülke geneline hiçbir seyahat yapılmamasını tavsiye etmektedir.
-    context: Yurtdışı seyahat tavsiyesi
-    pages:
-    still_current_at: Halen şurada
-    summary: Özet
-    updated: Güncelleme
   working_group:
     contact_details: İrtibat ayrıntıları
     policies: Politikalar

@@ -451,17 +451,6 @@ ko:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가의 각지를 여행하지 말라고 권고합니다.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가의 전역을 여행하지 말라고 권고합니다.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가 각지로의 모든 여행을 삼가라고 권고합니다.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 는 해당 국가 전역으로의 모든 여행을 삼가라고 권고합니다.
-    context: 외국 여행 권고
-    pages:
-    still_current_at: 최신 상태
-    summary: 요약
-    updated: 업데이트
   working_group:
     contact_details: 콘택트 세부 정보
     policies: 정책

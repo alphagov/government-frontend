@@ -451,17 +451,6 @@ vi:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo chỉ nên đi đến một số nơi ở quốc gia này khi thật cần thiết.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo chỉ nên đi đến quốc gia này khi thật cần thiết.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến một số nơi ở quốc gia này.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> khuyến cáo không nên đi đến quốc gia này.
-    context: Tư vấn đi nước ngoài
-    pages:
-    still_current_at: Vẫn đang ở
-    summary: Tóm tắt
-    updated: Đã cập nhật
   working_group:
     contact_details: Chi tiết liên hệ
     policies: Chính sách
