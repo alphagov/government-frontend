@@ -31,7 +31,6 @@ class ContentItemsController < ApplicationController
     elsif is_history_page?
       show_history_page
     else
-      set_access_control_allow_origin_header if request.format.atom?
       set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
       render_template
     end
@@ -191,16 +190,11 @@ private
 
     respond_to do |format|
       format.html
-      format.atom
     end
 
     with_locale do
       render content_item_template
     end
-  end
-
-  def set_access_control_allow_origin_header
-    response.headers["Access-Control-Allow-Origin"] = "*"
   end
 
   def set_expiry
