@@ -32,15 +32,15 @@ class ContentItemPresenterTest < PresenterTestCase
   end
 
   test "#canonical_url with a part" do
-    example_with_parts = govuk_content_schema_example("travel_advice", "full-country")
-    request_path = "#{example_with_parts['base_path']}/safety-and-security"
+    example_with_parts = govuk_content_schema_example("guide", "guide")
+    request_path = "#{example_with_parts['base_path']}/other-compulsory-subjects"
     presenter = create_presenter(
-      TravelAdvicePresenter,
+      GuidePresenter,
       content_item: example_with_parts,
       requested_path: request_path,
     )
 
-    assert_equal "https://www.test.gov.uk/foreign-travel-advice/albania/safety-and-security", presenter.canonical_url
+    assert_equal "https://www.test.gov.uk/national-curriculum/other-compulsory-subjects", presenter.canonical_url
   end
 
   test "available_translations sorts languages by locale with English first" do
@@ -58,7 +58,7 @@ class ContentItemPresenterTest < PresenterTestCase
   test "part slug is nil when requesting a content item without parts" do
     example_without_parts = govuk_content_schema_example("case_study", "translated")
     presenter = create_presenter(
-      TravelAdvicePresenter,
+      GuidePresenter,
       content_item: example_without_parts,
       requested_path: example_without_parts["base_path"],
     )
