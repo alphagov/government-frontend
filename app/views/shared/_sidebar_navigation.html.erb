@@ -2,7 +2,7 @@
 
 <div class="govuk-grid-column-one-third">
   <% if show_govuk_chat_promo?(@content_item.base_path) %>
-    <%= render "govuk_publishing_components/components/chat_entry", { border_top: true } %>
+    <%= render "govuk_publishing_components/components/chat_entry", { margin_top_until_tablet: true } %>
   <% end %>
 
   <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: content_item %>
