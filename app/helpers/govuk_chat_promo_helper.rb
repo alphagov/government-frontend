@@ -1,5 +1,5 @@
 module GovukChatPromoHelper
-  GOVUK_CHAT_PROMO_BASE_PATHS = %w[
+  GOVUK_CHAT_PROMO_PATHS = %w[
     /business-asset-disposal-relief
     /business-support-service
     /capital-gains-tax
@@ -65,7 +65,7 @@ module GovukChatPromoHelper
     /write-business-plan
   ].freeze
 
-  def show_govuk_chat_promo?(base_path)
-    ENV["GOVUK_CHAT_PROMO_ENABLED"] == "true" && GOVUK_CHAT_PROMO_BASE_PATHS.include?(base_path)
+  def show_govuk_chat_promo?(path)
+    ENV["GOVUK_CHAT_PROMO_ENABLED"] == "true" && GOVUK_CHAT_PROMO_PATHS.include?(path)
   end
 end
