@@ -294,4 +294,18 @@ class PublicationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("publication-with-featured-attachments", overrides)
     assert page.has_css?('meta[name="robots"][content="noindex"]', visible: false)
   end
+
+  test "translates Welsh published date correctly" do
+    setup_and_visit_content_item("publication", { "locale" => "cy" })
+
+    assert_has_metadata({
+      published: "3 Mai 2016",
+      from: {
+        "Environment Agency": "/government/organisations/environment-agency",
+        "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
+      },
+    })
+
+    assert_footer_has_published_dates("Cyhoeddwyd ar 3 Mai 2016")
+  end
 end
