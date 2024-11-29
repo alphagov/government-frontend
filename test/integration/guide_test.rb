@@ -16,6 +16,18 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".govuk-link.govuk-link--no-visited-state[href$='/print']", text: "View a printable version of the whole guide")
   end
 
+  test "skip link in English" do
+    setup_and_visit_content_item("guide")
+
+    assert page.has_css?(".gem-c-skip-link", text: "Skip contents")
+  end
+
+  test "translated skip link" do
+    setup_and_visit_content_item("guide", { "locale" => "cy" })
+
+    assert page.has_css?(".gem-c-skip-link", text: "Sgipio cynnwys")
+  end
+
   test "draft access tokens are appended to part links within navigation" do
     setup_and_visit_content_item_with_params("guide", "?token=some_token")
 
