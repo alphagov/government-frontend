@@ -1,54 +1,111 @@
 module GovukChatPromoHelper
   GOVUK_CHAT_PROMO_PATHS = %w[
+    /annual-accounts/microentities-small-and-dormant-companies
+    /become-sole-trader
+    /become-sole-trader/choose-your-business-name
+    /become-sole-trader/register-sole-trader
     /business-asset-disposal-relief
     /business-support-service
+    /capital-allowances
+    /capital-allowances/annual-investment-allowance
+    /capital-allowances/business-cars
+    /capital-allowances/first-year-allowances
     /capital-gains-tax
+    /capital-gains-tax-businesses
     /capital-gains-tax/allowances
+    /capital-gains-tax/losses
     /capital-gains-tax/rates
+    /child-employment
+    /child-employment/restrictions-on-child-employment
     /closing-a-limited-company
     /company-tax-returns
     /contracted-out
     /contracted-out/how-contracting-out-affects-your-amount
     /corporation-tax
+    /corporation-tax-rates
+    /directors-loans/you-owe-your-company-money
+    /dormant-company/dormant-for-corporation-tax
     /employee-tax-codes
+    /employee-tax-codes/letters
+    /employers-workplace-pensions-rules
+    /employment-status/selfemployed-contractor
     /eori
+    /expenses-and-benefits-a-to-z
+    /expenses-and-benefits-business-travel-mileage/rules-for-tax
+    /expenses-and-benefits-travel
     /flexible-working
+    /goods-sent-from-abroad
     /goods-sent-from-abroad/tax-and-duty
     /government/collections/intellectual-property-trade-marks
+    /government/collections/tax-treaties
     /government/publications/strike-off-a-company-from-the-register-ds01
     /government/publications/the-uk-sanctions-list
     /guidance/advisory-fuel-rates
+    /guidance/buildings-and-construction-vat-notice-708
     /guidance/capital-gains-tax-rates-and-allowances
+    /guidance/corporation-tax-marginal-relief
     /guidance/digital-and-online-services
+    /guidance/expenses-rates-for-employees-travelling-outside-the-uk
+    /guidance/get-a-certificate-of-residence
+    /guidance/get-confirmation-from-hmrc-that-you-are-trading-in-the-uk
+    /guidance/get-your-import-vat-certificates
     /guidance/get-your-postponed-import-vat-statement
     /guidance/import-of-products-animals-food-and-feed-system
     /guidance/rates-and-thresholds-for-employers-2024-to-2025
+    /guidance/rates-of-vat-on-different-goods-and-services
     /guidance/register-a-trust-as-a-trustee
+    /guidance/register-or-renew-your-money-laundering-supervision-with-hmrc
     /guidance/search-the-companies-house-register
+    /guidance/send-documents-to-support-declarations-for-the-customs-declaration-service
+    /guidance/stamp-duty-on-shares
+    /guidance/tax-free-allowances-on-property-and-trading-income
     /guidance/track-a-dbs-application
+    /guidance/vat-domestic-reverse-charge-for-building-and-construction-services
+    /guidance/vat-guide-notice-700
+    /guidance/vat-place-of-supply-of-services-notice-741a
+    /guidance/work-out-an-employees-income-tax
     /guidance/work-out-an-employees-national-insurance-contributions
     /holiday-entitlement-rights
     /how-to-register-a-trade-mark
+    /how-vat-works
     /limited-company-formation
+    /limited-company-formation/choose-company-name
+    /limited-company-formation/memorandum-and-articles-of-association
     /limited-company-formation/register-your-company
     /maximum-weekly-working-hours
     /pay-corporation-tax
     /pay-vat
+    /prepare-file-annual-accounts-for-limited-company
+    /prepare-file-annual-accounts-for-limited-company/file-your-accounts-and-company-tax-return
+    /register-for-vat
+    /register-for-vat/cancel-your-registration
+    /register-for-vat/how-register-for-vat
     /rest-breaks-work
+    /run-business-from-home
+    /running-a-limited-company
+    /running-a-limited-company/company-and-accounting-records
     /search-bankruptcy-insolvency-register
     /search-for-trademark
     /self-employed-national-insurance-rates
+    /set-up-a-social-enterprise
     /set-up-business
+    /set-up-business-partnership
     /stamp-duty-land-tax/residential-property-rates
     /strike-off-your-company-from-companies-register
     /strike-off-your-company-from-companies-register/close-down-your-company
     /submit-vat-return
+    /tax-employee-share-schemes/share-incentive-plans-sips
+    /tax-foreign-income
     /tax-sell-property
     /tax-sell-property/work-out-your-gain
     /tax-sell-shares
     /tax-sell-shares/work-out-your-gain
+    /tell-hmrc-changed-business-details
+    /vat-flat-rate-scheme
+    /vat-rates
     /what-is-the-construction-industry-scheme
     /what-you-must-do-as-a-cis-subcontractor/how-to-register
+    /working-for-yourself
     /workplace-pensions
     /write-business-plan
   ].freeze
