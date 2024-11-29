@@ -12,21 +12,15 @@ module GovukChatPromoHelper
     /corporation-tax
     /employee-tax-codes
     /eori
-    /expenses-if-youre-self-employed
-    /find-national-insurance-number
     /flexible-working
     /goods-sent-from-abroad/tax-and-duty
-    /government/collections/exchange-rates-for-customs-and-vat
     /government/collections/intellectual-property-trade-marks
-    /government/publications/changes-to-the-rates-of-capital-gains-tax
     /government/publications/strike-off-a-company-from-the-register-ds01
     /government/publications/the-uk-sanctions-list
     /guidance/advisory-fuel-rates
     /guidance/capital-gains-tax-rates-and-allowances
     /guidance/digital-and-online-services
-    /guidance/get-a-goods-movement-reference
     /guidance/get-your-postponed-import-vat-statement
-    /guidance/hmrc-tools-and-calculators
     /guidance/import-of-products-animals-food-and-feed-system
     /guidance/rates-and-thresholds-for-employers-2024-to-2025
     /guidance/register-a-trust-as-a-trustee
@@ -35,14 +29,9 @@ module GovukChatPromoHelper
     /guidance/work-out-an-employees-national-insurance-contributions
     /holiday-entitlement-rights
     /how-to-register-a-trade-mark
-    /inheritance-tax/gifts
-    /inheritance-tax/passing-on-home
     /limited-company-formation
     /limited-company-formation/register-your-company
     /maximum-weekly-working-hours
-    /national-insurance-rates-letters
-    /national-insurance-rates-letters/category-letters
-    /national-minimum-wage-rates
     /pay-corporation-tax
     /pay-vat
     /rest-breaks-work
@@ -51,7 +40,6 @@ module GovukChatPromoHelper
     /self-employed-national-insurance-rates
     /set-up-business
     /stamp-duty-land-tax/residential-property-rates
-    /stop-being-self-employed
     /strike-off-your-company-from-companies-register
     /strike-off-your-company-from-companies-register/close-down-your-company
     /submit-vat-return
