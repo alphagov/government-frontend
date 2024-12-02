@@ -114,7 +114,7 @@ GEM
     dartsass-rails (0.5.1)
       railties (>= 6.0.0)
       sass-embedded (~> 1.63)
-    date (3.4.0)
+    date (3.4.1)
     debug_inspector (1.2.0)
     docile (1.4.0)
     domain_name (0.6.20240107)
@@ -163,7 +163,7 @@ GEM
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
       rails (>= 6, < 9)
-    govuk_publishing_components (45.10.0)
+    govuk_publishing_components (46.0.0)
       chartkick
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
@@ -212,7 +212,7 @@ GEM
       rexml
     language_server-protocol (3.17.0.3)
     link_header (0.0.8)
-    logger (1.6.1)
+    logger (1.6.2)
     logstasher (2.1.5)
       activesupport (>= 5.2)
       request_store
@@ -471,7 +471,8 @@ GEM
     pry-byebug (3.10.1)
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
-    psych (5.2.0)
+    psych (5.2.1)
+      date
       stringio
     public_suffix (6.0.1)
     puma (6.5.0)
@@ -534,7 +535,7 @@ GEM
     rdoc (6.8.1)
       psych (>= 4.0.0)
     regexp_parser (2.9.2)
-    reline (0.5.11)
+    reline (0.5.12)
       io-console (~> 0.5)
     request_store (1.7.0)
       rack (>= 1.4)
@@ -587,7 +588,7 @@ GEM
     sass-embedded (1.77.8)
       google-protobuf (~> 4.26)
       rake (>= 13)
-    securerandom (0.3.2)
+    securerandom (0.4.0)
     selenium-webdriver (4.21.1)
       base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
@@ -637,7 +638,7 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webrick (1.9.0)
+    webrick (1.9.1)
     websocket (1.2.10)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
