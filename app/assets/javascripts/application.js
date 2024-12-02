@@ -10,4 +10,6 @@
 //= require govuk_publishing_components/components/single-page-notification-button
 //= require govuk_publishing_components/components/step-by-step-nav
 
+//= require govuk_web_banners/dependencies
+
 //= require_tree ./modules
