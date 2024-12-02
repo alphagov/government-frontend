@@ -17,7 +17,7 @@
   width: 100%;
 
   @include govuk-media-query($from: tablet) {
-    float: left;
+    float: inline-start;
     width: 50%;
   }
 }
@@ -29,8 +29,8 @@
     display: block;
     vertical-align: top;
     box-sizing: border-box;
-    float: left;
-    padding-left: govuk-spacing(3);
+    float: inline-end;
+    padding-inline-start: govuk-spacing(3);
     width: 50%;
   }
 
