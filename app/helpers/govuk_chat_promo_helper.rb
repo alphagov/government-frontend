@@ -19,9 +19,12 @@ module GovukChatPromoHelper
     /child-employment/restrictions-on-child-employment
     /closing-a-limited-company
     /company-tax-returns
+    /company-tax-returns/making-changes
+    /company-tax-returns/penalties-for-late-filing
     /contracted-out
     /contracted-out/how-contracting-out-affects-your-amount
     /corporation-tax
+    /corporation-tax/work-out-your-corporation-tax
     /corporation-tax-rates
     /directors-loans/you-owe-your-company-money
     /dormant-company/dormant-for-corporation-tax
@@ -74,7 +77,21 @@ module GovukChatPromoHelper
     /limited-company-formation/register-your-company
     /maximum-weekly-working-hours
     /pay-corporation-tax
+    /pay-corporation-tax/approve-a-payment-through-your-online-bank-account
+    /pay-corporation-tax/bank-details
+    /pay-corporation-tax/bank-or-building-society
+    /pay-corporation-tax/check-your-payment-has-been-received
+    /pay-corporation-tax/debit-or-credit-card
+    /pay-corporation-tax/direct-debit
+    /pay-corporation-tax/payments-for-a-group-of-companies
+    /pay-corporation-tax/tell-hmrc-no-payment-due
     /pay-vat
+    /pay-vat/approve-payment-through-your-online-bank-account
+    /pay-vat/bank-details
+    /pay-vat/bank-or-building-society
+    /pay-vat/by-debit-or-credit-card-online
+    /pay-vat/direct-debit
+    /pay-vat/standing-order
     /prepare-file-annual-accounts-for-limited-company
     /prepare-file-annual-accounts-for-limited-company/file-your-accounts-and-company-tax-return
     /register-for-vat
@@ -94,6 +111,11 @@ module GovukChatPromoHelper
     /strike-off-your-company-from-companies-register
     /strike-off-your-company-from-companies-register/close-down-your-company
     /submit-vat-return
+    /submit-vat-return/correct-errors-in-your-vat-return
+    /submit-vat-return/how-to-send-return-pay-vat-bill
+    /submit-vat-return/interest-underpaid-overpaid-vat
+    /submit-vat-return/late-returns-and-payment
+    /submit-vat-return/what-to-include-in-a-vat-return
     /tax-employee-share-schemes/share-incentive-plans-sips
     /tax-foreign-income
     /tax-sell-property
