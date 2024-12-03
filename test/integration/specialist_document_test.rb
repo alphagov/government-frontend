@@ -24,7 +24,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
         "Air Accidents Investigation Branch":
         "/government/organisations/air-accidents-investigation-branch",
       },
-    })
+    }, context_selector: ".metadata-column")
   end
 
   test "renders published and updated in metadata" do

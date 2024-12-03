@@ -24,7 +24,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
       from: {
         "Ministry of Defence": "/government/organisations/ministry-of-defence",
       },
-    })
+    }, context_selector: ".metadata-column")
 
     assert_has_important_metadata(
       "Field of operation": { "Zululand": "/government/fields-of-operation/zululand" },
@@ -60,7 +60,7 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
     assert_has_metadata({ from: {
       "Ministry of Defence": "/government/organisations/ministry-of-defence",
       "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
-    } })
+    } }, context_selector: ".metadata-column")
   end
 
   test "fatality notice with withdrawn notice" do

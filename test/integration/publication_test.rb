@@ -25,7 +25,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
         "Environment Agency": "/government/organisations/environment-agency",
         "The Rt Hon Sir Eric Pickles MP": "/government/people/eric-pickles",
       },
-    })
+    }, context_selector: ".metadata-column")
 
     assert_has_structured_data(page, "Article")
 

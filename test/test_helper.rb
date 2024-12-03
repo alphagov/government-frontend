@@ -105,8 +105,8 @@ class ActionDispatch::IntegrationTest
     assert_has_metadata(any_args)
   end
 
-  def assert_has_metadata(any_args, extra_metadata_classes: nil)
-    within ".gem-c-metadata#{extra_metadata_classes}" do
+  def assert_has_metadata(any_args, context_selector: nil, extra_metadata_classes: nil)
+    within "#{context_selector} .gem-c-metadata#{extra_metadata_classes}" do
       any_args.each_value do |value|
         value = { value => nil } if value.is_a?(String)
         value.each do |text, href|
@@ -138,9 +138,9 @@ class ActionDispatch::IntegrationTest
   end
 
   def assert_has_important_metadata(metadata)
-    within(".app-c-important-metadata") do
+    within(".important-metadata .gem-c-metadata") do
       assert_has_metadata_local(
-        metadata, ".app-c-important-metadata__term", ".app-c-important-metadata__definition"
+        metadata, ".gem-c-metadata__term", ".gem-c-metadata__definition"
       )
     end
   end

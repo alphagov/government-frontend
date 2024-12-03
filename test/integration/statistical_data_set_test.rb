@@ -15,7 +15,8 @@ class StatisticalDataSetTest < ActionDispatch::IntegrationTest
     assert_has_metadata({
       published: "13 December 2012",
       from: { "Department for Transport": "/government/organisations/department-for-transport" },
-    })
+    }, context_selector: ".metadata-column")
+
     assert_footer_has_published_dates("Published 13 December 2012")
   end
 

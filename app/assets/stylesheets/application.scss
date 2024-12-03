@@ -54,3 +54,8 @@ $govuk-include-default-font-face: false;
 .constrained-image {
   max-width: 100%;
 }
+
+.inverse-background {
+  background: $govuk-brand-colour;
+  color: govuk-colour("white");
+}
