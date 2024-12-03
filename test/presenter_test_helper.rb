@@ -28,3 +28,17 @@ class PresenterTestCase < ActiveSupport::TestCase
     govuk_content_schema_example(schema, type)
   end
 end
+
+class GraphqlPresenterTestCase < PresenterTestCase
+  def create_presenter(presenter_class,
+                       content_item: fetch_graphql_content_item("news_article"),
+                       requested_path: "/test-content-item",
+                       view_context: ApplicationController.new.view_context)
+    presenter_class.new(content_item, requested_path, view_context)
+  end
+
+  def presented_item(type = schema_name, overrides = {})
+    example = fetch_graphql_content_item(type)
+    present_example(example.merge(overrides))
+  end
+end
