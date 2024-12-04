@@ -1,5 +1,8 @@
 <% if group["title"] %>
-  <%= group["title"] %>
+  <%= render "govuk_publishing_components/components/heading", {
+    text: group["title"],
+    heading_level: 3,
+  } %>
 <% end %>
 
 <ol class="section-list hmrc">
