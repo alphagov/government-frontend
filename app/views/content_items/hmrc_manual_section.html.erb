@@ -21,7 +21,7 @@
 
   <% @content_item.section_groups.each do | group | %>
     <div class="subsection-collection govuk-grid-column-full">
-      <%= render "content_items/manuals/hmrc_sections", group: group %>
+      <%= render "content_items/manuals/hmrc_sections", group: group, heading_level: 2 %>
     </div>
   <% end %>
 
