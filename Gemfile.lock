@@ -148,7 +148,7 @@ GEM
       rinku (~> 2.0)
       sanitize (~> 6)
     govuk_ab_testing (3.0.0)
-    govuk_app_config (9.15.3)
+    govuk_app_config (9.15.4)
       logstasher (~> 2.1)
       opentelemetry-exporter-otlp (>= 0.25, < 0.30)
       opentelemetry-instrumentation-all (>= 0.39.1, < 0.70.0)
@@ -236,7 +236,7 @@ GEM
     mime-types-data (3.2024.1105)
     mini_mime (1.1.5)
     mini_portile2 (2.8.8)
-    minitest (5.25.2)
+    minitest (5.25.4)
     minitest-reporters (1.7.1)
       ansi
       builder
