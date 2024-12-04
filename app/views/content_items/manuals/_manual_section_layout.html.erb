@@ -29,6 +29,11 @@
             </div>
           <% end %>
 
+          <%= render "govuk_publishing_components/components/heading", {
+            text: t("manuals.contents_title"),
+            margin_bottom: 4
+          } %>
+
           <%= yield %>
         </article>
       </div>
