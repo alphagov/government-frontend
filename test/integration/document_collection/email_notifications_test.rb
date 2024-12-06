@@ -84,5 +84,14 @@ module DocumentCollection
       setup_and_visit_content_item("document_collection", "locale" => "cy")
       assert_not page.has_css?(".gem-c-single-page-notification-button")
     end
+
+    test "does not render the email signup link if the page is in a foreign language" do
+      content_item = get_content_example("document_collection")
+      content_item["links"]["taxonomy_topic_email_override"] = [{ "base_path" => taxonomy_topic_base_path.to_s }]
+      content_item["locale"] = "cy"
+      stub_content_store_has_item(content_item["base_path"], content_item)
+      visit_with_cachebust(content_item["base_path"])
+      assert_not page.has_css?(".gem-c-signup-link")
+    end
   end
 end
