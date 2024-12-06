@@ -74,9 +74,18 @@ class PublicationPresenterTest < PresenterTestCase
     assert_equal(presented.national_applicability[:wales][:alternative_url], "http://wales.gov.uk/topics/statistics/headlines/housing2012/121025/?lang=en")
   end
 
-  test "presents the single page notification button" do
-    presented = presented_item("statistics_publication")
-    assert presented.display_single_page_notification_button?
+  test "displays the single page notification button on English pages" do
+    I18n.with_locale("en") do
+      presented = presented_item("statistics_publication")
+      assert presented.display_single_page_notification_button?
+    end
+  end
+
+  test "does not display the single page notification button on foreign language pages" do
+    I18n.with_locale("fr") do
+      presented = presented_item("statistics_publication")
+      assert_not presented.display_single_page_notification_button?
+    end
   end
 
   test "hide_from_search_engines? returns false" do
