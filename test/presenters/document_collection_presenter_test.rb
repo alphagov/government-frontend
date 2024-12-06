@@ -120,8 +120,16 @@ class DocumentCollectionPresenterTest
       end
     end
 
-    test "renders with the single page notification button" do
-      assert presented_item.display_single_page_notification_button?
+    test "displays the single page notification button on English pages" do
+      I18n.with_locale("en") do
+        assert presented_item.display_single_page_notification_button?
+      end
+    end
+
+    test "does not display the single page notification button on foreign language pages" do
+      I18n.with_locale("fr") do
+        assert_not presented_item.display_single_page_notification_button?
+      end
     end
   end
 

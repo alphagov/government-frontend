@@ -82,7 +82,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
     assert_not_equal faq_schema["mainEntity"], []
   end
 
-  test "renders with the single page notification button" do
+  test "renders with the single page notification button on English language pages" do
     setup_and_visit_content_item("detailed_guide")
     assert page.has_css?(".gem-c-single-page-notification-button")
 
@@ -99,6 +99,11 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
 
   test "does not render the single page notification button on exempt pages" do
     setup_and_visit_notification_exempt_page("detailed_guide")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
+
+  test "does not render the single page notification button on foreign language pages" do
+    setup_and_visit_notification_exempt_page("detailed_guide", "locale" => "cy")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 end

@@ -13,7 +13,7 @@ module ContentItem
     end
 
     def display_single_page_notification_button?
-      !page_is_on_exemption_list?
+      !page_is_on_exemption_list? && I18n.locale == :en
     end
   end
 end
