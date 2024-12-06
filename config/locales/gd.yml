@@ -685,17 +685,6 @@ gd:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr> gach taisteal ach an taisteal is riachtanaí chuig áiteanna áirithe sa tír a sheachaint.
-      avoid_all_but_essential_travel_to_whole_country_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr> gach taisteal, seachas taisteal riachtanach, a sheachaint ar fud na tíre.
-      avoid_all_travel_to_parts_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr> gach taisteal chuig codanna den tír a sheachaint.
-      avoid_all_travel_to_whole_country_html: Molann an <abbr title="Foreign and Commonwealth Office">FCO</abbr> duit gach taisteal ar fud na tíre a sheachaint.
-    context: Comhairle phraiticiúil do thaistealaithe eachtracha
-    pages:
-    still_current_at: Bailí i gcónaí ar
-    summary: Coimriú
-    updated: Athnuachan
   working_group:
     contact_details: Sonraí teagmhála
     policies: Polasaithe

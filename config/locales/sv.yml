@@ -529,17 +529,6 @@ sv:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla utom nödvändiga resor till delar av landet.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla utom nödvändiga resor till hela landet.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla resor till delar av landet.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> avråder från alla resor till hela landet.
-    context: Råd för resor utomlands
-    pages:
-    still_current_at: Fortfarande aktuell på
-    summary: Sammanfattning
-    updated: Uppdaterad
   working_group:
     contact_details: Kontaktuppgifter
     policies: Policys

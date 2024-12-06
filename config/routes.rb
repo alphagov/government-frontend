@@ -28,9 +28,8 @@ Rails.application.routes.draw do
         variant: /print/,
       }
 
-  get "*path(.:locale)(.:format)" => "content_items#show",
+  get "*path(.:locale)" => "content_items#show",
       constraints: {
-        format: /atom/,
         locale: /\w{2}(-[\d\w]{2,3})?/,
       }
 

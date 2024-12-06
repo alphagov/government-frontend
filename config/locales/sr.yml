@@ -607,17 +607,6 @@ sr:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ne preporučuje putovanja koja nisu esencijalna za delove zemlje.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ne preporučuje putovanja koja nisu esencijalna za celu zemlju.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ne preporučuje putovanja za delove zemlje.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> ne preporučuje putovanja za celu zemlju.
-    context: Preporuka o putovanjima van zemlje
-    pages:
-    still_current_at: Još važi za
-    summary: Rezime
-    updated: Ažurirano
   working_group:
     contact_details: Detalji za kontakt
     policies: Politike

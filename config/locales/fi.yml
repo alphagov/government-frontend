@@ -529,17 +529,6 @@ fi:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja osissa maata.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia muita kuin välttämättömiä matkoja koko maahan.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja osissa maata.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> kehottaa välttämään kaikkia matkoja koko maahan.
-    context: Ulkomaan matkustusneuvonta
-    pages:
-    still_current_at: Vielä ajankohtainen klo
-    summary: Yhteenveto
-    updated: Päivitetty
   working_group:
     contact_details: Yhteystiedot
     policies: Käytännöt

@@ -27,7 +27,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Speech | [View on GOV.UK](https://www.gov.uk/government/speeches/government-at-your-service-ben-gummer-speech) |
 | Take part | [View on GOV.UK](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) |
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) |
-| Travel advice | [View on GOV.UK](https://www.gov.uk/foreign-travel-advice/nepal) |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) |
 | Worldwide corporate information page | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-madrid/about/complaints-procedure) |
 | Worldwide office | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-paris/office/british-embassy) |

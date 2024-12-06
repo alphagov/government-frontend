@@ -841,17 +841,6 @@ ar:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعدم السفر إلى بعض أجزاء البلد إلا للضرورة.
-      avoid_all_but_essential_travel_to_whole_country_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعد السفر إلى جميع أنحاء البلد إلا للضرورة.
-      avoid_all_travel_to_parts_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعدم السفر إلى بعض أجزاء البلد.
-      avoid_all_travel_to_whole_country_html: ينصح <abbr title="Foreign and Commonwealth Office">FCO</abbr> بعدم السفر إلى جميع أنحاء البلد.
-    context: نصائح السفر إلى الخارج
-    pages:
-    still_current_at: لا يزال ساريًا في
-    summary: ملخص
-    updated: تاريخ التحديث
   working_group:
     contact_details: تفاصيل جهة الاتصال
     policies: سياسات
