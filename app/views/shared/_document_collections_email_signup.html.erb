@@ -1,4 +1,4 @@
-<% if @content_item.taxonomy_topic_email_override_base_path.present? %>
+<% if @content_item.show_email_signup_link? %>
   <div
     data-module="ga4-link-tracker"
     data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index_link": 1, "index_total": 1, "section": "Top" }'
