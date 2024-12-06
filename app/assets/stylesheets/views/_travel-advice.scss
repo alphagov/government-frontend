@@ -11,7 +11,7 @@
   // TODO: Remove this when components can accept variable unidirectional spacing,
   // the component above should have a bigger margin-bottom.
   .map {
-    margin-top: govuk-spacing(6);
+    margin: govuk-spacing(6) 0 govuk-spacing(3);
     @include responsive-bottom-margin;
 
     .map-image {
