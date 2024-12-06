@@ -86,6 +86,6 @@ class DetailedGuidePresenterTest < PresenterTestCase
 
   test "presents the single page notification button" do
     presented = presented_item("national_applicability_detailed_guide")
-    assert presented.has_single_page_notifications?
+    assert presented.display_single_page_notification_button?
   end
 end

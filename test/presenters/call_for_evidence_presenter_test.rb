@@ -156,7 +156,7 @@ class CallForEvidencePresenterTest
       schema = schema_item("open_call_for_evidence")
       presented = presented_item("open_call_for_evidence", schema)
 
-      assert presented.has_single_page_notifications?
+      assert presented.display_single_page_notification_button?
     end
   end
 end

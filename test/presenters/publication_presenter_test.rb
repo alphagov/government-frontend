@@ -76,7 +76,7 @@ class PublicationPresenterTest < PresenterTestCase
 
   test "presents the single page notification button" do
     presented = presented_item("statistics_publication")
-    assert presented.has_single_page_notifications?
+    assert presented.display_single_page_notification_button?
   end
 
   test "hide_from_search_engines? returns false" do
