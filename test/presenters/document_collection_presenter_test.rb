@@ -119,6 +119,10 @@ class DocumentCollectionPresenterTest
         assert_nil nil, public_updated_at
       end
     end
+
+    test "renders with the single page notification button" do
+      assert presented_item.display_single_page_notification_button?
+    end
   end
 
   class GroupWithMissingDocument < TestCase
