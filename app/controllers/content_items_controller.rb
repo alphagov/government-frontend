@@ -136,16 +136,41 @@ private
     @content_item.draft_access_token = params[:token]
   end
 
+  class GdsApi::Response
+    def update_response_body
+      updated_response = JSON.parse(@http_response.body).dig("data", "edition").deep_transform_keys(&:underscore)
+      @http_response = RestClient::Response.create(
+        updated_response.to_json,
+        @http_response.net_http_res,
+        @http_response.request,
+      )
+    end
+  end
+
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
 
-    content_item["links"]["ordered_related_items"] = ordered_related_items(content_item["links"]) if content_item["links"]
+    @content_item = if content_item["schema_name"] == "news_article" && (Features.graphql_feature_enabled? || params.include?(:graphql))
+                      graphql_response = Services
+                        .publishing_api
+                        .graphql_query(Graphql::NewsArticleQuery.new(content_item_path).query)
 
-    @content_item = PresenterBuilder.new(
-      content_item,
-      content_item_path,
-      view_context,
-    ).presenter
+                      graphql_response.update_response_body
+
+                      PresenterBuilder.new(
+                        graphql_response,
+                        content_item_path,
+                        view_context,
+                      ).presenter
+                    else
+                      content_item["links"]["ordered_related_items"] = ordered_related_items(content_item["links"]) if content_item["links"]
+
+                      PresenterBuilder.new(
+                        content_item,
+                        content_item_path,
+                        view_context,
+                      ).presenter
+                    end
   end
 
   def ordered_related_items(links)

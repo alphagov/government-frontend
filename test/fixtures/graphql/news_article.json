@@ -1,0 +1,72 @@
+{
+  "data": {
+    "edition": {
+      "basePath": "/government/news/announcement",
+      "description": "Summary of the news",
+      "details": {
+        "body": "Some text",
+        "political": "true"
+      },
+      "documentType": "news_story",
+      "firstPublishedAt": "2016-12-25T01:02:03+00:00",
+      "links": {
+        "availableTranslations": [
+          {
+            "basePath": "/government/news/announcement",
+            "locale": "en"
+          }
+        ],
+        "government": [
+          {
+            "details": {
+              "current": false
+            },
+            "title": "A government"
+          }
+        ],
+        "organisations": [
+          {
+            "basePath": "/organisation-1",
+            "title": "An organisation"
+          }
+        ],
+        "people": [
+          {
+            "basePath": "/person-1",
+            "title": "A person"
+          }
+        ],
+        "taxons": [
+          {
+            "basePath": "/taxon-1",
+            "contentId": "8fa1fa2f-bcce-4cde-98fb-308514c35c63",
+            "title": "Taxon 1",
+            "links": {
+              "parentTaxons": [
+                {
+                  "basePath": "/taxon-2",
+                  "contentId": "9de167ce-6c4f-40b1-a45e-e3160d75556e",
+                  "title": "Taxon 2"
+                }
+              ]
+            }
+          }
+        ],
+        "topicalEvents": [
+          {
+            "basePath": "/topical-event-1",
+            "title": "A topical event"
+          }
+        ],
+        "worldLocations": [
+          {
+            "basePath": "/world-location-1",
+            "title": "A world location"
+          }
+        ]
+      },
+      "schemaName": "news_article",
+      "title": "Generic news article"
+    }
+  }
+}
