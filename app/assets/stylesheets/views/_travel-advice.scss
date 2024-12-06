@@ -18,6 +18,15 @@
       max-width: 100%;
     }
   }
+
+  .map__link {
+    margin: govuk-spacing(3) 0; 
+    @include govuk-font-size(19, $line-height: false, $important: false);
+
+    @include govuk-media-query($from: tablet) {
+      margin: govuk-spacing(6) 0 govuk-spacing(3);
+    }
+  }
 }
 
 .metadata__update {
