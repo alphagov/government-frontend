@@ -99,7 +99,6 @@ class DocumentCollectionPresenterTest
       disallowed_document_types = %w[answer
                                      completed_transaction
                                      guide
-                                     help_page
                                      local_transaction
                                      place
                                      simple_smart_answer
