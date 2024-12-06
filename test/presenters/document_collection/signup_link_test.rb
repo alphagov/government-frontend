@@ -22,12 +22,14 @@ class DocumentCollectionSignupLinkTest < ActiveSupport::TestCase
   end
 
   test "show_email_signup_link? returns true if there is a linked taxonomy_topic_email_override" do
-    item = DummyContentItem.new
-    item.content_item["links"]["taxonomy_topic_email_override"] = [
-      {
-        "base_path" => "/a-taxonomy-topic",
-      },
-    ]
-    assert item.show_email_signup_link?
+    I18n.with_locale("en") do
+      item = DummyContentItem.new
+      item.content_item["links"]["taxonomy_topic_email_override"] = [
+        {
+          "base_path" => "/a-taxonomy-topic",
+        },
+      ]
+      assert item.show_email_signup_link?
+    end
   end
 end
