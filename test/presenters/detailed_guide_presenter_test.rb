@@ -84,8 +84,10 @@ class DetailedGuidePresenterTest < PresenterTestCase
     assert_equal presented.logo, expected
   end
 
-  test "presents the single page notification button" do
-    presented = presented_item("national_applicability_detailed_guide")
-    assert presented.has_single_page_notifications?
+  test "displays the single page notification button on English pages" do
+    I18n.with_locale("en") do
+      presented = presented_item("national_applicability_detailed_guide")
+      assert presented.display_single_page_notification_button?
+    end
   end
 end

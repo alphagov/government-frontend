@@ -10,7 +10,7 @@
 
 <div class="published-dates-button-group">
   <h2 class="govuk-visually-hidden">
-    <% if @content_item.has_single_page_notifications? %>
+    <% if @content_item.display_single_page_notification_button? %>
       <%= I18n.t("common.email_and_print_link") %>
     <% else %>
       <%= I18n.t("common.print_link") %>
@@ -33,7 +33,7 @@
         section: "Footer"
       }
     }
-  } if @content_item.has_single_page_notifications? %>
+  } if @content_item.display_single_page_notification_button? %>
   <%= render "govuk_publishing_components/components/print_link", {
     margin_top: 0,
     margin_bottom: 8,
