@@ -171,11 +171,12 @@ class ConsultationPresenterTest
       assert_equal "https://twitter.com/share?url=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fconsultations%2Fpostgraduate-doctoral-loans&text=Postgraduate%20doctoral%20loans", presented_item("open_consultation").share_links[1][:href]
     end
 
-    test "presents the single page notification button" do
-      schema = schema_item("open_consultation")
-      presented = presented_item("open_consultation", schema)
-
-      assert presented.display_single_page_notification_button?
+    test "displays the single page notification button on English pages" do
+      I18n.with_locale("en") do
+        schema = schema_item("open_consultation")
+        presented = presented_item("open_consultation", schema)
+        assert presented.display_single_page_notification_button?
+      end
     end
   end
 end
