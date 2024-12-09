@@ -5,6 +5,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
   include ContentItem::TitleAndContext
   include ContentItem::ContentsList
   include ContentItem::SinglePageNotificationButton
+  include DocumentCollection::SignupLink
 
   def contents_items
     groups.map do |group|
@@ -52,10 +53,6 @@ class DocumentCollectionPresenter < ContentItemPresenter
       class: "govuk-heading-m govuk-!-font-size-27",
       id: group_title_id(title),
     )
-  end
-
-  def taxonomy_topic_email_override_base_path
-    content_item.dig("links", "taxonomy_topic_email_override", 0, "base_path")
   end
 
 private

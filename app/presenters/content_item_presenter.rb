@@ -47,7 +47,7 @@ class ContentItemPresenter
     false
   end
 
-  def has_single_page_notifications?
+  def display_single_page_notification_button?
     false
   end
 

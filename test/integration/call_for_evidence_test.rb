@@ -371,9 +371,14 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
     assert page.has_css?("a", text: "Twitter")
   end
 
-  test "renders with the single page notification button" do
+  test "renders with the single page notification button on English language pages" do
     setup_and_visit_content_item("open_call_for_evidence")
     assert page.has_css?(".gem-c-single-page-notification-button")
+  end
+
+  test "does not render the single page notification button on foreign language pages" do
+    setup_and_visit_content_item("open_call_for_evidence", "locale" => "cy")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 
   test "does not render the single page notification button on exempt pages" do

@@ -1,4 +1,4 @@
-<% if @content_item.taxonomy_topic_email_override_base_path.present? %>
+<% if @content_item.show_email_signup_link? %>
   <div
     data-module="ga4-link-tracker"
     data-ga4-link='{ "event_name": "navigation", "type": "subscribe", "index_link": 1, "index_total": 1, "section": "Top" }'
@@ -10,7 +10,7 @@
       margin_bottom: 6
     } %>
   </div>
-<% else %>
+<% elsif @content_item.display_single_page_notification_button? %>
   <%= render 'shared/single_page_notification_button', {
     content_item: @content_item,
     skip_account: @has_govuk_account ? "false" : "true"
