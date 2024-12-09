@@ -1,24 +1,26 @@
-<%
-  default_ga4_data_attributes = {
-    module: "ga4-link-tracker",
-    ga4_link: {
-      event_name: "navigation",
-      type: "subscribe",
-      index_link: 1,
-      index_total: 2,
-      section: "Top"
+<% if @content_item.display_single_page_notification_button? %>
+  <%
+    default_ga4_data_attributes = {
+      module: "ga4-link-tracker",
+      ga4_link: {
+        event_name: "navigation",
+        type: "subscribe",
+        index_link: 1,
+        index_total: 2,
+        section: "Top"
+      }
     }
-  }
-%>
+  %>
 
-<% ga4_data_attributes = ga4_data_attributes || default_ga4_data_attributes %>
-<% skip_account = skip_account || "false" %>
+  <% ga4_data_attributes = ga4_data_attributes || default_ga4_data_attributes %>
+  <% skip_account = skip_account || "false" %>
 
-<%= render 'govuk_publishing_components/components/single_page_notification_button', {
-  base_path: @content_item.base_path,
-  js_enhancement: @has_govuk_account,
-  ga4_data_attributes: ga4_data_attributes,
-  margin_bottom: 6,
-  button_location: "top",
-  skip_account: skip_account,
-} if @content_item.display_single_page_notification_button? %>
+  <%= render 'govuk_publishing_components/components/single_page_notification_button', {
+    base_path: @content_item.base_path,
+    js_enhancement: @has_govuk_account,
+    ga4_data_attributes: ga4_data_attributes,
+    margin_bottom: 6,
+    button_location: "top",
+    skip_account: skip_account,
+  } %>
+<% end %>
