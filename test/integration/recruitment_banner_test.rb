@@ -24,8 +24,8 @@ class RecruitmentBannerTest < ActionDispatch::IntegrationTest
       stub_content_store_has_item(content_item["base_path"], content_item.to_json)
       visit content_item["base_path"]
 
-      assert page.has_css?(".gem-c-intervention")
-      assert page.has_link?("Sign up to take part in user research (opens in a new tab)", href: "https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_2bggmg6xlelrO0S")
+      assert_not page.has_css?(".gem-c-intervention")
+      assert_not page.has_link?("Sign up to take part in user research (opens in a new tab)", href: "https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_2bggmg6xlelrO0S")
     end
   end
 
@@ -47,8 +47,8 @@ class RecruitmentBannerTest < ActionDispatch::IntegrationTest
       stub_content_store_has_item(content_item["base_path"], content_item.to_json)
       visit content_item["base_path"]
 
-      assert page.has_css?(".gem-c-intervention")
-      assert page.has_link?("Sign up to take part in user research (opens in a new tab)", href: "https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_2bggmg6xlelrO0S")
+      assert_not page.has_css?(".gem-c-intervention")
+      assert_not page.has_link?("Sign up to take part in user research (opens in a new tab)", href: "https://survey.take-part-in-research.service.gov.uk/jfe/form/SV_2bggmg6xlelrO0S")
     end
   end
 
