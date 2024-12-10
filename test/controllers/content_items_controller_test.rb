@@ -1,7 +1,9 @@
 require "test_helper"
+require "gds_api/test_helpers/publishing_api"
 
 class ContentItemsControllerTest < ActionController::TestCase
   include GdsApi::TestHelpers::ContentStore
+  include GdsApi::TestHelpers::PublishingApi
   include GovukAbTesting::MinitestHelpers
 
   test "routing handles paths with no format or locale" do
@@ -122,6 +124,42 @@ class ContentItemsControllerTest < ActionController::TestCase
         }
 
     assert_response :not_acceptable
+  end
+
+  test "with the GraphQL feature flag enabled gets item from GraphQL if it is a news article" do
+    Features.stubs(:graphql_feature_enabled?).returns(true)
+
+    content_item = content_store_has_schema_example("news_article", "news_article")
+    base_path = content_item["base_path"]
+
+    graphql_fixture = fetch_graphql_fixture("news_article")
+    stub_publishing_api_graphql_query(Graphql::NewsArticleQuery.new(base_path).query, graphql_fixture)
+
+    get :show,
+        params: {
+          path: path_for(content_item),
+        }
+
+    assert_requested :post, "#{PUBLISHING_API_ENDPOINT}/graphql",
+                     body: { query: Graphql::NewsArticleQuery.new(base_path).query },
+                     times: 1
+
+    assert_response :success
+  end
+
+  test "with the GraphQL feature flag enabled does not get item from GraphQL if it is not a news article" do
+    Features.stubs(:graphql_feature_enabled?).returns(true)
+
+    content_item = content_store_has_schema_example("case_study", "case_study")
+
+    get :show,
+        params: {
+          path: path_for(content_item),
+        }
+
+    assert_not_requested :post, "#{PUBLISHING_API_ENDPOINT}/graphql"
+
+    assert_response :success
   end
 
   test "gets item from content store" do
