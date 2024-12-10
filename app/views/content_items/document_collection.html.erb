@@ -6,7 +6,6 @@
 
 <%= render 'shared/email_subscribe_unsubscribe_flash', { title: @content_item.title_and_context[:title] } %>
 
-<%= render 'shared/intervention_banner' %>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/title',
@@ -32,7 +31,7 @@
     <% if @content_item.important_metadata.any? %>
       <%= content_tag :div, class: "important-metadata inverse-background responsive-bottom-margin" do %>
         <%= render "govuk_publishing_components/components/metadata", {
-          inverse: true, 
+          inverse: true,
           other: @content_item.important_metadata,
           margin_bottom: 0,
         } %>
