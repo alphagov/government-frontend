@@ -22,7 +22,6 @@ class DevelopmentController < ApplicationController
                        speech
                        statistical_data_set
                        statistics_announcement
-                       take_part
                        topical_event_about_page
                        travel_advice
                        working_group]
