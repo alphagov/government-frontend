@@ -8,8 +8,12 @@ module ContentItem
       5f9c6c15-7631-11e4-a3cb-005056011aef
     ].freeze
 
-    def has_single_page_notifications?
-      !EXEMPTION_LIST.include? content_item["content_id"]
+    def page_is_on_exemption_list?
+      EXEMPTION_LIST.include? content_item["content_id"]
+    end
+
+    def display_single_page_notification_button?
+      !page_is_on_exemption_list? && I18n.locale == :en
     end
   end
 end

@@ -372,7 +372,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     assert page.has_css?("a", text: "Twitter")
   end
 
-  test "renders with the single page notification button" do
+  test "renders with the single page notification button on English language pages" do
     setup_and_visit_content_item("open_consultation")
     assert page.has_css?(".gem-c-single-page-notification-button")
 
@@ -389,6 +389,11 @@ class ConsultationTest < ActionDispatch::IntegrationTest
 
   test "does not render the single page notification button on exempt pages" do
     setup_and_visit_notification_exempt_page("open_consultation")
+    assert_not page.has_css?(".gem-c-single-page-notification-button")
+  end
+
+  test "does not render the single page notification button on foreign language pages" do
+    setup_and_visit_notification_exempt_page("open_consultation", "locale" => "cy")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
 end

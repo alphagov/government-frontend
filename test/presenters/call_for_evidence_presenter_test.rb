@@ -152,11 +152,22 @@ class CallForEvidencePresenterTest
       assert_equal "https://twitter.com/share?url=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fcall_for_evidence%2Fyouth-vaping-call-for-evidence&text=Youth%20Vaping", presented_item("open_call_for_evidence").share_links[1][:href]
     end
 
-    test "presents the single page notification button" do
-      schema = schema_item("open_call_for_evidence")
-      presented = presented_item("open_call_for_evidence", schema)
+    test "displays the single page notification button on English pages" do
+      I18n.with_locale("en") do
+        schema = schema_item("open_call_for_evidence")
+        presented = presented_item("open_call_for_evidence", schema)
 
-      assert presented.has_single_page_notifications?
+        assert presented.display_single_page_notification_button?
+      end
+    end
+
+    test "does not display the single page notification button on foreign language pages" do
+      I18n.with_locale("fr") do
+        schema = schema_item("open_call_for_evidence")
+        presented = presented_item("open_call_for_evidence", schema)
+
+        assert_not presented.display_single_page_notification_button?
+      end
     end
   end
 end
