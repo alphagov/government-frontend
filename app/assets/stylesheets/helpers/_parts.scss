@@ -3,13 +3,12 @@
     margin-top: govuk-spacing(6);
     margin-bottom: govuk-spacing(6);
     padding-bottom: govuk-spacing(3);
+    border-bottom: 1px solid govuk-colour("mid-grey");
 
     @include govuk-media-query($from: tablet) {
       margin-top: 0;
       margin-bottom: 0;
     }
-
-    border-bottom: 1px solid govuk-colour("mid-grey");
   }
 
   .part-navigation {
