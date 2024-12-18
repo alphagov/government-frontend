@@ -11,14 +11,15 @@ class PublishedDatesTest < ComponentTestCase
 
   test "renders published date" do
     render_component(published: "1st November 2000")
-    assert_select ".app-c-published-dates", text: "Published 1st November 2000"
+    assert_select ".app-c-published-dates", text: "Updates to this page
+      Published 1st November 2000"
   end
 
   test "renders published date and last updated date" do
     render_component(published: "1st November 2000", last_updated: "15th July 2015")
-    assert_select ".app-c-published-dates",
-                  text: "Published 1st November 2000
-    Last updated 15th July 2015"
+    assert_select ".app-c-published-dates", text: "Updates to this page
+      Published 1st November 2000
+      Last updated 15th July 2015"
   end
 
   test "links to full page history" do
