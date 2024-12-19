@@ -451,17 +451,6 @@ zh:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国部分地区。  '
-      avoid_all_but_essential_travel_to_whole_country_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。  '
-      avoid_all_travel_to_parts_html: '<abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国家的某些地区。  '
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> 建议除非必要，否则不要前往该国全部地区。
-    context: 国外差旅建议
-    pages:
-    still_current_at: 有效范围
-    summary: 总结
-    updated: 已更新
   working_group:
     contact_details: 联系方式
     policies: 策略

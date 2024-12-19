@@ -25,27 +25,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
-  test "routing handles paths with just format" do
-    assert_routing(
-      "/government/news/statement-the-status-of-eu-nationals-in-the-uk.atom",
-      controller: "content_items",
-      action: "show",
-      path: "government/news/statement-the-status-of-eu-nationals-in-the-uk",
-      format: "atom",
-    )
-  end
-
-  test "routing handles paths with format and locale" do
-    assert_routing(
-      "/government/news/statement-the-status-of-eu-nationals-in-the-uk.es.atom",
-      controller: "content_items",
-      action: "show",
-      path: "government/news/statement-the-status-of-eu-nationals-in-the-uk",
-      format: "atom",
-      locale: "es",
-    )
-  end
-
   test "routing handles paths with print variant" do
     assert_routing(
       "/government/news/statement-the-status-of-eu-nationals-in-the-uk/print",
@@ -57,7 +36,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "redirects route with invalid parts to base path" do
-    content_item = content_store_has_schema_example("travel_advice", "full-country")
+    content_item = content_store_has_schema_example("guide", "guide")
     invalid_part_path = "#{path_for(content_item)}/not-a-valid-part"
 
     # The content store performs a 301 to the base path when requesting a content item
@@ -88,7 +67,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns HTML when an unspecific accepts header is requested (eg by IE8 and below)" do
     request.headers["Accept"] = "*/*"
-    content_item = content_store_has_schema_example("travel_advice", "full-country")
+    content_item = content_store_has_schema_example("guide", "guide")
 
     get :show,
         params: {
@@ -172,14 +151,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "max-age=20, public", @response.headers["Cache-Control"]
   end
 
-  test "sets a longer cache-control header for travel advice atom feeds" do
-    content_item = content_store_has_schema_example("travel_advice", "full-country")
-    get :show, params: { path: path_for(content_item), format: "atom" }
-
-    assert_response :success
-    assert_equal "max-age=300, public", @response.headers["Cache-Control"]
-  end
-
   test "honours cache-control private items" do
     content_item = content_store_has_schema_example("case_study", "case_study")
     stub_content_store_has_item(content_item["base_path"], content_item, private: true)
@@ -200,21 +171,13 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_select "title", %r{#{translated_schema_name}}
   end
 
-  test "renders atom feeds" do
-    content_item = content_store_has_schema_example("travel_advice", "full-country")
-    get :show, params: { path: path_for(content_item), format: "atom" }
-
-    assert_response :success
-    assert_select "feed title", "Travel Advice Summary"
-  end
-
   test "renders print variants" do
-    content_item = content_store_has_schema_example("travel_advice", "full-country")
+    content_item = content_store_has_schema_example("guide", "guide")
     get :show, params: { path: path_for(content_item), variant: "print" }
 
     assert_response :success
     assert_equal request.variant, [:print]
-    assert_select "#travel-advice-print"
+    assert_select "#guide-print"
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do
@@ -229,7 +192,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "returns 404 for invalid url" do
-    path = "foreign-travel-advice/egypt]"
+    path = "government/case-studies/electric-cars]"
 
     stub_content_store_does_not_have_item("/#{path}")
 
@@ -267,13 +230,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "returns 406 for schema types which don't support provided format" do
-    content_item_without_atom = content_store_has_schema_example("case_study", "case_study")
-    get :show, params: { path: path_for(content_item_without_atom), format: "atom" }
-
-    assert_response :not_acceptable
-  end
-
   test "returns 410 for content items that are gone" do
     stub_content_store_has_gone_item("/gone-item")
     get :show, params: { path: "gone-item" }
@@ -294,13 +250,6 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     get :show, params: { path: "406beacon/prefix/to-preserve" }
     assert_redirected_to "https://www.test.gov.uk/new-406-beacons-destination/to-preserve"
-  end
-
-  test "sets the Access-Control-Allow-Origin header for atom pages" do
-    content_store_has_schema_example("travel_advice", "full-country")
-    get :show, params: { path: "foreign-travel-advice/albania", format: "atom" }
-
-    assert_equal response.headers["Access-Control-Allow-Origin"], "*"
   end
 
   test "sets GOVUK-Account-Session-Flash in the Vary header" do

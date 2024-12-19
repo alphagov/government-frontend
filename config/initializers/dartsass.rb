@@ -3,7 +3,6 @@ APP_STYLESHEETS = {
   "components/_back-to-top.scss" => "components/_back-to-top.css",
   "components/_banner.scss" => "components/_banner.css",
   "components/_contents-list-with-body.scss" => "components/_contents-list-with-body.css",
-  "components/_download-link.scss" => "components/_download-link.css",
   "components/_figure.scss" => "components/_figure.css",
   "components/_published-dates.scss" => "components/_published-dates.css",
   "views/_guide.scss" => "views/_guide.css",
@@ -12,7 +11,6 @@ APP_STYLESHEETS = {
   "views/_published-dates-button-group.scss" => "views/_published-dates-button-group.css",
   "views/_service_manual_guide.scss" => "views/_service_manual_guide.css",
   "views/_specialist-document.scss" => "views/_specialist-document.css",
-  "views/_travel-advice.scss" => "views/_travel-advice.css",
 }.freeze
 
 all_stylesheets = APP_STYLESHEETS.merge(GovukPublishingComponents::Config.all_stylesheets)

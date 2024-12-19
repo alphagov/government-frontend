@@ -529,17 +529,6 @@ si:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.
-      avoid_all_but_essential_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙන නමුත් අත්‍යවශ්‍ය සංවාරයක යෙදිය හැකිය.
-      avoid_all_travel_to_parts_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> රටේ කොටස් වලට සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
-      avoid_all_travel_to_whole_country_html: <abbr title="Foreign and Commonwealth Office">FCO</abbr> සමස්ථ රටටම සියලු සංචාරවලට එරෙහිව උපදෙස් ලබා දෙයි.
-    context: විදේශ ගමන් උපදෙස්
-    pages:
-    still_current_at: තවමත් වත්මන්
-    summary: සාරාංශය
-    updated: යාවත්කාලීන කෙරිණි
   working_group:
     contact_details: විමසීම් විස්තර
     policies: ප්රතිපත්ති

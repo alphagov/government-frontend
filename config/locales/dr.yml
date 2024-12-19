@@ -532,17 +532,6 @@ dr:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr> در مورد هر گونه سفر ضروری به تمام نقاط کشور توصیه مینماید.
-      avoid_all_but_essential_travel_to_whole_country_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr> در مورد هرگونه سفر ضروری به تمام کشور توصیه مینماید.
-      avoid_all_travel_to_parts_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr> درمورد سفر به تمام نقاط کشور توصیه مینماید.
-      avoid_all_travel_to_whole_country_html: این<abbr title="Foreign and Commonwealth Office">FCO</abbr>در مورد سفر به تمام کشور توصیه مینماید.
-    context: مشاوره سفر هایی خارجی
-    pages:
-    still_current_at: هنور هم در
-    summary: خلاصه
-    updated: آپدیت شده
   working_group:
     contact_details: جزیٔیات تماس
     policies: سیاست ها

@@ -541,17 +541,6 @@ da:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: Den <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråde alle, men væsentlige rejser til dele af landet.
-      avoid_all_but_essential_travel_to_whole_country_html: Den <abbr title="Foreign and Commonwealth Office">FCO</abbr> fraråde alle, men væsentlige rejser til hele landet.
-      avoid_all_travel_to_parts_html: Den <abbr titel = "Foreign and Commonwealth Office">FCO</abbr> fraråde alle, men væsentlige rejser til dele af landet.
-      avoid_all_travel_to_whole_country_html: Den <abbr titel = "Udenrigs-og Commonwealth Office">FCO</abbr> fraråde alle, men væsentlige rejser til dele af landet.
-    context: Udenlandsk rejserådgivning
-    pages:
-    still_current_at: Stadig aktuel på
-    summary: Resumé
-    updated: Opdateret
   working_group:
     contact_details: Kontaktoplysninger
     policies: Politikker

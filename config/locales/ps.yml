@@ -529,17 +529,6 @@ ps:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-  travel_advice:
-    alert_status:
-      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د لازمي سفر پرته ټولو ته مشوره ورکوي.
-      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ټول هیواد ته د لازمي سفر پرته مشوره ورکوي.
-      avoid_all_travel_to_parts_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> د هیواد برخو ته د ټولو سفرونو پروړاندې مشوره ورکوي.
-      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign and Commonwealth Office">FCO</abbr> ټول هیواد ته د ټولو سفرونو پروړاندې مشوره ورکوي.
-    context: د بهرني سفر مشوره
-    pages:
-    still_current_at: په اوسني وخت کې
-    summary: لنډيز
-    updated: تازه شوی
   working_group:
     contact_details: د اړیکو نیولو معلومات
     policies: پالیسۍ
