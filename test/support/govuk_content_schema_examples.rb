@@ -50,7 +50,6 @@ module GovukContentSchemaExamples
         service_manual_service_standard
         service_manual_topic
         statistics_announcement
-        take_part
         topical_event_about_page
         working_group
       ]
