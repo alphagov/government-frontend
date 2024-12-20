@@ -47,7 +47,10 @@
         attachments_for_components: @content_item.outcome_documents
       %>
 
-      <%= render 'govuk_publishing_components/components/heading', text: t("call_for_evidence.detail_of_outcome"), mobile_top_margin: true %>
+      <%= render 'govuk_publishing_components/components/heading', {
+        text: t("call_for_evidence.detail_of_outcome"),
+        margin_bottom: 4,
+      } %>
       <div class="call-for-evidence-outcome-detail">
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
@@ -61,7 +64,7 @@
         <header>
           <%= render 'govuk_publishing_components/components/heading', {
             heading_level: 2,
-            mobile_top_margin: true,
+            margin_bottom: 4,
             text: t("call_for_evidence.original_call_for_evidence"),
           } %>
         </header>
@@ -108,11 +111,13 @@
 
     <div class="call-for-evidence-description">
       <%= render 'govuk_publishing_components/components/heading', {
-        mobile_top_margin: true,
+        margin_bottom: 4,
         text: t("call_for_evidence.description"),
       } %>
 
-      <%= render 'govuk_publishing_components/components/govspeak', {} do %>
+      <%= render 'govuk_publishing_components/components/govspeak', {
+        margin_bottom: 8,
+      } do %>
         <%= raw(@content_item.govspeak_body[:content]) %>
       <% end %>
 
@@ -124,8 +129,10 @@
 
     <% if @content_item.ways_to_respond? %>
       <div id="ways-to-respond" class="call-for-evidence-ways-to-respond">
-        <%= render 'govuk_publishing_components/components/heading', text: t("call_for_evidence.ways_to_respond"), mobile_top_margin: true %>
-
+        <%= render 'govuk_publishing_components/components/heading', {
+          text: t("call_for_evidence.ways_to_respond"),
+          margin_bottom: 4,
+        } %>
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>
