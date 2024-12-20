@@ -57,7 +57,10 @@
         title: t("consultation.download_outcome"),
         attachments_for_components: @content_item.final_outcome_attachments_for_components
       %>
-      <%= render 'govuk_publishing_components/components/heading', text: t("consultation.detail_of_outcome"), mobile_top_margin: true %>
+      <%= render 'govuk_publishing_components/components/heading', {
+        text: t("consultation.detail_of_outcome"),
+        margin_bottom: 4,
+      } %>
       <div class="consultation-outcome-detail">
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
@@ -73,7 +76,7 @@
     %>
     <% if @content_item.public_feedback_detail %>
       <%= render 'govuk_publishing_components/components/heading', {
-        mobile_top_margin: true,
+        margin_bottom: 4,
         text: t("consultation.detail_of_feedback_received"),
       } %>
       <div class="consultation-feedback">
@@ -92,7 +95,7 @@
           <%= render 'govuk_publishing_components/components/heading', {
             heading_level: 2,
             id: "original-consultation-title",
-            mobile_top_margin: true,
+            margin_bottom: 4,
             text: t("consultation.original_consultation"),
           } %>
         </header>
@@ -136,7 +139,7 @@
 
     <div class="consultation-description">
       <%= render 'govuk_publishing_components/components/heading', {
-        mobile_top_margin: true,
+        margin_bottom: 4,
         text: t("consultation.description"),
       } %>
 
@@ -152,8 +155,10 @@
 
     <% if @content_item.ways_to_respond? %>
       <div id="ways-to-respond" class="consultation-ways-to-respond">
-        <%= render 'govuk_publishing_components/components/heading', text: t("consultation.ways_to_respond"), mobile_top_margin: true %>
-
+        <%= render 'govuk_publishing_components/components/heading', {
+          text: t("consultation.ways_to_respond"),
+          margin_bottom: 4
+        } %>
         <%= render 'govuk_publishing_components/components/govspeak', {
           direction: page_text_direction,
         } do %>

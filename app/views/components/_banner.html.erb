@@ -1,8 +1,19 @@
-<% add_app_component_stylesheet("banner") %>
 <%
+  add_app_component_stylesheet("banner")
+
   title ||= false
   aside ||= false
   large_text = !title && !aside
+  local_assigns[:margin_bottom] ||= 7
+
+  component_helper = GovukPublishingComponents::Presenters::ComponentWrapperHelper.new(local_assigns)
+  component_helper.add_class("app-c-banner")
+  component_helper.add_class("app-c-banner--aside") if aside
+  component_helper.add_aria_attribute({ label: "Notice" })
+  component_helper.set_lang("en")
+  component_helper.add_data_attribute({ module: "ga4-link-tracker" })
+  component_helper.add_data_attribute({ ga4_track_links_only: "" })
+  component_helper.add_data_attribute({ ga4_link: { event_name: "navigation", type: "callout" } })
 %>
 <% content_block = capture do %>
   <% if title %>
@@ -12,15 +23,9 @@
     <%= text %>
   </p>
 <% end %>
-<section
-  class="app-c-banner<% if aside %> app-c-banner--aside<% end %>" 
-  aria-label="Notice"
-  lang="en"
-  data-module="ga4-link-tracker"
-  data-ga4-track-links-only
-  data-ga4-link="<%= { event_name: "navigation", type: "callout" }.to_json %>">
+<%= tag.section(**component_helper.all_attributes) do %>
   <%= content_block %>
   <% if aside %>
     <p class="app-c-banner__desc"><%= aside %></p>
   <% end %>
-</section>
+<% end %>
