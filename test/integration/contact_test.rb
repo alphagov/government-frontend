@@ -2,7 +2,7 @@ require "test_helper"
 
 class ContactTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
-    setup_and_visit_random_content_item
+    assert_nothing_raised { setup_and_visit_random_content_item }
   end
 
   test "online forms are rendered" do
@@ -83,14 +83,32 @@ class ContactTest < ActionDispatch::IntegrationTest
   end
 
   test "has GA4 tracking on the webchat available link" do
-    setup_and_visit_content_item("contact", { base_path: "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", details: { "more_info_webchat": "<p>Some HTML</p>\n" } })
+    assert_nothing_raised do
+      setup_and_visit_content_item(
+        "contact",
+        {
+          base_path: "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat",
+          details: { "more_info_webchat": "<p>Some HTML</p>\n" },
+        },
+      )
+    end
 
     assert_selector ".js-webchat-advisers-available a[data-module=ga4-link-tracker]"
     assert_selector ".js-webchat-advisers-available a[data-ga4-link='{\"event_name\":\"navigation\",\"type\":\"webchat\",\"text\":\"Speak to an adviser now\"}']"
   end
 
   test "has English text for GA4 on the webchat available link, even if the link is in another language" do
-    setup_and_visit_content_item("contact", { locale: "cy", base_path: "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", details: { "more_info_webchat": "<p>Some HTML</p>\n" } })
+    assert_nothing_raised do
+      setup_and_visit_content_item(
+        "contact",
+        {
+          locale: "cy",
+          base_path: "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat",
+          details: { "more_info_webchat": "<p>Some HTML</p>\n" },
+        },
+      )
+    end
+
     assert_selector ".js-webchat-advisers-available a[data-module=ga4-link-tracker]"
     assert_selector ".js-webchat-advisers-available a[data-ga4-link='{\"event_name\":\"navigation\",\"type\":\"webchat\",\"text\":\"Speak to an adviser now\"}']"
     assert_selector ".js-webchat-advisers-available a", text: "Siaradwch â chynghorydd nawr"

@@ -39,7 +39,7 @@ class ServiceManualServiceStandardTest < ActionDispatch::IntegrationTest
   end
 
   test "each point has an anchor tag so that they can be linked to externally" do
-    setup_and_visit_content_item("service_manual_service_standard")
+    assert_nothing_raised { setup_and_visit_content_item("service_manual_service_standard") }
 
     within("#criterion-1") do
       assert_text("1.\nUnderstand user needs")
