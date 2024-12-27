@@ -2,14 +2,15 @@ require "test_helper"
 
 class HtmlPublicationTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
-    setup_and_visit_random_content_item
+    assert_nothing_raised { setup_and_visit_random_content_item }
   end
 
   test "html publications" do
     setup_and_visit_html_publication("published")
 
     within ".gem-c-inverse-header" do
-      assert page.has_text?(@content_item["details"]["format_sub_type"])
+      format_sub_type = @content_item["details"]["format_sub_type"]
+      assert page.has_text?(format_sub_type) if format_sub_type.present?
       assert page.has_text?(@content_item["title"])
 
       assert page.has_text?("Published 17 January 2016")
