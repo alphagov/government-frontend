@@ -137,7 +137,7 @@ GEM
       rake (>= 13)
     googleapis-common-protos-types (1.16.0)
       google-protobuf (>= 3.18, < 5.a)
-    govspeak (8.8.0)
+    govspeak (8.8.2)
       actionview (>= 6, < 7.2.3)
       addressable (>= 2.3.8, < 2.8.8)
       govuk_publishing_components (>= 35.1)
@@ -247,7 +247,7 @@ GEM
     mocha (2.7.1)
       ruby2_keywords (>= 0.0.5)
     msgpack (1.7.2)
-    net-imap (0.5.2)
+    net-imap (0.5.4)
       date
       net-protocol
     net-pop (0.1.2)
