@@ -2,7 +2,7 @@
   <section id="<%= title.parameterize %>">
     <%= render 'govuk_publishing_components/components/heading',
       text: title,
-      mobile_top_margin: true
+      margin_bottom: 4
     %>
     <% add_gem_component_stylesheet("details") %>
     <% attachments_for_components.each do |details| %>
