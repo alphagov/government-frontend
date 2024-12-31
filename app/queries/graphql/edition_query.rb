@@ -1,4 +1,4 @@
-class Graphql::NewsArticleQuery
+class Graphql::EditionQuery
   def initialize(base_path)
     @base_path = base_path
   end
@@ -10,10 +10,25 @@ class Graphql::NewsArticleQuery
             base_path: "#{@base_path}",
             content_store: "live",
           ) {
-            ... on NewsArticle {
+            ... on Edition {
               base_path
               description
-              details
+              details {
+              body
+                change_history
+                default_news_image {
+                  alt_text
+                  url
+                }
+                display_date
+                emphasised_organisations
+                first_public_at
+                image {
+                  alt_text
+                  url
+                }
+                political
+              }
               document_type
               first_published_at
               links {

@@ -110,7 +110,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     base_path = "content-item"
 
     graphql_fixture = fetch_graphql_fixture("news_article")
-    stub_publishing_api_graphql_content_item(Graphql::NewsArticleQuery.new("/#{base_path}").query, graphql_fixture)
+    stub_publishing_api_graphql_content_item(Graphql::EditionQuery.new("/#{base_path}").query, graphql_fixture)
 
     get :show,
         params: {
@@ -118,7 +118,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         }
 
     assert_requested :post, "#{PUBLISHING_API_ENDPOINT}/graphql",
-                     body: { query: Graphql::NewsArticleQuery.new("/#{base_path}").query },
+                     body: { query: Graphql::EditionQuery.new("/#{base_path}").query },
                      times: 1
 
     assert_not_requested :get, "#{content_store_endpoint}/content/#{base_path}"
@@ -134,7 +134,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     graphql_fixture = fetch_graphql_fixture("news_article")
     graphql_fixture["data"]["edition"]["schema_name"] = "case_study"
-    stub_publishing_api_graphql_content_item(Graphql::NewsArticleQuery.new("/#{base_path}").query, graphql_fixture)
+    stub_publishing_api_graphql_content_item(Graphql::EditionQuery.new("/#{base_path}").query, graphql_fixture)
 
     get :show,
         params: {
@@ -142,7 +142,7 @@ class ContentItemsControllerTest < ActionController::TestCase
         }
 
     assert_requested :post, "#{PUBLISHING_API_ENDPOINT}/graphql",
-                     body: { query: Graphql::NewsArticleQuery.new("/#{base_path}").query }
+                     body: { query: Graphql::EditionQuery.new("/#{base_path}").query }
 
     assert_requested :get, "#{content_store_endpoint}/content/#{base_path}",
                      times: 1
