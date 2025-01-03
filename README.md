@@ -7,6 +7,7 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Schema | Live example |
 |---|---|
 | Answer | [View on GOV.UK](https://www.gov.uk/national-minimum-wage-rates) |
+| Call for evidence | [View on GOV.UK](https://www.gov.uk/government/calls-for-evidence/local-air-quality-management-public-authorities-call-for-evidence) |
 | Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) |
 | Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) |
 | Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) |
@@ -16,7 +17,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) |
 | Fields of operation | [View on Gov.UK](https://www.gov.uk/government/fields-of-operation) |
 | Field of operation | [View on GOV.UK](https://www.gov.uk/government/fields-of-operation/iraq) |
-| Help page | [View on GOV.UK](https://www.gov.uk/help/about-govuk) |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
 | Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)|
 | News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) |
@@ -25,7 +25,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) |
 | Statistical data set | [View on GOV.UK](https://www.gov.uk/government/statistical-data-sets/unclaimed-estates-list) |
 | Speech | [View on GOV.UK](https://www.gov.uk/government/speeches/government-at-your-service-ben-gummer-speech) |
-| Take part | [View on GOV.UK](https://www.gov.uk/government/get-involved/take-part/become-a-councillor) |
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) |
 | Worldwide corporate information page | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-madrid/about/complaints-procedure) |
