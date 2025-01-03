@@ -12,7 +12,6 @@ class DevelopmentController < ApplicationController
                        document_collection
                        fatality_notice
                        guide
-                       help_page
                        html_publication
                        news_article
                        placeholder_corporate_information_page
