@@ -1,9 +1,5 @@
 <% content_item = @content_item.content_item.parsed_content %>
 
 <div class="govuk-grid-column-one-third">
-  <% if show_govuk_chat_promo?(@content_item.requested_path) %>
-    <%= render "govuk_publishing_components/components/chat_entry", { margin_top_until_tablet: true } %>
-  <% end %>
-
   <%= render 'govuk_publishing_components/components/contextual_sidebar', content_item: content_item %>
 </div>
