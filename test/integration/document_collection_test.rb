@@ -50,7 +50,33 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
     assert page.has_css?(".gem-c-contents-list", text: "Contents")
   end
 
-  test "renders no contents list if body has multiple h2s and is long, but collection groups are empty" do
+  test "renders no contents list if body has no h2s and is long and collection groups are empty" do
+    content_item = get_content_example("document_collection")
+
+    content_item["details"]["body"] = <<~HTML
+      <div class="empty group">
+        <p>#{Faker::Lorem.characters(number: 200)}</p>
+        <p>#{Faker::Lorem.characters(number: 200)}</p>
+        <p>#{Faker::Lorem.characters(number: 200)}</p>
+      </div>
+    HTML
+
+    content_item["details"]["collection_groups"] = [
+      {
+        "body" => "<div class=\"empty group\">\n</div>",
+        "documents" => [],
+        "title" => "Empty Group",
+      },
+    ]
+
+    content_item["base_path"] += "-no-h2s"
+
+    stub_content_store_has_item(content_item["base_path"], content_item.to_json)
+    visit(content_item["base_path"])
+    assert_not page.has_css?(".gem-c-contents-list")
+  end
+
+  test "renders contents list if body has h2s and collection groups are empty" do
     content_item = get_content_example("document_collection")
 
     content_item["details"]["body"] = <<~HTML
@@ -72,9 +98,11 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       },
     ]
 
+    content_item["base_path"] += "-h2s"
+
     stub_content_store_has_item(content_item["base_path"], content_item.to_json)
     visit(content_item["base_path"])
-    assert_not page.has_css?(".gem-c-contents-list")
+    assert page.has_css?(".gem-c-contents-list")
   end
 
   test "renders each collection group" do

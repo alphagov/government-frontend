@@ -41,6 +41,15 @@ class DocumentCollectionPresenterTest
       assert_equal contents, presented_item.contents
     end
 
+    test "presents a contents list based on body h2 headers and collection groups" do
+      contents = [
+        { text: "Consolidated list", id: "consolidated-list", href: "#consolidated-list" },
+        { text: "Documents", id: "documents", href: "#documents" },
+      ]
+
+      assert_equal contents, presented_item("document_collection_with_body").contents
+    end
+
     test "presents a group heading with generated ID" do
       heading = '<h3 class="govuk-heading-m govuk-!-font-size-27" id="heading-with-spaces">Heading with Spaces</h3>'
 

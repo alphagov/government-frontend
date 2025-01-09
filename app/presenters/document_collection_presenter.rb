@@ -8,7 +8,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
   include DocumentCollection::SignupLink
 
   def contents_items
-    groups.map do |group|
+    super + groups.map do |group|
       title = group["title"]
       { text: title, id: group_title_id(title) }
     end
