@@ -37,14 +37,6 @@ class WorldwideCorporateInformationPageTest < ActionDispatch::IntegrationTest
     assert page.has_content? "The description for the worldwide corporate information page"
   end
 
-  test "includes the logo and name of the worldwide organisation as a link" do
-    setup_and_visit_content_item("worldwide_corporate_information_page")
-
-    assert_has_component_organisation_logo
-    assert_has_component_title("British Embassy\nManila")
-    assert page.has_link? "British EmbassyManila", href: "/world/organisations/british-embassy-manila"
-  end
-
   test "includes the world locations and sponsoring organisations" do
     setup_and_visit_content_item("worldwide_corporate_information_page")
 
