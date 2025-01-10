@@ -139,7 +139,7 @@ private
     @content_item = if use_graphql?
                       graphql_response = Services
                         .publishing_api
-                        .graphql_content_item(Graphql::NewsArticleQuery.new(content_item_path).query)
+                        .graphql_content_item(Graphql::EditionQuery.new(content_item_path).query)
 
                       if graphql_response["schema_name"] == "news_article"
                         PresenterBuilder.new(
