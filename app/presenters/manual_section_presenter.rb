@@ -27,30 +27,32 @@ class ManualSectionPresenter < ContentItemPresenter
   end
 
   def main
-    return nil unless details["body"]
+    @main ||= begin
+      return nil unless details["body"]
 
-    document = Nokogiri::HTML::DocumentFragment.parse(details["body"])
+      document = Nokogiri::HTML::DocumentFragment.parse(details["body"])
 
-    # Identifies all h2's and creates an array of objects from the heading and
-    # its proceeding content up to the next heading. This is so that it can be
-    # consumed by accordion components in the template.
-    document.css("h2").map do |heading|
-      content = []
-      heading.xpath("following-sibling::*").each do |element|
-        if element.name == "h2"
-          break
-        else
-          content << element.to_html
+      # Identifies all h2's and creates an array of objects from the heading and
+      # its proceeding content up to the next heading. This is so that it can be
+      # consumed by accordion components in the template.
+      document.css("h2").map do |heading|
+        content = []
+        heading.xpath("following-sibling::*").each do |element|
+          if element.name == "h2"
+            break
+          else
+            content << element.to_html
+          end
         end
-      end
 
-      {
-        heading: {
-          text: heading.text,
-          id: heading[:id],
-        },
-        content: content.join,
-      }
+        {
+          heading: {
+            text: heading.text,
+            id: heading[:id],
+          },
+          content: content.join,
+        }
+      end
     end
   end
 
