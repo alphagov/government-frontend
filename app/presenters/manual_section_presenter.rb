@@ -11,9 +11,9 @@ class ManualSectionPresenter < ContentItemPresenter
   end
 
   def intro
-    @intro ||= begin
-      return nil unless details["body"]
+    return nil unless details["body"]
 
+    @intro ||= begin
       intro = Nokogiri::HTML::DocumentFragment.parse(details["body"])
 
       # Strip all content following and including h2
@@ -29,9 +29,9 @@ class ManualSectionPresenter < ContentItemPresenter
   end
 
   def main
-    @main ||= begin
-      return nil unless details["body"]
+    return nil unless details["body"]
 
+    @main ||= begin
       document = Nokogiri::HTML::DocumentFragment.parse(details["body"])
 
       # Identifies all h2's and creates an array of objects from the heading and
