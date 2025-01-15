@@ -25,6 +25,7 @@ class ContentItemsController < ApplicationController
     load_content_item
 
     set_expiry
+    set_prometheus_labels
 
     if is_service_manual?
       show_service_manual_page
@@ -231,6 +232,14 @@ private
     expires_in(
       @content_item.cache_control_max_age(request.format),
       public: @content_item.cache_control_public?,
+    )
+  end
+
+  def set_prometheus_labels
+    prometheus_labels = request.env.fetch("govuk.prometheus_labels", {})
+    request.env["govuk.prometheus_labels"] = prometheus_labels.merge(
+      document_type: @content_item.document_type,
+      schema_name: @content_item.schema_name,
     )
   end
 
