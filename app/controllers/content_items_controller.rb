@@ -22,6 +22,7 @@ class ContentItemsController < ApplicationController
   end
 
   def show
+    GC.disable
     load_content_item
 
     set_expiry
@@ -34,6 +35,8 @@ class ContentItemsController < ApplicationController
       set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
       render_template
     end
+  ensure
+    GC.enable
   end
 
   def service_sign_in_options
