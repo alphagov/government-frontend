@@ -1594,7 +1594,7 @@ __metadata:
     jasmine-browser-runner: ^2.5.0
     jasmine-core: ^5.5.0
     standardx: ^7.0.0
-    stylelint: ^16.13.0
+    stylelint: ^16.13.1
     stylelint-config-gds: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -1732,10 +1732,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ignore@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "ignore@npm:7.0.0"
-  checksum: 68dea34f6d5f7eed1b0f5590d4a927bab9782b92a46dfc1cc064a61f0450fb92f4a4df9b84e83657b6c033d6accf76109ba19db2f3289088a57043910041d74a
+"ignore@npm:^7.0.1":
+  version: 7.0.3
+  resolution: "ignore@npm:7.0.3"
+  checksum: a0826b70b217d560e3703e3d64483283dc85f4c4ebca1f5bffeeecec9a7453dd542f33a02daeefa8d6f3c5f7ef387ec014ce2733014333357dd620002fa1fd4a
   languageName: node
   linkType: hard
 
@@ -3524,9 +3524,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.13.0":
-  version: 16.13.0
-  resolution: "stylelint@npm:16.13.0"
+"stylelint@npm:^16.13.1":
+  version: 16.13.1
+  resolution: "stylelint@npm:16.13.1"
   dependencies:
     "@csstools/css-parser-algorithms": ^3.0.4
     "@csstools/css-tokenizer": ^3.0.3
@@ -3546,7 +3546,7 @@ __metadata:
     globby: ^11.1.0
     globjoin: ^0.1.4
     html-tags: ^3.3.1
-    ignore: ^7.0.0
+    ignore: ^7.0.1
     imurmurhash: ^0.1.4
     is-plain-object: ^5.0.0
     known-css-properties: ^0.35.0
@@ -3568,7 +3568,7 @@ __metadata:
     write-file-atomic: ^5.0.1
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: 8a62cc2cb8bb92bd68062835d85932f18f13cda006e35d0db9b29ba6f6a4db3d024939c935d5071e7865074bac0400ac8c749c091cf2757f5afdc0271d8c75ca
+  checksum: 3cb22a5483a1ad9212bce62754c0757c5d3324780d3fd4f668c111c1f9355cce0342855ed2dbf1ea90cba0bd135e88f5836a66387e12bf567daeebeb212d9f52
   languageName: node
   linkType: hard
 
