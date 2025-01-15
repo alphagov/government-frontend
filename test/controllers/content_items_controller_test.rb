@@ -158,6 +158,14 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal content_item["title"], assigns[:content_item].title
   end
 
+  test "sets prometheus labels on the rack env" do
+    content_item = content_store_has_schema_example("case_study", "case_study")
+
+    get :show, params: { path: path_for(content_item) }
+    assert_response :success
+    assert_equal @request.env["govuk.prometheus_labels"], { document_type: "case_study", schema_name: "case_study" }
+  end
+
   test "gets item from content store and keeps existing ordered_related_items when links already exist" do
     content_item = content_store_has_schema_example("guide", "guide")
 
