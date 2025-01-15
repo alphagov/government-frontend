@@ -11,15 +11,17 @@ class ManualSectionPresenter < ContentItemPresenter
   end
 
   def intro
-    return nil unless details["body"]
+    @intro ||= begin
+      return nil unless details["body"]
 
-    intro = Nokogiri::HTML::DocumentFragment.parse(details["body"])
+      intro = Nokogiri::HTML::DocumentFragment.parse(details["body"])
 
-    # Strip all content following and including h2
-    intro.css("h2").xpath("following-sibling::*").remove
-    intro.css("h2").remove
+      # Strip all content following and including h2
+      intro.css("h2").xpath("following-sibling::*").remove
+      intro.css("h2").remove
 
-    intro.text.squeeze == "\n" ? "" : intro
+      intro.text.squeeze == "\n" ? "" : intro
+    end
   end
 
   def visually_expanded?
