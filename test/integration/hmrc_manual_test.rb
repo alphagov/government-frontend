@@ -54,6 +54,12 @@ class HmrcManualTest < ActionDispatch::IntegrationTest
     assert page.has_selector?("h2", text: I18n.t("manuals.contents_title"))
   end
 
+  test "renders sections title heading" do
+    setup_and_visit_content_item("vat-government-public-bodies")
+
+    assert page.has_selector?("h3", text: "Historic updates")
+  end
+
   test "renders section groups" do
     setup_and_visit_content_item("vat-government-public-bodies")
 
