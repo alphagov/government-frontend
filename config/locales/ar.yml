@@ -86,7 +86,7 @@ ar:
   content_item:
     contents: المحتويات
     metadata:
-      published: منشورة
+      published: تاريخ النشر
       updated: تاريخ التحديث
     schema_name:
       aaib_report:
@@ -456,8 +456,8 @@ ar:
       policy_paper:
         few:
         many:
-        one: ورقة السياسة
-        other: أوراق السياسة
+        one: ورقة تتعلق بالسياسات
+        other: أوراق تتعلق بالسياسات
         two:
         zero:
       press_release:
