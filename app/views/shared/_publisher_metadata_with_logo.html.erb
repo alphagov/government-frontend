@@ -3,7 +3,7 @@
   metadata_component_options[:margin_bottom] = 3 if @notification_button_visible
 %>
 <div class="govuk-grid-row">
-  <div class="metadata-logo-wrapper<%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
+  <div class="metadata-logo-wrapper gem-print-columns-none <%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
     <div class="govuk-grid-column-two-thirds metadata-column">
       <%= render 'govuk_publishing_components/components/metadata', metadata_component_options %>
     </div>
