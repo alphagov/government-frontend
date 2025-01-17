@@ -172,4 +172,22 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
 
     assert_equal [], presented.home_page_offices
   end
+
+  test "#display_page_title? returns true if the formatted logo title is different to the page title" do
+    content_item = schema_item
+    content_item["title"] = "Department for Business and Trade Paraguay"
+    content_item["details"]["logo"]["formatted_title"] = "Department for Business and Trade"
+
+    presented = create_presenter(WorldwideOrganisationPresenter, content_item: content_item)
+    assert presented.display_page_title?
+  end
+
+  test "#display_page_title? returns false if the formatted logo has the same text as the page title" do
+    content_item = schema_item
+    content_item["title"] = "Department for Business and Trade Paraguay"
+    content_item["details"]["logo"]["formatted_title"] = "Department for Business and Trade<br/>Paraguay"
+
+    presented = create_presenter(WorldwideOrganisationPresenter, content_item: content_item)
+    assert_not presented.display_page_title?
+  end
 end

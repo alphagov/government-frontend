@@ -46,6 +46,10 @@ class WorldwideCorporateInformationPagePresenterTest < PresenterTestCase
     assert_equal expected, presented.organisation_logo
   end
 
+  test "#display_page_title? returns false" do
+    assert_not presented_item.display_page_title?
+  end
+
 private
 
   def first_sponsoring_organisation(item)

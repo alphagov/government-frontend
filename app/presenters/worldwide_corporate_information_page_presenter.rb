@@ -11,6 +11,10 @@ class WorldwideCorporateInformationPagePresenter < ContentItemPresenter
     false
   end
 
+  def display_page_title?
+    false
+  end
+
   def worldwide_organisation
     return unless content_item.dig("links", "worldwide_organisation")
 

@@ -2,11 +2,21 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
   include ContentItem::Body
   include WorldwideOrganisation::Branding
   include ActionView::Helpers::UrlHelper
+  include ActionView::Helpers::SanitizeHelper
 
   WorldwideOffice = Struct.new(:contact, :has_access_and_opening_times?, :public_url, keyword_init: true)
 
   def formatted_title
     content_item.dig("details", "logo", "formatted_title")
+  end
+
+  def display_page_title?
+    return if sponsoring_organisations.empty?
+    return if formatted_title.nil? || content_item["title"].nil?
+
+    logo_formatted_title = strip_tags(formatted_title).gsub(/\s+/, "")
+    page_title = content_item["title"].gsub(/\s+/, "")
+    logo_formatted_title != page_title
   end
 
   def sponsoring_organisation_links

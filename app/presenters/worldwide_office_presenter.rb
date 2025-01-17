@@ -6,6 +6,10 @@ class WorldwideOfficePresenter < ContentItemPresenter
     worldwide_organisation&.formatted_title
   end
 
+  def display_page_title?
+    false
+  end
+
   def body
     content_item.dig("details", "access_and_opening_times")
   end
