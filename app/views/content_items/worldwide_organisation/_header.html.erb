@@ -1,10 +1,20 @@
 <header class="worldwide-organisation-header govuk-grid-row">
   <div class="govuk-grid-column-two-thirds worldwide-organisation-header__logo">
-    <%= render "govuk_publishing_components/components/organisation_logo", {
-      organisation: @content_item.organisation_logo,
-      heading_level: 1,
-      inline: true,
-    } %>
+    <% locals = { organisation: @content_item.organisation_logo, inline: true, heading_level: 1 } %>
+      <% if show_header_title
+        locals.merge!(margin_bottom: 8)
+        locals.delete(:heading_level) %>
+        <%= render "govuk_publishing_components/components/organisation_logo", locals %>
+        <%= render "govuk_publishing_components/components/heading", {
+          text: @content_item.title,
+          heading_level: 1,
+          inline: true,
+          font_size: "l",
+          margin_bottom: 5,
+        } %>
+      <% else %>
+        <%= render "govuk_publishing_components/components/organisation_logo", locals %>
+      <% end %>
   </div>
 
   <div class="govuk-grid-column-one-third govuk-!-padding-top-2">
