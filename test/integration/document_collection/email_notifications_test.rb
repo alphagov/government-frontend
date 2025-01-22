@@ -34,7 +34,7 @@ module DocumentCollection
     test "renders the single page notification button with a form action of email-alert-frontend's non account signup endpoint" do
       setup_and_visit_content_item("document_collection", "locale" => "en")
 
-      form = page.find("form.gem-c-single-page-notification-button")
+      form = page.find(".gem-c-single-page-notification-button > form")
       assert_match(email_alert_frontend_signup_endpoint_no_account, form["action"])
 
       button = page.find(:button, class: "gem-c-single-page-notification-button__submit")
@@ -58,7 +58,7 @@ module DocumentCollection
       mock_logged_in_session
       setup_and_visit_content_item("document_collection", "locale" => "en")
 
-      form = page.find("form.gem-c-single-page-notification-button")
+      form = page.find(".gem-c-single-page-notification-button > form")
       assert_match(email_alert_frontend_signup_endpoint_enforce_account, form["action"])
 
       button = page.find(:button, class: "gem-c-single-page-notification-button__submit")
