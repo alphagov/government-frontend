@@ -83,7 +83,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns a 406 for XMLHttpRequests without an Accept header set to a supported format" do
     request.headers["X-Requested-With"] = "XMLHttpRequest"
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
 
     get :show,
         params: {
@@ -95,7 +95,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns a 406 for unsupported format requests, eg text/javascript" do
     request.headers["Accept"] = "text/javascript"
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
 
     get :show,
         params: {
@@ -129,11 +129,11 @@ class ContentItemsControllerTest < ActionController::TestCase
   test "with the GraphQL feature flag enabled does not get item from GraphQL if it is not a news article" do
     Features.stubs(:graphql_feature_enabled?).returns(true)
 
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
     base_path = path_for(content_item)
 
     graphql_fixture = fetch_graphql_fixture("news_article")
-    graphql_fixture["data"]["edition"]["schema_name"] = "case_study"
+    graphql_fixture["data"]["edition"]["schema_name"] = "guide"
     stub_publishing_api_graphql_content_item(Graphql::EditionQuery.new("/#{base_path}").query, graphql_fixture)
 
     get :show,
@@ -151,7 +151,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -159,11 +159,11 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets prometheus labels on the rack env" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
-    assert_equal @request.env["govuk.prometheus_labels"], { document_type: "case_study", schema_name: "case_study" }
+    assert_equal @request.env["govuk.prometheus_labels"], { document_type: "guide", schema_name: "guide" }
   end
 
   test "gets item from content store and keeps existing ordered_related_items when links already exist" do
@@ -188,7 +188,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store and replaces ordered_related_items there are no existing links or overrides" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -198,7 +198,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets the expiry as sent by content-store" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
     stub_content_store_has_item(content_item["base_path"], content_item, max_age: 20)
 
     get :show, params: { path: path_for(content_item) }
@@ -207,7 +207,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "honours cache-control private items" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
     stub_content_store_has_item(content_item["base_path"], content_item, private: true)
 
     get :show, params: { path: path_for(content_item) }
@@ -216,9 +216,9 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "renders translated content items in their locale" do
-    content_item = content_store_has_schema_example("case_study", "translated")
+    content_item = content_store_has_schema_example("guide", "translated")
     locale = content_item["locale"]
-    translated_schema_name = I18n.t("content_item.schema_name.case_study", count: 1, locale:)
+    translated_schema_name = I18n.t("content_item.schema_name.guide", count: 1, locale:)
 
     get :show, params: { path: path_for(content_item, locale), locale: }
 
@@ -236,7 +236,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
     utf8_path    = "government/case-studies/caf\u00e9-culture"
     content_item["base_path"] = "/#{utf8_path}"
 
@@ -308,7 +308,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets GOVUK-Account-Session-Flash in the Vary header" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
     get :show, params: { path: path_for(content_item) }
 
     assert response.headers["Vary"].include?("GOVUK-Account-Session-Flash")
