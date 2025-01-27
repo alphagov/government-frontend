@@ -17,20 +17,20 @@ en:
     is_being: is being
     not_open_yet: This call for evidence isn't open yet
     'on': 'on'
-    'or': 'or'
     opens: This call for evidence opens
+    or: or
     original_call_for_evidence: Original call for evidence
     ran_from: This call for evidence ran from
-    response_form: response form
     respond_online: Respond online
+    response_form: response form
     summary: Summary
     was: was
     ways_to_respond: Ways to respond
     write_to: 'Write to:'
   common:
-    visit: 'Visit:'
     email_and_print_link: Sign up for emails or print this page
     print_link: Print this page
+    visit: 'Visit:'
   components:
     figure:
       image_credit: 'Image credit: %{credit}'
@@ -65,8 +65,8 @@ en:
     is_being: is being
     not_open_yet: This consultation isn't open yet
     'on': 'on'
-    'or': 'or'
     opens: This consultation opens
+    or: or
     original_consultation: Original consultation
     ran_from: This consultation ran from
     respond_online: Respond online
@@ -299,9 +299,6 @@ en:
       statutory_guidance:
         one: Statutory guidance
         other: Statutory guidance
-      take_part:
-        one: Take part
-        other: Take part
       tax_tribunal_decision:
         one: Tax and Chancery tribunal decision
         other: Tax and Chancery tribunal decisions
@@ -467,7 +464,6 @@ en:
     zh-hk: Cantonese
     zh-tw: Traditional Chinese
   manuals:
-    summary_title: Summary
     breadcrumb_contents: Back to contents
     contents_list_breadcrumb_contents: Manual homepage
     contents_title: Contents
@@ -478,6 +474,7 @@ en:
     previous_page: Previous page
     search_this_manual: Search this manual
     see_all_updates: See all updates
+    summary_title: Summary
     title: "%{title}Guidance"
     updated: Updated
     updates_amendments: published amendments
@@ -489,8 +486,6 @@ en:
     previous_page: Previous
     print_entire_guide: View a printable version of the whole guide
     printable_version: Printable version
-  national_statistics:
-    logo_alt_text:
   national_statistics:
     logo_alt_text: Accredited official statistics
   publication:
