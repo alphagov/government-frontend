@@ -6,7 +6,6 @@ function set_env() {
   export GOVUK_APP_DOMAIN=www.$1
   export GOVUK_WEBSITE_ROOT=https://www.$1
   export PLEK_SERVICE_CONTENT_STORE_URI=${PLEK_SERVICE_CONTENT_STORE_URI-https://test:bla@www.$1/api}
-  export PLEK_SERVICE_SEARCH_API_URI=${PLEK_SERVICE_SEARCH_API_URI-https://www.$1/api}
 }
 
 if [[ $1 == "--live" ]] ; then
