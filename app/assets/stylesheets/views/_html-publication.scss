@@ -11,11 +11,6 @@
     }
   }
 
-  .publication-header__last-changed {
-    margin-top: govuk-spacing(3);
-    @include govuk-font(19);
-  }
-
   .contents-list-container {
     @include govuk-media-query($from: desktop) {
       position: sticky;
