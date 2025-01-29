@@ -17,13 +17,13 @@
   <% if title %>
     <h2 class="app-c-banner__title"><%= title %></h2>
   <% end %>
-  <p class="app-c-banner__desc">
+  <p class="app-c-banner__text">
     <%= text %>
   </p>
 <% end %>
 <%= tag.section(**component_helper.all_attributes) do %>
   <%= content_block %>
   <% if aside %>
-    <p class="app-c-banner__desc"><%= aside %></p>
+    <p class="app-c-banner__text"><%= aside %></p>
   <% end %>
 <% end %>
