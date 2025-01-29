@@ -13,16 +13,13 @@
   component_helper.add_data_attribute({ ga4_track_links_only: "" })
   component_helper.add_data_attribute({ ga4_link: { event_name: "navigation", type: "callout" } })
 %>
-<% content_block = capture do %>
+<%= tag.section(**component_helper.all_attributes) do %>
   <% if title %>
     <h2 class="app-c-banner__title"><%= title %></h2>
   <% end %>
   <p class="app-c-banner__text">
     <%= text %>
   </p>
-<% end %>
-<%= tag.section(**component_helper.all_attributes) do %>
-  <%= content_block %>
   <% if secondary_text %>
     <p class="app-c-banner__text"><%= secondary_text %></p>
   <% end %>
