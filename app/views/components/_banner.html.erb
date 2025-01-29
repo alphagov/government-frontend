@@ -2,7 +2,7 @@
   add_app_component_stylesheet("banner")
 
   title ||= false
-  aside ||= false
+  secondary_text ||= false
   local_assigns[:margin_bottom] ||= 7
 
   component_helper = GovukPublishingComponents::Presenters::ComponentWrapperHelper.new(local_assigns)
@@ -23,7 +23,7 @@
 <% end %>
 <%= tag.section(**component_helper.all_attributes) do %>
   <%= content_block %>
-  <% if aside %>
-    <p class="app-c-banner__text"><%= aside %></p>
+  <% if secondary_text %>
+    <p class="app-c-banner__text"><%= secondary_text %></p>
   <% end %>
 <% end %>
