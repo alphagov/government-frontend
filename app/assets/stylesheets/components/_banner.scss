@@ -18,13 +18,6 @@
   }
 }
 
-.app-c-banner--aside {
-  @include govuk-media-query($from: tablet) {
-    padding: govuk-spacing(6);
-  }
-}
-
-
 .app-c-banner__title {
   margin-bottom: govuk-spacing(2);
   @include govuk-font(27, $weight: bold);

@@ -7,7 +7,6 @@
 
   component_helper = GovukPublishingComponents::Presenters::ComponentWrapperHelper.new(local_assigns)
   component_helper.add_class("app-c-banner")
-  component_helper.add_class("app-c-banner--aside") if aside
   component_helper.add_aria_attribute({ label: "Notice" })
   component_helper.set_lang("en")
   component_helper.add_data_attribute({ module: "ga4-link-tracker" })
