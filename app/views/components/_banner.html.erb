@@ -3,7 +3,6 @@
 
   title ||= false
   aside ||= false
-  large_text = !title && !aside
   local_assigns[:margin_bottom] ||= 7
 
   component_helper = GovukPublishingComponents::Presenters::ComponentWrapperHelper.new(local_assigns)
@@ -19,7 +18,7 @@
   <% if title %>
     <h2 class="app-c-banner__title"><%= title %></h2>
   <% end %>
-  <p class="app-c-banner__<% if large_text %>text<% else %>desc<% end %>">
+  <p class="app-c-banner__desc">
     <%= text %>
   </p>
 <% end %>
