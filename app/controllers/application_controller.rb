@@ -1,6 +1,12 @@
 class ApplicationController < ActionController::Base
   include Slimmer::Template
+  include ContentsListAbTestable
+
   slimmer_template "gem_layout"
+
+  helper_method :contents_list_variant
+  helper_method :step_by_step_page_under_test?
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery except: :service_sign_in_options

@@ -1,6 +1,7 @@
 require "slimmer/headers"
 
 class ContentItemsController < ApplicationController
+  include ContentsListAbTestable
   include GovukPersonalisation::ControllerConcern
   include Slimmer::Headers
   include Slimmer::Template
@@ -32,6 +33,11 @@ class ContentItemsController < ApplicationController
     elsif is_history_page?
       show_history_page
     else
+      if step_by_step_page_under_test?
+        set_contents_list_response_header
+        set_ab_test_show_contents_list
+      end
+
       set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
       render_template
     end
@@ -290,5 +296,9 @@ private
     return if !@content_item || !@content_item.respond_to?(:csp_connect_src)
 
     @content_item.csp_connect_src
+  end
+
+  def set_ab_test_show_contents_list
+    @content_item.ab_test_show_contents_list = contents_list_variant_b?
   end
 end

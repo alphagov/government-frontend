@@ -56,6 +56,7 @@
   <%= stylesheet_link_tag "application", :media => "all", integrity: false %>
   <%= javascript_include_tag "application", integrity: false, type: "module" %>
   <%= csrf_meta_tags %>
+  <%= contents_list_variant.analytics_meta_tag.html_safe if step_by_step_page_under_test? %>
   <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
 
   <% if @content_item.description.present? %>

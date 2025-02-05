@@ -1,7 +1,7 @@
 class GuidePresenter < ContentItemPresenter
   include ContentItem::Parts
 
-  attr_accessor :draft_access_token
+  attr_accessor :draft_access_token, :ab_test_show_contents_list
 
   def page_title
     if parts.any?
@@ -42,7 +42,7 @@ class GuidePresenter < ContentItemPresenter
   end
 
   def show_guide_navigation?
-    multi_page_guide? && !hide_chapter_navigation?
+    ab_test_show_contents_list || (multi_page_guide? && !hide_chapter_navigation?)
   end
 
   def content_title
