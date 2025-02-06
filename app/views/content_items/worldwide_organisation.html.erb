@@ -115,7 +115,7 @@
       padding: true
     } %>
 
-    <% if @content_item.corporate_information_pages.any? %>
+    <% if @content_item.corporate_information_pages.present? %>
       <%= render "govuk_publishing_components/components/list", {
         visible_counters: true,
         items: @content_item.corporate_information_pages
