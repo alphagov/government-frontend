@@ -19,6 +19,10 @@
   @include responsive-top-margin;
 }
 
+.responsive-top-margin {
+  @include responsive-top-margin;
+}
+
 .responsive-bottom-margin {
   @include responsive-bottom-margin;
 }
