@@ -10,7 +10,14 @@
 <body>
   <div id="wrapper">
     <main class="govspeak" id="content">
-      <%= render 'govuk_publishing_components/components/title', title: 'government-frontend' %>
+      <div class="responsive-top-margin">
+        <%= render 'govuk_publishing_components/components/heading', 
+          text: 'government-frontend',
+          heading_level: 1,
+          font_size: "xl",
+          margin_bottom: 8
+        %>
+      </div>
 
       <% html = capture do %>
         <p>

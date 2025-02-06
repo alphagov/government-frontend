@@ -18,11 +18,21 @@
 <% content_for :simple_header, true %>
 
 <div class="govuk-grid-row gem-print-columns-none">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds responsive-top-margin">
     <% if show_contents_list_ab_test? %>
-      <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
+      <%= render 'govuk_publishing_components/components/heading', { 
+        text: @content_item.content_title,
+        heading_level: 1,
+        font_size: "xl",
+        margin_bottom: 8
+      } %>
     <% else %>
-      <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
+      <%= render 'govuk_publishing_components/components/heading', { 
+        text: @content_item.content_title,
+        heading_level: 1,
+        font_size: "xl",
+        margin_bottom: 8
+      } %>
     <% end %>
     <% if show_contents_list_ab_test? || @content_item.show_guide_navigation? %>
       <%= render "govuk_publishing_components/components/skip_link", {

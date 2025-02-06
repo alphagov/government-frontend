@@ -7,10 +7,12 @@
 <% end %>
 
 <div class="govuk-grid-row gem-print-columns-none" id="guide-print">
-  <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', {
-      margin_bottom: 6,
-      title: @content_item.title,
+  <div class="govuk-grid-column-two-thirds responsive-top-margin">
+    <%= render 'govuk_publishing_components/components/heading', {
+      text: @content_item.title,
+      heading_level: 1,
+      font_size: "xl",
+      margin_bottom: 6
     } %>
 
     <div class="govuk-!-display-none-print">

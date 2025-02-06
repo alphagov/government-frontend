@@ -1,8 +1,11 @@
 <header class="govuk-width-container">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <%= render "govuk_publishing_components/components/title", {
-        title: "History of the UK&nbsp;government".html_safe
+    <div class="govuk-grid-column-full responsive-top-margin">
+      <%= render "govuk_publishing_components/components/heading", {
+        text: "History of the UK&nbsp;government".html_safe,
+        heading_level: 1,
+        font_size: "xl",
+        margin_bottom: 8
       } %>
     </div>
     <div class="govuk-grid-column-two-thirds">
