@@ -3,7 +3,7 @@ require "test_helper"
 class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
   include ContentItem::OrganisationBranding
 
-  def test_organisation
+  def tested_organisation
     {
       "base_path" => "/base-path",
       "details" => {
@@ -17,23 +17,23 @@ class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
   end
 
   test "presents the logo for organisations" do
-    logo = organisation_logo(test_organisation)
+    logo = organisation_logo(tested_organisation)
 
-    assert_equal logo[:organisation][:brand], test_organisation["details"]["brand"]
-    assert_equal logo[:organisation][:url], test_organisation["base_path"]
-    assert_equal logo[:organisation][:crest], test_organisation["details"]["logo"]["crest"]
-    assert_equal logo[:organisation][:name], test_organisation["details"]["logo"]["formatted_title"]
+    assert_equal logo[:organisation][:brand], tested_organisation["details"]["brand"]
+    assert_equal logo[:organisation][:url], tested_organisation["base_path"]
+    assert_equal logo[:organisation][:crest], tested_organisation["details"]["logo"]["crest"]
+    assert_equal logo[:organisation][:name], tested_organisation["details"]["logo"]["formatted_title"]
   end
 
   test "presents the brand colour class for organisations" do
-    assert_equal "department-of-health-brand-colour", organisation_brand_class(test_organisation)
+    assert_equal "department-of-health-brand-colour", organisation_brand_class(tested_organisation)
   end
 
   test "alters the brand for organisations with an executive order crest" do
-    organisation = test_organisation
+    organisation = tested_organisation
     organisation["details"]["logo"]["crest"] = "eo"
 
-    assert_not_equal organisation_brand(organisation), test_organisation["details"]["brand"]
+    assert_not_equal organisation_brand(organisation), tested_organisation["details"]["brand"]
     assert_equal organisation_brand(organisation), "executive-office"
   end
 
@@ -45,7 +45,7 @@ class ContentItemOrganisationBrandingTest < ActiveSupport::TestCase
   end
 
   test "includes an image organisations with a custom logo" do
-    organisation = test_organisation
+    organisation = tested_organisation
     organisation["details"]["logo"]["image"] = {
       "url" => "url",
       "alt_text" => "alt_text",

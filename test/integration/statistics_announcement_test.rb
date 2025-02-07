@@ -58,7 +58,9 @@ class StatisticsAnnouncementTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("official_statistics")
 
     within(".gem-c-notice") do
-      assert_text "#{StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE} on #{@content_item['details']['display_date']}"
+      assert_nothing_raised do
+        assert_text "#{StatisticsAnnouncementPresenter::FORTHCOMING_NOTICE} on #{@content_item['details']['display_date']}"
+      end
     end
   end
 

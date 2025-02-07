@@ -2,7 +2,7 @@ require "test_helper"
 
 class CaseStudyTest < ActionDispatch::IntegrationTest
   test "random but valid items do not error" do
-    setup_and_visit_random_content_item
+    assert_nothing_raised { setup_and_visit_random_content_item }
   end
 
   test "translated case study" do

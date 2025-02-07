@@ -74,7 +74,7 @@ class ServiceManualGuideTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("service_manual_guide")
 
     within(".app-change-history") do
-      assert_text "Last update:\n9 October 2015"
+      assert_nothing_raised { assert_text "Last update:\n9 October 2015" }
     end
   end
 
