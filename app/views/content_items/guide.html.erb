@@ -19,7 +19,11 @@
 
 <div class="govuk-grid-row gem-print-columns-none">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
+    <% if show_contents_list_ab_test? %>
+      <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
+    <% else %>
+      <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
+    <% end %>
     <% if show_contents_list_ab_test? || @content_item.show_guide_navigation? %>
       <%= render "govuk_publishing_components/components/skip_link", {
         text: t("guide.skip_contents"),
@@ -33,7 +37,7 @@
 
   <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6" id="guide-contents">
     <% if @content_item.has_parts? %>
-      <% if @content_item.show_guide_navigation? %>
+      <% if show_contents_list_ab_test? || @content_item.show_guide_navigation? %>
         <%= render 'govuk_publishing_components/components/heading', heading_level: 1, font_size: 'l', margin_bottom: 6, text: @content_item.current_part_title %>
       <% end %>
       <%
@@ -50,7 +54,7 @@
         <%= raw(@content_item.current_part_body) %>
       <% end %>
 
-      <% if @content_item.show_guide_navigation? %>
+      <% if show_contents_list_ab_test? || @content_item.show_guide_navigation? %>
         <%= render 'govuk_publishing_components/components/previous_and_next_navigation', @content_item.previous_and_next_navigation %>
 
         <div class="responsive-bottom-margin">
