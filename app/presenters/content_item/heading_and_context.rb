@@ -1,6 +1,6 @@
 module ContentItem
-  module TitleAndContext
-    def title_and_context
+  module HeadingAndContext
+    def heading_and_context
       {
         text: title,
         context: I18n.t("content_item.schema_name.#{document_type}", count: 1),
