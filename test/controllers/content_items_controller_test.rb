@@ -368,48 +368,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal "true", @response.headers[Slimmer::Headers::REMOVE_SEARCH_HEADER]
   end
 
-  test "Contents List AB test variant A" do
-    content_item = content_store_has_schema_example("guide", "guide-with-step-navs")
-    content_item["base_path"] = "/help-with-childcare-costs/support-while-you-study"
-    content_item["details"]["hide_chapter_navigation"] = true
-
-    stub_content_store_has_item(content_item["base_path"], content_item)
-
-    with_variant ContentsList: "A" do
-      get :show, params: { path: "help-with-childcare-costs/support-while-you-study" }
-      assert_response :success
-      assert_not response.body.include?("contents-list")
-    end
-  end
-
-  test "Contents List AB test variant B" do
-    content_item = content_store_has_schema_example("guide", "guide-with-step-navs")
-    content_item["base_path"] = "/help-with-childcare-costs/support-while-you-study"
-    content_item["details"]["hide_chapter_navigation"] = true
-
-    stub_content_store_has_item(content_item["base_path"], content_item)
-
-    with_variant ContentsList: "B" do
-      get :show, params: { path: "help-with-childcare-costs/support-while-you-study" }
-      assert_response :success
-      assert response.body.include?("contents-list")
-    end
-  end
-
-  test "Contents List AB test variant Z" do
-    content_item = content_store_has_schema_example("guide", "guide-with-step-navs")
-    content_item["base_path"] = "/help-with-childcare-costs/support-while-you-study"
-    content_item["details"]["hide_chapter_navigation"] = true
-
-    stub_content_store_has_item(content_item["base_path"], content_item)
-
-    with_variant ContentsList: "Z" do
-      get :show, params: { path: "help-with-childcare-costs/support-while-you-study" }
-      assert_response :success
-      assert_not response.body.include?("contents-list")
-    end
-  end
-
   def path_for(content_item, locale = nil)
     base_path = content_item["base_path"].sub(/^\//, "")
     base_path.gsub!(/\.#{locale}$/, "") if locale

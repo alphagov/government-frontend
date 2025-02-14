@@ -5,7 +5,7 @@
     canonical_url: @content_item.canonical_url,
     body: @content_item.has_parts? ? @content_item.current_part_body : nil
   ) %>
-  <%= contents_list_variant.analytics_meta_tag.html_safe if step_by_step_page_under_test? %>
+
   <%= @requested_variant.analytics_meta_tag.html_safe if @requested_variant.present? %>
 <% end %>
 
@@ -25,7 +25,7 @@
       font_size: "xl",
       margin_bottom: 8
     } %>
-    <% if show_contents_list_ab_test? || @content_item.show_guide_navigation? %>
+    <% if @content_item.show_guide_navigation? %>
       <%= render "govuk_publishing_components/components/skip_link", {
         text: t("guide.skip_contents"),
         href: "#guide-contents"

@@ -1,7 +1,6 @@
 require "slimmer/headers"
 
 class ContentItemsController < ApplicationController
-  include ContentsListAbTestable
   include GovukPersonalisation::ControllerConcern
   include Slimmer::Headers
   include Slimmer::Template
@@ -15,9 +14,6 @@ class ContentItemsController < ApplicationController
   rescue_from PresenterBuilder::RedirectRouteReturned, with: :error_redirect
   rescue_from PresenterBuilder::SpecialRouteReturned, with: :error_notfound
   rescue_from PresenterBuilder::GovernmentReturned, with: :error_notfound
-
-  helper_method :contents_list_variant
-  helper_method :step_by_step_page_under_test?
 
   attr_accessor :content_item, :taxonomy_navigation
 
@@ -36,10 +32,6 @@ class ContentItemsController < ApplicationController
     elsif is_history_page?
       show_history_page
     else
-      if step_by_step_page_under_test?
-        set_contents_list_response_header
-      end
-
       set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
       render_template
     end
@@ -64,8 +56,6 @@ class ContentItemsController < ApplicationController
   end
 
 private
-
-  helper_method :show_contents_list_ab_test?
 
   def is_history_page?
     @content_item.document_type == "history"
