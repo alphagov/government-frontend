@@ -11,7 +11,7 @@
 <%= render 'shared/email_subscribe_unsubscribe_flash', { title: @content_item.title } %>
 
 <div class="govuk-grid-row gem-print-columns-none">
-  <div class="govuk-grid-column-two-thirds responsive-top-margin">
+  <div class="govuk-grid-column-two-thirds">
     <%= render 'govuk_publishing_components/components/heading',
       context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
       context_locale: t_locale_fallback("content_item.schema_name.#{@content_item.document_type}", count: 1),

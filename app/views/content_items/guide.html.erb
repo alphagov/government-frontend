@@ -18,7 +18,7 @@
 <% content_for :simple_header, true %>
 
 <div class="govuk-grid-row gem-print-columns-none">
-  <div class="govuk-grid-column-two-thirds responsive-top-margin">
+  <div class="govuk-grid-column-two-thirds">
     <% if show_contents_list_ab_test? %>
       <%= render 'govuk_publishing_components/components/heading', { 
         text: @content_item.content_title,
