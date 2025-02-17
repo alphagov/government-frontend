@@ -2,6 +2,7 @@
   add_app_component_stylesheet("banner")
 
   title ||= false
+  text ||= false
   secondary_text ||= false
   local_assigns[:margin_bottom] ||= 7
 
@@ -13,14 +14,14 @@
   component_helper.add_data_attribute({ ga4_track_links_only: "" })
   component_helper.add_data_attribute({ ga4_link: { event_name: "navigation", type: "callout" } })
 %>
-<%= tag.section(**component_helper.all_attributes) do %>
-  <% if title %>
+<% if title.present? && text.present? %>
+  <%= tag.section(**component_helper.all_attributes) do %>
     <h2 class="app-c-banner__title govuk-heading-m"><%= title %></h2>
-  <% end %>
-  <p class="app-c-banner__text">
-    <%= text %>
-  </p>
-  <% if secondary_text %>
-    <p class="app-c-banner__text"><%= secondary_text %></p>
+    <p class="app-c-banner__text">
+      <%= text %>
+    </p>
+    <% if secondary_text %>
+      <p class="app-c-banner__text"><%= secondary_text %></p>
+    <% end %>
   <% end %>
 <% end %>
