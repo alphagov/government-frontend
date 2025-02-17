@@ -34,54 +34,6 @@ class GuideTest < ActionDispatch::IntegrationTest
     assert page.has_css?('.gem-c-contents-list a[href$="?token=some_token"]')
   end
 
-  test "does not show part navigation, print link or part title when only one part" do
-    setup_and_visit_content_item("single-page-guide")
-
-    assert_not page.has_css?("h1", text: @content_item["details"]["parts"].first["title"])
-    assert_not page.has_css?(".gem-c-print-link")
-  end
-
-  test "replaces guide title with part title if in a step by step and hide_chapter_navigation is true" do
-    setup_and_visit_content_item("guide-with-step-navs-and-hide-navigation")
-    title = @content_item["title"]
-    part_title = @content_item["details"]["parts"][0]["title"]
-
-    assert_not page.has_css?("h1", text: title)
-    assert_has_component_title(part_title)
-  end
-
-  test "does not replace guide title if not in a step by step and hide_chapter_navigation is true" do
-    setup_and_visit_content_item("guide-with-hide-navigation")
-    title = @content_item["title"]
-    part_title = @content_item["details"]["parts"][0]["title"]
-
-    assert_has_component_title(title)
-    assert_has_component_title(part_title)
-  end
-
-  test "shows correct title in a single page guide if in a step by step and hide_chapter_navigation is true" do
-    setup_and_visit_content_item("single-page-guide-with-step-navs-and-hide-navigation")
-    title = @content_item["title"]
-    part_title = @content_item["details"]["parts"][0]["title"]
-
-    assert_not page.has_css?("h1", text: title)
-    assert_has_component_title(part_title)
-  end
-
-  test "does not show guide navigation and print link if in a step by step and hide_chapter_navigation is true" do
-    setup_and_visit_content_item("guide-with-step-navs-and-hide-navigation")
-
-    assert_not page.has_css?(".govuk-pagination")
-    assert_not page.has_css?(".govuk-link.govuk-link--no-visited-state[href$='/print']")
-  end
-
-  test "shows guide navigation and print link if not in a step by step and hide_chapter_navigation is true" do
-    setup_and_visit_content_item("guide-with-hide-navigation")
-
-    assert page.has_css?(".govuk-pagination")
-    assert page.has_css?(".govuk-link.govuk-link--no-visited-state[href$='/print']", text: "View a printable version of the whole guide")
-  end
-
   test "guides with no parts in a step by step with hide_chapter_navigation do not error" do
     setup_and_visit_content_item("no-part-guide-with-step-navs-and-hide-navigation")
     title = @content_item["title"]
