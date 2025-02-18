@@ -2,30 +2,26 @@
   add_app_component_stylesheet("banner")
 
   title ||= false
-  aside ||= false
-  large_text = !title && !aside
+  text ||= false
+  secondary_text ||= false
   local_assigns[:margin_bottom] ||= 7
 
   component_helper = GovukPublishingComponents::Presenters::ComponentWrapperHelper.new(local_assigns)
   component_helper.add_class("app-c-banner")
-  component_helper.add_class("app-c-banner--aside") if aside
   component_helper.add_aria_attribute({ label: "Notice" })
   component_helper.set_lang("en")
   component_helper.add_data_attribute({ module: "ga4-link-tracker" })
   component_helper.add_data_attribute({ ga4_track_links_only: "" })
   component_helper.add_data_attribute({ ga4_link: { event_name: "navigation", type: "callout" } })
 %>
-<% content_block = capture do %>
-  <% if title %>
-    <h2 class="app-c-banner__title"><%= title %></h2>
-  <% end %>
-  <p class="app-c-banner__<% if large_text %>text<% else %>desc<% end %>">
-    <%= text %>
-  </p>
-<% end %>
-<%= tag.section(**component_helper.all_attributes) do %>
-  <%= content_block %>
-  <% if aside %>
-    <p class="app-c-banner__desc"><%= aside %></p>
+<% if title.present? && text.present? %>
+  <%= tag.section(**component_helper.all_attributes) do %>
+    <h2 class="app-c-banner__title govuk-heading-m"><%= title %></h2>
+    <p class="app-c-banner__text">
+      <%= text %>
+    </p>
+    <% if secondary_text %>
+      <p class="app-c-banner__text"><%= secondary_text %></p>
+    <% end %>
   <% end %>
 <% end %>

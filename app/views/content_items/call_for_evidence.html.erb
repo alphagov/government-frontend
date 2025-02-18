@@ -88,7 +88,7 @@
     <% call_for_evidence_desc = capture do %>
       <%= @content_item.description %>
       <% if @content_item.held_on_another_website? %>
-        <p class="govuk-!-margin-top-2">
+        <p class="app-c-banner__text">
           <strong>
             <% if @content_item.closed? %>
               <%= t("call_for_evidence.another_website_html", closed: t("call_for_evidence.was"), url: @content_item.held_on_another_website_url) %>.
@@ -100,7 +100,7 @@
       <% end %>
     <% end %>
     <%= render 'components/banner', {
-      aside: call_for_evidence_date,
+      secondary_text: call_for_evidence_date,
       text: call_for_evidence_desc,
       title: t("call_for_evidence.summary"),
     } %>

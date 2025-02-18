@@ -1,9 +1,12 @@
 name: Banner
-description: A page banner, designed to highlight important information
+description: A page banner that is currently used on consultations and calls for evidence to display a summary or other important information. 
 body: |
-  Passing an aside to the banner will mean the banner renders in a grid layout.
+  This component requires title and text attribute values passed to it, otherwise it will not render. This reflects how the component is currently used. If the component needed to become more flexible and work for other use cases, we should consider moving it to the gem.
 
-  Real world example: [Consultation with history banner](/government/consultations/child-trust-fund-consultation-on-allowing-the-transfer-of-savings-from-a-child-trust-fund-to-a-junior-isa)
+  Real world examples: 
+
+  - [consultation](/government/consultations/environmental-assessment-levels-for-the-amine-based-carbon-capture-process)
+  - [call for evidence](/government/calls-for-evidence/financial-services-growth-and-competitiveness-strategy)
 accessibility_criteria: |
   The banner must:
 
@@ -14,21 +17,12 @@ uses_component_wrapper_helper: true
 examples:
   default:
     data:
-      text: 'Text in a banner'
-  history_banner:
+      title: Summary
+      text: This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy.
+  with_secondary_text:
+    description: This example shows how the consultation and call for evidence templates use the secondary text to display dates.
     data:
-      text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
-  banner_with_title:
-    data:
-      title: 'Summary'
-      text: 'We are seeking external users’ views on a series of options for either reducing the scope of the annual Defence Inflation Estimates publication or ceasing it completely.'
-  banner_with_aside:
-    data:
-      title: 'Title'
-      text: 'Text'
-      aside: 'Aside'
-  consultation:
-    data:
-      title: 'Summary'
-      text: 'This was published under the 2010 to 2015 Conservative and Liberal Democrat coalition government'
-      aside: 'This consultation ran from: <span class="consultation-date"><time datetime="2017-06-13T09:30:00.000+01:00">9:30am on 13 June 2017</time> to <time datetime="2017-07-11T23:45:00.000+01:00">11:45pm on 11 July 2017</time></span>'
+      title: Summary
+      text: This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy.
+      secondary_text: This consultation ran from<br><strong class="consultation-date"><time datetime="2024-11-05T11:00:00.000+00:00">11am on 5 November 2024</time> to
+        <time datetime="2024-12-03T17:00:00.000+00:00">5pm on 3 December 2024</time></strong>

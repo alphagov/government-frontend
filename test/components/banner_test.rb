@@ -5,17 +5,20 @@ class BannerTest < ComponentTestCase
     "banner"
   end
 
-  test "fails to render a banner when no text is given" do
-    assert_raise do
-      render_component({})
-    end
+  test "fails to render a banner when nothing is passed to it" do
+    assert_empty render_component({})
   end
 
-  test "renders a banner with text correctly" do
-    render_component(title: "Summary", text: "This was published under the 2010 to 2015 Conservative government")
+  test "fails to render a banner when no title or no text is passed to it" do
+    assert_empty render_component(title: "Summary")
+    assert_empty render_component(text: "This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy.")
+  end
 
-    assert_select ".app-c-banner--aside", false
-    assert_select ".app-c-banner__desc", text: "This was published under the 2010 to 2015 Conservative government"
+  test "renders a banner with title and text correctly" do
+    render_component(title: "Summary", text: "This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy.")
+
+    assert_select ".app-c-banner__title", text: "Summary"
+    assert_select ".app-c-banner__text", text: "This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy."
   end
 
   test "renders a banner with an aria label" do
@@ -23,36 +26,26 @@ class BannerTest < ComponentTestCase
     assert_select "section[aria-label]"
   end
 
-  test "renders a banner with title and text correctly" do
-    render_component(title: "Summary", text: "This was published under the 2010 to 2015 Conservative government")
-
-    assert_select ".app-c-banner--aside", false
-    assert_select ".app-c-banner__title", text: "Summary"
-    assert_select ".app-c-banner__desc", text: "This was published under the 2010 to 2015 Conservative government"
-  end
-
-  test "renders a banner with title, text and aside correctly" do
+  test "renders a banner with title, text and secondary text correctly" do
     render_component(
       title: "Summary",
-      text: "This was published under the 2010 to 2015 Conservative government",
-      aside: "This consultation ran from 9:30am on 30 January 2017 to 5pm on 28 February 2017",
+      text: "This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy.",
+      secondary_text: "This consultation ran from<br><strong class='consultation-date'><time datetime='2024-11-05T11:00:00.000+00:00'>11am on 5 November 2024</time> to <time datetime='2024-12-03T17:00:00.000+00:00'>5pm on 3 December 2024</time></strong>",
     )
 
-    assert_select ".app-c-banner--aside"
     assert_select ".app-c-banner__title", text: "Summary"
-    assert_select ".app-c-banner__desc", text: "This was published under the 2010 to 2015 Conservative government"
-    assert_select ".app-c-banner__desc", text: "This consultation ran from 9:30am on 30 January 2017 to 5pm on 28 February 2017"
+    assert_select ".app-c-banner__text", text: "This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy."
+    assert_select ".app-c-banner__text", text: "This consultation ran from<br><strong class='consultation-date'><time datetime='2024-11-05T11:00:00.000+00:00'>11am on 5 November 2024</time> to <time datetime='2024-12-03T17:00:00.000+00:00'>5pm on 3 December 2024</time></strong>"
   end
 
   test "renders a banner with GA4 tracking" do
     render_component(
       title: "Summary",
-      text: "This was published under the 2010 to 2015 Conservative government",
-      aside: "This consultation ran from 9:30am on 30 January 2017 to 5pm on 28 February 2017",
+      text: "This call for evidence will inform the development of the financial services sector plan, a key part of the government’s modern industrial strategy.",
     )
 
-    assert_select ".app-c-banner--aside[data-module=ga4-link-tracker]"
-    assert_select ".app-c-banner--aside[data-ga4-track-links-only]"
-    assert_select ".app-c-banner--aside[data-ga4-link='{\"event_name\":\"navigation\",\"type\":\"callout\"}']"
+    assert_select ".app-c-banner[data-module=ga4-link-tracker]"
+    assert_select ".app-c-banner[data-ga4-track-links-only]"
+    assert_select ".app-c-banner[data-ga4-link='{\"event_name\":\"navigation\",\"type\":\"callout\"}']"
   end
 end
