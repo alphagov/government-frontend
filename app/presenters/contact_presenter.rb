@@ -1,10 +1,10 @@
 class ContactPresenter < ContentItemPresenter
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::ContactDetails
 
-  def title_and_context
+  def heading_and_context
     super.tap do |t|
-      t.delete(:average_title_length)
+      t[:font_size] = "xl"
       t.delete(:context)
     end
   end

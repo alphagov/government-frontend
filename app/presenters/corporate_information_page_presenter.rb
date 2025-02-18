@@ -1,7 +1,7 @@
 class CorporateInformationPagePresenter < ContentItemPresenter
   include ContentItem::Body
   include ContentItem::ContentsList
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::OrganisationBranding
   include ContentItem::CorporateInformationGroups
 
@@ -11,9 +11,9 @@ class CorporateInformationPagePresenter < ContentItemPresenter
     page_title
   end
 
-  def title_and_context
+  def heading_and_context
     super.tap do |t|
-      t.delete(:average_title_length)
+      t[:font_size] = "xl"
       t.delete(:context)
     end
   end

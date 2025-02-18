@@ -1,7 +1,7 @@
 class WorkingGroupPresenter < ContentItemPresenter
   include ContentItem::Body
   include ContentItem::ContentsList
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
 
   def email
     content_item["details"]["email"]
@@ -19,9 +19,9 @@ class WorkingGroupPresenter < ContentItemPresenter
     content_item["links"]["policies"]
   end
 
-  def title_and_context
+  def heading_and_context
     super.tap do |t|
-      t.delete(:average_title_length)
+      t[:font_size] = "xl"
       t.delete(:context)
     end
   end

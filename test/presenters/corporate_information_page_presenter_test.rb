@@ -28,11 +28,11 @@ class CorporateInformationPagePresenterTest
       assert presented_item.is_a?(ContentItem::ContentsList)
     end
 
-    test "has title without context" do
-      assert presented_item.is_a?(ContentItem::TitleAndContext)
-      title_component_params = { title: "About us", context_locale: :en }
+    test "has heading without context" do
+      assert presented_item.is_a?(ContentItem::HeadingAndContext)
+      heading_component_params = { text: "About us", context_locale: :en, heading_level: 1, margin_bottom: 8, font_size: "xl" }
 
-      assert_equal title_component_params, presented_item.title_and_context
+      assert_equal heading_component_params, presented_item.heading_and_context
     end
 
     test "has organisation branding" do

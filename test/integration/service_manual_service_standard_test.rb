@@ -1,15 +1,15 @@
 require "test_helper"
 
 class ServiceManualServiceStandardTest < ActionDispatch::IntegrationTest
-  test "service standard page has a title, summary and intro" do
+  test "service standard page has a heading, summary and intro" do
     setup_and_visit_content_item("service_manual_service_standard",
-                                 "title" => "Service Standard",
+                                 "text" => "Service Standard",
                                  "description" => "The Service Standard is a set of 14 criteria.",
                                  "details" => {
                                    "body" => "All public facing transactional services must meet the standard.",
                                  })
 
-    assert page.has_css?(".gem-c-title__text", text: "Service Standard"), "No title found"
+    assert page.has_css?(".gem-c-heading__text", text: "Service Standard"), "No title found"
     assert page.has_css?(".app-page-header__summary", text: "The Service Standard is a set of 14 criteria"), "No description found"
     assert page.has_css?(".app-page-header__intro", text: "All public facing transactional services must meet the standard."), "No body found"
   end

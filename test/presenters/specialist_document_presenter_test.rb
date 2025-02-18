@@ -91,16 +91,17 @@ class SpecialistDocumentPresenterTest
       assert Time.zone.parse(presented.published) == Time.zone.parse("2002-02-02")
     end
 
-    test "has title without context" do
-      assert presented_item("aaib-reports").is_a?(ContentItem::TitleAndContext)
-      title_component_params = {
-        title: schema_item("aaib-reports")["title"],
+    test "has heading without context" do
+      assert presented_item("aaib-reports").is_a?(ContentItem::HeadingAndContext)
+      heading_component_params = {
+        text: schema_item("aaib-reports")["title"],
         context_locale: nil,
-        average_title_length: "long",
-
+        heading_level: 1,
+        margin_bottom: 8,
+        font_size: "l",
       }
 
-      assert_equal title_component_params, presented_item("aaib-reports").title_and_context
+      assert_equal heading_component_params, presented_item("aaib-reports").heading_and_context
     end
 
     test "should not present continuation_link" do

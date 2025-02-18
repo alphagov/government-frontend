@@ -2,7 +2,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
   include ContentItem::Body
   include ContentItem::Metadata
   include ContentItem::Political
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::ContentsList
   include ContentItem::SinglePageNotificationButton
   include DocumentCollection::SignupLink

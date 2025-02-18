@@ -4,10 +4,10 @@ class DetailedGuidePresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::NationalApplicability
   include ContentItem::Political
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::SinglePageNotificationButton
 
-  def title_and_context
+  def heading_and_context
     super.tap do |t|
       t[:context] = I18n.t("content_item.schema_name.guidance", count: 1)
     end

@@ -1,7 +1,7 @@
 class CaseStudyPresenter < ContentItemPresenter
   include ContentItem::Body
   include ContentItem::Metadata
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
 
   def image
     content_item["details"]["image"]

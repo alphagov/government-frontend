@@ -4,7 +4,7 @@ class NewsArticlePresenter < ContentItemPresenter
   include ContentItem::Linkable
   include ContentItem::Updatable
   include ContentItem::Shareable
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::Metadata
   include ContentItem::NewsImage
 end
