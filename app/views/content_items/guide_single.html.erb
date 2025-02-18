@@ -17,13 +17,11 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title', { title: @content_item.content_title } %>
+    <%= render 'govuk_publishing_components/components/title', { title: @content_item.title } %>
 
-    <% if @content_item.show_guide_navigation? %>
-      <aside class="part-navigation-container" role="complementary">
-        <%= render "govuk_publishing_components/components/contents_list", aria: { label: t("guide.pages_in_guide") }, contents: @content_item.part_link_elements, underline_links: true %>
-      </aside>
-    <% end %>
+    <aside class="part-navigation-container" role="complementary">
+      <%= render "govuk_publishing_components/components/contents_list", aria: { label: t("guide.pages_in_guide") }, contents: @content_item.part_link_elements, underline_links: true %>
+    </aside>
   </div>
 
   <div class="govuk-grid-column-two-thirds">
