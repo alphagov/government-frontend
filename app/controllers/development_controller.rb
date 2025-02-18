@@ -17,7 +17,6 @@ class DevelopmentController < ApplicationController
                        placeholder_corporate_information_page
                        publication
                        service_sign_in
-                       specialist_document
                        speech
                        statistical_data_set
                        statistics_announcement
