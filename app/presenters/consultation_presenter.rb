@@ -6,7 +6,7 @@ class ConsultationPresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::Shareable
   include ContentItem::SinglePageNotificationButton
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
 
   def opening_date_time
     content_item["details"]["opening_date"]

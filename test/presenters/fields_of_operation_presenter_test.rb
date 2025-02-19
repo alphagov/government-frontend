@@ -5,14 +5,17 @@ class FieldsOfOperationPresenterTest < PresenterTestCase
     "fields_of_operation"
   end
 
-  test "presents the title and context" do
-    title_component_params = {
-      title: "Fields of operation",
+  test "presents the heading and context" do
+    heading_component_params = {
+      text: "Fields of operation",
       context: "British fatalities",
       context_locale: :en,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
     }
 
-    assert_equal title_component_params, presented_item.title_and_context
+    assert_equal heading_component_params, presented_item.heading_and_context
   end
 
   test "presents the fields of operation" do

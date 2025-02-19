@@ -1,7 +1,7 @@
 class StatisticsAnnouncementPresenter < ContentItemPresenter
   include ContentItem::Metadata
   include ContentItem::NationalStatisticsLogo
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include StatisticsAnnouncementHelper
 
   FORTHCOMING_NOTICE = I18n.t("statistics_announcement.forthcoming").freeze

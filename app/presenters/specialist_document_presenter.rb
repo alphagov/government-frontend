@@ -2,12 +2,12 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   include ContentItem::Body
   include ContentItem::Updatable
   include ContentItem::Linkable
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::Metadata
   include TypographyHelper
   include ContentItem::ContentsList
 
-  def title_and_context
+  def heading_and_context
     super.tap do |t|
       t.delete(:context)
     end

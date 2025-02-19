@@ -4,14 +4,17 @@
   ) %>
 <% end %>
 
-<%= render 'shared/email_subscribe_unsubscribe_flash', { title: @content_item.title_and_context[:title] } %>
+<%= render 'shared/email_subscribe_unsubscribe_flash', { title: @content_item.heading_and_context[:text] } %>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <%= render 'govuk_publishing_components/components/title',
+    <%= render 'govuk_publishing_components/components/heading',
        context: t("content_item.schema_name.#{@content_item.document_type}", count: 1),
-       title: @content_item.title,
-       average_title_length: "long" %>
+       text: @content_item.title,
+       heading_level: 1,
+       font_size: "l",
+       margin_bottom: 8
+      %>
   </div>
   <%= render 'shared/translations', content_item: @content_item %>
   <div class="govuk-grid-column-two-thirds">
