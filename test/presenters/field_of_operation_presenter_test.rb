@@ -5,13 +5,16 @@ class FieldOfOperationPresenterTest < PresenterTestCase
     "field_of_operation"
   end
 
-  test "#title_and_context" do
-    expected_title_and_context = {
-      title: "Operations in Iraq",
+  test "#heading_and_context" do
+    expected_heading_and_context = {
+      text: "Operations in Iraq",
       context: "British fatalities",
       context_locale: :en,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
     }
-    assert_equal expected_title_and_context, presented_item.title_and_context
+    assert_equal expected_heading_and_context, presented_item.heading_and_context
   end
 
   test "it presents a description" do
@@ -29,7 +32,7 @@ class FieldOfOperationPresenterTest < PresenterTestCase
     assert_equal expected, presented_item.organisation
   end
 
-  test "it presents fatlity notices when they are present" do
+  test "it presents fatality notices when they are present" do
     expected_notices = [
       FieldOfOperationPresenter::FatalityNotice.new("A fatality sadly occurred on 1 December", nil, "A fatality notice", "/government/fatalities/fatality-notice-one"),
       FieldOfOperationPresenter::FatalityNotice.new("A fatality sadly occurred on 2 December", nil, "A second fatality notice", "/government/fatalities/fatality-notice-two"),
@@ -38,7 +41,7 @@ class FieldOfOperationPresenterTest < PresenterTestCase
     assert_equal expected_notices, presented_item.fatality_notices
   end
 
-  test "it presents an ampty array when no fatlity notices are present" do
+  test "it presents an empty array when no fatality notices are present" do
     without_fatalities = schema_item
     without_fatalities["links"].delete("fatality_notices")
 

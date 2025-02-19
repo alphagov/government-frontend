@@ -1,13 +1,13 @@
 class FieldOfOperationPresenter < ContentItemPresenter
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
 
   FatalityNotice = Struct.new(:roll_call_introduction, :casualties, :title, :base_path)
 
-  def title_and_context
+  def heading_and_context
     super.tap do |t|
       t[:context] = I18n.t("field_of_operation.context")
-      t[:title] = "#{I18n.t('field_of_operation.title')} #{@content_item['title']}"
-      t.delete(:average_title_length)
+      t[:text] = "#{I18n.t('field_of_operation.title')} #{@content_item['title']}"
+      t[:font_size] = "xl"
     end
   end
 

@@ -3,7 +3,7 @@ class SpeechPresenter < ContentItemPresenter
   include ContentItem::Linkable
   include ContentItem::Political
   include ContentItem::Updatable
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::Metadata
   include ContentItem::NewsImage
 

@@ -48,6 +48,10 @@ class HtmlPublicationPresenter < ContentItemPresenter
     request.base_url + request.path
   end
 
+  def exclude_main_wrapper_class?
+    true
+  end
+
 private
 
   def public_timestamp

@@ -16,8 +16,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="app-page-header govuk-!-margin-top-3 govuk-!-margin-bottom-3">
-        <%= render "govuk_publishing_components/components/title", {
-          title: @content_item.title,
+        <%= render "govuk_publishing_components/components/heading", {
+          text: @content_item.title,
+          heading_level: 1,
+          font_size: "xl",
+          margin_bottom: 8
         } %>
         <p class="govuk-body-l govuk-!-margin-bottom-7 app-page-header__summary">
           <%= @content_item.content_item["description"] %>

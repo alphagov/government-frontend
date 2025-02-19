@@ -1,6 +1,6 @@
 class FatalityNoticePresenter < ContentItemPresenter
   include ContentItem::Body
-  include ContentItem::TitleAndContext
+  include ContentItem::HeadingAndContext
   include ContentItem::Metadata
 
   def field_of_operation
@@ -23,7 +23,7 @@ class FatalityNoticePresenter < ContentItemPresenter
     end
   end
 
-  def title_and_context
+  def heading_and_context
     super.tap do |t|
       if field_of_operation
         t[:context] = I18n.t("fatality_notice.operations_in", location: field_of_operation.try(:title))

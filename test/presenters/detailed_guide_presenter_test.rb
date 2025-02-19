@@ -70,7 +70,7 @@ class DetailedGuidePresenterTest < PresenterTestCase
 
   test "context in title is overridden to display as guidance" do
     I18n.with_locale("fr") do
-      assert_equal I18n.t("content_item.schema_name.guidance", count: 1), presented_item.title_and_context[:context]
+      assert_equal I18n.t("content_item.schema_name.guidance", count: 1), presented_item.heading_and_context[:context]
     end
   end
 
