@@ -21,6 +21,10 @@ class WorldwideCorporateInformationPagePresenter < ContentItemPresenter
     worldwide_organisation&.sponsoring_organisations
   end
 
+  def exclude_main_wrapper_class?
+    true
+  end
+
 private
 
   def show_contents_list?
