@@ -28,6 +28,7 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     super.tap do |m|
       facets_with_friendly_values.each do |facet|
         m.merge!(facet["name"] => value_or_array_of_values(facet["values"]))
+        m.merge!(facet["sub_facet_name"] => value_or_array_of_values(facet["sub_facet_values"])) if facet["sub_facet_values"].present?
       end
     end
   end
@@ -123,6 +124,11 @@ private
       values = [facet_values[facet["key"]]].compact.flatten
       facet["values"] = friendly_facet_values(facet, values)
 
+      if facet["nested_facet"]
+        sub_facet_values = [facet_values[facet["sub_facet_key"]]].compact.flatten
+        facet["sub_facet_values"] = friendly_sub_facet_text(facet, sub_facet_values)
+      end
+
       facet
     end
   end
@@ -156,6 +162,24 @@ private
                  values,
                  facet["filterable"])
   end
+
+  def friendly_sub_facet_text(facet, sub_facet_values)
+    return sub_facet_values if facet["allowed_values"].blank?
+
+    sub_facet_allowed_values = facet["allowed_values"].map { |main_facet|
+      main_facet["sub_facets"]&.map do |sub_facet|
+        {
+          "label" => [main_facet["label"], sub_facet["label"]].join(" - "),
+          "value" => sub_facet["value"],
+        }
+      end
+    }.compact.flatten
+
+    facet_blocks(facet["sub_facet_name"],
+                 facet["sub_facet_key"],
+                 sub_facet_allowed_values,
+                 sub_facet_values,
+                 facet["filterable"])
   end
 
   # The facet value is hyphenated, map this to the

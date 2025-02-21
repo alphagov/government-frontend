@@ -329,5 +329,32 @@ class SpecialistDocumentPresenterTest
       presented = present_example(example)
       assert Time.zone.parse(presented.published) == Time.zone.parse("2010-01-01")
     end
+
+    test "includes nested facets as text in metadata" do
+      values = { "facet-key" => "main-facet-1-value", "sub-facet-key" => "sub-facet-1-value" }
+      facet = example_facet({
+        "sub_facet_name" => "Sub Facet name",
+        "sub_facet_key" => "sub-facet-key",
+        "nested_facet" => true,
+        "allowed_values" => [
+          {
+            "label" => "Main Facet Value",
+            "value" => "main-facet-1-value",
+            "sub_facets" => [
+              {
+                "label" => "Sub Facet Value",
+                "value" => "sub-facet-1-value",
+              },
+            ],
+          },
+        ],
+      })
+      example = example_with_finder_facets([facet], values)
+
+      presented = present_example(example)
+
+      assert_equal "Main Facet Value", presented.important_metadata["Facet name"]
+      assert_equal "Main Facet Value - Sub Facet Value", presented.important_metadata["Sub Facet name"]
+    end
   end
 end
