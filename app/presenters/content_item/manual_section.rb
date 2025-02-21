@@ -46,7 +46,7 @@ module ContentItem
     end
 
     def published
-      display_date(manual_content_item["first_published_at"])
+      DateTimeHelper.display_date(manual_content_item["first_published_at"])
     end
 
     def other_metadata

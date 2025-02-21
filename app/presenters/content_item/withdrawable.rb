@@ -35,13 +35,9 @@ module ContentItem
 
     def withdrawal_notice_time
       view_context.tag.time(
-        english_display_date(withdrawal_notice["withdrawn_at"]),
+        DateTimeHelper.display_date(withdrawal_notice["withdrawn_at"], locale: :en),
         datetime: withdrawal_notice["withdrawn_at"],
       )
-    end
-
-    def english_display_date(timestamp, format = "%-d %B %Y")
-      I18n.l(Time.zone.parse(timestamp), format:, locale: :en) if timestamp
     end
   end
 end

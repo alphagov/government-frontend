@@ -1,11 +1,5 @@
 require "test_helper"
 
-module ContentItemUpdatableStubs
-  def display_date(date)
-    date
-  end
-end
-
 module ContentItemUpdatableWithUpdates
   def any_updates?
     true
@@ -16,7 +10,6 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
   def setup
     @updatable = Object.new
     @updatable.extend(ContentItem::Updatable)
-    @updatable.extend(ContentItemUpdatableStubs)
   end
 
   test "#history returns an empty array when there is no change history" do
@@ -49,7 +42,7 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
     end
 
     assert @updatable.history.any?
-    assert_equal @updatable.updated, "2002-02-02"
+    assert_equal "2 February 2002", @updatable.updated
   end
 
   test "#history returns no updates when first_public_at matches public_updated_at" do
@@ -133,14 +126,14 @@ class ContentItemUpdatableTest < ActiveSupport::TestCase
       end
     end
 
-    assert_equal @updatable.history,
-                 [
-                   {
-                     display_time: "2016-02-29T09:24:10.000+00:00",
-                     note: "notes",
-                     timestamp: "2016-02-29T09:24:10.000+00:00",
-                   },
-                 ]
+    expected_history = [
+      {
+        display_time: "29 February 2016",
+        note: "notes",
+        timestamp: "2016-02-29T09:24:10.000+00:00",
+      },
+    ]
+    assert_equal expected_history, @updatable.history
   end
 
   test "#history returns a reverse chronologically sorted array of hashes when there is change history" do

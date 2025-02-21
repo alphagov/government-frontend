@@ -129,10 +129,6 @@ private
     Time.zone.now < polls_closing_time
   end
 
-  def display_date(timestamp, format = "%-d %B %Y")
-    I18n.l(Time.zone.parse(timestamp), format:, locale:) if timestamp
-  end
-
   def sorted_locales(translations)
     translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? "" : t["locale"] }
   end

@@ -11,6 +11,7 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
         "title" => "Super title",
         "base_path" => "/a/base/path",
         "public_updated_at" => "2022-03-23T08:30:20.000+00:00",
+        "first_published_at" => "2000-03-23T08:30:20.000+00:00",
         "schema_name" => schema_name,
         "details" => {
           "body" => "body",
@@ -32,12 +33,11 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
 
   test "returns see_updates_link true if published" do
     item = DummyContentItem.new
-    item.stubs(:display_date).returns("23 March 2000")
 
     expected_publisher_metadata = {
       from: ["<a class=\"govuk-link\" href=\"/blah\">blah</a>"],
       first_published: "23 March 2000",
-      last_updated: nil,
+      last_updated: "23 March 2022",
       see_updates_link: true,
     }
 
@@ -46,14 +46,12 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
 
   test "does not return see_updates_link if pending" do
     item = DummyContentItem.new
-    item.stubs(:display_date).returns("23 March 3000")
-
     item.content_item["details"]["display_date"] = "23 March 3000"
 
     expected_publisher_metadata = {
       from: ["<a class=\"govuk-link\" href=\"/blah\">blah</a>"],
-      first_published: "23 March 3000",
-      last_updated: nil,
+      first_published: "23 March 2000",
+      last_updated: "23 March 2022",
     }
 
     assert_equal expected_publisher_metadata, item.publisher_metadata
