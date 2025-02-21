@@ -120,18 +120,8 @@ private
 
   def facets_with_friendly_values
     facets_with_values.map do |facet|
-      facet_key = facet["key"]
-      # Cast all values into an array
-      values = [facet_values[facet_key]].flatten
-
-      facet["values"] = case facet["type"]
-                        when "date"
-                          friendly_facet_date(values)
-                        when "text"
-                          friendly_facet_text(facet, values)
-                        else
-                          values
-                        end
+      values = [facet_values[facet["key"]]].compact.flatten
+      facet["values"] = friendly_facet_values(facet, values)
 
       facet
     end
@@ -146,42 +136,52 @@ private
       .reject { |f| f["key"] == internal_notes_facet_key }
   end
 
+  def friendly_facet_values(facet, values)
+    return friendly_facet_date(values) if facet["type"] == "date"
+    return friendly_facet_text(facet, values) if facet["type"] == "text"
+
+    values
+  end
+
   def friendly_facet_date(dates)
     dates.map { |date| display_date(date) }
   end
 
   def friendly_facet_text(facet, values)
-    if facet["allowed_values"] && facet["allowed_values"].any?
-      facet_blocks(facet, values)
-    else
-      values
-    end
+    return values if facet["allowed_values"].blank?
+
+    facet_blocks(facet["name"],
+                 facet["key"],
+                 facet["allowed_values"],
+                 values,
+                 facet["filterable"])
+  end
   end
 
   # The facet value is hyphenated, map this to the
   # friendly readable version provided in `allowed_values`
-  def facet_blocks(facet, values)
+  def facet_blocks(facet_name, facet_key, allowed_values, values, filterable)
     values.map do |value|
-      allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
+      allowed_value = allowed_values.detect { |av| av["value"] == value }
 
       if allowed_value
-        facet_block(facet, allowed_value)
+        facet_block(allowed_value, facet_key, filterable)
       else
         GovukError.notify(
           "Facet value not in list of allowed values",
-          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" },
+          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet_name}' on #{base_path} content item" },
         )
         value
       end
     end
   end
 
-  def facet_block(facet, allowed_value)
+  def facet_block(allowed_value, facet_key, filterable)
     friendly_value = allowed_value["label"]
 
-    return friendly_value unless facet["filterable"]
+    return friendly_value unless filterable
 
-    facet_link(friendly_value, allowed_value["value"], facet["key"])
+    facet_link(friendly_value, allowed_value["value"], facet_key)
   end
 
   def facet_link(label, value, key)
