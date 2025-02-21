@@ -114,18 +114,18 @@ private
     finder.dig("details", "facets")
   end
 
-  def facet_values
+  def content_item_metadata
     # Metadata is a required field
     content_item["details"]["metadata"]
   end
 
   def facets_with_friendly_values
     facets_with_values.map do |facet|
-      values = [facet_values[facet["key"]]].compact.flatten
+      values = [content_item_metadata[facet["key"]]].compact.flatten
       facet["values"] = friendly_facet_values(facet, values)
 
       if facet["nested_facet"]
-        sub_facet_values = [facet_values[facet["sub_facet_key"]]].compact.flatten
+        sub_facet_values = [content_item_metadata[facet["sub_facet_key"]]].compact.flatten
         facet["sub_facet_values"] = friendly_sub_facet_text(facet, sub_facet_values)
       end
 
@@ -134,10 +134,10 @@ private
   end
 
   def facets_with_values
-    return [] unless facets && facet_values.any?
+    return [] unless facets && content_item_metadata.any?
 
     facets
-      .select { |f| facet_values[f["key"]] && facet_values[f["key"]].present? }
+      .select { |f| content_item_metadata[f["key"]] && content_item_metadata[f["key"]].present? }
       .reject { |f| f["key"] == first_published_at_facet_key }
       .reject { |f| f["key"] == internal_notes_facet_key }
   end
@@ -232,8 +232,8 @@ private
   #
   # Instead use first date in change history
   def first_public_at
-    @first_public_at ||= if facet_values[first_published_at_facet_key]
-                           facet_values[first_published_at_facet_key]
+    @first_public_at ||= if content_item_metadata[first_published_at_facet_key]
+                           content_item_metadata[first_published_at_facet_key]
                          else
                            changes = reverse_chronological_change_history
                            changes.any? ? changes.last[:timestamp] : nil
@@ -260,7 +260,7 @@ private
   # Example:
   # https://www.gov.uk/aaib-reports/lockheed-l1011-385-1-15-g-bhbr-19-december-1989
   def bulk_published?
-    facet_values["bulk_published"].present?
+    content_item_metadata["bulk_published"].present?
   end
 
   def statutory_instrument?
