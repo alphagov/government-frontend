@@ -26,9 +26,18 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def important_metadata
     super.tap do |m|
-      facets_with_friendly_values.each do |facet|
-        m.merge!(facet["name"] => value_or_array_of_values(facet["values"]))
-        m.merge!(facet["sub_facet_name"] => value_or_array_of_values(facet["sub_facet_values"])) if facet["sub_facet_values"].present?
+      facets_with_values.each do |facet|
+        specialist_document_facet = SpecialistDocumentFacet.new(base_path, facet)
+        main_facet_values = [content_item_metadata[specialist_document_facet.main_facet_key]].compact.flatten
+
+        if specialist_document_facet.type == "date"
+          m.merge!(specialist_document_facet.main_facet_name => value_or_array_of_values(friendly_facet_date(main_facet_values)))
+        elsif specialist_document_facet.type == "text"
+          m.merge!(specialist_document_facet.main_facet_name => friendly_main_facet_metadata(specialist_document_facet, facet["filterable"]))
+          m.merge!(specialist_document_facet.sub_facet_name => friendly_sub_facet_metadata(specialist_document_facet, facet["filterable"]))
+        else
+          m.merge!(specialist_document_facet.main_facet_name => content_item_metadata[specialist_document_facet.main_facet_key])
+        end
       end
     end
   end
@@ -80,6 +89,30 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
 private
 
+  def friendly_main_facet_metadata(specialist_document_facet, filterable)
+    metadata_main_facet = specialist_document_facet.main_facet_label_and_values_from(content_item_metadata)
+    metadata_main_facet_with_links = metadata_main_facet.map do |main_facet|
+      transform_into_facet_link(main_facet, specialist_document_facet.main_facet_key, filterable)
+    end
+    value_or_array_of_values(metadata_main_facet_with_links)
+  end
+
+  def friendly_sub_facet_metadata(specialist_document_facet, filterable)
+    metadata_sub_facet = specialist_document_facet.sub_facet_label_and_values_from(content_item_metadata)
+    metadata_sub_facet_with_links = metadata_sub_facet.map do |sub_facet|
+      transform_into_facet_link(sub_facet, specialist_document_facet.sub_facet_key, filterable)
+    end
+    value_or_array_of_values(metadata_sub_facet_with_links)
+  end
+
+  def transform_into_facet_link(facet, facet_key, filterable)
+    if facet["label"] && filterable
+      return facet_link(facet["label"], facet["value"], facet_key)
+    end
+
+    facet["value"]
+  end
+
   def nested_headers
     content_item["details"]["headers"] || []
   end
@@ -119,20 +152,6 @@ private
     content_item["details"]["metadata"]
   end
 
-  def facets_with_friendly_values
-    facets_with_values.map do |facet|
-      values = [content_item_metadata[facet["key"]]].compact.flatten
-      facet["values"] = friendly_facet_values(facet, values)
-
-      if facet["nested_facet"]
-        sub_facet_values = [content_item_metadata[facet["sub_facet_key"]]].compact.flatten
-        facet["sub_facet_values"] = friendly_sub_facet_text(facet, sub_facet_values)
-      end
-
-      facet
-    end
-  end
-
   def facets_with_values
     return [] unless facets && content_item_metadata.any?
 
@@ -142,70 +161,8 @@ private
       .reject { |f| f["key"] == internal_notes_facet_key }
   end
 
-  def friendly_facet_values(facet, values)
-    return friendly_facet_date(values) if facet["type"] == "date"
-    return friendly_facet_text(facet, values) if facet["type"] == "text"
-
-    values
-  end
-
   def friendly_facet_date(dates)
     dates.map { |date| DateTimeHelper.display_date(date) }
-  end
-
-  def friendly_facet_text(facet, values)
-    return values if facet["allowed_values"].blank?
-
-    facet_blocks(facet["name"],
-                 facet["key"],
-                 facet["allowed_values"],
-                 values,
-                 facet["filterable"])
-  end
-
-  def friendly_sub_facet_text(facet, sub_facet_values)
-    return sub_facet_values if facet["allowed_values"].blank?
-
-    sub_facet_allowed_values = facet["allowed_values"].map { |main_facet|
-      main_facet["sub_facets"]&.map do |sub_facet|
-        {
-          "label" => [main_facet["label"], sub_facet["label"]].join(" - "),
-          "value" => sub_facet["value"],
-        }
-      end
-    }.compact.flatten
-
-    facet_blocks(facet["sub_facet_name"],
-                 facet["sub_facet_key"],
-                 sub_facet_allowed_values,
-                 sub_facet_values,
-                 facet["filterable"])
-  end
-
-  # The facet value is hyphenated, map this to the
-  # friendly readable version provided in `allowed_values`
-  def facet_blocks(facet_name, facet_key, allowed_values, values, filterable)
-    values.map do |value|
-      allowed_value = allowed_values.detect { |av| av["value"] == value }
-
-      if allowed_value
-        facet_block(allowed_value, facet_key, filterable)
-      else
-        GovukError.notify(
-          "Facet value not in list of allowed values",
-          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet_name}' on #{base_path} content item" },
-        )
-        value
-      end
-    end
-  end
-
-  def facet_block(allowed_value, facet_key, filterable)
-    friendly_value = allowed_value["label"]
-
-    return friendly_value unless filterable
-
-    facet_link(friendly_value, allowed_value["value"], facet_key)
   end
 
   def facet_link(label, value, key)
