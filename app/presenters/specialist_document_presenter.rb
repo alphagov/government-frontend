@@ -26,8 +26,10 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def important_metadata
     super.tap do |m|
-      facets_with_friendly_values.each do |facet|
-        m.merge!(facet["name"] => value_or_array_of_values(facet["values"]))
+      facets_with_values.each do |facet|
+        facet_values_for_content_item = [content_item_metadata[facet["key"]]].flatten
+        friendly_facet_values = friendly_facet_values(facet, facet_values_for_content_item)
+        m.merge!(facet["name"] => value_or_array_of_values(friendly_facet_values))
       end
     end
   end
@@ -118,25 +120,6 @@ private
     content_item["details"]["metadata"]
   end
 
-  def facets_with_friendly_values
-    facets_with_values.map do |facet|
-      facet_key = facet["key"]
-      # Cast all values into an array
-      values = [content_item_metadata[facet_key]].flatten
-
-      facet["values"] = case facet["type"]
-                        when "date"
-                          friendly_facet_date(values)
-                        when "text"
-                          friendly_facet_text(facet, values)
-                        else
-                          values
-                        end
-
-      facet
-    end
-  end
-
   def facets_with_values
     return [] unless facets && content_item_metadata.any?
 
@@ -146,42 +129,38 @@ private
       .reject { |f| f["key"] == internal_notes_facet_key }
   end
 
+  def friendly_facet_values(facet, facet_values_for_content_item)
+    return friendly_facet_date(facet_values_for_content_item) if facet["type"] == "date"
+    return friendly_facet_text(facet, facet_values_for_content_item) if facet["type"] == "text"
+
+    facet_values_for_content_item
+  end
+
   def friendly_facet_date(dates)
     dates.map { |date| display_date(date) }
   end
 
   def friendly_facet_text(facet, values)
-    if facet["allowed_values"] && facet["allowed_values"].any?
-      facet_blocks(facet, values)
-    else
-      values
-    end
+    return values if facet["allowed_values"].blank?
+
+    values.map { |value| friendly_facet_label(facet, value) }
   end
 
-  # The facet value is hyphenated, map this to the
-  # friendly readable version provided in `allowed_values`
-  def facet_blocks(facet, values)
-    values.map do |value|
-      allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
+  def friendly_facet_label(facet, value)
+    allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
 
-      if allowed_value
-        facet_block(facet, allowed_value)
-      else
-        GovukError.notify(
-          "Facet value not in list of allowed values",
-          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" },
-        )
-        value
-      end
-    end
+    return default_facet_value_if_not_found(facet, value) unless allowed_value
+    return allowed_value["label"] unless facet["filterable"]
+
+    facet_link(allowed_value["label"], allowed_value["value"], facet["key"])
   end
 
-  def facet_block(facet, allowed_value)
-    friendly_value = allowed_value["label"]
-
-    return friendly_value unless facet["filterable"]
-
-    facet_link(friendly_value, allowed_value["value"], facet["key"])
+  def default_facet_value_if_not_found(facet, value)
+    GovukError.notify(
+      "Facet value not in list of allowed values",
+      extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" },
+    )
+    value
   end
 
   def facet_link(label, value, key)
