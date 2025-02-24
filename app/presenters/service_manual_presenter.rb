@@ -7,6 +7,10 @@ class ServiceManualPresenter < ContentItemPresenter
     @details ||= content_item["details"] || {}
   end
 
+  def exclude_main_wrapper_class?
+    service_manual_homepage?
+  end
+
   def include_search_in_header?
     true
   end

@@ -7,6 +7,10 @@ class ServiceManualServiceToolkitPresenter < ServiceManualPresenter
     details.fetch("collections", [])
   end
 
+  def exclude_main_wrapper_class?
+    true
+  end
+
   def show_default_breadcrumbs?
     false
   end
