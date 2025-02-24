@@ -31,24 +31,24 @@ class AttachmentsTest < ActiveSupport::TestCase
     assert_equal [{ "preview_url" => "some-url/preview", "url" => "some-url", "type" => "html" }], @subject.attachments
   end
 
-  test "#attachments returns attachments with preview_urls based on attachment_data_id and filename" do
+  test "#attachments returns attachments with preview_urls based on asset_manager_id and filename" do
     attachments = [{
       "preview_url" => "some-preview-url",
       "url" => "some-url",
-      "attachment_data_id" => "some-attachment-data-id",
+      "asset_manager_id" => "some-attachment-data-id",
       "filename" => "some-filename",
     }]
     @subject.content_item = { "details" => { "attachments" => attachments } }
     assert_equal [{
       "preview_url" => "/csv-preview/some-attachment-data-id/some-filename",
       "url" => "some-url",
-      "attachment_data_id" => "some-attachment-data-id",
+      "asset_manager_id" => "some-attachment-data-id",
       "filename" => "some-filename",
       "type" => "html",
     }], @subject.attachments
   end
 
-  test "#attachments raises an error if preview_url is present, but both url and attachment_data_id / filename are absent" do
+  test "#attachments raises an error if preview_url is present, but both url and asset_manager_id / filename are absent" do
     attachments = [{
       "preview_url" => "some-preview-url",
     }]
