@@ -11,6 +11,7 @@ class ContentItemManualTest < ActiveSupport::TestCase
         "title" => "Super title",
         "base_path" => "/a/base/path",
         "public_updated_at" => "2022-03-23T08:30:20.000+00:00",
+        "first_published_at" => "2022-03-23T08:30:20.000+00:00",
         "schema_name" => schema_name,
         "details" => {
           "body" => "body",
@@ -61,7 +62,6 @@ class ContentItemManualTest < ActiveSupport::TestCase
 
   test "returns extra publisher metadata" do
     item = DummyContentItem.new
-    item.stubs(:display_date).returns("23 March 2022")
 
     view_context = mock
     view_context.stubs(:request).returns(ActionDispatch::TestRequest.create)

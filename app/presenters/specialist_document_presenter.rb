@@ -147,7 +147,7 @@ private
   end
 
   def friendly_facet_date(dates)
-    dates.map { |date| display_date(date) }
+    dates.map { |date| DateTimeHelper.display_date(date) }
   end
 
   def friendly_facet_text(facet, values)

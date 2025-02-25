@@ -1,11 +1,11 @@
 module ContentItem
   module Updatable
     def published
-      display_date(first_public_at)
+      DateTimeHelper.display_date(first_public_at)
     end
 
     def updated
-      display_date(public_updated_at) if any_updates?
+      DateTimeHelper.display_date(public_updated_at) if any_updates?
     end
 
     def history
@@ -28,7 +28,7 @@ module ContentItem
       changes = content_item["details"]["change_history"] || []
       changes.map do |item|
         {
-          display_time: display_date(item["public_timestamp"]),
+          display_time: DateTimeHelper.display_date(item["public_timestamp"]),
           note: item["note"],
           timestamp: item["public_timestamp"],
         }

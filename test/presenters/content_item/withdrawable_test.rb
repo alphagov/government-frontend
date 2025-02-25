@@ -52,10 +52,6 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
         "news_article"
       end
 
-      def display_date(date)
-        date
-      end
-
       def content_item
         {
           "title" => "Proportion of residents who do any walking or cycling (at local authority level) (CW010)",
