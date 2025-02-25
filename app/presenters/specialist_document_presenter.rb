@@ -26,8 +26,10 @@ class SpecialistDocumentPresenter < ContentItemPresenter
 
   def important_metadata
     super.tap do |m|
-      facets_with_friendly_values.each do |facet|
-        m.merge!(facet["name"] => value_or_array_of_values(facet["values"]))
+      facets_with_values.each do |facet|
+        facet_values_for_content_item = [content_item_metadata[facet["key"]]].flatten
+        friendly_facet_values = friendly_facet_values(facet, facet_values_for_content_item)
+        m.merge!(facet["name"] => value_or_array_of_values(friendly_facet_values))
       end
     end
   end
@@ -113,37 +115,25 @@ private
     finder.dig("details", "facets")
   end
 
-  def facet_values
+  def content_item_metadata
     # Metadata is a required field
     content_item["details"]["metadata"]
   end
 
-  def facets_with_friendly_values
-    facets_with_values.map do |facet|
-      facet_key = facet["key"]
-      # Cast all values into an array
-      values = [facet_values[facet_key]].flatten
-
-      facet["values"] = case facet["type"]
-                        when "date"
-                          friendly_facet_date(values)
-                        when "text"
-                          friendly_facet_text(facet, values)
-                        else
-                          values
-                        end
-
-      facet
-    end
-  end
-
   def facets_with_values
-    return [] unless facets && facet_values.any?
+    return [] unless facets && content_item_metadata.any?
 
     facets
-      .select { |f| facet_values[f["key"]] && facet_values[f["key"]].present? }
+      .select { |f| content_item_metadata[f["key"]] && content_item_metadata[f["key"]].present? }
       .reject { |f| f["key"] == first_published_at_facet_key }
       .reject { |f| f["key"] == internal_notes_facet_key }
+  end
+
+  def friendly_facet_values(facet, facet_values_for_content_item)
+    return friendly_facet_date(facet_values_for_content_item) if facet["type"] == "date"
+    return friendly_facet_text(facet, facet_values_for_content_item) if facet["type"] == "text"
+
+    facet_values_for_content_item
   end
 
   def friendly_facet_date(dates)
@@ -151,37 +141,26 @@ private
   end
 
   def friendly_facet_text(facet, values)
-    if facet["allowed_values"] && facet["allowed_values"].any?
-      facet_blocks(facet, values)
-    else
-      values
-    end
+    return values if facet["allowed_values"].blank?
+
+    values.map { |value| friendly_facet_label(facet, value) }
   end
 
-  # The facet value is hyphenated, map this to the
-  # friendly readable version provided in `allowed_values`
-  def facet_blocks(facet, values)
-    values.map do |value|
-      allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
+  def friendly_facet_label(facet, value)
+    allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
 
-      if allowed_value
-        facet_block(facet, allowed_value)
-      else
-        GovukError.notify(
-          "Facet value not in list of allowed values",
-          extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" },
-        )
-        value
-      end
-    end
+    return default_facet_value_if_not_found(facet, value) unless allowed_value
+    return allowed_value["label"] unless facet["filterable"]
+
+    facet_link(allowed_value["label"], allowed_value["value"], facet["key"])
   end
 
-  def facet_block(facet, allowed_value)
-    friendly_value = allowed_value["label"]
-
-    return friendly_value unless facet["filterable"]
-
-    facet_link(friendly_value, allowed_value["value"], facet["key"])
+  def default_facet_value_if_not_found(facet, value)
+    GovukError.notify(
+      "Facet value not in list of allowed values",
+      extra: { error_message: "Facet value '#{value}' not an allowed value for facet '#{facet['name']}' on #{base_path} content item" },
+    )
+    value
   end
 
   def facet_link(label, value, key)
@@ -208,8 +187,8 @@ private
   #
   # Instead use first date in change history
   def first_public_at
-    @first_public_at ||= if facet_values[first_published_at_facet_key]
-                           facet_values[first_published_at_facet_key]
+    @first_public_at ||= if content_item_metadata[first_published_at_facet_key]
+                           content_item_metadata[first_published_at_facet_key]
                          else
                            changes = reverse_chronological_change_history
                            changes.any? ? changes.last[:timestamp] : nil
@@ -236,7 +215,7 @@ private
   # Example:
   # https://www.gov.uk/aaib-reports/lockheed-l1011-385-1-15-g-bhbr-19-december-1989
   def bulk_published?
-    facet_values["bulk_published"].present?
+    content_item_metadata["bulk_published"].present?
   end
 
   def statutory_instrument?
