@@ -110,9 +110,7 @@ private
   end
 
   def facets
-    return nil unless finder
-
-    finder.dig("details", "facets")
+    @facets ||= finder&.dig("details", "facets")
   end
 
   def content_item_metadata
@@ -150,9 +148,16 @@ private
     allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
 
     return default_facet_value_if_not_found(facet, value) unless allowed_value
-    return allowed_value["label"] unless facet["filterable"]
 
-    facet_link(allowed_value["label"], allowed_value["value"], facet["key"])
+    label = if allowed_value["main_facet_label"].present?
+              [allowed_value["main_facet_label"], allowed_value["label"]].join(" - ")
+            else
+              allowed_value["label"]
+            end
+
+    return label unless facet["filterable"]
+
+    facet_link(label, allowed_value, facet["key"])
   end
 
   def default_facet_value_if_not_found(facet, value)
@@ -163,13 +168,25 @@ private
     value
   end
 
-  def facet_link(label, value, key)
+  def facet_link(label, allowed_value, key)
     finder_base_path = finder["base_path"]
-    view_context.link_to(
-      label,
-      "#{finder_base_path}?#{key}%5B%5D=#{value}",
-      class: "govuk-link govuk-link--inverse",
-    )
+    url = "#{finder_base_path}?#{facet_link_query_params(allowed_value, key)}"
+    view_context.link_to(label, url, class: "govuk-link govuk-link--inverse")
+  end
+
+  def facet_link_query_params(allowed_value, key)
+    query_params = { "#{key}[]" => allowed_value["value"] }
+
+    if allowed_value["main_facet_value"]
+      main_facet = main_facet_for_sub_facet(key)
+      query_params["#{main_facet['key']}[]"] = allowed_value["main_facet_value"] if main_facet
+    end
+
+    query_params.to_query
+  end
+
+  def main_facet_for_sub_facet(sub_facet_key)
+    facets&.detect { |f| f["sub_facet_key"] == sub_facet_key }
   end
 
   def first_published_at_facet_key
