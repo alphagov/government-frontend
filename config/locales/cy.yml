@@ -6,16 +6,16 @@ cy:
     at: am
     closed:
     closes: Mae'n cau am
-    closes_at:
+    closes_at: Mae'r alwad hon am dystiolaeth yn cau ar
     complete_a: Cwblhau
-    description:
+    description: Disgrifiad yr alwad o dystiolaeth
     detail_of_outcome: Manylion am y canlyniad
     documents: Dogfennau
     download_outcome: Llwytho'r canlyniad llawn i lawr
     either: naill ai
     email_to: 'E-bostio at:'
     is_being: yn cael ei
-    not_open_yet:
+    not_open_yet: Nid yw'r alwad am dystiolaeth hon ar agor eto
     'on':
     opens:
     or:
@@ -127,8 +127,8 @@ cy:
       call_for_evidence:
         few:
         many:
-        one:
-        other:
+        one: Galwad am dystiolaeth
+        other: Galwadau am dystiolaeth
         two:
         zero:
       call_for_evidence_outcome:
@@ -148,7 +148,7 @@ cy:
       closed_call_for_evidence:
         few:
         many:
-        one:
+        one: Galwad am dystiolaeth caeëdig
         other:
         two:
         zero:
@@ -428,7 +428,7 @@ cy:
       open_call_for_evidence:
         few:
         many:
-        one:
+        one: Galwad agored am dystiolaeth
         other:
         two:
         zero:
