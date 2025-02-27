@@ -29,13 +29,13 @@ cy:
     write_to:
   common:
     email_and_print_link:
-    print_link:
+    print_link: Argraffu'r dudalen hon
     visit: 'Ymweld:'
   components:
     figure:
       image_credit: 'Delwedd gan: %{credit}'
     print_link:
-      text:
+      text: Argraffu'r dudalen hon
     published_dates:
       hidden_heading:
       hide_all_updates: cuddio pob diweddariad
