@@ -7,6 +7,7 @@ module DateTimeHelper
     time = Time.zone.parse(date)
     date_format = "%-e %B %Y"
     time_format = "%l:%M%P"
+    on = I18n.t("time.on")
 
     if rollback_midnight && (time.strftime(time_format) == "12:00am")
       # 12am, 12:00am and "midnight on" can all be misinterpreted
@@ -14,6 +15,6 @@ module DateTimeHelper
       # 12am on 10 January becomes 11:59pm on 9 January
       time -= 1.second
     end
-    I18n.l(time, format: "#{time_format} on #{date_format}").gsub(":00", "").gsub("12pm", "midday").gsub("12am on ", "").strip
+    I18n.l(time, format: "#{time_format} #{on} #{date_format}").gsub(":00", "").gsub("12pm", "midday").gsub("12am on ", "").strip
   end
 end
