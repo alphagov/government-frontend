@@ -5,6 +5,7 @@ cy:
     another_website_html:
     at: am
     closed:
+    closed_another_website_html:
     closes: Mae'n cau am
     closes_at: Mae'r alwad hon am dystiolaeth yn cau ar
     complete_a: Cwblhau
@@ -17,6 +18,7 @@ cy:
     is_being: yn cael ei
     not_open_yet: Nid yw'r alwad am dystiolaeth hon ar agor eto
     'on':
+    open_another_website_html: Cedwir yr alwad hon am dystiolaeth ar <a href="%{url}">wefan arall</a>
     opens:
     or:
     original_call_for_evidence:

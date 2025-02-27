@@ -5,6 +5,7 @@ en:
     another_website_html: This call for evidence %{closed} held on <a href="%{url}">another website</a>
     at: at
     closed: This call for evidence has closed
+    closed_another_website_html: This call for evidence was held on <a href="%{url}">another website</a>
     closes: It closes at
     closes_at: This call for evidence closes at
     complete_a: Complete a
@@ -17,6 +18,7 @@ en:
     is_being: is being
     not_open_yet: This call for evidence isn't open yet
     'on': 'on'
+    open_another_website_html: This call for evidence is being held on <a href="%{url}">another website</a>
     opens: This call for evidence opens
     or: or
     original_call_for_evidence: Original call for evidence
