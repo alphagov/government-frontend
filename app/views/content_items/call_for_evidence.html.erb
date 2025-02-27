@@ -91,9 +91,9 @@
         <p class="app-c-banner__text">
           <strong>
             <% if @content_item.closed? %>
-              <%= t("call_for_evidence.another_website_html", closed: t("call_for_evidence.was"), url: @content_item.held_on_another_website_url) %>.
+              <%= t("call_for_evidence.closed_another_website_html", url: @content_item.held_on_another_website_url) %>.
             <% else %>
-              <%= t("call_for_evidence.another_website_html", closed: t("call_for_evidence.is_being"), url: @content_item.held_on_another_website_url) %>.
+              <%= t("call_for_evidence.open_another_website_html", url: @content_item.held_on_another_website_url) %>.
             <% end %>
           </strong>
         </p>

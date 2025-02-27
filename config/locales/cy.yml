@@ -1,41 +1,43 @@
 ---
 cy:
   call_for_evidence:
-    and:
+    and: a
     another_website_html:
-    at:
+    at: am
     closed:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    is_being:
-    not_open_yet:
+    closed_another_website_html:
+    closes: Mae'n cau am
+    closes_at: Mae'r alwad hon am dystiolaeth yn cau ar
+    complete_a: Cwblhau
+    description: Disgrifiad yr alwad o dystiolaeth
+    detail_of_outcome: Manylion am y canlyniad
+    documents: Dogfennau
+    download_outcome: Llwytho'r canlyniad llawn i lawr
+    either: naill ai
+    email_to: 'E-bostio at:'
+    is_being: yn cael ei
+    not_open_yet: Nid yw'r alwad am dystiolaeth hon ar agor eto
     'on':
+    open_another_website_html: Cedwir yr alwad hon am dystiolaeth ar <a href="%{url}">wefan arall</a>
     opens:
     or:
     original_call_for_evidence:
     ran_from:
-    respond_online:
+    respond_online: Ymateb ar-lein
     response_form:
     summary: Crynodeb
-    was:
-    ways_to_respond:
-    write_to:
+    was: roedd
+    ways_to_respond: Ffyrdd o ymateb
+    write_to: 'Ysgrifennu at:'
   common:
     email_and_print_link:
-    print_link:
+    print_link: Argraffu'r dudalen hon
     visit: 'Ymweld:'
   components:
     figure:
       image_credit: 'Delwedd gan: %{credit}'
     print_link:
-      text:
+      text: Argraffu'r dudalen hon
     published_dates:
       hidden_heading:
       hide_all_updates: cuddio pob diweddariad
@@ -127,8 +129,8 @@ cy:
       call_for_evidence:
         few:
         many:
-        one:
-        other:
+        one: Galwad am dystiolaeth
+        other: Galwadau am dystiolaeth
         two:
         zero:
       call_for_evidence_outcome:
@@ -148,7 +150,7 @@ cy:
       closed_call_for_evidence:
         few:
         many:
-        one:
+        one: Galwad am dystiolaeth caeëdig
         other:
         two:
         zero:
@@ -428,7 +430,7 @@ cy:
       open_call_for_evidence:
         few:
         many:
-        one:
+        one: Galwad agored am dystiolaeth
         other:
         two:
         zero:
