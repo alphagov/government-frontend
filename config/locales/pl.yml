@@ -641,7 +641,7 @@ pl:
   time:
     formats:
       short_ordinal: "%e %B %Y"
-    'on':
+    'on': dnia
   working_group:
     contact_details: Dane kontaktowe
     policies: Polityka
