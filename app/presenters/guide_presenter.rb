@@ -22,10 +22,6 @@ class GuidePresenter < ContentItemPresenter
     parts.any?
   end
 
-  def multi_page_guide?
-    parts.size > 1
-  end
-
   def print_link
     "#{base_path}/print"
   end
@@ -41,27 +37,10 @@ class GuidePresenter < ContentItemPresenter
     end
   end
 
-  def show_guide_navigation?
-    multi_page_guide? && !hide_chapter_navigation?
-  end
-
-  def content_title
-    if parts.any? && hide_chapter_navigation?
-      return current_part_title
-    end
-
-    title
-  end
-
 private
 
   def draft_access_token_param
     "token=#{draft_access_token}" if draft_access_token
-  end
-
-  def hide_chapter_navigation?
-    hide_navigation_elements = content_item.parsed_content["details"]["hide_chapter_navigation"]
-    part_of_step_navs? && hide_navigation_elements
   end
 
   def part_of_step_navs?
