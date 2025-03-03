@@ -1,0 +1,508 @@
+---
+ky:
+  call_for_evidence:
+    and: жана
+    another_website_html: Бул далилдерди талап кылуу %{closed} <a href="%{url}">башка вебсайтта</a> суралган
+    at: бул жерде
+    closed: Бул далилдерди талап кылуу жабылган
+    closed_another_website_html:
+    closes: Ал жабылат
+    closes_at: Бул далилдерди талап кылуу жабылат
+    complete_a: Толтуруу
+    description: Далилдерди талап кылуу сүрөттөмөсү
+    detail_of_outcome: Натыйжанын чоо-жайы
+    documents: Документтер
+    download_outcome: Натыйжаны толугу менен окуу
+    either: же
+    email_to: 'Бул жерге электрондук кат жөнөтүңүз:'
+    is_being: ал
+    not_open_yet: Бул далилдерди талап кылуу ачыла элек
+    'on': күнү
+    open_another_website_html:
+    opens: Бул далилдерди талап кылуу ачылат
+    or: же
+    original_call_for_evidence: Далилдерди талап кылуунун түпнускасы
+    ran_from: Бул далилдерди талап кылуу аткарылды
+    respond_online: Онлайн жооп берүү
+    response_form: жооп формасы
+    summary: Кыскача
+    was: болгон
+    ways_to_respond: Жооп берүү жолдору
+    write_to: 'Бул жерге жазуу:'
+  common:
+    email_and_print_link: Электрондук каттарга жазылуу же бул баракчаны басып чыгаруу
+    print_link: Бул баракчаны басып чыгаруу
+    visit: 'Баш багыңыз:'
+  components:
+    figure:
+      image_credit: Сүрөттүн ээси %{credit}
+    print_link:
+      text: Бул баракчаны басып чыгаруу
+    published_dates:
+      hidden_heading: Бул баракчанын жаңыртуулары
+      hide_all_updates: бардык жаңыртууларды жашыруу
+      last_updated: Акыркы жолу жаңыртылды %{date}
+      published: Жарыяланды %{date}
+      see_all_updates: Бардык жаңыртууларды көрүү
+      show_all_updates: бардык жаңыртууларды көрсөтүү
+    share_links:
+      share_this_page: Бул баракчаны бөлүшүү
+  consultation:
+    analysing_feedback: Биз пикириңизди талдап жатабыз
+    and: жана
+    another_website_html: Бул консультация %{closed} <a href="%{url}">башка вебсайтта</a> жүргүзүлгөн
+    at: бул жерде
+    closes: Ал жабылат
+    closes_at: Бул консультация жабылат
+    complete_a: Толтуруу
+    concluded: Бул консультация аяктады
+    description: Консультациянын сүрөттөмөсү
+    detail_of_feedback_received: Алынган пикирдин чоо-жайы
+    detail_of_outcome: Натыйжанын чоо-жайы
+    documents: Документтер
+    download_outcome: Натыйжаны толугу менен окуу
+    either: же
+    email_to: 'Бул жерге электрондук кат жөнөтүңүз:'
+    feedback_received: Алынган сын-пикир
+    is_being: ал
+    not_open_yet: Бул консультация ачыла элек
+    'on': күнү
+    opens: Бул консультация ачылат
+    or: же
+    original_consultation: Түпнуска консультация
+    ran_from: Бул консультация ачылды
+    respond_online: Онлайн жооп берүү
+    summary: Кыскача
+    visit_soon: Бул жалпыга ачык пикирдин жыйынтыгын жүктөп алуу үчүн бир аздан кийин бул баракчага кайрадан баш багыңыз.
+    was: болгон
+    ways_to_respond: Жооп берүү жолдору
+    write_to: 'Бул жерге жазуу:'
+  contact:
+    access_and_opening_times: Кирүү жана ачылуу убактары
+    contact_form: Байланыш формасы
+    email: Электрондук кат
+    find_call_charges: Чалуу акылары тууралуу табуу
+    online: Онлайн
+    phone: Телефон
+    webchat: Вебчат
+  content_item:
+    contents: Мазмуну
+    metadata:
+      published: Жарыяланды
+      updated: Жаңыртылды
+    schema_name:
+      aaib_report:
+        one: Абадагы кагылыштарды териштирүүчү бөлүмдүн отчету
+        other: Абадагы кагылыштарды териштирүүчү бөлүмдүн отчеттору
+      announcement:
+        one: Кулактандыруу
+        other: Кулактандыруулар
+      asylum_support_decision:
+        one: Баш калкалоочуларды колдоо суроолору боюнча трибуналдын чечими
+        other: Баш калкалоочуларды колдоо суроолору боюнча трибуналдын чечимдери
+      authored_article:
+        one: Макаланын автору
+        other: Макалалардын автору
+      business_finance_support_scheme:
+        one: Бизнести каржылоону колдоочу схема
+        other: Бизнести каржылоону колдоочу схемалар
+      call_for_evidence:
+        one: Далилдерди талап кылуу
+        other: Далилдерди талап кылуулар
+      call_for_evidence_outcome:
+        one: Натыйжанын далилдөөсүн талап кылуу
+        other: Натыйжанын далилдөөлөрүн талап кылуу
+      case_study:
+        one: Окуяны изилдөө
+        other: Окуяларды изилдөө
+      closed_call_for_evidence:
+        one: Далилдерди жабык түрдө талап кылуу
+        other: Далилдерди жабык түрдө талап кылуулар
+      closed_consultation:
+        one: Жабык түрдө консультация
+        other: Жабык түрдө консультациялар
+      cma_case:
+        one: Атаандаштыкты жана рынокту башкаруу иши
+        other: Атаандаштыкты жана рынокту башкаруу иштери
+      consultation:
+        one: Консультация
+        other: Консультациялар
+      consultation_outcome:
+        one: Консультациянын натыйжасы
+        other: Консультациянын натыйжалары
+      corporate_information_page:
+        one: Маалымат баракчасы
+        other: Маалымат баракчалары
+      corporate_report:
+        one: Корпоративдик отчет
+        other: Корпоративдик отчеттор
+      correspondence:
+        one: Корреспонденция
+        other: Корреспонденциялар
+      countryside_stewardship_grant:
+        one: Айылдык аймактарды башкаруу боюнча грант
+        other: Айылдык аймактарды башкаруу боюнча гранттар
+      decision:
+        one: Чечим
+        other: Чечимдер
+      detailed_guide:
+        one: Жетектеме
+        other: Жетектеме
+      dfid_research_output:
+        one: Өнүгүү үчүн изилдөөнүн натыйжасы
+        other: Өнүгүү үчүн изилдөөнүн натыйжалары
+      document_collection:
+        one: Жыйнак
+        other: Жыйнактар
+      draft_text:
+        one: Сомдомо тексти
+        other: Сомдомо тексттери
+      drug_safety_update:
+        one: Дары каражаттарынын коопсуздугу боюнча жаңыртуу
+        other: Дары каражаттарынын коопсуздугу боюнча жаңыртуулар
+      employment_appeal_tribunal_decision:
+        one: Эмгек арыздары боюнча апелляциялык соттун чечими
+        other: Эмгек арыздары боюнча апелляциялык соттун чечимдери
+      employment_tribunal_decision:
+        one: Эмгек боюнча апелляциялык соттун чечими
+        other: Эмгек боюнча апелляциялык соттун чечимдери
+      esi_fund:
+        one: Европалык структуралык жана инвестиция фонду (ESIF)
+        other: Европалык структуралык жана инвестиция фонддору (ESIF)
+      fatality_notice:
+        one: Өлүм тууралуу билдирүү
+        other: Өлүм тууралуу билдирүүлөр
+      foi_release:
+        one: FOI чыгарылышы
+        other: FOI чыгарылыштары
+      form:
+        one: Форма
+        other: Формалар
+      government_response:
+        one: Өкмөттүн реакциясы
+        other: Өкмөттүн реакциялары
+      guidance:
+        one: Жетектеме
+        other: Жетектеме
+      impact_assessment:
+        one: Таасирдин баалоосу
+        other: Таасирдин баалоолору
+      imported:
+        one: импорттолгон - күтүүчү түр
+        other: импорттолгон - күтүүчү түр
+      independent_report:
+        one: Көз карандысыз отчет
+        other: Көз карандысыз отчеттор
+      international_development_fund:
+        one: Өнүгүүнүн эл аралык каржылоосу
+        other: Өнүгүүнүн эл аралык каржылоосу
+      international_treaty:
+        one: Эл аралык келишим
+        other: Эл аралык келишимдер
+      maib_report:
+        one: Деңиз үстүндөгү кагылыштарды териштирүүчү бөлүмдүн отчету
+        other: Деңиз үстүндөгү кагылыштарды териштирүүчү бөлүмдүн отчеттору
+      map:
+        one: Карта
+        other: Карталар
+      medical_safety_alert:
+        one: Дары каражаттарын жана медициналык жабдуулар боюнча маалымдоолор жана чакырып алуулар
+        other: Дары каражаттарын жана медициналык жабдуулар боюнча маалымдоолор жана чакырып алуулар
+      national:
+        one: Аккредиттелген расмий статистикалык кулактандыруу
+        other: Аккредиттелген расмий статистикалык кулактандыруулар
+      national_statistics:
+        one: Аккредиттелген расмий статистика
+        other: Аккредиттелген расмий статистика
+      national_statistics_announcement:
+        one: Аккредиттелген расмий статистикалык кулактандыруу
+        other: Аккредиттелген расмий статистикалык кулактандыруулар
+      news_article:
+        one: Жаңылыктар макаласы
+        other: Жаңылыктар макалалар
+      news_story:
+        one: Жаңылыктар тарыхчасы
+        other: Жаңылыктар тарыхчалары
+      notice:
+        one: Эскертүү
+        other: Эскертүүлөр
+      official:
+        one: Расмий статистикалык кулактандыруу
+        other: Расмий статистикалык кулактандыруулар
+      official_statistics:
+        one: Расмий статистика
+        other: Расмий статистикалар
+      official_statistics_announcement:
+        one: Расмий статистикалык кулактандыруу
+        other: Расмий статистикалык кулактандыруулар
+      open_call_for_evidence:
+        one: Далилдерди ачык түрдө талап кылуу
+        other: Далилдерди ачык түрдө талап кылуулар
+      open_consultation:
+        one: Ачык консультация
+        other: Ачык консультациялар
+      oral_statement:
+        one: Парламентте ооз эки арыз
+        other: Парламентте ооз эки арыздар
+      policy:
+        one: Саясат
+        other: Саясаттар
+      policy_paper:
+        one: Саясий документ
+        other: Саясий документтер
+      press_release:
+        one: Пресс-релиз
+        other: Пресс-релиздер
+      product-safety-alert-report-recall:
+        one: Продукциянын коопсуздугу боюнча эскертүүлөр, отчеттор жана пикирлер
+        other: Продукциянын коопсуздугу боюнча эскертүүлөр, отчеттор жана пикирлер
+      promotional:
+        one: Жарнама материалдары
+        other: Жарнама материалдары
+      publication:
+        one: Жарыялоо
+        other: Жарыялоолор
+      raib_report:
+        one: Темир жолдогу кагылыштарды териштирүүчү бөлүмдүн отчету
+        other: Темир жолдогу кагылыштарды териштирүүчү бөлүмдүн отчеттору
+      regulation:
+        one: Жөнгө салуу
+        other: Жөнгө салуулар
+      research:
+        one: Изилдөө жана талдоо
+        other: Изилдөө жана талдоо
+      residential_property_tribunal_decision:
+        one: Турак-жай менчиги боюнча соттун чечими
+        other: Турак-жай менчиги боюнча соттун чечимдери
+      service_sign_in:
+        one: Кызматка кирүү
+        other: Кызматка кирүү
+      service_standard_report:
+        one: Кызмат көрсөтүү стандарттары боюнча отчет
+        other: Кызмат көрсөтүү стандарттары боюнча отчеттор
+      speaking_notes:
+        one: Чыгып сүйлөө боюнча эскертүүлөр
+        other: Чыгып сүйлөө боюнча эскертүүлөр
+      speech:
+        one: Сөз
+        other: Сөздөр
+      standard:
+        one: Стандарт
+        other: Стандарттар
+      statement_to_parliament:
+        one: Парламентте арыз
+        other: Парламентте арыздар
+      statistical_data_set:
+        one: Статистикалык дайындардын топтому
+        other: Статистикалык дайындардын топтомдору
+      statistics_announcement:
+        one: Статистиканы чыгаруу кулактандыруусу
+        other: Статистиканы чыгаруу кулактандыруулары
+      statutory_guidance:
+        one: Нормативдик жетектеме
+        other: Нормативдик жетектеме
+      tax_tribunal_decision:
+        one: Салык жана канцелярия трибуналынын чечими
+        other: Салык жана канцелярия трибуналынын чечимдери
+      transcript:
+        one: Стенограмма
+        other: Стенограммалар
+      transparency:
+        one: Дайындардын тунуктугу
+        other: Дайындардын тунуктугу
+      utaac_decision:
+        one: Административдик аппелляция трибуналынын чечими
+        other: Административдик аппелляция трибуналынын чечимдери
+      world_news_story:
+        one: Дүйнөлүк жаңылыктар тарыхчасы
+        other: Дүйнөлүк жаңылыктар тарыхчалары
+      written_statement:
+        one: Парламентте жазуу түрүндө арыз
+        other: Парламентте жазуу түрүндө арыздар
+  corporate_information_page:
+    about_our_services_html: Аныктоо %{link}.
+    corporate_information: Корпоративдик маалымат
+    personal_information_charter_html: Биздин %{link} жеке маалыматыңызга кандай мамиле кылганыбызды түшүндүрөт.
+    publication_scheme_html: Биз дайыма жарыялап турган маалыматтын түрлөрү жөнүндө %{link} баракчабыздан окуңуз.
+    social_media_use_html: Саясатыбызды %{link} сайтынан окуп чыгыңыз.
+    welsh_language_scheme_html: "%{link} боюнча милдеттенмебиз жөнүндө билип алыңыз."
+  email:
+    already_subscribed_title: Бул баракча тууралуу электрондук каттарды алып жатасыз
+    description: Бардык GOV.UK электрондук почта жазылууларыңызды көрүп
+    subscribe_title: Сиз бул баракча тууралуу электрондук каттарга жазылгансыз
+    unsubscribe_title: Сиз бул баракча тууралуу электрондук каттарга жазылуудан баш тарткансыз
+  fatality_notice:
+    alt_text: Коргоо министрлигинин герби
+    field_of_operation: Иштөө чөйрөсү
+    none_added: Бул иш аймагында каза болгондор тууралуу билдирүүлөр азырынча кошула элек.
+    operations_in: "%{location} аймагындагы операциялар"
+  field_of_operation:
+    context: Каза болгон британиялыктар
+    title: Операциялар
+  fields_of_operation:
+    context: Каза болгон британиялыктар
+  gone:
+    page_title: Жеткиликсиз
+    published_in_error: Бул баракчадагы маалымат ката менен жарыялангандыктан өчүрүлдү.
+    title: Сиз карап жаткан баракча мындан ары жеткиликсиз
+  guide:
+    pages_in_guide: Бул жетектемедеги баракчалар
+    skip_contents: Мазмунду өткөрүп жиберүү
+  html_publication:
+    print_meta_data:
+      available_at: Бул жарыялоо %{url} сайтында жеткиликтүү
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'Бул басылма Ачык Өкмөт Лицензиясынын v3.0 шарттарына ылайык лицензияланган. Бул уруксаттаманы көрүү үчүн <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> вебсайтына баш багып же Маалыматтык саясат тобуна, Улуттук архивге, Кью, Лондон TW9 4DU жазып же электрондук катты бул дарекке жөнөтүңүз: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Үчүнчү тараптын автордук укук маалыматын аныктаган учурда, сиз тиешелүү автордук укук ээлеринен уруксат алышыңыз керек болот.
+  i18n:
+    direction: Лтр
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    ky: Кыргыз
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
+  manuals:
+    breadcrumb_contents: Мазмунга кайтуу
+    contents_list_breadcrumb_contents: Нускаманын башкы баракчасы
+    contents_title: Мазмуну
+    hmrc_manual_type: HMRC ички нускамасы
+    hmrc_title: "%{title}HMRC ички нускамасы"
+    next_page: Кийинки баракча
+    pages_in_manual_section: Нускама бөлүмдөрүнүн барактары
+    previous_page: Мурунку баракча
+    search_this_manual: Бул нускаманы издөө
+    see_all_updates: Бардык жаңыртууларды көрүү
+    summary_title: Кыскача
+    title: "%{title}Жетектеме"
+    updated: Жаңыртылды
+    updates_amendments: жарыяланган түзөтүүлөр
+    updates_description: "%{title}' жаңыртууларынын тизмеси."
+    updates_page_title: Жаңыртуулар - %{title}
+    updates_title: Жаңыртуулар %{title}
+  multi_page:
+    next_page: Кийинки
+    previous_page: Мурунку
+    print_entire_guide: Колдонмонун бүтүн басып чыгарыла турган версиясын көрүңүз
+    printable_version: Басып чыгарылуучу версия
+  national_statistics:
+    logo_alt_text: Аккредиттелген расмий статистика
+  publication:
+    details: Чоо-жайы
+    documents:
+      one: Документ
+      other: Документтер
+  service_sign_in:
+    continue: Улантуу
+    error:
+      option: Параметрди тандаңыз
+      title: Сиз параметрди тандаган жоксуз
+  shared:
+    historically_political: Бул %{government} астында жарыяланган
+    webchat:
+      available: Кеңешчилер маектешүүгө жеткиликтүү.
+      busy: Вебчат кеңешчилеринин баары учурда бош эмес.
+      closed: Вебчат учурда жабык.
+      speak_to_adviser: Азыр кеңешчи менен сүйлөшүү
+      technical_problem: Вебчат учурда техникалык көйгөйлөрдөн улам жеткиликсиз.
+  specialist_document:
+    pdo_alt_text: Схема логотиби деген жазуусу бар кара мөөр болуп саналат
+    pgi_alt_text: Схема логотиби Geographic Origin UK Protected деген жазуусу бар кара мөөр болуп саналат
+    tsg_alt_text: Схема логотиби Traditional Speciality UK Protected деген жазуусу бар кара мөөр болуп саналат
+  speech:
+    delivered_on: Жеткирилген күнү
+    location: Жайгашкан жер
+    written_on: Жазылган күн
+  statistics_announcement:
+    cancellation_date: Жокко чыгаруу күнү
+    cancelled: Статистиканы чыгаруу жокко чыгарылды
+    changed_date: Чыгаруу күнү өзгөртүлө алат
+    forthcoming: Бул статистикалар чыгарылат
+    previous_date: Мурунку дата
+    proposed_date: Сунушталган чыгарылыш
+    reason_for_change: Өзгөртүү себеби
+    release_date: Чыгаруу датасы
+  time:
+    formats:
+      short_ordinal: "%e %B %Y"
+  working_group:
+    contact_details: Байланыш маалыматтары
+    policies: Саясаттар
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html: Аныктоо %{link}.
+      personal_information_charter_html: Биздин %{link} жеке маалыматыңызга кандай мамиле кылганыбызды түшүндүрөт.
+      publication_scheme_html: Биз дайыма жарыялап турган маалыматтын түрлөрү жөнүндө %{link} баракчабыздан окуңуз.
+      social_media_use_html: Саясатыбызды %{link} сайтынан окуп чыгыңыз.
+      welsh_language_scheme_html: "%{link} боюнча милдеттенмебиз жөнүндө билип алыңыз."
+    find_out_more: Толук профилди жана бардык байланыш маалыматтарын көрүү
+    headings:
+      contact_us: Биз менен байланышыңыз
+      corporate_information: Корпоративдик маалымат
+      follow_us: Бизге катталыңыз
+      our_people: Биздин адамдар
+    location: Жайгашкан жер
+    part_of: Бөлүгү
