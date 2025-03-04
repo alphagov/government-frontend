@@ -4,7 +4,7 @@ cy:
     and: a
     another_website_html:
     at: am
-    closed:
+    closed: Mae'r alwad hon am dystiolaeth wedi cau
     closed_another_website_html:
     closes: Mae'n cau am
     closes_at: Mae'r alwad hon am dystiolaeth yn cau ar
@@ -19,12 +19,12 @@ cy:
     not_open_yet: Nid yw'r alwad am dystiolaeth hon ar agor eto
     'on':
     open_another_website_html: Cedwir yr alwad hon am dystiolaeth ar <a href="%{url}">wefan arall</a>
-    opens:
+    opens: Mae'r alwad am dystiolaeth yn agor
     or:
-    original_call_for_evidence:
-    ran_from:
+    original_call_for_evidence: Yr alwad wreiddiol am dystiolaeth
+    ran_from: Roedd yr alwad hon am dystiolaeth yn rhedeg o
     respond_online: Ymateb ar-lein
-    response_form:
+    response_form: ffurflen ymateb
     summary: Crynodeb
     was: roedd
     ways_to_respond: Ffyrdd o ymateb
@@ -136,8 +136,8 @@ cy:
       call_for_evidence_outcome:
         few:
         many:
-        one:
-        other:
+        one: Canlyniad yr alwad am dystiolaeth
+        other: Canlyniadau yr alwad am dystiolaeth
         two:
         zero:
       case_study:
@@ -150,8 +150,8 @@ cy:
       closed_call_for_evidence:
         few:
         many:
-        one: Galwad am dystiolaeth caeëdig
-        other:
+        one: Galwad gaeedig am dystiolaeth
+        other: Galwadau caeedig am dystiolaeth
         two:
         zero:
       closed_consultation:
