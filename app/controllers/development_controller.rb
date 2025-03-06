@@ -16,7 +16,6 @@ class DevelopmentController < ApplicationController
                        publication
                        service_sign_in
                        specialist_document
-                       speech
                        statistical_data_set
                        statistics_announcement
                        topical_event_about_page
