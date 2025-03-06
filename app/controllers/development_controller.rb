@@ -10,7 +10,6 @@ class DevelopmentController < ApplicationController
                        corporate_information_page
                        detailed_guide
                        document_collection
-                       fatality_notice
                        guide
                        html_publication
                        news_article
