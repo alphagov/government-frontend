@@ -1,6 +1,5 @@
 APP_STYLESHEETS = {
   "application.scss" => "application.css",
-  "components/_back-to-top.scss" => "components/_back-to-top.css",
   "components/_banner.scss" => "components/_banner.css",
   "components/_contents-list-with-body.scss" => "components/_contents-list-with-body.css",
   "components/_figure.scss" => "components/_figure.css",

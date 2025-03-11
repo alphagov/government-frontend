@@ -50,6 +50,6 @@ class ContentsListWithBodyTest < ComponentTestCase
     assert_select(%(.app-c-contents-list-with-body
                     .app-c-contents-list-with-body__link-wrapper
                     .app-c-contents-list-with-body__link-container
-                    .app-c-back-to-top[href='#contents']))
+                    .gem-c-back-to-top-link[href='#contents']))
   end
 end

@@ -87,7 +87,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?("#contents .gem-c-contents-list")
     assert page.has_css?(%(#contents .app-c-contents-list-with-body__link-wrapper
-                          .app-c-contents-list-with-body__link-container a.app-c-back-to-top))
+                          .app-c-contents-list-with-body__link-container a.gem-c-back-to-top-link))
 
     within ".gem-c-contents-list" do
       @content_item["details"]["headers"].each do |heading|
