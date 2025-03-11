@@ -47,8 +47,7 @@
       <% end %>
       <%= render 'govuk_publishing_components/components/notice',
         title: t("consultation.analysing_feedback"),
-        description_text: content_item_final_outcome,
-        margin_bottom:(0 unless @content_item.add_margin?)
+        description_text: content_item_final_outcome
       %>
 
     <% elsif @content_item.final_outcome? %>
