@@ -52,7 +52,7 @@
         <%= render 'govuk_publishing_components/components/organisation_logo', @content_item.organisation_logo %>
       </div>
 
-      <%= render "components/contents_list_with_body", contents: @content_item.contents do %>
+      <%= render "govuk_publishing_components/components/contents_list_with_body", contents: @content_item.contents do %>
         <div class="responsive-bottom-margin">
           <%= render 'govuk_publishing_components/components/govspeak', {} do %>
             <%= raw(@content_item.body) %>

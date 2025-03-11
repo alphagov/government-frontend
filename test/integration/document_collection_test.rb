@@ -114,7 +114,7 @@ class DocumentCollectionTest < ActionDispatch::IntegrationTest
       assert page.has_css?(".govuk-heading-m.govuk-\\!-font-size-27", text: group["title"])
     end
 
-    within ".app-c-contents-list-with-body" do
+    within ".gem-c-contents-list-with-body" do
       assert page.has_css?(".gem-c-govspeak", count: group_count)
       assert page.has_css?(".gem-c-document-list", count: group_count)
     end

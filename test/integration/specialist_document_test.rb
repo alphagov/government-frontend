@@ -86,8 +86,8 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("countryside-stewardship-grants")
 
     assert page.has_css?("#contents .gem-c-contents-list")
-    assert page.has_css?(%(#contents .app-c-contents-list-with-body__link-wrapper
-                          .app-c-contents-list-with-body__link-container a.gem-c-back-to-top-link))
+    assert page.has_css?(%(#contents .gem-c-contents-list-with-body__link-wrapper
+                          .gem-c-contents-list-with-body__link-container a.gem-c-back-to-top-link))
 
     within ".gem-c-contents-list" do
       @content_item["details"]["headers"].each do |heading|

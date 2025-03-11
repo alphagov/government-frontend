@@ -31,7 +31,7 @@
       <% end %>
     <% end %>
 
-    <%= render "components/contents_list_with_body", contents: @content_item.contents do %>
+    <%= render "govuk_publishing_components/components/contents_list_with_body", contents: @content_item.contents do %>
 
       <% if @content_item.protected_food_drink_name? %>
         <img
