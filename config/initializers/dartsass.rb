@@ -1,6 +1,5 @@
 APP_STYLESHEETS = {
   "application.scss" => "application.css",
-  "components/_published-dates.scss" => "components/_published-dates.css",
   "views/_guide.scss" => "views/_guide.css",
   "views/_html-publication.scss" => "views/_html-publication.css",
   "views/_manual.scss" => "views/_manual.css",

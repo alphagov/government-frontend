@@ -38,14 +38,14 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders change history in reverse chronological order" do
     setup_and_visit_content_item("countryside-stewardship-grants")
 
-    within(".app-c-published-dates__change-history") do
+    within(".gem-c-published-dates__change-history") do
       assert_match @content_item["details"]["change_history"].last["note"],
-                   page.find(".app-c-published-dates__change-item:first-child").text
+                   page.find(".gem-c-published-dates__change-item:first-child").text
 
       assert_match @content_item["details"]["change_history"].first["note"],
-                   page.find(".app-c-published-dates__change-item:last-child").text
+                   page.find(".gem-c-published-dates__change-item:last-child").text
 
-      assert_equal all(".app-c-published-dates__change-item").size,
+      assert_equal all(".gem-c-published-dates__change-item").size,
                    @content_item["details"]["change_history"].size
     end
   end

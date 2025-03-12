@@ -39,16 +39,16 @@ class FatalityNoticeTest < ActionDispatch::IntegrationTest
 
     assert page.has_text?("Colley served nearly all of his military and administrative career in British South Africa, but he played a significant part in the Second Anglo-Afghan War as military secretary and then private secretary to the governor-general of India, Lord Lytton. The war began in November 1878 and ended in May 1879 with the Treaty of Gandamak.")
 
-    within(".content-bottom-margin .app-c-published-dates") do
+    within(".content-bottom-margin .gem-c-published-dates") do
       assert page.has_content?("Published 27 February 1881")
       assert page.has_content?("Last updated 14 September 2016")
 
-      within(".app-c-published-dates__change-history") do
-        within(".app-c-published-dates__change-item:first-child") do
+      within(".gem-c-published-dates__change-history") do
+        within(".gem-c-published-dates__change-item:first-child") do
           assert page.has_content?(:all, "14 September 2016 Updated information.")
         end
 
-        within(".app-c-published-dates__change-item:last-child") do
+        within(".gem-c-published-dates__change-item:last-child") do
           assert page.has_content?(:all, "27 February 1881 First published.")
         end
       end
