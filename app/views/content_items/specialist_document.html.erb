@@ -35,7 +35,7 @@
 
       <% if @content_item.protected_food_drink_name? %>
         <img
-          class="app-c-figure__image protected-food-drink-name-logo"
+          class="gem-c-figure__image protected-food-drink-name-logo"
           src="<%= @content_item.images.dig(@content_item.protection_type, "url") %>"
           alt="<%= @content_item.images.dig(@content_item.protection_type, "alt_text") %>"
         >
