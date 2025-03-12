@@ -44,19 +44,19 @@ class ContentItemPresenterTest < PresenterTestCase
   end
 
   test "available_translations sorts languages by locale with English first" do
-    translated = govuk_content_schema_example("case_study", "translated")
+    translated = govuk_content_schema_example("detailed_guide", "translated_detailed_guide")
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
-    assert_equal %w[en ar es], (presenter.available_translations.map { |t| t[:locale] })
+    assert_equal %w[en cy], (presenter.available_translations.map { |t| t[:locale] })
   end
 
   test "available_translations returns native locale names using native_language_name_for" do
-    translated = govuk_content_schema_example("case_study", "translated")
+    translated = govuk_content_schema_example("detailed_guide", "translated_detailed_guide")
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
-    assert_equal %w[English العربيَّة Español], (presenter.available_translations.map { |t| t[:text] })
+    assert_equal %w[English Cymraeg], (presenter.available_translations.map { |t| t[:text] })
   end
 
   test "part slug is nil when requesting a content item without parts" do
-    example_without_parts = govuk_content_schema_example("case_study", "translated")
+    example_without_parts = govuk_content_schema_example("detailed_guide", "translated_detailed_guide")
     presenter = create_presenter(
       GuidePresenter,
       content_item: example_without_parts,
