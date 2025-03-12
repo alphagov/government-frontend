@@ -188,7 +188,10 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store and replaces ordered_related_items there are no existing links or overrides" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide")
+    content_item["links"]["suggested_ordered_related_items"] = content_item["links"]["ordered_related_items"]
+    content_item["links"]["ordered_related_items"] = []
+    stub_content_store_has_item(content_item["base_path"], content_item, max_age: 20)
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
