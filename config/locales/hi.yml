@@ -34,17 +34,8 @@ hi:
     print_link:
     visit: 'इस पर जाएं:'
   components:
-    figure:
-      image_credit: 'इमेज क्रेडिट: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: सारे अपडेट छिपाएं
-      last_updated: पिछली बार अपडेट किया गया %{date}
-      published: प्रकाशित %{date}
-      see_all_updates: सभी अपडेट देखें
-      show_all_updates: सभी अपडेट दिखाएं
     share_links:
       share_this_page: यह पेज शेयर करें
   consultation:

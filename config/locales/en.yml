@@ -34,17 +34,8 @@ en:
     print_link: Print this page
     visit: 'Visit:'
   components:
-    figure:
-      image_credit: 'Image credit: %{credit}'
     print_link:
       text: Print this page
-    published_dates:
-      hidden_heading: Updates to this page
-      hide_all_updates: hide all updates
-      last_updated: Last updated %{date}
-      published: Published %{date}
-      see_all_updates: See all updates
-      show_all_updates: show all updates
     share_links:
       share_this_page: Share this page
   consultation:

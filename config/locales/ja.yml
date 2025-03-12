@@ -34,17 +34,8 @@ ja:
     print_link:
     visit: 訪問：
   components:
-    figure:
-      image_credit: 画像著作権：%{credit}
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: すべての更新を非表示
-      last_updated: 最終更新日：%{date}
-      published: 公開日：%{date}
-      see_all_updates: すべての更新を見る
-      show_all_updates: すべての更新を表示
     share_links:
       share_this_page: このページを共有
   consultation:

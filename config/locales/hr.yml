@@ -34,17 +34,8 @@ hr:
     print_link:
     visit: 'Posjetite:'
   components:
-    figure:
-      image_credit: 'Zasluga za sliku: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: sakriti sva ažuriranja
-      last_updated: Zadnje ažurirano %{date}
-      published: Objavljeno %{date}
-      see_all_updates: pogledajte sva ažuriranja
-      show_all_updates: prikaži sva ažuriranja
     share_links:
       share_this_page: Podijelite ovu stranicu
   consultation:

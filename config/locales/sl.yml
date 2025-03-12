@@ -34,17 +34,8 @@ sl:
     print_link:
     visit: 'Obiščite:'
   components:
-    figure:
-      image_credit: 'Avtor slike: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: Skrij vse posodobitve
-      last_updated: Zadnjič posodobljeno %{date}
-      published: Objavljeno %{date}
-      see_all_updates: poglej vse posodobitve
-      show_all_updates: prikaži vse posodobitve
     share_links:
       share_this_page: Deli to stran
   consultation:

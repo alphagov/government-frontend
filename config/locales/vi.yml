@@ -34,17 +34,8 @@ vi:
     print_link:
     visit: 'Truy cập:'
   components:
-    figure:
-      image_credit: 'Nguồn hình ảnh: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: ẩn tất cả các cập nhật
-      last_updated: Lần cập nhật gần đây nhất %{date}
-      published: Ngày xuất bản %{date}
-      see_all_updates: xem tất cả nội dung cập nhật
-      show_all_updates: hiển thị tất cả nội dung cập nhật
     share_links:
       share_this_page: Chia sẻ trang này
   consultation:

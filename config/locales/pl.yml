@@ -34,17 +34,8 @@ pl:
     print_link:
     visit: 'Odwiedź:'
   components:
-    figure:
-      image_credit: Obrazek:%{credit}
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: ukryj wszystkie aktualizacje
-      last_updated: Ostatnio zaktualizowano %{date}
-      published: Opublikowano %{date}
-      see_all_updates: zobacz wszystkie aktualizacje
-      show_all_updates: pokaż wszystkie aktualizacje
     share_links:
       share_this_page: Udostępnij tę stronę
   consultation:

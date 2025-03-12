@@ -34,17 +34,8 @@ ka:
     print_link:
     visit: 'ეწვიეთ:'
   components:
-    figure:
-      image_credit: 'სურათ: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: ყველა ცვლილების დაფარვა
-      last_updated: ბოლოს განახლდა %{date}
-      published: გამოქვეყნდა %{date}
-      see_all_updates: ყველა ცვლილების ნახვა
-      show_all_updates: ყველა ცვლილების ჩვენება
     share_links:
       share_this_page: ამ გვერდის გაზიარება
   consultation:

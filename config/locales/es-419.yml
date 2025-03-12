@@ -34,17 +34,8 @@ es-419:
     print_link:
     visit: 'Visite:'
   components:
-    figure:
-      image_credit: 'Crédito de la imagen: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: ocultar todas las novedades
-      last_updated: Última actualización %{date}
-      published: Publicado %{date}
-      see_all_updates: ver todas las novedades
-      show_all_updates: mostrar todas las actualizaciones
     share_links:
       share_this_page: Compartir esta página
   consultation:

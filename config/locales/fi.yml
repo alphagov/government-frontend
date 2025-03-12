@@ -34,17 +34,8 @@ fi:
     print_link:
     visit: 'Vierailla:'
   components:
-    figure:
-      image_credit: 'Kuvaluotto: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: piilota kaikki päivitykset
-      last_updated: Viimeksi päivitetty %{date}
-      published: Julkaistu %{date}
-      see_all_updates: katso kaikki palvelut
-      show_all_updates: näytä kaikki päivitykset
     share_links:
       share_this_page: Jaa tämä sivu
   consultation:

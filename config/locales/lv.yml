@@ -34,17 +34,8 @@ lv:
     print_link:
     visit: 'Apmeklējiet:'
   components:
-    figure:
-      image_credit: 'Attēla autortiesības: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: paslēpt visus atjauninājumus
-      last_updated: Pēdējoreiz atjaunināts %{date}
-      published: Publicēts %{date}
-      see_all_updates: skatīt visus atjauninājumus
-      show_all_updates: rādīt visus atjauninājumus
     share_links:
       share_this_page: Kopīgot šo lapu
   consultation:

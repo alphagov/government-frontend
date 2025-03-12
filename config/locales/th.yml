@@ -34,17 +34,8 @@ th:
     print_link:
     visit: 'เยี่ยมชม:'
   components:
-    figure:
-      image_credit: 'เครดิตภาพ: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: ซ่อนอัปเดตทั้งหมด
-      last_updated: อัปเดตล่าสุดเมื่อ %{date}
-      published: เผยแพร่เมื่อ %{date}
-      see_all_updates: ดูอัปเดตทั้งหมด
-      show_all_updates: แสดงอัปเดตทั้งหมด
     share_links:
       share_this_page: แชร์หน้านี้
   consultation:

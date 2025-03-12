@@ -34,17 +34,8 @@ et:
     print_link:
     visit: 'Külastus:'
   components:
-    figure:
-      image_credit: 'Pildi autoriõigus: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: peida kõik värskendused
-      last_updated: Viimati värskendatud %{date}
-      published: Avaldatud %{date}
-      see_all_updates: vt kõiki värskendusi
-      show_all_updates: kuva kõik värskendused
     share_links:
       share_this_page: Jaga seda lehte
   consultation:

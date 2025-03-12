@@ -34,17 +34,8 @@ ms:
     print_link:
     visit: 'Lawati:'
   components:
-    figure:
-      image_credit: 'Imej kredit: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: sorok semua kemas kini
-      last_updated: Kali terakhir dikemas kini %{date}
-      published: Diterbitkan %{date}
-      see_all_updates: lihat semua kemas kini
-      show_all_updates: tunjuk semua kemas kini
     share_links:
       share_this_page: Kongsi laman ini
   consultation:

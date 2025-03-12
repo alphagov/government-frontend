@@ -34,17 +34,8 @@ tr:
     print_link:
     visit: 'Ziyaret et:'
   components:
-    figure:
-      image_credit: 'Resim sahibi: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: tüm güncellemeleri gizle
-      last_updated: Son güncelleme %{date}
-      published: Yayınlama %{date}
-      see_all_updates: tüm güncellemeleri görün
-      show_all_updates: tüm güncellemeleri göster
     share_links:
       share_this_page: Bu sayfayı paylaş
   consultation:

@@ -34,17 +34,8 @@ be:
     print_link:
     visit: 'Наведайце:'
   components:
-    figure:
-      image_credit: 'Крэдыт выявы: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: схаваць усе абнаўленні
-      last_updated: Апошняе абнаўленне %{date}
-      published: Апублікавана %{date}
-      see_all_updates: паглядзець усе абнаўленні
-      show_all_updates: паказаць усе абнаўленні
     share_links:
       share_this_page: Падзяліцца гэтай старонкай
   consultation:

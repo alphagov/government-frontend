@@ -34,17 +34,8 @@
     print_link:
     visit: 'Besøk:'
   components:
-    figure:
-      image_credit: 'Bildekreditt: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: skjul alle oppdateringer
-      last_updated: Sist oppdatert %{date}
-      published: Publisert %{date}
-      see_all_updates: se alle oppdateringer
-      show_all_updates: vis alle oppdateringer
     share_links:
       share_this_page: Del denne siden
   consultation:

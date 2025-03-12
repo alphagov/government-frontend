@@ -34,17 +34,8 @@ bn:
     print_link:
     visit: 'ভিজিট করুন:'
   components:
-    figure:
-      image_credit: 'ছবির কৃতিত্ব: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: সকল আপডেট লুকান
-      last_updated: সর্বশেষ হালনাগাদ হয়েছে %{date}
-      published: প্রকাশিত হওয়ার তারিখ %{date}
-      see_all_updates: সকল আপডেট দেখুন
-      show_all_updates: সকল আপডেট দেখান
     share_links:
       share_this_page: এই পেজটি শেয়ার করুন
   consultation:

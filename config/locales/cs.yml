@@ -34,17 +34,8 @@ cs:
     print_link:
     visit: 'Navštivte:'
   components:
-    figure:
-      image_credit: zobrazení úvěru %{credit}
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: skrýt všechny aktualizace
-      last_updated: Poslední aktualizace %{date}
-      published: Zveřejněno %{date}
-      see_all_updates: vidět všechny aktualizace
-      show_all_updates: zobrazit všechny aktualizace
     share_links:
       share_this_page: Sdílet tuto stránku
   consultation:
