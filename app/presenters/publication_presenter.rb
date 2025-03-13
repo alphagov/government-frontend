@@ -26,8 +26,16 @@ class PublicationPresenter < ContentItemPresenter
     %(national_statistics official_statistics transparency).include? document_type
   end
 
-  # this is a temporary hack and should be removed in approx 3 months
   def hide_from_search_engines?
-    content_item["base_path"] == "/government/publications/pension-credit-claim-form--2"
+    # this is a temporary hack and should be removed in approx 3 months
+    return true if content_item["base_path"] == "/government/publications/pension-credit-claim-form--2"
+
+    mobile_paths = %w[
+      /government/publications/govuk-app-terms-and-conditions
+      /government/publications/govuk-app-privacy-notice-how-we-use-your-data
+      /government/publications/govuk-app-test-privacy-notice-how-we-use-your-data
+      /government/publications/accessibility-statement-for-the-govuk-app
+    ]
+    mobile_paths.include?(content_item["base_path"])
   end
 end
