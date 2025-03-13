@@ -300,6 +300,20 @@ class PublicationTest < ActionDispatch::IntegrationTest
     assert page.has_css?('meta[name="robots"][content="noindex"]', visible: false)
   end
 
+  test "adds the noindex meta tag to mobile paths" do
+    mobile_paths = %w[
+      /government/publications/govuk-app-terms-and-conditions
+      /government/publications/govuk-app-privacy-notice-how-we-use-your-data
+      /government/publications/govuk-app-test-privacy-notice-how-we-use-your-data
+      /government/publications/accessibility-statement-for-the-govuk-app
+    ]
+    mobile_paths.each do |path|
+      overrides = { "base_path" => path }
+      setup_and_visit_content_item("publication-with-featured-attachments", overrides)
+      assert page.has_css?('meta[name="robots"][content="noindex"]', visible: false)
+    end
+  end
+
   test "translates Welsh published date correctly" do
     setup_and_visit_content_item("publication", { "locale" => "cy" })
 

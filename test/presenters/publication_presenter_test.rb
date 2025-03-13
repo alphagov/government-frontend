@@ -101,4 +101,19 @@ class PublicationPresenterTest < PresenterTestCase
 
     assert presented.hide_from_search_engines?
   end
+
+  test "hide_from_search_engines? returns true if the page is related to mobile" do
+    schema_example = schema_item("publication-with-featured-attachments")
+    mobile_paths = %w[
+      /government/publications/govuk-app-terms-and-conditions
+      /government/publications/govuk-app-privacy-notice-how-we-use-your-data
+      /government/publications/govuk-app-test-privacy-notice-how-we-use-your-data
+      /government/publications/accessibility-statement-for-the-govuk-app
+    ]
+    mobile_paths.each do |path|
+      schema_example["base_path"] = path
+      presented = presented_item("publication", schema_example)
+      assert presented.hide_from_search_engines?
+    end
+  end
 end
