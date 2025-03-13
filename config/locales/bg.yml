@@ -34,17 +34,8 @@ bg:
     print_link:
     visit: 'Посетете:'
   components:
-    figure:
-      image_credit: 'Изображението е от: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: скриване на всички актуализации
-      last_updated: Последна актуализация %{date}
-      published: Публикувано на %{date}
-      see_all_updates: вижте всички актуализации
-      show_all_updates: показване на всички актуализации
     share_links:
       share_this_page: Споделяне на тази страница
   consultation:

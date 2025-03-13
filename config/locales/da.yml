@@ -34,17 +34,8 @@ da:
     print_link:
     visit: 'Besøge:'
   components:
-    figure:
-      image_credit: 'Billede kredit: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: skjule alle opdateringer
-      last_updated: Senest opdateret %{date}
-      published: Udgivet %{date}
-      see_all_updates: se alle opdateringer
-      show_all_updates: vis alle opdateringer
     share_links:
       share_this_page: Del denne side
   consultation:

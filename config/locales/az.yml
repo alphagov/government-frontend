@@ -34,17 +34,8 @@ az:
     print_link:
     visit: 'Baş çəkin:'
   components:
-    figure:
-      image_credit: 'Təqdim edilmiş qrafik material: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: bütün yenilmələri gizlət
-      last_updated: 'Son yenilənmə: %{date}'
-      published: 'Dərc edilib: %{date}'
-      see_all_updates: bütün yeniləmələrə baxın
-      show_all_updates: bütün yeniləmələri göstər
     share_links:
       share_this_page: Bu səhifəni paylaşın
   consultation:

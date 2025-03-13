@@ -34,17 +34,8 @@ nl:
     print_link:
     visit: 'Bezoek:'
   components:
-    figure:
-      image_credit: 'Image credit: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: verberg alle updates
-      last_updated: Laatst bijgewerkt %{date}
-      published: Gepubliceerd %{date}
-      see_all_updates: zie alle updates
-      show_all_updates: toon alle updates
     share_links:
       share_this_page: Deel deze pagina
   consultation:

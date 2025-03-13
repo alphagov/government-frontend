@@ -34,17 +34,8 @@ uz:
     print_link:
     visit: 'Ташриф буюринг:'
   components:
-    figure:
-      image_credit: 'График материаллар тақдим этилган: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: Барча янгиланишларни яшириш
-      last_updated: Сўнгги янгиланиш %{date}
-      published: Нашр қилинган %{date}
-      see_all_updates: Барча янгиланишларни кўриш
-      show_all_updates: янгиланишларни барчасини кўрсатиш
     share_links:
       share_this_page: Саҳифа билан бўлишиш
   consultation:

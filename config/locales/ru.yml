@@ -34,17 +34,8 @@ ru:
     print_link:
     visit: 'Посетите:'
   components:
-    figure:
-      image_credit: 'Графические материалы предоставлены: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: Скрыть всю последнюю информацию
-      last_updated: Последние изменения %{date}
-      published: Опубликовано %{date}
-      see_all_updates: Посмотреть всю поледнюю информацию
-      show_all_updates: Показать всю поледнюю информацию
     share_links:
       share_this_page: 'Поделиться данной страницей '
   consultation:

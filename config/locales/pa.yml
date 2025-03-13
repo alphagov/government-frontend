@@ -34,17 +34,8 @@ pa:
     print_link:
     visit: 'ਮੁਲਾਕਾਤ:'
   components:
-    figure:
-      image_credit: 'ਚਿੱਤਰ ਕ੍ਰੈਡਿਟ: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: ਸਾਰੇ ਅਪਡੇਟਾਂ ਨੂੰ ਲੁਕਾਓ
-      last_updated: ਪਿਛਲੀ ਵਾਰ ਅਪਡੇਟ ਕੀਤਾ ਗਿਆ %{date}
-      published: ਪ੍ਰਕਾਸ਼ਿਤ %{date}
-      see_all_updates: ਸਾਰੇ ਅਪਡੇਟਸ ਵੇਖੋ
-      show_all_updates: ਸਾਰੇ ਅਪਡੇਟ ਦਿਖਾਉ
     share_links:
       share_this_page: ਇਸ ਪੇਜ ਨੂੰ ਸ਼ੇਅਰ ਕਰੋ
   consultation:

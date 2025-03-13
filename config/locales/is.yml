@@ -34,17 +34,8 @@ is:
     print_link:
     visit: 'Heimsæktu:'
   components:
-    figure:
-      image_credit: Uppruni myndar %{credit}
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: fela allar uppfærslur
-      last_updated: Síðast uppfært %{date}
-      published: Birt %{date}
-      see_all_updates: sjá allar uppfærslur
-      show_all_updates: sýna allar uppfærslur
     share_links:
       share_this_page: Deila þessari síðu
   consultation:

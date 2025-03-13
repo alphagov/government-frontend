@@ -91,7 +91,7 @@ class ActionDispatch::IntegrationTest
     text = []
     text << first_published if first_published
     text << last_updated if last_updated
-    last_published_dates_element = all(".app-c-published-dates").last
+    last_published_dates_element = all(".gem-c-published-dates").last
 
     within last_published_dates_element do
       assert page.has_text?(text.join("\n")), "Published dates #{text.join("\n")} not found"

@@ -34,17 +34,8 @@ tk:
     print_link:
     visit: 'Serediň:'
   components:
-    figure:
-      image_credit: 'Surat krediti: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: ähli täzelenmeleri gizle
-      last_updated: Soňky gezek täzelenme %{date}
-      published: Çap edilen %{date}
-      see_all_updates: ähli täzelenmelere serediň
-      show_all_updates: ähli täzelenmeleri görkez
     share_links:
       share_this_page: Bu sahypany paýlaşyň
   consultation:

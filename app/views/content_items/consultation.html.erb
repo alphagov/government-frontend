@@ -120,14 +120,14 @@
     <% consultation_desc = capture do %>
       <%= @content_item.description %>
       <% if @content_item.held_on_another_website? %>
-        <p class="app-c-banner__text">
+        <p class="gem-c-summary-banner__text">
           <strong>
             <%= t("consultation.another_website_html", closed: @content_item.closed? ? t("consultation.was") : t("consultation.is_being"), url: @content_item.held_on_another_website_url) %>.
           </strong>
         </p>
       <% end %>
     <% end %>
-    <%= render 'components/banner', {
+    <%= render 'govuk_publishing_components/components/summary_banner', {
       secondary_text: consultation_date,
       text: consultation_desc,
       title: t("consultation.summary"),

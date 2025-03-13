@@ -34,17 +34,8 @@ pa-pk:
     print_link:
     visit: 'ویکھو:'
   components:
-    figure:
-      image_credit: 'امیج کریڈٹ: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: سارے تازہ ترین حالات نوں لُکا لوؤ
-      last_updated: اخری وار تازہ ترین بنایا %{date}
-      published: شائع ہویا %{date}
-      see_all_updates: ساری تازہ ترین صورتِ حال
-      show_all_updates: ساری تازہ ترین صورتِ حال وکھاؤ
     share_links:
       share_this_page: ایہ ورقہ تقسیم کرو
   consultation:

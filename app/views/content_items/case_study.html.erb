@@ -23,7 +23,7 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="content-bottom-margin">
       <div class="responsive-bottom-margin">
-        <%= render 'components/figure',
+        <%= render 'govuk_publishing_components/components/figure',
           src: @content_item.image["url"],
           alt: @content_item.image["alt_text"],
           credit: @content_item.image["credit"],
@@ -36,7 +36,7 @@
         <% end %>
       </div>
 
-      <%= render 'components/published_dates', {
+      <%= render 'govuk_publishing_components/components/published_dates', {
         published: @content_item.published,
         last_updated: @content_item.updated,
         history: @content_item.history

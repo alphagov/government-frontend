@@ -34,17 +34,8 @@ mt:
     print_link:
     visit: 'Żur:'
   components:
-    figure:
-      image_credit: 'Kreditu għall-immaġni:  %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: aħbi l-aġġornamenti kollha
-      last_updated: L-aħħar aġġornament %{date}
-      published: Ippubblikat %{date}
-      see_all_updates: ara l-aġġornamenti kollha
-      show_all_updates: uri l-aġġornamenti kollha
     share_links:
       share_this_page: Aqsam din il-paġna ma'
   consultation:

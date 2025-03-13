@@ -34,17 +34,8 @@ cy:
     print_link: Argraffu'r dudalen hon
     visit: 'Ymweld:'
   components:
-    figure:
-      image_credit: 'Delwedd gan: %{credit}'
     print_link:
       text: Argraffu'r dudalen hon
-    published_dates:
-      hidden_heading:
-      hide_all_updates: cuddio pob diweddariad
-      last_updated: Diweddarwyd ddiwethaf ar %{date}
-      published: Cyhoeddwyd ar %{date}
-      see_all_updates: gweld pob diweddariad
-      show_all_updates: dangos pob diweddariad
     share_links:
       share_this_page: Rhannu'r dudalen hon
   consultation:

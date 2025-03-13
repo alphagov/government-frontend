@@ -18,7 +18,7 @@ class DetailedGuideTest < ActionDispatch::IntegrationTest
   test "renders back to contents elements" do
     setup_and_visit_content_item("detailed_guide")
 
-    assert page.has_css?(".app-c-back-to-top[href='#contents']")
+    assert page.has_css?(".gem-c-back-to-top-link[href='#contents']")
   end
 
   test "withdrawn detailed guide" do

@@ -34,17 +34,8 @@ uk:
     print_link:
     visit: 'Відвідайте:'
   components:
-    figure:
-      image_credit: 'Зображення: %{credit}'
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: приховати всі оновлення
-      last_updated: Останнє оновлення %{date}
-      published: Опубліковано %{date}
-      see_all_updates: переглянути всі оновлення
-      show_all_updates: показати всі оновлення
     share_links:
       share_this_page: Поділіться цією сторінкою
   consultation:

@@ -32,7 +32,7 @@
           <% end %>
         <% end %>
 
-        <%= render 'components/figure',
+        <%= render 'govuk_publishing_components/components/figure',
           src: @content_item.image["url"],
           alt: @content_item.image["alt_text"],
           credit: @content_item.image["credit"],
@@ -43,7 +43,7 @@
           <%= raw(@content_item.body) %>
         <% end %>
       </div>
-      <%= render 'components/published_dates', {
+      <%= render 'govuk_publishing_components/components/published_dates', {
         published: @content_item.published,
         last_updated: @content_item.updated,
         history: @content_item.history

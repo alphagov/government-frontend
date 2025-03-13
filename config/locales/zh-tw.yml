@@ -34,17 +34,8 @@ zh-tw:
     print_link:
     visit: 探訪：
   components:
-    figure:
-      image_credit: 圖片來源： %{credit}
     print_link:
       text:
-    published_dates:
-      hidden_heading:
-      hide_all_updates: 隱藏所有更新
-      last_updated: 最後更新於 %{date}
-      published: 發布於 %{date}
-      see_all_updates: 查看所有更新
-      show_all_updates: 展開所有更新
     share_links:
       share_this_page: 分享此頁面
   consultation:
