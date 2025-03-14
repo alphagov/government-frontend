@@ -335,33 +335,27 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "main-facet-1-value", "sub-facet-key" => "sub-facet-1-value" }
       facet = example_facet({
         "name" => "Facet name",
+        "type" => "nested",
         "key" => "facet-key",
         "sub_facet_name" => "Sub Facet name",
         "sub_facet_key" => "sub-facet-key",
-        "nested_facet" => true,
         "filterable" => true,
         "allowed_values" => [
           {
             "label" => "Main Facet Value",
             "value" => "main-facet-1-value",
+            "sub_facets" => [
+              {
+                "label" => "Sub Facet Value",
+                "value" => "sub-facet-1-value",
+                "main_facet_label" => "Main Facet Value",
+                "main_facet_value" => "main-facet-1-value",
+              },
+            ],
           },
         ],
       })
-      sub_facet = example_facet({
-        "name" => "Sub Facet name",
-        "key" => "sub-facet-key",
-        "nested_facet" => true,
-        "filterable" => true,
-        "allowed_values" => [
-          {
-            "label" => "Sub Facet Value",
-            "value" => "sub-facet-1-value",
-            "main_facet_label" => "Main Facet Value",
-            "main_facet_value" => "main-facet-1-value",
-          },
-        ],
-      })
-      example = example_with_finder_facets([facet, sub_facet], values)
+      example = example_with_finder_facets([facet], values)
 
       presented = present_example(example)
 
