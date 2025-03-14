@@ -50,6 +50,27 @@ class PublicationPresenterTest < PresenterTestCase
     assert presented_item("statistics_publication").national_statistics?
   end
 
+  test "#attachments_for_components presents featured attachments" do
+    content_item = schema_item
+    content_item["details"]["featured_attachments"] = %w[some-id]
+    content_item["details"]["attachments"] = [{
+      "id" => "some-id",
+      "content_type" => "text/csv",
+      "preview_url" => "some-preview-url",
+      "url" => "some-url",
+    }]
+    presented = present_example(content_item)
+    expected = [{
+      "id" => "some-id",
+      "content_type" => "text/csv",
+      # NOTE: preview_url is the url with /preview appended, not the preview_url from above,
+      #       because we're working around a bug with preview_url
+      "preview_url" => "some-url/preview",
+      "url" => "some-url",
+    }]
+    assert_equal expected, presented.attachments_for_components
+  end
+
   test "presents withdrawn notices" do
     example = schema_item("withdrawn_publication")
     presented = presented_item("withdrawn_publication")
