@@ -25,7 +25,7 @@ require "minitest/reporters"
 
 Dir[Rails.root.join("test/support/*.rb")].sort.each { |f| require f }
 
-Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new(print_failure_summary: true)
 
 GovukTest.configure
 
