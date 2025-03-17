@@ -281,14 +281,3 @@ class ActionDispatch::IntegrationTest
     }
   end
 end
-
-def fetch_graphql_fixture(filename)
-  json = File.read(
-    Rails.root.join("test", "fixtures", "graphql", "#{filename}.json"),
-  )
-  JSON.parse(json)
-end
-
-def fetch_graphql_content_item(filename)
-  fetch_graphql_fixture(filename).dig("data", "edition")
-end

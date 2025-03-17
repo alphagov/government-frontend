@@ -132,45 +132,15 @@ private
   end
 
   def load_content_item
-    @content_item = if use_graphql?
-                      graphql_response = Services
-                        .publishing_api
-                        .graphql_content_item(Graphql::EditionQuery.new(content_item_path).query)
-
-                      if graphql_response["schema_name"] == "news_article"
-                        PresenterBuilder.new(
-                          graphql_response,
-                          content_item_path,
-                          view_context,
-                        ).presenter
-                      else
-                        load_content_item_from_content_store
-                      end
-                    else
-                      load_content_item_from_content_store
-                    end
-  end
-
-  def load_content_item_from_content_store
     content_item = Services.content_store.content_item(content_item_path)
 
     content_item["links"]["ordered_related_items"] = ordered_related_items(content_item["links"]) if content_item["links"]
 
-    PresenterBuilder.new(
+    @content_item = PresenterBuilder.new(
       content_item,
       content_item_path,
       view_context,
     ).presenter
-  end
-
-  def use_graphql?
-    if params.include?(:graphql) && params[:graphql] == "true"
-      true
-    elsif params.include?(:graphql) && params[:graphql] == "false"
-      false
-    else
-      Features.graphql_feature_enabled?
-    end
   end
 
   def ordered_related_items(links)
