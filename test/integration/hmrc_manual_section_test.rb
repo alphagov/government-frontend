@@ -96,7 +96,7 @@ class HmrcManualSectionTest < ActionDispatch::IntegrationTest
     stub_content_store_has_item(manual_base_path, @manual.to_json)
 
     stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
-    visit_with_cachebust((@content_item["base_path"]).to_s)
+    visit_with_cachebust(@content_item["base_path"].to_s)
   end
 
   def setup_and_visit_manual_section_with_breadcrumbs(content_item = get_content_example("vatgpb2000"))
@@ -112,6 +112,6 @@ class HmrcManualSectionTest < ActionDispatch::IntegrationTest
 
     stub_content_store_has_item(@content_item["base_path"], @content_item.to_json)
     stub_content_store_has_item(@content_item["details"]["breadcrumbs"].last["base_path"], @content_item.to_json)
-    visit_with_cachebust((@content_item["base_path"]).to_s)
+    visit_with_cachebust(@content_item["base_path"].to_s)
   end
 end
