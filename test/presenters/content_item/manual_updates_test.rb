@@ -72,14 +72,14 @@ class ContentItemManualUpdatesTest < ActiveSupport::TestCase
           [
             "6 October 2014 <span class=\"govuk-visually-hidden\">#{I18n.t('manuals.updates_amendments')}</span>",
             {
-              (first_note["base_path"]).to_s => [first_note],
-              (second_note["base_path"]).to_s => [second_note],
+              first_note["base_path"].to_s => [first_note],
+              second_note["base_path"].to_s => [second_note],
             },
           ],
           [
             "6 August 2014 <span class=\"govuk-visually-hidden\">#{I18n.t('manuals.updates_amendments')}</span>",
             {
-              (third_note["base_path"]).to_s => [third_note],
+              third_note["base_path"].to_s => [third_note],
             },
           ],
         ],
@@ -90,7 +90,7 @@ class ContentItemManualUpdatesTest < ActiveSupport::TestCase
           [
             "7 September 2013 <span class=\"govuk-visually-hidden\">#{I18n.t('manuals.updates_amendments')}</span>",
             {
-              (fourth_note["base_path"]).to_s => [fourth_note],
+              fourth_note["base_path"].to_s => [fourth_note],
             },
           ],
         ],
