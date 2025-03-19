@@ -6,6 +6,13 @@ class PublicationPresenter < ContentItemPresenter
   include ContentItem::Political
   include ContentItem::SinglePageNotificationButton
 
+  MOBILE_PATHS = %w[
+    /government/publications/govuk-app-terms-and-conditions
+    /government/publications/govuk-app-privacy-notice-how-we-use-your-data
+    /government/publications/govuk-app-testing-privacy-notice-how-we-use-your-data
+    /government/publications/accessibility-statement-for-the-govuk-app
+  ].freeze
+
   def details
     content_item["details"]["body"]
   end
@@ -30,12 +37,6 @@ class PublicationPresenter < ContentItemPresenter
     # this is a temporary hack and should be removed in approx 3 months
     return true if content_item["base_path"] == "/government/publications/pension-credit-claim-form--2"
 
-    mobile_paths = %w[
-      /government/publications/govuk-app-terms-and-conditions
-      /government/publications/govuk-app-privacy-notice-how-we-use-your-data
-      /government/publications/govuk-app-testing-privacy-notice-how-we-use-your-data
-      /government/publications/accessibility-statement-for-the-govuk-app
-    ]
-    mobile_paths.include?(content_item["base_path"])
+    MOBILE_PATHS.include?(content_item["base_path"])
   end
 end

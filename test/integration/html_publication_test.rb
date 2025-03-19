@@ -114,4 +114,11 @@ class HtmlPublicationTest < ActionDispatch::IntegrationTest
       },
     ])
   end
+
+  test "adds the noindex meta tag to mobile paths" do
+    path = "/government/publications/govuk-app-terms-and-conditions/html-attachment"
+    overrides = { "base_path" => path }
+    setup_and_visit_html_publication("published", overrides)
+    assert page.has_css?('meta[name="robots"][content="noindex"]', visible: false)
+  end
 end
