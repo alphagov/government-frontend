@@ -52,6 +52,10 @@ class HtmlPublicationPresenter < ContentItemPresenter
     true
   end
 
+  def hide_from_search_engines?
+    PublicationPresenter::MOBILE_PATHS.any? { |path| content_item["base_path"].start_with?(path) }
+  end
+
 private
 
   def public_timestamp

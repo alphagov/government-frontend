@@ -175,12 +175,13 @@ class ActionDispatch::IntegrationTest
     visit_with_cachebust("#{content_item['base_path']}#{parameter_string}")
   end
 
-  def setup_and_visit_html_publication(name, parameter_string = "")
+  def setup_and_visit_html_publication(name, overrides = {})
     @content_item = get_content_example(name).tap do |item|
       parent = item["links"]["parent"][0]
+      item = item.deep_merge(overrides)
       stub_content_store_has_item(item["base_path"], item.to_json)
       stub_content_store_has_item(parent["base_path"], parent.to_json)
-      visit_with_cachebust("#{item['base_path']}#{parameter_string}")
+      visit_with_cachebust(item["base_path"].to_s)
     end
   end
 
