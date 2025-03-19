@@ -304,7 +304,7 @@ class PublicationTest < ActionDispatch::IntegrationTest
     mobile_paths = %w[
       /government/publications/govuk-app-terms-and-conditions
       /government/publications/govuk-app-privacy-notice-how-we-use-your-data
-      /government/publications/govuk-app-test-privacy-notice-how-we-use-your-data
+      /government/publications/govuk-app-testing-privacy-notice-how-we-use-your-data
       /government/publications/accessibility-statement-for-the-govuk-app
     ]
     mobile_paths.each do |path|
