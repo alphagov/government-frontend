@@ -58,8 +58,7 @@ class DocumentCollectionPresenter < ContentItemPresenter
 private
 
   def group_document_link_public_updated_at(link)
-    disallowed_document_types = %w[answer
-                                   completed_transaction
+    disallowed_document_types = %w[completed_transaction
                                    guide
                                    local_transaction
                                    place
