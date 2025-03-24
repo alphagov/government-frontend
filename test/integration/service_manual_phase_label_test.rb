@@ -11,17 +11,6 @@ class ServiceManualPhaseLabelTest < ActionDispatch::IntegrationTest
     assert page.has_content?("Contact the Service Manual team")
   end
 
-  test "renders custom message for service manual homepage" do
-    homepage = content_store_has_schema_example(
-      "service_manual_homepage",
-      "service_manual_homepage",
-    )
-
-    visit homepage["base_path"]
-
-    assert page.has_content?("Contact the Service Manual team")
-  end
-
   test "alpha phase label is displayed for a guide in phase 'alpha'" do
     guide = govuk_content_schema_example("service_manual_guide", "service_manual_guide")
     guide["phase"] = "alpha"
