@@ -1,8 +1,0 @@
-<% content_for :extra_head_content do %>
-  <%= machine_readable_metadata(
-    schema: :faq
-  ) %>
-
-  <%= @requested_variant.analytics_meta_tag.html_safe if @requested_variant.present? %>
-<% end %>
-<%= render 'content_items/body_with_related_links' %>
