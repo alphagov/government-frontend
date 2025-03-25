@@ -283,7 +283,7 @@ class SpecialistDocumentPresenterTest
       example = example_with_finder_facets([example_facet(overrides)], values)
 
       presented = present_example(example)
-      expected_link = "<a class=\"govuk-link govuk-link--inverse\" href=\"/finder-base-path?facet-key%5B%5D=something\">Something</a>"
+      expected_link = "<a class=\"govuk-link govuk-link--inverse\" href=\"/finder-base-path?facet-key=something\">Something</a>"
       assert_equal expected_link, presented.important_metadata["Facet name"]
     end
 
@@ -335,38 +335,32 @@ class SpecialistDocumentPresenterTest
       values = { "facet-key" => "main-facet-1-value", "sub-facet-key" => "sub-facet-1-value" }
       facet = example_facet({
         "name" => "Facet name",
+        "type" => "nested",
         "key" => "facet-key",
         "sub_facet_name" => "Sub Facet name",
         "sub_facet_key" => "sub-facet-key",
-        "nested_facet" => true,
         "filterable" => true,
         "allowed_values" => [
           {
             "label" => "Main Facet Value",
             "value" => "main-facet-1-value",
+            "sub_facets" => [
+              {
+                "label" => "Sub Facet Value",
+                "value" => "sub-facet-1-value",
+                "main_facet_label" => "Main Facet Value",
+                "main_facet_value" => "main-facet-1-value",
+              },
+            ],
           },
         ],
       })
-      sub_facet = example_facet({
-        "name" => "Sub Facet name",
-        "key" => "sub-facet-key",
-        "nested_facet" => true,
-        "filterable" => true,
-        "allowed_values" => [
-          {
-            "label" => "Sub Facet Value",
-            "value" => "sub-facet-1-value",
-            "main_facet_label" => "Main Facet Value",
-            "main_facet_value" => "main-facet-1-value",
-          },
-        ],
-      })
-      example = example_with_finder_facets([facet, sub_facet], values)
+      example = example_with_finder_facets([facet], values)
 
       presented = present_example(example)
 
-      expected_main_facet_link = "<a class=\"govuk-link govuk-link--inverse\" href=\"/finder-base-path?facet-key%5B%5D=main-facet-1-value\">Main Facet Value</a>"
-      expected_sub_facet_link = "<a class=\"govuk-link govuk-link--inverse\" href=\"/finder-base-path?facet-key%5B%5D=main-facet-1-value&amp;sub-facet-key%5B%5D=sub-facet-1-value\">Main Facet Value - Sub Facet Value</a>"
+      expected_main_facet_link = "<a class=\"govuk-link govuk-link--inverse\" href=\"/finder-base-path?facet-key=main-facet-1-value\">Main Facet Value</a>"
+      expected_sub_facet_link = "<a class=\"govuk-link govuk-link--inverse\" href=\"/finder-base-path?facet-key=main-facet-1-value&amp;sub-facet-key=sub-facet-1-value\">Main Facet Value - Sub Facet Value</a>"
       assert_equal expected_main_facet_link, presented.important_metadata["Facet name"]
       assert_equal expected_sub_facet_link, presented.important_metadata["Sub Facet name"]
     end

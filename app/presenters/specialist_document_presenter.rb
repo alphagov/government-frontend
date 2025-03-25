@@ -27,11 +27,17 @@ class SpecialistDocumentPresenter < ContentItemPresenter
   def important_metadata
     super.tap do |m|
       facets_with_values.each do |facet|
-        facet_values_for_content_item = [content_item_metadata[facet["key"]]].flatten
-        friendly_facet_values = friendly_facet_values(facet, facet_values_for_content_item)
-        m.merge!(facet["name"] => value_or_array_of_values(friendly_facet_values))
+        m.merge!(friendly_facet_values_for_key("key", facet))
+        m.merge!(friendly_facet_values_for_key("sub_facet_key", facet)) if facet["type"] == "nested"
       end
     end
+  end
+
+  def friendly_facet_values_for_key(key, facet)
+    facet_values_for_content_item = [content_item_metadata[facet[key]]].flatten
+    friendly_facet_values = friendly_facet_values(facet, key, facet_values_for_content_item)
+    name = key == "key" ? facet["name"] : facet["sub_facet_name"]
+    { name => value_or_array_of_values(friendly_facet_values) }
   end
 
   def continuation_link
@@ -127,9 +133,9 @@ private
       .reject { |f| f["key"] == internal_notes_facet_key }
   end
 
-  def friendly_facet_values(facet, facet_values_for_content_item)
+  def friendly_facet_values(facet, key, facet_values_for_content_item)
     return friendly_facet_date(facet_values_for_content_item) if facet["type"] == "date"
-    return friendly_facet_text(facet, facet_values_for_content_item) if facet["type"] == "text"
+    return friendly_facet_text(facet, key, facet_values_for_content_item) if %w[text nested].include?(facet["type"])
 
     facet_values_for_content_item
   end
@@ -138,14 +144,18 @@ private
     dates.map { |date| DateTimeHelper.display_date(date) }
   end
 
-  def friendly_facet_text(facet, values)
+  def friendly_facet_text(facet, key, values)
     return values if facet["allowed_values"].blank?
 
-    values.map { |value| friendly_facet_label(facet, value) }
+    values.map { |value| friendly_facet_label(facet, key, value) }
   end
 
-  def friendly_facet_label(facet, value)
-    allowed_value = facet["allowed_values"].detect { |av| av["value"] == value }
+  def friendly_facet_label(facet, key, value)
+    allowed_value = if key == "key"
+                      facet["allowed_values"].detect { |av| av["value"] == value }
+                    elsif key == "sub_facet_key"
+                      facet["allowed_values"].pluck("sub_facets").flatten.compact.detect { |av| av["value"] == value }
+                    end
 
     return default_facet_value_if_not_found(facet, value) unless allowed_value
 
@@ -157,7 +167,7 @@ private
 
     return label unless facet["filterable"]
 
-    facet_link(label, allowed_value, facet["key"])
+    facet_link(label, allowed_value, facet[key])
   end
 
   def default_facet_value_if_not_found(facet, value)
@@ -175,11 +185,11 @@ private
   end
 
   def facet_link_query_params(allowed_value, key)
-    query_params = { "#{key}[]" => allowed_value["value"] }
+    query_params = { key => allowed_value["value"] }
 
     if allowed_value["main_facet_value"]
       main_facet = main_facet_for_sub_facet(key)
-      query_params["#{main_facet['key']}[]"] = allowed_value["main_facet_value"] if main_facet
+      query_params[main_facet["key"]] = allowed_value["main_facet_value"] if main_facet
     end
 
     query_params.to_query

@@ -54,17 +54,17 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("countryside-stewardship-grants")
 
     assert_has_important_metadata(
-      "Grant type": { "Option": "/countryside-stewardship-grants?grant_type%5B%5D=option" },
+      "Grant type": { "Option": "/countryside-stewardship-grants?grant_type=option" },
       "Land use": {
-        "Arable land": "/countryside-stewardship-grants?land_use%5B%5D=arable-land",
-        "Water quality": "/countryside-stewardship-grants?land_use%5B%5D=water-quality",
+        "Arable land": "/countryside-stewardship-grants?land_use=arable-land",
+        "Water quality": "/countryside-stewardship-grants?land_use=water-quality",
       },
       "Tiers or standalone items": {
-        "Higher Tier": "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=higher-tier",
-        "Mid Tier": "/countryside-stewardship-grants?tiers_or_standalone_items%5B%5D=mid-tier",
+        "Higher Tier": "/countryside-stewardship-grants?tiers_or_standalone_items=higher-tier",
+        "Mid Tier": "/countryside-stewardship-grants?tiers_or_standalone_items=mid-tier",
       },
       "Funding (per unit per year)": {
-        "More than £500": "/countryside-stewardship-grants?funding_amount%5B%5D=more-than-500",
+        "More than £500": "/countryside-stewardship-grants?funding_amount=more-than-500",
       },
     )
   end
