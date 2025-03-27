@@ -93,7 +93,7 @@ private
   end
 
   def service_manual_layout
-    types = %w[service_manual_homepage service_manual_service_toolkit]
+    types = %w[service_manual_homepage]
     types.include?(@content_item.document_type) ? "gem_layout_full_width_no_footer_navigation" : "gem_layout_no_footer_navigation"
   end
 
