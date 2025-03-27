@@ -105,8 +105,7 @@ class DocumentCollectionPresenterTest
     test "it returns nil if specfic document_type is in the disallowed_document_types list" do
       schema_data = schema_item
 
-      disallowed_document_types = %w[answer
-                                     completed_transaction
+      disallowed_document_types = %w[completed_transaction
                                      guide
                                      local_transaction
                                      place
