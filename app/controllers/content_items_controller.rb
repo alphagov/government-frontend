@@ -84,17 +84,12 @@ private
   end
 
   def show_service_manual_page
-    slimmer_template(service_manual_layout)
+    slimmer_template("gem_layout_no_footer_navigation")
     configure_header_search
 
     with_locale do
       render content_item_template
     end
-  end
-
-  def service_manual_layout
-    types = %w[service_manual_homepage]
-    types.include?(@content_item.document_type) ? "gem_layout_full_width_no_footer_navigation" : "gem_layout_no_footer_navigation"
   end
 
   def configure_header_search
