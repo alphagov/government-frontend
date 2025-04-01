@@ -156,4 +156,16 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("aaib-reports")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
+
+  test "renders metadata block when show_metadata_block is true and important_metadata is present" do
+    setup_and_visit_content_item("countryside-stewardship-grants")
+
+    assert page.has_css?(".important-metadata"), "Expected metadata block to be rendered"
+  end
+
+  test "does not render metadata block when show_metadata_block is false" do
+    setup_and_visit_content_item("cma-cases")
+
+    assert_not page.has_css?(".important-metadata"), "Expected metadata block not to be rendered"
+  end
 end

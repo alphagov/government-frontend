@@ -85,6 +85,10 @@ class SpecialistDocumentPresenter < ContentItemPresenter
     }
   end
 
+  def show_metadata_block?
+    content_item.dig("links", "finder", 0, "details", "show_metadata_block")
+  end
+
 private
 
   def nested_headers
