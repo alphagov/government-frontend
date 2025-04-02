@@ -13,7 +13,6 @@ class DevelopmentController < ApplicationController
                        fatality_notice
                        guide
                        html_publication
-                       news_article
                        placeholder_corporate_information_page
                        publication
                        service_sign_in
