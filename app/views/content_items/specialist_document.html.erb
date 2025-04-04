@@ -31,7 +31,9 @@
       <% end %>
     <% end %>
 
-    <%= render "govuk_publishing_components/components/contents_list_with_body", contents: @content_item.contents do %>
+    <% if @content_item.show_table_of_contents_list? %>
+      <%= render "govuk_publishing_components/components/contents_list_with_body", contents: @content_item.contents do %>
+    <% end %>
 
       <% if @content_item.protected_food_drink_name? %>
         <img
