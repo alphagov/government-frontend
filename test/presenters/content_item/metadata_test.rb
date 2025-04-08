@@ -56,4 +56,18 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
 
     assert_equal expected_publisher_metadata, item.publisher_metadata
   end
+
+  test "does not return see_updates_link if cancelled" do
+    item = DummyContentItem.new
+    item.content_item["details"]["state"] = "cancelled"
+
+    assert item.cancelled_stats_announcement?
+  end
+
+  test "cancelled_stats_announcement? returns false when state is not cancelled" do
+    item = DummyContentItem.new
+
+    item.content_item["details"]["state"] = "published"
+    assert_not item.cancelled_stats_announcement?
+  end
 end

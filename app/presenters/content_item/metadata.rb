@@ -26,7 +26,7 @@ module ContentItem
         last_updated: updated,
       }
 
-      unless pending_stats_announcement?
+      unless pending_stats_announcement? || cancelled_stats_announcement?
         metadata[:see_updates_link] = true
       end
 
@@ -35,6 +35,10 @@ module ContentItem
 
     def pending_stats_announcement?
       details_display_date.present? && Time.zone.parse(details_display_date).future?
+    end
+
+    def cancelled_stats_announcement?
+      content_item["details"]["state"] == "cancelled"
     end
 
     def details_display_date
