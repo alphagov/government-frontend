@@ -8,7 +8,7 @@ module ContentItem
         from:,
         first_published: published,
         last_updated: updated,
-        see_updates_link: true,
+        see_updates_link: any_updates?,
         part_of:,
         direction: text_direction,
         other: {},
