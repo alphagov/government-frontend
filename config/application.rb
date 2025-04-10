@@ -75,7 +75,6 @@ module GovernmentFrontend
       ka
       kk
       ko
-      ky
       lt
       lv
       ms
