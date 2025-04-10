@@ -110,10 +110,6 @@ class ConsultationPresenter < ContentItemPresenter
     ways_to_respond["attachment_url"]
   end
 
-  def add_margin?
-    final_outcome? || public_feedback_detail || public_feedback_attachments_for_components.any?
-  end
-
 private
 
   def ways_to_respond
