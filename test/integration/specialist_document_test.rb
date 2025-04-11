@@ -168,4 +168,16 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
     assert_not page.has_css?(".important-metadata"), "Expected metadata block not to be rendered"
   end
+
+  test "renders table of contents when show_table_of_contents_list is true" do
+    setup_and_visit_content_item("countryside-stewardship-grants")
+
+    assert page.has_css?(".gem-c-contents-list"), "Expected table of contents to be rendered"
+  end
+
+  test "does not render table of contents when show_table_of_contents_list is false" do
+    setup_and_visit_content_item("cma-cases")
+
+    assert_not page.has_css?(".gem-c-contents-list"), "Expected table of contents not to be rendered"
+  end
 end
