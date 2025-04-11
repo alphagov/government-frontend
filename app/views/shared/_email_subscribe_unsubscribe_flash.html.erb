@@ -3,7 +3,7 @@
 <% end %>
 
 <% if show_email_subscription_success_banner?(@account_flash) %>
-  <div class="govuk-grid-row govuk-!-margin-top-3">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <%
         ga4_data = {
@@ -23,7 +23,6 @@
         <%= render "govuk_publishing_components/components/success_alert", {
           message: email_subscription_success_banner_heading(@account_flash),
           description: banner_description,
-          margin_bottom: 0,
         } %>
       <% end %>
     </div>
