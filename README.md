@@ -15,7 +15,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) |
 | Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) |
 | Fatality notice | [View on GOV.UK](https://www.gov.uk/government/fatalities/corporal-lee-churcher-dies-in-iraq) |
-| Fields of operation | [View on Gov.UK](https://www.gov.uk/government/fields-of-operation) |
 | Field of operation | [View on GOV.UK](https://www.gov.uk/government/fields-of-operation/iraq) |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
 | Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)|
