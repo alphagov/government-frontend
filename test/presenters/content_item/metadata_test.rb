@@ -29,6 +29,10 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
       @title = content_item["title"]
       @schema_name = content_item["schema_name"]
     end
+
+    def text_direction
+      "ltr"
+    end
   end
 
   test "returns see_updates_link true if published" do
@@ -44,6 +48,12 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
     assert_equal expected_publisher_metadata, item.publisher_metadata
   end
 
+  test "metadata see_updates_link is true when there are updates" do
+    item_with_updates = DummyContentItem.new
+
+    assert item_with_updates.metadata[:see_updates_link]
+  end
+
   test "does not return see_updates_link if pending" do
     item = DummyContentItem.new
     item.content_item["details"]["display_date"] = "23 March 3000"
@@ -55,5 +65,37 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
     }
 
     assert_equal expected_publisher_metadata, item.publisher_metadata
+  end
+
+  test "does not return see_updates_link if cancelled" do
+    item = DummyContentItem.new
+    item.content_item["details"]["state"] = "cancelled"
+
+    assert item.cancelled_stats_announcement?
+  end
+
+  test "cancelled_stats_announcement? returns false when state is not cancelled" do
+    item = DummyContentItem.new
+
+    item.content_item["details"]["state"] = "published"
+    assert_not item.cancelled_stats_announcement?
+  end
+
+  class MockUpdatableItem < DummyContentItem
+    def initialize(has_updates: true)
+      super()
+      @has_updates = has_updates
+    end
+
+    def any_updates?
+      @has_updates
+    end
+  end
+
+  test "metadata see_updates_link reflects any_updates? result" do
+    item_with_updates = MockUpdatableItem.new(has_updates: true)
+    assert item_with_updates.metadata[:see_updates_link]
+    item_without_updates = MockUpdatableItem.new(has_updates: false)
+    assert_not item_without_updates.metadata[:see_updates_link]
   end
 end
