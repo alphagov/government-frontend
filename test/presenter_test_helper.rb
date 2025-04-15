@@ -2,7 +2,7 @@ require "test_helper"
 
 class PresenterTestCase < ActiveSupport::TestCase
   def create_presenter(presenter_class,
-                       content_item: schema_item("case_study"),
+                       content_item: schema_item("detailed_guide"),
                        requested_path: "/test-content-item",
                        view_context: ApplicationController.new.view_context)
     presenter_class.new(content_item, requested_path, view_context)
@@ -31,7 +31,7 @@ end
 
 class GraphqlPresenterTestCase < PresenterTestCase
   def create_presenter(presenter_class,
-                       content_item: fetch_graphql_content_item("news_article"),
+                       content_item: fetch_graphql_content_item("detailed_guide"),
                        requested_path: "/test-content-item",
                        view_context: ApplicationController.new.view_context)
     presenter_class.new(content_item, requested_path, view_context)
