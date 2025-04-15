@@ -22,8 +22,6 @@ module ContentItem
       content_item["public_updated_at"]
     end
 
-  private
-
     def change_history
       changes = content_item["details"]["change_history"] || []
       changes.map do |item|
@@ -34,6 +32,8 @@ module ContentItem
         }
       end
     end
+
+  private
 
     # The direction of change history isn't guaranteed
     # https://github.com/alphagov/govuk-content-schemas/issues/545

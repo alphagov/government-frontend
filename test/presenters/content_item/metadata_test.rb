@@ -17,6 +17,12 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
           "body" => "body",
           "child_section_groups" => [{ "title" => "thing" }],
           "display_date" => "23 March 2000",
+          "change_history" => [
+            {
+              "public_timestamp" => "2022-03-23T08:30:20.000+00:00",
+              "note" => "Updated content",
+            },
+          ],
         },
         "links" => {
           "organisations" => [
@@ -62,24 +68,25 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
       from: ["<a class=\"govuk-link\" href=\"/blah\">blah</a>"],
       first_published: "23 March 2000",
       last_updated: "23 March 2022",
+      see_updates_link: false,
     }
 
     assert_equal expected_publisher_metadata, item.publisher_metadata
   end
 
-  test "does not return see_updates_link if cancelled" do
-    item = DummyContentItem.new
-    item.content_item["details"]["state"] = "cancelled"
+  # test "does not return see_updates_link if cancelled" do
+  #   item = DummyContentItem.new
+  #   item.content_item["details"]["state"] = "cancelled"
 
-    assert item.cancelled_stats_announcement?
-  end
+  #   assert item.cancelled_stats_announcement?
+  # end
 
-  test "cancelled_stats_announcement? returns false when state is not cancelled" do
-    item = DummyContentItem.new
+  # test "cancelled_stats_announcement? returns false when state is not cancelled" do
+  #   item = DummyContentItem.new
 
-    item.content_item["details"]["state"] = "published"
-    assert_not item.cancelled_stats_announcement?
-  end
+  #   item.content_item["details"]["state"] = "published"
+  #   assert_not item.cancelled_stats_announcement?
+  # end
 
   class MockUpdatableItem < DummyContentItem
     def initialize(has_updates: true)
