@@ -5,7 +5,12 @@
 <div class="govuk-grid-row">
   <div class="metadata-logo-wrapper gem-print-columns-none <%= ' responsive-bottom-margin' if @content_item.try(:logo) %>">
     <div class="govuk-grid-column-two-thirds metadata-column">
-      <%= render 'govuk_publishing_components/components/metadata', metadata_component_options %>
+      <%= render 'govuk_publishing_components/components/metadata', {
+        from: "40th September 2023",
+        first_published: "128th September 2023",
+        last_updated: "29th September 2023",
+        see_all_updates: true,      }
+      %>
     </div>
     <div class="govuk-grid-column-one-third">
       <% if @content_item.try(:logo) %>

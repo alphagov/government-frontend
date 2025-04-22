@@ -20,18 +20,19 @@ module ContentItem
     end
 
     def publisher_metadata
-      metadata = {
+      # metadata = 
+      {
         from:,
         first_published: published,
         last_updated: updated,
-        # see_updates_link: has_change_history?,
+        see_updates_link: false,
       }
 
-      unless pending_stats_announcement? || cancelled_stats_announcement?
-        metadata[:see_updates_link] = false
-      end
+      # unless pending_stats_announcement? || cancelled_stats_announcement?
+      #   metadata[:see_updates_link] = false
+      # end
 
-      metadata
+      # metadata
     end
 
     def details_display_date
@@ -46,10 +47,10 @@ module ContentItem
       content_item["details"]["state"] == "cancelled"
     end
 
-    # def has_change_history?
-    #   false
-    #   # change_history.present?
-    # end
+    def has_change_history?
+      false
+      # change_history.present?
+    end
   end
 end
 
