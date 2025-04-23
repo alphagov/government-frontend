@@ -2,14 +2,14 @@ require "test_helper"
 
 class MetaTagsTest < ActionDispatch::IntegrationTest
   test "correct meta tags are displayed for pages" do
-    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "news_article") do |random|
+    detailed_guide = GovukSchemas::RandomExample.for_schema(frontend_schema: "detailed_guide") do |random|
       random.merge(
         "title" => "Zhe title",
         "withdrawn_notice" => {},
       )
     end
 
-    stub_content_store_has_item("/some-page", case_study.to_json)
+    stub_content_store_has_item("/some-page", detailed_guide.to_json)
 
     visit_with_cachebust "/some-page"
 
@@ -17,12 +17,12 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
   end
 
   test "correct meta tags are displayed for pages without images" do
-    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "news_article") do |random|
+    detailed_guide = GovukSchemas::RandomExample.for_schema(frontend_schema: "detailed_guide") do |random|
       random["details"].delete("image")
       random
     end
 
-    stub_content_store_has_item("/some-page", case_study.to_json)
+    stub_content_store_has_item("/some-page", detailed_guide.to_json)
 
     visit_with_cachebust "/some-page"
 
@@ -30,7 +30,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
   end
 
   test "correct meta tags are displayed for pages with images" do
-    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "news_article") do |random|
+    detailed_guide = GovukSchemas::RandomExample.for_schema(frontend_schema: "detailed_guide") do |random|
       random["details"] = random["details"].merge(
         "image" => {
           "url" => "https://example.org/image.jpg",
@@ -41,7 +41,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
       random
     end
 
-    stub_content_store_has_item("/some-page", case_study.to_json)
+    stub_content_store_has_item("/some-page", detailed_guide.to_json)
 
     visit_with_cachebust "/some-page"
 
