@@ -6,7 +6,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 
 | Schema | Live example |
 |---|---|
-| Answer | [View on GOV.UK](https://www.gov.uk/national-minimum-wage-rates) |
 | Call for evidence | [View on GOV.UK](https://www.gov.uk/government/calls-for-evidence/local-air-quality-management-public-authorities-call-for-evidence) |
 | Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) |
 | Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) |
