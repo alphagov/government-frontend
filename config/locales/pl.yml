@@ -397,11 +397,6 @@ pl:
         many:
         one: Notatki do prelekcji
         other: Notatki do prelekcji
-      speech:
-        few:
-        many:
-        one: Przemówienie
-        other: Przemówienia
       standard:
         few:
         many:
@@ -610,10 +605,6 @@ pl:
     pdo_alt_text: Logo programu to czarna pieczęć z napisem „Designated Origin UK Protected”
     pgi_alt_text: Logo programu to czarna pieczęć z napisem „Geographic Origin UK Protected”
     tsg_alt_text: Logo programu to czarna pieczęć z napisem „Traditional Specialty UK Protected”
-  speech:
-    delivered_on: Dostarczono o
-    location: Lokalizacja
-    written_on: Napisano o
   statistics_announcement:
     cancellation_date: Data anulowania
     cancelled: Publikacja statystyk anulowana

@@ -271,9 +271,6 @@ et:
       speaking_notes:
         one: Kõnemärkmed
         other: Kõnemärkmed
-      speech:
-        one: Kõne
-        other: Kõned
       standard:
         one: Standard
         other: Standardid
@@ -458,10 +455,6 @@ et:
     pdo_alt_text: Skeemi logo on must tempel kirjaga Designated Origin UK Protected
     pgi_alt_text: Skeemi logo on must tempel kirjaga Geographic Origin UK Protected
     tsg_alt_text: Skeemi logo on must tempel kirjaga Traditional Specialty UK Protected
-  speech:
-    delivered_on: Edastati
-    location: Asukoht
-    written_on: Kirjutatud
   statistics_announcement:
     cancellation_date: Tühistamise kuupäev
     cancelled: Statistika avaldamine tühistati
