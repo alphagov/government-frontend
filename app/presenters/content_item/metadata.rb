@@ -4,15 +4,11 @@ module ContentItem
     include Updatable
 
     def metadata
-      {
-        from:,
-        first_published: published,
-        last_updated: updated,
-        see_updates_link: true,
+      publisher_metadata.merge(
         part_of:,
         direction: text_direction,
         other: {},
-      }
+      )
     end
 
     def important_metadata
@@ -26,19 +22,13 @@ module ContentItem
         last_updated: updated,
       }
 
-      unless pending_stats_announcement?
-        metadata[:see_updates_link] = true
-      end
+      metadata[:see_updates_link] = true if has_change_history?
 
       metadata
     end
 
-    def pending_stats_announcement?
-      details_display_date.present? && Time.zone.parse(details_display_date).future?
-    end
-
-    def details_display_date
-      content_item["details"]["display_date"]
+    def has_change_history?
+      change_history.present?
     end
   end
 end

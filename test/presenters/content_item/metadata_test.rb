@@ -17,6 +17,12 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
           "body" => "body",
           "child_section_groups" => [{ "title" => "thing" }],
           "display_date" => "23 March 2000",
+          "change_history" => [
+            {
+              "public_timestamp" => "2022-03-23T08:30:20.000+00:00",
+              "note" => "Updated content",
+            },
+          ],
         },
         "links" => {
           "organisations" => [
@@ -28,6 +34,10 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
       @public_updated_at = content_item["public_updated_at"]
       @title = content_item["title"]
       @schema_name = content_item["schema_name"]
+    end
+
+    def text_direction
+      "ltr"
     end
   end
 
@@ -44,16 +54,27 @@ class ContentItemMetadataTest < ActiveSupport::TestCase
     assert_equal expected_publisher_metadata, item.publisher_metadata
   end
 
-  test "does not return see_updates_link if pending" do
-    item = DummyContentItem.new
-    item.content_item["details"]["display_date"] = "23 March 3000"
+  test "metadata see_updates_link is true when there are updates" do
+    item_with_updates = DummyContentItem.new
 
-    expected_publisher_metadata = {
-      from: ["<a class=\"govuk-link\" href=\"/blah\">blah</a>"],
-      first_published: "23 March 2000",
-      last_updated: "23 March 2022",
-    }
+    assert item_with_updates.metadata[:see_updates_link]
+  end
 
-    assert_equal expected_publisher_metadata, item.publisher_metadata
+  class MockUpdatableItem < DummyContentItem
+    def initialize(has_updates: true)
+      super()
+      @has_updates = has_updates
+    end
+
+    def has_change_history?
+      @has_updates
+    end
+  end
+
+  test "metadata see_updates_link reflects any_updates? result" do
+    item_with_updates = MockUpdatableItem.new(has_updates: true)
+    assert item_with_updates.metadata[:see_updates_link]
+    item_without_updates = MockUpdatableItem.new(has_updates: false)
+    assert_nil item_without_updates.metadata[:see_updates_link]
   end
 end
