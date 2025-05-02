@@ -304,14 +304,6 @@ tr:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: Savunma Bakanlığı arması
-    field_of_operation: Faaliyet alanı
-    none_added: Henüz bu faaliyet alanına eklenen hiçbir ölüm oranı bildirimi yok.
-    operations_in: "%{location} konumundaki faaliyetler"
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: Artık mevcut değil
     published_in_error: Bu sayfadaki bilgiler hatalı yayınlandığından kaldırıldı.

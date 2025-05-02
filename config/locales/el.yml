@@ -304,14 +304,6 @@ el:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: Οικόσημο Υπουργείου Άμυνας
-    field_of_operation: Πεδίο λειτουργίας
-    none_added: Δεν έχουν προστεθεί ακόμη ανακοινώσεις θανάτου για αυτό το πεδίο λειτουργίας.
-    operations_in: Λειτουργίες στην τοποθεσία %{location}
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: Δεν είναι πλέον διαθέσιμο
     published_in_error: Οι πληροφορίες σε αυτήν τη σελίδα έχουν καταργηθεί επειδή δημοσιεύθηκαν κατά λάθος.

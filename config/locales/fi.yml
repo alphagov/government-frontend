@@ -304,14 +304,6 @@ fi:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: Puolustusministeriön vaakuna
-    field_of_operation: Toiminta -alue
-    none_added: Kuolemantapauksia ei ole ilmoitettu lisätty tälle toiminta-alueelle.
-    operations_in: Toiminnot paikassa %{location}
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: Ei ole enää käytettävissä
     published_in_error: Tämän sivun tiedot on poistettu, koska ne on julkaistu virheellisesti.

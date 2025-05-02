@@ -584,14 +584,6 @@ ar:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: شعار وزارة الدفاع
-    field_of_operation: ساحة العمليات
-    none_added: لم تتم إضافة أي إشعارات حول الوفيات في ساحة العمليات هذه حتى الآن.
-    operations_in: العمليات الدائرة في %{location}
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: لم تعد متاحة
     published_in_error: تمت إزالة المعلومات الموجودة في هذه الصفحة لأنها قد نُشِرت عن طريق الخطأ.
