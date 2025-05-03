@@ -16,7 +16,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Field of operation | [View on GOV.UK](https://www.gov.uk/government/fields-of-operation/iraq) |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
 | Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)|
-| News Article | [View on GOV.UK](https://www.gov.uk/government/news/the-personal-independence-payment-amendment-regulations-2017-statement-by-paul-gray) |
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) |
 | Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/access-to-finance-advice-north-west-england) |
 | Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) |
