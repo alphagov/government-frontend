@@ -21,7 +21,7 @@ module ContentItem
 
     def preview_url(doc)
       case doc.symbolize_keys
-      in { preview_url: String, assets:, filename: }
+      in { assets:, filename: }
         # We have assets and filename, so we can redirect to a new style CSV preview
         # Note: using a path rather than a full URL so the user doesn't flip from a draft frontend
         #       to a live frontend if previewing a live asset of a draft document
