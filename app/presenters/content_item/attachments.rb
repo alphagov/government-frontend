@@ -8,7 +8,7 @@ module ContentItem
       docs.each do |doc|
         doc["type"] = "html" unless doc["content_type"]
         doc["type"] = "external" if doc["attachment_type"] == "external"
-        doc["preview_url"] = preview_url(doc) if doc["content_type"] == "text/csv"
+        doc["preview_url"] = preview_url(doc) if csv_content_type.include?(doc["content_type"])
         doc["alternative_format_contact_email"] = nil if doc["accessible"] == true
       end
     end
@@ -18,6 +18,10 @@ module ContentItem
     end
 
   private
+
+    def csv_content_type
+      ["text/csv", "application/csv"]
+    end
 
     def preview_url(doc)
       case doc.symbolize_keys
