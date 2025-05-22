@@ -1,3 +1,19 @@
+GIT
+  remote: https://github.com/alphagov/govuk_publishing_components
+  revision: b8af05962e0dbe5660fee2f829f150fa184cf370
+  branch: devolved-nation-translations
+  specs:
+    govuk_publishing_components (57.0.0)
+      govuk_app_config
+      govuk_personalisation (>= 0.7.0)
+      kramdown
+      ostruct
+      plek
+      rails (>= 6)
+      rouge
+      sprockets (>= 3)
+      sprockets-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -117,7 +133,7 @@ GEM
     debug_inspector (1.2.0)
     docile (1.4.1)
     domain_name (0.6.20240107)
-    drb (2.2.1)
+    drb (2.2.3)
     erb (5.0.1)
     erubi (1.13.1)
     execjs (2.10.0)
@@ -163,16 +179,6 @@ GEM
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
       rails (>= 6, < 9)
-    govuk_publishing_components (56.3.2)
-      govuk_app_config
-      govuk_personalisation (>= 0.7.0)
-      kramdown
-      ostruct
-      plek
-      rails (>= 6)
-      rouge
-      sprockets (>= 3)
-      sprockets-rails
     govuk_schemas (6.0.0)
       faker (>= 3.4.1, < 3.6.0)
       json-schema (>= 2.8, < 5.2)
@@ -535,7 +541,7 @@ GEM
       actionpack (>= 5.0.1.rc1)
       actionview (>= 5.0.1.rc1)
       activesupport (>= 5.0.1.rc1)
-    rails-dom-testing (2.2.0)
+    rails-dom-testing (2.3.0)
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
@@ -709,7 +715,7 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_personalisation
-  govuk_publishing_components
+  govuk_publishing_components!
   govuk_schemas
   govuk_test
   govuk_web_banners
