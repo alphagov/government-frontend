@@ -445,12 +445,6 @@ tr:
       title: Bir seçenek seçmediniz
   shared:
     historically_political: "%{government} kapsamında yayınlandı"
-    webchat:
-      available: Danışmanlar sohbet için müsait.
-      busy: Tüm webchat danışmanları şu anda meşgul.
-      closed: Webchat şu anda kapalı.
-      speak_to_adviser: Bir danışmanla konuşun
-      technical_problem: Teknik sorunlar nedeniyle şu an Webchat’e ulaşılamıyor.
   specialist_document:
     pdo_alt_text: Şema logosu Designated Origin UK Protected sözcüklerini içeren siyah bir damgadır
     pgi_alt_text: Şema logosu Geographic Origin UK Protected sözcüklerini içeren siyah bir damgadır
@@ -467,6 +461,13 @@ tr:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Danışmanlar sohbet için müsait.
+    busy: Tüm webchat danışmanları şu anda meşgul.
+    closed: Webchat şu anda kapalı.
+    speak_to_adviser: Bir danışmanla konuşun
+    technical_problem: Teknik sorunlar nedeniyle şu an Webchat’e ulaşılamıyor.
+    webchat_body:
   working_group:
     contact_details: İrtibat ayrıntıları
     policies: Politikalar

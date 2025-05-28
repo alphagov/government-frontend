@@ -445,12 +445,6 @@ sq:
       title: You nuk keni zgjedhur një opsion
   shared:
     historically_political: Kjo u botua nën %{government}
-    webchat:
-      available: Këshilltarët janë në dispozicion për të biseduar.
-      busy: Të gjithë këshilltarët e webchat janë të zënë për momentin.
-      closed: Webchat është e mbyllur për momentin.
-      speak_to_adviser: Flisni me një këshilltar tani
-      technical_problem: Webchat nuk është i disponueshëm për momentin për shkak të problemeve teknike.
   specialist_document:
     pdo_alt_text: Logoja e skemës është një pullë e zezë me fjalët Designed Origin UK Protected
     pgi_alt_text: Logoja e skemës është një pullë e zezë me fjalët Geographic Origin UK Protected
@@ -467,6 +461,13 @@ sq:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Këshilltarët janë në dispozicion për të biseduar.
+    busy: Të gjithë këshilltarët e webchat janë të zënë për momentin.
+    closed: Webchat është e mbyllur për momentin.
+    speak_to_adviser: Flisni me një këshilltar tani
+    technical_problem: Webchat nuk është i disponueshëm për momentin për shkak të problemeve teknike.
+    webchat_body:
   working_group:
     contact_details: Detajet e kontaktit
     policies: Politikat

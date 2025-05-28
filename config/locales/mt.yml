@@ -595,12 +595,6 @@ mt:
       title: M'agħmiltx għażla
   shared:
     historically_political: Din ma ġietx ippubblikata taħt il- %{government}
-    webchat:
-      available: Konsulenti huma disponibbli biex jiċċettjaw.
-      busy: Il-konsulenti tal-webchat kollha huma okkupati bħalissa.
-      closed: Il-webchat huwa magħluq bħalissa.
-      speak_to_adviser: Kellem lil konsulent issa
-      technical_problem: Il-webchat mhuwiex disponibbli bħalissa minħabba problemi tekniċi.
   specialist_document:
     pdo_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem Oriġini Magħżula Protetta mir-RU
     pgi_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem  Oriġini Ġeografika Protetta mir-RU
@@ -617,6 +611,13 @@ mt:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Konsulenti huma disponibbli biex jiċċettjaw.
+    busy: Il-konsulenti tal-webchat kollha huma okkupati bħalissa.
+    closed: Il-webchat huwa magħluq bħalissa.
+    speak_to_adviser: Kellem lil konsulent issa
+    technical_problem: Il-webchat mhuwiex disponibbli bħalissa minħabba problemi tekniċi.
+    webchat_body:
   working_group:
     contact_details: Dettalji tal-kuntatt
     policies: Politiki

@@ -370,12 +370,6 @@ th:
       title: คุณยังไม่ได้เลือกตัวเลือกใดๆ
   shared:
     historically_political: เผยแพร่ภายใต้ %{government}
-    webchat:
-      available: ที่ปรึกษาพร้อมสำหรับการแชท
-      busy: ที่ปรึกษาทางเว็บแชทไม่ว่างเลยในขณะนี้
-      closed: เว็บแชทปิดอยู่ในขณะนี้
-      speak_to_adviser: พูดคุยกับที่ปรึกษาตอนนี้
-      technical_problem: Webchat ไม่พร้อมให้บริการในขณะนี้เนื่องจากปัญหาทางเทคนิค
   specialist_document:
     pdo_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Designated Origin UK Protected
     pgi_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Geographic Origin UK Protected
@@ -392,6 +386,13 @@ th:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: ที่ปรึกษาพร้อมสำหรับการแชท
+    busy: ที่ปรึกษาทางเว็บแชทไม่ว่างเลยในขณะนี้
+    closed: เว็บแชทปิดอยู่ในขณะนี้
+    speak_to_adviser: พูดคุยกับที่ปรึกษาตอนนี้
+    technical_problem: Webchat ไม่พร้อมให้บริการในขณะนี้เนื่องจากปัญหาทางเทคนิค
+    webchat_body:
   working_group:
     contact_details: รายละเอียดการติดต่อ
     policies: นโยบาย

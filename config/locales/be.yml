@@ -595,12 +595,6 @@ be:
       title: Вы не выбралі варыянту
   shared:
     historically_political: Гэта было апублікавана пад%{government}
-    webchat:
-      available: Кансультанты даступныя для камунікавання.
-      busy: Усе кансультанты ўэб-чату зараз заняты.
-      closed: Ўэб-чат зараз час зачынены.
-      speak_to_adviser: Пагаварыце зараз з кансультантам
-      technical_problem: Ўэб-чат зараз недаступны з-за тэхнічных праблем.
   specialist_document:
     pdo_alt_text: Лагатып схемы ўяўляе сабою чорны друк з надпісам Designated Origin UK Protected
     pgi_alt_text: Лагатып схемы ўяўляе сабою чорны друк з надпісам Geographic Origin UK Protected
@@ -617,6 +611,13 @@ be:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Кансультанты даступныя для камунікавання.
+    busy: Усе кансультанты ўэб-чату зараз заняты.
+    closed: Ўэб-чат зараз час зачынены.
+    speak_to_adviser: Пагаварыце зараз з кансультантам
+    technical_problem: Ўэб-чат зараз недаступны з-за тэхнічных праблем.
+    webchat_body:
   working_group:
     contact_details: Кантактныя дадзеныя
     policies: Напрамкі дзейнасці

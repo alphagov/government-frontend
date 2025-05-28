@@ -445,12 +445,6 @@ fi:
       title: Et ole valinnut vaihtoehtoa
   shared:
     historically_political: Tämä julkaistiin osoitteessa %{government}
-    webchat:
-      available: Neuvonantajat ovat chatissa.
-      busy: Kaikki webchat-neuvojat ovat tällä hetkellä varattuja.
-      closed: Webchat on suljettu tällä hetkellä.
-      speak_to_adviser: Puhu nyt neuvonantajan kanssa
-      technical_problem: Webchat ei ole tällä hetkellä käytettävissä teknisten ongelmien vuoksi.
   specialist_document:
     pdo_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Nimetty alkuperä Yhdistynyt kuningaskunta Suojattu
     pgi_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Maantieteellinen alkuperä Yhdistynyt kuningaskunta Suojattu
@@ -467,6 +461,13 @@ fi:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Neuvonantajat ovat chatissa.
+    busy: Kaikki webchat-neuvojat ovat tällä hetkellä varattuja.
+    closed: Webchat on suljettu tällä hetkellä.
+    speak_to_adviser: Puhu nyt neuvonantajan kanssa
+    technical_problem: Webchat ei ole tällä hetkellä käytettävissä teknisten ongelmien vuoksi.
+    webchat_body:
   working_group:
     contact_details: Yhteystiedot
     policies: Käytännöt

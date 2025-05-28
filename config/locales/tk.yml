@@ -445,12 +445,6 @@ tk:
       title: Siz saýlaw saýlamadyňyz
   shared:
     historically_political: Bu %{government} garamagynda neşir edildi
-    webchat:
-      available: Maslahat berijiler habarlaşmak üçin elýeterli.
-      busy: Häzirki wagtda ähli webçat maslahat berijiler işli.
-      closed: Webçat häzirki wagtda ýapyk.
-      speak_to_adviser: Maslahat berijiler bilen häzir gürleşiň
-      technical_problem: Tehniki sebäplere görä häzirki wagtda webçat elýeterli däl.
   specialist_document:
     pdo_alt_text: Shemanyň nyşany Designated Origin UK Protected sözlerini özünde saklaýan gara ştampdyr.
     pgi_alt_text: Shemanyň nyşany Geographic Origin UK Protected sözlerini özünde saklaýan gara ştampdyr.
@@ -467,6 +461,13 @@ tk:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Maslahat berijiler habarlaşmak üçin elýeterli.
+    busy: Häzirki wagtda ähli webçat maslahat berijiler işli.
+    closed: Webçat häzirki wagtda ýapyk.
+    speak_to_adviser: Maslahat berijiler bilen häzir gürleşiň
+    technical_problem: Tehniki sebäplere görä häzirki wagtda webçat elýeterli däl.
+    webchat_body:
   working_group:
     contact_details: Habarlaşmak üçin maglumatlar
     policies: Syýasatlar

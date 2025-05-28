@@ -445,12 +445,6 @@ is:
       title: Þú hefur ekki valið valmöguleika
   shared:
     historically_political: Þetta var gefið út undir %{government}
-    webchat:
-      available: Ráðgjafar eru til taks í spjall.
-      busy: Allir ráðgjafar í vefspjalli eru uppteknir í augnablikinu.
-      closed: Vefspjallið er lokað í augnblikinu.
-      speak_to_adviser: Tala við ráðgjafa núna
-      technical_problem: Vefspjallið er ekki aðgengilegt í augnablikinu vegna tæknilegra örðugleika.
   specialist_document:
     pdo_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Designated Origin UK Protected
     pgi_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Geographic Origin UK Protected
@@ -467,6 +461,13 @@ is:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Ráðgjafar eru til taks í spjall.
+    busy: Allir ráðgjafar í vefspjalli eru uppteknir í augnablikinu.
+    closed: Vefspjallið er lokað í augnblikinu.
+    speak_to_adviser: Tala við ráðgjafa núna
+    technical_problem: Vefspjallið er ekki aðgengilegt í augnablikinu vegna tæknilegra örðugleika.
+    webchat_body:
   working_group:
     contact_details: Upplýsingar til að hafa samband
     policies: Stefnur

@@ -445,12 +445,6 @@ he:
       title: לא בחרת באפשרות
   shared:
     historically_political: זה פורסם תחת %{government}
-    webchat:
-      available: יועצים זמינים לצ'אט.
-      busy: 'כל יועצי הצ''אט באינטרנט עסוקים כרגע. '
-      closed: 'צ''אט באינטרנט סגור כרגע. '
-      speak_to_adviser: דבר עם יועץ עכשיו
-      technical_problem: צ'אט באינטרנט אינו זמין כרגע בגלל בעיות טכניות.
   specialist_document:
     pdo_alt_text: הלוגו של התוכנית הוא שחור עם חותמת המילים "מקור ייעודי, בריטניה. מוגן"
     pgi_alt_text: לוגו התוכנית הוא חותמת שחורה עם המילים מוצא גיאוגרפי מוגן בבריטניה
@@ -467,6 +461,13 @@ he:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: יועצים זמינים לצ'אט.
+    busy: 'כל יועצי הצ''אט באינטרנט עסוקים כרגע. '
+    closed: 'צ''אט באינטרנט סגור כרגע. '
+    speak_to_adviser: דבר עם יועץ עכשיו
+    technical_problem: צ'אט באינטרנט אינו זמין כרגע בגלל בעיות טכניות.
+    webchat_body:
   working_group:
     contact_details: פרטי קשר
     policies: מדיניות

@@ -445,12 +445,6 @@ es-419:
       title: No ha seleccionado ninguna opción
   shared:
     historically_political: Esto fue publicado bajo el %{government}
-    webchat:
-      available: Hay asesores disponibles en el chat.
-      busy: Todos los asesores del Chat web están ocupados en este momento.
-      closed: El Chat web está cerrado en este momento.
-      speak_to_adviser: Hable con un asesor ahora
-      technical_problem: El Chat web no está disponible en este momento debido a problemas técnicos.
   specialist_document:
     pdo_alt_text: El logotipo del programa es un sello negro con las palabras "Designated Origin UK Protected"
     pgi_alt_text: El logotipo del programa es un sello negro con las palabras "Geographic Origin UK Protected"
@@ -467,6 +461,13 @@ es-419:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Hay asesores disponibles en el chat.
+    busy: Todos los asesores del Chat web están ocupados en este momento.
+    closed: El Chat web está cerrado en este momento.
+    speak_to_adviser: Hable con un asesor ahora
+    technical_problem: El Chat web no está disponible en este momento debido a problemas técnicos.
+    webchat_body:
   working_group:
     contact_details: Datos de contacto
     policies: Normativas

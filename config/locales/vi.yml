@@ -370,12 +370,6 @@ vi:
       title: Bạn chưa chọn tùy chọn
   shared:
     historically_political: Điều này đã được xuất bản trong %{government}
-    webchat:
-      available: Tư vấn viên đã sẵn sàng trò chuyện.
-      busy: Tất cả các tư vấn viên webchat hiện đang bận.
-      closed: Webchat hiện đã bị đóng.
-      speak_to_adviser: Nói chuyện với tư vấn viên ngay bây giờ
-      technical_problem: Webchat hiện không có sẵn do sự cố kỹ thuật.
   specialist_document:
     pdo_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Designated Origin UK Protected”
     pgi_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Geographic Origin UK Protected”
@@ -392,6 +386,13 @@ vi:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Tư vấn viên đã sẵn sàng trò chuyện.
+    busy: Tất cả các tư vấn viên webchat hiện đang bận.
+    closed: Webchat hiện đã bị đóng.
+    speak_to_adviser: Nói chuyện với tư vấn viên ngay bây giờ
+    technical_problem: Webchat hiện không có sẵn do sự cố kỹ thuật.
+    webchat_body:
   working_group:
     contact_details: Chi tiết liên hệ
     policies: Chính sách

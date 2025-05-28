@@ -595,12 +595,6 @@ uk:
       title: Ви не вибрали варіант
   shared:
     historically_political: Це було опубліковано при %{government}
-    webchat:
-      available: Доступні консультанти для спілкування.
-      busy: Наразі всі консультанти вебчату зайняті.
-      closed: На даний момент вебчат закритий.
-      speak_to_adviser: Поговорити з консультантом зараз
-      technical_problem: Вебчат наразі не доступний через технічні проблеми.
   specialist_document:
     pdo_alt_text: Логотип схеми –– це чорний штамп зі словами Designated Origin UK Protected
     pgi_alt_text: Логотип схеми –– це чорний штамп зі словами Designated Origin UK Protected
@@ -617,6 +611,13 @@ uk:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Доступні консультанти для спілкування.
+    busy: Наразі всі консультанти вебчату зайняті.
+    closed: На даний момент вебчат закритий.
+    speak_to_adviser: Поговорити з консультантом зараз
+    technical_problem: Вебчат наразі не доступний через технічні проблеми.
+    webchat_body:
   working_group:
     contact_details: Контактні дані
     policies: Політики

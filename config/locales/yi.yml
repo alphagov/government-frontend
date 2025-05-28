@@ -445,12 +445,6 @@ yi:
       title:
   shared:
     historically_political:
-    webchat:
-      available:
-      busy:
-      closed:
-      speak_to_adviser:
-      technical_problem:
   specialist_document:
     pdo_alt_text:
     pgi_alt_text:
@@ -467,6 +461,13 @@ yi:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available:
+    busy:
+    closed:
+    speak_to_adviser:
+    technical_problem:
+    webchat_body:
   working_group:
     contact_details:
     policies:

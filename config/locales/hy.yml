@@ -445,12 +445,6 @@ hy:
       title: Դուք չեք ընտրել որևէ տարբերակ
   shared:
     historically_political: Սույնը հրապարակվել է %{government} բաժնում
-    webchat:
-      available: 'Խորհրդատուները հասանելի են զրույցի համար:'
-      busy: 'Webchat-ի բոլոր խորհրդատուներն այս պահին զբաղված են:'
-      closed: 'Webchat-ն այս պահին հասանելի չէ:'
-      speak_to_adviser: Զրուցել խորհրդատուի հետ հիմա
-      technical_problem: 'Տեխնիկական խնդիրների պատճառով այս պահին webchat-ը հասանելի չէ:'
   specialist_document:
     pdo_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Designated Origin UK Protected
     pgi_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Geographic Origin UK Protected
@@ -467,6 +461,13 @@ hy:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: 'Խորհրդատուները հասանելի են զրույցի համար:'
+    busy: 'Webchat-ի բոլոր խորհրդատուներն այս պահին զբաղված են:'
+    closed: 'Webchat-ն այս պահին հասանելի չէ:'
+    speak_to_adviser: Զրուցել խորհրդատուի հետ հիմա
+    technical_problem: 'Տեխնիկական խնդիրների պատճառով այս պահին webchat-ը հասանելի չէ:'
+    webchat_body:
   working_group:
     contact_details: Կոնտակտային տվյալներ
     policies: Քաղաքականություններ

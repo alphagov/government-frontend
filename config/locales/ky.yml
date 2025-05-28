@@ -462,12 +462,6 @@ ky:
       title: Сиз параметрди тандаган жоксуз
   shared:
     historically_political: Бул %{government} астында жарыяланган
-    webchat:
-      available: Кеңешчилер маектешүүгө жеткиликтүү.
-      busy: Вебчат кеңешчилеринин баары учурда бош эмес.
-      closed: Вебчат учурда жабык.
-      speak_to_adviser: Азыр кеңешчи менен сүйлөшүү
-      technical_problem: Вебчат учурда техникалык көйгөйлөрдөн улам жеткиликсиз.
   specialist_document:
     pdo_alt_text: Схема логотиби деген жазуусу бар кара мөөр болуп саналат
     pgi_alt_text: Схема логотиби Geographic Origin UK Protected деген жазуусу бар кара мөөр болуп саналат
@@ -488,6 +482,13 @@ ky:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Кеңешчилер маектешүүгө жеткиликтүү.
+    busy: Вебчат кеңешчилеринин баары учурда бош эмес.
+    closed: Вебчат учурда жабык.
+    speak_to_adviser: Азыр кеңешчи менен сүйлөшүү
+    technical_problem: Вебчат учурда техникалык көйгөйлөрдөн улам жеткиликсиз.
+    webchat_body:
   working_group:
     contact_details: Байланыш маалыматтары
     policies: Саясаттар

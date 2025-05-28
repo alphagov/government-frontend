@@ -370,12 +370,6 @@ id:
       title: Anda belum memilih opsi
   shared:
     historically_political: Ini diterbitkan di bawah %{government}
-    webchat:
-      available: Penasihat tersedia untuk diajak bicara.
-      busy: Semua penasihat obrolan web sedang sibuk saat ini.
-      closed: Obrolan web ditutup untuk saat ini.
-      speak_to_adviser: Bicara dengan penasihat sekarang
-      technical_problem: Obrolan web tidak tersedia saat ini dikarenakan masalah teknis.
   specialist_document:
     pdo_alt_text: Logo skema adalah cap hitam dengan kata-kata Designated Origin UK Protected
     pgi_alt_text: Logo skema adalah cap hitam dengan kata-kata Geographic Origin UK Protected
@@ -392,6 +386,13 @@ id:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Penasihat tersedia untuk diajak bicara.
+    busy: Semua penasihat obrolan web sedang sibuk saat ini.
+    closed: Obrolan web ditutup untuk saat ini.
+    speak_to_adviser: Bicara dengan penasihat sekarang
+    technical_problem: Obrolan web tidak tersedia saat ini dikarenakan masalah teknis.
+    webchat_body:
   working_group:
     contact_details: Detail kontak
     policies: Kebijakan

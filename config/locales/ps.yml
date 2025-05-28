@@ -445,12 +445,6 @@ ps:
       title: تاسو یو انتخاب ندی ټاکلی
   shared:
     historically_political: دا د%{government} لاندې خپور شوی
-    webchat:
-      available: د خبرو اترو لپاره مشاورین شتون لري.
-      busy: ټول د ویب چیټ مشاورین دا مهال بوخت دي.
-      closed: ویب چیٹ دا مهال بند دی.
-      speak_to_adviser: همدا اوس له یوه سلاکار سره خبرې وکړئ
-      technical_problem: ویب چیٹ دا مهال د تخنیکي ستونزو له امله شتون نلري.
   specialist_document:
     pdo_alt_text: د سکیم لوگو یو تور ټاپه ده چې د ډیزاین شوي اصلي انګلستان محافظت کلمو سره دی
     pgi_alt_text: د سکیم لوګو یو تور ټاپه ده چې د جغرافیائی اصل انګلستان محافظت کلمو سره دی
@@ -467,6 +461,13 @@ ps:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: د خبرو اترو لپاره مشاورین شتون لري.
+    busy: ټول د ویب چیټ مشاورین دا مهال بوخت دي.
+    closed: ویب چیٹ دا مهال بند دی.
+    speak_to_adviser: همدا اوس له یوه سلاکار سره خبرې وکړئ
+    technical_problem: ویب چیٹ دا مهال د تخنیکي ستونزو له امله شتون نلري.
+    webchat_body:
   working_group:
     contact_details: د اړیکو نیولو معلومات
     policies: پالیسۍ

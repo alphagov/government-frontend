@@ -445,12 +445,6 @@ bg:
       title: Не сте избрали опция
   shared:
     historically_political: Това е публикувано под %{government}
-    webchat:
-      available: Консултантите са на разположение за разговори.
-      busy: В момента всички консултанти от уебчата са заети.
-      closed: В момента уебчатът е затворен.
-      speak_to_adviser: Можете да говорите с консултанта
-      technical_problem: В момента уебчатът не е достъпен поради технически проблеми.
   specialist_document:
     pdo_alt_text: Логото на схемата представлява черен печат с надпис Designated Origin UK Protected
     pgi_alt_text: Логото на схемата представлява черен печат с надпис Geographic Origin UK Protected
@@ -467,6 +461,13 @@ bg:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Консултантите са на разположение за разговори.
+    busy: В момента всички консултанти от уебчата са заети.
+    closed: В момента уебчатът е затворен.
+    speak_to_adviser: Можете да говорите с консултанта
+    technical_problem: В момента уебчатът не е достъпен поради технически проблеми.
+    webchat_body:
   working_group:
     contact_details: Данни за контакти
     policies: Политики

@@ -445,12 +445,6 @@ hi:
       title: आपने कोई विकल्प नहीं चुना है
   shared:
     historically_political: यह %{government} के तहत प्रकाशित किया गया था
-    webchat:
-      available: चैट पर सलाहकार उपलब्ध हैं।
-      busy: सभी वेबचैट सलाहकार इस समय व्यस्त हैं।
-      closed: फिलहाल वेबचैट बंद है।
-      speak_to_adviser: अभी एक सलाहकार से बात करें
-      technical_problem: तकनीकी समस्याओं की वज़ह से इस समय वेबचैट अनुपलब्ध है।
   specialist_document:
     pdo_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है, जिस पर Designated Origin UK Protected शब्द हैं
     pgi_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है जिसमें Geographic Origin UK Protected शब्द हैं
@@ -467,6 +461,13 @@ hi:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: चैट पर सलाहकार उपलब्ध हैं।
+    busy: सभी वेबचैट सलाहकार इस समय व्यस्त हैं।
+    closed: फिलहाल वेबचैट बंद है।
+    speak_to_adviser: अभी एक सलाहकार से बात करें
+    technical_problem: तकनीकी समस्याओं की वज़ह से इस समय वेबचैट अनुपलब्ध है।
+    webchat_body:
   working_group:
     contact_details: संपर्क के विवरण
     policies: नीतियां

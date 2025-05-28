@@ -520,12 +520,6 @@ lt:
       title: Jūs nepasirinkote varianto
   shared:
     historically_political: Tai buvo publikuota pagal %{government}
-    webchat:
-      available: Konsultantai pasirengę bendrauti.
-      busy: Visis internetinių pokalbių konsultantai šiuo metu užimti.
-      closed: Internetinis pokalbis šiuo metu neprieinamas.
-      speak_to_adviser: Kalbėti su konsultantu dabar
-      technical_problem: Internetinis pokalbis šiuo metu neprieinamas dėl techninių problemų.
   specialist_document:
     pdo_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma kilmės vietos nuoroda“ '
     pgi_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma geografinė kilmės vieta“ '
@@ -542,6 +536,13 @@ lt:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Konsultantai pasirengę bendrauti.
+    busy: Visis internetinių pokalbių konsultantai šiuo metu užimti.
+    closed: Internetinis pokalbis šiuo metu neprieinamas.
+    speak_to_adviser: Kalbėti su konsultantu dabar
+    technical_problem: Internetinis pokalbis šiuo metu neprieinamas dėl techninių problemų.
+    webchat_body:
   working_group:
     contact_details: Kontaktiniai duomenys
     policies: Strategijos

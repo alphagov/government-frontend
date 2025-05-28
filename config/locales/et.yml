@@ -445,12 +445,6 @@ et:
       title: Te pole valikut teinud
   shared:
     historically_political: See avaldati %{government} all
-    webchat:
-      available: Nõustajad on vestlemiseks saadaval.
-      busy: Kõik veebivestluse nõustajad on praegu hõivatud.
-      closed: Veebivestlus on praegu suletud.
-      speak_to_adviser: Rääkige nüüd nõustajaga
-      technical_problem: Veebivestlus pole praegu tehniliste probleemide tõttu saadaval.
   specialist_document:
     pdo_alt_text: Skeemi logo on must tempel kirjaga Designated Origin UK Protected
     pgi_alt_text: Skeemi logo on must tempel kirjaga Geographic Origin UK Protected
@@ -467,6 +461,13 @@ et:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Nõustajad on vestlemiseks saadaval.
+    busy: Kõik veebivestluse nõustajad on praegu hõivatud.
+    closed: Veebivestlus on praegu suletud.
+    speak_to_adviser: Rääkige nüüd nõustajaga
+    technical_problem: Veebivestlus pole praegu tehniliste probleemide tõttu saadaval.
+    webchat_body:
   working_group:
     contact_details: Kontaktandmed
     policies: Eeskirjad

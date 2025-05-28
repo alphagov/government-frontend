@@ -370,12 +370,6 @@ ja:
       title: オプションを選択していません
   shared:
     historically_political: 本件は、%{government}で公開されました
-    webchat:
-      available: アドバイザーのチャットがご利用いただけます。
-      busy: 現在、すべてのウェブチャットアドバイザーはビジーです。
-      closed: ウェブチャットは現在ご利用いただけません。
-      speak_to_adviser: 今すぐアドバイザーにご相談ください
-      technical_problem: 技術的な問題により、現在ウェブチャットはご利用いただけません。
   specialist_document:
     pdo_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
     pgi_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
@@ -392,6 +386,13 @@ ja:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: アドバイザーのチャットがご利用いただけます。
+    busy: 現在、すべてのウェブチャットアドバイザーはビジーです。
+    closed: ウェブチャットは現在ご利用いただけません。
+    speak_to_adviser: 今すぐアドバイザーにご相談ください
+    technical_problem: 技術的な問題により、現在ウェブチャットはご利用いただけません。
+    webchat_body:
   working_group:
     contact_details: 連絡先の詳細
     policies: 方針

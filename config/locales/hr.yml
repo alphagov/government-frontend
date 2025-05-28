@@ -520,12 +520,6 @@ hr:
       title: Niste odabrali opciju
   shared:
     historically_political: Ovo je objavljeno pod %{government}
-    webchat:
-      available: Savjetnici su dostupni za razgovor.
-      busy: Svi savjetnici za webchat trenutno su zauzeti.
-      closed: Webchat je trenutno zatvoren.
-      speak_to_adviser: Odmah razgovarajte sa savjetnikom
-      technical_problem: Webchat trenutno nije dostupan zbog tehničkih problema.
   specialist_document:
     pdo_alt_text: Logo sheme je crni pečat s riječima Označeno Podrijetlo UK Zaštićeno
     pgi_alt_text: Logo sheme je crni pečat s riječima Geografsko Podrijetlo UK Zaštićeno
@@ -542,6 +536,13 @@ hr:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Savjetnici su dostupni za razgovor.
+    busy: Svi savjetnici za webchat trenutno su zauzeti.
+    closed: Webchat je trenutno zatvoren.
+    speak_to_adviser: Odmah razgovarajte sa savjetnikom
+    technical_problem: Webchat trenutno nije dostupan zbog tehničkih problema.
+    webchat_body:
   working_group:
     contact_details: Kontakt podaci
     policies: Pravila

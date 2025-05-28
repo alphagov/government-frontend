@@ -595,12 +595,6 @@ sl:
       title: Niste izbrali možnosti
   shared:
     historically_political: To je bilo objavljeno pod %{government}
-    webchat:
-      available: Svetovalci so na voljo za klepet.
-      busy: Trenutno so vsi svetovalci spletnega klepeta zasedeni.
-      closed: Spletni klepet trenutno ne deluje.
-      speak_to_adviser: Govorite s svetovalcem zdaj
-      technical_problem: Spletni klepet trenutno ni na voljo zaradi tehničnih težav.
   specialist_document:
     pdo_alt_text: Logotip sheme je črni žig z besedami Designated Origin UK Protected
     pgi_alt_text: Logotip sheme je črni žig z besedami Geographic Origin UK Protected
@@ -617,6 +611,13 @@ sl:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Svetovalci so na voljo za klepet.
+    busy: Trenutno so vsi svetovalci spletnega klepeta zasedeni.
+    closed: Spletni klepet trenutno ne deluje.
+    speak_to_adviser: Govorite s svetovalcem zdaj
+    technical_problem: Spletni klepet trenutno ni na voljo zaradi tehničnih težav.
+    webchat_body:
   working_group:
     contact_details: Kontaktni podatki
     policies: Politike

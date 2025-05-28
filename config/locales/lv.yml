@@ -445,12 +445,6 @@ lv:
       title: Nav izvēlēta neviena opcija
   shared:
     historically_political: Šis tika publicēts saskaņā ar %{government}
-    webchat:
-      available: Konsultanti ir pieejami tērzēšanai.
-      busy: Visi konsultanti pašlaik ir aizņemti.
-      closed: Tīmekļa tērzēšana pašlaik ir slēgta.
-      speak_to_adviser: Runāt ar konsultantu tūlīt
-      technical_problem: Tīmekļa tērzēšana pašlaik nav pieejama tehnisku problēmu dēļ.
   specialist_document:
     pdo_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Designated Origin UK Protected
     pgi_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Geographic Origin UK Protected
@@ -467,6 +461,13 @@ lv:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Konsultanti ir pieejami tērzēšanai.
+    busy: Visi konsultanti pašlaik ir aizņemti.
+    closed: Tīmekļa tērzēšana pašlaik ir slēgta.
+    speak_to_adviser: Runāt ar konsultantu tūlīt
+    technical_problem: Tīmekļa tērzēšana pašlaik nav pieejama tehnisku problēmu dēļ.
+    webchat_body:
   working_group:
     contact_details: Kontaktinformācija
     policies: Politikas

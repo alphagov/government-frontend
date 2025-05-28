@@ -445,12 +445,6 @@ fa:
       title: شما یک گزینه را انتخاب نکرده‌اید
   shared:
     historically_political: این مورد تحت %{government} منتشر شده است
-    webchat:
-      available: مشاوران برای چت در دسترس هستند.
-      busy: تمام مشاوران وب‌چت در حال حاضر مشغول هستند.
-      closed: وب‌چت در این لحظه بسته می‌شود.
-      speak_to_adviser: اکنون با یک مشاور صحبت کنید
-      technical_problem: به دلیل مشکلات فنی، وب‌چت در حال حاضر در دسترس نیست.
   specialist_document:
     pdo_alt_text: آرم طرح یک مهر سیاه با این کلمات است Designated Origin UK Protected
     pgi_alt_text: آرم طرح یک مهر سیاه با این کلمات است Geographic Origin UK Protected
@@ -467,6 +461,13 @@ fa:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: مشاوران برای چت در دسترس هستند.
+    busy: تمام مشاوران وب‌چت در حال حاضر مشغول هستند.
+    closed: وب‌چت در این لحظه بسته می‌شود.
+    speak_to_adviser: اکنون با یک مشاور صحبت کنید
+    technical_problem: به دلیل مشکلات فنی، وب‌چت در حال حاضر در دسترس نیست.
+    webchat_body:
   working_group:
     contact_details: جزئیات اطلاعات تماس
     policies: سیاست ها

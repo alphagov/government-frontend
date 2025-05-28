@@ -445,12 +445,6 @@ nl:
       title: U heeft geen optie geselecteerd
   shared:
     historically_political: Dit werd gepubliceerd onder de %{government}
-    webchat:
-      available: Er zijn adviseurs beschikbaar om te chatten.
-      busy: Alle webchat-adviseurs zijn momenteel bezet.
-      closed: Webchat is op dit moment gesloten.
-      speak_to_adviser: Spreek nu met een adviseur
-      technical_problem: Webchat is momenteel niet beschikbaar wegens technische problemen.
   specialist_document:
     pdo_alt_text: Het logo van de regeling is een zwarte stempel met de woorden Designated Origin UK Protected
     pgi_alt_text: Het logo van de regeling is een zwarte stempel met de woorden Geographic Origin UK Protected
@@ -467,6 +461,13 @@ nl:
   time:
     formats:
       short_ordinal: "%e %B %Y"
+  webchat:
+    available: Er zijn adviseurs beschikbaar om te chatten.
+    busy: Alle webchat-adviseurs zijn momenteel bezet.
+    closed: Webchat is op dit moment gesloten.
+    speak_to_adviser: Spreek nu met een adviseur
+    technical_problem: Webchat is momenteel niet beschikbaar wegens technische problemen.
+    webchat_body:
   working_group:
     contact_details: Contact gegevens
     policies: Beleid
