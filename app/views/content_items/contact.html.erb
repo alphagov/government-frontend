@@ -27,11 +27,6 @@
           <%= @content_item.online_form_body %>
         <% end %>
 
-        <% if @content_item.show_webchat? %>
-          <h2 id="webchat-title"><%= t("contact.webchat") %></h2>
-          <%= render 'shared/webchat' %>
-        <% end %>
-
         <% if @content_item.email.any? %>
           <h2 id="email-title"><%= t("contact.email") %></h2>
           <% @content_item.email.each do |email_group| %>

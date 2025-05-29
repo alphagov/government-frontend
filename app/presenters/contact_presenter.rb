@@ -69,24 +69,6 @@ class ContactPresenter < ContentItemPresenter
     content_item.dig("details", "more_info_email_address").try(:html_safe)
   end
 
-  # Webchat
-
-  def webchat
-    Webchat.find(content_item["base_path"])
-  end
-
-  def show_webchat?
-    webchat.present?
-  end
-
-  def webchat_body
-    content_item.dig("details", "more_info_webchat").try(:html_safe)
-  end
-
-  def csp_connect_src
-    webchat&.csp_connect_src
-  end
-
 private
 
   def phone_numbers_in_group(group)
