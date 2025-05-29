@@ -17,7 +17,8 @@ class Webchat
   end
 
   def self.find(base_path)
-    load_all.find { |w| w.base_path == base_path }
+    load_all.find { |w| w.base_path == base_path } ||
+      raise(ActiveModel::ValidationError, "Webchat config not found for path: #{base_path}")
   end
 
   def self.load_all

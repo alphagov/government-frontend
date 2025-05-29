@@ -1,0 +1,35 @@
+<div class="webchat-container">
+  <p class="webchat-body">
+    <%= t("webchat.webchat_body") %>
+  </p>
+
+  <div class="js-webchat"
+    data-availability-url="<%= @webchat_config.availability_url %>"
+    data-open-url="<%= @webchat_config.open_url %>"
+    data-redirect="<%= @webchat_config.open_url_redirect %>"
+  >
+    <span class="js-webchat-advisers-error">
+      <%= t("webchat.technical_problem") %>
+    </span>
+    <span class="js-webchat-advisers-unavailable govuk-!-display-none">
+      <%= t("webchat.closed") %>
+    </span>
+    <span class="js-webchat-advisers-busy govuk-!-display-none">
+      <%= t("webchat.busy") %>
+    </span>
+    <span class="js-webchat-advisers-available govuk-!-display-none">
+      <%= t("webchat.available") %>
+      <a
+        href="#"
+        data-redirect="<%= @webchat_config.open_url_redirect %>"
+        rel="external"
+        class="js-webchat-open-button"
+        data-module="ga4-link-tracker"
+        data-ga4-link="<%= { event_name: "navigation", type: "webchat", text: t("webchat.speak_to_adviser", locale: :en) }.to_json %>">
+        <%= t("webchat.speak_to_adviser") %>
+      </a>.
+    </span>
+  </div>
+</div>
+
+<%= javascript_include_tag "webchat", integrity: false, type: "module" %>
