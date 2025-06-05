@@ -1,12 +1,13 @@
 class ContactPresenter < ContentItemPresenter
-  include ContentItem::HeadingAndContext
   include ContentItem::ContactDetails
 
   def heading_and_context
-    super.tap do |t|
-      t[:font_size] = "xl"
-      t.delete(:context)
-    end
+    {
+      text: title,
+      heading_level: 1,
+      margin_bottom: 8,
+      font_size: "xl",
+    }
   end
 
   def online_form_body
