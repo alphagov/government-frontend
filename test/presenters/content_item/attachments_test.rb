@@ -24,11 +24,14 @@ class AttachmentsTest < ActiveSupport::TestCase
   end
 
   test "#attachments returns attachments with preview_urls based on url" do
-    attachments = [
-      { "preview_url" => "some-preview-url", "url" => "some-url", "content_type" => "text/csv" },
-    ]
+    attachments = [{
+      "preview_url" => "some-preview-url",
+      "url" => "assets.test.gov.uk/media/123/some-filename.csv",
+      "content_type" => "text/csv",
+      "filename" => "some-filename.csv",
+    }]
     @subject.content_item = { "details" => { "attachments" => attachments } }
-    assert_equal [{ "preview_url" => "some-url/preview", "url" => "some-url", "content_type" => "text/csv" }], @subject.attachments
+    assert_equal [{ "preview_url" => "/csv-preview/123/some-filename.csv", "url" => "assets.test.gov.uk/media/123/some-filename.csv", "content_type" => "text/csv", "filename" => "some-filename.csv" }], @subject.attachments
   end
 
   test "#attachments returns attachments with preview_urls based on asset_manager_id and filename" do
