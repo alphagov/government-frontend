@@ -23,6 +23,8 @@ Rails.application.routes.draw do
             "/search?#{query}"
           }
 
+  get "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", to: "webchat#webchat"
+
   get "*path/:variant" => "content_items#show",
       constraints: {
         variant: /print/,
