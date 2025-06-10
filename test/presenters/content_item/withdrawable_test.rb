@@ -49,7 +49,7 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
   test "notice title and description are generated correctly" do
     class << @withdrawable
       def schema_name
-        "news_article"
+        "detailed_guide"
       end
 
       def content_item
@@ -63,7 +63,7 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
       end
     end
 
-    assert_equal @withdrawable.withdrawal_notice_component[:title], "This news article was withdrawn on <time datetime=\"2016-07-12T09:47:15Z\">12 July 2016</time>"
+    assert_equal @withdrawable.withdrawal_notice_component[:title], "This guidance was withdrawn on <time datetime=\"2016-07-12T09:47:15Z\">12 July 2016</time>"
     assert_equal @withdrawable.withdrawal_notice_component[:description_govspeak], "<div class='govspeak'><p>It has been superseded by <a href='https://www.gov.uk/government/statistics/local-area-walking-and-cycling-in-england-2014-to-2015'>Local area walking and cycling in England: 2014 to 2015</a>.</p>\\n</div>"
   end
 
