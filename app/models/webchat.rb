@@ -5,7 +5,9 @@ class Webchat
 
   validates :base_path, :open_url, :availability_url, presence: true
 
-  attr_reader :base_path, :open_url, :availability_url, :open_url_redirect, :csp_connect_src
+  attr_reader :base_path, :open_url, :availability_url, :open_url_redirect,
+              :csp_connect_src, :title, :more_info_webchat, :quick_links,
+              :parent, :description, :schema_name
 
   def initialize(attrs)
     @base_path = attrs["base_path"]
@@ -13,6 +15,12 @@ class Webchat
     @availability_url = attrs["availability_url"]
     @open_url_redirect = attrs["open_url_redirect"]
     @csp_connect_src = attrs["csp_connect_src"]
+    @title = attrs["title"]
+    @more_info_webchat = attrs["more_info_webchat"]
+    @quick_links = attrs["quick_links"]
+    @parent = attrs["parent"]
+    @description = attrs["description"]
+    @schema_name = attrs["schema_name"]
     validate!
   end
 

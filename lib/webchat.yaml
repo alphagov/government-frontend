@@ -1,5 +1,17 @@
 - base_path: /government/organisations/hm-passport-office/contact/hm-passport-office-webchat
+  title: HM Passport Office webchat
+  description: "Chat online with HM Passport Office advisers"
+  schema_name: "webchat"
   open_url: https://d1y02qp19gjy8q.cloudfront.net/open/index.html
   availability_url: https://d1y02qp19gjy8q.cloudfront.net/availability/18555309
   csp_connect_src: https://d1y02qp19gjy8q.cloudfront.net
   open_url_redirect: false
+  more_info_webchat: <p>Monday to Friday, 8am to 8pm <br>Weekends and public holidays, 9am to 5:30pm</p><p>Advisers may be busy at peak times.</p>
+  quick_links:
+    - title: "Get a passport urgently"
+      url: "/get-a-passport-urgently"
+    - title: "Passport advice line"
+      url: "/passport-advice-line"
+  parent:
+    title: "HM Passport Office"
+    base_path: "/government/organisations/hm-passport-office"
