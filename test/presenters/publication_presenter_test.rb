@@ -56,17 +56,18 @@ class PublicationPresenterTest < PresenterTestCase
     content_item["details"]["attachments"] = [{
       "id" => "some-id",
       "content_type" => "text/csv",
-      "preview_url" => "some-preview-url",
       "url" => "some-url",
+      "filename" => "some-filename.csv",
+      "assets" => [{ "asset_manager_id" => 123, "filename" => "some-filename.csv" }],
     }]
     presented = present_example(content_item)
     expected = [{
       "id" => "some-id",
       "content_type" => "text/csv",
-      # NOTE: preview_url is the url with /preview appended, not the preview_url from above,
-      #       because we're working around a bug with preview_url
-      "preview_url" => "some-url/preview",
+      "preview_url" => "/csv-preview/123/some-filename.csv",
       "url" => "some-url",
+      "filename" => "some-filename.csv",
+      "assets" => [{ "asset_manager_id" => 123, "filename" => "some-filename.csv" }],
     }]
     assert_equal expected, presented.attachments_for_components
   end

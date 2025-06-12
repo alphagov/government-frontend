@@ -27,7 +27,11 @@ module ContentItem
       if asset.nil?
         # This is a temporary edge case whilst assets are a new field on all csv attachments.
         Rails.logger.warn("Assets key is missing from attachment at #{doc['url']}")
-        "#{doc['url']}/preview"
+
+        url = doc["url"].match(/.*\/media\/(?<asset_manager_id>\w+)\/(?<filename>.*\.csv)/)
+        if url && (url["filename"] == doc["filename"])
+          "/csv-preview/#{url['asset_manager_id']}/#{url['filename']}"
+        end
       elsif asset["filename"] == doc["filename"]
         "/csv-preview/#{asset['asset_manager_id']}/#{asset['filename']}"
       end
