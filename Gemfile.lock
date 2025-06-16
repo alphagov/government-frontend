@@ -163,7 +163,7 @@ GEM
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
       rails (>= 6, < 9)
-    govuk_publishing_components (57.1.0)
+    govuk_publishing_components (57.2.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -634,10 +634,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sentry-rails (5.24.0)
+    sentry-rails (5.25.0)
       railties (>= 5.0)
-      sentry-ruby (~> 5.24.0)
-    sentry-ruby (5.24.0)
+      sentry-ruby (~> 5.25.0)
+    sentry-ruby (5.25.0)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     shoulda-context (2.0.0)
