@@ -1,0 +1,1 @@
+GovukI18n.configure
