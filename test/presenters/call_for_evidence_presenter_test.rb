@@ -148,8 +148,8 @@ class CallForEvidencePresenterTest
     end
 
     test "presents share urls with encoded url and title" do
-      assert_equal "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fcall_for_evidence%2Fyouth-vaping-call-for-evidence", presented_item("open_call_for_evidence").share_links[0][:href]
-      assert_equal "https://twitter.com/share?url=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fcall_for_evidence%2Fyouth-vaping-call-for-evidence&text=Youth%20Vaping", presented_item("open_call_for_evidence").share_links[1][:href]
+      assert_equal "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fcalls-for-evidence%2Fyouth-vaping-call-for-evidence", presented_item("open_call_for_evidence").share_links[0][:href]
+      assert_equal "https://twitter.com/share?url=https%3A%2F%2Fwww.test.gov.uk%2Fgovernment%2Fcalls-for-evidence%2Fyouth-vaping-call-for-evidence&text=Youth%20Vaping", presented_item("open_call_for_evidence").share_links[1][:href]
     end
 
     test "displays the single page notification button on English pages" do
