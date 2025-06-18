@@ -88,7 +88,7 @@
     <% call_for_evidence_desc = capture do %>
       <%= @content_item.description %>
       <% if @content_item.held_on_another_website? %>
-        <p class="gem-c-summary-banner__text">
+        <p>
           <strong>
             <% if @content_item.closed? %>
               <%= t("call_for_evidence.closed_another_website_html", url: @content_item.held_on_another_website_url) %>.
