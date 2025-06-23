@@ -41,7 +41,7 @@ class WebchatIntegrationTest < ActionDispatch::IntegrationTest
       visit WEBCHAT_PATH
 
       assert_selector "h1", text: "Test Webchat"
-      assert_selector "#webchat-title", text: "Webchat"
+      assert_selector "#webchat-title", text: I18n.t("contact.webchat", locale: :en)
       assert page.has_content?("Test info")
     end
   end

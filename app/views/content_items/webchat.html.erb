@@ -10,7 +10,7 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="content-bottom-margin">
       <%= render 'govuk_publishing_components/components/govspeak' do %>
-        <h2 id="webchat-title"><%= t("contact.webchat") %></h2>
+        <h2 id="webchat-title"><%= t("contact.webchat", locale: :en) %></h2>
 
         <%= sanitize(@content_item.webchat_body)%>
 
