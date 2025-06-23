@@ -7,6 +7,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
       setup_and_visit_random_content_item(document_type: "raib_report")
       setup_and_visit_random_content_item(document_type: "tax_tribunal_decision")
       setup_and_visit_random_content_item(document_type: "cma_case")
+      setup_and_visit_random_content_item(document_type: "countryside_stewardship_grant")
     end
   end
 
@@ -54,17 +55,11 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("countryside-stewardship-grants")
 
     assert_has_important_metadata(
-      "Grant type": { "Option": "/countryside-stewardship-grants?grant_type=option" },
+      "Grant type": { "Capital item": "/capital-grant-finder?grant_type=capital-item" },
       "Land use": {
-        "Arable land": "/countryside-stewardship-grants?land_use=arable-land",
-        "Water quality": "/countryside-stewardship-grants?land_use=water-quality",
-      },
-      "Tiers or standalone items": {
-        "Higher Tier": "/countryside-stewardship-grants?tiers_or_standalone_items=higher-tier",
-        "Mid Tier": "/countryside-stewardship-grants?tiers_or_standalone_items=mid-tier",
-      },
-      "Funding (per unit per year)": {
-        "More than £500": "/countryside-stewardship-grants?funding_amount=more-than-500",
+        "Arable land": "/capital-grant-finder?land_use=arable-land",
+        "Water quality": "/capital-grant-finder?land_use=water-quality",
+        "Pollinators and wildlife": "/capital-grant-finder?land_use=wildlife-package",
       },
     )
   end
