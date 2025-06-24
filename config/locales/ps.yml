@@ -1,34 +1,5 @@
 ---
 ps:
-  call_for_evidence:
-    and:
-    another_website_html:
-    at:
-    closed:
-    closed_another_website_html:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    is_being:
-    not_open_yet:
-    'on':
-    open_another_website_html:
-    opens:
-    or:
-    original_call_for_evidence:
-    ran_from:
-    respond_online:
-    response_form:
-    summary:
-    was:
-    ways_to_respond:
-    write_to:
   common:
     email_and_print_link:
     print_link:
@@ -97,18 +68,9 @@ ps:
       business_finance_support_scheme:
         one: د سوداګرۍ د مالي ملاتړ طرحه
         other: د سوداګرۍ د مالي ملاتړ طرحې
-      call_for_evidence:
-        one:
-        other:
-      call_for_evidence_outcome:
-        one:
-        other:
       case_study:
         one: موردي مطالعه
         other: موردي مطالعات
-      closed_call_for_evidence:
-        one:
-        other:
       closed_consultation:
         one: له نيژدې مشوره
         other: له نيژدې مشورې
@@ -217,9 +179,6 @@ ps:
       official_statistics_announcement:
         one: د رسمي احصایې اعلان
         other: د رسمي احصایې اعلانونه
-      open_call_for_evidence:
-        one:
-        other:
       open_consultation:
         one: خلاص مشوره
         other: مشورې خلاص کړئ

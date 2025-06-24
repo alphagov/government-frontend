@@ -1,34 +1,5 @@
 ---
 'no':
-  call_for_evidence:
-    and:
-    another_website_html:
-    at:
-    closed:
-    closed_another_website_html:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    is_being:
-    not_open_yet:
-    'on':
-    open_another_website_html:
-    opens:
-    or:
-    original_call_for_evidence:
-    ran_from:
-    respond_online:
-    response_form:
-    summary:
-    was:
-    ways_to_respond:
-    write_to:
   common:
     email_and_print_link:
     print_link:
@@ -97,18 +68,9 @@
       business_finance_support_scheme:
         one: Forretningsfinansieringsstøtteordning
         other: Forretningsfinansieringsstøtteordninger
-      call_for_evidence:
-        one:
-        other:
-      call_for_evidence_outcome:
-        one:
-        other:
       case_study:
         one: Casestudie
         other: Casestudier
-      closed_call_for_evidence:
-        one:
-        other:
       closed_consultation:
         one: Lukket konsultasjon
         other: Lukkede konsultasjoner
@@ -217,9 +179,6 @@
       official_statistics_announcement:
         one: Kunngjøring om offisiell statistikk
         other: Kunngjøringer om offisiell statistikk
-      open_call_for_evidence:
-        one:
-        other:
       open_consultation:
         one: Åpen konsultasjon
         other: Åpne konsultasjoner
