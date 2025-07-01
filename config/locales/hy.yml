@@ -304,14 +304,6 @@ hy:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: Պաշտպանության նախարարության զինանշան
-    field_of_operation: Գործունեության ոլորտ
-    none_added: 'Գործունեության այս ոլորտի համար դժբախտ պատահարի ծանուցումներ դեռևս չեն ավելացվել:'
-    operations_in: Գործունեություն % {location}-ում
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: Այլևս հասանելի չէ
     published_in_error: 'Այս էջի տեղեկությունը հեռացվել է, քանի որ սխալմամբ էր հրապարակվել:'

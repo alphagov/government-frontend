@@ -304,14 +304,6 @@ ka:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: თავდაცვის სამინისტრო
-    field_of_operation: ოპერაციის სფერო
-    none_added: ფატალურობის შეტყობინება ჯერ არ დამატებულა ოპერაციის ამ სფეროში.
-    operations_in: ოპერაციები %{location}-ში
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: აღარ არის ხელმისაწვდომი
     published_in_error: ამ გვერდზე არსებული ინფორმაცია ამოღებულია, რადგან ის გამოქვეყნდა შეცდომით.

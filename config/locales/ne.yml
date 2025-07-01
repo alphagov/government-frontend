@@ -304,14 +304,6 @@ ne:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: रक्षा मन्त्रालय क्रेस्ट
-    field_of_operation: सञ्चालन क्षेत्र
-    none_added: त्यहाँ सञ्चालन क्षेत्रको लागी अझै सम्म कुनै मृत्यु सूचनाहरु थपिएका छैनन्।
-    operations_in: "%{location} मा सञ्चालन"
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: अब उपलब्ध छैन
     published_in_error: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित भएको थियो।

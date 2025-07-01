@@ -304,14 +304,6 @@ lv:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: Aizsardzības ministrijas ģerbonis
-    field_of_operation: Darbības joma
-    none_added: Šajā darbības jomā vēl nav neviena paziņojuma par bojāgājušajiem.
-    operations_in: 'Darbības šeit: %{location}'
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: Vairs nav pieejams
     published_in_error: Informācija šajā lapā ir noņemta, jo tā tika publicēta kļūdas dēļ.

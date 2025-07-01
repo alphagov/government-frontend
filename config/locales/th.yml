@@ -234,14 +234,6 @@ th:
     description:
     subscribe_title:
     unsubscribe_title:
-  fatality_notice:
-    alt_text: ตรากระทรวงกลาโหม
-    field_of_operation: พื้นที่ปฏิบัติการ
-    none_added: ยังไม่มีการแจ้งการเสียชีวิตเพิ่มเติมสำหรับพื้นที่ปฏิบัติการนี้
-    operations_in: การดำเนินงานใน %{location}
-  field_of_operation:
-    context:
-    title:
   gone:
     page_title: ไม่มีแล้ว
     published_in_error: ข้อมูลในหน้านี้ถูกนำออกเนื่องจากมีการเผยแพร่โดยความผิดพลาด
