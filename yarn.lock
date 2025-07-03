@@ -1698,7 +1698,7 @@ __metadata:
     jasmine-browser-runner: ^3.0.0
     jasmine-core: ^5.8.0
     standardx: ^7.0.0
-    stylelint: ^16.21.0
+    stylelint: ^16.21.1
     stylelint-config-gds: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -2955,7 +2955,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.5":
+"postcss@npm:^8.5.6":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
   dependencies:
@@ -3746,9 +3746,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.21.0":
-  version: 16.21.0
-  resolution: "stylelint@npm:16.21.0"
+"stylelint@npm:^16.21.1":
+  version: 16.21.1
+  resolution: "stylelint@npm:16.21.1"
   dependencies:
     "@csstools/css-parser-algorithms": ^3.0.5
     "@csstools/css-tokenizer": ^3.0.4
@@ -3777,7 +3777,7 @@ __metadata:
     micromatch: ^4.0.8
     normalize-path: ^3.0.0
     picocolors: ^1.1.1
-    postcss: ^8.5.5
+    postcss: ^8.5.6
     postcss-resolve-nested-selector: ^0.1.6
     postcss-safe-parser: ^7.0.1
     postcss-selector-parser: ^7.1.0
@@ -3790,7 +3790,7 @@ __metadata:
     write-file-atomic: ^5.0.1
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: 3401ebf59979710486b4f3ce53e2acc57dc39c8e08b76475bf8ae0958ad1f93a3b9920100ec96c6e44a84cfff05716ef682f1a295baf690c4ed88c03087171bd
+  checksum: 11e27372348786679ddfcedebc6d21cf9b98325f692f89728cb0ca040bb1060a1abd95569248c13930d59810b15bca8af558d9106f59041ac89343d1f9b384db
   languageName: node
   linkType: hard
 
