@@ -1,34 +1,5 @@
 ---
 mt:
-  call_for_evidence:
-    and:
-    another_website_html:
-    at:
-    closed:
-    closed_another_website_html:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    is_being:
-    not_open_yet:
-    'on':
-    open_another_website_html:
-    opens:
-    or:
-    original_call_for_evidence:
-    ran_from:
-    respond_online:
-    response_form:
-    summary:
-    was:
-    ways_to_respond:
-    write_to:
   common:
     email_and_print_link:
     print_link:
@@ -107,26 +78,11 @@ mt:
         many:
         one: Skema ta' għajnuna għall-finanzjament tan-negozju
         other: Skemi ta' għajnuna għall-finanzjament tan-negozju
-      call_for_evidence:
-        few:
-        many:
-        one:
-        other:
-      call_for_evidence_outcome:
-        few:
-        many:
-        one:
-        other:
       case_study:
         few:
         many:
         one: Studju ta' Każ
         other: Studju ta' Każijiet
-      closed_call_for_evidence:
-        few:
-        many:
-        one:
-        other:
       closed_consultation:
         few:
         many:
@@ -307,11 +263,6 @@ mt:
         many:
         one: Avviż dwar l-istatistiċi uffiċjali
         other: Avviżi dwar l-istatistiċi uffiċjali
-      open_call_for_evidence:
-        few:
-        many:
-        one:
-        other:
       open_consultation:
         few:
         many:

@@ -1,34 +1,5 @@
 ---
 be:
-  call_for_evidence:
-    and:
-    another_website_html:
-    at:
-    closed:
-    closed_another_website_html:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    is_being:
-    not_open_yet:
-    'on':
-    open_another_website_html:
-    opens:
-    or:
-    original_call_for_evidence:
-    ran_from:
-    respond_online:
-    response_form:
-    summary:
-    was:
-    ways_to_respond:
-    write_to:
   common:
     email_and_print_link:
     print_link:
@@ -107,26 +78,11 @@ be:
         many:
         one: Схема падтрымкі фінансавання бізнесу
         other: Схемы падтрымкі фінансавання бізнесу
-      call_for_evidence:
-        few:
-        many:
-        one:
-        other:
-      call_for_evidence_outcome:
-        few:
-        many:
-        one:
-        other:
       case_study:
         few:
         many:
         one: Тэматычнае даследаванне
         other: Тэматычныя даследаванні
-      closed_call_for_evidence:
-        few:
-        many:
-        one:
-        other:
       closed_consultation:
         few:
         many:
@@ -307,11 +263,6 @@ be:
         many:
         one: Аб'ява пра афiцыйную статыстыку
         other: Аб'явы пра афiцыйную статыстыку
-      open_call_for_evidence:
-        few:
-        many:
-        one:
-        other:
       open_consultation:
         few:
         many:

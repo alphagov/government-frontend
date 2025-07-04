@@ -1,34 +1,5 @@
 ---
 tk:
-  call_for_evidence:
-    and:
-    another_website_html:
-    at:
-    closed:
-    closed_another_website_html:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    is_being:
-    not_open_yet:
-    'on':
-    open_another_website_html:
-    opens:
-    or:
-    original_call_for_evidence:
-    ran_from:
-    respond_online:
-    response_form:
-    summary:
-    was:
-    ways_to_respond:
-    write_to:
   common:
     email_and_print_link:
     print_link:
@@ -97,18 +68,9 @@ tk:
       business_finance_support_scheme:
         one: Telekeçiligi maliýeleşdirmegiň shemasy
         other: Telekeçiligi maliýeleşdirmegi goldamak shemalary
-      call_for_evidence:
-        one:
-        other:
-      call_for_evidence_outcome:
-        one:
-        other:
       case_study:
         one: Ýagdaý seljermesi
         other: Ýagdaý seljermeleri
-      closed_call_for_evidence:
-        one:
-        other:
       closed_consultation:
         one: Ýapyk maslahat
         other: Ýapyk maslahatlar
@@ -217,9 +179,6 @@ tk:
       official_statistics_announcement:
         one: Resmi statistika bildirişi
         other: Resmi statistika bildirişleri
-      open_call_for_evidence:
-        one:
-        other:
       open_consultation:
         one: Açyk maslahat
         other: Açyk maslahatlar
