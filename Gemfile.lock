@@ -137,7 +137,7 @@ GEM
       rake (>= 13)
     googleapis-common-protos-types (1.20.0)
       google-protobuf (>= 3.18, < 5.a)
-    govspeak (10.4.0)
+    govspeak (10.4.1)
       actionview (>= 6, < 8.0.3)
       addressable (>= 2.3.8, < 2.8.8)
       govuk_publishing_components (>= 43)
@@ -560,7 +560,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.0)
-    rdoc (6.14.1)
+    rdoc (6.14.2)
       erb
       psych (>= 4.0.0)
     redis (5.4.0)
