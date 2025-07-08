@@ -1,3 +1,5 @@
+@import "govuk_publishing_components/individual_component_support";
+
 .related {
   @include govuk-media-query($from: tablet) {
     border-top: 1px solid $govuk-border-colour;
