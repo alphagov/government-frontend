@@ -12,7 +12,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) |
 | Corporate information page | [View on GOV.UK](https://www.gov.uk/government/organisations/government-digital-service/about) |
 | Detailed guide | [View on GOV.UK](https://www.gov.uk/guidance/waste-exemption-nwfd-2-temporary-storage-at-the-place-of-production--2) |
-| Document collection | [View on GOV.UK](https://www.gov.uk/government/collections/statutory-guidance-schools) |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
 | Guide | [View on GOV.UK](https://www.gov.uk/log-in-register-hmrc-online-services)|
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) |
