@@ -2,7 +2,7 @@ require "test_helper"
 
 class MetaTagsTest < ActionDispatch::IntegrationTest
   test "correct meta tags are displayed for pages" do
-    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "detailed_guide") do |random|
+    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "case_study") do |random|
       random.merge(
         "title" => "Zhe title",
         "withdrawn_notice" => {},
@@ -17,7 +17,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
   end
 
   test "correct meta tags are displayed for pages without images" do
-    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "detailed_guide") do |random|
+    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "case_study") do |random|
       random["details"].delete("image")
       random
     end
@@ -30,7 +30,7 @@ class MetaTagsTest < ActionDispatch::IntegrationTest
   end
 
   test "correct meta tags are displayed for pages with images" do
-    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "detailed_guide") do |random|
+    case_study = GovukSchemas::RandomExample.for_schema(frontend_schema: "case_study") do |random|
       random["details"] = random["details"].merge(
         "image" => {
           "url" => "https://example.org/image.jpg",
