@@ -60,6 +60,7 @@ class ActionDispatch::IntegrationTest
   def teardown
     Capybara.reset_sessions!
     Capybara.use_default_driver
+    # I18n.locale = I18n.default_locale
   end
 
   def assert_has_component_metadata_pair(label, value)

@@ -10,6 +10,7 @@ class ContentItemWithdrawableTest < ActiveSupport::TestCase
   end
 
   def teardown
+  # is this ok?
     I18n.locale = I18n.default_locale
   end
 

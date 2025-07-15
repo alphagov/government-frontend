@@ -25,6 +25,7 @@ class ApplicationHelperTest < ActionView::TestCase
       fallback = t_locale_fallback("some_missing.key", count: 1, locale: :fake)
       assert_equal :en, fallback
     end
+    I18n.unstub(:locale)
   end
 
   test "#t_locale_fallback returns fallback for irrelevant key" do

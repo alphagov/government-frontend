@@ -18,6 +18,7 @@ class WorldwideCorporateInformationPageTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("worldwide_corporate_information_page")
 
     assert page.has_css?("#wrapper.direction-rtl"), "has .direction-rtl class on #wrapper element"
+    I18n.unstub(:locale)
   end
 
   test "includes the body and contents" do
