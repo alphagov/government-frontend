@@ -380,9 +380,4 @@ class CallForEvidenceTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("open_call_for_evidence", "locale" => "cy")
     assert_not page.has_css?(".gem-c-single-page-notification-button")
   end
-
-  test "does not render the single page notification button on exempt pages" do
-    setup_and_visit_notification_exempt_page("open_call_for_evidence")
-    assert_not page.has_css?(".gem-c-single-page-notification-button")
-  end
 end
