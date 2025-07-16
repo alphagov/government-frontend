@@ -13,7 +13,6 @@
   %>
 
   <% ga4_data_attributes = ga4_data_attributes || default_ga4_data_attributes %>
-  <% skip_account = skip_account || "false" %>
 
   <%= render 'govuk_publishing_components/components/single_page_notification_button', {
     base_path: @content_item.base_path,
@@ -21,6 +20,6 @@
     ga4_data_attributes: ga4_data_attributes,
     margin_bottom: 6,
     button_location: "top",
-    skip_account: skip_account,
+    skip_account: local_assigns[:skip_account] || false,
   } %>
 <% end %>

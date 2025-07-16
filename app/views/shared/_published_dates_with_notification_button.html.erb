@@ -1,5 +1,5 @@
 <% add_view_stylesheet("published-dates-button-group") %>
-<% skip_account = skip_account || "false" %>
+<% skip_account = skip_account || false %>
 
 <%= render 'govuk_publishing_components/components/published_dates', {
     published: @content_item.published,

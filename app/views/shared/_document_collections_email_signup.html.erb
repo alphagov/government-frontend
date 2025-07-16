@@ -13,6 +13,6 @@
 <% elsif @content_item.display_single_page_notification_button? %>
   <%= render 'shared/single_page_notification_button', {
     content_item: @content_item,
-    skip_account: @has_govuk_account ? "false" : "true"
-    } %>
+    skip_account: !@has_govuk_account
+  } %>
 <% end %>
