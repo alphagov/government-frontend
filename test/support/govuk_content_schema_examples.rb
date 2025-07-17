@@ -46,7 +46,6 @@ module GovukContentSchemaExamples
         case_study
         html_publication
         service_manual_guide
-        service_manual_topic
         statistics_announcement
         topical_event_about_page
         working_group
