@@ -15,7 +15,6 @@ class DevelopmentController < ApplicationController
                        publication
                        service_sign_in
                        specialist_document
-                       statistical_data_set
                        statistics_announcement
                        topical_event_about_page
                        working_group]
