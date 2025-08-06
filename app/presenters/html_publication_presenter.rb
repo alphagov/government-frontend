@@ -53,7 +53,7 @@ class HtmlPublicationPresenter < ContentItemPresenter
   end
 
   def hide_from_search_engines?
-    PublicationPresenter::MOBILE_PATHS.any? { |path| content_item["base_path"].start_with?(path) }
+    content_item["base_path"] == "/government/publications/govuk-app-testing-privacy-notice-how-we-use-your-data/govuk-app-testing-privacy-notice-how-we-use-your-data"
   end
 
 private

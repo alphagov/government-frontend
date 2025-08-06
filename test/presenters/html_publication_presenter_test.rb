@@ -75,9 +75,9 @@ class HtmlPublicationPresenterTest < PresenterTestCase
     assert_not presented.organisation_logo(organisation)[:organisation][:image]
   end
 
-  test "hide_from_search_engines? returns true if the page is related to mobile" do
+  test "hide_from_search_engines? returns true for one specific mobile-related publication" do
     schema_example = schema_item("published")
-    path = "/government/publications/govuk-app-terms-and-conditions/html-attachment"
+    path = "/government/publications/govuk-app-testing-privacy-notice-how-we-use-your-data/govuk-app-testing-privacy-notice-how-we-use-your-data"
     schema_example["base_path"] = path
     presented = presented_item("published", schema_example)
     assert presented.hide_from_search_engines?
