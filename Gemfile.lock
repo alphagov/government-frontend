@@ -104,6 +104,9 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.3)
+    content_block_tools (1.0.3)
+      actionview (>= 6)
+      govspeak (= 10.6.1)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -701,6 +704,7 @@ DEPENDENCIES
   bootsnap
   capybara
   climate_control
+  content_block_tools
   dalli
   dartsass-rails
   faker

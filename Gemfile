@@ -5,6 +5,7 @@ ruby "~> 3.3.6"
 gem "rails", "8.0.2"
 
 gem "bootsnap", require: false
+gem "content_block_tools"
 gem "dalli"
 gem "dartsass-rails"
 gem "gds-api-adapters"
