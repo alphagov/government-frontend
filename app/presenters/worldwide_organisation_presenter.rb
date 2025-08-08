@@ -19,7 +19,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     links.to_sentence.html_safe
   end
 
-  def world_location_links
+  def world_location_links_2
     return if world_locations.empty?
 
     world_location_name_translations = content_item.dig("details", "world_location_names")
@@ -29,6 +29,23 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
         translation["content_id"] == location["content_id"]
       end
       link_to(world_location_translation["name"], WorldLocationBasePath.for(location), class: "govuk-link")
+    end
+
+    links.to_sentence.html_safe
+  end
+
+  def world_location_links
+    return if world_locations.empty?
+
+    world_location_names = content_item.dig("details", "world_location_names")
+
+    links = world_locations.map do |location|
+      world_location_name = world_location_names.find do |translation|
+        translation["content_id"] == location["content_id"]
+      end
+      location["title"] = world_location_name["name"]
+
+      link_to(location["title"], WorldLocationBasePath.for(location), class: "govuk-link")
     end
 
     links.to_sentence.html_safe
