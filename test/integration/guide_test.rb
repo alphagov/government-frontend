@@ -167,7 +167,7 @@ class GuideTest < ActionDispatch::IntegrationTest
       content_item = setup_and_visit_voting_guide
 
       first_part = content_item["details"]["parts"].first
-      assert_nothing_raised { assert_selector "h1", text: first_part["title"] }
+      assert_nothing_raised { assert_selector "h2", text: first_part["title"] }
 
       part_titles = content_item["details"]["parts"].drop(1).map { |part| part["title"] }
       part_titles.each do |part_title|
