@@ -46,13 +46,13 @@ class ContentItemPresenterTest < PresenterTestCase
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example("case_study", "translated")
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
-    assert_equal %w[en ar es], (presenter.available_translations.map { |t| t[:locale] })
+    assert_equal(%w[en ar es], presenter.available_translations.map { |t| t[:locale] })
   end
 
   test "available_translations returns native locale names using native_language_name_for" do
     translated = govuk_content_schema_example("case_study", "translated")
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
-    assert_equal %w[English العربيَّة Español], (presenter.available_translations.map { |t| t[:text] })
+    assert_equal(%w[English العربيَّة Español], presenter.available_translations.map { |t| t[:text] })
   end
 
   test "part slug is nil when requesting a content item without parts" do

@@ -105,7 +105,7 @@ class GuideTest < ActionDispatch::IntegrationTest
       "Key stage 3 and 4",
       "Other compulsory subjects",
     ]
-    assert_equal chapter_titles, (q_and_as.map { |q_and_a| q_and_a["name"] })
+    assert_equal(chapter_titles, q_and_as.map { |q_and_a| q_and_a["name"] })
 
     guide_part_urls = [
       "https://www.test.gov.uk/national-curriculum",
@@ -113,8 +113,8 @@ class GuideTest < ActionDispatch::IntegrationTest
       "https://www.test.gov.uk/national-curriculum/key-stage-3-and-4",
       "https://www.test.gov.uk/national-curriculum/other-compulsory-subjects",
     ]
-    assert_equal guide_part_urls, (q_and_as.map { |q_and_a| q_and_a["url"] })
-    assert_equal guide_part_urls, (answers.map { |answer| answer["url"] })
+    assert_equal(guide_part_urls, q_and_as.map { |q_and_a| q_and_a["url"] })
+    assert_equal(guide_part_urls, answers.map { |answer| answer["url"] })
   end
 
   test "guide chapters do not show the faq schema" do
