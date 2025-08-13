@@ -2,11 +2,11 @@ require "test_helper"
 
 class AttachmentsTest < ActiveSupport::TestCase
   setup do
-    @subject = (Class.new do
+    @subject = Class.new {
       attr_accessor :content_item
 
       include ContentItem::Attachments
-    end).new
+    }.new
   end
 
   test "#attachments returns an empty array when there are no attachments" do
