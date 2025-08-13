@@ -55,8 +55,8 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     {
       name: person["title"],
       href: person["base_path"],
-      image_url: person["details"]["image"]["url"],
-      image_alt: person["details"]["image"]["alt_text"],
+      image_url: person.dig("details", "image", "url"),
+      image_alt: person.dig("details", "image", "alt_text"),
       description: presented_title_for_roles(current_roles),
     }
   end
