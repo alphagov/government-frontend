@@ -25,8 +25,15 @@
 
 <div class="govuk-grid-row gem-print-columns-none">
   <div class="govuk-grid-column-two-thirds">
+    <%
+      heading_text = @content_item.content_title
+
+      if @content_item.has_parts? && @content_item.show_guide_navigation?
+        heading_text = "#{@content_item.content_title}: #{@content_item.current_part_title}"
+      end
+    %>
     <%= render 'govuk_publishing_components/components/heading', {
-      text: @content_item.content_title,
+      text: heading_text,
       heading_level: 1,
       font_size: "xl",
       margin_bottom: 8
@@ -44,9 +51,6 @@
 
   <div class="govuk-grid-column-two-thirds govuk-!-margin-top-6" id="guide-contents">
     <% if @content_item.has_parts? %>
-      <% if @content_item.show_guide_navigation? %>
-        <%= render 'govuk_publishing_components/components/heading', heading_level: 1, font_size: 'l', margin_bottom: 6, text: @content_item.current_part_title %>
-      <% end %>
       <%
         disable_youtube_expansions = true
         # This is for the /child-benefit/how-to-claim page
