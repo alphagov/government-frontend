@@ -1,0 +1,475 @@
+---
+ku:
+  call_for_evidence:
+    and: له‌گه‌ڵ
+    another_website_html: ئەم بانگەوازە بۆ بەڵگە %{closed} لە <a href="%{url}">ماڵپەڕێکی تر</a>دا دانراوە
+    at: لە
+    closed: ئەم بانگەوازە بۆ بەڵگە داخراوە
+    closed_another_website_html: ئەم بانگەوازە بۆ بەڵگە لە <a href="%{url}">ماڵپەڕێکی تر</a> بەڕێوەچوو
+    closes: دادەخرێت لە کاتژمێر
+    closes_at: 'ئەم بانگەوازە بۆ بەڵگە دادەخرێت لە '
+    complete_a: تەواوە لە
+    description: بۆ وەسفکردنی بەڵگە پەیوەندی بکەن
+    detail_of_outcome: وردەکاری دەرئەنجامەکە
+    documents: بەڵگەکان
+    download_outcome: تەواوی دەرئەنجامەکە بخوێنەرەوە
+    either: 'هەریەک لە  '
+    email_to: 'ئیمەیڵ بۆ : '
+    is_being: 'بووە بە '
+    not_open_yet: ئەم بانگەوازە بۆ بەڵگە هێشتا کراوە نییە
+    'on': لەسەر
+    open_another_website_html: ئەم بانگەوازە بۆ بەڵگە لە <a href="%{url}">ماڵپەڕێکی تر</a> بەڕێوەدەچێت
+    opens: ئەم بانگەوازە بۆ بەڵگە کراوەیە
+    or: یان
+    original_call_for_evidence: بانگەوازی ئەسڵی بۆ بەڵگە
+    ran_from: 'ئەم بانگەوازە بۆ بەڵگە بەڕێوە دەچێت لە '
+    respond_online: بە شێوەی ئۆنلاین وەڵام بدەرەوە
+    response_form: 'وەڵام بدەرەوە لە '
+    summary: پوختە
+    was: هەبوو
+    ways_to_respond: ڕێگاکانی وەڵامدانەوە
+    write_to: 'بنووسە بۆ : '
+  common:
+    email_and_print_link: ناوت تۆمار بکە بۆ ئیمەیڵه‌كان یان ئەم لاپەڕەیە پرنت بکە
+    print_link: ئەم لاپەڕەیە پرنت بکە
+    visit: 'سەردانی : '
+  components:
+    print_link:
+      text: ئەم لاپەڕەیە پرنت بکە
+    share_links:
+      share_this_page: ئەم په‌یجه‌ هاوبه‌ش بکەن
+  consultation:
+    analysing_feedback: ئێمە خەریکی شیکردنەوەی فیدباکەکانتانین
+    and: له‌گه‌ڵ
+    another_website_html: ئەم ڕاوێژکارییە %{closed} لە <a href="%{url}">ماڵپەڕێکی تر</a> بەڕێوەچوو
+    at: لە
+    closes: 'دادەخرێت لە '
+    closes_at: 'ئەم راوێژکارییە دادەخرێت لە '
+    complete_a: 'تەواوە لە '
+    concluded: ئەم ڕاوێژکارییە کۆتایی هات
+    description: وەسفکردنی ڕاوێژکاری
+    detail_of_feedback_received: وردەکارییەکانی فیدباکی بەدەست گەیشتوو
+    detail_of_outcome: وردەکاری دەرئەنجامەکە
+    documents: بەڵگەکان
+    download_outcome: تەواوی دەرئەنجامەکە بخوێنەرەوە
+    either: 'هەریەک لە '
+    email_to: 'ئیمەیڵ بۆ : '
+    feedback_received: فیدباک وەرگیراوە
+    is_being: 'بووە بە '
+    not_open_yet: ئەم ڕاوێژکارییە هێشتا کراوە نییە
+    'on': لەسەر
+    opens: ئەم ڕاوێژکارییە کراوەیە
+    or: یان
+    original_consultation: ڕاوێژکاری ئەسڵی
+    ran_from: ئەم ڕاوێژکارییە بەڕێوە دەچێت لە
+    respond_online: بە شێوەی ئۆنلاین وەڵام بدەرەوە
+    summary: پوختە
+    visit_soon: بەم زووانە سەردانی ئەم پەیجە بکەرەوە بۆ دابەزاندنی دەرئەنجامەکە بۆ ئەم فیدباکە گشتییە.
+    was: 'بووە بە '
+    ways_to_respond: 'ڕیگاکانی وەڵامدانەوە  '
+    write_to: 'بنووسە بۆ : '
+  contact:
+    access_and_opening_times: 'دەسگەیشتن و کاتی کردنەوەی '
+    contact_form: فۆڕمی پەیوەندیکردن
+    email: 'ئیمەیڵ '
+    find_call_charges: 'زانیاری بزانە دەربارەی پارەو تێچووی پەیوەندیکردن '
+    online: ئۆنلاین
+    phone: تەلەفۆن
+    webchat: وێبچات
+  content_item:
+    contents: ناوەڕۆک
+    metadata:
+      published: بڵاوکراوەتەوە
+      updated: نوێ کراوەتەوە
+    schema_name:
+      aaib_report:
+        one: اپۆرتی لقی لێکۆڵینەوە لە ڕووداوە ئاسمانییەکان
+        other: ڕاپۆرتی لقی لێکۆڵینەوە لە ڕووداوە ئاسمانییەکان
+      announcement:
+        one: ڕاگەیاندن
+        other: ڕاگەیاندن
+      asylum_support_decision:
+        one: بڕیاری دادگا له‌سه‌ر هاوكاری پەنابەری
+        other: بڕیاری دادگا له‌سه‌ر هاوكاری پەنابەری
+      authored_article:
+        one: بابەتێکی نووسەر
+        other: بابەته‌ نووسراوه‌كان
+      business_finance_support_scheme:
+        one: پلانی هاوكاری دارایی بازرگانی
+        other: پلانی هاوكاری دارایی بازرگانی
+      call_for_evidence:
+        one: بانگەواز بۆ بەڵگە
+        other: بانگەوازەکان بۆ بەڵکە
+      call_for_evidence_outcome:
+        one: بانگەواز بۆ دەرئەنجامی بەڵگە
+        other: بانگەواز بۆ دەرئەنجامەکانی بەڵگە
+      case_study:
+        one: توێژینەوەی کەیس
+        other: توێژینەوەی کەیس
+      closed_call_for_evidence:
+        one: بانگەوازێکی داخراو بۆ بەڵگە
+        other: بانگەوازە داخراوەکان بۆ بەڵگە
+      closed_consultation:
+        one: ڕاوێژکاری داخراو
+        other: ڕاوێژکاری داخراو
+      cma_case:
+        one: کەیسەکانی دەسەڵاتی کێبڕکێ و بازاڕەکان
+        other: کەیسەکانی دەسەڵاتی کێبڕکێ و بازاڕەکان
+      consultation:
+        one: ڕاوێژکاری
+        other: ڕاوێژکاری
+      consultation_outcome:
+        one: دەرئەنجامی ڕاوێژکاری
+        other: دەرئەنجامی ڕاوێژکاری
+      corporate_information_page:
+        one: لاپەڕەکانی زانیاری
+        other: لاپەڕەکانی زانیاری
+      corporate_report:
+        one: ڕاپۆرتی کۆمپانیاکان
+        other: ڕاپۆرتی کۆمپانیاکان
+      correspondence:
+        one: پەیوەندیکردن
+        other: پەیوەندیکردن
+      countryside_stewardship_grant:
+        one: یارمەتی بەڕێوەبردنی لادێ
+        other: یارمەتی بەڕێوەبردنی لادێ
+      decision:
+        one: بڕیار
+        other: بڕیارەکان
+      detailed_guide:
+        one: ڕێنوێنی
+        other: ڕێنوێنی
+      dfid_research_output:
+        one: توێژینەوە بۆ بەرهەمی گەشەپێدان
+        other: توێژینەوە بۆ بەرهەمی گەشەپێدان
+      document_collection:
+        one: کۆکردنەوە
+        other: کۆکردنەوە
+      draft_text:
+        one: ڕەشنووسی دەقەکان
+        other: ڕەشنووسی دەقەکان
+      drug_safety_update:
+        one: نوێکردنەوەی سەلامەتی دەرمان
+        other: نوێکردنەوەی سەلامەتی دەرمان
+      employment_appeal_tribunal_decision:
+        one: بڕیاری دادگای تانە لە دامەزراندن
+        other: بڕیارەکانی دادگای تانەدان لە دامەزراندن
+      employment_tribunal_decision:
+        one: بڕیاری دادگای دامەزراندن
+        other: بڕیارەکانی دادگای دامەزراندن
+      esi_fund:
+        one: سندوقی پێکهاتەیی و وەبەرهێنانی ئەوروپا (ESIF)
+        other: سندوقەکانی پێکهاتەیی و وەبەرهێنانی ئەوروپا (ESIF)
+      foi_release:
+        one: بڵاوکردنەوەی ئازادی زانیاری
+        other: بڵاوکردنەوەی ئازادی زانیاریه‌كان
+      form:
+        one: فۆرم
+        other: فۆڕمەکان
+      guidance:
+        one: ڕێنوێنی
+        other: ڕێنوێنی
+      impact_assessment:
+        one: هەڵسەنگاندنی کاریگەرییەکان
+        other: هەڵسەنگاندنی کاریگەرییەکان
+      imported:
+        one: هاوردە کراوە - جۆری چاوەڕوانکراو
+        other: هاوردە کراوە - جۆری چاوەڕوانکراو
+      independent_report:
+        one: ڕاپۆرتی سەربەخۆ
+        other: ڕاپۆرتە سەربەخۆکان
+      international_development_fund:
+        one: هاوكاری دارایی بۆ گەشەپێدانی نێودەوڵەتی
+        other: هاوكاری دارایی بۆ گەشەپێدانی نێودەوڵەتی
+      international_treaty:
+        one: پەیمانی نێودەوڵەتی
+        other: پەیمانی نێودەوڵەتی
+      maib_report:
+        one: ڕاپۆرتی لقی لێکۆڵینەوەی ڕووداوی دەریایی
+        other: ڕاپۆرتەکانی لقی لێکۆڵینەوە لە ڕووداوە دەریاییەکان
+      map:
+        one: نەخشە
+        other: نەخشەکان
+      medical_safety_alert:
+        one: ئاگادارکردنەوە و بانگهێشتکردنەوە بۆ دەرمان و ئامێرە پزیشکییەکان
+        other: ئاگادارکردنەوە و بانگهێشتکردنەوە بۆ دەرمان و ئامێرە پزیشکییەکان
+      national:
+        one: ڕاگەیاندنی ئاماری فەرمی باوەڕپێکراو
+        other: ڕاگەیاندنی ئاماره‌ فەرمیه‌ باوەڕپێکراوه‌كان
+      national_statistics:
+        one: ئاماری فەرمی باوەڕپێکراو
+        other: ئاماری فەرمی باوەڕپێکراو
+      national_statistics_announcement:
+        one: ڕاگەیاندنی ئاماری فەرمی باوەڕپێکراو
+        other: ڕاگەیاندنی ئاماره‌ فەرمیه‌ باوەڕپێکراوه‌كان
+      news_article:
+        one: ئاگاداری
+        other: ئاگادارییەکان
+      notice:
+      official:
+        one: ڕاگەیاندنی ئاماری فەرمی
+        other: ڕاگەیاندنی ئاماری فەرمیه‌كان
+      official_statistics:
+        one: ئاماری فەرمی
+        other: ئاماره‌ فەرمیه‌كان
+      official_statistics_announcement:
+        one: ڕاگەیاندنی ئاماری فەرمی
+        other: ڕاگەیاندنی ئاماره‌ فەرمیه‌كان
+      open_call_for_evidence:
+        one: بانگەوازی کراوە بۆ بەڵگە
+        other: بانگەوازە کراوەکان بۆ بەڵگە
+      open_consultation:
+        one: ڕاوێژکاری کراوە
+        other: ڕاوێژکاری کراوه‌كان
+      oral_statement:
+        one: لێدوانی زارەکی بۆ پەرلەمان
+        other: لێدوانی زارەکی بۆ پەرلەمان
+      policy:
+        one: سیاسەت
+        other: سیاسەتەکان
+      policy_paper:
+        one: وەرەقەی سیاسی
+        other: وەرەقە سیاسەكان
+      product-safety-alert-report-recall:
+        one: هۆشداری سەلامەتی بەرهەم، ڕاپۆرت و گه‌ڕانه‌وه‌ی به‌رهه‌مه‌كان
+        other: هۆشداری سەلامەتی بەرهەم، ڕاپۆرت و گه‌ڕانه‌وه‌ی به‌رهه‌مه‌كان
+      promotional:
+        one: مادەی بانگەشە
+        other: مادەی بانگەشە
+      publication:
+        one: بڵاوکراوە
+        other: بڵاوکراوەکان
+      raib_report:
+        one: 'لێکۆڵینەوە لە ڕووداوەکانی شەمەندەفەر- ڕاپۆرتی لق '
+        other: 'لێکۆڵینەوە لە ڕووداوەکانی شەمەندەفەر- ڕاپۆرتی لقه‌كان '
+      regulation:
+        one: ڕێسا
+        other: ڕێساکان
+      research:
+        one: لێکۆڵینەوە و شیکاری
+        other: لێکۆڵینەوە و شیکاریه‌كان
+      residential_property_tribunal_decision:
+        one: دەرئەنجامی دادگای کەیسی نیشتەجێبوون
+        other: دەرئەنجامه‌كانی دادگای کەیسی نیشتەجێبوون
+      service_sign_in:
+        one: چوونەژوورەوەی خزمەتگوزاری
+        other: چوونەژوورەوەی خزمەتگوزاری
+      service_standard_report:
+        one: ڕاپۆرتی ستانداردی خزمەتگوزاری
+        other: ڕاپۆرتەکانی ستانداردی خزمەتگوزاری
+      speaking_notes:
+        one: تێبینی قسەکردن
+        other: تێبینی قسەکردن
+      standard:
+        one: ستاندەر
+        other: ستانداردەکان
+      statement_to_parliament:
+        one: بەیاننامەیەک بۆ پەرلەمان
+        other: لێدوان بۆ پەرلەمان
+      statistical_data_set:
+        one: کۆمەڵە زانیارییە ئامارییەکان
+        other: کۆمەڵە زانیارییە ئامارییەکان
+      statistics_announcement:
+        one: ڕاگەیاندنی بڵاوکردنەوەی ئامارەکان
+        other: ئامارەکان ڕاگەیاندنەکانی بڵاوکردەوە
+      statutory_guidance:
+        one: ڕێنمایی یاسایی
+        other: ڕێنمایی یاسایی
+      tax_tribunal_decision:
+        one: بڕیاری دادگا سەبارەت بە باج یان پرسی دارایی
+        other: بڕیاری دادگا سەبارەت بە باج یان پرسە داراییەکان
+      transcript:
+        one: وەرگێڕانی قسه‌ به‌ نوسین
+        other: وەرگێڕانی قسه‌ به‌ نوسین
+      transparency:
+        one: داتاکانی شەفافیەت
+        other: داتاکانی شەفافیەت
+      utaac_decision:
+        one: بڕیاری دادگای تانەدانی کارگێڕی
+        othe: بڕیارەکانی دادگای تانەدانی کارگێڕی
+      written_statement:
+        one: بەیاننامەی نووسراو بۆ پەرلەمان
+        other: بەیاننامە نووسراوه‌كان بۆ پەرلەمان
+  corporate_information_page:
+    about_our_services_html: "%{link}. ببینه‌."
+    corporate_information: زانیاری کۆمپانیاکان
+    personal_information_charter_html: " ئێمە ڕوونی دەکاتەوە کە چۆن مامەڵە لەگەڵ زانیارییە کەسییەکانتان دەکەین%{link}ی "
+    publication_scheme_html: سەبارەت بەو جۆرە زانیاریانە بخوێنەرەوە کە بە شێوەیەکی ڕۆتینی دا بڵاوی دەکەینەوە له‌م %{link}.
+    social_media_use_html: سیاسەتەکەمان لە %{link}. بخوێنەرەوە.
+    welsh_language_scheme_html: بزانە دەربارەی پابەندبوونمان بە %{link}.
+  email:
+    already_subscribed_title: لە ئێستاوه‌ تۆ  ئیمەیڵت بۆ دێت دەربارەی ئەم په‌یجه‌
+    description: هەموو بەشداریکردنەکانی ئیمەیڵی GOV.UK ببینە و بەڕێوەی ببە
+    subscribe_title: تۆ بەشداریت لە ئیمەیڵەکان کردووە سەبارەت بەم په‌یجه‌
+    unsubscribe_title: تۆ بەشداریکردنت لە ئیمەیڵەکان سەبارەت بەم لاپەڕەیە ڕاگرتووه‌
+  fatality_notice:
+    alt_text: لۆگۆی وەزارەتی بەرگری
+    field_of_operation: مەیدانی ئپپراسێۆن- عەمەلیات
+    none_added: تا ئێستا هیچ ئاگادارییەک یان تێبینیەکی بوونی کوژراو بۆ ئەم بوارە ئۆپەراسیۆنە زیاد نەکراوە.
+    operations_in: ئۆپراسێۆنەکە لە %{location}
+  field_of_operation:
+    context: کوژراوانی بەریتانیا
+    title: 'ئۆپراسێۆن لە '
+  gone:
+    page_title: ئیتر بەردەست نییە
+    published_in_error: زانیارییەکانی ئەم لاپەڕەیە لابراون چونکە بە هەڵە بڵاوکراوەتەوە.
+    title: ئەو پەیجەی کە بەدوایدا دەگەڕێیت ئێستا بەردەست نییە
+  guide:
+    pages_in_guide: لاپەڕەکانی ئەم ڕێنماییە
+    skip_contents: ناوەڕۆکەکان بەجێبهێڵە
+  html_publication:
+    print_meta_data:
+      available_at: ئەم بڵاوکراوەیە لە %{url} بەردەستە.
+      copyright: "© مافی چاپکردنی تاج %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'ئەم بڵاوکراوە بەپێی مەرجەکانی مۆڵەتی حکومەتی کراوە v3.0 مۆڵەتی پێدراوە جگە لەو شوێنانەی کە بە پێچەوانەوە ئاماژەیان پێکراوە. بۆ بینینی ئەم مۆڵەتە، سەردانی <ahref="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> بکەن یان نامە بنووسە  بۆ تیمی سیاسەتی زانیاری، ئەرشیفی نیشتمانی، کیو، لەندەن TW9 4DU، یان ئیمەیڵ: <a href="mailto:psi@nationalarchives.gov.uk">psi@ئnationalarchives.gov.uk</a>.'
+      third_party: لەو شوێنانەی کە ئێمە هەر زانیارییەکی مافی کۆپیکردنی لایەنی سێیەممان دەستنیشان کردووە پێویستە مۆڵەت لە خاوەن مافی کۆپیکردنی پەیوەندیدار وەربگریت.
+  i18n:
+    direction: rtl
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    ku: سۆرانی کوردی
+    ky:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    ti:
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
+  manuals:
+    breadcrumb_contents: گەڕانەوە بۆ ناوەڕۆک
+    contents_list_breadcrumb_contents: لاپەڕەی سەرەکی ڕێنماییەکان
+    contents_title: ناوقەرۆکەکان
+    hmrc_manual_type: ڕێنمایی ناوخۆیی HMRC
+    hmrc_title: "%{title}ڕێنمایی ناوخۆیی HMRC"
+    next_page: لاپەڕەی داهاتوو
+    pages_in_manual_section: لاپەڕەکانی بەشی ڕێنمایی
+    previous_page: لاپەڕەی پێشوو
+    search_this_manual: بگەڕێ لەم ڕێنامییانەدا
+    see_all_updates: هەموو نوێکارییەکان ببینە
+    summary_title: پوختە
+    title: "%{title} ڕێنمایی"
+    updated: نوێ کراوەتەوە
+    updates_amendments: هەموارکردنەوەکانی بڵاوکراوە
+    updates_description: لیستی نوێکارییەکان بۆ '%{title}'.
+    updates_page_title: "%{title}' نوێکاری"
+    updates_title: "%{title}' نوێکارییەکان"
+  multi_page:
+    next_page: داهاتوو
+    previous_page: پێشووتر
+    print_entire_guide: بینینی وەشانی پرنت کراوی تەواوی ڕێنماییەکە
+    printable_version: وەشانی پرنت کراو
+  national_statistics:
+    logo_alt_text: ئاماری فەرمی باوەڕپێکراو
+  publication:
+    details: ووردەکارییەکان
+    documents:
+      one:
+      other:
+  service_sign_in:
+    continue: بەردەوام بوون
+    error:
+      option: تکایە بژاردەیەک هەڵبژێرە
+      title: تۆ هیچ بژاردەیەکت هەڵنەبژاردووە
+  shared:
+    historically_political: " %{حکومەت}ئەمە لە ژێر بڵاوکراوەتەوە."
+    webchat:
+      available: ڕاوێژکاران ئامادەن بۆ گفتوگۆکردن
+      busy: هەموو ڕاوێژکارانی وێبچات لە ئێستادا سەرقاڵی کارن و مەشغوڵن.
+      closed: لە ئێستادا وێبچات داخراوە.
+      speak_to_adviser: ئێستا لەگەڵ ڕاوێژکارێک قسە بکە
+      technical_problem: لە ئێستادا وێبچات بەردەست نییە بەهۆی کێشەی تەکنیکییەوە.
+  specialist_document:
+    pdo_alt_text: 'Designated Origin UK Protectedلۆگۆی پلانەکە مۆرێکی ڕەشە کە لەسەری نووسراوه‌    '
+    pgi_alt_text: 'Designated Origin UK Protectedلۆگۆی پلانەکە مۆرێکی ڕەشە کە لەسەری نووسراوه‌    '
+    tsg_alt_text: 'Designated Origin UK Protectedلۆگۆی پلانەکە مۆرێکی ڕەشە کە لەسەری نووسراوه‌    '
+  statistics_announcement:
+    cancellation_date: بەرواری هەڵوەشاندنەوە
+    cancelled: هەڵوەشاندنەوەی ئامارە بڵاوکراوەکان
+    changed_date: وادەی بڵاوکردنەوە گۆڕاوە
+    forthcoming: ئەم ئامارانە بڵاودەکرێنەوە
+    previous_date: بەرواری پێشوو
+    proposed_date: بڵاوکراوەی پێشنیارکراو
+    reason_for_change: هۆکاری گۆڕانکاری
+    release_date: بەرواری بڵاوکردنەوە
+  time:
+    formats:
+      short_ordinal: "%e %B %Y"
+  working_group:
+    contact_details: وردەکاری پەیوەندیکردن
+    policies: سیاسەتەکان
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html: "%{link}. ببینه‌."
+      personal_information_charter_html: " ئێمە ڕوونی دەکاتەوە کە چۆن مامەڵە لەگەڵ زانیارییە کەسییەکانتان دەکەین%{link}ی "
+      publication_scheme_html: سەبارەت بەو جۆرە زانیاریانە بخوێنەرەوە کە بە شێوەیەکی ڕۆتینی دا بڵاوی دەکەینەوە له‌م %{link}.
+      social_media_use_html: سیاسەتەکەمان لە %{link}. بخوێنەرەوە.
+      welsh_language_scheme_html: بزانە دەربارەی پابەندبوونمان بە %{link}.
+    find_out_more: تەواوی پڕۆفایل و هەموو وردەکارییەکانی پەیوەندیکردن ببینە
+    headings:
+      contact_us: پەیوەندیکردن بە ئێمە
+      corporate_information: زانیاری کۆمپانیاکان
+      follow_us: لەگەڵمان بە- فۆڵۆومان بکەن
+      our_people: خەڵکەکانمان
+    location: شوێن
+    part_of: بەشێک لە
