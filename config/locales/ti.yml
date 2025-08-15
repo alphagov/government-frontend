@@ -1,0 +1,470 @@
+---
+ti:
+  call_for_evidence:
+    and: ከምኡ ውን
+    another_website_html: እዚ ጻውዒት መርትዖ %{closed} ኣብ <a href="%{url}">ካልእ መርበብ ሓበሬታ</a> ተታሒዙ
+    at: ኣብ
+    closed: እዚ ጻውዒት መርትዖ ተዓጽዩ ኣሎ
+    closed_another_website_html: እዚ ጻውዒት መርትዖ ኣብ <a href="%{url}">ካልእ መርበብ ሓበሬታ</a> እዩ ተኻይዱ
+    closes: ዝዕጸወሉ ድማ
+    closes_at: እዚ ጻውዒት መርትዖ ዝዕጸወሉ
+    complete_a: ዝተዛዘመ ኤ/a
+    description: መግለጺ ናይ ጻውዒት መርትዖ
+    detail_of_outcome: ዝርዝር ውጽኢት
+    documents: ሰነዳት
+    download_outcome: ምሉእ ውጽኢት ኣንብብ
+    either: ወይ
+    email_to: ኢመይል ናብ፤
+    is_being: ምዃኑ እዩ
+    not_open_yet: እዚ ጻውዒት መርትዖ ገና ክፉት ኣይኮነን ዘሎ
+    'on': አብ
+    open_another_website_html: እዚ ጻውዒት መርትዖ ኣብ <a href="%{url}">ካልእ መርበብ ሓበሬታ</a> ይካየድ ኣሎ።
+    opens: እዚ ጻውዒት መርትዖ ይኽፈት
+    or: ወይ
+    original_call_for_evidence: ኦርጅናል ጻውዒት መርትዖ
+    ran_from: እዚ ጻውዒት መርትዖ ዝካየደሉ ካብ
+    respond_online: ብ ኦንላይን መልሲ ሃብ
+    response_form: ናይ መልሲ ቅጥዒ/ፎርም
+    summary: መጠቃለሊ
+    was: ነይሩ
+    ways_to_respond: መልሲ ዝወሃበሉ መንገድታት
+    write_to: ጽሓፍ ናብ፤
+  common:
+    email_and_print_link: 'ነዚ ገጽ ፕሪንት ንምባል ወይ ውን ንኢመይላት ተመዝገቡ '
+    print_link: ነዚ ገጽ ሕተሞ
+    visit: ምብጻሕ፥
+  components:
+    print_link:
+      text: ነዚ ገጽ ሕተሞ
+    share_links:
+      share_this_page: ነዚ ፔጅ ሼር ግበርዎ
+  consultation:
+    analysing_feedback: ርእይቶኹም ንትንትን ኣለና
+    and: ከምኡ ውን
+    another_website_html: እዚ ምምኽኻር %{closed} ኣብ <a href="%{url}">ካልእ መርበብ ሓበሬታ</a> ዝተኻየደ እዩ።
+    at: ኣብ
+    closes: ዝዕጸወሉ ድማ
+    closes_at: እዚ ምምኽኻር ዝዕጸወሉ ኣብ
+    complete_a: ዝርዝር ዝተረኸበ ግብረ መልሲ
+    concluded: እዚ ምምኽኻር ተዛዚሙ ኣሎ
+    description: ናይ ምምኽኻር መግለጺ
+    detail_of_feedback_received: ዝርዝር ዝተረኸበ ግብረ መልሲ
+    detail_of_outcome: ዝርዝር ውጽኢት
+    documents: ዝረኸብናዮ ግብረ መልሲ
+    download_outcome: ምሉእ ውጽኢት ኣንብብ
+    either: ወይ
+    email_to: ምዃኑ እዩ
+    feedback_received: ዝረኸብናዮ ግብረ መልሲ
+    is_being: ምዃኑ እዩ
+    not_open_yet: እዚ ምምኽኻር ገና ክፉት ኣይኮነን ዘሎ
+    'on': አብ
+    opens: እዚ ምምኽኻር ይኽፈት
+    or: ወይ
+    original_consultation: ኦርጅናል ምምኽኻር
+    ran_from: እዚ ምምኽኻር ዝካየደሉ ካብ
+    respond_online: ብኦንላይን መልሲ ሃብ
+    summary: መጠቃለሊ
+    visit_soon: እቲ ውጽኢት ናብዚ ህዝባዊ ርእይቶ ንምውራድ ኣብ ቀረባ እዋን ደጊምኩም ኣብዚ ገጽ ተወከሱ።
+    was: ነይሩ
+    ways_to_respond: መልሲ ዝወሃብሉ መንገድታት
+    write_to: ናብዚ ጽሓፍ፣
+  contact:
+    access_and_opening_times: ናይ ምእታውን ምኽፋትን ሰዓታት
+    contact_form: 'ቅጥዒ/ፎርም አድራሻ/ኮንታክት '
+    email: ኢመይል
+    find_call_charges: ብዛዕባ ክፍሊት ጻውዒት ዝምልከት ሓበሬታ ርኸብ
+    online: ኦንላይን
+    phone: ስልኪ
+    webchat: ዌብቻት
+  content_item:
+    contents: ትሕዝቶ
+    metadata:
+      published: ተሓቲሙ
+      updated: ዝተመሓየሸ
+    schema_name:
+      aaib_report:
+        one: ጸብጻብ ናይ ጨንፈር መርመራ ሓደጋታት ኣየር
+        other: ጸብጻባት ናይ ጨንፈር መርመራ ሓደጋታት ኣየር
+      announcement:
+        one: ምልክታ
+        other: ምልክታታት
+      asylum_support_decision:
+        one: ናይ ቤት ፍርዲ ውሳነ ኣብ ናይ ዑቕባ ደገፍ
+        other: ናይ ቤት ፍርዲ ውሳነታት ኣብ ናይ ዑቕባ ደገፍ
+      authored_article:
+        one: ወግዓዊ ዓንቀጽ
+        other: ወግዓዊ ዓንቀጽ
+      business_finance_support_scheme:
+        one: ናይ ቢዝነስ ፋይናንስ ደገፍ መደብ
+        other: ናይ ቢዝነስ ፋይናንስ ደገፍ መደባት
+      call_for_evidence:
+        one: ጻውዒት ንመርትዖ
+        other: ጻውዒታት ንመርትዖ
+      call_for_evidence_outcome:
+        one: ውጽኢት መርትዖ ንምርካብ ጻውዒት ግበር
+        other: ውጽኢታት መርትዖ ንምርካብ ጻውዒት ግበር
+      case_study:
+        one: ናይቲ ጉዳይ መጽናዕቲ / (ኬዝ ስታዲ)
+        other: ናይቲ ጉዳይ መጽናዕቲታት / (ኬዝ ስታዲ)
+      closed_call_for_evidence:
+        one: ዕጹው ጻውዒት መርትዖ
+        other: ዕጹው ጻውዒታት መርትዖ
+      closed_consultation:
+        one: ዕጹው ምምኽኻር / (ክሎዝድ ኮንሳልቴሽን)
+        other: ዕጹዋት ምምኽኻራት / (ክሎዝድ ኮንሳልቴሽንስ)
+      cma_case:
+        one: ጉዳይ በዓል መዚ ውድድርን ዕዳጋታትን
+        other: ጉዳያት በዓል መዚ ውድድርን ዕዳጋታትን
+      consultation:
+        one: ምምኽኻር
+        other: ምምኽኻራት
+      consultation_outcome:
+        one: ውጽኢት ምምኽኻር
+        other: ውጽኢት ምምኽኻራት
+      corporate_information_page:
+        one: ናይ ሓበሬታ ገጽ
+        other: ናይ ሓበሬታ ገጻት
+      corporate_report:
+        one: ጸብጻብ ትካል
+        other: ጸብጻባት ትካላት
+      correspondence:
+        one: ደብዳቤ / (ክሮስፖንደንስ)
+        other: ደብዳቤታት / (ክሮስፖንደንስስ)
+      countryside_stewardship_grant:
+        one: ንዕቃበ ገጠር ዝኸውን ደገፍ
+        other: ንዕቃበ ገጠር ዝኸውን ድጋፋት
+      decision:
+        one: ውሳነ
+        other: ውሳነታት
+      detailed_guide:
+        one: መምርሒ
+        other: ምምርሒታት
+      dfid_research_output:
+        one: ንውጽኢት ልምዓት ዝኸውን መጽናዕቲ
+        other: ንውጽኢት ልምዓት ዝኸውን መጽናዕትታት
+      document_collection:
+        one: እኩብ
+        other: እኩባት
+      draft_text:
+        one: ንድፊ ጽሑፍ
+        other: ንድፊ ጽሑፋት
+      drug_safety_update:
+        one: እዋናዊ ሓበሬታ ድሕነት መድሃኒት
+        other: እዋናዊ ሓበሬታ ድሕነት መድሃኒታት
+      employment_appeal_tribunal_decision:
+        one: ውሳኔ ናይ ስራሕ ናይ ይግባይ ቤት ፍርዲ
+        other: ውሳኔታት ናይ ስራሕ ናይ ይግባይ ቤት ፍርዲ
+      employment_tribunal_decision:
+        one: ውሳነ ቤት ፍርዲ ናይ ስራሕ
+        other: ውሳነታት ቤት ፍርዲ ናይ ስራሕ
+      esi_fund:
+        one: ኤውሮጳዊ መዋቕራውን ወፍርን ሓገዝ (ኢ.ኤስ.ኣይ.ኤፍ/ESIF)
+        other: ኤውሮጳዊ መዋቕራውን ወፍርን ሓገዛት (ኢ.ኤስ.ኣይ.ኤፍ/ESIF)
+      foi_release:
+        one: ምዝርጋሕ ናይ ኤፍ.ኦ.አይ/(FOI)
+        other: ምዝርጋሕ ናይ ኤፍ.ኦ.አይ/(FOI)
+      form:
+        one: ቅጥዒ
+        other: ቅጥዕታት
+      guidance:
+        one: መምርሒ
+        other: ምምርሒታት
+      impact_assessment:
+        one: ናይ ጽልዋ ገምጋም
+        other: ናይ ጽልዋ ገምጋማት
+      imported:
+        one: ብደገ ዝመጽአ - ኣብ ምጽባይ ዝርከብ  ዓይነት
+        other: ብደገ ዝመጽአ - ኣብ ምጽባይ ዝርከብ  ዓይነት
+      independent_report:
+        one: ነጻ ጸብጻብ
+        other: ነጻ ጸብጻባት
+      international_development_fund:
+        one: ዓለም ለኸ ልምዓታዊ ደገፍ
+        other: ዓለም ለኸ ልምዓታዊ ደገፋት
+      international_treaty:
+        one: ኣህጉራዊ ውዕል
+        other: ኣህጉራዊ ውዕላት
+      maib_report:
+        one: ጸብጻብ ጨንፈር መርመራ ሓደጋ ባሕሪ
+        other: ጸብጻባት ጨንፈር መርመራ ሓደጋ ባሕሪ
+      map:
+        one: ካርታ
+        other: ካርታታት
+      medical_safety_alert:
+        one: ን መድሃኒታትን ሕክምናዊ መሳርሒታት ዝምልከት መጠንቀቕታን መጸዋዕታን
+        other: ን መድሃኒታትን ሕክምናዊ መሳርሒታት ዝምልከት መጠንቀቕታን መጸዋዕታን
+      national:
+        one: ተፈላጥነት ዘለዎ ወግዓዊ ናይ ስታቲስቲክስ ምልክታ
+        other: ተፈላጥነት ዘለዎ ወግዓዊ ናይ ስታቲስቲክስ ምልክታታት
+      national_statistics:
+        one: ተፈላጥነት ዘለዎ ወግዓዊ ስታቲስቲክስ
+        other: ተፈላጥነት ዘለዎ ወግዓዊ ስታቲስቲክስ
+      national_statistics_announcement:
+        one: ተፈላጥነት ዘለዎ ወግዓዊ ናይ ስታቲስቲክስ ምልክታ
+        other: ተፈላጥነት ዘለዎ ወግዓዊ ናይ ስታቲስቲክስ ምልክታታት
+      news_article:
+        one: ምልክታ
+        other: ምልክታታት
+      notice:
+      official:
+        one: ወግዓዊ ምልክታ ናይ ስታቲስቲክስ
+        other: ወግዓዊ ምልክታታት ናይ ስታቲስቲክስ
+      official_statistics:
+        one: ወግዓዊ ስታቲስቲክስ
+        other: ወግዓዊ ስታቲስቲክስ
+      official_statistics_announcement:
+        one: ወግዓዊ ምልክታ ናይ ስታቲስቲክስ
+        other: ወግዓዊ ምልክታታት ናይ ስታቲስቲክስ
+      open_call_for_evidence:
+        one: ቅሉዕ ጻውዒት መርትዖ
+        other: ቅሉዕ ጻውዒታት መርትዖ
+      open_consultation:
+        one: ክፉት ምምኽኻር
+        other: ክፉት ምምኽኻራት
+      oral_statement:
+        one: ኣፋዊ መግለጺ ናብ ባይቶ
+        other: ኣፋዊ መግለጺታት ናብ ባይቶ
+      policy:
+        one: ፖሊሲ
+        other: ፖሊሲታት
+      policy_paper:
+        one: ናይ ፖሊሲ ወረቐት
+        other: ናይ ፖሊሲ ወረቓቕቲ
+      product-safety-alert-report-recall:
+        one: መጠንቀቕታታት ድሕነት ፍርያት፣ ጸብጻባትን ዳግማይ መጸዋዕታን
+        other: መጠንቀቕታታት ድሕነት ፍርያት፣ ጸብጻባትን ዳግማይ መጸዋዕታን
+      promotional:
+        one: ናይ ምውዕዋዕ ንብረት
+        other: ናይ ምውዕዋዕ ንብረት
+      publication:
+        one: ሕታም
+        other: ሕታማት
+      raib_report:
+        one: ጸብጻብ ጨንፈር መርመራ ሓደጋ ባቡር
+        other: ጸብጻባት ጨንፈር መርመራ ሓደጋ ባቡር
+      regulation:
+        one: ደንቢ
+        other: ደንቢታት
+      research:
+        one: መጽናዕትን ትንተናን
+        other: መጽናዕትን ትንተናን
+      residential_property_tribunal_decision:
+        one: ውሳነ ቤት ፍርዲ ናይ መንበሪ ገዛ
+        other: ውሳነታት ቤት ፍርዲ ናይ መንበሪ ገዛ
+      service_sign_in:
+        one: ናብ ኣገልግሎት ምእታው
+        other: ናብ ኣገልግሎት ምእታው
+      service_standard_report:
+        one: ጸብጻብ ደረጃ ኣገልግሎት
+        other: ጸብጻባት ደረጃ ኣገልግሎት
+      speaking_notes:
+        one: ናይ ዘረባ መዘኻኸሪታት
+        other: ናይ ዘረባ መዘኻኸሪታት
+      standard:
+        one: መለክዒ
+        other: መለክዒታት
+      statement_to_parliament:
+        one: መግለጺ ናብ ባይቶ
+        other: መግለጺታት ናብ ባይቶ
+      statistical_data_set:
+        one: ስታቲስቲካዊ  እኩብ ዳታ/ሓበሬታ
+        other: ስታቲስቲካዊ  እኩብ ዳታታት/ሓበሬታታት
+      statistics_announcement:
+        one: ን ስታቲስቲክስ መግለጺ ዝምልከት ምልክታ
+        other: ን ስታቲስቲክስ መግለጺ ዝምልከት ምልክታ
+      statutory_guidance:
+        one: ሕጋዊ መምርሒ
+        other: ሕጋዊ መምርሒታት
+      tax_tribunal_decision:
+        one: ውሳነ ቤት ፍርዲ ግብሪን ቻንስለርን
+        other: ውሳነታት ቤት ፍርዲ ግብሪን ቻንስለርን
+      transcript:
+        one: ትራንስክሪፕት
+        other: ትራንስክሪፕትታት
+      transparency:
+        one: ናይ ግሉጽነት ዳታ/ሓበሬታ
+        other: ናይ ግሉጽነት ዳታ/ሓበሬታ
+      utaac_decision:
+        one: ውሳኔ ቤት ፍርዲ ኣብ ምምሕዳራዊ ይግባይ
+        othe: 'ውሳኔታት ቤት ፍርዲ ኣብ ምምሕዳራዊ ይግባይ '
+      written_statement:
+        one: ብጽሑፍ ናብ ባይቶ ዝተዋህበ መግለጺ
+        other: ንባይቶ ዝቐረበ ናይ ጽሑፍ መግለጺታት
+  corporate_information_page:
+    about_our_services_html: "%{link} ኣብ ዚ ሊንክ ተወከስ"
+    corporate_information: ናይ ትካላት ሓበሬታ
+    personal_information_charter_html: "%{link} እዚ መላግቦና ንውልቃዊ ሓበሬታኻ ብኸመይ ከም እንሕዞ ይገልጽ።"
+    publication_scheme_html: ብዛዕባ እቶም ብስሩዕ እንዝርግሖም ዓይነታት ሓበሬታ ኣብ %{link} ኣንብብ።
+    social_media_use_html: ኣብ %{link} ፖሊሲና ኣንብብ።
+    welsh_language_scheme_html: ብዛዕባ %{link} ዘለና ተወፋይነት ፍለጥ።
+  email:
+    already_subscribed_title: ድሮ’ውን ብዛዕባ’ዚ ገጽ’ዚ ኢመይላት ይመጸካ ኣሎ
+    description: ኩሉ ናይ GOV.UK ኢመይል ሳብስክራይባትካ ርኣይን ኣመሓድርን።
+    subscribe_title: ብዛዕባ’ዚ ገጽ’ዚ ዝምልከት ኢመይላት ሳብስክራይብ ጌርካ ኣለኻ
+    unsubscribe_title: ብዛዕባ’ዚ ገጽ’ዚ ዝምልከት ዝመጽእ ኢመይላት ወጺእካ/አንሳብስክራይብ ጌርካ ኣለኻ
+  fatality_notice:
+    alt_text: ሚኒስትሪ ምክልኻል ክረስት/crest
+    field_of_operation: ዓውዲ ስርሒት/ፊልድ ኦፍ ኦፐሬሽን
+    none_added: ክሳብ ሕጂ ነዚ ዓውዲ ስርሒት/ፊልድ ኦፍ ኦፐሬሽን ዝምልከት ናይ ሞት መጉዳእቲ ኣይተወሰኸን።
+    operations_in: ስርሓት ኣብ %{location}
+  gone:
+    page_title: ድሕሪ ደጊም የለን
+    published_in_error: ኣብዚ ገጽ ዘሎ ሓበሬታ ብጌጋ ስለ ዝተሓትመ ተኣልዩ ኣሎ።
+    title: እቲ ትደልይዎ ዘለኹም ገጽ ድሕሪ ሕጂ ኣብዚ ኣይርከብን እዩ።
+  guide:
+    pages_in_guide: ገጻት ኣብዚ መምርሒ
+    skip_contents: ትሕዝቶታት ዝለል
+  html_publication:
+    print_meta_data:
+      available_at: እዚ ሕታም እዚ ኣብ %{url} ይርከብ።
+      copyright: "© መሰል ቅዳሕ ዘውዲ %{year}"
+      isbn: 'ኣይ.ኤስ.ቢ.ኤን/ISBN:'
+      licence_html: እዚ ሕታም እዚ ብዘይካ እቲ ዝተገልጸ ብመሰረት ውዕላት ፍቓድ ክፉት መንግስቲ/ኦፐን ጋቨርመምት ቪ/v3.0 ፍቓድ ተዋሂብዎ ኣሎ። ነዚ ፍቓድ ንምርኣይ፡ ኣብ <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> ተወከሱ ወይ ድማ ናብ ጉጅለ ፖሊሲ ሓበሬታ፡ ወይ ናብ ሃገራዊ ማህደር/ናሽናል ኣርካይቭስ፡ ኪው፡ ለንደን ቲ.ደብሊዩ9 4ዲ.ዩ/TW9 4DU፡ ወይ ብኢመይል ጽሓፉ፡ <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.
+      third_party: ዝኾነ ናይ ሳልሳይ ወገን መሰል ቅዳሕ ሓበሬታ ኣብ ዘለለናሉ እዋን ፣ ካብቶም ዝምልከቶም ወነንቲ መሰል ቅዳሕ ፍቓድ ክትረኽቡ ከድልየኩም እዩ።
+  language_names:
+    ar:
+    az:
+    be:
+    bg:
+    bn:
+    cs:
+    cy:
+    da:
+    de:
+    dr:
+    el:
+    en:
+    es:
+    es-419:
+    et:
+    fa:
+    fi:
+    fr:
+    gd:
+    gu:
+    he:
+    hi:
+    hr:
+    hu:
+    hy:
+    id:
+    is:
+    it:
+    ja:
+    ka:
+    kk:
+    ko:
+    ku:
+    ky:
+    lt:
+    lv:
+    ms:
+    mt:
+    ne:
+    nl:
+    'no':
+    pa:
+    pa-pk:
+    pl:
+    ps:
+    pt:
+    ro:
+    ru:
+    si:
+    sk:
+    sl:
+    so:
+    sq:
+    sr:
+    sv:
+    sw:
+    ta:
+    th:
+    ti: ትግሪኛ
+    tk:
+    tr:
+    uk:
+    ur:
+    uz:
+    vi:
+    yi:
+    zh:
+    zh-hk:
+    zh-tw:
+  manuals:
+    breadcrumb_contents: ናብ ትሕዝቶታት ተመለስ
+    contents_list_breadcrumb_contents: ማንዋል መበገሲ ገጽ/ማንዋል ሆም ፔጅ
+    contents_title: ትሕዝቶ
+    hmrc_manual_type: ውሽጣዊ ማንዋል ኤች.ኤም.ኣር.ሲ/HMRC
+    hmrc_title: "%{title}ኤች.ኤም.ኣር.ሲ/HMRCውሽጣዊ መምርሒ"
+    next_page: ዝቕጽል ገጽ
+    pages_in_manual_section: ገጻት ክፍሊ ማንዋል
+    previous_page: ዝሓለፈ ገጽ
+    search_this_manual: ነዚ መምርሒ ማንዋል ድለይ
+    see_all_updates: ኩሉ ሓድሽ ሓበሬታ ርአ
+    summary_title: መጠቃለሊ
+    title: "%{title}መምርሒ"
+    updated: ዝተመሓየሸ
+    updates_amendments: ዝተመሓየሸ ሕታም
+    updates_description: ዝርዝር ናይ '%{title}' ምዕባለታት።
+    updates_page_title: እዋናዊ ሓበሬታ - %{title}
+    updates_title: እዋናዊ ሓበሬታ፡ %{title}
+  multi_page:
+    next_page: ዝቅጽል
+    previous_page: ዝሓለፈ
+    print_entire_guide: ናይቲ ምሉእ መምርሒ ክሕተም ዝኽእል ኣማራጺ ርአ
+    printable_version: ክሕተም ዝኽእል ኣማራጺ
+  national_statistics:
+    logo_alt_text: ተፈላጥነት ዘለዎ ወግዓዊ ስታቲስቲክስ
+  publication:
+    details: ዝርዝራት
+    documents:
+      one:
+      other:
+  service_sign_in:
+    continue: ቀጽል
+    error:
+      option: በጃኹም ሓደ ኣማራጺ ምረጹ
+      title: ኣማራጺ ኣይመረጽካን
+  shared:
+    historically_political: እዚ ኣብ ትሕቲ %{government} ዝተሓትመ እዩ።
+    webchat:
+      available: ኣማኸርቲ ኣብ ቻት ንኽዕልሉ ድሉዋት እዮም
+      busy: ኩሎም ኣማኸርቲ ዌብቻት ኣብዚ እዋን ትሑዛት እዮም ዘለው
+      closed: ኣብዚ እዋን እዚ ዌብቻት ተዓጽዩ ኣሎ
+      speak_to_adviser: ሕጂ ምስ ኣማኻሪ ተዘራረብ
+      technical_problem: ኣብዚ ሕዚ እዋን ዌብቻት ብሰንኪ ቴክኒካዊ ጸገም ክርከብ ኣይክእል እዩ።
+  specialist_document:
+    pdo_alt_text: እቲ ናይ ስኬም ኣርማ ጸሊም ማሕተም ኮይኑ፡ ደዚግኔትድ ኦሪጅን ዩኬ ፕሮቴክትድ (Designated Origin UK Protected) ዝብል ጽሑፍ ኣለዎ።
+    pgi_alt_text: እቲ ናይ ስኬም ኣርማ ጸሊም ማሕተም ኮይኑ፡ ጂኦግራፊክ ኦሪጅን ዩኬ ፕሮቴክትድ ዝብል ጽሑፍ ኣለዎ።
+    tsg_alt_text: እቲ ናይ ስኬም ኣርማ ጸሊም ማሕተም ኮይኑ፡ ትራዲሽናል ስፔሻሊቲ  ዩኬ ፕሮቴክትድ(Traditional Speciality UK Protected) ዝብል ጽሑፍ ኣለዎ።
+  statistics_announcement:
+    cancellation_date: ዕለት ምስራዝ
+    cancelled: ስታቲስቲካዊ ምዝርጋሕ/ረሊዝ ተሰሪዙ
+    changed_date: ዕለተ ምዝርጋሕ/ረሊዝ ተቐይሩ ኣሎ
+    forthcoming: እዚ ስታቲስቲክስ ክዝርጋሕ እዩ።
+    previous_date: ዝሓለፈ ዕለት
+    proposed_date: ንምዝርጋሕ ዝቐረበ ሓሳብ
+    reason_for_change: ምኽንያት ናይቲ ለውጢ
+    release_date: ዕለተ ምዝርጋሕ
+  time:
+    formats:
+      short_ordinal: "%e %B %Y"
+  working_group:
+    contact_details: ዝርዝር ኣድራሻ/ኮንታክት
+    policies: ፖሊሲታት
+  worldwide_organisation:
+    corporate_information:
+      about_our_services_html: "%{link} ኣብ ዚ ሊንክ ተወከስ"
+      personal_information_charter_html: "%{link} እዚ መላግቦና ንውልቃዊ ሓበሬታኻ ብኸመይ ከም እንሕዞ ይገልጽ።"
+      publication_scheme_html: ብዛዕባ እቶም ብስሩዕ እንዝርግሖም ዓይነታት ሓበሬታ ኣብ %{link} ኣንብብ።
+      social_media_use_html: ኣብ %{link} ፖሊሲና ኣንብብ።
+      welsh_language_scheme_html: ብዛዕባ %{link} ዘለና ተወፋይነት ፍለጥ።
+    find_out_more: ምሉእ ፕሮፋይልን ኩሉ ዝርዝር ኣድራሻ/ኮንታክት ርአ
+    headings:
+      contact_us: ርኸቡና
+      corporate_information: ናይ ትካላት ሓበሬታ
+      follow_us: ተኸታተሉና
+      our_people: ህዝብና
+    location: ቦታ
+    part_of: ሓደ ክፋል ናይ
