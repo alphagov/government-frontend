@@ -8,7 +8,6 @@ class DevelopmentController < ApplicationController
                        contact
                        corporate_information_page
                        detailed_guide
-                       document_collection
                        guide
                        html_publication
                        placeholder_corporate_information_page
