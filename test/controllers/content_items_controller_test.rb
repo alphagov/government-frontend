@@ -267,7 +267,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert response.headers["Vary"].include?("GOVUK-Account-Session-Flash")
   end
 
-  %w[publication consultation detailed_guide].each do |schema_name|
+  %w[publication consultation].each do |schema_name|
     test "#{schema_name} displays the subscription success banner when the 'email-subscription-success' flash is present" do
       example_name = %w[consultation].include?(schema_name) ? "open_#{schema_name}" : schema_name
       content_item = content_store_has_schema_example(schema_name, example_name)
