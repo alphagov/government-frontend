@@ -1,34 +1,5 @@
 ---
 cy:
-  call_for_evidence:
-    and: a
-    another_website_html:
-    at: am
-    closed: Mae'r alwad hon am dystiolaeth wedi cau
-    closed_another_website_html:
-    closes: Mae'n cau am
-    closes_at: Mae'r alwad hon am dystiolaeth yn cau ar
-    complete_a: Cwblhau
-    description: Disgrifiad yr alwad o dystiolaeth
-    detail_of_outcome: Manylion am y canlyniad
-    documents: Dogfennau
-    download_outcome: Llwytho'r canlyniad llawn i lawr
-    either: naill ai
-    email_to: 'E-bostio at:'
-    is_being: yn cael ei
-    not_open_yet: Nid yw'r alwad am dystiolaeth hon ar agor eto
-    'on':
-    open_another_website_html: Cedwir yr alwad hon am dystiolaeth ar <a href="%{url}">wefan arall</a>
-    opens: Mae'r alwad am dystiolaeth yn agor
-    or:
-    original_call_for_evidence: Yr alwad wreiddiol am dystiolaeth
-    ran_from: Roedd yr alwad hon am dystiolaeth yn rhedeg o
-    respond_online: Ymateb ar-lein
-    response_form: ffurflen ymateb
-    summary: Crynodeb
-    was: roedd
-    ways_to_respond: Ffyrdd o ymateb
-    write_to: 'Ysgrifennu at:'
   common:
     email_and_print_link:
     print_link: Argraffu'r dudalen hon
@@ -117,32 +88,11 @@ cy:
         other: Cynlluniau cymorth cyllid busnes
         two:
         zero:
-      call_for_evidence:
-        few:
-        many:
-        one: Galwad am dystiolaeth
-        other: Galwadau am dystiolaeth
-        two:
-        zero:
-      call_for_evidence_outcome:
-        few:
-        many:
-        one: Canlyniad yr alwad am dystiolaeth
-        other: Canlyniadau yr alwad am dystiolaeth
-        two:
-        zero:
       case_study:
         few:
         many:
         one: Astudiaeth achos
         other: Astudiaethau achos
-        two:
-        zero:
-      closed_call_for_evidence:
-        few:
-        many:
-        one: Galwad gaeedig am dystiolaeth
-        other: Galwadau caeedig am dystiolaeth
         two:
         zero:
       closed_consultation:
@@ -395,13 +345,6 @@ cy:
         many:
         one: Cyhoeddiad o ystadegau swyddogol
         other: Cyhoeddiadau o ystadegau swyddogol
-        two:
-        zero:
-      open_call_for_evidence:
-        few:
-        many:
-        one: Galwad agored am dystiolaeth
-        other:
         two:
         zero:
       open_consultation:

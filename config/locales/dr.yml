@@ -1,34 +1,5 @@
 ---
 dr:
-  call_for_evidence:
-    and:
-    another_website_html:
-    at:
-    closed:
-    closed_another_website_html:
-    closes:
-    closes_at:
-    complete_a:
-    description:
-    detail_of_outcome:
-    documents:
-    download_outcome:
-    either:
-    email_to:
-    is_being:
-    not_open_yet:
-    'on':
-    open_another_website_html:
-    opens:
-    or:
-    original_call_for_evidence:
-    ran_from:
-    respond_online:
-    response_form:
-    summary:
-    was:
-    ways_to_respond:
-    write_to:
   common:
     email_and_print_link:
     print_link:
@@ -97,18 +68,9 @@ dr:
       business_finance_support_scheme:
         one: طرح حمایت مالی از کسب و کار
         other: طرح هایی حمایت مالی از کسب و کار
-      call_for_evidence:
-        one:
-        other:
-      call_for_evidence_outcome:
-        one:
-        other:
       case_study:
         one: مطالعه موردی
         other: مطالعات موردی
-      closed_call_for_evidence:
-        one:
-        other:
       closed_consultation:
         one: مشاورهء متوقف شده
         other: مشاوره هایی متوقف شده
@@ -217,9 +179,6 @@ dr:
       official_statistics_announcement:
         one: اطلاعیه آمار رسمی
         other: اطلاعیه آمار رسمی
-      open_call_for_evidence:
-        one:
-        other:
       open_consultation:
         one: مشاوره آزاد
         other: مشاوره هایی آزاد

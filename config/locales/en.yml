@@ -1,34 +1,5 @@
 ---
 en:
-  call_for_evidence:
-    and: and
-    another_website_html: This call for evidence %{closed} held on <a href="%{url}">another website</a>
-    at: at
-    closed: This call for evidence has closed
-    closed_another_website_html: This call for evidence was held on <a href="%{url}">another website</a>
-    closes: It closes at
-    closes_at: This call for evidence closes at
-    complete_a: Complete a
-    description: Call for evidence description
-    detail_of_outcome: Detail of outcome
-    documents: Documents
-    download_outcome: Read the full outcome
-    either: either
-    email_to: 'Email to:'
-    is_being: is being
-    not_open_yet: This call for evidence isn't open yet
-    'on': 'on'
-    open_another_website_html: This call for evidence is being held on <a href="%{url}">another website</a>
-    opens: This call for evidence opens
-    or: or
-    original_call_for_evidence: Original call for evidence
-    ran_from: This call for evidence ran from
-    respond_online: Respond online
-    response_form: response form
-    summary: Summary
-    was: was
-    ways_to_respond: Ways to respond
-    write_to: 'Write to:'
   common:
     email_and_print_link: Sign up for emails or print this page
     print_link: Print this page
@@ -97,18 +68,9 @@ en:
       business_finance_support_scheme:
         one: Business finance support scheme
         other: Business finance support schemes
-      call_for_evidence:
-        one: Call for evidence
-        other: Calls for evidence
-      call_for_evidence_outcome:
-        one: Call for evidence outcome
-        other: Call for evidence outcomes
       case_study:
         one: Case study
         other: Case studies
-      closed_call_for_evidence:
-        one: Closed call for evidence
-        other: Closed calls for evidence
       closed_consultation:
         one: Closed consultation
         other: Closed consultations
@@ -217,9 +179,6 @@ en:
       official_statistics_announcement:
         one: Official statistics announcement
         other: Official statistics announcements
-      open_call_for_evidence:
-        one: Open call for evidence
-        other: Open calls for evidence
       open_consultation:
         one: Open consultation
         other: Open consultations
