@@ -75,6 +75,7 @@ module GovernmentFrontend
       ka
       kk
       ko
+      ku
       ky
       lt
       lv
@@ -100,6 +101,7 @@ module GovernmentFrontend
       sw
       ta
       th
+      ti
       tk
       tr
       uk
