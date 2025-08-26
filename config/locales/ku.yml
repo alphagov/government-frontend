@@ -1,34 +1,5 @@
 ---
 ku:
-  call_for_evidence:
-    and: له‌گه‌ڵ
-    another_website_html: ئەم بانگەوازە بۆ بەڵگە %{closed} لە <a href="%{url}">ماڵپەڕێکی تر</a>دا دانراوە
-    at: لە
-    closed: ئەم بانگەوازە بۆ بەڵگە داخراوە
-    closed_another_website_html: ئەم بانگەوازە بۆ بەڵگە لە <a href="%{url}">ماڵپەڕێکی تر</a> بەڕێوەچوو
-    closes: دادەخرێت لە کاتژمێر
-    closes_at: 'ئەم بانگەوازە بۆ بەڵگە دادەخرێت لە '
-    complete_a: تەواوە لە
-    description: بۆ وەسفکردنی بەڵگە پەیوەندی بکەن
-    detail_of_outcome: وردەکاری دەرئەنجامەکە
-    documents: بەڵگەکان
-    download_outcome: تەواوی دەرئەنجامەکە بخوێنەرەوە
-    either: 'هەریەک لە  '
-    email_to: 'ئیمەیڵ بۆ : '
-    is_being: 'بووە بە '
-    not_open_yet: ئەم بانگەوازە بۆ بەڵگە هێشتا کراوە نییە
-    'on': لەسەر
-    open_another_website_html: ئەم بانگەوازە بۆ بەڵگە لە <a href="%{url}">ماڵپەڕێکی تر</a> بەڕێوەدەچێت
-    opens: ئەم بانگەوازە بۆ بەڵگە کراوەیە
-    or: یان
-    original_call_for_evidence: بانگەوازی ئەسڵی بۆ بەڵگە
-    ran_from: 'ئەم بانگەوازە بۆ بەڵگە بەڕێوە دەچێت لە '
-    respond_online: بە شێوەی ئۆنلاین وەڵام بدەرەوە
-    response_form: 'وەڵام بدەرەوە لە '
-    summary: پوختە
-    was: هەبوو
-    ways_to_respond: ڕێگاکانی وەڵامدانەوە
-    write_to: 'بنووسە بۆ : '
   common:
     email_and_print_link: ناوت تۆمار بکە بۆ ئیمەیڵه‌كان یان ئەم لاپەڕەیە پرنت بکە
     print_link: ئەم لاپەڕەیە پرنت بکە
@@ -97,18 +68,9 @@ ku:
       business_finance_support_scheme:
         one: پلانی هاوكاری دارایی بازرگانی
         other: پلانی هاوكاری دارایی بازرگانی
-      call_for_evidence:
-        one: بانگەواز بۆ بەڵگە
-        other: بانگەوازەکان بۆ بەڵکە
-      call_for_evidence_outcome:
-        one: بانگەواز بۆ دەرئەنجامی بەڵگە
-        other: بانگەواز بۆ دەرئەنجامەکانی بەڵگە
       case_study:
         one: توێژینەوەی کەیس
         other: توێژینەوەی کەیس
-      closed_call_for_evidence:
-        one: بانگەوازێکی داخراو بۆ بەڵگە
-        other: بانگەوازە داخراوەکان بۆ بەڵگە
       closed_consultation:
         one: ڕاوێژکاری داخراو
         other: ڕاوێژکاری داخراو
@@ -215,9 +177,6 @@ ku:
       official_statistics_announcement:
         one: ڕاگەیاندنی ئاماری فەرمی
         other: ڕاگەیاندنی ئاماره‌ فەرمیه‌كان
-      open_call_for_evidence:
-        one: بانگەوازی کراوە بۆ بەڵگە
-        other: بانگەوازە کراوەکان بۆ بەڵگە
       open_consultation:
         one: ڕاوێژکاری کراوە
         other: ڕاوێژکاری کراوه‌كان
@@ -266,9 +225,6 @@ ku:
       statement_to_parliament:
         one: بەیاننامەیەک بۆ پەرلەمان
         other: لێدوان بۆ پەرلەمان
-      statistical_data_set:
-        one: کۆمەڵە زانیارییە ئامارییەکان
-        other: کۆمەڵە زانیارییە ئامارییەکان
       statistics_announcement:
         one: ڕاگەیاندنی بڵاوکردنەوەی ئامارەکان
         other: ئامارەکان ڕاگەیاندنەکانی بڵاوکردەوە
@@ -286,7 +242,7 @@ ku:
         other: داتاکانی شەفافیەت
       utaac_decision:
         one: بڕیاری دادگای تانەدانی کارگێڕی
-        othe: بڕیارەکانی دادگای تانەدانی کارگێڕی
+        other: بڕیارەکانی دادگای تانەدانی کارگێڕی
       written_statement:
         one: بەیاننامەی نووسراو بۆ پەرلەمان
         other: بەیاننامە نووسراوه‌كان بۆ پەرلەمان
@@ -302,14 +258,6 @@ ku:
     description: هەموو بەشداریکردنەکانی ئیمەیڵی GOV.UK ببینە و بەڕێوەی ببە
     subscribe_title: تۆ بەشداریت لە ئیمەیڵەکان کردووە سەبارەت بەم په‌یجه‌
     unsubscribe_title: تۆ بەشداریکردنت لە ئیمەیڵەکان سەبارەت بەم لاپەڕەیە ڕاگرتووه‌
-  fatality_notice:
-    alt_text: لۆگۆی وەزارەتی بەرگری
-    field_of_operation: مەیدانی ئپپراسێۆن- عەمەلیات
-    none_added: تا ئێستا هیچ ئاگادارییەک یان تێبینیەکی بوونی کوژراو بۆ ئەم بوارە ئۆپەراسیۆنە زیاد نەکراوە.
-    operations_in: ئۆپراسێۆنەکە لە %{location}
-  field_of_operation:
-    context: کوژراوانی بەریتانیا
-    title: 'ئۆپراسێۆن لە '
   gone:
     page_title: ئیتر بەردەست نییە
     published_in_error: زانیارییەکانی ئەم لاپەڕەیە لابراون چونکە بە هەڵە بڵاوکراوەتەوە.
