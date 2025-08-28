@@ -68,9 +68,18 @@ ti:
       business_finance_support_scheme:
         one: ናይ ቢዝነስ ፋይናንስ ደገፍ መደብ
         other: ናይ ቢዝነስ ፋይናንስ ደገፍ መደባት
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: ናይቲ ጉዳይ መጽናዕቲ / (ኬዝ ስታዲ)
         other: ናይቲ ጉዳይ መጽናዕቲታት / (ኬዝ ስታዲ)
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: ዕጹው ምምኽኻር / (ክሎዝድ ኮንሳልቴሽን)
         other: ዕጹዋት ምምኽኻራት / (ክሎዝድ ኮንሳልቴሽንስ)
@@ -177,6 +186,9 @@ ti:
       official_statistics_announcement:
         one: ወግዓዊ ምልክታ ናይ ስታቲስቲክስ
         other: ወግዓዊ ምልክታታት ናይ ስታቲስቲክስ
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: ክፉት ምምኽኻር
         other: ክፉት ምምኽኻራት
