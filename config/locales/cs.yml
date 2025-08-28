@@ -73,10 +73,22 @@ cs:
         few:
         one: Režim podpory financování podniků
         other: Režimy podpory financování podniků
+      call_for_evidence:
+        few:
+        one:
+        other:
+      call_for_evidence_outcome:
+        few:
+        one:
+        other:
       case_study:
         few:
         one: Případová studie
         other: Případové studie
+      closed_call_for_evidence:
+        few:
+        one:
+        other:
       closed_consultation:
         few:
         one: Uzavřená konzultace
@@ -221,6 +233,10 @@ cs:
         few:
         one: Oficiální statistické oznámení
         other: Oficiální statistická oznámení
+      open_call_for_evidence:
+        few:
+        one:
+        other:
       open_consultation:
         few:
         one: Otevřená konzultace

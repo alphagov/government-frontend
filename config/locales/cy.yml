@@ -88,11 +88,32 @@ cy:
         other: Cynlluniau cymorth cyllid busnes
         two:
         zero:
+      call_for_evidence:
+        few:
+        many:
+        one: Galwad am dystiolaeth
+        other: Galwadau am dystiolaeth
+        two:
+        zero:
+      call_for_evidence_outcome:
+        few:
+        many:
+        one: Canlyniad yr alwad am dystiolaeth
+        other: Canlyniadau yr alwad am dystiolaeth
+        two:
+        zero:
       case_study:
         few:
         many:
         one: Astudiaeth achos
         other: Astudiaethau achos
+        two:
+        zero:
+      closed_call_for_evidence:
+        few:
+        many:
+        one: Galwad gaeedig am dystiolaeth
+        other: Galwadau caeedig am dystiolaeth
         two:
         zero:
       closed_consultation:
@@ -345,6 +366,13 @@ cy:
         many:
         one: Cyhoeddiad o ystadegau swyddogol
         other: Cyhoeddiadau o ystadegau swyddogol
+        two:
+        zero:
+      open_call_for_evidence:
+        few:
+        many:
+        one: Galwad agored am dystiolaeth
+        other:
         two:
         zero:
       open_consultation:

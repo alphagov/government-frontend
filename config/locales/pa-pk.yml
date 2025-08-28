@@ -68,9 +68,18 @@ pa-pk:
       business_finance_support_scheme:
         one: کاروبار دی مالی مدد دا منصوبہ
         other: کاروبار دی مالی مدد دے منصوبے
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: کیس دی پڑھائی
         other: کیس دی پڑھائی
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: مشاورت بند ہوئی
         other: مشاورت بند ہوئی
@@ -179,6 +188,9 @@ pa-pk:
       official_statistics_announcement:
         one: سرکاری اعدادوشمار دا اعلان
         other: سرکاری اعدادوشمار دے اعلانات
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: 'کُھلی مشاورت '
         other: 'کُھلی مشاورت '

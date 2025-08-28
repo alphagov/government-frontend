@@ -73,10 +73,22 @@ ro:
         few:
         one: Schema de sprijin pentru finanțarea întreprinderilor
         other: Scheme de sprijin pentru finanțarea întreprinderilor
+      call_for_evidence:
+        few:
+        one:
+        other:
+      call_for_evidence_outcome:
+        few:
+        one:
+        other:
       case_study:
         few:
         one: Studiu de caz
         other: Studii de caz
+      closed_call_for_evidence:
+        few:
+        one:
+        other:
       closed_consultation:
         few:
         one: Consultație închisă
@@ -221,6 +233,10 @@ ro:
         few:
         one: Anunț oficial de statistică
         other: Anunțuri oficiale de statistică
+      open_call_for_evidence:
+        few:
+        one:
+        other:
       open_consultation:
         few:
         one: Consultație deschisă

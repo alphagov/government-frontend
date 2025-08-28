@@ -68,9 +68,18 @@ so:
       business_finance_support_scheme:
         one: Qorshaha caawimada maaliyada ganacsi
         other: Qorshayaasha caawimada maaliyada ganacsi
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Daraasad
         other: Daraasado
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Latalin xidhan
         other: Latalino xidhan
@@ -179,6 +188,9 @@ so:
       official_statistics_announcement:
         one: Ogeysiiska tirokoobka rasmiga ah
         other: Ogeysiisyada tirokoobka rasmiga ah
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Latalin furan
         other: Latalino furan

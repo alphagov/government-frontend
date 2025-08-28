@@ -77,9 +77,18 @@ ky:
       business_finance_support_scheme:
         one: Бизнести каржылоону колдоочу схема
         other: Бизнести каржылоону колдоочу схемалар
+      call_for_evidence:
+        one: Далилдерди талап кылуу
+        other: Далилдерди талап кылуулар
+      call_for_evidence_outcome:
+        one: Натыйжанын далилдөөсүн талап кылуу
+        other: Натыйжанын далилдөөлөрүн талап кылуу
       case_study:
         one: Окуяны изилдөө
         other: Окуяларды изилдөө
+      closed_call_for_evidence:
+        one: Далилдерди жабык түрдө талап кылуу
+        other: Далилдерди жабык түрдө талап кылуулар
       closed_consultation:
         one: Жабык түрдө консультация
         other: Жабык түрдө консультациялар
@@ -197,6 +206,9 @@ ky:
       official_statistics_announcement:
         one: Расмий статистикалык кулактандыруу
         other: Расмий статистикалык кулактандыруулар
+      open_call_for_evidence:
+        one: Далилдерди ачык түрдө талап кылуу
+        other: Далилдерди ачык түрдө талап кылуулар
       open_consultation:
         one: Ачык консультация
         other: Ачык консультациялар

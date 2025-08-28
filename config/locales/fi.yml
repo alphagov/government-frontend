@@ -68,9 +68,18 @@ fi:
       business_finance_support_scheme:
         one: Yritysrahoituksen tukijärjestelmä
         other: Yritysrahoituksen tukijärjestelmät
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Tapaustutkimus
         other: Tapaustutkimuksia
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Suljettu kuuleminen
         other: Suljetut neuvottelut
@@ -179,6 +188,9 @@ fi:
       official_statistics_announcement:
         one: Virallinen tilastoilmoitus
         other: Viralliset tilastotiedot
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Avoin kuuleminen
         other: Avoimet kuulemiset

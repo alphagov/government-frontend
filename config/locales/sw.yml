@@ -68,9 +68,18 @@ sw:
       business_finance_support_scheme:
         one: Mpango wa msaada wa fedha za biashara
         other: Mipango ya msaada wa fedha za biashara
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Uchunguzi kifani
         other: Uchunguzi kifani
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Mashauriano ya watu wachache
         other: Mashauriano ya watu wachache
@@ -179,6 +188,9 @@ sw:
       official_statistics_announcement:
         one: Tangazo la takwimu rasmi
         other: Matangazo ya takwimu rasmi
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Mashauriano ya watu wengi
         other: Mashauriano ya watu wengi

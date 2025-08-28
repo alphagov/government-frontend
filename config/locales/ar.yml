@@ -88,11 +88,32 @@ ar:
         other: مخططات دعم تمويل الأعمال
         two:
         zero:
+      call_for_evidence:
+        few:
+        many:
+        one:
+        other:
+        two:
+        zero:
+      call_for_evidence_outcome:
+        few:
+        many:
+        one:
+        other:
+        two:
+        zero:
       case_study:
         few:
         many:
         one: دراسة الحالة
         other: دراسات الحالة
+        two:
+        zero:
+      closed_call_for_evidence:
+        few:
+        many:
+        one:
+        other:
         two:
         zero:
       closed_consultation:
@@ -345,6 +366,13 @@ ar:
         many:
         one: إعلان للإحصاءات الرسمية
         other: إعلانات للإحصاءات الرسمية
+        two:
+        zero:
+      open_call_for_evidence:
+        few:
+        many:
+        one:
+        other:
         two:
         zero:
       open_consultation:

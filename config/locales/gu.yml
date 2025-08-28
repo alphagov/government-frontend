@@ -68,9 +68,18 @@ gu:
       business_finance_support_scheme:
         one: વ્યાપાર નાણાંકીય સહાય યોજના
         other: વ્યાપાર નાણાંકીય સહાય યોજનાઓ
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: કેસ સ્ટડી
         other: કેસ સ્ટડીઝ
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: બંધ થયેલ પરામર્શ
         other: બંધ થયેલા પરામર્શ
@@ -179,6 +188,9 @@ gu:
       official_statistics_announcement:
         one: અધિકૃત આંકડાની જાહેરાત
         other: અધિકૃત આંકડાની જાહેરાતો
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: ખુલ્લો પરામર્શ
         other: ખુલ્લા પરામર્શ

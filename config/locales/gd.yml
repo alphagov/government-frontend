@@ -78,10 +78,25 @@ gd:
         one: Scéim tacaíochta maoinithe gnó
         other: Meicníochtaí tacaíochta do mhaoiniú gnó
         two:
+      call_for_evidence:
+        few:
+        one:
+        other:
+        two:
+      call_for_evidence_outcome:
+        few:
+        one:
+        other:
+        two:
       case_study:
         few:
         one: Cás-staidéir
         other: Tuarascálacha staidéir
+        two:
+      closed_call_for_evidence:
+        few:
+        one:
+        other:
         two:
       closed_consultation:
         few:
@@ -262,6 +277,11 @@ gd:
         few:
         one: Fógra staitisticí oifigiúla
         other: Fógraí staitisticí oifigiúla
+        two:
+      open_call_for_evidence:
+        few:
+        one:
+        other:
         two:
       open_consultation:
         few:

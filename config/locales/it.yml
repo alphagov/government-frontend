@@ -68,9 +68,18 @@ it:
       business_finance_support_scheme:
         one: Schema di sostegno alla finanza aziendale
         other: Schemi di sostegno alla finanza aziendale
+      call_for_evidence:
+        one:
+        other:
+      call_for_evidence_outcome:
+        one:
+        other:
       case_study:
         one: Caso di studio
         other: Casi di studio
+      closed_call_for_evidence:
+        one:
+        other:
       closed_consultation:
         one: Consultazione chiusa
         other: Consultazioni chiuse
@@ -179,6 +188,9 @@ it:
       official_statistics_announcement:
         one: Annuncio statistico ufficiale
         other: Annunci statistici ufficiali
+      open_call_for_evidence:
+        one:
+        other:
       open_consultation:
         one: Consultazione aperta
         other: Consultazioni aperte
