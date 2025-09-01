@@ -110,6 +110,12 @@ class ConsultationPresenter < ContentItemPresenter
     ways_to_respond["attachment_url"]
   end
 
+  def heading_and_context
+    super.tap do |t|
+      t[:margin_bottom] = 0
+    end
+  end
+
 private
 
   def ways_to_respond

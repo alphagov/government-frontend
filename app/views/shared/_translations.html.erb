@@ -1,6 +1,9 @@
 <% if @content_item.available_translations.length > 1 %>
-  <div class="govuk-grid-column-one-third">
-    <%= render 'govuk_publishing_components/components/translation_nav',
-        translations: @content_item.available_translations %>
+  <div class="govuk-grid-column-one-third translation-nav-header__child">
+    <%= render 'govuk_publishing_components/components/translation_nav', {
+      no_margin_top: true,
+      margin_bottom: 0,
+      translations: @content_item.available_translations,
+    } %>
   </div>
 <% end %>
