@@ -25,7 +25,6 @@ class AttachmentsTest < ActiveSupport::TestCase
 
   test "#attachments returns attachments with preview_urls based on url" do
     attachments = [{
-      "preview_url" => "some-preview-url",
       "url" => "assets.test.gov.uk/media/123/some-filename.csv",
       "content_type" => "text/csv",
       "filename" => "some-filename.csv",
@@ -36,7 +35,6 @@ class AttachmentsTest < ActiveSupport::TestCase
 
   test "#attachments returns attachments with preview_urls based on asset_manager_id and filename" do
     attachments = [{
-      "preview_url" => "some-preview-url",
       "url" => "some-url",
       "assets" => [{ "asset_manager_id" => "some-attachment-data-id", "filename" => "some-filename" }],
       "filename" => "some-filename",
