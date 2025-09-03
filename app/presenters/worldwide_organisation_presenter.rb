@@ -123,10 +123,6 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
     content_item.dig("links", "sponsoring_organisations") || []
   end
 
-  def exclude_main_wrapper_class?
-    true
-  end
-
 private
 
   def office(office, contact)
