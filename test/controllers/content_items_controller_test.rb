@@ -147,7 +147,7 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_response :success
     assert_empty content_item["links"]["ordered_related_items"], "Content item should not have existing related links"
     assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
-    assert_equal assigns[:content_item].content_item["links"]["ordered_related_items"], content_item["links"]["suggested_ordered_related_items"]
+    assert_empty assigns[:content_item].content_item["links"]["ordered_related_items"]
   end
 
   test "sets the expiry as sent by content-store" do
