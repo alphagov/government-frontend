@@ -27,16 +27,18 @@
 <% end %>
 
 <div class="<%= @content_item.organisation_brand_class %>">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <%= render 'govuk_publishing_components/components/heading', 
+  <div class="govuk-grid-row translation-nav-header">
+    <div class="govuk-grid-column-two-thirds translation-nav-header__child">
+      <%= render 'govuk_publishing_components/components/heading',
         text: @content_item.title,
         heading_level: 1,
         font_size: "xl",
-        margin_bottom: 8
+        margin_bottom: 0
       %>
     </div>
     <%= render 'shared/translations' %>
+  </div>
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <%= render 'govuk_publishing_components/components/lead_paragraph', text: @content_item.description %>
       <% if @content_item.withdrawn? %>
