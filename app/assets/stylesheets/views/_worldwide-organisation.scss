@@ -1,8 +1,3 @@
-.worldwide-organisation-header {
-  margin-top: govuk-spacing(3);
-  margin-bottom: govuk-spacing(3);
-}
-
 .govuk-frontend-supported {
   .worldwide-organisation-header {
     .show-other-content {
@@ -18,33 +13,22 @@
   }
 }
 
-.worldwide-organisation-header__logo {
-  @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(3);
-  }
-}
-
 .worldwide-organisation-header__metadata {
-  margin-top: govuk-spacing(2);
+  margin: 0;
+  @include govuk-text-colour;
+  @include govuk-font($size: 16);
 
-  dl {
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: govuk-spacing(2);
+  }
+
+  dt,
+  dd {
+    display: block;
+    line-height: 1.5em;
     margin: 0;
-    @include govuk-text-colour;
-    @include govuk-font($size: 16);
-    @include govuk-responsive-margin(4, "bottom");
-
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-gap: govuk-spacing(2);
-    }
-
-    dt,
-    dd {
-      display: block;
-      line-height: 1.5em;
-      margin: 0;
-    }
   }
 }
 
