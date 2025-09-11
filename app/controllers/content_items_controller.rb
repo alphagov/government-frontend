@@ -27,9 +27,7 @@ class ContentItemsController < ApplicationController
     set_expiry
     set_prometheus_labels
 
-    if is_service_manual?
-      show_service_manual_page
-    elsif is_history_page?
+    if is_history_page?
       show_history_page
     else
       set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
@@ -79,37 +77,10 @@ private
     end
   end
 
-  def is_service_manual?
-    @content_item.document_type.include?("service_manual")
-  end
-
-  def show_service_manual_page
-    slimmer_template("gem_layout_no_footer_navigation")
-    configure_header_search
-
-    with_locale do
-      render content_item_template
-    end
-  end
-
   def configure_header_search
     if @content_item.present? && !@content_item.include_search_in_header?
       remove_header_search
-    else
-      scope_header_search_to_service_manual
     end
-  end
-
-  def scope_header_search_to_service_manual
-    # Slimmer is middleware which wraps the service manual in the GOV.UK header
-    # and footer. We set a response header so that Slimmer adds a hidden field
-    # to the header search to scope the search results to just the service
-    # manual.
-    set_slimmer_headers(
-      search_parameters: {
-        "filter_manual" => "/service-manual",
-      }.to_json,
-    )
   end
 
   def remove_header_search

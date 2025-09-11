@@ -8,7 +8,6 @@ class WebchatPresenter
   end
 
   def show_phase_banner? = false
-  def service_manual? = false
   def show_default_breadcrumbs? = true
   def exclude_main_wrapper_class? = false
 
