@@ -221,9 +221,6 @@ sq:
       residential_property_tribunal_decision:
         one: Vendimi i gjykatës së pronës së banimit
         other: Vendimet e gjykatës së pronës së banimit
-      service_sign_in:
-        one: Hyrje në shërbim
-        other: Hyrje në shërbim
       service_standard_report:
         one: Raporti Standard i Shërbimit
         other: Raportet Standarde të Shërbimit
@@ -385,11 +382,6 @@ sq:
     documents:
       one: Dokument
       other: Dokumente
-  service_sign_in:
-    continue: Vazhdo
-    error:
-      option: Ju lutemi zgjidhni një opsion
-      title: You nuk keni zgjedhur një opsion
   shared:
     historically_political: Kjo u botua nën %{government}
     webchat:

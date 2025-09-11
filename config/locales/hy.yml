@@ -221,9 +221,6 @@ hy:
       residential_property_tribunal_decision:
         one: Անշարժ գույքի վերաբերյալ տրիբունալի որոշում
         other: Անշարժ գույքի վերաբերյալ տրիբունալի որոշումներ
-      service_sign_in:
-        one: Ծառայության մուտք
-        other: Ծառայության մուտք
       service_standard_report:
         one: Ծառայության ստանդարտ զեկույց
         other: Ծառայության ստանդարտ զեկույցներ
@@ -385,11 +382,6 @@ hy:
     documents:
       one: Փաստաթուղթ
       other: Փաստաթղթեր
-  service_sign_in:
-    continue: Շարունակել
-    error:
-      option: Խնդրում ենք ընտրել որևէ տարբերակ
-      title: Դուք չեք ընտրել որևէ տարբերակ
   shared:
     historically_political: Սույնը հրապարակվել է %{government} բաժնում
     webchat:

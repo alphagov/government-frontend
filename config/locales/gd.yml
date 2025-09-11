@@ -333,11 +333,6 @@ gd:
         one: Rialú cúirte maoine cónaithe
         other: Cinntí cúirte eastáit réadaigh chónaithe
         two:
-      service_sign_in:
-        few:
-        one: Ceangal seirbhíse
-        other: Ceangal seirbhíse
-        two:
       service_standard_report:
         few:
         one: Tuarascáil chaighdeánach seirbhíse
@@ -523,11 +518,6 @@ gd:
       one: Tuarascáil
       other: Doiciméid
       two:
-  service_sign_in:
-    continue: Le leanúint ar aghaidh
-    error:
-      option: Iontráil rogha le do thoil
-      title: Ní dhearna tú do rogha
   shared:
     historically_political: Foilsíodh an doiciméad seo go deimhin faoi chuimsiú an %{government}
     webchat:

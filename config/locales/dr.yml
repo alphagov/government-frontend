@@ -221,9 +221,6 @@ dr:
       residential_property_tribunal_decision:
         one: تصمیم دادگاه ملکیت مسکونی
         other: تصامیم دادگاه ملکیت مسکونی
-      service_sign_in:
-        one: ورود به بخش خدمات
-        other: ورود به بخش خدمات
       service_standard_report:
         one: گزارش استندرد خدمات
         other: گزارشات استندرد خدمات
@@ -388,11 +385,6 @@ dr:
     documents:
       one: سند
       other: اسناد
-  service_sign_in:
-    continue: ادامه بدهید
-    error:
-      option: لطفاً یک گزینه را انتخاب نمایید
-      title: شما کدام گزینهء را انتخاب نکرده اید
   shared:
     historically_political: این تحت%{government}منتشر شده است
     webchat:

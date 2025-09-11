@@ -221,9 +221,6 @@
       residential_property_tribunal_decision:
         one: Beslutning fra boligeiendomsnemnda
         other: Beslutninger fra boligeiendomsnemnda
-      service_sign_in:
-        one: Tjenestepålogging
-        other: Tjeneste påloggin
       service_standard_report:
         one: Tjenestestandardrapport
         other: Tjenestestandardrapporter
@@ -385,11 +382,6 @@
     documents:
       one: Dokument
       other: Dokumenter
-  service_sign_in:
-    continue: Fortsett
-    error:
-      option: Vennligst velg et alternativ
-      title: Du har ikke valgt et alternativ
   shared:
     historically_political: Dette ble publisert under %{government}
     webchat:

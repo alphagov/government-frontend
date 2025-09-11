@@ -277,10 +277,6 @@ hr:
         few:
         one: Odluka suda stambene imovine
         other: Odluke suda stambene imovine
-      service_sign_in:
-        few:
-        one: Prijava na uslugu
-        other: Prijava na uslugu
       service_standard_report:
         few:
         one: Standardno izvješće usluge
@@ -454,11 +450,6 @@ hr:
       few:
       one: Dokument
       other: Dokumenti
-  service_sign_in:
-    continue: Nastavi
-    error:
-      option: Odaberite opciju
-      title: Niste odabrali opciju
   shared:
     historically_political: Ovo je objavljeno pod %{government}
     webchat:

@@ -221,9 +221,6 @@ kk:
       residential_property_tribunal_decision:
         one: Тұрғын үйге қатысты сот шешімі
         other: Тұрғын үйге қатысты сот шешімдері
-      service_sign_in:
-        one: Қызметке кіру
-        other: Қызметке кіру
       service_standard_report:
         one: Қызметтің стандартты есебі
         other: Қызметтің стандартты есептері
@@ -385,11 +382,6 @@ kk:
     documents:
       one: Құжат
       other: Құжаттар
-  service_sign_in:
-    continue: Жалғастыру
-    error:
-      option: Опцияны таңдаңыз
-      title: Сіз опцияны таңдамадыңыз
   shared:
     historically_political: Бұл %{government} кезінде жарияланды
     webchat:

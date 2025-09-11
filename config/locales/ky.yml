@@ -242,9 +242,6 @@ ky:
       residential_property_tribunal_decision:
         one: Турак-жай менчиги боюнча соттун чечими
         other: Турак-жай менчиги боюнча соттун чечимдери
-      service_sign_in:
-        one: Кызматка кирүү
-        other: Кызматка кирүү
       service_standard_report:
         one: Кызмат көрсөтүү стандарттары боюнча отчет
         other: Кызмат көрсөтүү стандарттары боюнча отчеттор
@@ -412,11 +409,6 @@ ky:
     documents:
       one: Документ
       other: Документтер
-  service_sign_in:
-    continue: Улантуу
-    error:
-      option: Параметрди тандаңыз
-      title: Сиз параметрди тандаган жоксуз
   shared:
     historically_political: Бул %{government} астында жарыяланган
     webchat:

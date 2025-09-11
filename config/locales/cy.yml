@@ -445,13 +445,6 @@ cy:
         other: Penderfyniadau'r tribiwnlys eiddo preswyl
         two:
         zero:
-      service_sign_in:
-        few:
-        many:
-        one: Mewngofnodi i'r gwasanaeth
-        other: Mewngofnodi i'r gwasanaeth
-        two:
-        zero:
       service_standard_report:
         few:
         many:
@@ -661,11 +654,6 @@ cy:
       other: Dogfennau
       two:
       zero:
-  service_sign_in:
-    continue: Parhau
-    error:
-      option: Dewiswch opsiwn
-      title: Dydych chi ddim wedi dewis opsiwn
   shared:
     historically_political: Cyhoeddwyd hwn o dan y %{government}
     webchat:

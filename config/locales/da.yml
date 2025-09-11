@@ -229,9 +229,6 @@ da:
       residential_property_tribunal_decision:
         one: Afgørelse fra domstolene om boligejendomme
         other: Afgørelser fra domstolene om boligejendomme
-      service_sign_in:
-        one: Tjeneste logge ind
-        other: Tjeneste logge ind
       service_standard_report:
         one: Servicestandardrapport
         other: Servicestandardrapport
@@ -397,11 +394,6 @@ da:
     documents:
       one: Dokument
       other: Dokumenter
-  service_sign_in:
-    continue: Fortsætte
-    error:
-      option: Vælg en indstilling
-      title: Du har ikke valgt en indstilling
   shared:
     historically_political: Dette blev udgivet under %{government}
     webchat:

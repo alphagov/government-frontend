@@ -221,9 +221,6 @@ el:
       residential_property_tribunal_decision:
         one: Απόφαση δικαστηρίου διαφορών ιδιοκτησίας
         other: Αποφάσεις δικαστηρίου διαφορών ιδιοκτησίας
-      service_sign_in:
-        one: Σύνδεση υπηρεσίας
-        other: Σύνδεση υπηρεσίας
       service_standard_report:
         one: Τυπική έκθεση υπηρεσίας
         other: Τυπικές εκθέσεις υπηρεσίας
@@ -385,11 +382,6 @@ el:
     documents:
       one: Έγγραφο
       other: Έγγραφα
-  service_sign_in:
-    continue: Συνέχεια
-    error:
-      option: Διαλέξτε μια επιλογή
-      title: Δεν έχετε επιλέξει κάποια επιλογή
   shared:
     historically_political: Αυτό δημοσιεύτηκε στο %{government}
     webchat:

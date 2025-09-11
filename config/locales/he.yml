@@ -221,9 +221,6 @@ he:
       residential_property_tribunal_decision:
         one: החלטת בית הדין לנכסים למגורים
         other: החלטות בית הדין לנכסים למגורים
-      service_sign_in:
-        one: כניסה לשירות
-        other: כניסה לשירות
       service_standard_report:
         one: דוח שירות סטנדרטי
         other: דוחות שירות סטנדרטיים
@@ -385,11 +382,6 @@ he:
     documents:
       one: מסמך
       other: מסמכים
-  service_sign_in:
-    continue: המשך
-    error:
-      option: נא בחר אפשרות
-      title: לא בחרת באפשרות
   shared:
     historically_political: זה פורסם תחת %{government}
     webchat:

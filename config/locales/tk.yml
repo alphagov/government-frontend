@@ -221,9 +221,6 @@ tk:
       residential_property_tribunal_decision:
         one: Ýaşaýyş jaý kazyýetiniň karary
         other: Ýaşaýyş jaý kazyýetiniň kararlary
-      service_sign_in:
-        one: Hyzmat hasaba girmek
-        other: Hyzmat hasaba girmek
       service_standard_report:
         one: Standart hyzmat hasabaty
         other: Standart hyzmat hasabatlary
@@ -385,11 +382,6 @@ tk:
     documents:
       one: Resminama
       other: Resminamalar
-  service_sign_in:
-    continue: Dowam et
-    error:
-      option: Bir saýlaw saýlaň
-      title: Siz saýlaw saýlamadyňyz
   shared:
     historically_political: Bu %{government} garamagynda neşir edildi
     webchat:

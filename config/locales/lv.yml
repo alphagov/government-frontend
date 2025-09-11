@@ -221,9 +221,6 @@ lv:
       residential_property_tribunal_decision:
         one: Mājokļu īpašuma lietu tiesas lēmums
         other: Mājokļu īpašuma lietu tiesas lēmumi
-      service_sign_in:
-        one: Pierakstīšanās pakalpojumā
-        other: Pierakstīšanās pakalpojumā
       service_standard_report:
         one: Pakalpojuma standarta ziņojums
         other: Pakalpojuma standarta ziņojumi
@@ -385,11 +382,6 @@ lv:
     documents:
       one: Dokuments
       other: Dokumenti
-  service_sign_in:
-    continue: Turpināt
-    error:
-      option: Lūdzu, izvēlieties opciju
-      title: Nav izvēlēta neviena opcija
   shared:
     historically_political: Šis tika publicēts saskaņā ar %{government}
     webchat:

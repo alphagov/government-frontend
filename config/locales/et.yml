@@ -221,9 +221,6 @@ et:
       residential_property_tribunal_decision:
         one: Elamukinnisvara kohtuotsus
         other: Elamukinnisvara kohtuotsused
-      service_sign_in:
-        one: Teenusesse sisselogimine
-        other: Teenusesse sisselogimine
       service_standard_report:
         one: Teenuse standardaruanne
         other: Teenuse standardaruanded
@@ -385,11 +382,6 @@ et:
     documents:
       one: Dokument
       other: Dokumendid
-  service_sign_in:
-    continue: Jätka
-    error:
-      option: Palun tehke valik
-      title: Te pole valikut teinud
   shared:
     historically_political: See avaldati %{government} all
     webchat:

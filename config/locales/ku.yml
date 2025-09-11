@@ -207,9 +207,6 @@ ku:
       residential_property_tribunal_decision:
         one: دەرئەنجامی دادگای کەیسی نیشتەجێبوون
         other: دەرئەنجامه‌كانی دادگای کەیسی نیشتەجێبوون
-      service_sign_in:
-        one: چوونەژوورەوەی خزمەتگوزاری
-        other: چوونەژوورەوەی خزمەتگوزاری
       service_standard_report:
         one: ڕاپۆرتی ستانداردی خزمەتگوزاری
         other: ڕاپۆرتەکانی ستانداردی خزمەتگوزاری
@@ -371,11 +368,6 @@ ku:
     documents:
       one:
       other:
-  service_sign_in:
-    continue: بەردەوام بوون
-    error:
-      option: تکایە بژاردەیەک هەڵبژێرە
-      title: تۆ هیچ بژاردەیەکت هەڵنەبژاردووە
   shared:
     historically_political: " %{حکومەت}ئەمە لە ژێر بڵاوکراوەتەوە."
     webchat:

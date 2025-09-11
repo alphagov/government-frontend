@@ -333,11 +333,6 @@ uk:
         many:
         one: Рішення арбітражного суду щодо житлової нерухомості
         other: Рішення арбітражного суду щодо житлової нерухомості
-      service_sign_in:
-        few:
-        many:
-        one: Знак обслуговування в
-        other: Знак обслуговування в
       service_standard_report:
         few:
         many:
@@ -523,11 +518,6 @@ uk:
       many:
       one: Документ
       other: Документи
-  service_sign_in:
-    continue: Продовжити
-    error:
-      option: Виберіть варіант
-      title: Ви не вибрали варіант
   shared:
     historically_political: Це було опубліковано при %{government}
     webchat:
