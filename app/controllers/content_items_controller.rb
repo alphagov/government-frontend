@@ -27,12 +27,8 @@ class ContentItemsController < ApplicationController
     set_expiry
     set_prometheus_labels
 
-    if is_history_page?
-      show_history_page
-    else
-      set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
-      render_template
-    end
+    set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
+    render_template
   end
 
   def service_sign_in_options
@@ -54,28 +50,6 @@ class ContentItemsController < ApplicationController
   end
 
 private
-
-  def is_history_page?
-    @content_item.document_type == "history"
-  end
-
-  def show_history_page
-    page_id = content_item_path.split("/").last.underscore
-    valid_page_ids = %w[
-      10_downing_street
-      11_downing_street
-      1_horse_guards_road
-      king_charles_street
-      lancaster_house
-      history
-    ]
-
-    if valid_page_ids.include?(page_id)
-      render template: "histories/#{page_id}"
-    else
-      render plain: "Not found", status: :not_found
-    end
-  end
 
   def configure_header_search
     if @content_item.present? && !@content_item.include_search_in_header?
