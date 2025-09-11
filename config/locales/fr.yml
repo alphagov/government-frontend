@@ -221,9 +221,6 @@ fr:
       residential_property_tribunal_decision:
         one: Décision du tribunal chargé du logement résidentiel
         other: Décisions du tribunal chargé du logement résidentiel
-      service_sign_in:
-        one: Connexion au service
-        other: Connexion au service
       service_standard_report:
         one: Rapport sur les normes de service
         other: Rapports sur les normes de service
@@ -385,11 +382,6 @@ fr:
     documents:
       one: Document
       other: Documents
-  service_sign_in:
-    continue: Continuer
-    error:
-      option: Veuillez choisir une option
-      title: Vous n'avez choisi aucune option
   shared:
     historically_political: Cela a été publié dans le cadre du %{government}
     webchat:

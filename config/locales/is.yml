@@ -221,9 +221,6 @@ is:
       residential_property_tribunal_decision:
         one: Úrskurður dómstóls íbúðarhúsnæði
         other: Úrskurðir dómstóls íbúðarhúsnæði
-      service_sign_in:
-        one: Þjónustu innskráning
-        other: Þjónustu innskráning
       service_standard_report:
         one: Skýrsla um Þjónustustaðal
         other: Skýrslur um Þjónustustaðal
@@ -385,11 +382,6 @@ is:
     documents:
       one: Skjal
       other: Skjöl
-  service_sign_in:
-    continue: Halda áfram
-    error:
-      option: Vinsamlegast veldu valmöguleika
-      title: Þú hefur ekki valið valmöguleika
   shared:
     historically_political: Þetta var gefið út undir %{government}
     webchat:

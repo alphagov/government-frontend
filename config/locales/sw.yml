@@ -221,9 +221,6 @@ sw:
       residential_property_tribunal_decision:
         one: Uamuzi wa mahakama ya kesi za mali ya makazi
         other: Maamuzi ya mahakama ya kesi za mali ya makazi
-      service_sign_in:
-        one: Kuingia kwenye huduma
-        other: Kuingia kwenye huduma
       service_standard_report:
         one: Ripoti ya Kawaida ya Huduma
         other: Ripoti za Kawaida za Huduma
@@ -385,11 +382,6 @@ sw:
     documents:
       one: Hati
       other: Hati
-  service_sign_in:
-    continue: Endelea
-    error:
-      option: Tafadhali teua chaguo
-      title: Hujateua chaguo lolote
   shared:
     historically_political: Hii ilichapishwa chini ya %{government}
     webchat:

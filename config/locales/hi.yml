@@ -221,9 +221,6 @@ hi:
       residential_property_tribunal_decision:
         one: आवासीय संपत्ति न्यायाधिकरण का फैसला
         other: आवासीय संपत्ति न्यायाधिकरण के फैसले
-      service_sign_in:
-        one: सेवा साइन इन
-        other: सेवा साइन इन
       service_standard_report:
         one: सेवा मानक की रिपोर्ट
         other: सेवा मानक की रिपोर्टें
@@ -385,11 +382,6 @@ hi:
     documents:
       one: दस्तावेज़
       other: दस्तावेज़
-  service_sign_in:
-    continue: जारी रखें
-    error:
-      option: कृपया एक विकल्प चुनें
-      title: आपने कोई विकल्प नहीं चुना है
   shared:
     historically_political: यह %{government} के तहत प्रकाशित किया गया था
     webchat:

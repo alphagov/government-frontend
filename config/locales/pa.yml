@@ -221,9 +221,6 @@ pa:
       residential_property_tribunal_decision:
         one: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦਾ ਫੈਸਲਾ
         other: ਰਿਹਾਇਸ਼ੀ ਸੰਪਤੀ ਟ੍ਰਿਬਿਊਨਲ ਦੇ ਫੈਸਲੇ
-      service_sign_in:
-        one: ਸੇਵਾ ਸਾਈਨ ਇਨ
-        other: ਸੇਵਾ ਸਾਈਨ ਇਨ
       service_standard_report:
         one: ਸੇਵਾ ਮਿਆਰੀ ਰਿਪੋਰਟ
         other: ਸੇਵਾ ਮਿਆਰੀ ਰਿਪੋਰਟਾਂ
@@ -385,11 +382,6 @@ pa:
     documents:
       one: ਦਸਤਾਵੇਜ਼
       other: ਦਸਤਾਵੇਜ਼
-  service_sign_in:
-    continue: ਜਾਰੀ ਰੱਖੋ
-    error:
-      option: ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵਿਕਲਪ ਚੁਣੋ
-      title: ਤੁਸੀਂ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਚੁਣਿਆ
   shared:
     historically_political: ਇਹ %{government} ਦੇ ਅਧੀਨ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤਾ ਗਿਆ ਸੀ
     webchat:

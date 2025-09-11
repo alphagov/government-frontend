@@ -277,10 +277,6 @@ cs:
         few:
         one: Rozhodnutí tribunálu pro obytné nemovitosti
         other: Rozhodnutí tribunálu pro obytné nemovitosti
-      service_sign_in:
-        few:
-        one: Přihlášení do služby
-        other: Přihlášení do služby
       service_standard_report:
         few:
         one: Zpráva o standardu služby
@@ -454,11 +450,6 @@ cs:
       few:
       one: Odkaz na dokument
       other: Dokumenty
-  service_sign_in:
-    continue: Pokračovat
-    error:
-      option: Vyberte prosím jednu z možností
-      title: Nevybrali jste žádnou možnost
   shared:
     historically_political: Tento dokument byl zveřejněn pod hlavičkou %{government}
     webchat:

@@ -221,9 +221,6 @@ bn:
       residential_property_tribunal_decision:
         one: আবাসিক সম্পত্তির ট্রাইব্যুনালের সিদ্ধান্ত
         other: আবাসিক সম্পত্তির ট্রাইব্যুনালের সিদ্ধান্তসমূহ
-      service_sign_in:
-        one: পরিষেবায় সাইন ইন
-        other: পরিষেবায় সাইন ইন
       service_standard_report:
         one: পরিষেবার স্ট্যান্ডার্ডের প্রতিবেদন
         other: পরিষেবার স্ট্যান্ডার্ডের প্রতিবেদনসমূহ
@@ -385,11 +382,6 @@ bn:
     documents:
       one: নথিপত্র
       other: নথিপত্র
-  service_sign_in:
-    continue: চালিয়ে যান
-    error:
-      option: অনুগ্রহ করে একটি বিকল্প নির্বাচন করুন
-      title: আপনি কোনো বিকল্প নির্বাচন করেননি
   shared:
     historically_political: এটি %{government}-এর অধীনে প্রকাশিত হয়েছে
     webchat:

@@ -221,9 +221,6 @@ si:
       residential_property_tribunal_decision:
         one: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණය
         other: නේවාසික දේපළ විනිශ්චය මණ්ඩල තීරණ
-      service_sign_in:
-        one: සේවා පිවිසුම
-        other: සේවා පිවිසුම
       service_standard_report:
         one: සේවා සම්මත වාර්තාව
         other: සේවා සම්මත වාර්තා
@@ -385,11 +382,6 @@ si:
     documents:
       one: ලේඛණය
       other: ලේඛන
-  service_sign_in:
-    continue: ඉදිරියටයන්න
-    error:
-      option: කරුණාකර විකල්පයක් තෝරන්න
-      title: ඔබ විකල්පයක් තෝරාගෙන නැත
   shared:
     historically_political: මෙය %{government} යටතේ ප්‍රකාශණය කරණ ලදී
     webchat:

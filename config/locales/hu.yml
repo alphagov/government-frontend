@@ -221,9 +221,6 @@ hu:
       residential_property_tribunal_decision:
         one: Lakóingatlannal kapcsolatos bírósági döntés
         other: Lakóingatlannal kapcsolatos bírósági döntések
-      service_sign_in:
-        one: Bejelentkezés a szolgálatásba
-        other: Bejelentkezés a szolgálatásba
       service_standard_report:
         one: Szolgálatás Szabványos Jelentése
         other: Szolgálatás Szabványos Jelentései
@@ -385,11 +382,6 @@ hu:
     documents:
       one: Dokumentum
       other: Dokumentumok
-  service_sign_in:
-    continue: Folytatás
-    error:
-      option: Kérjük, válasszon ki egy lehetőséget
-      title: Nem választott ki lehetőséget
   shared:
     historically_political: A jelen kiadvány a(z) %{government} alatt került kiadásra
     webchat:

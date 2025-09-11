@@ -277,10 +277,6 @@ lt:
         few:
         one: Gyvenamosios nuosavybės tribunolo sprendimas
         other: Gyvenamosios nuosavybės tribunolo sprendimai
-      service_sign_in:
-        few:
-        one: Prisijungti prie paslaugos
-        other: Prisijungti prie paslaugos
       service_standard_report:
         few:
         one: Standartinė paslaugos ataskaita
@@ -454,11 +450,6 @@ lt:
       few:
       one: Dokumentas
       other: Dokumentai
-  service_sign_in:
-    continue: Tęsti
-    error:
-      option: Pasirinkite variantą
-      title: Jūs nepasirinkote varianto
   shared:
     historically_political: Tai buvo publikuota pagal %{government}
     webchat:

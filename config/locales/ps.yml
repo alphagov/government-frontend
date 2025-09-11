@@ -221,9 +221,6 @@ ps:
       residential_property_tribunal_decision:
         one: د استوګنې د ملکیت د محکمې پریکړه
         other: د استوګنې د ملکیت د محکمې پریکړې
-      service_sign_in:
-        one: د خدمت ننوتل
-        other: د خدمت ننوتل
       service_standard_report:
         one: د خدمت معیاري راپور
         other: د خدمت معیاري راپورونه
@@ -385,11 +382,6 @@ ps:
     documents:
       one: اسناد
       other: اسناد
-  service_sign_in:
-    continue: ادامه ورکړئ
-    error:
-      option: مهرباني وکړئ یو انتخاب غوره کړئ
-      title: تاسو یو انتخاب ندی ټاکلی
   shared:
     historically_political: دا د%{government} لاندې خپور شوی
     webchat:
