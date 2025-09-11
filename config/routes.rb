@@ -17,12 +17,6 @@ Rails.application.routes.draw do
   get "/government/uploads/*path" => "asset_manager_redirect#redirect_government_uploads_path", format: false
   get "/media/*path" => "asset_manager_redirect#redirect_media_path", format: false
 
-  get "/service-manual/search",
-      to: redirect { |_, request|
-            query = request.query_parameters.merge(filter_manual: "/service-manual").to_query
-            "/search?#{query}"
-          }
-
   get "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", to: "webchat#webchat"
 
   get "*path/:variant" => "content_items#show",

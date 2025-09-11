@@ -93,14 +93,6 @@ class ContentItemPresenter
     phase.in?(%w[alpha beta])
   end
 
-  def service_manual?
-    false
-  end
-
-  def service_manual_homepage?
-    false
-  end
-
   def render_guide_as_single_page?
     # /how-to-vote
     content_id == "9315bc67-33e7-42e9-8dea-e022f56dabfa" && voting_is_open?
