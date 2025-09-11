@@ -195,15 +195,6 @@ class ActionDispatch::IntegrationTest
     end
   end
 
-  def setup_and_visit_notification_exempt_page(name, overrides = {})
-    @content_item = get_content_example(name).tap do |item|
-      item.deep_merge(overrides)
-      item["content_id"] = ContentItem::SinglePageNotificationButton::EXEMPTION_LIST[0]
-      stub_content_store_has_item(item["base_path"], item.to_json)
-      visit_with_cachebust(item["base_path"].to_s)
-    end
-  end
-
   def setup_and_visit_a_page_with_specific_base_path(name, base_path, content_id = nil)
     @content_item = get_content_example(name).tap do |item|
       item["content_id"] = content_id if content_id.present?
