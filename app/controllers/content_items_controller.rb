@@ -31,24 +31,6 @@ class ContentItemsController < ApplicationController
     render_template
   end
 
-  def service_sign_in_options
-    return head :not_found unless is_sign_in_content_item_path?
-
-    if params[:option].blank?
-      show_error_message
-    else
-      load_content_item
-      selected = @content_item.selected_option(params[:option])
-
-      if selected.nil?
-        show_error_message
-        return
-      end
-
-      redirect_to service_url(selected[:url]), allow_other_host: true
-    end
-  end
-
 private
 
   def configure_header_search
@@ -64,10 +46,6 @@ private
   def show_error_message
     @error = true
     show
-  end
-
-  def is_sign_in_content_item_path?
-    content_item_path.include?("sign-in")
   end
 
   # Allow guides to pass access token to each part to allow
@@ -119,11 +97,6 @@ private
       return
     end
 
-    if @content_item.requesting_a_service_sign_in_page? && !@content_item.has_valid_path?
-      redirect_to @content_item.path
-      return
-    end
-
     # use this and `@content_item.base_path` in the template
     @has_govuk_account = account_session_header.present?
 
@@ -151,16 +124,6 @@ private
       document_type: @content_item.document_type,
       schema_name: @content_item.schema_name,
     )
-  end
-
-  def service_url(original_url)
-    ga_param = params[:_ga]
-    return original_url if ga_param.nil?
-
-    url = URI.parse(original_url)
-    new_query_ar = URI.decode_www_form(url.query || "") << ["_ga", ga_param]
-    url.query = URI.encode_www_form(new_query_ar)
-    url.to_s
   end
 
   def with_locale(&block)

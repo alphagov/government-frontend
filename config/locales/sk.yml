@@ -277,10 +277,6 @@ sk:
         few:
         one: Rozhodnutie tribunálu pre obytné nehnuteľnosti
         other: Rozhodnutia tribunálu pre obytné nehnuteľnosti
-      service_sign_in:
-        few:
-        one: Prihlásiť sa do služby
-        other: Prihlásiť sa do služby
       service_standard_report:
         few:
         one: Správa o štandardných službách
@@ -454,11 +450,6 @@ sk:
       few:
       one: Dokument
       other: Dokumenty
-  service_sign_in:
-    continue: Pokračovať
-    error:
-      option: Vyberte možnosť
-      title: Nevybrali ste žiadnu možnosť
   shared:
     historically_political: Táto správa bola uverejnená pod hlavičkou %{government}
     webchat:

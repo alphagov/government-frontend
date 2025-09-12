@@ -10,7 +10,6 @@ class DevelopmentController < ApplicationController
                        html_publication
                        placeholder_corporate_information_page
                        publication
-                       service_sign_in
                        specialist_document
                        statistics_announcement
                        topical_event_about_page

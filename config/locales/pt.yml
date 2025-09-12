@@ -221,9 +221,6 @@ pt:
       residential_property_tribunal_decision:
         one: Decisão do tribunal de propriedade residencial
         other: Decisões do tribunal de propriedade residencial
-      service_sign_in:
-        one: Registo no serviço
-        other: Registo no serviço
       service_standard_report:
         one: Relatório Padrão de Serviço
         other: Relatórios Padrão de Serviço
@@ -385,11 +382,6 @@ pt:
     documents:
       one: Documento
       other: Documentos
-  service_sign_in:
-    continue: Continuar
-    error:
-      option: Por favor, selecione uma opção
-      title: Ainda não selecionou uma opção
   shared:
     historically_political: Isto foi publicado no âmbito do %{government}
     webchat:

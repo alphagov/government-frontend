@@ -221,9 +221,6 @@ so:
       residential_property_tribunal_decision:
         one: Go'aanka maxkamada ee hantida guriga
         other: Go'aamada maxkamada ee hantida guriga
-      service_sign_in:
-        one: Galitaanka adeega
-        other: Galitaanka adeega
       service_standard_report:
         one: Warbixinta Adeega
         other: Warbixinaha Adeega
@@ -385,11 +382,6 @@ so:
     documents:
       one: Dukumenti
       other: Dukumentiyada
-  service_sign_in:
-    continue: Sii wad
-    error:
-      option: Fadlan dooro mid
-      title: Waxba maad dooran
   shared:
     historically_political: Tani waxa la daabacayaa iyadoo kujirta %{government}
     webchat:

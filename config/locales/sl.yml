@@ -333,11 +333,6 @@ sl:
         one: Odločitev sodišča za stanovanjske nepremičnine
         other: Odločitve sodišča za stanovanjske nepremičnine
         two:
-      service_sign_in:
-        few:
-        one: Prijava v storitev
-        other: Prijava v storitev
-        two:
       service_standard_report:
         few:
         one: Standardno poročilo o storitvah
@@ -523,11 +518,6 @@ sl:
       one: Dokument
       other: Dokumenti
       two:
-  service_sign_in:
-    continue: Nadaljuj
-    error:
-      option: Prosimo, izberite možnost
-      title: Niste izbrali možnosti
   shared:
     historically_political: To je bilo objavljeno pod %{government}
     webchat:

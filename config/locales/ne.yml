@@ -221,9 +221,6 @@ ne:
       residential_property_tribunal_decision:
         one: आवासीय सम्पत्ति न्यायाधिकरण निर्णय
         other: आवासीय सम्पत्ति न्यायाधिकरण निर्णयहरू
-      service_sign_in:
-        one: सेवा साइन इन
-        other: सेवा साइन इन
       service_standard_report:
         one: सेवा मानक प्रतिवेदन
         other: सेवा मानक प्रतिवेदनहरू
@@ -385,11 +382,6 @@ ne:
     documents:
       one: कागजात
       other: कागजातहरु
-  service_sign_in:
-    continue: जारी राख्नुहोस्
-    error:
-      option: कृपया एउटा विकल्प छनौट गर्नुहोस्
-      title: तपाईंले एक विकल्प छनौट गर्नुभएको छैन
   shared:
     historically_political: यो %{government} अन्तर्गत प्रकाशित भएको थियो
     webchat:

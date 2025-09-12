@@ -221,9 +221,6 @@ az:
       residential_property_tribunal_decision:
         one: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarı
         other: Yaşayış üçün istifadə edilən mülk üzrə məhkəmə kollegiyası qərarları
-      service_sign_in:
-        one: Xidmət üçün sistemə daxil olma
-        other: Xidmət üçün sistemə daxil olma
       service_standard_report:
         one: Xidmət standartı üzrə hesabat
         other: Xidmət standartı üzrə hesabatlar
@@ -385,11 +382,6 @@ az:
     documents:
       one: Sənəd
       other: Sənədlər
-  service_sign_in:
-    continue: Davam edin
-    error:
-      option: Lütfən variant seçin
-      title: Variant seçməmisiniz
   shared:
     historically_political: Bu %{government} əsasən dərc edilmişdir
     webchat:

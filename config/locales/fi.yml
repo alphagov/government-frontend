@@ -221,9 +221,6 @@ fi:
       residential_property_tribunal_decision:
         one: Asunto -omaisuuden tuomioistuimen päätös
         other: Asunto -omaisuuden tuomioistuimen päätökset
-      service_sign_in:
-        one: Palveluun kirjautuminen
-        other: Palveluun kirjautuminen
       service_standard_report:
         one: Palvelustandardiraportti
         other: Palvelustandardiraportit
@@ -385,11 +382,6 @@ fi:
     documents:
       one: Asiakirja
       other: Asiakirjat
-  service_sign_in:
-    continue: Jatkaa
-    error:
-      option: Ole hyvä ja valitse vaihtoehto
-      title: Et ole valinnut vaihtoehtoa
   shared:
     historically_political: Tämä julkaistiin osoitteessa %{government}
     webchat:

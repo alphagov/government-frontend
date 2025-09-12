@@ -221,9 +221,6 @@ ka:
       residential_property_tribunal_decision:
         one: საცხოვრებელი ქონების ტრიბუნალის გადაწყვეტილება
         other: საცხოვრებელი ქონების ტრიბუნალის გადაწყვეტილებები
-      service_sign_in:
-        one: სერვისში შესვლა
-        other: სერვისში შესვლა
       service_standard_report:
         one: სერვისის სტანდარტული ანგარიში
         other: სერვისის სტანდარტული ანგარიშები
@@ -385,11 +382,6 @@ ka:
     documents:
       one: დოკუმენტი
       other: დოკუმენტები
-  service_sign_in:
-    continue: განაგრძეთ
-    error:
-      option: გთხოვთ აირჩიოთ ვარიანტი
-      title: თქვენ არ გაქვთ არჩეული ვარიანტი
   shared:
     historically_political: ეს გამოქვეყნდა %{government}
     webchat:

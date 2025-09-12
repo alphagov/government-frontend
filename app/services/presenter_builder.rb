@@ -34,7 +34,6 @@ private
   end
 
   def presenter_name
-    return service_sign_in_presenter_name if service_sign_in_format?
     return "ManualUpdatesPresenter" if manual_updates?
     return "HmrcManualUpdatesPresenter" if hmrc_manual_updates?
 
@@ -47,18 +46,6 @@ private
 
   def hmrc_manual_updates?
     view_context.request.path =~ /^\/hmrc-internal-manuals\/.*\/updates$/ && content_item["schema_name"] == "hmrc_manual"
-  end
-
-  def service_sign_in_format?
-    content_item["schema_name"] == "service_sign_in"
-  end
-
-  def service_sign_in_presenter_name
-    if content_path_create_account?
-      "ServiceSignIn::CreateNewAccountPresenter"
-    else
-      "ServiceSignIn::ChooseSignInPresenter"
-    end
   end
 
   def content_path_create_account?

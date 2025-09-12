@@ -221,9 +221,6 @@ it:
       residential_property_tribunal_decision:
         one: Decisione del tribunale sulla proprietà residenziale
         other: Decisioni del tribunale sulla proprietà residenziale
-      service_sign_in:
-        one: Accesso al servizio
-        other: Accesso al servizio
       service_standard_report:
         one: Rapporto standard di servizio
         other: Rapporti standard di servizio
@@ -385,11 +382,6 @@ it:
     documents:
       one: Documento
       other: Documenti
-  service_sign_in:
-    continue: Continua
-    error:
-      option: Seleziona una opzione
-      title: Non hai selezionato una opzione
   shared:
     historically_political: Questo è stato pubblicato sotto %{government}
     webchat:

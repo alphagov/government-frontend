@@ -277,10 +277,6 @@ sr:
         few:
         one: Odluka tribunala o imovini rezidenta
         other: Odluke tribunala o imovini rezidenata
-      service_sign_in:
-        few:
-        one: Prijava u uslugu
-        other: Prijava u uslugu
       service_standard_report:
         few:
         one: Izveštaj o standardu usluge
@@ -454,11 +450,6 @@ sr:
       few:
       one: Dokument
       other: Dokumenti
-  service_sign_in:
-    continue: Nastavi
-    error:
-      option: Izaberite opciju
-      title: Niste izabrali opciju
   shared:
     historically_political: Ovo je objavljeno u okviru %{government}
     webchat:

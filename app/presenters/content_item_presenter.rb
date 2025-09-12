@@ -43,10 +43,6 @@ class ContentItemPresenter
     false
   end
 
-  def requesting_a_service_sign_in_page?
-    false
-  end
-
   def display_single_page_notification_button?
     false
   end

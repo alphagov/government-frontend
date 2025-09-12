@@ -165,8 +165,6 @@ th:
         other: การวิจัยและการวิเคราะห์
       residential_property_tribunal_decision:
         other: คำพิพากษาของศาลเกี่ยวกับที่อยู่อาศัย
-      service_sign_in:
-        other: ลงชื่อเข้าใช้บริการ
       service_standard_report:
         other: รายงานมาตรฐานบริการ
       speaking_notes:
@@ -316,11 +314,6 @@ th:
     details: รายละเอียด
     documents:
       other: เอกสาร
-  service_sign_in:
-    continue: ดำเนินการต่อ
-    error:
-      option: โปรดเลือกตัวเลือก
-      title: คุณยังไม่ได้เลือกตัวเลือกใดๆ
   shared:
     historically_political: เผยแพร่ภายใต้ %{government}
     webchat:

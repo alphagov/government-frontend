@@ -221,9 +221,6 @@ fa:
       residential_property_tribunal_decision:
         one: حکم دادگاه املاک مسکونی
         other: احکام دادگاه املاک مسکونی
-      service_sign_in:
-        one: ورود به سرویس
-        other: ورود به سرویس
       service_standard_report:
         one: گزارش استاندارد خدمات
         other: گزارش‌های استاندارد خدمات
@@ -385,11 +382,6 @@ fa:
     documents:
       one: سند
       other: اسناد
-  service_sign_in:
-    continue: ادامه
-    error:
-      option: لطفاً یک گزینه را انتخاب کنید
-      title: شما یک گزینه را انتخاب نکرده‌اید
   shared:
     historically_political: این مورد تحت %{government} منتشر شده است
     webchat:

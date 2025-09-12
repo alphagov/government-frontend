@@ -221,9 +221,6 @@ es-419:
       residential_property_tribunal_decision:
         one: Decisión del tribunal de bienes residenciales
         other: Decisiones del tribunal de bienes residenciales
-      service_sign_in:
-        one: Registro del servicio
-        other: Registro del servicio
       service_standard_report:
         one: Informe estándar del servicio
         other: Informes estándar del servicio
@@ -385,11 +382,6 @@ es-419:
     documents:
       one: Documento
       other: Documentos
-  service_sign_in:
-    continue: Continúa
-    error:
-      option: Por favor, seleccione una opción
-      title: No ha seleccionado ninguna opción
   shared:
     historically_political: Esto fue publicado bajo el %{government}
     webchat:

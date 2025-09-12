@@ -221,9 +221,6 @@ pa-pk:
       residential_property_tribunal_decision:
         one: رہائشی جائیداد دی عدالت دا فیصلہ
         other: رہائشی جائیداد دی عدالت دے فیصلے
-      service_sign_in:
-        one: سروس سائن اِن
-        other: سروس سائن اِن
       service_standard_report:
         one: سروس سٹینڈرڈ رپورٹ
         other: سروس سٹینڈرڈ رپورٹس
@@ -385,11 +382,6 @@ pa-pk:
     documents:
       one: دستاویز
       other: دستاویزات
-  service_sign_in:
-    continue: جاری رکھو
-    error:
-      option: برائے مہربانی اک نوں چُنو
-      title: تُسی کسے دا چناؤ نئیں کیتا
   shared:
     historically_political: اینوں ایس دے تحت شائع کیتا گیا %{government}
     webchat:
