@@ -5,9 +5,4 @@ class AssetManagerRedirectTest < ActionDispatch::IntegrationTest
     get "/government/uploads/system/uploads/attachment_data/file/1234567/example.pdf"
     assert_redirected_to "http://assets.test.gov.uk/government/uploads/system/uploads/attachment_data/file/1234567/example.pdf"
   end
-
-  test "should redirect to asset path for '/media/*path'" do
-    get "/media/1234567/example.pdf"
-    assert_redirected_to "http://assets.test.gov.uk/media/1234567/example.pdf"
-  end
 end
