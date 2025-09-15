@@ -221,9 +221,6 @@ de:
       residential_property_tribunal_decision:
         one: Gerichtsentscheidung über Wohneigentum
         other: Gerichtsentscheidungen über Wohneigentum
-      service_sign_in:
-        one: Dienstanmeldungen
-        other: Dienstanmeldungen
       service_standard_report:
         one: Dienststandardbericht
         other: Dienststandardberichte
@@ -385,11 +382,6 @@ de:
     documents:
       one: Dokument
       other: Dokumente
-  service_sign_in:
-    continue: Fortfahren
-    error:
-      option: Bitte wählen Sie eine Option
-      title: Sie haben keine Option ausgewählt
   shared:
     historically_political: Veröffentlicht wurde dies unter der %{government}
     webchat:

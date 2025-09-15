@@ -221,9 +221,6 @@ bg:
       residential_property_tribunal_decision:
         one: Съдебно решение за жилищни имоти
         other: Съдебни решения за жилищни имоти
-      service_sign_in:
-        one: Влизане в услугата
-        other: Влизане в услугата
       service_standard_report:
         one: Стандартен доклад за услугите
         other: Стандартни доклади за услугите
@@ -385,11 +382,6 @@ bg:
     documents:
       one: Документ
       other: Документи
-  service_sign_in:
-    continue: Продължи
-    error:
-      option: Моля, изберете опция
-      title: Не сте избрали опция
   shared:
     historically_political: Това е публикувано под %{government}
     webchat:

@@ -221,9 +221,6 @@ tr:
       residential_property_tribunal_decision:
         one: Meskun mahaldeki emlak mahkeme kararı
         other: Meskun mahaldeki emlak mahkeme kararları
-      service_sign_in:
-        one: Hizmet oturum aç
-        other: Hizmet oturum aç
       service_standard_report:
         one: Hizmet Standardı Raporu
         other: Hizmet Standardı Raporları
@@ -385,11 +382,6 @@ tr:
     documents:
       one: Belge
       other: Belgeler
-  service_sign_in:
-    continue: Devam
-    error:
-      option: Lütfen bir seçenek seçin
-      title: Bir seçenek seçmediniz
   shared:
     historically_political: "%{government} kapsamında yayınlandı"
     webchat:

@@ -221,9 +221,6 @@ nl:
       residential_property_tribunal_decision:
         one: Beslissing van de rechtbank voor woningen
         other: Beslissingen van de rechtbank voor woningen
-      service_sign_in:
-        one: Dienst aanmelden
-        other: Dienst aanmelden
       service_standard_report:
         one: Service Standaardrapport
         other: Service Standaardrapporten
@@ -385,11 +382,6 @@ nl:
     documents:
       one: Document
       other: Documenten
-  service_sign_in:
-    continue: Doorgaan
-    error:
-      option: Selecteer een optie
-      title: U heeft geen optie geselecteerd
   shared:
     historically_political: Dit werd gepubliceerd onder de %{government}
     webchat:

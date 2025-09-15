@@ -277,10 +277,6 @@ ro:
         few:
         one: Decizia tribunalului pentru proprietatea rezidențială
         other: Deciziile tribunalului pentru proprietatea rezidențială
-      service_sign_in:
-        few:
-        one: Conectare la serviciu
-        other: Conectare la serviciu
       service_standard_report:
         few:
         one: Raport standard pentru serviciu
@@ -454,11 +450,6 @@ ro:
       few:
       one: Document
       other: Documente
-  service_sign_in:
-    continue: Continuați
-    error:
-      option: Selectați o opțiune
-      title: Nu ați selectat o opțiune
   shared:
     historically_political: Acesta a fost publicat sub %{government}
     webchat:

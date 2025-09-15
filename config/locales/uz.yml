@@ -221,9 +221,6 @@ uz:
       residential_property_tribunal_decision:
         one: Турар-жой объектига нисбатан трибунал қарори
         other: Турар-жой объектига нисбатан трибунал қарорлари
-      service_sign_in:
-        one: Хизматни рўйхатдан ўтказиш
-        other: Хизматни рўйхатдан ўтказиш
       service_standard_report:
         one: Хизмат кўрсатиш стандарти бўйича ҳисобот
         other: Хизмат кўрсатиш стандарти бўйича ҳисоботлар
@@ -385,11 +382,6 @@ uz:
     documents:
       one: Ҳужжат
       other: Ҳужжатлар
-  service_sign_in:
-    continue: Давом эттириш
-    error:
-      option: Опцияни танланг
-      title: Сиз опцияни танламадингиз
   shared:
     historically_political: Бу %{government} номидан бўлган
     webchat:

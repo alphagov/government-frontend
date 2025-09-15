@@ -333,11 +333,6 @@ ru:
         many:
         one: Решение арбитражного суда по жилищной собственности
         other: Решения арбитражного суда по жилищной собственности
-      service_sign_in:
-        few:
-        many:
-        one: Сервис по регистрации
-        other: Сервис по регистрации
       service_standard_report:
         few:
         many:
@@ -523,11 +518,6 @@ ru:
       many:
       one: Документ
       other: Документы
-  service_sign_in:
-    continue: Продолжить
-    error:
-      option: Поджалуйста, выберите вариант
-      title: Вы не выбрали вариант
   shared:
     historically_political: Данный документ был опубликован в соответствии %{government}
     webchat:

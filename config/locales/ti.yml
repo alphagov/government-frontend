@@ -207,9 +207,6 @@ ti:
       residential_property_tribunal_decision:
         one: ውሳነ ቤት ፍርዲ ናይ መንበሪ ገዛ
         other: ውሳነታት ቤት ፍርዲ ናይ መንበሪ ገዛ
-      service_sign_in:
-        one: ናብ ኣገልግሎት ምእታው
-        other: ናብ ኣገልግሎት ምእታው
       service_standard_report:
         one: ጸብጻብ ደረጃ ኣገልግሎት
         other: ጸብጻባት ደረጃ ኣገልግሎት
@@ -371,11 +368,6 @@ ti:
     documents:
       one:
       other:
-  service_sign_in:
-    continue: ቀጽል
-    error:
-      option: በጃኹም ሓደ ኣማራጺ ምረጹ
-      title: ኣማራጺ ኣይመረጽካን
   shared:
     historically_political: እዚ ኣብ ትሕቲ %{government} ዝተሓትመ እዩ።
     webchat:

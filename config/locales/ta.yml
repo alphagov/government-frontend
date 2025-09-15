@@ -221,9 +221,6 @@ ta:
       residential_property_tribunal_decision:
         one: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவு
         other: வசிப்பிடச் சொத்துத் தீர்ப்பாய முடிவுகள்
-      service_sign_in:
-        one: சேவை உள்நுழைவு
-        other: சேவை உள்நுழைவு
       service_standard_report:
         one: சேவைத் தர அறிக்கை
         other: சேவைத் தர அறிக்கைகள்
@@ -385,11 +382,6 @@ ta:
     documents:
       one: ஆவணம்
       other: ஆவணங்கள்
-  service_sign_in:
-    continue: தொடர்க
-    error:
-      option: தயவுசெது ஒரு விருப்பத்தேர்வைத் தேர்ந்தெடுக்கவும்
-      title: ஒரு விருப்பத்தேர்வை நீங்கள் தேர்ந்தெடுக்கவில்லை
   shared:
     historically_political: "%{government}-ன்கீழ் இது வெளியிடப்பட்டது"
     webchat:

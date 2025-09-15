@@ -333,11 +333,6 @@ be:
         many:
         one: Пастанова трыбунала па жылой нерухомасці
         other: Пастановы трыбунала па жылой нерухомасці
-      service_sign_in:
-        few:
-        many:
-        one: Уваход у сістэму абслугоўвання
-        other: Уваход у сістэму абслугоўвання
       service_standard_report:
         few:
         many:
@@ -523,11 +518,6 @@ be:
       many:
       one: Дакумент
       other: Дакументы
-  service_sign_in:
-    continue: Далей
-    error:
-      option: Калі ласка, выберыце варыянт
-      title: Вы не выбралі варыянту
   shared:
     historically_political: Гэта было апублікавана пад%{government}
     webchat:

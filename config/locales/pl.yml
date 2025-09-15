@@ -333,11 +333,6 @@ pl:
         many:
         one: Decyzja trybunału ds. nieruchomości mieszkalnych
         other: Decyzje trybunału ds. nieruchomości mieszkalnych
-      service_sign_in:
-        few:
-        many:
-        one: Logowanie do serwisu
-        other: Logowanie do serwisu
       service_standard_report:
         few:
         many:
@@ -523,11 +518,6 @@ pl:
       many:
       one: Dokument
       other: Dokumenty
-  service_sign_in:
-    continue: Kontynuuj
-    error:
-      option: Proszę wybrać jedną z opcji
-      title: Nie wybrano żadnej opcji
   shared:
     historically_political: Zostało to opublikowane w ramach %{government}
     webchat:

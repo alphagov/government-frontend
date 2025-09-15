@@ -221,9 +221,6 @@ sv:
       residential_property_tribunal_decision:
         one: Beslut av domstol för bostadsfastigheter
         other: Beslut från domstolarna för bostadsfastigheter
-      service_sign_in:
-        one: Logga in på tjänsten
-        other: Anmälan av tjänsten
       service_standard_report:
         one: Standardrapport för tjänsten
         other: Standardrapporter för tjänster
@@ -385,11 +382,6 @@ sv:
     documents:
       one: Dokument
       other: Dokument
-  service_sign_in:
-    continue: Fortsätt
-    error:
-      option: Välj ett alternativ
-      title: Du har inte valt något alternativ
   shared:
     historically_political: Det här publicerades under %{government}
     webchat:
