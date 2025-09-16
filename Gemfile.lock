@@ -132,7 +132,7 @@ GEM
       rest-client (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.32.0)
+    google-protobuf (4.32.1)
       bigdecimal
       rake (>= 13)
     googleapis-common-protos-types (1.21.0)
@@ -163,7 +163,7 @@ GEM
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
       rails (>= 6, < 9)
-    govuk_publishing_components (60.2.1)
+    govuk_publishing_components (61.0.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -261,7 +261,7 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.4)
-    nokogiri (1.18.9)
+    nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     null_logger (0.0.1)
@@ -582,7 +582,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rexml (3.4.3)
+    rexml (3.4.4)
     rinku (2.0.6)
     rouge (4.6.0)
     rss (0.3.1)
