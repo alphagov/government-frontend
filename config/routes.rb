@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   )
 
   get "/government/uploads/*path" => "asset_manager_redirect#redirect_government_uploads_path", format: false
-  get "/media/*path" => "asset_manager_redirect#redirect_media_path", format: false
 
   get "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", to: "webchat#webchat"
 

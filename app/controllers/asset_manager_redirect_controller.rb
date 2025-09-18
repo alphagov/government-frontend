@@ -3,10 +3,6 @@ class AssetManagerRedirectController < ApplicationController
     redirect
   end
 
-  def redirect_media_path
-    redirect
-  end
-
 private
 
   def redirect
