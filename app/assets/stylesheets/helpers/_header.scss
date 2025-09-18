@@ -2,15 +2,7 @@
 
 .translation-nav-header {
   @include govuk-media-query($from: tablet) {
-    display: flex;
-    align-items: end;
     margin-bottom: govuk-spacing(8);
-  }
-}
-
-.direction-rtl {
-  .translation-nav-header {
-    flex-direction: row-reverse;
   }
 }
 
