@@ -7,7 +7,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Schema | Live example |
 |---|---|
 | Case study | [View on GOV.UK](https://www.gov.uk/government/case-studies/2013-elections-in-swaziland) |
-| Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) |
 | Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) |
 | Corporate information page | [View on GOV.UK](https://www.gov.uk/government/organisations/government-digital-service/about) |
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
