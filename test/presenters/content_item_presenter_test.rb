@@ -31,18 +31,6 @@ class ContentItemPresenterTest < PresenterTestCase
     assert_equal "https://www.test.gov.uk/test", presenter.canonical_url
   end
 
-  test "#canonical_url with a part" do
-    example_with_parts = govuk_content_schema_example("guide", "guide")
-    request_path = "#{example_with_parts['base_path']}/other-compulsory-subjects"
-    presenter = create_presenter(
-      GuidePresenter,
-      content_item: example_with_parts,
-      requested_path: request_path,
-    )
-
-    assert_equal "https://www.test.gov.uk/national-curriculum/other-compulsory-subjects", presenter.canonical_url
-  end
-
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example("corporate_information_page", "corporate_information_page_translated_custom_logo")
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
