@@ -27,7 +27,6 @@ class ContentItemsController < ApplicationController
     set_expiry
     set_prometheus_labels
 
-    set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
     render_template
   end
 
@@ -46,12 +45,6 @@ private
   def show_error_message
     @error = true
     show
-  end
-
-  # Allow guides to pass access token to each part to allow
-  # fact checking of all content
-  def set_guide_draft_access_token
-    @content_item.draft_access_token = params[:token]
   end
 
   def load_content_item
