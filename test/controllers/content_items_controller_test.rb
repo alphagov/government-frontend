@@ -27,7 +27,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns HTML when an unspecific accepts header is requested (eg by IE8 and below)" do
     request.headers["Accept"] = "*/*"
-    content_item = content_store_has_schema_example("guide", "guide")
+    content_item = content_store_has_schema_example("working_group", "short")
 
     get :show,
         params: {
