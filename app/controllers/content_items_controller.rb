@@ -91,8 +91,6 @@ private
     # use this and `@content_item.base_path` in the template
     @has_govuk_account = account_session_header.present?
 
-    request.variant = :print if params[:variant] == "print"
-
     respond_to do |format|
       format.html
     end

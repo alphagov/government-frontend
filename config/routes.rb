@@ -18,11 +18,6 @@ Rails.application.routes.draw do
 
   get "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", to: "webchat#webchat"
 
-  get "*path/:variant" => "content_items#show",
-      constraints: {
-        variant: /print/,
-      }
-
   get "*path(.:locale)" => "content_items#show",
       constraints: {
         locale: /\w{2}(-[\d\w]{2,3})?/,
