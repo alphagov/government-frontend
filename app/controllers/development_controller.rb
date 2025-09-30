@@ -6,7 +6,6 @@ class DevelopmentController < ApplicationController
                        consultation
                        contact
                        corporate_information_page
-                       guide
                        html_publication
                        placeholder_corporate_information_page
                        publication
