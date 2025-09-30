@@ -75,7 +75,6 @@ private
   end
 
   def content_item_template
-    return "guide_single" if @content_item.render_guide_as_single_page?
     return "manual_updates" if @content_item.manual_updates?
     return "hmrc_manual_updates" if @content_item.hmrc_manual_updates?
 
@@ -83,11 +82,6 @@ private
   end
 
   def render_template
-    if @content_item.requesting_a_part? && !@content_item.has_valid_part?
-      redirect_to @content_item.base_path
-      return
-    end
-
     # use this and `@content_item.base_path` in the template
     @has_govuk_account = account_session_header.present?
 
