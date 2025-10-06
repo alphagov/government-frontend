@@ -2,8 +2,7 @@ class DevelopmentController < ApplicationController
   layout false
 
   def index
-    @schema_names = %w[case_study
-                       consultation
+    @schema_names = %w[consultation
                        contact
                        corporate_information_page
                        guide
