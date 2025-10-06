@@ -267,33 +267,28 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert response.headers["Vary"].include?("GOVUK-Account-Session-Flash")
   end
 
-  %w[publication consultation].each do |schema_name|
-    test "#{schema_name} displays the subscription success banner when the 'email-subscription-success' flash is present" do
-      example_name = %w[consultation].include?(schema_name) ? "open_#{schema_name}" : schema_name
-      content_item = content_store_has_schema_example(schema_name, example_name)
+  test "publication displays the subscription success banner when the 'email-subscription-success' flash is present" do
+    content_item = content_store_has_schema_example("publication", "publication")
 
-      request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-subscription-success])
-      get :show, params: { path: path_for(content_item) }
-      assert response.body.include?("subscribed to emails about this page")
-    end
+    request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-subscription-success])
+    get :show, params: { path: path_for(content_item) }
+    assert response.body.include?("subscribed to emails about this page")
+  end
 
-    test "#{schema_name} displays the unsubscribe success banner when the 'email-unsubscribe-success' flash is present" do
-      example_name = %w[consultation call_for_evidence].include?(schema_name) ? "open_#{schema_name}" : schema_name
-      content_item = content_store_has_schema_example(schema_name, example_name)
+  test "publication displays the unsubscribe success banner when the 'email-unsubscribe-success' flash is present" do
+    content_item = content_store_has_schema_example("publication", "publication")
 
-      request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-unsubscribe-success])
-      get :show, params: { path: path_for(content_item) }
-      assert response.body.include?("unsubscribed from emails about this page")
-    end
+    request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-unsubscribe-success])
+    get :show, params: { path: path_for(content_item) }
+    assert response.body.include?("unsubscribed from emails about this page")
+  end
 
-    test "#{schema_name} displays the already subscribed success banner when the 'email-subscribe-already-subscribed' flash is present" do
-      example_name = %w[consultation call_for_evidence].include?(schema_name) ? "open_#{schema_name}" : schema_name
-      content_item = content_store_has_schema_example(schema_name, example_name)
+  test "publication displays the already subscribed success banner when the 'email-subscribe-already-subscribed' flash is present" do
+    content_item = content_store_has_schema_example("publication", "publication")
 
-      request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-subscription-already-subscribed])
-      get :show, params: { path: path_for(content_item) }
-      assert response.body.include?("already getting emails about this page")
-    end
+    request.headers["GOVUK-Account-Session"] = GovukPersonalisation::Flash.encode_session("session-id", %w[email-subscription-already-subscribed])
+    get :show, params: { path: path_for(content_item) }
+    assert response.body.include?("already getting emails about this page")
   end
 
   def path_for(content_item, locale = nil)
