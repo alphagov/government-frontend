@@ -43,7 +43,6 @@ module GovukContentSchemaExamples
 
     def supported_schemas
       %w[
-        case_study
         html_publication
         statistics_announcement
         topical_event_about_page
