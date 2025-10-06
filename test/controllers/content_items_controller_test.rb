@@ -81,7 +81,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns a 406 for XMLHttpRequests without an Accept header set to a supported format" do
     request.headers["X-Requested-With"] = "XMLHttpRequest"
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
 
     get :show,
         params: {
@@ -93,7 +93,7 @@ class ContentItemsControllerTest < ActionController::TestCase
 
   test "returns a 406 for unsupported format requests, eg text/javascript" do
     request.headers["Accept"] = "text/javascript"
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
 
     get :show,
         params: {
@@ -104,7 +104,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -112,11 +112,11 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets prometheus labels on the rack env" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
-    assert_equal @request.env["govuk.prometheus_labels"], { document_type: "case_study", schema_name: "case_study" }
+    assert_equal @request.env["govuk.prometheus_labels"], { document_type: "worldwide_organisation", schema_name: "worldwide_organisation" }
   end
 
   test "gets item from content store and keeps existing ordered_related_items when links already exist" do
@@ -141,7 +141,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store and replaces ordered_related_items there are no existing links or overrides" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("guide", "guide-with-facet-groups")
 
     get :show, params: { path: path_for(content_item) }
     assert_response :success
@@ -151,7 +151,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets the expiry as sent by content-store" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
     stub_content_store_has_item(content_item["base_path"], content_item, max_age: 20)
 
     get :show, params: { path: path_for(content_item) }
@@ -160,7 +160,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "honours cache-control private items" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
     stub_content_store_has_item(content_item["base_path"], content_item, private: true)
 
     get :show, params: { path: path_for(content_item) }
@@ -169,14 +169,13 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "renders translated content items in their locale" do
-    content_item = content_store_has_schema_example("case_study", "translated")
+    content_item = content_store_has_schema_example("corporate_information_page", "corporate_information_page_translated_custom_logo")
     locale = content_item["locale"]
-    translated_schema_name = I18n.t("content_item.schema_name.case_study", count: 1, locale:)
 
     get :show, params: { path: path_for(content_item, locale), locale: }
 
     assert_response :success
-    assert_select "title", %r{#{translated_schema_name}}
+    assert_select "title", "Defnydd o gyfryngau cymdeithasol - Land Registry - GOV.UK"
   end
 
   test "renders print variants" do
@@ -189,8 +188,8 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
-    utf8_path    = "government/case-studies/caf\u00e9-culture"
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
+    utf8_path    = "/world/uk-caf\u00e9-in-country"
     content_item["base_path"] = "/#{utf8_path}"
 
     stub_content_store_has_item(content_item["base_path"], content_item)
@@ -261,7 +260,7 @@ class ContentItemsControllerTest < ActionController::TestCase
   end
 
   test "sets GOVUK-Account-Session-Flash in the Vary header" do
-    content_item = content_store_has_schema_example("case_study", "case_study")
+    content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
     get :show, params: { path: path_for(content_item) }
 
     assert response.headers["Vary"].include?("GOVUK-Account-Session-Flash")
