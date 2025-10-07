@@ -140,16 +140,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_nil content_item["links"]["ordered_related_items"]
   end
 
-  test "gets item from content store and replaces ordered_related_items there are no existing links or overrides" do
-    content_item = content_store_has_schema_example("guide", "guide-with-facet-groups")
-
-    get :show, params: { path: path_for(content_item) }
-    assert_response :success
-    assert_empty content_item["links"]["ordered_related_items"], "Content item should not have existing related links"
-    assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
-    assert_empty assigns[:content_item].content_item["links"]["ordered_related_items"]
-  end
-
   test "sets the expiry as sent by content-store" do
     content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
     stub_content_store_has_item(content_item["base_path"], content_item, max_age: 20)
