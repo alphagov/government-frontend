@@ -82,7 +82,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
       rouge (>= 1.0.0)
-    bigdecimal (3.2.3)
+    bigdecimal (3.3.0)
     binding_of_caller (1.0.1)
       debug_inspector (>= 1.2.0)
     bootsnap (1.18.6)
@@ -118,7 +118,7 @@ GEM
     docile (1.4.1)
     domain_name (0.6.20240107)
     drb (2.2.3)
-    erb (5.0.2)
+    erb (5.0.3)
     erubi (1.13.1)
     execjs (2.10.0)
     faker (3.5.2)
@@ -135,7 +135,7 @@ GEM
     google-protobuf (4.32.1)
       bigdecimal
       rake (>= 13)
-    googleapis-common-protos-types (1.21.0)
+    googleapis-common-protos-types (1.22.0)
       google-protobuf (~> 4.26)
     govspeak (10.6.5)
       actionview (>= 6, < 8.0.4)
@@ -180,7 +180,7 @@ GEM
       capybara (>= 3.36)
       puma
       selenium-webdriver (>= 4.0)
-    govuk_web_banners (1.14.0)
+    govuk_web_banners (1.15.0)
       govuk_app_config (>= 9)
       govuk_publishing_components
       rails (>= 7)
@@ -240,7 +240,7 @@ GEM
     mime-types-data (3.2025.0812)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.25.5)
+    minitest (5.26.0)
     minitest-reporters (1.7.1)
       ansi
       builder
@@ -249,7 +249,7 @@ GEM
     mocha (2.7.1)
       ruby2_keywords (>= 0.0.5)
     msgpack (1.8.0)
-    net-imap (0.5.11)
+    net-imap (0.5.12)
       date
       net-protocol
     net-pop (0.1.2)
@@ -570,7 +570,7 @@ GEM
       tsort
     redis (5.4.1)
       redis-client (>= 0.22.0)
-    redis-client (0.25.3)
+    redis-client (0.26.1)
       connection_pool
     regexp_parser (2.11.2)
     reline (0.6.2)
@@ -682,7 +682,7 @@ GEM
     unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
-    uri (1.0.3)
+    uri (1.0.4)
     useragent (0.16.11)
     webmock (3.25.1)
       addressable (>= 2.8.0)
