@@ -22,7 +22,7 @@
 
     <%= yield :header %>
 
-    <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %> <%= 'govuk-main-wrapper' unless @content_item.exclude_main_wrapper_class? %>" lang="<%= I18n.locale %>">
+    <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %> govuk-main-wrapper govuk-main-wrapper--auto-spacing" lang="<%= I18n.locale %>">
       <span id="Top"></span>
       <%= yield :main %>
     </main>
