@@ -48,10 +48,6 @@ class HtmlPublicationPresenter < ContentItemPresenter
     request.base_url + request.path
   end
 
-  def exclude_main_wrapper_class?
-    true
-  end
-
   def hide_from_search_engines?
     PublicationPresenter::MOBILE_PATHS.any? { |path| content_item["base_path"].start_with?(path) }
   end

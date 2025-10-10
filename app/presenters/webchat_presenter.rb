@@ -9,7 +9,6 @@ class WebchatPresenter
 
   def show_phase_banner? = false
   def show_default_breadcrumbs? = true
-  def exclude_main_wrapper_class? = false
 
   def content_item = self
   def page_title = webchat.title

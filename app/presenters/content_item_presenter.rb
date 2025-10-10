@@ -106,10 +106,6 @@ class ContentItemPresenter
     true
   end
 
-  def exclude_main_wrapper_class?
-    false
-  end
-
 private
 
   def voting_is_open?
