@@ -1,8 +1,7 @@
 {
   "srcDir": "public/assets/government-frontend",
   "srcFiles": [
-    "application-*.js",
-    "webchat-*.js"
+    "application-*.js"
   ],
   "cssFiles": [
     "application-*.css"
@@ -13,8 +12,6 @@
   ],
   "helpers": [
     "vendor/jquery-1.12.4.js",
-    "vendor/jasmine-jquery-2.0.5.js",
-    "vendor/jasmine-ajax-3.4.0.js",
     "vendor/lolex.js",
     "helpers/*.js"
   ],
