@@ -46,7 +46,6 @@ pt:
     find_call_charges: Saiba quais são as tarifas para as chamadas
     online: Online
     phone: Telefone
-    webchat: Webchat
   content_item:
     contents: Conteúdos
     metadata:
@@ -381,12 +380,6 @@ pt:
       other: Documentos
   shared:
     historically_political: Isto foi publicado no âmbito do %{government}
-    webchat:
-      available: Os consultores estão disponíveis para conversar.
-      busy: Todos os consultores por webchat estão ocupados neste momento.
-      closed: O webchat está fechado neste momento.
-      speak_to_adviser: Fale com um consultor agora
-      technical_problem: O webchat não está disponível de momento, devido a problemas técnicos.
   specialist_document:
     pdo_alt_text: O logotipo do sistema é um carimbo preto com as palavras "Designated Origin UK Protected" (Origem Designada Reino Unido Protegida)
     pgi_alt_text: O logotipo do sistema é um carimbo preto com as palavras "Geographic Origin UK Protected" (Origem Geográfica Reino Unido Protegida)

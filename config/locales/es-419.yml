@@ -46,7 +46,6 @@ es-419:
     find_call_charges: Conozca las tarifas de las llamadas
     online: En línea
     phone: Teléfono
-    webchat: Chat web
   content_item:
     contents: Contenido
     metadata:
@@ -381,12 +380,6 @@ es-419:
       other: Documentos
   shared:
     historically_political: Esto fue publicado bajo el %{government}
-    webchat:
-      available: Hay asesores disponibles en el chat.
-      busy: Todos los asesores del Chat web están ocupados en este momento.
-      closed: El Chat web está cerrado en este momento.
-      speak_to_adviser: Hable con un asesor ahora
-      technical_problem: El Chat web no está disponible en este momento debido a problemas técnicos.
   specialist_document:
     pdo_alt_text: El logotipo del programa es un sello negro con las palabras "Designated Origin UK Protected"
     pgi_alt_text: El logotipo del programa es un sello negro con las palabras "Geographic Origin UK Protected"

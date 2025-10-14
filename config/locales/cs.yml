@@ -46,7 +46,6 @@ cs:
     find_call_charges: Informace o poplatcích za volání
     online: Online
     phone: Telefon
-    webchat: Webchat
   content_item:
     contents: Obsah
     metadata:
@@ -448,12 +447,6 @@ cs:
       other: Dokumenty
   shared:
     historically_political: Tento dokument byl zveřejněn pod hlavičkou %{government}
-    webchat:
-      available: Poradci jsou vám k dispozici na chatu.
-      busy: Všichni weboví poradci jsou v současné době zaneprázdněni.
-      closed: Webchat je v tuto chvíli uzavřen.
-      speak_to_adviser: Obraťte se na poradce
-      technical_problem: Webchat je v současné době z technických důvodů nedostupný.
   specialist_document:
     pdo_alt_text: Logo programu je černé razítko s nápisem "Designated Origin UK Protected" (Chráněný původ určení UK)
     pgi_alt_text: Logo programu je černé razítko s nápisem Geographic Origin UK Protected (Chráněný zeměpisný původ UK)

@@ -46,7 +46,6 @@ el:
     find_call_charges: Ενημερωθείτε για τις χρεώσεις κλήσεων
     online: Online
     phone: Τηλέφωνο
-    webchat: Διαδικτυακή συνομιλία
   content_item:
     contents: Περιεχόμενα
     metadata:
@@ -381,12 +380,6 @@ el:
       other: Έγγραφα
   shared:
     historically_political: Αυτό δημοσιεύτηκε στο %{government}
-    webchat:
-      available: Οι σύμβουλοι είναι διαθέσιμοι για συνομιλία.
-      busy: Όλοι οι σύμβουλοι διαδικτυακής συνομιλίας είναι απασχολημένοι αυτήν τη στιγμή.
-      closed: Η διαδικτυακή συνομιλία είναι κλειστή αυτήν τη στιγμή.
-      speak_to_adviser: Μιλήστε τώρα με έναν σύμβουλο
-      technical_problem: Η διαδικτυακή συνομιλία δεν είναι διαθέσιμη αυτήν τη στιγμή λόγω τεχνικών προβλημάτων.
   specialist_document:
     pdo_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Designated Origin UK Protected
     pgi_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Geographic Origin UK Protected

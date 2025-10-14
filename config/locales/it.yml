@@ -46,7 +46,6 @@ it:
     find_call_charges: Scopri i costi delle chiamate
     online: Online
     phone: Telefono
-    webchat: Webchat
   content_item:
     contents: Contenuti
     metadata:
@@ -381,12 +380,6 @@ it:
       other: Documenti
   shared:
     historically_political: Questo è stato pubblicato sotto %{government}
-    webchat:
-      available: I consulenti sono disponibili in chat.
-      busy: Tutti i consulenti di webchat sono momentaneamente occupati.
-      closed: La webchat è momentaneamente chiusa.
-      speak_to_adviser: Parla con un consulente adesso
-      technical_problem: La webchat non è al momento disponibile a causa di problemi tecnici.
   specialist_document:
     pdo_alt_text: Il logo dello schema è un timbro nero con le parole Designated Origin UK Protected
     pgi_alt_text: Il logo dello schema è un timbro nero con le parole Geographic Origin UK Protected

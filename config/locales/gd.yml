@@ -46,7 +46,6 @@ gd:
     find_call_charges: Faigh amach faoin méid cumarsáide
     online: I líne
     phone: Teileafón
-    webchat: Comhrá gréasáin
   content_item:
     contents: Clár ábhair
     metadata:
@@ -515,12 +514,6 @@ gd:
       two:
   shared:
     historically_political: Foilsíodh an doiciméad seo go deimhin faoi chuimsiú an %{government}
-    webchat:
-      available: Is féidir teacht ar chomhairleoirí trí chomhrá.
-      busy: Tá na comhairleoirí comhrá gréasáin ar líne gnóthach i láthair na huaire.
-      closed: Tá an gréasán gréasáin dúnta ag an am seo.
-      speak_to_adviser: Labhair le comhairleoir anois
-      technical_problem: Níl comhrá ar líne ag obair ag an am seo mar gheall ar chur isteach teicniúil.
   specialist_document:
     pdo_alt_text: Is é atá i lógó an chláir ná lógó dubh marcáilte Bunús Ainmnithe atá faoi chosaint na RA
     pgi_alt_text: Séala dubh é lógó an chláir ar a bhfuil na focail Geographic Origin UK Protected
