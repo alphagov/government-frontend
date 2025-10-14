@@ -46,7 +46,6 @@ en:
     find_call_charges: Find out about call charges
     online: Online
     phone: Phone
-    webchat: Webchat
   content_item:
     contents: Contents
     metadata:
@@ -381,12 +380,6 @@ en:
       other: Documents
   shared:
     historically_political: This was published under the %{government}
-    webchat:
-      available: Advisers are available to chat.
-      busy: All webchat advisers are busy at the moment.
-      closed: Webchat is closed at the moment.
-      speak_to_adviser: Speak to an adviser now
-      technical_problem: Webchat is unavailable at the moment because of technical problems.
   specialist_document:
     pdo_alt_text: The scheme logo is a black stamp with the words Designated Origin UK Protected
     pgi_alt_text: The scheme logo is a black stamp with the words Geographic Origin UK Protected

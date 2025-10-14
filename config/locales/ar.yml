@@ -46,7 +46,6 @@ ar:
     find_call_charges: تعرف على رسوم المكالمات
     online: عبر الإنترنت
     phone: الهاتف
-    webchat: الدردشة عبر الويب
   content_item:
     contents: المحتويات
     metadata:
@@ -649,12 +648,6 @@ ar:
       zero:
   shared:
     historically_political: تم نشره بموجب %{government}
-    webchat:
-      available: المستشارون ليسوا متاحين للدردشة.
-      busy: جميع مستشاري دردشة الويب مشغولون في الوقت الحالي.
-      closed: دردشة الويب مغلقة في الوقت الحالي.
-      speak_to_adviser: تحدث مع أحد المستشارين الآن
-      technical_problem: دردشة الويب غير متاحة في الوقت الحالي بسبب مشاكل فنية.
   specialist_document:
     pdo_alt_text: شعار المخطط عبارة عن ختم أسود يحمل الكلمات Designated Origin UK Protected
     pgi_alt_text: شعار المخطط عبارة عن ختم أسود يحمل الكلمات Geographic Origin UK Protected

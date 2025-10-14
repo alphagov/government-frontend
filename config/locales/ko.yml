@@ -46,7 +46,6 @@ ko:
     find_call_charges: 통화비에 대해 알아보기
     online: 온라인
     phone: 전화번호
-    webchat: 웹챗
   content_item:
     contents: 콘텐츠
     metadata:
@@ -314,12 +313,6 @@ ko:
       other: 문서
   shared:
     historically_political: 이 문서는 %{government} 산하에 출판되었습니다
-    webchat:
-      available: 자문이 대화를 나눌 수 있습니다.
-      busy: 모든 웹챗 자문이 지금 바쁩니다.
-      closed: 현재 웹챗이 닫혔습니다.
-      speak_to_adviser: 지금 자문에게 말하기
-      technical_problem: 기술 문제로 현재 웹챗을 이용할 수 없습니다.
   specialist_document:
     pdo_alt_text: 정책 로고는 Designated Origin UK Protected라는 글자가 담긴 검정색 도장입니다
     pgi_alt_text: 계획 로고는 Geographic Origin UK Protected라는 글자가 담긴 검정색 도장입니다

@@ -46,7 +46,6 @@ lt:
     find_call_charges: Sužinokite visą informaciją apie skambučiams taikomus mokesčius
     online: Internete
     phone: Telefonas
-    webchat: Internetinis pokalbis
   content_item:
     contents: Turinys
     metadata:
@@ -448,12 +447,6 @@ lt:
       other: Dokumentai
   shared:
     historically_political: Tai buvo publikuota pagal %{government}
-    webchat:
-      available: Konsultantai pasirengę bendrauti.
-      busy: Visis internetinių pokalbių konsultantai šiuo metu užimti.
-      closed: Internetinis pokalbis šiuo metu neprieinamas.
-      speak_to_adviser: Kalbėti su konsultantu dabar
-      technical_problem: Internetinis pokalbis šiuo metu neprieinamas dėl techninių problemų.
   specialist_document:
     pdo_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma kilmės vietos nuoroda“ '
     pgi_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma geografinė kilmės vieta“ '

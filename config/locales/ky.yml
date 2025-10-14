@@ -55,7 +55,6 @@ ky:
     find_call_charges: Чалуу акылары тууралуу табуу
     online: Онлайн
     phone: Телефон
-    webchat: Вебчат
   content_item:
     contents: Мазмуну
     metadata:
@@ -408,12 +407,6 @@ ky:
       other: Документтер
   shared:
     historically_political: Бул %{government} астында жарыяланган
-    webchat:
-      available: Кеңешчилер маектешүүгө жеткиликтүү.
-      busy: Вебчат кеңешчилеринин баары учурда бош эмес.
-      closed: Вебчат учурда жабык.
-      speak_to_adviser: Азыр кеңешчи менен сүйлөшүү
-      technical_problem: Вебчат учурда техникалык көйгөйлөрдөн улам жеткиликсиз.
   specialist_document:
     pdo_alt_text: Схема логотиби деген жазуусу бар кара мөөр болуп саналат
     pgi_alt_text: Схема логотиби Geographic Origin UK Protected деген жазуусу бар кара мөөр болуп саналат

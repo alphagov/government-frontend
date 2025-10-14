@@ -46,7 +46,6 @@ cy:
     find_call_charges: Dysgwch am ffioedd ffonio
     online: Ar-lein
     phone: Ffôn
-    webchat: Gwe-sgwrs
   content_item:
     contents: Cynnwys
     metadata:
@@ -649,12 +648,6 @@ cy:
       zero:
   shared:
     historically_political: Cyhoeddwyd hwn o dan y %{government}
-    webchat:
-      available: Mae cynghorwyr ar gael i sgwrsio.
-      busy: Mae holl gynghorwyr y we-sgwrs yn brysur ar hyn o bryd.
-      closed: Mae'r we-sgwrs ar gau ar hyn o bryd.
-      speak_to_adviser: Siaradwch â chynghorydd nawr
-      technical_problem: Dydy'r we-sgwrs ddim ar gael ar hyn o bryd oherwydd problemau technegol.
   specialist_document:
     pdo_alt_text: Stamp du gyda'r geiriau Designated Origin UK Protected yw logo'r cynllun
     pgi_alt_text: Stamp du gyda'r geiriau Geographic Origin UK Protected yw logo'r cynllun

@@ -46,7 +46,6 @@ sw:
     find_call_charges: Pata maelezo kuhusu gharama za kupiga simu
     online: Mtandaoni
     phone: Simu
-    webchat: Gumzo la mtandaoni
   content_item:
     contents: Maudhui
     metadata:
@@ -381,12 +380,6 @@ sw:
       other: Hati
   shared:
     historically_political: Hii ilichapishwa chini ya %{government}
-    webchat:
-      available: Washauri wanapatikana ili kupiga gumzo nao.
-      busy: Washauri wote wa gumzo la mtandaoni hawapatikani kwa sasa.
-      closed: Huduma ya gumzo la mtandaoni imefungwa kwa sasa.
-      speak_to_adviser: Zungumza na mshauri sasa
-      technical_problem: Huduma ya gumzo la mtandaoni haipatikani kwa sasa kwa sababu ya matatizo ya kiufundi.
   specialist_document:
     pdo_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Designated Origin UK Protected
     pgi_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Geographic Origin UK Protected
