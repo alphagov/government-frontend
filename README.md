@@ -42,10 +42,6 @@ Pages are rendered using components. Components can be specific to government-fr
 
 Components specific to government-frontend are [within the application](https://github.com/alphagov/government-frontend/tree/master/app/views/components) and follow rules set out by the [govuk_publishing_components](https://github.com/alphagov/govuk_publishing_components) gem. They are documented in the [government-frontend component guide](https://government-frontend.herokuapp.com/component-guide).
 
-### Further documentation
-
-- [Webchat](docs/webchat.md)
-
 ## Licence
 
 [MIT License](LICENCE)
