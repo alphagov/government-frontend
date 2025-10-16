@@ -10,7 +10,6 @@ class ContentItemPresenter
               :description,
               :schema_name,
               :locale,
-              :phase,
               :part_slug,
               :document_type,
               :step_by_steps,
@@ -28,7 +27,6 @@ class ContentItemPresenter
     @description = content_item["description"]
     @schema_name = content_item["schema_name"]
     @locale = content_item["locale"] || "en"
-    @phase = content_item["phase"]
     @document_type = content_item["document_type"]
     @taxons = content_item["links"]["taxons"] if content_item["links"]
     @step_by_steps = content_item["links"]["part_of_step_navs"] if content_item["links"]
@@ -83,10 +81,6 @@ class ContentItemPresenter
 
   def cache_control_public?
     !content_item.cache_control.private?
-  end
-
-  def show_phase_banner?
-    phase.in?(%w[alpha beta])
   end
 
   def render_guide_as_single_page?

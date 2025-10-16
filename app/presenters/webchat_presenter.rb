@@ -7,7 +7,6 @@ class WebchatPresenter
     @webchat ||= Webchat.find(@base_path)
   end
 
-  def show_phase_banner? = false
   def show_default_breadcrumbs? = true
 
   def content_item = self
