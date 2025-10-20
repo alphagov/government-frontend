@@ -185,9 +185,9 @@ class WorldwideOrganisationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("worldwide_organisation")
 
     within find(".worldwide-organisation-header__metadata", match: :first) do
-      assert page.has_content? "Location:"
-      assert page.has_link? "India with translation", href: "/world/india/news"
-      assert page.has_link? "Another location with translation", href: "/world/another-location/news"
+      assert page.has_content? "News:"
+      assert page.has_link? "India with translation and the UK", href: "/world/india/news"
+      assert page.has_link? "Another location with translation and the UK", href: "/world/another-location/news"
 
       assert page.has_content? "Part of:"
       assert page.has_link? "Foreign, Commonwealth & Development Office", href: "/government/organisations/foreign-commonwealth-development-office"

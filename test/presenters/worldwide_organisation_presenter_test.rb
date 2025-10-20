@@ -119,8 +119,8 @@ class WorldwideOrganisationPresenterTest < PresenterTestCase
 
   test "#world_location_links returns the world locations as a joined sentence of links" do
     expected_links =
-      "<a class=\"govuk-link\" href=\"/world/india/news\">India with translation</a> and " \
-        "<a class=\"govuk-link\" href=\"/world/another-location/news\">Another location with translation</a>"
+      "<a class=\"govuk-link\" href=\"/world/india/news\">India with translation and the UK</a> and " \
+        "<a class=\"govuk-link\" href=\"/world/another-location/news\">Another location with translation and the UK</a>"
 
     assert_equal expected_links, presented_item.world_location_links
   end
