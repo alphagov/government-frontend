@@ -28,7 +28,7 @@ class WorldwideOrganisationPresenter < ContentItemPresenter
       world_location_translation = world_location_name_translations.find do |translation|
         translation["content_id"] == location["content_id"]
       end
-      link_to(I18n.t("worldwide_organisation.world_location", country: world_location_translation["name"]), WorldLocationBasePath.for(location), class: "govuk-link")
+      link_to(I18n.t("worldwide_organisation.world_news_link", country: world_location_translation["name"]), WorldLocationBasePath.for(location), class: "govuk-link")
     end
 
     links.to_sentence.html_safe
