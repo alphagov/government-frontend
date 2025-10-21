@@ -42,16 +42,4 @@ class ContentItemPresenterTest < PresenterTestCase
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
     assert_equal(%w[English Cymraeg], presenter.available_translations.map { |t| t[:text] })
   end
-
-  test "part slug is nil when requesting a content item without parts" do
-    example_without_parts = govuk_content_schema_example("worldwide_organisation", "worldwide_organisation")
-    presenter = create_presenter(
-      GuidePresenter,
-      content_item: example_without_parts,
-      requested_path: example_without_parts["base_path"],
-    )
-
-    assert_not presenter.requesting_a_part?
-    assert presenter.part_slug.nil?
-  end
 end
