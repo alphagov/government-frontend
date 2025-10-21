@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  unless Rails.env.production?
-    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    get "random/:schema" => "randomly_generated_content_item#show"
-  end
-
   root to: "development#index"
 
   mount GovukPublishingComponents::Engine, at: "/component-guide"
