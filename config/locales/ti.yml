@@ -253,9 +253,6 @@ ti:
     page_title: ድሕሪ ደጊም የለን
     published_in_error: ኣብዚ ገጽ ዘሎ ሓበሬታ ብጌጋ ስለ ዝተሓትመ ተኣልዩ ኣሎ።
     title: እቲ ትደልይዎ ዘለኹም ገጽ ድሕሪ ሕጂ ኣብዚ ኣይርከብን እዩ።
-  guide:
-    pages_in_guide: ገጻት ኣብዚ መምርሒ
-    skip_contents: ትሕዝቶታት ዝለል
   html_publication:
     print_meta_data:
       available_at: እዚ ሕታም እዚ ኣብ %{url} ይርከብ።
@@ -353,11 +350,6 @@ ti:
     updates_description: ዝርዝር ናይ '%{title}' ምዕባለታት።
     updates_page_title: እዋናዊ ሓበሬታ - %{title}
     updates_title: እዋናዊ ሓበሬታ፡ %{title}
-  multi_page:
-    next_page: ዝቅጽል
-    previous_page: ዝሓለፈ
-    print_entire_guide: ናይቲ ምሉእ መምርሒ ክሕተም ዝኽእል ኣማራጺ ርአ
-    printable_version: ክሕተም ዝኽእል ኣማራጺ
   national_statistics:
     logo_alt_text: ተፈላጥነት ዘለዎ ወግዓዊ ስታቲስቲክስ
   publication:

@@ -30,15 +30,10 @@ class ContentItemPresenter
     @document_type = content_item["document_type"]
     @taxons = content_item["links"]["taxons"] if content_item["links"]
     @step_by_steps = content_item["links"]["part_of_step_navs"] if content_item["links"]
-    @part_slug = requesting_a_part? ? requested_path.split("/").last : nil
   end
 
   def parsed_content_item
     content_item.parsed_content
-  end
-
-  def requesting_a_part?
-    false
   end
 
   def display_single_page_notification_button?
@@ -66,11 +61,7 @@ class ContentItemPresenter
   end
 
   def canonical_url
-    if requesting_a_part?
-      "#{web_url}/#{part_slug}"
-    else
-      web_url
-    end
+    web_url
   end
 
   # The default behaviour to is honour the max_age
@@ -81,11 +72,6 @@ class ContentItemPresenter
 
   def cache_control_public?
     !content_item.cache_control.private?
-  end
-
-  def render_guide_as_single_page?
-    # /how-to-vote
-    content_id == "9315bc67-33e7-42e9-8dea-e022f56dabfa" && voting_is_open?
   end
 
   def manual_updates?
@@ -101,11 +87,6 @@ class ContentItemPresenter
   end
 
 private
-
-  def voting_is_open?
-    polls_closing_time = Time.zone.parse("2021-05-06 22:00:00")
-    Time.zone.now < polls_closing_time
-  end
 
   def sorted_locales(translations)
     translations.sort_by { |t| t["locale"] == I18n.default_locale.to_s ? "" : t["locale"] }

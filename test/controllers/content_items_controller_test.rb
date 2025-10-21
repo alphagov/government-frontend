@@ -25,49 +25,9 @@ class ContentItemsControllerTest < ActionController::TestCase
     end
   end
 
-  test "routing handles paths with print variant" do
-    assert_routing(
-      "/government/news/statement-the-status-of-eu-nationals-in-the-uk/print",
-      controller: "content_items",
-      action: "show",
-      path: "government/news/statement-the-status-of-eu-nationals-in-the-uk",
-      variant: "print",
-    )
-  end
-
-  test "redirects route with invalid parts to base path" do
-    content_item = content_store_has_schema_example("guide", "guide")
-    invalid_part_path = "#{path_for(content_item)}/not-a-valid-part"
-
-    # The content store performs a 301 to the base path when requesting a content item
-    # with any part URL. Simulate this by stubbing a request that returns the content
-    # item.
-    stub_request(:get, %r{#{invalid_part_path}})
-      .to_return(status: 200, body: content_item.to_json, headers: {})
-
-    get :show, params: { path: invalid_part_path }
-
-    assert_response :redirect
-    assert_redirected_to content_item["base_path"]
-  end
-
-  test "redirects route for first path to base path" do
-    content_item = content_store_has_schema_example("guide", "guide")
-    invalid_part_path = "#{path_for(content_item)}/#{content_item['details']['parts'].first['slug']}"
-
-    stub_request(:get, %r{#{invalid_part_path}}).to_return(status: 200, body: content_item.to_json, headers: {})
-
-    @controller.stubs(:page_in_scope?).returns(false)
-
-    get :show, params: { path: invalid_part_path }
-
-    assert_response :redirect
-    assert_redirected_to content_item["base_path"]
-  end
-
   test "returns HTML when an unspecific accepts header is requested (eg by IE8 and below)" do
     request.headers["Accept"] = "*/*"
-    content_item = content_store_has_schema_example("guide", "guide")
+    content_item = content_store_has_schema_example("working_group", "short")
 
     get :show,
         params: {
@@ -119,27 +79,6 @@ class ContentItemsControllerTest < ActionController::TestCase
     assert_equal @request.env["govuk.prometheus_labels"], { document_type: "worldwide_organisation", schema_name: "worldwide_organisation" }
   end
 
-  test "gets item from content store and keeps existing ordered_related_items when links already exist" do
-    content_item = content_store_has_schema_example("guide", "guide")
-
-    get :show, params: { path: path_for(content_item) }
-    assert_response :success
-    assert_not_empty content_item["links"]["ordered_related_items"], "Content item should have existing related links"
-    assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
-    assert_equal content_item["links"]["ordered_related_items"], assigns[:content_item].content_item["links"]["ordered_related_items"]
-  end
-
-  test "gets item from content store and does not change ordered_related_items when link overrides exist" do
-    content_item = content_store_has_schema_example("guide", "guide-with-related-link-overrides")
-
-    get :show, params: { path: path_for(content_item) }
-    assert_response :success
-    assert_nil content_item["links"]["ordered_related_items"], "Content item should not have existing related links"
-    assert_not_empty content_item["links"]["ordered_related_items_overrides"], "Content item should have existing related link overrides"
-    assert_not_empty content_item["links"]["suggested_ordered_related_items"], "Content item should have existing suggested related links"
-    assert_nil content_item["links"]["ordered_related_items"]
-  end
-
   test "sets the expiry as sent by content-store" do
     content_item = content_store_has_schema_example("worldwide_organisation", "worldwide_organisation")
     stub_content_store_has_item(content_item["base_path"], content_item, max_age: 20)
@@ -166,15 +105,6 @@ class ContentItemsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_select "title", "Defnydd o gyfryngau cymdeithasol - Land Registry - GOV.UK"
-  end
-
-  test "renders print variants" do
-    content_item = content_store_has_schema_example("guide", "guide")
-    get :show, params: { path: path_for(content_item), variant: "print" }
-
-    assert_response :success
-    assert_equal request.variant, [:print]
-    assert_select "#guide-print"
   end
 
   test "gets item from content store even when url contains multi-byte UTF8 character" do

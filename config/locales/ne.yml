@@ -267,9 +267,6 @@ ne:
     page_title: अब उपलब्ध छैन
     published_in_error: यस पृष्ठमा रहेको जानकारी हटाइएको छ किनभने त्यो त्रुटीपूर्ण तरिकाले प्रकाशित भएको थियो।
     title: तपाईंले खोज्नु भएको पृष्ठ अब उपलब्ध छैन
-  guide:
-    pages_in_guide: यस गाइडका पृष्ठहरू
-    skip_contents:
   html_publication:
     print_meta_data:
       available_at: यो प्रकाशन %{url} मा उपलब्ध छ
@@ -367,11 +364,6 @@ ne:
     updates_description:
     updates_page_title:
     updates_title:
-  multi_page:
-    next_page: अर्को
-    previous_page: अघिल्लो
-    print_entire_guide: सम्पूर्ण गाइड छाप्नुहोस्
-    printable_version:
   national_statistics:
     logo_alt_text:
   publication:

@@ -31,18 +31,6 @@ class ContentItemPresenterTest < PresenterTestCase
     assert_equal "https://www.test.gov.uk/test", presenter.canonical_url
   end
 
-  test "#canonical_url with a part" do
-    example_with_parts = govuk_content_schema_example("guide", "guide")
-    request_path = "#{example_with_parts['base_path']}/other-compulsory-subjects"
-    presenter = create_presenter(
-      GuidePresenter,
-      content_item: example_with_parts,
-      requested_path: request_path,
-    )
-
-    assert_equal "https://www.test.gov.uk/national-curriculum/other-compulsory-subjects", presenter.canonical_url
-  end
-
   test "available_translations sorts languages by locale with English first" do
     translated = govuk_content_schema_example("corporate_information_page", "corporate_information_page_translated_custom_logo")
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
@@ -53,17 +41,5 @@ class ContentItemPresenterTest < PresenterTestCase
     translated = govuk_content_schema_example("corporate_information_page", "corporate_information_page_translated_custom_logo")
     presenter = create_presenter(ContentItemPresenter, content_item: translated)
     assert_equal(%w[English Cymraeg], presenter.available_translations.map { |t| t[:text] })
-  end
-
-  test "part slug is nil when requesting a content item without parts" do
-    example_without_parts = govuk_content_schema_example("worldwide_organisation", "worldwide_organisation")
-    presenter = create_presenter(
-      GuidePresenter,
-      content_item: example_without_parts,
-      requested_path: example_without_parts["base_path"],
-    )
-
-    assert_not presenter.requesting_a_part?
-    assert presenter.part_slug.nil?
   end
 end

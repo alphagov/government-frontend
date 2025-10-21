@@ -267,9 +267,6 @@ en:
     page_title: No longer available
     published_in_error: The information on this page has been removed because it was published in error.
     title: The page you're looking for is no longer available
-  guide:
-    pages_in_guide: Pages in this guide
-    skip_contents: Skip contents
   html_publication:
     print_meta_data:
       available_at: This publication is available at %{url}
@@ -367,11 +364,6 @@ en:
     updates_description: List of updates to '%{title}'.
     updates_page_title: Updates - %{title}
     updates_title: 'Updates: %{title}'
-  multi_page:
-    next_page: Next
-    previous_page: Previous
-    print_entire_guide: View a printable version of the whole guide
-    printable_version: Printable version
   national_statistics:
     logo_alt_text: Accredited official statistics
   publication:

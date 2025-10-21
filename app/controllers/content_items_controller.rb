@@ -27,7 +27,6 @@ class ContentItemsController < ApplicationController
     set_expiry
     set_prometheus_labels
 
-    set_guide_draft_access_token if @content_item.is_a?(GuidePresenter)
     render_template
   end
 
@@ -48,12 +47,6 @@ private
     show
   end
 
-  # Allow guides to pass access token to each part to allow
-  # fact checking of all content
-  def set_guide_draft_access_token
-    @content_item.draft_access_token = params[:token]
-  end
-
   def load_content_item
     content_item = Services.content_store.content_item(content_item_path)
 
@@ -72,17 +65,7 @@ private
     links["ordered_related_items"].presence || []
   end
 
-  def format_banner_links(links)
-    links.each.map do |(title, base_path)|
-      view_context.link_to(
-        title,
-        base_path,
-      )
-    end
-  end
-
   def content_item_template
-    return "guide_single" if @content_item.render_guide_as_single_page?
     return "manual_updates" if @content_item.manual_updates?
     return "hmrc_manual_updates" if @content_item.hmrc_manual_updates?
 
@@ -90,15 +73,8 @@ private
   end
 
   def render_template
-    if @content_item.requesting_a_part? && !@content_item.has_valid_part?
-      redirect_to @content_item.base_path
-      return
-    end
-
     # use this and `@content_item.base_path` in the template
     @has_govuk_account = account_session_header.present?
-
-    request.variant = :print if params[:variant] == "print"
 
     respond_to do |format|
       format.html

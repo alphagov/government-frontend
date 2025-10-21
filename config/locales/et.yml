@@ -267,9 +267,6 @@ et:
     page_title: Ei ole enam saadaval
     published_in_error: Sellel lehel olev teave on eemaldatud, kuna see avaldati ekslikult.
     title: Otsitav leht pole enam saadaval
-  guide:
-    pages_in_guide: Selle juhendi leheküljed
-    skip_contents:
   html_publication:
     print_meta_data:
       available_at: See publikatsioon on saadaval aadressil %{url}
@@ -367,11 +364,6 @@ et:
     updates_description:
     updates_page_title:
     updates_title:
-  multi_page:
-    next_page: Edasi
-    previous_page: Eelmine
-    print_entire_guide: Printige kogu juhend
-    printable_version:
   national_statistics:
     logo_alt_text:
   publication:
