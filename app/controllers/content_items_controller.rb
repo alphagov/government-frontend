@@ -65,15 +65,6 @@ private
     links["ordered_related_items"].presence || []
   end
 
-  def format_banner_links(links)
-    links.each.map do |(title, base_path)|
-      view_context.link_to(
-        title,
-        base_path,
-      )
-    end
-  end
-
   def content_item_template
     return "manual_updates" if @content_item.manual_updates?
     return "hmrc_manual_updates" if @content_item.hmrc_manual_updates?
