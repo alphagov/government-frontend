@@ -49,9 +49,9 @@ class WorldwideCorporateInformationPageTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("worldwide_corporate_information_page")
 
     within find(".worldwide-organisation-header__metadata", match: :first) do
-      assert page.has_content? "Location:"
-      assert page.has_link? "Philippines", href: "/world/philippines/news"
-      assert page.has_link? "Palau", href: "/world/palau/news"
+      assert page.has_content? "News:"
+      assert page.has_link? "Philippines with translation and the UK", href: "/world/philippines/news"
+      assert page.has_link? "Palau with translation and the UK", href: "/world/palau/news"
 
       assert page.has_content? "Part of:"
       assert page.has_link? "Foreign, Commonwealth & Development Office", href: "/government/organisations/foreign-commonwealth-development-office"
