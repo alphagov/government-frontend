@@ -180,7 +180,7 @@ GEM
       capybara (>= 3.36)
       puma
       selenium-webdriver (>= 4.0)
-    govuk_web_banners (1.19.0)
+    govuk_web_banners (1.20.0)
       govuk_app_config (>= 9)
       govuk_publishing_components
       rails (>= 7)
@@ -206,7 +206,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
     io-console (0.8.1)
-    irb (1.15.2)
+    irb (1.15.3)
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
@@ -462,7 +462,7 @@ GEM
     puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.2.3)
+    rack (3.2.4)
     rack-proxy (0.7.7)
       rack
     rack-session (2.1.1)
@@ -518,7 +518,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
-    rdoc (6.15.0)
+    rdoc (6.15.1)
       erb
       psych (>= 4.0.0)
       tsort
