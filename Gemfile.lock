@@ -180,7 +180,7 @@ GEM
       capybara (>= 3.36)
       puma
       selenium-webdriver (>= 4.0)
-    govuk_web_banners (1.21.0)
+    govuk_web_banners (1.21.1)
       govuk_app_config (>= 9)
       govuk_publishing_components
       rails (>= 7)
@@ -447,7 +447,7 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.4.0)
-    prometheus_exporter (2.3.0)
+    prometheus_exporter (2.3.1)
       webrick
     pry (0.15.2)
       coderay (~> 1.1)
@@ -527,7 +527,7 @@ GEM
     redis-client (0.26.1)
       connection_pool
     regexp_parser (2.11.2)
-    reline (0.6.2)
+    reline (0.6.3)
       io-console (~> 0.5)
     request_store (1.7.0)
       rack (>= 1.4)
@@ -622,7 +622,7 @@ GEM
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
     statsd-ruby (1.5.0)
-    stringio (3.1.7)
+    stringio (3.1.8)
     terminal-table (4.0.0)
       unicode-display_width (>= 1.1.1, < 4)
     terser (1.2.6)
