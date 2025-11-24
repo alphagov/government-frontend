@@ -1,6 +1,5 @@
 APP_STYLESHEETS = {
   "application.scss" => "application.css",
-  "views/_html-publication.scss" => "views/_html-publication.css",
   "views/_manual.scss" => "views/_manual.css",
   "views/_published-dates-button-group.scss" => "views/_published-dates-button-group.css",
   "views/_specialist-document.scss" => "views/_specialist-document.css",
