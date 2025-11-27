@@ -1,7 +1,7 @@
 <% show_contents ||= false %>
 
 <% content_for :main do %>
-  <div id="manuals-frontend" class="manuals-frontend-body">
+  <div id="manuals-frontend">
     <% if show_contents %>
       <%= render "govuk_publishing_components/components/contents_list", {
         aria: { label: t("manuals.pages_in_manual_section") }, contents: @content_item.contents, underline_links: true
