@@ -1,44 +1,5 @@
 @import "govuk_publishing_components/individual_component_support";
 
-.manuals-header {
-  background: $govuk-brand-colour;
-  color: govuk-colour("white");
-  margin: 0;
-  padding-bottom: govuk-spacing(6);
-  padding-top: govuk-spacing(6);
-  @include govuk-font(16);
-  @include govuk-clearfix;
-
-  @include govuk-media-query($from: tablet) {
-    padding: govuk-spacing(6) govuk-spacing(3);
-  }
-
-  .manual-type {
-    @include govuk-font(24);
-  }
-
-  h1 {
-    padding: 0 0 govuk-spacing(3);
-    @include govuk-font(36, $weight: bold);
-
-    @include govuk-media-query($from: tablet) {
-      padding: 0 0 govuk-spacing(6);
-    }
-  }
-
-  a {
-    color: govuk-colour("white");
-
-    &:focus {
-      @include govuk-focused-text;
-    }
-  }
-
-  &.hmrc {
-    background: govuk-organisation-colour("hm-revenue-customs");
-  }
-}
-
 .section-list {
   margin-top: govuk-spacing(6);
   padding: 0;
