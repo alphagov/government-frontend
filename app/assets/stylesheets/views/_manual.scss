@@ -55,18 +55,6 @@
   }
 }
 
-.manual-body {
-  @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(4);
-  }
-
-  .section-title {
-    @include govuk-text-colour;
-    @include govuk-font($size: 24, $weight: bold);
-    @include govuk-responsive-margin(4, "bottom");
-  }
-}
-
 .subsection-collection {
   margin-top: govuk-spacing(3);
 

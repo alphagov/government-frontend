@@ -9,29 +9,27 @@
     <% end %>
 
     <div class="govuk-grid-row">
-      <div class="manual-body">
-        <article aria-labelledby="section-title">
-          <div class="govuk-grid-column-full">
-            <%= render "govuk_publishing_components/components/heading", {
-              text: @content_item.document_heading.join(" - "),
-              font_size: "l",
-              id: "section-title",
-              heading_level: 1,
-              margin_bottom: 4,
+      <article aria-labelledby="section-title">
+        <div class="govuk-grid-column-full">
+          <%= render "govuk_publishing_components/components/heading", {
+            text: @content_item.document_heading.join(" - "),
+            font_size: "l",
+            id: "section-title",
+            heading_level: 1,
+            margin_bottom: 4,
+          } %>
+        </div>
+
+        <% if @content_item.description.present? %>
+          <div class="govuk-grid-column-two-thirds">
+            <%= render "govuk_publishing_components/components/lead_paragraph", {
+              text: @content_item.description
             } %>
           </div>
+        <% end %>
 
-          <% if @content_item.description.present? %>
-            <div class="govuk-grid-column-two-thirds">
-              <%= render "govuk_publishing_components/components/lead_paragraph", {
-                text: @content_item.description
-              } %>
-            </div>
-          <% end %>
-
-          <%= yield %>
-        </article>
-      </div>
+        <%= yield %>
+      </article>
     </div>
 
     <%= render 'govuk_publishing_components/components/print_link' %>
