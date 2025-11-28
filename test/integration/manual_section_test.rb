@@ -80,7 +80,7 @@ class ManualSectionTest < ActionDispatch::IntegrationTest
 
     setup_and_visit_manual_section(content_item)
 
-    within ".manual-body" do
+    within "#manuals-frontend" do
       assert_equal 7, page.all("h2").count
       first_section_heading = page.all("h2").first
 

@@ -1,51 +1,53 @@
 <%
   green_background ||= false
   type ||= nil
-
-  classes = %w[govuk-grid-row manuals-header]
-  classes << %w[govuk-!-margin-bottom-4]
-  classes << "hmrc" if green_background
 %>
+<%= render "govuk_publishing_components/components/inverse_header", {
+  html_publication_header: true,
+  hmrc_header: green_background,
+  padding_top: 6,
+  margin_bottom: 4,
+  aria: {
+    labelledby: "manual-title",
+  },
+} do %>
+  <div class="govuk-grid-row">
+    <div class='govuk-grid-column-two-thirds'>
+      <%= render "govuk_publishing_components/components/heading", {
+        text: content_item.title,
+        context: type,
+        font_size: "l",
+        inverse: true,
+        id: "manual-title",
+        heading_level: heading_level,
+        margin_bottom: 8,
+      } %>
 
-<%= content_tag(:header, aria: { "labelledby": "manual-title" }, class: classes) do %>
-  <div class='govuk-grid-column-two-thirds'>
-    <% if type %>
-      <span class="manual-type"><%= type %></span>
-    <% end %>
+      <%= render 'govuk_publishing_components/components/metadata', content_item.manual_metadata %>
 
-    <%= render "govuk_publishing_components/components/heading", {
-      text: content_item.title,
-      font_size: "l",
-      inverse: true,
-      id: "manual-title",
-      heading_level: heading_level,
-      margin_bottom: margin_bottom,
-    } %>
-
-    <%= render 'govuk_publishing_components/components/metadata', content_item.manual_metadata %>
-
-    <div class="in-manual-search">
-      <%
-        form_data = {
-          module: "ga4-form-tracker",
-          ga4_form_no_answer_undefined: "",
-          ga4_form_include_text: "",
-          ga4_form: {
-            event_name: "search",
-            type: "content",
-            section: content_item.title,
-            action: "search",
-            url: "/search/all",
+      <div class="in-manual-search">
+        <%
+          form_data = {
+            module: "ga4-form-tracker",
+            ga4_form_no_answer_undefined: "",
+            ga4_form_include_text: "",
+            ga4_form: {
+              event_name: "search",
+              type: "content",
+              section: content_item.title,
+              action: "search",
+              url: "/search/all",
+            }
           }
-        }
-      %>
-      <%= content_tag('form', action: "/search/all", data: form_data) do %>
-        <input type='hidden' name="manual[]" value="<%= content_item.base_path %>">
-        <%= render "govuk_publishing_components/components/search", {
-          on_govuk_blue: true,
-          label_text: t("manuals.search_this_manual"),
-        } %>
-      <% end %>
+        %>
+        <%= content_tag('form', action: "/search/all", data: form_data) do %>
+          <input type='hidden' name="manual[]" value="<%= content_item.base_path %>">
+          <%= render "govuk_publishing_components/components/search", {
+            on_govuk_blue: true,
+            label_text: t("manuals.search_this_manual"),
+          } %>
+        <% end %>
+      </div>
     </div>
   </div>
 <% end %>

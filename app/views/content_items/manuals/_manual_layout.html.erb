@@ -1,32 +1,30 @@
 <% content_for :main do %>
-  <div id="manuals-frontend" class="manuals-frontend-body">
+  <div id="manuals-frontend">
 
     <%= machine_readable_metadata(schema: :article) %>
 
-    <div class="manual-body">
-      <% if @content_item.description.present? %>
-        <%= render "govuk_publishing_components/components/heading", {
-          text: t("manuals.summary_title"),
-          margin_bottom: 4
-        } %>
-        <%= render "govuk_publishing_components/components/lead_paragraph", {
-          text: @content_item.description
-        } %>
-      <% end %>
-      <% if @content_item.body.present? %>
-        <%= render "govuk_publishing_components/components/govspeak", {} do %>
-          <%= raw(@content_item.body) %>
-        <% end %>
-      <% end %>
-
+    <% if @content_item.description.present? %>
       <%= render "govuk_publishing_components/components/heading", {
-        text: t("manuals.contents_title"),
+        text: t("manuals.summary_title"),
         margin_bottom: 4
       } %>
+      <%= render "govuk_publishing_components/components/lead_paragraph", {
+        text: @content_item.description
+      } %>
+    <% end %>
+    <% if @content_item.body.present? %>
+      <%= render "govuk_publishing_components/components/govspeak", {} do %>
+        <%= raw(@content_item.body) %>
+      <% end %>
+    <% end %>
 
-      <%= yield %>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: t("manuals.contents_title"),
+      margin_bottom: 4
+    } %>
 
-      <%= render 'govuk_publishing_components/components/print_link' %>
-    </div>
+    <%= yield %>
+
+    <%= render 'govuk_publishing_components/components/print_link' %>
   </div>
 <% end %>
