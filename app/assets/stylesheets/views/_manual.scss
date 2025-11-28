@@ -1,17 +1,30 @@
 @import "govuk_publishing_components/individual_component_support";
 
 .section-list {
-  margin-top: govuk-spacing(6);
+  margin: 0;
   padding: 0;
+  margin-top: govuk-spacing(6);
+  padding-bottom: govuk-spacing(6);
 
   @include govuk-media-query($from: tablet) {
-    margin-top: govuk-spacing(9);
+    .title-wrap {
+      display: table-row;
+
+      div {
+        display: table-cell;
+      }
+    }
+  }
+
+  .subsection-id {
+    color: $govuk-secondary-text-colour;
+    min-width: 135px;
+    padding-right: govuk-spacing(3);
   }
 }
 
 .section-list-item {
   border-top: 1px solid $govuk-border-colour;
-  cursor: pointer;
   list-style: none;
   @include govuk-font(19);
 
@@ -26,16 +39,8 @@
 
 .section-link {
   display: block;
-  padding: govuk-spacing(2) govuk-spacing(2) govuk-spacing(2) 0;
+  padding: govuk-spacing(2) 0;
   text-decoration: none;
-
-  @include govuk-media-query($from: tablet) {
-    padding-right: 33.3333%;
-  }
-
-  &:focus {
-    @include govuk-focused-text;
-  }
 
   .subsection-title-text {
     display: block;
@@ -63,27 +68,3 @@
   }
 }
 
-.hmrc.section-list {
-  margin-top: govuk-spacing(6);
-  padding-bottom: govuk-spacing(6);
-
-  @include govuk-media-query($from: tablet) {
-    .title-wrap {
-      display: table-row;
-
-      div {
-        display: table-cell;
-      }
-    }
-  }
-
-  a {
-    padding-right: 0;
-  }
-
-  .subsection-id {
-    color: $govuk-secondary-text-colour;
-    min-width: 135px;
-    padding-right: govuk-spacing(3);
-  }
-}
