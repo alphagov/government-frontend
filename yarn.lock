@@ -63,6 +63,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@csstools/css-syntax-patches-for-csstree@npm:^1.0.19":
+  version: 1.0.19
+  resolution: "@csstools/css-syntax-patches-for-csstree@npm:1.0.19"
+  checksum: 0cd74b9db207cd9f6948ffc63ff90bb828b89abcebabe6b3dcf2911786d0a56176be9f72ac049a01c612028a26df95630376321a652be3d66838a8a3c18f124a
+  languageName: node
+  linkType: hard
+
 "@csstools/css-tokenizer@npm:^3.0.4":
   version: 3.0.4
   resolution: "@csstools/css-tokenizer@npm:3.0.4"
@@ -1382,7 +1389,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-entry-cache@npm:^11.1.0":
+"file-entry-cache@npm:^11.1.1":
   version: 11.1.1
   resolution: "file-entry-cache@npm:11.1.1"
   dependencies:
@@ -1716,7 +1723,7 @@ __metadata:
     jasmine-browser-runner: ^3.0.0
     jasmine-core: ^5.12.1
     standardx: ^7.0.0
-    stylelint: ^16.26.0
+    stylelint: ^16.26.1
     stylelint-config-gds: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -3757,11 +3764,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.26.0":
-  version: 16.26.0
-  resolution: "stylelint@npm:16.26.0"
+"stylelint@npm:^16.26.1":
+  version: 16.26.1
+  resolution: "stylelint@npm:16.26.1"
   dependencies:
     "@csstools/css-parser-algorithms": ^3.0.5
+    "@csstools/css-syntax-patches-for-csstree": ^1.0.19
     "@csstools/css-tokenizer": ^3.0.4
     "@csstools/media-query-list-parser": ^4.0.3
     "@csstools/selector-specificity": ^5.0.0
@@ -3774,7 +3782,7 @@ __metadata:
     debug: ^4.4.3
     fast-glob: ^3.3.3
     fastest-levenshtein: ^1.0.16
-    file-entry-cache: ^11.1.0
+    file-entry-cache: ^11.1.1
     global-modules: ^2.0.0
     globby: ^11.1.0
     globjoin: ^0.1.4
@@ -3801,7 +3809,7 @@ __metadata:
     write-file-atomic: ^5.0.1
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: bb67861306049fa7c4e68255d500fe2c2e4017b3a4b4f9f561e156ef225303f2471211ccc2ecd214dda57f4440b1a4df33b6959562e44ba482b90580a06853fa
+  checksum: 932b8587bfd86ec95d897a61d07d75fcdc9d6d14446faa8afc40119c9cf24ff7dbcde49eab96cdbd305536c349264a46e04e23db87a675af156ae66f4baae1f9
   languageName: node
   linkType: hard
 
