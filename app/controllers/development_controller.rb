@@ -5,7 +5,6 @@ class DevelopmentController < ApplicationController
     @schema_names = %w[consultation
                        contact
                        corporate_information_page
-                       html_publication
                        placeholder_corporate_information_page
                        publication
                        specialist_document

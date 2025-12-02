@@ -9,7 +9,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | Consultation | [View on GOV.UK](https://www.gov.uk/government/consultations/soft-drinks-industry-levy) |
 | Contacts | [View on GOV.UK](https://www.gov.uk/government/organisations/hm-revenue-customs/contact/alcohol-duties-national-registration-unit) |
 | Corporate information page | [View on GOV.UK](https://www.gov.uk/government/organisations/government-digital-service/about) |
-| HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) |
 | Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/access-to-finance-advice-north-west-england) |
 | Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) |
