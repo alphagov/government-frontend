@@ -6,7 +6,7 @@ class HmrcManualUpdatesTest < ActionDispatch::IntegrationTest
 
     assert_has_component_title(I18n.t("manuals.updates_title", title: @content_item["title"]))
 
-    within ".manual-type" do
+    within "#manual-title" do
       assert page.has_text?(I18n.t("manuals.hmrc_manual_type"))
     end
   end

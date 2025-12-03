@@ -1,66 +1,64 @@
 <div class="govuk-grid-row">
-  <div class="manual-body">
-    <article aria-labelledby="section-title">
-      <div class="govuk-grid-column-full">
+  <article aria-labelledby="section-title">
+    <div class="govuk-grid-column-full">
+      <%= render "govuk_publishing_components/components/heading", {
+        font_size: "l",
+        heading_level: 1,
+        id: "section-title",
+        margin_bottom: 4,
+        text: t("manuals.updates_title", title: content_item.title),
+      } %>
+    </div>
+
+    <% content_item.presented_change_notes.each do |year, updates_by_year| %>
+      <div class="govuk-grid-column-two-thirds">
         <%= render "govuk_publishing_components/components/heading", {
-          font_size: "l",
-          heading_level: 1,
-          id: "section-title",
-          margin_bottom: 4,
-          text: t("manuals.updates_title", title: content_item.title),
+          text: year,
+          font_size: "l"
+        } %>
+
+        <%= render "govuk_publishing_components/components/accordion", {
+          heading_level: 3,
+          items: updates_by_year.each.with_index(1).map do |updated_documents, index|
+            accordion_content = capture do %>
+              <% change_notes = updated_documents.last %>
+              <div class="govuk-!-margin-top-3">
+                <% change_notes.each do |change_note_entry| %>
+                  <% change_note_items = change_note_entry.last.collect { |i| i["change_note"] } %>
+                  <% change_note = change_note_entry.flatten.last %>
+                  <% if change_note["title"].present? %>
+                    <p class="govuk-body">
+                      <%= link_to change_note["title"], change_note["base_path"], class: "govuk-link" %>
+                    </p>
+                  <% end %>
+                  <% change_note_items.each do |change_note_item| %>
+                    <%= simple_format(change_note_item, class: "govuk-body") %>
+                  <% end %>
+                <% end %>
+              </div>
+            <% end
+            {
+              data_attributes: {
+                ga4_event: {
+                  event_name: 'select_content',
+                  type: 'accordion',
+                  text: sanitize_manual_update_title(updated_documents.first),
+                  index: index,
+                  index_total: updates_by_year.length,
+                }
+              },
+              heading: {
+                text: updated_documents.first,
+              },
+              content: {
+                html: accordion_content
+              }
+            }
+          end
         } %>
       </div>
-
-      <% content_item.presented_change_notes.each do |year, updates_by_year| %>
-        <div class="govuk-grid-column-two-thirds">
-          <%= render "govuk_publishing_components/components/heading", {
-            text: year,
-            font_size: "l"
-          } %>
-
-          <%= render "govuk_publishing_components/components/accordion", {
-            heading_level: 3,
-            items: updates_by_year.each.with_index(1).map do |updated_documents, index|
-              accordion_content = capture do %>
-                <% change_notes = updated_documents.last %>
-                <div class="govuk-!-margin-top-3">
-                  <% change_notes.each do |change_note_entry| %>
-                    <% change_note_items = change_note_entry.last.collect { |i| i["change_note"] } %>
-                    <% change_note = change_note_entry.flatten.last %>
-                    <% if change_note["title"].present? %>
-                      <p class="govuk-body">
-                        <%= link_to change_note["title"], change_note["base_path"], class: "govuk-link" %>
-                      </p>
-                    <% end %>
-                    <% change_note_items.each do |change_note_item| %>
-                      <%= simple_format(change_note_item, class: "govuk-body") %>
-                    <% end %>
-                  <% end %>
-                </div>
-              <% end
-              {
-                data_attributes: {
-                  ga4_event: {
-                    event_name: 'select_content',
-                    type: 'accordion',
-                    text: sanitize_manual_update_title(updated_documents.first),
-                    index: index,
-                    index_total: updates_by_year.length,
-                  }
-                },
-                heading: {
-                  text: updated_documents.first,
-                },
-                content: {
-                  html: accordion_content
-                }
-              }
-            end
-          } %>
-        </div>
-      <% end %>
-    </article>
-  </div>
+    <% end %>
+  </article>
 </div>
 
 <%= render 'govuk_publishing_components/components/print_link' %>
