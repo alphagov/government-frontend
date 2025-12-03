@@ -1635,7 +1635,7 @@ __metadata:
   resolution: "government-frontend@workspace:."
   dependencies:
     jasmine-browser-runner: ^3.0.0
-    jasmine-core: ^5.12.1
+    jasmine-core: ^5.13.0
     standardx: ^7.0.0
     stylelint: ^16.26.1
     stylelint-config-gds: ^2.0.0
@@ -2017,10 +2017,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-core@npm:^5.12.1":
-  version: 5.12.1
-  resolution: "jasmine-core@npm:5.12.1"
-  checksum: 2dad326679e1ae7598c4500eb643421b447cb98cdd65d4df292530caf7ab5e5b32deb8fcad2dd6d6be0990044a1343aa8844f78f5c15ab18ed25c80b7c197d43
+"jasmine-core@npm:^5.13.0":
+  version: 5.13.0
+  resolution: "jasmine-core@npm:5.13.0"
+  checksum: ab0114a31b3b447390ef02698c53d56d9cdd277c25ec9e3e1b396d776b25901102a356a3cf1fd18d177b80fb1bb03289d2b836d30f8c1a0b892ff40d6fd71505
   languageName: node
   linkType: hard
 
