@@ -1,4 +1,6 @@
-<% add_view_stylesheet("published-dates-button-group") %>
+<% content_for :extra_head_content do %>
+  <%= stylesheet_link_tag "views/_published-dates-button-group", media: "all" %>
+<% end %>
 <% skip_account = skip_account || false %>
 
 <%= render 'govuk_publishing_components/components/published_dates', {

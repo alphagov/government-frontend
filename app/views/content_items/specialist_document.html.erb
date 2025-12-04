@@ -1,4 +1,6 @@
-<% add_view_stylesheet("specialist-document") %>
+<% content_for :extra_head_content do %>
+  <%= stylesheet_link_tag "views/_specialist-document", media: "all" %>
+<% end %>
 <% content_for :extra_head_content do %>
   <%= machine_readable_metadata(
     schema: :article
@@ -24,7 +26,7 @@
     <% if @content_item.important_metadata.any? && @content_item.show_metadata_block? %>
       <%= content_tag :div, class: "important-metadata inverse-background responsive-bottom-margin" do %>
         <%= render "govuk_publishing_components/components/metadata", {
-          inverse: true, 
+          inverse: true,
           other: @content_item.important_metadata,
           margin_bottom: 0,
         } %>
