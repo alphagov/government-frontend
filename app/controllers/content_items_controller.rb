@@ -1,9 +1,5 @@
-require "slimmer/headers"
-
 class ContentItemsController < ApplicationController
   include GovukPersonalisation::ControllerConcern
-  include Slimmer::Headers
-  include Slimmer::Template
 
   rescue_from GdsApi::HTTPForbidden, with: :error_403
   rescue_from GdsApi::HTTPNotFound, with: :error_notfound
@@ -31,16 +27,6 @@ class ContentItemsController < ApplicationController
   end
 
 private
-
-  def configure_header_search
-    if @content_item.present? && !@content_item.include_search_in_header?
-      remove_header_search
-    end
-  end
-
-  def remove_header_search
-    set_slimmer_headers(remove_search: true)
-  end
 
   def show_error_message
     @error = true
