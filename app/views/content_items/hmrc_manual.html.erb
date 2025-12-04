@@ -1,4 +1,6 @@
-<% add_view_stylesheet("manual") %>
+<% content_for :extra_head_content do %>
+  <%= stylesheet_link_tag "views/_manual", media: "all" %>
+<% end %>
 <% content_for :header do %>
   <%= render "content_items/manuals/header", {
     content_item: @content_item,
