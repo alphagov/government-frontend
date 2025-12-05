@@ -376,7 +376,7 @@ class ConsultationTest < ActionDispatch::IntegrationTest
     setup_and_visit_content_item("open_consultation")
     assert page.has_css?(".gem-c-single-page-notification-button")
 
-    buttons = page.find_all(:button)
+    buttons = page.find_all("button[data-ga4-link]")
 
     expected_tracking_top = single_page_notification_button_ga4_tracking(1, "Top")
     actual_tracking_top = JSON.parse(buttons.first["data-ga4-link"])
