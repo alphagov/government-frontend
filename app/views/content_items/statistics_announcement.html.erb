@@ -1,4 +1,4 @@
-<% content_for :extra_head_content do %>
+<% content_for :head do %>
   <%= machine_readable_metadata(
     schema: :article
   ) %>
@@ -18,7 +18,7 @@
     <% if @content_item.important_metadata.any? %>
       <%= content_tag :div, class: "important-metadata inverse-background" do %>
         <%= render "govuk_publishing_components/components/metadata", {
-          inverse: true, 
+          inverse: true,
           other: @content_item.important_metadata,
           margin_bottom: 0,
         } %>
@@ -29,7 +29,7 @@
       <div class="release-date-changed">
         <%= content_tag :div, class: "inverse-background" do %>
           <%= render "govuk_publishing_components/components/metadata", {
-            inverse: true, 
+            inverse: true,
             other: {
               t("statistics_announcement.previous_date") => @content_item.previous_release_date,
               t("statistics_announcement.reason_for_change") => @content_item.release_date_change_reason,

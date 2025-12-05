@@ -22,7 +22,6 @@ gem "rails-i18n"
 gem "rails_translation_manager"
 gem "rinku", require: "rails_rinku"
 gem "rss"
-gem "slimmer"
 gem "sprockets-rails"
 gem "terser"
 
