@@ -1,7 +1,5 @@
-<% content_for :extra_head_content do %>
+<% content_for :head do %>
   <%= stylesheet_link_tag "views/_html-publication", media: "all" %>
-<% end %>
-<% content_for :extra_head_content do %>
   <%= machine_readable_metadata(
     schema: :html_publication
   ) %>
