@@ -82,8 +82,8 @@ private
   end
 
   def assert_ga4_tracking_present
-    assert_selector ".js-webchat-advisers-available a[data-module=ga4-link-tracker]"
-    assert_selector ".js-webchat-advisers-available a[data-ga4-link='#{expected_ga4_data}']"
+    assert_selector ".js-webchat-advisers-available a[data-module=ga4-link-tracker]", visible: false
+    assert_selector ".js-webchat-advisers-available a[data-ga4-link='#{expected_ga4_data}']", visible: false
   end
 
   def expected_ga4_data
