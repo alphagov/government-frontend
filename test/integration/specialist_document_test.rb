@@ -39,14 +39,14 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
   test "renders change history in reverse chronological order" do
     setup_and_visit_content_item("countryside-stewardship-grants")
 
-    within(".gem-c-published-dates__change-history") do
+    within(".gem-c-published-dates") do
       assert_match @content_item["details"]["change_history"].last["note"],
-                   page.find(".gem-c-published-dates__change-item:first-child").text
+                   page.find(".gem-c-published-dates__change-item:first-child", visible: false).text(:all)
 
       assert_match @content_item["details"]["change_history"].first["note"],
-                   page.find(".gem-c-published-dates__change-item:last-child").text
+                   page.find(".gem-c-published-dates__change-item:last-child", visible: false).text(:all)
 
-      assert_equal all(".gem-c-published-dates__change-item").size,
+      assert_equal all(".gem-c-published-dates__change-item", visible: false).size,
                    @content_item["details"]["change_history"].size
     end
   end
@@ -82,7 +82,7 @@ class SpecialistDocumentTest < ActionDispatch::IntegrationTest
 
     assert page.has_css?("#contents .gem-c-contents-list")
     assert page.has_css?(%(#contents .gem-c-contents-list-with-body__link-wrapper
-                          .gem-c-contents-list-with-body__link-container a.gem-c-back-to-top-link))
+                          .gem-c-contents-list-with-body__link-container a.gem-c-back-to-top-link), visible: false)
 
     within ".gem-c-contents-list" do
       @content_item["details"]["headers"].each do |heading|
