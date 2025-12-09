@@ -1,9 +1,3 @@
-<% unless content_for?(:main) %>
-  <% content_for :main do %>
-    <%= yield %>
-  <% end %>
-<% end %>
-
 <% content_for :body do %>
   <div id="wrapper" class="<%= wrapper_class %>">
     <% if @content_item.show_default_breadcrumbs? %>
@@ -20,7 +14,7 @@
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %> govuk-main-wrapper govuk-main-wrapper--auto-spacing" lang="<%= I18n.locale %>">
       <span id="Top"></span>
-      <%= yield :main %>
+      <%= yield %>
     </main>
   </div>
 <% end %>
