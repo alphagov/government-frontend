@@ -35,6 +35,14 @@ GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
 end
 
+class RedisDouble
+  def hgetall
+    {}
+  end
+end
+
+Rails.application.config.emergency_banner_redis_client = RedisDouble.new
+
 WebMock.disable_net_connect!(allow_localhost: true)
 
 class ActiveSupport::TestCase
