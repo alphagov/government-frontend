@@ -16,6 +16,8 @@
 
 <%= render "govuk_publishing_components/components/layout_for_public", {
     title: title,
+    emergency_banner: render("govuk_web_banners/emergency_banner"),
+    global_banner: render("govuk_web_banners/global_banner"),
   } do %>
   <div id="wrapper" class="govuk-width-container <%= wrapper_class %>">
     <% if @content_item.show_default_breadcrumbs? %>
