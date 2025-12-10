@@ -16,6 +16,7 @@
 
 <%= render "govuk_publishing_components/components/layout_for_public", {
     title: title,
+    title_lang: I18n.locale,
     emergency_banner: render("govuk_web_banners/emergency_banner"),
     global_banner: render("govuk_web_banners/global_banner"),
   } do %>
