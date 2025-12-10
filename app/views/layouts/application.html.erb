@@ -1,11 +1,26 @@
-<% unless content_for?(:main) %>
-  <% content_for :main do %>
-    <%= yield %>
+<% content_for :head do %>
+  <% if @content_item.description.present? %>
+    <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
+  <% end %>
+  <%= csrf_meta_tags %>
+  <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
+<% end %>
+
+<% title = capture do %>
+  <% if content_for?(:title) %>
+    <%= yield :title %> - GOV.UK
+  <% else %>
+    <%= @content_item.page_title %> - GOV.UK
   <% end %>
 <% end %>
 
-<% content_for :body do %>
-  <div id="wrapper" class="<%= wrapper_class %>">
+<%= render "govuk_publishing_components/components/layout_for_public", {
+    title: title,
+    title_lang: I18n.locale,
+    emergency_banner: render("govuk_web_banners/emergency_banner"),
+    global_banner: render("govuk_web_banners/global_banner"),
+  } do %>
+  <div id="wrapper" class="govuk-width-container <%= wrapper_class %>">
     <% if @content_item.show_default_breadcrumbs? %>
       <% if @content_item.try(:back_link) %>
         <%= render 'govuk_publishing_components/components/back_link', href: @content_item.back_link %>
@@ -15,46 +30,11 @@
     <% end %>
 
     <%= render "govuk_web_banners/recruitment_banner" %>
-
     <%= yield :header %>
 
     <main role="main" id="content" class="<%= @content_item.schema_name.dasherize %> govuk-main-wrapper govuk-main-wrapper--auto-spacing" lang="<%= I18n.locale %>">
       <span id="Top"></span>
-      <%= yield :main %>
+      <%= yield %>
     </main>
   </div>
 <% end %>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title lang="<%= I18n.locale %>">
-    <% if content_for?(:title) %>
-      <%= yield :title %> - GOV.UK
-    <% else %>
-      <%= @content_item.page_title %> - GOV.UK
-    <% end %>
-  </title>
-
-  <% if ENV['HEROKU_APP_NAME'].present? %>
-    <meta name="robots" content="noindex, nofollow">
-  <% end %>
-
-  <%= stylesheet_link_tag "application", :media => "all", integrity: false %>
-  <%= javascript_include_tag "application", integrity: false, type: "module" %>
-  <%= csrf_meta_tags %>
-  <%= render 'govuk_publishing_components/components/meta_tags', content_item: @content_item.content_item %>
-
-  <% if @content_item.description.present? %>
-    <meta name="description" content="<%= strip_tags(@content_item.description) %>" />
-  <% end %>
-
-  <%= yield :extra_head_content %>
-  <%=
-    render_component_stylesheets
-  %>
-</head>
-<body>
-  <%= yield :body %>
-</body>
-</html>

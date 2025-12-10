@@ -35,20 +35,21 @@ GovukAbTesting.configure do |config|
   config.acceptance_test_framework = :active_support
 end
 
+class RedisDouble
+  def hgetall
+    {}
+  end
+end
+
+Rails.application.config.emergency_banner_redis_client = RedisDouble.new
+
 WebMock.disable_net_connect!(allow_localhost: true)
 
 class ActiveSupport::TestCase
   include GovukContentSchemaExamples
 end
 
-# NOTE: This is so that slimmer is skipped, preventing network requests for
-# content from static (i.e. core_layout.html.erb).
 class ActionController::Base
-  before_action :set_skip_slimmer_header
-
-  def set_skip_slimmer_header
-    response.headers[Slimmer::Headers::SKIP_HEADER] = "true" unless ENV["USE_SLIMMER"]
-  end
 end
 
 class ActionDispatch::IntegrationTest

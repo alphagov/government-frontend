@@ -1,12 +1,54 @@
-// The main application stylesheet
-
-// This flag stops the font from being included in this application's
-// stylesheet - the font is being served by Static across all of GOV.UK, so is
-// not needed here.
-$govuk-include-default-font-face: false;
-
-// Components from govuk_publishing_components gem
 @import "govuk_publishing_components/govuk_frontend_support";
+@import "govuk_publishing_components/component_support";
+
+@import "govuk_publishing_components/components/accordion";
+@import "govuk_publishing_components/components/attachment";
+@import "govuk_publishing_components/components/back-link";
+@import "govuk_publishing_components/components/back-to-top-link";
+@import "govuk_publishing_components/components/big-number";
+@import "govuk_publishing_components/components/breadcrumbs";
+@import "govuk_publishing_components/components/button";
+@import 'govuk_publishing_components/components/cookie-banner';
+@import "govuk_publishing_components/components/contents-list";
+@import "govuk_publishing_components/components/contents-list-with-body";
+@import "govuk_publishing_components/components/contextual-sidebar";
+@import 'govuk_publishing_components/components/cross-service-header';
+@import "govuk_publishing_components/components/details";
+@import "govuk_publishing_components/components/devolved-nations";
+@import "govuk_publishing_components/components/document-list";
+@import 'govuk_publishing_components/components/feedback';
+@import "govuk_publishing_components/components/govspeak";
+@import "govuk_publishing_components/components/govspeak-html-publication";
+@import "govuk_publishing_components/components/heading";
+@import "govuk_publishing_components/components/image-card";
+@import "govuk_publishing_components/components/inverse-header";
+@import 'govuk_publishing_components/components/label';
+@import 'govuk_publishing_components/components/layout-footer';
+@import 'govuk_publishing_components/components/layout-for-public';
+@import 'govuk_publishing_components/components/layout-super-navigation-header';
+@import "govuk_publishing_components/components/lead-paragraph";
+@import "govuk_publishing_components/components/metadata";
+@import "govuk_publishing_components/components/notice";
+@import "govuk_publishing_components/components/organisation-logo";
+@import "govuk_publishing_components/components/previous-and-next-navigation";
+@import "govuk_publishing_components/components/print-link";
+@import "govuk_publishing_components/components/published-dates";
+@import "govuk_publishing_components/components/related-navigation";
+@import "govuk_publishing_components/components/search";
+@import 'govuk_publishing_components/components/search-with-autocomplete';
+@import 'govuk_publishing_components/components/service-navigation';
+@import "govuk_publishing_components/components/share-links";
+@import "govuk_publishing_components/components/single-page-notification-button";
+@import 'govuk_publishing_components/components/skip-link';
+@import "govuk_publishing_components/components/step-by-step-nav";
+@import "govuk_publishing_components/components/step-by-step-nav-header";
+@import "govuk_publishing_components/components/step-by-step-nav-related";
+@import "govuk_publishing_components/components/success-alert";
+@import "govuk_publishing_components/components/summary-banner";
+@import "govuk_publishing_components/components/textarea";
+@import "govuk_publishing_components/components/translation-nav";
+
+@import "govuk_web_banners/dependencies";
 
 // government-frontend mixins
 @import "mixins/margins";

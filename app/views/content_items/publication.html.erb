@@ -1,4 +1,4 @@
-<% content_for :extra_head_content do %>
+<% content_for :head do %>
   <%= machine_readable_metadata(
     schema: (@content_item.dataset? ? :dataset : :article)
   ) %>

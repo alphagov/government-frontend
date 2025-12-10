@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/healthcheck/live", to: proc { [200, {}, %w[OK]] }
   get "/healthcheck/ready", to: GovukHealthcheck.rack_response(
     GovukHealthcheck::RailsCache,
+    GovukHealthcheck::EmergencyBannerRedis,
   )
 
   get "/government/uploads/*path" => "asset_manager_redirect#redirect_government_uploads_path", format: false
