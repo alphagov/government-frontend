@@ -92,11 +92,11 @@ class HmrcManualSectionPresenterTest
       expected_previous_and_next_links = {
         previous_page: {
           title: I18n.t("manuals.previous_page"),
-          url: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
+          href: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
         },
         next_page: {
           title: I18n.t("manuals.next_page"),
-          url: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb3000",
+          href: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb3000",
         },
       }
 
@@ -118,7 +118,7 @@ class HmrcManualSectionPresenterTest
       expected_next_link = {
         next_page: {
           title: I18n.t("manuals.next_page"),
-          url: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb3000",
+          href: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb3000",
         },
       }
 
@@ -139,7 +139,7 @@ class HmrcManualSectionPresenterTest
       expected_previous_link = {
         previous_page: {
           title: I18n.t("manuals.previous_page"),
-          url: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
+          href: "/hmrc-internal-manuals/vat-government-and-public-bodies/vatgpb1000",
         },
       }
 

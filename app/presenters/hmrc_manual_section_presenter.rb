@@ -37,14 +37,14 @@ class HmrcManualSectionPresenter < ContentItemPresenter
     if previous_sibling
       section_siblings[:previous_page] = {
         title: I18n.t("manuals.previous_page"),
-        url: previous_sibling["base_path"],
+        href: previous_sibling["base_path"],
       }
     end
 
     if next_sibling
       section_siblings[:next_page] = {
         title: I18n.t("manuals.next_page"),
-        url: next_sibling["base_path"],
+        href: next_sibling["base_path"],
       }
     end
 
