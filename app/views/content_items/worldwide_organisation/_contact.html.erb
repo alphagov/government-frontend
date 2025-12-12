@@ -8,43 +8,35 @@
     } %>
   <% end %>
 
-  <div class="govuk-grid-row">
-    <% if contact.post_address %>
-      <div class="govuk-grid-column-one-third" >
-        <%= contact.post_address %>
-      </div>
-    <% end %>
+  <% if contact.post_address %>
+    <%= contact.post_address %>
+  <% end %>
 
-    <% if contact.email.present? || contact.contact_form_link.present? || contact.phone_number_groups&.any? %>
-      <div class="govuk-grid-column-one-third">
+  <% if contact.email.present? || contact.contact_form_link.present? || contact.phone_number_groups&.any? %>
 
-        <% if contact.email.present? %>
-          <p class="govuk-body govuk-!-margin-bottom-4">
-            <%= t('contact.email') %><br />
-            <%= mail_to contact.email, class: "govuk-link" %>
-          </p>
-        <% end %>
+      <% if contact.email.present? %>
+        <p class="govuk-body">
+          <%= t('contact.email') %><br />
+          <%= mail_to contact.email, class: "govuk-link" %>
+        </p>
+      <% end %>
 
-        <% if contact.contact_form_link.present? %>
-          <p class="govuk-body govuk-!-margin-bottom-4">
-            <%= t("contact.contact_form") %><br />
-            <%= link_to contact.contact_form_link.truncate(25), contact.contact_form_link, class: "govuk-link" %>
-          </p>
-        <% end %>
+      <% if contact.contact_form_link.present? %>
+        <p class="govuk-body">
+          <%= t("contact.contact_form") %><br />
+          <%= link_to contact.contact_form_link.truncate(25), contact.contact_form_link, class: "govuk-link" %>
+        </p>
+      <% end %>
 
-        <% contact.phone_number_groups&.each do |number| %>
-          <p class="govuk-body govuk-!-margin-bottom-4">
-            <%= number["title"] %> <br />
-            <span dir="ltr"><%= number["number"] %></span>
-          </p>
-        <% end %>
-      </div>
-    <% end %>
+      <% contact.phone_number_groups&.each do |number| %>
+        <p class="govuk-body">
+          <%= number["title"] %> <br />
+          <span dir="ltr"><%= number["number"] %></span>
+        </p>
+      <% end %>
+  <% end %>
 
-    <% if contact.comments.present? %>
-      <div class="govuk-grid-column-one-third">
-        <%= auto_link(contact.comments, html: { class: "govuk-link" }) %>
-      </div>
-    <% end %>
-  </div>
+  <% if contact.comments.present? %>
+      <%= auto_link(contact.comments, html: { class: "govuk-link" }) %>
+  <% end %>
 <% end %>

@@ -87,7 +87,7 @@
       } %>
 
       <% if @content_item.main_office.has_access_and_opening_times? %>
-        <%= link_to t("contact.access_and_opening_times"), @content_item.main_office.public_url, class: "govuk-link", lang: @content_item.locale %>
+        <p class="govuk-body"><%= link_to t("contact.access_and_opening_times"), @content_item.main_office.public_url, class: "govuk-link", lang: @content_item.locale %></p>
       <% end %>
     </div>
 
