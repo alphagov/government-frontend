@@ -83,6 +83,7 @@ private
     request.env["govuk.prometheus_labels"] = prometheus_labels.merge(
       document_type: @content_item.document_type,
       schema_name: @content_item.schema_name,
+      graphql: use_graphql?,
     )
   end
 
