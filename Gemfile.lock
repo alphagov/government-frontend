@@ -123,7 +123,7 @@ GEM
     execjs (2.10.0)
     faker (3.5.3)
       i18n (>= 1.8.11, < 2)
-    gds-api-adapters (101.0.0)
+    gds-api-adapters (101.1.0)
       addressable
       link_header
       null_logger
@@ -191,7 +191,7 @@ GEM
       reline
     htmlentities (4.4.2)
     http-accept (1.7.0)
-    http-cookie (1.0.8)
+    http-cookie (1.1.0)
       domain_name (~> 0.5)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
@@ -239,7 +239,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0812)
+    mime-types-data (3.2025.0924)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
     minitest (5.27.0)
