@@ -3,6 +3,9 @@
           border: "bottom",
           margin_bottom: 6,
           breadcrumbs: @content_item.breadcrumbs,
+          aria: { 
+            label: "new label" 
+          },
           collapse_on_mobile: false } %>
 <% else %>
   <%= render "govuk_publishing_components/components/back_link", {
