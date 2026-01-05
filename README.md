@@ -12,7 +12,6 @@ Government Frontend is a public-facing app to display the majority of documents 
 | HTML Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents/budget-2016)|
 | Publication | [View on GOV.UK](https://www.gov.uk/government/publications/budget-2016-documents) |
 | Specialist document | [View on GOV.UK](https://www.gov.uk/business-finance-support/access-to-finance-advice-north-west-england) |
-| Statistics announcement | [View on GOV.UK](https://www.gov.uk/government/statistics/announcements/diagnostic-imaging-dataset-for-september-2015) |
 | Topical event about page | [View on GOV.UK](https://www.gov.uk/government/topical-events/2014-overseas-territories-joint-ministerial-council/about) |
 | Working group | [View on GOV.UK](https://www.gov.uk/government/groups/abstraction-reform) |
 | Worldwide corporate information page | [View on GOV.UK](https://www.gov.uk/world/organisations/british-embassy-madrid/about/complaints-procedure) |
