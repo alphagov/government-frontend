@@ -383,15 +383,6 @@ pa:
     pdo_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਇੱਕ ਕਾਲਾ ਮੋਹਰ ਹੈ ਜਿਸਦੇ ਨਾਲ ਡਿਜ਼ਾਈਨਡ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦ ਹਨ
     pgi_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਜੀਓਗ੍ਰਾਫਿਕ ਓਰੀਜਨ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ ਕਾਲੀ ਮੋਹਰ ਹੈ
     tsg_alt_text: ਸਕੀਮ ਦਾ ਲੋਗੋ ਟ੍ਰੈਡੀਸ਼ਨਲ ਸਪੈਸ਼ਲਿਟੀ ਯੂਕੇ ਪ੍ਰੋਟੈਕਟਡ ਸ਼ਬਦਾਂ ਨਾਲ ਇੱਕ ਕਾਲਾ ਮੋਹਰ ਹੈ
-  statistics_announcement:
-    cancellation_date: ਰੱਦ ਕਰਨ ਦੀ ਤਾਰੀਖ
-    cancelled: ਅੰਕੜੇ ਜਾਰੀ ਰੱਦ
-    changed_date: ਰਿਲੀਜ਼ ਦੀ ਤਾਰੀਖ ਬਦਲ ਦਿੱਤੀ ਗਈ ਹੈ
-    forthcoming: ਇਹ ਅੰਕੜੇ ਜਾਰੀ ਕੀਤੇ ਜਾਣਗੇ
-    previous_date: ਪਿਛਲੀ ਤਾਰੀਖ
-    proposed_date: ਪ੍ਰਸਤਾਵਿਤ ਰਿਹਾਈ
-    reason_for_change: ਤਬਦੀਲੀ ਦਾ ਕਾਰਨ
-    release_date: ਰਿਹਾਈ ਤਾਰੀਖ
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ pa:
       follow_us: ਸਾਨੂੰ ਫਾਲੋ ਕਰੋ
       our_people: ਸਾਡੇ ਲੋਕ
     news: ਖ਼ਬਰਾਂ
-    world_news_link: '%{country} ਅਤੇ ਯੂਕੇ'
     part_of: ਦਾ ਹਿੱਸਾ
+    world_news_link: "%{country} ਅਤੇ ਯੂਕੇ"

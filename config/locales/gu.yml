@@ -383,15 +383,6 @@ gu:
     pdo_alt_text: આ યોજનાનો લોગો એક કાળા રંગનો સ્ટેમ્પ છે, જેમાં ડેઝીગ્નેટેડ ઓરિજિન UK પ્રોટેક્ટેડ શબ્દો છે
     pgi_alt_text: આ યોજનાનો લોગો એક કાળા રંગનો સ્ટેમ્પ છે, જેમાં જ્યોગ્રાફિક ઓરિજિન UK પ્રોટેક્ટેડ શબ્દો છે
     tsg_alt_text: આ યોજનાનો લોગો એક કાળા રંગનો સ્ટેમ્પ છે, જેમાં ટ્રેડિશનલ સ્પેશિયાલિટી UK પ્રોટેક્ટેડ શબ્દો છે
-  statistics_announcement:
-    cancellation_date: રદ કર્યાની તારીખ
-    cancelled: આંકડાનું પ્રકશન રદ થયું
-    changed_date: રીલીઝ તારીખ બદલવામાં આવી છે
-    forthcoming: આ આંકડાઓ રીલીઝ કરાશે
-    previous_date: પાછલી તારીખ
-    proposed_date: પ્રસ્તાવિત રીલીઝ
-    reason_for_change: પરીવર્તન માટેનું કારણ
-    release_date: રીલીઝ તારીખ
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ gu:
       follow_us: અમને ફોલો કરો
       our_people: અમારા લોકો
     news: સમાચાર
-    world_news_link: '%{country} અને યુકે'
     part_of: નો ભાગ
+    world_news_link: "%{country} અને યુકે"

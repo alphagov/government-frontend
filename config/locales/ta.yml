@@ -383,15 +383,6 @@ ta:
     pdo_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நியமனத் தோற்றுவாயுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
     pgi_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் நிலவியல் தோற்றுவாயுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
     tsg_alt_text: திட்ட லோகோ என்பது UK பாதுகாப்புடன் மரபார்ந்த சிறப்பம்சமுள்ள வார்த்தைகளுடன் கூடிய ஒரு கருப்பு முத்திரை
-  statistics_announcement:
-    cancellation_date: இரத்தாகும் தேதி
-    cancelled: புள்ளியியல் வெளியீடு இரத்தானது
-    changed_date: வெளியீட்டுத் தேதி மாற்றப்பட்டுள்ளது
-    forthcoming: இந்த புள்ளியியல் வெளியிடப்படும்
-    previous_date: முந்தைய தேதி
-    proposed_date: முன்மொழியப்பட்ட வெளியீடு
-    reason_for_change: மாற்றத்துக்கான காரணம்
-    release_date: வெளியீட்டுத் தேதி
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ ta:
       follow_us: எங்களைப் பின்தொடர்க
       our_people: எங்கள் மக்கள்
     news: செய்திகள்
-    world_news_link: '%{country} மற்றும் UK'
     part_of: பகுதி
+    world_news_link: "%{country} மற்றும் UK"

@@ -383,15 +383,6 @@ pa-pk:
     pdo_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Designated Origin UK Protected
     pgi_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Geographic Origin UK Protected
     tsg_alt_text: منصوبے دا لوگو اک بلیک سٹیمپ وچ اے تے اوندے تے ایہ لفظ لکھے نیں Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: منسوخ کرن دی تاریخ
-    cancelled: اعدادوشمار جاری کرنا منسوخ ہویا
-    changed_date: جاری کرن دی تاریخ بدل دتی گئی
-    forthcoming: اعدادو شمار جاری کیتے جان گے
-    previous_date: پچھلی تاریخ
-    proposed_date: تجویز کر کے جاری کیتا گیا
-    reason_for_change: بدلن دی وجہ
-    release_date: جاری کرن دی تاریخ
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ pa-pk:
       follow_us: ساڈے پچھے آؤ
       our_people: ساڈے لوک
     news: ਖ਼ਬਰਾਂ
-    world_news_link: '%{country} ਅਤੇ ਯੂਕੇ'
     part_of: دا  حصہ
+    world_news_link: "%{country} ਅਤੇ ਯੂਕੇ"

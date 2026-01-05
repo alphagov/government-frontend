@@ -383,15 +383,6 @@ bn:
     pdo_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Designated Origin UK Protected শব্দগুলো রয়েছে
     pgi_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Geographic Origin UK Protected শব্দগুলো রয়েছে
     tsg_alt_text: স্কিমের লোগোতে কালো স্ট্যাম্পের সাথে Traditional Speciality UK Protected শব্দগুলো রয়েছে
-  statistics_announcement:
-    cancellation_date: বাতিল করার তারিখ
-    cancelled: প্রকাশিত পরিসংখ্যান বাতিল করা হয়েছে
-    changed_date: প্রকাশের তারিখ পরিবর্তন করা হয়েছে
-    forthcoming: এই পরিসংখ্যানগুলো প্রকাশ করা হবে
-    previous_date: পূর্ববর্তী তারিখ
-    proposed_date: প্রস্তাবিত প্রকাশ
-    reason_for_change: পরিবর্তন করার কারণ
-    release_date: প্রকাশের তারিখ
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ bn:
       follow_us: আমাদেরকে অনুসরণ করুন
       our_people: আমাদের লোকজন
     news: খবর
-    world_news_link: '%{country} এবং যুক্তরাজ্য'
     part_of: এর অংশ
+    world_news_link: "%{country} এবং যুক্তরাজ্য"

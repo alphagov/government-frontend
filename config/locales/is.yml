@@ -383,15 +383,6 @@ is:
     pdo_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Designated Origin UK Protected
     pgi_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Geographic Origin UK Protected
     tsg_alt_text: Merki ráðagerðarinnar er svartur stimpill með orðunum Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Dagsetning aflýsingar
-    cancelled: Útgáfu tölfræðigagna aflýst
-    changed_date: Útgáfudagsetningunni hefur verið breytt
-    forthcoming: Þessi tölfræði verður gefin út
-    previous_date: Fyrri dagsetning
-    proposed_date: Fyrirhuguð útgáfa
-    reason_for_change: Ástæða fyrir breytingu
-    release_date: Útgáfudagsetning
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ is:
       follow_us: Fylgja okkur
       our_people: Okkar fólk
     news: Fréttir
-    world_news_link: '%{country} og Bretland'
     part_of: Hluti af
+    world_news_link: "%{country} og Bretland"

@@ -450,15 +450,6 @@ hr:
     pdo_alt_text: Logo sheme je crni pečat s riječima Označeno Podrijetlo UK Zaštićeno
     pgi_alt_text: Logo sheme je crni pečat s riječima Geografsko Podrijetlo UK Zaštićeno
     tsg_alt_text: Logo sheme je crni pečat s riječima Tradicionalni Specijalitet UK Zaštićeno
-  statistics_announcement:
-    cancellation_date: Datum otkazivanja
-    cancelled: Objavljivanje statistike otkazano
-    changed_date: Datum izlaska je promijenjen
-    forthcoming: Ove će statistike biti objavljene
-    previous_date: Prethodni datum
-    proposed_date: Predloženo puštanje na slobodu
-    reason_for_change: Razlog za promjenu
-    release_date: Datum izlaska
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -479,5 +470,5 @@ hr:
       follow_us: Prati nas
       our_people: Naši ljudi
     news: Vijesti
-    world_news_link: '%{country} i UK'
     part_of: Dio
+    world_news_link: "%{country} i UK"

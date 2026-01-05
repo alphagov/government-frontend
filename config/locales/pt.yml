@@ -383,15 +383,6 @@ pt:
     pdo_alt_text: O logotipo do sistema é um carimbo preto com as palavras "Designated Origin UK Protected" (Origem Designada Reino Unido Protegida)
     pgi_alt_text: O logotipo do sistema é um carimbo preto com as palavras "Geographic Origin UK Protected" (Origem Geográfica Reino Unido Protegida)
     tsg_alt_text: O logotipo do sistema é um carimbo preto com as palavras "Traditional Speciality UK Protected" (Especialidade Tradicional Reino Unido Protegida)
-  statistics_announcement:
-    cancellation_date: Data de cancelamento
-    cancelled: Divulgação de estatísticas cancelada
-    changed_date: A data de divulgação foi alterada
-    forthcoming: Estas estatísticas serão divulgadas
-    previous_date: Data anterior
-    proposed_date: Divulgação proposta
-    reason_for_change: Motivo de alteração
-    release_date: Data de divulgação
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ pt:
       follow_us: Siga-nos
       our_people: A nosso povo
     news: Notícias
-    world_news_link: '%{country} e o Reino Unido'
     part_of: Parte de
+    world_news_link: "%{country} e o Reino Unido"

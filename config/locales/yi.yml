@@ -383,15 +383,6 @@ yi:
     pdo_alt_text:
     pgi_alt_text:
     tsg_alt_text:
-  statistics_announcement:
-    cancellation_date:
-    cancelled:
-    changed_date:
-    forthcoming:
-    previous_date:
-    proposed_date:
-    reason_for_change:
-    release_date:
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ yi:
       follow_us:
       our_people:
     news: נייעס
-    world_news_link: '%{country} און די פאראייניגטע קעניגרייך'
     part_of:
+    world_news_link: "%{country} און די פאראייניגטע קעניגרייך"

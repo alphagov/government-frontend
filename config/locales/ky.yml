@@ -410,15 +410,6 @@ ky:
     pdo_alt_text: Схема логотиби деген жазуусу бар кара мөөр болуп саналат
     pgi_alt_text: Схема логотиби Geographic Origin UK Protected деген жазуусу бар кара мөөр болуп саналат
     tsg_alt_text: Схема логотиби Traditional Speciality UK Protected деген жазуусу бар кара мөөр болуп саналат
-  statistics_announcement:
-    cancellation_date: Жокко чыгаруу күнү
-    cancelled: Статистиканы чыгаруу жокко чыгарылды
-    changed_date: Чыгаруу күнү өзгөртүлө алат
-    forthcoming: Бул статистикалар чыгарылат
-    previous_date: Мурунку дата
-    proposed_date: Сунушталган чыгарылыш
-    reason_for_change: Өзгөртүү себеби
-    release_date: Чыгаруу датасы
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -439,5 +430,5 @@ ky:
       follow_us: Бизге катталыңыз
       our_people: Биздин адамдар
     news: Жаңылыктар
-    world_news_link: '%{country} жана Улуу Британия'
     part_of: Бөлүгү
+    world_news_link: "%{country} жана Улуу Британия"

@@ -316,15 +316,6 @@ th:
     pdo_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Designated Origin UK Protected
     pgi_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Geographic Origin UK Protected
     tsg_alt_text: ตราโครงการเป็นตราประทับสีดำที่มีข้อความว่า Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: วันที่ยกเลิก
-    cancelled: ยกเลิกการออกข้อมูลสถิติ
-    changed_date: วันที่ออกมีการเปลี่ยนแปลง
-    forthcoming: สถิติเหล่านี้จะถูกเผยแพร่
-    previous_date: วันที่ก่อนหน้า
-    proposed_date: วันเผยแพร่ที่เสนอ
-    reason_for_change: สาเหตุที่เปลี่ยน
-    release_date: วันเผยแพร่
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ th:
       follow_us: ติดตามเรา
       our_people: บุคลากรของเรา
     news: ข่าว
-    world_news_link: '%{country} และสหราชอาณาจักร'
     part_of: ส่วนหนึ่งของ
+    world_news_link: "%{country} และสหราชอาณาจักร"

@@ -383,15 +383,6 @@ sv:
     pdo_alt_text: Systemets logotyp är en svart stämpel med orden Designated Origin UK Protected.
     pgi_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin UK Protected.
     tsg_alt_text: Systemets logotyp är en svart stämpel med orden Geographic Origin UK Protected.
-  statistics_announcement:
-    cancellation_date: Datum för avbeställning
-    cancelled: Statistiskt meddelande avbrutits
-    changed_date: Utgivningsdatumet har ändrats
-    forthcoming: Denna statistik kommer att offentliggöras
-    previous_date: Föregående datum
-    proposed_date: Föreslagna offentliggöranden
-    reason_for_change: Skäl till ändringen
-    release_date: Datum för offentliggörandet
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ sv:
       follow_us: Följ oss
       our_people: Vår personal
     news: Nyheter
-    world_news_link: '%{country} och Storbritannien'
     part_of: Del av
+    world_news_link: "%{country} och Storbritannien"

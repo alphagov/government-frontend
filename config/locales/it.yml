@@ -383,15 +383,6 @@ it:
     pdo_alt_text: Il logo dello schema è un timbro nero con le parole Designated Origin UK Protected
     pgi_alt_text: Il logo dello schema è un timbro nero con le parole Geographic Origin UK Protected
     tsg_alt_text: Il logo dello schema è un timbro nero con le parole Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Data di cancellazione
-    cancelled: Rilascio statistico cancellato
-    changed_date: La data di rilascio è stata modificata
-    forthcoming: Queste statistiche verranno rilasciate
-    previous_date: Data precedente
-    proposed_date: Rilascio proposto
-    reason_for_change: Motivo della modifica
-    release_date: Data di rilascio
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ it:
       follow_us: Seguici
       our_people: Il nostro personale
     news: Notizie
-    world_news_link: '%{country} e Regno Unito'
     part_of: Parte di
+    world_news_link: "%{country} e Regno Unito"

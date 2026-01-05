@@ -450,15 +450,6 @@ cs:
     pdo_alt_text: Logo programu je černé razítko s nápisem "Designated Origin UK Protected" (Chráněný původ určení UK)
     pgi_alt_text: Logo programu je černé razítko s nápisem Geographic Origin UK Protected (Chráněný zeměpisný původ UK)
     tsg_alt_text: Logo programu je černé razítko s nápisem Tradiční specialita chráněná ve Spojeném království
-  statistics_announcement:
-    cancellation_date: Datum zrušení
-    cancelled: Vydání statistik zrušeno
-    changed_date: Datum vydání bylo změněno
-    forthcoming: Tyto statistiky budou zveřejněny
-    previous_date: Předchozí datum
-    proposed_date: Navrhované uvolnění
-    reason_for_change: Důvod změny
-    release_date: Datum vydání
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -479,5 +470,5 @@ cs:
       follow_us: Sledujte nás
       our_people: Naši lidé
     news: Zprávy
-    world_news_link: '%{country} a Spojené království'
     part_of: Část
+    world_news_link: "%{country} a Spojené království"

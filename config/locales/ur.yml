@@ -383,15 +383,6 @@ ur:
     pdo_alt_text: سکیم کا لوگو متعین کردہ اصل UK سے محفوظ شدہ (Designated Origin UK Protected) کے ساتھ سیاہ اسٹام پر مشتمل ہے
     pgi_alt_text: سکیم کا لوگو جغرافیائی اصل UK سے محفوظ شدہ (Geographic Origin UK Protected) کے ساتھ سیاہ اسٹام پر مشتمل ہے
     tsg_alt_text: سکیم کا لوگو روایتی خصوصیت UK سے محفوظ شدہ (Traditional Speciality UK Protected) کے ساتھ سیاہ اسٹام پر مشتمل ہے
-  statistics_announcement:
-    cancellation_date: منسوخی کی تاریخ
-    cancelled: شماریات کے اجراء کو منسوخ کر دیا گیا
-    changed_date: اجراء کی تاریخ تبدیل ہو گئی ہے
-    forthcoming: یہ شماریات جاری کی جائیں گے
-    previous_date: گزشتہ تاریخ
-    proposed_date: تجویز کردہ اجراء
-    reason_for_change: تبدیلی کی وجہ
-    release_date: اجراء کی تاریخ
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ ur:
       follow_us: ہمیں فالو کریں
       our_people: ہمارے لوگ
     news: خبریں
-    world_news_link: '%{country} اور برطانیہ'
     part_of: حصہ از
+    world_news_link: "%{country} اور برطانیہ"

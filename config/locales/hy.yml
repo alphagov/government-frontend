@@ -383,15 +383,6 @@ hy:
     pdo_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Designated Origin UK Protected
     pgi_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Geographic Origin UK Protected
     tsg_alt_text: Սխեմատիկ պատկերանշանը սև կնիքի տեսքով հետևյալ գրությամբ՝ Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Չեղարկման ամսաթիվ
-    cancelled: Վիճակագրության հրապարակումը չեղարկվել է
-    changed_date: Հրապարակման ամսաթիվը փոխվել է
-    forthcoming: Այս վիճակագրությունը կհրապարակվի
-    previous_date: Նախորդ ամսաթիվ
-    proposed_date: Առաջարկվող հրապարակում
-    reason_for_change: Փոփոխության պատճառը
-    release_date: Հրապարակման ամսաթիվ
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ hy:
       follow_us: Հետևել մեզ
       our_people: Մեր անձնակազմը
     news: Նորություններ
-    world_news_link: '%{country} և Մեծ Բրիտանիա'
     part_of: Մաս է՝
+    world_news_link: "%{country} և Մեծ Բրիտանիա"

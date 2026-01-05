@@ -383,15 +383,6 @@ hu:
     pdo_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Designated Origin UK Protected'
     pgi_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Geographic Origin UK Protected'
     tsg_alt_text: 'A tervezet logója egy fekete pecsét a következő szavakkal: Traditional Speciality UK Protected'
-  statistics_announcement:
-    cancellation_date: Lemondás időpontja
-    cancelled: A statisztikák közzététele törölve
-    changed_date: A kiadás időpontja megváltozott.
-    forthcoming: Ezek a statisztikák kiadásra kerülnek a jövőben
-    previous_date: Korábbi időpont
-    proposed_date: Javasolt kiadás
-    reason_for_change: Változás oka
-    release_date: Kiadás időpontja
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ hu:
       follow_us: Kövessen minket
       our_people: Munkatársaink
     news: Hírek
-    world_news_link: '%{country} és az Egyesült Királyság'
     part_of: 'Része a következőnek:'
+    world_news_link: "%{country} és az Egyesült Királyság"
