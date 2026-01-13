@@ -8,14 +8,8 @@
     "GOVUK_WEBSITE_ROOT": {
       "value": "https://www.gov.uk"
     },
-    "GOVUK_PROXY_STATIC_ENABLED": {
-      "value": "true"
-    },
     "PLEK_SERVICE_CONTENT_STORE_URI": {
       "value": "https://www.gov.uk/api"
-    },
-    "PLEK_SERVICE_STATIC_URI": {
-      "value": "https://assets.publishing.service.gov.uk"
     },
     "RAILS_SERVE_STATIC_ASSETS": {
       "value": "yes"
