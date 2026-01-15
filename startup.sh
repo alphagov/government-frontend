@@ -10,8 +10,6 @@ function set_env() {
 
 if [[ $1 == "--live" ]] ; then
   set_env "gov.uk"
-  export GOVUK_PROXY_STATIC_ENABLED=true
-  export PLEK_SERVICE_STATIC_URI=${PLEK_SERVICE_STATIC_URI-https://assets.publishing.service.gov.uk}
   ./bin/dev
 else
   echo "ERROR: other startup modes are not supported"
