@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     GovukHealthcheck::EmergencyBannerRedis,
   )
 
-  get "/government/uploads/*path" => "asset_manager_redirect#redirect_government_uploads_path", format: false
-
   get "/government/organisations/hm-passport-office/contact/hm-passport-office-webchat", to: "webchat#webchat"
 
   get "*path(.:locale)" => "content_items#show",
