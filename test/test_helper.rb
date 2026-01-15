@@ -1,6 +1,5 @@
 ENV["RAILS_ENV"] ||= "test"
 ENV["GOVUK_APP_DOMAIN"] = "test.gov.uk"
-ENV["GOVUK_ASSET_ROOT"] = "http://static.test.gov.uk"
 
 # Must go at top of file
 require "simplecov"
