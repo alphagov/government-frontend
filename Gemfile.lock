@@ -150,7 +150,7 @@ GEM
       rinku (~> 2.0)
       sanitize (>= 6, < 8)
     govuk_ab_testing (3.1.0)
-    govuk_app_config (9.23.2)
+    govuk_app_config (9.23.3)
       connection_pool (< 3)
       logstasher (~> 2.1)
       opentelemetry-exporter-otlp (>= 0.25, < 0.32)
@@ -244,7 +244,8 @@ GEM
     mime-types-data (3.2025.0924)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.27.0)
+    minitest (6.0.1)
+      prism (~> 1.5)
     minitest-reporters (1.7.1)
       ansi
       builder
@@ -450,7 +451,7 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.4.0)
+    prism (1.8.0)
     prometheus_exporter (2.3.1)
       webrick
     pry (0.16.0)
