@@ -450,15 +450,6 @@ lt:
     pdo_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma kilmės vietos nuoroda“ '
     pgi_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugoma geografinė kilmės vieta“ '
     tsg_alt_text: 'Plano logotipas yra juodas spaudas su užrašu „JK saugomas tradicinis gaminys“ '
-  statistics_announcement:
-    cancellation_date: Atšaukimo data
-    cancelled: Statistikos pranešimas atšauktas
-    changed_date: Pranešimo data buvo pakeista
-    forthcoming: Ši statistika bus paskelbta
-    previous_date: Ankstesnė data
-    proposed_date: Siūloma paskelbimo data
-    reason_for_change: Pakeitimo priežastis
-    release_date: Paskelbimo data
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -479,5 +470,5 @@ lt:
       follow_us: Sekite mus
       our_people: Mūsų darbuotojai
     news: Naujienos
-    world_news_link: '%{country} ir JK'
     part_of: Dalis
+    world_news_link: "%{country} ir JK"

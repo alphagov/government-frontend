@@ -383,15 +383,6 @@ de:
     pdo_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Designated Origin UK Protected"
     pgi_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Geographic Origin UK Protected"
     tsg_alt_text: Das Logo ist ein schwarzer Stempel mit der Aufschrift "Traditional Speciality UK Protected"
-  statistics_announcement:
-    cancellation_date: Annullierungsdatum
-    cancelled: Veröffentlichung von Statistiken annulliert
-    changed_date: Das Veröffentlichungsdatum wurde geändert
-    forthcoming: Diese Statistiken werden veröffentlicht
-    previous_date: Vorheriges Datum
-    proposed_date: Geplante Veröffentlichung
-    reason_for_change: Grund für die Änderung
-    release_date: Veröffentlichungsdatum
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ de:
       follow_us: Folgen Sie uns
       our_people: Unsere Mitarbeiter
     news: Nachrichten
-    world_news_link: '%{country} und Großbritannien'
     part_of: Teil von
+    world_news_link: "%{country} und Großbritannien"

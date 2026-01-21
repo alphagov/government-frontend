@@ -383,15 +383,6 @@ ka:
     pdo_alt_text: 'სქემის ლოგო არის შავი შტამპი სიტყვებით: გაერთიანებული სამეფოს დაცული დანიშნულების ადგილი'
     pgi_alt_text: 'სქემის ლოგო არის შავი შტამპი სიტყვებით: გაერთიანებული სამეფოს დაცული დანიშნულების ადგილი'
     tsg_alt_text: სქემის ლოგო არის შავი ბეჭედი, რომელზეც წერია ტრადიციული სპეციალობა დაცულია გაერთიანებული სამეფოს მიერ
-  statistics_announcement:
-    cancellation_date: გაუქმების თარიღი
-    cancelled: სტატისტიკის გამოშვება გაუქმდა
-    changed_date: გამოსვლის თარიღი შეიცვალა
-    forthcoming: ეს სტატისტიკა გამოქვეყნდება
-    previous_date: წინა თარიღი
-    proposed_date: შეთავაზებული გაცემა
-    reason_for_change: შეცვლის მიზეზი
-    release_date: გამოშვების თარიღი
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ ka:
       follow_us: გამოგვყევით
       our_people: ჩვენი ხალხი
     news: სიახლეები
-    world_news_link: '%{country} და დიდი ბრიტანეთი'
     part_of: ნაწილი
+    world_news_link: "%{country} და დიდი ბრიტანეთი"

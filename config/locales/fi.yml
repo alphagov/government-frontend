@@ -383,15 +383,6 @@ fi:
     pdo_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Nimetty alkuperä Yhdistynyt kuningaskunta Suojattu
     pgi_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Maantieteellinen alkuperä Yhdistynyt kuningaskunta Suojattu
     tsg_alt_text: Järjestelmän logo on musta leima, jossa on teksti seuraavasti Perinteinen erikoisuus Yhdistynyt kuningaskunta Suojattu
-  statistics_announcement:
-    cancellation_date: Peruutuspäivä
-    cancelled: Tilastotiedote peruttu
-    changed_date: Julkaisupäivää on muutettu
-    forthcoming: Nämä tilastot julkaistaan
-    previous_date: Edellinen päivämäärä
-    proposed_date: Ehdotettu julkaisu
-    reason_for_change: Muutoksen syy
-    release_date: Julkaisupäivä
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ fi:
       follow_us: Seuraa meitä
       our_people: Meidän ihmiset
     news: Uutiset
-    world_news_link: '%{country} ja Iso-Britannia'
     part_of: Osa
+    world_news_link: "%{country} ja Iso-Britannia"

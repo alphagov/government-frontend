@@ -450,15 +450,6 @@ ro:
     pdo_alt_text: Logoul schemei este un timbru negru cu cuvintele Designated Origin UK Protected
     pgi_alt_text: Logoul schemei este un timbru negru cu cuvintele Geographic Origin UK Protected
     tsg_alt_text: Logoul schemei este un timbru negru cu cuvintele Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Data anulării
-    cancelled: Eliberarea documentelor statistice a fost anulată
-    changed_date: Data eliberării a fost schimbată
-    forthcoming: Aceste statistici vor fi eliberate
-    previous_date: Data anterioară
-    proposed_date: Data propusă
-    reason_for_change: Motivul schimbării
-    release_date: Data publicării
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -479,5 +470,5 @@ ro:
       follow_us: Urmăriți-ne
       our_people: Oamenii noștri
     news: Știri
-    world_news_link: '%{country} și Regatul Unit'
     part_of: Parte din
+    world_news_link: "%{country} și Regatul Unit"

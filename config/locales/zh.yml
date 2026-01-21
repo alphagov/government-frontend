@@ -316,15 +316,6 @@ zh:
     pdo_alt_text: 该计划的标志是一个黑色的印章，上面写着“受特定来源国英国保护”
     pgi_alt_text: 该计划的标志是一个黑色的印章，上面写着“受地理来源国英国保护”
     tsg_alt_text: 该计划的标志是一个黑色的印章，上面写着“受传统专业英国保护”
-  statistics_announcement:
-    cancellation_date: 取消日期
-    cancelled: 统计数据发布已取消
-    changed_date: 发布日期已更改
-    forthcoming: 这些统计数据将会公布
-    previous_date: 上一个日期
-    proposed_date: 拟议发布
-    reason_for_change: 变更原因
-    release_date: 发布日期
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ zh:
       follow_us: 关注我们
       our_people: 我们的员工
     news: 新闻
-    world_news_link: '%{country} 和英国'
     part_of: 一部分
+    world_news_link: "%{country} 和英国"

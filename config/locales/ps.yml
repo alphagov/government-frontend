@@ -383,15 +383,6 @@ ps:
     pdo_alt_text: د سکیم لوگو یو تور ټاپه ده چې د ډیزاین شوي اصلي انګلستان محافظت کلمو سره دی
     pgi_alt_text: د سکیم لوګو یو تور ټاپه ده چې د جغرافیائی اصل انګلستان محافظت کلمو سره دی
     tsg_alt_text: د سکیم لوگو یو تور ټاپه ده چې د دودیز تخصص انګلستان محافظت کلمو سره دی
-  statistics_announcement:
-    cancellation_date: د لغوه کولو نیټه
-    cancelled: د احصایې خپریدل لغوه شول
-    changed_date: د خپریدو نیټه بدله شوې
-    forthcoming: دا احصایې به خپاره شي
-    previous_date: پخوانۍ نیټه
-    proposed_date: وړاندیز شوی خوشې کول
-    reason_for_change: د بدلون لپاره دلیل
-    release_date: دخپریدو نیټه
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ ps:
       follow_us: مونږ پسی راځه
       our_people: زموږ خلک
     news: خبرونه
-    world_news_link: '%{country} او انګلستان'
     part_of: برخه
+    world_news_link: "%{country} او انګلستان"

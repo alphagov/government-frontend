@@ -383,15 +383,6 @@ he:
     pdo_alt_text: הלוגו של התוכנית הוא שחור עם חותמת המילים "מקור ייעודי, בריטניה. מוגן"
     pgi_alt_text: לוגו התוכנית הוא חותמת שחורה עם המילים מוצא גיאוגרפי מוגן בבריטניה
     tsg_alt_text: הלוגו של התוכנית הוא חותמת שחורה שעליה כתוב "המומחיות המסורתית מוגנת בבריטניה"
-  statistics_announcement:
-    cancellation_date: תאריך ביטול
-    cancelled: פרסום סטטיסטיקה בוטל
-    changed_date: תאריך הפרסם שונה
-    forthcoming: סטטיסטיקה זו יפורסמה
-    previous_date: 'תאריך קודם '
-    proposed_date: הצעה לפרסם
-    reason_for_change: סיבה לשינוי
-    release_date: תאריך פרסם
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ he:
       follow_us: עקבו אחרינו
       our_people: הצוות שלנו
     news: חדשות
-    world_news_link: '%{country} ובריטניה'
     part_of: חלק של
+    world_news_link: "%{country} ובריטניה"

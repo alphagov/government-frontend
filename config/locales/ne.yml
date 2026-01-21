@@ -383,15 +383,6 @@ ne:
     pdo_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, निर्दिष्ट मूल संयक्त अधिराज्य संरक्षित
     pgi_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, ग्राफिक मूल संयक्त अधिराज्य संरक्षित
     tsg_alt_text: योजनाको चिन्ह निम्न शब्दहरु सहितको कालो मोहर हो, पारम्परिक विशेषता संयक्त अधिराज्य संरक्षित
-  statistics_announcement:
-    cancellation_date: रद्द मिति
-    cancelled: तथ्याङ्क बिज्ञप्ति रद्द
-    changed_date: बिज्ञप्ति मिति परिवर्तन गरिएको छ
-    forthcoming: तथ्याङ्क जारी गरिनेछ
-    previous_date: अघिल्लो मिति
-    proposed_date: प्रस्तावित बिज्ञप्ति
-    reason_for_change: परिवर्तनको कारण
-    release_date: बिज्ञप्ति मिति
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ ne:
       follow_us: हमीलाई अनुगमन गर्नुहोस्
       our_people: हाम्रा जनता
     news: समाचार
-    world_news_link: '%{country} र बेलायत'
     part_of: को भाग
+    world_news_link: "%{country} र बेलायत"

@@ -316,15 +316,6 @@ ko:
     pdo_alt_text: 정책 로고는 Designated Origin UK Protected라는 글자가 담긴 검정색 도장입니다
     pgi_alt_text: 계획 로고는 Geographic Origin UK Protected라는 글자가 담긴 검정색 도장입니다
     tsg_alt_text: 정책 로고는 Traditional Speciality UK Protected라는 글자가 담긴 검정색 도장입니다
-  statistics_announcement:
-    cancellation_date: 취소 날짜
-    cancelled: 통계 공개가 취소되었습니다
-    changed_date: 공개 날짜가 변경되었습니다
-    forthcoming: 이 통계는 공개될 것입니다
-    previous_date: 이전 날짜
-    proposed_date: 제안 공개
-    reason_for_change: 변경 이유
-    release_date: 공개 날짜
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ ko:
       follow_us: 소셜네트워크
       our_people: 직원
     news: 뉴스
-    world_news_link: '%{country} 과 영국'
     part_of: 파트
+    world_news_link: "%{country} 과 영국"

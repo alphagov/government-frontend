@@ -383,15 +383,6 @@ tr:
     pdo_alt_text: Şema logosu Designated Origin UK Protected sözcüklerini içeren siyah bir damgadır
     pgi_alt_text: Şema logosu Geographic Origin UK Protected sözcüklerini içeren siyah bir damgadır
     tsg_alt_text: Şema logosu Traditional Specialty UK Protected sözcüklerini içeren siyah bir damgadır
-  statistics_announcement:
-    cancellation_date: İptal tarihi
-    cancelled: İstatistik açıklaması iptal edildi
-    changed_date: Açıklama tarihi değiştirildi
-    forthcoming: İstatistikler açıklanacak
-    previous_date: Önceki tarih
-    proposed_date: Önerilen açıklama
-    reason_for_change: Değişiklik gerekçesi
-    release_date: Açıklama tarihi
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ tr:
       follow_us: Bizi takip edin
       our_people: İnsan kaynağımız
     news: Haberler
-    world_news_link: '%{country} ve Birleşik Krallık'
     part_of: Şunun kısmı
+    world_news_link: "%{country} ve Birleşik Krallık"

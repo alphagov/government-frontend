@@ -383,15 +383,6 @@ si:
     pdo_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Designated Origin UK Protected යන වචන සහිත කළු මුද්දරයක් වේ
     pgi_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Geographic Origin UK Protected යන වචන සහිත කළු මුද්දරයක් වේ
     tsg_alt_text: මෙම යෝජනා ක්රම ලාංඡනය Traditional Speciality UK Protected යන වචන සහිත කළු මුද්දරයක් වේ
-  statistics_announcement:
-    cancellation_date: අවලංගු කිරීමේ දිනය
-    cancelled: සංඛ්යාලේඛන නිකුත් කිරීම අවලංගු කෙරිණි
-    changed_date: නිකුත් කිරීමේ දිනය වෙනස් කර ඇත
-    forthcoming: මෙම සංඛ්යාලේඛන නිකුත් කරනු ලබන්නේ
-    previous_date: පෙර දිනය
-    proposed_date: යෝජිත නිකුතුව
-    reason_for_change: වෙනස් වීමට හේතුව
-    release_date: නිකුත් කිරීමේ දිනය
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ si:
       follow_us: අපව අනුගමනය කරන්න
       our_people: අපේ ජනතාව
     news: පුවත්
-    world_news_link: '%{country} සහ එක්සත් රාජධානිය'
     part_of: කොටසක්
+    world_news_link: "%{country} සහ එක්සත් රාජධානිය"

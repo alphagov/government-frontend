@@ -383,15 +383,6 @@ sq:
     pdo_alt_text: Logoja e skemës është një pullë e zezë me fjalët Designed Origin UK Protected
     pgi_alt_text: Logoja e skemës është një pullë e zezë me fjalët Geographic Origin UK Protected
     tsg_alt_text: Logoja e skemës është një pullë e zezë me fjalët Traditional Specialty UK Protected
-  statistics_announcement:
-    cancellation_date: Data e anulimit
-    cancelled: Publikimi i statistikave u anulua
-    changed_date: Data e publikimit është ndryshuar
-    forthcoming: Këto statistika do të publikohen
-    previous_date: Data e mëparshme
-    proposed_date: Publikimi i propozuar
-    reason_for_change: Arsye për të ndryshuar
-    release_date: Data e publikimit
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ sq:
       follow_us: Na ndiqni
       our_people: Njerëzit tanë
     news: Lajme
-    world_news_link: '%{country} dhe Mbretëria e Bashkuar'
     part_of: Pjesë e
+    world_news_link: "%{country} dhe Mbretëria e Bashkuar"

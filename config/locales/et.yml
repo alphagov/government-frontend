@@ -383,15 +383,6 @@ et:
     pdo_alt_text: Skeemi logo on must tempel kirjaga Designated Origin UK Protected
     pgi_alt_text: Skeemi logo on must tempel kirjaga Geographic Origin UK Protected
     tsg_alt_text: Skeemi logo on must tempel kirjaga Traditional Specialty UK Protected
-  statistics_announcement:
-    cancellation_date: Tühistamise kuupäev
-    cancelled: Statistika avaldamine tühistati
-    changed_date: Väljaandmiskuupäeva on muudetud
-    forthcoming: See statistika avaldatakse
-    previous_date: Eelmine kuupäev
-    proposed_date: Kavandatud avaldamine
-    reason_for_change: Põhjus muutumiseks
-    release_date: Väljaande kuupäev
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ et:
       follow_us: Jälgige meid
       our_people: Meie inimesed
     news: Uudised
-    world_news_link: '%{country} ja Ühendkuningriik'
     part_of: Osa
+    world_news_link: "%{country} ja Ühendkuningriik"

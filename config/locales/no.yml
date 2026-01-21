@@ -383,15 +383,6 @@
     pdo_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK Protected
     pgi_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK Protected
     tsg_alt_text: Skjemalogoen er et svart stempel med ordene Designated Origin UK Protected
-  statistics_announcement:
-    cancellation_date: Avbestillingsdato
-    cancelled: Statistikkutgivelsen avbrutt
-    changed_date: Utgivelsesdatoen er endret
-    forthcoming: Denne statistikken vil bli offentliggjort
-    previous_date: Forrige dato
-    proposed_date: Foreslått utgivelse
-    reason_for_change: Årsak til endring
-    release_date: Utgivelsesdato
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@
       follow_us: Følg oss
       our_people: Våre folk
     news: Nyheter
-    world_news_link: '%{country} og Storbritannia'
     part_of: Del av
+    world_news_link: "%{country} og Storbritannia"

@@ -450,15 +450,6 @@ sr:
     pdo_alt_text: Shematski logotip je odštampan crno sa rečima Designated Origin UK Protected
     pgi_alt_text: Shematski logotip je odštampan crno sa rečima Geographic Origin UK Protected
     tsg_alt_text: Shematski logotip je odštampan crno sa rečima Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Datum otkazivanja
-    cancelled: Objavljivanje statističkih podataka je otkazano
-    changed_date: Ovaj datum objavljivanja je promenjen
-    forthcoming: Ovi statistički podaci će biti objavljeni
-    previous_date: Prethodni datum
-    proposed_date: Predloženi datum objavljivanja
-    reason_for_change: Razlog za izmenu
-    release_date: Datum objavljivanja
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -479,5 +470,5 @@ sr:
       follow_us: Pratite nas
       our_people: Naši ljudi
     news: Vesti
-    world_news_link: '%{country} i Ujedinjeno Kraljevstvo'
     part_of: Deo
+    world_news_link: "%{country} i Ujedinjeno Kraljevstvo"

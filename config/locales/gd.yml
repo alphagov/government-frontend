@@ -517,15 +517,6 @@ gd:
     pdo_alt_text: Is é atá i lógó an chláir ná lógó dubh marcáilte Bunús Ainmnithe atá faoi chosaint na RA
     pgi_alt_text: Séala dubh é lógó an chláir ar a bhfuil na focail Geographic Origin UK Protected
     tsg_alt_text: Tá stampa dubh ar lógó an chláir leis na focail Traditional Specialty UK Protected
-  statistics_announcement:
-    cancellation_date: Dáta scriosadh an phoist
-    cancelled: Cealaítear an scaoileadh staitisticí
-    changed_date: Athraíodh an dáta scaoilte
-    forthcoming: Déanfar na foilseacháin staitisticí seo
-    previous_date: Dáta roimhe seo
-    proposed_date: Scaipeadh beartaithe
-    reason_for_change: Cúis leis an athrú
-    release_date: Dáta foilsithe
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -546,5 +537,5 @@ gd:
       follow_us: Lean orainn
       our_people: Ár gcomhoibritheoirí
     news: Nuacht
-    world_news_link: '%{country} agus an Ríocht Aontaithe'
     part_of: Chuid
+    world_news_link: "%{country} agus an Ríocht Aontaithe"

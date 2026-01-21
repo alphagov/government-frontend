@@ -383,15 +383,6 @@ nl:
     pdo_alt_text: Het logo van de regeling is een zwarte stempel met de woorden Designated Origin UK Protected
     pgi_alt_text: Het logo van de regeling is een zwarte stempel met de woorden Geographic Origin UK Protected
     tsg_alt_text: Het logo van de regeling is een zwart stempel met de woorden Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Datum van annulering
-    cancelled: Statistieken vrijgave geannuleerd
-    changed_date: De releasedatum is gewijzigd
-    forthcoming: Deze statistieken zullen worden vrijgegeven
-    previous_date: Vorige datum
-    proposed_date: Voorgestelde vrijgave
-    reason_for_change: Reden voor wijziging
-    release_date: Publicatiedatum
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ nl:
       follow_us: Volg ons op
       our_people: Onze mensen
     news: Nieuws
-    world_news_link: '%{country} en het VK'
     part_of: Deel van
+    world_news_link: "%{country} en het VK"

@@ -383,15 +383,6 @@ el:
     pdo_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Designated Origin UK Protected
     pgi_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Geographic Origin UK Protected
     tsg_alt_text: Το λογότυπο του σχεδίου είναι μια μαύρη σφραγίδα με τις λέξεις Traditional Specialty UK Protected
-  statistics_announcement:
-    cancellation_date: Ημερομηνία ακύρωσης
-    cancelled: Η στατιστική έκδοση ακυρώθηκε
-    changed_date: Η ημερομηνία κυκλοφορίας άλλαξε
-    forthcoming: Αυτά τα στατιστικά στοιχεία θα δημοσιοποιηθούν
-    previous_date: Προηγούμενη ημερομηνία
-    proposed_date: Προτεινόμενη κυκλοφορία
-    reason_for_change: Λόγος για την αλλαγή
-    release_date: Ημερομηνία κυκλοφορίας
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ el:
       follow_us: Ακολουθήστε μας
       our_people: Οι άνθρωποί μας
     news: Νέα
-    world_news_link: '%{country} και Ηνωμένο Βασίλειο'
     part_of: Μέρος του
+    world_news_link: "%{country} και Ηνωμένο Βασίλειο"
