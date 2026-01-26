@@ -166,7 +166,7 @@ GEM
     govuk_personalisation (1.1.0)
       plek (>= 1.9.0)
       rails (>= 6, < 9)
-    govuk_publishing_components (63.0.0)
+    govuk_publishing_components (64.0.0)
       govuk_app_config
       govuk_personalisation (>= 0.7.0)
       kramdown
@@ -450,7 +450,7 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.4.0)
+    prism (1.8.0)
     prometheus_exporter (2.3.1)
       webrick
     pry (0.16.0)
@@ -464,7 +464,7 @@ GEM
       date
       stringio
     public_suffix (7.0.2)
-    puma (7.1.0)
+    puma (7.2.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.4)
@@ -667,12 +667,13 @@ DEPENDENCIES
   govuk_ab_testing
   govuk_app_config
   govuk_personalisation
-  govuk_publishing_components (= 63.0.0)
+  govuk_publishing_components (= 64.0.0)
   govuk_schemas
   govuk_test
   govuk_web_banners
   htmlentities
   i18n-coverage
+  minitest (= 5.27.0)
   minitest-reporters
   mocha
   plek
