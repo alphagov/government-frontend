@@ -34,7 +34,13 @@ private
   end
 
   def load_content_item
-    content_item = Services.content_store.content_item(content_item_path)
+    content_item = if params[:graphql] == "true"
+                     puts "Rendered #{content_item_path} from GraphQL"
+                     Services.publishing_api.graphql_live_content_item(content_item_path)
+                   else
+                     puts "Rendered #{content_item_path} from Content Store"
+                     Services.content_store.content_item(content_item_path)
+                   end
 
     content_item["links"]["ordered_related_items"] = ordered_related_items(content_item["links"]) if content_item["links"]
 
