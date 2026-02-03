@@ -316,15 +316,6 @@ vi:
     pdo_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Designated Origin UK Protected”
     pgi_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Geographic Origin UK Protected”
     tsg_alt_text: Biểu trưng của kế hoạch là một con tem màu đen với dòng chữ “Traditional Speciality UK Protected”
-  statistics_announcement:
-    cancellation_date: Ngày hủy bỏ
-    cancelled: Đã hủy phát hành thống kê
-    changed_date: Đã thay đổi ngày phát hành
-    forthcoming: Những thống kê này sẽ được phát hành
-    previous_date: Ngày trước đó
-    proposed_date: Thông tin được đề nghị phát hành
-    reason_for_change: Lý do thay đổi
-    release_date: Ngày phát hành
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ vi:
       follow_us: Theo dõi chúng tôi
       our_people: Đội ngũ của chúng tôi
     news: Tin tức
-    world_news_link: '%{country} và Vương quốc Anh'
     part_of: Một phần của
+    world_news_link: "%{country} và Vương quốc Anh"

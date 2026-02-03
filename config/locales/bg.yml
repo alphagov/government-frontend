@@ -383,15 +383,6 @@ bg:
     pdo_alt_text: Логото на схемата представлява черен печат с надпис Designated Origin UK Protected
     pgi_alt_text: Логото на схемата представлява черен печат с надпис Geographic Origin UK Protected
     tsg_alt_text: Логото на схемата представлява черен печат с надпис Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Дата на анулиране
-    cancelled: Съобщенията за статистика са анулирани
-    changed_date: Датата на изданието е променена
-    forthcoming: Статистиката ще бъде издадена
-    previous_date: Предишна дата
-    proposed_date: Предложено издание
-    reason_for_change: Причина за промяната
-    release_date: Дата на издаване
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ bg:
       follow_us: Следвайте ни
       our_people: Нашият народ
     news: Новини
-    world_news_link: '%{country} и Обединеното кралство'
     part_of: Част от
+    world_news_link: "%{country} и Обединеното кралство"

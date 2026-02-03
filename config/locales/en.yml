@@ -383,15 +383,6 @@ en:
     pdo_alt_text: The scheme logo is a black stamp with the words Designated Origin UK Protected
     pgi_alt_text: The scheme logo is a black stamp with the words Geographic Origin UK Protected
     tsg_alt_text: The scheme logo is a black stamp with the words Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Cancellation date
-    cancelled: Statistics release cancelled
-    changed_date: The release date has been changed
-    forthcoming: These statistics will be released
-    previous_date: Previous date
-    proposed_date: Proposed release
-    reason_for_change: Reason for change
-    release_date: Release date
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ en:
       follow_us: Follow us
       our_people: Our people
     news: News
-    world_news_link: '%{country} and the UK'
     part_of: Part of
+    world_news_link: "%{country} and the UK"

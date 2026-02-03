@@ -651,15 +651,6 @@ ar:
     pdo_alt_text: شعار المخطط عبارة عن ختم أسود يحمل الكلمات Designated Origin UK Protected
     pgi_alt_text: شعار المخطط عبارة عن ختم أسود يحمل الكلمات Geographic Origin UK Protected
     tsg_alt_text: شعار المخطط عبارة عن ختم أسود يحمل الكلمات Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: تاريخ الإلغاء
-    cancelled: تم إلغاء إصدار الإحصائيات
-    changed_date: تغير تاريخ الإصدار
-    forthcoming: سيتم إصدار هذه الإحصائيات
-    previous_date: التاريخ السابق
-    proposed_date: الإصدار المقترح
-    reason_for_change: سبب التغيير
-    release_date: تاريخ الإصدار
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -680,5 +671,5 @@ ar:
       follow_us: تابعنا
       our_people: موظفونا
     news: الأخبار
-    world_news_link: '%{country} والمملكة المتحدة'
     part_of: جزء من
+    world_news_link: "%{country} والمملكة المتحدة"

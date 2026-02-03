@@ -517,15 +517,6 @@ mt:
     pdo_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem Oriġini Magħżula Protetta mir-RU
     pgi_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem  Oriġini Ġeografika Protetta mir-RU
     tsg_alt_text: Il-logo tal-iskema huwa timbru iswed bil-kliem Speċjalità Tradizzjonali Protetta mir-RU
-  statistics_announcement:
-    cancellation_date: Data tal-kanċellament
-    cancelled: Rilaxx tal-istatistiċi ġie kkanċellat
-    changed_date: Id-data tar-rilaxx ġiet mibdula
-    forthcoming: Dawn l-istatistiċi ser jiġu rilaxxati
-    previous_date: Data ta' qabel
-    proposed_date: Rilaxx propost
-    reason_for_change: Raġuni għall-bidla
-    release_date: Data tar-rilaxx
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -546,5 +537,5 @@ mt:
       follow_us: Segwina
       our_people: In-nies tagħna
     news: Aħbarijiet
-    world_news_link: '%{country} u r-Renju Unit'
     part_of: Parti minn
+    world_news_link: "%{country} u r-Renju Unit"

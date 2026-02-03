@@ -383,15 +383,6 @@ es-419:
     pdo_alt_text: El logotipo del programa es un sello negro con las palabras "Designated Origin UK Protected"
     pgi_alt_text: El logotipo del programa es un sello negro con las palabras "Geographic Origin UK Protected"
     tsg_alt_text: El logotipo del programa es un sello negro con las palabras "Traditional Speciality UK Protected"
-  statistics_announcement:
-    cancellation_date: Fecha de cancelación
-    cancelled: Publicación de estadísticas cancelada
-    changed_date: La fecha de lanzamiento ha sido modificada
-    forthcoming: Estas estadísticas se publicarán
-    previous_date: Fecha anterior
-    proposed_date: Propuesta de publicación
-    reason_for_change: Motivo de la modificación
-    release_date: Fecha de publicación
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ es-419:
       follow_us: Síguenos
       our_people: Nuestra gente
     news: Noticias
-    world_news_link: '%{country} y el Reino Unido'
     part_of: Parte de
+    world_news_link: "%{country} y el Reino Unido"

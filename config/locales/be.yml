@@ -517,15 +517,6 @@ be:
     pdo_alt_text: Лагатып схемы ўяўляе сабою чорны друк з надпісам Designated Origin UK Protected
     pgi_alt_text: Лагатып схемы ўяўляе сабою чорны друк з надпісам Geographic Origin UK Protected
     tsg_alt_text: Лагатып схемы ўяўляе сабою чорны друк з надпісам Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Дата адмены
-    cancelled: Выпуск статыстычных дадзеных скасаваны
-    changed_date: Дата рэлізу была зменена
-    forthcoming: Гэта статыстыка будзе апублікавана
-    previous_date: Папярэдняя дата
-    proposed_date: Прапанаваны рэліз
-    reason_for_change: Прычына змены
-    release_date: Дата рэлізу
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -546,5 +537,5 @@ be:
       follow_us: Сачыце за намі
       our_people: Нашы людзі
     news: Навіны
-    world_news_link: '%{country} і Вялікабрытанія'
     part_of: Частка
+    world_news_link: "%{country} і Вялікабрытанія"

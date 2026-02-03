@@ -316,15 +316,6 @@ zh-hk:
     pdo_alt_text: 該計劃之標誌為一黑色印章，帶有「英國指定原產地保護」之字樣
     pgi_alt_text: 該計劃之標誌為一黑色印章，帶有「英國地理原產地保護」之字樣
     tsg_alt_text: 該計劃之標誌為一黑色印章，帶有「英國傳統特產保護」之字樣
-  statistics_announcement:
-    cancellation_date: 取消日期
-    cancelled: 統計資料發佈已取消
-    changed_date: 發佈日期已更改
-    forthcoming: 統計資料已發佈
-    previous_date: 之前日期
-    proposed_date: 擬議發佈
-    reason_for_change: 更改原因
-    release_date: 發佈日期
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ zh-hk:
       follow_us: 關注我們
       our_people: 主要館員
     news: 新聞
-    world_news_link: '%{country} 同英國'
     part_of: 隸屬於
+    world_news_link: "%{country} 同英國"

@@ -651,15 +651,6 @@ cy:
     pdo_alt_text: Stamp du gyda'r geiriau Designated Origin UK Protected yw logo'r cynllun
     pgi_alt_text: Stamp du gyda'r geiriau Geographic Origin UK Protected yw logo'r cynllun
     tsg_alt_text: Stamp du gyda'r geiriau Traditional Speciality UK Protected yw logo'r cynllun
-  statistics_announcement:
-    cancellation_date: Dyddiad canslo
-    cancelled: Rhyddhau ystadegau wedi'i ganslo
-    changed_date: Mae'r dyddiad rhyddhau wedi'i newid
-    forthcoming: Bydd yr ystadegau hyn yn cael eu rhyddhau
-    previous_date: Dyddiad blaenorol
-    proposed_date: Rhyddhau arfaethedig
-    reason_for_change: Rheswm dros y newid
-    release_date: Dyddiad rhyddhau
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -680,5 +671,5 @@ cy:
       follow_us: Dilynwch ni
       our_people: Ein pobl
     news: Newyddion
-    world_news_link: "%{country} a'r DU"
     part_of: Rhan o
+    world_news_link: "%{country} a'r DU"

@@ -383,15 +383,6 @@ az:
     pdo_alt_text: Qrafik loqo üzərində "Səlahiyyətli mənbə BK qorunur" sözləri olan qara möhürdür
     pgi_alt_text: Qrafik loqo üzərində "Coğrafi mənbə BK qorunur" sözləri olan qara möhürdür
     tsg_alt_text: Qrafik loqo üzərində "Ənənəvi məhsul BK qorunur" sözləri olan qara möhürdür
-  statistics_announcement:
-    cancellation_date: Ləğvetmə tarixi
-    cancelled: Statistik məlumat buraxılışı ləğv edilib
-    changed_date: Bu statistik məlumat dəyişdirilib
-    forthcoming: Bu statistik məlumat buraxılacaq
-    previous_date: Əvvəlki tarix
-    proposed_date: Təklif edilmiş buraxılış
-    reason_for_change: Dəyişikliyin səbəbi
-    release_date: Buraxılış tarixi
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ az:
       follow_us: Bizi təqib edin
       our_people: İnsanlarımız
     news: Xəbərlər
-    world_news_link: '%{country} və Böyük Britaniya'
     part_of: Dövlət orqanının
+    world_news_link: "%{country} və Böyük Britaniya"
