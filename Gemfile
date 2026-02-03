@@ -42,7 +42,7 @@ group :test do
   gem "climate_control"
   gem "faker"
   gem "i18n-coverage"
-  gem "minitest", "5.27.0"
+  gem "minitest", "6.0.1"
   gem "minitest-reporters"
   gem "mocha"
   gem "shoulda-context"

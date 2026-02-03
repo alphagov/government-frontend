@@ -246,7 +246,8 @@ GEM
     mime-types-data (3.2026.0127)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.27.0)
+    minitest (6.0.1)
+      prism (~> 1.5)
     minitest-reporters (1.7.1)
       ansi
       builder
@@ -675,7 +676,7 @@ DEPENDENCIES
   govuk_web_banners
   htmlentities
   i18n-coverage
-  minitest (= 5.27.0)
+  minitest (= 6.0.1)
   minitest-reporters
   mocha
   plek
