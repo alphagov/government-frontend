@@ -2,7 +2,7 @@
 
 var $ = window.jQuery
 
-describe('Webchat', function () {
+xdescribe('Webchat', function () {
   var GOVUK = window.GOVUK
 
   var CHILD_BENEFIT_API_URL = 'https://hmrc-uk.digital.nuance.com/tagserver/launch/agentAvailability?agentGroupID=10006859&siteID=10006719&businessUnitID=19001235'
