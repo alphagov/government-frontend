@@ -54,13 +54,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-calc@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@csstools/css-calc@npm:3.0.0"
+"@csstools/css-calc@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@csstools/css-calc@npm:3.1.1"
   peerDependencies:
     "@csstools/css-parser-algorithms": ^4.0.0
     "@csstools/css-tokenizer": ^4.0.0
-  checksum: bb12b20a5bcd41bdf1cb86668d33e4de0fea4a31dd82cfada84c07593f5625abdcebad47ce50f11acc3227951839f5bcbde3ed8f4a906430c3a5f423383b61a7
+  checksum: 22d76fa9a83b58ad61c9341937549304f51dfddbd7f03324e3ea4a59c7e317f54ec9c75122bf9ccf8b32c448ea5b453c239cbaa161a1a4995ee0779bb81ecbc8
   languageName: node
   linkType: hard
 
@@ -1587,7 +1587,7 @@ __metadata:
     jasmine-browser-runner: ^4.0.0
     jasmine-core: ^5.13.0
     standardx: ^7.0.0
-    stylelint: ^17.2.0
+    stylelint: ^17.3.0
     stylelint-config-gds: ^2.0.0
   languageName: unknown
   linkType: soft
@@ -3572,11 +3572,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^17.2.0":
-  version: 17.2.0
-  resolution: "stylelint@npm:17.2.0"
+"stylelint@npm:^17.3.0":
+  version: 17.3.0
+  resolution: "stylelint@npm:17.3.0"
   dependencies:
-    "@csstools/css-calc": ^3.0.0
+    "@csstools/css-calc": ^3.1.1
     "@csstools/css-parser-algorithms": ^4.0.0
     "@csstools/css-syntax-patches-for-csstree": ^1.0.26
     "@csstools/css-tokenizer": ^4.0.0
@@ -3610,14 +3610,14 @@ __metadata:
     postcss-safe-parser: ^7.0.1
     postcss-selector-parser: ^7.1.1
     postcss-value-parser: ^4.2.0
-    string-width: ^8.1.0
+    string-width: ^8.1.1
     supports-hyperlinks: ^4.4.0
     svg-tags: ^1.0.0
     table: ^6.9.0
     write-file-atomic: ^7.0.0
   bin:
     stylelint: bin/stylelint.mjs
-  checksum: d0f529b46c81345cbe5e18d1b1ab04b0d018d7ee01ce4d547474ea7fb49cdb8ce8b43de90222e1a44e12fd9f25d8013edf165356871bd58973e4b763a3d414c1
+  checksum: 8629b3b4f6d201b661cce9b1cbe5cc84e7e964233354a66ca464dc9597d4129eb5b8071e2ebbee4ff8da2f1b2d85a0d53b251b069d4e353b2059441dec39dca5
   languageName: node
   linkType: hard
 
