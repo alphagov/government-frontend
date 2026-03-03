@@ -383,15 +383,6 @@ tk:
     pdo_alt_text: Shemanyň nyşany Designated Origin UK Protected sözlerini özünde saklaýan gara ştampdyr.
     pgi_alt_text: Shemanyň nyşany Geographic Origin UK Protected sözlerini özünde saklaýan gara ştampdyr.
     tsg_alt_text: Shemanyň nyşany Traditional Speciality UK Protected sözlerini özünde saklaýan gara ştampdyr.
-  statistics_announcement:
-    cancellation_date: Bes etmegiň senesi
-    cancelled: Statistiki goýberişlerini bes etmek
-    changed_date: Goýberiliş senesi üýtgedildi
-    forthcoming: Bu statistikalar çap ediler
-    previous_date: Geçenki senesi
-    proposed_date: Teklip edilen goýberiliş
-    reason_for_change: Üýtgedilmeginiň sebäbi
-    release_date: Goýberiliş senesi
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ tk:
       follow_us: Bizi yzarlaň
       our_people: Biziň adamlarymyz
     news: Habarlar
-    world_news_link: '%{country} we Beýik Britaniýa'
     part_of: Bir bölegi
+    world_news_link: "%{country} we Beýik Britaniýa"

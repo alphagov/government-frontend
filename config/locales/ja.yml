@@ -316,15 +316,6 @@ ja:
     pdo_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
     pgi_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
     tsg_alt_text: デザインロゴは、Designated Origin UK Protectedという文字の入った黒のスタンプです
-  statistics_announcement:
-    cancellation_date: キャンセル日
-    cancelled: 統計発表がキャンセルされました
-    changed_date: 発表日程が変更されました
-    forthcoming: これらの統計は公開されます
-    previous_date: 以前の日程
-    proposed_date: 予定されている発表
-    reason_for_change: 変更理由
-    release_date: 発表日程
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ ja:
       follow_us: フォローする
       our_people: 人々
     news: 最新情報
-    world_news_link: '%{country}と英国'
     part_of: 次の一部：
+    world_news_link: "%{country}と英国"

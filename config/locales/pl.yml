@@ -517,15 +517,6 @@ pl:
     pdo_alt_text: Logo programu to czarna pieczęć z napisem „Designated Origin UK Protected”
     pgi_alt_text: Logo programu to czarna pieczęć z napisem „Geographic Origin UK Protected”
     tsg_alt_text: Logo programu to czarna pieczęć z napisem „Traditional Specialty UK Protected”
-  statistics_announcement:
-    cancellation_date: Data anulowania
-    cancelled: Publikacja statystyk anulowana
-    changed_date: Data publikacji została zmieniona
-    forthcoming: Te statystyki zostaną opublikowane
-    previous_date: Poprzednia data
-    proposed_date: Proponowana publikacja
-    reason_for_change: Powód zmiany
-    release_date: Data publikacji
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -546,5 +537,5 @@ pl:
       follow_us: Obserwuj nasz profil
       our_people: Nasi ludzie
     news: Wiadomości
-    world_news_link: '%{country} i Wielka Brytania'
     part_of: Część
+    world_news_link: "%{country} i Wielka Brytania"

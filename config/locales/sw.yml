@@ -383,15 +383,6 @@ sw:
     pdo_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Designated Origin UK Protected
     pgi_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Geographic Origin UK Protected
     tsg_alt_text: Nembo ya mpango ni muhuri mweusi wenye maneno Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Tarehe ya kughairiwa
-    cancelled: Taarifa ya kutangazwa kwa takwimu imeghairiwa
-    changed_date: Tarehe ya kutangazwa imebadilishwa
-    forthcoming: Takwimu hizi zitatangazwa
-    previous_date: Tarehe ya awali
-    proposed_date: Tarehe ya kutangazwa inayopendekezwa
-    reason_for_change: Sababu ya kubadilishwa
-    release_date: Tarehe ya kutangazwa
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ sw:
       follow_us: Tufuatilie
       our_people: Watu wetu
     news: Habari
-    world_news_link: '%{country} na Uingereza'
     part_of: Sehemu ya
+    world_news_link: "%{country} na Uingereza"

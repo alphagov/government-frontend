@@ -383,15 +383,6 @@ hi:
     pdo_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है, जिस पर Designated Origin UK Protected शब्द हैं
     pgi_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है जिसमें Geographic Origin UK Protected शब्द हैं
     tsg_alt_text: स्कीम का लोगो एक ब्लैक स्टैम्प है जिसमें Traditional Speciality UK Protected शब्द हैं
-  statistics_announcement:
-    cancellation_date: रद्द करने की तारीख
-    cancelled: सांख्यिकी विज्ञप्ति रद्द
-    changed_date: विज्ञप्ति की तारीख बदल दी गई है
-    forthcoming: ये आंकड़े जारी होंगे
-    previous_date: पिछली तारीख
-    proposed_date: प्रस्तावित विज्ञप्ति
-    reason_for_change: बदलाव के कारण
-    release_date: जारी करने की तारीख
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ hi:
       follow_us: हमें फॉलो करें
       our_people: हमारे लोग
     news: समाचार
-    world_news_link: '%{country} और ब्रिटेन'
     part_of: का भाग
+    world_news_link: "%{country} और ब्रिटेन"

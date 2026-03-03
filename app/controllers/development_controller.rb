@@ -9,7 +9,6 @@ class DevelopmentController < ApplicationController
                        placeholder_corporate_information_page
                        publication
                        specialist_document
-                       statistics_announcement
                        topical_event_about_page
                        working_group]
 

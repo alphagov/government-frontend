@@ -517,15 +517,6 @@ uk:
     pdo_alt_text: Логотип схеми –– це чорний штамп зі словами Designated Origin UK Protected
     pgi_alt_text: Логотип схеми –– це чорний штамп зі словами Designated Origin UK Protected
     tsg_alt_text: Логотип схеми –– це чорний штамп зі словами Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Дата скасування
-    cancelled: Випуск даних статистики скасовано
-    changed_date: Дата випуску змінена
-    forthcoming: Ці дані статистики будуть оприлюднені
-    previous_date: Попередня дата
-    proposed_date: Пропонований випуск
-    reason_for_change: Причина змін
-    release_date: Дата виходу
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -546,5 +537,5 @@ uk:
       follow_us: Слідкуйте за нами
       our_people: Наші співробітники
     news: Новини
-    world_news_link: '%{country} та Велика Британія'
     part_of: Частина
+    world_news_link: "%{country} та Велика Британія"

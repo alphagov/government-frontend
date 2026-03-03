@@ -517,15 +517,6 @@ sl:
     pdo_alt_text: Logotip sheme je črni žig z besedami Designated Origin UK Protected
     pgi_alt_text: Logotip sheme je črni žig z besedami Geographic Origin UK Protected
     tsg_alt_text: Logotip sheme je črni žig z besedami Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Datum preklica
-    cancelled: Statistična objava je bila preklicana
-    changed_date: Datum objave seje spremenil
-    forthcoming: Ta statistika bo objavljena
-    previous_date: Prejšnji datum
-    proposed_date: Predlagana objava
-    reason_for_change: Razlog za spremembo
-    release_date: Datum objave
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -546,5 +537,5 @@ sl:
       follow_us: Sledite nam
       our_people: Naši ljudje
     news: Novice
-    world_news_link: '%{country} in Združeno kraljestvo'
     part_of: Del
+    world_news_link: "%{country} in Združeno kraljestvo"

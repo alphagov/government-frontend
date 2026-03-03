@@ -395,15 +395,6 @@ da:
     pdo_alt_text: Ordningen logo er et sort stempel med ordene benævnt oprindelse UK Ppotected
     pgi_alt_text: Ordningen logo er et sort stempel med ordene geografisk oprindelse UK beskyttet
     tsg_alt_text: Ordningen logo er et sort stempel med ordene traditionelle specialitet UK beskyttet
-  statistics_announcement:
-    cancellation_date: Afbestillingsdato
-    cancelled: Meddelelser om frigivelse af statistik
-    changed_date: Udgivelsesdatoen er blevet ændret
-    forthcoming: Disse statistikker vil blive frigivet
-    previous_date: Forrige dato
-    proposed_date: Foreslået udgivelse
-    reason_for_change: Årsag til ændring
-    release_date: Udgivelsesdato
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -424,5 +415,5 @@ da:
       follow_us: Følg os
       our_people: Vores folk
     news: Nyheder
-    world_news_link: '%{country} og Storbritannien'
     part_of: del af
+    world_news_link: "%{country} og Storbritannien"

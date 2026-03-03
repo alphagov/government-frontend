@@ -316,15 +316,6 @@ id:
     pdo_alt_text: Logo skema adalah cap hitam dengan kata-kata Designated Origin UK Protected
     pgi_alt_text: Logo skema adalah cap hitam dengan kata-kata Geographic Origin UK Protected
     tsg_alt_text: Logo skema adalah cap hitam dengan kata-kata Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Tanggal pembatalan
-    cancelled: Rilis statistik dibatalkan
-    changed_date: Tanggal rilis telah berubah
-    forthcoming: Statistik ini akan dirilis
-    previous_date: Tanggal sebelumnya
-    proposed_date: Rilis yang diusulkan
-    reason_for_change: Alasan perubahan
-    release_date: Tanggal rilis
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ id:
       follow_us: Ikuti kami
       our_people: Orang-orang kami
     news: Berita
-    world_news_link: '%{country} dan Inggris'
     part_of: Bagian dari
+    world_news_link: "%{country} dan Inggris"

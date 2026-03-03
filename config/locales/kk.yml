@@ -383,15 +383,6 @@ kk:
     pdo_alt_text: Схема логотипі - Ұлыбританияда тағайындалған шығу тегі жазылған қара мөр
     pgi_alt_text: Схема логотипі - Ұлыбританияда географиялық шығу тегі жазылған қара мөр
     tsg_alt_text: Схема логотипі - Ұлыбританияда дәстүрлі ерекшелігі жазылған қара мөр
-  statistics_announcement:
-    cancellation_date: Бас тартылған күні
-    cancelled: Статистикалық шығарылым тоқтатылды
-    changed_date: Шығарылым күні өзгертілді
-    forthcoming: Бұл статистика шығарылады
-    previous_date: Алдыңғы күн
-    proposed_date: Ұсынылған шығарылым
-    reason_for_change: Өзгеріс себебі
-    release_date: Шығарылым күні
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ kk:
       follow_us: Бізге жазылыңыз
       our_people: Біздің адамдар
     news: Жаңалықтар
-    world_news_link: '%{country} және Ұлыбритания'
     part_of: Бөлігі
+    world_news_link: "%{country} және Ұлыбритания"

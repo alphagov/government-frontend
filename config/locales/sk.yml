@@ -450,15 +450,6 @@ sk:
     pdo_alt_text: Logo schémy je čierna pečiatka s nápisom Designated Origin UK Protected
     pgi_alt_text: Logo schémy je čierna pečiatka s nápisom Geographic Origin UK Protected
     tsg_alt_text: Logo schémy je čierna pečiatka s nápisom Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Dátum zrušenia
-    cancelled: Zrušené vydávanie štatistík
-    changed_date: Dátum vydania bol zmenený
-    forthcoming: Tieto štatistiky budú zverejnené
-    previous_date: Predchádzajúci dátum
-    proposed_date: Navrhované vydanie
-    reason_for_change: Dôvod zmeny
-    release_date: Dátum vydania
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -479,5 +470,5 @@ sk:
       follow_us: Sledujte nás
       our_people: Naši ľudia
     news: Správy
-    world_news_link: '%{country} a Spojené kráľovstvo'
     part_of: Časť
+    world_news_link: "%{country} a Spojené kráľovstvo"

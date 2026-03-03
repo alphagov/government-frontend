@@ -383,15 +383,6 @@ so:
     pdo_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayada Lagu Nashqadeeyay asal ahaana UK Ilaashan ah
     pgi_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayada Lagu Nashqadeeyay Goob ahaana UK Ilaashan ah
     tsg_alt_text: Jaantuska loogadu waa shaabad madaw taasoo erayo lagu nashqadeeyay Dhaqaan u gaar ah UK Ilaashan ah
-  statistics_announcement:
-    cancellation_date: Taariikhda la joojiyay
-    cancelled: Ku dhawaaqisaha xog ururinta la joojiyay
-    changed_date: Taariikhda ku dhawaaqista waa la badalay
-    forthcoming: Xog ururintan waxa lasii dayn doonaa
-    previous_date: Taariikh hore
-    proposed_date: Ku dhawaaqis dib u dhacday
-    reason_for_change: Sababta loo badalay
-    release_date: Taariikhda sii daynta
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ so:
       follow_us: Nagala soco
       our_people: Dadkayaga
     news: War
-    world_news_link: '%{country} iyo UK'
     part_of: Ka qeyba
+    world_news_link: "%{country} iyo UK"

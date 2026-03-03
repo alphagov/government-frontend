@@ -383,15 +383,6 @@ lv:
     pdo_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Designated Origin UK Protected
     pgi_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Geographic Origin UK Protected
     tsg_alt_text: Shēmas logotips ir melns zīmogs ar vārdiem Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Atcelšanas datums
-    cancelled: Statistikas publiskošana atcelta
-    changed_date: Publiskošanas datums ir mainīts
-    forthcoming: Statistika tiks publiskota
-    previous_date: Iepriekšējais datums
-    proposed_date: Paredzētā publiskošana
-    reason_for_change: Izmaiņu iemesls
-    release_date: Publiskošanas datums
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ lv:
       follow_us: Seko mums
       our_people: Darbinieki
     news: Ziņas
-    world_news_link: '%{country} un Apvienotā Karaliste'
     part_of: Daļa no
+    world_news_link: "%{country} un Apvienotā Karaliste"

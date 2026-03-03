@@ -383,15 +383,6 @@ uz:
     pdo_alt_text: Схема логотипи ўзи билан “Махсус мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
     pgi_alt_text: Схема логотипи ўзи билан “Географик мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
     tsg_alt_text: Схема логотипи ўзи билан “Анъанавий мўлжалланиш. Буюк Британия. Ҳимояланган” сўзлари билан қора штампни тақдим этади.
-  statistics_announcement:
-    cancellation_date: Бекор қилиш санаси
-    cancelled: Статистик маълумотларнинг чиқарилиши бекор қилинган
-    changed_date: Нашр санаси ўзгартирилган
-    forthcoming: Ушбу статистик маълумотлар чиқарилган бўлади
-    previous_date: Олдинги сана
-    proposed_date: Режалаштирилган нашр
-    reason_for_change: Ўзгариш киритилиш сабаблари
-    release_date: Нашр санаси
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ uz:
       follow_us: Бизга аъзо бўлинг
       our_people: Бизнинг одамлар
     news: Yangiliklar
-    world_news_link: '%{country} va Buyuk Britaniya'
     part_of: Қисми
+    world_news_link: "%{country} va Buyuk Britaniya"

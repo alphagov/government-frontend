@@ -383,15 +383,6 @@ es:
     pdo_alt_text: El logotipo del esquema es un sello negro con las palabras Designated Origin UK Protected
     pgi_alt_text: El logotipo del esquema es un sello negro con las palabras Geographic Origin UK protected
     tsg_alt_text: El logotipo del esquema es un sello negro con las palabras Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: Fecha de cancelación
-    cancelled: Cancelación de la publicación de estadísticas
-    changed_date: Se ha cambiado la fecha de publicación
-    forthcoming: Estas estadísticas serán publicadas
-    previous_date: Fecha anterior
-    proposed_date: Publicación propuesta
-    reason_for_change: Motivo del cambio
-    release_date: Fecha de lanzamiento
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ es:
       follow_us: Síguenos
       our_people: Nuestro equipo
     news: Noticias
-    world_news_link: '%{country} y el Reino Unido'
     part_of: Parte de
+    world_news_link: "%{country} y el Reino Unido"

@@ -316,15 +316,6 @@ zh-tw:
     pdo_alt_text: 項目標識為黑色印章，上面寫著「指定的原產地受英國保護」
     pgi_alt_text: 項目標識為黑色印章，上面寫著「地理上原產地受英國保護」
     tsg_alt_text: 項目標識為黑色印章，上面寫著「傳統特產受英國保護」
-  statistics_announcement:
-    cancellation_date: 取消日期
-    cancelled: 統計發佈取消
-    changed_date: 發佈日期已變更
-    forthcoming: 統計數據將發佈
-    previous_date: 先前日期
-    proposed_date: 建議發佈
-    reason_for_change: 變更理由
-    release_date: 發佈日期
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -345,5 +336,5 @@ zh-tw:
       follow_us: 追蹤我們
       our_people: 我們的人
     news: 新聞
-    world_news_link: '%{country} 和英國'
     part_of: 部分
+    world_news_link: "%{country} 和英國"

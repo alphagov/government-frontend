@@ -386,15 +386,6 @@ dr:
     pdo_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتDesignated Origin UK Protected است
     pgi_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتeographic Origin UK Protected است
     tsg_alt_text: لوگو این طرح یک مهر سیاه رنگ با کلماتTraditional Specialty UK Protected است
-  statistics_announcement:
-    cancellation_date: تاریخ لغو کردن
-    cancelled: انتشار آمار لغو شد
-    changed_date: تاریخ انتشارتغییر داده شد
-    forthcoming: این آمار منتشر خواهد شد
-    previous_date: تاریخ قبلی
-    proposed_date: انتشار پیشنهاد شده
-    reason_for_change: دلیل تغییر
-    release_date: تاریخ انتشار
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -415,5 +406,5 @@ dr:
       follow_us: مارا دنبال نمایید
       our_people: مردم ما
     news: خبر
-    world_news_link: '%{country} و بریتانیا'
     part_of: بخشی از
+    world_news_link: "%{country} و بریتانیا"

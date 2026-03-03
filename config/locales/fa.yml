@@ -383,15 +383,6 @@ fa:
     pdo_alt_text: آرم طرح یک مهر سیاه با این کلمات است Designated Origin UK Protected
     pgi_alt_text: آرم طرح یک مهر سیاه با این کلمات است Geographic Origin UK Protected
     tsg_alt_text: آرم طرح یک مهر سیاه با این کلمات است Traditional Speciality UK Protected
-  statistics_announcement:
-    cancellation_date: تاریخ لغو
-    cancelled: انتشار آمار لغو شد
-    changed_date: تاریخ انتشار تغییر کرده است
-    forthcoming: این آمارها منتشر خواهد شد
-    previous_date: تاریخ قبلی
-    proposed_date: انتاشر پیشنهادی
-    reason_for_change: دلیل تغییر
-    release_date: تاریخ انتشار
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ fa:
       follow_us: ما را دنبال کنید
       our_people: افراد ما
     news: اخبار
-    world_news_link: '%{country} و بریتانیا'
     part_of: بخشی از
+    world_news_link: "%{country} و بریتانیا"

@@ -383,15 +383,6 @@ fr:
     pdo_alt_text: Le logo du système est un cachet noir portant la mention "Origine désignée protégée par le Royaume-Uni"
     pgi_alt_text: Le logo du système est un tampon noir portant la mention "Origine géographique protégée par le Royaume-Uni"
     tsg_alt_text: Le logo du système est un cachet noir portant la mention "Spécialité traditionnelle protégée par le Royaume-Uni"
-  statistics_announcement:
-    cancellation_date: Date d'annulation
-    cancelled: La publication des statistiques est annulée
-    changed_date: La date de publication a été modifiée
-    forthcoming: Ces statistiques seront publiées
-    previous_date: Date précédente
-    proposed_date: Version proposée
-    reason_for_change: Raison du changement
-    release_date: Date de sortie
   time:
     formats:
       short_ordinal: "%e %B %Y"
@@ -412,5 +403,5 @@ fr:
       follow_us: Suivez-nous
       our_people: Notre équipe
     news: Actualités
-    world_news_link: '%{country} et le Royaume-Uni'
     part_of: Fait partie de
+    world_news_link: "%{country} et le Royaume-Uni"
