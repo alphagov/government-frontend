@@ -1,5 +1,3 @@
-@import "govuk_publishing_components/individual_component_support";
-
 .translation-nav-header {
   @include govuk-media-query($from: tablet) {
     margin-bottom: govuk-spacing(8);
