@@ -12,8 +12,6 @@
     "**/*[sS]pec.js"
   ],
   "helpers": [
-    "vendor/jquery-1.12.4.js",
-    "vendor/jasmine-jquery-2.0.5.js",
     "vendor/jasmine-ajax-3.4.0.js",
     "vendor/lolex.js",
     "helpers/*.js"

@@ -1,81 +1,96 @@
 describe('A hide-other-links module', function () {
-  var list
+  var container
   var GOVUK = window.GOVUK
 
   function subject () {
-    $('body').append(list)
-    var instance = new GOVUK.Modules.HideOtherLinks(list[0])
+    var instance = new GOVUK.Modules.HideOtherLinks(container.firstElementChild)
     instance.init()
   }
 
   afterEach(function () {
-    list.remove()
+    document.body.removeChild(container)
   })
 
   describe('with a list of more than 2 links', function () {
     beforeEach(function () {
-      list = $(
-        '<dd class="animals">' +
-          '<a href="http://en.wikipedia.org/wiki/dog">Dog</a>, ' +
-          '<a href="http://en.wikipedia.org/wiki/cat">Cat</a>, ' +
-          '<a href="http://en.wikipedia.org/wiki/cow">Cow</a> and ' +
-          '<a href="http://en.wikipedia.org/wiki/pig">Pig</a>.' +
-        '</dd>'
-      )
+      container = document.createElement('div')
+      container.innerHTML = `
+        <dd class="animals">
+          <a href="http://en.wikipedia.org/wiki/dog">Dog</a>, 
+          <a href="http://en.wikipedia.org/wiki/cat">Cat</a>, 
+          <a href="http://en.wikipedia.org/wiki/cow">Cow</a> and 
+          <a href="http://en.wikipedia.org/wiki/pig">Pig</a>.
+        </dd>
+      `
 
+      document.body.appendChild(container)
       subject()
     })
 
     it('groups elements into other-content span', function () {
-      expect($('.animals .other-content').children().length).toBe(3)
+      var otherContent = document.querySelector('.animals .other-content')
+
+      expect(otherContent.childElementCount).toBe(3)
     })
 
     it('creates a link to show hidden content', function () {
-      expect($('.animals .show-other-content').length).toBe(1)
+      var showOtherContent = document.querySelector('.animals .show-other-content')
+
+      expect(showOtherContent.childElementCount).toBe(1)
     })
 
     it('has the correct count in the link', function () {
-      var otherCount = $('.animals .other-content').find('a').length
-      var linkCount = $('.animals .show-other-content').text().match(/\d+/).pop()
-      expect(parseInt(linkCount, 10)).toBe(otherCount)
+      var otherCount = document.querySelectorAll('.animals .other-content a').length
+      var linkCountText = document.querySelector('.animals .show-other-content').textContent
+
+      expect(linkCountText).toContain(otherCount)
     })
 
     it('sets the correct aria value', function () {
-      expect($('.animals').attr('aria-live')).toEqual('polite')
+      var animalsList = document.querySelector('.animals')
+
+      expect(animalsList.getAttribute('aria-live')).toEqual('polite')
     })
   })
 
   describe('with a list of 2 short links', function () {
     beforeEach(function () {
-      list = $(
-        '<dd class="animals">' +
-          '<a href="http://en.wikipedia.org/wiki/dog">Dog</a>, ' +
-          '<a href="http://en.wikipedia.org/wiki/cat">Cat</a>, ' +
-        '</dd>'
-      )
-
+      container = document.createElement('div')
+      container.innerHTML = `
+        <dd class="animals">
+          <a href="http://en.wikipedia.org/wiki/dog">Dog</a>, 
+          <a href="http://en.wikipedia.org/wiki/cat">Cat</a>, 
+        </dd>
+      `
+      document.body.appendChild(container)
       subject()
     })
 
     it('does not hide any links', function () {
-      expect($('.animals .other-content').length).toBe(0)
+      var otherContent = document.querySelector('.animals .other-content')
+
+      expect(otherContent).toBe(null)
     })
   })
 
   describe('with a list of 2 long links', function () {
     beforeEach(function () {
-      list = $(
-        '<dd class="long-words">' +
-          '<a href="http://en.wikipedia.org/wiki/Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato­silphio­parao­melito­katakechy­meno­kichl­epi­kossypho­phatto­perister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baphe­tragano­pterygon">Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato­silphio­parao­melito­katakechy­meno­kichl­epi­kossypho­phatto­perister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baphe­tragano­pterygon</a>, ' +
-          '<a href="http://en.wikipedia.org/wiki/Pneumonoultramicroscopicsilicovolcanoconiosis">Pneumonoultramicroscopicsilicovolcanoconiosis</a>, ' +
-        '</dd>'
-      )
+      container = document.createElement('div')
+      container.innerHTML = `
+        <dd class="long-words"> 
+          <a href="http://en.wikipedia.org/wiki/Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato­silphio­parao­melito­katakechy­meno­kichl­epi­kossypho­phatto­perister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baphe­tragano­pterygon">Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato­silphio­parao­melito­katakechy­meno­kichl­epi­kossypho­phatto­perister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baphe­tragano­pterygon</a>, 
+          <a href="http://en.wikipedia.org/wiki/Pneumonoultramicroscopicsilicovolcanoconiosis">Pneumonoultramicroscopicsilicovolcanoconiosis</a>, 
+        </dd>
+      `
 
+      document.body.appendChild(container)
       subject()
     })
 
     it('hides the links', function () {
-      expect($('.long-words .other-content').children().length).toBe(1)
+      var otherContent = document.querySelector('.long-words .other-content')
+
+      expect(otherContent.childElementCount).toBe(1)
     })
   })
 })
